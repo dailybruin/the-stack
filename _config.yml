@@ -11,7 +11,7 @@ twitter_username: _thestack
 github_username:  daily-bruin
 
 # Outputting
-permalink: pretty
+permalink: pretty # don't have `.html` on the end of permalinks
 timezone: America/Los_Angeles
 
 # Build settings
