@@ -1,6 +1,7 @@
 ---
 layout: post
-title:  "Welcome to Jekyll!"
+title:  How much money every employee in the UC makes, visualized
+teaser: "Salaries from Gene Block, Coach Mora, your professor, and your fellow student campus workers"
 date:   2015-08-19 21:22:23
 categories: jekyll update
 authors: [hliddiard@media.ucla.edu, nbedi@media.ucla.edu]
