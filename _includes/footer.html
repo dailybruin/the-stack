@@ -2,15 +2,9 @@
 
   <div class="wrapper">
 
-    <h2 class="footer-heading">{{ site.title }}</h2>
+    <h2>{{ site.title }}</h2>
 
     <div class="footer-col-wrapper">
-      <div class="footer-col  footer-col-1">
-        <ul class="contact-list">
-          <li>{{ site.title }}</li>
-          <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
-        </ul>
-      </div>
 
       <div class="footer-col  footer-col-2">
         <ul class="social-media-list">
@@ -43,11 +37,29 @@
           </li>
           {% endif %}
         </ul>
+
+        <p class="copyright-info">Content &copy; Daily Bruin</p>
+        <p class="copyright-info">Code available under open source licenses <a href="https://github.com/{{ site.github_username }}">on GitHub</a></p>
+      </div>
+
+      <div class="footer-col  footer-col-1">
+        <ul class="contact-list">
+          <li>
+            <h3>Contact us</h3>
+            <a href="mailto:{{ site.email }}">{{ site.email }}</a>
+          </li>
+          <li>
+            <h3>Develop/write for us</h3>
+            <a href="#">Write a guest post</a>
+            <a href="http://recruiting.dailybruin.com/applications/daily-bruin/web-developer-intern/">Apply to Daily Bruin Online</a>
+          </li>
+        </ul>
       </div>
 
       <div class="footer-col  footer-col-3">
         <p class="text">{{ site.description }}</p>
       </div>
+
     </div>
 
   </div>
