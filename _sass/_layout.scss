@@ -2,30 +2,42 @@
  * Site header
  */
 .site-header {
+    $height: 56px;
     border-top: 5px solid $grey-color-dark;
     border-bottom: 1px solid $grey-color-light;
-    min-height: 56px;
+    min-height: $height;
+    line-height: $height;
 
     // Positioning context for the mobile navigation icon
     position: relative;
 }
 
 .site-title {
-    font-size: 26px;
-    line-height: 56px;
-    letter-spacing: -1px;
-    margin-bottom: 0;
+    font-family: $header-font-family;
+    font-weight: 400;
     float: left;
+    font-size: 2em;
+    line-height: 1;
+    margin-top: 10px;
 
     &,
     &:visited {
         color: $grey-color-dark;
     }
+
+    img {
+        width: 42px;
+    }
+}
+
+.tagline {
+    color: $grey-color;
+    font-size: 0.9em;
+    margin: 1.2em;
 }
 
 .site-nav {
     float: right;
-    line-height: 56px;
 
     .menu-icon {
         display: none;
@@ -94,11 +106,31 @@
 .site-footer {
     border-top: 1px solid $grey-color-light;
     padding: $spacing-unit 0;
-}
 
-.footer-heading {
-    font-size: 18px;
-    margin-bottom: $spacing-unit / 2;
+    h2 {
+        font-size: 18px;
+        margin-bottom: $spacing-unit / 2;
+    }
+
+    h3 {
+        font-size: 14px;
+        margin-bottom: 0;
+    }
+
+    .contact-list {
+        li {
+            margin-bottom: $spacing-unit / 2;
+
+            a {
+                display: block;
+            }
+        }
+    }
+
+    .copyright-info {
+        font-size: 0.7em;
+        margin: 0.5em 0;
+    }
 }
 
 .contact-list,
@@ -121,13 +153,13 @@
 }
 
 .footer-col-1 {
-    width: -webkit-calc(35% - (#{$spacing-unit} / 2));
-    width:         calc(35% - (#{$spacing-unit} / 2));
+    width: -webkit-calc(28% - (#{$spacing-unit} / 2));
+    width:         calc(28% - (#{$spacing-unit} / 2));
 }
 
 .footer-col-2 {
-    width: -webkit-calc(20% - (#{$spacing-unit} / 2));
-    width:         calc(20% - (#{$spacing-unit} / 2));
+    width: -webkit-calc(27% - (#{$spacing-unit} / 2));
+    width:         calc(27% - (#{$spacing-unit} / 2));
 }
 
 .footer-col-3 {
@@ -181,6 +213,12 @@
 .post-meta {
     font-size: $small-font-size;
     color: $grey-color;
+    border-bottom: 1px solid $grey-color-light;
+    padding-bottom: 0.25em;
+
+    .date {
+        float: right;
+    }
 }
 
 .post-link {
@@ -199,12 +237,19 @@
 
 .post-title {
     font-size: 42px;
-    letter-spacing: -1px;
     line-height: 1;
+    margin-bottom: 0.1em;
 
     @include media-query($on-laptop) {
         font-size: 36px;
     }
+}
+
+.post-teaser {
+    line-height: 1.2;
+    margin: 0.75em 0 0.5em;
+    color: $grey-color-dark;
+    font-weight: 400;
 }
 
 .post-content {
