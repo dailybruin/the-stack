@@ -8,18 +8,23 @@ layout: default
 
   <header class="post-header">
     <h1 class="post-title">{{ page.title }}</h1>
-
-    {% if page.authors %}
-        <p class="post-authors">
-            by 
-            {% for author_key in page.authors %}
-                {% assign author = site.data.authors[author_key] %}
-                {{ author.name }}{% unless forloop.last %}, {% endunless %}
-            {% endfor %}
-        </p>
+    {% if page.teaser %}
+      <h2 class="post-teaser">{{ page.teaser }}</h1>
     {% endif %}
 
-    <p class="post-meta">{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ author.name }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
+    <div class="post-meta">
+      {% if page.authors %}
+        <span class="authors">
+          by
+          {% for author_key in page.authors %}
+              {% assign author = site.data.authors[author_key] %}
+              {{ author.name }}{% unless forloop.last %}, {% endunless %}
+          {% endfor %}
+        </span>
+      {% endif %}
+      <span class="date">{{ page.date | date: "%b %-d, %Y" }}</span>
+    </div>
+
   </header>
 
   <article class="post-content">
