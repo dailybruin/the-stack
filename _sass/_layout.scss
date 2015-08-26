@@ -111,7 +111,14 @@
 
     h2 {
         font-size: 18px;
+        font-weight: 400;
+        cursor: default;
         margin-bottom: $spacing-unit / 2;
+
+        .logo {
+            width: 20px;
+            margin-bottom: 4px;
+        }
     }
 
     h3 {
