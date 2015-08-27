@@ -2,8 +2,6 @@
 layout: default
 ---
 
-{% assign author = site.data.authors[page.author] %}
-
 <div class="post">
 
   <header class="post-header">
@@ -45,5 +43,31 @@ layout: default
   <article class="post-content">
     {{ content }}
   </article>
+
+  {% if page.authors %}
+  <section class="about-the-author">
+    <h2>About the Author{% if page.authors.size > 1 %}s{% endif %}</h2>
+    {% for author_key in page.authors %}
+      {% assign author = site.data.authors[author_key] %}
+    <div class="author">
+      {% if author.mug %}<img class="mug" src="/img/mugs/{{ author.mug }}" />{% endif %}
+      <h3>{{ author.name }}</h3>{% if author.title %}, <h4>{{ author.title }}</h4>{% endif %}
+      <p>{{ author.bio }}</p>
+      <ul class="contact">
+        {% if author.github %}
+        <li><a href="https://github.com/{{ author.github }}"><img src="/img/icons/github.svg" /> {{ author.github }}</a></li>
+        {% endif %}
+        {% if author.twitter %}
+        <li><a href="https://twitter.com/{{ author.twitter }}"><img src="/img/icons/twitter.svg" /> {{ author.twitter }}</a></li>
+        {% endif %}
+        <li><a href="mailto:{{ author_key }}"><img src="/img/icons/email.svg" /> {{ author_key }}</a></li>
+        {% if author.website %}
+        <!--<li><a href="{{ author.website }}"><img src="/img/icons/globe.svg" /> {{ author.website | replace:'http://','' | replace:'https://','' }}</a></li>-->
+        {% endif %}
+      </ul>
+    </div>
+    {% endfor %}
+  </section>
+  {% endif %}
 
 </div>

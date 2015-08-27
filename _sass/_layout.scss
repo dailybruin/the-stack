@@ -7,6 +7,7 @@
     border-bottom: 1px solid $grey-color-light;
     min-height: $height;
     line-height: $height;
+    padding-top: 10%;
 
     // Positioning context for the mobile navigation icon
     position: relative;
@@ -146,6 +147,11 @@
 .social-media-list {
     list-style: none;
     margin-left: 0;
+
+    img {
+        width: 20px;
+        vertical-align: text-top;
+    }
 }
 
 .footer-col-wrapper {
@@ -223,7 +229,7 @@
     font-size: $small-font-size;
     color: $grey-color;
     border-bottom: 1px solid $grey-color-light;
-    padding-bottom: 0.25em;
+    padding-bottom: 0.5em;
 
     .date {
         float: right;
@@ -256,7 +262,7 @@
 
 .post-teaser {
     line-height: 1.2;
-    margin: 0.75em 0 0.5em;
+    margin: 0.6em 0;
     color: $grey-color-dark;
     font-weight: 400;
 }
@@ -318,6 +324,46 @@
                 top: -8px;
                 left: -14px;
             }
+        }
+    }
+}
+
+.about-the-author {
+    border-top: 1px solid $grey-color-light;
+    padding-top: 1.5em;
+
+    .author {
+        overflow: hidden;
+        margin-bottom: 1em;
+
+        h3, h4 {
+            display: inline;
+        }
+
+        h4 {
+            font-weight: 400;
+            font-style: italic;
+            color: $grey-color;
+        }
+
+        ul.contact {
+            list-style-type: none;
+
+            li {
+                display: inline-block;
+                margin-right: 1em;
+            }
+
+            img {
+                width: 20px;
+                vertical-align: text-top;
+            }
+        }
+
+        .mug {
+            width: 200px;
+            float: left;
+            margin-right: 1em;
         }
     }
 }
