@@ -293,6 +293,11 @@
             font-size: 18px;
         }
     }
+
+    .fullwidth {
+        width: 100vw;
+        margin-left: calc((100vw - (#{$content-width} - (#{$spacing-unit} * 2)))/-2);
+    }
 }
 
 .key-takeaways {
