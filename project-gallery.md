@@ -4,4 +4,5 @@ title: Project Gallery
 permalink: /projects/
 ---
 
-Coming soon to a web browser near you!
+Below is a list of projects created by developers in the online department of
+Daily Bruin, of which The Stack is a part.
