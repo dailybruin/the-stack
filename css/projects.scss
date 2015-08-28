@@ -1,0 +1,23 @@
+---
+---
+
+@import 'globals';
+
+.project {
+    width: 320px;
+    height: 200px;
+    background-position: center;
+    background-size: cover;
+
+    img {
+        width: 40px;
+    }
+
+    a {
+        display: inline-block;
+
+        &:hover {
+            background-color: $brand-color;
+        }
+    }
+}
