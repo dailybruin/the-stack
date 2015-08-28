@@ -29,7 +29,7 @@ layout: default
 
   {% if page.key_takeaways %}
   <section class="key-takeaways">
-    <h2>Key Takeaways</h2>
+    <h2>Key takeaways</h2>
     <ul>
     {% for takeaway in page.key_takeaways %}
       <li>{{ takeaway }}</li>
@@ -46,7 +46,7 @@ layout: default
 
   {% if page.authors %}
   <section class="about-the-author">
-    <h2>About the Author{% if page.authors.size > 1 %}s{% endif %}</h2>
+    <h2>About the author{% if page.authors.size > 1 %}s{% endif %}</h2>
     {% for author_key in page.authors %}
       {% assign author = site.data.authors[author_key] %}
     <div class="author">
