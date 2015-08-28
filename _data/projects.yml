@@ -1,6 +1,6 @@
 the_stack:
     name: The Stack
     description: Data and tech blog from the Daily Bruin
-    website: http://stack.dailybruin.com/
+    link: http://stack.dailybruin.com/
     github: the-stack
     image: /
