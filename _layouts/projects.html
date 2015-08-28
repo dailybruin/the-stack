@@ -4,6 +4,10 @@ stylesheets:
   - /css/projects.css
 ---
 
+<article class="post-content">
+  {{ content }}
+</article>
+
 <div class="fullwidth">
   {% for project in site.data.projects %}
   <div class="project" style="background-image: url(/img/projects/{{ project[1].image }})">
