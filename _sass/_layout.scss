@@ -37,6 +37,7 @@
     color: $grey-color;
     font-size: 0.9em;
     margin: 1.2em;
+    white-space: nowrap;
 }
 
 .site-nav {
@@ -297,6 +298,10 @@
     .fullwidth {
         width: 100vw;
         margin-left: calc((100vw - (#{$content-width} - (#{$spacing-unit} * 2)))/-2);
+
+        @include media-query($on-laptop) {
+            margin-left: #{-$spacing-unit/2};
+        }
     }
 }
 
@@ -353,6 +358,7 @@
 
         ul.contact {
             list-style-type: none;
+            margin-left: 0;
 
             li {
                 display: inline-block;
@@ -366,9 +372,9 @@
         }
 
         .mug {
-            width: 200px;
             float: left;
             margin-right: 1em;
+            width: 200px;
         }
     }
 }
