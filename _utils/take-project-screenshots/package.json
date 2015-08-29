@@ -22,7 +22,6 @@
   },
   "homepage": "https://github.com/daily-bruin/the-stack#readme",
   "dependencies": {
-    "phantom": "^0.7.2",
     "webshot": "^0.16.0",
     "yamljs": "^0.2.3"
   }
