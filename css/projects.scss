@@ -7,11 +7,18 @@
     float: left;
     width: 50%;
     box-sizing: border-box;
-    padding: 0.5em;
-    margin: 1em 0;
+    padding: 1em;
     line-height: 1;
+    cursor: default;
+
+    @include media-query($on-palm) {
+        width: 100%;
+    }
 
     &:hover {
+        background-color: white;
+        box-shadow: 0 0 0 1px rgba($brand-color, 0.5);
+
         .screenshot-wrapper {
             a {
                 display: block;
@@ -24,7 +31,7 @@
     }
 
     h2 {
-        margin-bottom: 0;
+        margin-bottom: 0.1em;
     }
 
     .screenshot-wrapper {
@@ -33,21 +40,26 @@
         a {
             position: absolute;
             display: none;
-            width: 40px;
-            top: 10px;
-            padding: 1em;
+            width: 25%;
+            top: 20%;
+            padding: 5%;
 
             &:hover {
-                background-color: $brand-color;
+                background-color: rgba($brand-color, 0.5);
             }
 
-            .link {
-                left: 10px;
+            &.link {
+                left: 15%;
             }
 
-            .github {
-                right: 10px;
+            &.github {
+                right: 15%;
             }
+        }
+
+        .screenshot {
+            background-color: white;
+            border: 1px solid $grey-color-light;
         }
     }
 }
