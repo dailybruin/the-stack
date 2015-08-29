@@ -1,0 +1,29 @@
+{
+  "name": "take-project-screenshots",
+  "version": "1.0.0",
+  "description": "Take screenshots of each of the projects in _data/projects.yml and put them in img/projects/.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/daily-bruin/the-stack.git"
+  },
+  "keywords": [
+    "screenshot",
+    "jekyll",
+    "projects"
+  ],
+  "author": "Harrison Liddiard <omniaura5@gmail.com> (http://harrisonliddiard.com)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/daily-bruin/the-stack/issues"
+  },
+  "homepage": "https://github.com/daily-bruin/the-stack#readme",
+  "dependencies": {
+    "phantom": "^0.7.2",
+    "webshot": "^0.16.0",
+    "yamljs": "^0.2.3"
+  }
+}
