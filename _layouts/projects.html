@@ -8,18 +8,19 @@ stylesheets:
   {{ content }}
 </article>
 
-<div class="fullwidth">
-  {% for project in site.data.projects %}
-  <div class="project" style="background-image: url(/img/projects/{{ project[1].image }})">
-    <!-- index [0] is key, index [1] is value -->
-    <h2>{{ project[1].name }}</h2>
-    <p class="description">{{ project[1].description }}</p>
-    <a href="{{ project[1].link }}">
+{% for project in site.data.projects %}
+<div class="project">
+  <!-- index [0] is key, index [1] is value -->
+  <h2>{{ project[1].name }}</h2>
+  <p class="description">{{ project[1].description }}</p>
+  <div class="screenshot-wrapper">
+    <img class="screenshot" src="/img/projects/{{ project[1].image }}" />
+    <a class="link" href="{{ project[1].link }}">
       <img src="/img/icons/link.svg" />
     </a>
-    <a href="https://github.com/{{ site.github_username }}/{{ project[1].github }}">
+    <a class="github" href="https://github.com/{{ site.github_username }}/{{ project[1].github }}">
       <img src="/img/icons/github.svg" />
     </a>
   </div>
-  {% endfor %}
 </div>
+{% endfor %}
