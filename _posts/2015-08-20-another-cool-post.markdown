@@ -1,12 +1,11 @@
 ---
 layout: post
-title:  How much money every employee in the UC makes, visualized
-teaser: Salaries from Gene Block, Coach Mora, your professor, and your fellow student campus workers
-date:   2015-08-19 21:22:23
+title:  Another cool post
+teaser: Just when you thought they were done, another cool one comes along.
+date:   2015-08-20 21:22:23
 categories: jekyll update
 authors:
     - hliddiard@media.ucla.edu
-    - nbedi@media.ucla.edu
 key_takeaways:
     - The Stack is pretty much the coolest blog ever. Sorry, other blogs.
     - Lorem ipsum dolor sit amet. Consectectur adspicing elit, sed do eiusmod tempor incindit. Et laborem, ut dolorem.
