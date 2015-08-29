@@ -44,6 +44,25 @@ layout: default
     {{ content }}
   </article>
 
+  <nav class="prev-next-post">
+    {% if page.previous %}
+    <a class="prev" href="{{ page.previous.url }}">
+      <h2>← {{ page.previous.title }}</h2>
+      <h3>{{ page.previous.teaser }}</h3>
+    </a>
+    {% else %}
+    <div class="placeholder"><!-- empty placeholder for flexbox to do proper horizonatal alignment--></div>
+    {% endif %}
+    {% if page.next %}
+    <a class="next" href="{{ page.next.url }}">
+      <h2>{{ page.next.title }} →</h2>
+      <h3>{{ page.next.teaser }}</h3>
+    </a>
+    {% else %}
+    <div class="placeholder"><!-- empty placeholder for flexbox to do proper horizonatal alignment--></div>
+    {% endif %}
+  </nav>
+
   {% if page.authors %}
   <section class="about-the-author">
     <h2>About the author{% if page.authors.size > 1 %}s{% endif %}</h2>

@@ -27,7 +27,7 @@
     }
 
     img {
-        width: 42px;
+        height: 1em;
         vertical-align: middle;
         margin-bottom: 6px;
     }
@@ -306,9 +306,8 @@
 }
 
 .key-takeaways {
-    $color: yellow;
-    background-color: rgba($color, 0.05);
-    border: 1px solid darken($color, 5%);
+    background-color: rgba($brand-color-secondary-warm, 0.05);
+    border: 1px solid rgba($brand-color-secondary-warm, 0.5);
     padding: 0.5em 1em 0;
     margin-bottom: 1em;
 
@@ -338,7 +337,53 @@
     }
 }
 
+.prev-next-post {
+    margin-bottom: 1em;
+    display: -webkit-flex;
+    display: flex;
+    align-items: flex-end; // vertically align children at bottom of container
+    flex-wrap: wrap; // allow children to wrap on mobile
+
+    a, .placeholder {
+        width: 50%;
+    }
+
+    a {
+        font-size: 0.8em;
+        box-sizing: border-box;
+        padding: 1em;
+        line-height: 1.2;
+
+        @include media-query($on-palm) {
+            width: 100%;
+        }
+
+        &:hover {
+            background-color: rgba(#3D4899, 0.05);
+        }
+
+        &.prev {
+            float: left;
+        }
+
+        &.next {
+            float: right;
+            text-align: right;
+        }
+
+        h2 {
+            margin-bottom: 0.25em;
+        }
+
+        h3 {
+            font-weight: normal;
+            margin-bottom: 0;
+        }
+    }
+}
+
 .about-the-author {
+    clear: both;
     border-top: 1px solid $grey-color-light;
     padding-top: 1.5em;
 
@@ -380,10 +425,10 @@
 }
 
 #jump-to-visualization {
+    background-color: rgba($brand-color-secondary-cool, 0.05);
+    border: 1px solid rgba($brand-color-secondary-cool, 0.125);
     display: none;
     float: right;
-    background-color: rgba(0, 0, 0, 0.025);
-    border: 1px solid rgba(0, 0, 0, 0.05);
     padding: 0.2em 0.4em;
     margin: 0 0 1em 1em;
 }
