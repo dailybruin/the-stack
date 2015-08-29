@@ -338,24 +338,25 @@
 }
 
 .prev-next-post {
+    overflow: hidden;
     margin-bottom: 1em;
     display: -webkit-flex;
     display: flex;
     align-items: flex-end; // vertically align children at bottom of container
 
+    @include media-query($on-palm) {
+        display: block;
+    }
+
     a {
         // force all items to take up the same amount of space
         flex-grow: 1;
         flex-basis: 0;
-        
+
         font-size: 0.8em;
         box-sizing: border-box;
         padding: 1em;
         line-height: 1.2;
-
-        @include media-query($on-palm) {
-            flex-wrap: wrap;
-        }
 
         &:hover {
             background-color: rgba(#3D4899, 0.05);
