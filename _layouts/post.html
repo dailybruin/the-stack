@@ -50,16 +50,12 @@ layout: default
       <h2>← {{ page.previous.title }}</h2>
       <h3>{{ page.previous.teaser }}</h3>
     </a>
-    {% else %}
-    <div class="placeholder"><!-- empty placeholder for flexbox to do proper horizonatal alignment--></div>
     {% endif %}
     {% if page.next %}
     <a class="next" href="{{ page.next.url }}">
       <h2>{{ page.next.title }} →</h2>
       <h3>{{ page.next.teaser }}</h3>
     </a>
-    {% else %}
-    <div class="placeholder"><!-- empty placeholder for flexbox to do proper horizonatal alignment--></div>
     {% endif %}
   </nav>
 
