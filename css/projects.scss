@@ -4,20 +4,50 @@
 @import 'globals';
 
 .project {
-    width: 320px;
-    height: 200px;
-    background-position: center;
-    background-size: cover;
+    float: left;
+    width: 50%;
+    box-sizing: border-box;
+    padding: 0.5em;
+    margin: 1em 0;
+    line-height: 1;
 
-    img {
-        width: 40px;
+    &:hover {
+        .screenshot-wrapper {
+            a {
+                display: block;
+            }
+
+            .screenshot {
+                opacity: 0.5;
+            }
+        }
     }
 
-    a {
-        display: inline-block;
+    h2 {
+        margin-bottom: 0;
+    }
 
-        &:hover {
-            background-color: $brand-color;
+    .screenshot-wrapper {
+        position: relative;
+
+        a {
+            position: absolute;
+            display: none;
+            width: 40px;
+            top: 10px;
+            padding: 1em;
+
+            &:hover {
+                background-color: $brand-color;
+            }
+
+            .link {
+                left: 10px;
+            }
+
+            .github {
+                right: 10px;
+            }
         }
     }
 }
