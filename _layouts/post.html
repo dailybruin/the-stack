@@ -5,9 +5,21 @@ layout: default
 <div class="post">
 
   <header class="post-header">
+
     <h1 class="post-title">{{ page.title }}</h1>
     {% if page.teaser %}
     <h2 class="post-teaser">{{ page.teaser }}</h1>
+    {% endif %}
+
+    {% if page.featured_image %}
+    <figure class="featured-image">
+      <img src="{{ site.image_url }}/{{ page.featured_image.url }}" />
+      {% if page.featured_image.caption %}
+      <figcaption>
+        {{ page.featured_image.caption | markdownify }}
+      </figcaption>
+      {% endif %}
+    </figure>
     {% endif %}
 
     <div class="post-meta">
@@ -24,7 +36,6 @@ layout: default
 
       <span class="date">{{ page.date | date: "%b %-d, %Y" }}</span>
     </div>
-
   </header>
 
   {% if page.key_takeaways %}
