@@ -2,16 +2,20 @@
 layout: post
 title:  How much money every employee in the UC makes, visualized
 teaser: Salaries from Gene Block, Coach Mora, your professor, and your fellow student campus workers
-date:   2015-08-19 21:22:23
-categories: jekyll update
+date:   2015-08-19
 authors:
     - hliddiard@media.ucla.edu
     - nbedi@media.ucla.edu
 key_takeaways:
     - The Stack is pretty much the coolest blog ever. Sorry, other blogs.
     - Lorem ipsum dolor sit amet. Consectectur adspicing elit, sed do eiusmod tempor incindit. Et laborem, ut dolorem.
+image:
+  - url: 2015-08-19-welcome-to-jekyll/duck.jpg
+    caption: 'A photo from my trip to [the solar farm](http://example.com).'
 ---
 You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
+
+{% figure_img right 0 caption %}
 
 To add new posts, simply add a file in the `_posts` directory that follows the convention `YYYY-MM-DD-name-of-post.ext` and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.
 
