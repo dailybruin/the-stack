@@ -9,6 +9,8 @@ authors:
 key_takeaways:
     - The Stack is pretty much the coolest blog ever. Sorry, other blogs.
     - Lorem ipsum dolor sit amet. Consectectur adspicing elit, sed do eiusmod tempor incindit. Et laborem, ut dolorem.
+featured_image:
+    url: 2015-08-19-welcome-to-jekyll/visualization_screenshot.png
 image:
   - url: 2015-08-19-welcome-to-jekyll/duck.jpg
     caption: 'A photo from my trip to [the solar farm](http://example.com).'
