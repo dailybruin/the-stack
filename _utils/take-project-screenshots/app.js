@@ -15,6 +15,8 @@ var FILE_EXTENSION = '.png';
 
 var projects = YAML.load(PROJECTS_FILE);
 
+console.log('Saving screenshots of projects from ' + PROJECTS_FILE + ' to ' + SCREENSHOT_DIR);
+
 for (var key in projects) {
   if (projects.hasOwnProperty(key)) {
     var project = projects[key];
@@ -23,7 +25,7 @@ for (var key in projects) {
       if (err)
         console.log('ERROR saving screenshot for ' + project.name);
       else
-        console.log('saved screenshot for ' + project.name);
+        console.log('saved screenshot for ' + project.name + ' as ' + key + FILE_EXTENSION);
     });
   }
 }
