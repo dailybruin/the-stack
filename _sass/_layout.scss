@@ -295,6 +295,29 @@
         }
     }
 
+    figure {
+        &.left {
+            float: left;
+            margin-right: $spacing-unit / 2;
+        }
+
+        &.right {
+            float: right;
+            margin-left: $spacing-unit / 2;
+        }
+
+        &.left, &.right {
+            width: 50%;
+
+            @include media-query($on-palm) {
+                width: 100%;
+                float: none;
+                margin-left: 0;
+                margin-right: 0;
+            }
+        }
+    }
+
     .fullwidth {
         width: 100vw;
         margin-left: calc((100vw - (#{$content-width} - (#{$spacing-unit} * 2)))/-2);

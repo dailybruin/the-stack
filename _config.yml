@@ -7,6 +7,7 @@ description: > # this means to ignore newlines until "baseurl:"
   insights to real life.
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://stack.dailybruin.com" # the base hostname & protocol for your site
+image_url: /img/posts # corresponds to directory for post images (cf. https://github.com/opattison/jekyll-figure-image-tag#why-yaml-is-useful-for-storing-images)
 twitter_username: _thestack
 github_username:  daily-bruin
 
