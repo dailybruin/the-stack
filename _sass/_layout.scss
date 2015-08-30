@@ -237,11 +237,6 @@
     }
 }
 
-.post-link {
-    display: block;
-    font-size: 24px;
-}
-
 
 
 /**
@@ -380,10 +375,6 @@
         box-sizing: border-box;
         padding: 1em;
         line-height: 1.2;
-
-        &:hover {
-            background-color: rgba(#3D4899, 0.05);
-        }
 
         &.prev {
             float: left;

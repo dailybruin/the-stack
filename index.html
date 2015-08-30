@@ -1,23 +1,37 @@
 ---
 layout: default
+stylesheets:
+  - /css/front.css
 ---
 
 <div class="home">
 
-  <h1 class="page-heading">Posts</h1>
-
   <ul class="post-list">
-    {% for post in site.posts %}
+    {% for post in paginator.posts %}
       <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
+        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
+          {% if post.featured_image %}
+          <img class="featured-image" src="{{ site.image_url }}/{{ post.featured_image.url }}" />
+          {% endif %}
+          <h2>{{ post.title }}</h2>
+          <h3>{{ post.teaser }}</h3>
+        </a>
       </li>
     {% endfor %}
   </ul>
 
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+  {% if paginator.previous_page or paginator.next_page %}
+  <nav class="pagination">
+    {% if paginator.previous_page %}
+      <a href="{{ paginator.previous_page_path }}" class="previous">← Previous page</a>
+    {% endif %}
+    <span class="page-number">Page {{ paginator.page }} of {{ paginator.total_pages }}</span>
+    {% if paginator.next_page %}
+      <a href="{{ paginator.next_page_path }}" class="next">More posts →</a>
+    {% endif %}
+  </nav>
+  {% endif %}
+
+  <p class="rss-subscribe">subscribe to {{ site.title }} <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
 
 </div>
