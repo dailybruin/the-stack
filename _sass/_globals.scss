@@ -1,4 +1,5 @@
-// Our variables
+// Fonts & spacing
+
 $base-font-family: 'Open Sans', sans-serif;
 $base-font-size:   16px;
 $small-font-size:  $base-font-size * 0.875;
@@ -9,32 +10,46 @@ $header-font-weight: 600;
 
 $spacing-unit:     30px;
 
+
+// main site colors
+
 $text-color:       #111;
 $background-color: #fdfdfd;
 $brand-color:      #00a5ff;
-
 $grey-color:       #828282;
 $grey-color-light: lighten($grey-color, 40%);
 $grey-color-dark:  darken($grey-color, 25%);
 
-$brand-color-secondary-warm: #FF9040;
-$brand-color-secondary-cool: #3D4899;
+
+// brand colors
+
+$brand-color-primary-blue:   $brand-color;
+$brand-color-primary-grey:   $grey-color-dark;
+
+$brand-color-secondary-blue: #3fbbff;
+$brand-color-secondary-warm: #ff9040;
+
+$brand-color-tertiary-blue:  #7fd1ff;
+$brand-color-tertiary-warm:  #cc4714;
+$brand-color-tertiary-cool:  #3d4899;
+
 
 // Width of the content area
+
 $content-width:    800px;
 
 $on-palm:          600px;
 $on-laptop:        800px;
 
 
-
-// Using media queries with like this:
+// Mixin for media queries like this:
 // @include media-query($on-palm) {
 //     .wrapper {
 //         padding-right: $spacing-unit / 2;
 //         padding-left: $spacing-unit / 2;
 //     }
 // }
+
 @mixin media-query($device) {
     @media screen and (max-width: $device) {
         @content;
