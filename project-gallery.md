@@ -5,5 +5,5 @@ permalink: /projects/
 ---
 
 Below are projects created by developers in the online department of the Daily
-Bruin, of which The Stack is a part. Projects include web designs, interactive
-stories and web applications.
+Bruin. The Stack is a part of the online department. Projects include web
+designs, interactive stories and web applications.
