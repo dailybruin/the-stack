@@ -13,9 +13,13 @@
 
 ### Inline images
 
+### Responsive videos
+
 ### Special classes
 
 ### Writing style
+
+### Correction style
 
 ## Authors
 
