@@ -360,6 +360,7 @@
     margin-bottom: 1em;
     display: -webkit-flex;
     display: flex;
+    -webkit-align-items: flex-end;
     align-items: flex-end; // vertically align children at bottom of container
 
     @include media-query($on-palm) {
@@ -368,7 +369,9 @@
 
     a {
         // force all items to take up the same amount of space
+        -webkit-flex-grow: 1;
         flex-grow: 1;
+        -webkit-flex-basis: 0;
         flex-basis: 0;
 
         font-size: 0.8em;
