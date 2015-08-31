@@ -15,12 +15,16 @@ stylesheets:
   <p class="description">{{ project[1].description }}</p>
   <div class="screenshot-wrapper">
     <img class="screenshot" src="/img/projects/{{ project[0] }}.png" />
+    {% if project[1].link %}
     <a class="link" title="Project link" href="{{ project[1].link }}">
       <img src="/img/icons/link.svg" />
     </a>
+    {% endif %}
+    {% if project[1].github %}
     <a class="github" title="GitHub repository" href="https://github.com/{{ site.github_username }}/{{ project[1].github }}">
       <img src="/img/icons/github.svg" />
     </a>
+    {% endif %}
   </div>
 </div>
 {% endfor %}
