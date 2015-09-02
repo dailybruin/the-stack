@@ -8,6 +8,9 @@
     min-height: $height;
     line-height: $height;
     padding-top: 10%;
+    background: url(/img/banner.svg) no-repeat center;
+    background-size: cover;
+    text-shadow: 0 0 2px white;
 
     // Positioning context for the mobile navigation icon
     position: relative;
