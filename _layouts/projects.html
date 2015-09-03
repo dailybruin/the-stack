@@ -9,12 +9,13 @@ stylesheets:
 </article>
 
 {% for project in site.data.projects %}
+{% cycle '<div class="row">', '' %}
 <div class="project">
   <!-- index [0] is key, index [1] is value -->
   <h2>{{ project[1].name }}</h2>
   <p class="description">{{ project[1].description }}</p>
   <div class="screenshot-wrapper">
-    <img class="screenshot" src="/img/projects/{{ project[0] }}.png" />
+    <img class="screenshot" src="/img/projects/{{ project[0] }}.jpg" />
     {% if project[1].link %}
     <a class="link" title="Project link" href="{{ project[1].link }}">
       <img src="/img/icons/link.svg" />
@@ -27,4 +28,5 @@ stylesheets:
     {% endif %}
   </div>
 </div>
+{% cycle '', '</div>' %}
 {% endfor %}
