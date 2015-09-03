@@ -3,6 +3,10 @@
 
 @import 'globals';
 
+.row {
+    overflow: hidden;
+}
+
 .project {
     float: left;
     width: 50%;
@@ -10,6 +14,7 @@
     padding: 1em;
     line-height: 1;
     cursor: default;
+    margin-right: -4px; // remove inline-block space between elements
 
     @include media-query($on-palm) {
         width: 100%;
@@ -31,6 +36,10 @@
         margin-bottom: 0.1em;
     }
 
+    .description {
+        line-height: 1.2;
+    }
+
     .screenshot-wrapper {
         position: relative;
 
@@ -48,11 +57,11 @@
             }
 
             &.link {
-                left: 15%;
+                left: 12.5%;
             }
 
             &.github {
-                right: 15%;
+                right: 12.5%;
             }
         }
 
