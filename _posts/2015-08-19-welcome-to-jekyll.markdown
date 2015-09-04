@@ -11,7 +11,7 @@ featured_image:
     url: 2015-08-19-welcome-to-jekyll/visualization_screenshot.png
 image:
   - url: 2015-08-19-welcome-to-jekyll/duck.jpg
-    caption: 'A photo from my trip to [the solar farm](http://example.com).'
+    caption: A photo from my trip to [the solar farm](http://example.com).
 ---
 You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 
