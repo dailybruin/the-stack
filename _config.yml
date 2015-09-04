@@ -11,6 +11,15 @@ image_url: /img/posts # corresponds to directory for post images (cf. https://gi
 twitter_username: _thestack
 github_username:  daily-bruin
 
+# Defaults
+defaults:
+  -
+    scope:
+      path: "" # an empty string here means all files in the project
+      type: posts
+    values:
+      layout: post
+
 # Outputting
 permalink: pretty # don't have `.html` on the end of permalinks
 timezone: America/Los_Angeles
