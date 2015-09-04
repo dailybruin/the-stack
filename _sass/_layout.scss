@@ -324,6 +324,11 @@
             margin-left: #{-$spacing-unit/2};
         }
     }
+
+    .correction {
+        font-style: italic;
+        font-size: 0.8em;
+    }
 }
 
 .key-takeaways {
