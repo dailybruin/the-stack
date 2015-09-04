@@ -1,9 +1,6 @@
 ---
-layout: post
 title:  Another excellent post
 teaser: Just when you thought they were done, another excellent one comes along.
-date:   2015-08-21 21:22:23
-categories: jekyll update
 authors:
     - hliddiard@media.ucla.edu
 key_takeaways:
