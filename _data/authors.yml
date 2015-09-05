@@ -1,16 +1,18 @@
-hliddiard@media.ucla.edu:
+harrison_liddiard:
     name: Harrison Liddiard
     title: Chief data nerd
     bio: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam et posuere orci, nec laoreet lectus. Praesent nec augue rutrum nunc convallis consectetur vitae ut libero. Quisque volutpat, justo non iaculis imperdiet, felis nibh varius orci, interdum condimentum dui ipsum eu diam.
     mug: hliddiard.jpg
     twitter: HLiddiard
+    email: hliddiard@media.ucla.edu
     github: liddiard
     website: http://harrisonliddiard.com
-nbedi@media.ucla.edu:
+neil_bedi:
     name: Neil Bedi
     title: Beditor in chief
     bio: Mauris id nisl turpis. Donec condimentum nisi non tincidunt condimentum. Nam ullamcorper orci leo.
     mug: nbedi.jpeg
+    email: nbedi@media.ucla.edu
     twitter: _neilbedi
     github: nbedi
     website: http://neilbedi.com
