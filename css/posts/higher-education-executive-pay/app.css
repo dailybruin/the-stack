@@ -1,0 +1,88 @@
+.point {
+	fill: purple;
+}
+
+.magnet {
+	fill: orange;
+}
+
+.magnet:hover {
+	cursor: move;
+}
+
+.dataDesc {
+
+}
+
+.sort:hover {
+	background-color: #F9F9F9;
+	cursor: pointer; cursor: hand;
+}
+
+.dataVis{
+	margin-left: 5%;
+	margin-right: 5%;
+	margin-top: 2%;
+	margin-bottom: 2%;
+	text-align: center;
+}
+
+.dataset{
+	display: inline-block;
+	text-align: left;
+}
+
+select{
+	font-size: 12px;
+	height: 2rem;
+	width: auto;
+	min-width: 150px;
+}
+
+.d3-tip {
+  line-height: 1;
+  font-size: 14px;
+  padding: 10px;
+  margin-left: 3.5rem;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  border-radius: 2px;
+  pointer-events: none;
+}
+
+magnet{
+  text-align:center;
+}
+
+label {
+  font-size: .75rem;
+}
+
+input {
+	min-width: 150px;
+	padding: 0.5rem;
+}
+
+magnet .success {
+  font-size: 0.85rem;
+  background-color: #43AC6A;;
+  color: white;
+  display: inline-block;
+  margin: 0.75rem 0;
+  padding: 0.75rem 1rem;
+  border: none;
+}
+
+magnet .alert {
+  font-size: 0.85rem;
+  background-color: #f04124;;
+  color: white;
+  display: inline-block;
+  margin: 0.75rem 0;
+  padding: 0.75rem 1rem;
+  border: none;
+}
+
+#visualization {
+	margin-bottom: 1em;
+}
