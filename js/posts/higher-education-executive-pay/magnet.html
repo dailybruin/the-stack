@@ -1,0 +1,43 @@
+<div ng-show="allowcreate">
+<div class="row">
+	<!-- <div class="small-4 columns"> -->
+		<label >First field</label>
+		<select ng-model="selectedLeft" style="width:auto" ng-options="left for left in lefts"/>
+	<!-- </div> -->
+	<!-- <div class="small-4 columns"> -->
+		<label>Comparator</label>
+		<select ng-model="selectedComp" ng-options="comp.name for comp in comps"/>
+	<!-- </div> -->
+	<!-- <div class="small-4 columns"> -->
+		<label>Second field</label>
+		<input type="text" ng-model="selectedRight" list="rightSuggest" placeholder="suggestions load below"/>
+		<datalist ng-model="suggestions" id="rightSuggest">
+            <option data-ng-repeat="suggestion in suggestions" value="{{suggestion}}"></option>
+        </datalist>
+	<!-- </div> -->
+</div>
+<!-- <button>Add statement</button> -->
+
+<div class="row" >
+	<label ng-show="invalidInd" style="color:red;display:block;">Error: {{invalidInput}}</label>
+	<!-- <div class="small-4 columns"> -->
+	<!-- </div> -->
+	<!-- <div class="small-4 columns"> -->
+	<label style="display:block;font-weight:400;line-height:3;">Right-click to remove individual magnets</label>
+	<button class="button success" ng-click="submit()">Create Magnet</button>
+	 <button class="button alert" ng-click="clearMagnets()">Clear Magnets</button>
+
+	<!-- </div> -->
+	<!-- <div class="small-4 columns"> -->
+	<!-- </div> -->
+</div>
+</div>
+
+<script>
+
+  // $(".js-example-basic-multiple").select2({
+  // 	tags: true,
+  // 	maximumSelectionLength: 2
+  // });
+
+</script>
