@@ -2,13 +2,14 @@
 title:  Welcome to The Stack
 teaser: The Stack is Daily Bruin’s data journalism and newsroom tech blog
 authors:
-    - nbedi@media.ucla.edu
+    - neil_bedi
 key_takeaways:
     - This blog will feature investigative data journalism, insights on technology and practical data analysis and visualizations related to UCLA life.
     - Code will be available on GitHub.
     - Email us your ideas/feedback.
 featured_image:
-    url: 2015-03-03-welcome-to-the-stack/stack_logo.svg
+    url: welcome-to-the-stack/nameplate.svg
+og_image: welcome-to-the-stack/nameplate.svg
 ---
 Welcome to The Stack.
 
@@ -22,4 +23,4 @@ We are focused on an open source approach and will be providing links to GitHub 
 
 We are eager to hear your thoughts and feedback about what we are doing. [Email all thoughts/questions/concerns to us](mailto:online@media.ucla.edu) and we will respond as quickly as possible.
 
-<p class="correction">Update Sept. 3, 2015: Changed email address for contact.</p>
+<p class="correction">Update Sept. 3: Changed email address for contact.</p>
