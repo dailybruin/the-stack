@@ -352,6 +352,12 @@
             line-height: 1.4;
             margin: 0.5em 0;
 
+            p {
+                // conversion to markdown adds <p> tags inside every <li> and
+                // we don't want these to add extra space
+                margin: 0;
+            }
+
             &:before {
                 content: '\203a';
                 font-size: 1.5em;

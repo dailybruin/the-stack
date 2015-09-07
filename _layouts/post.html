@@ -43,7 +43,7 @@ layout: default
     <h2>Key takeaways</h2>
     <ul>
     {% for takeaway in page.key_takeaways %}
-      <li>{{ takeaway }}</li>
+      <li>{{ takeaway | markdownify }}</li>
     {% endfor %}
     </ul>
   </section>
