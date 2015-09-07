@@ -48,6 +48,8 @@ Feel free to delete the initial magnets and make your own to see how university 
 
 Note that some executives started or ended their position in the middle of the 2013 fiscal year. Their base pay will reflect the salary earned in that partial year and an asterix will appear next to their names.
 
+---
+
 ## About the data
 
 Our data mostly came from the Chronicle of Higher Education and its [post on executive compensation in public universities](https://chronicle.com/article/Executive-Compensation-at/146519/#id=table). Our only addition was including each executive’s sex.
