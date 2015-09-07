@@ -3,11 +3,11 @@ title: The Stack
 email: online@media.ucla.edu
 description: > # this means to ignore newlines until "baseurl:"
   The Stack is Daily Bruin’s data journalism and newsroom tech blog. We investigate
-  public data, discuss our experiments with technology and apply quantitative
-  insights to real life.
+  public data, experiment with technology and apply quantitative insights to
+  real life.
 meta_description: > # shortened description for meta description tag
   The Stack is Daily Bruin’s data journalism and newsroom tech blog. We investigate
-  public data, discuss technology experiments and apply quantitative insights.
+  public data, experiment with technology and apply quantitative insights.
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://stack.dailybruin.com" # the base hostname & protocol for your site
 image_url: /img/posts # corresponds to directory for post images (cf. https://github.com/opattison/jekyll-figure-image-tag#why-yaml-is-useful-for-storing-images)
