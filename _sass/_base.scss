@@ -121,6 +121,18 @@ blockquote {
 
 
 /**
+ * Horizontal rules
+ */
+ hr {
+    border: 0;
+    height: 1px;
+    background-color: $grey-color-light;
+    margin: 1em 0;
+ }
+
+
+
+/**
  * Code formatting
  */
 pre,
