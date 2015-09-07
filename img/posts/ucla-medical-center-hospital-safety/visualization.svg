@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="481px" height="486px" viewBox="0 0 481 486" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.2 (12043) - http://www.bohemiancoding.com/sketch -->
+    <title>Slice 1</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Group" sketch:type="MSLayerGroup">
+            <g transform="translate(119.000000, 124.000000)" id="Shape" fill="#000000" sketch:type="MSShapeGroup">
+                <path d="M119,0.25 L92.5756391,3.22731043"></path>
+                <path d="M92.5756391,3.22731043 L67.476306,12.0099469"></path>
+                <path d="M67.476306,12.0099469 L44.960586,26.1575115"></path>
+                <path d="M44.960586,26.1575115 L26.1575115,44.960586"></path>
+                <path d="M26.1575115,44.960586 L12.0099469,67.476306"></path>
+                <path d="M12.0099469,67.476306 L3.22731043,92.5756391"></path>
+                <path d="M3.22731043,92.5756391 L0.25,119"></path>
+                <path d="M0.25,119 L3.22731043,145.424361"></path>
+                <path d="M3.22731043,145.424361 L12.0099469,170.523694"></path>
+                <path d="M12.0099469,170.523694 L26.1575115,193.039414"></path>
+                <path d="M26.1575115,193.039414 L44.960586,211.842489"></path>
+                <path d="M44.960586,211.842489 L67.476306,225.990053"></path>
+                <path d="M67.476306,225.990053 L92.5756391,234.77269"></path>
+                <path d="M92.5756391,234.77269 L119,237.75"></path>
+                <path d="M119,237.75 L145.424361,234.77269"></path>
+                <path d="M145.424361,234.77269 L170.523694,225.990053"></path>
+                <path d="M170.523694,225.990053 L193.039414,211.842489"></path>
+                <path d="M193.039414,211.842489 L211.842489,193.039414"></path>
+                <path d="M211.842489,193.039414 L225.990053,170.523694"></path>
+                <path d="M225.990053,170.523694 L234.77269,145.424361"></path>
+                <path d="M234.77269,145.424361 L237.75,119"></path>
+                <path d="M237.75,119 L234.77269,92.5756391"></path>
+                <path d="M234.77269,92.5756391 L225.990053,67.476306"></path>
+                <path d="M225.990053,67.476306 L211.842489,44.960586"></path>
+                <path d="M211.842489,44.960586 L193.039414,26.1575115"></path>
+                <path d="M193.039414,26.1575115 L170.523694,12.0099469"></path>
+                <path d="M170.523694,12.0099469 L145.424361,3.22731043"></path>
+                <path d="M145.424361,3.22731043 L119,0.25"></path>
+            </g>
+            <g transform="translate(0.000000, 5.000000)" id="Shape" fill="#000000" sketch:type="MSShapeGroup">
+                <path d="M238,0.5 L185.151278,6.45462086"></path>
+                <path d="M185.151278,6.45462086 L134.952612,24.0198939"></path>
+                <path d="M134.952612,24.0198939 L89.9211721,52.3150229"></path>
+                <path d="M89.9211721,52.3150229 L52.3150229,89.9211721"></path>
+                <path d="M52.3150229,89.9211721 L24.0198939,134.952612"></path>
+                <path d="M24.0198939,134.952612 L6.45462086,185.151278"></path>
+                <path d="M6.45462086,185.151278 L0.5,238"></path>
+                <path d="M0.5,238 L6.45462086,290.848722"></path>
+                <path d="M6.45462086,290.848722 L24.0198939,341.047388"></path>
+                <path d="M24.0198939,341.047388 L52.3150229,386.078828"></path>
+                <path d="M52.3150229,386.078828 L89.9211721,423.684977"></path>
+                <path d="M89.9211721,423.684977 L134.952612,451.980106"></path>
+                <path d="M134.952612,451.980106 L185.151278,469.545379"></path>
+                <path d="M185.151278,469.545379 L238,475.5"></path>
+                <path d="M238,475.5 L290.848722,469.545379"></path>
+                <path d="M290.848722,469.545379 L341.047388,451.980106"></path>
+                <path d="M341.047388,451.980106 L386.078828,423.684977"></path>
+                <path d="M386.078828,423.684977 L423.684977,386.078828"></path>
+                <path d="M423.684977,386.078828 L451.980106,341.047388"></path>
+                <path d="M451.980106,341.047388 L469.545379,290.848722"></path>
+                <path d="M469.545379,290.848722 L475.5,238"></path>
+                <path d="M475.5,238 L469.545379,185.151278"></path>
+                <path d="M469.545379,185.151278 L451.980106,134.952612"></path>
+                <path d="M451.980106,134.952612 L423.684977,89.9211721"></path>
+                <path d="M423.684977,89.9211721 L386.078828,52.3150229"></path>
+                <path d="M386.078828,52.3150229 L341.047388,24.0198939"></path>
+                <path d="M341.047388,24.0198939 L290.848722,6.45462086"></path>
+                <path d="M290.848722,6.45462086 L238,0.5"></path>
+            </g>
+            <path d="M238,243 L238,5.5" id="Shape" fill="#000000" sketch:type="MSShapeGroup"></path>
+            <path d="M238,243 L185.151278,11.4546209" id="Shape" fill="#000000" sketch:type="MSShapeGroup"></path>
+            <path d="M238,243 L134.952612,29.0198939" id="Shape" fill="#000000" sketch:type="MSShapeGroup"></path>
+            <path d="M238,243 L89.9211721,57.3150229" id="Shape" fill="#000000" sketch:type="MSShapeGroup"></path>
+            <path d="M238,243 L52.3150229,94.9211721" id="Shape" fill="#000000" sketch:type="MSShapeGroup"></path>
+            <path d="M238,243 L24.0198939,139.952612" id="Shape" fill="#000000" sketch:type="MSShapeGroup"></path>
+            <path d="M238,243 L6.45462086,190.151278" id="Shape" fill="#000000" sketch:type="MSShapeGroup"></path>
+            <path d="M238,243 L0.5,243" id="Shape" fill="#000000" sketch:type="MSShapeGroup"></path>
+            <path d="M238,243 L6.45462086,295.848722" id="Shape" fill="#000000" sketch:type="MSShapeGroup"></path>
+            <path d="M238,243 L24.0198939,346.047388" id="Shape" fill="#000000" sketch:type="MSShapeGroup"></path>
+            <path d="M238,243 L52.3150229,391.078828" id="Shape" fill="#000000" sketch:type="MSShapeGroup"></path>
+            <path d="M238,243 L89.9211721,428.684977" id="Shape" fill="#000000" sketch:type="MSShapeGroup"></path>
+            <path d="M238,243 L134.952612,456.980106" id="Shape" fill="#000000" sketch:type="MSShapeGroup"></path>
+            <path d="M238,243 L185.151278,474.545379" id="Shape" fill="#000000" sketch:type="MSShapeGroup"></path>
+            <path d="M238,243 L238,480.5" id="Shape" fill="#000000" sketch:type="MSShapeGroup"></path>
+            <path d="M238,243 L290.848722,474.545379" id="Shape" fill="#000000" sketch:type="MSShapeGroup"></path>
+            <path d="M238,243 L341.047388,456.980106" id="Shape" fill="#000000" sketch:type="MSShapeGroup"></path>
+            <path d="M238,243 L386.078828,428.684977" id="Shape" fill="#000000" sketch:type="MSShapeGroup"></path>
+            <path d="M238,243 L423.684977,391.078828" id="Shape" fill="#000000" sketch:type="MSShapeGroup"></path>
+            <path d="M238,243 L451.980106,346.047388" id="Shape" fill="#000000" sketch:type="MSShapeGroup"></path>
+            <path d="M238,243 L469.545379,295.848722" id="Shape" fill="#000000" sketch:type="MSShapeGroup"></path>
+            <path d="M238,243 L475.5,243" id="Shape" fill="#000000" sketch:type="MSShapeGroup"></path>
+            <path d="M238,243 L469.545379,190.151278" id="Shape" fill="#000000" sketch:type="MSShapeGroup"></path>
+            <path d="M238,243 L451.980106,139.952612" id="Shape" fill="#000000" sketch:type="MSShapeGroup"></path>
+            <path d="M238,243 L423.684977,94.9211721" id="Shape" fill="#000000" sketch:type="MSShapeGroup"></path>
+            <path d="M238,243 L386.078828,57.3150229" id="Shape" fill="#000000" sketch:type="MSShapeGroup"></path>
+            <path d="M238,243 L341.047388,29.0198939" id="Shape" fill="#000000" sketch:type="MSShapeGroup"></path>
+            <path d="M238,243 L290.848722,11.4546209" id="Shape" fill="#000000" sketch:type="MSShapeGroup"></path>
+            <path d="M238,5.5 L185.151278,11.4546209 L134.952612,29.0198939 L98.3320495,67.8619296 L133.737885,159.853738 L43.6846656,149.422667 L141.075104,220.877525 L108.1825,243 L51.9301333,285.469233 L85.8815426,316.256388 L123.432369,334.364637 L111.851646,401.185032 L186.620572,349.690481 L185.151278,474.545379 L238,480.5 L287.075323,458.013039 L341.047388,456.980106 L386.078828,428.684977 L423.684977,391.078828 L451.980106,346.047388 L469.545379,295.848722 L475.5,243 L450.21134,194.564146 L451.980106,139.952612 L408.217418,107.256138 L382.0807,62.3285173 L341.047388,29.0198939 L290.848722,11.4546209 L238,5.5 Z" id="Shape" stroke="#FF7F0E" fill-opacity="0.5" fill="#FF7F0E" sketch:type="MSShapeGroup"></path>
+            <path d="M238,45.28125 L185.151278,11.4546209 L134.952612,29.0198939 L120.573489,95.7518132 L91.4017106,126.091765 L75.8244776,164.900385 L49.3368251,199.938861 L123.78625,243 L192.524488,253.379489 L110.232479,304.529595 L199.024723,274.081746 L115.701696,396.357223 L210.424519,300.261076 L185.151278,474.545379 L238,480.5 L290.848722,474.545379 L341.047388,456.980106 L386.078828,428.684977 L423.684977,391.078828 L451.980106,346.047388 L469.545379,295.848722 L475.5,243 L469.545379,190.151278 L430.582096,150.257351 L415.941914,101.096059 L378.067763,67.3605802 L337.718957,35.9314513 L283.957248,41.6481383 L238,45.28125 Z" id="Shape" stroke="#2CA02C" fill-opacity="0.5" fill="#2CA02C" sketch:type="MSShapeGroup"></path>
+            <g transform="translate(38.000000, 0.000000)" id="Oval" fill="#FF7F0E" sketch:type="MSShapeGroup">
+                <circle cx="200" cy="5.5" r="5"></circle>
+                <circle cx="147.151278" cy="11.4546209" r="5"></circle>
+                <circle cx="96.952612" cy="29.0198939" r="5"></circle>
+                <circle cx="60.3320495" cy="67.8619296" r="5"></circle>
+                <circle cx="95.7378854" cy="159.853738" r="5"></circle>
+                <circle cx="5.68466563" cy="149.422667" r="5"></circle>
+                <circle cx="103.075104" cy="220.877525" r="5"></circle>
+                <circle cx="70.1825" cy="243" r="5"></circle>
+                <circle cx="13.9301333" cy="285.469233" r="5"></circle>
+                <circle cx="47.8815426" cy="316.256388" r="5"></circle>
+                <circle cx="85.4323691" cy="334.364637" r="5"></circle>
+                <circle cx="73.8516465" cy="401.185032" r="5"></circle>
+                <circle cx="148.620572" cy="349.690481" r="5"></circle>
+                <circle cx="147.151278" cy="474.545379" r="5"></circle>
+                <circle cx="200" cy="480.5" r="5"></circle>
+                <circle cx="249.075323" cy="458.013039" r="5"></circle>
+                <circle cx="303.047388" cy="456.980106" r="5"></circle>
+                <circle cx="348.078828" cy="428.684977" r="5"></circle>
+                <circle cx="385.684977" cy="391.078828" r="5"></circle>
+                <circle cx="413.980106" cy="346.047388" r="5"></circle>
+                <circle cx="431.545379" cy="295.848722" r="5"></circle>
+                <circle cx="437.5" cy="243" r="5"></circle>
+                <circle cx="412.21134" cy="194.564146" r="5"></circle>
+                <circle cx="413.980106" cy="139.952612" r="5"></circle>
+                <circle cx="370.217418" cy="107.256138" r="5"></circle>
+                <circle stroke="#000000" cx="344.0807" cy="62.3285173" r="5"></circle>
+                <circle cx="303.047388" cy="29.0198939" r="5"></circle>
+                <circle cx="252.848722" cy="11.4546209" r="5"></circle>
+            </g>
+            <g transform="translate(44.000000, 6.000000)" id="Oval" fill="#2CA02C" sketch:type="MSShapeGroup">
+                <circle cx="194" cy="39.28125" r="5"></circle>
+                <circle cx="141.151278" cy="5.45462086" r="5"></circle>
+                <circle cx="90.952612" cy="23.0198939" r="5"></circle>
+                <circle cx="76.5734894" cy="89.7518132" r="5"></circle>
+                <circle cx="47.4017106" cy="120.091765" r="5"></circle>
+                <circle cx="31.8244776" cy="158.900385" r="5"></circle>
+                <circle cx="5.33682507" cy="193.938861" r="5"></circle>
+                <circle cx="79.78625" cy="237" r="5"></circle>
+                <circle cx="148.524488" cy="247.379489" r="5"></circle>
+                <circle cx="66.2324786" cy="298.529595" r="5"></circle>
+                <circle cx="155.024723" cy="268.081746" r="5"></circle>
+                <circle cx="71.701696" cy="390.357223" r="5"></circle>
+                <circle cx="166.424519" cy="294.261076" r="5"></circle>
+                <circle cx="141.151278" cy="468.545379" r="5"></circle>
+                <circle cx="194" cy="474.5" r="5"></circle>
+                <circle cx="246.848722" cy="468.545379" r="5"></circle>
+                <circle cx="297.047388" cy="450.980106" r="5"></circle>
+                <circle cx="342.078828" cy="422.684977" r="5"></circle>
+                <circle cx="379.684977" cy="385.078828" r="5"></circle>
+                <circle cx="407.980106" cy="340.047388" r="5"></circle>
+                <circle cx="425.545379" cy="289.848722" r="5"></circle>
+                <circle cx="431.5" cy="237" r="5"></circle>
+                <circle cx="425.545379" cy="184.151278" r="5"></circle>
+                <circle cx="386.582096" cy="144.257351" r="5"></circle>
+                <circle cx="371.941914" cy="95.0960592" r="5"></circle>
+                <circle cx="334.067763" cy="61.3605802" r="5"></circle>
+                <circle cx="293.718957" cy="29.9314513" r="5"></circle>
+                <circle cx="239.957248" cy="35.6481383" r="5"></circle>
+            </g>
+            <path d="M238,206.87625 L185.151278,11.4546209 L162.899064,87.0512987 L128.673401,105.908781 L107.073523,138.589618 L102.999951,177.987403 L125.098473,217.230963 L133.69,243 L238,243 L110.360867,304.467767 L109.598838,345.39651 L110.207971,403.246135 L218.266425,283.97719 L185.151278,474.545379 L238,480.5 L290.848722,474.545379 L341.047388,456.980106 L386.078828,428.684977 L423.684977,391.078828 L451.980106,346.047388 L469.545379,295.848722 L475.5,243 L469.545379,190.151278 L441.281101,145.104981 L423.684977,94.9211721 L378.067763,67.3605802 L341.047388,29.0198939 L290.848722,11.4546209 L238,206.87625 Z" id="Shape" stroke="#1F77B4" fill-opacity="0.75" fill="#1F77B4" sketch:type="MSShapeGroup"></path>
+            <g transform="translate(97.000000, 6.000000)" id="Oval" fill="#1F77B4" sketch:type="MSShapeGroup">
+                <circle stroke="#000000" stroke-width="3" cx="141" cy="200.87625" r="10"></circle>
+                <circle cx="88.1512782" cy="5.45462086" r="5"></circle>
+                <circle cx="65.8990636" cy="81.0512987" r="5"></circle>
+                <circle cx="31.6734013" cy="99.9087814" r="5"></circle>
+                <circle cx="10.0735227" cy="132.589618" r="5"></circle>
+                <circle cx="5.99995104" cy="171.987403" r="5"></circle>
+                <circle cx="28.0984731" cy="211.230963" r="5"></circle>
+                <circle cx="36.69" cy="237" r="5"></circle>
+                <circle cx="141" cy="237" r="5"></circle>
+                <circle cx="13.3608667" cy="298.467767" r="5"></circle>
+                <circle cx="12.5988383" cy="339.39651" r="5"></circle>
+                <circle cx="13.2079715" cy="397.246135" r="5"></circle>
+                <circle cx="121.266425" cy="277.97719" r="5"></circle>
+                <circle cx="88.1512782" cy="468.545379" r="5"></circle>
+                <circle cx="141" cy="474.5" r="5"></circle>
+                <circle cx="193.848722" cy="468.545379" r="5"></circle>
+                <circle cx="244.047388" cy="450.980106" r="5"></circle>
+                <circle cx="289.078828" cy="422.684977" r="5"></circle>
+                <circle cx="326.684977" cy="385.078828" r="5"></circle>
+                <circle cx="354.980106" cy="340.047388" r="5"></circle>
+                <circle cx="372.545379" cy="289.848722" r="5"></circle>
+                <circle cx="378.5" cy="237" r="5"></circle>
+                <circle cx="372.545379" cy="184.151278" r="5"></circle>
+                <circle cx="344.281101" cy="139.104981" r="5"></circle>
+                <circle cx="326.684977" cy="88.9211721" r="5"></circle>
+                <circle cx="281.067763" cy="61.3605802" r="5"></circle>
+                <circle cx="244.047388" cy="23.0198939" r="5"></circle>
+                <circle cx="193.848722" cy="5.45462086" r="5"></circle>
+            </g>
+        </g>
+    </g>
+</svg>
