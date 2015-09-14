@@ -40,7 +40,7 @@ var vis = d3.select(".viz").append("svg:svg")
     .attr("width", w)
     .attr("height", h);
 
-d3.json("/js/posts/student-group-allocations/data.json", function(json) {
+d3.json("/datasets/student-group-allocations/data.json", function(json) {
   root = json;
   root.fixed = true;
   root.x = w / 2;

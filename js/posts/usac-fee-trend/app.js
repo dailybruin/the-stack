@@ -32,7 +32,7 @@ for (var key in FEES) {
 var breakdownChart = c3.generate({
   bindto: '#breakdown',
   data: {
-    url: '/js/posts/usac-fee-trend/usac-fees-historical.csv',
+    url: '/datasets/usac-fee-trend/usac-fees-historical.csv',
     type: 'bar',
     groups: [
       feeNames
@@ -108,7 +108,7 @@ var breakdownChart = c3.generate({
 var comparisonChart = c3.generate({
   bindto: '#comparison',
   data: {
-    url: '/js/posts/usac-fee-trend/historical-increase-ratio.csv',
+    url: '/datasets/usac-fee-trend/historical-increase-ratio.csv',
     type: 'area'
   },
   axis: {

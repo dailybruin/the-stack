@@ -13,7 +13,7 @@ var stats, yearStats, globalSuccessRate = 0.66;
 var startYear = 1986, endYear = 2015;
 
 $(function(){
-    $.getJSON('/js/posts/usac-endorsements-vs-election-results/data.json', function(res) {
+    $.getJSON('/datasets/usac-endorsements-vs-election-results/data.json', function(res) {
         completeData = res;
         completeData.sort(function(a, b) {
             if (a.endorsed == b.endorsed)
