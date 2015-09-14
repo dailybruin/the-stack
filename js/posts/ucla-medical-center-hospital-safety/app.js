@@ -1,5 +1,5 @@
 (function(){
-  var dataUrl = '/js/posts/ucla-medical-center-hospital-safety/scores.json';
+  var dataUrl = '/datasets/ucla-medical-center-hospital-safety/scores.json';
   $.getJSON(dataUrl, function(jdata) {
     var data =jdata;
     var chart = RadarChart.chart();

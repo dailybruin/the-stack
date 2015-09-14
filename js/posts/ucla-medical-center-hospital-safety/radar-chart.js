@@ -308,7 +308,7 @@ var RadarChart = {
                         $("#field-desc").show();
                         $(".measure-desc").show();
                         $(".legend").show();
-                        $.getJSON('/js/posts/ucla-medical-center-hospital-safety/scores.json', function(jdata) {
+                        $.getJSON('/datasets/ucla-medical-center-hospital-safety/scores.json', function(jdata) {
                           var data = jdata;
                           var chart = RadarChart.chart();
                           var cfg = chart.config();
@@ -320,7 +320,7 @@ var RadarChart = {
                           });
                       });;
 
-              d3.tsv("/js/posts/ucla-medical-center-hospital-safety/hospitalbar.tsv", type, function(error, data) {
+              d3.tsv("/datasets/ucla-medical-center-hospital-safety/hospitalbar.tsv", type, function(error, data) {
                 x.domain(data.map(function(d) { return d.hospital_name; }));
                 y.domain([0, d3.max(data, function(d) { return d["score_"+score_index]; })]);
 

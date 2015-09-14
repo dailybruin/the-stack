@@ -20,7 +20,7 @@
 app.controller('MagnetController', function($http, $scope){
    	var viz = this;
    	viz.initialfields = initialfields;
-   	$http.get('/js/posts/higher-education-executive-pay/pubexecpay2013.json').success(function(data) {
+   	$http.get('/datasets/higher-education-executive-pay/pubexecpay2013.json').success(function(data) {
   		viz.data = data;
 	  	});
   	});
