@@ -86,7 +86,9 @@ layout: default
         {% if author.twitter %}
         <li><a href="https://twitter.com/{{ author.twitter }}"><img src="/img/icons/twitter.svg" /> {{ author.twitter }}</a></li>
         {% endif %}
+        {% if author.email %}
         <li><a href="mailto:{{ author.email }}"><img src="/img/icons/email.svg" /> {{ author.email }}</a></li>
+        {% endif %}
         {% if author.website %}
         <!--<li><a href="{{ author.website }}"><img src="/img/icons/globe.svg" /> {{ author.website | replace:'http://','' | replace:'https://','' }}</a></li>-->
         {% endif %}
