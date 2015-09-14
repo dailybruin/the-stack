@@ -8,8 +8,8 @@ key_takeaways:
     - Hooligan Theatre Company was allocated the most this year, $35,560.19. Most student groups receive less than a tenth of this.
     - Search for your student group below to see how it compares to other groups.
 featured_image:
-    url: /usac-endorsements-vs-election-results/visualization.svg
-og_image: /usac-endorsements-vs-election-results/visualization.png
+    url: /student-group-allocations/visualization.svg
+og_image: /student-group-allocations/visualization.png
 stylesheets:
     - /css/posts/student-group-allocations/app.css
 scripts:

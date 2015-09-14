@@ -1,6 +1,6 @@
 ---
 title:  Welcome to The Stack
-teaser: The Stack is Daily Bruin’s data journalism and newsroom tech blog
+teaser: The Stack is Daily Bruin’s data journalism and newsroom tech blog.
 authors:
     - neil_bedi
 key_takeaways:
