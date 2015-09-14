@@ -1,0 +1,55 @@
+html, body {
+	overflow-x: hidden;
+}
+
+#d3-container {
+	height: 100vh;
+	background-color: #ffffff;
+}
+
+.footer {
+	/*padding: 6px 10px 0 0;*/
+	text-align: right;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+#explanations {
+	margin-top: 20px;
+}
+
+#position-dropdown {
+	margin-top: 20px;
+	width: 300px;
+	/*white-space: nowrap;*/
+	/*overflow: hidden;*/
+}
+
+#info-container {
+	padding: 2rem;
+}
+
+#stat-eaw>.value {
+	color: #ffe11a;
+}
+
+#stat-eal>.value {
+	color: #807F83;
+}
+
+#stat-neaw>.value {
+	color: #004358;
+}
+
+#stat-neal>.value {
+	color: #fd7400;
+}
+
+.ui.progress {
+	  margin: 1em 0 4em;
+}
+
+.total {
+	text-align: center;
+	font-size: 1.5rem;
+}

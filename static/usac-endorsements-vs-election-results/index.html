@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  	<script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.js" charset="utf-8"></script>
+  	<script src="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.12.1/semantic.min.js"></script>
+  	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.12.1/semantic.min.css">
+  	<link rel="stylesheet" href="/css/posts/usac-endorsements-vs-election-results/app.css">
+  	<script src="/js/posts/usac-endorsements-vs-election-results/app.js"></script>
+  </head>
+  <body>
+  	<div class="ui stackable grid" id="container">
+  		<div class="nine wide column" id="d3-container"></div>
+  		<div class="seven wide column" id="info-container">
+  			<h1>Daily Bruin USAC endorsement vs. election results for contested positions</h1>
+  			<p class="total"></p>
+  			<div class="ui statistics">
+  				<div class="statistic" id="stat-eaw">
+  					<div class="value">27</div>
+  					<div class="label">endorsed and won</div>
+  				</div>
+  				<div class="statistic" id="stat-eal">
+  					<div class="value">27</div>
+  					<div class="label">endorsed and lost</div>
+  				</div>
+  				<div class="statistic" id="stat-neaw">
+  					<div class="value">27</div>
+  					<div class="label">not endorsed and won</div>
+  				</div>
+  				<div class="statistic" id="stat-neal">
+  					<div class="value">27</div>
+  					<div class="label">not endorsed and lost</div>
+  				</div>
+  			</div>
+  			<div class="ui teal progress" id="success-progress">
+  				<div class="bar"></div>
+  				<div class="label"></div>
+  			</div>
+  			<div class="ui large buttons changeType">
+  				<p>Choose a way to organize the data:</p>
+  				<div class="ui yellow button" id="changeType-result" onclick="changeType('result')">By result</div>
+  				<div class="or"></div>
+  				<div class="ui blue button" id="changeType-year" onclick="changeType('year')">By year</div>
+  			</div>
+  			<div class="row">
+  				<div class="ui teal floating disabled dropdown labeled button" id="position-dropdown" data-type="position">
+  					<i class="suitcase icon"></i>
+  					<div class="text">Position</div>
+  					<i class="dropdown icon"></i>
+  					<div class="menu">
+  						<div class="item">All</div>
+  						<div class="item">President</div>
+  						<div class="item">Internal Vice President</div>
+  						<div class="item">External Vice President</div>
+  						<div class="item">Academic Affairs Commissioner</div>
+  						<div class="item">Financial Supports Commissioner</div>
+  						<div class="item">General Representative</div>
+  						<div class="item">Facilities Commissioner</div>
+  						<div class="item">Cultural Affairs Commissioner</div>
+  						<div class="item">Campus Events Commissioner</div>
+  						<div class="item">Student Welfare Commissioner</div>
+  					</div>
+  				</div>
+  			</div>
+  			<h3>Notes on data:</h3>
+  			<p >The years 2009 and 1992 have no data. 2009 has no data because the editorial board decided not to endorse candidates that year. 1992 has no data because it is missing from the Daily Bruin's archives.</p>
+  			<p><a href="https://docs.google.com/spreadsheets/d/1aQLmaEXESo17dzU_zr0ThV_ws-LpViZrJHTyxkF8G8g/edit?usp=sharing">Find all data used on this public Google Spreadsheet.</a></p>
+  		</div>
+  	</div>
+  	<div class="footer">
+  		<p>Graphic by <a href="mailto:tguo@media.ucla.edu">Tim Guo/Daily Bruin developer</a></p>
+  	</div>
+  </body>
+</html>
