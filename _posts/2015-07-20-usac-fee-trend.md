@@ -4,9 +4,9 @@ teaser: The number of fees students pay to USAC has increased from two to 17 in 
 authors:
     - harrison_liddiard
 key_takeaways:
-    - The money students pay to USAC goes toward officer stipends, office budgets, funds, administrative costs and student groups.
-    - Hooligan Theatre Company was allocated the most this year, $35,560.19. Most student groups receive less than a tenth of this.
-    - Search for your student group below to see how it compares to other groups.
+    - Undergrads will pay $160 to USAC this year.
+    - New fees result from ballot measures passed by students.
+    - USAC fees have increased less than tuition has increased.
 featured_image:
     url: /usac-fee-trend/visualization.svg
 og_image: /usac-fee-trend/visualization.png
