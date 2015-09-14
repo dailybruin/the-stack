@@ -5,7 +5,7 @@
 .chart-container #fee-explainer {
     display: none; /* hidden by default */
     position: absolute;
-    top: 4%;
+    top: 16%;
     left: 8%;
     background-color: rgba(255,255,255, 0.8);
     box-shadow: 0 4px 20px rgba(0,0,0, 0.5);
