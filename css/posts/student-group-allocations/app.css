@@ -1,0 +1,66 @@
+.filter {
+  overflow: hidden;
+  margin: auto;
+  text-align: center;
+}
+
+.search {
+  margin-top: 1.5rem;
+  display: inline-block;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  min-width: 400px;
+}
+
+.search_button {
+  top: -5px;
+  display: inline-block;
+  font-size: 1rem;
+  border-style: solid;
+  border-width: 0px;
+  cursor: pointer;
+  font-family: "Helvetica Neue",Helvetica,Roboto,Arial,sans-serif;
+  margin-top: -5px;
+  position: relative;
+  padding: 0.65rem 1.5rem;
+  font-size: 1rem;
+  background-color: #008cba;
+  border-color: #007095;
+  color: #fff;
+}
+
+.viz {
+  margin: 1rem auto;
+  /*text-align: center;*/
+}
+svg {
+  border: solid thin lightgrey;
+}
+
+.node circle {
+  cursor: pointer;
+  stroke: #20221E;
+  stroke-width: 1.5px;
+}
+
+.node text {
+  font: 10px sans-serif;
+  pointer-events: none;
+  text-anchor: middle;
+}
+
+line.link {
+  fill: none;
+  stroke: #9ecae1;
+  stroke-width: 1.5px;
+}
+.d3-tip {
+  line-height: 1;
+  font-size: 14px;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  border-radius: 2px;
+  pointer-events: none;
+  font-family: 'Helvetica', sans-serif;
+}
