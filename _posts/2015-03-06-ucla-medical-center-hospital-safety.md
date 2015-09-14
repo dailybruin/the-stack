@@ -5,7 +5,7 @@ authors:
     - neil_bedi
 key_takeaways:
     - Ronald Reagan is *significantly* worse than other UC hospitals at leaving dangerous objects in patients' bodies.
-    - Its patients also have more accidental cuts and tears and collapsed lungs after discharge than UCLA's Medical Center in Santa Monica or UC Davis' medical center.
+    - Its patients also have more accidental cuts and tears and collapsed lungs after discharge than patients at UCLA's Medical Center in Santa Monica or UC Davis' medical center.
 featured_image:
     url: ucla-medical-center-hospital-safety/visualization.svg
 og_image: ucla-medical-center-hospital-safety/visualization.png
