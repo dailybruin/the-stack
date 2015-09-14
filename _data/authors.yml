@@ -16,3 +16,11 @@ neil_bedi:
     twitter: _neilbedi
     github: nbedi
     website: http://neilbedi.com
+katie_shepherd:
+    name: Katie Shepherd
+    title: Data Reporter Extraordinare
+    bio: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam et posuere orci, nec laoreet lectus. Praesent nec augue rutrum nunc convallis consectetur vitae ut libero. Quisque volutpat, justo non iaculis imperdiet, felis nibh varius orci, interdum condimentum dui ipsum eu diam.
+byron_lutz:
+    name: Byron Lutz
+tim_guo:
+    name: Tim Guo
