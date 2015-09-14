@@ -23,15 +23,15 @@
         &:hover h2, &:hover h3 {
             color: $brand-color;
         }
+
+        &:hover .featured-image {
+            opacity: 0.9;
+        }
     }
 
     .featured-image {
         display: block;
         margin: 0 auto $spacing-unit/2;
-
-        &:hover {
-            opacity: 0.9;
-        }
     }
 }
 
