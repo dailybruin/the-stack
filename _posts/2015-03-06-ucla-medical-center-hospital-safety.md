@@ -1,6 +1,6 @@
 ---
 title:  Shaping up Ronald Reagan UCLA Medical Center’s hospital safety score
-teaser: See where UCLA’s Westwood hospital does well and where it performs poorly
+teaser: See where UCLA’s Westwood hospital does well and where it performs poorly.
 authors:
     - neil_bedi
 key_takeaways:

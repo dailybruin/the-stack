@@ -1,6 +1,6 @@
 ---
 title:  Visualizing divisions in public higher education executive pay
-teaser: Demographics of university administrators compared to how much they make
+teaser: Demographics of university administrators compared to how much they make.
 authors:
     - neil_bedi
 key_takeaways:

@@ -1,6 +1,6 @@
 ---
 title:  Behind the scenes with Meow, our in-house social media manager
-teaser: Find out why we ditched existing platforms like Hootsuite and decided to roll our own solution
+teaser: Why we ditched existing platforms like Hootsuite and decided to roll our own solution.
 authors:
     - byron_lutz
 key_takeaways:
