@@ -28,6 +28,10 @@
     .featured-image {
         display: block;
         margin: 0 auto $spacing-unit/2;
+
+        &:hover {
+            opacity: 0.9;
+        }
     }
 }
 
