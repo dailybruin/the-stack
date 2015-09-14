@@ -9,7 +9,7 @@ The Stack is [Daily Bruin’s](http://dailybruin.com/) data journalism and newsr
 
 Information is being created faster than anyone can consume it. Most of it is noise to the average person, but occasionally there's something important. This important data usually never reaches people because it is difficult to find, difficult to collect, or difficult to understand. News organizations have not kept pace finding, analyzing, and explaining this important information to the people who care about it.
 
-The Stack exists to fulfill this need for the UCLA community. We will examine data from UC employee pay and weaknesses of campus systems to 800 Degrees' pizzas of the day and where you should go over spring break.
+The Stack exists to fulfill this need for the UCLA community. We will examine data from UC employee pay and weaknesses of campus systems to 800 Degrees' pizzas of the day and where you should go for spring break.
 
 If it's something you care about, and there's insight to be gained from data, we'll cover it.
 
