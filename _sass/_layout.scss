@@ -227,6 +227,10 @@
     > li {
         margin-bottom: $spacing-unit + ($spacing-unit/2);
         border-bottom: 1px solid $grey-color-light;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
     }
 }
 
