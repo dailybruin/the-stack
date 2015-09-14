@@ -17,7 +17,7 @@ The Daily Bruin has one of the largest and most accomplished teams of student de
 
 The Daily Bruin is a community newspaper, and we plan on giving back to the community – both our own Westwood community and larger communities of university news organizations and individuals interested in data for public good. That's why we're making all the code on this blog [available under open-source licenses on GitHub](https://github.com/daily-bruin/) and all the datasets we collect and parse [available to everyone](https://github.com/daily-bruin/datasets/).
 
-Whether as a reader or a collaborator, we hope you'll join us on this exciting data experiment.
+Whether as a reader or a collaborator, we hope you'll join us in this exciting data experiment.
 
 ---
 
