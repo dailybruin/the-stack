@@ -76,9 +76,11 @@ layout: default
     {% for author_key in page.authors %}
       {% assign author = site.data.authors[author_key] %}
     <div class="author">
-      {% if author.mug %}<img class="mug" src="/img/mugs/{{ author.mug }}" />{% endif %}
+      {% if author.mug %}<img class="mug" src="/img/mugs/{{ author_key }}.jpg" />{% endif %}
       <h3>{{ author.name }}</h3>{% if author.title %}, <h4>{{ author.title }}</h4>{% endif %}
-      <p>{{ author.bio }}</p>
+      {% if author.bio %}
+      {{ author.bio | markdownify }}
+      {% endif %}
       <ul class="contact">
         {% if author.github %}
         <li><a href="https://github.com/{{ author.github }}"><img src="/img/icons/github.svg" /> {{ author.github }}</a></li>
