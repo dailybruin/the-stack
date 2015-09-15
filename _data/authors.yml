@@ -2,7 +2,7 @@ harrison_liddiard:
     name: Harrison Liddiard
     title: Chief Data Nerd
     bio: Harrison is the data editor at the Daily Bruin. He is currently an undergrad studying lingusitics and computer science. He is also a board member of UCLA's ACM chapter. When he's not data-nerding, he enjoys casual web-apping, design, scuba diving, pretending he's good at musical instruments, and romantic walks on the beach.
-    mug: yes
+    mug: Yes
     twitter: HLiddiard
     email: hliddiard@media.ucla.edu
     github: liddiard
@@ -11,7 +11,7 @@ neil_bedi:
     name: Neil Bedi
     title: Beditor in Chief
     bio: Neil is the creator of The Stack and was its editor from 2014-2015. He has also been the Daily Bruin's photo editor and a member of the editorial board. He currently works as an analyst at JP Morgan. He loves journalism, creating data visualizations, [reminding people of their own mortality](https://chrome.google.com/webstore/detail/motivation/kcngcjbgnnhcdgnaonkmjheanflddmpo), and a good beard.
-    mug: yes
+    mug: Yes
     email: nbedi@media.ucla.edu
     twitter: _neilbedi
     github: nbedi
@@ -20,7 +20,7 @@ katie_shepherd:
     name: Katie Shepherd
     title: Data Reporter Extraordinare
     bio: Katie has been a reporter, editor, and developer for the Daily Bruin, serving as the campus news editor and an assitant opinion editor. She's worked at the Los Angeles Times and is currently pursuing a master's at Columbia University Graduate School of Journalism. She's passionate about policy, government, Netflix marathons, and spicy wasabi peas.
-    mug: yes
+    mug: Yes
     email: kshepherd@media.ucla.edu
     twitter: katemshepherd
     github: ksheps
@@ -28,8 +28,8 @@ katie_shepherd:
 byron_lutz:
     name: Byron Lutz
     title: Data Sage
-    bio: Byron is the creator of the Daily Bruin's online department. He's worked on countless projects for the Daily Bruin including [a website](https://github.com/daily-bruin/gryphondor), [a social media manager](https://github.com/daily-bruin/meow/), and [a reporting project in the Philippines](http://yolanda.dailybruin.com), to name a few. He currently works as a software developer at [Factual](https://factual.com) in Los Angeles. He loves UniCamp (like a lot), experimenting with hairstyles, and [holding watermelons](https://www.facebook.com/photo.php?fbid=10203809355127941&set=a.1522595138443.2073979.1041533851&type=1&permPage=1).
-    mug: yes
+    bio: Byron is the creator of the Daily Bruin's online department. He's worked on countless projects for The Bruin including [a website](https://github.com/daily-bruin/gryphondor), [a social media manager](https://github.com/daily-bruin/meow/), and [a reporting project in the Philippines](http://yolanda.dailybruin.com). He currently works as a software developer at [Factual](https://factual.com) in Los Angeles. He loves UniCamp (like a lot), experimenting with hairstyles, and [holding watermelons](https://www.facebook.com/photo.php?fbid=10203809355127941&set=a.1522595138443.2073979.1041533851&type=1&permPage=1).
+    mug: Yes
     email: byronlutz@gmail.com
     twitter: byronlutz
     github: blutz
@@ -38,7 +38,7 @@ tim_guo:
     name: Tim Guo
     title: D3 Magnate
     bio: Tim has been a developer for the Daily Bruin. He's worked at Hulu and is currently studying computer science at Brown University. His interests include photogrpahy and psychology. He considers his greatest skill to be his ability to consume apples whole.
-    mug: yes
+    mug: Yes
     email: tguo@media.ucla.edu
     twitter: https://twitter.com/timguoqk
     github: timguoqk
