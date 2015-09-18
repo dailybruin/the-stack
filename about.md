@@ -4,8 +4,6 @@ title: About
 permalink: /about/
 ---
 
-## What The Stack is
-
 The Stack is [Daily Bruin](http://dailybruin.com/)'s data journalism and newsroom tech blog. We investigate public data, experiment with technology and apply quantitative insights to real life.
 
 ## Why it exists
