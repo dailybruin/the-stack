@@ -1,0 +1,14 @@
+.post-content h2 {
+    clear: both;
+}
+
+
+.chart {
+    width: 50%;
+    float: left;
+    margin-right: 1em;
+}
+
+.c3-xgrid-line line {
+    stroke: orange;
+}
