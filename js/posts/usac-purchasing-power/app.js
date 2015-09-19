@@ -147,6 +147,10 @@ for (var key in FEES) {
           },
         },
         y: {
+          label: {
+            text: 'Purchasing power in 2015 dollars',
+            position: 'outer-top'
+          },
           tick: {
             format: function(v){
               var formatCurrency = d3.format("$,");

@@ -1,7 +1,10 @@
-.post-content h2 {
+.post-content hr {
     clear: both;
 }
 
+.post-content h2 {
+    clear: both;
+}
 
 .chart {
     width: 50%;
@@ -11,4 +14,16 @@
 
 .c3-xgrid-line line {
     stroke: orange;
+}
+
+.c3-axis-y-label {
+    fill: gray;
+}
+
+@media (max-width: 600px) {
+    .chart {
+        width: 100%;
+        float: none;
+        margin-right: 0;
+    }
 }
