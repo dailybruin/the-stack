@@ -34,7 +34,7 @@ If you have any feedback or questions, email us at [online@media.ucla.edu](onlin
 
 Follow us [on Twitter](https://twitter.com/_thestack/).
 
-[Write a guest post](#) on The Stack or apply to the [Daily Bruin Online department](http://recruiting.dailybruin.com/applications/daily-bruin/web-developer-intern/).
+[Write a guest post](https://docs.google.com/a/media.ucla.edu/forms/d/1LS6u4b-MZk2Vh7OKwm8oK2pdpQbWJfozc0lx-6Dj450/viewform?usp=send_form) on The Stack or apply to the [Daily Bruin Online department](http://recruiting.dailybruin.com/applications/daily-bruin/web-developer-intern/).
 
 ---
 
