@@ -19,7 +19,9 @@ The entire process was error-prone and tedious. And I was tired of leaving Kerck
 
 Before school started in 2013, I worked for two weeks designing and building a new tool that I hoped would make uploading of social media posts much easier.
 
-{% youtube NnyOiVmGqrw %}
+<div class="video-wrapper">
+    <iframe src="https://www.youtube.com/embed/NnyOiVmGqrw" frameborder="0" allowfullscreen></iframe>
+</div>
 
 Meow is an open-source web application built in Django that helps The Bruin manage social media and post to Twitter and Facebook. Here’s how it works:
 
