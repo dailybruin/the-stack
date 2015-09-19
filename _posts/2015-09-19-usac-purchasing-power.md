@@ -119,7 +119,7 @@ Inflation data is from the [Bureau of Labor Statistics' CPI Inflation Calculator
 
 Enrollment data is from the [UCLA office of Academic Planning and Budget (APB)](http://www.aim.ucla.edu/tables/enrollment_history.aspx).
 
-Historical fee is from the Undergraduate Students Association Council.
+Historical fee data is from the Undergraduate Students Association Council.
 
 Note that the numbers in the post assume that every undergraduate counted in APB's enrollment history table pays USAC fees. In reality, a portion of undergraduates do not pay USAC fees including those who are not full-time, studying abroad or nursing students.
 
