@@ -86,19 +86,6 @@ for example, where you want all pages to have a shared header.
 
 `projects.html` is used for the Project Gallery page.
 
-### `_plugins`
-
-Plugins extend the functionality of Jekyll. **Clone plugins from a git repo**
-to add a new plugin here. The reason we do this instead of just dropping the
-`.rb` file in is that if we need to update the plugin, it's easy to run `git
-pull` in that directory.
-
-`jekyll-figure-image-tag` allows in-post images with captions using the
-`figure_img` tag.
-
-`responsive-youtube-jekyll-tag` allows for responsive YouTube video embeds
-with the `youtube` tag.
-
 ### `_posts`
 
 This is where the text and metadata for all posts is stored. Posts follow
