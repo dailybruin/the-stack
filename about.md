@@ -20,7 +20,7 @@ If it's something you care about, and there's insight to be gained from the data
 
 The Daily Bruin has one of the largest and most accomplished teams of news organization student developers in the world. Our team is excited to take risks, explore new ways to tell meaningful stories and build tools to help journalism succeed.
 
-Occasionally we'll geek out to others interested in journalism and computer science about a JavaScript library we're loving or a workflow tool we've built, but for the most part, we'll keep our posts squarely centered on what UCLA students and Westwood residents find important.
+Occasionally we'll geek out to others interested in journalism and computer science about a JavaScript library we're loving or a workflow tool we've built, but for the most part, we'll keep our posts squarely centered on what most UCLA students and Westwood residents find important.
 
 ## How we're giving back
 
