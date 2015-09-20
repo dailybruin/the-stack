@@ -8,6 +8,7 @@ stylesheets:
 
   <ul class="post-list">
     {% for post in paginator.posts %}
+      {% if post.displayed %}
       <li>
         <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
           {% if post.featured_image %}
@@ -17,6 +18,7 @@ stylesheets:
           <h3>{{ post.teaser }}</h3>
         </a>
       </li>
+      {% endif %}
     {% endfor %}
   </ul>
 
