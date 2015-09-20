@@ -23,7 +23,7 @@ Our previous post showed that [student government fees have risen significantly 
 
 Each fee the Undergraduate Students Association Council has added since 2005 is automatically adjusted for inflation every three years, but most fees instituted prior to 2005 are not.      
 
-Portions of many fees go to **funding bodies**, which provide money for student groups. A large percentage of fees, such as the membership fee, goes to funding bodies. Although the membership fee increased from $7 to $10 in 2001, the purchasing power in 2015 dollars of the money USAC gets from the fee has dropped from $400,000 in 1982 to around $300,000 in 2015.
+Portions of many fees go to **funding bodies**, which provide money for student groups. A large percentage of fees, such as the membership fee, goes to funding bodies. Although the membership fee increased from $7 to $10 in 2001, the purchasing power in 2015 dollars of the money USAC gets from the fee has dropped from $1.2 million in 1982 to around $900,000 in 2015.
 
 An increase in the number of undergraduates has brought in slightly more income for USAC in recent years because there are more people paying the same fee, but for most of USAC's history, inflation has resulted in a net loss in purchasing power for many of the fees that don't get adjusted for inflation.
 
