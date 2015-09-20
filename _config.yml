@@ -22,6 +22,7 @@ defaults:
       type: posts
     values:
       layout: post
+      displayed: Yes
 
 # Outputting
 permalink: pretty # don't have `.html` on the end of permalinks
