@@ -14,7 +14,7 @@ displayed: No
 ---
 [Lyst is our new real-time analytics dashboard](http://lyst.dailybruin.com/) powered by [Google Analytics](http://google.com/analytics/).
 
-The project was originally just a solution to provide our staff of over 100 people easy, on-demand access to our user analytics.
+The project was originally just a solution to provide our staff of over 250 people easy, on-demand access to our user analytics.
 
 We decided to go one step further and make it a tool to publicly display our analytics.
 
@@ -56,10 +56,12 @@ Using [Google’s well-documented APIs](https://developers.google.com/analytics/
 
 We even added a bare-bones [custom query page](http://lyst.dailybruin.com/custom) to manually query the data using the APIs.
 
+Feel free to [peruse our anaytics with lyst](http://lyst.dailybruin.com/). And of course, keep in mind that our website isn't the only way readers get to our stories – in addition to [dailybruin.com](http://dailybruin.com), we put around 9,000 papers on stands daily and have an [iOS app](https://itunes.apple.com/us/app/the-ucla-daily-bruin/id784097181) for reading stories on mobile devices.
+
 ## What’s next?
 
 Like all of our online work, [lyst is completely open source](http://github.com/nbedi/lyst) and free for you to use.
 
 That means we’re also welcoming contributions or suggestions from any developers. Lyst definitely isn’t perfect and could use a bit of refactoring to make it more efficient and visually engaging.
 
-If you’re interested in contributing or have any questions, feel free to contact us at [online@media.ucla.edu](mailto:online@media.ucla.edu).
+If you’re interested in contributing or have any questions, please get in touch with us at [online@media.ucla.edu](mailto:online@media.ucla.edu).
