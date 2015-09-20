@@ -1,6 +1,6 @@
 ---
-title:  "Introducing lyst, our website analytics viewer"
-teaser: We're making dailybruin.com’s analytics public with a tool we created. Here's why.
+title:  "Introducing lyst, our user analytics dashboard"
+teaser: We're making dailybruin.com’s analytics public with a web application we developed.
 authors:
     - neil_bedi
 key_takeaways:
@@ -25,6 +25,11 @@ Open data allows interested parties – other student newsrooms, media organizat
 
 We soon realized while building this tool that our user analytics data is just another dataset with information others could learn from. After some thought, the pros of making this data free and easy to access outweighed the few cons.
 
+<figure class="image">
+    <img src="/img/posts/introducing-lyst/realtime.png"/>
+    <figcaption>Lyst's home page shows real-time user sessions.</figcaption>
+</figure>
+
 We also hope that, by making this data open, other newsrooms will follow suit – either by using lyst themselves or by creating a similar application.
 
 Being one of the first newsrooms to publicly share its analytics is also exciting. BuzzFeed is the only newsroom we could find that is [doing something similar](http://www.buzzfeed.com/dashboard/buzzfeed).
@@ -40,6 +45,11 @@ But free also means the tool comes with some limitations.
 There is no easy way to share on-demand analytics with a large group of people since the dashboard requires admin access for each individual person. The closest solution Google provides in the dashboard is a reporting feature that can email PDF reports on a scheduled time interval.
 
 We built lyst as a solution that interacts with all the data Google gathers for us.
+
+<figure class="image right">
+    <img src="/img/posts/introducing-lyst/month_sessions_bounces.png"/>
+    <figcaption>Lyst showing sessions vs. bounces over the past month in a scatter plot.</figcaption>
+</figure>
 
 Using [Google’s well-documented APIs](https://developers.google.com/analytics/?hl=en), we’re able to query the data as we wish in our code. The data then populates our customized dashboards to show users the information they want to see.
 
