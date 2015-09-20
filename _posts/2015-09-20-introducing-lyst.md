@@ -1,12 +1,12 @@
 ---
 title:  "Introducing lyst, our user analytics dashboard"
-teaser: We're making dailybruin.com’s analytics public with a web application we developed.
+teaser: We're making dailybruin.com’s analytics public with a Web application we developed.
 authors:
     - neil_bedi
 key_takeaways:
     - Lyst allows you to make a public Google Analytics dashboard for your website.
     - We hope other student publications will follow suit in making their analytics public.
-    - This project is open source, and we welcome collaborators.
+    - This project is open-source, and we welcome collaborators.
 featured_image:
     url: /introducing-lyst/graph.svg
 og_image: /introducing-lyst/graph.png
@@ -14,7 +14,7 @@ displayed: No
 ---
 [Lyst is our new real-time analytics dashboard](http://lyst.dailybruin.com/) powered by [Google Analytics](http://google.com/analytics/).
 
-The project was originally just a solution to provide our staff of over 250 people easy, on-demand access to our user analytics.
+The project was originally just a solution to provide our staff of more than 250 people easy, on-demand access to our user analytics.
 
 We decided to go one step further and make it a tool to publicly display our analytics.
 
@@ -22,9 +22,9 @@ We decided to go one step further and make it a tool to publicly display our ana
 
 We’ve always been a fan of open data at The Stack.
 
-Open data allows interested parties – other student newsrooms, media organizations or even readers – to learn from data we publish.
+Open data allows interested parties – other student newsrooms, media organizations or readers – to learn from the data we publish.
 
-We soon realized while building this tool that our user analytics data is just another dataset with information others could learn from. After some thought, the pros of making this data free and easy to access outweighed the few cons.
+We soon realized while building this tool that our user analytics data is just another dataset with information others could benefit from. After some thought, we decided the pros of making this data free and easy to access outweighed the few cons.
 
 <figure class="image">
     <img src="/img/posts/introducing-lyst/realtime.png"/>
@@ -35,7 +35,7 @@ We also hope that, by making this data open, other newsrooms will follow suit �
 
 Being one of the first newsrooms to publicly share its analytics is also exciting. BuzzFeed is the only newsroom we could find that is [doing something similar](http://www.buzzfeed.com/dashboard/buzzfeed).
 
-We’re excited to join in on this experiment.
+We’re excited to join this experiment.
 
 ## How does lyst work?
 
@@ -60,7 +60,7 @@ Feel free to [peruse our analytics with lyst](http://lyst.dailybruin.com/). And 
 
 ## What’s next?
 
-Like all of our online work, [lyst is completely open source](http://github.com/nbedi/lyst) and free for you to use.
+Like all of our online work, [lyst is completely open-source](http://github.com/nbedi/lyst) and free for you to use.
 
 That means we’re also welcoming contributions or suggestions from any developers. Lyst definitely isn’t perfect and could use a bit of refactoring to make it more efficient and visually engaging.
 
