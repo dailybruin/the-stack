@@ -37,6 +37,18 @@ Being one of the first newsrooms to publicly share its analytics is also excitin
 
 We’re excited to join this experiment.
 
+## lyst in action
+
+Four breaking news posts published throughout the day on Sunday. With lyst, we were able to see how many readers visited the site and how they got there.
+
+A 50 percent spike in analytics occured before the first two posts, [on a fire in Westwood](http://dailybruin.com/2015/09/21/ucla-student-found-dead-after-roebling-structure-fire/), even went online. Readers were visiting older stories on past incidents through Google searches for information on Sunday's fire.
+
+Each post, when published, then generated a 500 percent increase in the active users we normally have for a total ten-fold increase.
+
+The [active user](https://developers.google.com/analytics/devguides/reporting/realtime/dimsmets/user#rt:activeUsers) count stayed at about six times the normal amount for the rest of the day, with updates on football controversy and coverage of Bruin Bash madness keeping the stats up.
+
+We kept track of how well our social media accounts were getting news to our readers — with Facebook as the most effective — and saw that a majority of users were using Google to get to us.
+
 ## How does lyst work?
 
 Google Analytics itself is great platform and, since it’s free, it automatically becomes the preferred tool for a small student newsroom like the Daily Bruin.
