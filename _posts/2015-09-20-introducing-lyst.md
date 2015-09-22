@@ -45,7 +45,7 @@ A 50 percent spike in analytics occured before the first two posts, [on a fire i
 
 Each post, when published, then generated a 500 percent increase in the active users we normally have for a total ten-fold increase.
 
-The [active user](https://developers.google.com/analytics/devguides/reporting/realtime/dimsmets/user#rt:activeUsers) count stayed at about six times the normal amount for the rest of the day, with updates on football controversy and coverage of Bruin Bash madness keeping the stats up.
+The [active user](https://developers.google.com/analytics/devguides/reporting/realtime/dimsmets/user#rt:activeUsers) count stayed at about six times the normal amount for the rest of the day, with [updates on football controversy](http://dailybruin.com/2015/09/21/ishmael-adams-will-not-face-felony-charges-for-alleged-robbery/) and [coverage of Bruin Bash madness](http://dailybruin.com/2015/09/21/cec-cac-run-out-of-bruin-bash-wristbands-despite-guaranteeing-admission/) keeping the stats up.
 
 We kept track of how well our social media accounts were getting news to our readers — with Facebook as the most effective — and saw that a majority of users were using Google to get to us.
 
