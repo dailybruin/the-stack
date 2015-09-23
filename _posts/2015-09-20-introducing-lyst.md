@@ -43,11 +43,11 @@ Four breaking news posts published throughout the day this Sunday. With lyst, we
 
 A 50 percent spike in analytics occurred before the first two posts about an [apartment fire in Westwood](http://dailybruin.com/2015/09/21/ucla-student-found-dead-after-roebling-structure-fire/) even went online. People had heard about the incident from other sources, searched Google, and were ending up on old Daily Bruin articles about past fires.
 
-When each of the posts about the fire was published, it generated a 500 percent increase in traffic for a 10x total increase.
+When the first post about the fire published, it generated a 500 percent increase in traffic. The second post then doubled that traffic for a total increase of 10 times the average for that time of day.
 
-The [active user count](https://developers.google.com/analytics/devguides/reporting/realtime/dimsmets/user#rt:activeUsers) stayed at about six times the normal volume for the rest of the day, with [updates on Ishmael Adams' legal proceedings](http://dailybruin.com/2015/09/21/ishmael-adams-will-not-face-felony-charges-for-alleged-robbery/) and [coverage of Bruin Bash madness](http://dailybruin.com/2015/09/21/cec-cac-run-out-of-bruin-bash-wristbands-despite-guaranteeing-admission/) keeping the stats up.
+The [active user count](https://developers.google.com/analytics/devguides/reporting/realtime/dimsmets/user#rt:activeUsers) stayed at about six times the normal volume for the rest of the day, with [updates on Ishmael Adams' legal proceedings](http://dailybruin.com/2015/09/21/ishmael-adams-will-not-face-felony-charges-for-alleged-robbery/) and [coverage of Bruin Bash admission issues](http://dailybruin.com/2015/09/21/cec-cac-run-out-of-bruin-bash-wristbands-despite-guaranteeing-admission/) keeping the stats up.
 
-We saw that the [Daily Bruin Facebook account](https://www.facebook.com/dailybruin) was our most effective social media account at getting the news to our readers, and that despite high traffic from social media, a majority of readers were getting to us via Google.
+We saw that the [Daily Bruin Facebook account](https://www.facebook.com/dailybruin) was our most effective social media account for getting the news to our readers, and that despite high traffic from social media, a majority of readers were getting to us via Google.
 
 ## How does lyst work?
 
