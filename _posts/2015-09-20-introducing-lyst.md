@@ -39,15 +39,15 @@ We’re excited to join this experiment.
 
 ## lyst in action
 
-Four breaking news posts published throughout the day on Sunday. With lyst, we were able to see how many readers visited the site and how they got there.
+Four breaking news posts published throughout the day this Sunday. With lyst, we were able to see when readers visited the site and how they got there.
 
-A 50 percent spike in analytics occured before the first two posts, [on a fire in Westwood](http://dailybruin.com/2015/09/21/ucla-student-found-dead-after-roebling-structure-fire/), even went online. Readers were visiting older stories on past incidents through Google searches for information on Sunday's fire.
+A 50 percent spike in analytics occurred before the first two posts about an [apartment fire in Westwood](http://dailybruin.com/2015/09/21/ucla-student-found-dead-after-roebling-structure-fire/) even went online. People had heard about the incident from other sources, searched Google, and were ending up on old Daily Bruin articles about past fires.
 
-Each post, when published, then generated a 500 percent increase in the active users we normally have for a total ten-fold increase.
+When each of the posts about the fire was published, it generated a 500 percent increase in traffic for a 10x total increase.
 
-The [active user](https://developers.google.com/analytics/devguides/reporting/realtime/dimsmets/user#rt:activeUsers) count stayed at about six times the normal amount for the rest of the day, with [updates on football controversy](http://dailybruin.com/2015/09/21/ishmael-adams-will-not-face-felony-charges-for-alleged-robbery/) and [coverage of Bruin Bash madness](http://dailybruin.com/2015/09/21/cec-cac-run-out-of-bruin-bash-wristbands-despite-guaranteeing-admission/) keeping the stats up.
+The [active user count](https://developers.google.com/analytics/devguides/reporting/realtime/dimsmets/user#rt:activeUsers) stayed at about six times the normal volume for the rest of the day, with [updates on Ishmael Adams' legal proceedings](http://dailybruin.com/2015/09/21/ishmael-adams-will-not-face-felony-charges-for-alleged-robbery/) and [coverage of Bruin Bash madness](http://dailybruin.com/2015/09/21/cec-cac-run-out-of-bruin-bash-wristbands-despite-guaranteeing-admission/) keeping the stats up.
 
-We kept track of how well our social media accounts were getting news to our readers — with Facebook as the most effective — and saw that a majority of users were using Google to get to us.
+We saw that the [Daily Bruin Facebook account](https://www.facebook.com/dailybruin) was our most effective social media account at getting the news to our readers, and that despite high traffic from social media, a majority of readers were getting to us via Google.
 
 ## How does lyst work?
 
