@@ -83,11 +83,48 @@ Below is a list of default values.
 
 ### Formatting
 
+The text content of posts on The Stack is rendered using
+[Markdown](https://daringfireball.net/projects/markdown/), specifically
+[Kramdown](http://kramdown.gettalong.org/quickref.html). See Kramdown's
+reference guide for how to use all its features.
+
 ### Inline images
+
+The markup for inline images is as follows:
+
+{% highlight html %}
+<figure class="image [align]">
+    <img src="/img/posts/[post-slug]/[filename]" />
+    <figcaption>Caption that supports **Markdown**</figcaption>
+</figure>
+{% endhighlight %}
+
+`[align]` can be `left`, `right`, or omitted. If omitted, the image will span
+the full width of the post text. If `left` or `right` is used, the image
+will be floated to the left or right in the post content on larger screen
+sizes and span full width on smaller screen sizes. The caption is optional.
 
 ### Responsive videos
 
+The markup for responsive YouTube videos is as follows:
+
+{% highlight html %}
+<div class="video-wrapper">
+    <iframe src="https://www.youtube.com/watch?v=[video-id]" frameborder="0" allowfullscreen />
+</div>
+{% endhighlight %}
+
+N.B. the iframe embed code is **not** exactly the embed code YouTube gives you.
+Namely, the width and height attributes have been removed. This allows the
+video to be responsive – the video wrapper <div> and CSS handle all the
+responsiveness for you.
+
 ### Special classes
+
+Applying the `fullwidth` class to any element within a post will cause it to
+span the full width of the viewport regardless of screen dimensions. This
+can be useful for displaying very large or intricate photos or visualizations
+which could benefit from not being constrained to the width of the post.
 
 ### Coding style
 
