@@ -76,3 +76,5 @@ Like all of our online work, [lyst is completely open-source](http://github.com/
 That means we’re also welcoming contributions or suggestions from any developers. Lyst definitely isn’t perfect and could use a bit of refactoring to make it more efficient and visually engaging.
 
 If you’re interested in contributing or have any questions, please get in touch with us at [online@media.ucla.edu](mailto:online@media.ucla.edu).
+
+<p class="correction">Correction Sept. 24: The original version of this post incorrectly mentioned breaking news posts published on Sunday. In fact, the posts were published on Monday.</p>
