@@ -8,8 +8,8 @@ key_takeaways:
     - We hope other student publications will follow suit in making their analytics public.
     - This project is open-source, and we welcome collaborators.
 featured_image:
-    url: /introducing-lyst/graph.svg
-og_image: /introducing-lyst/graph.png
+    url: introducing-lyst/graph.svg
+og_image: introducing-lyst/graph.png
 ---
 [Lyst is our new real-time analytics dashboard](http://lyst.dailybruin.com/) powered by [Google Analytics](http://google.com/analytics/).
 
