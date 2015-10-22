@@ -78,7 +78,7 @@ Several more said the inflated swipe counts influenced their swiping habits.
 
 <hr id="visualization"/>
 
-The graph below shows how many swipes students said Housing officials deducted from their meal plans. The graph omits five outliers in which students reported they had lost a greater amount of swipes than those displayed below. You can see the [full response data on this spreadsheet](https://docs.google.com/a/g.ucla.edu/spreadsheets/d/1HUyfwNCODB5R0a8rmIoDQb3uCpIR7F4T5B-DP1sWBRA/edit?usp=sharing).
+The graph below shows how many swipes students reported Housing officials deducted from their meal plans. The graph omits five outliers in which students said they had lost a greater amount of swipes than those displayed below. You can see the [full response data on this spreadsheet](https://docs.google.com/a/g.ucla.edu/spreadsheets/d/1HUyfwNCODB5R0a8rmIoDQb3uCpIR7F4T5B-DP1sWBRA/edit?usp=sharing).
 
 <figure class="chart-container">
     <h2>Number of swipes deducted</h2>
