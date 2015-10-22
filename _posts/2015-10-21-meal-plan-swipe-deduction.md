@@ -36,9 +36,9 @@ The email to students with Premier meal plans said UCLA Housing officials recent
 
 The email also said the number of swipes students used between the start of the quarter and Oct. 1 was deducted from their swipe counts and that the number of swipes deducted was specific to each student.
 
-Housing officials said they would host an additional themed dinner at a dining hall during fall quarter to thank students for their understanding.
+The email from Housing said they would host an additional themed dinner at a dining hall during fall quarter to thank students for their understanding.
 
-They plan to use a case-by-case appeal process for students who overused their swipes as a result of the error.
+Housing officials said they plan to use a case-by-case appeal process for students who overused their swipes as a result of the error.
 
 We [conducted a survey among students who were affected](https://docs.google.com/a/g.ucla.edu/forms/d/1R1T99kVaP13nFn_0uaNJtfRxjGp5caGrzLrgJAJeTUg/viewform?usp=send_form#start=invite), asking them how many swipes they had deducted from their meal plan and what they thought. As of publishing, **313** students responded, and **135** left additional comments.
 
