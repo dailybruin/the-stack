@@ -52,6 +52,30 @@ We [conducted a survey among students who were affected](https://docs.google.com
 
 <span class="big-number">6</span> expressed frustration with Housing's **lack of transparency**, and suggested an online balance or transaction record to monitor their usage.
 
+Some students said that the decision was bad customer service and cited the themed dinner as inadequate compensation.
+
+> Could you imagine Amazon sending you the wrong package and then making you pay for it? Or Walmart undercharging you for something and then calling you back into the store to pay the difference? A restaurant serving you the wrong food and forcing you to eat it? Basically what's going on here.
+>
+> Absolutely crazy that they think that a themed dining night will fix this mess.
+>
+> They messed up and are taking none of the burden of their mistake, and by the end of the quarter people will be out of swipes early.
+
+Others expressed concern over the affect of the deduction on their budget.
+
+> I manage my swipes based on their reported numbers and rarely go below the predicted number of swipes I should have. However, when I got an email that my carefully calculated limit had suddenly dropped by a months worth of swipes, I was furious. I am on a very tight budget for school. This budget does not allow for buying food off campus and will be my only option to correct for the supposed deduction of my swipes.
+>
+> I do not want a themed dinner. I want to be able to eat for the remaining quarter.
+
+Some students said they were upset with how long it took Housing to notify them of the error.
+
+> It took housing 20 days to figure it out. If it was a day or 2 I could understand them deducting our swipes. But I've been using my swipes according to the number I've been told I have left and it's unfair for them to take away our swipes after nearly a month because they messed up.
+
+Several more said the inflated swipe counts influenced their swiping habits.
+
+> Coming from someone who is an RA, this is ridiculous. Housing is punishing students for their own internal error and providing zero compensation. I ask how many swipes I have almost every time I swipe, and I use that number to help determine if I can swipe friends, residents, etc.
+
+> I'm furious with this mistake the school made, considering that I thought I had extra swipes available, and started swiping in friends who lived off campus as a result. Now instead of being 18 swipes behind schedule (having extra) like I thought, I'm 12 swipes ahead of schedule and will have to decide what meals I should skip in order to make sure I don't run out of swipes by the end of the quarter.
+
 <hr id="visualization"/>
 
 The graph below shows how many swipes students said Housing officials deducted from their meal plans. The graph omits five outliers in which students reported they had lost a greater amount of swipes than those displayed below. You can see the [full response data on this spreadsheet](https://docs.google.com/a/g.ucla.edu/spreadsheets/d/1HUyfwNCODB5R0a8rmIoDQb3uCpIR7F4T5B-DP1sWBRA/edit?usp=sharing).
