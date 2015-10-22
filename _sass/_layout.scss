@@ -460,6 +460,10 @@
             float: left;
             margin-right: 1em;
             width: 200px;
+
+            @include media-query($on-palm) {
+                width: 100px;
+            }
         }
     }
 }
