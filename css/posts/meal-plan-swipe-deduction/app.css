@@ -1,0 +1,19 @@
+.chart-container h2 {
+    text-align: center;
+}
+
+.stat-box {
+    font-size: 1.3em;
+}
+
+.big-number {
+    font-size: 3em;
+    font-weight: 600;
+    margin: 0 0.1em;
+    line-height: 0.8;
+    font-family: 'Hind';
+}
+
+hr {
+    clear: both;
+}
