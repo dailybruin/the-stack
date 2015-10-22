@@ -24,12 +24,12 @@ Hundreds of students woke up Wednesday morning to an email from UCLA Housing & H
 
 <figure class="image right">
     <img src="/img/posts/meal-plan-swipe-deduction/email-screenshot-1.jpg"/>
-    <figcaption>Screenshot from the email</figcaption>
+    <figcaption>Screenshot of the email (1/2)</figcaption>
 </figure>
 
 <figure class="image right">
     <img src="/img/posts/meal-plan-swipe-deduction/email-screenshot-2.jpg"/>
-    <figcaption>Screenshot from the email</figcaption>
+    <figcaption>Screenshot of the email (2/2)</figcaption>
 </figure>
 
 The email to students with Premier meal plans said UCLA Housing officials recently discovered the BruinCard system erroneously reset students’ swipe counts on Oct. 1. After the reset, students with the 14 Premier meal plan had 154 swipes, and those with the 19 Premier plan had 209 swipes.
