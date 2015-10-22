@@ -60,7 +60,7 @@ Some students said that the decision was bad customer service and cited the them
 >
 > They messed up and are taking none of the burden of their mistake, and by the end of the quarter people will be out of swipes early.
 
-Others expressed concern over the affect of the deduction on their budget.
+Others expressed concern over the effect of the deduction on their budget.
 
 > I manage my swipes based on their reported numbers and rarely go below the predicted number of swipes I should have. However, when I got an email that my carefully calculated limit had suddenly dropped by a months worth of swipes, I was furious. I am on a very tight budget for school. This budget does not allow for buying food off campus and will be my only option to correct for the supposed deduction of my swipes.
 >
