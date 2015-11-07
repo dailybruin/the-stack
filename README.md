@@ -22,7 +22,7 @@ The recommended installation method on Windows is using a VM:
 
 Otherwise,
 [follow these instructions if you're feeling adventurous](http://jekyll-windows.juthilo.com).
-When given the choice, install Pygments instead of Rouge for syntax highlighting.
+When given the choice, install Rouge instead of Pygments for syntax highlighting.
 [Here are some other considerations](http://jekyllrb.com/docs/windows/) when
 using Jekyll on Windows.
 
