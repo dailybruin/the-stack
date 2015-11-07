@@ -5,9 +5,10 @@ Daily Bruin's data journalism and newsroom tech blog.
 ## Installation (Mac)
 
 1. Git clone repository.
-2. `gem install jekyll`
+2. `gem install jekyll bundler`
 3. `cd` into top level of repository
-4. `jekyll serve`
+4. `bundle`
+5. `jekyll serve`
 
 ## Installation (Windows)
 
