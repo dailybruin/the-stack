@@ -53,6 +53,9 @@ generates when your site is compiled.
 `README.md` contains information about the project for people landing on
 the GitHub repo and new contributors.
 
+`setup.sh` contains a script for automating initial setup of the project 
+for people on Mac/Linux computers.
+
 ### `_data`
 
 Stores collections of website data used for the site itself, **NOT** data used
