@@ -23,6 +23,15 @@ Alternatively, use a VM:
 4. Configure VirtualBox port forwarding from VM port 4000 to host port 4000.
 5. Follow the instructions for Mac installation above.
 
+## Contributing
+
+TL;DR
+
+1. Develop on your own feature branch. Only the data editor should commit to master.
+2. Follow the coding practices outlined in the docs and the conventions established in existing posts.
+
+Pull requests which do not conform to the above will not be accepted. If you have any questions on how something should be done, please ask the data editor.
+
 ##[Brand guidelines](https://github.com/daily-bruin/brand/tree/master/stack)
 
 ![Stack swag](http://i.imgur.com/L5kgSYu.png)
