@@ -15,6 +15,10 @@ stylesheets:
     - /css/posts/daily-bruin-word-frequency/app.css
 scripts:
     - //cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.js
+    - //cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js
     - /js/posts/daily-bruin-word-frequency/app.js
 ---
-hi
+
+<div id="visualization">
+
+</div>
