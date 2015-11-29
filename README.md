@@ -2,7 +2,7 @@
 
 Daily Bruin's data journalism and newsroom tech blog.
 
-## Installation (Mac)
+## Installation (Mac/Linux)
 
 1. clone repository 
 2. run `setup.sh` script
