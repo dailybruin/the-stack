@@ -28,7 +28,7 @@ Alternatively, use a VM:
 TL;DR
 
 1. Develop on your own feature branch. Only the data editor should commit to master.
-2. Follow the coding practices outlined in the docs and the conventions established in existing posts.
+2. Follow the coding practices outlined in [the docs](https://github.com/daily-bruin/the-stack/tree/master/docs) and the conventions established in existing posts.
 
 Pull requests which do not conform to the above will not be accepted. If you have any questions on how something should be done, please ask the data editor.
 
