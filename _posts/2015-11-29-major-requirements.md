@@ -13,6 +13,7 @@ og_image: welcome-to-the-stack/nameplate.svg
 stylesheets:
     - /css/posts/major-requirements/app.css
 scripts:
+    - //cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.js
     - /js/posts/major-requirements/app.js
 
 ---
