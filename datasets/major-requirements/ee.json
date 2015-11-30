@@ -1,12 +1,54 @@
+// Check http://www.seasoasa.ucla.edu/curric-15-16/31curelec-15.html
+// for the EE four year plan.
+
 [
   {
-    "class name": {
+    "EE170A": {
+      "name": "Principles of Photonics",
       "units" : 4,
-      "prereq": [ "class1", "class2", "class3" ]
+      "prereq": [ "EE2", "EE101A" ]
     },
-    "class name2": {
+    "EE141": {
+      "name": "Principles of Feedback Control",
+      "units" : 4,
+      "prereq": [ "EE102" ]
+    }, 
+    "EE133A": {
+      "name": "Mathematics of Design",
+      "units" : 4,
+      "prereq": [ "EE131A", "CS31", "Civil Engineering M20" ] // optional CS or Civil
+    }, 
+    "EE132A": {
+      "name": "Introduction to Communication Systems",
+      "units" : 4,
+      "prereq": [ "EE102", "EE113", "EE131A" ]
+    }, 
+    // Next 2 have choice
+    "EE101B": {
+      "name": "Electromagnetic Waves",
+      "units" : 4,
+      "prereq": [ "EE101A" ]
+    }, 
+    "CS33": {
+      "name": "Introduction to Computer Organization",
       "units" : 5,
-      "prereq": [ "class1", "class2", "class3" ]
+      "prereq": [ "CS32" ]
+    }, 
+    // end choice
+    "EE121B": {
+      "name": "Principles of Semiconductor Device Design",
+      "units" : 4,
+      "prereq": [ "EE2" ]
+    }, 
+    "EE115AL": {
+      "name": "Analog Electronics Laboratory I",
+      "units" : 2,
+      "prereq": [ "E115A", "EE110L", "EE111L" ] // optional EE110L or EE111L
+    }, 
+    "EE101A": {
+      "name": "Engineering Electromagnetics",
+      "units" : 4,
+      "prereq": [ "Physics 1C", "Math 32A", "Math 32B", "Math 33A", "Math 33B" ] // ((Math 32A and 32B) or (33A and 33B))
     }
   }
 ]
