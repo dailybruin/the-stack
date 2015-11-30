@@ -1,0 +1,12 @@
+[
+  {
+    "class name": {
+      "units" : 4,
+      "prereq": [ "class1", "class2", "class3" ]
+    },
+    "class name2": {
+      "units" : 5,
+      "prereq": [ "class1", "class2", "class3" ]
+    }
+  }
+]
