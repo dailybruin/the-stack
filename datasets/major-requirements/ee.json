@@ -49,6 +49,136 @@
       "name": "Engineering Electromagnetics",
       "units" : 4,
       "prereq": [ "Physics 1C", "Math 32A", "Math 32B", "Math 33A", "Math 33B" ] // ((Math 32A and 32B) or (33A and 33B))
+    },
+    "EE131A": {
+      "name": "Probability and Statistics",
+      "units" : 4,
+      "prereq": [ "EE102", "Math 32B", "Math 33B" ]
+    },
+    "EE115A": {
+      "name": "Analog Electronic Circuits I",
+      "units" : 4,
+      "prereq": [ "EE110" ]
+    },
+    "EE113": {
+      "name": "Digital Signal Processing",
+      "units" : 4,
+      "prereq": [ "EE102" ]
+    },
+    "EE110": {
+      "name": "Circuit Theory II",
+      "units" : 4,
+      "prereq": [ "EE10", "EE102", "EE111L" ] // 111L corequisite
+    },
+    "EE111L": {
+      "name": "Circuits Laboratory II",
+      "units" : 1,
+      "prereq": [ "EE10", "EE11L", "EE110" ] // 110 corequisite
+    },
+    "EE2": {
+      "name": "Physics for Electrical Engineers",
+      "units" : 4,
+      "prereq": [ "Physics 1C" ]
+    },
+    "EE102": {
+      "name": "Systems and Signals",
+      "units" : 4,
+      "prereq": [ "Math 33A", "Math 33B" ]
+    },
+    "Physics 1C": {
+      "name": "Electrodynamics, Optics, and Special Relativity",
+      "units" : 5,
+      "prereq": [ "Physics 1A", "Physics 1B", "Math 32A", "Math 32B", "Math 33A" ]
+    },
+    "Math 33B": {
+      "name": "Differential Equations",
+      "units" : 4,
+      "prereq": [ "Math 31B" ]
+    },
+    "EE M16 or CS M51A": {
+      "name": "Logic Design of Digital Systems",
+      "units" : 4,
+      "prereq": [  ]
+    },
+    "EE10": {
+      "name": "Circuit Theory I",
+      "units" : 4,
+      "prereq": [ "EE3", "CS1", "Mat Sci 10", "Math 33A", "Physics 1B", "EE11L", "Math 33B", "Math 33A", "Math 33B" ] //(course 3 or Com Sci 1 or Mat Sci 10), Math 33A, Physics 1B; corequisites: course 11L (enforced only for Com Sci and Engr and El Engr majors) and Math 33B
+    },
+    "EE11L": {
+      "name": "Circuits Laboratory I",
+      "units" : 1,
+      "prereq": [ "EE10" ]
+    },
+    "Math 33A": {
+      "name": "Linear Algebra and Applications",
+      "units" : 4,
+      "prereq": [ "Math 31B", "Math 32A",  "Math 3B" ] // course 31B or 32A or 3B (C- or better)
+    },
+    "Physics 4BL": {
+      "name": "Electricity and Magnetism Laboratory",
+      "units" : 2,
+      "prereq": [ "Physics 1A", "Physics 1AH", "Physics 1B", "Physics 1BH", "Physics 1C", "Physics 1CH" ] // courses (1A or 1AH) and (1B or 1BH) and 1C (corequisite) or 1CH (corequisite)
+    },
+    "Math 32B": {
+      "name": "Calculus of Several Variables",
+      "units" : 4,
+      "prereq": [ "Math 31B", "Math 32A" ]
+    },
+    "EE3": {
+      "name": "Introduction to Electrical Engineering",
+      "units" : 3,
+      "prereq": [ "Physics 1B" ]
+    },
+    "Physics 4AL": {
+      "name": "Mechanics Laboratory",
+      "units" : 2,
+      "prereq": [ "Physics 1A", "Physics 1B" ] // Courses 1A and 1B (corequisite) or 1AH and 1BH (corequisite)
+    },
+    "Physics 1B": {
+      "name": "Oscillations, Waves, Electric and Magnetic Fields",
+      "units" : 5,
+      "prereq": [ "Physics 1A", "Math 31B", "Math 32A", "Math 32B" ]
+    },
+    "Math 32A": {
+      "name": "Calculus of Several Variables",
+      "units" : 4,
+      "prereq": [ "Math 31A" ]
+    },
+    "Physics 1A": {
+      "name": "Mechanics",
+      "units" : 5,
+      "prereq": [ "Math 31B", "Math 32A", "Math 32B" ]
+    },
+    "Math 31B": {
+      "name": "Integration and Infinite Series",
+      "units" : 4,
+      "prereq": [ "Math 31A" ]
+    },
+    "CS32": {
+      "name": "Introduction to Computer Science II",
+      "units" : 4,
+      "prereq": [ "CS31" ] 
+    },
+    "Chemistry and Biochemistry 20A": {
+      "name": "Chemical Structure",
+      "units" : 4,
+      "prereq": [ "Math 31A" ]
+    },
+    "CS31": {
+      "name": "Introduction to Computer Science I",
+      "units" : 4,
+      "prereq": [  ] 
+    },
+    "Math 31A": {
+      "name": "Differential and Integral Calculus",
+      "units" : 4,
+      "prereq": [ "Math 1" ] // or pass math diagnostic
+    },
+    "English Composition 3": {
+      "name": "English Composition, Rhetoric, and Language",
+      "units" : 5,
+      "prereq": [ "English Composition 2" ]
     }
   }
 ]
