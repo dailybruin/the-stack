@@ -1,5 +1,7 @@
 # The Stack
 
+![Stack logo](https://raw.githubusercontent.com/daily-bruin/the-stack/master/img/nameplate%402x.png)
+
 Daily Bruin's data journalism and newsroom tech blog.
 
 ## Installation (Mac/Linux)
