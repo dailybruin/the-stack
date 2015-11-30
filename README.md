@@ -1,8 +1,8 @@
+![Stack logo](https://raw.githubusercontent.com/daily-bruin/the-stack/master/img/nameplate%402x.png)
+
 # The Stack
 
 Daily Bruin's data journalism and newsroom tech blog.
-
-![Stack logo](https://raw.githubusercontent.com/daily-bruin/the-stack/master/img/nameplate%402x.png)
 
 ## Installation (Mac/Linux)
 
