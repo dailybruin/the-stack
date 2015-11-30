@@ -146,7 +146,7 @@ imports all sitewide styles from `/_sass`.
 CSS libraries that are **NOT**
 available from a CDN (preferred method of loading CSS/JS libraries), you
 can put them in the `lib` folder. CSS styles associated with a post should
-be placed in `posts/post-slug`.
+be placed in `css/posts/post-slug`.
 
 ### `datasets`
 
