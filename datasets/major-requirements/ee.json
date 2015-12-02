@@ -30,12 +30,14 @@
     "EE101B": {
       "name": "Electromagnetic Waves",
       "units" : 4,
-      "prereq": [ "EE101A" ]
+      "prereq": [ "EE101A" ],
+      "alternate": [ "CS33" ]
     }, 
     "CS33": {
       "name": "Introduction to Computer Organization",
       "units" : 5,
-      "prereq": [ "CS32" ]
+      "prereq": [ "CS32" ],
+      "alternate": [ "EE101B" ]
     }, 
     // end choice
     "EE121B": {
