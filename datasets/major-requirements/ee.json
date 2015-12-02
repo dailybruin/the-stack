@@ -16,7 +16,10 @@
     "EE133A": {
       "name": "Mathematics of Design",
       "units" : 4,
-      "prereq": [ "EE131A", "CS31", "Civil Engineering M20" ] // optional CS or Civil
+      "prereq": [ "EE131A", 
+                  { "options": 1, 
+                    "classes": [ "CS31", "Civil Engineering M20" ] 
+                  }]
     }, 
     "EE132A": {
       "name": "Introduction to Communication Systems",
@@ -27,12 +30,14 @@
     "EE101B": {
       "name": "Electromagnetic Waves",
       "units" : 4,
-      "prereq": [ "EE101A" ]
+      "prereq": [ "EE101A" ],
+      "alternate": [ "CS33" ]
     }, 
     "CS33": {
       "name": "Introduction to Computer Organization",
       "units" : 5,
-      "prereq": [ "CS32" ]
+      "prereq": [ "CS32" ],
+      "alternate": [ "EE101B" ]
     }, 
     // end choice
     "EE121B": {
@@ -43,12 +48,16 @@
     "EE115AL": {
       "name": "Analog Electronics Laboratory I",
       "units" : 2,
-      "prereq": [ "E115A", "EE110L", "EE111L" ] // optional EE110L or EE111L
+      "prereq": [ "E115A", { "options": 1,
+                             "classes": [ "EE110L", "EE111L" ] 
+                           }]
     }, 
     "EE101A": {
       "name": "Engineering Electromagnetics",
       "units" : 4,
-      "prereq": [ "Physics 1C", "Math 32A", "Math 32B", "Math 33A", "Math 33B" ] // ((Math 32A and 32B) or (33A and 33B))
+      "prereq": [ "Physics 1C", { "options": 1, 
+                                  "classes": [ "Math 32B", "Math 33B" ] 
+                                  }]
     },
     "EE131A": {
       "name": "Probability and Statistics",
@@ -68,12 +77,14 @@
     "EE110": {
       "name": "Circuit Theory II",
       "units" : 4,
-      "prereq": [ "EE10", "EE102", "EE111L" ] // 111L corequisite
+      "prereq": [ "EE10", "EE102" ],
+      "coreq": [ "EE111L" ]
     },
     "EE111L": {
       "name": "Circuits Laboratory II",
       "units" : 1,
-      "prereq": [ "EE10", "EE11L", "EE110" ] // 110 corequisite
+      "prereq": [ "EE10", "EE11L", "EE110" ],
+      "coreq": [ "EE110" ]
     },
     "EE2": {
       "name": "Physics for Electrical Engineers",
@@ -88,7 +99,7 @@
     "Physics 1C": {
       "name": "Electrodynamics, Optics, and Special Relativity",
       "units" : 5,
-      "prereq": [ "Physics 1A", "Physics 1B", "Math 32A", "Math 32B", "Math 33A" ]
+      "prereq": [ "Physics 1B", "Math 32B", "Math 33A" ]
     },
     "Math 33B": {
       "name": "Differential Equations",
@@ -103,7 +114,9 @@
     "EE10": {
       "name": "Circuit Theory I",
       "units" : 4,
-      "prereq": [ "EE3", "CS1", "Mat Sci 10", "Math 33A", "Physics 1B", "EE11L", "Math 33B", "Math 33A", "Math 33B" ] //(course 3 or Com Sci 1 or Mat Sci 10), Math 33A, Physics 1B; corequisites: course 11L (enforced only for Com Sci and Engr and El Engr majors) and Math 33B
+      "prereq": [ { "options": 1,
+                    "courses": [ "EE3", "CS1", "Mat Sci 10" ] }, "Math 33A", "Physics 1B", "Math 33A", "Math 33B" ],
+      "coreq": [ "EE11L", "Math 33B" ]
     },
     "EE11L": {
       "name": "Circuits Laboratory I",
@@ -113,12 +126,18 @@
     "Math 33A": {
       "name": "Linear Algebra and Applications",
       "units" : 4,
-      "prereq": [ "Math 31B", "Math 32A",  "Math 3B" ] // course 31B or 32A or 3B (C- or better)
+      "prereq": [ { "options": 1, 
+                    "classes": [ "Math 31B", "Math 32A",  "Math 3B" ]
+                }]
+
     },
     "Physics 4BL": {
       "name": "Electricity and Magnetism Laboratory",
       "units" : 2,
-      "prereq": [ "Physics 1A", "Physics 1AH", "Physics 1B", "Physics 1BH", "Physics 1C", "Physics 1CH" ] // courses (1A or 1AH) and (1B or 1BH) and 1C (corequisite) or 1CH (corequisite)
+      "prereq": [  ],
+      "coreq": [ { "options": 1,
+                    "courses": [ "Physics 1C", "Physics 1CH" ] 
+                  }]
     },
     "Math 32B": {
       "name": "Calculus of Several Variables",
@@ -133,12 +152,15 @@
     "Physics 4AL": {
       "name": "Mechanics Laboratory",
       "units" : 2,
-      "prereq": [ "Physics 1A", "Physics 1B" ] // Courses 1A and 1B (corequisite) or 1AH and 1BH (corequisite)
+      "prereq": [ ],
+      "coreq": [ { "options": 1,
+                   "courses": [ "Physics 1B", "Physics 1BH"  ] 
+                }]
     },
     "Physics 1B": {
       "name": "Oscillations, Waves, Electric and Magnetic Fields",
       "units" : 5,
-      "prereq": [ "Physics 1A", "Math 31B", "Math 32A", "Math 32B" ]
+      "prereq": [ "Physics 1A", "Math 31B", "Math 32B" ]
     },
     "Math 32A": {
       "name": "Calculus of Several Variables",
@@ -148,7 +170,7 @@
     "Physics 1A": {
       "name": "Mechanics",
       "units" : 5,
-      "prereq": [ "Math 31B", "Math 32A", "Math 32B" ]
+      "prereq": [ "Math 31B", "Math 32B" ]
     },
     "Math 31B": {
       "name": "Integration and Infinite Series",
@@ -173,7 +195,7 @@
     "Math 31A": {
       "name": "Differential and Integral Calculus",
       "units" : 4,
-      "prereq": [ "Math 1" ] // or pass math diagnostic
+      "prereq": [ "Math 1" ]
     },
     "English Composition 3": {
       "name": "English Composition, Rhetoric, and Language",
