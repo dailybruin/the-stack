@@ -99,7 +99,7 @@
     "Physics 1C": {
       "name": "Electrodynamics, Optics, and Special Relativity",
       "units" : 5,
-      "prereq": [ "Physics 1A", "Physics 1B", "Math 32A", "Math 32B", "Math 33A" ]
+      "prereq": [ "Physics 1B", "Math 32B", "Math 33A" ]
     },
     "Math 33B": {
       "name": "Differential Equations",
@@ -160,7 +160,7 @@
     "Physics 1B": {
       "name": "Oscillations, Waves, Electric and Magnetic Fields",
       "units" : 5,
-      "prereq": [ "Physics 1A", "Math 31B", "Math 32A", "Math 32B" ]
+      "prereq": [ "Physics 1A", "Math 31B", "Math 32B" ]
     },
     "Math 32A": {
       "name": "Calculus of Several Variables",
@@ -170,7 +170,7 @@
     "Physics 1A": {
       "name": "Mechanics",
       "units" : 5,
-      "prereq": [ "Math 31B", "Math 32A", "Math 32B" ]
+      "prereq": [ "Math 31B", "Math 32B" ]
     },
     "Math 31B": {
       "name": "Integration and Infinite Series",
