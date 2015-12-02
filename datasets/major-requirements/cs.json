@@ -53,6 +53,21 @@
       "units" : 4,
       "prereq": [ "CS111"] 
     },
+    "CSCM121": {
+      "name": "Introduction to Bioinformatics",
+      "units" : 4,
+      "prereq": [{"options": 1, "set": ["CS32", "PIC10C"]}, {"options":1, "set":["BIOSTAT100A", "BIOSTAT110A", "CIVIL110", "EE131A", "MATH170A", "STAT100A"]}] 
+    },
+    "CSCM122": {
+      "name": "Algorithms in Bioinformatics and Systems Biology",
+      "units" : 4,
+      "prereq": [{"options": 1, "set": ["CS32", "PIC10C"]}, {"options":1, "set":["BIOSTAT100A", "BIOSTAT110A", "CIVIL110", "EE131A", "MATH170A", "STAT100A"]}] 
+    },
+    "CSCM124": {
+      "name": "Computational Genetics",
+      "units" : 4,
+      "prereq": [{"options": 1, "set": ["CS32", "PIC10C"]}, {"options":1, "set":["BIOSTAT100A", "BIOSTAT110A", "CIVIL110", "EE131A", "MATH170A", "STAT100A"]}] 
+    },
     "CS130": {
       "name": "Software Engineering",
       "units" : 4,
@@ -78,11 +93,141 @@
       "units" : 4,
       "prereq": [ "CS118"] 
     },
+     "CSC137A": {
+      "name": "Prototyping Programming Languages",
+      "units" : 4,
+      "prereq": [ "CS131"] 
+    },
     "CSC137B": {
       "name": "Programming Language Design",
       "units" : 4,
-      "prereq": [ "C137A"] 
+      "prereq": [ "CSC137A"] 
     },
+    "CS143": {
+      "name": "Database Systems",
+      "units" : 4,
+      "prereq": [ "CS111"] 
+    },
+    "CS144": {
+      "name": "Web Applications",
+      "units" : 4,
+      "prereq": [ "CS143"] 
+    },
+    "CS145": {
+      "name": "Introduction to Data Mining",
+      "units" : 4,
+      "prereq": [ "CS180"] 
+    },
+    "CSM151B": {
+      "name": "Computer System Architecture",
+      "units" : 4,
+      "prereq": [ "CS33", "CSM51A"] 
+    },
+    "CSM152A": {
+      "name": "Introductory Digital Design Laboratory",
+      "units" : 2,
+      "prereq": ["CSM51A"] 
+    },
+    "CS152B": {
+      "name": "Digital Design Project Laboratory",
+      "units" : 4,
+      "prereq": ["CSM51B"] 
+    },
+    "CS161": {
+      "name": "Fundamentals of Artificial Intelligence",
+      "units" : 4,
+      "prereq": ["CS180"] 
+    },
+    "CS170A": {
+      "name": "Mathematical Modeling and Methods for Computer Science",
+      "units" : 4,
+      "prereq": ["CS180", "Math33B"] 
+    },
+    "CS174A": {
+      "name": "Introduction to Computer Graphics",
+      "units" : 4,
+      "prereq": ["CS32"] 
+    },
+    "CS180": {
+      "name": "Introduction to Algorithms and Complexity",
+      "units" : 4,
+      "prereq": ["CS32", {"options": 1, "set": ["Math61", "Math180"]}] 
+    },
+    "CS181": {
+      "name": "Introduction to Formal Languages and Automata Theory",
+      "units" : 4,
+      "prereq": ["CS180"] 
+    },
+    "CS183": {
+      "name": "Introduction to Cryptography",
+      "units" : 4,
+      "prereq": ["CS180"] 
+    },
+    //non cs classes
+    "MATH61": {
+      "name": "Introduction to Discrete Structures",
+      "units" : 4,
+      "prereq": ["MATH31A", "MATH31B"]
+    },
+
+    "MATH31A": {
+      "name": "Integration and Infinite Series",
+      "units" : 4,
+      "prereq": []
+    },
+
+    "MATH31B": {
+      "name": "Differential and Integral Calculus",
+      "units" : 4,
+      "prereq": ["MATH31A"]
+    },
+
+    "MATH32A": {
+      "name": "Calculus of Several Variables",
+      "units" : 4,
+      "prereq": ["MATH31A"]
+    },
+
+    "MATH32B": {
+      "name": "Calculus of Several Variables",
+      "units" : 4,
+      "prereq": ["MATH31B", "MATH32A"]
+    },
+
+    "MATH33A": {
+      "name": "Linear Algebra",
+      "units" : 4,
+      "prereq": ["MATH31B", "MATH32A"]
+    },
+    "MATH33B": {
+      "name": "Differential Equations",
+      "units" : 4,
+      "prereq": ["MATH31B"]
+    },
+    "MATH170A": {
+      "name": "Probability Theory",
+      "units" : 4,
+      "prereq": ["MATH32B", "MATH33A"]
+    },
+
+    "MATH180": {
+      "name": "Combinatorics",
+      "units" : 4,
+      "prereq": ["MATH32B", "MATH33A", "MATH33B"]
+    },
+
+    "Stats100A": {
+      "name": "Introduction to Probability",
+      "units" : 4,
+      "prereq": ["MATH32B", "MATH33A"]
+    },
+
+    "EE131A": {
+      "name": "Introduction to Probability",
+      "units" : 4,
+      "prereq": ["MATH32B", "MATH33A"]
+    },
+
 
   }
 ]
