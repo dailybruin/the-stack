@@ -1,0 +1,88 @@
+// Check http://www.seasoasa.ucla.edu/curric-15-16/31curelec-15.html
+// for the EE four year plan.
+
+[
+  {
+    "CS1": {
+      "name": "Freshman Computer Science Seminar",
+      "units" : 1,
+      "prereq": []
+    },
+    "CS31": {
+      "name": "Introduction to Computer Science I",
+      "units" : 4,
+      "prereq": [] 
+    },
+    "CS32": {
+      "name": "Introduction to Computer Science II",
+      "units" : 4,
+      "prereq": [ "CS31" ] 
+    },
+    "CS33": {
+      "name": "Introduction to Computer Organization",
+      "units" : 5,
+      "prereq": [ "CS32" ] 
+    },
+    "CS35L": {
+      "name": "Software Construction Laboratory",
+      "units" : 2,
+      "prereq": [ "CS31" ] 
+    },
+    "CSM51A": {
+      "name": "Logic Design of Digital Systems",
+      "units" : 4,
+      "prereq": [ ] 
+    },
+    "CS111": {
+      "name": "Operating Systems Principles",
+      "units" : 5,
+      "prereq": [ "CS33", "CS35L" ] 
+    },
+    "CS112": {
+      "name": "Modeling Uncertainty In Information Systems",
+      "units" : 4,
+      "prereq": [ "CS111", {"set": ["Stats100A", "EE131A"]} ] 
+    },
+    "CSM117": {
+      "name": "Computer Network Physical Layers",
+      "units" : 4,
+      "prereq": [ ] 
+    },
+    "CS118": {
+      "name": "Computer Network Fundamentals",
+      "units" : 4,
+      "prereq": [ "CS111"] 
+    },
+    "CS130": {
+      "name": "Software Engineering",
+      "units" : 4,
+      "prereq": [ "CS111"] 
+    },
+    "CS131": {
+      "name": "Programming Languages",
+      "units" : 4,
+      "prereq": [ "CS33", "CS35L"] 
+    },
+    "CS132": {
+      "name": "Compiler Construction",
+      "units" : 4,
+      "prereq": [ "CS131", "181"] 
+    },
+    "CS133": {
+      "name": "Parallel and Distributed Computing",
+      "units" : 4,
+      "prereq": [ "CS111", "131"] 
+    },
+    "CS136": {
+      "name": "Introduction to Computer Security",
+      "units" : 4,
+      "prereq": [ "CS118"] 
+    },
+    "CSC137B": {
+      "name": "Programming Language Design",
+      "units" : 4,
+      "prereq": [ "C137A"] 
+    },
+
+  }
+]
