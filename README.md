@@ -7,7 +7,8 @@ Daily Bruin's data journalism and newsroom tech blog.
 ## Installation (Mac/Linux)
 
 1. clone repository: `git clone https://github.com/daily-bruin/the-stack.git`
-2. run the `setup.sh` script in the top level of the repo
+2. `cd` into the newly created directory
+3. run `./setup.sh`
 3. run `jekyll serve`
 
 ## Installation (Windows)
