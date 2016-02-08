@@ -3,7 +3,7 @@
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 echo "Installing global dependencies..."
-gem install jekyll bundler
+gem install bundler
 
 echo "Installing project dependencies..."
 cd $SCRIPT_DIR
