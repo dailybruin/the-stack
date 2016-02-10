@@ -1,0 +1,42 @@
+---
+layout: page
+title: Developer Documentation
+permalink: /docs/
+exclude: true
+---
+<div class="home">
+
+  <ul class="post-list">
+    {% for post in paginator.posts %}
+      {% if post.displayed %}
+      <li>
+        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
+          {% if post.featured_image %}
+          <img class="featured-image" src="{{ site.image_url }}/{{ post.featured_image.url }}" />
+          {% endif %}
+          <h2>{{ post.title }}</h2>
+          <h3>{{ post.teaser }}</h3>
+        </a>
+      </li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+
+  {% if paginator.previous_page or paginator.next_page %}
+  <nav class="pagination">
+    {% if paginator.previous_page %}
+      <a href="{{ paginator.previous_page_path }}" class="previous">← Previous page</a>
+    {% endif %}
+    <span class="page-number">Page {{ paginator.page }} of {{ paginator.total_pages }}</span>
+    {% if paginator.next_page %}
+      <a href="{{ paginator.next_page_path }}" class="next">More posts →</a>
+    {% endif %}
+  </nav>
+  {% endif %}
+</div>
+
+<div class="post-list">
+  Start off by <a href="https://github.com/daily-bruin/the-stack/blob/master/README.md">installing Jekyll</a>.
+    Then, acquainted with <a href="/docs/website-code/">how to develop for the Stack</a>.
+    Finally, keep in mind our <a href="/docs/workflow/">workflow</a>.
+</div>
