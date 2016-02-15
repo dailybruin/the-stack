@@ -1,0 +1,30 @@
+div#vizContainer {
+  font-family: "Nunito", sans-serif;
+}
+
+svg {
+  width: 1000px;
+  height: 1000px;
+  display: block;
+  margin: auto;
+}
+
+g.axis {
+  font-size: 11px;
+  font-weight: 300;
+}
+
+
+circle {
+  opacity: 0.9;
+  /*fill: #F39C12;*/
+}
+
+/*.selected {
+  opacity: 1;
+  fill: #00A3E0;
+}*/
+
+text {
+  font-size: 1.2em;
+}
