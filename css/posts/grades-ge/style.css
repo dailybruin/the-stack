@@ -3,8 +3,8 @@ div#vizContainer {
 }
 
 svg {
-  width: 1000px;
-  height: 1000px;
+  width: 960px;
+  height: 800px;
   display: block;
   margin: auto;
 }
@@ -27,4 +27,8 @@ circle {
 
 text {
   font-size: 1.2em;
+}
+
+text.labels {
+  font-size: 0.8em;
 }
