@@ -10,8 +10,12 @@ svg {
 }
 
 g.axis {
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 300;
+}
+
+button.selected {
+  background-color: lightgrey;
 }
 
 
@@ -29,6 +33,6 @@ text {
   font-size: 1.2em;
 }
 
-text.labels {
+text.labelsY {
   font-size: 0.8em;
 }

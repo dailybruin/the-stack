@@ -22,7 +22,7 @@ function chart(allGrades) {
           .interpolate(d3.interpolateHcl)
 
   totClassExtent = d3.extent(allGrades, function(d) { return parseInt(d.TotClasses) })
-  totClassScale = d3.scale.pow().exponent(0.5).domain(totClassExtent).range([0, -200])
+  totClassScale = d3.scale.pow().exponent(0.5).domain(totClassExtent).range([0, -250])
 
 
   $("select#pickCategory")
@@ -95,14 +95,14 @@ function chart(allGrades) {
   // add axis labels
   d3.select("svg#chart").append("text")
       .attr("text-anchor", "middle")
-      .attr("transform", "translate(800, 250)")
-      .attr("class", "labels")
+      .attr("transform", "translate(800, 200)")
+      .attr("class", "labelsY")
       .text("Total classes since Fall 2012");
 
   d3.select("svg#chart").append("text")
       .attr("text-anchor", "middle")
       .attr("transform", "translate(400, 550)")
-      .attr("class", "labels")
+      .attr("class", "labelsX")
       .text("% students who got A");
 
 
@@ -131,6 +131,7 @@ function chart(allGrades) {
 
   $("button").click(function() {
       pickedTheme = $(this).attr("value")
+      //$(this).addClass("selected")
       pickTheme(pickedTheme)
   })
 
