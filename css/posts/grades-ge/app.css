@@ -36,3 +36,13 @@ text {
 text.labelsY {
   font-size: 0.8em;
 }
+
+figcaption {
+  text-align: center;
+}
+
+iframe#geVar {
+  height: 380px;
+  width: 870px;
+  border: none;
+}
