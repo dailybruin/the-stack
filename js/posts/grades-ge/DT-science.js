@@ -1,13 +1,11 @@
-
 $(document).ready(function() {
     $("table#physics").DataTable( {
-        "ajax": "/datasets/grades-ge/physics.JSON",
+        "ajax": "/datasets/grades-ge/science.JSON",
         columns: [
           { "data": "Subject" },
           { "data": "CatalogNo" },
           { "data": "Name" },
-          { "data": "MedianA" },
-          { "data": "ClassSize" }
+          { "data": "MedianA" }
         ],
         "order": [[3, "asc"]],
         "scrollY":        "300px",
@@ -15,5 +13,3 @@ $(document).ready(function() {
         "paging":         false
     } );
 } );
-
-$("tbody tr:eq(0)").css("background-color", "green")

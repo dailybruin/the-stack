@@ -25,10 +25,20 @@ function chart(allGrades) {
   totClassScale = d3.scale.pow().exponent(0.5).domain(totClassExtent).range([0, -250])
 
 
-  $("select#pickCategory")
-      .change(function() {
-        var pickedCategory = $("select#pickCategory option:selected").val()
-        switch(pickedCategory) {
+  $("button.pickReq").click(function() {
+        if ( !($(this).hasClass("blue")) ) {
+          $(this).siblings().each(function() {
+              if ($(this).hasClass("blue")) {
+                $(this).removeClass("blue")
+                $(this).addClass("basic")
+              }
+          })
+          $(this).addClass("blue")
+          $(this).removeClass("basic")
+        }
+
+        var pickedReq = $(this).attr("value")
+        switch(pickedReq) {
           case "0":
             filteredGrades = allGrades;
             pickTheme(pickedTheme)
@@ -62,7 +72,8 @@ function chart(allGrades) {
             pickTheme(pickedTheme)
             break
         }
-    })
+
+      })
 
   var xAxis = d3.svg.axis()
       .scale(gradesScale)
@@ -129,9 +140,18 @@ function chart(allGrades) {
     updateChart(grades);
   }
 
-  $("button").click(function() {
+  $("button.pickTheme").click(function() {
+      if ( !($(this).hasClass("olive")) ) {
+        $(this).siblings().each(function() {
+            if ($(this).hasClass("olive")) {
+              $(this).removeClass("olive")
+              $(this).addClass("basic")
+            }
+        })
+        $(this).addClass("olive")
+        $(this).removeClass("basic")
+      }
       pickedTheme = $(this).attr("value")
-      //$(this).addClass("selected")
       pickTheme(pickedTheme)
   })
 

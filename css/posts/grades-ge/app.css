@@ -4,7 +4,7 @@ div#vizContainer {
 
 svg {
   width: 960px;
-  height: 800px;
+  height: 650px;
   display: block;
   margin: auto;
 }
@@ -41,8 +41,34 @@ figcaption {
   text-align: center;
 }
 
-iframe#geVar {
-  height: 380px;
-  width: 870px;
+iframe {
   border: none;
+  -webkit-box-shadow: 0px 0px 6px 5px rgba(128,128,128,0.1);
+  -moz-box-shadow: 0px 0px 6px 5px rgba(128,128,128,0.1);
+  box-shadow: 0px 0px 6px 5px rgba(128,128,128,0.1);
+  border-radius: 5px;
+  width: 870px;
+}
+
+iframe#geVar {
+  height: 370px;
+}
+
+iframe#geAll {
+  height: 500px;
+}
+
+
+blockquote.note {
+  font-size: 14px;
+  margin-bottom: 40px;
+}
+
+article {
+  line-height: 1.75;
+}
+
+.dataTables_info {
+  font-size: smaller;
+  font-family: monospace;
 }
