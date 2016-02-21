@@ -1,6 +1,4 @@
-
 d3.csv("/datasets/grades-ge/ge-all.csv", chart);
-
 
 function chart(allGrades) {
 
@@ -92,27 +90,25 @@ function chart(allGrades) {
 
 
   d3.select("svg#chart").append("g")
-    .attr("transform", "translate(0, 470)") // rotate(21.5)
+    .attr("transform", "translate(0, 420)")
     .attr("class", "axis")
     .call(xAxis)
-      // .selectAll("text")
-      // .attr("transform", "rotate(-21.5)")
 
   d3.select("svg#chart").append("g")
-    .attr("transform", "translate(820, 470)")
+    .attr("transform", "translate(800, 420)")
     .attr("class", "axis")
     .call(yAxis)
 
   // add axis labels
   d3.select("svg#chart").append("text")
       .attr("text-anchor", "middle")
-      .attr("transform", "translate(800, 200)")
+      .attr("transform", "translate(800, 150)")
       .attr("class", "labelsY")
-      .text("Total classes since Fall 2012");
+      .text("Total sections since Fall 2012");
 
   d3.select("svg#chart").append("text")
       .attr("text-anchor", "middle")
-      .attr("transform", "translate(400, 550)")
+      .attr("transform", "translate(400, 480)")
       .attr("class", "labelsX")
       .text("% students who got A");
 
@@ -162,6 +158,9 @@ function chart(allGrades) {
 
 // update selection based on which combination of GE category and theme user chooses
 function updateChart(grades) {
+  var bottomY = 400;
+  var infoX = 80;
+  var infoY = 40;
 
   var circles = d3.select("svg#chart")
     .selectAll("circle")
@@ -170,14 +169,10 @@ function updateChart(grades) {
 
   circles.enter()
     .append("circle")
-    .style("opacity", 0)
-    .transition()
-    .duration(200)
-    .style("opacity", 1)
     .attr("r", 5)
     .attr("cx", function(d, i) { return gradesScale(d.MedianA) })
     .attr("cy", function(d, i) {
-            return 450 + totClassScale(d.TotClasses) //+  gradesScale(d.MedianA)*0.4 // d.count*13
+            return bottomY + totClassScale(d.TotClasses)
       })
     .style("fill", function(d) { return colorScale(d.MedianA) })
 
@@ -187,16 +182,16 @@ function updateChart(grades) {
 
   var classNameInfo = d3.select("svg#chart")
           .append("text")
-          .attr("x", 100)
-          .attr("y", 50)
+          .attr("x", infoX)
+          .attr("y", infoY)
   var classGradeInfo = d3.select("svg#chart")
           .append("text")
-          .attr("x", 100)
-          .attr("y", 100)
+          .attr("x", infoX)
+          .attr("y", infoY + 40)
   var classOtherInfo = d3.select("svg#chart")
           .append("text")
-          .attr("x", 100)
-          .attr("y", 150)
+          .attr("x", infoX)
+          .attr("y", infoY + 80)
 
   function mouseOver(d, i) {
     classNameInfo.text(d.Subject + " " + d.CatalogNo + " : " + d.Name);
@@ -221,7 +216,7 @@ function updateChart(grades) {
   }
 
   // remove and transition out of existing selection to prep for new selection
-  circles.exit().transition().style("opacity", 0).duration(200).remove();
+  circles.exit().remove();
 
 }
 
