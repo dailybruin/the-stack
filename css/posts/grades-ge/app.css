@@ -4,7 +4,7 @@ div#vizContainer {
 
 svg {
   width: 960px;
-  height: 650px;
+  height: 550px;
   display: block;
   margin: auto;
 }
@@ -24,15 +24,6 @@ circle {
   /*fill: #F39C12;*/
 }
 
-/*.selected {
-  opacity: 1;
-  fill: #00A3E0;
-}*/
-
-text {
-  font-size: 1.2em;
-}
-
 text.labelsY {
   font-size: 0.8em;
 }
@@ -41,7 +32,7 @@ figcaption {
   text-align: center;
 }
 
-iframe {
+iframe.datatables {
   border: none;
   -webkit-box-shadow: 0px 0px 6px 5px rgba(128,128,128,0.1);
   -moz-box-shadow: 0px 0px 6px 5px rgba(128,128,128,0.1);

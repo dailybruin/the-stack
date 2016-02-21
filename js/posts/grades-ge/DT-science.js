@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    $("table#physics").DataTable( {
+    $("table#science").DataTable( {
         "ajax": "/datasets/grades-ge/science.JSON",
         columns: [
           { "data": "Subject" },
@@ -8,7 +8,7 @@ $(document).ready(function() {
           { "data": "MedianA" }
         ],
         "order": [[3, "asc"]],
-        "scrollY":        "300px",
+        "scrollY":        "250px",
         "scrollCollapse": true,
         "paging":         false
     } );
