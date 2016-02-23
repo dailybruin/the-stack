@@ -12,4 +12,18 @@ $(document).ready(function() {
         "scrollCollapse": true,
         "paging":         false
     } );
+
+    $("table#lit").DataTable( {
+        "ajax": "/datasets/grades-ge/lit.JSON",
+        columns: [
+          { "data": "Subject" },
+          { "data": "CatalogNo" },
+          { "data": "Name" },
+          { "data": "MedianA" }
+        ],
+        "order": [[3, "asc"]],
+        "scrollY":        "250px",
+        "scrollCollapse": true,
+        "paging":         false
+    } );
 } );

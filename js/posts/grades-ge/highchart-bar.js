@@ -38,11 +38,11 @@ $(function () {
           }
       },
       legend: {
-          layout: 'vertical',
+          layout: 'horizontal',
           align: 'right',
           verticalAlign: 'top',
           x: 0,
-          y: 150,
+          y: 290,
           floating: true,
           borderWidth: 1,
           backgroundColor: ((Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#FFFFFF'),
@@ -57,8 +57,8 @@ $(function () {
           data: [59, 56, 50, 44, 43, 40, 30],
           visible: true
       }, {
-          name: "% B and above",
-          data: [80, 70, 60, 50, 40, 30, 20],
+          name: "% B- and above",
+          data: [89, 90, 84, 85, 83, 77, 70],
           visible: false
       }]
   })

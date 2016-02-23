@@ -22,7 +22,6 @@ function chart(allGrades) {
   totClassExtent = d3.extent(allGrades, function(d) { return parseInt(d.TotClasses) })
   totClassScale = d3.scale.pow().exponent(0.5).domain(totClassExtent).range([0, -250])
 
-
   $("button.pickReq").click(function() {
         if ( !($(this).hasClass("blue")) ) {
           $(this).siblings().each(function() {
@@ -70,7 +69,6 @@ function chart(allGrades) {
             pickTheme(pickedTheme)
             break
         }
-
       })
 
   var xAxis = d3.svg.axis()
@@ -130,8 +128,6 @@ function chart(allGrades) {
       case "4":
         grades = filteredGrades.filter(function(d) { return d.ClassSize >= 100 & d.MedianA >= 0.6 });
         break;
-      case "5":
-        grades = filteredGrades.filter(function(d) { return d.ClassSize >= 200 });
     }
     updateChart(grades);
   }
