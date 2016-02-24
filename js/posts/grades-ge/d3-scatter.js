@@ -108,7 +108,7 @@ function chart(allGrades) {
       .attr("text-anchor", "middle")
       .attr("transform", "translate(400, 500)")
       .attr("class", "labelsX")
-      .text("% students who got A");
+      .text("Percent students who earned As");
 
 
   function pickTheme(theme) {
