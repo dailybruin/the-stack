@@ -1,9 +1,11 @@
 div#vizContainer {
   font-family: "Nunito", sans-serif;
+  width: 120%;
+  overflow-x: scroll;
 }
 
 svg {
-  width: 960px;
+  width: 890px;
   height: 550px;
   display: block;
   margin: auto;
@@ -25,7 +27,7 @@ circle {
 }
 
 text.labelsY {
-  font-size: 0.8em;
+  font-size: 0.7em;
 }
 
 figcaption {
@@ -38,15 +40,16 @@ iframe.datatables {
   -moz-box-shadow: 0px 0px 6px 5px rgba(128,128,128,0.1);
   box-shadow: 0px 0px 6px 5px rgba(128,128,128,0.1);
   border-radius: 5px;
-  width: 870px;
+  width: 100%;
+  overflow-x: scroll;
 }
 
 iframe#geVar {
-  height: 370px;
+  height: 410px;
 }
 
 iframe#geAll {
-  height: 500px;
+  height: 540px;
 }
 
 
@@ -62,4 +65,9 @@ article {
 .dataTables_info {
   font-size: smaller;
   font-family: monospace;
+}
+
+.ui.button {
+  padding: 0.7em;
+  margin: 0.4em;
 }
