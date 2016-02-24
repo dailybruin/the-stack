@@ -88,7 +88,7 @@ function chart(allGrades) {
 
 
   d3.select("svg#chart").append("g")
-    .attr("transform", "translate(0, 420)")
+    .attr("transform", "translate(0, 440)")
     .attr("class", "axis")
     .call(xAxis)
 
@@ -106,7 +106,7 @@ function chart(allGrades) {
 
   d3.select("svg#chart").append("text")
       .attr("text-anchor", "middle")
-      .attr("transform", "translate(400, 480)")
+      .attr("transform", "translate(400, 500)")
       .attr("class", "labelsX")
       .text("% students who got A");
 
@@ -154,7 +154,7 @@ function chart(allGrades) {
 
 // update selection based on which combination of GE category and theme user chooses
 function updateChart(grades) {
-  var bottomY = 400;
+  var bottomY = 420;
   var infoX = 80;
   var infoY = 40;
 
