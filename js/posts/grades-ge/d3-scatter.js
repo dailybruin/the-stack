@@ -93,7 +93,7 @@ function chart(allGrades) {
     .call(xAxis)
 
   d3.select("svg#chart").append("g")
-    .attr("transform", "translate(800, 420)")
+    .attr("transform", "translate(800, 440)")
     .attr("class", "axis")
     .call(yAxis)
 
@@ -157,6 +157,8 @@ function updateChart(grades) {
   var bottomY = 420;
   var infoX = 80;
   var infoY = 40;
+  var circleRadius = 5;
+  var selectedRadius = 6;
 
   var circles = d3.select("svg#chart")
     .selectAll("circle")
@@ -165,7 +167,7 @@ function updateChart(grades) {
 
   circles.enter()
     .append("circle")
-    .attr("r", 5)
+    .attr("r", circleRadius)
     .attr("cx", function(d, i) { return gradesScale(d.MedianA) })
     .attr("cy", function(d, i) {
             return bottomY + totClassScale(d.TotClasses)
@@ -198,7 +200,7 @@ function updateChart(grades) {
 
 
     circles.filter(function(p, j) { return i === j })
-        .attr("r", 7)
+        .attr("r", selectedRadius)
         .style("fill", "#3255A4")
   }
 

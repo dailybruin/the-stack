@@ -1,0 +1,318 @@
+Subject,CatalogNo,Name,GE,MedianA,MedianGPA,TotClasses,ClassSize
+A&O SCI,0001,CLIMATE CHANGE,Scientific Inquiry-Physical Sciences,0.34,2.77,10,150
+A&O SCI,0002,AIR POLLUTION,Scientific Inquiry-Physical Sciences,0.32,2.64,11,169
+A&O SCI,0003,INTR-ATMOS ENVIRMNT,Scientific Inquiry-Physical Sciences,0.3,2.79,6,65
+AF AMER,0006,BLACK INTLCTL THGHT,Society and Culture-Historical Analysis,0.57,3.21,2,42
+AFRO-AM,0006,BLACK INTLCTL THGHT,Society and Culture-Historical Analysis,0.47,3.21,3,55
+AN N EA,0010W,JERUSALEM-HOLY CITY,Society and Culture-Historical Analysis,0.59,3.33,24,26
+AN N EA,0015,WMN&PWR-ANCNT WORLD,Society and Culture-Historical Analysis,0.63,3.33,4,155
+AN N EA,0030,SCIENCE-ARCHAEOLOGY,Scientific Inquiry-Life Sciences,0.88,3.48,1,72
+ANTHRO,0007,HUMAN EVOLUTION,Scientific Inquiry-Life Sciences,0.34,2.7,10,252
+ANTHRO,0008,ARCHAEOLOGY-INTRO,Society and Culture-Historical Analysis,0.36,2.75,11,222
+ANTHRO,0009,CULTURE AND SOCIETY,Society and Culture-Social Analysis,0.39,3.04,10,226
+ANTHRO,0033,CULTURE&COMMUNICATN,Society and Culture-Social Analysis,0.58,3.25,10,264
+APPLING,0010W,LANGUAGE IN ACTION,Arts and Humanities-Philosophical and Linguistic Analysis,0.54,3.37,1,59
+APPLING,0030W,LANG&SOCL INTERACTN,Arts and Humanities-Philosophical and Linguistic Analysis,0.68,3.51,12,18
+APPLING,0040,LANGUAGE AND GENDER,Arts and Humanities-Philosophical and Linguistic Analysis,0.25,2.86,2,64
+APPLING,0040W,LANGUAGE AND GENDER,Arts and Humanities-Philosophical and Linguistic Analysis,0.68,3.32,12,21
+APPLING,0101W,LANG LEARNING&TCHNG,Arts and Humanities-Philosophical and Linguistic Analysis,0.68,3.68,11,19
+ARCHEOL,0030,SCIENCE-ARCHAEOLOGY,Scientific Inquiry-Life Sciences,0.92,3.74,1,94
+ART,0031A,MODERNISM,Arts and Humanities-Visual and Performance Arts Analysis and Practice,0.54,3.36,4,68
+ART,0031B,MODERNISM,Arts and Humanities-Visual and Performance Arts Analysis and Practice,0.51,3.38,3,73
+ART,0031C,MODERNISM,Arts and Humanities-Visual and Performance Arts Analysis and Practice,0.53,3.47,3,71
+ART HIS,0024,ARCHITCTR-MDRN WRLD,Arts and Humanities-Visual and Performance Arts Analysis and Practice,0.4,2.85,1,249
+ART HIS,0028,ARTS OF AFRICA,Arts and Humanities-Visual and Performance Arts Analysis and Practice,0.56,3.17,1,232
+ART HIS,0050,ANCIENT ART,Arts and Humanities-Visual and Performance Arts Analysis and Practice,0.53,3.05,2,200
+ART HIS,0051,MEDIEVAL ART,Arts and Humanities-Visual and Performance Arts Analysis and Practice,0.55,3.19,4,198
+ART HIS,0054,MODERN ART,Arts and Humanities-Visual and Performance Arts Analysis and Practice,0.49,3.12,2,283
+ART HIS,0055A,INTRO-AFRICAN ARTS,Arts and Humanities-Visual and Performance Arts Analysis and Practice,0.62,3.27,3,196
+ART HIS,0055B,INTR-PRE-COLUMB ART,Arts and Humanities-Visual and Performance Arts Analysis and Practice,0.58,3.29,2,144
+ART HIS,0056A,ARTS-INDIA&SE ASIA,Arts and Humanities-Visual and Performance Arts Analysis and Practice,0.76,3.52,2,284
+ART HIS,0056B,CHINESE ART,Arts and Humanities-Visual and Performance Arts Analysis and Practice,0.63,3.25,1,214
+ART HIS,0057,RENSSNC&BAROQUE ART,Arts and Humanities-Visual and Performance Arts Analysis and Practice,0.48,3.06,2,248
+ART HIS,0058,ARCHITCTR-MDRN WRLD,Arts and Humanities-Visual and Performance Arts Analysis and Practice,0.46,2.94,1,176
+ASIA AM,0010,HIST-ASIAN AMERICNS,Society and Culture-Historical Analysis,0.54,3.14,6,36
+ASIA AM,0020,ASIA AM COMMUNITIES,Society and Culture-Social Analysis,0.7,3.42,6,176
+ASIA AM,0030,ASIAN AM LIT&CULTUR,Arts and Humanities-Literary and Cultural Analysis,0.35,2.75,4,52
+ASIA AM,0030W,ASIAN AM LIT&CULTUR,Arts and Humanities-Literary and Cultural Analysis,0.53,3.42,3,17
+ASIA AM,0040,ASIAN AMER MOVEMENT,Society and Culture-Historical Analysis,0.75,3.42,4,142
+ASIA AM,0050,ASIAN AMERICN WOMEN,Society and Culture-Social Analysis,0.51,3.05,3,98
+ASTR,0003,NATURE OF UNIVERSE,Scientific Inquiry-Physical Sciences,0.32,2.84,20,132
+ASTR,0004,BLACK HOLES,Scientific Inquiry-Physical Sciences,0.28,2.57,7,105
+ASTR,0005,LIFE IN THE UNIVERS,Scientific Inquiry-Life Sciences,0.46,3.01,16,112
+ASTR,0006,CHANG CNCPT-UNIVERS,Scientific Inquiry-Physical Sciences,0.32,2.63,3,60
+C&EE,0058SL,CLIMATE CHNG&ECOSYS,Scientific Inquiry-Life Sciences,0.89,3.76,1,17
+C&EE ST,0091,CLTR&SOC-CNTR&E EUR,Arts and Humanities-Literary and Cultural Analysis,0.86,3.79,1,34
+CEE STD,0091,CLTR&SOC-CNTR&E EUR,Arts and Humanities-Literary and Cultural Analysis,0.66,3.2,2,44
+CHEM,0014A,EQUILBR&ACIDS&BASES,Scientific Inquiry-Physical Sciences,0.22,2.71,28,337
+CHEM,0014B,THRMDN&ELCTCHM&KNTC,Scientific Inquiry-Physical Sciences,0.22,2.65,18,359
+CHEM,0014BL,GEN&ORGN CHEM LAB 1,Scientific Inquiry-Physical Sciences,0.38,3.17,20,227
+CHEM,0020A,CHEMICAL STRUCTURE,Scientific Inquiry-Physical Sciences,0.26,2.75,21,249
+CHEM,0020AH,CHEM STRUCTURE-HNRS,Scientific Inquiry-Physical Sciences,0.61,3.42,3,31
+CHEM,0020B,ENERGETICS&CHANGE,Scientific Inquiry-Physical Sciences,0.22,2.7,12,194
+CHEM,0020BH,ENRGTCS&CHANGE-HNRS,Scientific Inquiry-Physical Sciences,0.5,3.38,3,14
+CHEM,0020L,GENRL CHEMISTRY LAB,Scientific Inquiry-Physical Sciences,0.32,3.03,13,203
+CHICANO,0010A,CHICANO HIST&CULTUR,Arts and Humanities-Visual and Performance Arts Analysis and Practice,0.73,3.6,8,396
+CHICANO,0010B,SOC STRUC&CONT COND,Society and Culture-Historical Analysis,0.57,3.41,6,102
+CHIN,0050,CHINESE CIVILIZATN,Arts and Humanities-Philosophical and Linguistic Analysis,0.56,2.94,10,150
+CHIN,0070,CLASSCS-CHINESE LIT,Arts and Humanities-Literary and Cultural Analysis,0.62,3.06,2,31
+CHIN,0070W,CLASSCS-CHINESE LIT,Arts and Humanities-Literary and Cultural Analysis,0.96,3.9,1,22
+CHIN,0080,CHINESE CINEMA,Arts and Humanities-Visual and Performance Arts Analysis and Practice,0.64,3.06,1,36
+CIVIC,0050SL,ENGAGING LA,Society and Culture-Social Analysis,0.6,3.4,2,64
+CLASSIC,0010,DISCOVERING GREEKS,Society and Culture-Historical Analysis,0.48,3.09,8,210
+CLASSIC,0020,DISCOVERING ROMANS,Society and Culture-Historical Analysis,0.35,2.86,7,200
+CLASSIC,0030,CLASSICAL MYTHOLOGY,Arts and Humanities-Literary and Cultural Analysis,0.38,2.88,8,200
+CLASSIC,0040W,READING GREEK LIT,Arts and Humanities-Literary and Cultural Analysis,0.54,3.35,2,54
+CLASSIC,0042,CINEMA&ANCIENT WRLD,Arts and Humanities-Visual and Performance Arts Analysis and Practice,0.49,3.12,5,126
+CLASSIC,0051A,ART&ARCL-ANC GREECE,Arts and Humanities-Visual and Performance Arts Analysis and Practice,0.55,3.14,2,249
+CLASSIC,0051B,ART&ARCHL-ANCT ROME,Arts and Humanities-Visual and Performance Arts Analysis and Practice,0.43,2.88,2,194
+CLASSIC,0060,FANTASTIC JOURNEY,Arts and Humanities-Literary and Cultural Analysis,0.47,3.18,3,89
+CLASSIC,0148,EARLY GRK MED&THGHT,Arts and Humanities-Philosophical and Linguistic Analysis,0.43,2.85,1,76
+CLASSIC,0185,ENGLISH VOCABULARY,Arts and Humanities-Philosophical and Linguistic Analysis,0.42,2.79,5,74
+COM LIT,0001B,WRD LIT-MID AGE-17C,Arts and Humanities-Literary and Cultural Analysis,0.58,3.12,2,30
+COM LIT,0001C,WRD LIT-ENLTNMT-20C,Arts and Humanities-Literary and Cultural Analysis,0.56,3.31,2,72
+COM LIT,0002AW,SRV-LT-ANTQ-MID AGE,Arts and Humanities-Literary and Cultural Analysis,0.34,3.25,3,70
+COM LIT,0002BW,SRV-LIT-MID AGE-17C,Arts and Humanities-Literary and Cultural Analysis,0.54,3.47,3,79
+COM LIT,0002CW,SRV-LIT-ENLTNMT-20C,Arts and Humanities-Literary and Cultural Analysis,0.44,3.25,8,92
+COM LIT,0002DW,GREAT BOOKS-WORLD,Arts and Humanities-Literary and Cultural Analysis,0.51,3.28,3,44
+COMM ST,0010,INTRO-COMMCTN STDS,Society and Culture-Social Analysis,0.18,2.68,16,174
+DANCE,0044,WORLD DANCE HIST,Arts and Humanities-Visual and Performance Arts Analysis and Practice,0.58,3.41,3,53
+DESMA,0008,MEDIA HISTORIES,Society and Culture-Social Analysis,0.57,3.12,3,268
+DESMA,0009,ART&SCIENCE&TCHNLGY,Arts and Humanities-Visual and Performance Arts Analysis and Practice,0.71,3.33,5,199
+DESMA,0010,DESIGN CULTURE,Arts and Humanities-Visual and Performance Arts Analysis and Practice,0.7,3.45,6,273
+DUTCH,0010,CONTEMP DUTCH SOCTY,Arts and Humanities-Literary and Cultural Analysis,0.54,3.64,1,13
+E&S SCI,0001,INTRO TO EARTH SCI,Scientific Inquiry-Physical Sciences,0.33,2.97,3,70
+E&S SCI,0001F,EARTH SCI-FIELDWORK,Scientific Inquiry-Physical Sciences,0.5,3.23,1,47
+E&S SCI,0003,ASTROBIOLOGY,Scientific Inquiry-Life Sciences,0.5,3.08,2,130
+E&S SCI,0008,EARTHQUAKES,Scientific Inquiry-Physical Sciences,0.27,2.63,5,118
+E&S SCI,0009,SOLAR SYSTM&PLANETS,Scientific Inquiry-Physical Sciences,0.48,3.17,5,131
+E&S SCI,0013,NATURAL DISASTERS,Scientific Inquiry-Physical Sciences,0.3,2.63,1,80
+E&S SCI,0015,INTROD-OCEANOGRAPHY,Scientific Inquiry-Life Sciences,0.74,3.44,5,284
+E&S SCI,0016,MJR EVNTS-HIST LIFE,Scientific Inquiry-Life Sciences,0.3,2.38,1,97
+E&S SCI,0017,DINOSAURS&RELATIVES,Scientific Inquiry-Life Sciences,0.26,2.7,2,214
+EE BIOL,0017,EVOLTN FOR EVERYONE,Scientific Inquiry-Life Sciences,0.36,2.95,3,33
+EE BIOL,0018,SCI-ENVRNMNT ISSUES,Scientific Inquiry-Life Sciences,0.76,3.6,4,70
+EE BIOL,0025,LIVING OCEAN,Scientific Inquiry-Life Sciences,0.24,2.46,3,71
+ENGCOMP,0005W,LIT&CLTR&CRIT INQRY,Arts and Humanities-Literary and Cultural Analysis,0.77,3.64,17,20
+ENGL,0010A,LIT IN ENGL TO 1700,Arts and Humanities-Literary and Cultural Analysis,0.29,2.9,10,119
+ENGL,0080,MAJOR AMER AUTHORS,Arts and Humanities-Literary and Cultural Analysis,0.51,3.3,5,60
+ENGL,0085,AMERICAN NOVEL,Arts and Humanities-Literary and Cultural Analysis,0.4,3.2,6,74
+ENGL,0090,SHAKESPEARE,Arts and Humanities-Literary and Cultural Analysis,0.48,3.22,4,68
+ENGL,0091A,INTRO TO POETRY,Arts and Humanities-Literary and Cultural Analysis,0.6,3.26,4,78
+ENGL,0091B,INTRO TO DRAMA,Arts and Humanities-Literary and Cultural Analysis,0.54,3.31,1,24
+ENGL,0091C,INTRO TO FICTION,Arts and Humanities-Literary and Cultural Analysis,0.4,2.96,7,50
+ENGR,0010A,COMPLEX SYSTEMS SCI,Scientific Inquiry-Physical Sciences,0.55,3.27,3,30
+ENVIRON,0012,SUSTNBLTY&ENVIRNMNT,Scientific Inquiry-Life Sciences,0.7,3.55,6,52
+EPS SCI,0001,INTRO TO EARTH SCI,Scientific Inquiry-Physical Sciences,0.32,2.62,4,64
+EPS SCI,0003,ASTROBIOLOGY,Scientific Inquiry-Life Sciences,0.5,2.98,2,220
+EPS SCI,0008,EARTHQUAKES,Scientific Inquiry-Physical Sciences,0.32,2.74,5,111
+EPS SCI,0009,SOLAR SYSTM&PLANETS,Scientific Inquiry-Physical Sciences,0.36,2.87,7,54
+EPS SCI,0010,EXPLORING MARS,Scientific Inquiry-Physical Sciences,0.49,3.19,1,109
+EPS SCI,0013,NATURAL DISASTERS,Scientific Inquiry-Physical Sciences,0.16,2.15,2,76
+EPS SCI,0015,INTROD-OCEANOGRAPHY,Scientific Inquiry-Life Sciences,0.58,3.08,6,183
+EPS SCI,0016,MJR EVNTS-HIST LIFE,Scientific Inquiry-Life Sciences,0.27,2.42,2,99
+EPS SCI,0017,DINOSAURS&RELATIVES,Scientific Inquiry-Life Sciences,0.32,2.75,4,248
+ETHNOMU,0005,MUSIC AROUND WORLD,Arts and Humanities-Visual and Performance Arts Analysis and Practice,0.49,3.19,3,107
+ETHNOMU,0025,GLOBAL POP,Arts and Humanities-Visual and Performance Arts Analysis and Practice,0.63,3.37,7,162
+ETHNOMU,0030,MUSIC AND MEDIA,Arts and Humanities-Visual and Performance Arts Analysis and Practice,0.42,2.77,2,109
+ETHNOMU,0040,MUSIC AND RELIGION,Arts and Humanities-Visual and Performance Arts Analysis and Practice,0.68,3.4,2,57
+ETHNOMU,0045,MUSIC OF BOLLYWOOD,Arts and Humanities-Visual and Performance Arts Analysis and Practice,0.79,3.45,3,44
+ETHNOMU,0050A,JAZZ-AMERCN CULTURE,Arts and Humanities-Visual and Performance Arts Analysis and Practice,0.73,3.48,7,359
+ETHNOMU,0050B,JAZZ-AMERCN CULTURE,Arts and Humanities-Visual and Performance Arts Analysis and Practice,0.62,3.26,6,225
+ETHNOMU,0060,BACH-HIS WORLD&OURS,Arts and Humanities-Visual and Performance Arts Analysis and Practice,0.5,3.04,2,64
+ETHNOMU,0108B,MUSIC-LATIN AMERICA,Arts and Humanities-Visual and Performance Arts Analysis and Practice,0.57,3.15,4,52
+FILM TV,0106A,HIST AM MOTION PIC,Arts and Humanities-Visual and Performance Arts Analysis and Practice,0.54,3.39,13,249
+FILM TV,0106B,HIST EUROPE MTN PIC,Arts and Humanities-Visual and Performance Arts Analysis and Practice,0.61,3.41,3,117
+FILM TV,0106C,AFR&ASN&LAT AM FILM,Arts and Humanities-Visual and Performance Arts Analysis and Practice,0.54,3.29,5,39
+FILM TV,0108,HIST-DOCUMNTRY FILM,Arts and Humanities-Visual and Performance Arts Analysis and Practice,0.57,3.42,4,114
+FILM TV,0110A,AMERICAN TV HISTORY,Arts and Humanities-Visual and Performance Arts Analysis and Practice,0.62,3.4,6,74
+FILM TV,0112,FILM&SOCIAL CHANGE,Arts and Humanities-Visual and Performance Arts Analysis and Practice,0.52,3.38,3,104
+FILM TV,0113,FILM AUTHORS,Arts and Humanities-Visual and Performance Arts Analysis and Practice,0.31,2.94,1,130
+FILM TV,0114,FILM GENRES,Arts and Humanities-Visual and Performance Arts Analysis and Practice,0.57,3.21,6,114
+FRNCH,0014,INTRO-FRN CULTR&CIV,Arts and Humanities-Literary and Cultural Analysis,0.7,3.47,4,38
+FRNCH,0014W,INTRO-FRN CULTR&CIV,Arts and Humanities-Literary and Cultural Analysis,0.55,3.44,4,38
+FRNCH,0016,SCTY-ERLY MDRN FRNC,Society and Culture-Historical Analysis,0.47,3.02,3,33
+FRNCH,0041,FRENCH CINEMA&CULTR,Arts and Humanities-Visual and Performance Arts Analysis and Practice,0.57,3.22,6,112
+FRNCH,0060,FRENCH&FRANCPHN NOV,Arts and Humanities-Literary and Cultural Analysis,0.54,3.1,5,27
+GE CLST,0020A,INTERRCL DYNAMCS-US,Arts and Humanities-Visual and Performance Arts Analysis and Practice,0.46,3.41,4,207
+GE CLST,0020B,INTERRCL DYNAMCS-US,Arts and Humanities-Visual and Performance Arts Analysis and Practice,0.46,3.43,3,159
+GE CLST,0021A,HIST-MODERN THOUGHT,Arts and Humanities-Philosophical and Linguistic Analysis,0.48,3.38,4,182
+GE CLST,0021B,HIST-MODERN THOUGHT,Arts and Humanities-Philosophical and Linguistic Analysis,0.66,3.59,3,146
+GE CLST,0026A,PVRTY&HLTH-LATIN AM,Scientific Inquiry-Life Sciences,0.63,3.47,3,102
+GE CLST,0026B,PVRTY&HLTH-LATIN AM,Scientific Inquiry-Life Sciences,0.62,3.47,3,76
+GE CLST,0030A,PERSPECTIVE ON MYTH,Arts and Humanities-Philosophical and Linguistic Analysis,0.36,3.18,3,192
+GE CLST,0030B,PERSPECTIVE ON MYTH,Arts and Humanities-Philosophical and Linguistic Analysis,0.52,3.34,2,150
+GE CLST,0060A,AMERICA 1954-1974,Arts and Humanities-Visual and Performance Arts Analysis and Practice,0.44,3.36,4,213
+GE CLST,0060B,AMERICA 1954-1974,Arts and Humanities-Visual and Performance Arts Analysis and Practice,0.44,3.38,3,167
+GE CLST,0066A,LA-THE CLUSTER,Arts and Humanities-Visual and Performance Arts Analysis and Practice,0.49,3.38,2,170
+GE CLST,0066B,LA-THE CLUSTER,Arts and Humanities-Visual and Performance Arts Analysis and Practice,0.69,3.62,2,139
+GE CLST,0070A,COSMOS AND LIFE,Scientific Inquiry-Life Sciences,0.37,3.1,4,190
+GE CLST,0070B,COSMOS AND LIFE,Scientific Inquiry-Life Sciences,0.43,3.28,3,159
+GE CLST,0072A,SEX-BIOLOGY-SOCIETY,Scientific Inquiry-Life Sciences,0.38,3.13,2,141
+GE CLST,0072B,SEX-BIOLOGY-SOCIETY,Scientific Inquiry-Life Sciences,0.44,3.25,2,121
+GE CLST,0073A,HIST&SCI&PHIL-BRAIN,Scientific Inquiry-Life Sciences,0.26,3,4,141
+GE CLST,0073B,HIST&SCI&PHIL-BRAIN,Scientific Inquiry-Life Sciences,0.36,3.08,3,120
+GE CLST,0080A,FRONTRS-HUMAN AGING,Scientific Inquiry-Life Sciences,0.4,3.25,2,104
+GE CLST,0080A,LONGEVITY REVOLUTN,Scientific Inquiry-Life Sciences,0.42,3.22,2,84
+GE CLST,0080B,FRONTRS-HUMAN AGING,Scientific Inquiry-Life Sciences,0.57,3.48,1,75
+GE CLST,0080B,LONGEVITY REVOLUTN,Scientific Inquiry-Life Sciences,0.7,3.63,2,71
+GENDER,0010,FMNST-WOMEN&SOCIETY,Society and Culture-Social Analysis,0.51,3.38,1,151
+GENDER,0010,INTRO-GENDER STDS,Society and Culture-Social Analysis,0.56,3.24,12,152
+GEOG,0001,EARTH PHYS ENVIRONM,Scientific Inquiry-Physical Sciences,0.3,2.62,4,91
+GEOG,0002,BIODIVR-CHNGNG WRLD,Scientific Inquiry-Life Sciences,0.37,2.86,7,142
+GEOG,0003,CULTURAL GEOGRAPHY,Society and Culture-Social Analysis,0.38,2.98,12,142
+GEOG,0004,REGNL DEV&WRLD ECON,Society and Culture-Historical Analysis,0.3,2.71,13,97
+GEOG,0005,PEOPLE&EARTH ECOSYS,Scientific Inquiry-Life Sciences,0.38,2.95,16,238
+GEOG,0006,WORLD REGIONS,Society and Culture-Social Analysis,0.67,3.44,4,87
+GEOG,0007,GEOG INFO SYSTEMS,Scientific Inquiry-Life Sciences,0.36,2.51,16,117
+GERMAN,0056,FIGURES-CHANG WORLD,Arts and Humanities-Philosophical and Linguistic Analysis,0.47,3.11,3,119
+GERMAN,0059,HOLOCAUST-FILM&LIT,Arts and Humanities-Philosophical and Linguistic Analysis,0.56,3.38,6,196
+GERMAN,0061A,MDRN MTRPLS-BERLIN,Society and Culture-Historical Analysis,0.83,3.76,3,18
+GERMAN,0061C,MDRN MTRPLS-VIENNA,Society and Culture-Historical Analysis,0.28,2.53,2,38
+GERMAN,0102,WAR&POLITICS&ART,Society and Culture-Historical Analysis,0.76,3.71,5,23
+GLBL ST,0001,GLOBALIZATN-MARKETS,Society and Culture-Social Analysis,0.33,2.9,5,270
+GLBL ST,0001,INTRO-GLOBL STUDIES,Society and Culture-Social Analysis,0.54,3.45,2,158
+HIST,0001A,WESTERN CIVILIZATN,Society and Culture-Historical Analysis,0.44,2.99,7,190
+HIST,0001B,WESTERN CIVILIZATN,Society and Culture-Historical Analysis,0.49,3.13,7,139
+HIST,0001C,WESTERN CIVILIZATN,Society and Culture-Historical Analysis,0.46,3.02,10,128
+HIST,0002C,MYSTIC&HERTIC&WITCH,Society and Culture-Historical Analysis,0.8,3.55,2,259
+HIST,0003A,INTRO HIST SCIENCE,Society and Culture-Historical Analysis,0.41,3.13,4,100
+HIST,0003C,SCI-RELATIVITY-DNA,Society and Culture-Historical Analysis,0.31,2.85,3,134
+HIST,0003D,HISTORY OF MEDICINE,Society and Culture-Historical Analysis,0.4,2.93,3,142
+HIST,0005,HOLOCAUST,Society and Culture-Historical Analysis,0.6,3.31,2,116
+HIST,0008A,COLONIAL LATIN AMER,Society and Culture-Historical Analysis,0.48,3.16,4,246
+HIST,0008B,MODRN LATIN AMERICA,Society and Culture-Historical Analysis,0.61,3.04,1,61
+HIST,0008C,LAT AMRCN SOCL HIST,Society and Culture-Historical Analysis,0.4,2.93,2,78
+HIST,0009A,INDIA,Society and Culture-Historical Analysis,0.57,2.99,3,74
+HIST,0009C,JAPAN,Society and Culture-Historical Analysis,0.39,2.68,1,107
+HIST,0009D,MIDDLE EAST,Society and Culture-Historical Analysis,0.74,3.51,2,110
+HIST,0009D,NEAR & MIDDLE EAST,Society and Culture-Historical Analysis,0.56,3.29,2,88
+HIST,0009E,SE ASIAN CROSSROADS,Society and Culture-Historical Analysis,0.51,2.76,3,46
+HIST,0010B,AFRICA 1800-PRESENT,Society and Culture-Historical Analysis,0.77,3.49,3,137
+HIST,0011A,HIST-CHINA TO 1000,Society and Culture-Historical Analysis,0.33,2.38,4,74
+HIST,0011B,HIS-CHINA-1000-1950,Society and Culture-Historical Analysis,0.27,2.42,3,55
+HIST,0013A,US&COLONIAL ORIGINS,Society and Culture-Historical Analysis,0.36,2.94,4,124
+HIST,0013B,US&COLONL ORGNS-19C,Society and Culture-Historical Analysis,0.51,3.1,3,143
+HIST,0013C,US&COLONL ORGNS-20C,Society and Culture-Historical Analysis,0.57,3.03,6,116
+HIST,0020,WRLD HIST TO AD 600,Society and Culture-Historical Analysis,0.5,3.32,7,64
+HIST,0021,WORLD HIST 600-1760,Society and Culture-Historical Analysis,0.43,3.1,3,22
+HIST,0022,WRLD HIST 1760-PRES,Society and Culture-Historical Analysis,0.53,3.18,3,103
+HNRS,0070A,GEN ENGR-MED&AG&LAW,Scientific Inquiry-Life Sciences,0.71,3.4,3,29
+I A STD,0001,INTL & AREA STUDIES,Society and Culture-Social Analysis,0.29,2.74,7,73
+I A STD,0031,INTR-SOUTHEAST ASIA,Arts and Humanities-Visual and Performance Arts Analysis and Practice,0.71,3.17,4,33
+I A STD,0033,INTRO TO EAST ASIA,Society and Culture-Historical Analysis,0.38,3.1,4,35
+I A STD,0050,INTRO-LATIN AMERICA,Society and Culture-Historical Analysis,0.52,3.23,3,39
+INF STD,0010,INFORMATION&POWER,Society and Culture-Social Analysis,0.72,3.37,3,25
+INF STD,0020,INTRO-INFO STUDIES,Society and Culture-Social Analysis,0.32,3.01,4,14
+INF STD,0030,INTERNET & SOCIETY,Society and Culture-Social Analysis,0.84,3.75,8,36
+ITALIAN,0042A,EARLY MODERN ITALY,Society and Culture-Historical Analysis,0.78,3.62,5,93
+ITALIAN,0042B,MODERN&CONTMP ITALY,Society and Culture-Historical Analysis,0.5,3.1,2,87
+ITALIAN,0042C,ITALIAN FOOD & LIT,Arts and Humanities-Literary and Cultural Analysis,0.36,3,3,50
+ITALIAN,0046,ITAL CINEMA&CULTURE,Arts and Humanities-Literary and Cultural Analysis,0.5,3.17,9,61
+ITALIAN,0050A,LIT-MID AGES-BAROQE,Arts and Humanities-Literary and Cultural Analysis,0.73,3.5,1,15
+ITALIAN,0050B,LIT-ENLGHT-MODERNTY,Arts and Humanities-Literary and Cultural Analysis,0.41,2.65,1,29
+JAPAN,0050,JAPANESE CIVILIZATN,Arts and Humanities-Literary and Cultural Analysis,0.58,3.05,10,126
+JAPAN,0070,IMAGES OF JAPAN,Arts and Humanities-Literary and Cultural Analysis,0.71,3.6,7,83
+JEWISH,0175,MDRN ISRL LIT-FILMS,Arts and Humanities-Literary and Cultural Analysis,0.55,3.25,3,19
+KOREA,0040,KOREAN POP CULTURE,Society and Culture-Social Analysis,0.73,3.44,6,30
+KOREA,0050,HIST KOREAN CIV,Society and Culture-Historical Analysis,0.44,3.36,1,25
+KOREA,0050,KOREAN CIVILIZATION,Society and Culture-Historical Analysis,0.43,3.05,5,141
+LIFESCI,0001,EVOLUTN&ECOL&BIODIV,Scientific Inquiry-Life Sciences,0.25,2.98,26,302
+LIFESCI,0002,CELLS&TISSUES&ORGNS,Scientific Inquiry-Life Sciences,0.22,2.74,28,297
+LIFESCI,0015,LIFE-CONCPTS&ISSUES,Scientific Inquiry-Life Sciences,0.34,2.98,10,274
+LING,0001,INTR-STUDY-LANGUAGE,Scientific Inquiry-Life Sciences,0.47,2.99,27,216
+LING,0020,INTRO LING ANALYSIS,Arts and Humanities-Philosophical and Linguistic Analysis,0.43,2.79,9,25
+LING,0020,INTRO TO LINGUISTCS,Arts and Humanities-Philosophical and Linguistic Analysis,0.28,2.68,12,112
+M E STD,0050A,FIRST CIVILIZATIONS,Society and Culture-Historical Analysis,0.5,3.36,2,167
+M E STD,0050C,MODERN MIDDLE EAST,Arts and Humanities-Literary and Cultural Analysis,0.73,3.5,3,35
+MCD BIO,0040,AIDS&SEXUAL TRANSMT,Scientific Inquiry-Life Sciences,0.5,3.17,1,94
+MCD BIO,0050,STEM CELL BIO&PLTCS,Scientific Inquiry-Life Sciences,0.37,2.92,13,97
+MCD BIO,0060,BIOMEDICAL ETHICS,Arts and Humanities-Philosophical and Linguistic Analysis,0.27,2.7,13,101
+MCD BIO,0070,GENETIC ENGR&SOCTY,Scientific Inquiry-Life Sciences,0.52,3.03,2,19
+MCD BIO,0090,HUMN STEM CELLS&MED,Scientific Inquiry-Life Sciences,0.47,2.73,1,13
+MUS HST,0003,INTRO-CLASSICAL MUS,Arts and Humanities-Visual and Performance Arts Analysis and Practice,0.55,2.92,1,62
+MUS HST,0005,HIST-ROCK AND ROLL,Arts and Humanities-Visual and Performance Arts Analysis and Practice,0.68,3.48,7,290
+MUS HST,0007,FILM AND MUSIC,Arts and Humanities-Visual and Performance Arts Analysis and Practice,0.61,3.29,7,51
+MUS HST,0008,HIST-ELEC DNCE MUSC,Arts and Humanities-Visual and Performance Arts Analysis and Practice,0.69,3.54,4,61
+MUS HST,0009,AMERCN POPULAR SONG,Arts and Humanities-Visual and Performance Arts Analysis and Practice,0.76,3.44,1,118
+MUS HST,0013,PUNK-HIST&SUBCULTUR,Arts and Humanities-Visual and Performance Arts Analysis and Practice,0.8,3.46,1,91
+MUS HST,0060,AMERICAN MUSICAL,Arts and Humanities-Visual and Performance Arts Analysis and Practice,0.58,3.17,4,82
+MUS HST,0061,MUSIC-LOS ANGELES,Arts and Humanities-Visual and Performance Arts Analysis and Practice,0.84,3.65,1,122
+MUS HST,0062,MOZART,Arts and Humanities-Visual and Performance Arts Analysis and Practice,0.68,3.27,2,50
+MUS HST,0064,MOTOWN AND SOUL,Arts and Humanities-Visual and Performance Arts Analysis and Practice,0.51,3.22,3,116
+MUS HST,0065,BLUES,Arts and Humanities-Visual and Performance Arts Analysis and Practice,0.71,3.48,2,98
+MUS HST,0068,BEATLES,Arts and Humanities-Visual and Performance Arts Analysis and Practice,0.8,3.6,6,192
+MUS HST,0070,BEETHOVEN,Arts and Humanities-Visual and Performance Arts Analysis and Practice,0.5,3.06,2,110
+MUS HST,0071,LISTENING,Arts and Humanities-Visual and Performance Arts Analysis and Practice,0.69,3.19,2,46
+MUS HST,0072,SACRED MUSIC,Arts and Humanities-Visual and Performance Arts Analysis and Practice,0.86,3.54,2,12
+MUS HST,0094,MUSIC AND INTERNET,Arts and Humanities-Visual and Performance Arts Analysis and Practice,0.68,3.35,2,118
+MUS HST,0135A,HISTORY OF OPERA,Arts and Humanities-Visual and Performance Arts Analysis and Practice,0.35,2.53,1,84
+MUS HST,0135B,HISTORY OF OPERA,Arts and Humanities-Visual and Performance Arts Analysis and Practice,0.51,2.94,1,64
+MUS HST,0135C,HISTORY OF OPERA,Arts and Humanities-Visual and Performance Arts Analysis and Practice,0.62,3.07,2,44
+MUSIC,0015,ART OF LISTENING,Arts and Humanities-Visual and Performance Arts Analysis and Practice,0.72,3.53,3,214
+NURSING,0003,HUMAN PHYSIOLOGY,Scientific Inquiry-Life Sciences,0.52,3.34,5,42
+NURSING,0013,INTRO-HUMAN ANATOMY,Scientific Inquiry-Life Sciences,0.52,3.34,5,38
+PHILOS,0003,HIST INTRO TO PHIL,Arts and Humanities-Philosophical and Linguistic Analysis,0.32,2.59,4,70
+PHILOS,0004,ANLY-CNTMP MORL ISS,Arts and Humanities-Philosophical and Linguistic Analysis,0.27,2.84,1,187
+PHILOS,0005,PHILOS IN LITERATRE,Arts and Humanities-Philosophical and Linguistic Analysis,0.44,3.27,4,199
+PHILOS,0006,INTRO-POLITICL PHIL,Arts and Humanities-Philosophical and Linguistic Analysis,0.41,3,6,222
+PHILOS,0007,INT PHILOSOPHY-MIND,Arts and Humanities-Philosophical and Linguistic Analysis,0.36,3.04,12,137
+PHILOS,0008,INTRO-PHILOS OF SCI,Arts and Humanities-Philosophical and Linguistic Analysis,0.29,2.76,7,150
+PHILOS,0021,SKEPTICSM&RATNALTY,Arts and Humanities-Philosophical and Linguistic Analysis,0.2,2.66,4,144
+PHILOS,0022,INTRO-ETHICAL THRY,Arts and Humanities-Philosophical and Linguistic Analysis,0.41,2.96,9,44
+PHILOS,0022W,INTRO-ETHICAL THRY,Arts and Humanities-Philosophical and Linguistic Analysis,0.33,3.12,3,98
+PHYSCI,0003,INTRO-HUMAN PHYSIOL,Scientific Inquiry-Life Sciences,0.26,2.98,3,133
+PHYSCI,0005,HMN PHYS-DIET&EXRCS,Scientific Inquiry-Life Sciences,0.49,3.08,13,385
+PHYSCI,0007,SCIENCE AND FOOD,Scientific Inquiry-Life Sciences,0.47,3.27,3,51
+PHYSCI,0013,INTRO-HUMAN ANATOMY,Scientific Inquiry-Life Sciences,0.66,3.5,3,147
+PHYSICS,0001A,MECHANICS,Scientific Inquiry-Physical Sciences,0.3,2.9,25,174
+PHYSICS,0001AH,MECHANICS-HONORS,Scientific Inquiry-Physical Sciences,0.92,3.84,1,25
+PHYSICS,0001B,OSCILTNS&WAVES&FLDS,Scientific Inquiry-Physical Sciences,0.3,2.85,25,172
+PHYSICS,0001C,ELECTRODYNMC&OPTICS,Scientific Inquiry-Physical Sciences,0.3,2.9,23,157
+PHYSICS,0006A,PHYSIC-LIFE SCI MAJ,Scientific Inquiry-Physical Sciences,0.32,2.9,34,175
+PHYSICS,0006B,PHYSIC-LIFE SCI MAJ,Scientific Inquiry-Physical Sciences,0.34,3.04,32,168
+PHYSICS,0006C,PHYSIC-LIFE SCI MAJ,Scientific Inquiry-Physical Sciences,0.36,3.05,32,170
+PHYSICS,0010,PHYSICS,Scientific Inquiry-Physical Sciences,0.48,3.17,10,136
+PHYSICS,0011,REVOLUTIONS-PHYSICS,Scientific Inquiry-Physical Sciences,0.43,2.99,2,40
+POL SCI,0010,INTR-POLITCL THEORY,Society and Culture-Social Analysis,0.47,3.18,11,269
+POL SCI,0020,WORLD POLITICS,Society and Culture-Social Analysis,0.41,3.05,15,181
+POL SCI,0040,INTRO-AMERICN PLTCS,Society and Culture-Social Analysis,0.59,3.32,17,224
+POL SCI,0050,INTRO-COMPRTV PLTCS,Society and Culture-Social Analysis,0.3,2.99,14,115
+POL SCI,0060,DIVERSITY&DISAGRMNT,Society and Culture-Social Analysis,0.51,3.29,1,60
+PORTGSE,0040B,BRAZILIAN LIT-TRNSL,Arts and Humanities-Literary and Cultural Analysis,0.55,3.49,1,11
+PORTGSE,0046,BRAZIL&PRTGSE WORLD,Society and Culture-Historical Analysis,0.72,3.56,4,64
+PSYCH,0015,INTRO PSYCHOBIOLOGY,Scientific Inquiry-Life Sciences,0.27,2.41,13,167
+PUB PLC,0010A,INTRO-PUBLIC POLICY,Society and Culture-Social Analysis,0.43,3.42,6,70
+RELIGN,0011,RELIGION IN LA,Society and Culture-Social Analysis,0.77,3.54,7,35
+RUSSIAN,0025,GREAT RUSSIAN NOVEL,Arts and Humanities-Literary and Cultural Analysis,0.54,2.85,3,28
+RUSSIAN,0025W,GREAT RUSSIAN NOVEL,Arts and Humanities-Literary and Cultural Analysis,0.4,3.21,2,51
+RUSSIAN,0090A,INTR-RUSSIAN CVLZTN,Society and Culture-Historical Analysis,0.6,2.98,2,56
+RUSSIAN,0090B,RUSSIAN CVLZTN-20 C,Arts and Humanities-Literary and Cultural Analysis,0.39,3.03,3,23
+RUSSIAN,0090BW,RUSSIAN CVLZTN-20 C,Arts and Humanities-Literary and Cultural Analysis,0.63,3.51,1,38
+RUSSN,0090A,INTR-RUSSIAN CVLZTN,Society and Culture-Historical Analysis,0.62,3.16,1,103
+RUSSN,0090BW,RUSSIAN CVLZTN-20 C,Arts and Humanities-Literary and Cultural Analysis,0.64,3.6,2,40
+SCAND,0040W,HERO JRNY-MYTH&LEGD,Arts and Humanities-Literary and Cultural Analysis,0.77,3.69,2,73
+SCAND,0050,INTRO-SCAN LIT&CLTR,Arts and Humanities-Literary and Cultural Analysis,0.79,3.58,10,312
+SCAND,0050W,INTRO-SCAN LIT&CLTR,Arts and Humanities-Literary and Cultural Analysis,0.89,3.74,29,21
+SCAND,0138,VIKINGS,Society and Culture-Historical Analysis,0.62,3.2,6,47
+SLAVC,0005,INTRO TO EURASIA,Society and Culture-Historical Analysis,0.83,3.5,1,17
+SLAVC,0087,LANGUAGES OF L A,Arts and Humanities-Philosophical and Linguistic Analysis,0.66,3.06,1,36
+SLAVC,0090,INTRO-SLAVIC CVLZTN,Arts and Humanities-Visual and Performance Arts Analysis and Practice,0.28,2.62,1,32
+SLAVIC,0087,LANGUAGES OF L A,Arts and Humanities-Philosophical and Linguistic Analysis,0.62,3.38,2,36
+SLAVIC,0090,INTRO-SLAVIC CVLZTN,Arts and Humanities-Visual and Performance Arts Analysis and Practice,0.33,2.65,3,37
+SOC GEN,0005,HUMAN BIOL&SOCIETY,Scientific Inquiry-Life Sciences,0.53,3.33,8,134
+SOC GEN,0101,GNTC CNCPT-HUMN SCI,Scientific Inquiry-Life Sciences,0.42,3.33,3,45
+SOCIOL,0001,INTRODUCTORY SOCIOL,Society and Culture-Social Analysis,0.28,2.94,27,232
+SOCIOL,0040,AMERICAN RACISM,Society and Culture-Historical Analysis,0.84,3.74,1,152
+SOCIOL,0051,SOCIOLOGY-MIGRATION,Society and Culture-Social Analysis,0.45,3.29,4,56
+SPAN,0042,IBERIAN CULTURE,Arts and Humanities-Literary and Cultural Analysis,0.48,3.25,7,111
+SPAN,0044,LATIN AMERICAN CLTR,Society and Culture-Historical Analysis,0.46,3.16,7,116
+STATS,0010,INTRO-STAT REASON,Scientific Inquiry-Life Sciences,0.41,2.98,47,169
+STATS,0012,STAT MTHDS-GEOG&ENV,Society and Culture-Social Analysis,0.46,3.1,3,78
+STATS,0013,STATS-LIFE&HLTH SCI,Scientific Inquiry-Life Sciences,0.49,3.24,15,144
+THEATER,0010,INTRO-THEATER,Arts and Humanities-Visual and Performance Arts Analysis and Practice,0.66,3.35,9,97
+THEATER,0106,HST-AMER THTR&DRAMA,Arts and Humanities-Visual and Performance Arts Analysis and Practice,0.76,3.63,4,76
+WL ARTS,0022,INTR-AMER FLKLR STD,Arts and Humanities-Literary and Cultural Analysis,0.76,3.54,4,35
+WL ARTS,0033,INDIGENOUS WORLDVWS,Arts and Humanities-Philosophical and Linguistic Analysis,0.5,2.9,4,56
+WL ARTS,0051W,ALIEN&PSYCHIC&GHOST,Arts and Humanities-Literary and Cultural Analysis,0.64,3.42,4,74
+YIDDSH,0010,YIDDISH-BECOMG MDRN,Arts and Humanities-Literary and Cultural Analysis,0.72,3.46,2,16
