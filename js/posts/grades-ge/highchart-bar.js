@@ -4,7 +4,7 @@ $(function () {
           type: 'bar'
       },
       title: {
-          text: 'Comparing median grades by GE reqs'
+          text: 'Comparing median grades by GE requirements'
       },
 
       xAxis: {
