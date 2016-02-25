@@ -53,6 +53,9 @@ generates when your site is compiled.
 `README.md` contains information about the project for people landing on
 the GitHub repo and new contributors.
 
+`setup.sh` contains a script for automating initial setup of the project 
+for people on Mac/Linux computers.
+
 ### `_data`
 
 Stores collections of website data used for the site itself, **NOT** data used
@@ -143,7 +146,7 @@ imports all sitewide styles from `/_sass`.
 CSS libraries that are **NOT**
 available from a CDN (preferred method of loading CSS/JS libraries), you
 can put them in the `lib` folder. CSS styles associated with a post should
-be placed in `posts/post-slug`.
+be placed in `css/posts/post-slug`.
 
 ### `datasets`
 
