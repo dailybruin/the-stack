@@ -9,13 +9,13 @@ $(function () {
 
       xAxis: {
           categories: [
-              "Visual and Performance Arts",
-              "Literary and Cultural",
+              "Visual and performance Arts",
+              "Literary and cultural",
               "Historical",
               "Social",
-              "Philosophical and Linguistic",
-              "Life Sciences",
-              "Physical Sciences" ]
+              "Philosophical and linguistic",
+              "Life sciences",
+              "Physical sciences" ]
       },
       yAxis: {
           min: 0,
