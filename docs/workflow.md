@@ -1,4 +1,6 @@
 ---
+layout: page
+permalink: /docs/workflow/
 ---
 
 # Workflow
