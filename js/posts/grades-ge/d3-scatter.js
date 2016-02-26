@@ -102,13 +102,13 @@ function chart(allGrades) {
       .attr("text-anchor", "middle")
       .attr("transform", "translate(800, 150)")
       .attr("class", "labelsY")
-      .text("Total sections since Fall 2012");
+      .text("Total sections since fall 2012");
 
   d3.select("svg#chart").append("text")
       .attr("text-anchor", "middle")
       .attr("transform", "translate(400, 500)")
       .attr("class", "labelsX")
-      .text("Percent students who earned As");
+      .text("Percent of students who earned As");
 
 
   function pickTheme(theme) {

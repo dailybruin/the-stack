@@ -20,10 +20,8 @@ button.selected {
   background-color: lightgrey;
 }
 
-
 circle {
   opacity: 0.9;
-  /*fill: #F39C12;*/
 }
 
 text.labelsY {
@@ -51,7 +49,6 @@ iframe#geVar {
 iframe#geAll {
   height: 540px;
 }
-
 
 blockquote.note {
   font-size: 14px;

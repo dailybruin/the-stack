@@ -10,7 +10,7 @@ $(document).ready(function() {
         "order": [[3, "asc"]],
         "scrollY":        "250px",
         "scrollCollapse": true,
-        "paging":         false
+        "paging":         true
     } );
 
     $("table#lit").DataTable( {
@@ -24,6 +24,6 @@ $(document).ready(function() {
         "order": [[3, "asc"]],
         "scrollY":        "250px",
         "scrollCollapse": true,
-        "paging":         false
+        "paging":         true
     } );
 } );
