@@ -1,5 +1,6 @@
 ---
 layout: page
+permalink: /docs/usage-and-style/
 ---
 
 # Usage documentation and style guidelines
