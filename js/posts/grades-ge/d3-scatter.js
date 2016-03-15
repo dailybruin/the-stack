@@ -1,18 +1,26 @@
+// utility: re-render circle & move it to front (https://gist.github.com/trtg/3922684)
+d3.selection.prototype.moveToFront = function() {
+  return this.each(function(){
+    this.parentNode.appendChild(this);
+  });
+};
+
+// load data & render chart
 d3.csv("/datasets/grades-ge/ge-all.csv", chart);
 
 function chart(allGrades) {
 
   var l = [];
   allGrades.map(function(d, i) {
-          var c = count(l, Math.round(d.MedianA*100))
-          d.count = c
+          var c = count(l, Math.round(d.MedianA * 100))
+          d.count = c // not used
           d.index = i;
-          l.push(Math.round(d.MedianA*100))
-      })
+          l.push(Math.round(d.MedianA * 100))
+      });
 
   filteredGrades = allGrades; // global variable
-  grades = allGrades // global variable
-  pickedTheme = "0" // global variable
+  grades = allGrades; // global variable
+  pickedTheme = "0"; // global variable
 
   gradesExtent = d3.extent(allGrades, function(d) { return d.MedianA })
   gradesScale = d3.scale.linear().domain([0, 1]).range([800, 30]);
@@ -34,42 +42,42 @@ function chart(allGrades) {
           $(this).removeClass("basic")
         }
 
-        var pickedReq = $(this).attr("value")
+        var pickedReq = $(this).attr("value");
         switch(pickedReq) {
           case "0":
             filteredGrades = allGrades;
-            pickTheme(pickedTheme)
-            break
+            pickTheme(pickedTheme);
+            break;
           case "1":
-            filteredGrades = allGrades.filter(function(d) { return d.GE === "Arts and Humanities-Literary and Cultural Analysis" })
-            pickTheme(pickedTheme)
-            break
+            filteredGrades = allGrades.filter(function(d) { return d.GE === "Arts and Humanities-Literary and Cultural Analysis" });
+            pickTheme(pickedTheme);
+            break;
           case "2":
-            filteredGrades = allGrades.filter(function(d) { return d.GE === "Arts and Humanities-Philosophical and Linguistic Analysis" })
-            pickTheme(pickedTheme)
-            break
+            filteredGrades = allGrades.filter(function(d) { return d.GE === "Arts and Humanities-Philosophical and Linguistic Analysis" });
+            pickTheme(pickedTheme);
+            break;
           case "3":
-            filteredGrades = allGrades.filter(function(d) { return d.GE === "Arts and Humanities-Visual and Performance Arts Analysis and Practice" })
-            pickTheme(pickedTheme)
-            break
+            filteredGrades = allGrades.filter(function(d) { return d.GE === "Arts and Humanities-Visual and Performance Arts Analysis and Practice" });
+            pickTheme(pickedTheme);
+            break;
           case "4":
-            filteredGrades = allGrades.filter(function(d) { return d.GE === "Society and Culture-Historical Analysis" })
-            pickTheme(pickedTheme)
-            break
+            filteredGrades = allGrades.filter(function(d) { return d.GE === "Society and Culture-Historical Analysis" });
+            pickTheme(pickedTheme);
+            break;
           case "5":
-            filteredGrades = allGrades.filter(function(d) { return d.GE === "Society and Culture-Social Analysis" })
-            pickTheme(pickedTheme)
-            break
+            filteredGrades = allGrades.filter(function(d) { return d.GE === "Society and Culture-Social Analysis" });
+            pickTheme(pickedTheme);
+            break;
           case "6":
-            filteredGrades = allGrades.filter(function(d) { return d.GE === "Scientific Inquiry-Life Sciences" })
-            pickTheme(pickedTheme)
-            break
+            filteredGrades = allGrades.filter(function(d) { return d.GE === "Scientific Inquiry-Life Sciences" });
+            pickTheme(pickedTheme);
+            break;
           case "7":
-            filteredGrades = allGrades.filter(function(d) { return d.GE === "Scientific Inquiry-Physical Sciences" })
-            pickTheme(pickedTheme)
-            break
+            filteredGrades = allGrades.filter(function(d) { return d.GE === "Scientific Inquiry-Physical Sciences" });
+            pickTheme(pickedTheme);
+            break;
         }
-      })
+      });
 
   var xAxis = d3.svg.axis()
       .scale(gradesScale)
@@ -77,7 +85,7 @@ function chart(allGrades) {
       .tickValues([0, 0.25, 0.5, 0.75, 1])
       .outerTickSize(0.5)
       .tickPadding(10)
-      .tickFormat(d3.format("%"))
+      .tickFormat(d3.format("%"));
 
   var yAxis = d3.svg.axis()
       .scale(totClassScale)
@@ -90,19 +98,19 @@ function chart(allGrades) {
   d3.select("svg#chart").append("g")
     .attr("transform", "translate(0, 440)")
     .attr("class", "axis")
-    .call(xAxis)
+    .call(xAxis);
 
   d3.select("svg#chart").append("g")
     .attr("transform", "translate(800, 440)")
     .attr("class", "axis")
-    .call(yAxis)
+    .call(yAxis);
 
   // add axis labels
   d3.select("svg#chart").append("text")
       .attr("text-anchor", "middle")
-      .attr("transform", "translate(800, 150)")
+      .attr("transform", "translate(790, 170)")
       .attr("class", "labelsY")
-      .text("Total sections since fall 2012");
+      .text("Total lectures since fall 2012");
 
   d3.select("svg#chart").append("text")
       .attr("text-anchor", "middle")
@@ -143,9 +151,9 @@ function chart(allGrades) {
         $(this).addClass("olive")
         $(this).removeClass("basic")
       }
-      pickedTheme = $(this).attr("value")
-      pickTheme(pickedTheme)
-  })
+      pickedTheme = $(this).attr("value");
+      pickTheme(pickedTheme);
+  });
 
   // this renders initially once only
   updateChart(allGrades);
@@ -158,12 +166,13 @@ function updateChart(grades) {
   var infoX = 80;
   var infoY = 40;
   var circleRadius = 5;
-  var selectedRadius = 6;
+  var selectedRadius = 7;
+  var circleOpacity = 0.9;
+  var transitionDuration = 300;
 
   var circles = d3.select("svg#chart")
     .selectAll("circle")
-    .data(grades, function(d) { return d.index })
-
+    .data(grades, function(d) { return d.index });
 
   circles.enter()
     .append("circle")
@@ -173,35 +182,45 @@ function updateChart(grades) {
             return bottomY + totClassScale(d.TotClasses)
       })
     .style("fill", function(d) { return colorScale(d.MedianA) })
-
+    .style("opacity", 0)
+    .transition()
+    .duration(transitionDuration)
+    .style("opacity", circleOpacity);
 
     circles.on("mouseover", function(d, i) { return mouseOver(d, i) })
-    .on("mouseleave", function(d, i) { return mouseLeave(d, i) })
+      .on("mouseleave", function(d, i) { return mouseLeave(d, i) });
 
   var classNameInfo = d3.select("svg#chart")
           .append("text")
           .attr("x", infoX)
-          .attr("y", infoY)
+          .attr("y", infoY);
+
   var classGradeInfo = d3.select("svg#chart")
           .append("text")
           .attr("x", infoX)
-          .attr("y", infoY + 40)
+          .attr("y", infoY + 40);
+
   var classOtherInfo = d3.select("svg#chart")
           .append("text")
           .attr("x", infoX)
-          .attr("y", infoY + 80)
+          .attr("y", infoY + 80);
 
   function mouseOver(d, i) {
-    classNameInfo.text(d.Subject + " " + d.CatalogNo + " : " + d.Name);
-    classGradeInfo.text("Typically, " + Math.round(d.MedianA*100) +
-                    " percent of students get an A+, A or A- in this class.");
-    classOtherInfo.text("This class has been taught " + d.TotClasses + (d.TotClasses > 1 ? " times" : " time") +
-                    " since Fall 2012. A typical class has " + d.ClassSize + " students.")
-
+    classNameInfo.append("tspan").attr("class", "classNo").attr("xml:space", "preserve").text(d.Subject + " " + d.CatalogNo + "   ");
+    classNameInfo.append("tspan").attr("class", "className").text(d.Name);
+    classGradeInfo.append("tspan").attr("class", "info").text("Typically, ");
+    classGradeInfo.append("tspan").attr("class", "classNumbers").text(Math.round(d.MedianA * 100));
+    classGradeInfo.append("tspan").attr("class", "info").text(" percent of students get an A+, A or A- in this class.");
+    classOtherInfo.append("tspan").attr("class", "info").text("This class has been taught ");
+    classOtherInfo.append("tspan").attr("class", "classNumbers").text(d.TotClasses);
+    classOtherInfo.append("tspan").attr("class", "info").text((d.TotClasses > 1 ? " times" : " time") + " since Fall 2012, and a typical class has " );
+    classOtherInfo.append("tspan").attr("class", "classNumbers").text(d.ClassSize);
+    classOtherInfo.append("tspan").attr("class", "info").text(" students.");
 
     circles.filter(function(p, j) { return i === j })
         .attr("r", selectedRadius)
         .style("fill", "#3255A4")
+        .moveToFront();
   }
 
   function mouseLeave(d, i) {
@@ -209,15 +228,26 @@ function updateChart(grades) {
     classGradeInfo.text("");
     classOtherInfo.text("");
 
-    circles.attr("r", 5)
-           .style("fill", function(d) { return colorScale(d.MedianA) })
+    circles.attr("r", circleRadius)
+           .style("fill", function(d) { return colorScale(d.MedianA) });
   }
 
   // remove and transition out of existing selection to prep for new selection
-  circles.exit().remove();
+  circles.exit().transition().duration(transitionDuration).style("opacity", 0).remove();
 
 }
 
+
+// $(window).resize(function() {
+//   var SvgWidthToWindowWidth = 0.7;
+//   var windowWidth = $(window).width();
+//   var windowHeight = $(window).height();
+//   var width = document.getElementById("chart").getBoundingClientRect().width;
+//   var height = document.getElementById("chart").getBoundingClientRect().height;
+//   console.log([windowWidth, windowHeight, width, height]);
+//   var newWidth = SvgWidthToWindowWidth * windowWidth;
+//   d3.select("svg#chart").style("width", newWidth);
+// }).resize();
 
 // utility function to count number of targets in an array
 function count(array, target) {
@@ -226,5 +256,5 @@ function count(array, target) {
      if(array[i] == target)
          count++;
   }
-  return count
+  return count;
 }
