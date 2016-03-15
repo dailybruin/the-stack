@@ -1,11 +1,11 @@
 div#vizContainer {
-  font-family: "Nunito", sans-serif;
+  font-family: "Roboto", sans-serif;
   width: 120%;
   overflow-x: scroll;
 }
 
 svg {
-  width: 890px;
+  width: 880px;
   height: 550px;
   display: block;
   margin: auto;
@@ -13,7 +13,33 @@ svg {
 
 g.axis {
   font-size: 12px;
-  font-weight: 300;
+  font-weight: 500;
+}
+
+.classNo, .className {
+  font-size: 25px;
+  font-weight: 500;
+}
+
+.classNo {
+  font-family: "Roboto Condensed", "Nunito", sans-serif;
+  fill: #6699CC;
+}
+
+.className {
+  font-family: "Nunito", sans-serif;
+  fill: #A23E48;
+}
+
+.info{
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.classNumbers {
+  fill: #FF8C42;
+  font-size: 18px;
+  font-weight: 400;
 }
 
 button.selected {
@@ -25,7 +51,7 @@ circle {
 }
 
 text.labelsY {
-  font-size: 0.7em;
+  font-size: 0.8em;
 }
 
 figcaption {
@@ -38,8 +64,8 @@ iframe.datatables {
   -moz-box-shadow: 0px 0px 6px 5px rgba(128,128,128,0.1);
   box-shadow: 0px 0px 6px 5px rgba(128,128,128,0.1);
   border-radius: 5px;
-  width: 100%;
-  overflow-x: scroll;
+  width: 100% !important;
+  overflow-x: scroll !important;
 }
 
 iframe#geVar {
