@@ -13,16 +13,16 @@ svg {
 
 g.axis {
   font-size: 12px;
-  font-weight: 500;
+  font-weight: 400;
 }
 
 .classNo, .className {
-  font-size: 25px;
+  font-size: 28px;
   font-weight: 500;
 }
 
 .classNo {
-  font-family: "Roboto Condensed", "Nunito", sans-serif;
+  font-family: "Roboto Condensed", sans-serif;
   fill: #6699CC;
 }
 
@@ -31,7 +31,7 @@ g.axis {
   fill: #A23E48;
 }
 
-.info{
+.info {
   font-size: 18px;
   font-weight: 400;
 }
@@ -39,7 +39,7 @@ g.axis {
 .classNumbers {
   fill: #FF8C42;
   font-size: 18px;
-  font-weight: 400;
+  font-weight: 500;
 }
 
 button.selected {

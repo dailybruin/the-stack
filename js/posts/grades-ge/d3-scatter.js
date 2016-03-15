@@ -1,13 +1,21 @@
+// utility: re-render circle & move it to front (https://gist.github.com/trtg/3922684)
+d3.selection.prototype.moveToFront = function() {
+  return this.each(function(){
+    this.parentNode.appendChild(this);
+  });
+};
+
+// load data & render chart
 d3.csv("/datasets/grades-ge/ge-all.csv", chart);
 
 function chart(allGrades) {
 
   var l = [];
   allGrades.map(function(d, i) {
-          var c = count(l, Math.round(d.MedianA*100))
-          d.count = c
+          var c = count(l, Math.round(d.MedianA * 100))
+          d.count = c // not used
           d.index = i;
-          l.push(Math.round(d.MedianA*100))
+          l.push(Math.round(d.MedianA * 100))
       });
 
   filteredGrades = allGrades; // global variable
@@ -102,7 +110,7 @@ function chart(allGrades) {
       .attr("text-anchor", "middle")
       .attr("transform", "translate(790, 170)")
       .attr("class", "labelsY")
-      .text("Total sections since fall 2012");
+      .text("Total lectures since fall 2012");
 
   d3.select("svg#chart").append("text")
       .attr("text-anchor", "middle")
@@ -158,14 +166,13 @@ function updateChart(grades) {
   var infoX = 80;
   var infoY = 40;
   var circleRadius = 5;
-  var selectedRadius = 6;
+  var selectedRadius = 7;
   var circleOpacity = 0.9;
   var transitionDuration = 300;
 
   var circles = d3.select("svg#chart")
     .selectAll("circle")
     .data(grades, function(d) { return d.index });
-
 
   circles.enter()
     .append("circle")
@@ -199,20 +206,21 @@ function updateChart(grades) {
           .attr("y", infoY + 80);
 
   function mouseOver(d, i) {
-    classNameInfo.append("tspan").attr("class", "classNo").text(d.Subject + " " + d.CatalogNo + " ");
+    classNameInfo.append("tspan").attr("class", "classNo").attr("xml:space", "preserve").text(d.Subject + " " + d.CatalogNo + "   ");
     classNameInfo.append("tspan").attr("class", "className").text(d.Name);
     classGradeInfo.append("tspan").attr("class", "info").text("Typically, ");
     classGradeInfo.append("tspan").attr("class", "classNumbers").text(Math.round(d.MedianA * 100));
     classGradeInfo.append("tspan").attr("class", "info").text(" percent of students get an A+, A or A- in this class.");
     classOtherInfo.append("tspan").attr("class", "info").text("This class has been taught ");
     classOtherInfo.append("tspan").attr("class", "classNumbers").text(d.TotClasses);
-    classOtherInfo.append("tspan").attr("class", "info").text((d.TotClasses > 1 ? " times" : " time") + " since Fall 2012. A typical class has " );
+    classOtherInfo.append("tspan").attr("class", "info").text((d.TotClasses > 1 ? " times" : " time") + " since Fall 2012, and a typical class has " );
     classOtherInfo.append("tspan").attr("class", "classNumbers").text(d.ClassSize);
     classOtherInfo.append("tspan").attr("class", "info").text(" students.");
 
     circles.filter(function(p, j) { return i === j })
         .attr("r", selectedRadius)
-        .style("fill", "#3255A4");
+        .style("fill", "#3255A4")
+        .moveToFront();
   }
 
   function mouseLeave(d, i) {
@@ -220,7 +228,7 @@ function updateChart(grades) {
     classGradeInfo.text("");
     classOtherInfo.text("");
 
-    circles.attr("r", 5)
+    circles.attr("r", circleRadius)
            .style("fill", function(d) { return colorScale(d.MedianA) });
   }
 
