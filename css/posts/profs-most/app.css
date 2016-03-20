@@ -1,0 +1,17 @@
+svg {
+  width: 800px;
+  height: 1000px;
+}
+
+text {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+}
+
+circle {
+  opacity: 0.6;
+}
+
+.selected-circle {
+  opacity: 1;
+}
