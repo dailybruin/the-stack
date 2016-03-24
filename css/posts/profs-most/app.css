@@ -12,6 +12,19 @@ circle {
   opacity: 0.6;
 }
 
+rect {
+  opacity: 0.8;
+}
+
 .selected-circle {
   opacity: 1;
+}
+
+.node {
+  border: solid 1px white;
+  font-size: 10px;
+  line-height: 12px;
+  overflow: hidden;
+  position: absolute;
+  text-indent: 2px;
 }
