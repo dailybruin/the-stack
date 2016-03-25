@@ -1,6 +1,7 @@
 d3.csv("/datasets/profs-difficulty/profs-d3.csv", function(data) {
 
-  var xRange = [50, 400];
+  var xRange = [50, 600],
+      circleR = 8;
 
   var dpmtNames = data.map(function(d) { return d.Subject });
   dpmtNames = d3.set(dpmtNames.sort()).values();
@@ -19,30 +20,107 @@ d3.csv("/datasets/profs-difficulty/profs-d3.csv", function(data) {
   }).change();
 
   function pickDpmt(dpmt) {
-    var newData = data.filter(function(d) { return d.Subject === dpmt });
-    var gradesExtent = d3.extent(newData, function(d) { return d.ProfGrade }); console.log(gradesExtent);
-    var xScale = d3.scale.linear().domain(gradesExtent).range(xRange);
+    var newData = data.filter(function(d) { return d.Subject === dpmt }),
+        gradesExtent = d3.extent(newData, function(d) { return d.ProfGrade });
+        xScale = d3.scale.linear().domain(gradesExtent).range(xRange),
+        y = 150;
 
-    var svg = d3.select("#viz")
+    var groups = newData.map(function(d) { return d.Group });
+    groups = d3.set(groups.sort()).values();
+
+    var nestedData = d3.nest()
+        .key(function(d) { return d.Group })
+        .entries(newData);
+
+        console.log(nestedData);
+
+    var svgData = d3.select("#viz-container")
       .selectAll("svg")
-      .data(newData, function(d) { return d.Group })
+      .data(nestedData, function(d) { return Math.random() + dpmt; })
 
-    svg.enter()
-      .append("svg");
+    var svgGroups = svgData.enter()
+        .append("svg");
 
-    svg.exit()
-      .remove()
+    svgGroups.append("text")
+        .attr("x", 700)
+        .attr("y", 100)
+        .attr("class", "group-label")
+        .text(function(d, i) { return "Group " + (i + 1); })
 
+    var profData = svgGroups.selectAll("g")
+        .data(function(d) { return d.values });
 
-    // var circles = svg.selectAll("circle")
-    //   .data(newData, function(d) { return d.Instructor })
-    //
-    // circles.enter()
-    //     .append("circle")
-    //     .attr("class", "prof-circle")
-    //     .attr("cx", function(d, i) { return xScale(d.ProfGrade) })
-    //     .attr("cy", function(d, i) { return 60 })
-    //     .attr("r", 6)
+    var profG = profData.enter()
+        .append("g")
+        .translate(function(d) { return [xScale(d.ProfGrade), y] })
+
+    var circles = profG.append("circle")
+      .attr("class", "prof-circle")
+      .attr("r", circleR)
+      .attr("cx", 0)
+      .attr("cy", 0)
+      .on("mouseover", function(d, i) { return mouseOverCircle(d); })
+      .on("mouseleave", function(d, i) { return mouseLeaveCircle(d); })
+
+    var names = profG.append("text")
+      .attr("class", "prof-label")
+      .attr("x", -circleR / 1.2)
+      .attr("y", function(d, i) { return i % 2 === 0 ? 20 : -20 })
+      .text(function(d) { return getInitials(d.Instructor) })
+
+    function mouseOverCircle(d) {
+      profG.filter(function(p) { return p === d; })
+        .select("circle")
+        .attr("class", "selected-prof-circle")
+    }
+
+    function mouseLeaveCircle(d) {
+      profG.filter(function(p) { return p === d; })
+        .select("circle")
+        .attr("class", "prof-circle")
+    }
+
+    profData.exit().remove()
+    svgData.exit().remove()
   }
 
 });
+
+
+
+function getInitials(fullName) {
+  var firstNameInitial = fullName.split(", ")[1].split("")[0]
+  var lastNameInitial = fullName.split("")[0]
+  return firstNameInitial + lastNameInitial;
+}
+
+// test viz
+d3.select("#viz-test").append("svg")
+
+function update(data) {
+  var g = d3.select("#viz-test svg").selectAll("g")
+  .data(data, function(d) { return d; })
+
+  g.enter()
+    .append("g")
+    .translate(function(d) { return [d * 50 + 60, 80]; })
+
+  g.append("circle")
+    .style("fill", "indianred")
+    .attr("r", 8)
+    .attr("cx", 0)
+    .attr("cy", 0)
+    .style("opacity", 0)
+    .transition()
+    .duration(300)
+    .style("opacity", 2)
+
+  g.exit().transition().duration(300).style("opacity", 0).remove()
+}
+
+var data =  [5, 6, 7, 8, 9, 10].map(function(d) { return d * Math.random() });
+update(data);
+setInterval(function() {
+  var data =  [5, 6, 7, 8, 9, 10].map(function(d) { return d * Math.random() });
+  update(data);
+}, 2000);

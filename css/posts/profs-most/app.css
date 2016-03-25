@@ -1,6 +1,13 @@
+#viz-container {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
 svg {
   width: 800px;
-  height: 600px;
+  height: 200px;
+  background-color: white;
+  font-family: 'Roboto', sans-serif;
 }
 
 select {
@@ -9,6 +16,25 @@ select {
   width: 200px;
 }
 
-.prof-circle {
+.group-label {
+  font-size: 15px;
+  font-weight: 300;
+}
+
+.prof-circle, .selected-prof-circle {
   fill: powderblue;
+  stroke: #4D5656;
+}
+
+.prof-circle {
+  stroke-width: 2px;
+}
+
+.selected-prof-circle {
+  stroke-width: 4px;
+}
+
+.prof-label {
+  font-size: 10px;
+  font-weight: 400;
 }

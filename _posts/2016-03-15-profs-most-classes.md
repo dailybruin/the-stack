@@ -28,5 +28,10 @@ Graphics below ...
   </select>
 </div>
 
-<div id="viz">
+<div id="viz-container">
+</div>
+
+Test graphics below ...
+
+<div id="viz-test">
 </div>
