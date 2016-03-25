@@ -1,5 +1,5 @@
 ---
-title: Which professors taught the most classes?
+title: Which professors are the hardest?
 teaser: teaser
 
 authors:
@@ -21,7 +21,12 @@ stylesheets:
     - /css/posts/profs-most/app.css
 ---
 
-Graphics below
+Graphics below ...
+
+<div id="pick-dpmt-container">
+  <select id="pick-dpmt">
+  </select>
+</div>
 
 <div id="viz">
 </div>
