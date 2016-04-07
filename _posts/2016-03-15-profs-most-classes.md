@@ -14,11 +14,11 @@ og_image:
 scripts:
     - //ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js
     - //cdnjs.cloudflare.com/ajax/libs/d3/3.5.16/d3.min.js
-    - /js/posts/profs-most/d3-jetpack.js
-    - /js/posts/profs-most/app.js
+    - /js/posts/profs-difficulty/d3-jetpack.js
+    - /js/posts/profs-difficulty/app.js
 stylesheets:
     - //fonts.googleapis.com/css?family=Roboto:400,300,500
-    - /css/posts/profs-most/app.css
+    - /css/posts/profs-difficulty/app.css
 ---
 
 Graphics below ...

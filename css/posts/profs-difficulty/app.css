@@ -16,19 +16,30 @@ select {
   width: 200px;
 }
 
+.axis {
+  font-size: 13px;
+  font-weight: 400;
+}
+
 .group-label {
   font-size: 15px;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .prof-circle, .selected-prof-circle {
-  fill: powderblue;
+  fill: orange;
+  opacity: 0.8;
   stroke: #4D5656;
+}
+
+.prof-circle:hover, .selected-prof-circle:hover {
+  cursor: crosshair;
 }
 
 .prof-circle {
   stroke-width: 2px;
 }
+
 
 .selected-prof-circle {
   stroke-width: 4px;
