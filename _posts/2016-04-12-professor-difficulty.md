@@ -33,5 +33,8 @@ Graphics below ...
 
 Test graphics below ...
 
+<div id="collision-test">
+</div>
+
 <div id="viz-test">
 </div>

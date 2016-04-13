@@ -1,16 +1,21 @@
 d3.csv("/datasets/profs-difficulty/profs-d3.csv", function(data) {
 
   var xRange = [50, 600],
-      circleR = 8,
-      y = 150
+      circleRadius = 8,
+      y = 200,
+      height = 300,
+      width = 800,
+      padding = 2; // separation between circles
 
   var dpmtNames = data.map(function(d) { return d.Subject });
   dpmtNames = d3.set(dpmtNames.sort()).values();
 
   // convert strings to integers
-  data.forEach(function(d) { d.AvgPercentile = parseInt(d.AvgPercentile); });
-  data.forEach(function(d) { d.TotClasses = parseInt(d.TotClasses); });
-  data.forEach(function(d) { d.TotStudents = parseInt(d.TotStudents); });
+  data.forEach(function(d) {
+    d.AvgPercentile = +d.AvgPercentile;
+    d.TotClasses = +d.TotClasses;
+    d.TotStudents = +d.TotStudents;
+  });
 
   d3.select("#pick-dpmt")
     .selectAll("option")
@@ -27,12 +32,23 @@ d3.csv("/datasets/profs-difficulty/profs-d3.csv", function(data) {
 
   function pickDpmt(dpmt) {
     var newData = data.filter(function(d) { return d.Subject === dpmt }),
-        gradesExtent = d3.extent(newData, function(d) { return d.AvgPercentile });
-        xScale = d3.scale.linear().domain(gradesExtent).range(xRange);
+        gradesExtent = d3.extent(newData, function(d) { return d.AvgPercentile }),
+        totClassesExtent = d3.extent(newData, function(d) { return d.TotClasses; }),
+        xScale = d3.scale.linear().domain(gradesExtent).range(xRange)
+
+    // set initial positions
+    newData.forEach(function(d, i) {
+      d.x = xScale(d.AvgPercentile);
+      d.y = y;
+      d.cx = xScale(d.AvgPercentile);
+      d.cy = y;
+      d.radius = circleRadius;
+    })
 
     var xAxis = d3.svg.axis()
         .scale(xScale)
         .orient("bottom")
+        .ticks(4)
         .outerTickSize(2)
 
     var groups = newData.map(function(d) { return d.title });
@@ -44,66 +60,121 @@ d3.csv("/datasets/profs-difficulty/profs-d3.csv", function(data) {
         .entries(newData);
     console.log(nestedData);
 
+      var force = d3.layout.force()
+      .nodes(newData)
+      .size([width, height])
+      .charge(-1)
+      .gravity(0)
+      .chargeDistance(3)
+      .on("tick", tick)
+      .start()
+
     var svgData = d3.select("#viz-container")
-      .selectAll("svg")
+      .selectAll("svg.svg-classes")
       .data(nestedData, function(d, i) { return Math.random(); })
 
     var svgGroups = svgData.enter()
-        .append("svg");
+        .append("svg")
+        .attr("class", "svg-classes")
+        .attr("height", height)
+        .attr("width", width);
 
     svgData.append("g")
-      .translate([0, y + circleR * 1.5 ])
+      .translate([0, y + circleRadius * 1.5 ])
       .attr("class", "axis")
       .call(xAxis)
 
     svgData.append("text")
-        .attr("x", 250)
+        .attr("x", width / 3)
         .attr("y", 80)
         .attr("class", "group-label")
         .text(function(d, i) { return d.key; })
 
-    var profData = svgGroups.selectAll("g.prof-group")
+    var profData = svgGroups.selectAll("circle")
         .data(function(d) { return d.values });
 
-    var profG = profData.enter()
-        .append("g")
-        .attr("class", "prof-group")
-        .translate(function(d) { return [xScale(d.AvgPercentile), y] })
-
-    var circles = profG.append("circle")
-      .attr("class", "prof-circle")
-      .attr("r", circleR)
-      .attr("cx", 0)
-      .attr("cy", function(d, i) {
-        if (!(collide(d))) {
-          return -circleR * 1.5;
+    var circles = profData
+      .enter()
+      .append("circle")
+      .attr("class", function(d, i) {
+        if (d.TotClasses >= 5) {
+          return "frequent-prof-circle";
         } else {
-          return -circleR * 2;
+          return "prof-circle";
         }
       })
+      .attr("r", function(d, i) { return circleRadius; })
+      .attr("cx", function(d, i) { return d.cx; })
+      .attr("cy", function(d, i) { return d.cy; })
       .on("mouseover", function(d, i) { return mouseOverCircle(d); })
       .on("mouseleave", function(d, i) { return mouseLeaveCircle(d); })
 
-    var names = profG.append("text")
-      .attr("class", "prof-label")
-      .attr("x", -circleR / 1.2)
-      .attr("y", function(d, i) { return i % 2 === 0 ? 10 : -25 })
-      .text(function(d) { return getInitials(d.Instructor) })
 
-    function collide(d) {
-      return false;
+    function tick(e) {
+      circles
+        .each(moveCircle(0.4 * e.alpha))
+        .each(collide(0.5))
+        .attr("cx", function(d, i) { return d.x })
+        .attr("cy", function(d, i) { return d.y })
     }
 
+    function moveCircle(alpha) {
+      return function(d) {
+        d.x += (d.cx - d.x) * alpha;
+        d.y += (d.cy - d.y) * alpha;
+      }
+    }
+
+    function collide(alpha) {
+      var quadtree = d3.geom.quadtree(newData);
+      return function(d) {
+        var r = d.radius * 1.3 + padding,
+            nx1 = d.x - r,
+            nx2 = d.x + r,
+            ny1 = d.y - r,
+            ny2 = d.y + r;
+        quadtree.visit(function(quad, x1, y1, x2, y2) {
+          if (quad.point && (quad.point !== d)) {
+            var x = d.x - quad.point.x,
+                y = d.y - quad.point.y,
+                l = Math.sqrt(x * x + y * y),
+                r = d.radius * 1.3;
+            if (l < r) {
+              l = (l - r) / l * alpha
+              d.x -= x *= l;
+              d.y -= y *= l;
+              quad.point.x += x;
+              quad.point.y += y;
+            }
+          }
+          return x1 > nx2 || x2 < nx1 || y1 > ny2 || y2 < ny1;
+        });
+      };
+    }
+
+    var tooltip = d3.select('body')
+      .append('div')
+      .style('position','absolute')
+      .style('padding','0 10px')
+      .style('opacity',0)
+      .attr('class','tooltip')
+
     function mouseOverCircle(d) {
-      profG.filter(function(p) { return p === d; })
-        .select("circle")
-        .attr("class", "selected-prof-circle")
+      tooltip
+        .transition()
+        .style('opacity', .9)
+        .style('background', 'lightsteelblue')
+      tooltip
+        .html( d.Instructor + ": " + d.AvgPercentile)
+        .style('left',(d3.event.pageX - 35) + 'px')
+        .style('top', (d3.event.pageY - 30) + 'px')
+
     }
 
     function mouseLeaveCircle(d) {
-      profG.filter(function(p) { return p === d; })
-        .select("circle")
-        .attr("class", "prof-circle")
+      tooltip
+        .transition()
+        .style('opacity', 0)
     }
 
     svgData.exit().remove()
@@ -118,8 +189,11 @@ function getInitials(fullName) {
   return firstNameInitial + lastNameInitial;
 }
 
-// test viz
-d3.select("#viz-test").append("svg")
+// test collision detection ====================================================
+
+
+// test enter update exit pattern ==============================================
+d3.select("#viz-test").append("svg").attr("width", 500).attr("height", 100)
 
 function update(data) {
   var g = d3.select("#viz-test svg").selectAll("g")
@@ -137,7 +211,7 @@ function update(data) {
     .style("opacity", 0)
     .transition()
     .duration(300)
-    .style("opacity", 2)
+    .style("opacity", 0.8)
 
   g.exit().transition().duration(300).style("opacity", 0).remove()
 }

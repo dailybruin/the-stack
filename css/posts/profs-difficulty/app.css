@@ -3,11 +3,8 @@
   margin-bottom: 30px;
 }
 
-svg {
-  width: 800px;
-  height: 200px;
+svg#svg-classes {
   background-color: white;
-  font-family: 'Roboto', sans-serif;
 }
 
 select {
@@ -22,28 +19,34 @@ select {
 }
 
 .group-label {
+  font-family: 'Roboto', sans-serif;
   font-size: 15px;
-  font-weight: 400;
+  font-weight: 500;
 }
 
-.prof-circle, .selected-prof-circle {
-  fill: orange;
-  opacity: 0.8;
+.prof-circle, .frequent-prof-circle {
   stroke: #4D5656;
-}
-
-.prof-circle:hover, .selected-prof-circle:hover {
-  cursor: crosshair;
-}
-
-.prof-circle {
   stroke-width: 2px;
 }
 
-
-.selected-prof-circle {
-  stroke-width: 4px;
+.prof-circle {
+  fill: #FFB30F;
+  opacity: 0.7;
 }
+
+.frequent-prof-circle {
+  fill: #247BA0;
+  opacity: 0.9;
+  z-index: 1000 !important;
+}
+
+.prof-circle:hover, .frequent-prof-circle:hover {
+  cursor: crosshair;
+}
+
+/*.selected-prof-circle {
+  stroke-width: 4px;
+}*/
 
 .prof-label {
   font-size: 10px;
