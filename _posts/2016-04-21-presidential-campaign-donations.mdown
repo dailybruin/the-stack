@@ -1,0 +1,18 @@
+---
+title: Presidential Campaign Donations
+teaser: 
+authors:
+    - 
+key_takeaways:
+    - 
+featured_image:
+    url: 
+og_image: 
+stylesheets:
+    - /css/posts/presidential-campaign-donations/app.css
+scripts:
+    - //cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.js
+    - /js/posts/presidential-campaign-donations/app.js
+---
+
+*Story by Shreya Maskara. Graphics by Nick Liu, Alex Guziak, Amber Won, Jennifer Xu, Li-Wei Chi, & Chang Liu.*
