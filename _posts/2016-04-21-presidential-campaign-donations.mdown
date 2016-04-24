@@ -2,12 +2,12 @@
 title: Presidential Campaign Donations
 teaser: 
 authors:
-    - 
+    - asdf
 key_takeaways:
-    - 
+    - asdf
 featured_image:
-    url: 
-og_image: 
+    url: meal-plan-swipe-deduction/graph.svg
+og_image: meal-plan-swipe-deduction/graph.png
 stylesheets:
     - /css/posts/presidential-campaign-donations/app.css
 scripts:
