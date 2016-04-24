@@ -32,9 +32,9 @@ var svg = d3.select("body").append("svg")
 // svg.call(tip);
 
 d3.json("/datasets/presidential-campaign-donations/result.json", function(error, data) {
-	data = data["dem"]["Sanders"];
+	data = data[0];
 
-  x.domain(d3.range(data["colleges"]["ucla"]["jobs"].length));
+  x.domain(d3.range(data["colleges"][0]["jobs"].length));
   y.domain([0, 200]);
 
   svg.append("g")
@@ -54,8 +54,7 @@ d3.json("/datasets/presidential-campaign-donations/result.json", function(error,
 
   svg.selectAll(".bar")
       .data(function(){
-      	console.log(data["colleges"]["ucla"]["jobs"])
-      	return data["colleges"]["ucla"]["jobs"]
+      	return data["colleges"][0]["jobs"]
       })
     .enter().append("rect")
       .attr("class", "bar")
