@@ -207,20 +207,23 @@
                 },
                 "ucla": {
                     "total": 42355.44000000001,
-                    "jobs": {
-                        "professor": {
+                    "jobs": [
+                        {
+                            "title": "professor",
                             "total": 11440.93,
                             "donators": 156
                         },
-                        "undergraduate": {
+                        {
+                            "title": "student",
                             "total": 4217.530000000001,
                             "donators": 33
                         },
-                        "graduate": {
+                        {
+                            "title": "graduate",
                             "total": 724.44,
                             "donators": 27
                         }
-                    },
+                    ],
                     "donators": 685
                 },
                 "ucsc": {
