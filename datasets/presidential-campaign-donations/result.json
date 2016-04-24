@@ -1,450 +1,544 @@
-{
-    "rep": {
-        "Carson": {
-            "colleges": {
-                "ucla": {
-                    "total": 175.0,
-                    "jobs": {},
-                    "donators": 3
-                },
-                "ucsd": {
-                    "total": 60.0,
-                    "jobs": {},
-                    "donators": 3
-                },
-                "ucsf": {
-                    "total": 585.0,
-                    "jobs": {},
-                    "donators": 16
-                }
-            },
-            "total": 3074944.3500000024,
-            "locations": {},
-            "colleges_total": 820.0
-        },
-        "Fiorina": {
-            "colleges": {
-                "ucsd": {
-                    "total": 1500.0,
-                    "jobs": {},
-                    "donators": 4
-                },
-                "ucla": {
-                    "total": 1500.0,
-                    "jobs": {},
-                    "donators": 1
-                }
-            },
-            "total": 1468489.42,
-            "locations": {},
-            "colleges_total": 3000.0
-        },
-        "Cruz": {
-            "colleges": {
-                "ucsc": {
-                    "total": 2375.0,
-                    "jobs": {},
-                    "donators": 32
-                },
-                "ucla": {
-                    "total": 12383.0,
-                    "jobs": {
-                        "undergraduate": {
-                            "total": 35.0,
-                            "donators": 1
-                        }
+[
+    {
+        "colleges": [
+            {
+                "total": 15987.920000000002,
+                "jobs": [
+                    {
+                        "total": 585.94,
+                        "donators": 39,
+                        "title": "graduate"
                     },
-                    "donators": 25
-                },
-                "ucsf": {
-                    "total": 75.0,
-                    "jobs": {},
-                    "donators": 2
-                }
-            },
-            "total": 4725199.450000001,
-            "locations": {},
-            "colleges_total": 14833.0
-        },
-        "Perry": {
-            "colleges": {},
-            "total": 208400.0,
-            "locations": {},
-            "colleges_total": 0
-        },
-        "Trump": {
-            "colleges": {
-                "ucm": {
-                    "total": 250.0,
-                    "jobs": {},
-                    "donators": 1
-                }
-            },
-            "total": 331901.0,
-            "locations": {},
-            "colleges_total": 250.0
-        },
-        "Kasich": {
-            "colleges": {
-                "ucla": {
-                    "total": 526.0,
-                    "jobs": {},
-                    "donators": 9
-                },
-                "ucsf": {
-                    "total": 100.0,
-                    "jobs": {},
-                    "donators": 1
-                }
-            },
-            "total": 1271638.42,
-            "locations": {},
-            "colleges_total": 626.0
-        },
-        "Paul": {
-            "colleges": {
-                "ucsf": {
-                    "total": 1392.75,
-                    "jobs": {
-                        "professor": {
-                            "total": 1292.75,
-                            "donators": 3
-                        }
+                    {
+                        "total": 1651.03,
+                        "donators": 21,
+                        "title": "professor"
                     },
-                    "donators": 4
-                },
-                "ucla": {
-                    "total": 250.0,
-                    "jobs": {},
-                    "donators": 1
-                },
-                "ucsd": {
-                    "total": 75.0,
-                    "jobs": {},
-                    "donators": 2
-                },
-                "ucr": {
-                    "total": 25.0,
-                    "jobs": {},
-                    "donators": 1
-                }
+                    {
+                        "total": 1038.03,
+                        "donators": 28,
+                        "title": "undergraduate"
+                    }
+                ],
+                "name": "ucsd",
+                "donators": 320
             },
-            "total": 819173.2899999963,
-            "locations": {},
-            "colleges_total": 1742.75
-        },
-        "Graham": {
-            "colleges": {},
-            "total": 405895.0,
-            "locations": {},
-            "colleges_total": 0
-        },
-        "Bush": {
-            "colleges": {},
-            "total": 3327043.83,
-            "locations": {},
-            "colleges_total": 0
-        },
-        "Rubio": {
-            "colleges": {
-                "ucla": {
-                    "total": 1850.0,
-                    "jobs": {
-                        "professor": {
-                            "total": 1500.0,
-                            "donators": 6
-                        }
+            {
+                "total": 6258.07,
+                "jobs": [
+                    {
+                        "total": 2550.54,
+                        "donators": 27,
+                        "title": "professor"
                     },
-                    "donators": 9
-                },
-                "ucsd": {
-                    "total": 400.0,
-                    "jobs": {},
-                    "donators": 4
-                }
+                    {
+                        "total": 97.0,
+                        "donators": 3,
+                        "title": "undergraduate"
+                    }
+                ],
+                "name": "ucb",
+                "donators": 99
             },
-            "total": 5488752.270000001,
-            "locations": {},
-            "colleges_total": 2250.0
-        }
+            {
+                "total": 4054.5400000000004,
+                "jobs": [
+                    {
+                        "total": 255.0,
+                        "donators": 15,
+                        "title": "graduate"
+                    },
+                    {
+                        "total": 1315.0,
+                        "donators": 8,
+                        "title": "professor"
+                    }
+                ],
+                "name": "ucr",
+                "donators": 74
+            },
+            {
+                "total": 4801.65,
+                "jobs": [
+                    {
+                        "total": 1514.32,
+                        "donators": 25,
+                        "title": "professor"
+                    },
+                    {
+                        "total": 127.0,
+                        "donators": 2,
+                        "title": "graduate"
+                    }
+                ],
+                "name": "ucd",
+                "donators": 77
+            },
+            {
+                "total": 5910.339999999999,
+                "jobs": [
+                    {
+                        "total": 615.0,
+                        "donators": 12,
+                        "title": "professor"
+                    },
+                    {
+                        "total": 3188.34,
+                        "donators": 26,
+                        "title": "graduate"
+                    },
+                    {
+                        "total": 46.0,
+                        "donators": 7,
+                        "title": "undergraduate"
+                    }
+                ],
+                "name": "ucsb",
+                "donators": 86
+            },
+            {
+                "total": 42355.44000000001,
+                "jobs": [
+                    {
+                        "total": 724.44,
+                        "donators": 27,
+                        "title": "graduate"
+                    },
+                    {
+                        "total": 11440.93,
+                        "donators": 156,
+                        "title": "professor"
+                    },
+                    {
+                        "total": 4217.530000000001,
+                        "donators": 33,
+                        "title": "undergraduate"
+                    }
+                ],
+                "name": "ucla",
+                "donators": 685
+            },
+            {
+                "total": 17384.670000000002,
+                "jobs": [
+                    {
+                        "total": 1610.8899999999999,
+                        "donators": 65,
+                        "title": "professor"
+                    },
+                    {
+                        "total": 241.89999999999998,
+                        "donators": 7,
+                        "title": "undergraduate"
+                    }
+                ],
+                "name": "ucsf",
+                "donators": 413
+            },
+            {
+                "total": 2399.0,
+                "jobs": [
+                    {
+                        "total": 30.0,
+                        "donators": 1,
+                        "title": "graduate"
+                    }
+                ],
+                "name": "ucsc",
+                "donators": 56
+            },
+            {
+                "total": 27.0,
+                "jobs": [],
+                "name": "ucm",
+                "donators": 1
+            }
+        ],
+        "name": "Sanders",
+        "locations": [],
+        "party": "dem",
+        "total": 13913776.019999102,
+        "colleges_total": 99178.63000000003
     },
-    "dem": {
-        "Webb": {
-            "colleges": {},
-            "total": 76568.16,
-            "locations": {},
-            "colleges_total": 0
-        },
-        "Sanders": {
-            "colleges": {
-                "ucr": {
-                    "total": 4054.5400000000004,
-                    "jobs": {
-                        "professor": {
-                            "total": 1315.0,
-                            "donators": 8
-                        },
-                        "graduate": {
-                            "total": 255.0,
-                            "donators": 15
-                        }
+    {
+        "colleges": [
+            {
+                "total": 75661.23,
+                "jobs": [
+                    {
+                        "total": 32301.07,
+                        "donators": 88,
+                        "title": "professor"
                     },
-                    "donators": 74
-                },
-                "ucd": {
-                    "total": 4801.65,
-                    "jobs": {
-                        "professor": {
-                            "total": 1514.32,
-                            "donators": 25
-                        },
-                        "graduate": {
-                            "total": 127.0,
-                            "donators": 2
-                        }
+                    {
+                        "total": 248.64,
+                        "donators": 11,
+                        "title": "graduate"
                     },
-                    "donators": 77
-                },
-                "ucla": {
-                    "total": 42355.44000000001,
-                    "jobs": [
-                        {
-                            "title": "professor",
-                            "total": 11440.93,
-                            "donators": 156
-                        },
-                        {
-                            "title": "student",
-                            "total": 4217.530000000001,
-                            "donators": 33
-                        },
-                        {
-                            "title": "graduate",
-                            "total": 724.44,
-                            "donators": 27
-                        }
-                    ],
-                    "donators": 685
-                },
-                "ucsc": {
-                    "total": 2399.0,
-                    "jobs": {
-                        "graduate": {
-                            "total": 30.0,
-                            "donators": 1
-                        }
+                    {
+                        "total": 2700.0,
+                        "donators": 1,
+                        "title": "undergraduate"
                     },
-                    "donators": 56
-                },
-                "ucsb": {
-                    "total": 5910.339999999999,
-                    "jobs": {
-                        "professor": {
-                            "total": 615.0,
-                            "donators": 12
-                        },
-                        "undergraduate": {
-                            "total": 46.0,
-                            "donators": 7
-                        },
-                        "graduate": {
-                            "total": 3188.34,
-                            "donators": 26
-                        }
-                    },
-                    "donators": 86
-                },
-                "ucsd": {
-                    "total": 15987.920000000002,
-                    "jobs": {
-                        "professor": {
-                            "total": 1651.03,
-                            "donators": 21
-                        },
-                        "undergraduate": {
-                            "total": 1038.03,
-                            "donators": 28
-                        },
-                        "graduate": {
-                            "total": 585.94,
-                            "donators": 39
-                        }
-                    },
-                    "donators": 320
-                },
-                "ucsf": {
-                    "total": 17384.670000000002,
-                    "jobs": {
-                        "professor": {
-                            "total": 1610.8899999999999,
-                            "donators": 65
-                        },
-                        "undergraduate": {
-                            "total": 241.89999999999998,
-                            "donators": 7
-                        }
-                    },
-                    "donators": 413
-                },
-                "ucm": {
-                    "total": 27.0,
-                    "jobs": {},
-                    "donators": 1
-                },
-                "ucb": {
-                    "total": 6258.07,
-                    "jobs": {
-                        "professor": {
-                            "total": 2550.54,
-                            "donators": 27
-                        },
-                        "undergraduate": {
-                            "total": 97.0,
-                            "donators": 3
-                        }
-                    },
-                    "donators": 99
-                }
+                    {
+                        "total": 2700.0,
+                        "donators": 1,
+                        "title": "faculty"
+                    }
+                ],
+                "name": "ucla",
+                "donators": 287
             },
-            "total": 13913776.019999102,
-            "locations": {},
-            "colleges_total": 99178.63000000003
-        },
-        "Clinton": {
-            "colleges": {
-                "ucr": {
-                    "total": 2775.0,
-                    "jobs": {
-                        "professor": {
-                            "total": 75.0,
-                            "donators": 3
-                        }
+            {
+                "total": 21334.079999999998,
+                "jobs": [
+                    {
+                        "total": 13100.970000000001,
+                        "donators": 36,
+                        "title": "professor"
                     },
-                    "donators": 4
-                },
-                "ucd": {
-                    "total": 9351.0,
-                    "jobs": {
-                        "professor": {
-                            "total": 5088.0,
-                            "donators": 27
-                        }
+                    {
+                        "total": 308.47,
+                        "donators": 11,
+                        "title": "undergraduate"
                     },
-                    "donators": 34
-                },
-                "ucla": {
-                    "total": 75661.23,
-                    "jobs": {
-                        "professor": {
-                            "total": 32301.07,
-                            "donators": 88
-                        },
-                        "faculty": {
-                            "total": 2700.0,
-                            "donators": 1
-                        },
-                        "undergraduate": {
-                            "total": 2700.0,
-                            "donators": 1
-                        },
-                        "graduate": {
-                            "total": 248.64,
-                            "donators": 11
-                        }
-                    },
-                    "donators": 287
-                },
-                "ucsc": {
-                    "total": 6069.13,
-                    "jobs": {
-                        "professor": {
-                            "total": 2700.0,
-                            "donators": 1
-                        }
-                    },
-                    "donators": 13
-                },
-                "ucsb": {
-                    "total": 25.0,
-                    "jobs": {},
-                    "donators": 1
-                },
-                "ucb": {
-                    "total": 21334.079999999998,
-                    "jobs": {
-                        "professor": {
-                            "total": 13100.970000000001,
-                            "donators": 36
-                        },
-                        "undergraduate": {
-                            "total": 308.47,
-                            "donators": 11
-                        },
-                        "graduate": {
-                            "total": 250.0,
-                            "donators": 1
-                        }
-                    },
-                    "donators": 95
-                },
-                "ucsf": {
-                    "total": 2703.8199999999997,
-                    "jobs": {},
-                    "donators": 14
-                },
-                "ucsd": {
-                    "total": 12197.369999999999,
-                    "jobs": {
-                        "professor": {
-                            "total": 4750.0,
-                            "donators": 5
-                        }
-                    },
-                    "donators": 35
-                }
+                    {
+                        "total": 250.0,
+                        "donators": 1,
+                        "title": "graduate"
+                    }
+                ],
+                "name": "ucb",
+                "donators": 95
             },
-            "total": 30346423.560000055,
-            "locations": {},
-            "colleges_total": 130116.63
-        },
-        "O'Malley": {
-            "colleges": {
-                "ucla": {
-                    "total": 3950.0,
-                    "jobs": {
-                        "professor": {
-                            "total": 1000.0,
-                            "donators": 1
-                        }
-                    },
-                    "donators": 3
-                }
+            {
+                "total": 2775.0,
+                "jobs": [
+                    {
+                        "total": 75.0,
+                        "donators": 3,
+                        "title": "professor"
+                    }
+                ],
+                "name": "ucr",
+                "donators": 4
             },
-            "total": 297549.26,
-            "locations": {},
-            "colleges_total": 3950.0
-        },
-        "Lessig": {
-            "colleges": {
-                "ucm": {
-                    "total": 788.15,
-                    "jobs": {},
-                    "donators": 4
-                },
-                "ucd": {
-                    "total": 250.0,
-                    "jobs": {
-                        "professor": {
-                            "total": 250.0,
-                            "donators": 1
-                        }
-                    },
-                    "donators": 1
-                }
+            {
+                "total": 9351.0,
+                "jobs": [
+                    {
+                        "total": 5088.0,
+                        "donators": 27,
+                        "title": "professor"
+                    }
+                ],
+                "name": "ucd",
+                "donators": 34
             },
-            "total": 186144.49999999997,
-            "locations": {},
-            "colleges_total": 1038.15
-        }
+            {
+                "total": 25.0,
+                "jobs": [],
+                "name": "ucsb",
+                "donators": 1
+            },
+            {
+                "total": 6069.13,
+                "jobs": [
+                    {
+                        "total": 2700.0,
+                        "donators": 1,
+                        "title": "professor"
+                    }
+                ],
+                "name": "ucsc",
+                "donators": 13
+            },
+            {
+                "total": 12197.369999999999,
+                "jobs": [
+                    {
+                        "total": 4750.0,
+                        "donators": 5,
+                        "title": "professor"
+                    }
+                ],
+                "name": "ucsd",
+                "donators": 35
+            },
+            {
+                "total": 2703.8199999999997,
+                "jobs": [],
+                "name": "ucsf",
+                "donators": 14
+            }
+        ],
+        "name": "Clinton",
+        "locations": [],
+        "party": "dem",
+        "total": 30346423.560000055,
+        "colleges_total": 130116.63
+    },
+    {
+        "colleges": [
+            {
+                "total": 250.0,
+                "jobs": [
+                    {
+                        "total": 250.0,
+                        "donators": 1,
+                        "title": "professor"
+                    }
+                ],
+                "name": "ucd",
+                "donators": 1
+            },
+            {
+                "total": 788.15,
+                "jobs": [],
+                "name": "ucm",
+                "donators": 4
+            }
+        ],
+        "name": "Lessig",
+        "locations": [],
+        "party": "dem",
+        "total": 186144.49999999997,
+        "colleges_total": 1038.15
+    },
+    {
+        "colleges": [
+            {
+                "total": 3950.0,
+                "jobs": [
+                    {
+                        "total": 1000.0,
+                        "donators": 1,
+                        "title": "professor"
+                    }
+                ],
+                "name": "ucla",
+                "donators": 3
+            }
+        ],
+        "name": "O'Malley",
+        "locations": [],
+        "party": "dem",
+        "total": 297549.26,
+        "colleges_total": 3950.0
+    },
+    {
+        "colleges": [],
+        "name": "Webb",
+        "locations": [],
+        "party": "dem",
+        "total": 76568.16,
+        "colleges_total": 0
+    },
+    {
+        "colleges": [
+            {
+                "total": 585.0,
+                "jobs": [],
+                "name": "ucsf",
+                "donators": 16
+            },
+            {
+                "total": 60.0,
+                "jobs": [],
+                "name": "ucsd",
+                "donators": 3
+            },
+            {
+                "total": 175.0,
+                "jobs": [],
+                "name": "ucla",
+                "donators": 3
+            }
+        ],
+        "name": "Carson",
+        "locations": [],
+        "party": "rep",
+        "total": 3074944.3500000024,
+        "colleges_total": 820.0
+    },
+    {
+        "colleges": [
+            {
+                "total": 12383.0,
+                "jobs": [
+                    {
+                        "total": 35.0,
+                        "donators": 1,
+                        "title": "undergraduate"
+                    }
+                ],
+                "name": "ucla",
+                "donators": 25
+            },
+            {
+                "total": 75.0,
+                "jobs": [],
+                "name": "ucsf",
+                "donators": 2
+            },
+            {
+                "total": 2375.0,
+                "jobs": [],
+                "name": "ucsc",
+                "donators": 32
+            }
+        ],
+        "name": "Cruz",
+        "locations": [],
+        "party": "rep",
+        "total": 4725199.450000001,
+        "colleges_total": 14833.0
+    },
+    {
+        "colleges": [
+            {
+                "total": 526.0,
+                "jobs": [],
+                "name": "ucla",
+                "donators": 9
+            },
+            {
+                "total": 100.0,
+                "jobs": [],
+                "name": "ucsf",
+                "donators": 1
+            }
+        ],
+        "name": "Kasich",
+        "locations": [],
+        "party": "rep",
+        "total": 1271638.42,
+        "colleges_total": 626.0
+    },
+    {
+        "colleges": [],
+        "name": "Bush",
+        "locations": [],
+        "party": "rep",
+        "total": 3327043.83,
+        "colleges_total": 0
+    },
+    {
+        "colleges": [],
+        "name": "Perry",
+        "locations": [],
+        "party": "rep",
+        "total": 208400.0,
+        "colleges_total": 0
+    },
+    {
+        "colleges": [
+            {
+                "total": 1500.0,
+                "jobs": [],
+                "name": "ucsd",
+                "donators": 4
+            },
+            {
+                "total": 1500.0,
+                "jobs": [],
+                "name": "ucla",
+                "donators": 1
+            }
+        ],
+        "name": "Fiorina",
+        "locations": [],
+        "party": "rep",
+        "total": 1468489.42,
+        "colleges_total": 3000.0
+    },
+    {
+        "colleges": [
+            {
+                "total": 1850.0,
+                "jobs": [
+                    {
+                        "total": 1500.0,
+                        "donators": 6,
+                        "title": "professor"
+                    }
+                ],
+                "name": "ucla",
+                "donators": 9
+            },
+            {
+                "total": 400.0,
+                "jobs": [],
+                "name": "ucsd",
+                "donators": 4
+            }
+        ],
+        "name": "Rubio",
+        "locations": [],
+        "party": "rep",
+        "total": 5488752.270000001,
+        "colleges_total": 2250.0
+    },
+    {
+        "colleges": [
+            {
+                "total": 75.0,
+                "jobs": [],
+                "name": "ucsd",
+                "donators": 2
+            },
+            {
+                "total": 25.0,
+                "jobs": [],
+                "name": "ucr",
+                "donators": 1
+            },
+            {
+                "total": 250.0,
+                "jobs": [],
+                "name": "ucla",
+                "donators": 1
+            },
+            {
+                "total": 1392.75,
+                "jobs": [
+                    {
+                        "total": 1292.75,
+                        "donators": 3,
+                        "title": "professor"
+                    }
+                ],
+                "name": "ucsf",
+                "donators": 4
+            }
+        ],
+        "name": "Paul",
+        "locations": [],
+        "party": "rep",
+        "total": 819173.2899999963,
+        "colleges_total": 1742.75
+    },
+    {
+        "colleges": [
+            {
+                "total": 250.0,
+                "jobs": [],
+                "name": "ucm",
+                "donators": 1
+            }
+        ],
+        "name": "Trump",
+        "locations": [],
+        "party": "rep",
+        "total": 331901.0,
+        "colleges_total": 250.0
+    },
+    {
+        "colleges": [],
+        "name": "Graham",
+        "locations": [],
+        "party": "rep",
+        "total": 405895.0,
+        "colleges_total": 0
     }
-}
+]
