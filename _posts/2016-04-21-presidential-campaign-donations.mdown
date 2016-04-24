@@ -11,7 +11,8 @@ og_image: meal-plan-swipe-deduction/graph.png
 stylesheets:
     - /css/posts/presidential-campaign-donations/app.css
 scripts:
-    - //cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.js
+    - //d3js.org/d3.v3.min.js
+    - //labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js
     - /js/posts/presidential-campaign-donations/app.js
 ---
 
