@@ -16,12 +16,12 @@ var yAxis = d3.svg.axis()
     .scale(y)
     .orient("left")
 
-// var tip = d3.tip()
-//   .attr('class', 'd3-tip')
-//   .offset([-10, 0])
-//   .html(function(d) {
-//     return "<strong>Frequency:</strong> <span style='color:red'>" + d.frequency + "</span>";
-//   })
+var tip = d3.tip()
+  .attr('class', 'd3-tip')
+  .offset([-10, 0])
+  .html(function(d) {
+    return "<strong>Donators:</strong> <span style='color:red'>" + d.donators + "</span>";
+  })
 
 var svg = d3.select("body").append("svg")
     .attr("width", width + margin.left + margin.right)
@@ -29,9 +29,9 @@ var svg = d3.select("body").append("svg")
   .append("g")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-// svg.call(tip);
+svg.call(tip);
 
-d3.json("/datasets/presidential-campaign-donations/result.json", function(error, data) {
+d3.json("/datasets/presidential-campaign-donations/result.json", function(data) {
 	data = data[0];
 
   x.domain(d3.range(data["colleges"][0]["jobs"].length));
@@ -63,11 +63,10 @@ d3.json("/datasets/presidential-campaign-donations/result.json", function(error,
       })
       .attr("width", x.rangeBand())
       .attr("y", function(d) { 
-      	console.log(d.donators);
       	return y(d.donators); 
       })
       .attr("height", function(d) { return height - y(d.donators); })
-      // .on('mouseover', tip.show)
-      // .on('mouseout', tip.hide)
+      .on('mouseover', tip.show)
+      .on('mouseout', tip.hide)
 
 });
