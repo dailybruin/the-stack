@@ -1,5 +1,5 @@
 var margin = {top: 40, right: 20, bottom: 30, left: 40},
-    width = 960 - margin.left - margin.right,
+    width = 720 - margin.left - margin.right,
     height = 500 - margin.top - margin.bottom;
 
 var x = d3.scale.ordinal()
@@ -7,6 +7,8 @@ var x = d3.scale.ordinal()
 
 var y = d3.scale.linear()
     .range([height, 0]);
+
+
 
 var xAxis = d3.svg.axis()
     .scale(x)
@@ -16,27 +18,54 @@ var yAxis = d3.svg.axis()
     .scale(y)
     .orient("left")
 
-// var tip = d3.tip()
-//   .attr('class', 'd3-tip')
-//   .offset([-10, 0])
-//   .html(function(d) {
-//     return "<strong>Frequency:</strong> <span style='color:red'>" + d.frequency + "</span>";
-//   })
+var tip = d3.tip()
+  .attr('class', 'd3-tip')
+  .offset([-10, 0])
+  .html(function(d) {
+    return "<strong>Donators:</strong> <span style='color:red'>" + d.y + "</span>\n<strong>College:</strong> <span style='color:red'>" + d.name.toUpperCase() + "</span>";
+  })
 
-var svg = d3.select("body").append("svg")
+var svg = d3.select("#viz").append("svg")
     .attr("width", width + margin.left + margin.right)
     .attr("height", height + margin.top + margin.bottom)
   .append("g")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-// svg.call(tip);
+svg.call(tip);
+
+// stacked bar chart colors
+var color = d3.scale.category20();
 
 d3.json("/datasets/presidential-campaign-donations/result.json", function(error, data) {
-	data = data["dem"]["Sanders"];
+	if (error)
+		throw error
+
+	data = data[0];
+
+  // data["jobs"] = {};
+  // var jobs = d3.nest()
+  // .key(function(d) { return d.title })
+  // .entries(data)
+
+  var colleges = data.colleges.map(function(c) { return c.name });
+  // console.log(colleges);
+
+  var layers = d3.layout.stack()(colleges.map(function(c) {
 
 
-  x.domain(d3.range(data["colleges"]["ucla"]["jobs"].length));
-  y.domain([0, 200]);
+    return data.jobs.map(function(d, i) {
+      if (typeof d.colleges[c] == 'undefined') {
+        return( { x : i, y : 0 })
+      }
+      return( { x : i, y : d.colleges[c].donators, name : c } );
+    });
+  }));
+
+  console.log(layers)
+
+  // x.domain(d3.range(data["jobs"].length));
+  x.domain(layers[0].map(function(d) { return d.x }));
+  y.domain([0, 500]);
 
   svg.append("g")
       .attr("class", "x axis")
@@ -46,31 +75,47 @@ d3.json("/datasets/presidential-campaign-donations/result.json", function(error,
   svg.append("g")
       .attr("class", "y axis")
       .call(yAxis)
-    // .append("text")
-    //   .attr("transform", "rotate(-90)")
-    //   .attr("y", 6)
-    //   .attr("dy", ".71em")
-    //   .style("text-anchor", "end")
-    //   .text("Frequency");
 
-  svg.selectAll(".bar")
-      .data(function(){
-      	console.log(data["colleges"]["ucla"]["jobs"])
-      	return data["colleges"]["ucla"]["jobs"]
-      })
+  var layer = svg.selectAll(".layer")
+      .data(layers)
+    .enter().append("g")
+      .attr("class", "layer")
+      .style("fill", function(d, i) { return color(i); });
+
+  layer.selectAll("rect")
+      .data(function(d) { return d; })
     .enter().append("rect")
-      .attr("class", "bar")
-      .attr("x", function(d, i) { 
-      	return x(i); 
+      .attr("x", function(d) { 
+        return x(d.x); 
       })
-      .attr("width", x.rangeBand())
       .attr("y", function(d) { 
-      	console.log(d.donators);
-      	return y(d.donators); 
+        console.log(d)
+        
+        // console.log("Y = " + d.y0);
+        // return 0;
+        return y(d.y + d.y0); 
       })
-      .attr("height", function(d) { return height - y(d.donators); })
-      // .on('mouseover', tip.show)
-      // .on('mouseout', tip.hide)
+      .attr("height", function(d) { return y(d.y0) - y(d.y + d.y0); })
+      .attr("width", x.rangeBand() - 1)
+      .on('mouseover', tip.show)
+      .on('mouseout', tip.hide);
+
+  // svg.selectAll(".bar")
+  //     .data(function(){
+  //       return data["jobs"]
+  //     	// return data["colleges"][0]["jobs"]
+  //     })
+  //   .enter().append("rect")
+  //     .attr("class", "bar")
+  //     .attr("x", function(d, i) {
+  //     	return x(i);
+  //     })
+  //     .attr("width", x.rangeBand())
+  //     .attr("y", function(d) {
+  //     	return y(d.donators);
+  //     })
+  //     .attr("height", function(d) { return height - y(d.donators); })
+  
 
 });
 
