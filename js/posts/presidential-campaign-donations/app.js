@@ -23,7 +23,7 @@ var tip = d3.tip()
     return "<strong>Donators:</strong> <span style='color:red'>" + d.donators + "</span>";
   })
 
-var svg = d3.select("body").append("svg")
+var svg = d3.select("#Sanders").append("svg")
     .attr("width", width + margin.left + margin.right)
     .attr("height", height + margin.top + margin.bottom)
   .append("g")
@@ -32,7 +32,8 @@ var svg = d3.select("body").append("svg")
 svg.call(tip);
 
 d3.json("/datasets/presidential-campaign-donations/result.json", function(data) {
-	data = data[0];
+  console.log(data);
+  data = data[0];
 
   x.domain(d3.range(data["colleges"][0]["jobs"].length));
   y.domain([0, 200]);
@@ -58,12 +59,12 @@ d3.json("/datasets/presidential-campaign-donations/result.json", function(data) 
       })
     .enter().append("rect")
       .attr("class", "bar")
-      .attr("x", function(d, i) { 
-      	return x(i); 
+      .attr("x", function(d, i) {
+      	return x(i);
       })
       .attr("width", x.rangeBand())
-      .attr("y", function(d) { 
-      	return y(d.donators); 
+      .attr("y", function(d) {
+      	return y(d.donators);
       })
       .attr("height", function(d) { return height - y(d.donators); })
       .on('mouseover', tip.show)
