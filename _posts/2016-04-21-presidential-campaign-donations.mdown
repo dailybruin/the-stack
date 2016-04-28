@@ -1,6 +1,6 @@
 ---
 title: Presidential Campaign Donations
-teaser: 
+teaser:
 authors:
     - asdf
 key_takeaways:
@@ -14,6 +14,7 @@ scripts:
     - //d3js.org/d3.v3.min.js
     - //labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js
     - /js/posts/presidential-campaign-donations/app.js
+    - /js/posts/presidential-campaign-donations/ring_chart.js
 ---
 
 *Story by Shreya Maskara. Graphics by Nick Liu, Alex Guziak, Amber Won, Jennifer Xu, Li-Wei Chi, & Chang Liu.*
