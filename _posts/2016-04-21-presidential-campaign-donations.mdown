@@ -14,12 +14,9 @@ scripts:
     - //d3js.org/d3.v3.min.js
     - //labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js
     - /js/posts/presidential-campaign-donations/app.js
-    - /js/posts/presidential-campaign-donations/stack-bar.js
 ---
-
-<figure class="chart-container">
-    <h2>Job distribution by Campuses</h2>
-    <div class="chart" id="stack-bar"></div>
-</figure>
-
 *Story by Shreya Maskara. Graphics by Nick Liu, Alex Guziak, Amber Won, Jennifer Xu, Li-Wei Chi, & Chang Liu.*
+
+<div id="viz"></div>
+
+<div id="stacked-bar"></div>
