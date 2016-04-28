@@ -18,10 +18,4 @@ scripts:
 ---
 *Story by Shreya Maskara. Graphics by Nick Liu, Alex Guziak, Amber Won, Jennifer Xu, Li-Wei Chi, & Chang Liu.*
 
-<<<<<<< HEAD
-*Story by Shreya Maskara. Graphics by Nick Liu, Alex Guziak, Amber Won, Jennifer Xu, Li-Wei Chi, & Chang Liu.*
-=======
 <div id="viz"></div>
-
-<div id="stacked-bar"></div>
->>>>>>> 9a9fb9b025405437be4463172672cfc9104e862a
