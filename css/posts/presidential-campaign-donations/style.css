@@ -19,3 +19,22 @@ div.tooltip {
     border-radius: 8px;
     pointer-events: none;
 }
+
+#donutChart {
+	float: left;
+}
+
+#barChart {
+	float: left;
+}
+
+text {
+  font: 10px sans-serif;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}

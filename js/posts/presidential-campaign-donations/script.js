@@ -1,9 +1,9 @@
-var width = 960,
+var width = 500,
     height = 500,
     radius = Math.min(width, height) / 2;
 
 /* d3 tool tip */
-var div = d3.select("body").append("div")
+var div = d3.select("#donutChart").append("div")
     .attr("class", "tooltip")
     .style("opacity", 0);
 
@@ -31,7 +31,7 @@ var innerPie = d3.layout.pie()
     .sort(null)
     .value(function(d) { return d["colleges_total"]; });
 
-var svg = d3.select("body").append("svg")
+var svg = d3.select("#donutChart").append("svg")
     .attr("width", width)
     .attr("height", height)
   .append("g")
@@ -41,7 +41,7 @@ var parties = ["dem", "rep"];
 d3.json("result.json", function(error, data) {
   if (error) throw error;
 
-  var outerArc; 
+  var outerArc;
   var innerArc;
 
   var nest = d3.nest()
@@ -67,7 +67,6 @@ d3.json("result.json", function(error, data) {
   nest[0].total = total[0];
   nest[1].total = total[1];
 
-  console.log(nest);
   outerArcs = svg.selectAll(".outerArc")
       .data(outerPie(nest))
     .enter().append("g")
@@ -84,11 +83,11 @@ d3.json("result.json", function(error, data) {
         div.transition()
             .duration(200)
             .style("opacity", .9);
-        div.html(function() { 
+        div.html(function() {
           var str = "Party: "+d.data.key+"</br>"+"College Total: "+parseInt(d.data.total)+"</br>";
 
             for (var i = 0; i < d.data.values.length; i++) {
-              str += "Candiate: " + d.data.values[i]["name"] + ", College Total: " + parseInt(d.data.values[i]["colleges_total"]) + "</br>"; 
+              str += "Candiate: " + d.data.values[i]["name"] + ", College Total: " + parseInt(d.data.values[i]["colleges_total"]) + "</br>";
             }
               return str;
         })
@@ -101,10 +100,12 @@ d3.json("result.json", function(error, data) {
           div.transition()
             .duration(500)
             .style("opacity", 0);
-      });
+      })
+      .on("click", function(d) {
+        transitionBarGraph(d.data);
+      })
 
-  console.log(nest);
-  console.log(candEntries);
+
   /*             */
 
 
@@ -116,36 +117,40 @@ d3.json("result.json", function(error, data) {
   innerArcs.append("path")
       .attr("d", innerArcRegion)
       .style("fill", function(d, i) { return colorScale(i); })
-      .on("mouseover", function(d) { 
+      .on("mouseover", function(d) {
         d3.select(this).attr("opacity", 0.5);
       })
       .on("mousemove", function(d) {
         div.transition()
           .duration(200)
           .style("opacity", .9);
-        div.html(function() { 
+        div.html(function() {
           var str = "Candidate: "+d.data["name"]+"</br>"+"College Total: "+parseInt(d.data["colleges_total"]);
-        
+
           for (var i = 0; i < d.data.colleges.length; i++) {
-            str += "College: " + d.data.colleges[i]["name"] + ", College Total: " + parseInt(d.data.colleges[i]["total"]) + "</br>"; 
+            str += "College: " + d.data.colleges[i]["name"] + ", College Total: " + parseInt(d.data.colleges[i]["total"]) + "</br>";
           }
             return str;
           })
         .style("left", (d3.event.pageX) + "px")
         .style("top", (d3.event.pageY - 28) + "px")
-      })    
+      })
       .on("mouseout", function(d) {
           d3.select(this)
            .attr("opacity", 1);
           div.transition()
             .duration(500)
             .style("opacity", 0);
-      });
+      })
+      .on("click", function(d) {
+        console.log(d.data);
+        transitionBarGraph(d.data);
+      })
 });
 
 function drawOuterArc(outerArc, data) {
-  
-  
+
+
 }
 // function type(d) {
 //   d.population = +d.population;
