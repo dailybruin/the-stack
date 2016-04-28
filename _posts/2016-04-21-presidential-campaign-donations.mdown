@@ -17,3 +17,7 @@ scripts:
 ---
 
 *Story by Shreya Maskara. Graphics by Nick Liu, Alex Guziak, Amber Won, Jennifer Xu, Li-Wei Chi, & Chang Liu.*
+
+<div id="viz"></div>
+
+<div id="horizontal-bar"></div>
