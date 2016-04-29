@@ -29,6 +29,7 @@ var svg = d3.select("#viz").append("svg")
     .attr("width", width + margin.left + margin.right)
     .attr("height", height + margin.top + margin.bottom)
   .append("g")
+    .attr('class', 'wrapper')
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
 svg.call(tip);
@@ -36,88 +37,154 @@ svg.call(tip);
 // stacked bar chart colors
 var color = d3.scale.category20();
 
-d3.json("/datasets/presidential-campaign-donations/result.json", function(error, data) {
-	if (error)
-		throw error
+function updateData(index) {
 
-	data = data[0];
+  // Get the data again
+  d3.json("/datasets/presidential-campaign-donations/result.json", function(error, data) {
 
-  // data["jobs"] = {};
-  // var jobs = d3.nest()
-  // .key(function(d) { return d.title })
-  // .entries(data)
+    data = data[index];
 
-  var colleges = data.colleges.map(function(c) { return c.name });
-  // console.log(colleges);
+    var colleges = data.colleges.map(function(c) { return c.name });
 
-  var layers = d3.layout.stack()(colleges.map(function(c) {
+    var new_layers = d3.layout.stack()(colleges.map(function(c) {
 
+      return data.jobs.map(function(d, i) {
+        if (typeof d.colleges[c] == 'undefined') {
+          return( { x : i, y : 0 })
+        }
+        return( { x : i, y : d.colleges[c].donators, name : c } );
+      });
+    }));
 
-    return data.jobs.map(function(d, i) {
-      if (typeof d.colleges[c] == 'undefined') {
-        return( { x : i, y : 0 })
-      }
-      return( { x : i, y : d.colleges[c].donators, name : c } );
-    });
-  }));
+    // Select the section we want to apply our changes to
+    var svg = d3.select("#viz");
 
-  console.log(layers)
+    // Make the changes
 
-  // x.domain(d3.range(data["jobs"].length));
-  x.domain(layers[0].map(function(d) { return d.x }));
-  y.domain([0, 500]);
+    x.domain(new_layers[0].map(function(d) { return d.x }));
+    y.domain([0, d3.max(new_layers[new_layers.length - 1], function(d) { return d.y0 + d.y; })]).nice()
 
-  svg.append("g")
+    
+
+    // svg.select(".x.axis") // change the x axis
+    //   .attr("transform", "translate(0," + height + ")")
+    //   .transition().duration(300).call(xAxis);
+
+    // svg.select(".y.axis").transition().duration(300).call(yAxis)
+
+    var wrapper = svg.select(".wrapper")
+
+    var layers = wrapper.selectAll(".layer")
+
+    svg.selectAll("g.y.axis")
+        .call(yAxis);
+
+    svg.selectAll("g.x.axis")
+        .call(xAxis);
+
+    wrapper.append("g")
       .attr("class", "x axis")
       .attr("transform", "translate(0," + height + ")")
       .call(xAxis);
 
-  svg.append("g")
+    wrapper.append("g")
       .attr("class", "y axis")
       .call(yAxis)
 
-  var layer = svg.selectAll(".layer")
-      .data(layers)
+    
+
+    layers.selectAll("rect")
+      .data(new_layers)
+      .exit()
+      .transition()
+        .duration(300)
+      .attr("y", function(d) { return -1 * y(d.y + d.y0); })
+      .remove();
+
+    layers
+      .transition()
+        .duration(300)
+      .remove()
+
+
+
+    var new_layer = wrapper.selectAll(".layer")
+      .data(new_layers)
     .enter().append("g")
       .attr("class", "layer")
-      .style("fill", function(d, i) { return color(i); });
+      .style("fill", function(d, i) { 
+        return color(i); 
+      });
 
-  layer.selectAll("rect")
-      .data(function(d) { return d; })
+    new_layer.selectAll("rect")
+      .data(function(d) { console.log(d); return d; })
     .enter().append("rect")
-      .attr("x", function(d) { 
-        return x(d.x); 
-      })
-      .attr("y", function(d) { 
-        console.log(d)
-        
-        // console.log("Y = " + d.y0);
-        // return 0;
-        return y(d.y + d.y0); 
-      })
+      .attr("x", function(d) { return x(d.x); })
+      .attr("y", function(d) { return y(d.y + d.y0); })
       .attr("height", function(d) { return y(d.y0) - y(d.y + d.y0); })
       .attr("width", x.rangeBand() - 1)
       .on('mouseover', tip.show)
       .on('mouseout', tip.hide);
 
-  // svg.selectAll(".bar")
-  //     .data(function(){
-  //       return data["jobs"]
-  //     	// return data["colleges"][0]["jobs"]
-  //     })
-  //   .enter().append("rect")
-  //     .attr("class", "bar")
-  //     .attr("x", function(d, i) {
-  //     	return x(i);
-  //     })
-  //     .attr("width", x.rangeBand())
-  //     .attr("y", function(d) {
-  //     	return y(d.donators);
-  //     })
-  //     .attr("height", function(d) { return height - y(d.donators); })
+    // svg.selectAll(".layer").selectAll("rect").exit().remove()
+    // svg.selectAll(".layer").exit().remove()
+
+
+  });
+}
+
+// d3.json("/datasets/presidential-campaign-donations/result.json", function(error, data) {
+// 	if (error)
+// 		throw error
+
+// 	data = data[0];
+
+//   var colleges = data.colleges.map(function(c) { return c.name });
+
+//   var layers = d3.layout.stack()(colleges.map(function(c) {
+
+
+//     return data.jobs.map(function(d, i) {
+//       if (typeof d.colleges[c] == 'undefined') {
+//         return( { x : i, y : 0 })
+//       }
+//       return( { x : i, y : d.colleges[c].donators, name : c } );
+//     });
+//   }));
+
+//   // x.domain(d3.range(data["jobs"].length));
+//   x.domain(layers[0].map(function(d) { return d.x }));
+//   y.domain([0, d3.max(layers[layers.length - 1], function(d) { return d.y0 + d.y; })]).nice()
+
+//   svg.append("g")
+//     .attr("class", "x axis")
+//     .attr("transform", "translate(0," + height + ")")
+//     .call(xAxis);
+
+//   svg.append("g")
+//     .attr("class", "y axis")
+//     .call(yAxis)
+
+//   var layer = svg.selectAll(".layer")
+//       .data(layers)
+//     .enter().append("g")
+//       .attr("class", "layer")
+//       .style("fill", function(d, i) { return color(i); });
+
+//   layer.selectAll("rect")
+//       .data(function(d) { return d; })
+//     .enter().append("rect")
+//       .attr("x", function(d) { return x(d.x); })
+//       .attr("y", function(d) { return y(d.y + d.y0); })
+//       .attr("height", function(d) { return y(d.y0) - y(d.y + d.y0); })
+//       .attr("width", x.rangeBand() - 1)
+//       .on('mouseover', tip.show)
+//       .on('mouseout', tip.hide);
   
 
-});
+// });
+
+updateData(0);
 
 // Horizontal Bar Chart
 
