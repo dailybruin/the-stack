@@ -38,7 +38,7 @@ var svg = d3.select("#donutChart").append("svg")
     .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
 
 var parties = ["dem", "rep"];
-d3.json("result.json", function(error, data) {
+d3.json("/datasets/presidential-campaign-donations/result.json", function(error, data) {
   if (error) throw error;
 
   var outerArc;
