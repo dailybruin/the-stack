@@ -113,7 +113,7 @@ function transitionBarGraph(data) {
 }
 
 
-d3.json("result.json", function(data) {
+d3.json("/datasets/presidential-campaign-donations/result.json", function(data) {
 	var nest = d3.nest()
    	 	.key(function(d) { return d.party; })
     	.entries(data);

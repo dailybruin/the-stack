@@ -20,6 +20,7 @@ scripts:
     - //cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/components/dropdown.min.js
     - /js/posts/presidential-campaign-donations/vertical-bar.js
     - /js/posts/presidential-campaign-donations/horizontal-bar.js
+#    - /js/posts/presidential-campaign-donations/barGraph.js
 #    - /js/posts/presidential-campaign-donations/script.js
 ---
 *Story by Shreya Maskara. Graphics by Nick Liu, Alex Guziak, Amber Won, Jennifer Xu, Li-Wei Chi, & Chang Liu.*
@@ -27,7 +28,7 @@ scripts:
 
 
 <div id="vertical-bar"></div>
-<div class="ui dropdown">
+<div class="ui inline dropdown" id="d1">
   <div class="text">
     1
   </div>
@@ -80,11 +81,24 @@ scripts:
     </div>
   </div>
 </div>
-<!-- <div id="option">
-    <input name="updateButton" type="button" value="Update" />
-</div> -->
+
+<div class="ui inline dropdown" id="d2">
+  <div class="text">
+    Donators
+  </div>
+  <i class="dropdown icon"></i>
+  <div class="menu">
+    <div class="item">
+      Donators
+    </div>
+    <div class="item">
+      Amount
+    </div>
+  </div>
+</div>
+
 
 <!-- <div id="donutChart"></div> -->
 
-<!-- <div id="horizontal-bar"></div> -->
+<div id="horizontal-bar"></div>
 

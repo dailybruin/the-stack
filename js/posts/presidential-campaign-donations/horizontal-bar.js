@@ -51,19 +51,7 @@ d3.json("/datasets/presidential-campaign-donations/result.json", function(error,
         .append('svg')
         .attr({'width':900,'height':550});
 
-  var grids = canvas.append('g')
-          .attr('id','grid')
-          .attr('transform','translate(150,10)')
-          .selectAll('line')
-          .data(grid)
-          .enter()
-          .append('line')
-          .attr({'x1':function(d,i){ return i*30; },
-                 'y1':function(d){ return d.y1; },
-                 'x2':function(d,i){ return i*30; },
-                 'y2':function(d){ return d.y2; },
-          })
-          .style({'stroke':'#adadad','stroke-width':'1px'});
+  
 
   var xAxis2 = d3.svg.axis();
     xAxis2

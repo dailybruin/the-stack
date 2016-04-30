@@ -20,7 +20,9 @@ var tip = d3.tip()
   .attr('class', 'd3-tip')
   .offset([-10, 0])
   .html(function(d) {
-    return "<strong>Donators:</strong> <span style='color:red'>" + d.y + "</span>\n<strong>College:</strong> <span style='color:red'>" + d.name.toUpperCase() + "</span>";
+    var f = curr_filter == "donators" ? "Donators" : "Amount";
+    var val = curr_filter == "donators" ? d.y : "$" + d.y.toFixed(2);
+    return "<strong>College:</strong> <span style='color:red'>" + d.name.toUpperCase() + "</span><br><strong>" + f + ":</strong> <span style='color:red'>" + val + "</span>";
   })
 
 var svg = d3.select("#vertical-bar").append("svg")
@@ -37,26 +39,49 @@ var color = d3.scale.category20();
 
 var data_structure = []
 
+var curr_cand = 0;
+var curr_filter = "donators";
+
 // Get the data again
 d3.json("/datasets/presidential-campaign-donations/result.json", function(error, data) {
 
-  // $('#option > input').on('click', function() {
-  //   update(2)
-  // });
-
-  $('.ui.dropdown').dropdown({
+  $('#d1').dropdown({
     onChange: function (val) {
-      update(val-1)
+      curr_cand = val-1; 
+      update();
+      
+    }
+  });
+
+  $('#d2').dropdown({
+    onChange: function (val) {
+      if (val == "Donators") {
+        curr_filter = "donators"; 
+      }
+      else {
+        curr_filter = "total"; 
+      }
+      update();
       
     }
   });
 
   data_structure = data; 
 
-  function update(index) {
+  function update() {
 
-    var data = data_structure[index];
+    var data = data_structure[curr_cand];
 
+    if (data.colleges.length == 0) {
+      new_layers = [
+        [
+          {
+            x : 0,
+            y: 0  
+          }
+        ]
+      ]; 
+    }
     var colleges = data.colleges.map(function(c) { return c.name });
 
     var new_layers = d3.layout.stack()(colleges.map(function(c) {
@@ -65,7 +90,7 @@ d3.json("/datasets/presidential-campaign-donations/result.json", function(error,
         if (typeof d.colleges[c] == 'undefined') {
           return( { x : i, y : 0 })
         }
-        return( { x : i, y : d.colleges[c].donators, name : c } );
+        return( { x : i, y : d.colleges[c][curr_filter], name : c } );
       });
     }));
 
@@ -112,39 +137,6 @@ d3.json("/datasets/presidential-campaign-donations/result.json", function(error,
       .attr("width", x.rangeBand() - 1)
       .on('mouseover', tip.show)
       .on('mouseout', tip.hide);
-
-    // var layers = svg.selectAll(".layer")
-
-    // layers.selectAll("rect")
-    //   .data(new_layers)
-    //   .exit()
-    //   // .transition()
-    //   //   .duration(300)
-    //   .attr("y", function(d) { return -1 * y(d.y + d.y0); })
-    //   .remove();
-
-    // layers
-    //   // .transition()
-    //   //   .duration(300)
-    //   .remove()
-
-    // var new_layer = svg.selectAll(".layer")
-    //   .data(new_layers)
-    // .enter().append("g")
-    //   .attr("class", "layer")
-    //   .style("fill", function(d, i) { 
-    //     return color(i); 
-    //   });
-
-    // new_layer.selectAll("rect")
-    //   .data(function(d) { return d; })
-    // .enter().append("rect")
-    //   .attr("x", function(d) { return x(d.x); })
-    //   .attr("y", function(d) { return y(d.y + d.y0); })
-    //   .attr("height", function(d) { return y(d.y0) - y(d.y + d.y0); })
-    //   .attr("width", x.rangeBand() - 1)
-    //   .on('mouseover', tip.show)
-    //   .on('mouseout', tip.hide);
   }
 
   update(0);
