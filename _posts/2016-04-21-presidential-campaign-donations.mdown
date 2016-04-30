@@ -13,19 +13,18 @@ stylesheets:
 scripts:
     - //d3js.org/d3.v3.min.js
     - //labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js
-    - /js/posts/presidential-campaign-donations/app.js
+    - //code.jquery.com/jquery-1.12.3.min.js
+    - /js/posts/presidential-campaign-donations/vertical-bar.js
+    - /js/posts/presidential-campaign-donations/horizontal-bar.js
 #    - /js/posts/presidential-campaign-donations/script.js
 ---
 *Story by Shreya Maskara. Graphics by Nick Liu, Alex Guziak, Amber Won, Jennifer Xu, Li-Wei Chi, & Chang Liu.*
 
 
 
-<div id="viz"></div>
+<div id="vertical-bar"></div>
 <div id="option">
-    <input name="updateButton" 
-           type="button" 
-           value="Update" 
-           onclick="updateData(2)" />
+    <input name="updateButton" type="button" value="Update" />
 </div>
 
 <!-- <div id="donutChart"></div> -->
