@@ -40,8 +40,15 @@ var data_structure = []
 // Get the data again
 d3.json("/datasets/presidential-campaign-donations/result.json", function(error, data) {
 
-  $('#option > input').on('click', function() {
-    update(2)
+  // $('#option > input').on('click', function() {
+  //   update(2)
+  // });
+
+  $('.ui.dropdown').dropdown({
+    onChange: function (val) {
+      update(val-1)
+      
+    }
   });
 
   data_structure = data; 
@@ -65,14 +72,16 @@ d3.json("/datasets/presidential-campaign-donations/result.json", function(error,
     x.domain(new_layers[0].map(function(d) { return d.x }));
     y.domain([0, d3.max(new_layers[new_layers.length - 1], function(d) { return d.y0 + d.y; })]).nice()
 
-    var layers = svg.selectAll(".layer")
+    svg.select(".y.axis").remove()
+    svg.select(".x.axis").remove()
 
-    svg.selectAll(".y.axis")
+    svg.select(".y.axis")
       .transition().duration(300)
       .call(yAxis);
 
-    svg.selectAll(".x.axis")
+    svg.select(".x.axis")
       .transition().duration(300)
+      .attr("transform", "translate(0," + height + ")")
       .call(xAxis);
 
     svg.append("g")
@@ -84,40 +93,58 @@ d3.json("/datasets/presidential-campaign-donations/result.json", function(error,
       .attr("class", "y axis")
       .call(yAxis)
 
-    
-
-    layers.selectAll("rect")
-      .data(new_layers)
-      .exit()
-      .transition()
-        .duration(300)
-      .attr("y", function(d) { return -1 * y(d.y + d.y0); })
-      .remove();
-
-    layers
-      .transition()
-        .duration(300)
-      .remove()
-
-
+    svg.selectAll(".layer").remove();
 
     var new_layer = svg.selectAll(".layer")
       .data(new_layers)
-    .enter().append("g")
+      .enter().append("g")
       .attr("class", "layer")
       .style("fill", function(d, i) { 
         return color(i); 
       });
 
     new_layer.selectAll("rect")
-      .data(function(d) { console.log(d); return d; })
-    .enter().append("rect")
+      .data(function(d) { return d; })
+      .enter().append("rect")
       .attr("x", function(d) { return x(d.x); })
       .attr("y", function(d) { return y(d.y + d.y0); })
       .attr("height", function(d) { return y(d.y0) - y(d.y + d.y0); })
       .attr("width", x.rangeBand() - 1)
       .on('mouseover', tip.show)
       .on('mouseout', tip.hide);
+
+    // var layers = svg.selectAll(".layer")
+
+    // layers.selectAll("rect")
+    //   .data(new_layers)
+    //   .exit()
+    //   // .transition()
+    //   //   .duration(300)
+    //   .attr("y", function(d) { return -1 * y(d.y + d.y0); })
+    //   .remove();
+
+    // layers
+    //   // .transition()
+    //   //   .duration(300)
+    //   .remove()
+
+    // var new_layer = svg.selectAll(".layer")
+    //   .data(new_layers)
+    // .enter().append("g")
+    //   .attr("class", "layer")
+    //   .style("fill", function(d, i) { 
+    //     return color(i); 
+    //   });
+
+    // new_layer.selectAll("rect")
+    //   .data(function(d) { return d; })
+    // .enter().append("rect")
+    //   .attr("x", function(d) { return x(d.x); })
+    //   .attr("y", function(d) { return y(d.y + d.y0); })
+    //   .attr("height", function(d) { return y(d.y0) - y(d.y + d.y0); })
+    //   .attr("width", x.rangeBand() - 1)
+    //   .on('mouseover', tip.show)
+    //   .on('mouseout', tip.hide);
   }
 
   update(0);
