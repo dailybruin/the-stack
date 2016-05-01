@@ -24,16 +24,17 @@ var yAxis = barSVG.append("g")
 	.call(yScale.axis = d3.svg.axis().scale(yScale).orient("left"));
 
 var schoolRects;
+var currMode = 1;
 
 function initBarGraph(initData) {
 	transitionyScale(initData);
 
-	schoolRects = barSVG.selectAll(".schoolRect")
+	dataRects = barSVG.selectAll(".dataRect")
 		.data(initData.colleges)
 		.enter().append("g")
-		.attr("class", function(d) { return "schoolRect " + d.name;});
+		.attr("class", function(d) { return "dataRect " + d.name;});
 
-	schoolRects.append("rect")
+	dataRects.append("rect")
 		.attr("x", 0)
 		.attr("y", function(d) { return yScale(d.name); })
 		.attr("width", function(d) { return xScale(d.total); })
@@ -44,25 +45,30 @@ function initBarGraph(initData) {
 function transitionyScale(transitionData) {
 	// for (var i = 0; i < transitionData.colleges.length; i++)
 	// 	console.log(transitionData.colleges[i].name);
+	console.log(transitionData)
+// ;	if (transitionData)
+	var map;
+	var newYDomain = [];
+	var newXDomain = [];
 
+	// map = transitionData.map(function(d) {
+	// 	newYDomain.push(d["key"]);
+	// });
+	// newXDomain = [0, d3.max(transitionData, function(d) { return parseInt(d.values[0]["total"]); })];
 	if (transitionData.colleges.length == 0)
 		return;
-
-	var newYDomain = []
-	var map = transitionData.colleges.map(function(d) {
+	map = transitionData.colleges.map(function(d) {
 		newYDomain.push(d["name"]);
 	});
+	newXDomain = [0, d3.max(transitionData.colleges, function(d) { return parseInt(d.total); })];
 
 	yScale.domain(newYDomain);
+	yScale.rangeRoundBands([newYDomain.length*50, 0], 0.1);
 
 	yAxis.transition()
 		.duration(500)
 		.ease("linear")
 		.call(yScale.axis);
-
-	var newXDomain = [];
-
-	newXDomain = [0, d3.max(transitionData.colleges, function(d) { return parseInt(d.total); })];
 
 	// console.log(newXDomain);
 	xScale.domain(newXDomain);
@@ -76,14 +82,12 @@ function transitionyScale(transitionData) {
 
 function transitionBarGraph(data) {
 	transitionyScale(data);
+	console.log(data);
 
-	// console.log(data);
-
-	var schoolRects = d3.selectAll(".schoolRect").select("rect")
+	var dataRects = d3.selectAll(".dataRect").select("rect")
 		.transition()
 		.duration(500)
 		.attr("width", 0);
-
 
 	for (var i = 0; i < data.colleges.length; i++) {
 		var specificSchoolRect = d3.select("." + data.colleges[i].name);
@@ -101,15 +105,11 @@ function transitionBarGraph(data) {
 				return yScale.rangeBand();
 			})
 			.attr("width", function(d) {
-				// if (typeof(d.total) == NaN)
+				// if (xScale(data.colleges[i].total) == NaN)
 				// 	return 0;
-				// console.log(d);
 				return xScale(data.colleges[i].total);
 			});
 	}
-
-
-
 }
 
 

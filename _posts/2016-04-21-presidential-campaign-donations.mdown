@@ -10,6 +10,7 @@ featured_image:
 og_image: meal-plan-swipe-deduction/graph.png
 stylesheets:
     - /css/posts/presidential-campaign-donations/app.css
+    - /css/posts/presidential-campaign-donations/style.css
     - //cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/semantic.min.css
     - //cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/components/dropdown.min.css
 scripts:
@@ -18,16 +19,15 @@ scripts:
     - //code.jquery.com/jquery-1.11.2.js
     - //cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/semantic.min.js
     - //cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/components/dropdown.min.js
+    - //cdnjs.cloudflare.com/ajax/libs/d3-tip/0.6.7/d3-tip.js
     - /js/posts/presidential-campaign-donations/vertical-bar.js
     - /js/posts/presidential-campaign-donations/horizontal-bar.js
-#    - /js/posts/presidential-campaign-donations/barGraph.js
-#    - /js/posts/presidential-campaign-donations/script.js
+    - /js/posts/presidential-campaign-donations/script.js
+    - /js/posts/presidential-campaign-donations/barGraph.js
 ---
 *Story by Shreya Maskara. Graphics by Nick Liu, Alex Guziak, Amber Won, Jennifer Xu, Li-Wei Chi, & Chang Liu.*
 
-
-
-<div id="vertical-bar"></div>
+<!-- <div id="vertical-bar"></div> -->
 <div class="ui inline dropdown" id="d1">
   <div class="text">
     1
@@ -81,7 +81,7 @@ scripts:
     </div>
   </div>
 </div>
-
+<!--
 <div class="ui inline dropdown" id="d2">
   <div class="text">
     Donators
@@ -95,10 +95,13 @@ scripts:
       Amount
     </div>
   </div>
-</div>
+</div> -->
 
+<div class="ui inline dropdown" id="d3">
+  <div id="donutChart"></div>
+  <div id="barChart"></div>
+</div>
 
 <!-- <div id="donutChart"></div> -->
 
 <div id="horizontal-bar"></div>
-
