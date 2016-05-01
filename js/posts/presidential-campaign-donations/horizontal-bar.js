@@ -25,7 +25,7 @@ d3.json("/datasets/presidential-campaign-donations/result.json", function(error,
   var candidate_total = data[0].total;
   data = data[0].colleges;
   y.domain(d3.range(data.length));
-  
+
   var grid = d3.range(25).map(function(i){
     return {'x1':0,'y1':0,'x2':0,'y2':480};
   });
@@ -50,8 +50,6 @@ d3.json("/datasets/presidential-campaign-donations/result.json", function(error,
   var canvas = d3.select('#horizontal-bar')
         .append('svg')
         .attr({'width':900,'height':550});
-
-  
 
   var xAxis2 = d3.svg.axis();
     xAxis2
@@ -92,7 +90,7 @@ d3.json("/datasets/presidential-campaign-donations/result.json", function(error,
   var transit = d3.select("g#bars").selectAll("rect")
             .data(data)
             .transition()
-            .duration(1000) 
+            .duration(1000)
             .attr('width', function(d) { return xscale(d.total/candidate_total); });
 
   var transitext = d3.select('#bars')

@@ -3,7 +3,7 @@ var width = 500,
     radius = Math.min(width, height) / 2;
 
 /* d3 tool tip */
-var div = d3.select("#donutChart").append("div")
+var d3tooltip = d3.select("#donutChart").append("div")
     .attr("class", "tooltip")
     .style("opacity", 0);
 
@@ -80,10 +80,10 @@ d3.json("/datasets/presidential-campaign-donations/result.json", function(error,
           .attr("opacity", 0.5);
       })
       .on("mousemove", function(d, i) {
-        div.transition()
+        d3tooltip.transition()
             .duration(200)
             .style("opacity", .9);
-        div.html(function() {
+        d3tooltip.html(function() {
           var str = "Party: "+d.data.key+"</br>"+"College Total: "+parseInt(d.data.total)+"</br>";
 
             for (var i = 0; i < d.data.values.length; i++) {
@@ -97,17 +97,10 @@ d3.json("/datasets/presidential-campaign-donations/result.json", function(error,
       .on("mouseout", function(d) {
           d3.select(this)
            .attr("opacity", 1);
-          div.transition()
+          d3tooltip.transition()
             .duration(500)
             .style("opacity", 0);
       })
-      .on("click", function(d) {
-        transitionBarGraph(d.data);
-      })
-
-
-  /*             */
-
 
   innerArcs = svg.selectAll(".innerArc")
       .data(innerPie(candEntries))
@@ -121,10 +114,10 @@ d3.json("/datasets/presidential-campaign-donations/result.json", function(error,
         d3.select(this).attr("opacity", 0.5);
       })
       .on("mousemove", function(d) {
-        div.transition()
+        d3tooltip.transition()
           .duration(200)
           .style("opacity", .9);
-        div.html(function() {
+        d3tooltip.html(function() {
           var str = "Candidate: "+d.data["name"]+"</br>"+"College Total: "+parseInt(d.data["colleges_total"]);
 
           for (var i = 0; i < d.data.colleges.length; i++) {
@@ -138,12 +131,11 @@ d3.json("/datasets/presidential-campaign-donations/result.json", function(error,
       .on("mouseout", function(d) {
           d3.select(this)
            .attr("opacity", 1);
-          div.transition()
+          d3tooltip.transition()
             .duration(500)
             .style("opacity", 0);
       })
       .on("click", function(d) {
-        console.log(d.data);
         transitionBarGraph(d.data);
       })
 });
