@@ -1,6 +1,7 @@
-#viz-container {
+#dotchart {
   margin-top: 30px;
   margin-bottom: 30px;
+  overflow-x: scroll;
 }
 
 svg#svg-classes {
@@ -9,46 +10,49 @@ svg#svg-classes {
 
 select {
   cursor: pointer;
-  font-size: 50px;
-  width: 200px;
 }
 
-.axis {
+.x-axis {
   font-size: 13px;
   font-weight: 400;
+  opacity: 0.8;
 }
 
 .group-label {
-  font-family: 'Roboto', sans-serif;
-  font-size: 15px;
+  font-family: sans-serif;
+  font-size: 20px;
   font-weight: 500;
+}
+
+.class-line {
+  stroke: navy;
+  stroke-width: 1.5;
+  opacity: 0.5;
 }
 
 .prof-circle, .frequent-prof-circle {
   stroke: #4D5656;
-  stroke-width: 2px;
+  stroke-width: 1.5px;
+  opacity: 1;
 }
 
 .prof-circle {
   fill: #FFB30F;
-  opacity: 0.7;
 }
 
 .frequent-prof-circle {
   fill: #247BA0;
-  opacity: 0.9;
-  z-index: 1000 !important;
 }
 
 .prof-circle:hover, .frequent-prof-circle:hover {
   cursor: crosshair;
 }
 
-/*.selected-prof-circle {
-  stroke-width: 4px;
-}*/
-
 .prof-label {
-  font-size: 10px;
+  font-size: 16px;
   font-weight: 400;
+}
+
+img {
+  height: auto;
 }
