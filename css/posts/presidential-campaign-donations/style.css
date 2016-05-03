@@ -7,7 +7,7 @@
   stroke: #fff;
 }
 
-d3tooltip.tooltip {
+div.tooltip {
     position: absolute;
     text-align: center;
     width: 300px;
