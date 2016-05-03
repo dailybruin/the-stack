@@ -106,10 +106,10 @@ scripts:
 
 <div id="horizontal-bar"></div>
 
-<div id="animated-horizontal-bar">
+<div id="animated-horizontal-bar"> </div>
   <div class="ui inline dropdown" id="d3">
     <div class="text">
-      1
+      Candidate
     </div>
     <i class="dropdown icon"></i>
     <div class="menu">
@@ -157,4 +157,3 @@ scripts:
   </div>
     </div>
   </div>
-</div>
