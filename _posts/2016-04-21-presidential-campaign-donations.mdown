@@ -20,7 +20,7 @@ scripts:
     - //cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/semantic.min.js
     - //cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/components/dropdown.min.js
     - //cdnjs.cloudflare.com/ajax/libs/d3-tip/0.6.7/d3-tip.js
-    #- /js/posts/presidential-campaign-donations/vertical-bar.js
+    - /js/posts/presidential-campaign-donations/vertical-bar.js
     #- /js/posts/presidential-campaign-donations/horizontal-bar.js
     - /js/posts/presidential-campaign-donations/script.js
     #- /js/posts/presidential-campaign-donations/barGraph.js
@@ -28,7 +28,7 @@ scripts:
 ---
 *Story by Shreya Maskara. Graphics by Nick Liu, Alex Guziak, Amber Won, Jennifer Xu, Li-Wei Chi, & Chang Liu.*
 
-<!-- <div id="vertical-bar"></div>
+<div id="vertical-bar"></div>
 <div class="ui inline dropdown" id="d1">
   <div class="text">
     1
@@ -96,7 +96,7 @@ scripts:
       Amount
     </div>
   </div>
-</div> -->
+</div>
 
 <div>
   <div id="donutChart"></div>
