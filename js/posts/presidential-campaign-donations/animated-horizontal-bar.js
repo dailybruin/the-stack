@@ -16,7 +16,7 @@ var barSVG = d3.select("#animated-horizontal-bar").append("svg")
 	.append("g")
 	.attr("transform", "translate(" + margin.left + ", " + margin.top + ")");
 
-var xAxis = barSVG.append("g")
+var xAxis2 = barSVG.append("g")
 	.attr("class", "x axis")
 	.call(xScale.axis = d3.svg.axis().scale(xScale).orient("top"))
   .append("text")
@@ -25,7 +25,7 @@ var xAxis = barSVG.append("g")
   .style("text-anchor", "end")
   .text("Percentage from UC schools (%)");
 
-var yAxis = barSVG.append("g")
+var yAxis2 = barSVG.append("g")
 	.attr("class", "y axis")
 	.call(yScale.axis = d3.svg.axis().scale(yScale).orient("left"));
 
@@ -36,7 +36,6 @@ function initBarGraph(initData) {
 	transitionyScale(initData);
 
   var colleges = [];
-  // console.log(initData.colleges)
   initData.colleges.map(function(d) { colleges.push(d.name); });
   yScale.domain(colleges);
 
@@ -54,17 +53,9 @@ function initBarGraph(initData) {
 }
 
 function transitionyScale(transitionData) {
-  // for (var i = 0; i < transitionData.colleges.length; i++)
-  	// 	console.log(transitionData.colleges[i].name);
-  	console.log(transitionData)
-  // ;	if (transitionData)
   	var map;
   	var newYDomain = [];
 
-  	// map = transitionData.map(function(d) {
-  	// 	newYDomain.push(d["key"]);
-  	// });
-  	// newXDomain = [0, d3.max(transitionData, function(d) { return parseInt(d.values[0]["total"]); })];
   	map = transitionData.colleges.map(function(d) {
   		newYDomain.push(d["name"]);
   	});
@@ -72,12 +63,10 @@ function transitionyScale(transitionData) {
   	yScale.domain(newYDomain);
   	yScale.rangeRoundBands([newYDomain.length*50, 0], 0.1);
 
-  	yAxis.transition()
+  	yAxis2.transition()
   		.duration(500)
   		.ease("linear")
   		.call(yScale.axis);
-
-  	// console.log(newXDomain);
 }
 
 function transitionBarGraph(data) {
