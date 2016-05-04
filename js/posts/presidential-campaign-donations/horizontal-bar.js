@@ -8,14 +8,6 @@ var x = d3.scale.ordinal()
 var y = d3.scale.linear()
     .range([height, 0]);
 
-var xAxis = d3.svg.axis()
-    .scale(x)
-    .orient("bottom");
-
-var yAxis = d3.svg.axis()
-    .scale(y)
-    .orient("left")
-
 var colors = ['#0000b4','#0082ca','#0094ff','#0d4bcf','#0066AE','#074285','#00187B','#285964','#405F83'];
 
 d3.json("/datasets/presidential-campaign-donations/result.json", function(error, data) {
@@ -77,7 +69,7 @@ d3.json("/datasets/presidential-campaign-donations/result.json", function(error,
 
   var chart = canvas.append('g')
           .attr("transform", "translate(150,0)")
-          .attr('id','bars')
+          .attr('class','bars')
           .selectAll('rect')
           .data(data)
           .enter()
@@ -87,13 +79,13 @@ d3.json("/datasets/presidential-campaign-donations/result.json", function(error,
           .style('fill',function(d,i){ return colorScale(i); })
           .attr('width',function(d){ return 0; });
 
-  var transit = d3.select("g#bars").selectAll("rect")
+  var transit = d3.select("g.bars").selectAll("rect")
             .data(data)
             .transition()
             .duration(1000)
             .attr('width', function(d) { return xscale(d.total/candidate_total); });
 
-  var transitext = d3.select('#bars')
+  var transitext = d3.select('.bars')
           .selectAll('text')
           .data(data)
           .enter()
