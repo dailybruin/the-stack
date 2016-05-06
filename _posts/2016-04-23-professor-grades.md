@@ -13,9 +13,7 @@ featured_image:
 og_image:
 scripts:
     - //ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js
-    - //underscorejs.org/underscore-min.js
-    - //cdnjs.cloudflare.com/ajax/libs/d3/3.5.16/d3.min.js
-    - /js/posts/professor-grades/d3-jetpack.js
+    - //d3js.org/d3.v4.0.0-alpha.35.min.js
     - /js/posts/professor-grades/dotchart.js
 stylesheets:
     - //fonts.googleapis.com/css?family=Roboto:400,300,500
@@ -75,6 +73,10 @@ If you have this professor in any class, you're almost guaranteed to encounter a
 <div id="pick-dpmt-container">
   <select id="pick-dpmt">
   </select>
+  <form>
+    <input>
+    </input>
+  </form>
 </div>
 
 <div id="dotchart">

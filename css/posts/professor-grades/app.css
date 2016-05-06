@@ -1,11 +1,14 @@
 #dotchart {
   margin-top: 30px;
   margin-bottom: 30px;
-  overflow-x: scroll;
 }
 
-svg#svg-classes {
-  background-color: white;
+.svg-classes {
+  background-color: #FFFAF0;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 select {
@@ -13,14 +16,14 @@ select {
 }
 
 .x-axis {
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 400;
   opacity: 0.8;
 }
 
 .group-label {
   font-family: sans-serif;
-  font-size: 20px;
+  font-size: 14px;
   font-weight: 500;
 }
 
@@ -30,26 +33,29 @@ select {
   opacity: 0.5;
 }
 
-.prof-circle, .frequent-prof-circle {
+.prof-circle, .med-prof-circle, .frequent-prof-circle {
   stroke: #4D5656;
-  stroke-width: 1.5px;
-  opacity: 1;
+  stroke-width: 1px;
 }
 
 .prof-circle {
-  fill: #FFB30F;
+  fill: #f7fcb9;
+}
+
+.med-prof-circle {
+  fill: #addd8e
 }
 
 .frequent-prof-circle {
-  fill: #247BA0;
+  fill: #31a354;
 }
 
-.prof-circle:hover, .frequent-prof-circle:hover {
+.prof-circle:hover, .med-prof-circle:hover, .frequent-prof-circle:hover {
   cursor: crosshair;
 }
 
 .prof-label {
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 400;
 }
 
