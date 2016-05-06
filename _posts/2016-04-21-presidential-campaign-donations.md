@@ -22,7 +22,7 @@ scripts:
   - //cdnjs.cloudflare.com/ajax/libs/d3-tip/0.6.7/d3-tip.js
   - /js/posts/presidential-campaign-donations/vertical-bar.js
   - /js/posts/presidential-campaign-donations/animated-horizontal-bar.js
-# - /js/posts/presidential-campaign-donations/script.js
+  - /js/posts/presidential-campaign-donations/script.js
   
 
 ---
@@ -97,10 +97,8 @@ scripts:
   </div>
 </div>
 
-<!-- <div>
-  <div id="donutChart"></div>
-  <div id="barChart"></div>
-</div> -->
+<div id="donutChart"></div>
+
 
 <div id="animated-horizontal-bar"></div>
 <div class="ui inline dropdown" id="d3">
