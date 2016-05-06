@@ -45,7 +45,7 @@ var curr_filter = "donators";
 // Get the data again
 d3.json("/datasets/presidential-campaign-donations/result.json", function(error, data) {
 
-  $('#hori-dropdown').dropdown({
+  $('#d1').dropdown({
     onChange: function (val) {
       curr_cand = val-1;
       update();
@@ -106,12 +106,11 @@ d3.json("/datasets/presidential-campaign-donations/result.json", function(error,
 
     svg.select(".x.axis")
       .transition().duration(300)
-      .attr("transform", "translate(0," + height + ")")
       .call(xAxis);
 
     svg.append("g")
       .attr("class", "x axis")
-      .attr("transform", "translate(0," + height + ")")
+      .attr("transform", "translate(0," + (parseInt(height) + 30).toString() + ")")
       .call(xAxis);
 
     svg.append("g")

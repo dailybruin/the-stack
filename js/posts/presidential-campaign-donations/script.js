@@ -31,7 +31,7 @@ var innerPie = d3.layout.pie()
     .sort(null)
     .value(function(d) { return d["colleges_total"]; });
 
-var svg = d3.select("#donutChart").append("svg")
+var svg2 = d3.select("#donutChart").append("svg")
     .attr("width", width)
     .attr("height", height)
   .append("g")
@@ -67,7 +67,7 @@ d3.json("/datasets/presidential-campaign-donations/result.json", function(error,
   nest[0].total = total[0];
   nest[1].total = total[1];
 
-  outerArcs = svg.selectAll(".outerArc")
+  outerArcs = svg2.selectAll(".outerArc")
       .data(outerPie(nest))
     .enter().append("g")
       .attr("class", "outerArc");
@@ -102,7 +102,7 @@ d3.json("/datasets/presidential-campaign-donations/result.json", function(error,
             .style("opacity", 0);
       })
 
-  innerArcs = svg.selectAll(".innerArc")
+  innerArcs = svg2.selectAll(".innerArc")
       .data(innerPie(candEntries))
     .enter().append("g")
       .attr("class", "innerArc");

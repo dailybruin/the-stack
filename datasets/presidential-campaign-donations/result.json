@@ -17,9 +17,9 @@
                 "donators": 74
             },
             {
-                "total": 4801.65,
+                "total": 5561.84,
                 "name": "ucd",
-                "donators": 77
+                "donators": 91
             },
             {
                 "total": 5910.339999999999,
@@ -37,9 +37,14 @@
                 "donators": 413
             },
             {
-                "total": 2399.0,
+                "total": 3007.75,
+                "name": "uci",
+                "donators": 52
+            },
+            {
+                "total": 2635.8,
                 "name": "ucsc",
-                "donators": 56
+                "donators": 66
             },
             {
                 "total": 27.0,
@@ -109,8 +114,8 @@
             {
                 "colleges": {
                     "ucd": {
-                        "total": 731.0,
-                        "donators": 10
+                        "total": 1131.0,
+                        "donators": 14
                     },
                     "ucla": {
                         "total": 7298.199999999999,
@@ -128,13 +133,17 @@
                         "total": 6905.48,
                         "donators": 160
                     },
+                    "uci": {
+                        "total": 250.0,
+                        "donators": 1
+                    },
                     "ucb": {
                         "total": 281.0,
                         "donators": 14
                     }
                 },
-                "total": 23094.430000000004,
-                "donators": 386,
+                "total": 23744.430000000004,
+                "donators": 391,
                 "title": "HEALTH"
             },
             {
@@ -152,8 +161,8 @@
                         "donators": 248
                     },
                     "ucd": {
-                        "total": 2196.2,
-                        "donators": 40
+                        "total": 2556.39,
+                        "donators": 50
                     },
                     "ucsd": {
                         "total": 1853.03,
@@ -167,13 +176,17 @@
                         "total": 27.0,
                         "donators": 1
                     },
+                    "uci": {
+                        "total": 1275.0,
+                        "donators": 9
+                    },
                     "ucb": {
                         "total": 2650.54,
                         "donators": 28
                     }
                 },
-                "total": 31072.66,
-                "donators": 498,
+                "total": 32707.85,
+                "donators": 517,
                 "title": "PROFESSOR"
             },
             {
@@ -202,13 +215,17 @@
                         "total": 250.0,
                         "donators": 1
                     },
+                    "uci": {
+                        "total": 297.0,
+                        "donators": 8
+                    },
                     "ucsd": {
                         "total": 670.94,
                         "donators": 48
                     }
                 },
-                "total": 5854.869999999999,
-                "donators": 134,
+                "total": 6151.869999999999,
+                "donators": 142,
                 "title": "GRAD"
             },
             {
@@ -245,8 +262,8 @@
                         "donators": 50
                     },
                     "ucsc": {
-                        "total": 350.0,
-                        "donators": 2
+                        "total": 410.0,
+                        "donators": 6
                     },
                     "ucd": {
                         "total": 450.0,
@@ -265,24 +282,9 @@
                         "donators": 2
                     }
                 },
-                "total": 7398.469999999999,
-                "donators": 115,
+                "total": 7458.469999999999,
+                "donators": 119,
                 "title": "RESEARCH"
-            },
-            {
-                "colleges": {
-                    "ucb": {
-                        "total": 532.53,
-                        "donators": 11
-                    },
-                    "ucla": {
-                        "total": 948.0,
-                        "donators": 13
-                    }
-                },
-                "total": 1480.53,
-                "donators": 24,
-                "title": "ADMINISTRATIVE"
             },
             {
                 "colleges": {
@@ -293,6 +295,10 @@
                     "ucla": {
                         "total": 5100.98,
                         "donators": 74
+                    },
+                    "ucsc": {
+                        "total": 176.8,
+                        "donators": 6
                     },
                     "ucd": {
                         "total": 1000.0,
@@ -306,14 +312,37 @@
                         "total": 281.9,
                         "donators": 8
                     },
+                    "uci": {
+                        "total": 685.7500000000001,
+                        "donators": 24
+                    },
                     "ucsd": {
                         "total": 1538.03,
                         "donators": 33
                     }
                 },
-                "total": 8283.91,
-                "donators": 132,
+                "total": 9146.46,
+                "donators": 162,
                 "title": "UNDERGRAD"
+            },
+            {
+                "colleges": {
+                    "ucb": {
+                        "total": 532.53,
+                        "donators": 11
+                    },
+                    "uci": {
+                        "total": 500.0,
+                        "donators": 10
+                    },
+                    "ucla": {
+                        "total": 948.0,
+                        "donators": 13
+                    }
+                },
+                "total": 1980.53,
+                "donators": 34,
+                "title": "ADMINISTRATIVE"
             },
             {
                 "colleges": {
@@ -361,7 +390,7 @@
         "locations": [],
         "party": "dem",
         "total": 13913776.019999102,
-        "colleges_total": 99178.63000000003
+        "colleges_total": 103183.37000000005
     },
     {
         "colleges": [
@@ -386,14 +415,19 @@
                 "donators": 34
             },
             {
+                "total": 5900.0,
+                "name": "uci",
+                "donators": 12
+            },
+            {
                 "total": 25.0,
                 "name": "ucsb",
                 "donators": 1
             },
             {
-                "total": 6069.13,
+                "total": 6136.13,
                 "name": "ucsc",
-                "donators": 13
+                "donators": 17
             },
             {
                 "total": 12197.369999999999,
@@ -429,13 +463,17 @@
                         "total": 10550.0,
                         "donators": 9
                     },
+                    "uci": {
+                        "total": 5900.0,
+                        "donators": 12
+                    },
                     "ucb": {
                         "total": 13986.970000000001,
                         "donators": 42
                     }
                 },
-                "total": 72536.73,
-                "donators": 238,
+                "total": 78436.73,
+                "donators": 250,
                 "title": "PROFESSOR"
             },
             {
@@ -528,6 +566,10 @@
             },
             {
                 "colleges": {
+                    "ucsc": {
+                        "total": 67.0,
+                        "donators": 4
+                    },
                     "ucsb": {
                         "total": 25.0,
                         "donators": 1
@@ -541,8 +583,8 @@
                         "donators": 6
                     }
                 },
-                "total": 2247.5,
-                "donators": 29,
+                "total": 2314.5,
+                "donators": 33,
                 "title": "OTHER"
             },
             {
@@ -644,10 +686,15 @@
         "locations": [],
         "party": "dem",
         "total": 30346423.560000055,
-        "colleges_total": 130116.63
+        "colleges_total": 136083.62999999998
     },
     {
         "colleges": [
+            {
+                "total": 250.0,
+                "name": "uci",
+                "donators": 1
+            },
             {
                 "total": 250.0,
                 "name": "ucd",
@@ -665,10 +712,14 @@
                     "ucd": {
                         "total": 250.0,
                         "donators": 1
+                    },
+                    "uci": {
+                        "total": 250.0,
+                        "donators": 1
                     }
                 },
-                "total": 250.0,
-                "donators": 1,
+                "total": 500.0,
+                "donators": 2,
                 "title": "PROFESSOR"
             },
             {
@@ -687,7 +738,7 @@
         "locations": [],
         "party": "dem",
         "total": 186144.49999999997,
-        "colleges_total": 1038.15
+        "colleges_total": 1288.15
     },
     {
         "colleges": [
@@ -945,9 +996,9 @@
     {
         "colleges": [
             {
-                "total": 1500.0,
+                "total": 4200.0,
                 "name": "ucsd",
-                "donators": 4
+                "donators": 7
             },
             {
                 "total": 1500.0,
@@ -970,13 +1021,24 @@
                 "total": 3000.0,
                 "donators": 5,
                 "title": "HEALTH"
+            },
+            {
+                "colleges": {
+                    "ucsd": {
+                        "total": 2700.0,
+                        "donators": 3
+                    }
+                },
+                "total": 2700.0,
+                "donators": 3,
+                "title": "PROFESSOR"
             }
         ],
         "name": "Fiorina",
         "locations": [],
         "party": "rep",
         "total": 1468489.42,
-        "colleges_total": 3000.0
+        "colleges_total": 5700.0
     },
     {
         "colleges": [
@@ -1149,6 +1211,15 @@
         "locations": [],
         "party": "rep",
         "total": 405895.0,
+        "colleges_total": 0
+    },
+    {
+        "colleges": [],
+        "jobs": [],
+        "name": "Huckabee",
+        "locations": [],
+        "party": "rep",
+        "total": 230890.6,
         "colleges_total": 0
     }
 ]
