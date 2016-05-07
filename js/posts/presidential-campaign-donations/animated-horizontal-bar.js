@@ -70,7 +70,7 @@ function transitionyScale(transitionData) {
 }
 
 function transitionBarGraph(data) {
-	transitionyScale(data);
+	// transitionyScale(data);
 
 	var dataRects = d3.selectAll(".dataRect").select("rect")
 		.transition()
