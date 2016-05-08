@@ -35,7 +35,8 @@ var svg = d3.select("#vertical-bar").append("svg")
 svg.call(tip);
 
 // stacked bar chart colors
-var color = d3.scale.category20();
+var color = d3.scale.ordinal()
+    .range(["#98abc5", "#8a89a6", "#7b6888", "#6b486b", "#a05d56", "#d0743c", "#ff8c00", "#dd9760", "#cc6ae5", "#45bbdd"]);
 
 var data_structure = []
 
@@ -94,11 +95,11 @@ d3.json("/datasets/presidential-campaign-donations/result.json", function(error,
       });
     }));
 
-    x.domain(new_layers[0].map(function(d) { return d.x }));
-    y.domain([0, d3.max(new_layers[new_layers.length - 1], function(d) { return d.y0 + d.y; })]).nice()
+    x.domain(new_layers[0].map(function(d) { return d.x; }));
+    y.domain([0, d3.max(new_layers[new_layers.length - 1], function(d) { return d.y0 + d.y; })]).nice();
 
-    svg.select(".y.axis").remove()
-    svg.select(".x.axis").remove()
+    svg.select(".y.axis").remove();
+    svg.select(".x.axis").remove();
 
     svg.select(".y.axis")
       .transition().duration(300)
@@ -115,7 +116,7 @@ d3.json("/datasets/presidential-campaign-donations/result.json", function(error,
 
     svg.append("g")
       .attr("class", "y axis")
-      .call(yAxis)
+      .call(yAxis);
 
     svg.selectAll(".layer").remove();
 
@@ -136,7 +137,40 @@ d3.json("/datasets/presidential-campaign-donations/result.json", function(error,
       .attr("width", x.rangeBand() - 1)
       .on('mouseover', tip.show)
       .on('mouseout', tip.hide);
+      
+    var reverseColors = d3.scale.ordinal()
+    .range(["#45bbdd", "#cc6ae5", "#dd9760", "#ff8c00", "#d0743c", "#a05d56", 
+            "#6b486b", "#7b6888", "#8a89a6", "#98abc5"]);
+      // puts college names into array for easier access
+    var colleges = data_structure[curr_cand].colleges;
+      college_names = [];
+      for (var k = 0; k < colleges.length; k++) {
+          college_names[k] = colleges[k].name.toUpperCase();
+      }
+      
+      var rebirth = d3.selectAll(".legend").remove(); // removes legend every update
+    
+      // creates legend with college names as data input
+    var legend = svg.selectAll(".legend")
+      .data(college_names.reverse())
+      .enter().append("g")
+      .attr("class", "legend")
+      .attr("transform", function(data, i) { return "translate(100," + i * 20 + ")"; });
+
+      // outputs colored rectangles in order of reverseColors
+    legend.append("rect")
+      .attr("x", width - 18)
+      .attr("width", 18)
+      .attr("height", 18)
+      .style("fill", reverseColors);
+      
+    legend.append("text")
+      .attr("x", width - 24)
+      .attr("y", 9)
+      .attr("dy", ".35em")
+      .style("text-anchor", "end")
+      .text(function(data) { return data; });
   }
 
-  update(0);
+    update(0);
 });
