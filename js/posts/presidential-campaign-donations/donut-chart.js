@@ -12,8 +12,6 @@ var outerColorScale = d3.scale.ordinal()
   .range(["#232066", "#E91D0E"]);
 
 var colorScale = d3.scale.category20();
-// var color = d3.scale.ordinal()
-//     .range(["#98abc5", "#8a89a6", "#7b6888", "#6b486b", "#a05d56", "#d0743c", "#ff8c00"]);
 
 var outerArcRegion = d3.svg.arc()
     .outerRadius(radius - 10)
@@ -144,7 +142,3 @@ function drawOuterArc(outerArc, data) {
 
 
 }
-// function type(d) {
-//   d.population = +d.population;
-//   return d;
-// }
