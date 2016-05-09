@@ -49,7 +49,7 @@ function initBarGraph(initData) {
 		.attr("y", function(d) { return yScale(d.name); })
 		.attr("width", function(d) { return xScale(d.total/initData.colleges_total); })
 		.attr("height", yScale.rangeBand())
-		.style("fill", "#ff8c00");
+		.style("fill", "rgb(13, 75, 207)");
 }
 
 function transitionyScale(transitionData) {
