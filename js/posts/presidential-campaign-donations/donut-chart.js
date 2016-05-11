@@ -3,7 +3,7 @@ var width = 500,
     radius = Math.min(width, height) / 2;
 
 /* d3 tool tip */
-var div = d3.select("#d3").append("div")
+var div = d3.select("#donutChart").append("div")
     .attr("class", "tooltip")
     .style("opacity", 0);
 
@@ -28,6 +28,18 @@ var outerPie = d3.layout.pie()
 var innerPie = d3.layout.pie()
     .sort(null)
     .value(function(d) { return d["colleges_total"]; });
+
+var arcOverInner = d3.svg.arc()
+    .startAngle(function(d){ return d.startAngle; })
+    .endAngle(function(d){ return d.endAngle; })
+    .innerRadius(radius - 95)
+    .outerRadius(radius - 32);
+
+var arcOverOuter = d3.svg.arc()
+    .startAngle(function(d){ return d.startAngle; })
+    .endAngle(function(d){ return d.endAngle; })
+    .innerRadius(radius)
+    .outerRadius(radius - 30);
 
 var svg2 = d3.select("#donutChart").append("svg")
     .attr("width", width)
@@ -64,6 +76,7 @@ d3.json("/datasets/presidential-campaign-donations/result.json", function(error,
 
   nest[0].total = total[0];
   nest[1].total = total[1];
+  var overallTotal = nest[0].total + nest[1].total;
 
   outerArcs = svg2.selectAll(".outerArc")
       .data(outerPie(nest))
@@ -75,26 +88,44 @@ d3.json("/datasets/presidential-campaign-donations/result.json", function(error,
       .style("fill", function(d, i) { return outerColorScale(parties[i]); })
       .on("mouseover", function(d) {
         d3.select(this)
-          .attr("opacity", 0.5);
+          .attr("opacity", 0.5)
+          .transition()
+          .duration(300)
+          .attr("d", arcOverOuter);
       })
       .on("mousemove", function(d, i) {
         div.transition()
             .duration(200)
             .style("opacity", .9);
         div.html(function() {
-          var str = "Party: "+d.data.key+"</br>"+"College Total: "+parseInt(d.data.total)+"</br>";
+          var party;
+          switch(d.data.key){
+            case "dem":
+              party = "Democrats";
+              break;
+            case "rep":
+              party = "Republicans";
+              break;
+          }
+          var percentage = (d.data.total/overallTotal)*100;
+          var str = "<div class='left'><b>"+party+"</b></div>"+"<div class='right'>Total Donation: "+ parseInt(d.data.total)
+            + "<br>" + percentage.toFixed(1)+"% </br></div>";
 
-            for (var i = 0; i < d.data.values.length; i++) {
-              str += "Candiate: " + d.data.values[i]["name"] + ", College Total: " + parseInt(d.data.values[i]["colleges_total"]) + "</br>";
-            }
+            // for (var i = 0; i < d.data.values.length; i++) {
+            //   str += "Candiate: " + d.data.values[i]["name"] + ", College Total: " + parseInt(d.data.values[i]["colleges_total"]) + "</br>";
+            // }
               return str;
         })
-        .style("left", (d3.event.pageX) + "px")
-        .style("top", (d3.event.pageY - 28) + "px");
+        .style("left", (d3.event.pageX + 12) + "px")
+        .style("top", (d3.event.pageY -10) + "px")
+        .style("width", "150px");
       })
       .on("mouseout", function(d) {
           d3.select(this)
-           .attr("opacity", 1);
+           .attr("opacity", 1)
+           .transition()
+           .duration(300)
+           .attr("d", outerArcRegion);
           div.transition()
             .duration(500)
             .style("opacity", 0);
@@ -109,26 +140,34 @@ d3.json("/datasets/presidential-campaign-donations/result.json", function(error,
       .attr("d", innerArcRegion)
       .style("fill", function(d, i) { return colorScale(i); })
       .on("mouseover", function(d) {
-        d3.select(this).attr("opacity", 0.5);
+        d3.select(this)
+          .attr("opacity", 0.5)
+          .transition()
+          .duration(300)
+          .attr("d", arcOverInner);
       })
       .on("mousemove", function(d) {
         div.transition()
           .duration(200)
           .style("opacity", .9);
         div.html(function() {
-          var str = "Candidate: "+d.data["name"]+"</br>"+"College Total: "+parseInt(d.data["colleges_total"]);
+          var str = "Candidate: "+d.data["name"]+"</br>"+"Total Donation: "+parseInt(d.data["colleges_total"]);
 
-          for (var i = 0; i < d.data.colleges.length; i++) {
-            str += "College: " + d.data.colleges[i]["name"] + ", College Total: " + parseInt(d.data.colleges[i]["total"]) + "</br>";
+          for (var i = 0; i < d.data.jobs.length; i++) {
+            // var percentage = (d.data.jobs[i]["total"]/d.data.total)*100;
+            str += "<br> Job Type: " + d.data.jobs[i]["title"] + ", Donation: " + parseInt(d.data.jobs[i]["total"]) + "</br>";
           }
             return str;
           })
-        .style("left", (d3.event.pageX) + "px")
-        .style("top", (d3.event.pageY - 28) + "px")
+        .style("left", (d3.event.pageX + 12) + "px")
+        .style("top", (d3.event.pageY - 10) + "px")
       })
       .on("mouseout", function(d) {
           d3.select(this)
-           .attr("opacity", 1);
+           .attr("opacity", 1)
+           .transition()
+           .duration(300)
+           .attr("d", innerArcRegion);
           div.transition()
             .duration(500)
             .style("opacity", 0);
