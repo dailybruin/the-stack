@@ -3,7 +3,7 @@ var width = 500,
     radius = Math.min(width, height) / 2;
 
 /* d3 tool tip */
-var div = d3.select("#donutChart").append("div")
+var div = d3.select("#donut-chart").append("div")
     .attr("class", "tooltip")
     .style("opacity", 0);
 
@@ -32,7 +32,7 @@ var innerPie = d3.layout.pie()
 var arcOverInner = d3.svg.arc()
     .startAngle(function(d){ return d.startAngle; })
     .endAngle(function(d){ return d.endAngle; })
-    .innerRadius(radius - 95)
+    .innerRadius(radius - 90)
     .outerRadius(radius - 32);
 
 var arcOverOuter = d3.svg.arc()
@@ -41,7 +41,7 @@ var arcOverOuter = d3.svg.arc()
     .innerRadius(radius)
     .outerRadius(radius - 30);
 
-var svg2 = d3.select("#donutChart").append("svg")
+var svg2 = d3.select("#donut-chart").append("svg")
     .attr("width", width)
     .attr("height", height)
   .append("g")
