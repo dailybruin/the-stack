@@ -10,7 +10,6 @@ featured_image:
 og_image: meal-plan-swipe-deduction/graph.png
 stylesheets:
   - /css/posts/presidential-campaign-donations/app.css
-  - /css/posts/presidential-campaign-donations/style.css
   - //cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/semantic.min.css
   - //cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/components/dropdown.min.css
 scripts:
@@ -26,7 +25,7 @@ scripts:
 
 ---
 *Story by Shreya Maskara. Graphics by Nick Liu, Alex Guziak, Amber Won, Jennifer Xu, Li-Wei Chi, & Chang Liu.*
-<div id="donutChart"></div>
+<div id="donut-chart"></div>
 
 <div id="vertical-bar"></div>
 
