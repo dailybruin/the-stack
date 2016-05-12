@@ -30,14 +30,18 @@ var yAxis = d3.svg.axis()
     .scale(y)
     .orient("left")
 
-var tip = d3.tip()
-  .attr('class', 'd3-tip')
-  .offset([-10, 0])
-  .html(function(d) {
-    var f = curr_filter == "donators" ? "Donators" : "Amount";
-    var val = curr_filter == "donators" ? d.y : "$" + d.y.toFixed(2);
-    return "<strong>College:</strong> <span style='color:red'>" + d.name.toUpperCase() + "</span><br><strong>" + f + ":</strong> <span style='color:red'>" + val + "</span>";
-  })
+// var tip = d3.tip()
+//   .attr('class', 'd3-tip')
+//   .offset([-10, 0])
+//   .html(function(d) {
+//     var f = curr_filter == "donators" ? "Donators" : "Amount";
+//     var val = curr_filter == "donators" ? d.y : "$" + d.y.toFixed(2);
+//     return "<strong>College:</strong> <span style='color:red'>" + d.name.toUpperCase() + "</span><br><strong>" + f + ":</strong> <span style='color:red'>" + val + "</span>";
+//   })
+
+tooltip = d3.select("body")
+  .append("div") 
+  .attr("class", "tooltip");
 
 var svg = d3.select("#vertical-bar").append("svg")
     .attr("width", width + margin.left + margin.right)
@@ -46,7 +50,7 @@ var svg = d3.select("#vertical-bar").append("svg")
     .attr('class', 'wrapper')
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-svg.call(tip);
+// svg.call(tip);
 
 // HORIZONTAL BAR
 var margin2 = {top: 50, right: 10, bottom: 50, left: 50},
@@ -73,7 +77,7 @@ var xAxis2 = barSVG.append("g")
   .attr("x", 570)
   .attr("y", -20)
   .style("text-anchor", "end")
-  .text("Percentage from UC schools (%)");
+  .text("Percentage of Total Contributions from UCs");
 
 var yAxis2 = barSVG.append("g")
   .attr("class", "y axis")
@@ -205,9 +209,11 @@ d3.json("/datasets/presidential-campaign-donations/result.json", function(error,
         if (typeof d.colleges[c] == 'undefined') {
           return( { x : i, y : 0 })
         }
-        return( { x : i, y : d.colleges[c][curr_filter], name : c } );
+        return( { x : i, y : d.colleges[c][curr_filter], name : c, job: d.title } );
       });
     }));
+
+    // console.log(new_layers);
 
     x.domain(new_layers[0].map(function(d) { return d.x }));
     y.domain([0, d3.max(new_layers[new_layers.length - 1], function(d) { return d.y0 + d.y; })]).nice()
@@ -249,8 +255,46 @@ d3.json("/datasets/presidential-campaign-donations/result.json", function(error,
       .attr("y", function(d) { return y(d.y + d.y0); })
       .attr("height", function(d) { return y(d.y0) - y(d.y + d.y0); })
       .attr("width", x.rangeBand() - 1)
-      .on('mouseover', tip.show)
-      .on('mouseout', tip.hide);
+      .on("mousemove",function(d, i) {
+
+        this.style.opacity = "0.6"; 
+        this.style.cursor = "pointer"; 
+
+        var val = curr_filter == "donators" ? d.y : "$" + d.y.toFixed(2);
+        var h = '<div class="left"><b style="width: 100%; border-bottom: 2px solid ' + color(i) + ';">' + d.job + '</b><br><br>';
+        for (var j = new_layers.length - 1; j >= 0; j--) { // start backwards 
+          // console.log(c);
+          var c = new_layers[j][i];
+          var s; 
+          if (c.name == d.name) {
+            s = '<p style="width:100%; background-color: yellow;">';
+          }
+          else {
+            s = '<p>'; 
+          }
+          // console.log(c);
+          var v = curr_filter == "donators" ? c.y : "$" + c.y.toFixed(2);
+          if (c.y != 0) {
+            s += ((c.name).toString().toUpperCase() + ': <b>' + v + '</b></p>');
+            h += s; 
+          }
+        }
+        h += '</div>';
+
+        tooltip.style("display","none");
+        tooltip.html(h)
+          .style("left", (d3.event.pageX+12) + "px")
+          .style("top", (d3.event.pageY-10) + "px")
+          .style("opacity", 1)
+          .style("display","block")
+
+      })
+
+      // mouseover', tip.show)
+      .on('mouseout', function() {
+        this.style.opacity = "1"; 
+        tooltip.html("").style("display","none");
+      });
 
     var reverseColors = d3.scale.ordinal()
     .range(["#45bbdd", "#cc6ae5", "#dd9760", "#ff8c00", "#d0743c", "#a05d56", 
