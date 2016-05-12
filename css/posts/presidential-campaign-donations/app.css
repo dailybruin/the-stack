@@ -21,17 +21,17 @@ body {
   display: none;
 }
 
-.d3-tip {
+/*.d3-tip {
   line-height: 1;
   font-weight: bold;
   padding: 12px;
   background: rgba(0, 0, 0, 0.8);
   color: #fff;
   border-radius: 2px;
-}
+}*/
 
 /* Creates a small triangle extender for the tooltip */
-.d3-tip:after {
+/*.d3-tip:after {
   box-sizing: border-box;
   display: inline;
   font-size: 10px;
@@ -41,60 +41,21 @@ body {
   content: "\25BC";
   position: absolute;
   text-align: center;
-}
+}*/
 
 /* Style northward tooltips differently */
-.d3-tip.n:after {
+/*.d3-tip.n:after {
   margin: -1px 0 0 0;
   top: 100%;
   left: 0;
-}
+}*/
 /*# sourceMappingURL=app.css.map */
 #xaxis .domain {
     fill:none;
     stroke:#000;
   }
-  #xaxis text, #yaxis text {
-    font-size: 12px;
-  }
-
-#d3 {
-  position: float;
-}
-
-.x.axis {
-
-
-}
-
-.arc text {
-  font: 10px sans-serif;
-  text-anchor: middle;
-}
-
-.arc path {
-  stroke: #fff;
-}
-
-div.tooltip {
-    position: absolute;
-    text-align: center;
-    width: 300px;
-    height: 150px;
-    padding: 2px;
-    font: 12px sans-serif;
-    background: lightsteelblue;
-    border: 0px;
-    border-radius: 8px;
-    pointer-events: none;
-}
-
-#donutChart {
-  float: left;
-}
-
-#barChart {
-  float: left;
+#xaxis text, #yaxis text {
+  font-size: 12px;
 }
 
 text {
@@ -117,7 +78,7 @@ text {
   stroke: #fff;
 }
 
-div.tooltip {
+/*div.tooltip {
   position: absolute;
   text-align: center;
   width: 300px;
@@ -128,6 +89,35 @@ div.tooltip {
   border: 0px;
   border-radius: 8px;
   pointer-events: none;
+}*/
+
+div.tooltip {
+  position: absolute; 
+  /* text-align: center; */
+  /*width: 100px; */
+  height: auto;   
+  padding: 6px; 
+  font: 12px sans-serif;  
+  /*background: green; */ 
+  background: rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(0, 0, 0, 0.2);          
+  /*border-radius: 8px;*/
+  color: black;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+  opacity:0;
+}
+
+div.tooltip .left {
+    display: inline-block; 
+    float:left;
+    padding-right: 5px; 
+    /*border-right: 1px dotted rgba(0,0,0, 0.4);  */
+  }
+div.tooltip .right {
+  font-size: 2em;
+  padding-left: 5px;
+  display: inline-block;
+  float: right;
 }
 
 #donut-chart {
@@ -140,9 +130,6 @@ div.tooltip {
   margin: 0 auto;
 }
 
-#barChart {
-  float: left;
-}
 
 text {
   font: 10px sans-serif;
@@ -153,6 +140,10 @@ text {
   fill: none;
   stroke: #000;
   shape-rendering: crispEdges;
+}
+
+div.tooltip .left p {
+  margin-bottom: 0px;
 }
 
 
