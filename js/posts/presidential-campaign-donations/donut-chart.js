@@ -9,9 +9,28 @@ var div = d3.select("#donut-chart").append("div")
 
 var outerColorScale = d3.scale.ordinal()
   .domain(["dem", "rep"])
-  .range(["#232066", "#E91D0E"]);
+  .range(["#1f77b4", "#E91D0E"]);
 
-var colorScale = d3.scale.category20();
+var colorList = ["#5f99ad",
+"#69caed",
+"#44a2d4",
+"#9ecade",
+"#fd6ca0",
+"#e74586",
+"#c85e7a",
+"#b41e55",
+"#d71f63",
+"#e39ba8",
+"#a13653",
+"#ea7c93",
+"#b07881",
+"#8d4a57",
+"#f83772",
+"#e34e6d",
+"#cc224d"];
+
+var colorScale = d3.scale.ordinal()
+  .range(colorList);
 
 var outerArcRegion = d3.svg.arc()
     .outerRadius(radius - 10)
