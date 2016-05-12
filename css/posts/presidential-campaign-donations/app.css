@@ -21,6 +21,14 @@ body {
   display: none;
 }
 
+.tick line {
+  display: none;
+}
+
+.domain {
+  display: none;
+}
+
 #xaxis .domain {
   fill:none;
   stroke:#000;
