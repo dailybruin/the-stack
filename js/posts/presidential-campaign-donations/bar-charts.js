@@ -21,9 +21,6 @@ var color = d3.scale.ordinal()
           "#b2c28b",
           "#97c7b1"]);
 
-
-
-
 var margin = {top: 40, right: 20, bottom: 50, left: 40},
     width = 720 - margin.left - margin.right,
     height = 500 - margin.top - margin.bottom;
@@ -63,7 +60,7 @@ svg.call(tip);
 // HORIZONTAL BAR
 var margin2 = {top: 50, right: 10, bottom: 50, left: 50},
     width2 = 630 - margin2.left - margin2.right,
-    height2 = 600 - margin2.top - margin2.bottom;
+    height2 = 400 - margin2.top - margin2.bottom;
 
 var xScale = d3.scale.linear()
   .domain([0, 1])
@@ -85,7 +82,7 @@ var xAxis2 = barSVG.append("g")
   .attr("x", 570)
   .attr("y", -20)
   .style("text-anchor", "end")
-  .text("Percentage from UC schools (%)")
+  .text("Percentage from UC schools (%)");
 
 var yAxis2 = barSVG.append("g")
   .attr("class", "y axis")
@@ -123,7 +120,7 @@ function transitionyScale(transitionData) {
     });
 
     yScale.domain(newYDomain);
-    yScale.rangeRoundBands([newYDomain.length*50, 0], 0.1);
+    yScale.rangeRoundBands([newYDomain.length*(height2/11), 0], 0.1);
 
     yAxis2.transition()
       .duration(500)
