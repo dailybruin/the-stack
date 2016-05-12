@@ -21,6 +21,14 @@ body {
   display: none;
 }
 
+#horizontal-bar .tick line {
+  display: none;
+}
+
+#horizontal-bar .domain {
+  display: none;
+}
+
 #xaxis .domain {
   fill:none;
   stroke:#000;
