@@ -3,8 +3,8 @@ var width = 500,
     radius = Math.min(width, height) / 2;
 
 /* d3 tool tip */
-var div = d3.select("#donut-chart").append("div")
-    .attr("class", "tooltip")
+var donutTip = d3.select("#donut-chart").append("div")
+    .attr("class", "horizontal-tip")
     .style("opacity", 0);
 
 var outerColorScale = d3.scale.ordinal()
@@ -113,10 +113,10 @@ d3.json("/datasets/presidential-campaign-donations/result.json", function(error,
           .attr("d", arcOverOuter);
       })
       .on("mousemove", function(d, i) {
-        div.transition()
+        donutTip.transition()
             .duration(200)
             .style("opacity", .9);
-        div.html(function() {
+        donutTip.html(function() {
           var party;
           switch(d.data.key){
             case "dem":
@@ -145,7 +145,7 @@ d3.json("/datasets/presidential-campaign-donations/result.json", function(error,
            .transition()
            .duration(300)
            .attr("d", outerArcRegion);
-          div.transition()
+          donutTip.transition()
             .duration(500)
             .style("opacity", 0);
       })
@@ -166,10 +166,12 @@ d3.json("/datasets/presidential-campaign-donations/result.json", function(error,
           .attr("d", arcOverInner);
       })
       .on("mousemove", function(d) {
-        div.transition()
+        this.style.cursor = "pointer";
+        
+        donutTip.transition()
           .duration(200)
           .style("opacity", .9);
-        div.html(function() {
+        donutTip.html(function() {
           var str = "Candidate: "+d.data["name"]+"</br>"+"Total Donation: "+parseInt(d.data["colleges_total"]);
 
           for (var i = 0; i < d.data.jobs.length; i++) {
@@ -187,7 +189,7 @@ d3.json("/datasets/presidential-campaign-donations/result.json", function(error,
            .transition()
            .duration(300)
            .attr("d", innerArcRegion);
-          div.transition()
+          donutTip.transition()
             .duration(500)
             .style("opacity", 0);
       })
