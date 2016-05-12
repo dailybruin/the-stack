@@ -281,6 +281,7 @@ d3.json("/datasets/presidential-campaign-donations/result.json", function(error,
       .attr("y", function(d) { return y(d.y + d.y0); })
       .attr("height", function(d) { return y(d.y0) - y(d.y + d.y0); })
       .attr("width", x.rangeBand() - 1)
+      .attr("class", function(d) { return "rect-" + d.name;})
       .on("mousemove",function(d, i) {
 
         this.style.opacity = "0.6";
@@ -353,6 +354,12 @@ d3.json("/datasets/presidential-campaign-donations/result.json", function(error,
       .attr("height", 18)
       .style("fill", function(d, i) {
         return color(d);
+      })
+      .on("mouseover", function(d, i) {
+        svg.selectAll("rect.rect-" + d).style("opacity", "0.6");
+      })
+      .on("mouseout", function(d, i) {
+        svg.selectAll("rect.rect-" + d).style("opacity", "1");
       });
 
     legend.append("text")
