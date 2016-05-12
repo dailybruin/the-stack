@@ -34,9 +34,13 @@ var yAxis = d3.svg.axis()
     .scale(y)
     .orient("left")
 
-tooltip = d3.select("body")
+var verticalTip1 = d3.select("body")
   .append("div")
-  .attr("class", "tooltip");
+  .attr("class", "vertical-tip-1");
+
+var horizontalTip = d3.select("body")
+  .append("div")
+  .attr("class", "horizontal-tip");
 
 var svg = d3.select("#vertical-bar").append("svg")
     .attr("width", width + margin.left + margin.right)
@@ -84,6 +88,7 @@ function initBarGraph(initData) {
 
   var colleges = [];
   initData.colleges.map(function(d) { colleges.push(d.name); });
+  
   yScale.domain(colleges);
 
   dataRects = barSVG.selectAll(".dataRect")
@@ -96,7 +101,30 @@ function initBarGraph(initData) {
     .attr("y", function(d) { return yScale(d.name); })
     .attr("width", function(d) { return xScale(d.total/initData.colleges_total); })
     .attr("height", yScale.rangeBand())
-    .style("fill", "rgb(116, 205, 232)");
+    .style("fill", "rgb(116, 205, 232)")
+    .on("mousemove",function(d, i) {
+
+      this.style.opacity = "0.6";
+      this.style.cursor = "pointer";
+
+      console.log(d);
+
+      var val = curr_filter == "donators" ? d.donators : "$" + d.total.toFixed(2);
+      var h = '<div class="left"><b style="border-bottom: 2px solid ' + color(i) + ';">' + d.name.toUpperCase() + '</b><br><br>' + curr_filter.toUpperCase() + ': <b>' + val + '</b></div>';
+      h += '<div class="right">' + curr_cand[curr_filter].toFixed(2) + '</div>';
+
+      horizontalTip.style("display","none");
+      horizontalTip.html(h)
+        .style("left", (d3.event.pageX+12) + "px")
+        .style("top", (d3.event.pageY-10) + "px")
+        .style("opacity", 1)
+        .style("display","block")
+
+    })
+    .on('mouseout', function() {
+      this.style.opacity = "1";
+      horizontalTip.html("").style("display","none");
+    });
 }
 
 function transitionyScale(transitionData) {
@@ -137,7 +165,7 @@ function updateHorizontalBar() {
       })
       .attr("width", function(d) {
         return xScale(curr_cand.colleges[i].total/curr_cand.colleges_total);
-      });
+      })
   }
 }
 
@@ -287,7 +315,7 @@ d3.json("/datasets/presidential-campaign-donations/result.json", function(error,
         this.style.cursor = "pointer";
 
         var val = curr_filter == "donators" ? d.y : "$" + d.y.toFixed(2);
-        var h = '<div class="left"><b style="width: 100%; border-bottom: 2px solid ' + color(i) + ';">' + d.job + '</b><br><br>';
+        var h = '<b style="width: 100%; border-bottom: 2px solid ' + color(i) + ';">' + d.job + '</b><br><br>';
         for (var j = new_layers.length - 1; j >= 0; j--) { // start backwards
           var c = new_layers[j][i];
           var s;
@@ -303,24 +331,20 @@ d3.json("/datasets/presidential-campaign-donations/result.json", function(error,
             h += s;
           }
         }
-        h += '</div>';
 
-        tooltip.style("display","none");
-        tooltip.html(h)
+        verticalTip1.style("display","none");
+        verticalTip1.html(h)
           .style("left", (d3.event.pageX+12) + "px")
           .style("top", (d3.event.pageY-10) + "px")
           .style("opacity", 1)
           .style("display","block")
 
       })
-
-      // mouseover', tip.show)
       .on('mouseout', function() {
         this.style.opacity = "1";
-        tooltip.html("").style("display","none");
+        verticalTip1.html("").style("display","none");
       });
 
-      // var reverseColors = colorList.reverse();
       // puts college names into array for easier access
       var colleges = curr_cand.colleges;
 
