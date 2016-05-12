@@ -9,17 +9,18 @@ var curr_filter = "total";
 
 // VERTICAL BAR
 // var color = d3.scale.category20();
+var colorList = ["#74cde8",
+        "#e5be97",
+        "#77dcd3",
+        "#eaadc7",
+        "#96d8ab",
+        "#b6b9ea",
+        "#d8e9b2",
+        "#b6eee2",
+        "#b2c28b",
+        "#97c7b1"];
 var color = d3.scale.ordinal()
-  .range(["#74cde8",
-          "#e5be97",
-          "#77dcd3",
-          "#eaadc7",
-          "#96d8ab",
-          "#b6b9ea",
-          "#d8e9b2",
-          "#b6eee2",
-          "#b2c28b",
-          "#97c7b1"]);
+  .range(colorList);
 
 var margin = {top: 40, right: 20, bottom: 50, left: 40},
     width = 720 - margin.left - margin.right,
@@ -230,8 +231,8 @@ d3.json("/datasets/presidential-campaign-donations/result.json", function(error,
     // console.log(x.domain())
     // console.log(new_layers);
     //   console.log(testList)
-    var listOfJobs = ['TECH', 'FACULTY', 'HEALTH', 'PROF', 'GRAD', 'OTHER', 'RESEARCH', 'UGRAD',
-                      'ADMIN', 'ARTS', 'LEGAL', 'RETIRED'];
+    var listOfJobs = ['TECH', 'FACULTY', 'HEALTH', 'PROF', 'GRAD', 'RESEARCH', 'UGRAD',
+                      'ADMIN', 'ARTS', 'LEGAL', 'RETIRED', 'OTHER'];
       x.domain(listOfJobs);
     new_layers.forEach(function(d, i) {
         for (var i = 0; i < d.length; i++) {
@@ -283,31 +284,33 @@ d3.json("/datasets/presidential-campaign-donations/result.json", function(error,
       .on('mouseover', tip.show)
       .on('mouseout', tip.hide);
 
-    var reverseColors = d3.scale.ordinal()
-    .range(["#45bbdd", "#cc6ae5", "#dd9760", "#ff8c00", "#d0743c", "#a05d56",
-            "#6b486b", "#7b6888", "#8a89a6", "#98abc5"]);
+      // var reverseColors = colorList.reverse();
       // puts college names into array for easier access
       var colleges = curr_cand.colleges;
-      college_names = [];
+      console.log(colleges);
+      var college_names = [];
       for (var k = 0; k < colleges.length; k++) {
           college_names[k] = colleges[k].name.toUpperCase();
       }
 
       var rebirth = d3.selectAll(".legend").remove(); // removes legend every update
 
+      // console.log(college_names.reverse());
       // creates legend with college names as data input
       var legend = svg.selectAll(".legend")
-      .data(college_names.reverse())
+      .data(college_names)
       .enter().append("g")
       .attr("class", "legend")
-      .attr("transform", function(data, i) { return "translate(100," + i * 20 + ")"; });
+      .attr("transform", function(data, i) { return "translate(150," + (200 - i * 20) + ")"; });
 
       // outputs colored rectangles in order of reverseColors
     legend.append("rect")
       .attr("x", width - 18)
       .attr("width", 18)
       .attr("height", 18)
-      .style("fill", reverseColors);
+      .style("fill", function(d, i) {
+        return colorList[i];
+      });
 
     legend.append("text")
       .attr("x", width - 24)
