@@ -160,7 +160,7 @@ d3.json("/datasets/presidential-campaign-donations/result.json", function(error,
   initBarGraph(data[0]);
 
   data_structure = data;
-  var curr_cand = data_structure[0];
+  curr_cand = data_structure[0];
 
   $('#d1').dropdown({
     onChange: function (val) {
@@ -180,6 +180,7 @@ d3.json("/datasets/presidential-campaign-donations/result.json", function(error,
   });
 
   $('#d2').dropdown({
+    // console.log("there");
     onChange: function (val) {
       if (val == "donators") {
         curr_filter = "donators";
@@ -189,7 +190,6 @@ d3.json("/datasets/presidential-campaign-donations/result.json", function(error,
       }
 
       updateVerticalBar();
-      // updateHorizontalBar(); TO DO
     }
   });
 
@@ -221,10 +221,23 @@ d3.json("/datasets/presidential-campaign-donations/result.json", function(error,
     var listOfJobs = ['TECH', 'FACULTY', 'HEALTH', 'PROF', 'GRAD', 'RESEARCH', 'UGRAD',
                       'ADMIN', 'ARTS', 'LEGAL', 'RETIRED', 'OTHER'];
     x.domain(listOfJobs);
-    new_layers.forEach(function(d, i) {
-        for (var i = 0; i < d.length; i++) {
-          d[i].x = listOfJobs[i];
+    new_layers.forEach(function(d) {
+      for (var j = 0; j < d.length; j++) {
+        // console.log(d)
+        var val = d[j].job; 
+        console.log(val);
+        if (val == "ADMINISTRATIVE") {
+          val = "ADMIN"
         }
+        else if (val == "UNDERGRAD") {
+          val = "UGRAD"
+        }
+        else if (val == "PROFESSOR") {
+          val = "PROF"
+        }
+        var ind = listOfJobs.indexOf(val);
+        d[j].x = listOfJobs[ind]
+      }
     });
 
     y.domain([0, d3.max(new_layers[new_layers.length - 1], function(d) { return d.y0 + d.y; })]).nice()
@@ -258,7 +271,6 @@ d3.json("/datasets/presidential-campaign-donations/result.json", function(error,
       .attr("class", "layer")
       .style("fill", function(d, i) {
         for (var i = 0; i < d.length; i++) {
-          console.log(d[i]);
           return color(d[i].name);
         }
       });
@@ -279,7 +291,6 @@ d3.json("/datasets/presidential-campaign-donations/result.json", function(error,
         var val = curr_filter == "donators" ? d.y : "$" + d.y.toFixed(2);
         var h = '<div class="left"><b style="width: 100%; border-bottom: 2px solid ' + color(i) + ';">' + d.job + '</b><br><br>';
         for (var j = new_layers.length - 1; j >= 0; j--) { // start backwards
-          // console.log(c);
           var c = new_layers[j][i];
           var s;
           if (c.name == d.name) {
@@ -314,6 +325,7 @@ d3.json("/datasets/presidential-campaign-donations/result.json", function(error,
       // var reverseColors = colorList.reverse();
       // puts college names into array for easier access
       var colleges = curr_cand.colleges;
+
       var college_names = [];
       for (var k = 0; k < colleges.length; k++) {
         if (colleges[k].name != 'n/a') {
@@ -321,18 +333,13 @@ d3.json("/datasets/presidential-campaign-donations/result.json", function(error,
         }
       }
 
-      console.log(college_names)
-      // var rebirth = d3.selectAll(".legend").remove(); // removes legend every update
-
-      // creates legend with college names as data input
-      // console.log(college_names);
       var legend = svg.selectAll(".legend")
       .data(college_names)
       .enter().append("g")
       .attr("class", function(d) { return "legend " + d; })
       .attr("transform", function(data, i) { return "translate(150," + (200 - i * 20) + ")"; });
 
-      console.log(college_names);
+      // console.log(college_names);
       // outputs colored rectangles in order of reverseColors
     legend.append("rect")
       .attr("x", width - 18)
@@ -342,11 +349,12 @@ d3.json("/datasets/presidential-campaign-donations/result.json", function(error,
         return color(d);
       })
       .on("mouseover", function(d, i) {
-        svg.selectAll("rect.rect-" + d).style("opacity", "0.6");
+        svg.selectAll("rect.rect-" + d).style("opacity", "0.6")
       })
       .on("mouseout", function(d, i) {
         svg.selectAll("rect.rect-" + d).style("opacity", "1");
       });
+
 
     legend.append("text")
       .attr("x", width - 24)
