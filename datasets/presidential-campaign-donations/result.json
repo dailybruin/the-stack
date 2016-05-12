@@ -17,9 +17,9 @@
                 "donators": 74
             },
             {
-                "total": 5561.84,
+                "total": 6161.84,
                 "name": "ucd",
-                "donators": 91
+                "donators": 101
             },
             {
                 "total": 5910.339999999999,
@@ -45,6 +45,11 @@
                 "total": 2635.8,
                 "name": "ucsc",
                 "donators": 66
+            },
+            {
+                "total": 250.0,
+                "name": "n/a",
+                "donators": 5
             },
             {
                 "total": 27.0,
@@ -160,9 +165,13 @@
                         "total": 16865.93,
                         "donators": 248
                     },
+                    "n/a": {
+                        "total": 250.0,
+                        "donators": 5
+                    },
                     "ucd": {
-                        "total": 2556.39,
-                        "donators": 50
+                        "total": 3156.39,
+                        "donators": 60
                     },
                     "ucsd": {
                         "total": 1853.03,
@@ -185,8 +194,8 @@
                         "donators": 28
                     }
                 },
-                "total": 32707.85,
-                "donators": 517,
+                "total": 33557.85,
+                "donators": 532,
                 "title": "PROFESSOR"
             },
             {
@@ -387,10 +396,11 @@
             }
         ],
         "name": "Sanders",
-        "locations": [],
         "party": "dem",
         "total": 13913776.019999102,
-        "colleges_total": 103183.37000000005
+        "locations": [],
+        "donators": 229708,
+        "colleges_total": 104033.37000000005
     },
     {
         "colleges": [
@@ -683,9 +693,10 @@
             }
         ],
         "name": "Clinton",
-        "locations": [],
         "party": "dem",
         "total": 30346423.560000055,
+        "locations": [],
+        "donators": 93679,
         "colleges_total": 136083.62999999998
     },
     {
@@ -735,9 +746,10 @@
             }
         ],
         "name": "Lessig",
-        "locations": [],
         "party": "dem",
         "total": 186144.49999999997,
+        "locations": [],
+        "donators": 372,
         "colleges_total": 1288.15
     },
     {
@@ -784,18 +796,20 @@
             }
         ],
         "name": "O'Malley",
-        "locations": [],
         "party": "dem",
         "total": 297549.26,
+        "locations": [],
+        "donators": 393,
         "colleges_total": 3950.0
     },
     {
         "colleges": [],
         "jobs": [],
         "name": "Webb",
-        "locations": [],
         "party": "dem",
         "total": 76568.16,
+        "locations": [],
+        "donators": 106,
         "colleges_total": 0
     },
     {
@@ -849,9 +863,10 @@
             }
         ],
         "name": "Carson",
-        "locations": [],
         "party": "rep",
         "total": 3074944.3500000024,
+        "locations": [],
+        "donators": 27238,
         "colleges_total": 820.0
     },
     {
@@ -927,9 +942,10 @@
             }
         ],
         "name": "Cruz",
-        "locations": [],
         "party": "rep",
         "total": 4725199.450000001,
+        "locations": [],
+        "donators": 41903,
         "colleges_total": 14833.0
     },
     {
@@ -970,27 +986,30 @@
             }
         ],
         "name": "Kasich",
-        "locations": [],
         "party": "rep",
         "total": 1271638.42,
+        "locations": [],
+        "donators": 2144,
         "colleges_total": 626.0
     },
     {
         "colleges": [],
         "jobs": [],
         "name": "Bush",
-        "locations": [],
         "party": "rep",
         "total": 3327043.83,
+        "locations": [],
+        "donators": 3109,
         "colleges_total": 0
     },
     {
         "colleges": [],
         "jobs": [],
         "name": "Perry",
-        "locations": [],
         "party": "rep",
         "total": 208400.0,
+        "locations": [],
+        "donators": 116,
         "colleges_total": 0
     },
     {
@@ -1035,9 +1054,10 @@
             }
         ],
         "name": "Fiorina",
-        "locations": [],
         "party": "rep",
         "total": 1468489.42,
+        "locations": [],
+        "donators": 4696,
         "colleges_total": 5700.0
     },
     {
@@ -1093,9 +1113,10 @@
             }
         ],
         "name": "Rubio",
-        "locations": [],
         "party": "rep",
         "total": 5488752.270000001,
+        "locations": [],
+        "donators": 13717,
         "colleges_total": 2250.0
     },
     {
@@ -1172,9 +1193,10 @@
             }
         ],
         "name": "Paul",
-        "locations": [],
         "party": "rep",
         "total": 819173.2899999963,
+        "locations": [],
+        "donators": 4246,
         "colleges_total": 1742.75
     },
     {
@@ -1199,27 +1221,68 @@
             }
         ],
         "name": "Trump",
-        "locations": [],
         "party": "rep",
         "total": 331901.0,
+        "locations": [],
+        "donators": 1091,
         "colleges_total": 250.0
     },
     {
         "colleges": [],
         "jobs": [],
         "name": "Graham",
-        "locations": [],
         "party": "rep",
         "total": 405895.0,
+        "locations": [],
+        "donators": 341,
         "colleges_total": 0
     },
     {
         "colleges": [],
         "jobs": [],
         "name": "Huckabee",
-        "locations": [],
         "party": "rep",
         "total": 230890.6,
+        "locations": [],
+        "donators": 531,
         "colleges_total": 0
+    },
+    {
+        "colleges": [],
+        "jobs": [],
+        "name": "Christie",
+        "party": "rep",
+        "total": 456066.0,
+        "locations": [],
+        "donators": 333,
+        "colleges_total": 0
+    },
+    {
+        "colleges": [
+            {
+                "total": 10.0,
+                "name": "ucsf",
+                "donators": 1
+            }
+        ],
+        "jobs": [
+            {
+                "colleges": {
+                    "ucsf": {
+                        "total": 10.0,
+                        "donators": 1
+                    }
+                },
+                "total": 10.0,
+                "donators": 1,
+                "title": "OTHER"
+            }
+        ],
+        "name": "Other",
+        "party": "mixed",
+        "total": 616247.54,
+        "locations": [],
+        "donators": 944,
+        "colleges_total": 10.0
     }
 ]
