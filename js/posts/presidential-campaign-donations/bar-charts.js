@@ -16,7 +16,7 @@ var color = d3.scale.ordinal()
   .domain(colleges)
   .range(colorList);
 
-var margin = {top: 40, right: 20, bottom: 50, left: 40},
+var margin = {top: 40, right: 80, bottom: 50, left: 40},
     width = 720 - margin.left - margin.right,
     height = 500 - margin.top - margin.bottom;
 
@@ -118,16 +118,17 @@ function transitionyScale(transitionData) {
 
 function updateHorizontalBar() {
 
+
   var dataRects = d3.selectAll(".dataRect").select("rect")
     .transition()
     .duration(500)
     .attr("width", 0);
 
   for (var i = 0; i < curr_cand.colleges.length; i++) {
-    var specificSchoolRect = d3.select("." + curr_cand.colleges[i].name);
+    var specificSchoolRect = d3.select("g.dataRect." + curr_cand.colleges[i].name);
 
     specificSchoolRect.select("rect").transition()
-      .duration(500)
+      .duration(400)
       .attr("y", function(d, i) {
         return yScale(d.name); })
       .attr("height", function(d) {
@@ -144,10 +145,9 @@ function updateLegend(val) {
   d3.selectAll('.legend').attr('opacity', 0.3);
 
   for (var i = 0; i < val.colleges.length; i++) {
-    if (val.colleges[i].name != 'n/a') {
-      var update = d3.select('.' + val.colleges[i].name)
-        .transition().ease('cubic').duration(50).delay(function(d, i) { return i *500;}).attr('opacity', 1);
-      }
+    var update = d3.select('.' + val.colleges[i].name)
+      .transition().ease('cubic').duration(50).delay(function(d, i) { return i *500;}).attr('opacity', 1);
+      
   }
 }
 
@@ -164,7 +164,6 @@ d3.json("/datasets/presidential-campaign-donations/result.json", function(error,
 
   $('#d1').dropdown({
     onChange: function (val) {
-      // console.log("here");
       if (val.split(' ')[0] == 'martin') {
         val = "O'Malley";
       }
@@ -180,7 +179,6 @@ d3.json("/datasets/presidential-campaign-donations/result.json", function(error,
   });
 
   $('#d2').dropdown({
-    // console.log("there");
     onChange: function (val) {
       if (val == "donators") {
         curr_filter = "donators";
@@ -195,6 +193,8 @@ d3.json("/datasets/presidential-campaign-donations/result.json", function(error,
 
   function updateVerticalBar() {
 
+    var new_layers; 
+
     if (curr_cand.colleges.length == 0) {
       new_layers = [
         [
@@ -207,8 +207,7 @@ d3.json("/datasets/presidential-campaign-donations/result.json", function(error,
     }
     var colleges = curr_cand.colleges.map(function(c) { return c.name });
 
-    // console.log(curr_cand);
-    var new_layers = d3.layout.stack()(colleges.map(function(c) {
+    new_layers = d3.layout.stack()(colleges.map(function(c) {
 
       return curr_cand.jobs.map(function(d, i) {
         if (typeof d.colleges[c] == 'undefined') {
@@ -223,9 +222,7 @@ d3.json("/datasets/presidential-campaign-donations/result.json", function(error,
     x.domain(listOfJobs);
     new_layers.forEach(function(d) {
       for (var j = 0; j < d.length; j++) {
-        // console.log(d)
         var val = d[j].job; 
-        console.log(val);
         if (val == "ADMINISTRATIVE") {
           val = "ADMIN"
         }
@@ -328,9 +325,8 @@ d3.json("/datasets/presidential-campaign-donations/result.json", function(error,
 
       var college_names = [];
       for (var k = 0; k < colleges.length; k++) {
-        if (colleges[k].name != 'n/a') {
-          college_names.push(colleges[k].name);
-        }
+        if (colleges[k].name == 'na') { college_names.push('na'); continue; }
+        college_names.push(colleges[k].name);
       }
 
       var legend = svg.selectAll(".legend")
@@ -339,7 +335,6 @@ d3.json("/datasets/presidential-campaign-donations/result.json", function(error,
       .attr("class", function(d) { return "legend " + d; })
       .attr("transform", function(data, i) { return "translate(150," + (200 - i * 20) + ")"; });
 
-      // console.log(college_names);
       // outputs colored rectangles in order of reverseColors
     legend.append("rect")
       .attr("x", width - 18)
@@ -361,7 +356,10 @@ d3.json("/datasets/presidential-campaign-donations/result.json", function(error,
       .attr("y", 9)
       .attr("dy", ".35em")
       .style("text-anchor", "end")
-      .text(function(data) { return data.toUpperCase(); });
+      .text(function(data) { 
+        if (data == 'na') return "N/A"; 
+        return data.toUpperCase(); 
+      });
   }
 
   updateVerticalBar();
