@@ -12,7 +12,7 @@ var curr_filter = "total";
 var color = d3.scale.ordinal()
   .range(["#98abc5", "#8a89a6", "#7b6888", "#6b486b", "#a05d56", "#d0743c", "#ff8c00", "#dd9760", "#cc6ae5", "#45bbdd"]);
 
-var margin = {top: 40, right: 20, bottom: 30, left: 40},
+var margin = {top: 40, right: 125, bottom: 30, left: 40},
     width = 720 - margin.left - margin.right,
     height = 500 - margin.top - margin.bottom;
 
@@ -42,7 +42,7 @@ var tip = d3.tip()
 var svg = d3.select("#vertical-bar").append("svg")
     .attr("width", width + margin.left + margin.right)
     .attr("height", height + margin.top + margin.bottom)
-  .append("g")
+    .append("g")
     .attr('class', 'wrapper')
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
@@ -256,7 +256,7 @@ d3.json("/datasets/presidential-campaign-donations/result.json", function(error,
     .range(["#45bbdd", "#cc6ae5", "#dd9760", "#ff8c00", "#d0743c", "#a05d56", 
             "#6b486b", "#7b6888", "#8a89a6", "#98abc5"]);
       // puts college names into array for easier access
-    var colleges = curr_cand.colleges;
+      var colleges = curr_cand.colleges;
       college_names = [];
       for (var k = 0; k < colleges.length; k++) {
           college_names[k] = colleges[k].name.toUpperCase();
@@ -265,7 +265,7 @@ d3.json("/datasets/presidential-campaign-donations/result.json", function(error,
       var rebirth = d3.selectAll(".legend").remove(); // removes legend every update
     
       // creates legend with college names as data input
-    var legend = svg.selectAll(".legend")
+      var legend = svg.selectAll(".legend")
       .data(college_names.reverse())
       .enter().append("g")
       .attr("class", "legend")
