@@ -9,17 +9,11 @@ var curr_filter = "total";
 
 // VERTICAL BAR
 // var color = d3.scale.category20();
-var colorList = ["#74cde8",
-        "#e5be97",
-        "#77dcd3",
-        "#eaadc7",
-        "#96d8ab",
-        "#b6b9ea",
-        "#d8e9b2",
-        "#b6eee2",
-        "#b2c28b",
-        "#97c7b1"];
+var colleges = ['ucsd', 'ucb', 'ucr', 'ucd', 'ucsb', 'ucla', 'ucsf', 'uci', 'ucsc', 'ucm'];
+var colorList = ['#3182bd', '#6baed6', '#9ecae1', '#c6dbef', '#e6550d', '#fd8d3c', '#fdae6b', '#fdd0a2',
+        '#31a354', '#74c476'];
 var color = d3.scale.ordinal()
+  .domain(colleges)
   .range(colorList);
 
 var margin = {top: 40, right: 20, bottom: 50, left: 40},
@@ -41,7 +35,7 @@ var yAxis = d3.svg.axis()
     .orient("left")
 
 tooltip = d3.select("body")
-  .append("div") 
+  .append("div")
   .attr("class", "tooltip");
 
 var svg = d3.select("#vertical-bar").append("svg")
@@ -124,7 +118,6 @@ function transitionyScale(transitionData) {
 
 function updateHorizontalBar() {
 
-
   var dataRects = d3.selectAll(".dataRect").select("rect")
     .transition()
     .duration(500)
@@ -146,11 +139,25 @@ function updateHorizontalBar() {
   }
 }
 
+function updateLegend(val) {
+
+  d3.selectAll('.legend').attr('opacity', 0.3);
+
+  for (var i = 0; i < val.colleges.length; i++) {
+    if (val.colleges[i].name != 'n/a') {
+      var update = d3.select('.' + val.colleges[i].name)
+        .transition().ease('cubic').duration(50).delay(function(d, i) { return i *500;}).attr('opacity', 1);
+      }
+  }
+}
+
 
 d3.json("/datasets/presidential-campaign-donations/result.json", function(error, data) {
   var nest = d3.nest()
     .key(function(d) { return d.party; })
     .entries(data);
+
+  console.log(data);
 
   initBarGraph(data[0]);
 
@@ -158,10 +165,11 @@ d3.json("/datasets/presidential-campaign-donations/result.json", function(error,
 
   // console.log(data_structure);
 
-  curr_cand = data_structure[0];
+  var curr_cand = data_structure[0];
 
   $('#d1').dropdown({
     onChange: function (val) {
+      // console.log("here");
       if (val.split(' ')[0] == 'martin') {
         val = "O'Malley";
       }
@@ -170,12 +178,14 @@ d3.json("/datasets/presidential-campaign-donations/result.json", function(error,
       }
       data.map(function(d) { if (d.name == val) curr_cand = d; });
 
-      updateVerticalBar();
+      updateLegend(curr_cand);
+      calBar();
       updateHorizontalBar();
     }
   });
 
   $('#d2').dropdown({
+    // console.log("there");
     onChange: function (val) {
       if (val == "donators") {
         curr_filter = "donators";
@@ -190,7 +200,7 @@ d3.json("/datasets/presidential-campaign-donations/result.json", function(error,
     }
   });
 
-  function updateVerticalBar() {
+  function calBar() {
 
     if (curr_cand.colleges.length == 0) {
       new_layers = [
@@ -204,12 +214,12 @@ d3.json("/datasets/presidential-campaign-donations/result.json", function(error,
     }
     var colleges = curr_cand.colleges.map(function(c) { return c.name });
 
-    console.log(curr_cand);
+    // console.log(curr_cand);
     var new_layers = d3.layout.stack()(colleges.map(function(c) {
 
       return curr_cand.jobs.map(function(d, i) {
         if (typeof d.colleges[c] == 'undefined') {
-          return( { x : i, y : 0 })
+          return( { x : i, y : 0, name: c })
         }
         return( { x : i, y : d.colleges[c][curr_filter], name : c, job: d.title } );
       });
@@ -251,12 +261,17 @@ d3.json("/datasets/presidential-campaign-donations/result.json", function(error,
 
     svg.selectAll(".layer").remove();
 
+    console.log(new_layers);
+
     var new_layer = svg.selectAll(".layer")
       .data(new_layers)
       .enter().append("g")
       .attr("class", "layer")
       .style("fill", function(d, i) {
-        return color(i);
+        for (var i = 0; i < d.length; i++) {
+          console.log(d[i]);
+          return color(d[i].name);
+        }
       });
 
     new_layer.selectAll("rect")
@@ -268,26 +283,26 @@ d3.json("/datasets/presidential-campaign-donations/result.json", function(error,
       .attr("width", x.rangeBand() - 1)
       .on("mousemove",function(d, i) {
 
-        this.style.opacity = "0.6"; 
-        this.style.cursor = "pointer"; 
+        this.style.opacity = "0.6";
+        this.style.cursor = "pointer";
 
         var val = curr_filter == "donators" ? d.y : "$" + d.y.toFixed(2);
         var h = '<div class="left"><b style="width: 100%; border-bottom: 2px solid ' + color(i) + ';">' + d.job + '</b><br><br>';
-        for (var j = new_layers.length - 1; j >= 0; j--) { // start backwards 
+        for (var j = new_layers.length - 1; j >= 0; j--) { // start backwards
           // console.log(c);
           var c = new_layers[j][i];
-          var s; 
+          var s;
           if (c.name == d.name) {
             s = '<p style="width:100%; background-color: yellow;">';
           }
           else {
-            s = '<p>'; 
+            s = '<p>';
           }
           // console.log(c);
           var v = curr_filter == "donators" ? c.y : "$" + c.y.toFixed(2);
           if (c.y != 0) {
             s += ((c.name).toString().toUpperCase() + ': <b>' + v + '</b></p>');
-            h += s; 
+            h += s;
           }
         }
         h += '</div>';
@@ -303,36 +318,41 @@ d3.json("/datasets/presidential-campaign-donations/result.json", function(error,
 
       // mouseover', tip.show)
       .on('mouseout', function() {
-        this.style.opacity = "1"; 
+        this.style.opacity = "1";
         tooltip.html("").style("display","none");
       });
 
       // var reverseColors = colorList.reverse();
       // puts college names into array for easier access
       var colleges = curr_cand.colleges;
-      console.log(colleges);
+      // console.log(colleges);
       var college_names = [];
       for (var k = 0; k < colleges.length; k++) {
-          college_names[k] = colleges[k].name.toUpperCase();
+        if (colleges[k].name != 'n/a') {
+          college_names.push(colleges[k].name);
+        }
       }
 
-      var rebirth = d3.selectAll(".legend").remove(); // removes legend every update
+      console.log(college_names)
+      // var rebirth = d3.selectAll(".legend").remove(); // removes legend every update
 
       // console.log(college_names.reverse());
       // creates legend with college names as data input
+      // console.log(college_names);
       var legend = svg.selectAll(".legend")
       .data(college_names)
       .enter().append("g")
-      .attr("class", "legend")
+      .attr("class", function(d) { return "legend " + d; })
       .attr("transform", function(data, i) { return "translate(150," + (200 - i * 20) + ")"; });
 
+      console.log(college_names);
       // outputs colored rectangles in order of reverseColors
     legend.append("rect")
       .attr("x", width - 18)
       .attr("width", 18)
       .attr("height", 18)
       .style("fill", function(d, i) {
-        return colorList[i];
+        return color(d);
       });
 
     legend.append("text")
@@ -340,8 +360,8 @@ d3.json("/datasets/presidential-campaign-donations/result.json", function(error,
       .attr("y", 9)
       .attr("dy", ".35em")
       .style("text-anchor", "end")
-      .text(function(data) { return data; });
+      .text(function(data) { return data.toUpperCase(); });
   }
 
-  updateVerticalBar();
+  calBar();
 });
