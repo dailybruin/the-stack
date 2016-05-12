@@ -9,10 +9,18 @@ var curr_filter = "total";
 
 // VERTICAL BAR
 // var color = d3.scale.category20();
-var colorList = ['#3182bd', '#6baed6', '#9ecae1', '#c6dbef', '#e6550d', '#fd8d3c', '#fdae6b', '#fdd0a2', '#31a354', '#74c476', '#a1d99b'];
+var colorList = ["#74cde8",
+        "#e5be97",
+        "#77dcd3",
+        "#eaadc7",
+        "#96d8ab",
+        "#b6b9ea",
+        "#d8e9b2",
+        "#b6eee2",
+        "#b2c28b",
+        "#97c7b1"];
 var color = d3.scale.ordinal()
   .range(colorList);
-
 
 var margin = {top: 40, right: 20, bottom: 50, left: 40},
     width = 720 - margin.left - margin.right,
