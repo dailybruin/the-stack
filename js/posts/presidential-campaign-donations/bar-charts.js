@@ -10,7 +10,18 @@ var curr_filter = "total";
 // VERTICAL BAR 
 // var color = d3.scale.category20();
 var color = d3.scale.ordinal()
-  .range(["#98abc5", "#8a89a6", "#7b6888", "#6b486b", "#a05d56", "#d0743c", "#ff8c00", "#dd9760", "#cc6ae5", "#45bbdd"]);
+  .range(["#74cde8",
+          "#e5be97",
+          "#77dcd3",
+          "#eaadc7",
+          "#96d8ab",
+          "#b6b9ea",
+          "#d8e9b2",
+          "#b6eee2",
+          "#b2c28b",
+          "#97c7b1"]);
+
+
 
 var margin = {top: 40, right: 20, bottom: 30, left: 40},
     width = 720 - margin.left - margin.right,
