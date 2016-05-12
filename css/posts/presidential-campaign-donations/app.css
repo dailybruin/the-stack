@@ -21,11 +21,11 @@ body {
   display: none;
 }
 
-.tick line {
+#horizontal-bar .tick line {
   display: none;
 }
 
-.domain {
+#horizontal-bar .domain {
   display: none;
 }
 
