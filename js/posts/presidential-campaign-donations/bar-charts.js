@@ -104,7 +104,8 @@ function transitionyScale(transitionData) {
     var newYDomain = [];
 
     map = transitionData.colleges.map(function(d) {
-      newYDomain.push(d["name"]);
+      if (d["name"] == 'na') { newYDomain.push("N/A"); }
+      else newYDomain.push((d["name"]).toUpperCase());
     });
 
     yScale.domain(newYDomain);
