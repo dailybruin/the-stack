@@ -156,8 +156,6 @@ d3.json("/datasets/presidential-campaign-donations/result.json", function(error,
 
   data_structure = data;
 
-  // console.log(data_structure);
-
   curr_cand = data_structure[0];
 
   $('#d1').dropdown({
@@ -209,13 +207,11 @@ d3.json("/datasets/presidential-campaign-donations/result.json", function(error,
 
       return curr_cand.jobs.map(function(d, i) {
         if (typeof d.colleges[c] == 'undefined') {
-          return( { x : i, y : 0 })
+          return( { x : i, y : 0, name: c, job: d.title })
         }
         return( { x : i, y : d.colleges[c][curr_filter], name : c, job: d.title } );
       });
     }));
-
-    var testList = [];
 
     var listOfJobs = ['TECH', 'FACULTY', 'HEALTH', 'PROF', 'GRAD', 'RESEARCH', 'UGRAD',
                       'ADMIN', 'ARTS', 'LEGAL', 'RETIRED', 'OTHER'];
@@ -283,7 +279,6 @@ d3.json("/datasets/presidential-campaign-donations/result.json", function(error,
           else {
             s = '<p>'; 
           }
-          // console.log(c);
           var v = curr_filter == "donators" ? c.y : "$" + c.y.toFixed(2);
           if (c.y != 0) {
             s += ((c.name).toString().toUpperCase() + ': <b>' + v + '</b></p>');
@@ -310,7 +305,6 @@ d3.json("/datasets/presidential-campaign-donations/result.json", function(error,
       // var reverseColors = colorList.reverse();
       // puts college names into array for easier access
       var colleges = curr_cand.colleges;
-      console.log(colleges);
       var college_names = [];
       for (var k = 0; k < colleges.length; k++) {
           college_names[k] = colleges[k].name.toUpperCase();
@@ -318,7 +312,6 @@ d3.json("/datasets/presidential-campaign-donations/result.json", function(error,
 
       var rebirth = d3.selectAll(".legend").remove(); // removes legend every update
 
-      // console.log(college_names.reverse());
       // creates legend with college names as data input
       var legend = svg.selectAll(".legend")
       .data(college_names)
