@@ -5,7 +5,7 @@ authors:
   - asdf
 key_takeaways:
   - asdf
-featured_image: 
+featured_image:
   url: meal-plan-swipe-deduction/graph.svg
 og_image: meal-plan-swipe-deduction/graph.png
 stylesheets:
@@ -21,16 +21,13 @@ scripts:
   - //cdnjs.cloudflare.com/ajax/libs/d3-tip/0.6.7/d3-tip.js
   - /js/posts/presidential-campaign-donations/bar-charts.js
   - /js/posts/presidential-campaign-donations/donut-chart.js
-  
+
 
 ---
 *Story by Shreya Maskara. Graphics by Nick Liu, Alex Guziak, Amber Won, Jennifer Xu, Li-Wei Chi, & Chang Liu.*
 <div id="donut-chart"></div>
 
 <div id="vertical-bar"></div>
-
-
-<div id="horizontal-bar"></div>
 <div class="ui inline dropdown" id="d1">
   <div class="text">
     Candidate
@@ -81,6 +78,9 @@ scripts:
     </div>
   </div>
 </div>
+
+
+<div id="horizontal-bar"></div>
 
 <div class="ui inline dropdown" id="d2">
   <div class="text">
