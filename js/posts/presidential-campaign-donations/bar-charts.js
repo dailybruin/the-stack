@@ -88,7 +88,7 @@ function initBarGraph(initData) {
 
   var colleges = [];
   initData.colleges.map(function(d) { colleges.push(d.name); });
-  
+
   yScale.domain(colleges);
 
   dataRects = barSVG.selectAll(".dataRect")
@@ -174,7 +174,7 @@ function updateLegend(val) {
   for (var i = 0; i < val.colleges.length; i++) {
     var update = d3.select('.' + val.colleges[i].name)
       .transition().ease('cubic').duration(50).delay(function(d, i) { return i *500;}).attr('opacity', 1);
-      
+
   }
 }
 
@@ -220,7 +220,7 @@ d3.json("/datasets/presidential-campaign-donations/result.json", function(error,
 
   function updateVerticalBar() {
 
-    var new_layers; 
+    var new_layers;
 
     if (curr_cand.colleges.length == 0) {
       new_layers = [
@@ -249,7 +249,7 @@ d3.json("/datasets/presidential-campaign-donations/result.json", function(error,
     x.domain(listOfJobs);
     new_layers.forEach(function(d) {
       for (var j = 0; j < d.length; j++) {
-        var val = d[j].job; 
+        var val = d[j].job;
         if (val == "ADMINISTRATIVE") {
           val = "ADMIN"
         }
@@ -367,10 +367,10 @@ d3.json("/datasets/presidential-campaign-donations/result.json", function(error,
         return color(d);
       })
       .on("mouseover", function(d, i) {
-        svg.selectAll("rect.rect-" + d).style("opacity", "0.6")
+        svg.selectAll("rect.rect-" + d).style("stroke", "blue").style("opacity", "0.8");
       })
       .on("mouseout", function(d, i) {
-        svg.selectAll("rect.rect-" + d).style("opacity", "1");
+        svg.selectAll("rect.rect-" + d).style("stroke", "none").style("opacity", "1");
       });
 
 
@@ -379,9 +379,9 @@ d3.json("/datasets/presidential-campaign-donations/result.json", function(error,
       .attr("y", 9)
       .attr("dy", ".35em")
       .style("text-anchor", "end")
-      .text(function(data) { 
-        if (data == 'na') return "N/A"; 
-        return data.toUpperCase(); 
+      .text(function(data) {
+        if (data == 'na') return "N/A";
+        return data.toUpperCase();
       });
   }
 
