@@ -121,7 +121,7 @@ d3.json("/datasets/presidential-campaign-donations/result.json", function(error,
       this.style.cursor = "pointer";
 
       var p = d.data.key == "dem" ? "Democratic" : "Republican";
-      var h = '<div class="left"><p><b style="border-bottom: 2px solid ' + colorScale(i) + ';">' + p.toUpperCase() + '</b></p><p>Amount: <b>' + parseInt(d.data.total) + '</b></p></div>';
+      var h = '<div class="left"><p><b style="border-bottom: 2px solid ' + colorScale(i) + ';">' + p.toUpperCase() + '</b></p><p><b>TOTAL: </b>$' + numberWithCommas(parseInt(d.data.total)) + '</p></div>';
 
       var perc = (d.data.total/overallTotal)*100;
       h += '<div class="right">' + perc.toFixed(1) + '%</div>';
@@ -165,10 +165,10 @@ d3.json("/datasets/presidential-campaign-donations/result.json", function(error,
           .duration(200)
           .style("opacity", .9);
 
-        var h = '<b style="width: 100%; border-bottom: 2px solid ' + colorScale(i) + ';">' + d.data["name"] + '</b><br><br>College Donations: <b>' + parseInt(d.data["colleges_total"]) + '</b><br>';
+        var h = '<b style="width: 100%; border-bottom: 2px solid ' + colorScale(i) + ';">' + d.data["name"].toUpperCase() + '</b><br><br><p style="width:100%; background-color: yellow;"><b>TOTAL: </b>$' + numberWithCommas(Math.round(d.data["colleges_total"])) + '</p><br>';
 
         for (var j = 0; j < d.data.jobs.length; j++) { 
-          h += (d.data.jobs[j]["title"] + ": " + parseInt(d.data.jobs[j]["total"]) + "</br>");
+          h += '<b>' + (d.data.jobs[j]["title"] + "</b>: $" + numberWithCommas(Math.round(d.data.jobs[j]["total"])) + "</br>");
         }
 
         donutTip2.html(h)
@@ -189,8 +189,3 @@ d3.json("/datasets/presidential-campaign-donations/result.json", function(error,
       //   transitionBarGraph(d.data);
       // })
 });
-
-function drawOuterArc(outerArc, data) {
-
-
-}
