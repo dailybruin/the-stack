@@ -135,9 +135,10 @@ d3.json("/datasets/presidential-campaign-donations/result.json", function(error,
         .style("top", (d3.event.pageY -10) + "px")
     })
     .on("mouseout", function(d) {
-        d3.select(this)
-         .attr("opacity", 1)
-         .attr("d", outerArcRegion);
+        d3.select(this).transition()
+          .duration(300)
+          .attr("opacity", 1)
+          .attr("d", outerArcRegion);
         donutTip1.style("display", "none");
     })
 
