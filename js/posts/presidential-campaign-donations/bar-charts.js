@@ -107,8 +107,6 @@ function initBarGraph(initData) {
       this.style.opacity = "0.6";
       this.style.cursor = "pointer";
 
-      console.log(d);
-
       var val = curr_filter == "donators" ? d.donators : "$" + d.total.toFixed(2);
       var h = '<div class="left"><b style="border-bottom: 2px solid ' + color(i) + ';">' + d.name.toUpperCase() + '</b><br><br>' + curr_filter.toUpperCase() + ': <b>' + val + '</b></div>';
       h += '<div class="right">' + curr_cand[curr_filter].toFixed(2) + '</div>';
@@ -128,21 +126,21 @@ function initBarGraph(initData) {
 }
 
 function transitionyScale(transitionData) {
-    var map;
-    var newYDomain = [];
+  var map;
+  var newYDomain = [];
 
-    map = transitionData.colleges.map(function(d) {
-      if (d["name"] == 'na') { newYDomain.push("N/A"); }
-      else newYDomain.push((d["name"]).toUpperCase());
-    });
+  map = transitionData.colleges.map(function(d) {
+    if (d["name"] == 'na') { newYDomain.push("N/A"); }
+    else newYDomain.push((d["name"]).toUpperCase());
+  });
 
-    yScale.domain(newYDomain);
-    yScale.rangeRoundBands([newYDomain.length*(height2/11), 0], 0.1);
+  yScale.domain(newYDomain);
+  yScale.rangeRoundBands([newYDomain.length*(height2/11), 0], 0.1);
 
-    yAxis2.transition()
-      .duration(500)
-      .ease("linear")
-      .call(yScale.axis);
+  yAxis2.transition()
+    .duration(500)
+    .ease("linear")
+    .call(yScale.axis);
 }
 
 function updateHorizontalBar() {
