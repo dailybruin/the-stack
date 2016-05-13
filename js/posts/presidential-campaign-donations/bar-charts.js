@@ -2,6 +2,10 @@ function capitalizeFirstLetter(string) {
   return string.charAt(0).toUpperCase() + string.slice(1);
 }
 
+function numberWithCommas(x) {
+  return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
+
 var data_structure = []
 
 var curr_cand;
@@ -107,9 +111,11 @@ function initBarGraph(initData) {
       this.style.opacity = "0.6";
       this.style.cursor = "pointer";
 
-      var val = curr_filter == "donators" ? d.donators : "$" + d.total.toFixed(2);
-      var h = '<div class="left"><b style="border-bottom: 2px solid ' + color(i) + ';">' + d.name.toUpperCase() + '</b><br><br>' + curr_filter.toUpperCase() + ': <b>' + val + '</b></div>';
-      h += '<div class="right">' + curr_cand[curr_filter].toFixed(2) + '</div>';
+      var val = curr_filter == "donators" ? d.donators : "$" + numberWithCommas(Math.round(d.total));
+      var perc = (d.total/initData.colleges_total).toFixed(2);
+
+      var h = '<div class="left"><p><b style="border-bottom: 2px solid ' + color(i) + ';">' + d.name.toUpperCase() + '</b></p><p><b>' + curr_filter.toUpperCase() + '</b>: ' + val + '<p></div>';
+      h += '<div class="right">' + perc + '%</div>';
 
       horizontalTip.style("display","none");
       horizontalTip.html(h)
@@ -312,7 +318,7 @@ d3.json("/datasets/presidential-campaign-donations/result.json", function(error,
         this.style.opacity = "0.6";
         this.style.cursor = "pointer";
 
-        var val = curr_filter == "donators" ? d.y : "$" + d.y.toFixed(2);
+        var val = curr_filter == "donators" ? d.y : "$" + numberWithCommas(Math.round(d.y));
         var h = '<b style="width: 100%; border-bottom: 2px solid ' + color(i) + ';">' + d.job + '</b><br><br>';
         for (var j = new_layers.length - 1; j >= 0; j--) { // start backwards
           var c = new_layers[j][i];
@@ -323,9 +329,9 @@ d3.json("/datasets/presidential-campaign-donations/result.json", function(error,
           else {
             s = '<p>';
           }
-          var v = curr_filter == "donators" ? c.y : "$" + c.y.toFixed(2);
+          var v = curr_filter == "donators" ? c.y : "$" + numberWithCommas(Math.round(c.y));
           if (c.y != 0) {
-            s += ((c.name).toString().toUpperCase() + ': <b>' + v + '</b></p>');
+            s += '<b>' + ((c.name).toString().toUpperCase() + '</b>: ' + v + '</p>');
             h += s;
           }
         }

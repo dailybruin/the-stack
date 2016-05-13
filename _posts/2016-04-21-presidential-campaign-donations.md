@@ -27,7 +27,6 @@ scripts:
 *Story by Shreya Maskara. Graphics by Nick Liu, Alex Guziak, Amber Won, Jennifer Xu, Li-Wei Chi, & Chang Liu.*
 <div id="donut-chart"></div>
 
-<div id="vertical-bar"></div>
 <div class="ui inline dropdown" id="d1">
   <div class="text">
     Candidate
@@ -36,6 +35,9 @@ scripts:
   <div class="menu">
     <div class="item">
       Bernie Sanders  
+    </div>
+    <div class="item">
+      Donald Trump
     </div>
     <div class="item">
       Hillary Clinton
@@ -56,12 +58,6 @@ scripts:
       John Kasich
     </div>
     <div class="item">
-      Jeb Bush
-    </div>
-    <div class="item">
-      Rick Perry
-    </div>
-    <div class="item">
       Carly Fiorina
     </div>
     <div class="item">
@@ -70,21 +66,11 @@ scripts:
     <div class="item">
       Rand Paul
     </div>
-    <div class="item">
-      Donald Trump
-    </div>
-    <div class="item">
-      Lindsey Graham
-    </div>
   </div>
 </div>
-
-
-<div id="horizontal-bar"></div>
-
 <div class="ui inline dropdown" id="d2">
   <div class="text">
-    Amount
+    Filter
   </div>
   <i class="dropdown icon"></i>
   <div class="menu">
@@ -96,3 +82,8 @@ scripts:
     </div>
   </div>
 </div>
+
+<div id="vertical-bar"></div>
+<div id="horizontal-bar"></div>
+
+

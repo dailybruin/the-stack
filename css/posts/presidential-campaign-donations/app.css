@@ -127,3 +127,8 @@ div.horizontal-tip .right {
   float: right;
 }
 
+.legend rect:hover {
+  cursor: pointer;
+
+}
+
