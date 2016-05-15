@@ -72,13 +72,14 @@ var barSVG = d3.select("#horizontal-bar").append("svg")
   .attr("transform", "translate(" + margin2.left + ", " + margin2.top + ")");
 
 var xAxis2 = barSVG.append("g")
-  .attr("class", "x axis")
+  .attr("class", "x axis2")
   .call(xScale.axis = d3.svg.axis().scale(xScale).orient("top"))
   .append("text")
+  .attr("class", "xAxisText")
   .attr("x", 570)
   .attr("y", -20)
   .style("text-anchor", "end")
-  .text("Percentage of Total Contributions from UCs");
+  .text("Percentage of Total Contributions from UC schools");
 
 var yAxis2 = barSVG.append("g")
   .attr("class", "y axis")
@@ -149,8 +150,7 @@ function transitionyScale(transitionData) {
     .call(yScale.axis);
 }
 
-function updateHorizontalBar() {
-
+function updateHorizontalBar(curr_cand) {
 
   var dataRects = d3.selectAll(".dataRect").select("rect")
     .transition()
@@ -170,6 +170,63 @@ function updateHorizontalBar() {
       .attr("width", function(d) {
         return xScale(curr_cand.colleges[i].total/curr_cand.colleges_total);
       })
+  }
+}
+
+// function removeHorizontalRects() {
+//   d3.selectAll('.dataRect')
+//     .transition()
+//     .ease('linear')
+//     .duration(100)
+//     .delay(function(d, i) {return i * 50; })
+//     .attr('y', -50)
+//     .each('end', function() { d3.select(this).remove(); });
+// }
+
+function changeXAxis(curr_cand, changeType) {
+  var target = (changeType == "donators") ? "donators" : "total";
+
+  var newXDomain
+  if (target == "donators")
+    newXDomain = [0, d3.max(curr_cand.colleges, function(d) { return d[target]; })]
+  else
+    newXDomain = [0, 1]
+
+  var newXScale = d3.scale.linear()
+    .domain(newXDomain)
+    .range([0, width2]);
+
+  xScale = newXScale.copy();
+
+  var newXAxis2 = d3.svg.axis()
+    .scale(newXScale)
+    .orient("top");
+
+  xAxis = d3.select('.x.axis2').transition()
+    .duration(1000).call(newXAxis2);
+
+  var text = (changeType == "donators") ? "Number of donators from UC schools" :
+    "Percentage of Total Contributions from UC schools"
+
+  d3.select(".xAxisText").text(text);
+}
+
+function updateHoriztonalBarType(curr_cand, changeType) {
+  changeXAxis(curr_cand, changeType);
+
+  if (changeType == "donators") {
+    var colleges = curr_cand.colleges.map(function(d) { return d.name; })
+
+    for (var i = 0; i < colleges.length; i++) {
+      d3.selectAll('.dataRect.' + colleges[i]).select('rect')
+        .transition()
+        .duration(1000)
+        .delay(function(d, i) { return 100 * i; })
+        .attr("width", function() { return xScale(curr_cand.colleges[i].donators); })
+    }
+  }
+  else {
+    updateHorizontalBar(curr_cand);
   }
 }
 
@@ -193,7 +250,7 @@ d3.json("/datasets/presidential-campaign-donations/result.json", function(error,
   initBarGraph(data[0]);
 
   data_structure = data;
-  curr_cand = data_structure[0];
+  var curr_cand = data_structure[0];
 
   $('#d1').dropdown({
     onChange: function (val) {
@@ -220,9 +277,15 @@ d3.json("/datasets/presidential-campaign-donations/result.json", function(error,
         curr_filter = "total";
       }
 
-      updateVerticalBar();
+      // updateVerticalBar();
+      // removeHorizontalRects();
+
+      // console.log(curr_cand);
+      // console.log(val);
+      updateHoriztonalBarType(curr_cand, val);
     }
   });
+
 
   function updateVerticalBar() {
 
@@ -392,4 +455,5 @@ d3.json("/datasets/presidential-campaign-donations/result.json", function(error,
   }
 
   updateVerticalBar();
+
 });
