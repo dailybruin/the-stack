@@ -150,7 +150,7 @@ function transitionyScale(transitionData) {
     .call(yScale.axis);
 }
 
-function updateHorizontalBar(curr_cand) {
+function updateHorizontalBar() {
 
   var dataRects = d3.selectAll(".dataRect").select("rect")
     .transition()
@@ -183,7 +183,7 @@ function updateHorizontalBar(curr_cand) {
 //     .each('end', function() { d3.select(this).remove(); });
 // }
 
-function changeXAxis(curr_cand, changeType) {
+function changeXAxis(changeType) {
   var target = (changeType == "donators") ? "donators" : "total";
 
   var newXDomain
@@ -211,8 +211,8 @@ function changeXAxis(curr_cand, changeType) {
   d3.select(".xAxisText").text(text);
 }
 
-function updateHorizontalBarType(curr_cand, changeType) {
-  changeXAxis(curr_cand, changeType);
+function updateHorizontalBarType(changeType) {
+  changeXAxis(changeType);
 
   if (changeType == "donators") {
     var colleges = curr_cand.colleges.map(function(d) { return d.name; })
@@ -226,7 +226,7 @@ function updateHorizontalBarType(curr_cand, changeType) {
     }
   }
   else {
-    updateHorizontalBar(curr_cand);
+    updateHorizontalBar();
   }
 }
 
@@ -250,7 +250,7 @@ d3.json("/datasets/presidential-campaign-donations/result.json", function(error,
   initBarGraph(data[0]);
 
   data_structure = data;
-  var curr_cand = data_structure[0];
+  curr_cand = data_structure[0];
 
   $('#d1').dropdown({
     onChange: function (val) {
@@ -278,7 +278,7 @@ d3.json("/datasets/presidential-campaign-donations/result.json", function(error,
       }
 
       updateVerticalBar();
-      updateHorizontalBarType(curr_cand, val);
+      updateHorizontalBarType(val);
     }
   });
 
