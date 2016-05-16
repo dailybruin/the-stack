@@ -114,7 +114,7 @@ function initBarGraph(initData) {
       var val = curr_filter == "donators" ? d.donators : "$" + numberWithCommas(Math.round(d.total));
       var perc = (d.total/initData.colleges_total).toFixed(2);
 
-      var h = '<div class="left"><p><b style="border-bottom: 2px solid ' + color(i) + ';">' + d.name.toUpperCase() + '</b></p><p><b>' + curr_filter.toUpperCase() + '</b>: ' + val + '<p></div>';
+      var h = '<div class="left"><p><b style="border-bottom: 2px solid ' + color(i) + ';">' + d.name.toUpperCase() + '</b></p><p style="width:100%; background-color: yellow;"><b>' + curr_filter.toUpperCase() + '</b>: ' + val + '<p></div>';
       h += '<div class="right">' + perc + '%</div>';
 
       horizontalTip.style("display","none");

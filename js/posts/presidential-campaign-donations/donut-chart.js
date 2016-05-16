@@ -121,7 +121,7 @@ d3.json("/datasets/presidential-campaign-donations/result.json", function(error,
       this.style.cursor = "pointer";
 
       var p = d.data.key == "dem" ? "Democratic" : "Republican";
-      var h = '<div class="left"><p><b style="border-bottom: 2px solid ' + colorScale(i) + ';">' + p.toUpperCase() + '</b></p><p><b>TOTAL: </b>$' + numberWithCommas(parseInt(d.data.total)) + '</p></div>';
+      var h = '<div class="left"><p><b style="border-bottom: 2px solid ' + colorScale(i) + ';">' + p.toUpperCase() + '</b></p><p style="width:100%; background-color: yellow;"><b>TOTAL: </b>$' + numberWithCommas(Math.round(d.data.total)) + '</p></div>';
 
       var perc = (d.data.total/overallTotal)*100;
       h += '<div class="right">' + perc.toFixed(1) + '%</div>';
