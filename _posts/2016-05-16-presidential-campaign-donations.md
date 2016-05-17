@@ -13,7 +13,7 @@ featured_image:
 og_image: presidential-campaign-donations/graph.png
 stylesheets:
   - /css/posts/presidential-campaign-donations/app.css
-  - //cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/semantic.min.css
+  - /css/posts/presidential-campaign-donations/semantic.min.css
   - //cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/components/dropdown.min.css
   - //cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/components/form.min.css
   - //cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/components/checkbox.min.css
