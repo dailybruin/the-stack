@@ -78,7 +78,7 @@ scripts:
       Amount
     </div>
     <div class="item">
-      Donators
+      Contributions
     </div>
   </div>
 </div>

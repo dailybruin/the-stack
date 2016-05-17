@@ -134,7 +134,7 @@ function updateHorizontalBar() {
       this.style.opacity = "0.6";
       this.style.cursor = "pointer";
 
-      var val = curr_filter == "donators" ? d.donators : "$" + numberWithCommas(Math.round(d.total));
+      var val = curr_filter == "contributions" ? d.contributions : "$" + numberWithCommas(Math.round(d.total));
       var perc = (d.total/curr_cand.colleges_total).toFixed(2);
 
       var h = '<div class="left"><p><b style="border-bottom: 2px solid ' + color(i) + ';">' + d.name.toUpperCase() + '</b></p><p style="width:100%; background-color: yellow;"><b>' + curr_filter.toUpperCase() + '</b>: ' + val + '<p></div>';
@@ -185,10 +185,10 @@ function removeHorizontalRects() {
 }
 
 function changeXAxis() {
-  var target = (curr_filter == "donators") ? "donators" : "total";
+  var target = (curr_filter == "contributions") ? "contributions" : "total";
 
   var newXDomain
-  if (target == "donators")
+  if (target == "contributions")
     newXDomain = [0, d3.max(curr_cand.colleges, function(d) { return d[target]; })]
   else
     newXDomain = [0, 1]
@@ -206,8 +206,8 @@ function changeXAxis() {
   xAxis2 = d3.select('.x.axis2').transition()
     .duration(1000).call(newXAxis2);
 
-  var text = (target == "donators") ? "Number of Donators from UC Schools" :
-    "Percentage of Total Contributions from UC Schools"
+  var text = (target == "contributions") ? "Number of Contributions from UC Schools" :
+    "Percentage of Total Money Contributed from UC Schools"
 
   d3.select(".xAxisText").text(text);
 }
@@ -215,7 +215,7 @@ function changeXAxis() {
 function updateHorizontalBarType() {
   changeXAxis();
 
-  if (curr_filter == "donators") {
+  if (curr_filter == "contributions") {
     var colleges = curr_cand.colleges.map(function(d) { return d.name; })
 
     for (var i = 0; i < colleges.length; i++) {
@@ -223,7 +223,7 @@ function updateHorizontalBarType() {
         .transition()
         .duration(1000)
         .delay(function(d, i) { return 100 * i; })
-        .attr("width", function() { return xScale(curr_cand.colleges[i].donators); })
+        .attr("width", function() { return xScale(curr_cand.colleges[i].contributions); })
     }
   }
   else {
@@ -272,8 +272,8 @@ d3.json("/datasets/presidential-campaign-donations/result.json", function(error,
 
   $('#d2').dropdown({
     onChange: function (val) {
-      if (val == "donators") {
-        curr_filter = "donators";
+      if (val == "contributions") {
+        curr_filter = "contributions";
       }
       else {
         curr_filter = "total";
@@ -379,7 +379,7 @@ d3.json("/datasets/presidential-campaign-donations/result.json", function(error,
         this.style.opacity = "0.6";
         this.style.cursor = "pointer";
 
-        var val = curr_filter == "donators" ? d.y : "$" + numberWithCommas(Math.round(d.y));
+        var val = curr_filter == "contributions" ? d.y : "$" + numberWithCommas(Math.round(d.y));
         var h = '<b style="width: 100%; border-bottom: 2px solid ' + color(i) + ';">' + d.job + '</b><br><br>';
         for (var j = new_layers.length - 1; j >= 0; j--) { // start backwards
           var c = new_layers[j][i];
@@ -390,7 +390,7 @@ d3.json("/datasets/presidential-campaign-donations/result.json", function(error,
           else {
             s = '<p>';
           }
-          var v = curr_filter == "donators" ? c.y : "$" + numberWithCommas(Math.round(c.y));
+          var v = curr_filter == "contributions" ? c.y : "$" + numberWithCommas(Math.round(c.y));
           if (c.y != 0) {
             s += '<b>' + ((c.name).toString().toUpperCase() + '</b>: ' + v + '</p>');
             h += s;
