@@ -10,6 +10,7 @@ var data_structure = []
 
 var curr_cand;
 var curr_filter = "total";
+var ordered_colleges = ['na', 'ucb', 'ucd', 'uci', 'ucla', 'ucm', 'ucr', 'ucsb', 'ucsc', 'ucsd', 'ucsf']
 
 // VERTICAL BAR
 var colleges = ['ucb', 'ucsd', 'ucr', 'ucd', 'ucsb', 'ucla', 'ucsf', 'uci', 'ucsc', 'ucm', 'na'];
@@ -87,14 +88,8 @@ var yAxis2 = barSVG.append("g")
 var schoolRects;
 
 function initHorizontalBar() {
-  transitionyScale(curr_cand);
-
-  var colleges = [];
-  curr_cand.colleges.map(function(d) { colleges.push(d.name); });
-  // var colleges = ['na', 'ucb', 'ucsd', 'ucr', 'ucd', 'ucsb', 'ucla', 'ucsf', 'uci', 'ucsc', 'ucm'];
-
-  yScale.domain(colleges);
-
+  transitionyScale(data_structure[0]);
+  yScale.domain(ordered_colleges);
 }
 
 function transitionyScale(transitionData) {
@@ -121,13 +116,7 @@ function updateHorizontalBar() {
     .duration(500)
     .attr("width", 0)
 
-  // removeHorizontalRects();
   d3.selectAll('.dataRect')
-    // .transition()
-    // .ease('linear')
-    // .duration(100)
-    // .delay(function(d, i) {return i * 50; })
-    // .attr('y', -50)
     .each(function() { d3.select(this).remove(); });
 
   // setTimeout(function() { 
@@ -185,46 +174,7 @@ function updateHorizontalBar() {
   // }, 800);
 }
 
-function removeHorizontalRects() {
-  d3.selectAll('.dataRect')
-    .transition()
-    .ease('linear')
-    .duration(100)
-    .delay(function(d, i) {return i * 50; })
-    .attr('y', -50)
-    .each('end', function() { d3.select(this).remove(); });
-}
-
-function changeXAxis() {
-  var target = (curr_filter == "contributions") ? "contributions" : "total";
-
-  var newXDomain
-  if (target == "contributions")
-    newXDomain = [0, d3.max(curr_cand.colleges, function(d) { return d[target]; })]
-  else
-    newXDomain = [0, 100]
-
-  var newXScale = d3.scale.linear()
-    .domain(newXDomain)
-    .range([0, width2]);
-
-  xScale = newXScale.copy();
-
-  var newXAxis2 = d3.svg.axis()
-    .scale(newXScale)
-    .orient("top");
-
-  xAxis2 = d3.select('.x.axis2').transition()
-    .duration(1000).call(newXAxis2);
-
-  var text = (target == "contributions") ? "Number of Contributions from UC Schools" :
-    "Percentage of Total UC Contribution by Campus"
-
-  d3.select(".xAxisText").text(text);
-}
-
 function updateHorizontalBarType() {
-  // changeXAxis();
 
   if (curr_filter == "contributions") {
     var colleges = curr_cand.colleges.map(function(d) { return d.name; })
@@ -261,7 +211,7 @@ d3.json("/datasets/presidential-campaign-donations/result.json", function(error,
     .entries(data);
 
   data_structure = data;
-  curr_cand = data_structure[0];
+  curr_cand = data_structure[5];
 
   initHorizontalBar();
   updateHorizontalBar();
@@ -294,7 +244,6 @@ d3.json("/datasets/presidential-campaign-donations/result.json", function(error,
       }
       data.map(function(d) { if (d.name == val) curr_cand = d; });
 
-      updateLegend();
       updateVerticalBar();
       updateHorizontalBar();
     }
@@ -424,19 +373,8 @@ d3.json("/datasets/presidential-campaign-donations/result.json", function(error,
         verticalTip1.html("").style("display","none");
       });
 
-      // puts college names into array for easier access
-      var colleges = curr_cand.colleges;
-
-      var college_names = [];
-      for (var k = 0; k < colleges.length; k++) {
-        if (colleges[k].name == 'na') { college_names.push('na'); continue; }
-        college_names.push(colleges[k].name);
-      }
-
-      // var college_names = ['na', 'ucb', 'ucsd', 'ucr', 'ucd', 'ucsb', 'ucla', 'ucsf', 'uci', 'ucsc', 'ucm'];
-
       var legend = svg.selectAll(".legend")
-      .data(college_names)
+      .data(ordered_colleges)
       .enter().append("g")
       .attr("class", function(d) { return "legend " + d; })
       .attr("transform", function(data, i) { return "translate(150," + (200 - i * 20) + ")"; });
@@ -469,9 +407,12 @@ d3.json("/datasets/presidential-campaign-donations/result.json", function(error,
 
       // Update text on main page using jQuery
       var percentage = ((curr_cand.colleges_total / curr_cand.total)*100);
-      $('#amount').html(Math.round(curr_cand.colleges_total*100)/100);
+      $('#amount').html(numberWithCommas(Math.round(curr_cand.colleges_total)));
       $('#percentage').html(Math.round(percentage*100)/100);
+
+    updateLegend();
   }
+
 
   updateVerticalBar();
 
