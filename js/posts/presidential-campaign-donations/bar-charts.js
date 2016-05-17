@@ -118,60 +118,74 @@ function transitionyScale(transitionData) {
 }
 
 function updateHorizontalBar() {
-  var dataRects = barSVG.selectAll(".dataRect")
-    .data(curr_cand.colleges)
-    .enter().append("g")
-    .attr("class", function(d) { return "dataRect " + d.name;});
-
-  dataRects.append("rect")
-    .attr("x", 0)
-    .attr("y", function(d) { return yScale(d.name); })
-    .attr("width", function(d) { return xScale(d.total/curr_cand.colleges_total); })
-    .attr("height", yScale.rangeBand())
-    .style("fill", "rgb(116, 205, 232)")
-    .on("mousemove",function(d, i) {
-
-      this.style.opacity = "0.6";
-      this.style.cursor = "pointer";
-
-      var val = curr_filter == "contributions" ? d.contributions : "$" + numberWithCommas(Math.round(d.total));
-      var perc = (d.total/curr_cand.colleges_total).toFixed(2);
-
-      var h = '<div class="left"><p><b style="border-bottom: 2px solid ' + color(i) + ';">' + d.name.toUpperCase() + '</b></p><p style="width:100%; background-color: yellow;"><b>' + curr_filter.toUpperCase() + '</b>: ' + val + '<p></div>';
-      h += '<div class="right">' + perc + '%</div>';
-
-      horizontalTip.style("display","none");
-      horizontalTip.html(h)
-        .style("left", (d3.event.pageX+12) + "px")
-        .style("top", (d3.event.pageY-10) + "px")
-        .style("opacity", 1)
-        .style("display","block")
-
-    })
-    .on('mouseout', function() {
-      this.style.opacity = "1";
-      horizontalTip.html("").style("display","none");
-    });
-
   var dataRects = d3.selectAll(".dataRect").select("rect")
     .transition()
     .duration(500)
-    .attr("width", 0);
+    .attr("width", 0)
 
-  for (var i = 0; i < curr_cand.colleges.length; i++) {
-    var specificSchoolRect = d3.select("g.dataRect." + curr_cand.colleges[i].name);
+  // removeHorizontalRects();
+  d3.selectAll('.dataRect')
+    // .transition()
+    // .ease('linear')
+    // .duration(100)
+    // .delay(function(d, i) {return i * 50; })
+    // .attr('y', -50)
+    .each(function() { d3.select(this).remove(); });
 
-    specificSchoolRect.select("rect").transition()
-      .duration(400)
-      .attr("y", function(d, i) {
-        return yScale(d.name); })
-      .attr("height", function(d) {
-        return yScale.rangeBand();
+  // setTimeout(function() { 
+
+    var dataRects = barSVG.selectAll(".dataRect")
+      .data(curr_cand.colleges)
+      .enter().append("g")
+      .attr("class", function(d) { return "dataRect " + d.name;});
+
+    dataRects.append("rect")
+      .attr("x", 0)
+      .attr("y", function(d) { return yScale(d.name); })
+      .attr("width", function(d) { return xScale(d.total/curr_cand.colleges_total); })
+      .attr("height", yScale.rangeBand())
+      .style("fill", "rgb(116, 205, 232)")
+      .on("mousemove",function(d, i) {
+        // console.log(d);
+
+        this.style.opacity = "0.6";
+        this.style.cursor = "pointer";
+
+        var val = curr_filter == "contributions" ? d.contributions : "$" + numberWithCommas(Math.round(d.total));
+        var perc = (d.total/curr_cand.colleges_total).toFixed(2);
+
+        var h = '<div class="left"><p><b style="border-bottom: 2px solid ' + color(i) + ';">' + d.name.toUpperCase() + '</b></p><p style="width:100%; background-color: yellow;"><b>' + curr_filter.toUpperCase() + '</b>: ' + val + '<p></div>';
+        h += '<div class="right">' + perc + '%</div>';
+
+        horizontalTip.style("display","none");
+        horizontalTip.html(h)
+          .style("left", (d3.event.pageX+12) + "px")
+          .style("top", (d3.event.pageY-10) + "px")
+          .style("opacity", 1)
+          .style("display","block")
+
       })
-      .attr("width", function(d) {
-        return xScale(curr_cand.colleges[i].total/curr_cand.colleges_total);
-      })
-  }
+      .on('mouseout', function() {
+        this.style.opacity = "1";
+        horizontalTip.html("").style("display","none");
+      });
+
+    for (var i = 0; i < curr_cand.colleges.length; i++) {
+      var specificSchoolRect = d3.select("g.dataRect." + curr_cand.colleges[i].name);
+
+      specificSchoolRect.select("rect").transition()
+        .duration(400)
+        .attr("y", function(d, i) {
+          return yScale(d.name); })
+        .attr("height", function(d) {
+          return yScale.rangeBand();
+        })
+        .attr("width", function(d) {
+          return xScale(curr_cand.colleges[i].total/curr_cand.colleges_total);
+        })
+    }
+
+  // }, 800);
 }
 
 function removeHorizontalRects() {
