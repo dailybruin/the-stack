@@ -60,7 +60,7 @@ var margin2 = {top: 50, right: 10, bottom: 50, left: 50},
     height2 = 400 - margin2.top - margin2.bottom;
 
 var xScale = d3.scale.linear()
-  .domain([0, 1])
+  .domain([0, 100])
   .range([0, width2]);
 
 var yScale = d3.scale.ordinal()
@@ -80,7 +80,7 @@ var xAxis2 = barSVG.append("g")
   .attr("x", 570)
   .attr("y", -20)
   .style("text-anchor", "end")
-  .text("Percentage of Total Contributions from UC schools");
+  .text("Percentage of Total UC Contribution by Campus");
 
 var yAxis2 = barSVG.append("g")
   .attr("class", "y axis")
@@ -142,17 +142,16 @@ function updateHorizontalBar() {
     dataRects.append("rect")
       .attr("x", 0)
       .attr("y", function(d) { return yScale(d.name); })
-      .attr("width", function(d) { return xScale(d.total/curr_cand.colleges_total); })
+      .attr("width", function(d) { return xScale((d.total/curr_cand.colleges_total) * 100); })
       .attr("height", yScale.rangeBand())
       .style("fill", "rgb(116, 205, 232)")
       .on("mousemove",function(d, i) {
-        // console.log(d);
 
         this.style.opacity = "0.6";
         this.style.cursor = "pointer";
 
         var val = curr_filter == "contributions" ? d.contributions : "$" + numberWithCommas(Math.round(d.total));
-        var perc = (d.total/curr_cand.colleges_total).toFixed(2);
+        var perc = curr_filter == "contributions" ? Math.round((d.contributions/curr_cand.colleges_contributions) * 100) : Math.round((d.total/curr_cand.colleges_total) * 100);
 
         var h = '<div class="left"><p><b style="border-bottom: 2px solid ' + color(i) + ';">' + d.name.toUpperCase() + '</b></p><p style="width:100%; background-color: yellow;"><b>' + curr_filter.toUpperCase() + '</b>: ' + val + '<p></div>';
         h += '<div class="right">' + perc + '%</div>';
@@ -181,7 +180,7 @@ function updateHorizontalBar() {
           return yScale.rangeBand();
         })
         .attr("width", function(d) {
-          return xScale(curr_cand.colleges[i].total/curr_cand.colleges_total);
+          return xScale((curr_cand.colleges[i].total/curr_cand.colleges_total) * 100);
         })
     }
 
@@ -205,7 +204,7 @@ function changeXAxis() {
   if (target == "contributions")
     newXDomain = [0, d3.max(curr_cand.colleges, function(d) { return d[target]; })]
   else
-    newXDomain = [0, 1]
+    newXDomain = [0, 100]
 
   var newXScale = d3.scale.linear()
     .domain(newXDomain)
@@ -221,23 +220,24 @@ function changeXAxis() {
     .duration(1000).call(newXAxis2);
 
   var text = (target == "contributions") ? "Number of Contributions from UC Schools" :
-    "Percentage of Total Money Contributed from UC Schools"
+    "Percentage of Total UC Contribution by Campus"
 
   d3.select(".xAxisText").text(text);
 }
 
 function updateHorizontalBarType() {
-  changeXAxis();
+  // changeXAxis();
 
   if (curr_filter == "contributions") {
     var colleges = curr_cand.colleges.map(function(d) { return d.name; })
+    var cont = curr_cand.colleges_contributions; 
 
     for (var i = 0; i < colleges.length; i++) {
       d3.selectAll('.dataRect.' + colleges[i]).select('rect')
         .transition()
         .duration(1000)
         .delay(function(d, i) { return 100 * i; })
-        .attr("width", function() { return xScale(curr_cand.colleges[i].contributions); })
+        .attr("width", function() { return xScale((curr_cand.colleges[i].contributions/cont) * 100) ; })
     }
   }
   else {
