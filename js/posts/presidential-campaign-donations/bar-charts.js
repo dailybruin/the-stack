@@ -12,9 +12,7 @@ var curr_cand;
 var curr_filter = "total";
 
 // VERTICAL BAR
-// var colleges = ['n/a', 'ucb', 'ucd', 'uci', 'ucla', 'ucm', 'ucsb', 'ucsc', 'ucsd', 'ucsf', 'ucr']
 var colleges = ['ucb', 'ucsd', 'ucr', 'ucd', 'ucsb', 'ucla', 'ucsf', 'uci', 'ucsc', 'ucm', 'na'];
-
 var colorList = ['#3182bd', '#6baed6', '#9ecae1', '#c6dbef', '#e6550d', '#fd8d3c', '#fdae6b', '#fdd0a2',
         '#31a354', '#74c476', '9edae5'];
 var color = d3.scale.category20()
@@ -55,7 +53,7 @@ var svg = d3.select("#vertical-bar").append("svg")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
 // HORIZONTAL BAR
-var margin2 = {top: 50, right: 10, bottom: 50, left: 50},
+var margin2 = {top: 40, right: 10, bottom: 40, left: 50},
     width2 = 630 - margin2.left - margin2.right,
     height2 = 400 - margin2.top - margin2.bottom;
 
@@ -268,13 +266,31 @@ d3.json("/datasets/presidential-campaign-donations/result.json", function(error,
   initHorizontalBar();
   updateHorizontalBar();
 
+  $( ".ui.radio.checkbox" ).checkbox( { 
+    onChange: function(value) {
+      var d = $('#d2').prop('checked');
+      if (d) {
+        curr_filter = "total";
+      }
+      else {
+        curr_filter = "contributions"; 
+      }
+      updateVerticalBar();
+      updateHorizontalBarType();
+    }
+           
+  });
+
   $('#d1').dropdown({
     onChange: function (val) {
-      if (val.split(' ')[0] == 'martin') {
+      var s = val.split('>')
+      var s2 = (s[1].split(' '));
+
+      if (s2[1] == 'martin') {
         val = "O'Malley";
       }
       else {
-        val = capitalizeFirstLetter(val.split(' ')[1]);
+        val = capitalizeFirstLetter(s2[2]);
       }
       data.map(function(d) { if (d.name == val) curr_cand = d; });
 
@@ -283,21 +299,6 @@ d3.json("/datasets/presidential-campaign-donations/result.json", function(error,
       updateHorizontalBar();
     }
   });
-
-  $('#d2').dropdown({
-    onChange: function (val) {
-      if (val == "contributions") {
-        curr_filter = "contributions";
-      }
-      else {
-        curr_filter = "total";
-      }
-
-      updateVerticalBar();
-      updateHorizontalBarType();
-    }
-  });
-
 
   function updateVerticalBar() {
     var new_layers;
@@ -431,6 +432,8 @@ d3.json("/datasets/presidential-campaign-donations/result.json", function(error,
         if (colleges[k].name == 'na') { college_names.push('na'); continue; }
         college_names.push(colleges[k].name);
       }
+
+      // var college_names = ['na', 'ucb', 'ucsd', 'ucr', 'ucd', 'ucsb', 'ucla', 'ucsf', 'uci', 'ucsc', 'ucm'];
 
       var legend = svg.selectAll(".legend")
       .data(college_names)

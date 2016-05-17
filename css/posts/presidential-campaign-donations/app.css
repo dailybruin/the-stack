@@ -1,7 +1,3 @@
-body {
-  font: 10px sans-serif;
-}
-
 .axis path,
 .axis line {
   fill: none;
@@ -80,7 +76,7 @@ div.vertical-tip-1 {
   height: auto;   
   padding: 6px; 
   font: 12px sans-serif;  
-  background: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.75);
   border: 1px solid rgba(0, 0, 0, 0.2);          
   color: black;
   box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
@@ -97,7 +93,7 @@ div.horizontal-tip {
   /*width: 200px; */
   padding: 6px; 
   font: 12px sans-serif;  
-  background: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.75);
   border: 1px solid rgba(0, 0, 0, 0.2);          
   color: black;
   box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
@@ -132,3 +128,14 @@ div.horizontal-tip .right {
 
 }
 
+#d1 {
+  font-size: 1.8em;
+}
+
+img.ui.avatar.image.rep {
+  border: 2px solid red;
+}
+
+img.ui.avatar.image.dem {
+  border: 2px solid blue;
+}
