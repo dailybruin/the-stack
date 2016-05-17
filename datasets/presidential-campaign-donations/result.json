@@ -2,49 +2,9 @@
     {
         "colleges": [
             {
-                "total": 24756.260000000002,
-                "name": "ucsf",
-                "donators": 512
-            },
-            {
-                "total": 19774.550000000003,
-                "name": "ucsd",
-                "donators": 393
-            },
-            {
-                "total": 6248.36,
-                "name": "ucsc",
-                "donators": 142
-            },
-            {
-                "total": 10340.98,
-                "name": "ucsb",
-                "donators": 137
-            },
-            {
-                "total": 4264.040000000001,
-                "name": "ucr",
-                "donators": 86
-            },
-            {
-                "total": 27.0,
-                "name": "ucm",
-                "donators": 1
-            },
-            {
-                "total": 47964.48,
-                "name": "ucla",
-                "donators": 715
-            },
-            {
-                "total": 5510.14,
-                "name": "uci",
-                "donators": 106
-            },
-            {
-                "total": 14833.84,
-                "name": "ucd",
-                "donators": 190
+                "total": 2625.58,
+                "name": "na",
+                "donators": 49
             },
             {
                 "total": 21295.350000000002,
@@ -52,9 +12,49 @@
                 "donators": 224
             },
             {
-                "total": 2625.58,
-                "name": "na",
-                "donators": 49
+                "total": 14833.84,
+                "name": "ucd",
+                "donators": 190
+            },
+            {
+                "total": 5510.14,
+                "name": "uci",
+                "donators": 106
+            },
+            {
+                "total": 47964.48,
+                "name": "ucla",
+                "donators": 715
+            },
+            {
+                "total": 27.0,
+                "name": "ucm",
+                "donators": 1
+            },
+            {
+                "total": 4264.040000000001,
+                "name": "ucr",
+                "donators": 86
+            },
+            {
+                "total": 10340.98,
+                "name": "ucsb",
+                "donators": 137
+            },
+            {
+                "total": 6248.36,
+                "name": "ucsc",
+                "donators": 142
+            },
+            {
+                "total": 19774.550000000003,
+                "name": "ucsd",
+                "donators": 393
+            },
+            {
+                "total": 24756.260000000002,
+                "name": "ucsf",
+                "donators": 512
             }
         ],
         "jobs": [
@@ -489,16 +489,6 @@
     {
         "colleges": [
             {
-                "total": 82941.37999999999,
-                "name": "ucla",
-                "donators": 348
-            },
-            {
-                "total": 14770.0,
-                "name": "uci",
-                "donators": 68
-            },
-            {
                 "total": 11682.0,
                 "name": "na",
                 "donators": 39
@@ -509,9 +499,19 @@
                 "donators": 205
             },
             {
-                "total": 27108.8,
-                "name": "ucsd",
-                "donators": 124
+                "total": 21301.0,
+                "name": "ucd",
+                "donators": 57
+            },
+            {
+                "total": 14770.0,
+                "name": "uci",
+                "donators": 68
+            },
+            {
+                "total": 82941.37999999999,
+                "name": "ucla",
+                "donators": 348
             },
             {
                 "total": 2969.0,
@@ -519,24 +519,24 @@
                 "donators": 8
             },
             {
-                "total": 21301.0,
-                "name": "ucd",
-                "donators": 57
-            },
-            {
                 "total": 6674.0,
                 "name": "ucsb",
                 "donators": 33
             },
             {
-                "total": 27284.670000000002,
-                "name": "ucsf",
-                "donators": 110
-            },
-            {
                 "total": 9336.130000000001,
                 "name": "ucsc",
                 "donators": 28
+            },
+            {
+                "total": 27108.8,
+                "name": "ucsd",
+                "donators": 124
+            },
+            {
+                "total": 27284.670000000002,
+                "name": "ucsf",
+                "donators": 110
             }
         ],
         "jobs": [
@@ -928,9 +928,9 @@
                 "donators": 1
             },
             {
-                "total": 350.0,
-                "name": "ucsf",
-                "donators": 7
+                "total": 250.0,
+                "name": "ucd",
+                "donators": 1
             },
             {
                 "total": 250.0,
@@ -938,14 +938,14 @@
                 "donators": 1
             },
             {
-                "total": 250.0,
-                "name": "ucd",
-                "donators": 1
-            },
-            {
                 "total": 788.15,
                 "name": "ucm",
                 "donators": 4
+            },
+            {
+                "total": 350.0,
+                "name": "ucsf",
+                "donators": 7
             }
         ],
         "jobs": [
@@ -1066,9 +1066,9 @@
                 "donators": 7
             },
             {
-                "total": 585.0,
-                "name": "ucsf",
-                "donators": 16
+                "total": 175.0,
+                "name": "ucla",
+                "donators": 3
             },
             {
                 "total": 60.0,
@@ -1076,9 +1076,9 @@
                 "donators": 3
             },
             {
-                "total": 175.0,
-                "name": "ucla",
-                "donators": 3
+                "total": 585.0,
+                "name": "ucsf",
+                "donators": 16
             }
         ],
         "jobs": [
@@ -1134,21 +1134,6 @@
     {
         "colleges": [
             {
-                "total": 12633.0,
-                "name": "ucla",
-                "donators": 26
-            },
-            {
-                "total": 125.0,
-                "name": "ucsf",
-                "donators": 3
-            },
-            {
-                "total": 2375.0,
-                "name": "ucsc",
-                "donators": 32
-            },
-            {
                 "total": 500.0,
                 "name": "ucb",
                 "donators": 1
@@ -1157,6 +1142,21 @@
                 "total": 200.0,
                 "name": "uci",
                 "donators": 4
+            },
+            {
+                "total": 12633.0,
+                "name": "ucla",
+                "donators": 26
+            },
+            {
+                "total": 2375.0,
+                "name": "ucsc",
+                "donators": 32
+            },
+            {
+                "total": 125.0,
+                "name": "ucsf",
+                "donators": 3
             }
         ],
         "jobs": [
@@ -1253,6 +1253,11 @@
     {
         "colleges": [
             {
+                "total": 25.0,
+                "name": "ucb",
+                "donators": 1
+            },
+            {
                 "total": 526.0,
                 "name": "ucla",
                 "donators": 9
@@ -1260,11 +1265,6 @@
             {
                 "total": 100.0,
                 "name": "ucsf",
-                "donators": 1
-            },
-            {
-                "total": 25.0,
-                "name": "ucb",
                 "donators": 1
             }
         ],
@@ -1333,9 +1333,9 @@
     {
         "colleges": [
             {
-                "total": 4200.0,
-                "name": "ucsd",
-                "donators": 7
+                "total": 281.0,
+                "name": "ucd",
+                "donators": 4
             },
             {
                 "total": 1500.0,
@@ -1343,14 +1343,14 @@
                 "donators": 1
             },
             {
-                "total": 281.0,
-                "name": "ucd",
-                "donators": 4
-            },
-            {
                 "total": 125.0,
                 "name": "ucsc",
                 "donators": 5
+            },
+            {
+                "total": 4200.0,
+                "name": "ucsd",
+                "donators": 7
             }
         ],
         "jobs": [
@@ -1458,9 +1458,9 @@
     {
         "colleges": [
             {
-                "total": 75.0,
-                "name": "ucsd",
-                "donators": 2
+                "total": 250.0,
+                "name": "ucla",
+                "donators": 1
             },
             {
                 "total": 25.0,
@@ -1468,9 +1468,9 @@
                 "donators": 1
             },
             {
-                "total": 250.0,
-                "name": "ucla",
-                "donators": 1
+                "total": 75.0,
+                "name": "ucsd",
+                "donators": 2
             },
             {
                 "total": 1392.75,
