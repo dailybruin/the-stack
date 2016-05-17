@@ -212,8 +212,8 @@
                         "contributions": 21
                     },
                     "ucsd": {
-                        "total": 7133.749999999999,
-                        "contributions": 96
+                        "total": 7088.749999999999,
+                        "contributions": 93
                     },
                     "ucsf": {
                         "total": 7355.48,
@@ -228,8 +228,8 @@
                         "contributions": 14
                     }
                 },
-                "total": 25826.430000000004,
-                "contributions": 417,
+                "total": 25781.430000000004,
+                "contributions": 414,
                 "title": "HEALTH"
             },
             {
@@ -239,47 +239,47 @@
                         "contributions": 15
                     },
                     "ucd": {
-                        "total": 127.0,
-                        "contributions": 2
+                        "total": 1127.0,
+                        "contributions": 3
                     },
                     "ucla": {
-                        "total": 1333.5900000000001,
-                        "contributions": 41
+                        "total": 2032.5900000000001,
+                        "contributions": 74
                     },
                     "ucsc": {
                         "total": 30.0,
                         "contributions": 1
                     },
                     "ucsb": {
-                        "total": 3438.34,
-                        "contributions": 27
+                        "total": 3621.34,
+                        "contributions": 37
                     },
                     "ucsd": {
-                        "total": 670.94,
-                        "contributions": 48
+                        "total": 1089.07,
+                        "contributions": 56
                     },
                     "ucsf": {
-                        "total": 250.0,
-                        "contributions": 1
+                        "total": 290.0,
+                        "contributions": 2
                     },
                     "uci": {
                         "total": 750.54,
                         "contributions": 23
                     },
                     "ucb": {
-                        "total": 250.0,
-                        "contributions": 1
+                        "total": 355.0,
+                        "contributions": 4
                     }
                 },
-                "total": 7105.409999999999,
-                "contributions": 159,
+                "total": 9550.54,
+                "contributions": 215,
                 "title": "GRAD"
             },
             {
                 "colleges": {
                     "ucsb": {
-                        "total": 40.0,
-                        "contributions": 3
+                        "total": 30.0,
+                        "contributions": 2
                     },
                     "na": {
                         "total": 105.0,
@@ -298,8 +298,8 @@
                         "contributions": 23
                     },
                     "ucsd": {
-                        "total": 1056.13,
-                        "contributions": 35
+                        "total": 683.0,
+                        "contributions": 30
                     },
                     "ucsf": {
                         "total": 2876.5699999999997,
@@ -314,8 +314,8 @@
                         "contributions": 8
                     }
                 },
-                "total": 10785.599999999999,
-                "contributions": 177,
+                "total": 10402.47,
+                "contributions": 171,
                 "title": "RESEARCH"
             },
             {
@@ -363,29 +363,25 @@
             },
             {
                 "colleges": {
-                    "ucd": {
-                        "total": 1000.0,
-                        "contributions": 1
-                    },
                     "ucla": {
-                        "total": 5331.679999999999,
-                        "contributions": 82
+                        "total": 4632.68,
+                        "contributions": 49
                     },
                     "ucsc": {
                         "total": 203.8,
                         "contributions": 7
                     },
                     "ucsb": {
-                        "total": 254.0,
-                        "contributions": 20
-                    },
-                    "ucb": {
-                        "total": 249.5,
+                        "total": 81.0,
                         "contributions": 11
                     },
-                    "ucsf": {
-                        "total": 281.9,
+                    "ucb": {
+                        "total": 144.5,
                         "contributions": 8
+                    },
+                    "ucsf": {
+                        "total": 241.89999999999998,
+                        "contributions": 7
                     },
                     "uci": {
                         "total": 685.7500000000001,
@@ -396,8 +392,8 @@
                         "contributions": 33
                     }
                 },
-                "total": 9544.66,
-                "contributions": 186,
+                "total": 7527.659999999999,
+                "contributions": 139,
                 "title": "UNDERGRAD"
             },
             {
@@ -788,12 +784,12 @@
                         "contributions": 1
                     },
                     "ucb": {
-                        "total": 1311.0,
-                        "contributions": 17
+                        "total": 1061.0,
+                        "contributions": 16
                     }
                 },
-                "total": 31350.08,
-                "contributions": 85,
+                "total": 31100.08,
+                "contributions": 84,
                 "title": "HEALTH"
             },
             {
@@ -811,12 +807,12 @@
                         "contributions": 11
                     },
                     "ucla": {
-                        "total": 3962.84,
-                        "contributions": 5
+                        "total": 3862.84,
+                        "contributions": 4
                     }
                 },
-                "total": 10671.310000000001,
-                "contributions": 19,
+                "total": 10571.310000000001,
+                "contributions": 18,
                 "title": "UNDERGRAD"
             },
             {
@@ -830,16 +826,16 @@
                         "contributions": 5
                     },
                     "ucb": {
-                        "total": 1157.6399999999999,
-                        "contributions": 8
+                        "total": 1407.6399999999999,
+                        "contributions": 9
                     },
                     "ucla": {
-                        "total": 248.64,
-                        "contributions": 11
+                        "total": 348.64,
+                        "contributions": 12
                     }
                 },
-                "total": 1501.28,
-                "contributions": 25,
+                "total": 1851.28,
+                "contributions": 27,
                 "title": "GRAD"
             },
             {
