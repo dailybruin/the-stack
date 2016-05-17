@@ -87,17 +87,38 @@ var yAxis2 = barSVG.append("g")
   .call(yScale.axis = d3.svg.axis().scale(yScale).orient("left"));
 
 var schoolRects;
-var currMode = 1;
 
-function initBarGraph() {
+function initHorizontalBar() {
   transitionyScale(curr_cand);
 
   var colleges = [];
   curr_cand.colleges.map(function(d) { colleges.push(d.name); });
+  // var colleges = ['na', 'ucb', 'ucsd', 'ucr', 'ucd', 'ucsb', 'ucla', 'ucsf', 'uci', 'ucsc', 'ucm'];
 
   yScale.domain(colleges);
 
-  dataRects = barSVG.selectAll(".dataRect")
+}
+
+function transitionyScale(transitionData) {
+  var map;
+  var newYDomain = [];
+
+  map = transitionData.colleges.map(function(d) {
+    if (d["name"] == 'na') { newYDomain.push("N/A"); }
+    else newYDomain.push((d["name"]).toUpperCase());
+  });
+
+  yScale.domain(newYDomain);
+  yScale.rangeRoundBands([newYDomain.length*(height2/11), 0], 0.1);
+
+  yAxis2.transition()
+    .duration(500)
+    .ease("linear")
+    .call(yScale.axis);
+}
+
+function updateHorizontalBar() {
+  var dataRects = barSVG.selectAll(".dataRect")
     .data(curr_cand.colleges)
     .enter().append("g")
     .attr("class", function(d) { return "dataRect " + d.name;});
@@ -131,27 +152,6 @@ function initBarGraph() {
       this.style.opacity = "1";
       horizontalTip.html("").style("display","none");
     });
-}
-
-function transitionyScale(transitionData) {
-  var map;
-  var newYDomain = [];
-
-  map = transitionData.colleges.map(function(d) {
-    if (d["name"] == 'na') { newYDomain.push("N/A"); }
-    else newYDomain.push((d["name"]).toUpperCase());
-  });
-
-  yScale.domain(newYDomain);
-  yScale.rangeRoundBands([newYDomain.length*(height2/11), 0], 0.1);
-
-  yAxis2.transition()
-    .duration(500)
-    .ease("linear")
-    .call(yScale.axis);
-}
-
-function updateHorizontalBar() {
 
   var dataRects = d3.selectAll(".dataRect").select("rect")
     .transition()
@@ -251,7 +251,8 @@ d3.json("/datasets/presidential-campaign-donations/result.json", function(error,
   data_structure = data;
   curr_cand = data_structure[0];
 
-  initBarGraph();
+  initHorizontalBar();
+  updateHorizontalBar();
 
   $('#d1').dropdown({
     onChange: function (val) {
