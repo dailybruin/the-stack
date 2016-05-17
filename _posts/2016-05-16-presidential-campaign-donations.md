@@ -98,7 +98,7 @@ The third graph shows the percentage each campus makes up out of the total amoun
   </div>
 </div>
 
-<span>This candidate received a total of $<b>X</b> from UCs alone, amounting to <b>Y</b>% of his total campaign donations received in California.</span>
+<span>This candidate received a total of $<b><span id="amount"></span></b> from UCs alone, amounting to <b><span id="percentage"></span></b>% of his total campaign donations received in California.</span>
 
 <div id="vertical-bar"></div>
 <div id="horizontal-bar"></div>
@@ -119,6 +119,6 @@ Key observations:
 - Despite being the presumptive Republican nominee, Donald Trump received the least amount of money out of all the Republican candidates.
 - Sanders and Clinton's largest source of donations were professors and health workers, with about half of their contributions coming from both sources. Cruz, Fiorina and Rubio, the Republican candidates with the largest amount of donations, also had health workers as their largest source of contributions.
 
-*Story by Ryan Leou. Graphics by Nick Liu, Alex Guziak, Amber Won, Jennifer Xu, Li-Wei Chi, & Chang Liu.*
+*Story by Ryan Leou. Graphics by Nick Liu, Alex Guziak, Amber Won, Jennifer Xu, Li-Wei Chi, Jeffrey Chan & Chang Liu.*
 
 
