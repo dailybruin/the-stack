@@ -300,7 +300,6 @@ d3.json("/datasets/presidential-campaign-donations/result.json", function(error,
 
 
   function updateVerticalBar() {
-
     var new_layers;
 
     if (curr_cand.colleges.length == 0) {
@@ -464,6 +463,11 @@ d3.json("/datasets/presidential-campaign-donations/result.json", function(error,
         if (data == 'na') return "N/A";
         return data.toUpperCase();
       });
+
+      // Update text on main page using jQuery
+      var percentage = ((curr_cand.colleges_total / curr_cand.total)*100);
+      $('#amount').html(Math.round(curr_cand.colleges_total*100)/100);
+      $('#percentage').html(Math.round(percentage*100)/100);
   }
 
   updateVerticalBar();
