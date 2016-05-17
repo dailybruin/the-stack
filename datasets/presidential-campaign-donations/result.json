@@ -57,6 +57,8 @@
                 "name": "ucsf"
             }
         ],
+        "colleges_contributions": 2555,
+        "name": "Sanders",
         "jobs": [
             {
                 "colleges": {
@@ -479,7 +481,6 @@
                 "title": "LEGAL"
             }
         ],
-        "name": "Sanders",
         "party": "dem",
         "total": 13913776.019999102,
         "contributions": 229708,
@@ -539,6 +540,8 @@
                 "name": "ucsf"
             }
         ],
+        "colleges_contributions": 1020,
+        "name": "Clinton",
         "jobs": [
             {
                 "colleges": {
@@ -913,7 +916,6 @@
                 "title": "ARTS"
             }
         ],
-        "name": "Clinton",
         "party": "dem",
         "total": 30346423.560000055,
         "contributions": 93679,
@@ -948,6 +950,8 @@
                 "name": "ucsf"
             }
         ],
+        "colleges_contributions": 14,
+        "name": "Lessig",
         "jobs": [
             {
                 "colleges": {
@@ -991,7 +995,6 @@
                 "title": "TECH"
             }
         ],
-        "name": "Lessig",
         "party": "dem",
         "total": 186144.49999999997,
         "contributions": 372,
@@ -1006,6 +1009,8 @@
                 "name": "ucla"
             }
         ],
+        "colleges_contributions": 3,
+        "name": "O'Malley",
         "jobs": [
             {
                 "colleges": {
@@ -1041,7 +1046,6 @@
                 "title": "TECH"
             }
         ],
-        "name": "O'Malley",
         "party": "dem",
         "total": 297549.26,
         "contributions": 393,
@@ -1050,8 +1054,9 @@
     },
     {
         "colleges": [],
-        "jobs": [],
+        "colleges_contributions": 0,
         "name": "Webb",
+        "jobs": [],
         "party": "dem",
         "total": 76568.16,
         "contributions": 106,
@@ -1081,6 +1086,8 @@
                 "name": "ucsf"
             }
         ],
+        "colleges_contributions": 29,
+        "name": "Carson",
         "jobs": [
             {
                 "colleges": {
@@ -1124,7 +1131,6 @@
                 "title": "TECH"
             }
         ],
-        "name": "Carson",
         "party": "rep",
         "total": 3074944.3500000024,
         "contributions": 27238,
@@ -1159,6 +1165,8 @@
                 "name": "ucsf"
             }
         ],
+        "colleges_contributions": 66,
+        "name": "Cruz",
         "jobs": [
             {
                 "colleges": {
@@ -1243,7 +1251,6 @@
                 "title": "RESEARCH"
             }
         ],
-        "name": "Cruz",
         "party": "rep",
         "total": 4725199.450000001,
         "contributions": 41903,
@@ -1268,6 +1275,8 @@
                 "name": "ucsf"
             }
         ],
+        "colleges_contributions": 11,
+        "name": "Kasich",
         "jobs": [
             {
                 "colleges": {
@@ -1303,7 +1312,6 @@
                 "title": "TECH"
             }
         ],
-        "name": "Kasich",
         "party": "rep",
         "total": 1271638.42,
         "contributions": 2144,
@@ -1312,8 +1320,9 @@
     },
     {
         "colleges": [],
-        "jobs": [],
+        "colleges_contributions": 0,
         "name": "Bush",
+        "jobs": [],
         "party": "rep",
         "total": 3327043.83,
         "contributions": 3109,
@@ -1322,8 +1331,9 @@
     },
     {
         "colleges": [],
-        "jobs": [],
+        "colleges_contributions": 0,
         "name": "Perry",
+        "jobs": [],
         "party": "rep",
         "total": 208400.0,
         "contributions": 116,
@@ -1353,6 +1363,8 @@
                 "name": "ucsd"
             }
         ],
+        "colleges_contributions": 17,
+        "name": "Fiorina",
         "jobs": [
             {
                 "colleges": {
@@ -1389,7 +1401,6 @@
                 "title": "PROFESSOR"
             }
         ],
-        "name": "Fiorina",
         "party": "rep",
         "total": 1468489.42,
         "contributions": 4696,
@@ -1409,6 +1420,8 @@
                 "name": "ucsd"
             }
         ],
+        "colleges_contributions": 15,
+        "name": "Rubio",
         "jobs": [
             {
                 "colleges": {
@@ -1448,7 +1461,6 @@
                 "title": "OTHER"
             }
         ],
-        "name": "Rubio",
         "party": "rep",
         "total": 5488752.270000001,
         "contributions": 13717,
@@ -1478,6 +1490,8 @@
                 "name": "ucsf"
             }
         ],
+        "colleges_contributions": 8,
+        "name": "Paul",
         "jobs": [
             {
                 "colleges": {
@@ -1528,7 +1542,6 @@
                 "title": "PROFESSOR"
             }
         ],
-        "name": "Paul",
         "party": "rep",
         "total": 819173.2899999963,
         "contributions": 4246,
@@ -1543,6 +1556,8 @@
                 "name": "ucm"
             }
         ],
+        "colleges_contributions": 1,
+        "name": "Trump",
         "jobs": [
             {
                 "colleges": {
@@ -1556,7 +1571,6 @@
                 "title": "RESEARCH"
             }
         ],
-        "name": "Trump",
         "party": "rep",
         "total": 331901.0,
         "contributions": 1091,
@@ -1565,8 +1579,9 @@
     },
     {
         "colleges": [],
-        "jobs": [],
+        "colleges_contributions": 0,
         "name": "Graham",
+        "jobs": [],
         "party": "rep",
         "total": 405895.0,
         "contributions": 341,
@@ -1575,8 +1590,9 @@
     },
     {
         "colleges": [],
-        "jobs": [],
+        "colleges_contributions": 0,
         "name": "Huckabee",
+        "jobs": [],
         "party": "rep",
         "total": 230890.6,
         "contributions": 531,
@@ -1585,8 +1601,9 @@
     },
     {
         "colleges": [],
-        "jobs": [],
+        "colleges_contributions": 0,
         "name": "Christie",
+        "jobs": [],
         "party": "rep",
         "total": 456066.0,
         "contributions": 333,
@@ -1601,6 +1618,8 @@
                 "name": "ucsf"
             }
         ],
+        "colleges_contributions": 1,
+        "name": "Other",
         "jobs": [
             {
                 "colleges": {
@@ -1614,7 +1633,6 @@
                 "title": "OTHER"
             }
         ],
-        "name": "Other",
         "party": "mixed",
         "total": 616247.54,
         "contributions": 944,
