@@ -1,0 +1,148 @@
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.bar {
+  fill: orange;
+}
+
+.bar:hover {
+  fill: orangered ;
+}
+
+.x.axis path {
+  display: none;
+}
+
+#horizontal-bar .tick line {
+  display: none;
+}
+
+#horizontal-bar .domain {
+
+  display: none;
+}
+
+#xaxis .domain {
+  fill:none;
+  stroke:#000;
+}
+
+#xaxis text, #yaxis text {
+  font-size: 12px;
+}
+
+.arc text {
+  font: 10px sans-serif;
+  text-anchor: middle;
+}
+
+.arc path {
+  stroke: #fff;
+}
+
+#donut-chart {
+  width: 100%;
+  display: block;
+}
+
+#donut-chart svg {
+  display: block;
+  margin: 0 auto;
+}
+
+
+text {
+  font: 10px sans-serif;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+#vertical-bar > svg > g > g.x.axis > g > line {
+  display: none;
+}
+
+
+div.vertical-tip-1 {
+  position: absolute; 
+  height: auto;   
+  padding: 6px; 
+  font: 12px sans-serif;  
+  background: rgba(255, 255, 255, 0.75);
+  border: 1px solid rgba(0, 0, 0, 0.2);          
+  color: black;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+  opacity:0;
+}
+
+div.vertical-tip-1 p {
+  margin-bottom: 0px;
+}
+
+div.horizontal-tip {
+  position: absolute; 
+  height: auto;  
+  /*width: 200px; */
+  padding: 6px; 
+  font: 12px sans-serif;  
+  background: rgba(255, 255, 255, 0.75);
+  border: 1px solid rgba(0, 0, 0, 0.2);          
+  color: black;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+  opacity:0;
+}
+
+.affixed {
+  position: fixed;
+  box-sizing: border-box;
+  box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.2);
+  top: 0;
+}
+
+div.horizontal-tip .left {
+  display: inline-block; 
+  float:left;
+  padding-right: 5px; 
+  border-right: 1px dotted rgba(0,0,0, 0.4);
+  position: relative; 
+  padding-top: 7px;
+  padding-bottom: 7px;
+}
+
+div.horizontal-tip .left p {
+  margin-bottom: 2px;
+}
+div.horizontal-tip .right {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  height: auto;
+  font-size: 2em;
+  padding-left: 5px;
+  display: inline-block;
+  float: right;
+}
+
+.legend rect:hover {
+  cursor: pointer;
+
+}
+
+#d1 {
+  font-size: 1.8em;
+}
+
+img.ui.avatar.image.rep {
+  border: 2px solid red;
+}
+
+img.ui.avatar.image.dem {
+  border: 2px solid blue;
+}
