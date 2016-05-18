@@ -64,3 +64,18 @@ tyson_ni:
     mug: Yes
     email: tni@media.ucla.edu
     github: tyson-ni
+ryan_leou:
+    name: Ryan Leou
+    title: Daily Bruin Reporter
+    bio: Ryan is a writer for the news section at the Daily Bruin covering national news and higher education. He studies political and environmental science.  In his free time, he enjoys browsing Wikipedia, napping, traveling around the world and sifting through campaign contribution data.
+    mug: No
+    email: rleou@media.ucla.edu
+    twitter: rleou
+chang_liu:
+    name: Chang Liu
+    title: D3 Apprentice
+    bio: Chang is a Project Manager for the Daily Bruin and the incoming editor of this website. He is currently pursuing a Linguistics & Computer Science degree at UCLA. When he's not struggling to learn natural or programming languages, he likes to take photos, dance and travel. 
+    mug: No
+    email: chliu@media.ucla.edu
+    github: shampliu
+    website: http://shampliu.me
