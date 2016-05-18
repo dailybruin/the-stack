@@ -1,6 +1,6 @@
 ---
-title: How do campaign contributions at the UC differ by campus and job?
-teaser: The answer may or may not surprise you. 
+title: How do presidential campaign contributions at the UC break down?
+teaser: The Daily Bruin analyzed campaign donation filings to see which candidates UC employees and students support the most.
 authors:
   - ryan_leou
   - chang_liu
