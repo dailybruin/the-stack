@@ -1,5 +1,5 @@
 ---
-title: How do campaign contributions at the UCs differ by campus and job?
+title: How do campaign contributions at the UC differ by campus and job?
 teaser: The answer may or may not surprise you. 
 authors:
   - ryan_leou
@@ -35,89 +35,91 @@ Because the Daily Bruin does not have the resources to conduct comprehensive pol
 
 > The first graph displays total campaign contributions for all candidates. The outer circle represents the Democratic Party in blue and the Republican Party in red. Candidates for the parties are shown in the inner circle in varying shades of red or blue, according to their party. Hovering over the candidate segments will show total contributions, broken down by job category.
 
+#### Presidential Campaign Contributions at the UC
+
 <div id="donut-chart"></div>
 
 > The second graph breaks down contributions by job type. Hover over the x-axis to see how we organized job titles for each category. Toggle between different candidates in the dropdown menu. Use the checkbox selection to switch between amount donated and number of contributions. Each job type is further broken down by campus, represented by the different colors on the side. 
 
-<div id="nav" style="height: 50px;">
-  <div class="ui inline dropdown" style="margin-bottom: 10px; float: left;" id="d1">
-    <div class="text">
-      <img class="ui avatar image rep" src="/img/posts/presidential-campaign-donations/rep.png"> Ben Carson
-    </div>
-    <i class="dropdown icon"></i>
-    <div class="menu">
-      <div class="item">
+<div id="nav-container" style="width: 720px; background-color: white; height: 72px; padding: 5px 10px;">
+  <div id="nav" style="height: 62px; width: 720px;">
+    <div class="ui inline dropdown" style="margin-bottom: 10px;" id="d1">
+      <div class="text">
         <img class="ui avatar image rep" src="/img/posts/presidential-campaign-donations/rep.png"> Ben Carson
       </div>
-      <div class="item">
-        <img class="ui avatar image dem" src="/img/posts/presidential-campaign-donations/dem.png"> Hillary Clinton
-      </div>
-      <div class="item">
-        <img class="ui avatar image rep" src="/img/posts/presidential-campaign-donations/rep.png"> Ted Cruz
-      </div>
-      <div class="item">
-        <img class="ui avatar image rep" src="/img/posts/presidential-campaign-donations/rep.png"> Carly Fiorina
-      </div>
-      <div class="item">
-        <img class="ui avatar image rep" src="/img/posts/presidential-campaign-donations/rep.png"> John Kasich
-      </div>
-      <div class="item">
-        <img class="ui avatar image dem" src="/img/posts/presidential-campaign-donations/dem.png"> Larry Lessig
-      </div>
-      <div class="item">
-        <img class="ui avatar image dem" src="/img/posts/presidential-campaign-donations/dem.png"> Martin O'Malley
-      </div>
-      <div class="item">
-        <img class="ui avatar image rep" src="/img/posts/presidential-campaign-donations/rep.png"> Rand Paul
-      </div>
-      <div class="item">
-        <img class="ui avatar image rep" src="/img/posts/presidential-campaign-donations/rep.png"> Marco Rubio
-      </div>
-      <div class="item">
-        <img class="ui avatar image dem" src="/img/posts/presidential-campaign-donations/dem.png"> Bernie Sanders  
-      </div>
-      <div class="item">
-        <img class="ui avatar image rep" src="/img/posts/presidential-campaign-donations/rep.png"> Donald Trump
-      </div>
-    </div>
-  </div>
-  <div class="ui form" style="    
-    float: right;
-    height: 50px;
-    line-height: 50px;
-    white-space: nowrap;">
-    <div class="inline fields">
-      <label for="filter">Filter by:</label>
-      <div class="field">
-        <div class="ui radio checkbox">
-          <input type="radio" name="filter" id="d2" checked="" tabindex="0" class="hidden">
-          <label>Amount</label>
+      <i class="dropdown icon"></i>
+      <div class="menu">
+        <div class="item">
+          <img class="ui avatar image rep" src="/img/posts/presidential-campaign-donations/rep.png"> Ben Carson
+        </div>
+        <div class="item">
+          <img class="ui avatar image dem" src="/img/posts/presidential-campaign-donations/dem.png"> Hillary Clinton
+        </div>
+        <div class="item">
+          <img class="ui avatar image rep" src="/img/posts/presidential-campaign-donations/rep.png"> Ted Cruz
+        </div>
+        <div class="item">
+          <img class="ui avatar image rep" src="/img/posts/presidential-campaign-donations/rep.png"> Carly Fiorina
+        </div>
+        <div class="item">
+          <img class="ui avatar image rep" src="/img/posts/presidential-campaign-donations/rep.png"> John Kasich
+        </div>
+        <div class="item">
+          <img class="ui avatar image dem" src="/img/posts/presidential-campaign-donations/dem.png"> Larry Lessig
+        </div>
+        <div class="item">
+          <img class="ui avatar image dem" src="/img/posts/presidential-campaign-donations/dem.png"> Martin O'Malley
+        </div>
+        <div class="item">
+          <img class="ui avatar image rep" src="/img/posts/presidential-campaign-donations/rep.png"> Rand Paul
+        </div>
+        <div class="item">
+          <img class="ui avatar image rep" src="/img/posts/presidential-campaign-donations/rep.png"> Marco Rubio
+        </div>
+        <div class="item">
+          <img class="ui avatar image dem" src="/img/posts/presidential-campaign-donations/dem.png"> Bernie Sanders  
+        </div>
+        <div class="item">
+          <img class="ui avatar image rep" src="/img/posts/presidential-campaign-donations/rep.png"> Donald Trump
         </div>
       </div>
-      <div class="field">
-        <div class="ui radio checkbox">
-          <input type="radio" name="filter" tabindex="0" class="hidden">
-          <label>Contributions</label>
+    </div>
+    <div class="ui form" style="    
+      display:inline-block;
+      margin-left: 30px;
+      height: 62px;
+      line-height: 62px;
+      white-space: nowrap;">
+      <div class="inline fields">
+        <label for="filter">Filter:</label>
+        <div class="field">
+          <div class="ui radio checkbox">
+            <input type="radio" name="filter" id="d2" checked="" tabindex="0" class="hidden">
+            <label>Amount</label>
+          </div>
+        </div>
+        <div class="field">
+          <div class="ui radio checkbox">
+            <input type="radio" name="filter" tabindex="0" class="hidden">
+            <label>Contributions</label>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </div>
 
-<p style="clear: both;">This candidate received a total of $<b><span id="amount"></span></b> from UCs alone, which amounts to <b><span id="percentage"></span></b>% of the total donations they received in California.</p>
+<p style="margin-top: 20px;">This candidate received a total of $<b><span id="amount"></span></b> from UCs alone, which amounts to <b><span id="percentage"></span></b>% of the total donations they received in California.</p>
 
+
+
+
+#### Job Distribution of Donators
 <div id="vertical-bar"></div>
 > The third graph shows the percentage each campus makes up out of the total amount of contributions from UC employees for each candidate.
 
+#### Contributions by Campus
 <div id="horizontal-bar"></div>
-
-#### Disclaimers:
-- This post only includes data from within the state of California. UC employees employed outside the state are not included.
-- The Bruin searched for people associated with the UC by employer, therefore unemployed donors associated with the UC are not included.
-- The Federal Election Commission does not report donors who have contributed less than $200.
-- Due to inconsistencies in the way people describe their employers, some donors and contributions are not included.
-- Candidates who did not receive any donations from UC affiliated employees or students are not included.
--Data is current through April.
 
 #### Key observations:
 - UC donors overwhelmingly supported Democratic candidates. More than 90 percent of contributions went to Sen. Bernie Sanders, I-Vt., and former Secretary of State Hillary Clinton. UC Santa Barbara faculty and staff made no donations to Republican candidates.
@@ -127,6 +129,14 @@ Because the Daily Bruin does not have the resources to conduct comprehensive pol
 - Despite being the presumptive Republican nominee, Donald Trump received the least amount of money out of all the Republican candidates.
 - Sanders and Clinton's largest source of donations were professors and health workers, with about half of their contributions coming from both sources. Cruz, Fiorina and Rubio, the Republican candidates with the largest amount of donations, also had health workers as their largest source of contributions.
 
-*Story by Ryan Leou. Graphics by Nick Liu, Alex Guziak, Amber Won, Jennifer Xu, Li-Wei Chi, Jeffrey Chan & Chang Liu.*
+#### Disclaimers:
+- This post only includes data from within the state of California. UC employees employed outside the state are not included.
+- The Bruin searched for people associated with the UC by employer, therefore unemployed donors associated with the UC are not included.
+- The Federal Election Commission does not report donors who have contributed less than $200.
+- Due to inconsistencies in the way people describe their employers, some donors and contributions are not included.
+- Candidates who did not receive any donations from UC affiliated employees or students are not included.
+-Data is current through April.
+
+*Story by Ryan Leou. Graphics by Nick Liu, Alex Guziak, Amber Won, Jennifer Xu, Li-Wei Chi, Jeffrey Chan, Vivian Zhang & Chang Liu.*
 
 

@@ -6,6 +6,17 @@ function numberWithCommas(x) {
   return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
 
+var offset = $('#nav-container').offset().top  + 505
+$(window).scroll(function() {
+  if ($(window).scrollTop() > offset) {
+    $('#nav-container').addClass('affixed');
+  }
+  else { 
+    $('#nav-container').removeClass('affixed');
+
+  }
+});
+
 var data_structure = []
 
 var curr_cand;
@@ -274,7 +285,7 @@ d3.json("/datasets/presidential-campaign-donations/result.json", function(error,
       });
     }));
 
-    var listOfJobs = ['TECH', 'FACULTY', 'HEALTH', 'PROF', 'GRAD', 'RESEARCH', 'UGRAD',
+    var listOfJobs = ['TECH', 'FACULTY', 'DATA', 'HEALTH', 'UGRAD', 'GRAD', 'RESEARCH',
                       'ADMIN', 'ARTS', 'LEGAL', 'RETIRED', 'OTHER'];
     x.domain(listOfJobs);
     new_layers.forEach(function(d) {
@@ -286,9 +297,9 @@ d3.json("/datasets/presidential-campaign-donations/result.json", function(error,
         else if (val == "UNDERGRAD") {
           val = "UGRAD"
         }
-        else if (val == "PROFESSOR") {
-          val = "PROF"
-        }
+        // else if (val == "PROFESSOR") {
+        //   val = "PROF"
+        // }
         var ind = listOfJobs.indexOf(val);
         d[j].x = listOfJobs[ind]
       }
