@@ -114,7 +114,7 @@ Because the Daily Bruin does not have the resources to conduct comprehensive pol
 
 
 
-#### Job Distribution of Donators
+#### Job Distributions
 <div id="vertical-bar"></div>
 > The third graph shows the percentage each campus makes up out of the total amount of contributions from UC employees for each candidate.
 
