@@ -42,5 +42,6 @@ Follow us [on Twitter](https://twitter.com/_thestack/).
 
 The data editor is the person overseeing The Stack. A list of editors by year is below.
 
+- Chang Liu (2016-2017)
 - Harrison Liddiard (2015-2016)
 - Neil Bedi (creator, 2014-2015)
