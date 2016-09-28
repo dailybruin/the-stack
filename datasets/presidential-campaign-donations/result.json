@@ -2,925 +2,1010 @@
     {
         "colleges": [
             {
-                "total": 2625.58,
-                "contributions": 49,
+                "total": 4215.3,
+                "contributions": 84,
                 "name": "na"
             },
             {
-                "total": 21295.350000000002,
-                "contributions": 224,
+                "total": 23614.32,
+                "contributions": 363,
                 "name": "ucb"
             },
             {
-                "total": 14833.84,
-                "contributions": 190,
+                "total": 20025.730000000003,
+                "contributions": 367,
                 "name": "ucd"
             },
             {
-                "total": 5510.14,
-                "contributions": 106,
+                "total": 7816.67,
+                "contributions": 178,
                 "name": "uci"
             },
             {
-                "total": 47964.48,
-                "contributions": 715,
+                "total": 68604.19,
+                "contributions": 1221,
                 "name": "ucla"
             },
             {
-                "total": 27.0,
-                "contributions": 1,
+                "total": 409.0,
+                "contributions": 14,
                 "name": "ucm"
             },
             {
-                "total": 4264.040000000001,
-                "contributions": 86,
+                "total": 4855.08,
+                "contributions": 150,
                 "name": "ucr"
             },
             {
-                "total": 10340.98,
-                "contributions": 137,
+                "total": 13348.55,
+                "contributions": 245,
                 "name": "ucsb"
             },
             {
-                "total": 6248.36,
-                "contributions": 142,
+                "total": 9950.800000000001,
+                "contributions": 275,
                 "name": "ucsc"
             },
             {
-                "total": 19774.550000000003,
-                "contributions": 393,
+                "total": 30021.51,
+                "contributions": 775,
                 "name": "ucsd"
             },
             {
-                "total": 24756.260000000002,
-                "contributions": 512,
+                "total": 41542.21999999999,
+                "contributions": 942,
                 "name": "ucsf"
             }
         ],
-        "colleges_contributions": 2555,
+        "colleges_contributions": 4614,
         "name": "Sanders",
         "jobs": [
             {
                 "colleges": {
                     "ucsb": {
-                        "total": 905.0,
-                        "contributions": 13
+                        "total": 1354.0,
+                        "contributions": 31
+                    },
+                    "ucr": {
+                        "total": 837.0,
+                        "contributions": 17
                     },
                     "ucla": {
-                        "total": 8298.199999999999,
-                        "contributions": 99
+                        "total": 2172.08,
+                        "contributions": 73
+                    },
+                    "ucsc": {
+                        "total": 2813.06,
+                        "contributions": 92
                     },
                     "ucd": {
-                        "total": 1496.0,
+                        "total": 487.0,
+                        "contributions": 16
+                    },
+                    "ucsd": {
+                        "total": 1217.0,
+                        "contributions": 6
+                    },
+                    "ucsf": {
+                        "total": 3875.5,
+                        "contributions": 35
+                    },
+                    "ucb": {
+                        "total": 3475.95,
+                        "contributions": 48
+                    }
+                },
+                "total": 16231.59,
+                "contributions": 318,
+                "title": "TECH"
+            },
+            {
+                "colleges": {
+                    "ucsb": {
+                        "total": 4517.200000000001,
+                        "contributions": 93
+                    },
+                    "ucr": {
+                        "total": 2872.08,
+                        "contributions": 74
+                    },
+                    "na": {
+                        "total": 2290.11,
+                        "contributions": 40
+                    },
+                    "ucla": {
+                        "total": 27407.390000000003,
+                        "contributions": 454
+                    },
+                    "ucsc": {
+                        "total": 2697.5299999999997,
+                        "contributions": 47
+                    },
+                    "ucd": {
+                        "total": 9682.23,
+                        "contributions": 141
+                    },
+                    "ucsd": {
+                        "total": 5674.59,
+                        "contributions": 132
+                    },
+                    "ucsf": {
+                        "total": 7437.349999999999,
+                        "contributions": 221
+                    },
+                    "ucm": {
+                        "total": 209.0,
+                        "contributions": 12
+                    },
+                    "uci": {
+                        "total": 4212.43,
+                        "contributions": 74
+                    },
+                    "ucb": {
+                        "total": 12666.589999999998,
+                        "contributions": 129
+                    }
+                },
+                "total": 79666.5,
+                "contributions": 1417,
+                "title": "FACULTY"
+            },
+            {
+                "colleges": {
+                    "ucsb": {
+                        "total": 20.0,
+                        "contributions": 1
+                    },
+                    "na": {
+                        "total": 547.0,
+                        "contributions": 19
+                    },
+                    "ucla": {
+                        "total": 1806.0,
+                        "contributions": 31
+                    },
+                    "ucsc": {
+                        "total": 1193.1499999999999,
+                        "contributions": 16
+                    },
+                    "ucd": {
+                        "total": 268.95,
                         "contributions": 23
                     },
                     "ucsd": {
-                        "total": 7964.749999999999,
-                        "contributions": 113
+                        "total": 980.0,
+                        "contributions": 24
                     },
                     "ucsf": {
-                        "total": 8989.48,
-                        "contributions": 205
+                        "total": 3079.12,
+                        "contributions": 104
+                    },
+                    "uci": {
+                        "total": 27.0,
+                        "contributions": 1
+                    },
+                    "ucb": {
+                        "total": 462.0,
+                        "contributions": 13
+                    }
+                },
+                "total": 8383.22,
+                "contributions": 232,
+                "title": "DATA"
+            },
+            {
+                "colleges": {
+                    "ucd": {
+                        "total": 310.5,
+                        "contributions": 12
+                    },
+                    "na": {
+                        "total": 307.75,
+                        "contributions": 10
+                    },
+                    "ucla": {
+                        "total": 6843.82,
+                        "contributions": 145
+                    },
+                    "ucsc": {
+                        "total": 191.5,
+                        "contributions": 27
+                    },
+                    "ucsb": {
+                        "total": 721.0,
+                        "contributions": 11
+                    },
+                    "ucsd": {
+                        "total": 1383.67,
+                        "contributions": 58
+                    },
+                    "ucsf": {
+                        "total": 2385.0000000000005,
+                        "contributions": 44
+                    },
+                    "uci": {
+                        "total": 550.0,
+                        "contributions": 11
+                    },
+                    "ucb": {
+                        "total": 1977.53,
+                        "contributions": 43
+                    }
+                },
+                "total": 14670.770000000004,
+                "contributions": 361,
+                "title": "ADMINISTRATIVE"
+            },
+            {
+                "colleges": {
+                    "ucla": {
+                        "total": 354.0,
+                        "contributions": 5
+                    },
+                    "ucsc": {
+                        "total": 990.0,
+                        "contributions": 14
+                    },
+                    "ucd": {
+                        "total": 50.0,
+                        "contributions": 1
+                    },
+                    "ucsb": {
+                        "total": 189.0,
+                        "contributions": 13
+                    },
+                    "ucsf": {
+                        "total": 3810.5199999999995,
+                        "contributions": 54
+                    },
+                    "ucb": {
+                        "total": 104.0,
+                        "contributions": 12
+                    }
+                },
+                "total": 5497.5199999999995,
+                "contributions": 99,
+                "title": "OTHER"
+            },
+            {
+                "colleges": {
+                    "ucd": {
+                        "total": 2613.0,
+                        "contributions": 46
+                    },
+                    "ucla": {
+                        "total": 10236.930000000002,
+                        "contributions": 151
+                    },
+                    "ucsb": {
+                        "total": 1775.0,
+                        "contributions": 20
+                    },
+                    "ucsd": {
+                        "total": 9465.25,
+                        "contributions": 157
+                    },
+                    "ucsf": {
+                        "total": 14008.420000000004,
+                        "contributions": 311
                     },
                     "uci": {
                         "total": 250.0,
                         "contributions": 1
                     },
                     "ucb": {
-                        "total": 177.0,
-                        "contributions": 2
+                        "total": 232.0,
+                        "contributions": 4
                     }
                 },
-                "total": 28080.43,
-                "contributions": 456,
+                "total": 38580.59999999999,
+                "contributions": 690,
                 "title": "HEALTH"
             },
             {
                 "colleges": {
+                    "ucsb": {
+                        "total": 4461.9,
+                        "contributions": 53
+                    },
                     "ucr": {
-                        "total": 3081.54,
-                        "contributions": 47
-                    },
-                    "ucd": {
-                        "total": 8248.39,
-                        "contributions": 78
-                    },
-                    "na": {
-                        "total": 1951.58,
-                        "contributions": 31
+                        "total": 695.0,
+                        "contributions": 28
                     },
                     "ucla": {
-                        "total": 20982.370000000003,
-                        "contributions": 270
+                        "total": 3649.2200000000003,
+                        "contributions": 114
                     },
                     "ucsc": {
-                        "total": 1638.53,
-                        "contributions": 27
+                        "total": 264.5,
+                        "contributions": 16
                     },
-                    "ucsb": {
-                        "total": 2805.64,
-                        "contributions": 36
+                    "ucd": {
+                        "total": 1502.45,
+                        "contributions": 13
                     },
                     "ucsd": {
-                        "total": 2885.5299999999997,
-                        "contributions": 50
-                    },
-                    "ucsf": {
-                        "total": 5852.650000000001,
-                        "contributions": 135
-                    },
-                    "ucm": {
-                        "total": 27.0,
-                        "contributions": 1
-                    },
-                    "uci": {
-                        "total": 2994.85,
-                        "contributions": 38
-                    },
-                    "ucb": {
-                        "total": 10452.37,
-                        "contributions": 91
-                    }
-                },
-                "total": 60920.44999999998,
-                "contributions": 804,
-                "title": "FACULTY"
-            },
-            {
-                "colleges": {
-                    "ucb": {
-                        "total": 375.0,
-                        "contributions": 7
-                    },
-                    "ucr": {
-                        "total": 255.0,
-                        "contributions": 15
-                    },
-                    "ucla": {
-                        "total": 2059.59,
-                        "contributions": 75
-                    },
-                    "ucsc": {
-                        "total": 30.0,
-                        "contributions": 1
-                    },
-                    "ucd": {
-                        "total": 1127.0,
-                        "contributions": 3
-                    },
-                    "ucsb": {
-                        "total": 3728.34,
-                        "contributions": 41
+                        "total": 2172.38,
+                        "contributions": 129
                     },
                     "ucsf": {
                         "total": 290.0,
                         "contributions": 2
                     },
                     "uci": {
-                        "total": 985.54,
-                        "contributions": 35
+                        "total": 1709.04,
+                        "contributions": 56
                     },
-                    "ucsd": {
-                        "total": 1289.07,
-                        "contributions": 58
+                    "ucb": {
+                        "total": 689.5,
+                        "contributions": 21
                     }
                 },
-                "total": 10139.54,
-                "contributions": 237,
+                "total": 15433.990000000002,
+                "contributions": 432,
                 "title": "GRAD"
             },
             {
                 "colleges": {
-                    "ucd": {
-                        "total": 50.0,
-                        "contributions": 1
-                    },
-                    "ucla": {
-                        "total": 300.53,
-                        "contributions": 15
+                    "na": {
+                        "total": 670.44,
+                        "contributions": 11
                     },
                     "ucsc": {
-                        "total": 650.0,
-                        "contributions": 5
+                        "total": 256.5,
+                        "contributions": 12
                     },
-                    "ucsb": {
-                        "total": 137.0,
+                    "ucd": {
+                        "total": 1583.0,
+                        "contributions": 30
+                    }
+                },
+                "total": 2509.94,
+                "contributions": 53,
+                "title": "RETIRED"
+            },
+            {
+                "colleges": {
+                    "ucr": {
+                        "total": 134.5,
                         "contributions": 10
                     },
-                    "ucb": {
-                        "total": 104.0,
-                        "contributions": 12
-                    },
-                    "ucsf": {
-                        "total": 957.49,
-                        "contributions": 19
-                    }
-                },
-                "total": 2199.02,
-                "contributions": 62,
-                "title": "OTHER"
-            },
-            {
-                "colleges": {
-                    "ucr": {
-                        "total": 837.0,
-                        "contributions": 17
-                    },
-                    "ucd": {
-                        "total": 372.0,
-                        "contributions": 12
+                    "na": {
+                        "total": 400.0,
+                        "contributions": 4
                     },
                     "ucla": {
-                        "total": 1319.9599999999998,
+                        "total": 5418.08,
+                        "contributions": 77
+                    },
+                    "ucsc": {
+                        "total": 566.0,
+                        "contributions": 6
+                    },
+                    "ucd": {
+                        "total": 2355.0,
                         "contributions": 46
                     },
-                    "ucsc": {
-                        "total": 1850.0,
-                        "contributions": 56
-                    },
-                    "ucsb": {
-                        "total": 914.0,
-                        "contributions": 22
-                    },
-                    "ucb": {
-                        "total": 2783.95,
-                        "contributions": 33
+                    "ucsd": {
+                        "total": 7010.84,
+                        "contributions": 210
                     },
                     "ucsf": {
-                        "total": 1673.5,
-                        "contributions": 17
+                        "total": 3811.81,
+                        "contributions": 78
                     },
-                    "ucsd": {
-                        "total": 1187.0,
-                        "contributions": 5
-                    }
-                },
-                "total": 10937.41,
-                "contributions": 208,
-                "title": "TECH"
-            },
-            {
-                "colleges": {
-                    "ucsb": {
-                        "total": 1270.0,
-                        "contributions": 3
-                    },
-                    "na": {
-                        "total": 342.0,
-                        "contributions": 12
-                    },
-                    "ucla": {
-                        "total": 994.5,
-                        "contributions": 14
-                    },
-                    "ucsc": {
-                        "total": 1084.03,
-                        "contributions": 12
-                    },
-                    "ucd": {
-                        "total": 193.45,
-                        "contributions": 12
-                    },
-                    "ucb": {
-                        "total": 437.0,
-                        "contributions": 12
-                    },
-                    "ucsf": {
-                        "total": 1540.45,
-                        "contributions": 45
-                    },
-                    "ucsd": {
-                        "total": 577.0,
-                        "contributions": 15
-                    }
-                },
-                "total": 6438.429999999999,
-                "contributions": 125,
-                "title": "DATA"
-            },
-            {
-                "colleges": {
-                    "ucr": {
-                        "total": 90.5,
-                        "contributions": 7
-                    },
-                    "na": {
+                    "ucm": {
                         "total": 200.0,
                         "contributions": 2
                     },
-                    "ucla": {
-                        "total": 4093.8999999999996,
-                        "contributions": 49
-                    },
-                    "ucsc": {
-                        "total": 400.0,
-                        "contributions": 3
-                    },
-                    "ucd": {
-                        "total": 1840.0,
-                        "contributions": 25
-                    },
-                    "ucsd": {
-                        "total": 3997.0,
-                        "contributions": 86
-                    },
-                    "ucsf": {
-                        "total": 3068.5699999999997,
-                        "contributions": 46
-                    },
                     "uci": {
-                        "total": 227.0,
-                        "contributions": 3
+                        "total": 277.0,
+                        "contributions": 4
                     },
                     "ucb": {
-                        "total": 1299.0,
-                        "contributions": 9
+                        "total": 1641.0,
+                        "contributions": 14
                     }
                 },
-                "total": 15215.970000000001,
-                "contributions": 230,
+                "total": 21814.229999999996,
+                "contributions": 451,
                 "title": "RESEARCH"
             },
             {
                 "colleges": {
-                    "ucd": {
-                        "total": 54.0,
-                        "contributions": 2
-                    },
-                    "na": {
-                        "total": 132.0,
-                        "contributions": 4
-                    },
-                    "ucla": {
-                        "total": 5162.749999999999,
-                        "contributions": 98
-                    },
-                    "ucsc": {
-                        "total": 116.0,
-                        "contributions": 13
-                    },
-                    "ucsb": {
-                        "total": 500.0,
+                    "ucr": {
+                        "total": 50.0,
                         "contributions": 1
                     },
-                    "ucb": {
-                        "total": 1877.53,
-                        "contributions": 30
+                    "ucd": {
+                        "total": 27.0,
+                        "contributions": 1
                     },
-                    "ucsf": {
-                        "total": 1671.22,
-                        "contributions": 28
-                    },
-                    "uci": {
-                        "total": 500.0,
-                        "contributions": 10
-                    },
-                    "ucsd": {
-                        "total": 336.17,
-                        "contributions": 33
-                    }
-                },
-                "total": 10349.670000000002,
-                "contributions": 219,
-                "title": "ADMINISTRATIVE"
-            },
-            {
-                "colleges": {
                     "ucla": {
-                        "total": 4548.68,
-                        "contributions": 45
+                        "total": 7974.709999999999,
+                        "contributions": 83
                     },
                     "ucsc": {
-                        "total": 203.8,
-                        "contributions": 7
+                        "total": 280.8,
+                        "contributions": 9
                     },
                     "ucsb": {
-                        "total": 81.0,
-                        "contributions": 11
-                    },
-                    "ucb": {
-                        "total": 124.5,
-                        "contributions": 5
-                    },
-                    "ucsf": {
-                        "total": 241.89999999999998,
-                        "contributions": 7
-                    },
-                    "uci": {
-                        "total": 552.75,
-                        "contributions": 19
+                        "total": 210.45,
+                        "contributions": 22
                     },
                     "ucsd": {
-                        "total": 1538.03,
-                        "contributions": 33
+                        "total": 1696.78,
+                        "contributions": 46
+                    },
+                    "ucsf": {
+                        "total": 594.3500000000001,
+                        "contributions": 17
+                    },
+                    "uci": {
+                        "total": 764.2,
+                        "contributions": 30
+                    },
+                    "ucb": {
+                        "total": 283.0,
+                        "contributions": 13
                     }
                 },
-                "total": 7290.659999999999,
-                "contributions": 127,
+                "total": 11881.290000000005,
+                "contributions": 222,
                 "title": "UNDERGRAD"
             },
             {
                 "colleges": {
                     "ucsc": {
-                        "total": 126.0,
-                        "contributions": 6
-                    },
-                    "ucd": {
-                        "total": 805.0,
-                        "contributions": 15
-                    },
-                    "ucb": {
-                        "total": 3110.0,
-                        "contributions": 8
+                        "total": 300.0,
+                        "contributions": 23
                     },
                     "ucsf": {
-                        "total": 22.0,
-                        "contributions": 2
-                    }
-                },
-                "total": 4063.0,
-                "contributions": 31,
-                "title": "RETIRED"
-            },
-            {
-                "colleges": {
-                    "ucsc": {
-                        "total": 150.0,
-                        "contributions": 12
-                    },
-                    "ucsf": {
-                        "total": 35.0,
-                        "contributions": 1
-                    },
-                    "ucla": {
-                        "total": 204.0,
+                        "total": 139.0,
                         "contributions": 4
                     },
                     "ucb": {
-                        "total": 480.0,
-                        "contributions": 13
+                        "total": 929.31,
+                        "contributions": 31
+                    },
+                    "ucla": {
+                        "total": 682.45,
+                        "contributions": 24
                     }
                 },
-                "total": 869.0,
-                "contributions": 30,
+                "total": 2050.76,
+                "contributions": 82,
                 "title": "ARTS"
             },
             {
                 "colleges": {
                     "ucd": {
-                        "total": 648.0,
-                        "contributions": 19
+                        "total": 688.0,
+                        "contributions": 22
                     },
                     "ucb": {
-                        "total": 75.0,
-                        "contributions": 2
+                        "total": 102.0,
+                        "contributions": 3
                     },
                     "ucsf": {
-                        "total": 414.0,
-                        "contributions": 5
+                        "total": 741.0,
+                        "contributions": 8
                     }
                 },
-                "total": 1137.0,
-                "contributions": 26,
+                "total": 1531.0,
+                "contributions": 33,
                 "title": "LEGAL"
             }
         ],
         "party": "dem",
-        "total": 13913776.019999102,
-        "contributions": 229708,
+        "total": 19630342.799998637,
+        "contributions": 407151,
         "locations": [],
-        "colleges_total": 157640.58000000007
+        "colleges_total": 224403.37000000026
     },
     {
         "colleges": [
             {
-                "total": 11682.0,
-                "contributions": 39,
+                "total": 33293.950000000004,
+                "contributions": 230,
                 "name": "na"
             },
             {
-                "total": 53879.72,
-                "contributions": 205,
+                "total": 167308.37,
+                "contributions": 1053,
                 "name": "ucb"
             },
             {
-                "total": 21301.0,
-                "contributions": 57,
+                "total": 52590.340000000004,
+                "contributions": 293,
                 "name": "ucd"
             },
             {
-                "total": 14770.0,
-                "contributions": 68,
+                "total": 33920.020000000004,
+                "contributions": 176,
                 "name": "uci"
             },
             {
-                "total": 82941.37999999999,
-                "contributions": 348,
+                "total": 195323.46,
+                "contributions": 1296,
                 "name": "ucla"
             },
             {
-                "total": 2969.0,
-                "contributions": 8,
+                "total": 675.0,
+                "contributions": 5,
+                "name": "ucm"
+            },
+            {
+                "total": 7989.5,
+                "contributions": 56,
                 "name": "ucr"
             },
             {
-                "total": 6674.0,
-                "contributions": 33,
+                "total": 25951.19,
+                "contributions": 242,
                 "name": "ucsb"
             },
             {
-                "total": 9336.130000000001,
-                "contributions": 28,
+                "total": 16427.13,
+                "contributions": 111,
                 "name": "ucsc"
             },
             {
-                "total": 27108.8,
-                "contributions": 124,
+                "total": 57630.98,
+                "contributions": 510,
                 "name": "ucsd"
             },
             {
-                "total": 27284.670000000002,
-                "contributions": 110,
+                "total": 94556.73000000001,
+                "contributions": 623,
                 "name": "ucsf"
             }
         ],
-        "colleges_contributions": 1020,
+        "colleges_contributions": 4595,
         "name": "Clinton",
         "jobs": [
-            {
-                "colleges": {
-                    "ucr": {
-                        "total": 75.0,
-                        "contributions": 3
-                    },
-                    "ucd": {
-                        "total": 14826.0,
-                        "contributions": 41
-                    },
-                    "na": {
-                        "total": 1850.0,
-                        "contributions": 9
-                    },
-                    "ucla": {
-                        "total": 46673.76,
-                        "contributions": 172
-                    },
-                    "ucsc": {
-                        "total": 5750.0,
-                        "contributions": 4
-                    },
-                    "ucsb": {
-                        "total": 2830.0,
-                        "contributions": 18
-                    },
-                    "ucb": {
-                        "total": 29094.97,
-                        "contributions": 83
-                    },
-                    "ucsf": {
-                        "total": 4516.64,
-                        "contributions": 20
-                    },
-                    "uci": {
-                        "total": 10250.0,
-                        "contributions": 46
-                    },
-                    "ucsd": {
-                        "total": 16841.64,
-                        "contributions": 50
-                    }
-                },
-                "total": 132708.01,
-                "contributions": 446,
-                "title": "FACULTY"
-            },
-            {
-                "colleges": {
-                    "ucr": {
-                        "total": 2700.0,
-                        "contributions": 1
-                    },
-                    "na": {
-                        "total": 5400.0,
-                        "contributions": 2
-                    },
-                    "ucla": {
-                        "total": 5164.31,
-                        "contributions": 33
-                    },
-                    "ucsc": {
-                        "total": 235.0,
-                        "contributions": 7
-                    },
-                    "ucsb": {
-                        "total": 69.0,
-                        "contributions": 7
-                    },
-                    "ucb": {
-                        "total": 9345.0,
-                        "contributions": 22
-                    },
-                    "ucsf": {
-                        "total": 2929.16,
-                        "contributions": 25
-                    },
-                    "uci": {
-                        "total": 515.0,
-                        "contributions": 9
-                    },
-                    "ucsd": {
-                        "total": 816.52,
-                        "contributions": 13
-                    }
-                },
-                "total": 27173.989999999998,
-                "contributions": 119,
-                "title": "ADMINISTRATIVE"
-            },
-            {
-                "colleges": {
-                    "na": {
-                        "total": 2057.0,
-                        "contributions": 12
-                    },
-                    "ucsf": {
-                        "total": 214.41,
-                        "contributions": 2
-                    },
-                    "ucla": {
-                        "total": 6416.0,
-                        "contributions": 15
-                    },
-                    "ucb": {
-                        "total": 3225.64,
-                        "contributions": 13
-                    }
-                },
-                "total": 11913.050000000001,
-                "contributions": 42,
-                "title": "LEGAL"
-            },
-            {
-                "colleges": {
-                    "na": {
-                        "total": 600.0,
-                        "contributions": 2
-                    },
-                    "ucla": {
-                        "total": 1288.0,
-                        "contributions": 5
-                    },
-                    "ucd": {
-                        "total": 250.0,
-                        "contributions": 9
-                    },
-                    "ucb": {
-                        "total": 800.0,
-                        "contributions": 2
-                    },
-                    "ucsf": {
-                        "total": 4010.64,
-                        "contributions": 14
-                    },
-                    "ucsd": {
-                        "total": 4518.639999999999,
-                        "contributions": 42
-                    }
-                },
-                "total": 11467.28,
-                "contributions": 74,
-                "title": "RESEARCH"
-            },
-            {
-                "colleges": {
-                    "na": {
-                        "total": 725.0,
-                        "contributions": 8
-                    },
-                    "ucla": {
-                        "total": 1334.15,
-                        "contributions": 26
-                    },
-                    "ucsc": {
-                        "total": 67.0,
-                        "contributions": 4
-                    },
-                    "ucsb": {
-                        "total": 25.0,
-                        "contributions": 1
-                    },
-                    "ucb": {
-                        "total": 1620.0,
-                        "contributions": 15
-                    },
-                    "ucsf": {
-                        "total": 313.0,
-                        "contributions": 11
-                    }
-                },
-                "total": 4084.15,
-                "contributions": 65,
-                "title": "OTHER"
-            },
-            {
-                "colleges": {
-                    "ucsc": {
-                        "total": 2736.69,
-                        "contributions": 2
-                    },
-                    "ucsf": {
-                        "total": 527.8199999999999,
-                        "contributions": 9
-                    },
-                    "ucla": {
-                        "total": 1173.0,
-                        "contributions": 20
-                    },
-                    "uci": {
-                        "total": 305.0,
-                        "contributions": 7
-                    },
-                    "ucb": {
-                        "total": 3525.0,
-                        "contributions": 10
-                    }
-                },
-                "total": 8267.509999999998,
-                "contributions": 48,
-                "title": "DATA"
-            },
-            {
-                "colleges": {
-                    "ucr": {
-                        "total": 69.0,
-                        "contributions": 3
-                    },
-                    "na": {
-                        "total": 1050.0,
-                        "contributions": 6
-                    },
-                    "ucla": {
-                        "total": 1933.88,
-                        "contributions": 15
-                    },
-                    "ucsc": {
-                        "total": 100.0,
-                        "contributions": 4
-                    },
-                    "ucd": {
-                        "total": 2700.0,
-                        "contributions": 2
-                    },
-                    "ucb": {
-                        "total": 542.0,
-                        "contributions": 22
-                    },
-                    "ucsf": {
-                        "total": 550.0,
-                        "contributions": 2
-                    },
-                    "uci": {
-                        "total": 2700.0,
-                        "contributions": 5
-                    },
-                    "ucsd": {
-                        "total": 1000.0,
-                        "contributions": 1
-                    }
-                },
-                "total": 10644.88,
-                "contributions": 60,
-                "title": "RETIRED"
-            },
             {
                 "colleges": {
                     "ucr": {
                         "total": 125.0,
                         "contributions": 1
                     },
+                    "na": {
+                        "total": 994.55,
+                        "contributions": 21
+                    },
                     "ucla": {
-                        "total": 14559.64,
-                        "contributions": 46
+                        "total": 31985.75,
+                        "contributions": 208
                     },
                     "ucsc": {
-                        "total": 147.44,
-                        "contributions": 2
+                        "total": 222.44,
+                        "contributions": 5
                     },
                     "ucd": {
-                        "total": 3500.0,
-                        "contributions": 4
+                        "total": 4092.0,
+                        "contributions": 33
                     },
                     "ucsd": {
-                        "total": 1132.0,
-                        "contributions": 15
+                        "total": 4502.3,
+                        "contributions": 75
                     },
                     "ucsf": {
-                        "total": 14078.0,
-                        "contributions": 23
+                        "total": 34480.340000000004,
+                        "contributions": 151
+                    },
+                    "ucm": {
+                        "total": 150.0,
+                        "contributions": 2
                     },
                     "uci": {
-                        "total": 1000.0,
-                        "contributions": 1
+                        "total": 2000.0,
+                        "contributions": 2
                     },
                     "ucb": {
-                        "total": 3761.0,
-                        "contributions": 17
+                        "total": 7427.5,
+                        "contributions": 42
                     }
                 },
-                "total": 38303.08,
-                "contributions": 109,
+                "total": 85979.88,
+                "contributions": 540,
                 "title": "HEALTH"
             },
             {
                 "colleges": {
-                    "ucsd": {
-                        "total": 2700.0,
-                        "contributions": 1
+                    "ucr": {
+                        "total": 4769.5,
+                        "contributions": 48
                     },
-                    "ucsb": {
-                        "total": 3700.0,
-                        "contributions": 2
+                    "ucd": {
+                        "total": 39725.09,
+                        "contributions": 168
                     },
-                    "ucb": {
-                        "total": 308.47,
-                        "contributions": 11
+                    "na": {
+                        "total": 11718.400000000001,
+                        "contributions": 76
                     },
                     "ucla": {
-                        "total": 3700.0,
+                        "total": 105415.93000000001,
+                        "contributions": 574
+                    },
+                    "ucsc": {
+                        "total": 7762.0,
+                        "contributions": 22
+                    },
+                    "ucsb": {
+                        "total": 17304.239999999998,
+                        "contributions": 149
+                    },
+                    "ucb": {
+                        "total": 90960.65999999999,
+                        "contributions": 352
+                    },
+                    "ucsf": {
+                        "total": 27367.69,
+                        "contributions": 129
+                    },
+                    "ucm": {
+                        "total": 500.0,
                         "contributions": 2
+                    },
+                    "uci": {
+                        "total": 23595.15,
+                        "contributions": 109
+                    },
+                    "ucsd": {
+                        "total": 30921.769999999997,
+                        "contributions": 230
                     }
                 },
-                "total": 10408.470000000001,
-                "contributions": 16,
-                "title": "UNDERGRAD"
+                "total": 360040.43,
+                "contributions": 1859,
+                "title": "FACULTY"
             },
             {
                 "colleges": {
-                    "ucsf": {
-                        "total": 45.0,
-                        "contributions": 1
-                    },
-                    "ucsb": {
-                        "total": 50.0,
-                        "contributions": 5
-                    },
-                    "ucb": {
-                        "total": 1407.6399999999999,
-                        "contributions": 9
+                    "na": {
+                        "total": 370.0,
+                        "contributions": 4
                     },
                     "ucla": {
-                        "total": 348.64,
-                        "contributions": 12
+                        "total": 906.66,
+                        "contributions": 40
+                    },
+                    "ucsb": {
+                        "total": 138.07,
+                        "contributions": 14
+                    },
+                    "ucsd": {
+                        "total": 386.0,
+                        "contributions": 14
+                    },
+                    "ucsf": {
+                        "total": 90.0,
+                        "contributions": 2
+                    },
+                    "ucb": {
+                        "total": 10875.570000000002,
+                        "contributions": 111
                     }
                 },
-                "total": 1851.28,
-                "contributions": 27,
+                "total": 12766.300000000001,
+                "contributions": 185,
                 "title": "GRAD"
             },
             {
                 "colleges": {
-                    "ucb": {
-                        "total": 250.0,
-                        "contributions": 1
+                    "ucsb": {
+                        "total": 100.0,
+                        "contributions": 2
+                    },
+                    "na": {
+                        "total": 1100.0,
+                        "contributions": 4
                     },
                     "ucla": {
-                        "total": 350.0,
+                        "total": 5434.5,
+                        "contributions": 22
+                    },
+                    "ucsc": {
+                        "total": 1100.0,
                         "contributions": 2
+                    },
+                    "ucd": {
+                        "total": 875.0,
+                        "contributions": 26
+                    },
+                    "ucsd": {
+                        "total": 10569.64,
+                        "contributions": 96
+                    },
+                    "ucsf": {
+                        "total": 4398.639999999999,
+                        "contributions": 25
+                    },
+                    "ucm": {
+                        "total": 25.0,
+                        "contributions": 1
+                    },
+                    "ucb": {
+                        "total": 7751.0,
+                        "contributions": 21
                     }
                 },
-                "total": 600.0,
-                "contributions": 3,
-                "title": "ARTS"
+                "total": 31353.78,
+                "contributions": 199,
+                "title": "RESEARCH"
             },
             {
                 "colleges": {
-                    "ucsc": {
-                        "total": 300.0,
-                        "contributions": 5
+                    "ucsb": {
+                        "total": 500.0,
+                        "contributions": 1
                     },
+                    "ucr": {
+                        "total": 94.0,
+                        "contributions": 4
+                    },
+                    "na": {
+                        "total": 2300.0,
+                        "contributions": 16
+                    },
+                    "ucla": {
+                        "total": 5374.879999999999,
+                        "contributions": 29
+                    },
+                    "ucsc": {
+                        "total": 396.0,
+                        "contributions": 17
+                    },
+                    "ucd": {
+                        "total": 2700.0,
+                        "contributions": 2
+                    },
+                    "ucb": {
+                        "total": 2038.52,
+                        "contributions": 84
+                    },
+                    "ucsf": {
+                        "total": 800.0,
+                        "contributions": 3
+                    },
+                    "uci": {
+                        "total": 2950.0,
+                        "contributions": 13
+                    },
+                    "ucsd": {
+                        "total": 1285.0,
+                        "contributions": 5
+                    }
+                },
+                "total": 18438.4,
+                "contributions": 174,
+                "title": "RETIRED"
+            },
+            {
+                "colleges": {
                     "ucd": {
                         "total": 25.0,
                         "contributions": 1
                     },
-                    "ucsd": {
-                        "total": 100.0,
+                    "na": {
+                        "total": 1350.0,
+                        "contributions": 15
+                    },
+                    "ucla": {
+                        "total": 1942.3,
+                        "contributions": 63
+                    },
+                    "ucsc": {
+                        "total": 154.0,
+                        "contributions": 9
+                    },
+                    "ucsb": {
+                        "total": 212.5,
+                        "contributions": 5
+                    },
+                    "ucb": {
+                        "total": 3240.19,
+                        "contributions": 38
+                    },
+                    "ucsf": {
+                        "total": 1430.35,
+                        "contributions": 45
+                    }
+                },
+                "total": 8354.339999999998,
+                "contributions": 176,
+                "title": "OTHER"
+            },
+            {
+                "colleges": {
+                    "ucsb": {
+                        "total": 3700.0,
                         "contributions": 2
+                    },
+                    "ucla": {
+                        "total": 5317.0,
+                        "contributions": 18
+                    },
+                    "ucb": {
+                        "total": 1357.2800000000002,
+                        "contributions": 50
+                    },
+                    "uci": {
+                        "total": 111.15,
+                        "contributions": 8
+                    },
+                    "ucsd": {
+                        "total": 3325.0,
+                        "contributions": 8
+                    }
+                },
+                "total": 13810.43,
+                "contributions": 86,
+                "title": "UNDERGRAD"
+            },
+            {
+                "colleges": {
+                    "na": {
+                        "total": 700.0,
+                        "contributions": 11
+                    },
+                    "ucla": {
+                        "total": 250.0,
+                        "contributions": 1
+                    },
+                    "ucsc": {
+                        "total": 575.0,
+                        "contributions": 10
+                    },
+                    "ucd": {
+                        "total": 160.5,
+                        "contributions": 3
+                    },
+                    "ucsd": {
+                        "total": 675.0,
+                        "contributions": 11
                     },
                     "ucsf": {
                         "total": 100.0,
                         "contributions": 3
+                    },
+                    "ucb": {
+                        "total": 1450.0,
+                        "contributions": 4
                     }
                 },
-                "total": 525.0,
-                "contributions": 11,
+                "total": 3910.5,
+                "contributions": 43,
                 "title": "TECH"
+            },
+            {
+                "colleges": {
+                    "ucr": {
+                        "total": 2800.0,
+                        "contributions": 2
+                    },
+                    "ucd": {
+                        "total": 160.0,
+                        "contributions": 6
+                    },
+                    "na": {
+                        "total": 6130.0,
+                        "contributions": 9
+                    },
+                    "ucla": {
+                        "total": 14534.259999999998,
+                        "contributions": 79
+                    },
+                    "ucsc": {
+                        "total": 353.0,
+                        "contributions": 19
+                    },
+                    "ucsb": {
+                        "total": 240.55,
+                        "contributions": 22
+                    },
+                    "ucsd": {
+                        "total": 2914.52,
+                        "contributions": 32
+                    },
+                    "ucsf": {
+                        "total": 4449.47,
+                        "contributions": 59
+                    },
+                    "uci": {
+                        "total": 648.0,
+                        "contributions": 20
+                    },
+                    "ucb": {
+                        "total": 14725.0,
+                        "contributions": 112
+                    }
+                },
+                "total": 46954.8,
+                "contributions": 360,
+                "title": "ADMINISTRATIVE"
+            },
+            {
+                "colleges": {
+                    "na": {
+                        "total": 1426.0,
+                        "contributions": 7
+                    },
+                    "ucla": {
+                        "total": 2232.75,
+                        "contributions": 60
+                    },
+                    "ucsc": {
+                        "total": 4946.6900000000005,
+                        "contributions": 10
+                    },
+                    "ucb": {
+                        "total": 4637.3099999999995,
+                        "contributions": 31
+                    },
+                    "ucsf": {
+                        "total": 2724.3199999999997,
+                        "contributions": 18
+                    },
+                    "uci": {
+                        "total": 495.75,
+                        "contributions": 8
+                    }
+                },
+                "total": 16462.82,
+                "contributions": 134,
+                "title": "DATA"
+            },
+            {
+                "colleges": {
+                    "na": {
+                        "total": 4296.000000000001,
+                        "contributions": 47
+                    },
+                    "ucb": {
+                        "total": 4032.8900000000003,
+                        "contributions": 22
+                    },
+                    "ucla": {
+                        "total": 8456.0,
+                        "contributions": 19
+                    },
+                    "ucsf": {
+                        "total": 1480.96,
+                        "contributions": 5
+                    }
+                },
+                "total": 18265.850000000002,
+                "contributions": 93,
+                "title": "LEGAL"
+            },
+            {
+                "colleges": {
+                    "ucla": {
+                        "total": 350.0,
+                        "contributions": 2
+                    },
+                    "ucb": {
+                        "total": 600.0,
+                        "contributions": 7
+                    },
+                    "ucsf": {
+                        "total": 300.0,
+                        "contributions": 3
+                    }
+                },
+                "total": 1250.0,
+                "contributions": 12,
+                "title": "ARTS"
             }
         ],
         "party": "dem",
-        "total": 30346423.560000055,
-        "contributions": 93679,
+        "total": 63707470.929998055,
+        "contributions": 356696,
         "locations": [],
-        "colleges_total": 257946.70000000004
+        "colleges_total": 685666.6700000002
     },
     {
         "colleges": [
@@ -1047,8 +1132,8 @@
             }
         ],
         "party": "dem",
-        "total": 297549.26,
-        "contributions": 393,
+        "total": 297834.26,
+        "contributions": 397,
         "locations": [],
         "colleges_total": 3950.0
     },
@@ -1091,17 +1176,6 @@
         "jobs": [
             {
                 "colleges": {
-                    "ucd": {
-                        "total": 305.0,
-                        "contributions": 7
-                    }
-                },
-                "total": 305.0,
-                "contributions": 7,
-                "title": "ADMINISTRATIVE"
-            },
-            {
-                "colleges": {
                     "ucsd": {
                         "total": 60.0,
                         "contributions": 3
@@ -1114,6 +1188,17 @@
                 "total": 195.0,
                 "contributions": 8,
                 "title": "HEALTH"
+            },
+            {
+                "colleges": {
+                    "ucd": {
+                        "total": 305.0,
+                        "contributions": 7
+                    }
+                },
+                "total": 305.0,
+                "contributions": 7,
+                "title": "ADMINISTRATIVE"
             },
             {
                 "colleges": {
@@ -1143,8 +1228,8 @@
             }
         ],
         "party": "rep",
-        "total": 3074944.3500000024,
-        "contributions": 27238,
+        "total": 2939309.000000002,
+        "contributions": 27348,
         "locations": [],
         "colleges_total": 1125.0
     },
@@ -1156,58 +1241,43 @@
                 "name": "ucb"
             },
             {
-                "total": 200.0,
-                "contributions": 4,
+                "total": 500.0,
+                "contributions": 10,
                 "name": "uci"
             },
             {
-                "total": 12633.0,
-                "contributions": 26,
+                "total": 10108.0,
+                "contributions": 32,
                 "name": "ucla"
             },
             {
-                "total": 2375.0,
-                "contributions": 32,
+                "total": 2550.0,
+                "contributions": 35,
                 "name": "ucsc"
             },
             {
-                "total": 125.0,
-                "contributions": 3,
+                "total": 160.0,
+                "contributions": 4,
                 "name": "ucsf"
             }
         ],
-        "colleges_contributions": 66,
+        "colleges_contributions": 82,
         "name": "Cruz",
         "jobs": [
             {
                 "colleges": {
                     "ucsc": {
-                        "total": 1525.0,
-                        "contributions": 28
+                        "total": 1700.0,
+                        "contributions": 31
                     },
                     "ucla": {
-                        "total": 1048.0,
-                        "contributions": 19
+                        "total": 1138.0,
+                        "contributions": 22
                     }
                 },
-                "total": 2573.0,
-                "contributions": 47,
+                "total": 2838.0,
+                "contributions": 53,
                 "title": "TECH"
-            },
-            {
-                "colleges": {
-                    "ucla": {
-                        "total": 11300.0,
-                        "contributions": 5
-                    },
-                    "ucsf": {
-                        "total": 75.0,
-                        "contributions": 2
-                    }
-                },
-                "total": 11375.0,
-                "contributions": 7,
-                "title": "HEALTH"
             },
             {
                 "colleges": {
@@ -1226,29 +1296,18 @@
             },
             {
                 "colleges": {
-                    "ucb": {
-                        "total": 500.0,
-                        "contributions": 1
-                    },
                     "ucla": {
-                        "total": 35.0,
-                        "contributions": 1
+                        "total": 8600.0,
+                        "contributions": 6
+                    },
+                    "ucsf": {
+                        "total": 110.0,
+                        "contributions": 3
                     }
                 },
-                "total": 535.0,
-                "contributions": 2,
-                "title": "UNDERGRAD"
-            },
-            {
-                "colleges": {
-                    "uci": {
-                        "total": 200.0,
-                        "contributions": 4
-                    }
-                },
-                "total": 200.0,
-                "contributions": 4,
-                "title": "FACULTY"
+                "total": 8710.0,
+                "contributions": 9,
+                "title": "HEALTH"
             },
             {
                 "colleges": {
@@ -1260,55 +1319,86 @@
                 "total": 50.0,
                 "contributions": 1,
                 "title": "RESEARCH"
+            },
+            {
+                "colleges": {
+                    "uci": {
+                        "total": 400.0,
+                        "contributions": 8
+                    }
+                },
+                "total": 400.0,
+                "contributions": 8,
+                "title": "FACULTY"
+            },
+            {
+                "colleges": {
+                    "ucla": {
+                        "total": 120.0,
+                        "contributions": 3
+                    },
+                    "ucb": {
+                        "total": 500.0,
+                        "contributions": 1
+                    }
+                },
+                "total": 620.0,
+                "contributions": 4,
+                "title": "UNDERGRAD"
             }
         ],
         "party": "rep",
-        "total": 4725199.450000001,
-        "contributions": 41903,
+        "total": 5735382.2700000005,
+        "contributions": 57820,
         "locations": [],
-        "colleges_total": 15833.0
+        "colleges_total": 13818.0
     },
     {
         "colleges": [
+            {
+                "total": 100.0,
+                "contributions": 1,
+                "name": "na"
+            },
             {
                 "total": 25.0,
                 "contributions": 1,
                 "name": "ucb"
             },
             {
-                "total": 526.0,
-                "contributions": 9,
+                "total": 426.0,
+                "contributions": 10,
                 "name": "ucla"
             },
             {
-                "total": 100.0,
-                "contributions": 1,
+                "total": 235.0,
+                "contributions": 2,
                 "name": "ucsf"
             }
         ],
-        "colleges_contributions": 11,
+        "colleges_contributions": 14,
         "name": "Kasich",
         "jobs": [
             {
                 "colleges": {
                     "ucla": {
-                        "total": 526.0,
-                        "contributions": 9
+                        "total": 426.0,
+                        "contributions": 10
                     }
                 },
-                "total": 526.0,
-                "contributions": 9,
+                "total": 426.0,
+                "contributions": 10,
                 "title": "FACULTY"
             },
             {
                 "colleges": {
                     "ucsf": {
-                        "total": 100.0,
-                        "contributions": 1
+                        "total": 235.0,
+                        "contributions": 2
                     }
                 },
-                "total": 100.0,
-                "contributions": 1,
+                "total": 235.0,
+                "contributions": 2,
                 "title": "HEALTH"
             },
             {
@@ -1324,10 +1414,10 @@
             }
         ],
         "party": "rep",
-        "total": 1271638.42,
-        "contributions": 2144,
+        "total": 1519569.54,
+        "contributions": 3005,
         "locations": [],
-        "colleges_total": 651.0
+        "colleges_total": 786.0
     },
     {
         "colleges": [],
@@ -1335,8 +1425,8 @@
         "name": "Bush",
         "jobs": [],
         "party": "rep",
-        "total": 3327043.83,
-        "contributions": 3109,
+        "total": 3325791.83,
+        "contributions": 3115,
         "locations": [],
         "colleges_total": 0
     },
@@ -1473,8 +1563,8 @@
             }
         ],
         "party": "rep",
-        "total": 5488752.270000001,
-        "contributions": 13717,
+        "total": 4842483.7200000025,
+        "contributions": 14092,
         "locations": [],
         "colleges_total": 4275.0
     },
@@ -1547,39 +1637,118 @@
             }
         ],
         "party": "rep",
-        "total": 819173.2899999963,
-        "contributions": 4246,
+        "total": 797104.2899999961,
+        "contributions": 4259,
         "locations": [],
         "colleges_total": 1742.75
     },
     {
         "colleges": [
             {
-                "total": 250.0,
+                "total": 40.0,
                 "contributions": 1,
+                "name": "na"
+            },
+            {
+                "total": 28.0,
+                "contributions": 1,
+                "name": "ucd"
+            },
+            {
+                "total": 160.0,
+                "contributions": 2,
+                "name": "uci"
+            },
+            {
+                "total": 3189.0,
+                "contributions": 5,
+                "name": "ucla"
+            },
+            {
+                "total": 350.0,
+                "contributions": 2,
                 "name": "ucm"
+            },
+            {
+                "total": 1086.4,
+                "contributions": 5,
+                "name": "ucsd"
+            },
+            {
+                "total": 80.0,
+                "contributions": 2,
+                "name": "ucsf"
             }
         ],
-        "colleges_contributions": 1,
+        "colleges_contributions": 18,
         "name": "Trump",
         "jobs": [
             {
                 "colleges": {
+                    "ucd": {
+                        "total": 28.0,
+                        "contributions": 1
+                    },
+                    "ucla": {
+                        "total": 2950.0,
+                        "contributions": 2
+                    },
+                    "uci": {
+                        "total": 160.0,
+                        "contributions": 2
+                    }
+                },
+                "total": 3138.0,
+                "contributions": 5,
+                "title": "FACULTY"
+            },
+            {
+                "colleges": {
                     "ucm": {
-                        "total": 250.0,
+                        "total": 350.0,
+                        "contributions": 2
+                    }
+                },
+                "total": 350.0,
+                "contributions": 2,
+                "title": "RESEARCH"
+            },
+            {
+                "colleges": {
+                    "ucsd": {
+                        "total": 1000.0,
+                        "contributions": 1
+                    },
+                    "ucla": {
+                        "total": 12.0,
                         "contributions": 1
                     }
                 },
-                "total": 250.0,
-                "contributions": 1,
-                "title": "RESEARCH"
+                "total": 1012.0,
+                "contributions": 2,
+                "title": "HEALTH"
+            },
+            {
+                "colleges": {
+                    "ucsd": {
+                        "total": 28.0,
+                        "contributions": 1
+                    },
+                    "ucla": {
+                        "total": 199.0,
+                        "contributions": 1
+                    }
+                },
+                "total": 227.0,
+                "contributions": 2,
+                "title": "ADMINISTRATIVE"
             }
         ],
         "party": "rep",
-        "total": 331901.0,
-        "contributions": 1091,
+        "total": 6172794.210000108,
+        "contributions": 40507,
         "locations": [],
-        "colleges_total": 250.0
+        "colleges_total": 4933.4
     },
     {
         "colleges": [],
@@ -1587,8 +1756,8 @@
         "name": "Graham",
         "jobs": [],
         "party": "rep",
-        "total": 405895.0,
-        "contributions": 341,
+        "total": 414495.0,
+        "contributions": 347,
         "locations": [],
         "colleges_total": 0
     },
@@ -1617,30 +1786,46 @@
     {
         "colleges": [
             {
-                "total": 10.0,
+                "total": 250.0,
                 "contributions": 1,
+                "name": "na"
+            },
+            {
+                "total": 275.0,
+                "contributions": 7,
                 "name": "ucsf"
             }
         ],
-        "colleges_contributions": 1,
+        "colleges_contributions": 8,
         "name": "Other",
         "jobs": [
             {
                 "colleges": {
                     "ucsf": {
-                        "total": 10.0,
+                        "total": 50.0,
+                        "contributions": 5
+                    }
+                },
+                "total": 50.0,
+                "contributions": 5,
+                "title": "DATA"
+            },
+            {
+                "colleges": {
+                    "ucsf": {
+                        "total": 100.0,
                         "contributions": 1
                     }
                 },
-                "total": 10.0,
+                "total": 100.0,
                 "contributions": 1,
-                "title": "DATA"
+                "title": "OTHER"
             }
         ],
         "party": "mixed",
-        "total": 616247.54,
-        "contributions": 944,
+        "total": 1065524.0800000003,
+        "contributions": 2414,
         "locations": [],
-        "colleges_total": 10.0
+        "colleges_total": 525.0
     }
 ]
