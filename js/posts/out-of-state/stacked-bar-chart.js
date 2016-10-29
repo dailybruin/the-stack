@@ -1,14 +1,14 @@
 function initStackedBarChart(data) {
   var margin = {top: 50, right: 20, bottom: 10, left: 80},
-      width = 800 - margin.left - margin.right,
+      width = 740 - margin.left - margin.right,
       height = 500 - margin.top - margin.bottom;
 
   var y = d3.scaleBand().rangeRound([0, height]).padding(.3);
 
   var x = d3.scaleLinear().rangeRound([0, width]);
 
-  var color = d3.scaleOrdinal()
-      .range(["#c7001e", "#f6a580", "#cccccc", "#92c6db", "#086fad", "#086fad"]);
+  var color = d3.scaleOrdinal(d3.schemeCategory20)
+    // .range(["#c7001e", "#f6a580", "#cccccc", "#92c6db", "#086fad", "#086fad"]);
 
   var xAxis = d3.axisTop()
       .scale(x)
@@ -30,7 +30,6 @@ function initStackedBarChart(data) {
     
 
   data.forEach(function(d) {
-    // calc percentages
     d["Berkeley"] = +d["UCB P"];
     d["Davis"] = +d["UCD P"];
     d["Irvine"] = +d["UCI P"];
@@ -104,8 +103,7 @@ function initStackedBarChart(data) {
       .attr("y2", height);
 
   var startp = svg.append("g").attr("class", "legendbox").attr("id", "mylegendbox");
-  // this is not nice, we should calculate the bounding box and use that
-  var legend_tabs = [0, 80, 140, 200, 290, 360];
+  var legend_tabs = [0, 80, 140, 200, 290, 360]; // hardcoded
   var legend = startp.selectAll(".legend")
       .data(color.domain().slice())
     .enter().append("g")

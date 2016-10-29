@@ -8,7 +8,7 @@ function initBubbleChart(data) {
 
 	var pack = d3.pack()
 	    .size([width, width])
-	    .padding(1.5);
+	    .padding(1.1);
 
 	var root = d3.hierarchy({children: data})
 	      .sum(function(d) { 

@@ -1,19 +1,40 @@
-function initTable(data) {
-	var tbl     = document.createElement("table");
-	var tblBody = document.createElement("tbody");
-
-	for (var i = 0; i < data.length; i++) {
-		var row = document.createElement("tr");
-
-		for (var j in data[i]) {
-			var cell = document.createElement("td");  
-			var cellText = document.createTextNode(data[i][j]);
-			cell.appendChild(cellText);
-			row.appendChild(cell);
-		}
-		tblBody.appendChild(row);
+function formatCell(c) {
+	switch (c.column) {
+		case "Current 538 margin (P)":
+			return c.value > 0 ? "color: blue" : "color: red";
+			break;
+		default:
+			return "color: black";
 	}
+}
 
-	tbl.appendChild(tblBody);
-	document.getElementById("table").appendChild(tbl);
+function initTable(data) {
+	var table = d3.select("#table").append('table');
+	var thead = table.append('thead');
+	var tbody = table.append('tbody');
+
+	var columns = ["State", "UC", "Current 538 margin (P)", "Percentage of vote each person contributes"];
+	var displayColumns = ["State", "Registered UC Voters", "538 Margin (%)", "Impact of 1 Vote"]
+
+	thead.append('tr')
+		.selectAll('th')
+		.data(displayColumns).enter()
+		.append('th')
+			.text(function(column) { return column; })
+
+	var rows = tbody.selectAll("tr")
+    .data(data)
+    .enter()
+    .append("tr");
+
+  var cells = rows.selectAll("td")
+  	.data(function(row) {
+  		return columns.map(function(column) {
+        return {column: column, value: row[column]};
+      });
+  	})
+    .enter()
+    .append("td")
+    .attr("style", function(d) { return formatCell(d); })
+    .html(function(d) { return d.value; });
 }
