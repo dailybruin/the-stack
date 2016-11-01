@@ -1,0 +1,47 @@
+.time-line {
+  fill: none;
+  stroke-width: 3px;
+  opacity: 0.8; }
+
+.wooden {
+  stroke: #008fd5; }
+
+.bfit {
+  stroke: #ffb81c; }
+
+.facility-open {
+  stroke: #008fd5; }
+
+.facility-closed {
+  stroke: #f6b900; }
+
+.voronoi path {
+  fill: none;
+  pointer-events: all; }
+
+.now {
+  fill: #3284BF;
+  stroke: #3284BF; }
+
+.label {
+  font-size: 13px; }
+
+.now-label {
+  font-weight: bold; }
+
+.not-now-label {
+  fill: black;
+  font-size: 12px; }
+
+.now-border {
+  stroke-width: 4px; }
+
+.closed-border {
+  stroke: none;
+  opacity: 0; }
+
+.not-now-border {
+  stroke: grey;
+  stroke-width: 1px; }
+
+/*# sourceMappingURL=app.css.map */

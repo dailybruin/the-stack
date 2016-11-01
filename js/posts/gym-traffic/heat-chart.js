@@ -14,11 +14,11 @@ $(document).ready(function() {
     })
 
     // render first time
-    renderFacilityHeatCharts(data)
+    renderAllFacilityHeatCharts(data)
 
     // render upon window resize
     $(window).resize(function() {
-      renderFacilityHeatCharts(data)
+      renderAllFacilityHeatCharts(data)
     })
   });
 
@@ -30,12 +30,12 @@ $(document).ready(function() {
 })
 
 // render wooden and bfit heat charts
-function renderFacilityHeatCharts(data) {
+function renderAllFacilityHeatCharts(data) {
   let woodenData = data.filter(d => d.facility == 'wooden');
   let bfitData = data.filter(d => d.facility == 'bfit');
 
-  renderHeatChart(woodenData, '#wooden-heatmap');
-  renderHeatChart(bfitData, '#bfit-heatmap');
+  renderFacilityHeatChart(woodenData, '#wooden-heatmap');
+  renderFacilityHeatChart(bfitData, '#bfit-heatmap');
 }
 
 // render comparison charts
@@ -43,7 +43,7 @@ function renderComparisonCharts(data) {
 }
 
 // render heat chart of a facility
-function renderHeatChart(data, container, comparison = false) {
+function renderFacilityHeatChart(data, container, comparison = false) {
   // reset container content
   $(container).html('');
 
@@ -138,16 +138,22 @@ function renderHeatChart_(data, colors, container) {
     })
 
   // render hour of day labels horizontally
+  let times = [
+    {label: 'Morning', centerDigit: 8},
+    {label: 'Noon', centerDigit: 12},
+    {label: 'Evening', centerDigit: 17},
+    {label: 'Midnight', centerDigit: 0}
+  ];
   let hours = [
-    {label: '5 AM', digit: 5},
+    {label: '5', digit: 5},
     {label: '6', digit: 6},
     {label: '7', digit: 7},
     {label: '8', digit: 8},
     {label: '9', digit: 9},
     {label: '10', digit: 10},
     {label: '11', digit: 11},
-    {label: 'Noon', digit: 12},
-    {label: '1 PM', digit: 13},
+    {label: '12', digit: 12},
+    {label: '1', digit: 13},
     {label: '2', digit: 14},
     {label: '3', digit: 15},
     {label: '4', digit: 16},
@@ -158,18 +164,33 @@ function renderHeatChart_(data, colors, container) {
     {label: '9', digit: 21},
     {label: '10', digit: 22},
     {label: '11', digit: 23},
-    {label: 'Midnight', digit: 0},
-    {label: '1 AM', digit: 1}
+    {label: '12', digit: 0},
+    {label: '1', digit: 1}
   ];
+
+  let timeLabelOffsetY = 0,
+      hourLabelOffsetY = 18;
+
+  let timeLabels = chartG.selectAll('.time-label')
+    .data(times)
+    .enter().append('text')
+    .text(d => d.label)
+    // FIX: center time label above specific hours
+    .attr('x', (d, i) => {
+      return 100 + i * 120;
+    })
+    .attr('y', timeLabelOffsetY)
+    .style('text-anchor', 'end')
+    .attr('class', 'time-label');
 
   let hourLabels = chartG.selectAll(".hour-label")
     .data(hours)
     .enter().append("text")
-    .text(d => d.digit)
+    .text(d => d.label)
     .attr("x", (d, i) => {
       return 50 + i * gridWidth
     })
-    .attr("y", 5)
+    .attr("y", hourLabelOffsetY)
     .style("text-anchor", "end")
     //.attr("transform", "translate(0, 15)")
     .attr("class", (d, i) => {

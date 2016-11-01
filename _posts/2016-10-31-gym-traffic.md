@@ -17,7 +17,7 @@ scripts:
     - /js/posts/gym-traffic/line-chart.js
     - /js/posts/gym-traffic/heat-chart.js
 stylesheets:
-    - /css/posts/gym-traffic/style.css
+    - /css/posts/gym-traffic/app.css
     - /css/posts/gym-traffic/semantic.min.css
 ---
 
@@ -30,7 +30,7 @@ stylesheets:
       <option value='bfit'>BFit</option>
       <option value='both'>Wooden + BFit</option>
     </select>
-    
+
     <select id='pick-scale'>
       <option value='relative'>% Relative to peak</option>
       <option value='absolute'>Number of people</option>
