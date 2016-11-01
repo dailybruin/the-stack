@@ -24,20 +24,24 @@ stylesheets:
 <div id="viz-container">
 
   <div id='viz-selections'>
+
     <select id='pick-facility'>
       <option value='wooden'>Wooden</option>
       <option value='bfit'>BFit</option>
       <option value='both'>Wooden + BFit</option>
     </select>
+    
     <select id='pick-scale'>
       <option value='relative'>% Relative to peak</option>
       <option value='absolute'>Number of people</option>
     </select>
+
   </div>
 
   <div id='line-chart'></div>
 
   <div id='heat-chart'>
+
     <div class='ui centered medium header'>Wooden</div>
     <div class='ui centered one column grid'>
       <div class='twelve wide column' id='wooden-heatmap'></div>
@@ -52,6 +56,7 @@ stylesheets:
     <div class='ui centered one column grid'>
       <div class='twelve wide column' id='comparison-heatmap'></div>
     </div>
+
   </div>
 
 </div>
