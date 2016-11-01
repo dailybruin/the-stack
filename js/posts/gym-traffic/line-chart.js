@@ -1,6 +1,9 @@
-d3.csv('/datasets/gym-traffic/facilities-daily-traffic.csv', function(error, data) {
-  if (error) throw error;
-  renderGraphics(data);
+// run this script once page is ready
+$(document).ready(function() {
+  d3.csv('/datasets/gym-traffic/facilities-daily-traffic.csv', function(error, data) {
+    if (error) throw error;
+    renderGraphics(data);
+  })
 })
 
 function renderGraphics(data) {
