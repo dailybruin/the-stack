@@ -11,6 +11,11 @@ Daily Bruin's data journalism and newsroom tech blog.
 3. run `./setup.sh`
 3. run `jekyll serve`
 
+### Troubleshooting
+
+- If you get dependency errors, try `gem install`ing them.
+- If you still get dependency errors, look for a `Gemfile.lock` file in the top level of the local repo, delete it, and re-run `jekyll serve`.
+
 ## Installation (Windows)
 
 [Follow these instructions](http://jekyll-windows.juthilo.com).
