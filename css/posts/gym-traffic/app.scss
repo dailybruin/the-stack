@@ -1,3 +1,6 @@
+$blue: #008fd5;
+$yellow: #ffb81c;
+
 .time-line {
   fill: none;
   stroke-width: 3px;
@@ -5,15 +8,15 @@
 }
 
 .wooden {
-  stroke: #008fd5;
+  stroke: $blue;
 }
 
 .bfit {
-  stroke: #ffb81c;
+  stroke: $yellow;
 }
 
 .facility-open {
-  stroke: #008fd5;
+  stroke: $blue;
 }
 
 .facility-closed {
