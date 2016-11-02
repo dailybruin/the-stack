@@ -43,8 +43,8 @@ function renderAllFacilityHeatCharts(data) {
   let woodenData = data.filter(d => d.facility == 'wooden');
   let bfitData = data.filter(d => d.facility == 'bfit');
 
-  renderFacilityHeatChart(woodenData, '#wooden-heatmap');
-  renderFacilityHeatChart(bfitData, '#bfit-heatmap');
+  renderFacilityHeatChart(woodenData, '#wooden-heatmap', 'wooden');
+  renderFacilityHeatChart(bfitData, '#bfit-heatmap', 'bfit');
 }
 
 // render comparison charts
@@ -52,7 +52,7 @@ function renderComparisonCharts(data) {
 }
 
 // render heat chart of a facility
-function renderFacilityHeatChart(data, container, comparison = false) {
+function renderFacilityHeatChart(data, container, facility) {
   // reset container content
   $(container).html('');
 
@@ -79,11 +79,11 @@ function renderFacilityHeatChart(data, container, comparison = false) {
       };
     });
 
-  renderHeatChart_(chartData, colors, container);
+  renderHeatChart_(chartData, colors, container, facility);
 
 }
 
-function renderHeatChart_(data, colors, container) {
+function renderHeatChart_(data, colors, container, facility) {
 
   // validate data input
   let validDataLength = 21 * 7;
@@ -117,6 +117,8 @@ function renderHeatChart_(data, colors, container) {
     .append('svg')
     .attr('width', chartWidth + margins.left + margins.right)
     .attr('height', chartHeight + margins.top + margins.bottom)
+    .attr('class', 'heat-chart-svg-container')
+    .attr('id', facility + '-svg-container')
     .append('g')
     .attr('transform', 'translate(' + margins.left + ',' + margins.top + ')');
 

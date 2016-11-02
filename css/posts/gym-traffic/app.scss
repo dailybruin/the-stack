@@ -17,6 +17,20 @@ $yellow: #ffb81c;
   color: $yellow;
 }
 
+.heat-chart-svg-container {
+  -webkit-box-shadow: 11px 9px 12px -3px rgba(214,219,223,1);
+  -moz-box-shadow: 11px 9px 12px -3px rgba(214,219,223,1);
+  box-shadow: 11px 9px 12px -3px rgba(214,219,223,1);
+}
+
+#wooden-svg-container {
+  border: 1px solid $blue;
+}
+
+#bfit-svg-container {
+  border: 1px solid $yellow;
+}
+
 .traffic-text {
   font-weight: bold;
 }

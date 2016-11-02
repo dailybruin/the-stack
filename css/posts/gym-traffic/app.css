@@ -11,6 +11,17 @@
   stroke: #ffb81c;
   color: #ffb81c; }
 
+.heat-chart-svg-container {
+  -webkit-box-shadow: 11px 9px 12px -3px #d6dbdf;
+  -moz-box-shadow: 11px 9px 12px -3px #d6dbdf;
+  box-shadow: 11px 9px 12px -3px #d6dbdf; }
+
+#wooden-svg-container {
+  border: 1px solid #008fd5; }
+
+#bfit-svg-container {
+  border: 1px solid #ffb81c; }
+
 .traffic-text {
   font-weight: bold; }
 

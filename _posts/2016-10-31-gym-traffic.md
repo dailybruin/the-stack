@@ -1,5 +1,5 @@
 ---
-title: When should you go to gym?
+title: When you should go to gym?
 teaser: teaser ...
 
 authors:
