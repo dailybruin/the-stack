@@ -9,10 +9,16 @@ $yellow: #ffb81c;
 
 .wooden {
   stroke: $blue;
+  color: $blue;
 }
 
 .bfit {
   stroke: $yellow;
+  color: $yellow;
+}
+
+.traffic-text {
+  font-weight: bold;
 }
 
 .facility-open {
