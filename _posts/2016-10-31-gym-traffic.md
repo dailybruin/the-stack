@@ -21,6 +21,11 @@ stylesheets:
     - /css/posts/gym-traffic/semantic.min.css
 ---
 
+Historical patterns suggest
+Wooden is <span id='wooden-traffic-text'></span>, and
+BFit is <span id='bfit-traffic-text'></span>
+right now.
+
 <div id="viz-container">
 
   <div id='viz-selections'>

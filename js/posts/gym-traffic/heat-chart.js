@@ -27,6 +27,15 @@ $(document).ready(function() {
     renderComparisonCharts(data)
   })
 
+  // FIX: render opening traffic text
+  d3.select('#wooden-traffic-text')
+    .text("very busy")
+    .attr('class', 'wooden traffic-text')
+
+  d3.select('#bfit-traffic-text')
+    .text("moderately busy")
+    .attr('class', 'bfit traffic-text')
+
 })
 
 // render wooden and bfit heat charts
