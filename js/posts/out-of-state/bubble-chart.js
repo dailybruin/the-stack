@@ -62,9 +62,9 @@ function initBubbleChart(data) {
 
 	        h += '<div class="right">';
 	        if (d.data.value < 0) {
-	        	 h += '<span style="color: red;">' + d.value + 'x</span>';
+	        	 h += '<span style="color: rgb(214, 39, 40);">' + d.value + 'x</span>';
 	        } else {
-	        	h += '<span style="color: blue;">' + d.value + 'x</span>';
+	        	h += '<span style="color: rgb(31, 119, 180);">' + d.value + 'x</span>';
 	        } 
 	        h += '</div>';
 
