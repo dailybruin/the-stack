@@ -5,18 +5,26 @@
 
 #table {
   width: 740px;
-  overflow: scroll;
+  /*overflow: scroll;*/
 }
 
 #table table {
-  margin: 0 auto;
+  margin: 0 auto;;
 }
 
 table th, table td {
   text-align: left;
   padding: 2px 10px;
-  font-size: 14px;
+  font-size: 15px;
 
+}
+
+#table > table > tbody > tr:nth-child(even) {
+  background: rgba(0,0,0,0.1);
+}
+
+#table > table > thead > tr {
+  background: rgba(184, 229, 255, 0.8);
 }
 
 .axis path,

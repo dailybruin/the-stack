@@ -49,9 +49,9 @@ var yAxis = d3.svg.axis()
     .scale(y)
     .orient("left")
 
-var verticalTip1 = d3.select("body")
+var verticalTip = d3.select("body")
   .append("div")
-  .attr("class", "vertical-tip-1");
+  .attr("class", "vertical-tip");
 
 var horizontalTip = d3.select("body")
   .append("div")
@@ -371,8 +371,8 @@ d3.json("/datasets/presidential-campaign-donations/result.json", function(error,
           }
         }
 
-        verticalTip1.style("display","none");
-        verticalTip1.html(h)
+        verticalTip.style("display","none");
+        verticalTip.html(h)
           .style("left", (d3.event.pageX+12) + "px")
           .style("top", (d3.event.pageY-10) + "px")
           .style("opacity", 1)
@@ -381,7 +381,7 @@ d3.json("/datasets/presidential-campaign-donations/result.json", function(error,
       })
       .on('mouseout', function() {
         this.style.opacity = "1";
-        verticalTip1.html("").style("display","none");
+        verticalTip.html("").style("display","none");
       });
 
       var legend = svg.selectAll(".legend")

@@ -27,7 +27,9 @@ function initStackedBarChart(data) {
 
   color.domain(colleges);
 
-    
+  var verticalTip = d3.select("body")
+    .append("div")
+    .attr("class", "vertical-tip");
 
   data.forEach(function(d) {
     d["Berkeley"] = +d["UCB P"];
@@ -38,10 +40,13 @@ function initStackedBarChart(data) {
     d["Riverside"] = +d["UCR P"];
     var x0 = 0;
     var idx = 0;
+    var colleges_arr = [];
     d.boxes = color.domain().map(function(name) { 
-      var n = +d[colleges[idx]] || 0;
+      var c = +d[colleges[idx]]; 
+      colleges_arr.push(c); 
+      var n = c || 0;
       idx++;
-      return {name: name, x0: x0, x1: x0 += +d[name], N: +d["UC P"], n: n}; 
+      return {name: name, x0: x0, x1: x0 += +d[name], state: d["State"], N: +d["UC P"], n: n, colleges: colleges_arr }; 
     });
   });
 
@@ -76,7 +81,36 @@ function initStackedBarChart(data) {
       .attr("height", y.bandwidth())
       .attr("x", function(d) { return x(d.x0); })
       .attr("width", function(d) { return x(d.x1) - x(d.x0); })
-      .style("fill", function(d) { return color(d.name); });
+      .style("fill", function(d) { return color(d.name); })
+      .on("mousemove",function(d, i) {
+
+        this.style.opacity = "0.6";
+        this.style.cursor = "pointer";
+
+        var h = '<b style="width: 100%; border-bottom: 2px solid ' + color(i) + ';">' + d.state + '</b><br><br>';
+ 
+        for (var j = d.colleges.length - 1; j >= 0; j--) { // start backwards
+          var c = d.colleges[j]; 
+          var name = colleges[i];
+          if (name == colleges[j]) {
+            h += '<p style="width:100%; background-color: yellow;"><b>' + colleges[j] + "</b>: " + d.colleges[j] + "</p>";
+          } else {
+            h += "<p><b>" + colleges[j] + "</b>: " + d.colleges[j] + "</p>";
+          }
+        }
+
+        verticalTip.style("display","none");
+        verticalTip.html(h)
+          .style("left", (d3.event.pageX+12) + "px")
+          .style("top", (d3.event.pageY-10) + "px")
+          .style("opacity", 1)
+          .style("display","block")
+
+      })
+      .on('mouseout', function() {
+        this.style.opacity = "1";
+        verticalTip.html("").style("display","none");
+      });
 
   bars.append("text")
       .attr("x", function(d) { return x(d.x0); })
