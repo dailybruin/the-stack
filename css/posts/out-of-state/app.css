@@ -3,6 +3,15 @@
   margin: 25px auto;
 }
 
+#bubble-chart > g > text > tspan {
+  font-size: 20px;
+  pointer-events: none;
+}
+
+div.horizontal-tip .right {
+  padding-top: 16px !important;
+}
+
 #table {
   width: 740px;
   margin: 25px 0;

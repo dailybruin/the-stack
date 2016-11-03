@@ -16,7 +16,7 @@ function initTable(data) {
 	var tbody = table.append('tbody');
 
 	var columns = ["State", "UC", "Current 538 margin (P)", "Percentage of vote each person contributes"];
-	var displayColumns = ["State", "UC Students from this State", "538 Margin (%)", "Impact of 1 Vote"]
+	var displayColumns = ["State", "UC Students from this State", "538 Margin (%)", "Impact of 1 Vote (%)"]
 
 	thead.append('tr')
 		.selectAll('th')
