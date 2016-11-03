@@ -10,18 +10,33 @@ function initBubbleChart(data) {
 	    .size([width, width])
 	    .padding(1.1);
 
+	var horizontalTip = d3.select("body")
+		  .append("div")
+		  .attr("class", "horizontal-tip");
+
+	var states = {
+		"California" : "CA", 
+		"Pennsylvania" : "PA",
+		"New Hampshire" : "NH",
+		"North Carolina" : "NC",
+		"Colorado" : "CO",
+		"Iowa" : "IA",
+		"Arizona" : "AZ",
+		"Ohio" : "OH",
+		"Missouri" : "MO",
+		"Nevada" : "NV",
+		"Florida" : "FL"
+	}
+
 	var root = d3.hierarchy({children: data})
 	      .sum(function(d) { 
 	        d.value = d["How many times more competitive state is than CA"];
 	        d.id = d["State"];
-	        return d.value;
+	        return Math.abs(d.value)
 	      })
 	      .each(function(d) {
 	        if (id = d.data.id) {
-	          var id, i = id.lastIndexOf(".");
 	          d.id = id;
-	          d.package = id.slice(0, i);
-	          d.class = id.slice(i + 1);
 	        }
 	      });
 
@@ -36,7 +51,36 @@ function initBubbleChart(data) {
 	  node.append("circle")
 	      .attr("id", function(d) { return d.id; })
 	      .attr("r", function(d) { return d.r; })
-	      .style("fill", function(d) { return color(d.package); });
+	      .on("mousemove",function(d, i) {
+
+	        this.style.opacity = "0.6";
+	        this.style.cursor = "pointer";
+
+	        var h = '<div class="left"><p><b style="border-bottom: 2px solid ' + color(i) + ';">' + d.id.toUpperCase() + 
+	        				'</b></p><p><b>' + "2016 Expected Turnout" + '</b>: ' + d.data["2016 expected turnout"] + 
+	        				'</p><p><b>2016 Expected Margin</b>: ' + d.data["Margin 2016 P"] + '</p></div>';
+
+	        h += '<div class="right">';
+	        if (d.data.value < 0) {
+	        	 h += '<span style="color: red;">' + d.value + 'x</span>';
+	        } else {
+	        	h += '<span style="color: blue;">' + d.value + 'x</span>';
+	        } 
+	        h += '</div>';
+
+	        horizontalTip.style("display","none");
+	        horizontalTip.html(h)
+	          .style("left", (d3.event.pageX+12) + "px")
+	          .style("top", (d3.event.pageY-10) + "px")
+	          .style("opacity", 1)
+	          .style("display","block")
+
+	      })
+	      .on('mouseout', function() {
+	        this.style.opacity = "1";
+	        horizontalTip.html("").style("display","none");
+	      })
+		    .style("fill", function(d) { return color(d.id); });
 
 	  node.append("clipPath")
 	      .attr("id", function(d) { return "clip-" + d.id; })
@@ -44,14 +88,21 @@ function initBubbleChart(data) {
 	      .attr("xlink:href", function(d) { return "#" + d.id; });
 
 	  node.append("text")
-	      .attr("clip-path", function(d) { return "url(#clip-" + d.id + ")"; })
+	      .attr("clip-path", function(d) { 
+	      	return "url(#clip-" + d.id + ")"; 
+	      })
 	    .selectAll("tspan")
-	    .data(function(d) { return d.class.split(/(?=[A-Z][^A-Z])/g); })
+	    .data(function(d) { 
+	    	return [d.id];
+	    	// return d.id.split(/(?=[A-Z][^A-Z])/g); 
+	    })
 	    .enter().append("tspan")
-	      .attr("x", -20)
+	      .attr("x", -15)
 	      .attr("y", function(d, i, nodes) { return 13 + (i - nodes.length / 2 - 0.5) * 10; })
-	      .text(function(d) { return d; });
+	      .text(function(d) { 
+	      	return states[d]; 
+	      });
 
-	  node.append("title")
-	      .text(function(d) { return d.id + "\n" + format(d.value); });
+	  // node.append("title")
+	  //     .text(function(d) { return d.id + "\n" + format(d.value); });
 }
