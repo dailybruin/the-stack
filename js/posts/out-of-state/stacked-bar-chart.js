@@ -88,6 +88,8 @@ function initStackedBarChart(data) {
         this.style.cursor = "pointer";
 
         var h = '<b style="width: 100%; border-bottom: 2px solid ' + color(i) + ';">' + d.state + '</b><br><br>';
+
+        h += '<p><b>Total</b>: ' + d.N +'%</p><br>'
  
         for (var j = d.colleges.length - 1; j >= 0; j--) { // start backwards
           var c = d.colleges[j]; 
