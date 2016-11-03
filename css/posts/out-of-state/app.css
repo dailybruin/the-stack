@@ -1,10 +1,11 @@
 #bubble-chart {
   display: block;
-  margin: 0 auto;
+  margin: 25px auto;
 }
 
 #table {
   width: 740px;
+  margin: 25px 0;
   /*overflow: scroll;*/
 }
 
