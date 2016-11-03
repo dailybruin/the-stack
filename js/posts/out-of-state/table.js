@@ -1,7 +1,7 @@
 function formatCell(c) {
 	switch (c.column) {
 		case "Current 538 margin (P)":
-			return c.value > 0 ? "color: blue" : "color: red";
+			return c.value > 0 ? "color: rgb(31, 119, 180);" : "color: rgb(214, 39, 40);";
 			break;
 		default:
 			return "color: black";
@@ -38,5 +38,5 @@ function initTable(data) {
     .enter()
     .append("td")
     .attr("style", function(d) { return formatCell(d); })
-    .html(function(d) { return d.value; });
+    .html(function(d) { return d.value < 0 ? d.value * -1 : d.value; });
 }
