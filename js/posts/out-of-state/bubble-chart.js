@@ -58,7 +58,8 @@ function initBubbleChart(data) {
 
 	        var h = '<div class="left"><p><b style="border-bottom: 2px solid ' + color(i) + ';">' + d.id.toUpperCase() + 
 	        				'</b></p><br/><p><b>' + "2016 Expected Turnout" + '</b>: ' + d.data["2016 expected turnout"] + 
-	        				'</p><p><b>2016 Expected Margin</b>: ' + d.data["Margin 2016 P"] + '</p></div>';
+	        				'</p><p><b>2016 Expected Margin</b>: ' + d.data["Margin 2016 P"] + 
+	        				'</p><p><b>Power of Vote Compared to CA</b>: ' + d.data["How much more each vote contributes to winning than in CA"] + 'x</p></div>';
 
 	        h += '<div class="right">';
 	        if (d.data.value < 0) {
