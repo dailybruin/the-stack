@@ -6,20 +6,22 @@ function formatCell(c) {
 		default:
 			return "color: black";
 	}
-}
+} 
 
 function initTable(data) {
-	var table = d3.select("#table").append('table');
+	var table = d3.select("#table").append('table')
+								.attr("cellpadding", 0)
+								.attr("cellspacing", 0);
 	var thead = table.append('thead');
 	var tbody = table.append('tbody');
 
 	var columns = ["State", "UC", "Current 538 margin (P)", "Percentage of vote each person contributes"];
-	var displayColumns = ["State", "Registered UC Voters", "538 Margin (%)", "Impact of 1 Vote"]
+	var displayColumns = ["State", "Students from this State", "538 Margin (%)", "Impact of 1 Vote"]
 
 	thead.append('tr')
 		.selectAll('th')
 		.data(displayColumns).enter()
-		.append('th')
+		.append('th')	
 			.text(function(column) { return column; })
 
 	var rows = tbody.selectAll("tr")

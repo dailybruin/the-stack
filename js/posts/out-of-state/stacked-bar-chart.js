@@ -93,9 +93,9 @@ function initStackedBarChart(data) {
           var c = d.colleges[j]; 
           var name = colleges[i];
           if (name == colleges[j]) {
-            h += '<p style="width:100%; background-color: yellow;"><b>' + colleges[j] + "</b>: " + d.colleges[j] + "</p>";
+            h += '<p style="width:100%; background-color: yellow;"><b>' + colleges[j] + "</b>: " + d.colleges[j] + "%</p>";
           } else {
-            h += "<p><b>" + colleges[j] + "</b>: " + d.colleges[j] + "</p>";
+            h += "<p><b>" + colleges[j] + "</b>: " + d.colleges[j] + "%</p>";
           }
         }
 
