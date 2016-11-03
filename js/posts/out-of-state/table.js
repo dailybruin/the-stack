@@ -38,5 +38,5 @@ function initTable(data) {
     .enter()
     .append("td")
     .attr("style", function(d) { return formatCell(d); })
-    .html(function(d) { return d.value; });
+    .html(function(d) { return d.value < 0 ? d.value * -1 : d.value; });
 }
