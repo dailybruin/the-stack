@@ -1,7 +1,7 @@
 // run this script once page is ready
 $(document).ready(function() {
   // render wooden & bfit facility charts
-  d3.csv('/datasets/gym-traffic/heat-chart-data.csv', function(error, data) {
+  d3.csv('/datasets/gym-traffic/facility-heat-chart-data.csv', function(error, data) {
     if (error) throw error;
 
     // process data
@@ -23,8 +23,14 @@ $(document).ready(function() {
   });
 
   // render comparison charts
-  d3.csv('/datasets/gym-traffic/heat-chart-data.csv', function(error, data) {
-    renderComparisonCharts(data)
+  d3.csv('/datasets/gym-traffic/comparison-chart-data.csv', function(error, data) {
+    // process data
+    data.forEach(d => {
+      d.day_of_week = parseInt(d.day_of_week);
+      d.hour = parseInt(d.hour);
+      d.category = parseInt(d.category);
+    })
+    renderComparisonChart(data)
   })
 
   // FIX: render opening traffic text
@@ -48,7 +54,33 @@ function renderAllFacilityHeatCharts(data) {
 }
 
 // render comparison charts
-function renderComparisonCharts(data) {
+function renderComparisonChart(data) {
+  let blueColors = ['#008FD5', '#9FD5EF']; // http://htmlcolorcodes.com/color-picker/
+  let yellowColors = ['ffb81c', '#FFE4AA'];
+  let neutralColor = ['#CFDDCC']; // http://www.colorhexa.com/80a478
+  let closedColor = ['#EBEDEF'];
+
+  let colorScale = d3.scaleOrdinal().domain([0, 1, 2, 3, 4, 5])
+    .range(closedColor.concat(yellowColors).concat(neutralColor).concat(blueColors.reverse()));
+
+  // filter data to exclude hours from 2 to 4
+  data = data.filter(d => {
+    return d.hour != 2 & d.hour != 3 & d.hour != 4;
+  })
+
+  let colors = data.map(d => {
+    return colorScale(d.category);
+  })
+
+  // get data to render chart
+  let chartData = data.map(d => {
+      return {
+        day_of_week: d.day_of_week,
+        hour: d.hour
+      };
+    });
+  renderHeatChart_(chartData, colors, '#comparison-heatmap');
+
 }
 
 // render heat chart of a facility
@@ -57,9 +89,11 @@ function renderFacilityHeatChart(data, container, facility) {
   $(container).html('');
 
   // determine color of each heat circle
+  let sequentialColors = ['#feedde','#fdbe85','#fd8d3c','#d94701']; // http://colorbrewer2.org/#type=sequential&scheme=Oranges&n=4
+  let closedColor = ['#EBEDEF'];
   let colorScale = d3.scaleOrdinal()
     .domain([0, 1, 2, 3, 4, 5])
-    .range(['#EBEDEF', '#feedde','#fdbe85','#fd8d3c','#e6550d','#a63603']);
+    .range(closedColor.concat(sequentialColors));
 
   // filter data to exclude hours from 2 to 4
   data = data.filter(d => {
@@ -83,7 +117,7 @@ function renderFacilityHeatChart(data, container, facility) {
 
 }
 
-function renderHeatChart_(data, colors, container, facility) {
+function renderHeatChart_(data, colors, container, facility = 'f') {
 
   // validate data input
   let validDataLength = 21 * 7;
