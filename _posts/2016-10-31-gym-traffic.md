@@ -7,66 +7,84 @@ authors:
 key_takeaways:
     - ...
     - ...
-    - ...
 featured_image:
-    url: gym-traffic/wooden-heat-chart.png
-    og_image: gym-traffic/wooden-heat-chart.png
+    url: gym-traffic/comparison-chart.png
+    og_image: gym-traffic/comparison-chart.png
+stylesheets:
+    - /css/posts/gym-traffic/app.css
+    - /css/posts/gym-traffic/semantic.min.css
 scripts:
     - //code.jquery.com/jquery-3.1.1.min.js
     - //d3js.org/d3.v4.min.js
     - /js/posts/gym-traffic/line-chart.js
     - /js/posts/gym-traffic/heat-chart.js
-stylesheets:
-    - /css/posts/gym-traffic/app.css
-    - /css/posts/gym-traffic/semantic.min.css
+
 ---
+
+1.5 million entrance records at UCLA Recreation facilities can tell us a lot about
+when students like going to the gym and inform when and where you should go work out ...
+
+## Explain data ...
+The most immediate use of new data from 2015-2016 school year provided by ucla rec officials to Daily Bruin
+is to estimate traffic. While the anonymized entrace records provide data on when and where students enter a facility,
+a couple assumptions were needed to estimate traffic ... More details are explained in the methodology section ...
+For now, you can be confident that the estimates are accurate ...
+
+
+## Live traffic estimate ...
 
 Historical patterns suggest
 Wooden is <span id='wooden-traffic-text'></span>, and
 BFit is <span id='bfit-traffic-text'></span>
 right now.
 
-<div id="viz-container">
 
-  <div id='viz-selections'>
+## Relative traffic at Wooden and BFit
+...
 
-    <select id='pick-facility'>
-      <option value='wooden'>Wooden</option>
-      <option value='bfit'>BFit</option>
-      <option value='both'>Wooden + BFit</option>
-    </select>
+<div id='heat-chart'>
 
-    <select id='pick-scale'>
-      <option value='relative'>% Relative to peak</option>
-      <option value='absolute'>Number of people</option>
-    </select>
-
+  <div class='ui centered medium header'>Wooden vs. BFit</div>
+  <div class='ui centered one column grid'>
+    <div class='twelve wide column heat-chart' id='comparison-heatmap'></div>
   </div>
 
-  <div id='line-chart'></div>
+  <div class='ui centered medium header'>Wooden vs. BFit</div>
+  <div class='ui centered one column grid'>
+    <div class='twelve wide column heat-chart' id='comparison-heatmap'></div>
+  </div>
 
-  <div id='heat-chart'>
+  <div class='ui centered medium header'>Wooden</div>
+  <div class='ui centered one column grid'>
+    <div class='twelve wide column heat-chart' id='wooden-heatmap'></div>
+  </div>
 
-    <div class='ui centered medium header'>Wooden</div>
-    <div class='ui centered one column grid'>
-      <div class='twelve wide column' id='wooden-heatmap'></div>
-    </div>
-
-    <div class='ui centered medium header'>BFit</div>
-    <div class='ui centered one column grid'>
-      <div class='twelve wide column' id='bfit-heatmap'></div>
-    </div>
-
-    <div class='ui centered medium header'>Wooden vs BFit</div>
-    <div class='ui centered one column grid'>
-      <div class='twelve wide column' id='comparison-heatmap'></div>
-    </div>
-
+  <div class='ui centered medium header'>BFit</div>
+  <div class='ui centered one column grid'>
+    <div class='twelve wide column heat-chart' id='bfit-heatmap'></div>
   </div>
 
 </div>
 
 
+## Go deeper into traffic trends  
+...
 
-## About the data
+<div id='viz-selections'>
+  <select id='pick-facility'>
+    <option value='wooden'>Wooden</option>
+    <option value='bfit'>BFit</option>
+    <option value='both'>Wooden + BFit</option>
+  </select>
+
+  <select id='pick-scale'>
+    <option value='relative'>% Relative to peak</option>
+    <option value='absolute'>Number of people</option>
+  </select>
+</div>
+
+<div id='line-chart'></div>
+
+
+## Methodology
 ...

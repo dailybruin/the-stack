@@ -18,17 +18,9 @@ $yellow: #ffb81c;
 }
 
 .heat-chart-svg-container {
-  -webkit-box-shadow: 11px 9px 12px -3px rgba(214,219,223,1);
-  -moz-box-shadow: 11px 9px 12px -3px rgba(214,219,223,1);
-  box-shadow: 11px 9px 12px -3px rgba(214,219,223,1);
-}
-
-#wooden-svg-container {
-  border: 1px solid $blue;
-}
-
-#bfit-svg-container {
-  border: 1px solid $yellow;
+  // -webkit-box-shadow: 11px 9px 12px -3px rgba(214,219,223,1);
+  // -moz-box-shadow: 11px 9px 12px -3px rgba(214,219,223,1);
+  // box-shadow: 11px 9px 12px -3px rgba(214,219,223,1);
 }
 
 .traffic-text {
@@ -49,8 +41,8 @@ $yellow: #ffb81c;
 }
 
 .now {
-  fill: #3284BF;
-  stroke: #3284BF;
+  fill: black;
+  stroke: black;
 }
 
 .label {
