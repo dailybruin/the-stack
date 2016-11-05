@@ -132,7 +132,7 @@ function renderHeatChart(data, colors, container) {
   let containerWidth = $(container).outerWidth(),
       containerHeight = $(container).outerHeight(),
       chartWidth = containerWidth - margins.left - margins.right,
-          cHeight = 250; // FIX: use 400 for now, figure out later
+          cHeight = 150; // FIX: use 400 for now, figure out later
       chartHeight = cHeight - margins.top - margins.bottom;
 
   // determine size of circles / grids
