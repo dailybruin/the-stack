@@ -27,14 +27,6 @@ $yellow: #ffb81c;
   font-weight: bold;
 }
 
-.facility-open {
-  stroke: $blue;
-}
-
-.facility-closed {
-  stroke: #f6b900;
-}
-
 .voronoi path {
   fill: none;
   pointer-events: all;
@@ -60,11 +52,6 @@ $yellow: #ffb81c;
 
 .now-border {
   stroke-width: 4px;
-}
-
-.closed-border {
-  stroke: none;
-  opacity: 0;
 }
 
 .not-now-border {

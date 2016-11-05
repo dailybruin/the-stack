@@ -14,12 +14,6 @@
 .traffic-text {
   font-weight: bold; }
 
-.facility-open {
-  stroke: #008fd5; }
-
-.facility-closed {
-  stroke: #f6b900; }
-
 .voronoi path {
   fill: none;
   pointer-events: all; }
@@ -40,10 +34,6 @@
 
 .now-border {
   stroke-width: 4px; }
-
-.closed-border {
-  stroke: none;
-  opacity: 0; }
 
 .not-now-border {
   stroke: grey;
