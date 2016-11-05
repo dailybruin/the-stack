@@ -1,12 +1,12 @@
 ---
-title: When you should go to gym?
-teaser: teaser ...
+title: When and where you should go workout?
+teaser: An unprecendent look at facility traffic at Wooden and BFit
 
 authors:
     - tyson_ni
 key_takeaways:
-    - ...
-    - ...
+    - Data provided by UCLA Recreation show clear and consistent usage patterns across Wooden and BFit
+    - Use the graphics below to decide when and where to workout 
 featured_image:
     url: gym-traffic/comparison-chart.png
     og_image: gym-traffic/comparison-chart.png
@@ -33,37 +33,35 @@ For now, you can be confident that the estimates are accurate ...
 
 ## Live traffic estimate ...
 
-Historical patterns suggest
-Wooden is <span id='wooden-traffic-text'></span>, and
+Right now, Wooden is <span id='wooden-traffic-text'></span>, and
 BFit is <span id='bfit-traffic-text'></span>
-right now.
+.
 
 
-## Relative traffic at Wooden and BFit
+## Choosing between Wooden and BFit
 ...
 
-<div id='heat-chart'>
 
   <div class='ui centered medium header'>Wooden vs. BFit</div>
   <div class='ui centered one column grid'>
     <div class='twelve wide column heat-chart' id='comparison-heatmap'></div>
   </div>
 
-  <div class='ui centered medium header'>Wooden vs. BFit</div>
-  <div class='ui centered one column grid'>
-    <div class='twelve wide column heat-chart' id='comparison-heatmap'></div>
-  </div>
 
-  <div class='ui centered medium header'>Wooden</div>
-  <div class='ui centered one column grid'>
-    <div class='twelve wide column heat-chart' id='wooden-heatmap'></div>
-  </div>
 
-  <div class='ui centered medium header'>BFit</div>
-  <div class='ui centered one column grid'>
-    <div class='twelve wide column heat-chart' id='bfit-heatmap'></div>
-  </div>
+## Wooden
+...
 
+<div class='ui centered medium header'>Wooden</div>
+<div class='ui centered one column grid'>
+  <div class='twelve wide column heat-chart' id='wooden-heatmap'></div>
+</div>
+
+
+## BFit
+<div class='ui centered medium header'>BFit</div>
+<div class='ui centered one column grid'>
+  <div class='twelve wide column heat-chart' id='bfit-heatmap'></div>
 </div>
 
 
