@@ -1,4 +1,6 @@
 function initStackedBarChart(data) {
+  currData = 0;
+
   var margin = {top: 50, right: 20, bottom: 10, left: 80},
       width = 740 - margin.left - margin.right,
       height = 500 - margin.top - margin.bottom;
@@ -31,7 +33,7 @@ function initStackedBarChart(data) {
     .append("div")
     .attr("class", "vertical-tip");
 
-  data.forEach(function(d) {
+  data[currData].forEach(function(d) {
     d["Berkeley"] = +d["UCB P"];
     d["Davis"] = +d["UCD P"];
     d["Irvine"] = +d["UCI P"];
@@ -52,12 +54,12 @@ function initStackedBarChart(data) {
 
   var min_val = 0; // every stack starts at 0;
 
-  var max_val = d3.max(data, function(d) {
+  var max_val = d3.max(data[currData], function(d) {
     return d.boxes["4"].x1;
   });
 
   x.domain([min_val, max_val]).nice();
-  y.domain(data.map(function(d) { return d.State; }));
+  y.domain(data[currData].map(function(d) { return d.State; }));
 
   svg.append("g")
       .attr("class", "x axis")
@@ -68,7 +70,7 @@ function initStackedBarChart(data) {
       .call(yAxis)
 
   var vakken = svg.selectAll(".question")
-      .data(data)
+      .data(data[currData])
     .enter().append("g")
       .attr("class", "bar")
       .attr("transform", function(d, i) { return "translate(0," + y(d.State) + ")"; });

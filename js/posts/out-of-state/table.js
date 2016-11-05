@@ -9,6 +9,9 @@ function formatCell(c) {
 } 
 
 function initTable(data) {
+
+	var currData = 0;
+
 	var table = d3.select("#table").append('table')
 								.attr("cellpadding", 0)
 								.attr("cellspacing", 0);
@@ -25,7 +28,7 @@ function initTable(data) {
 			.text(function(column) { return column; })
 
 	var rows = tbody.selectAll("tr")
-    .data(data)
+    .data(data[currData])
     .enter()
     .append("tr");
 
