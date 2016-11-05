@@ -90,7 +90,7 @@ function renderFacilityHeatChart(data, container, facility) {
 
   // determine color of each heat circle
   let sequentialColors = ['#feedde','#fdbe85','#fd8d3c','#d94701']; // http://colorbrewer2.org/#type=sequential&scheme=Oranges&n=4
-  let closedColor = ['#EBEDEF'];
+  let closedColor = ['lightgrey'];//['#EBEDEF'];
   let colorScale = d3.scaleOrdinal()
     .domain([0, 1, 2, 3, 4, 5])
     .range(closedColor.concat(sequentialColors));
