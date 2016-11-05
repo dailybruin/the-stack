@@ -4,9 +4,9 @@ d3.csv("/datasets/out-of-state/president.csv", function(error, pres) {
   d3.csv("/datasets/out-of-state/senate.csv", function(error, sen) {
     if (error) throw error;
     
-    initTable(pres);
-    initBubbleChart(pres); 
-    initStackedBarChart(pres);
+    initTable([pres, sen]);
+    initBubbleChart([pres, sen]); 
+    initStackedBarChart([pres, sen]);
 
   });
 });

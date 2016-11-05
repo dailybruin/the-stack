@@ -1,4 +1,7 @@
 function initBubbleChart(data) {
+
+	currData = 0;
+
 	var svg = d3.select("#bubble-chart"),
 	    width = +svg.attr("width");
 
@@ -8,7 +11,7 @@ function initBubbleChart(data) {
 
 	var pack = d3.pack()
 	    .size([width, width])
-	    .padding(1.1);
+	    .padding(10);
 
 	var horizontalTip = d3.select("body")
 		  .append("div")
@@ -28,7 +31,7 @@ function initBubbleChart(data) {
 		"Florida" : "FL"
 	}
 
-	var root = d3.hierarchy({children: data})
+	var root = d3.hierarchy({children: data[currData]})
 	      .sum(function(d) { 
 	        d.value = d["How many times more competitive state is than CA"];
 	        d.id = d["State"];
