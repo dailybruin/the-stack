@@ -21,22 +21,20 @@ scripts:
 
 ---
 
-Every time a student cards into one of UCLA Recreation's facilities, a record is generated.
-Just last school year, there were [1.5] million records like that.
-They not only tell us a lot about how students use each facility, but also inform *where and when you should workout*.
+Every time a student cards into a UCLA Recreation facility, an entrance is timestamped and recorded.
+Last school year, 1.5 million visits were recorded like that.
+They tell us a lot about how students use each facility and also inform *where and when you should workout*.
 
-The most obvious use of the data – which includes all entrance records from the 2015 to 2016 school year – is to **estimate how many people are inside the gym at a given moment**.
-Because the anonymized records include only the timestamp of when a student entered the gym, but not the total headcount inside, we need a model to *estimate* traffic. That model would have to account for the fact that people who are in the gym at a given moment includes not only those who entered just now (for which we have actual data) but also *some proportion* of the people who entered *previously* and remained (here's where the model comes in). More details are explained later in the post, but for now, you can be rest assured that these estimates are solid.
+The most obvious use of that data – all entrance records from the 2015 to 2016 school year – is to **estimate how many people are inside the gym at any given moment**.
+Because the anonymized records include only the timestamp of each entrance, but not the headcount inside a facility, we need a model to *estimate* traffic.
+
+That model would have to account for not only people who entered at a particular time (for which we have data) but also *some proportion* of the people who entered *previously* and remained (here's where the model comes in). More details are explained later, but for now you should be confident that the estimates are solid.
 
 ## Live Traffic Estimate
 
-If we know the time of day and day of week, gym usage patterns are remarkably consistent.
-While UCLA Recreation no longer provides real time traffic, we can still fairly safely estimate, in real time,
-how busy a gym is based on historical data.
+Gym usage patterns are remarkably consistent. While UCLA Recreation doesn't provides real time information, we can fairly safely estimate – in real time – how busy a gym is based on past data.
 
-Right now, it's likely that Wooden is <span id='wooden-traffic-text'></span>, and
-BFit is <span id='bfit-traffic-text'></span>
-.
+Right now, it's likely that Wooden is <span id='wooden-traffic-text'></span>, and BFit is <span id='bfit-traffic-text'></span>.
 
 > These live estimates are worded relative to other 1) times of day, and 2) days of week.
 > What if campus is not in session or gym hours are changed? Well your browser doesn't know that!
@@ -44,14 +42,13 @@ BFit is <span id='bfit-traffic-text'></span>
 
 ## Choosing between Wooden and BFit
 
-Wooden has a much higher capacity than BFit, and **normally it has between two and four times as many people has
-BFit**. But occasionally, BFit reaches almost the same level of traffic as Wooden. In that case, we might argue that Wooden is the better, less crowdy place to workout. Conversely, at times when Wooden is *a lot* busier than BFit, BFit might be a better choice.
+Wooden has a much higher capacity than BFit, and **normally it houses between two and three times as many people as
+BFit**. Occasionally though, BFit reaches almost the same level of traffic as Wooden. In that case, we might argue that Wooden is the better, less crowdy place to workout. Conversely, when Wooden is *a lot* busier than BFit, BFit might be a better choice.
 
-  <div class='ui centered medium header'>Wooden vs. BFit</div>
+  <div class='ui centered medium header'>Wooden or BFit</div>
   <div class='ui centered one column grid'>
     <div class='twelve wide column heat-chart' id='comparison-heatmap'></div>
   </div>
-
 
 
 ## A quick glance
@@ -68,13 +65,12 @@ BFit**. But occasionally, BFit reaches almost the same level of traffic as Woode
 
 
 ## Dive deeper  
-...
 
 <div id='viz-selections'>
   <select id='pick-facility'>
+    <option value='both'>Wooden + BFit</option>
     <option value='wooden'>Wooden</option>
     <option value='bfit'>BFit</option>
-    <option value='both'>Wooden + BFit</option>
   </select>
 
   <select id='pick-scale'>
@@ -84,6 +80,8 @@ BFit**. But occasionally, BFit reaches almost the same level of traffic as Woode
 </div>
 
 <div id='line-chart'></div>
+
+...
 
 
 ## Data and Methodology
