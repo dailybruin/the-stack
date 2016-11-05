@@ -1,6 +1,6 @@
 ---
 title: When and where you should go workout?
-teaser: An unprecendented look at gym traffic at Wooden and BFit
+teaser: An unprecendented look at gym traffic in Wooden and BFit
 
 authors:
     - tyson_ni
@@ -21,14 +21,14 @@ scripts:
 
 ---
 
-Every time a student cards into a UCLA Recreation facility, an entrance is timestamped and recorded.
-Last school year, 1.5 million visits were recorded like that.
-They tell us a lot about how students use each facility and also inform *where and when you should workout*.
+Every time a student cards into a UCLA Recreation facility, an entry is timestamped and recorded.
+Last school year, **1.5 million** visits were recorded like that.
+They tell us a lot about how students use each facility and also inform **where and when you should workout**.
 
-The most obvious use of that data – all entrance records from the 2015 to 2016 school year – is to **estimate how many people are inside the gym at any given moment**.
+The most obvious use of that data – all entrance records from the 2015 to 2016 school year – is to **estimate how many people are in the gym at any given moment**.
 Because the anonymized records include only the timestamp of each entrance, but not the headcount inside a facility, we need a model to *estimate* traffic.
 
-That model would have to account for not only people who entered at a particular time (for which we have data) but also *some proportion* of the people who entered *previously* and remained (here's where the model comes in). More details are explained later, but for now you should be confident that the estimates are solid.
+That model would have to account for not only people who entered at a particular time (for which we use the data) but also *some proportion* of the people who entered *previously* and remained (here's where the model comes in). More details are explained later, but for now you should be confident that the estimates are solid.
 
 ## Live Traffic Estimate
 
@@ -37,13 +37,13 @@ Gym usage patterns are remarkably consistent. While UCLA Recreation doesn't prov
 Right now, it's likely that Wooden is <span id='wooden-traffic-text'></span>, and BFit is <span id='bfit-traffic-text'></span>.
 
 > These live estimates are worded relative to other 1) times of day, and 2) days of week.
-> What if campus is not in session or gym hours are changed? Well your browser doesn't know that!
+> What if campus is not in session or gym hours are changed? Well, your browser doesn't know that!
 
 
 ## Choosing between Wooden and BFit
 
 Wooden has a much higher capacity than BFit, and **normally it houses between two and three times as many people as
-BFit**. Occasionally though, BFit reaches almost the same level of traffic as Wooden. In that case, we might argue that Wooden is the better, less crowdy place to workout. Conversely, when Wooden is *a lot* busier than BFit, BFit might be a better choice.
+BFit**. Occasionally though, BFit reaches almost the same level of traffic as Wooden. In that case, we might argue that Wooden is the better, less croweded place to workout. Conversely, when Wooden is *a lot* busier than BFit, BFit might be a better choice.
 
   <div class='ui centered medium header'>Wooden or BFit</div>
   <div class='ui centered one column grid'>
@@ -85,4 +85,21 @@ BFit**. Occasionally though, BFit reaches almost the same level of traffic as Wo
 
 
 ## Data and Methodology
+
+A couple UCLA Recreation officials graciously provided the dataset to Daily Bruin. There were around 1.5 million  records in total, spanning from June 2015 to June 2016, and containing the *timestamp*, *type of user* (ie. undergrad, grad or staff), and *facility name* (ie. Wooden, BFit, KREC, and Sunset Rec) of each entrance.
+
+Because BFit opened in October 2015, weeks into Fall 2015, data from that quarter were removed from the calculations.
+
+To estimate traffic, **we need know how long each person stays**. Because the dataset doesn't have exit timestamps, we need to guess how much time each person spends at the gym – we need a distribution and come up with good enough parameters using survey data.
+
 ...
+
+Essentially, each visitor:
+
+1. Enters at actual time, *provided by the data*
+2. Remains for X number of time intervals, *simulated from the model*
+3. Exits
+
+Now we simply count all the people who remain at a particular time point to get an estimated traffic.
+
+Is the model reliable? Using different models actually produced a high variance in estimated traffic counts. One set of parameters might produce an estimate of 200 while another that assumes people spend more time might output 260 as the estimate. But **the relative difference between times are very consistent** so the trends shown above in relative scales don't vary much regardless of model specification. They're reliable enough for decision making because after all ...
