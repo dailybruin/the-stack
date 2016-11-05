@@ -1,46 +1,49 @@
-// run this script once page is ready
+// run script once page is ready
 $(document).ready(function() {
+
+  // store current time in global namespace
+  window.currentTime_ = getCurrentDayAndHour();
+
   // render wooden & bfit facility charts
   d3.csv('/datasets/gym-traffic/facility-heat-chart-data.csv', function(error, data) {
-    if (error) throw error;
+    if (error)  throw error;
 
     // process data
-    data.forEach(d => {
-      d.day_of_week = parseInt(d.day_of_week);
-      d.hour = parseInt(d.hour);
-      d.avg_n_people = parseInt(d.avg_n_people);
-      d.avg_n_people_rel = Number(d.avg_n_people_rel);
-      d.category = parseInt(d.category);
-    })
+    data = processFacilityData(data);
 
-    // render first time
-    renderAllFacilityHeatCharts(data)
+    // render charts when page is loaded for the first time
+    renderAllFacilityHeatCharts(data);
 
     // render upon window resize
     $(window).resize(function() {
-      renderAllFacilityHeatCharts(data)
+      renderAllFacilityHeatCharts(data);
     })
   });
 
   // render comparison charts
   d3.csv('/datasets/gym-traffic/comparison-chart-data.csv', function(error, data) {
+    if (error)  throw error;
+
     // process data
-    data.forEach(d => {
-      d.day_of_week = parseInt(d.day_of_week);
-      d.hour = parseInt(d.hour);
-      d.category = parseInt(d.category);
+    data = processComparisonData(data);
+
+    // render chart when page is loaded for the first time
+    renderComparisonChart(data);
+
+    // render upon window resize
+    $(window).resize(function() {
+      renderComparisonChart(data);
     })
-    renderComparisonChart(data)
   })
 
-  // FIX: render opening traffic text
-  d3.select('#wooden-traffic-text')
-    .text("very busy")
-    .attr('class', 'wooden traffic-text')
+      // FIX: render opening traffic text
+      d3.select('#wooden-traffic-text')
+        .text("very busy")
+        .attr('class', 'wooden traffic-text')
 
-  d3.select('#bfit-traffic-text')
-    .text("moderately busy")
-    .attr('class', 'bfit traffic-text')
+      d3.select('#bfit-traffic-text')
+        .text("moderately busy")
+        .attr('class', 'bfit traffic-text')
 
 })
 
@@ -53,38 +56,36 @@ function renderAllFacilityHeatCharts(data) {
   renderFacilityHeatChart(bfitData, '#bfit-heatmap', 'bfit');
 }
 
+
 // render comparison charts
 function renderComparisonChart(data) {
-  let blueColors = ['#008FD5', '#9FD5EF']; // http://htmlcolorcodes.com/color-picker/
-  let yellowColors = ['ffb81c', '#FFE4AA'];
+
+  let blueColors = ['#008FD5', '#9FD5EF']; // [darker, less dark] http://htmlcolorcodes.com/color-picker/
+  let yellowColors = ['ffb81c', '#FFE4AA']; // [darker, less dark]
   let neutralColor = ['#CFDDCC']; // http://www.colorhexa.com/80a478
   let closedColor = ['#EBEDEF'];
-
-  let colorScale = d3.scaleOrdinal().domain([0, 1, 2, 3, 4, 5])
-    .range(closedColor.concat(yellowColors).concat(neutralColor).concat(blueColors.reverse()));
 
   // filter data to exclude hours from 2 to 4
   data = data.filter(d => {
     return d.hour != 2 & d.hour != 3 & d.hour != 4;
   })
 
+  // get color of each data point
+  let colorScale = d3.scaleOrdinal().domain([0, 1, 2, 3, 4, 5])
+    .range(closedColor.concat(yellowColors).concat(neutralColor).concat(blueColors.reverse()));
+
   let colors = data.map(d => {
     return colorScale(d.category);
   })
 
-  // get data to render chart
-  let chartData = data.map(d => {
-      return {
-        day_of_week: d.day_of_week,
-        hour: d.hour
-      };
-    });
-  renderHeatChart_(chartData, colors, '#comparison-heatmap');
+  renderHeatChart(data, colors, '#comparison-heatmap');
 
 }
 
-// render heat chart of a facility
+
+// prepare data & render heat chart of a facility
 function renderFacilityHeatChart(data, container, facility) {
+
   // reset container content
   $(container).html('');
 
@@ -105,19 +106,13 @@ function renderFacilityHeatChart(data, container, facility) {
     return colorScale(d.category);
   });
 
-  // get data to render chart
-  let chartData = data.map(d => {
-      return {
-        day_of_week: d.day_of_week,
-        hour: d.hour
-      };
-    });
-
-  renderHeatChart_(chartData, colors, container, facility);
+  // render chart
+  renderHeatChart(data, colors, container);
 
 }
 
-function renderHeatChart_(data, colors, container, facility = 'f') {
+
+function renderHeatChart(data, colors, container) {
 
   // validate data input
   let validDataLength = 21 * 7;
@@ -137,7 +132,7 @@ function renderHeatChart_(data, colors, container, facility = 'f') {
   let containerWidth = $(container).outerWidth(),
       containerHeight = $(container).outerHeight(),
       chartWidth = containerWidth - margins.left - margins.right,
-          cHeight = 300 // FIX: use 400 for now, figure out later
+          cHeight = 250; // FIX: use 400 for now, figure out later
       chartHeight = cHeight - margins.top - margins.bottom;
 
   // determine size of circles / grids
@@ -152,17 +147,11 @@ function renderHeatChart_(data, colors, container, facility = 'f') {
     .attr('width', chartWidth + margins.left + margins.right)
     .attr('height', chartHeight + margins.top + margins.bottom)
     .attr('class', 'heat-chart-svg-container')
-    .attr('id', facility + '-svg-container')
     .append('g')
     .attr('transform', 'translate(' + margins.left + ',' + margins.top + ')');
 
-  // get current time
-  let currentTime = new Date,
-      currentHour = currentTime.getHours(),
-      currentDayOfWeek = recodeDayOfWeek(currentTime.getDay());
-
   // render day of week labels vertically
-  let days = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
+  let days = ['Mon to Thur', 'Fri', 'Sat', 'Sun'];
 
   // render day of week labels vertically
   let dayLabels = chartG.selectAll(".day-label")
@@ -170,26 +159,28 @@ function renderHeatChart_(data, colors, container, facility = 'f') {
     .enter()
     .append("text")
     .text(d => d)
-    .attr("x", 10)
+    .attr("x", 15)
     .attr("y", (d, i) => {
       return 30 + i * gridHeight
     })
     .style("text-anchor", "middle")
     //.attr("transform", "translate(" + gridWidth * yScaleFactor + ", -6)")
     .attr("class", (d, i) => {
-      return i + 1 == currentDayOfWeek ?
+      return i + 1 == window.currentTime_.day_of_week ?
           'label day-label now now-label' :
           'label day-label not-now-label';
     })
 
   // render hour of day labels horizontally
   let times = [
-    {label: 'Morning', centerDigit: 8},
+    {label: 'AM', centerDigit: 6},
     {label: 'Noon', centerDigit: 12},
-    {label: 'Evening', centerDigit: 17},
-    {label: 'Midnight', centerDigit: 0}
-  ];
-  let hours = [
+    {label: 'PM', centerDigit: 18}
+  ],
+
+  hours = [
+    {label: '0', digit: 0},
+    {label: '1', digit: 1},
     {label: '5', digit: 5},
     {label: '6', digit: 6},
     {label: '7', digit: 7},
@@ -208,9 +199,7 @@ function renderHeatChart_(data, colors, container, facility = 'f') {
     {label: '8', digit: 20},
     {label: '9', digit: 21},
     {label: '10', digit: 22},
-    {label: '11', digit: 23},
-    {label: '12', digit: 0},
-    {label: '1', digit: 1}
+    {label: '11', digit: 23}
   ];
 
   let timeLabelOffsetY = 0,
@@ -222,7 +211,7 @@ function renderHeatChart_(data, colors, container, facility = 'f') {
     .text(d => d.label)
     // FIX: center time label above specific hours
     .attr('x', (d, i) => {
-      return 100 + i * 120;
+      return 100 + i * 150;
     })
     .attr('y', timeLabelOffsetY)
     .style('text-anchor', 'end')
@@ -233,13 +222,13 @@ function renderHeatChart_(data, colors, container, facility = 'f') {
     .enter().append("text")
     .text(d => d.label)
     .attr("x", (d, i) => {
-      return 50 + i * gridWidth
+      return 70 + i * gridWidth
     })
     .attr("y", hourLabelOffsetY)
     .style("text-anchor", "end")
     //.attr("transform", "translate(0, 15)")
     .attr("class", (d, i) => {
-      return d.digit == currentHour ? 'label hour-label now now-label' : 'label hour-label not-now-label';
+      return d.digit == window.currentTime_.hour ? 'label hour-label now now-label' : 'label hour-label not-now-label';
     });
 
     // render heat circles
@@ -254,24 +243,36 @@ function renderHeatChart_(data, colors, container, facility = 'f') {
           hour_index = i + 1;
         }
       })
-      return (hour_index - 1) * gridWidth + 50;
+      return (hour_index - 1) * gridWidth + 70;
     })
-    .attr("cy", d => {
-      return (d.day_of_week - 1) * gridHeight + 30;
+    .attr("cy", (d, i) => {
+      return getHourIndexY(d.day_of_week) * gridHeight + 30;
     })
     .attr('r', circleRadius)
     .attr("class", d => {
-      // if (d.category == 0) {
-      //   return 'heat-circle closed-border';
-      // }
-     return (d.hour == currentHour & d.day_of_week == currentDayOfWeek) ?
+     return (d.hour == window.currentTime_.hour & d.day_of_week == window.currentTime_.day_of_week) ?
         'heat-circle now now-border' : 'heat-circle not-now-border';
     })
     .style('fill', (d, i) => {
       return colors[i];
     })
+    .on('mouseover', showHeatchartTooltip)
+    .on('mouseout', hideHeatchartTooltip)
 
 }
+
+
+// display mouseover tooltip
+function showHeatchartTooltip(d) {
+  console.log('mouseover');
+}
+
+
+// hide mouseover tooltip
+function hideHeatchartTooltip(d) {
+  console.log('mouseout');
+}
+
 
 // recode day of week from [Sunday = 0, ..., Saturday = 6] to [Monday = 1, ..., Sunday = 7]
 function recodeDayOfWeek(day) {
@@ -279,4 +280,51 @@ function recodeDayOfWeek(day) {
     day = 7;
   }
   return day;
+}
+
+// process data upon loading
+function processFacilityData(data) {
+  data.forEach(d => {
+    d.day_of_week = parseInt(d.day_of_week);
+    d.hour = parseInt(d.hour);
+    d.avg_n_people = parseInt(d.avg_n_people);
+    d.avg_n_people_rel = Number(d.avg_n_people_rel);
+    d.category = parseInt(d.category);
+  });
+  return data;
+}
+
+function processComparisonData(data) {
+  data.forEach(d => {
+    d.day_of_week = parseInt(d.day_of_week);
+    d.hour = parseInt(d.hour);
+    d.wooden_n_people = parseInt(d.wooden_n_people);
+    d.bfit_n_people = parseInt(d.bfit_n_people);
+    d.traffic_ratio = Number(d.traffic_ratio);
+    d.category = parseInt(d.category);
+  });
+  return data;
+}
+
+// get hour's position
+function getHourIndexY(hour) {
+  switch (hour) {
+    case 1:
+      return 0;
+    case 5:
+      return 1;
+    case 6:
+      return 2;
+    case 7:
+      return 3;
+  }
+}
+
+// get current day and hour
+function getCurrentDayAndHour() {
+  let currentTime = new Date;
+  return {
+    hour: currentTime.getHours(),
+    day_of_week: recodeDayOfWeek(currentTime.getDay())
+  };
 }
