@@ -47,7 +47,8 @@ BFit**. Occasionally though, BFit reaches almost the same level of traffic as Wo
 
   <div class='ui centered medium header'>Wooden or BFit</div>
   <div class='ui centered one column grid'>
-    <div class='twelve wide column heat-chart' id='comparison-heatmap'></div>
+    <div class='twelve wide column heat-chart' id='comparison-heatmap'>
+    </div>
   </div>
 
 As we can see, on weekday afternoons, Wooden is a lot busier than BFit as students stay near campus in between classes. Whereas BFit becomes quite crowded on evenings and late nights as well as weekends when Hill residents prefer the short walk to from dorms to BFit.
@@ -56,12 +57,14 @@ As we can see, on weekday afternoons, Wooden is a lot busier than BFit as studen
 
 <div class='ui centered medium header'>Wooden</div>
 <div class='ui centered one column grid'>
-  <div class='twelve wide column heat-chart' id='wooden-heatmap'></div>
+  <div class='twelve wide column heat-chart' id='wooden-heatmap'>
+  </div>
 </div>
 
 <div class='ui centered medium header'>BFit</div>
 <div class='ui centered one column grid'>
-  <div class='twelve wide column heat-chart' id='bfit-heatmap'></div>
+  <div class='twelve wide column heat-chart' id='bfit-heatmap'>
+  </div>
 </div>
 
 
