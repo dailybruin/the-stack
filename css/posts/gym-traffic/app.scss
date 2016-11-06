@@ -1,6 +1,18 @@
 $blue: #008fd5;
 $yellow: #ffb81c;
 
+.heatchart-tip {
+  display: none;
+  position: absolute;
+  height: auto;
+  padding: 5px;
+  font: 14px sans-serif;
+  background: rgba(255, 255, 255, 0.75);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  color: black;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+}
+
 .time-line {
   fill: none;
   stroke-width: 3px;

@@ -1,4 +1,3 @@
-// run script once page is ready
 $(document).ready(function() {
 
   // store current time in global namespace
@@ -11,12 +10,12 @@ $(document).ready(function() {
     // process data
     data = processFacilityData(data);
 
-    // render charts when page is loaded for the first time
-    renderAllFacilityHeatCharts(data);
+    // render for the first time
+    renderBothFacilityHeatCharts(data);
 
     // render upon window resize
     $(window).resize(function() {
-      renderAllFacilityHeatCharts(data);
+      renderBothFacilityHeatCharts(data);
     })
   });
 
@@ -27,12 +26,14 @@ $(document).ready(function() {
     // process data
     data = processComparisonData(data);
 
-    // render chart when page is loaded for the first time
-    renderComparisonChart(data);
+    let container = '#comparison-heatmap';
+
+    // render for the first time
+    renderComparisonChart(data, container);
 
     // render upon window resize
     $(window).resize(function() {
-      renderComparisonChart(data);
+      renderComparisonChart(data, container);
     })
   })
 
@@ -48,7 +49,7 @@ $(document).ready(function() {
 })
 
 // render wooden and bfit heat charts
-function renderAllFacilityHeatCharts(data) {
+function renderBothFacilityHeatCharts(data) {
   let woodenData = data.filter(d => d.facility == 'wooden');
   let bfitData = data.filter(d => d.facility == 'bfit');
 
@@ -58,7 +59,17 @@ function renderAllFacilityHeatCharts(data) {
 
 
 // render comparison charts
-function renderComparisonChart(data) {
+function renderComparisonChart(data, container) {
+
+  // reset container content
+  $(container).html('');
+
+  // append tooltip
+  let tooltip = d3.select(container)
+    .append('div')
+    .attr('class', 'heatchart-tip')
+    .attr('id', 'comparison-tip')
+    .html("Comparison tooltip text here") // FIX
 
   let blueColors = ['#008FD5', '#9FD5EF']; // [darker, less dark] http://htmlcolorcodes.com/color-picker/
   let yellowColors = ['ffb81c', '#FFE4AA']; // [darker, less dark]
@@ -69,6 +80,11 @@ function renderComparisonChart(data) {
   data = data.filter(d => {
     return d.hour != 2 & d.hour != 3 & d.hour != 4;
   })
+
+  // tooltip
+  data.forEach(d => {
+    d.tooltip = tooltip;
+  });
 
   // get color of each data point
   let colorScale = d3.scaleOrdinal().domain([0, 1, 2, 3, 4, 5])
@@ -89,6 +105,13 @@ function renderFacilityHeatChart(data, container, facility) {
   // reset container content
   $(container).html('');
 
+  // append tooltip
+  let tooltip = d3.select(container)
+    .append('div')
+    .attr('class', 'heatchart-tip')
+    .attr('id', facility + '-tip')
+    .html("Facility tooltip text here") // FIX
+
   // determine color of each heat circle
   let sequentialColors = ['#feedde','#fdbe85','#fd8d3c','#d94701']; // http://colorbrewer2.org/#type=sequential&scheme=Oranges&n=4
   let closedColor = ['EBEDEF'];//['#EBEDEF'];
@@ -106,16 +129,25 @@ function renderFacilityHeatChart(data, container, facility) {
     return colorScale(d.category);
   });
 
+  // specify whether to show each circle
+  let showFlags = data.map(d => {
+    return d.avg_n_people > 0;
+  })
+
+  // tooltip
+  data.forEach(d => {
+    d.tooltip = tooltip;
+  });
+
   // render chart
-  renderHeatChart(data, colors, container);
+  renderHeatChart(data, colors, container, showFlags);
 
 }
 
-
-function renderHeatChart(data, colors, container) {
+function renderHeatChart(data, colors, container, showFlags, legend = '') {
 
   // validate data input
-  let validDataLength = 21 * 7;
+  let validDataLength = 21 * 4;
   if (data.length != validDataLength| colors.length != validDataLength) {
     console.log('Check data length');
   }
@@ -126,18 +158,21 @@ function renderHeatChart(data, colors, container) {
   })
 
   // margins applied to svg container
-  let margins = {left: 20, right: 20, top: 20, bottom: 20};
+  let margins = {left: 20, right: 20, top: 10, bottom: 10};
 
   // get dimensions of container and determine dimensions of chart
   let containerWidth = $(container).outerWidth(),
       containerHeight = $(container).outerHeight(),
       chartWidth = containerWidth - margins.left - margins.right,
-          cHeight = 150; // FIX: use 400 for now, figure out later
+          cHeight = 150; // FIX
       chartHeight = cHeight - margins.top - margins.bottom;
+
+  // mobile threshold
+  let mobileThreshold = 450; if (containerWidth <= mobileThreshold) console.log("MOBILE!");
 
   // determine size of circles / grids
   let circleRadius = 8,
-      circlePaddings = {vertical: 5, horizontal: 5},
+      circlePaddings = {vertical: 7, horizontal: 3},
       gridHeight = circleRadius * 2 + circlePaddings.vertical,
       gridWidth = circleRadius * 2 + circlePaddings.horizontal;
 
@@ -153,15 +188,18 @@ function renderHeatChart(data, colors, container) {
   // render day of week labels vertically
   let days = ['Mon to Thur', 'Fri', 'Sat', 'Sun'];
 
-  // render day of week labels vertically
+  let verticalLabelOffsetX = 15,
+      firstCircleOffsetY = 30,
+      firstCircleOffsetX = 70;
+
   let dayLabels = chartG.selectAll(".day-label")
     .data(days)
     .enter()
     .append("text")
     .text(d => d)
-    .attr("x", 15)
+    .attr("x", verticalLabelOffsetX)
     .attr("y", (d, i) => {
-      return 30 + i * gridHeight
+      return firstCircleOffsetY + (i * gridHeight);
     })
     .style("text-anchor", "middle")
     //.attr("transform", "translate(" + gridWidth * yScaleFactor + ", -6)")
@@ -214,7 +252,7 @@ function renderHeatChart(data, colors, container) {
       return 100 + i * 150;
     })
     .attr('y', timeLabelOffsetY)
-    .style('text-anchor', 'end')
+    .style('text-anchor', 'middle')
     .attr('class', 'time-label');
 
   let hourLabels = chartG.selectAll(".hour-label")
@@ -222,10 +260,10 @@ function renderHeatChart(data, colors, container) {
     .enter().append("text")
     .text(d => d.label)
     .attr("x", (d, i) => {
-      return 70 + i * gridWidth
+      return firstCircleOffsetX + (i * gridWidth);
     })
     .attr("y", hourLabelOffsetY)
-    .style("text-anchor", "end")
+    .style("text-anchor", "middle")
     //.attr("transform", "translate(0, 15)")
     .attr("class", (d, i) => {
       return d.digit == window.currentTime_.hour ? 'label hour-label now now-label' : 'label hour-label not-now-label';
@@ -243,7 +281,7 @@ function renderHeatChart(data, colors, container) {
           hour_index = i + 1;
         }
       })
-      return (hour_index - 1) * gridWidth + 70;
+      return firstCircleOffsetX + (hour_index - 1) * gridWidth;
     })
     .attr("cy", (d, i) => {
       return getHourIndexY(d.day_of_week) * gridHeight + 30;
@@ -256,21 +294,36 @@ function renderHeatChart(data, colors, container) {
     .style('fill', (d, i) => {
       return colors[i];
     })
-    .on('mouseover', showHeatchartTooltip)
-    .on('mouseout', hideHeatchartTooltip)
+    .on('mouseover', (d, i) => {
+      showTooltip(d, i);
+    })
+    .on('mouseout', (d, i) => {
+      hideTooltip(d, i);
+    })
 
 }
 
 
 // display mouseover tooltip
-function showHeatchartTooltip(d) {
-  console.log('mouseover');
+function showTooltip(d, i) {
+  d.tooltip.html(
+    '<p>' + d.day_of_week + ' ' + d.hour + ' PM' + '<br>Typical traffic at ' +
+    d.facility + ': <br>' + Math.round(d.avg_n_people_rel * 100) + '% relative to peak.</p>'
+  );
+  d.tooltip.style('display', 'block');
+  // woodenTip.style('left', d => {
+  //   return d3.event.pageX + 'px';
+  // });
+  // woodenTip.style('top', d => {
+  //   return d3.event.pageY + 'px';
+  // });
 }
 
 
 // hide mouseover tooltip
-function hideHeatchartTooltip(d) {
-  console.log('mouseout');
+function hideTooltip(d, i) {
+  d.tooltip.html('');
+  d.tooltip.style('display', 'none');
 }
 
 
