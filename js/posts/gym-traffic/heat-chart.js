@@ -22,7 +22,7 @@ $(document).ready(function() {
     })
   });
 
-  // render comparison charts
+  // render comparison chart
   d3.csv('/datasets/gym-traffic/comparison-chart-data.csv', function(error, data) {
     if (error)  throw error;
 
@@ -79,17 +79,21 @@ function renderBothFacilityHeatCharts(data) {
   configAndRenderChart(facilityData.bfit, '#bfit-heatmap', 'bfit', sequentialColors, sequentialLabels);
 }
 
+// render comparison charts
+function renderComparisonChart(data, container) {
+  let blueColor = ['#008FD5'],
+      yellowColor = ['#ffb81c'], // [darker, less dark]
+      neutralColor = ['#CFDDCC']; // http://www.colorhexa.com/80a478,
+      scaleColors = yellowColor.concat(neutralColor).concat(blueColor),
+      scaleLabels = ['BFit Busier', '"Same"', 'Wooden Busier'];
+
+  configAndRenderChart(data, container, null, scaleColors, scaleLabels);
+}
+
 //
 function configAndRenderChart(data, container, facility, scaleColors, scaleLabels) {
   // reset container content
   $(container).html('');
-
-  // append tooltip
-  let tooltip = d3.select(container)
-    .append('div')
-    .attr('class', 'heatchart-tip')
-    .attr('id', facility + '-tip')
-    .html("Tooltip text here") // FIX
 
   let closedColor = ['#CCD1D1'],
       allColors = closedColor.concat(scaleColors)
@@ -107,7 +111,13 @@ function configAndRenderChart(data, container, facility, scaleColors, scaleLabel
       return colorScale(d.category);
     });
 
-    // tooltip
+    // append tooltip
+    let tooltip = d3.select(container)
+      .append('div')
+      .attr('class', 'heatchart-tip')
+      .attr('id', facility + '-tip')
+      .html("")
+
     data.forEach(d => {
       d.tooltip = tooltip;
     });
@@ -122,18 +132,6 @@ function configAndRenderChart(data, container, facility, scaleColors, scaleLabel
 
     // render chart
     renderHeatChart(data, colors, container, legendCircles);
-}
-
-
-// render comparison charts
-function renderComparisonChart(data, container) {
-  let blueColor = ['#008FD5'],
-      yellowColor = ['#ffb81c'], // [darker, less dark]
-      neutralColor = ['#CFDDCC']; // http://www.colorhexa.com/80a478,
-      scaleColors = yellowColor.concat(neutralColor).concat(blueColor),
-      scaleLabels = ['BFit Busier', '"Same"', 'Wooden Busier'];
-
-  configAndRenderChart(data, container, '', scaleColors, scaleLabels);
 }
 
 
@@ -370,20 +368,20 @@ function showTooltip(d, i) {
     '<p>' + d.day_of_week + ' ' + d.hour + ' PM' + '<br>Typical traffic at ' +
     d.facility + ': <br>' + Math.round(d.avg_n_people_rel * 100) + '% relative to peak.</p>'
   );
-  d.tooltip.style('display', 'block');
-  // woodenTip.style('left', d => {
-  //   return d3.event.pageX + 'px';
-  // });
-  // woodenTip.style('top', d => {
-  //   return d3.event.pageY + 'px';
-  // });
+  d.tooltip.style('opacity', 1)
+      .style('left', d => {
+        return (event.clientX - event.offsetX) + 'px';
+      })
+      .style('top', d => {
+        return (event.clientY + event.offsetY) + 'px';
+      })
 }
 
 
 // hide mouseover tooltip
 function hideTooltip(d, i) {
   d.tooltip.html('');
-  d.tooltip.style('display', 'none');
+  d.tooltip.style('opacity', 0);
 }
 
 

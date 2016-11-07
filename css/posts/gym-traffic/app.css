@@ -1,13 +1,17 @@
 .heatchart-tip {
-  display: none;
+  display: block;
+  opacity: 0;
   position: absolute;
+  text-align: center;
+  width: 150px;
   height: auto;
   padding: 5px;
   font: 14px sans-serif;
   background: rgba(255, 255, 255, 0.75);
   border: 1px solid rgba(0, 0, 0, 0.2);
   color: black;
-  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2); }
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px; }
 
 .time-line {
   fill: none;
