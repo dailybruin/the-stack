@@ -40,11 +40,11 @@ $(document).ready(function() {
       // FIX: render opening traffic text
       d3.select('#wooden-traffic-text')
         .text("very busy")
-        .attr('class', 'wooden traffic-text')
+        .attr('class', 'traffic-text')
 
       d3.select('#bfit-traffic-text')
         .text("moderately busy")
-        .attr('class', 'bfit traffic-text')
+        .attr('class', 'traffic-text')
 
 })
 
@@ -187,11 +187,7 @@ function renderHeatChart(data, colors, container, legendCircles = null) {
       return firstCircleOffsetY + (circleRadius/2) + (i * gridHeight);
     })
     .style("text-anchor", "middle")
-    .attr("class", (d, i) => {
-      return i + 1 == window.currentTime_.day_of_week ?
-          'label now-label' :
-          'label';
-    })
+    .attr("class", 'label')
 
   // render time and hour of day labels horizontally
 
@@ -252,9 +248,7 @@ function renderHeatChart(data, colors, container, legendCircles = null) {
     .attr("y", hourLabelOffsetY)
     .style("text-anchor", "middle")
     //.attr("transform", "translate(0, 15)")
-    .attr("class", (d, i) => {
-      return d.digit == window.currentTime_.hour ? 'label now-label' : 'label';
-    });
+    .attr("class", 'label');
 
     // render heat circles
     let circles = chartG.selectAll(".heat-circle")
