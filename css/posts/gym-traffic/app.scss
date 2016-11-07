@@ -22,12 +22,12 @@ $mobile-threshold: 700px;
 
 .wooden {
   stroke: $blue;
-  color: $blue;
+  border-bottom: 3px solid $blue;
 }
 
 .bfit {
   stroke: $yellow;
-  color: $yellow;
+  border-bottom: 3px solid $yellow;
 }
 
 .heat-circle:hover {
@@ -36,8 +36,12 @@ $mobile-threshold: 700px;
   stroke-width: 1px;
 }
 
-.traffic-text {
+.facility-name {
   font-weight: bold;
+}
+
+.traffic-text {
+  font-style: italic;
 }
 
 .voronoi path {

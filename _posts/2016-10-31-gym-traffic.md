@@ -35,7 +35,9 @@ That model would have to account for not only people who entered at a particular
 
 Gym usage patterns are remarkably consistent. While UCLA Recreation doesn't provides real time information, we can fairly safely estimate – in real time – how busy a gym is based on past data.
 
-Right now, it's likely that Wooden is <span id='wooden-traffic-text'></span>, and BFit is <span id='bfit-traffic-text'></span>.
+Right now, it's likely that
+<span class='wooden facility-name'>Wooden</span> is <span id='wooden-traffic-text'></span>, and
+<span class='bfit facility-name'>BFit</span> is <span id='bfit-traffic-text'></span>.
 
 > These live estimates are worded relative to other 1) times of day, and 2) days of week.
 > What if campus is not in session or gym hours are changed? Well, your browser doesn't know that!

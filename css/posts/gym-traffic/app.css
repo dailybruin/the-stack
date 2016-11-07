@@ -16,19 +16,22 @@
 
 .wooden {
   stroke: #008fd5;
-  color: #008fd5; }
+  border-bottom: 3px solid #008fd5; }
 
 .bfit {
   stroke: #ffb81c;
-  color: #ffb81c; }
+  border-bottom: 3px solid #ffb81c; }
 
 .heat-circle:hover {
   opacity: 0.6;
   stroke: black;
   stroke-width: 1px; }
 
-.traffic-text {
+.facility-name {
   font-weight: bold; }
+
+.traffic-text {
+  font-style: italic; }
 
 .voronoi path {
   fill: none;
