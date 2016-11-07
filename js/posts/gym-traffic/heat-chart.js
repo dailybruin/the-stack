@@ -71,18 +71,18 @@ function renderComparisonChart(data, container) {
     .attr('id', 'comparison-tip')
     .html("Comparison tooltip text here") // FIX
 
-  let blueColors = ['#008FD5', '#9FD5EF'], // [darker, less dark] http://htmlcolorcodes.com/color-picker/
-      yellowColors = ['#ffb81c', '#FFE4AA'], // [darker, less dark]
+  let blueColor = ['#008FD5'], // [darker, less dark] http://htmlcolorcodes.com/color-picker/
+      yellowColor = ['#ffb81c'], // [darker, less dark]
       neutralColor = ['#CFDDCC'], // http://www.colorhexa.com/80a478
       closedColor = ['#EBEDEF'],
-      allColors = closedColor.concat(yellowColors).concat(neutralColor).concat(blueColors.reverse()),
-      circleLabels = ['Closed', 'BFit Much Busier', '', 'Normal', '', 'Wooden Much Busier'],
-      colorScale = d3.scaleOrdinal().domain([0, 1, 2, 3, 4, 5])
+      allColors = closedColor.concat(yellowColor).concat(neutralColor).concat(blueColor),
+      circleLabels = ['Closed', 'BFit Busier', '"Same"', 'Wooden Busier'],
+      colorScale = d3.scaleOrdinal().domain([0, 1, 2, 3])
         .range(allColors);
 
-  // filter data to exclude hours from 2 to 4
+  // filter data to exclude hours from 1 to 4
   data = data.filter(d => {
-    return d.hour != 2 & d.hour != 3 & d.hour != 4;
+    return d.hour < 1 | d.hour > 4;
   })
 
   // tooltip
@@ -130,9 +130,9 @@ function renderFacilityHeatChart(data, container, facility) {
         .domain([0, 1, 2, 3, 4, 5])
         .range(allColors);
 
-  // filter data to exclude hours from 2 to 4
+  // filter data to exclude hours from 1 to 4
   data = data.filter(d => {
-    return d.hour != 2 & d.hour != 3 & d.hour != 4;
+    return d.hour < 1 | d.hour > 4;
   })
 
   // store color of each circle
@@ -243,7 +243,7 @@ function renderHeatChart(data, colors, container, legendCircles = null) {
 
   hours = isMobile?
     [
-      {label: '0', digit: 0}, {label: '1', digit: 1}, {label: '5', digit: 5},
+      {label: '0', digit: 0}, {label: '5', digit: 5},
       {label: '6', digit: 6}, {label: '', digit: 7}, {label: '', digit: 8},
       {label: '9', digit: 9}, {label: '', digit: 10}, {label: '', digit: 11},
       {label: '12', digit: 12}, {label: '', digit: 13}, {label: '', digit: 14},
@@ -253,7 +253,7 @@ function renderHeatChart(data, colors, container, legendCircles = null) {
     ] :
 
     [
-      {label: '0', digit: 0}, {label: '1', digit: 1}, {label: '5', digit: 5},
+      {label: '0', digit: 0}, {label: '5', digit: 5},
       {label: '6', digit: 6}, {label: '7', digit: 7}, {label: '8', digit: 8},
       {label: '9', digit: 9}, {label: '10', digit: 10}, {label: '11', digit: 11},
       {label: '12', digit: 12}, {label: '1', digit: 13}, {label: '2', digit: 14},
