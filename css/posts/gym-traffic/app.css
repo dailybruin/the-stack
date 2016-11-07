@@ -38,12 +38,11 @@
 .now-label {
   font-weight: bold; }
 
-.now-border {
+.bold-border {
   stroke: black;
-  stroke-width: 4px; }
+  stroke-width: 2.5px; }
 
-.not-now-border {
-  stroke: grey;
-  stroke-width: 1px; }
+.no-border {
+  stroke: none; }
 
 /*# sourceMappingURL=app.css.map */
