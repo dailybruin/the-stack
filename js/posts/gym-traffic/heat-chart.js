@@ -10,6 +10,9 @@ $(document).ready(function() {
     // process data
     data = processFacilityData(data);
 
+    // render traffic text
+    renderTrafficText(data);
+
     // render for the first time
     renderBothFacilityHeatCharts(data);
 
@@ -37,27 +40,43 @@ $(document).ready(function() {
     })
   })
 
-      // FIX: render opening traffic text
-      d3.select('#wooden-traffic-text')
-        .text("very busy")
-        .attr('class', 'traffic-text')
-
-      d3.select('#bfit-traffic-text')
-        .text("moderately busy")
-        .attr('class', 'traffic-text')
-
 })
+
+function renderTrafficText(data) {
+  let facilityData = filterFacilityData(data);
+
+  let woodenTraffic = null;
+  facilityData.wooden.forEach(d => {
+    if (d.hour == currentTime_.hour & d.day_of_week == currentTime_.day_of_week) {
+      woodenTraffic = d.category;
+    }
+  })
+
+  let bfitTraffic = null;
+  facilityData.bfit.forEach(d => {
+    if (d.hour == currentTime_.hour & d.day_of_week == currentTime_.day_of_week) {
+      bfitTraffic = d.category;
+    }
+  })
+
+  d3.select('#wooden-traffic-text')
+    .text(labelTrafficCategory(woodenTraffic))
+    .attr('class', 'traffic-text')
+
+  d3.select('#bfit-traffic-text')
+    .text(labelTrafficCategory(bfitTraffic))
+    .attr('class', 'traffic-text')
+}
 
 // render wooden and bfit heat charts
 function renderBothFacilityHeatCharts(data) {
-  let woodenData = data.filter(d => d.facility == 'wooden');
-  let bfitData = data.filter(d => d.facility == 'bfit');
+  let facilityData = filterFacilityData(data);
 
   let sequentialColors = ['#feedde','#fdbe85','#fd8d3c','#d94701'], // http://colorbrewer2.org/#type=sequential&scheme=Oranges&n=4
       sequentialLabels = ['Light Traffic', '', '', 'Very Busy'];
 
-  configAndRenderChart(woodenData, '#wooden-heatmap', 'wooden', sequentialColors, sequentialLabels);
-  configAndRenderChart(bfitData, '#bfit-heatmap', 'bfit', sequentialColors, sequentialLabels);
+  configAndRenderChart(facilityData.wooden, '#wooden-heatmap', 'wooden', sequentialColors, sequentialLabels);
+  configAndRenderChart(facilityData.bfit, '#bfit-heatmap', 'bfit', sequentialColors, sequentialLabels);
 }
 
 //
@@ -411,6 +430,34 @@ function getHourIndexY(hour) {
       return 2;
     case 7:
       return 3;
+  }
+}
+
+function filterFacilityData (data) {
+  let woodenData = data.filter(d => d.facility == 'wooden'),
+      bfitData = data.filter(d => d.facility == 'bfit');
+
+  return {
+    wooden: woodenData,
+    bfit: bfitData
+  };
+}
+
+// turn traffic category into display text
+function labelTrafficCategory(code) {
+  switch (code) {
+    case 0:
+      return "Closed";
+    case 1:
+      return "Not busy";
+    case 2:
+      return "Average";
+    case 3:
+      return "Somewhat busy";
+    case 4:
+      return "Very busy";
+    default:
+      return null;
   }
 }
 
