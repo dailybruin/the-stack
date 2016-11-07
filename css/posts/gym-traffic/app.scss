@@ -1,5 +1,6 @@
 $blue: #008fd5;
 $yellow: #ffb81c;
+$mobile-threshold: 700px;
 
 .heatchart-tip {
   display: none;
@@ -29,12 +30,6 @@ $yellow: #ffb81c;
   color: $yellow;
 }
 
-.heat-chart-svg-container {
-  // -webkit-box-shadow: 11px 9px 12px -3px rgba(214,219,223,1);
-  // -moz-box-shadow: 11px 9px 12px -3px rgba(214,219,223,1);
-  // box-shadow: 11px 9px 12px -3px rgba(214,219,223,1);
-}
-
 .traffic-text {
   font-weight: bold;
 }
@@ -44,25 +39,19 @@ $yellow: #ffb81c;
   pointer-events: all;
 }
 
-.now {
-  fill: black;
-  stroke: black;
-}
-
 .label {
-  font-size: 13px;
+  @media only screen and (max-width: $mobile-threshold) {
+    font-size: 7px;
+  }
+  font-size: 14px;
 }
 
 .now-label {
   font-weight: bold;
 }
 
-.not-now-label {
-  fill: black;
-  font-size: 12px;
-}
-
 .now-border {
+  stroke: black;
   stroke-width: 4px;
 }
 

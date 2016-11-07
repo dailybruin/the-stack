@@ -29,21 +29,17 @@
   fill: none;
   pointer-events: all; }
 
-.now {
-  fill: black;
-  stroke: black; }
-
 .label {
-  font-size: 13px; }
+  font-size: 14px; }
+  @media only screen and (max-width: 700px) {
+    .label {
+      font-size: 7px; } }
 
 .now-label {
   font-weight: bold; }
 
-.not-now-label {
-  fill: black;
-  font-size: 12px; }
-
 .now-border {
+  stroke: black;
   stroke-width: 4px; }
 
 .not-now-border {
