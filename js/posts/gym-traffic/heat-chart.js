@@ -95,11 +95,7 @@ function renderComparisonChart(data, container) {
   })
   console.log(data);
 
-  let showFlags = data.map(d => {
-    return d.wooden_n_people > 0 | d.bfit_n_people > 0;
-  })
-
-  renderHeatChart(data, colors, '#comparison-heatmap', showFlags);
+  renderHeatChart(data, colors, '#comparison-heatmap');
 
 }
 
@@ -134,22 +130,17 @@ function renderFacilityHeatChart(data, container, facility) {
     return colorScale(d.category);
   });
 
-  // specify whether to show each circle
-  let showFlags = data.map(d => {
-    return d.avg_n_people > 0;
-  })
-
   // tooltip
   data.forEach(d => {
     d.tooltip = tooltip;
   });
 
   // render chart
-  renderHeatChart(data, colors, container, showFlags);
+  renderHeatChart(data, colors, container);
 
 }
 
-function renderHeatChart(data, colors, container, showFlags, legend = '') {
+function renderHeatChart(data, colors, container, legend = null) {
 
   // validate data input
   let validDataLength = 21 * 4;
@@ -307,13 +298,10 @@ function renderHeatChart(data, colors, container, showFlags, legend = '') {
     .attr('r', circleRadius)
     .attr("class", d => {
      return (d.hour == window.currentTime_.hour & d.day_of_week == window.currentTime_.day_of_week) ?
-        'heat-circle now now-border' : 'heat-circle not-now-border';
+        'heat-circle bold-border' : 'heat-circle no-border';
     })
     .style('fill', (d, i) => {
       return colors[i];
-    })
-    .style('opacity', (d, i) => {
-      return showFlags[i]? 1 : 0;
     })
     .on('mouseover', (d, i) => {
       showTooltip(d, i);
