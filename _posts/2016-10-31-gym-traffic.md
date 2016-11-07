@@ -1,6 +1,6 @@
 ---
 title: When and where you should go workout?
-teaser: Take an unprecendented look at gym traffic in Wooden and BFit.
+teaser: Take an unprecedented look at gym traffic in Wooden and BFit.
 
 authors:
     - tyson_ni
@@ -98,26 +98,26 @@ A couple UCLA Recreation officials graciously provided the dataset to Daily Brui
 
 Because BFit opened in October 2015, weeks into Fall 2015, data from that quarter were removed from the calculations.
 
-To estimate traffic, **we need know how long each person stays**. Because the dataset doesn't have exit timestamps, we have to guess how long each workout lasted – we need to come up with a distribution and good enough parameters using *survey data*.
+To estimate traffic, **we need know how long each person stays**, but because the dataset doesn't have exit timestamps, we have to guess how long each workout lasted – we need to come up with a distribution and good enough parameters using *survey data*.
 
-...
+65 UCLA students responded to an online survey asking them how long they stayed at the gym last time they went. We chose the Weibull distribution due to its suitability for modeling timed events, and estimated parameters by fitting to the survey data.
 
 <figure>
   <img src="/img/posts/gym-traffic/survey-histogram.png" height='260px' width='300px' />
-  <figcaption>65 UCLA students were asked how much time they spent the last time they went to gym</figcaption>
+  <figcaption>Survey data on how much time students spent at gym</figcaption>
 </figure>
 
 <figure>
   <img src="/img/posts/gym-traffic/model-histogram.png" height='260px' width='300px' />
-  <figcaption>A model simulated based on survey data</figcaption>
+  <figcaption>A model based on survey data</figcaption>
 </figure>
 
-Essentially, each visitor:
+Once we have a model, we assume each visitor in the records does the following:
 
 1. Enters at actual time, *provided by the data*
-2. Remains for X number of time intervals, *simulated from the model*
+2. Remains for X number of time intervals, *simulated from the model distribution*
 3. Exits
 
-Now we simply count all the people who remain at a particular time point to get an estimated traffic.
+Now we simply count all the people who remain at a particular time point to get estimated traffic.
 
-Is the model reliable? Using different models actually produced a high variance in estimated traffic counts. One set of parameters might produce an estimate of 200 while another that assumes people spend more time might output 260 as the estimate. But **the relative difference between times are very consistent** so the trends shown in relative scales above don't vary much regardless of model specification. They're reliable enough for decision making because after all ...
+Is the model reliable? Using different models actually produced a high variance in estimated traffic counts. One set of parameters might produce an estimate of 200 while another that assumes people spend more time might output 260 as the estimate. But **the relative difference between times are very consistent** so the trends shown in relative scales above don't vary much regardless of model specification. They're robust enough for decision making because after all ...
