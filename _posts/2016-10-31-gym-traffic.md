@@ -39,13 +39,14 @@ Right now, it's likely that
 <span class='wooden facility-name'>Wooden</span> is <span id='wooden-traffic-text'></span>, and
 <span class='bfit facility-name'>BFit</span> is <span id='bfit-traffic-text'></span>.
 
-> These live estimates are worded relative to other 1) times of day, and 2) days of week.
+> These live estimates are based on 1) time of day, and 2) day of week.
+> Take a look at the legends below to better understand the scale.
 > What if campus is not in session or gym hours are changed? Well, your browser doesn't know that!
 
 
 ## Choosing between Wooden and BFit
 
-Wooden has a much higher capacity than BFit, and **normally it houses between two and three times as many people as
+Wooden's much higher capacity means **it normally houses between two and three times as many people as
 BFit**. Occasionally though, BFit reaches almost the same level of traffic as Wooden. In that case, we might argue that Wooden is the better, less croweded place to workout. Conversely, when Wooden is *a lot* busier than BFit, BFit might be a better choice.
 
   <div class='ui centered medium header'>Wooden or BFit</div>
