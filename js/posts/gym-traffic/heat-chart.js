@@ -93,8 +93,13 @@ function renderComparisonChart(data, container) {
   let colors = data.map(d => {
     return colorScale(d.category);
   })
+  console.log(data);
 
-  renderHeatChart(data, colors, '#comparison-heatmap');
+  let showFlags = data.map(d => {
+    return d.wooden_n_people > 0 | d.bfit_n_people > 0;
+  })
+
+  renderHeatChart(data, colors, '#comparison-heatmap', showFlags);
 
 }
 
@@ -157,23 +162,38 @@ function renderHeatChart(data, colors, container, showFlags, legend = '') {
     }
   })
 
-  // margins applied to svg container
-  let margins = {left: 20, right: 20, top: 10, bottom: 10};
-
-  // get dimensions of container and determine dimensions of chart
+  // get browser container width
   let containerWidth = $(container).outerWidth(),
-      containerHeight = $(container).outerHeight(),
-      chartWidth = containerWidth - margins.left - margins.right,
-          cHeight = 150; // FIX
-      chartHeight = cHeight - margins.top - margins.bottom;
+      containerHeight = $(container).outerHeight();
 
   // mobile threshold
-  let mobileThreshold = 450; if (containerWidth <= mobileThreshold) console.log("MOBILE!");
+  let mobileThreshold = 700,
+      windowWidth = $(window).width(); console.log(windowWidth);
+
+  let isMobile = windowWidth <= mobileThreshold ? true : false;
+  if (isMobile) console.log('mobile!');
+
+  // margins applied to svg container
+  let margins = isMobile?
+      {left: 0, right: 0, top: 5, bottom: 5} :
+      {left: 20, right: 20, top: 10, bottom: 10};
+
+  // get dimensions of container and determine dimensions of chart
+  let chartWidth = containerWidth - margins.left - margins.right,
+        cHeight = isMobile? 80 : 150,
+      chartHeight = cHeight - margins.top - margins.bottom;
+
+  // dimension and size configs
+  let circleRadius = isMobile? chartWidth / 60 : 8,
+      circlePaddings = isMobile? {vertical: 3, horizontal: 1.5} : {vertical: 8, horizontal: 4},
+      dayLabelOffsetX = isMobile? 18 : 22,
+      firstCircleOffsetX = isMobile? 40 : 75,
+      firstCircleOffsetY = isMobile? 17 : 35,
+      timeLabelOffsetY = 4,
+      hourLabelOffsetY = isMobile? 10 : 20;
 
   // determine size of circles / grids
-  let circleRadius = 8,
-      circlePaddings = {vertical: 7, horizontal: 3},
-      gridHeight = circleRadius * 2 + circlePaddings.vertical,
+  let gridHeight = circleRadius * 2 + circlePaddings.vertical,
       gridWidth = circleRadius * 2 + circlePaddings.horizontal;
 
   // render SVG container and g element using container dimensions
@@ -186,87 +206,85 @@ function renderHeatChart(data, colors, container, showFlags, legend = '') {
     .attr('transform', 'translate(' + margins.left + ',' + margins.top + ')');
 
   // render day of week labels vertically
-  let days = ['Mon to Thur', 'Fri', 'Sat', 'Sun'];
-
-  let verticalLabelOffsetX = 15,
-      firstCircleOffsetY = 30,
-      firstCircleOffsetX = 70;
+  let days = isMobile? ['Mo~Th', 'Fri', 'Sat', 'Sun'] : ['Mon to Thur', 'Fri', 'Sat', 'Sun'];
 
   let dayLabels = chartG.selectAll(".day-label")
     .data(days)
     .enter()
     .append("text")
     .text(d => d)
-    .attr("x", verticalLabelOffsetX)
+    .attr("x", dayLabelOffsetX)
     .attr("y", (d, i) => {
-      return firstCircleOffsetY + (i * gridHeight);
+      return firstCircleOffsetY + (circleRadius/2) + (i * gridHeight);
     })
     .style("text-anchor", "middle")
-    //.attr("transform", "translate(" + gridWidth * yScaleFactor + ", -6)")
     .attr("class", (d, i) => {
       return i + 1 == window.currentTime_.day_of_week ?
-          'label day-label now now-label' :
-          'label day-label not-now-label';
+          'label now-label' :
+          'label';
     })
 
-  // render hour of day labels horizontally
+  // render time and hour of day labels horizontally
+
   let times = [
-    {label: 'AM', centerDigit: 6},
-    {label: 'Noon', centerDigit: 12},
-    {label: 'PM', centerDigit: 18}
+    {label: 'AM'},
+    {label: 'Noon'},
+    {label: 'PM'}
   ],
 
-  hours = [
-    {label: '0', digit: 0},
-    {label: '1', digit: 1},
-    {label: '5', digit: 5},
-    {label: '6', digit: 6},
-    {label: '7', digit: 7},
-    {label: '8', digit: 8},
-    {label: '9', digit: 9},
-    {label: '10', digit: 10},
-    {label: '11', digit: 11},
-    {label: '12', digit: 12},
-    {label: '1', digit: 13},
-    {label: '2', digit: 14},
-    {label: '3', digit: 15},
-    {label: '4', digit: 16},
-    {label: '5', digit: 17},
-    {label: '6', digit: 18},
-    {label: '7', digit: 19},
-    {label: '8', digit: 20},
-    {label: '9', digit: 21},
-    {label: '10', digit: 22},
-    {label: '11', digit: 23}
-  ];
+  hours = isMobile?
+    [
+      {label: '0', digit: 0}, {label: '1', digit: 1}, {label: '5', digit: 5},
+      {label: '6', digit: 6}, {label: '', digit: 7}, {label: '', digit: 8},
+      {label: '9', digit: 9}, {label: '', digit: 10}, {label: '', digit: 11},
+      {label: '12', digit: 12}, {label: '', digit: 13}, {label: '', digit: 14},
+      {label: '3', digit: 15}, {label: '', digit: 16}, {label: '', digit: 17},
+      {label: '6', digit: 18}, {label: '', digit: 19}, {label: '', digit: 20},
+      {label: '9', digit: 21}, {label: '', digit: 22}, {label: '11', digit: 23}
+    ] :
 
-  let timeLabelOffsetY = 0,
-      hourLabelOffsetY = 18;
+    [
+      {label: '0', digit: 0}, {label: '1', digit: 1}, {label: '5', digit: 5},
+      {label: '6', digit: 6}, {label: '7', digit: 7}, {label: '8', digit: 8},
+      {label: '9', digit: 9}, {label: '10', digit: 10}, {label: '11', digit: 11},
+      {label: '12', digit: 12}, {label: '1', digit: 13}, {label: '2', digit: 14},
+      {label: '3', digit: 15}, {label: '4', digit: 16}, {label: '5', digit: 17},
+      {label: '6', digit: 18}, {label: '7', digit: 19}, {label: '8', digit: 20},
+      {label: '9', digit: 21}, {label: '10', digit: 22}, {label: '11', digit: 23}
+    ];
+
+  hours.forEach((d, i) => {
+    d.x = firstCircleOffsetX + (i * gridWidth);
+
+    if (d.digit == 6) {
+      times[0]['x'] = d.x;
+    } else if (d.digit == 12) {
+      times[1]['x'] = d.x;
+    } else if (d.digit == 18) {
+      times[2]['x'] = d.x;
+    }
+  })
 
   let timeLabels = chartG.selectAll('.time-label')
     .data(times)
     .enter().append('text')
     .text(d => d.label)
     // FIX: center time label above specific hours
-    .attr('x', (d, i) => {
-      return 100 + i * 150;
-    })
+    .attr('x', d => d.x)
     .attr('y', timeLabelOffsetY)
     .style('text-anchor', 'middle')
-    .attr('class', 'time-label');
+    .attr('class', 'label');
 
   let hourLabels = chartG.selectAll(".hour-label")
     .data(hours)
     .enter().append("text")
     .text(d => d.label)
-    .attr("x", (d, i) => {
-      return firstCircleOffsetX + (i * gridWidth);
-    })
+    .attr("x", d => d.x)
     .attr("y", hourLabelOffsetY)
     .style("text-anchor", "middle")
     //.attr("transform", "translate(0, 15)")
     .attr("class", (d, i) => {
-      return d.digit == window.currentTime_.hour ? 'label hour-label now now-label' : 'label hour-label not-now-label';
+      return d.digit == window.currentTime_.hour ? 'label now-label' : 'label';
     });
 
     // render heat circles
@@ -284,7 +302,7 @@ function renderHeatChart(data, colors, container, showFlags, legend = '') {
       return firstCircleOffsetX + (hour_index - 1) * gridWidth;
     })
     .attr("cy", (d, i) => {
-      return getHourIndexY(d.day_of_week) * gridHeight + 30;
+      return getHourIndexY(d.day_of_week) * gridHeight + firstCircleOffsetY;
     })
     .attr('r', circleRadius)
     .attr("class", d => {
@@ -293,6 +311,9 @@ function renderHeatChart(data, colors, container, showFlags, legend = '') {
     })
     .style('fill', (d, i) => {
       return colors[i];
+    })
+    .style('opacity', (d, i) => {
+      return showFlags[i]? 1 : 0;
     })
     .on('mouseover', (d, i) => {
       showTooltip(d, i);
