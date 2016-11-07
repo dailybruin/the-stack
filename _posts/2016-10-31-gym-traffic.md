@@ -68,7 +68,7 @@ As we can see, on weekday afternoons, Wooden is a lot busier than BFit as studen
 </div>
 
 
-## Dive deeper  
+## Go in-depth  
 
 <div id='viz-selections'>
   <select id='pick-facility'>
@@ -97,6 +97,16 @@ Because BFit opened in October 2015, weeks into Fall 2015, data from that quarte
 To estimate traffic, **we need know how long each person stays**. Because the dataset doesn't have exit timestamps, we have to guess how long each workout lasted – we need to come up with a distribution and good enough parameters using *survey data*.
 
 ...
+
+<figure>
+  <img src="/img/posts/gym-traffic/survey-histogram.png" height='260px' width='300px' />
+  <figcaption>65 UCLA students were asked how much time they spent the last time they went to gym</figcaption>
+</figure>
+
+<figure>
+  <img src="/img/posts/gym-traffic/model-histogram.png" height='260px' width='300px' />
+  <figcaption>A model simulated based on survey data</figcaption>
+</figure>
 
 Essentially, each visitor:
 

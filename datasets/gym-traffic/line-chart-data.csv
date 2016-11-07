@@ -5,10 +5,10 @@ hour,minute,avg_n_people,week,day,facility,avg_n_people_rel
 0,30,22.0,Weeks 1 to 3,Monday to Thursday,wooden,0.053
 0,40,15.0,Weeks 1 to 3,Monday to Thursday,wooden,0.036
 0,50,10.0,Weeks 1 to 3,Monday to Thursday,wooden,0.024
-1,0,6.0,Weeks 1 to 3,Monday to Thursday,wooden,0.014
-1,10,3.0,Weeks 1 to 3,Monday to Thursday,wooden,0.007
-1,20,2.0,Weeks 1 to 3,Monday to Thursday,wooden,0.005
-1,30,1.0,Weeks 1 to 3,Monday to Thursday,wooden,0.002
+1,0,0.0,Weeks 1 to 3,Monday to Thursday,wooden,0.0
+1,10,0.0,Weeks 1 to 3,Monday to Thursday,wooden,0.0
+1,20,0.0,Weeks 1 to 3,Monday to Thursday,wooden,0.0
+1,30,0.0,Weeks 1 to 3,Monday to Thursday,wooden,0.0
 1,40,0.0,Weeks 1 to 3,Monday to Thursday,wooden,0.0
 1,50,0.0,Weeks 1 to 3,Monday to Thursday,wooden,0.0
 2,0,0.0,Weeks 1 to 3,Monday to Thursday,wooden,0.0
@@ -149,11 +149,11 @@ hour,minute,avg_n_people,week,day,facility,avg_n_people_rel
 0,30,26.0,Weeks 1 to 3,Friday,wooden,0.063
 0,40,19.0,Weeks 1 to 3,Friday,wooden,0.046
 0,50,12.0,Weeks 1 to 3,Friday,wooden,0.029
-1,0,8.0,Weeks 1 to 3,Friday,wooden,0.019
-1,10,5.0,Weeks 1 to 3,Friday,wooden,0.012
-1,20,3.0,Weeks 1 to 3,Friday,wooden,0.007
-1,30,1.0,Weeks 1 to 3,Friday,wooden,0.002
-1,40,1.0,Weeks 1 to 3,Friday,wooden,0.002
+1,0,0.0,Weeks 1 to 3,Friday,wooden,0.0
+1,10,0.0,Weeks 1 to 3,Friday,wooden,0.0
+1,20,0.0,Weeks 1 to 3,Friday,wooden,0.0
+1,30,0.0,Weeks 1 to 3,Friday,wooden,0.0
+1,40,0.0,Weeks 1 to 3,Friday,wooden,0.0
 1,50,0.0,Weeks 1 to 3,Friday,wooden,0.0
 2,0,0.0,Weeks 1 to 3,Friday,wooden,0.0
 2,10,0.0,Weeks 1 to 3,Friday,wooden,0.0
@@ -275,12 +275,12 @@ hour,minute,avg_n_people,week,day,facility,avg_n_people_rel
 21,30,69.0,Weeks 1 to 3,Friday,wooden,0.166
 21,40,51.0,Weeks 1 to 3,Friday,wooden,0.123
 21,50,36.0,Weeks 1 to 3,Friday,wooden,0.087
-22,0,24.0,Weeks 1 to 3,Friday,wooden,0.058
-22,10,15.0,Weeks 1 to 3,Friday,wooden,0.036
-22,20,9.0,Weeks 1 to 3,Friday,wooden,0.022
-22,30,6.0,Weeks 1 to 3,Friday,wooden,0.014
-22,40,3.0,Weeks 1 to 3,Friday,wooden,0.007
-22,50,2.0,Weeks 1 to 3,Friday,wooden,0.005
+22,0,0.0,Weeks 1 to 3,Friday,wooden,0.0
+22,10,0.0,Weeks 1 to 3,Friday,wooden,0.0
+22,20,0.0,Weeks 1 to 3,Friday,wooden,0.0
+22,30,0.0,Weeks 1 to 3,Friday,wooden,0.0
+22,40,0.0,Weeks 1 to 3,Friday,wooden,0.0
+22,50,0.0,Weeks 1 to 3,Friday,wooden,0.0
 23,0,0.0,Weeks 1 to 3,Friday,wooden,0.0
 23,10,0.0,Weeks 1 to 3,Friday,wooden,0.0
 23,20,0.0,Weeks 1 to 3,Friday,wooden,0.0
@@ -340,7 +340,7 @@ hour,minute,avg_n_people,week,day,facility,avg_n_people_rel
 8,20,0.0,Weeks 1 to 3,Saturday,wooden,0.0
 8,30,0.0,Weeks 1 to 3,Saturday,wooden,0.0
 8,40,0.0,Weeks 1 to 3,Saturday,wooden,0.0
-8,50,5.0,Weeks 1 to 3,Saturday,wooden,0.012
+8,50,0.0,Weeks 1 to 3,Saturday,wooden,0.0
 9,0,61.0,Weeks 1 to 3,Saturday,wooden,0.147
 9,10,82.0,Weeks 1 to 3,Saturday,wooden,0.198
 9,20,102.0,Weeks 1 to 3,Saturday,wooden,0.246
@@ -407,13 +407,13 @@ hour,minute,avg_n_people,week,day,facility,avg_n_people_rel
 19,30,69.0,Weeks 1 to 3,Saturday,wooden,0.166
 19,40,51.0,Weeks 1 to 3,Saturday,wooden,0.123
 19,50,35.0,Weeks 1 to 3,Saturday,wooden,0.084
-20,0,23.0,Weeks 1 to 3,Saturday,wooden,0.055
-20,10,14.0,Weeks 1 to 3,Saturday,wooden,0.034
-20,20,7.0,Weeks 1 to 3,Saturday,wooden,0.017
-20,30,4.0,Weeks 1 to 3,Saturday,wooden,0.01
-20,40,2.0,Weeks 1 to 3,Saturday,wooden,0.005
-20,50,1.0,Weeks 1 to 3,Saturday,wooden,0.002
-21,0,1.0,Weeks 1 to 3,Saturday,wooden,0.002
+20,0,0.0,Weeks 1 to 3,Saturday,wooden,0.0
+20,10,0.0,Weeks 1 to 3,Saturday,wooden,0.0
+20,20,0.0,Weeks 1 to 3,Saturday,wooden,0.0
+20,30,0.0,Weeks 1 to 3,Saturday,wooden,0.0
+20,40,0.0,Weeks 1 to 3,Saturday,wooden,0.0
+20,50,0.0,Weeks 1 to 3,Saturday,wooden,0.0
+21,0,0.0,Weeks 1 to 3,Saturday,wooden,0.0
 21,10,0.0,Weeks 1 to 3,Saturday,wooden,0.0
 21,20,0.0,Weeks 1 to 3,Saturday,wooden,0.0
 21,30,0.0,Weeks 1 to 3,Saturday,wooden,0.0
@@ -569,22 +569,22 @@ hour,minute,avg_n_people,week,day,facility,avg_n_people_rel
 22,30,51.0,Weeks 1 to 3,Sunday,wooden,0.123
 22,40,36.0,Weeks 1 to 3,Sunday,wooden,0.087
 22,50,25.0,Weeks 1 to 3,Sunday,wooden,0.06
-23,0,15.0,Weeks 1 to 3,Sunday,wooden,0.036
-23,10,9.0,Weeks 1 to 3,Sunday,wooden,0.022
-23,20,5.0,Weeks 1 to 3,Sunday,wooden,0.012
-23,30,2.0,Weeks 1 to 3,Sunday,wooden,0.005
-23,40,1.0,Weeks 1 to 3,Sunday,wooden,0.002
-23,50,1.0,Weeks 1 to 3,Sunday,wooden,0.002
+23,0,0.0,Weeks 1 to 3,Sunday,wooden,0.0
+23,10,0.0,Weeks 1 to 3,Sunday,wooden,0.0
+23,20,0.0,Weeks 1 to 3,Sunday,wooden,0.0
+23,30,0.0,Weeks 1 to 3,Sunday,wooden,0.0
+23,40,0.0,Weeks 1 to 3,Sunday,wooden,0.0
+23,50,0.0,Weeks 1 to 3,Sunday,wooden,0.0
 0,0,57.0,Weeks 4 to 8,Monday to Thursday,wooden,0.137
 0,10,44.0,Weeks 4 to 8,Monday to Thursday,wooden,0.106
 0,20,31.0,Weeks 4 to 8,Monday to Thursday,wooden,0.075
 0,30,23.0,Weeks 4 to 8,Monday to Thursday,wooden,0.055
 0,40,15.0,Weeks 4 to 8,Monday to Thursday,wooden,0.036
 0,50,9.0,Weeks 4 to 8,Monday to Thursday,wooden,0.022
-1,0,5.0,Weeks 4 to 8,Monday to Thursday,wooden,0.012
-1,10,3.0,Weeks 4 to 8,Monday to Thursday,wooden,0.007
-1,20,2.0,Weeks 4 to 8,Monday to Thursday,wooden,0.005
-1,30,1.0,Weeks 4 to 8,Monday to Thursday,wooden,0.002
+1,0,0.0,Weeks 4 to 8,Monday to Thursday,wooden,0.0
+1,10,0.0,Weeks 4 to 8,Monday to Thursday,wooden,0.0
+1,20,0.0,Weeks 4 to 8,Monday to Thursday,wooden,0.0
+1,30,0.0,Weeks 4 to 8,Monday to Thursday,wooden,0.0
 1,40,0.0,Weeks 4 to 8,Monday to Thursday,wooden,0.0
 1,50,0.0,Weeks 4 to 8,Monday to Thursday,wooden,0.0
 2,0,0.0,Weeks 4 to 8,Monday to Thursday,wooden,0.0
@@ -725,12 +725,12 @@ hour,minute,avg_n_people,week,day,facility,avg_n_people_rel
 0,30,23.0,Weeks 4 to 8,Friday,wooden,0.055
 0,40,16.0,Weeks 4 to 8,Friday,wooden,0.039
 0,50,11.0,Weeks 4 to 8,Friday,wooden,0.027
-1,0,7.0,Weeks 4 to 8,Friday,wooden,0.017
-1,10,4.0,Weeks 4 to 8,Friday,wooden,0.01
-1,20,2.0,Weeks 4 to 8,Friday,wooden,0.005
-1,30,1.0,Weeks 4 to 8,Friday,wooden,0.002
-1,40,1.0,Weeks 4 to 8,Friday,wooden,0.002
-1,50,1.0,Weeks 4 to 8,Friday,wooden,0.002
+1,0,0.0,Weeks 4 to 8,Friday,wooden,0.0
+1,10,0.0,Weeks 4 to 8,Friday,wooden,0.0
+1,20,0.0,Weeks 4 to 8,Friday,wooden,0.0
+1,30,0.0,Weeks 4 to 8,Friday,wooden,0.0
+1,40,0.0,Weeks 4 to 8,Friday,wooden,0.0
+1,50,0.0,Weeks 4 to 8,Friday,wooden,0.0
 2,0,0.0,Weeks 4 to 8,Friday,wooden,0.0
 2,10,0.0,Weeks 4 to 8,Friday,wooden,0.0
 2,20,0.0,Weeks 4 to 8,Friday,wooden,0.0
@@ -851,12 +851,12 @@ hour,minute,avg_n_people,week,day,facility,avg_n_people_rel
 21,30,65.0,Weeks 4 to 8,Friday,wooden,0.157
 21,40,46.0,Weeks 4 to 8,Friday,wooden,0.111
 21,50,32.0,Weeks 4 to 8,Friday,wooden,0.077
-22,0,23.0,Weeks 4 to 8,Friday,wooden,0.055
-22,10,13.0,Weeks 4 to 8,Friday,wooden,0.031
-22,20,8.0,Weeks 4 to 8,Friday,wooden,0.019
-22,30,4.0,Weeks 4 to 8,Friday,wooden,0.01
-22,40,2.0,Weeks 4 to 8,Friday,wooden,0.005
-22,50,1.0,Weeks 4 to 8,Friday,wooden,0.002
+22,0,0.0,Weeks 4 to 8,Friday,wooden,0.0
+22,10,0.0,Weeks 4 to 8,Friday,wooden,0.0
+22,20,0.0,Weeks 4 to 8,Friday,wooden,0.0
+22,30,0.0,Weeks 4 to 8,Friday,wooden,0.0
+22,40,0.0,Weeks 4 to 8,Friday,wooden,0.0
+22,50,0.0,Weeks 4 to 8,Friday,wooden,0.0
 23,0,0.0,Weeks 4 to 8,Friday,wooden,0.0
 23,10,0.0,Weeks 4 to 8,Friday,wooden,0.0
 23,20,0.0,Weeks 4 to 8,Friday,wooden,0.0
@@ -916,7 +916,7 @@ hour,minute,avg_n_people,week,day,facility,avg_n_people_rel
 8,20,0.0,Weeks 4 to 8,Saturday,wooden,0.0
 8,30,0.0,Weeks 4 to 8,Saturday,wooden,0.0
 8,40,0.0,Weeks 4 to 8,Saturday,wooden,0.0
-8,50,5.0,Weeks 4 to 8,Saturday,wooden,0.012
+8,50,0.0,Weeks 4 to 8,Saturday,wooden,0.0
 9,0,49.0,Weeks 4 to 8,Saturday,wooden,0.118
 9,10,71.0,Weeks 4 to 8,Saturday,wooden,0.171
 9,20,85.0,Weeks 4 to 8,Saturday,wooden,0.205
@@ -983,12 +983,12 @@ hour,minute,avg_n_people,week,day,facility,avg_n_people_rel
 19,30,61.0,Weeks 4 to 8,Saturday,wooden,0.147
 19,40,44.0,Weeks 4 to 8,Saturday,wooden,0.106
 19,50,30.0,Weeks 4 to 8,Saturday,wooden,0.072
-20,0,18.0,Weeks 4 to 8,Saturday,wooden,0.043
-20,10,11.0,Weeks 4 to 8,Saturday,wooden,0.027
-20,20,6.0,Weeks 4 to 8,Saturday,wooden,0.014
-20,30,3.0,Weeks 4 to 8,Saturday,wooden,0.007
-20,40,1.0,Weeks 4 to 8,Saturday,wooden,0.002
-20,50,1.0,Weeks 4 to 8,Saturday,wooden,0.002
+20,0,0.0,Weeks 4 to 8,Saturday,wooden,0.0
+20,10,0.0,Weeks 4 to 8,Saturday,wooden,0.0
+20,20,0.0,Weeks 4 to 8,Saturday,wooden,0.0
+20,30,0.0,Weeks 4 to 8,Saturday,wooden,0.0
+20,40,0.0,Weeks 4 to 8,Saturday,wooden,0.0
+20,50,0.0,Weeks 4 to 8,Saturday,wooden,0.0
 21,0,0.0,Weeks 4 to 8,Saturday,wooden,0.0
 21,10,0.0,Weeks 4 to 8,Saturday,wooden,0.0
 21,20,0.0,Weeks 4 to 8,Saturday,wooden,0.0
@@ -1060,7 +1060,7 @@ hour,minute,avg_n_people,week,day,facility,avg_n_people_rel
 8,20,0.0,Weeks 4 to 8,Sunday,wooden,0.0
 8,30,0.0,Weeks 4 to 8,Sunday,wooden,0.0
 8,40,0.0,Weeks 4 to 8,Sunday,wooden,0.0
-8,50,2.0,Weeks 4 to 8,Sunday,wooden,0.005
+8,50,0.0,Weeks 4 to 8,Sunday,wooden,0.0
 9,0,41.0,Weeks 4 to 8,Sunday,wooden,0.099
 9,10,59.0,Weeks 4 to 8,Sunday,wooden,0.142
 9,20,70.0,Weeks 4 to 8,Sunday,wooden,0.169
@@ -1145,22 +1145,22 @@ hour,minute,avg_n_people,week,day,facility,avg_n_people_rel
 22,30,47.0,Weeks 4 to 8,Sunday,wooden,0.113
 22,40,33.0,Weeks 4 to 8,Sunday,wooden,0.08
 22,50,22.0,Weeks 4 to 8,Sunday,wooden,0.053
-23,0,14.0,Weeks 4 to 8,Sunday,wooden,0.034
-23,10,9.0,Weeks 4 to 8,Sunday,wooden,0.022
-23,20,5.0,Weeks 4 to 8,Sunday,wooden,0.012
-23,30,3.0,Weeks 4 to 8,Sunday,wooden,0.007
-23,40,2.0,Weeks 4 to 8,Sunday,wooden,0.005
-23,50,1.0,Weeks 4 to 8,Sunday,wooden,0.002
+23,0,0.0,Weeks 4 to 8,Sunday,wooden,0.0
+23,10,0.0,Weeks 4 to 8,Sunday,wooden,0.0
+23,20,0.0,Weeks 4 to 8,Sunday,wooden,0.0
+23,30,0.0,Weeks 4 to 8,Sunday,wooden,0.0
+23,40,0.0,Weeks 4 to 8,Sunday,wooden,0.0
+23,50,0.0,Weeks 4 to 8,Sunday,wooden,0.0
 0,0,43.0,Weeks 9 and 10,Monday to Thursday,wooden,0.104
 0,10,33.0,Weeks 9 and 10,Monday to Thursday,wooden,0.08
 0,20,25.0,Weeks 9 and 10,Monday to Thursday,wooden,0.06
 0,30,17.0,Weeks 9 and 10,Monday to Thursday,wooden,0.041
 0,40,12.0,Weeks 9 and 10,Monday to Thursday,wooden,0.029
 0,50,8.0,Weeks 9 and 10,Monday to Thursday,wooden,0.019
-1,0,5.0,Weeks 9 and 10,Monday to Thursday,wooden,0.012
-1,10,3.0,Weeks 9 and 10,Monday to Thursday,wooden,0.007
-1,20,1.0,Weeks 9 and 10,Monday to Thursday,wooden,0.002
-1,30,1.0,Weeks 9 and 10,Monday to Thursday,wooden,0.002
+1,0,0.0,Weeks 9 and 10,Monday to Thursday,wooden,0.0
+1,10,0.0,Weeks 9 and 10,Monday to Thursday,wooden,0.0
+1,20,0.0,Weeks 9 and 10,Monday to Thursday,wooden,0.0
+1,30,0.0,Weeks 9 and 10,Monday to Thursday,wooden,0.0
 1,40,0.0,Weeks 9 and 10,Monday to Thursday,wooden,0.0
 1,50,0.0,Weeks 9 and 10,Monday to Thursday,wooden,0.0
 2,0,0.0,Weeks 9 and 10,Monday to Thursday,wooden,0.0
@@ -1301,11 +1301,11 @@ hour,minute,avg_n_people,week,day,facility,avg_n_people_rel
 0,30,26.0,Weeks 9 and 10,Friday,wooden,0.063
 0,40,18.0,Weeks 9 and 10,Friday,wooden,0.043
 0,50,12.0,Weeks 9 and 10,Friday,wooden,0.029
-1,0,8.0,Weeks 9 and 10,Friday,wooden,0.019
-1,10,6.0,Weeks 9 and 10,Friday,wooden,0.014
-1,20,3.0,Weeks 9 and 10,Friday,wooden,0.007
-1,30,2.0,Weeks 9 and 10,Friday,wooden,0.005
-1,40,1.0,Weeks 9 and 10,Friday,wooden,0.002
+1,0,0.0,Weeks 9 and 10,Friday,wooden,0.0
+1,10,0.0,Weeks 9 and 10,Friday,wooden,0.0
+1,20,0.0,Weeks 9 and 10,Friday,wooden,0.0
+1,30,0.0,Weeks 9 and 10,Friday,wooden,0.0
+1,40,0.0,Weeks 9 and 10,Friday,wooden,0.0
 1,50,0.0,Weeks 9 and 10,Friday,wooden,0.0
 2,0,0.0,Weeks 9 and 10,Friday,wooden,0.0
 2,10,0.0,Weeks 9 and 10,Friday,wooden,0.0
@@ -1427,11 +1427,11 @@ hour,minute,avg_n_people,week,day,facility,avg_n_people_rel
 21,30,58.0,Weeks 9 and 10,Friday,wooden,0.14
 21,40,41.0,Weeks 9 and 10,Friday,wooden,0.099
 21,50,29.0,Weeks 9 and 10,Friday,wooden,0.07
-22,0,18.0,Weeks 9 and 10,Friday,wooden,0.043
-22,10,13.0,Weeks 9 and 10,Friday,wooden,0.031
-22,20,7.0,Weeks 9 and 10,Friday,wooden,0.017
-22,30,4.0,Weeks 9 and 10,Friday,wooden,0.01
-22,40,2.0,Weeks 9 and 10,Friday,wooden,0.005
+22,0,0.0,Weeks 9 and 10,Friday,wooden,0.0
+22,10,0.0,Weeks 9 and 10,Friday,wooden,0.0
+22,20,0.0,Weeks 9 and 10,Friday,wooden,0.0
+22,30,0.0,Weeks 9 and 10,Friday,wooden,0.0
+22,40,0.0,Weeks 9 and 10,Friday,wooden,0.0
 22,50,0.0,Weeks 9 and 10,Friday,wooden,0.0
 23,0,0.0,Weeks 9 and 10,Friday,wooden,0.0
 23,10,0.0,Weeks 9 and 10,Friday,wooden,0.0
@@ -1492,7 +1492,7 @@ hour,minute,avg_n_people,week,day,facility,avg_n_people_rel
 8,20,0.0,Weeks 9 and 10,Saturday,wooden,0.0
 8,30,0.0,Weeks 9 and 10,Saturday,wooden,0.0
 8,40,0.0,Weeks 9 and 10,Saturday,wooden,0.0
-8,50,4.0,Weeks 9 and 10,Saturday,wooden,0.01
+8,50,0.0,Weeks 9 and 10,Saturday,wooden,0.0
 9,0,44.0,Weeks 9 and 10,Saturday,wooden,0.106
 9,10,60.0,Weeks 9 and 10,Saturday,wooden,0.145
 9,20,75.0,Weeks 9 and 10,Saturday,wooden,0.181
@@ -1559,13 +1559,13 @@ hour,minute,avg_n_people,week,day,facility,avg_n_people_rel
 19,30,46.0,Weeks 9 and 10,Saturday,wooden,0.111
 19,40,38.0,Weeks 9 and 10,Saturday,wooden,0.092
 19,50,26.0,Weeks 9 and 10,Saturday,wooden,0.063
-20,0,18.0,Weeks 9 and 10,Saturday,wooden,0.043
-20,10,9.0,Weeks 9 and 10,Saturday,wooden,0.022
-20,20,5.0,Weeks 9 and 10,Saturday,wooden,0.012
-20,30,4.0,Weeks 9 and 10,Saturday,wooden,0.01
-20,40,2.0,Weeks 9 and 10,Saturday,wooden,0.005
-20,50,1.0,Weeks 9 and 10,Saturday,wooden,0.002
-21,0,1.0,Weeks 9 and 10,Saturday,wooden,0.002
+20,0,0.0,Weeks 9 and 10,Saturday,wooden,0.0
+20,10,0.0,Weeks 9 and 10,Saturday,wooden,0.0
+20,20,0.0,Weeks 9 and 10,Saturday,wooden,0.0
+20,30,0.0,Weeks 9 and 10,Saturday,wooden,0.0
+20,40,0.0,Weeks 9 and 10,Saturday,wooden,0.0
+20,50,0.0,Weeks 9 and 10,Saturday,wooden,0.0
+21,0,0.0,Weeks 9 and 10,Saturday,wooden,0.0
 21,10,0.0,Weeks 9 and 10,Saturday,wooden,0.0
 21,20,0.0,Weeks 9 and 10,Saturday,wooden,0.0
 21,30,0.0,Weeks 9 and 10,Saturday,wooden,0.0
@@ -1636,7 +1636,7 @@ hour,minute,avg_n_people,week,day,facility,avg_n_people_rel
 8,20,0.0,Weeks 9 and 10,Sunday,wooden,0.0
 8,30,0.0,Weeks 9 and 10,Sunday,wooden,0.0
 8,40,0.0,Weeks 9 and 10,Sunday,wooden,0.0
-8,50,4.0,Weeks 9 and 10,Sunday,wooden,0.01
+8,50,0.0,Weeks 9 and 10,Sunday,wooden,0.0
 9,0,30.0,Weeks 9 and 10,Sunday,wooden,0.072
 9,10,40.0,Weeks 9 and 10,Sunday,wooden,0.096
 9,20,45.0,Weeks 9 and 10,Sunday,wooden,0.108
@@ -1721,11 +1721,11 @@ hour,minute,avg_n_people,week,day,facility,avg_n_people_rel
 22,30,32.0,Weeks 9 and 10,Sunday,wooden,0.077
 22,40,23.0,Weeks 9 and 10,Sunday,wooden,0.055
 22,50,16.0,Weeks 9 and 10,Sunday,wooden,0.039
-23,0,11.0,Weeks 9 and 10,Sunday,wooden,0.027
-23,10,8.0,Weeks 9 and 10,Sunday,wooden,0.019
-23,20,4.0,Weeks 9 and 10,Sunday,wooden,0.01
-23,30,3.0,Weeks 9 and 10,Sunday,wooden,0.007
-23,40,1.0,Weeks 9 and 10,Sunday,wooden,0.002
+23,0,0.0,Weeks 9 and 10,Sunday,wooden,0.0
+23,10,0.0,Weeks 9 and 10,Sunday,wooden,0.0
+23,20,0.0,Weeks 9 and 10,Sunday,wooden,0.0
+23,30,0.0,Weeks 9 and 10,Sunday,wooden,0.0
+23,40,0.0,Weeks 9 and 10,Sunday,wooden,0.0
 23,50,0.0,Weeks 9 and 10,Sunday,wooden,0.0
 0,0,0.0,Finals Week,Monday to Thursday,wooden,0.0
 0,10,0.0,Finals Week,Monday to Thursday,wooden,0.0
@@ -2068,7 +2068,7 @@ hour,minute,avg_n_people,week,day,facility,avg_n_people_rel
 8,20,0.0,Finals Week,Saturday,wooden,0.0
 8,30,0.0,Finals Week,Saturday,wooden,0.0
 8,40,0.0,Finals Week,Saturday,wooden,0.0
-8,50,3.0,Finals Week,Saturday,wooden,0.007
+8,50,0.0,Finals Week,Saturday,wooden,0.0
 9,0,21.0,Finals Week,Saturday,wooden,0.051
 9,10,28.0,Finals Week,Saturday,wooden,0.067
 9,20,34.0,Finals Week,Saturday,wooden,0.082
@@ -2212,7 +2212,7 @@ hour,minute,avg_n_people,week,day,facility,avg_n_people_rel
 8,20,0.0,Finals Week,Sunday,wooden,0.0
 8,30,0.0,Finals Week,Sunday,wooden,0.0
 8,40,0.0,Finals Week,Sunday,wooden,0.0
-8,50,3.0,Finals Week,Sunday,wooden,0.007
+8,50,0.0,Finals Week,Sunday,wooden,0.0
 9,0,10.0,Finals Week,Sunday,wooden,0.024
 9,10,16.0,Finals Week,Sunday,wooden,0.039
 9,20,22.0,Finals Week,Sunday,wooden,0.053
@@ -2303,19 +2303,19 @@ hour,minute,avg_n_people,week,day,facility,avg_n_people_rel
 23,30,0.0,Finals Week,Sunday,wooden,0.0
 23,40,0.0,Finals Week,Sunday,wooden,0.0
 23,50,0.0,Finals Week,Sunday,wooden,0.0
-0,0,64.0,Weeks 1 to 3,Monday to Thursday,bfit,0.4
-0,10,55.0,Weeks 1 to 3,Monday to Thursday,bfit,0.344
-0,20,45.0,Weeks 1 to 3,Monday to Thursday,bfit,0.281
-0,30,35.0,Weeks 1 to 3,Monday to Thursday,bfit,0.219
-0,40,28.0,Weeks 1 to 3,Monday to Thursday,bfit,0.175
-0,50,20.0,Weeks 1 to 3,Monday to Thursday,bfit,0.125
-1,0,15.0,Weeks 1 to 3,Monday to Thursday,bfit,0.094
-1,10,10.0,Weeks 1 to 3,Monday to Thursday,bfit,0.062
-1,20,6.0,Weeks 1 to 3,Monday to Thursday,bfit,0.038
-1,30,4.0,Weeks 1 to 3,Monday to Thursday,bfit,0.025
-1,40,2.0,Weeks 1 to 3,Monday to Thursday,bfit,0.012
-1,50,1.0,Weeks 1 to 3,Monday to Thursday,bfit,0.006
-2,0,1.0,Weeks 1 to 3,Monday to Thursday,bfit,0.006
+0,0,58.0,Weeks 1 to 3,Monday to Thursday,bfit,0.362
+0,10,50.0,Weeks 1 to 3,Monday to Thursday,bfit,0.312
+0,20,42.0,Weeks 1 to 3,Monday to Thursday,bfit,0.262
+0,30,33.0,Weeks 1 to 3,Monday to Thursday,bfit,0.206
+0,40,27.0,Weeks 1 to 3,Monday to Thursday,bfit,0.169
+0,50,19.0,Weeks 1 to 3,Monday to Thursday,bfit,0.119
+1,0,0.0,Weeks 1 to 3,Monday to Thursday,bfit,0.0
+1,10,0.0,Weeks 1 to 3,Monday to Thursday,bfit,0.0
+1,20,0.0,Weeks 1 to 3,Monday to Thursday,bfit,0.0
+1,30,0.0,Weeks 1 to 3,Monday to Thursday,bfit,0.0
+1,40,0.0,Weeks 1 to 3,Monday to Thursday,bfit,0.0
+1,50,0.0,Weeks 1 to 3,Monday to Thursday,bfit,0.0
+2,0,0.0,Weeks 1 to 3,Monday to Thursday,bfit,0.0
 2,10,0.0,Weeks 1 to 3,Monday to Thursday,bfit,0.0
 2,20,0.0,Weeks 1 to 3,Monday to Thursday,bfit,0.0
 2,30,0.0,Weeks 1 to 3,Monday to Thursday,bfit,0.0
@@ -2453,14 +2453,14 @@ hour,minute,avg_n_people,week,day,facility,avg_n_people_rel
 0,30,38.0,Weeks 1 to 3,Friday,bfit,0.238
 0,40,30.0,Weeks 1 to 3,Friday,bfit,0.188
 0,50,22.0,Weeks 1 to 3,Friday,bfit,0.138
-1,0,17.0,Weeks 1 to 3,Friday,bfit,0.106
-1,10,13.0,Weeks 1 to 3,Friday,bfit,0.081
-1,20,9.0,Weeks 1 to 3,Friday,bfit,0.056
-1,30,5.0,Weeks 1 to 3,Friday,bfit,0.031
-1,40,3.0,Weeks 1 to 3,Friday,bfit,0.019
-1,50,2.0,Weeks 1 to 3,Friday,bfit,0.012
-2,0,2.0,Weeks 1 to 3,Friday,bfit,0.012
-2,10,1.0,Weeks 1 to 3,Friday,bfit,0.006
+1,0,0.0,Weeks 1 to 3,Friday,bfit,0.0
+1,10,0.0,Weeks 1 to 3,Friday,bfit,0.0
+1,20,0.0,Weeks 1 to 3,Friday,bfit,0.0
+1,30,0.0,Weeks 1 to 3,Friday,bfit,0.0
+1,40,0.0,Weeks 1 to 3,Friday,bfit,0.0
+1,50,0.0,Weeks 1 to 3,Friday,bfit,0.0
+2,0,0.0,Weeks 1 to 3,Friday,bfit,0.0
+2,10,0.0,Weeks 1 to 3,Friday,bfit,0.0
 2,20,0.0,Weeks 1 to 3,Friday,bfit,0.0
 2,30,0.0,Weeks 1 to 3,Friday,bfit,0.0
 2,40,0.0,Weeks 1 to 3,Friday,bfit,0.0
@@ -2579,13 +2579,13 @@ hour,minute,avg_n_people,week,day,facility,avg_n_people_rel
 21,30,55.0,Weeks 1 to 3,Friday,bfit,0.344
 21,40,42.0,Weeks 1 to 3,Friday,bfit,0.262
 21,50,30.0,Weeks 1 to 3,Friday,bfit,0.188
-22,0,21.0,Weeks 1 to 3,Friday,bfit,0.131
-22,10,14.0,Weeks 1 to 3,Friday,bfit,0.088
-22,20,9.0,Weeks 1 to 3,Friday,bfit,0.056
-22,30,5.0,Weeks 1 to 3,Friday,bfit,0.031
-22,40,3.0,Weeks 1 to 3,Friday,bfit,0.019
-22,50,2.0,Weeks 1 to 3,Friday,bfit,0.012
-23,0,1.0,Weeks 1 to 3,Friday,bfit,0.006
+22,0,0.0,Weeks 1 to 3,Friday,bfit,0.0
+22,10,0.0,Weeks 1 to 3,Friday,bfit,0.0
+22,20,0.0,Weeks 1 to 3,Friday,bfit,0.0
+22,30,0.0,Weeks 1 to 3,Friday,bfit,0.0
+22,40,0.0,Weeks 1 to 3,Friday,bfit,0.0
+22,50,0.0,Weeks 1 to 3,Friday,bfit,0.0
+23,0,0.0,Weeks 1 to 3,Friday,bfit,0.0
 23,10,0.0,Weeks 1 to 3,Friday,bfit,0.0
 23,20,0.0,Weeks 1 to 3,Friday,bfit,0.0
 23,30,0.0,Weeks 1 to 3,Friday,bfit,0.0
@@ -2638,7 +2638,7 @@ hour,minute,avg_n_people,week,day,facility,avg_n_people_rel
 7,20,0.0,Weeks 1 to 3,Saturday,bfit,0.0
 7,30,0.0,Weeks 1 to 3,Saturday,bfit,0.0
 7,40,0.0,Weeks 1 to 3,Saturday,bfit,0.0
-7,50,1.0,Weeks 1 to 3,Saturday,bfit,0.006
+7,50,0.0,Weeks 1 to 3,Saturday,bfit,0.0
 8,0,20.0,Weeks 1 to 3,Saturday,bfit,0.125
 8,10,32.0,Weeks 1 to 3,Saturday,bfit,0.2
 8,20,39.0,Weeks 1 to 3,Saturday,bfit,0.244
@@ -2711,15 +2711,15 @@ hour,minute,avg_n_people,week,day,facility,avg_n_people_rel
 19,30,118.0,Weeks 1 to 3,Saturday,bfit,0.738
 19,40,99.0,Weeks 1 to 3,Saturday,bfit,0.619
 19,50,79.0,Weeks 1 to 3,Saturday,bfit,0.494
-20,0,62.0,Weeks 1 to 3,Saturday,bfit,0.388
-20,10,46.0,Weeks 1 to 3,Saturday,bfit,0.288
-20,20,34.0,Weeks 1 to 3,Saturday,bfit,0.212
-20,30,24.0,Weeks 1 to 3,Saturday,bfit,0.15
-20,40,16.0,Weeks 1 to 3,Saturday,bfit,0.1
-20,50,9.0,Weeks 1 to 3,Saturday,bfit,0.056
-21,0,5.0,Weeks 1 to 3,Saturday,bfit,0.031
-21,10,3.0,Weeks 1 to 3,Saturday,bfit,0.019
-21,20,2.0,Weeks 1 to 3,Saturday,bfit,0.012
+20,0,0.0,Weeks 1 to 3,Saturday,bfit,0.0
+20,10,0.0,Weeks 1 to 3,Saturday,bfit,0.0
+20,20,0.0,Weeks 1 to 3,Saturday,bfit,0.0
+20,30,0.0,Weeks 1 to 3,Saturday,bfit,0.0
+20,40,0.0,Weeks 1 to 3,Saturday,bfit,0.0
+20,50,0.0,Weeks 1 to 3,Saturday,bfit,0.0
+21,0,0.0,Weeks 1 to 3,Saturday,bfit,0.0
+21,10,0.0,Weeks 1 to 3,Saturday,bfit,0.0
+21,20,0.0,Weeks 1 to 3,Saturday,bfit,0.0
 21,30,0.0,Weeks 1 to 3,Saturday,bfit,0.0
 21,40,0.0,Weeks 1 to 3,Saturday,bfit,0.0
 21,50,0.0,Weeks 1 to 3,Saturday,bfit,0.0
@@ -2782,7 +2782,7 @@ hour,minute,avg_n_people,week,day,facility,avg_n_people_rel
 7,20,0.0,Weeks 1 to 3,Sunday,bfit,0.0
 7,30,0.0,Weeks 1 to 3,Sunday,bfit,0.0
 7,40,0.0,Weeks 1 to 3,Sunday,bfit,0.0
-7,50,1.0,Weeks 1 to 3,Sunday,bfit,0.006
+7,50,0.0,Weeks 1 to 3,Sunday,bfit,0.0
 8,0,12.0,Weeks 1 to 3,Sunday,bfit,0.075
 8,10,21.0,Weeks 1 to 3,Sunday,bfit,0.131
 8,20,28.0,Weeks 1 to 3,Sunday,bfit,0.175
@@ -2879,19 +2879,19 @@ hour,minute,avg_n_people,week,day,facility,avg_n_people_rel
 23,30,66.0,Weeks 1 to 3,Sunday,bfit,0.412
 23,40,53.0,Weeks 1 to 3,Sunday,bfit,0.331
 23,50,40.0,Weeks 1 to 3,Sunday,bfit,0.25
-0,0,73.0,Weeks 4 to 8,Monday to Thursday,bfit,0.456
-0,10,66.0,Weeks 4 to 8,Monday to Thursday,bfit,0.412
-0,20,57.0,Weeks 4 to 8,Monday to Thursday,bfit,0.356
-0,30,48.0,Weeks 4 to 8,Monday to Thursday,bfit,0.3
-0,40,38.0,Weeks 4 to 8,Monday to Thursday,bfit,0.238
-0,50,30.0,Weeks 4 to 8,Monday to Thursday,bfit,0.188
-1,0,21.0,Weeks 4 to 8,Monday to Thursday,bfit,0.131
-1,10,15.0,Weeks 4 to 8,Monday to Thursday,bfit,0.094
-1,20,10.0,Weeks 4 to 8,Monday to Thursday,bfit,0.062
-1,30,6.0,Weeks 4 to 8,Monday to Thursday,bfit,0.038
-1,40,4.0,Weeks 4 to 8,Monday to Thursday,bfit,0.025
-1,50,2.0,Weeks 4 to 8,Monday to Thursday,bfit,0.012
-2,0,1.0,Weeks 4 to 8,Monday to Thursday,bfit,0.006
+0,0,68.0,Weeks 4 to 8,Monday to Thursday,bfit,0.425
+0,10,63.0,Weeks 4 to 8,Monday to Thursday,bfit,0.394
+0,20,54.0,Weeks 4 to 8,Monday to Thursday,bfit,0.338
+0,30,46.0,Weeks 4 to 8,Monday to Thursday,bfit,0.288
+0,40,37.0,Weeks 4 to 8,Monday to Thursday,bfit,0.231
+0,50,29.0,Weeks 4 to 8,Monday to Thursday,bfit,0.181
+1,0,0.0,Weeks 4 to 8,Monday to Thursday,bfit,0.0
+1,10,0.0,Weeks 4 to 8,Monday to Thursday,bfit,0.0
+1,20,0.0,Weeks 4 to 8,Monday to Thursday,bfit,0.0
+1,30,0.0,Weeks 4 to 8,Monday to Thursday,bfit,0.0
+1,40,0.0,Weeks 4 to 8,Monday to Thursday,bfit,0.0
+1,50,0.0,Weeks 4 to 8,Monday to Thursday,bfit,0.0
+2,0,0.0,Weeks 4 to 8,Monday to Thursday,bfit,0.0
 2,10,0.0,Weeks 4 to 8,Monday to Thursday,bfit,0.0
 2,20,0.0,Weeks 4 to 8,Monday to Thursday,bfit,0.0
 2,30,0.0,Weeks 4 to 8,Monday to Thursday,bfit,0.0
@@ -3029,13 +3029,13 @@ hour,minute,avg_n_people,week,day,facility,avg_n_people_rel
 0,30,44.0,Weeks 4 to 8,Friday,bfit,0.275
 0,40,34.0,Weeks 4 to 8,Friday,bfit,0.212
 0,50,24.0,Weeks 4 to 8,Friday,bfit,0.15
-1,0,17.0,Weeks 4 to 8,Friday,bfit,0.106
-1,10,12.0,Weeks 4 to 8,Friday,bfit,0.075
-1,20,8.0,Weeks 4 to 8,Friday,bfit,0.05
-1,30,5.0,Weeks 4 to 8,Friday,bfit,0.031
-1,40,4.0,Weeks 4 to 8,Friday,bfit,0.025
-1,50,2.0,Weeks 4 to 8,Friday,bfit,0.012
-2,0,1.0,Weeks 4 to 8,Friday,bfit,0.006
+1,0,0.0,Weeks 4 to 8,Friday,bfit,0.0
+1,10,0.0,Weeks 4 to 8,Friday,bfit,0.0
+1,20,0.0,Weeks 4 to 8,Friday,bfit,0.0
+1,30,0.0,Weeks 4 to 8,Friday,bfit,0.0
+1,40,0.0,Weeks 4 to 8,Friday,bfit,0.0
+1,50,0.0,Weeks 4 to 8,Friday,bfit,0.0
+2,0,0.0,Weeks 4 to 8,Friday,bfit,0.0
 2,10,0.0,Weeks 4 to 8,Friday,bfit,0.0
 2,20,0.0,Weeks 4 to 8,Friday,bfit,0.0
 2,30,0.0,Weeks 4 to 8,Friday,bfit,0.0
@@ -3155,13 +3155,13 @@ hour,minute,avg_n_people,week,day,facility,avg_n_people_rel
 21,30,52.0,Weeks 4 to 8,Friday,bfit,0.325
 21,40,40.0,Weeks 4 to 8,Friday,bfit,0.25
 21,50,27.0,Weeks 4 to 8,Friday,bfit,0.169
-22,0,19.0,Weeks 4 to 8,Friday,bfit,0.119
-22,10,12.0,Weeks 4 to 8,Friday,bfit,0.075
-22,20,8.0,Weeks 4 to 8,Friday,bfit,0.05
-22,30,5.0,Weeks 4 to 8,Friday,bfit,0.031
-22,40,3.0,Weeks 4 to 8,Friday,bfit,0.019
-22,50,2.0,Weeks 4 to 8,Friday,bfit,0.012
-23,0,1.0,Weeks 4 to 8,Friday,bfit,0.006
+22,0,0.0,Weeks 4 to 8,Friday,bfit,0.0
+22,10,0.0,Weeks 4 to 8,Friday,bfit,0.0
+22,20,0.0,Weeks 4 to 8,Friday,bfit,0.0
+22,30,0.0,Weeks 4 to 8,Friday,bfit,0.0
+22,40,0.0,Weeks 4 to 8,Friday,bfit,0.0
+22,50,0.0,Weeks 4 to 8,Friday,bfit,0.0
+23,0,0.0,Weeks 4 to 8,Friday,bfit,0.0
 23,10,0.0,Weeks 4 to 8,Friday,bfit,0.0
 23,20,0.0,Weeks 4 to 8,Friday,bfit,0.0
 23,30,0.0,Weeks 4 to 8,Friday,bfit,0.0
@@ -3287,16 +3287,16 @@ hour,minute,avg_n_people,week,day,facility,avg_n_people_rel
 19,30,110.0,Weeks 4 to 8,Saturday,bfit,0.688
 19,40,94.0,Weeks 4 to 8,Saturday,bfit,0.588
 19,50,77.0,Weeks 4 to 8,Saturday,bfit,0.481
-20,0,59.0,Weeks 4 to 8,Saturday,bfit,0.369
-20,10,42.0,Weeks 4 to 8,Saturday,bfit,0.262
-20,20,30.0,Weeks 4 to 8,Saturday,bfit,0.188
-20,30,19.0,Weeks 4 to 8,Saturday,bfit,0.119
-20,40,12.0,Weeks 4 to 8,Saturday,bfit,0.075
-20,50,6.0,Weeks 4 to 8,Saturday,bfit,0.038
-21,0,3.0,Weeks 4 to 8,Saturday,bfit,0.019
-21,10,2.0,Weeks 4 to 8,Saturday,bfit,0.012
-21,20,1.0,Weeks 4 to 8,Saturday,bfit,0.006
-21,30,1.0,Weeks 4 to 8,Saturday,bfit,0.006
+20,0,0.0,Weeks 4 to 8,Saturday,bfit,0.0
+20,10,0.0,Weeks 4 to 8,Saturday,bfit,0.0
+20,20,0.0,Weeks 4 to 8,Saturday,bfit,0.0
+20,30,0.0,Weeks 4 to 8,Saturday,bfit,0.0
+20,40,0.0,Weeks 4 to 8,Saturday,bfit,0.0
+20,50,0.0,Weeks 4 to 8,Saturday,bfit,0.0
+21,0,0.0,Weeks 4 to 8,Saturday,bfit,0.0
+21,10,0.0,Weeks 4 to 8,Saturday,bfit,0.0
+21,20,0.0,Weeks 4 to 8,Saturday,bfit,0.0
+21,30,0.0,Weeks 4 to 8,Saturday,bfit,0.0
 21,40,0.0,Weeks 4 to 8,Saturday,bfit,0.0
 21,50,0.0,Weeks 4 to 8,Saturday,bfit,0.0
 22,0,0.0,Weeks 4 to 8,Saturday,bfit,0.0
@@ -3358,7 +3358,7 @@ hour,minute,avg_n_people,week,day,facility,avg_n_people_rel
 7,20,0.0,Weeks 4 to 8,Sunday,bfit,0.0
 7,30,0.0,Weeks 4 to 8,Sunday,bfit,0.0
 7,40,0.0,Weeks 4 to 8,Sunday,bfit,0.0
-7,50,2.0,Weeks 4 to 8,Sunday,bfit,0.012
+7,50,0.0,Weeks 4 to 8,Sunday,bfit,0.0
 8,0,12.0,Weeks 4 to 8,Sunday,bfit,0.075
 8,10,19.0,Weeks 4 to 8,Sunday,bfit,0.119
 8,20,23.0,Weeks 4 to 8,Sunday,bfit,0.144
@@ -3455,19 +3455,19 @@ hour,minute,avg_n_people,week,day,facility,avg_n_people_rel
 23,30,70.0,Weeks 4 to 8,Sunday,bfit,0.438
 23,40,58.0,Weeks 4 to 8,Sunday,bfit,0.362
 23,50,46.0,Weeks 4 to 8,Sunday,bfit,0.288
-0,0,70.0,Weeks 9 and 10,Monday to Thursday,bfit,0.438
-0,10,64.0,Weeks 9 and 10,Monday to Thursday,bfit,0.4
-0,20,54.0,Weeks 9 and 10,Monday to Thursday,bfit,0.338
-0,30,45.0,Weeks 9 and 10,Monday to Thursday,bfit,0.281
-0,40,34.0,Weeks 9 and 10,Monday to Thursday,bfit,0.212
-0,50,24.0,Weeks 9 and 10,Monday to Thursday,bfit,0.15
-1,0,18.0,Weeks 9 and 10,Monday to Thursday,bfit,0.112
-1,10,12.0,Weeks 9 and 10,Monday to Thursday,bfit,0.075
-1,20,8.0,Weeks 9 and 10,Monday to Thursday,bfit,0.05
-1,30,5.0,Weeks 9 and 10,Monday to Thursday,bfit,0.031
-1,40,3.0,Weeks 9 and 10,Monday to Thursday,bfit,0.019
-1,50,2.0,Weeks 9 and 10,Monday to Thursday,bfit,0.012
-2,0,2.0,Weeks 9 and 10,Monday to Thursday,bfit,0.012
+0,0,58.0,Weeks 9 and 10,Monday to Thursday,bfit,0.362
+0,10,55.0,Weeks 9 and 10,Monday to Thursday,bfit,0.344
+0,20,48.0,Weeks 9 and 10,Monday to Thursday,bfit,0.3
+0,30,41.0,Weeks 9 and 10,Monday to Thursday,bfit,0.256
+0,40,31.0,Weeks 9 and 10,Monday to Thursday,bfit,0.194
+0,50,23.0,Weeks 9 and 10,Monday to Thursday,bfit,0.144
+1,0,0.0,Weeks 9 and 10,Monday to Thursday,bfit,0.0
+1,10,0.0,Weeks 9 and 10,Monday to Thursday,bfit,0.0
+1,20,0.0,Weeks 9 and 10,Monday to Thursday,bfit,0.0
+1,30,0.0,Weeks 9 and 10,Monday to Thursday,bfit,0.0
+1,40,0.0,Weeks 9 and 10,Monday to Thursday,bfit,0.0
+1,50,0.0,Weeks 9 and 10,Monday to Thursday,bfit,0.0
+2,0,0.0,Weeks 9 and 10,Monday to Thursday,bfit,0.0
 2,10,0.0,Weeks 9 and 10,Monday to Thursday,bfit,0.0
 2,20,0.0,Weeks 9 and 10,Monday to Thursday,bfit,0.0
 2,30,0.0,Weeks 9 and 10,Monday to Thursday,bfit,0.0
@@ -3605,14 +3605,14 @@ hour,minute,avg_n_people,week,day,facility,avg_n_people_rel
 0,30,44.0,Weeks 9 and 10,Friday,bfit,0.275
 0,40,38.0,Weeks 9 and 10,Friday,bfit,0.238
 0,50,32.0,Weeks 9 and 10,Friday,bfit,0.2
-1,0,25.0,Weeks 9 and 10,Friday,bfit,0.156
-1,10,17.0,Weeks 9 and 10,Friday,bfit,0.106
-1,20,12.0,Weeks 9 and 10,Friday,bfit,0.075
-1,30,7.0,Weeks 9 and 10,Friday,bfit,0.044
-1,40,5.0,Weeks 9 and 10,Friday,bfit,0.031
-1,50,4.0,Weeks 9 and 10,Friday,bfit,0.025
-2,0,2.0,Weeks 9 and 10,Friday,bfit,0.012
-2,10,1.0,Weeks 9 and 10,Friday,bfit,0.006
+1,0,0.0,Weeks 9 and 10,Friday,bfit,0.0
+1,10,0.0,Weeks 9 and 10,Friday,bfit,0.0
+1,20,0.0,Weeks 9 and 10,Friday,bfit,0.0
+1,30,0.0,Weeks 9 and 10,Friday,bfit,0.0
+1,40,0.0,Weeks 9 and 10,Friday,bfit,0.0
+1,50,0.0,Weeks 9 and 10,Friday,bfit,0.0
+2,0,0.0,Weeks 9 and 10,Friday,bfit,0.0
+2,10,0.0,Weeks 9 and 10,Friday,bfit,0.0
 2,20,0.0,Weeks 9 and 10,Friday,bfit,0.0
 2,30,0.0,Weeks 9 and 10,Friday,bfit,0.0
 2,40,0.0,Weeks 9 and 10,Friday,bfit,0.0
@@ -3731,12 +3731,12 @@ hour,minute,avg_n_people,week,day,facility,avg_n_people_rel
 21,30,36.0,Weeks 9 and 10,Friday,bfit,0.225
 21,40,28.0,Weeks 9 and 10,Friday,bfit,0.175
 21,50,20.0,Weeks 9 and 10,Friday,bfit,0.125
-22,0,12.0,Weeks 9 and 10,Friday,bfit,0.075
-22,10,6.0,Weeks 9 and 10,Friday,bfit,0.038
-22,20,4.0,Weeks 9 and 10,Friday,bfit,0.025
-22,30,3.0,Weeks 9 and 10,Friday,bfit,0.019
-22,40,1.0,Weeks 9 and 10,Friday,bfit,0.006
-22,50,1.0,Weeks 9 and 10,Friday,bfit,0.006
+22,0,0.0,Weeks 9 and 10,Friday,bfit,0.0
+22,10,0.0,Weeks 9 and 10,Friday,bfit,0.0
+22,20,0.0,Weeks 9 and 10,Friday,bfit,0.0
+22,30,0.0,Weeks 9 and 10,Friday,bfit,0.0
+22,40,0.0,Weeks 9 and 10,Friday,bfit,0.0
+22,50,0.0,Weeks 9 and 10,Friday,bfit,0.0
 23,0,0.0,Weeks 9 and 10,Friday,bfit,0.0
 23,10,0.0,Weeks 9 and 10,Friday,bfit,0.0
 23,20,0.0,Weeks 9 and 10,Friday,bfit,0.0
@@ -3790,7 +3790,7 @@ hour,minute,avg_n_people,week,day,facility,avg_n_people_rel
 7,20,0.0,Weeks 9 and 10,Saturday,bfit,0.0
 7,30,0.0,Weeks 9 and 10,Saturday,bfit,0.0
 7,40,0.0,Weeks 9 and 10,Saturday,bfit,0.0
-7,50,3.0,Weeks 9 and 10,Saturday,bfit,0.019
+7,50,0.0,Weeks 9 and 10,Saturday,bfit,0.0
 8,0,13.0,Weeks 9 and 10,Saturday,bfit,0.081
 8,10,22.0,Weeks 9 and 10,Saturday,bfit,0.138
 8,20,28.0,Weeks 9 and 10,Saturday,bfit,0.175
@@ -3863,15 +3863,15 @@ hour,minute,avg_n_people,week,day,facility,avg_n_people_rel
 19,30,106.0,Weeks 9 and 10,Saturday,bfit,0.662
 19,40,90.0,Weeks 9 and 10,Saturday,bfit,0.562
 19,50,73.0,Weeks 9 and 10,Saturday,bfit,0.456
-20,0,57.0,Weeks 9 and 10,Saturday,bfit,0.356
-20,10,44.0,Weeks 9 and 10,Saturday,bfit,0.275
-20,20,29.0,Weeks 9 and 10,Saturday,bfit,0.181
-20,30,21.0,Weeks 9 and 10,Saturday,bfit,0.131
-20,40,13.0,Weeks 9 and 10,Saturday,bfit,0.081
-20,50,9.0,Weeks 9 and 10,Saturday,bfit,0.056
-21,0,4.0,Weeks 9 and 10,Saturday,bfit,0.025
-21,10,2.0,Weeks 9 and 10,Saturday,bfit,0.012
-21,20,1.0,Weeks 9 and 10,Saturday,bfit,0.006
+20,0,0.0,Weeks 9 and 10,Saturday,bfit,0.0
+20,10,0.0,Weeks 9 and 10,Saturday,bfit,0.0
+20,20,0.0,Weeks 9 and 10,Saturday,bfit,0.0
+20,30,0.0,Weeks 9 and 10,Saturday,bfit,0.0
+20,40,0.0,Weeks 9 and 10,Saturday,bfit,0.0
+20,50,0.0,Weeks 9 and 10,Saturday,bfit,0.0
+21,0,0.0,Weeks 9 and 10,Saturday,bfit,0.0
+21,10,0.0,Weeks 9 and 10,Saturday,bfit,0.0
+21,20,0.0,Weeks 9 and 10,Saturday,bfit,0.0
 21,30,0.0,Weeks 9 and 10,Saturday,bfit,0.0
 21,40,0.0,Weeks 9 and 10,Saturday,bfit,0.0
 21,50,0.0,Weeks 9 and 10,Saturday,bfit,0.0
