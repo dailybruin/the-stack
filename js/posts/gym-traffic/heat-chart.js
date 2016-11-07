@@ -71,10 +71,14 @@ function renderComparisonChart(data, container) {
     .attr('id', 'comparison-tip')
     .html("Comparison tooltip text here") // FIX
 
-  let blueColors = ['#008FD5', '#9FD5EF']; // [darker, less dark] http://htmlcolorcodes.com/color-picker/
-  let yellowColors = ['ffb81c', '#FFE4AA']; // [darker, less dark]
-  let neutralColor = ['#CFDDCC']; // http://www.colorhexa.com/80a478
-  let closedColor = ['#EBEDEF'];
+  let blueColors = ['#008FD5', '#9FD5EF'], // [darker, less dark] http://htmlcolorcodes.com/color-picker/
+      yellowColors = ['#ffb81c', '#FFE4AA'], // [darker, less dark]
+      neutralColor = ['#CFDDCC'], // http://www.colorhexa.com/80a478
+      closedColor = ['#EBEDEF'],
+      allColors = closedColor.concat(yellowColors).concat(neutralColor).concat(blueColors.reverse()),
+      circleLabels = ['Closed', 'BFit Much Busier', '', 'Normal', '', 'Wooden Much Busier'],
+      colorScale = d3.scaleOrdinal().domain([0, 1, 2, 3, 4, 5])
+        .range(allColors);
 
   // filter data to exclude hours from 2 to 4
   data = data.filter(d => {
@@ -87,15 +91,19 @@ function renderComparisonChart(data, container) {
   });
 
   // get color of each data point
-  let colorScale = d3.scaleOrdinal().domain([0, 1, 2, 3, 4, 5])
-    .range(closedColor.concat(yellowColors).concat(neutralColor).concat(blueColors.reverse()));
-
   let colors = data.map(d => {
     return colorScale(d.category);
   })
-  console.log(data);
 
-  renderHeatChart(data, colors, '#comparison-heatmap');
+  // legend
+  let legendCircles = allColors.map((d, i) => {
+    return {
+      color: d,
+      text: circleLabels[i]
+    };
+  });
+
+  renderHeatChart(data, colors, '#comparison-heatmap', legendCircles);
 
 }
 
@@ -114,11 +122,13 @@ function renderFacilityHeatChart(data, container, facility) {
     .html("Facility tooltip text here") // FIX
 
   // determine color of each heat circle
-  let sequentialColors = ['#feedde','#fdbe85','#fd8d3c','#d94701']; // http://colorbrewer2.org/#type=sequential&scheme=Oranges&n=4
-  let closedColor = ['EBEDEF'];//['#EBEDEF'];
-  let colorScale = d3.scaleOrdinal()
-    .domain([0, 1, 2, 3, 4, 5])
-    .range(closedColor.concat(sequentialColors));
+  let sequentialColors = ['#feedde','#fdbe85','#fd8d3c','#d94701'], // http://colorbrewer2.org/#type=sequential&scheme=Oranges&n=4
+      closedColor = ['#EBEDEF'];//['#EBEDEF'];
+      allColors = closedColor.concat(sequentialColors),
+      circleLabels = ['Closed', 'Light Traffic', '', '', 'Very Busy']
+      colorScale = d3.scaleOrdinal()
+        .domain([0, 1, 2, 3, 4, 5])
+        .range(allColors);
 
   // filter data to exclude hours from 2 to 4
   data = data.filter(d => {
@@ -135,12 +145,20 @@ function renderFacilityHeatChart(data, container, facility) {
     d.tooltip = tooltip;
   });
 
+  // legend
+  let legendCircles = allColors.map((d, i) => {
+    return {
+      color: d,
+      text: circleLabels[i]
+    };
+  });
+
   // render chart
-  renderHeatChart(data, colors, container);
+  renderHeatChart(data, colors, container, legendCircles);
 
 }
 
-function renderHeatChart(data, colors, container, legend = null) {
+function renderHeatChart(data, colors, container, legendCircles = null) {
 
   // validate data input
   let validDataLength = 21 * 4;
@@ -159,7 +177,7 @@ function renderHeatChart(data, colors, container, legend = null) {
 
   // mobile threshold
   let mobileThreshold = 700,
-      windowWidth = $(window).width(); console.log(windowWidth);
+      windowWidth = $(window).width();
 
   let isMobile = windowWidth <= mobileThreshold ? true : false;
   if (isMobile) console.log('mobile!');
@@ -171,11 +189,11 @@ function renderHeatChart(data, colors, container, legend = null) {
 
   // get dimensions of container and determine dimensions of chart
   let chartWidth = containerWidth - margins.left - margins.right,
-        cHeight = isMobile? 80 : 150,
+        cHeight = isMobile? 80 : 130,
       chartHeight = cHeight - margins.top - margins.bottom;
 
   // dimension and size configs
-  let circleRadius = isMobile? chartWidth / 60 : 8,
+  let circleRadius = isMobile? (chartWidth / 60) : 8,
       circlePaddings = isMobile? {vertical: 3, horizontal: 1.5} : {vertical: 8, horizontal: 4},
       dayLabelOffsetX = isMobile? 18 : 22,
       firstCircleOffsetX = isMobile? 40 : 75,
@@ -309,6 +327,68 @@ function renderHeatChart(data, colors, container, legend = null) {
     .on('mouseout', (d, i) => {
       hideTooltip(d, i);
     })
+
+
+    // append divider between chart and legend
+    let divider = d3.select(container)
+      .append('svg')
+      .attr('width', chartWidth - 30)
+      .attr('height', 4)
+      .append('line')
+      .attr('x1', 0)
+      .attr('x2', chartWidth + margins.left + margins.right)
+      .attr('y1', 0)
+      .attr('y2', 0)
+      .attr('stroke-dasharray', '5, 5')
+      .style('stroke', 'black')
+      .style('stroke-width', '1px')
+
+    // append legend
+    legendCircles.forEach(d => {
+      d.stroke = 'none';
+      d.stroke_width = '0px';
+    });
+    legendCircles = legendCircles.concat([{
+      color: 'white',
+      text: 'Now',
+      stroke: 'black',
+      stroke_width: '2.5px'
+    }]);
+
+    let legendSvg = d3.select(container)
+      .append('svg')
+      .attr('width', chartWidth + margins.left + margins.right)
+      .attr('height', 30)
+
+    let legendG = legendSvg.append('g')
+      .attr('transform', 'translate(' + 5 + ',' + 5 + ')')
+      .attr('class', 'circle-legend-svg');
+
+    legendG.selectAll('circle')
+      .data(legendCircles)
+      .enter()
+      .append('circle')
+      .attr('r', circleRadius * 0.8)
+      .attr('cx', (d, i) => {
+        return 10 + i * circleRadius * 8;
+      })
+      .attr('cy', 5)
+      .attr('fill', d => d.color)
+      .attr('stroke', d => d.stroke)
+      .attr('stroke-width', d => d.stroke_width)
+
+    legendG.selectAll('text')
+      .data(legendCircles)
+      .enter()
+      .append('text')
+      .text(d => d.text)
+      .attr('x', (d, i) => {
+        return 10 + i * circleRadius * 8;
+      })
+      .attr('y', 15 + circleRadius * 0.8 * 1.2)
+      .attr('class', 'circle-legend-label')
+
+
 
 }
 

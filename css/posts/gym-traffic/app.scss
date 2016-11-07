@@ -42,8 +42,15 @@ $mobile-threshold: 700px;
 .label {
   @media only screen and (max-width: $mobile-threshold) {
     font-size: 7px;
+    text-anchor: middle;
   }
   font-size: 14px;
+  text-anchor: middle;
+}
+
+.circle-legend-label {
+  font-size: 10px;
+  text-anchor: middle;
 }
 
 .now-label {
@@ -57,4 +64,8 @@ $mobile-threshold: 700px;
 
 .no-border {
   stroke: none;
+}
+
+.circle-legend-svg {
+  
 }
