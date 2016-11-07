@@ -16,6 +16,7 @@ stylesheets:
 scripts:
     - //code.jquery.com/jquery-3.1.1.min.js
     - //d3js.org/d3.v4.min.js
+    - //underscorejs.org/underscore-min.js
     - /js/posts/gym-traffic/line-chart.js
     - /js/posts/gym-traffic/heat-chart.js
 

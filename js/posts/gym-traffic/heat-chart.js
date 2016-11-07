@@ -53,64 +53,15 @@ function renderBothFacilityHeatCharts(data) {
   let woodenData = data.filter(d => d.facility == 'wooden');
   let bfitData = data.filter(d => d.facility == 'bfit');
 
-  renderFacilityHeatChart(woodenData, '#wooden-heatmap', 'wooden');
-  renderFacilityHeatChart(bfitData, '#bfit-heatmap', 'bfit');
+  let sequentialColors = ['#feedde','#fdbe85','#fd8d3c','#d94701'], // http://colorbrewer2.org/#type=sequential&scheme=Oranges&n=4
+      sequentialLabels = ['Light Traffic', '', '', 'Very Busy'];
+
+  configAndRenderChart(woodenData, '#wooden-heatmap', 'wooden', sequentialColors, sequentialLabels);
+  configAndRenderChart(bfitData, '#bfit-heatmap', 'bfit', sequentialColors, sequentialLabels);
 }
 
-
-// render comparison charts
-function renderComparisonChart(data, container) {
-
-  // reset container content
-  $(container).html('');
-
-  // append tooltip
-  let tooltip = d3.select(container)
-    .append('div')
-    .attr('class', 'heatchart-tip')
-    .attr('id', 'comparison-tip')
-    .html("Comparison tooltip text here") // FIX
-
-  let blueColor = ['#008FD5'], // [darker, less dark] http://htmlcolorcodes.com/color-picker/
-      yellowColor = ['#ffb81c'], // [darker, less dark]
-      neutralColor = ['#CFDDCC'], // http://www.colorhexa.com/80a478
-      closedColor = ['#EBEDEF'],
-      allColors = closedColor.concat(yellowColor).concat(neutralColor).concat(blueColor),
-      circleLabels = ['Closed', 'BFit Busier', '"Same"', 'Wooden Busier'],
-      colorScale = d3.scaleOrdinal().domain([0, 1, 2, 3])
-        .range(allColors);
-
-  // filter data to exclude hours from 1 to 4
-  data = data.filter(d => {
-    return d.hour < 1 | d.hour > 4;
-  })
-
-  // tooltip
-  data.forEach(d => {
-    d.tooltip = tooltip;
-  });
-
-  // get color of each data point
-  let colors = data.map(d => {
-    return colorScale(d.category);
-  })
-
-  // legend
-  let legendCircles = allColors.map((d, i) => {
-    return {
-      color: d,
-      text: circleLabels[i]
-    };
-  });
-
-  renderHeatChart(data, colors, '#comparison-heatmap', legendCircles);
-
-}
-
-
-// prepare data & render heat chart of a facility
-function renderFacilityHeatChart(data, container, facility) {
-
+//
+function configAndRenderChart(data, container, facility, scaleColors, scaleLabels) {
   // reset container content
   $(container).html('');
 
@@ -119,49 +70,58 @@ function renderFacilityHeatChart(data, container, facility) {
     .append('div')
     .attr('class', 'heatchart-tip')
     .attr('id', facility + '-tip')
-    .html("Facility tooltip text here") // FIX
+    .html("Tooltip text here") // FIX
 
-  // determine color of each heat circle
-  let sequentialColors = ['#feedde','#fdbe85','#fd8d3c','#d94701'], // http://colorbrewer2.org/#type=sequential&scheme=Oranges&n=4
-      closedColor = ['#EBEDEF'];//['#EBEDEF'];
-      allColors = closedColor.concat(sequentialColors),
-      circleLabels = ['Closed', 'Light Traffic', '', '', 'Very Busy']
-      colorScale = d3.scaleOrdinal()
-        .domain([0, 1, 2, 3, 4, 5])
+  let closedColor = ['#CCD1D1'],
+      allColors = closedColor.concat(scaleColors)
+      allLabels = ['Closed'].concat(scaleLabels),
+      colorScale = d3.scaleOrdinal().domain(_.range(allColors.length))
         .range(allColors);
 
-  // filter data to exclude hours from 1 to 4
-  data = data.filter(d => {
-    return d.hour < 1 | d.hour > 4;
-  })
+    // filter data to exclude hours from 1 to 4
+    data = data.filter(d => {
+      return d.hour < 1 | d.hour > 4;
+    })
 
-  // store color of each circle
-  let colors = data.map(d => {
-    return colorScale(d.category);
-  });
+    // store color of each circle
+    let colors = data.map(d => {
+      return colorScale(d.category);
+    });
 
-  // tooltip
-  data.forEach(d => {
-    d.tooltip = tooltip;
-  });
+    // tooltip
+    data.forEach(d => {
+      d.tooltip = tooltip;
+    });
 
-  // legend
-  let legendCircles = allColors.map((d, i) => {
-    return {
-      color: d,
-      text: circleLabels[i]
-    };
-  });
+    // legend
+    let legendCircles = allColors.map((d, i) => {
+      return {
+        color: d,
+        text: allLabels[i]
+      };
+    });
 
-  // render chart
-  renderHeatChart(data, colors, container, legendCircles);
-
+    // render chart
+    renderHeatChart(data, colors, container, legendCircles);
 }
+
+
+// render comparison charts
+function renderComparisonChart(data, container) {
+  let blueColor = ['#008FD5'],
+      yellowColor = ['#ffb81c'], // [darker, less dark]
+      neutralColor = ['#CFDDCC']; // http://www.colorhexa.com/80a478,
+      scaleColors = yellowColor.concat(neutralColor).concat(blueColor),
+      scaleLabels = ['BFit Busier', '"Same"', 'Wooden Busier'];
+
+  configAndRenderChart(data, container, '', scaleColors, scaleLabels);
+}
+
 
 function renderHeatChart(data, colors, container, legendCircles = null) {
 
   // validate data input
-  let validDataLength = 21 * 4;
+  let validDataLength = 20 * 4;
   if (data.length != validDataLength| colors.length != validDataLength) {
     console.log('Check data length');
   }
@@ -302,13 +262,13 @@ function renderHeatChart(data, colors, container, legendCircles = null) {
     .enter()
     .append("circle")
     .attr("cx", d => {
-      let hour_index = -1;
+      let position = -1;
       hours.forEach((hour, i) => {
-        if (hour.digit == d.hour) {
-          hour_index = i + 1;
+        if (d.hour == hour.digit) {
+          position = i;
         }
       })
-      return firstCircleOffsetX + (hour_index - 1) * gridWidth;
+      return firstCircleOffsetX + position * gridWidth;
     })
     .attr("cy", (d, i) => {
       return getHourIndexY(d.day_of_week) * gridHeight + firstCircleOffsetY;
@@ -387,8 +347,6 @@ function renderHeatChart(data, colors, container, legendCircles = null) {
       })
       .attr('y', 15 + circleRadius * 0.8 * 1.2)
       .attr('class', 'circle-legend-label')
-
-
 
 }
 

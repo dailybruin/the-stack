@@ -30,6 +30,12 @@ $mobile-threshold: 700px;
   color: $yellow;
 }
 
+.heat-circle:hover {
+  opacity: 0.6;
+  stroke: black;
+  stroke-width: 1px;
+}
+
 .traffic-text {
   font-weight: bold;
 }
@@ -67,5 +73,5 @@ $mobile-threshold: 700px;
 }
 
 .circle-legend-svg {
-  
+
 }
