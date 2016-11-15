@@ -12,7 +12,9 @@ featured_image:
     og_image: gym-traffic/comparison-chart.png
 stylesheets:
     - /css/posts/gym-traffic/app.css
-    - /css/posts/gym-traffic/semantic.min.css
+    - /css/posts/gym-traffic/container.min.css
+    - /css/posts/gym-traffic/grid.min.css
+    - /css/posts/gym-traffic/header.min.css
 scripts:
     - //code.jquery.com/jquery-3.1.1.min.js
     - //d3js.org/d3.v4.min.js
@@ -20,7 +22,6 @@ scripts:
     - /js/posts/gym-traffic/d3-tip.js
     - /js/posts/gym-traffic/line-chart.js
     - /js/posts/gym-traffic/heat-chart.js
-
 ---
 
 Every time a student cards into a UCLA Recreation facility, the visit is timestamped and recorded.
@@ -31,19 +32,6 @@ An obvious use of that data – all entrance records from the 2015 to 2016 schoo
 Because the anonymized records include only the timestamp of each entrance, but not the headcount inside a facility or the exit timestamp, we need a model to *estimate* traffic.
 
 That model would have to account for not only people who entered at a particular time (for which we use the data) but also *some proportion* of the people who entered *previously* and remained (here's where the model comes in). More details are explained later, but for now you should be confident that the estimates are solid.
-
-## Live Traffic Estimate
-
-Gym usage patterns are remarkably consistent. While UCLA Recreation doesn't provides real time information, we can fairly safely estimate – in real time – how busy a gym is based on past data.
-
-Right now, it's likely that
-<span class='wooden facility-name'>Wooden</span> is <span id='wooden-traffic-text'></span>, and
-<span class='bfit facility-name'>BFit</span> is <span id='bfit-traffic-text'></span>.
-
-> These live estimates are based on 1) time of day, and 2) day of week.
-> Take a look at the legends below to better understand the scale.
-> What if campus is not in session or gym hours are changed? Well, your browser doesn't know that!
-
 
 ## Choosing between Wooden and BFit
 
@@ -72,15 +60,35 @@ As we can see, on weekday afternoons, Wooden is a lot busier than BFit as studen
   </div>
 </div>
 
+<br>
+
+## Live Traffic Estimate
+
+Gym usage patterns are remarkably consistent. While UCLA Recreation doesn't provides real time information, we can fairly safely estimate – in real time – how busy a gym is based on past data.
+
+Right now, it's likely that
+<span class='wooden facility-name'>Wooden</span> is <span id='wooden-traffic-text'></span>, and
+<span class='bfit facility-name'>BFit</span> is <span id='bfit-traffic-text'></span>.
+
+> These live estimates are based on 1) time of day, and 2) day of week.
+> Take a look at the legends below to better understand the scale.
+> What if campus is not in session or gym hours are changed? Well, your browser doesn't know that!
+
+<br>
 
 ## Go in-depth  
 
-<div id='viz-selections'>
+<div class='ui grid' id='viz-selections'>
+  <label>Scale</label>
   <select id='pick-scale'>
     <option value='relative'>% Relative to peak</option>
     <option value='absolute'>Number of people</option>
   </select>
+
+  <label>Week</label>
   <select id='pick-week'></select>
+
+  <label>Day of Week</label>
   <select id='pick-day'></select>
 </div>
 
