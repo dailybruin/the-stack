@@ -97,6 +97,20 @@ function renderLineChart(data, scale, firstRender) {
       .attr('class', 'axis y-axis')
       .call(d3.axisLeft(yScale));
 
+  // tooltip
+  let tip = d3.tip()
+    .attr('class', 'heatchart-tip')
+    .html(d => {
+      let formatTime = d3.timeFormat('%I:%M %p');
+      return (
+        "<span class='bold-tip'>" + formatTime(d.data.hour_minute) + "</span>" + "<br>" +
+        "<span class='bold-tip'>" + (d.data.facility == 'wooden'? "Wooden # people: " : "BFit # people: ") + "</span>" + d.data.avg_n_people + "<br>" +
+        "<span class='bold-tip'>" + (d.data.facility == 'wooden'? "Wooden relative to peak: " : "BFit relative to peak: ") + "</span>" + d.data.avg_n_people_rel + "%"
+      );
+    });
+
+  g.call(tip);
+
   // lines
   let line = d3.line()
     .x(d => xScale(d.hour_minute))
@@ -128,15 +142,11 @@ function renderLineChart(data, scale, firstRender) {
   focus.append('circle')
     .attr('r', 4);
 
-  focus.append('text')
-    .attr('y', -10);
-
   let voronoiGroup = g.append('g')
     .attr('class', 'voronoi');
 
   let dat = voronoi.extent([[0, 0], [width, height]]).polygons(data);
 
-  let selectedHourMinute = null;
   voronoiGroup.selectAll('path')
     .data(dat)
     .enter()
@@ -146,13 +156,12 @@ function renderLineChart(data, scale, firstRender) {
     .on("mouseout", mouseout);
 
   function mouseover(d) {
-    selectedHourMinute = d.data.hour_minute;
+    tip.show(d);
     focus.attr("transform", "translate(" + xScale(d.data.hour_minute) + "," + yScale(d.data.y_value) + ")");
-    focus.select("text").text(d.data.y_value + ' at ' + d.data.hour + ':' + d.data.minute);
   }
 
   function mouseout(d) {
-    selectedHourMinute = null;
+    tip.hide(d);
     focus.attr("transform", "translate(-100,-100)");
   }
 
