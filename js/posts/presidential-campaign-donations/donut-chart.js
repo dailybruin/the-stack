@@ -8,7 +8,7 @@ var donutTip1 = d3.select("#donut-chart").append("div")
   .style("opacity", 0);
 
 var donutTip2 = d3.select("#donut-chart").append("div")
-  .attr("class", "vertical-tip-1")
+  .attr("class", "vertical-tip")
   .style("opacity", 0);
 
 var outerColorScale = d3.scale.ordinal()
