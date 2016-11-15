@@ -1,0 +1,201 @@
+#bubble-chart {
+  display: block;
+  margin: 25px auto;
+}
+
+#bubble-chart > g > text > tspan {
+  font-size: 20px;
+  pointer-events: none;
+}
+
+div.horizontal-tip .right {
+  padding-top: 32px !important;
+}
+
+#table {
+  width: 740px;
+  margin: 25px 0;
+  /*overflow: scroll;*/
+}
+
+#table table {
+  margin: 0 auto;
+}
+
+table th, table td {
+  text-align: left;
+  padding: 2px 10px;
+  font-size: 15px;
+}
+
+#table > table > tbody > tr:nth-child(odd) {
+  background: rgba(200,200,200,0.1);
+}
+
+#table > table > tbody > tr > td {
+  height: 30px;
+  text-align: center;
+}
+
+#table > table > tbody > tr > td:nth-child(1) {
+  text-align: left; 
+}
+
+#table > table > tbody > tr > td:nth-child(3) {
+  font-weight: bold;
+}
+
+#table > table > thead > tr > th {
+  border-bottom: solid;
+  text-align: center;
+  /*background: rgba(184, 229, 255, 0.5);*/
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.bar {
+  fill: orange;
+}
+
+.bar:hover {
+  fill: orangered ;
+}
+
+.x.axis path {
+  display: none;
+}
+
+#horizontal-bar .tick line {
+  display: none;
+}
+
+#horizontal-bar .domain {
+
+  display: none;
+}
+
+#xaxis .domain {
+  fill:none;
+  stroke:#000;
+}
+
+#xaxis text, #yaxis text {
+  font-size: 12px;
+}
+
+.arc text {
+  font: 10px sans-serif;
+  text-anchor: middle;
+}
+
+.arc path {
+  stroke: #fff;
+}
+
+#donut-chart {
+  width: 100%;
+  display: block;
+}
+
+#donut-chart svg {
+  display: block;
+  margin: 0 auto;
+}
+
+
+text {
+  font: 10px sans-serif;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+#vertical-bar > svg > g > g.x.axis > g > line {
+  display: none;
+}
+
+
+div.vertical-tip-1 {
+  position: absolute; 
+  height: auto;   
+  padding: 6px; 
+  font: 12px sans-serif;  
+  background: rgba(255, 255, 255, 0.75);
+  border: 1px solid rgba(0, 0, 0, 0.2);          
+  color: black;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+  opacity:0;
+}
+
+div.vertical-tip-1 p {
+  margin-bottom: 0px;
+}
+
+div.horizontal-tip {
+  position: absolute; 
+  height: auto;  
+  /*width: 200px; */
+  padding: 6px; 
+  font: 12px sans-serif;  
+  background: rgba(255, 255, 255, 0.75);
+  border: 1px solid rgba(0, 0, 0, 0.2);          
+  color: black;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+  opacity:0;
+}
+
+.affixed {
+  position: fixed;
+  box-sizing: border-box;
+  box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.2);
+  top: 0;
+}
+
+div.horizontal-tip .left {
+  display: inline-block; 
+  float:left;
+  padding-right: 5px; 
+  border-right: 1px dotted rgba(0,0,0, 0.4);
+  position: relative; 
+  padding-top: 7px;
+  padding-bottom: 7px;
+}
+
+div.horizontal-tip .left p {
+  margin-bottom: 2px;
+}
+div.horizontal-tip .right {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  height: auto;
+  font-size: 2em;
+  padding-left: 5px;
+  display: inline-block;
+  float: right;
+}
+
+.legend rect:hover {
+  cursor: pointer;
+
+}
+
+#d1 {
+  font-size: 1.8em;
+}
+
+img.ui.avatar.image.rep {
+  border: 2px solid red;
+}
+
+img.ui.avatar.image.dem {
+  border: 2px solid blue;
+}

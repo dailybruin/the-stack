@@ -1,0 +1,50 @@
+div.vertical-tip {
+  position: absolute; 
+  height: auto;   
+  padding: 6px; 
+  font: 12px sans-serif;  
+  background: rgba(255, 255, 255, 0.75);
+  border: 1px solid rgba(0, 0, 0, 0.2);          
+  color: black;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+  opacity:0;
+}
+
+div.vertical-tip p {
+  margin-bottom: 0px;
+}
+
+div.horizontal-tip {
+  position: absolute; 
+  height: auto;  
+  /*width: 200px; */
+  padding: 6px; 
+  font: 12px sans-serif;  
+  background: rgba(255, 255, 255, 0.75);
+  border: 1px solid rgba(0, 0, 0, 0.2);          
+  color: black;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+  opacity:0;
+}
+div.horizontal-tip .left {
+  display: inline-block; 
+  float:left;
+  padding-right: 5px; 
+  border-right: 1px dotted rgba(0,0,0, 0.4);
+  position: relative; 
+  padding-top: 7px;
+  padding-bottom: 7px;
+}
+
+div.horizontal-tip .left p {
+  margin-bottom: 2px;
+}
+div.horizontal-tip .right {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  height: auto;
+  font-size: 2em;
+  padding-left: 5px;
+  display: inline-block;
+  float: right;
+}

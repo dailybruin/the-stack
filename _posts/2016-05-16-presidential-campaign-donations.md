@@ -12,6 +12,7 @@ featured_image:
   url: presidential-campaign-donations/graph.svg
 og_image: presidential-campaign-donations/graph.png
 stylesheets:
+  - /css/posts/presidential-campaign-donations/tooltip.css
   - /css/posts/presidential-campaign-donations/app.css
   - /css/posts/presidential-campaign-donations/semantic.min.css
   - //cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/components/dropdown.min.css
