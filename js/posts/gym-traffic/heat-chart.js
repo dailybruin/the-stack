@@ -257,16 +257,16 @@ function renderHeatChart(data, colors, container, legendCircles = null) {
                      d.day_of_week == 5? "Fri" :
                      d.day_of_week == 6? "Sat" : "Sun";
 
-        let sharedTip = "<span class='day-tip'>" + dayStr + "</span>" + " | " +
-            "<span class='hour-tip'>" + hourStr + "</span>" + "<br>";
+        let sharedTip = "<span class='bold-tip'>" + dayStr + "</span>" + " | " +
+            "<span>" + hourStr + "</span>" + "<br>";
 
         return d.type == 'comparison'? (
           sharedTip +
-          "<span class='traffic-label-tip'>" + "Wooden-BFit Ratio: " + "</span>" + d.traffic_ratio + "<br>"
+          "<span class='bold-tip'>" + "Wooden-BFit Ratio: " + "</span>" + d.traffic_ratio + "<br>"
         ) : (
           sharedTip +
-          "<span class='traffic-label-tip'>" + "# people: " + "</span>" + d.avg_n_people + "<br>" +
-          "<span class='traffic-label-tip'>" + "% relative to peak: " + "</span>" + parseInt(d.avg_n_people_rel * 100) + "%"
+          "<span class='bold-tip'>" + "# people: " + "</span>" + d.avg_n_people + "<br>" +
+          "<span class='bold-tip'>" + "% relative to peak: " + "</span>" + parseInt(d.avg_n_people_rel * 100) + "%"
         );
       });
 
