@@ -257,7 +257,7 @@ function renderHeatChart(data, colors, container, legendCircles = null) {
                      d.day_of_week == 5? "Fri" :
                      d.day_of_week == 6? "Sat" : "Sun";
 
-        let sharedTip = "<span class='day-tip'>" + dayStr + "</span>" + ", " +
+        let sharedTip = "<span class='day-tip'>" + dayStr + "</span>" + " | " +
             "<span class='hour-tip'>" + hourStr + "</span>" + "<br>";
 
         return d.type == 'comparison'? (
@@ -366,11 +366,14 @@ function renderHeatChart(data, colors, container, legendCircles = null) {
 
 }
 
-// recode day of week from [Sunday = 0, ..., Saturday = 6] to [Monday = 1, ..., Sunday = 7]
+// recode day of week from [Sunday = 0, ..., Saturday = 6] to [Monday ~ Thursday = 1, Friday = 5, Saturday = 6, Sunday = 7]
 function recodeDayOfWeek(day) {
   if (day == 0) {
     day = 7;
+  } else if (day >= 1 & day <= 4) {
+    day = 1;
   }
+
   return day;
 }
 
