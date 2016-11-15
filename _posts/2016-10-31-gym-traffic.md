@@ -12,9 +12,9 @@ featured_image:
     og_image: gym-traffic/comparison-chart.png
 stylesheets:
     - /css/posts/gym-traffic/app.css
-    - /css/posts/gym-traffic/container.min.css
     - /css/posts/gym-traffic/grid.min.css
     - /css/posts/gym-traffic/header.min.css
+    - /css/posts/gym-traffic/divider.min.css
 scripts:
     - //code.jquery.com/jquery-3.1.1.min.js
     - //d3js.org/d3.v4.min.js
@@ -39,8 +39,9 @@ Wooden's much higher capacity means **it normally houses between two and three t
 BFit**. Occasionally though, BFit reaches almost the same level of traffic as Wooden. In that case, we might argue that Wooden is the better, less croweded place to workout. Conversely, when Wooden is *a lot* busier than BFit, BFit might be a better choice.
 
   <div class='ui centered medium header'>Wooden or BFit</div>
-  <div class='ui centered one column grid'>
-    <div class='twelve wide column heat-chart' id='comparison-heatmap'>
+  <div class='ui centered grid'>
+    <div class='twelve wide column'>
+      <div class='heat-chart' id='comparison-heatmap'></div>
     </div>
   </div>
 
@@ -49,14 +50,16 @@ As we can see, on weekday afternoons, Wooden is a lot busier than BFit as studen
 ## A quick glance
 
 <div class='ui centered medium header'>Wooden</div>
-<div class='ui centered one column grid'>
-  <div class='twelve wide column heat-chart' id='wooden-heatmap'>
+<div class='ui centered grid'>
+  <div class='twelve wide column'>
+    <div class='heat-chart' id='wooden-heatmap'></div>
   </div>
 </div>
 
 <div class='ui centered medium header'>BFit</div>
-<div class='ui centered one column grid'>
-  <div class='twelve wide column heat-chart' id='bfit-heatmap'>
+<div class='ui centered grid'>
+  <div class='twelve wide column'>
+    <div class='heat-chart' id='bfit-heatmap'></div>
   </div>
 </div>
 
@@ -92,8 +95,12 @@ Right now, it's likely that
   <select id='pick-day'></select>
 </div>
 
-<div class='ui centered one column grid'>
-  <div class='twelve wide column line-chart' id='line-chart'></div>
+<div class='ui divider'></div>
+
+<div class='ui centered grid'>
+  <div class='twelve wide column'>
+    <div class='line-chart' id='line-chart'></div>
+  </div>
 </div>
 
 ...
