@@ -1,5 +1,4 @@
 $(document).ready(function() {
-
   // store current time in global namespace
   window.currentTime_ = getCurrentDayAndHour();
 
@@ -13,13 +12,12 @@ $(document).ready(function() {
     // render traffic text
     renderTrafficText(data);
 
-    // render for the first time
+    // render charts
     renderBothFacilityHeatCharts(data);
 
-    // render upon window resize
     $(window).resize(function() {
       renderBothFacilityHeatCharts(data);
-    })
+    });
   });
 
   // render comparison chart
@@ -31,16 +29,14 @@ $(document).ready(function() {
 
     let container = '#comparison-heatmap';
 
-    // render for the first time
+    // render chart
     renderComparisonChart(data, container);
 
-    // render upon window resize
     $(window).resize(function() {
       renderComparisonChart(data, container);
-    })
-  })
-
-})
+    });
+  });
+});
 
 function renderTrafficText(data) {
   let facilityData = filterFacilityData(data);
@@ -50,14 +46,14 @@ function renderTrafficText(data) {
     if (d.hour == currentTime_.hour & d.day_of_week == currentTime_.day_of_week) {
       woodenTraffic = d.category;
     }
-  })
+  });
 
   let bfitTraffic = null;
   facilityData.bfit.forEach(d => {
     if (d.hour == currentTime_.hour & d.day_of_week == currentTime_.day_of_week) {
       bfitTraffic = d.category;
     }
-  })
+  });
 
   d3.select('#wooden-traffic-text')
     .text(labelTrafficCategory(woodenTraffic))
@@ -90,7 +86,6 @@ function renderComparisonChart(data, container) {
   configAndRenderChart(data, container, null, scaleColors, scaleLabels);
 }
 
-//
 function configAndRenderChart(data, container, facility, scaleColors, scaleLabels) {
   // reset container content
   $(container).html('');
@@ -253,19 +248,6 @@ function renderHeatChart(data, colors, container, legendCircles = null) {
     .attr("y", hourLabelOffsetY)
     .style("text-anchor", "middle")
     .attr("class", 'label');
-
-    // format tooltip time
-    function formatHour(hourStr) {
-      let parseHour = d3.timeParse('%H'),
-          formatHour_ = d3.timeFormat('%I'),
-          formatAPM = d3.timeFormat('%p');
-
-      let hour = parseHour(hourStr),
-          hourDisplay = formatHour_(hour),
-          apmDisplay = formatAPM(hour);
-
-      return parseInt(hourDisplay) + " " + apmDisplay;
-    }
 
     // tooltip
     let tip = d3.tip().attr('class', 'heatchart-tip')
@@ -458,6 +440,19 @@ function labelTrafficCategory(code) {
     default:
       return null;
   }
+}
+
+// format tooltip time
+function formatHour(hourStr) {
+  let parseHour = d3.timeParse('%H'),
+      formatHour_ = d3.timeFormat('%I'),
+      formatAPM = d3.timeFormat('%p');
+
+  let hour = parseHour(hourStr),
+      hourDisplay = formatHour_(hour),
+      apmDisplay = formatAPM(hour);
+
+  return parseInt(hourDisplay) + " " + apmDisplay;
 }
 
 // get current day and hour

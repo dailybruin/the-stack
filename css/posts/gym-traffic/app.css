@@ -58,6 +58,9 @@
       font-size: 8px;
       text-anchor: middle; } }
 
+.line-legend .label {
+  font-size: 10px; }
+
 .circle-legend-label {
   font-size: 10px;
   text-anchor: middle; }

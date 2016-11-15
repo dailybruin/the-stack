@@ -76,19 +76,17 @@ As we can see, on weekday afternoons, Wooden is a lot busier than BFit as studen
 ## Go in-depth  
 
 <div id='viz-selections'>
-  <select id='pick-facility'>
-    <option value='both'>Wooden + BFit</option>
-    <option value='wooden'>Wooden</option>
-    <option value='bfit'>BFit</option>
-  </select>
-
   <select id='pick-scale'>
     <option value='relative'>% Relative to peak</option>
     <option value='absolute'>Number of people</option>
   </select>
+  <select id='pick-week'></select>
+  <select id='pick-day'></select>
 </div>
 
-<div id='line-chart'></div>
+<div class='ui centered one column grid'>
+  <div class='twelve wide column line-chart' id='line-chart'></div>
+</div>
 
 ...
 
