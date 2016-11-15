@@ -98,7 +98,7 @@ function configAndRenderChart(data, container, facility, scaleColors, scaleLabel
   let closedColor = ['#CCD1D1'],
       allColors = closedColor.concat(scaleColors)
       allLabels = ['Closed'].concat(scaleLabels),
-      colorScale = d3.scaleOrdinal().domain(_.range(allColors.length))
+      colorScale = d3.scaleOrdinal().domain(d3.range(0, allColors.length, 1))
         .range(allColors);
 
     // filter data to exclude hours from 1 to 4
@@ -109,17 +109,6 @@ function configAndRenderChart(data, container, facility, scaleColors, scaleLabel
     // store color of each circle
     let colors = data.map(d => {
       return colorScale(d.category);
-    });
-
-    // append tooltip
-    let tooltip = d3.select(container)
-      .append('div')
-      .attr('class', 'heatchart-tip')
-      .attr('id', facility + '-tip')
-      .html("")
-
-    data.forEach(d => {
-      d.tooltip = tooltip;
     });
 
     // legend
@@ -251,7 +240,6 @@ function renderHeatChart(data, colors, container, legendCircles = null) {
     .data(times)
     .enter().append('text')
     .text(d => d.label)
-    // FIX: center time label above specific hours
     .attr('x', d => d.x)
     .attr('y', timeLabelOffsetY)
     .style('text-anchor', 'middle')
@@ -264,8 +252,43 @@ function renderHeatChart(data, colors, container, legendCircles = null) {
     .attr("x", d => d.x)
     .attr("y", hourLabelOffsetY)
     .style("text-anchor", "middle")
-    //.attr("transform", "translate(0, 15)")
     .attr("class", 'label');
+
+    // format tooltip time
+    function formatHour(hourStr) {
+      let parseHour = d3.timeParse('%H'),
+          formatHour_ = d3.timeFormat('%I'),
+          formatAPM = d3.timeFormat('%p');
+
+      let hour = parseHour(hourStr),
+          hourDisplay = formatHour_(hour),
+          apmDisplay = formatAPM(hour);
+
+      return parseInt(hourDisplay) + " " + apmDisplay;
+    }
+
+    // tooltip
+    let tip = d3.tip().attr('class', 'heatchart-tip')
+      .html(d => {
+        let hourStr = formatHour(d.hour),
+            dayStr = d.day_of_week == 1? "Mon to Thur" :
+                     d.day_of_week == 5? "Fri" :
+                     d.day_of_week == 6? "Sat" : "Sun";
+
+        let sharedTip = "<span class='day-tip'>" + dayStr + "</span>" + ", " +
+            "<span class='hour-tip'>" + hourStr + "</span>" + "<br>";
+
+        return d.type == 'comparison'? (
+          sharedTip +
+          "<span class='traffic-label-tip'>" + "Wooden-BFit Ratio: " + "</span>" + d.traffic_ratio + "<br>"
+        ) : (
+          sharedTip +
+          "<span class='traffic-label-tip'>" + "# people: " + "</span>" + d.avg_n_people + "<br>" +
+          "<span class='traffic-label-tip'>" + "% relative to peak: " + "</span>" + parseInt(d.avg_n_people_rel * 100) + "%"
+        );
+      });
+
+    chartG.call(tip);
 
     // render heat circles
     let circles = chartG.selectAll(".heat-circle")
@@ -293,10 +316,10 @@ function renderHeatChart(data, colors, container, legendCircles = null) {
       return colors[i];
     })
     .on('mouseover', (d, i) => {
-      showTooltip(d, i);
+      tip.show(d);
     })
     .on('mouseout', (d, i) => {
-      hideTooltip(d, i);
+      tip.hide(d);
     })
 
 
@@ -361,30 +384,6 @@ function renderHeatChart(data, colors, container, legendCircles = null) {
 
 }
 
-
-// display mouseover tooltip
-function showTooltip(d, i) {
-  d.tooltip.html(
-    '<p>' + d.day_of_week + ' ' + d.hour + ' PM' + '<br>Typical traffic at ' +
-    d.facility + ': <br>' + Math.round(d.avg_n_people_rel * 100) + '% relative to peak.</p>'
-  );
-  d.tooltip.style('opacity', 1)
-      .style('left', d => {
-        return (event.clientX - event.offsetX) + 'px';
-      })
-      .style('top', d => {
-        return (event.clientY + event.offsetY) + 'px';
-      })
-}
-
-
-// hide mouseover tooltip
-function hideTooltip(d, i) {
-  d.tooltip.html('');
-  d.tooltip.style('opacity', 0);
-}
-
-
 // recode day of week from [Sunday = 0, ..., Saturday = 6] to [Monday = 1, ..., Sunday = 7]
 function recodeDayOfWeek(day) {
   if (day == 0) {
@@ -401,6 +400,7 @@ function processFacilityData(data) {
     d.avg_n_people = parseInt(d.avg_n_people);
     d.avg_n_people_rel = Number(d.avg_n_people_rel);
     d.category = parseInt(d.category);
+    d.type = 'facility';
   });
   return data;
 }
@@ -413,6 +413,7 @@ function processComparisonData(data) {
     d.bfit_n_people = parseInt(d.bfit_n_people);
     d.traffic_ratio = Number(d.traffic_ratio);
     d.category = parseInt(d.category);
+    d.type = 'comparison';
   });
   return data;
 }
