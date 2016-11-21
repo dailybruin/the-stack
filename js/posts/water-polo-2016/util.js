@@ -15,3 +15,4 @@ function formatBoxes(data, boxes) {
 function formatData(data, boxes) {
 	data.map(function(d) { formatBoxes(d, boxes); })
 }
+
