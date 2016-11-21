@@ -121,17 +121,6 @@ function configAndRenderChart(data, container, facility, scaleColors, scaleLabel
 
 function renderHeatChart(data, colors, container, legendCircles = null) {
 
-  // validate data input
-  let validDataLength = 20 * 4;
-  if (data.length != validDataLength| colors.length != validDataLength) {
-    console.log('Check data length');
-  }
-  data.forEach(d => {
-    if (d.hour == null | d.day_of_week == null) {
-      console.log('Check data type');
-    }
-  })
-
   // get browser container width
   let containerWidth = $(container).outerWidth(),
       containerHeight = $(container).outerHeight();

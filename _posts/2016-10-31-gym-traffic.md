@@ -27,17 +27,17 @@ scripts:
 
 Every time a student cards into a UCLA Recreation facility, the visit is timestamped and recorded.
 Last school year, **1.5 million visits** were recorded like that.
-They tell us a lot about how students use each facility and could inform **when and where you want to workout**.
+These records tell us a lot about how students use each facility and could suggest **when and where you should workout**.
 
 An obvious use of that data – all entrance records from the 2015 to 2016 school year – is to **estimate how many people are in the gym at any given moment**.
 Because the anonymized records include only the timestamp of each entrance, but not the headcount inside a gym or the exit timestamp, we need a model to *estimate* traffic.
 
-That model would have to account for not only people who entered at a particular time (for which we use the data) but also *some proportion* of the people who entered *previously* and remained (here's where the model comes in). More details are explained later, but for now you should be confident that the estimates are solid.
+That model would have to account for not only people who entered at a particular time (for which we use the data) but also *some proportion* of the people who entered *previously* and remained (here's where the model comes in). More details are explained later in the post.
 
 ## Choosing between Wooden and BFit
 
 Wooden's much higher capacity means **it normally houses between two and three times as many people as
-BFit**. Occasionally though, BFit reaches almost the same level of traffic as Wooden. In that case, we might argue that Wooden is the better, less crowded place to workout. Conversely, when Wooden is *a lot* (say more than 3 times) busier than BFit, BFit might be a better choice.
+BFit**. From time to time, BFit does reach about the same level of traffic as Wooden. In those cases, we might argue that Wooden is the better, less crowded place to workout. Conversely, when Wooden is *a lot* (say more than 3 times) busier than BFit, BFit might be a better choice.
 
   <div class='ui centered medium header'>Wooden or BFit</div>
   <div class='ui centered grid'>
@@ -46,11 +46,11 @@ BFit**. Occasionally though, BFit reaches almost the same level of traffic as Wo
     </div>
   </div>
 
-As we can see, on weekday afternoons, Wooden is unusually busier than BFit as students stay near campus in between classes. BFit becomes more crowded on evenings and late nights as well as weekends when Hill residents prefer the short walk from dorms.
+On weekday afternoons, Wooden is unusually busier than BFit as students stay near campus in between classes. BFit becomes more crowded on evenings and late nights as well as weekends when Hill residents prefer the short walk from dorms.
 
 ## A quick glance
 
-The heat charts below how busy each facility is at different hours and days of week. Because Wooden and BFit differ in sizes, we compare the traffic at each time period in a gym with its *peak traffic*. (Peak is defined as the average number of people at 5:30 PM on a weekday in the first 3 weeks of a quarter.)
+The heat charts below show how busy each facility is at different hours and days of week. Because Wooden and BFit differ in size, we compare each facility's traffic at each time period with its *peak traffic*. Peak traffic is simply the average number of people at 5:30 PM on a weekday in the first 3 weeks of a quarter when more people go to gyms.
 
 <div class='ui centered medium header'>Wooden</div>
 <div class='ui centered grid'>
@@ -78,8 +78,7 @@ Right now, it's likely that
 <span class='bfit facility-name'>BFit</span> is <span id='bfit-traffic-text'></span>.
 
 > These live estimates are based on 1) time of day, and 2) day of week.
-> Take a look at the legends below to better understand the scale.
-> What if campus is not in session or gym hours are changed? Well, your browser doesn't know that!
+> Take a look at the legends above to better understand the scale.
 
 <br>
 
@@ -111,17 +110,17 @@ The line chart below allows for more detailed look at how gym traffic varies ove
   </div>
 </div>
 
-A few interesting questions / insights:
+A few interesting insights:
 
 * Traffic dips in between noon and 1:30 PM on weekdays.
 * Traffic climbs from 2 PM onwards until it reaches the peak at around 5:30 PM on weekdays.
 * BFit is a lot busier than Wooden on weekends, especially on evenings. Weekend traffic at Wooden doesn't appear to vary that much throughout the day.
-* Do the trends differ between the final few weeks of a quarter and the first few weeks?
+* Less people go workout towards the end of a quarter.
 
 
 ## Data and Model
 
-UCLA Recreation officials graciously provided the dataset to Daily Bruin. There were around 1.5 million records in total, spanning from June 2015 to June 2016, and each contains the *timestamp*, *type of user* (ie. undergrad, grad or staff), and *facility name* (ie. Wooden, BFit, KREC, or Sunset Rec) of an entrance.
+UCLA Recreation officials graciously provided the dataset. There were around 1.5 million records in total, spanning from June 2015 to June 2016, and each contains the *timestamp*, *type of user* (ie. undergrad, grad or staff), and *facility name* (ie. Wooden, BFit, KREC, or Sunset Rec) of an entrance.
 
 Since the dataset doesn't have exit timestamps, we have to guess **how long each workout lasted** – we need to find a distribution and good enough parameters using *survey data*. 65 UCLA students responded to an online survey asking them how long they spent at the gym the last time they went. The *Weibull distribution* was chosen because of its suitability for modeling timed events, and parameters were then chosen from the survey data.
 
@@ -136,4 +135,4 @@ Once we have a model, we assume each visitor in the records did the following:
 
 Now we simply sum all the people who remained at each time point and do the necessary math to get the estimated average traffic for different times and days of week at each facility.
 
-How reliable is the model? Using different models produced variability in estimated traffic counts. One set of parameters might produce an estimate of 200 while another one might output 280 as the estimate. But **the relative difference between times are very consistent** so the trends shown in relative scales above don't vary much regardless of model specification.
+How reliable is the model? The estimation of the exact headcount varied considerably depending on the distribution parameters. For instance, one set of parameters might produce an estimate of 300 while another might output 380 as the estimate. But the **relative difference** between the different times of day, days of week, or weeks of quarter are very consistent so the trends shown in relative scales are reliable regardless of model specification.
