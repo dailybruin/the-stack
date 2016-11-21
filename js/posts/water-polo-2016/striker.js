@@ -26,12 +26,15 @@ var initStriker = function(data) {
   .enter()
   .append("text")
   .attr("x", function(data, index) {
-    return (Math.floor(index / 3)) * (sideLength * 2 + 5) + sideLength
+    return (Math.floor(index / 3)) * (sideLength * 2 + 5) + sideLength/2
   })
   .attr("y", function(data, index) {
     return (index % 3) * (sideLength + 5) + sideLength / 2
   })
   .text(function(data, index) {
-
+    if ((data[1] + data[0]) == 0)
+      return "NA"
+    else
+      return data[0]/ (data[0]+ data[1]) + "%"
   })
 }
