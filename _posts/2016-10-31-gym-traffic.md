@@ -78,7 +78,6 @@ Right now, it's likely that
 <span class='bfit facility-name'>BFit</span> is <span id='bfit-traffic-text'></span>.
 
 > These live estimates are based on 1) time of day, and 2) day of week.
-> Take a look at the legends above to better understand the scale.
 
 <br>
 
@@ -109,6 +108,8 @@ The line chart below allows you to explore and compare gym traffic at a more det
     <div class='line-chart' id='line-chart'></div>
   </div>
 </div>
+
+<br>
 
 A few interesting insights:
 

@@ -3,21 +3,22 @@ $yellow: #ffb81c;
 $mobile-threshold: 700px;
 
 .heatchart-tip {
+  @media only screen and (max-width: $mobile-threshold) {
+    font-size: 14px;
+    padding: 2px;
+  }
   display: block;
   position: absolute;
   text-align: center;
   width: auto;
   height: auto;
   padding: 3px;
-  font: 13px sans-serif;
+  font-size: 16px;
+  font-family: sans-serif;
   background-color: rgba(255, 255, 255, 0.85);
   border: 1px solid rgba(0, 0, 0, 0.2);
   box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
-  @media only screen and (max-width: $mobile-threshold) {
-    font: 9px sans-serif;
-    padding: 2px;
-  }
 }
 
 .bold-tip {
@@ -59,21 +60,19 @@ $mobile-threshold: 700px;
   pointer-events: all;
 }
 
-.label {
+.chart-label {
   @media only screen and (max-width: $mobile-threshold) {
-    font-size: 8px;
-    text-anchor: middle;
+    font-size: 9px;
   }
   font-size: 14px;
   text-anchor: middle;
 }
 
-.line-legend .label {
-  font-size: 10px;
-}
-
-.circle-legend-label {
-  font-size: 10px;
+.legend-label, .line-legend .label {
+  @media only screen and (max-width: $mobile-threshold) {
+    font-size: 8px;
+  }
+  font-size: 11px;
   text-anchor: middle;
 }
 
@@ -88,8 +87,4 @@ $mobile-threshold: 700px;
 
 .no-border {
   stroke: none;
-}
-
-.circle-legend-svg {
-
 }

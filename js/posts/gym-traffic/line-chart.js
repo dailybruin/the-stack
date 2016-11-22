@@ -79,7 +79,9 @@ function renderLineChart(data, scale, firstRender) {
   // scales and axes
   let xExtent = d3.extent(data, d => d.hour_minute);
 
-  let xScale = d3.scaleTime().domain(xExtent).range([0, width]),
+  let xScale = d3.scaleTime()
+        .domain(xExtent)
+        .range([0, width]),
       yAbsoluteScale = d3.scaleLinear().domain(window.yAbsoluteExtent).range([height, 0]),
       yRelativeScale = d3.scaleLinear().domain([0, 100]).range([height, 0]);
 
@@ -97,13 +99,22 @@ function renderLineChart(data, scale, firstRender) {
       .attr('class', 'axis y-axis')
       .call(d3.axisLeft(yScale));
 
+  // remove year 1900 from scale
+  $('.line-chart .x-axis .tick:first').css('opacity', 0);
+
   // tooltip
   let tip = d3.tip()
     .attr('class', 'heatchart-tip')
     .html(d => {
       let formatTime = d3.timeFormat('%I:%M %p');
-      return (
-        "<span class='bold-tip'>" + formatTime(d.data.hour_minute) + "</span>" + "<br>" +
+
+      let timeTip = "<span class='bold-tip'>" + formatTime(d.data.hour_minute) + "</span>" + "<br>";
+
+      return d.data.avg_n_people == 0? (
+        timeTip +
+        "<span class='bold-tip'>" + "Closed" + "</span>"
+      ) : (
+        timeTip +
         "<span class='bold-tip'>" + (d.data.facility == 'wooden'? "Wooden # people: " : "BFit # people: ") + "</span>" + d.data.avg_n_people + "<br>" +
         "<span class='bold-tip'>" + (d.data.facility == 'wooden'? "Wooden relative to peak: " : "BFit relative to peak: ") + "</span>" + d.data.avg_n_people_rel + "%"
       );
