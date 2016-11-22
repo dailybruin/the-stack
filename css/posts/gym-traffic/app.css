@@ -11,10 +11,13 @@
   border: 1px solid rgba(0, 0, 0, 0.2);
   box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px; }
-  @media only screen and (max-width: 700px) {
+  @media only screen and (max-width: 650px) {
     .heatchart-tip {
       font-size: 14px;
       padding: 2px; } }
+
+.invisible {
+  opacity: 0; }
 
 .bold-tip {
   font-weight: bold; }
@@ -50,14 +53,14 @@
 .chart-label {
   font-size: 14px;
   text-anchor: middle; }
-  @media only screen and (max-width: 700px) {
+  @media only screen and (max-width: 650px) {
     .chart-label {
       font-size: 9px; } }
 
 .legend-label, .line-legend .label {
   font-size: 11px;
   text-anchor: middle; }
-  @media only screen and (max-width: 700px) {
+  @media only screen and (max-width: 650px) {
     .legend-label, .line-legend .label {
       font-size: 8px; } }
 

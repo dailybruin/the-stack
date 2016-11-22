@@ -100,7 +100,7 @@ function renderLineChart(data, scale, firstRender) {
       .call(d3.axisLeft(yScale));
 
   // remove year 1900 from scale
-  $('.line-chart .x-axis .tick:first').css('opacity', 0);
+  $('.line-chart .x-axis .tick text:eq(0)').addClass('invisible');
 
   // tooltip
   let tip = d3.tip()

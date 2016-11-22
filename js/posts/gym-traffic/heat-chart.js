@@ -125,7 +125,7 @@ function renderHeatChart(data, colors, container, legendCircles = null) {
       containerHeight = $(container).outerHeight();
 
   // mobile threshold
-  let mobileThreshold = 700,
+  let mobileThreshold = 650,
       windowWidth = $(window).width(),
       isMobile = windowWidth <= mobileThreshold ? true : false;
 
@@ -136,12 +136,12 @@ function renderHeatChart(data, colors, container, legendCircles = null) {
 
   // get dimensions of container and determine dimensions of chart
   let chartWidth = containerWidth - margins.left - margins.right,
-        cHeight = isMobile? 80 : 130,
+        cHeight = isMobile? 85 : 140,
       chartHeight = cHeight - margins.top - margins.bottom;
 
   // dimension and size configs
-  let circleRadius = isMobile? (chartWidth / 60) : 8,
-      circlePaddings = isMobile? {vertical: 3, horizontal: 1.5} : {vertical: 8, horizontal: 4},
+  let circleRadius = isMobile? (chartWidth * 0.018) : 9,
+      circlePaddings = isMobile? {vertical: 2, horizontal: 1} : {vertical: 8, horizontal: 4},
       dayLabelOffsetX = isMobile? 15 : 22,
       firstCircleOffsetX = isMobile? 40 : 75,
       firstCircleOffsetY = isMobile? 21 : 35,
