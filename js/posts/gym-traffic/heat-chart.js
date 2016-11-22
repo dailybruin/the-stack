@@ -118,7 +118,6 @@ function configAndRenderChart(data, container, facility, scaleColors, scaleLabel
     renderHeatChart(data, colors, container, legendCircles);
 }
 
-
 function renderHeatChart(data, colors, container, legendCircles = null) {
 
   // get browser container width
@@ -424,7 +423,7 @@ function labelTrafficCategory(code) {
     case 1:
       return "Not busy";
     case 2:
-      return "Average";
+      return "Not too busy";
     case 3:
       return "Somewhat busy";
     case 4:
