@@ -69,7 +69,7 @@ function renderBothFacilityHeatCharts(data) {
   let facilityData = filterFacilityData(data);
 
   let sequentialColors = ['#feedde','#fdbe85','#fd8d3c','#d94701'], // http://colorbrewer2.org/#type=sequential&scheme=Oranges&n=4
-      sequentialLabels = ['Light Traffic', '', '', 'Very Busy'];
+      sequentialLabels = ['Not Busy', '', '', 'Very Busy'];
 
   configAndRenderChart(facilityData.wooden, '#wooden-heatmap', 'wooden', sequentialColors, sequentialLabels);
   configAndRenderChart(facilityData.bfit, '#bfit-heatmap', 'bfit', sequentialColors, sequentialLabels);
@@ -81,7 +81,7 @@ function renderComparisonChart(data, container) {
       yellowColor = ['#ffb81c'], // [darker, less dark]
       neutralColor = ['#CFDDCC']; // http://www.colorhexa.com/80a478,
       scaleColors = yellowColor.concat(neutralColor).concat(blueColor),
-      scaleLabels = ['BFit Busier', '"Same"', 'Wooden Busier'];
+      scaleLabels = ['BFit Busier', 'Normal', 'Wooden Busier'];
 
   configAndRenderChart(data, container, null, scaleColors, scaleLabels);
 }
@@ -126,10 +126,8 @@ function renderHeatChart(data, colors, container, legendCircles = null) {
 
   // mobile threshold
   let mobileThreshold = 700,
-      windowWidth = $(window).width();
-
-  let isMobile = windowWidth <= mobileThreshold ? true : false;
-  if (isMobile) console.log('mobile!');
+      windowWidth = $(window).width(),
+      isMobile = windowWidth <= mobileThreshold ? true : false;
 
   // margins applied to svg container
   let margins = isMobile?
@@ -144,11 +142,12 @@ function renderHeatChart(data, colors, container, legendCircles = null) {
   // dimension and size configs
   let circleRadius = isMobile? (chartWidth / 60) : 8,
       circlePaddings = isMobile? {vertical: 3, horizontal: 1.5} : {vertical: 8, horizontal: 4},
-      dayLabelOffsetX = isMobile? 18 : 22,
+      dayLabelOffsetX = isMobile? 15 : 22,
       firstCircleOffsetX = isMobile? 40 : 75,
-      firstCircleOffsetY = isMobile? 17 : 35,
-      timeLabelOffsetY = 4,
-      hourLabelOffsetY = isMobile? 10 : 20;
+      firstCircleOffsetY = isMobile? 21 : 35,
+      timeLabelOffsetY = isMobile? 2 : 4,
+      hourLabelOffsetY = isMobile? 12 : 20,
+      circleLegendDistance = isMobile? 12 : 8;
 
   // determine size of circles / grids
   let gridHeight = circleRadius * 2 + circlePaddings.vertical,
@@ -176,7 +175,7 @@ function renderHeatChart(data, colors, container, legendCircles = null) {
       return firstCircleOffsetY + (circleRadius/2) + (i * gridHeight);
     })
     .style("text-anchor", "middle")
-    .attr("class", 'label')
+    .attr("class", 'chart-label')
 
   // render time and hour of day labels horizontally
 
@@ -226,7 +225,7 @@ function renderHeatChart(data, colors, container, legendCircles = null) {
     .attr('x', d => d.x)
     .attr('y', timeLabelOffsetY)
     .style('text-anchor', 'middle')
-    .attr('class', 'label');
+    .attr('class', 'chart-label');
 
   let hourLabels = chartG.selectAll(".hour-label")
     .data(hours)
@@ -235,7 +234,7 @@ function renderHeatChart(data, colors, container, legendCircles = null) {
     .attr("x", d => d.x)
     .attr("y", hourLabelOffsetY)
     .style("text-anchor", "middle")
-    .attr("class", 'label');
+    .attr("class", 'chart-label');
 
     // tooltip
     let tip = d3.tip().attr('class', 'heatchart-tip')
@@ -246,7 +245,14 @@ function renderHeatChart(data, colors, container, legendCircles = null) {
                      d.day_of_week == 6? "Sat" : "Sun";
 
         let sharedTip = "<span class='bold-tip'>" + dayStr + "</span>" + " | " +
-            "<span>" + hourStr + "</span>" + "<br>";
+            "<span class='bold-tip'>" + hourStr + "</span>" + "<br>";
+
+        if (d.avg_n_people <= 0 | d.traffic_ratio <= 0) {
+          return (
+            sharedTip +
+            "<span class='bold-tip'>" + "Closed" + "</span>"
+          );
+        }
 
         return d.type == 'comparison'? (
           sharedTip +
@@ -325,7 +331,7 @@ function renderHeatChart(data, colors, container, legendCircles = null) {
       .attr('height', 30)
 
     let legendG = legendSvg.append('g')
-      .attr('transform', 'translate(' + 5 + ',' + 5 + ')')
+      .attr('transform', 'translate(' + 10 + ',' + 5 + ')')
       .attr('class', 'circle-legend-svg');
 
     legendG.selectAll('circle')
@@ -334,7 +340,7 @@ function renderHeatChart(data, colors, container, legendCircles = null) {
       .append('circle')
       .attr('r', circleRadius * 0.8)
       .attr('cx', (d, i) => {
-        return 10 + i * circleRadius * 8;
+        return 10 + i * circleRadius * circleLegendDistance;
       })
       .attr('cy', 5)
       .attr('fill', d => d.color)
@@ -347,10 +353,10 @@ function renderHeatChart(data, colors, container, legendCircles = null) {
       .append('text')
       .text(d => d.text)
       .attr('x', (d, i) => {
-        return 10 + i * circleRadius * 8;
+        return 10 + i * circleRadius * circleLegendDistance;
       })
       .attr('y', 15 + circleRadius * 0.8 * 1.2)
-      .attr('class', 'circle-legend-label')
+      .attr('class', 'legend-label')
 
 }
 
