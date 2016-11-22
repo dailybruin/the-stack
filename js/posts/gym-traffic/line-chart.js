@@ -183,8 +183,8 @@ function renderLineChart(data, scale, firstRender) {
 
   let legend = d3.legendColor()
     .shape('rect')
-    .shapeHeight(5)
-    .shapeWidth(20)
+    .shapeHeight(6)
+    .shapeWidth(25)
     .shapePadding(25)
     .orient('horizontal')
     .scale(facilityColors);
