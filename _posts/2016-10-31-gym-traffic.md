@@ -113,9 +113,9 @@ The line chart below allows you to explore and compare gym traffic at a more det
 
 A few interesting insights:
 
-* Traffic dips in between noon and 1:30 PM on weekdays.
+* Traffic dips in between noon and around 1:30 PM on weekdays.
 * Traffic rapidly climbs from 2 PM onward until it reaches the peak at around 5:30 PM on weekdays.
-* BFit is a lot busier than Wooden on weekends, especially on evenings. Weekend traffic at Wooden doesn't appear to vary that much throughout the day.
+* BFit is busier than Wooden on weekends, especially on evenings. Weekend traffic at Wooden doesn't appear to vary that much throughout the day.
 * Less people go workout towards the end of a quarter.
 
 
@@ -136,4 +136,4 @@ Once we have a distribution model, we assume each visitor in the records did the
 
 Now we simply sum all the people who remained at each time point and do the necessary math to get the estimated average traffic for different times at each facility.
 
-How reliable is the model? Estimates of the exact headcount varied considerably depending on model parameters. But the **relative difference** between the different times of day, days of week, or weeks of quarter are very consistent so the trends shown in relative scales are reliable regardless of how we specify a distribution.
+How reliable is the model? Estimates of the exact headcount varied considerably depending on model selection. But the **relative difference** between the different times of day, days of week, or weeks of quarter are very consistent so the trends shown in relative scales are reliable regardless of which model we pick.
