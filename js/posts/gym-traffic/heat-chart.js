@@ -3,7 +3,7 @@ $(document).ready(function() {
   window.currentTime_ = getCurrentDayAndHour();
 
   // render wooden & bfit facility charts
-  d3.csv('/datasets/gym-traffic/facility-heat-chart-data.csv', function(error, data) {
+  d3.csv('/datasets/gym-traffic/facility-heatchart-data.csv', function(error, data) {
     if (error)  throw error;
 
     // process data
@@ -81,7 +81,7 @@ function renderComparisonChart(data, container) {
       yellowColor = ['#ffb81c'], // [darker, less dark]
       neutralColor = ['#CFDDCC']; // http://www.colorhexa.com/80a478,
       scaleColors = yellowColor.concat(neutralColor).concat(blueColor),
-      scaleLabels = ['BFit Busier', 'Normal', 'Wooden Busier'];
+      scaleLabels = ['BFit Busier', '"Same"', 'Wooden Busier'];
 
   configAndRenderChart(data, container, null, scaleColors, scaleLabels);
 }
@@ -147,7 +147,7 @@ function renderHeatChart(data, colors, container, legendCircles = null) {
       firstCircleOffsetY = isMobile? 21 : 35,
       timeLabelOffsetY = isMobile? 2 : 4,
       hourLabelOffsetY = isMobile? 12 : 20,
-      circleLegendDistance = isMobile? 12 : 8;
+      circleLegendDistance = isMobile? 8 : 8;
 
   // determine size of circles / grids
   let gridHeight = circleRadius * 2 + circlePaddings.vertical,
@@ -247,7 +247,7 @@ function renderHeatChart(data, colors, container, legendCircles = null) {
         let sharedTip = "<span class='bold-tip'>" + dayStr + "</span>" + " | " +
             "<span class='bold-tip'>" + hourStr + "</span>" + "<br>";
 
-        if (d.avg_n_people <= 0 | d.traffic_ratio <= 0) {
+        if (d.n_people <= 0 | d.traffic_ratio <= 0) {
           return (
             sharedTip +
             "<span class='bold-tip'>" + "Closed" + "</span>"
@@ -259,8 +259,8 @@ function renderHeatChart(data, colors, container, legendCircles = null) {
           "<span class='bold-tip'>" + "Wooden-BFit Ratio: " + "</span>" + d.traffic_ratio + "<br>"
         ) : (
           sharedTip +
-          "<span class='bold-tip'>" + "# people: " + "</span>" + d.avg_n_people + "<br>" +
-          "<span class='bold-tip'>" + "% relative to peak: " + "</span>" + parseInt(d.avg_n_people_rel * 100) + "%"
+          "<span class='bold-tip'>" + "# people: " + "</span>" + d.n_people + "<br>" +
+          "<span class='bold-tip'>" + "% relative to peak: " + "</span>" + parseInt(d.n_people_rel * 100) + "%"
         );
       });
 
@@ -328,7 +328,7 @@ function renderHeatChart(data, colors, container, legendCircles = null) {
     let legendSvg = d3.select(container)
       .append('svg')
       .attr('width', chartWidth + margins.left + margins.right)
-      .attr('height', 30)
+      .attr('height', 32)
 
     let legendG = legendSvg.append('g')
       .attr('transform', 'translate(' + 10 + ',' + 5 + ')')
@@ -376,8 +376,8 @@ function processFacilityData(data) {
   data.forEach(d => {
     d.day_of_week = parseInt(d.day_of_week);
     d.hour = parseInt(d.hour);
-    d.avg_n_people = parseInt(d.avg_n_people);
-    d.avg_n_people_rel = Number(d.avg_n_people_rel);
+    d.n_people = parseInt(d.n_people);
+    d.n_people_rel = Number(d.n_people_rel);
     d.category = parseInt(d.category);
     d.type = 'facility';
   });
