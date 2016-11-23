@@ -57,11 +57,11 @@ function renderTrafficText(data) {
 
   d3.select('#wooden-traffic-text')
     .text(labelTrafficCategory(woodenTraffic))
-    .attr('class', 'traffic-text')
+    .attr('class', 'italic')
 
   d3.select('#bfit-traffic-text')
     .text(labelTrafficCategory(bfitTraffic))
-    .attr('class', 'traffic-text')
+    .attr('class', 'italic')
 }
 
 // render wooden and bfit heat charts
@@ -244,23 +244,23 @@ function renderHeatChart(data, colors, container, legendCircles = null) {
                      d.day_of_week == 5? "Fri" :
                      d.day_of_week == 6? "Sat" : "Sun";
 
-        let sharedTip = "<span class='bold-tip'>" + dayStr + "</span>" + " | " +
-            "<span class='bold-tip'>" + hourStr + "</span>" + "<br>";
+        let sharedTip = "<span class='bold'>" + dayStr + "</span>" + " | " +
+            "<span class='bold'>" + hourStr + "</span>" + "<br>";
 
         if (d.n_people <= 0 | d.traffic_ratio <= 0) {
           return (
             sharedTip +
-            "<span class='bold-tip'>" + "Closed" + "</span>"
+            "<span class='bold'>" + "Closed" + "</span>"
           );
         }
 
         return d.type == 'comparison'? (
           sharedTip +
-          "<span class='bold-tip'>" + "Wooden-BFit Ratio: " + "</span>" + d.traffic_ratio + "<br>"
+          "<span class='bold'>" + "Wooden-BFit Ratio: " + "</span>" + d.traffic_ratio + "<br>"
         ) : (
           sharedTip +
-          "<span class='bold-tip'>" + "# people: " + "</span>" + d.n_people + "<br>" +
-          "<span class='bold-tip'>" + "% relative to peak: " + "</span>" + parseInt(d.n_people_rel * 100) + "%"
+          "<span class='bold'>" + "# people: " + "</span>" + d.n_people + "<br>" +
+          "<span class='bold'>" + "% relative to peak: " + "</span>" + parseInt(d.n_people_rel * 100) + "%"
         );
       });
 
@@ -286,7 +286,7 @@ function renderHeatChart(data, colors, container, legendCircles = null) {
     .attr('r', circleRadius)
     .attr("class", d => {
      return (d.hour == window.currentTime_.hour & d.day_of_week == window.currentTime_.day_of_week) ?
-        'heat-circle bold-border' : 'heat-circle no-border';
+        'heat-circle black-stroke' : 'heat-circle no-border';
     })
     .style('fill', (d, i) => {
       return colors[i];

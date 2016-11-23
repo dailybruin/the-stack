@@ -5,7 +5,7 @@ teaser: Take an unprecedented look at gym traffic in Wooden and BFit.
 authors:
     - tyson_ni
 key_takeaways:
-    - Data provided by UCLA Recreation show clear and consistent usage patterns across Wooden and BFit
+    - Data provided by UCLA Recreation show clear and consistent usage patterns at Wooden and BFit
     - Use our graphics to decide when and where to workout
 featured_image:
     url: gym-traffic/comparison-chart.png
@@ -73,8 +73,8 @@ The heat charts below show how busy each facility is at different hours of day a
 Gym usage patterns are remarkably consistent. While UCLA Recreation doesn't provide real time information, we can fairly safely estimate – in real time – how busy a gym is based on past data.
 
 Right now, it's likely that
-<span class='wooden facility-name'>Wooden</span> is <span id='wooden-traffic-text'></span>, and
-<span class='bfit facility-name'>BFit</span> is <span id='bfit-traffic-text'></span>.
+<span class='wooden bold'>Wooden</span> is <span id='wooden-traffic-text'></span>, and
+<span class='bfit bold'>BFit</span> is <span id='bfit-traffic-text'></span>.
 
 > These live estimates are based on 1) time of day, and 2) day of week.
 
