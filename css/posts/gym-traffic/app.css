@@ -19,8 +19,11 @@
 .invisible {
   opacity: 0; }
 
-.bold-tip {
+.bold {
   font-weight: bold; }
+
+.italic {
+  font-style: italic; }
 
 .time-line {
   fill: none;
@@ -39,9 +42,6 @@
   opacity: 0.6;
   stroke: black;
   stroke-width: 1px; }
-
-.facility-name {
-  font-weight: bold; }
 
 .traffic-text {
   font-style: italic; }
@@ -64,10 +64,7 @@
     .legend-label, .line-legend .label {
       font-size: 8px; } }
 
-.now-label {
-  font-weight: bold; }
-
-.bold-border {
+.black-stroke {
   stroke: black;
   stroke-width: 2.5px; }
 
