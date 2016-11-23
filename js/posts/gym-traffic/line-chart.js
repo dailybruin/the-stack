@@ -108,15 +108,15 @@ function renderLineChart(data, scale, firstRender) {
     .html(d => {
       let formatTime = d3.timeFormat('%I:%M %p');
 
-      let timeTip = "<span class='bold-tip'>" + formatTime(d.data.hour_minute) + "</span>" + "<br>";
+      let timeTip = "<span class='bold'>" + formatTime(d.data.hour_minute) + "</span>" + "<br>";
 
       return d.data.n_people == 0? (
         timeTip +
-        "<span class='bold-tip'>" + "Closed" + "</span>"
+        "<span class='bold'>" + "Closed" + "</span>"
       ) : (
         timeTip +
-        "<span class='bold-tip'>" + (d.data.facility == 'wooden'? "Wooden # people: " : "BFit # people: ") + "</span>" + d.data.n_people + "<br>" +
-        "<span class='bold-tip'>" + (d.data.facility == 'wooden'? "Wooden relative to peak: " : "BFit relative to peak: ") + "</span>" + d.data.n_people_rel + "%"
+        "<span class='bold'>" + (d.data.facility == 'wooden'? "Wooden # people: " : "BFit # people: ") + "</span>" + d.data.n_people + "<br>" +
+        "<span class='bold'>" + (d.data.facility == 'wooden'? "Wooden relative to peak: " : "BFit relative to peak: ") + "</span>" + d.data.n_people_rel + "%"
       );
     });
 
