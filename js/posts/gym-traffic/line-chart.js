@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  d3.csv('/datasets/gym-traffic/line-chart-data.csv', function(error, data) {
+  d3.csv('/datasets/gym-traffic/linechart-data.csv', function(error, data) {
     if (error) throw error;
 
     data = processData(data);
@@ -35,7 +35,7 @@ function initGraphics(data) {
     .append('svg')
     .append('g');
 
-  window.yAbsoluteExtent = d3.extent(data, d => d.avg_n_people);
+  window.yAbsoluteExtent = d3.extent(data, d => d.n_people);
 
   // update line chart using week and day selections
   function updateLineChart(firstRender) {
@@ -87,7 +87,7 @@ function renderLineChart(data, scale, firstRender) {
 
   let yScale = scale == 'absolute' ? yAbsoluteScale : yRelativeScale;
   data.forEach(d => {
-    d.y_value = scale == 'absolute' ? d.avg_n_people : d.avg_n_people_rel;
+    d.y_value = scale == 'absolute' ? d.n_people : d.n_people_rel;
   })
 
   g.append('g')
@@ -110,13 +110,13 @@ function renderLineChart(data, scale, firstRender) {
 
       let timeTip = "<span class='bold-tip'>" + formatTime(d.data.hour_minute) + "</span>" + "<br>";
 
-      return d.data.avg_n_people == 0? (
+      return d.data.n_people == 0? (
         timeTip +
         "<span class='bold-tip'>" + "Closed" + "</span>"
       ) : (
         timeTip +
-        "<span class='bold-tip'>" + (d.data.facility == 'wooden'? "Wooden # people: " : "BFit # people: ") + "</span>" + d.data.avg_n_people + "<br>" +
-        "<span class='bold-tip'>" + (d.data.facility == 'wooden'? "Wooden relative to peak: " : "BFit relative to peak: ") + "</span>" + d.data.avg_n_people_rel + "%"
+        "<span class='bold-tip'>" + (d.data.facility == 'wooden'? "Wooden # people: " : "BFit # people: ") + "</span>" + d.data.n_people + "<br>" +
+        "<span class='bold-tip'>" + (d.data.facility == 'wooden'? "Wooden relative to peak: " : "BFit relative to peak: ") + "</span>" + d.data.n_people_rel + "%"
       );
     });
 
@@ -203,8 +203,8 @@ function processData(data) {
 
   data.forEach((d) => {
     d.hour_minute = parseHourMinute(Math.round(d.hour) + ':' + Math.round(d.minute))
-    d.avg_n_people = parseInt(d.avg_n_people);
-    d.avg_n_people_rel = parseInt(+d.avg_n_people_rel * 100);
+    d.n_people = parseInt(d.n_people);
+    d.n_people_rel = parseInt(+d.n_people_rel * 100);
   })
 
   return (data)
