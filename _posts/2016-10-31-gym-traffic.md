@@ -120,7 +120,7 @@ A few interesting insights:
 
 ## More on BFit
 
-...
+The opening of BFit has given students who live on the hill or even in the apartments more options. But are Bruins really using BFit? Has BFit improve student’s overall health? Daily Bruin Radio reporter Sarika Bharil investigated the effects that BFit has had on student fitness. Listen to the episode.
 
 <iframe width="100%" height="300" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/294327182&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true">
 </iframe>
