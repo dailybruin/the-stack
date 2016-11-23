@@ -59,6 +59,7 @@ function renderLineChart(data, scale, firstRender) {
 
   if (!firstRender) {
     d3.select('.y-axis').remove();
+    d3.select('.x-axis').remove();
     d3.selectAll('.time-line').remove();
   }
 
@@ -100,7 +101,7 @@ function renderLineChart(data, scale, firstRender) {
       .call(d3.axisLeft(yScale));
 
   // remove year 1900 from scale
-  $('.line-chart .x-axis .tick text:eq(0)').addClass('invisible');
+  $('.line-chart .x-axis .tick text').first().addClass('invisible');
 
   // tooltip
   let tip = d3.tip()

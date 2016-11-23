@@ -1,12 +1,12 @@
 ---
-title: When and where you should go workout?
-teaser: Take an unprecedented look at gym traffic in Wooden and BFit.
+title: When and where should you go work out?
+teaser: Take an inside look at gym traffic in Wooden and BFit.
 
 authors:
     - tyson_ni
 key_takeaways:
     - Data provided by UCLA Recreation show clear and consistent usage patterns at Wooden and BFit
-    - Use our graphics to decide when and where to workout
+    - Use our graphics to decide when and where to work out
 featured_image:
     url: gym-traffic/comparison-chart.png
     og_image: gym-traffic/comparison-chart.png
@@ -27,7 +27,7 @@ scripts:
 
 Every time a student cards into a UCLA Recreation facility, the visit is time-stamped and recorded.
 Last school year, **1.5 million visits** were recorded like that.
-These records tell us a lot about how students use each facility and could suggest **when and where you should workout**.
+These records tell us a lot about how students use each facility and could suggest **when and where you should work out**.
 
 An obvious use of that data – all entrance records from the 2015-2016 school year – is to **estimate how many people are in the gym at any given moment**.
 Because the anonymized records include only the time stamp of each entrance, but not the headcount inside a gym or the exit time stamp, we need a model to estimate traffic.
@@ -37,7 +37,7 @@ That model would have to account for not only people who entered at a particular
 ## Choosing between Wooden and BFit
 
 Wooden's larger space means that **it normally houses between two and three times as many people as
-BFit**. From time to time, BFit does reach about the same level of traffic as Wooden. In those cases, we might argue that Wooden is the better, less crowded place to workout. Conversely, when Wooden is *a lot* busier than BFit (say more than 3 times), BFit might be a better choice.
+BFit**. From time to time, BFit does reach about the same level of traffic as Wooden. In those cases, we might argue that Wooden is the better, less crowded place to work out. Conversely, when Wooden is *a lot* busier than BFit (say more than 3 times), BFit might be a better choice.
 
   <div class='ui centered medium header'>Wooden or BFit?</div>
   <div class='ui centered grid'>
@@ -116,7 +116,7 @@ A few interesting insights:
 * Traffic dips between noon and around 1:30 PM on weekdays.
 * Traffic rapidly climbs from 2 PM onward until it reaches the peak at around 5:30 PM on weekdays.
 * BFit is busier than Wooden on weekends, especially on evenings. Weekend traffic at Wooden doesn't appear to fluctuate that much throughout the day.
-* Less people go workout towards the end of a quarter.
+* Less people exercise towards the end of a quarter.
 
 ## More on BFit
 
