@@ -1,7 +1,6 @@
 ---
 title: When and where should you go work out?
 teaser: Take an inside look at gym traffic in Wooden and BFit.
-
 authors:
     - tyson_ni
 key_takeaways:
@@ -9,7 +8,7 @@ key_takeaways:
     - Use our graphics to decide when and where to work out
 featured_image:
     url: gym-traffic/comparison-chart.png
-    og_image: gym-traffic/comparison-chart.png
+og_image: gym-traffic/comparison-chart.png
 stylesheets:
     - /css/posts/gym-traffic/app.css
     - /css/posts/gym-traffic/grid.min.css
@@ -27,7 +26,7 @@ scripts:
 
 Every time a student cards into a UCLA Recreation facility, the visit is time-stamped and recorded.
 Last school year, **1.5 million visits** were recorded like that.
-These records tell us a lot about how students use each facility and could suggest **when and where you should work out**.
+These records tell us a lot about how students use each facility and could suggest when and where you should work out.
 
 An obvious use of that data – all entrance records from the 2015-2016 school year – is to **estimate how many people are in the gym at any given moment**.
 Because the anonymized records include only the time stamp of each entrance, but not the headcount inside a gym or the exit time stamp, we need a model to estimate traffic.
