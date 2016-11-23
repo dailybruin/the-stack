@@ -21,8 +21,8 @@ scripts:
     - //d3js.org/d3.v4.min.js
     - //cdnjs.cloudflare.com/ajax/libs/d3-legend/2.13.0/d3-legend.min.js
     - /js/posts/gym-traffic/d3-tip.js
-    - /js/posts/gym-traffic/line-chart.js
-    - /js/posts/gym-traffic/heat-chart.js
+    - /js/posts/gym-traffic/line-chart-compiled.js
+    - /js/posts/gym-traffic/heat-chart-compiled.js
 ---
 
 Every time a student cards into a UCLA Recreation facility, the visit is time-stamped and recorded.

@@ -79,7 +79,7 @@ function renderBothFacilityHeatCharts(data) {
 function renderComparisonChart(data, container) {
   let blueColor = ['#008FD5'],
       yellowColor = ['#ffb81c'], // [darker, less dark]
-      neutralColor = ['#CFDDCC']; // http://www.colorhexa.com/80a478,
+      neutralColor = ['#CFDDCC'], // http://www.colorhexa.com/80a478
       scaleColors = yellowColor.concat(neutralColor).concat(blueColor),
       scaleLabels = ['BFit Busier', '"Same"', 'Wooden Busier'];
 
@@ -91,7 +91,7 @@ function configAndRenderChart(data, container, facility, scaleColors, scaleLabel
   $(container).html('');
 
   let closedColor = ['#CCD1D1'],
-      allColors = closedColor.concat(scaleColors)
+      allColors = closedColor.concat(scaleColors),
       allLabels = ['Closed'].concat(scaleLabels),
       colorScale = d3.scaleOrdinal().domain(d3.range(0, allColors.length, 1))
         .range(allColors);
