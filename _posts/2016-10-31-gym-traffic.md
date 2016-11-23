@@ -79,10 +79,11 @@ Right now, it's likely that
 > These live estimates are based on 1) time of day, and 2) day of week.
 
 <br>
+<div id="visualization"></div>
 
 ## Go in-depth  
 
-The line chart below allows you to explore and compare gym traffic at a more detailed level.
+The line chart below allows you to explore and compare gym traffic at a more granular level.
 
 <br>
 
@@ -117,6 +118,14 @@ A few interesting insights:
 * BFit is busier than Wooden on weekends, especially on evenings. Weekend traffic at Wooden doesn't appear to fluctuate that much throughout the day.
 * Less people go workout towards the end of a quarter.
 
+## More on BFit
+
+...
+
+<iframe width="100%" height="300" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/294327182&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true">
+</iframe>
+
+<br>
 
 ## Data and Model
 
