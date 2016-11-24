@@ -17,9 +17,10 @@ stylesheets:
     - /css/posts/gym-traffic/image.min.css
 scripts:
     - //code.jquery.com/jquery-3.1.1.min.js
-    - //d3js.org/d3.v4.min.js
-    - //cdnjs.cloudflare.com/ajax/libs/d3-legend/2.13.0/d3-legend.min.js
-    - /js/posts/gym-traffic/d3-tip.js
+    - /js/posts/gym-traffic/libs/d3.min.js
+    - /js/posts/gym-traffic/libs/d3-legend.min.js
+    - /js/posts/gym-traffic/libs/d3-tip.js
+    - /js/posts/gym-traffic/libs/moment-timezone.min.js
     - /js/posts/gym-traffic/line-chart-compiled.js
     - /js/posts/gym-traffic/heat-chart-compiled.js
 ---
