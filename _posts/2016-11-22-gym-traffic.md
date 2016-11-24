@@ -20,7 +20,8 @@ scripts:
     - /js/posts/gym-traffic/libs/d3.min.js
     - /js/posts/gym-traffic/libs/d3-legend.min.js
     - /js/posts/gym-traffic/libs/d3-tip.js
-    - /js/posts/gym-traffic/libs/moment-timezone.min.js
+    - /js/posts/gym-traffic/libs/moment.min.js
+    - /js/posts/gym-traffic/libs/moment-timezone-with-data.js
     - /js/posts/gym-traffic/line-chart-compiled.js
     - /js/posts/gym-traffic/heat-chart-compiled.js
 ---
