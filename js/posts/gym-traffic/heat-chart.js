@@ -80,8 +80,8 @@ function renderComparisonChart(data, container) {
   let blueColor = ['#008FD5'],
       yellowColor = ['#ffb81c'], // [darker, less dark]
       neutralColor = ['#CFDDCC'], // http://www.colorhexa.com/80a478
-      scaleColors = yellowColor.concat(neutralColor).concat(blueColor),
-      scaleLabels = ['BFit Busier', '"Same"', 'Wooden Busier'];
+      scaleColors = blueColor.concat(neutralColor).concat(yellowColor),
+      scaleLabels = ['Wooden', '"Same"', 'BFit'];
 
   configAndRenderChart(data, container, null, scaleColors, scaleLabels);
 }
@@ -425,15 +425,15 @@ function filterFacilityData (data) {
 function labelTrafficCategory(code) {
   switch (code) {
     case 0:
-      return "Closed";
+      return "closed";
     case 1:
-      return "Not busy";
+      return "not busy";
     case 2:
-      return "Not too busy";
+      return "not too busy";
     case 3:
-      return "Somewhat busy";
+      return "somewhat busy";
     case 4:
-      return "Very busy";
+      return "very busy";
     default:
       return null;
   }

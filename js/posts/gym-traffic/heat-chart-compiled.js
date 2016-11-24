@@ -5,8 +5,8 @@ renderComparisonChart(b,c),$(window).resize(function(){renderComparisonChart(b,c
 function renderBothFacilityHeatCharts(a){var b=filterFacilityData(a),c=['#feedde','#fdbe85','#fd8d3c','#d94701'],// http://colorbrewer2.org/#type=sequential&scheme=Oranges&n=4
 e=['Not Busy','','','Very Busy'];configAndRenderChart(b.wooden,'#wooden-heatmap','wooden',c,e),configAndRenderChart(b.bfit,'#bfit-heatmap','bfit',c,e)}// render comparison charts
 function renderComparisonChart(a,b){var// http://www.colorhexa.com/80a478
-c=['#ffb81c'].concat(['#CFDDCC']).concat(['#008FD5'])// [darker, less dark]
-;configAndRenderChart(a,b,null,c,['BFit Busier','"Same"','Wooden Busier'])}function configAndRenderChart(a,b,c,e,f){$(b).html('');var g=['#CCD1D1'].concat(e),h=['Closed'].concat(f),j=d3.scaleOrdinal().domain(d3.range(0,g.length,1)).range(g);// filter data to exclude hours from 1 to 4
+c=['#008FD5'].concat(['#CFDDCC']).concat(['#ffb81c'])// [darker, less dark]
+;configAndRenderChart(a,b,null,c,['Wooden','"Same"','BFit'])}function configAndRenderChart(a,b,c,e,f){$(b).html('');var g=['#CCD1D1'].concat(e),h=['Closed'].concat(f),j=d3.scaleOrdinal().domain(d3.range(0,g.length,1)).range(g);// filter data to exclude hours from 1 to 4
 a=a.filter(function(m){return 1>m.hour|4<m.hour});// store color of each circle
 var k=a.map(function(m){return j(m.category)}),l=g.map(function(m,n){return{color:m,text:h[n]}});// legend
 // render chart
@@ -24,6 +24,6 @@ var C=d3.tip().attr('class','heatchart-tip').html(function(F){var G=formatHour(F
 function recodeDayOfWeek(a){return 0==a?a=7:1<=a&4>=a&&(a=1),a}// process data upon loading
 function processFacilityData(a){return a.forEach(function(b){b.day_of_week=parseInt(b.day_of_week),b.hour=parseInt(b.hour),b.n_people=parseInt(b.n_people),b.n_people_rel=+b.n_people_rel,b.category=parseInt(b.category),b.type='facility'}),a}function processComparisonData(a){return a.forEach(function(b){b.day_of_week=parseInt(b.day_of_week),b.hour=parseInt(b.hour),b.wooden_n_people=parseInt(b.wooden_n_people),b.bfit_n_people=parseInt(b.bfit_n_people),b.traffic_ratio=+b.traffic_ratio,b.category=parseInt(b.category),b.type='comparison'}),a}// get hour's position
 function getHourIndexY(a){return 1===a?0:5===a?1:6===a?2:7===a?3:void 0}function filterFacilityData(a){var b=a.filter(function(e){return'wooden'==e.facility}),c=a.filter(function(e){return'bfit'==e.facility});return{wooden:b,bfit:c}}// turn traffic category into display text
-function labelTrafficCategory(a){return 0===a?'Closed':1===a?'Not busy':2===a?'Not too busy':3===a?'Somewhat busy':4===a?'Very busy':null}// format tooltip time
+function labelTrafficCategory(a){return 0===a?'closed':1===a?'not busy':2===a?'not too busy':3===a?'somewhat busy':4===a?'very busy':null}// format tooltip time
 function formatHour(a){var b=d3.timeParse('%H'),c=d3.timeFormat('%I'),e=d3.timeFormat('%p'),f=b(a),g=c(f),h=e(f);return parseInt(g)+' '+h}// get current day and hour
 function getCurrentDayAndHour(){var a=new Date;return{hour:a.getHours(),day_of_week:recodeDayOfWeek(a.getDay())}}
