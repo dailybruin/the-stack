@@ -302,11 +302,11 @@ function renderHeatChart(data, colors, container, legendCircles = null) {
     // append divider between chart and legend
     let divider = d3.select(container)
       .append('svg')
-      .attr('width', chartWidth - 30)
+      .attr('width', chartWidth)
       .attr('height', 4)
       .append('line')
       .attr('x1', 0)
-      .attr('x2', chartWidth + margins.left + margins.right)
+      .attr('x2', chartWidth)
       .attr('y1', 0)
       .attr('y2', 0)
       .attr('stroke-dasharray', '5, 5')
