@@ -244,23 +244,22 @@ function renderHeatChart(data, colors, container, legendCircles = null) {
                      d.day_of_week == 5? "Fri" :
                      d.day_of_week == 6? "Sat" : "Sun";
 
-        let sharedTip = "<span class='bold'>" + dayStr + "</span>" + " | " +
+        let timeTip = "<span class='bold'>" + dayStr + "</span>" + " | " +
             "<span class='bold'>" + hourStr + "</span>" + "<br>";
 
         if (d.n_people <= 0 | d.traffic_ratio <= 0) {
           return (
-            sharedTip +
+            timeTip +
             "<span class='bold'>" + "Closed" + "</span>"
           );
         }
 
         return d.type == 'comparison'? (
-          sharedTip +
-          "<span class='bold'>" + "Wooden-BFit Ratio: " + "</span>" + d.traffic_ratio + "<br>"
+          timeTip +
+          "Wooden is " + "<span class='bold'>" + d.traffic_ratio + "</span>" + " times" + "<br>" + "as busy as BFit"
         ) : (
-          sharedTip +
-          "<span class='bold'>" + "# people: " + "</span>" + d.n_people + "<br>" +
-          "<span class='bold'>" + "% relative to peak: " + "</span>" + parseInt(d.n_people_rel * 100) + "%"
+          timeTip +
+          "<span class='bold'>" + parseInt(d.n_people_rel * 100) + "%" + "</span>" + " relative to peak" + "<br>"
         );
       });
 
