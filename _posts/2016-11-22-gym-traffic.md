@@ -17,9 +17,11 @@ stylesheets:
     - /css/posts/gym-traffic/image.min.css
 scripts:
     - //code.jquery.com/jquery-3.1.1.min.js
-    - //d3js.org/d3.v4.min.js
-    - //cdnjs.cloudflare.com/ajax/libs/d3-legend/2.13.0/d3-legend.min.js
-    - /js/posts/gym-traffic/d3-tip.js
+    - /js/posts/gym-traffic/libs/d3.min.js
+    - /js/posts/gym-traffic/libs/d3-legend.min.js
+    - /js/posts/gym-traffic/libs/d3-tip.js
+    - /js/posts/gym-traffic/libs/moment.min.js
+    - /js/posts/gym-traffic/libs/moment-timezone-with-data.js
     - /js/posts/gym-traffic/line-chart-compiled.js
     - /js/posts/gym-traffic/heat-chart-compiled.js
 ---
@@ -49,7 +51,7 @@ On weekday afternoons, Wooden is unusually busier than BFit as students stay nea
 
 ## A quick glance
 
-The heat charts below show how busy each facility is at different hours of day and days of week. Because Wooden and BFit differ in size, we compare each facility's traffic at each time period with the **peak traffic** at that facility. Peak traffic is defined as the average number of people at 5:30 PM on a weekday in the first 3 weeks of a quarter when more people go to gyms.
+The heat charts below show how busy each facility is at different hours of day and days of week. Because Wooden and BFit differ in size, we compare each facility's traffic at each time period with the **peak traffic** at that facility. Peak traffic is defined as the average number of people at the gym during the busiest time period in a quarter.
 
 <div class='ui centered medium header'>Wooden</div>
 <div class='ui centered grid'>
