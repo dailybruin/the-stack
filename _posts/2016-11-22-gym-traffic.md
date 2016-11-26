@@ -51,7 +51,7 @@ On weekday afternoons, Wooden is unusually busier than BFit as students stay nea
 
 ## A quick glance
 
-The heat charts below show how busy each facility is at different hours of day and days of week. Because Wooden and BFit differ in size, we compare each facility's traffic at each time period with the **peak traffic** at that facility. Peak traffic is defined as the average number of people at 5:30 PM on a weekday in the first 3 weeks of a quarter when more people go to gyms.
+The heat charts below show how busy each facility is at different hours of day and days of week. Because Wooden and BFit differ in size, we compare each facility's traffic at each time period with the **peak traffic** at that facility. Peak traffic is defined as the average number of people at the gym during the busiest time period in a quarter.
 
 <div class='ui centered medium header'>Wooden</div>
 <div class='ui centered grid'>
