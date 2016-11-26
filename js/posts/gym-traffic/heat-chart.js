@@ -453,9 +453,12 @@ function formatHour(hourStr) {
 
 // get current day and hour
 function getCurrentDayAndHour() {
-  let currentTime = new Date;
+  let localTime = new Date,
+      localMoment = moment(localTime).tz(moment.tz.guess()),
+      laMoment = localMoment.clone().tz('America/Los_Angeles');
+
   return {
-    hour: currentTime.getHours(),
-    day_of_week: recodeDayOfWeek(currentTime.getDay())
+    hour: laMoment.hour(),
+    day_of_week: recodeDayOfWeek(laMoment.day())
   };
 }

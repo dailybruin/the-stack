@@ -26,4 +26,4 @@ function processFacilityData(a){return a.forEach(function(b){b.day_of_week=parse
 function getHourIndexY(a){return 1===a?0:5===a?1:6===a?2:7===a?3:void 0}function filterFacilityData(a){var b=a.filter(function(e){return'wooden'==e.facility}),c=a.filter(function(e){return'bfit'==e.facility});return{wooden:b,bfit:c}}// turn traffic category into display text
 function labelTrafficCategory(a){return 0===a?'closed':1===a?'not busy':2===a?'not too busy':3===a?'somewhat busy':4===a?'very busy':null}// format tooltip time
 function formatHour(a){var b=d3.timeParse('%H'),c=d3.timeFormat('%I'),e=d3.timeFormat('%p'),f=b(a),g=c(f),h=e(f);return parseInt(g)+' '+h}// get current day and hour
-function getCurrentDayAndHour(){var a=new Date;return{hour:a.getHours(),day_of_week:recodeDayOfWeek(a.getDay())}}
+function getCurrentDayAndHour(){var a=new Date,b=moment(a).tz(moment.tz.guess()),c=b.clone().tz('America/Los_Angeles');return{hour:c.hour(),day_of_week:recodeDayOfWeek(c.day())}}
