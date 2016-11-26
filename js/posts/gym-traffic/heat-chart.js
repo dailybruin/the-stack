@@ -80,8 +80,8 @@ function renderComparisonChart(data, container) {
   let blueColor = ['#008FD5'],
       yellowColor = ['#ffb81c'], // [darker, less dark]
       neutralColor = ['#CFDDCC'], // http://www.colorhexa.com/80a478
-      scaleColors = yellowColor.concat(neutralColor).concat(blueColor),
-      scaleLabels = ['BFit Busier', '"Same"', 'Wooden Busier'];
+      scaleColors = blueColor.concat(neutralColor).concat(yellowColor),
+      scaleLabels = ['Wooden', '"Same"', 'BFit'];
 
   configAndRenderChart(data, container, null, scaleColors, scaleLabels);
 }
@@ -244,23 +244,22 @@ function renderHeatChart(data, colors, container, legendCircles = null) {
                      d.day_of_week == 5? "Fri" :
                      d.day_of_week == 6? "Sat" : "Sun";
 
-        let sharedTip = "<span class='bold'>" + dayStr + "</span>" + " | " +
+        let timeTip = "<span class='bold'>" + dayStr + "</span>" + " | " +
             "<span class='bold'>" + hourStr + "</span>" + "<br>";
 
-        if (d.n_people <= 0 | d.traffic_ratio <= 0) {
+        if (d.n_people_rel <= 0 | d.traffic_ratio <= 0) {
           return (
-            sharedTip +
+            timeTip +
             "<span class='bold'>" + "Closed" + "</span>"
           );
         }
 
         return d.type == 'comparison'? (
-          sharedTip +
-          "<span class='bold'>" + "Wooden-BFit Ratio: " + "</span>" + d.traffic_ratio + "<br>"
+          timeTip +
+          "Wooden is " + "<span class='bold'>" + d.traffic_ratio + "</span>" + " times" + "<br>" + "as busy as BFit"
         ) : (
-          sharedTip +
-          "<span class='bold'>" + "# people: " + "</span>" + d.n_people + "<br>" +
-          "<span class='bold'>" + "% relative to peak: " + "</span>" + parseInt(d.n_people_rel * 100) + "%"
+          timeTip +
+          "<span class='bold'>" + parseInt(d.n_people_rel * 100) + "%" + "</span>" + " relative to peak" + "<br>"
         );
       });
 
@@ -302,11 +301,11 @@ function renderHeatChart(data, colors, container, legendCircles = null) {
     // append divider between chart and legend
     let divider = d3.select(container)
       .append('svg')
-      .attr('width', chartWidth - 30)
+      .attr('width', chartWidth)
       .attr('height', 4)
       .append('line')
       .attr('x1', 0)
-      .attr('x2', chartWidth + margins.left + margins.right)
+      .attr('x2', chartWidth)
       .attr('y1', 0)
       .attr('y2', 0)
       .attr('stroke-dasharray', '5, 5')
@@ -425,15 +424,15 @@ function filterFacilityData (data) {
 function labelTrafficCategory(code) {
   switch (code) {
     case 0:
-      return "Closed";
+      return "closed";
     case 1:
-      return "Not busy";
+      return "not busy";
     case 2:
-      return "Not too busy";
+      return "not too busy";
     case 3:
-      return "Somewhat busy";
+      return "somewhat busy";
     case 4:
-      return "Very busy";
+      return "very busy";
     default:
       return null;
   }
@@ -454,9 +453,12 @@ function formatHour(hourStr) {
 
 // get current day and hour
 function getCurrentDayAndHour() {
-  let currentTime = new Date;
+  let localTime = new Date,
+      localMoment = moment(localTime).tz(moment.tz.guess()),
+      laMoment = localMoment.clone().tz('America/Los_Angeles');
+
   return {
-    hour: currentTime.getHours(),
-    day_of_week: recodeDayOfWeek(currentTime.getDay())
+    hour: laMoment.hour(),
+    day_of_week: recodeDayOfWeek(laMoment.day())
   };
 }
