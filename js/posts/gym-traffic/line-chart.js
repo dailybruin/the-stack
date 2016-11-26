@@ -67,10 +67,13 @@ function renderLineChart(data, scale, firstRender) {
   let containerWidth = $('#line-chart').outerWidth(),
       containerHeight = $('#line-chart').outerHeight();
 
+  // detect mobile
+  let isMobile = containerWidth < 400;
+
   let svg = d3.select('#line-chart')
     .select('svg')
     .attr('width', containerWidth)
-    .attr('height', 400);
+    .attr('height', isMobile? 300 : 400);
 
   let margin = { left: 30, right: 30, bottom: 60, top: 30 },
       width = svg.attr('width') - margin.left - margin.right,
@@ -94,7 +97,7 @@ function renderLineChart(data, scale, firstRender) {
   g.append('g')
     .attr('class', 'axis x-axis')
     .attr('transform', 'translate(0,' + height + ')')
-    .call(d3.axisBottom(xScale));
+    .call(d3.axisBottom(xScale).ticks(d3.timeHour.every(isMobile? 6 : 3)));
 
   g.append('g')
       .attr('class', 'axis y-axis')
@@ -109,15 +112,15 @@ function renderLineChart(data, scale, firstRender) {
     .html(d => {
       let formatTime = d3.timeFormat('%I:%M %p');
 
-      let timeTip = "<span class='bold'>" + formatTime(d.data.hour_minute) + "</span>" + "<br>";
+      let timeTip = "<span class='bold'>" + formatTime(d.data.hour_minute) + (d.data.facility == 'wooden'? " | Wooden" : " | BFit") + "</span>" + "<br>";
 
       return d.data.n_people == 0? (
         timeTip +
         "<span class='bold'>" + "Closed" + "</span>"
       ) : (
         timeTip +
-        "<span class='bold'>" + (d.data.facility == 'wooden'? "Wooden # people: " : "BFit # people: ") + "</span>" + d.data.n_people + "<br>" +
-        "<span class='bold'>" + (d.data.facility == 'wooden'? "Wooden relative to peak: " : "BFit relative to peak: ") + "</span>" + d.data.n_people_rel + "%"
+        "<span class='bold'>" + d.data.n_people_rel + "%" + "</span>" + " relative to peak" + "<br>" +
+        "<span class='bold'>" + d.data.n_people + "</span>" + " people"
       );
     });
 
