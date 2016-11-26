@@ -247,7 +247,7 @@ function renderHeatChart(data, colors, container, legendCircles = null) {
         let timeTip = "<span class='bold'>" + dayStr + "</span>" + " | " +
             "<span class='bold'>" + hourStr + "</span>" + "<br>";
 
-        if (d.n_people <= 0 | d.traffic_ratio <= 0) {
+        if (d.n_people_rel <= 0 | d.traffic_ratio <= 0) {
           return (
             timeTip +
             "<span class='bold'>" + "Closed" + "</span>"
