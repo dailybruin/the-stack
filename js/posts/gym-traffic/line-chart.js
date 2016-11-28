@@ -195,7 +195,9 @@ function renderLineChart(data, scale, firstRender) {
 
   svg.append('g')
     .attr('class', 'line-legend')
-    .attr('transform', 'translate(50,' + 370 + ')');
+    .attr('transform', () => {
+      return 'translate(50,' + (isMobile? 270 : 370) + ')'
+    });
 
   svg.select('.line-legend')
     .call(legend);
