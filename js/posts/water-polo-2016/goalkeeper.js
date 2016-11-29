@@ -14,6 +14,8 @@ function initGoalkeeperChart(data) {
         { pct: 1.0, color: "#00A2BF" }
     ];
     
+    var curr_player = 'player0';
+    
     formatData(data, 6);
     
     console.log(data[0]);
@@ -61,6 +63,62 @@ function initGoalkeeperChart(data) {
                 return percentage + "%";
             });
     
+    $('#mySwitch').click(function () {
+        if (curr_player == 'player0') {
+            updateGoalkeeperChart(data[1]);
+            curr_player = 'player1';
+        }
+        else {
+            curr_player = 'player0';
+            updateGoalkeeperChart(data[0]);
+        }
+    });
+    
+    // Update Function
+    function updateGoalkeeperChart(player) {
+        // remove rectangles in 
+        svg.selectAll('g').remove();
+
+        console.log(player);
+        
+        var region = svg.selectAll("g")
+                    .data(player.boxes)
+                    .enter().append("g")
+                    .attr("transform", function(d, i) {return "translate(" + xTransform(i) + "," + yTransform(i) + ")"});
+        console.log(player.boxes);
+    
+        region.append("rect")
+            .attr("width", regionWidth)
+            .attr("height", regionHeight)
+            .style("fill", function(d) {
+                            var percentage = d[1] / (d[0] + d[1]);
+                            return getColorForPercentage(percentage);
+                        })
+            .on("mouseover", function(d) {})
+            .on("mousemove", function(d) {
+                                var numBlocked = d[1]; // successfully blocked
+                                var numFailed = d[0]; // failed to block
+                                var h = "<div class='left'><p>Successfully Blocked: " + numBlocked + " Failed to Block: " + numFailed + "</p></div>";
+
+                                tooltip.style("display","block");
+                                tooltip.transition()
+                                .duration(200)
+                                .style("opacity", .9);
+                                tooltip.html(h)
+                                .style("left", (d3.event.pageX + 12) + "px")
+                                .style("top", (d3.event.pageY -10) + "px")
+                            })
+            .on("mouseout", function(d) { tooltip.style("display", "none"); });
+
+        region.append("text")
+            .attr("y", regionHeight / 2)
+            .attr("dy", ".35em")
+            .text(function(d) {
+                    var percentage = Math.round(d[1] / (d[0] + d[1]) * 100 *100) / 100;
+                    return percentage + "%";
+                });
+    }
+    
     // Calculation functions
     function xTransform(index) {
         // calculates x coordinate
@@ -77,7 +135,7 @@ function initGoalkeeperChart(data) {
 
     function getColorForPercentage(pct) {
         for (var i = 0; i < percentColors.length; i++) {
-            if (pct < percentColors[i].pct) {
+            if (pct <= percentColors[i].pct) {
                 return percentColors[i].color;
             }
         }
