@@ -2,7 +2,7 @@ function initGoalkeeperChart(data) {
     formatData(data, 6);
     
     // red - blue gradiant
-    var color = d3.scaleLinear().domain([0, 1]).range(["red", "blue"]);
+    var color = d3.scaleLinear().domain([0, 1]).range(["#962D3E", "#348899"]);
     
     // global constants
     var labelLength = 60;
@@ -56,6 +56,20 @@ function initGoalkeeperChart(data) {
             })
         .style('font-size', '20px')
         .style('pointer-events', 'none');
+    
+    var totalShotsBlocked = 0;
+    var totalShotsFailed = 0;
+    for (var k = 0; k < data.length; k += 1) {
+        for (var j = 0; j < data[k].boxes.length; j += 1) {
+            totalShotsBlocked += data[k].boxes[j][1];
+            totalShotsFailed += data[k].boxes[j][0];
+        }
+    }
+    var successRate = Math.round(totalShotsBlocked / (totalShotsBlocked + totalShotsFailed) * 100 * 1) / 1;
+    var statHTML = '<p style="text-align: center;">' + totalShotsBlocked + ' total shots blocked by UCLA goalkeepers, resulting in a ' + successRate + '% success rate.</p>';
+    var statistic = d3.select('#goalkeeper-chart-wrapper').append('div')
+                            .attr('id', 'statistic')
+                            .html(statHTML);
     
     // Dropdown function - invokes update
     $('#goalkeeperDropdown').change(function(option) {
