@@ -13,3 +13,12 @@
 .tooltip p {
     margin: 0;
 }
+
+.goal-border {
+    stroke: #C2C6CC;
+    stroke-width: 10;
+}
+
+.goal-border path {
+    stroke: #C2C6CC;
+}

@@ -84,40 +84,56 @@ function initGoalkeeperChart(data) {
             .style('font-size', '20px')
             .style('pointer-events', 'none');
         
-        var x = d3.scaleBand().rangeRound([0, 3 * regionWidth]),
-        y = d3.scaleBand().rangeRound([0, 2 * regionHeight]);
+        var x = d3.scaleBand().rangeRound([0, 3 * regionWidth + 15]),
+        y = d3.scaleBand().rangeRound([0, 2 * regionHeight + 10]),
+        scaleX = d3.scaleBand().rangeRound([0, 3 * regionHeight + 10]);
+        
+        // goal borders
+        svg.append('g')
+            .attr('class', 'axis goal-border')
+            .attr('transform', 'translate(50,5)')
+            .call(d3.axisTop(x).tickSizeOuter(4));
+        svg.append('g')
+            .attr('class', 'axis goal-border')
+            .attr('transform', 'translate(44,5)')
+            .call(d3.axisLeft(y).tickSizeOuter(5));
+        svg.append('g')
+            .attr('class', 'axis goal-border')
+            .attr('transform', 'translate(365, 5)')
+            .call(d3.axisRight(y).tickSizeOuter(5));
 
+        // goal scales
         svg.append("g")
             .attr("class", "axis axis--x")
-            .attr("transform", "translate(0," + (20 + 2 * regionHeight) + ")")
-            .call(d3.axisBottom(x));   
+            .attr("transform", "translate(50," + (35 + 2 * regionHeight) + ")")
+            .call(d3.axisBottom(scaleX));   
 
         svg.append("g")
             .attr("class", "axis axis--y")
-            .attr("transform", "translate(320,0)")
+            .attr("transform", "translate(385,10)")
             .call(d3.axisRight(y));   
 
         svg.append("text")
             .attr("text-anchor", "middle")  // this makes it easy to centre the text as the transform is applied to the anchor
-            .attr("transform", "translate("+ 150 +","+ 250+")")  // text is drawn off the screen top left, move down and out and rotate
+            .attr("transform", "translate("+ 195 +","+ 260+")")  // text is drawn off the screen top left, move down and out and rotate
             .text("3 M");
 
         svg.append("text")
             .attr("text-anchor", "middle")  // this makes it easy to centre the text as the transform is applied to the anchor
-            .attr("transform", "translate(" + (3 * regionWidth + 35) + ","+ regionHeight +")rotate(90)")  // text is drawn off the screen top left, move down and out and rotate
+            .attr("transform", "translate(" + (3 * regionWidth + 100) + ","+ (regionHeight + 5) +")rotate(90)")  // text is drawn off the screen top left, move down and out and rotate
             .text("90 CM");
     }
     
     // Helper Functions
     function xTransform(index) {
-        return (index % 3) * (regionWidth);
+        return (index % 3) * (regionWidth) + 55;
     }
 
     function yTransform(index) {
         if (index > 2)
-            return regionHeight;
+            return regionHeight + 15;
         else
-            return 0;
+            return 15;
     }
     
     function goalSection(index) {
