@@ -79,3 +79,20 @@ chang_liu:
     email: chliu@media.ucla.edu
     github: shampliu
     website: http://changliu.io
+michael_hull:
+    name: Michael Hull 
+    title: Assistant Sports Editor
+    bio: Hull currently covers men's water polo for the Sports section. He was a writer for the track and field team in the spring of 2016, and for the NCAA champion men's water polo team in 2015.
+    mug: No
+    email: mhull@media.ucla.edu
+    twitter: michaelchull
+jeffrey_chan:
+    name: Jeffrey Chan
+    title: Stack Developer
+    bio: Jeffrey is a front end developer who strives to add his own flavor to Daily Bruin webpages. He studies Electrical Engineering at UCLA and has an insatiable curiousity for technology. Outside of his academic coursework, he likes to tinker on personal projects, listen to EDM, and search for LA's finest cuisine.
+    mug: Yes
+    email: jchan6@media.ucla.edu
+    twitter: jeffreyxchan
+    github: jeffreyxchan
+
+
