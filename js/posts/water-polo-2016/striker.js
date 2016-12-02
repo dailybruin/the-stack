@@ -148,6 +148,7 @@ var initStriker = function(data) {
         return Math.round((data[0] / (data[0] + data[1])) * 100) + "%"
     })
     .attr('fill', 'white')
+    .style('font-size', '20px')
     .style('pointer-events', 'none');
 
 
