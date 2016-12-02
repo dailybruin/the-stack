@@ -8,7 +8,7 @@ var initStriker = function(data) {
   var goal = [{}]
 
   // red - blue gradiant
-  var color = d3.scaleLinear().domain([0, 1]).range(["#348899", "#962D3E"]);
+  var color = d3.scaleLinear().domain([0, 1]).range(["#2E94B9", "#FD5959"]);
 
   var allPlayers = {
     boxes: [
