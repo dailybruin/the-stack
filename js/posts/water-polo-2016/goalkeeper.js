@@ -4,6 +4,9 @@ function initGoalkeeperChart(data) {
     // red - blue gradiant
     var color = d3.scaleLinear().domain([0, 1]).range(["red", "blue"]);
     
+    // initial svg render
+    var svg = d3.select("#goalkeeper-chart");
+
     // global constants
     var labelLength = 60;
     var regionHeight = 100;
@@ -14,8 +17,7 @@ function initGoalkeeperChart(data) {
                       .attr("class", "tooltip")
                       .style('display', 'none');
     
-    // initial svg render
-    var svg = d3.select("#goalkeeper-chart");
+
     
     var region = svg.selectAll("g")
                     .data(data[0].boxes)
@@ -56,6 +58,29 @@ function initGoalkeeperChart(data) {
             })
         .style('font-size', '20px')
         .style('pointer-events', 'none');
+
+    var x = d3.scaleBand().rangeRound([0, 3 * regionWidth]),
+        y = d3.scaleBand().rangeRound([0, 2 * regionHeight]);
+
+    svg.append("g")
+        .attr("class", "axis axis--x")
+        .attr("transform", "translate(0," + (20 + 2 * regionHeight) + ")")
+        .call(d3.axisBottom(x));   
+
+    svg.append("g")
+        .attr("class", "axis axis--y")
+        .attr("transform", "translate(320,0)")
+        .call(d3.axisRight(y));   
+
+    svg.append("text")
+        .attr("text-anchor", "middle")  // this makes it easy to centre the text as the transform is applied to the anchor
+        .attr("transform", "translate("+ 150 +","+ 250+")")  // text is drawn off the screen top left, move down and out and rotate
+        .text("3 M");
+
+    svg.append("text")
+        .attr("text-anchor", "middle")  // this makes it easy to centre the text as the transform is applied to the anchor
+        .attr("transform", "translate(" + (3 * regionWidth + 35) + ","+ regionHeight +")rotate(90)")  // text is drawn off the screen top left, move down and out and rotate
+        .text("90 CM");
     
     // Dropdown function - invokes update
     $('#goalkeeperDropdown').change(function(option) {
