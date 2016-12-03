@@ -17,7 +17,7 @@ function initGoalkeeperChart(data) {
     data.push(allGoalkeepers);
     
     // red - blue gradiant
-    var color = d3.scaleLinear().domain([0, 1]).range(["#FD5959", "#2E94B9"]);
+    var color = d3.scaleLinear().domain([0, 1]).range(["#2E94B9", "#FD5959"]);
     
     // initial svg render
     var svg = d3.select("#goalkeeper-chart");
