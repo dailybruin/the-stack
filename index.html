@@ -16,6 +16,14 @@ stylesheets:
           {% endif %}
           <h2>{{ post.title }}</h2>
           <h3>{{ post.teaser }}</h3>
+          <h3 class='info'>
+            {{ post.date | date: "%b. %-d, %Y" }}
+             | By
+            {% for author_key in post.authors %}
+              {% assign author = site.data.authors[author_key] %}
+              {{author.name}}{% unless forloop.last %}, {% endunless %}
+            {% endfor %}
+          </h3>
         </a>
       </li>
       {% endif %}
