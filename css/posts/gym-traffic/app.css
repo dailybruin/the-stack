@@ -43,9 +43,6 @@
   stroke: black;
   stroke-width: 1px; }
 
-.traffic-text {
-  font-style: italic; }
-
 .voronoi path {
   fill: none;
   pointer-events: all; }
