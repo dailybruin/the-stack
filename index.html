@@ -17,8 +17,8 @@ stylesheets:
           <h2>{{ post.title }}</h2>
           <h3>{{ post.teaser }}</h3>
           <h3 class='info'>
-            {{ post.date | date: "%b. %-d, %Y" }}
-             | By
+            {{ post.date | date: "%b %-d, %Y" }}
+             &#9679 By
             {% for author_key in post.authors %}
               {% assign author = site.data.authors[author_key] %}
               {{author.name}}{% unless forloop.last %}, {% endunless %}
