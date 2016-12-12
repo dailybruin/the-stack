@@ -26,7 +26,7 @@ layout: default
 
       {% if page.authors %}
       <span class="authors">
-        by
+        By
         {% for author_key in page.authors %}
           {% assign author = site.data.authors[author_key] %}
           {{ author.name }}{% unless forloop.last %}, {% endunless %}
@@ -34,7 +34,7 @@ layout: default
       </span>
       {% endif %}
 
-      <span class="date">{{ page.date | date: "%b. %-d, %Y" }}</span>
+      <span class="date">{{ page.date | date: "%b %-d, %Y" }}</span>
     </div>
   </header>
 
