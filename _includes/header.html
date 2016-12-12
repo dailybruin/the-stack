@@ -21,13 +21,8 @@
       </a>
 
       <div class="trigger">
-        {% for page in site.pages %}
-          {% unless page.exclude %}
-            {% if page.title %}
-            <a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
-            {% endif %}
-          {% endunless %}
-        {% endfor %}
+        <a class='page-link' href="{{ '/about' | prepend: site.baseurl }}">About</a>
+        <a class='page-link' href="{{ '/projects' | prepend: site.baseurl }}">Project Gallery</a>
       </div>
     </nav>
 
