@@ -1,0 +1,22 @@
+#scatterplot-svg {
+  display: block;
+  margin: auto;
+  border: solid gray 1px; }
+
+.subject-circle {
+  opacity: 0.6; }
+
+.default-circle {
+  fill: #008fd5; }
+
+.grey-circle {
+  fill: darkgrey; }
+
+.circle-stroke {
+  stroke: black;
+  stroke-width: 2px; }
+
+.dropdown {
+  font-size: 16px; }
+
+/*# sourceMappingURL=app.css.map */
