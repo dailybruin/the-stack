@@ -1,11 +1,8 @@
 ---
 title: How are departments at UCLA related?
-teaser: ...
+teaser: Course catalog allows us to learn subjects that are similar or dissimilar to your major, and answers questions like "what's electrical engineering without the mathematics".
 authors:
     - tyson_ni
-key_takeaways:
-    - ...
-    - ...
 featured_image:
     url: 
 og_image: 
@@ -23,14 +20,15 @@ scripts:
     - /js/posts/course-catalog/scatterplot.js
 ---
  
-From Plato to Pluto, hundreds of subjects taught at UCLA cover much of the knowledge scholars accumulated over time, but if we were to plot every department on a chart, what relations and clusters would we find? 
+From Plato to Pluto, the hundreds of subjects taught at UCLA cover much of the knowledge scholars accumulated over time, but if we were to plot every department on a chart, what relations or clusters would we find? 
 
-The geography of UCLA offers a guide. By putting a divider line at near Powell Library, we might get two large buckets  – the north and south campus departments. But what if we want to know whether *geography* is more similar to *geology* or *anthropology*? Or subjects that are most like and unlike *electrical engineering*?
+Using the geography of UCLA as a guide. we might put a divider line near Powell Library and get two buckets – the north and south campus departments. But what if we want to know whether *art history* is closer to *history* or *classics*? Or subjects that are most like and unlike *economics*?
 
-The **course catalog** is a better source of data for answering these questions. After scrapping the class descriptions of every department from UCLA's course catalog, we applied a variant of the *Word2vec* algorithm, which is able to capture the semantic meaning of words, to assign 200 values to the course catalog of each department. Using these numbers, we then quantified the relationships between departments.
-
+The [**course catalog**](...) is a better source of data for answering these questions. Using course descriptions, we applied a variant of the *Word2vec* algorithm, which is able to capture the semantic meaning of words, and assigned 200 values to each department. Using these numbers, we then quantified how departments are related.
 
 ## Plotting UCLA departments
+
+Visualizing 200 dimensions is not possible but simplifying them down to a 2D chart allows us to see distinct clusters. I've labeled a few departments to make obvious a few clusters the model was able to capture, but feel free to hover over each point.
 
 <div id='scatterplot-wrapper'>
     <div class='ui grid centered'>
@@ -39,8 +37,14 @@ The **course catalog** is a better source of data for answering these questions.
     </div>
 </div>
 
+While the dimensionality-reduction technique used here preserves clusters, it does not try to preserve distances. For instance, that *mathematics* is placed closer to *spanish* than *electrical engineering* on the chart does not neccearily suggest any insight, but the fact that they appear in *separate* clusters does matter.
+
 ## Similar and dissimilar departments
-<label>Pick a subject</label>
+
+Using all the dimensions, we could better find relationships between departments.
+
+Pick a subject and see which 5 subjects are most similar and least similar to it:
+
 <select class="ui search selection dropdown" id="pick-subject">
 </select>
 
@@ -61,25 +65,40 @@ The **course catalog** is a better source of data for answering these questions.
   </div>
 </div>
 
+## Subject 1 + Subject 2 = ?
+At its best, *Word2vec* should allow us to learn new insights rather than simply quantify existing intuition. For instance, knowing the relationship between *United States* and *Britney Spears* it could be able to find the Japanese Britney Spears. 
 
-## Interpreting results
+In our case, adding the vectors of two departments allows us to learn departments that are similar to *both*.
 
-The algorithm is only as good as the whatever information that's contained in the course catalog. We might decompose those information into three categories, ways in which departments are similar:
+Which subjects are most similar to ...
 
-**What subjects are and how they are commonly practiced**
+## Subject 1 - Subject 2 = ?
 
-Course catalog inevitably reflects how subjects are practiced throughout the academic world. Because physicists use math quite heavily, we might argue that *physics* and *mathematics* are more similar. Yet if we are concerned only with what subjects are, we are better off working with the millions of Wikipedia entries.
+We might also wonder: "what's *electrical engineering* without the *mathematics*?"
+
+Pick a pair of subjects, and see the answers to questions that could be phrased in that form:
+
+The "subtraction" analysis, however, is more difficult to understand or validate than "addition", perhaps due to our lack of intuition on how to decompose a subject into other subjects.
+
+
+## More on course catalog
+
+The algorithm is only as good as the whatever information that's contained in course descriptions. We might break those information down into three categories:
+
+**What subjects are, and how they are commonly practiced**
+
+Course catalog inevitably reflects how subjects are practiced throughout the academic world. Yet if we are concerned only with what subjects are, we are better off working with the millions of Wikipedia entries.
 
 **How subjects are taught at UCLA**
 
-Each department might teach only parts of its discipline, and professors might over or under-teach certain topics compared to how the discipline is practiced outside UCLA. Therefore course catalog, much more so than Wikipedia, are key data points for understanding how departments within UCLA are related. In addition, some classes are offered through several departments, and that the algorithm should infer that those departments are similar in some sense.
+Each department might teach only parts of its discipline, and professors might over or under-teach certain topics compared to how the discipline is practiced outside UCLA. In addition, some classes are offered through several departments, and our model would infer that those departments are similar.
 
 **How class descriptions are worded**
 
-The catalog of multiple departments might be written under the same guidelines or by the same people. If that's the case, there has to commonality between these departments. But this category poses a problem for our approach. When class descriptions are worded sparsely without being complemented by context, they don't offer enough data to allow semantics to be captured. While some classes are explained through information-rich sentences, others are described merely by a list of topics, thereby preventing the algorithm from learning how some concepts relate to others.
-
-## Isn't this obvious?
+If the catalog of several departments were written in the same style, using similar words and phrases, there had to some commonality between those departments. This category allows us to learn *what departments sound like*.
 
 ## Data and model
+
+After scrapping the course catalog, I merged the course descriptions of every department into a corresponding document.  ...
 
 
