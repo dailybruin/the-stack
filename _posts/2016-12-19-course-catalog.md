@@ -13,7 +13,7 @@ stylesheets:
     - /css/posts/course-catalog/dropdown.min.css
     - /css/posts/course-catalog/app.css
 scripts:
-    - //code.jquery.com/jquery-3.1.1.min.js
+    - /js/lib/jquery-3.1.1.min.js
     - /js/posts/course-catalog/libs/d3.min.js
     - /js/posts/course-catalog/libs/d3-tip.js
     - /js/posts/course-catalog/tables.js
@@ -24,18 +24,16 @@ From Plato to Pluto, the hundreds of subjects taught at UCLA cover much of the k
 
 Using the geography of UCLA as a guide. we might put a divider line near Powell Library and get two buckets – the north and south campus departments. But what if we want to know whether *art history* is closer to *history* or *classics*? Or subjects that are most like and unlike *economics*?
 
-The [**course catalog**](...) is a better source of data for answering these questions. Using course descriptions, we applied a variant of the *Word2vec* algorithm, which is able to capture the semantic meaning of words, and assigned 200 values to each department. Using these numbers, we then quantified how departments are related.
+The [**course catalog**](...) is a better source of data for answering these questions. Using course descriptions, we applied a variant of the *Word2vec* algorithm, which is able to capture the semantic meaning of words, and assigned 200 values to each department. These high dimensional vectors allowed us to quantify how departments are related.
 
 ## Plotting UCLA departments
 
-Visualizing 200 dimensions is not possible but simplifying them down to a 2D chart allows us to see distinct clusters. I've labeled a few departments to make obvious a few clusters the model was able to capture, but feel free to hover over each point.
+Seeing 200 dimensions is not possible but simplifying them down to a 2D chart allows us to visualize distinct clusters. I've labeled a few departments to make obvious a few interesting clusters the model was able to capture, but feel free to hover over each point.
 
-<div id='scatterplot-wrapper'>
-    <div class='ui grid centered'>
-        <div class='twelve wide column' id='scatterplot'>
-        </div>
-    </div>
-</div>
+  <div class='ui grid centered' id='scatterplot-wrapper'>
+      <div class='twelve wide column' id='scatterplot'>
+      </div>
+  </div>
 
 While the dimensionality-reduction technique used here preserves clusters, it does not try to preserve distances. For instance, that *mathematics* is placed closer to *spanish* than *electrical engineering* on the chart does not neccearily suggest any insight, but the fact that they appear in *separate* clusters does matter.
 
@@ -65,8 +63,10 @@ Pick a subject and see which 5 subjects are most similar and least similar to it
   </div>
 </div>
 
+## Find the similarity between any two subjects
+
 ## Subject 1 + Subject 2 = ?
-At its best, *Word2vec* should allow us to learn new insights rather than simply quantify existing intuition. For instance, knowing the relationship between *United States* and *Britney Spears* it could be able to find the Japanese Britney Spears. 
+At its best, *Word2vec* should allow us to learn new insights rather than simply quantify existing intuition. For instance, knowing the relationship between *United States* and *Britney Spears* it could allow us to find the Japanese Britney Spears. 
 
 In our case, adding the vectors of two departments allows us to learn departments that are similar to *both*.
 

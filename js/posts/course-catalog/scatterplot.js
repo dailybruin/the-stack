@@ -51,13 +51,15 @@ function plot(data, container) {
   }, specialLabelYOffsets = {
     'Film and Television': -5,
     'Economics': 15,
-    'Bioengineering': 10,
+    'Bioengineering': 14,
     'Korean': -6,
     'Italian': -6
   };
 
   const labels = svg.selectAll('text')
-      .data(data)
+      .data(data.filter(d => {
+        return labeledSubjects.includes(d.name);
+      }))
       .enter()
       .append('text')
       .attr('x', d => {
@@ -68,7 +70,8 @@ function plot(data, container) {
       })
       .text((d, i) => {
           //const displayName = d.name.length >= 15? d.name.slice(0, 12) + ' ...' : d.name;
-          return labeledSubjects.includes(d.name)? d.name : '';
+          return d.name;
+          //return labeledSubjects.includes(d.name)? d.name : '';
       })
       .style('font-size', 11);
 
