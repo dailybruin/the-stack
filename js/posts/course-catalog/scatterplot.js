@@ -10,7 +10,8 @@ function plot(data, container) {
   $(container).html('');
 
   const aspectRatio = 1,
-        containerWidth = $(container).outerWidth();
+        containerWidth = $(container).outerWidth(),
+        isMobile = containerWidth < 400? true : false;
 
   const containerChartRatio = 0.8,
         chartWidth = containerWidth * containerChartRatio,
@@ -31,23 +32,28 @@ function plot(data, container) {
   })
 
 
-  const labeledSubjects = [
-      'Mathematics', 'Statistics', 'Computer Science', 'Life Sciences', 'Physiological Science', 
-      'Bioengineering', 'Chemical Engineering', 'Physics', 'Economics', 'Management',
-      'Philosophy', 'Design / Media Arts', 'Film and Television','Political Science', 'Sociology', 
-      'History', 'Art History', 'Italian', 'French', 'Korean', 'Chinese', 'Dance', 'Music History'
+  const labeledSubjects = isMobile? [
+    'Mathematics', 'Computer Science', 'Life Sciences', 'Physiological Science', 
+    'Physics', 'Mechanical and Aerospace Engineering', 'Economics', 'Management',
+    'Philosophy', 'Film and Television','Political Science', 'Italian', 'French'
+  ] : [
+    'Mathematics', 'Statistics', 'Computer Science', 'Life Sciences', 'Physiological Science', 
+    'Bioengineering', 'Chemical Engineering', 'Economics', 'Management',
+    'Philosophy', 'Film and Television','Political Science', 'Sociology', 
+    'History', 'Classics', 'Italian', 'French', 'Korean', 'Chinese', 'Dance'
   ];
 
   const labelYOffset = 0,
         labelXOffset = 0;
 
   const specialLabelXOffsets = {
-      'Economics': -8
+    'Economics': -8
   }, specialLabelYOffsets = {
-      'Economics': 15,
-      'Bioengineering': 10,
-      'Korean': -6,
-      'Italian': -6
+    'Film and Television': -5,
+    'Economics': 15,
+    'Bioengineering': 10,
+    'Korean': -6,
+    'Italian': -6
   };
 
   const labels = svg.selectAll('text')
