@@ -14,18 +14,6 @@ d3.queue()
   });
 
 
-// d3.json('/datasets/course-catalog/similar-subjects.json', (error, data) => {
-//   if (error) throw error;
-
-//   // process data
-//   data.forEach(d => {
-//     d.least_similar.reverse();
-//   });
-
-//   renderSubjectTwinTables(data);
-//   renderSubtractTable(data);
-// });
-
 function renderSubjectTwinTables(data) {
   const subjects = d3.set(data, d => d.name).values();
 
@@ -68,26 +56,27 @@ function renderSubtractTable(data) {
   });
 
   populateTable('#subtract-table', defaultData, 'most_similar');
-
 }
 
-function pickSubject(data) {
-  const selectedIndex = d3.select('#pick-subject').property('value');
+function getPickedData(selectId, data) {
+  const selectedIndex = d3.select(selectId).property('value');
   const selectedData = data.filter((d, i) => {
       return i == parseInt(selectedIndex);
   });
+  return selectedData
+}
+
+function pickSubject(data) {
+  const selectedData = getPickedData('#pick-subject', data);
 
   populateTable('#most-similar-table', selectedData, 'most_similar');
   populateTable('#least-similar-table', selectedData, 'least_similar');
 }
 
 function pickSubtractPair(data) {
-    const selectedIndex = d3.select('#pick-subtract-pair').property('value');
-    const selectedData = data.filter((d, i) => {
-      return i == parseInt(selectedIndex);
-    });
-
-    populateTable('#subtract-table', selectedData, 'most_similar');
+  const selectedData = getPickedData('#pick-subtract-pair', data);
+  
+  populateTable('#subtract-table', selectedData, 'most_similar');
 }
 
 function initTable(table) {
