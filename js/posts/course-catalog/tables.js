@@ -55,19 +55,17 @@ function populateTable(table, data, most) {
 
   const tbody = d3.select(table).select('tbody');
 
-  const rows = tbody.selectAll("tr")
+  const rows = tbody.selectAll('tr')
       .data(similar_subjects);
   
-  rows.enter()
+  const tr = rows.enter()
       .append('tr')
   
-      .selectAll('td')
+  const defaultCells = tr.selectAll('td')
       .data(d => [d.name, d.score])
       .enter()
       .append('td')
       .text(d => d);
-  
-  rows.exit().remove();
   
   const cells = rows.selectAll('td')
       .data(d => [d.name, d.score])
@@ -76,6 +74,7 @@ function populateTable(table, data, most) {
   cells.enter()
       .append('td')
       .text(d => d);
-  
+
+  rows.exit().remove();
   cells.exit().remove();
 }
