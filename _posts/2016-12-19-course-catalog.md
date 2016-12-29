@@ -78,6 +78,17 @@ We might also wonder: "what's *electrical engineering* without the *mathematics*
 
 Pick a pair of subjects, and see the answers to questions that could be phrased in that form:
 
+<select class="ui search selection dropdown" id="pick-subtract-pair">
+</select>
+
+  <div class='row'>
+    <div class='column'>
+      <h1>subtract ...</h1>
+      <table class='ui celled table' id='subtract-table'>
+      </table>
+    </div>
+  </div>
+
 The "subtraction" analysis, however, is more difficult to understand or validate than "addition", perhaps due to our lack of intuition on how to decompose a subject into other subjects.
 
 
