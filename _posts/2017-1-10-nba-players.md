@@ -32,14 +32,13 @@ With 11 National Champions —  more than any other school — UCLA touts a worl
 
 
 
- <input type="button" id="vorp" value="NBA Performance"></input>
- <input type="button" id="pick" value="Draft Position"></input>
- <input type="button" id="yrsCollege" value="Years Spent in College"></input>
- <input type="button" id="numPlayers" value="Number of Players Drafted"></input>
+ <input type="button" id="vorp" value="NBA Performance" />
+ <input type="button" id="pick" value="Draft Position" />
+ <input type="button" id="yrsCollege" value="Years Spent in College" />
+ <input type="button" id="numPlayers" value="Number of Players Drafted" />
 
  <div id="chart"></div>
- <script src="/js/posts/nba-players/graphs.js">
- </script>
+
 
 
  <h3> Top 5 VORP </h3>
