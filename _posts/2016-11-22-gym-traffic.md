@@ -17,9 +17,11 @@ stylesheets:
     - /css/posts/gym-traffic/image.min.css
 scripts:
     - //code.jquery.com/jquery-3.1.1.min.js
-    - //d3js.org/d3.v4.min.js
-    - //cdnjs.cloudflare.com/ajax/libs/d3-legend/2.13.0/d3-legend.min.js
-    - /js/posts/gym-traffic/d3-tip.js
+    - /js/posts/gym-traffic/libs/d3.min.js
+    - /js/posts/gym-traffic/libs/d3-legend.min.js
+    - /js/posts/gym-traffic/libs/d3-tip.js
+    - /js/posts/gym-traffic/libs/moment.min.js
+    - /js/posts/gym-traffic/libs/moment-timezone-with-data.js
     - /js/posts/gym-traffic/line-chart-compiled.js
     - /js/posts/gym-traffic/heat-chart-compiled.js
 ---
@@ -33,23 +35,9 @@ Because the anonymized records include only the time stamp of each entrance, but
 
 That model would have to account for not only people who entered at a particular time (for which we use the data) but also some proportion of the people who entered *previously* and remained (here's where the model comes in). More details are explained later in the post.
 
-## Choosing between Wooden and BFit
-
-Wooden's larger space means that **it normally houses between two and three times as many people as
-BFit**. From time to time, BFit does reach about the same level of traffic as Wooden. In those cases, we might argue that Wooden is the better, less crowded place to work out. Conversely, when Wooden is *a lot* busier than BFit (say more than 3 times), BFit might be a better choice.
-
-  <div class='ui centered medium header'>Wooden or BFit?</div>
-  <div class='ui centered grid'>
-    <div class='twelve wide column'>
-      <div class='heat-chart' id='comparison-heatmap'></div>
-    </div>
-  </div>
-
-On weekday afternoons, Wooden is unusually busier than BFit as students stay near campus in between classes. BFit becomes more crowded on evenings and late nights as well as weekends when Hill residents prefer the short walk from dorms.
-
 ## A quick glance
 
-The heat charts below show how busy each facility is at different hours of day and days of week. Because Wooden and BFit differ in size, we compare each facility's traffic at each time period with the **peak traffic** at that facility. Peak traffic is defined as the average number of people at 5:30 PM on a weekday in the first 3 weeks of a quarter when more people go to gyms.
+The heat charts below show how busy each facility is at different hours of day and days of week. Because Wooden and BFit differ in size, we compare each facility's traffic at each time period with the **peak traffic** at that facility. Peak traffic is defined as the average number of people at the gym during the busiest time period in a quarter.
 
 <div class='ui centered medium header'>Wooden</div>
 <div class='ui centered grid'>
@@ -67,15 +55,37 @@ The heat charts below show how busy each facility is at different hours of day a
 
 <br>
 
-## Live Traffic Estimate
+Let's compare the traffic between the two facilities.
 
-Gym usage patterns are remarkably consistent. While UCLA Recreation doesn't provide real time information, we can fairly safely estimate – in real time – how busy a gym is based on past data.
+## Choosing between Wooden and BFit
+
+Wooden's larger space means that it normally houses between **two and three times as many people** as
+BFit. From time to time, BFit does reach about the same level of traffic as Wooden. In those cases, we might argue that Wooden is the better, less crowded place to work out. Conversely, when Wooden accommodates, for instance, more than 3 times as many people, BFit might be a better choice.
+
+  <div class='ui centered medium header'>Wooden or BFit?</div>
+  <div class='ui centered grid'>
+    <div class='twelve wide column'>
+      <div class='heat-chart' id='comparison-heatmap'></div>
+    </div>
+  </div>
+
+<br>
+
+A couple patterns stick out:
+
+* On weekday afternoons, Wooden is unusually busier than BFit as students stay near campus in between classes. 
+* BFit becomes more crowded on evenings and late nights as well as weekends when Hill residents prefer the short walk from dorms.
+
+
+## Live traffic estimate
+
+Gym usage patterns are remarkably consistent. While UCLA Recreation doesn't provide real time information, we can fairly safely estimate – in real time – how busy a gym is based on past data and the current time of day and day of week.
 
 Right now, it's likely that
 <span class='wooden bold'>Wooden</span> is <span id='wooden-traffic-text'></span>, and
 <span class='bfit bold'>BFit</span> is <span id='bfit-traffic-text'></span>.
 
-> These live estimates are based on 1) time of day, and 2) day of week.
+> Note: Beginning January 2017, Wooden will be open 24 hours on Monday through Thursday.
 
 <br>
 <div id="visualization"></div>
@@ -128,7 +138,7 @@ The opening of BFit has given students who live on the hill or even in the apart
 
 ## Data and Model
 
-UCLA Recreation officials graciously provided the dataset. There were around 1.5 million records in total, spanning from June 2015 to June 2016, and each contains the *time stamp*, *type of user* (ie. undergrad, grad or staff), and *facility name* (ie. Wooden, BFit, KREC, or Sunset Rec) of an entrance.
+UCLA Recreation officials graciously provided the dataset, which consisted around 1.5 million records in total, spanning from June 2015 to June 2016, and containing the *time stamp*, *type of user* (ie. undergrad, grad or staff), and *facility name* (ie. Wooden, BFit, KREC, or Sunset Rec) of each entrance.
 
 Since the dataset doesn't have exit time stamps, **we have to guess how long each workout lasted** – we need to find a distribution and good enough parameters using *survey data*. Sixty-five UCLA students responded to an online survey asking them how long they spent at the gym the last time they went. The *Weibull distribution* was chosen because of its suitability for modeling timed events, and parameters were then inferred from the survey data.
 
