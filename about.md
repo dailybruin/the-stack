@@ -30,7 +30,7 @@ We hope you'll join us in this exciting data experiment, whether that be as a re
 
 ---
 
-If you have any feedback or questions, email us at [online@media.ucla.edu](online@media.ucla.edu).
+If you have any feedback or questions, email us at [online@media.ucla.edu](mailto:online@media.ucla.edu).
 
 Follow us [on Twitter](https://twitter.com/_thestack/).
 
