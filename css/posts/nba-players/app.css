@@ -1,0 +1,51 @@
+tr {
+	height: 50%;
+}
+td {
+	font-weight: normal;
+	font-size: 1em;
+  	webkit-box-shadow: 0 2px 2px -2px #0E1119;
+	-moz-box-shadow: 0 2px 2px -2px #0E1119;
+	box-shadow: 0 2px 2px -2px #0E1119;
+
+	width: 20%;
+	text-align: center;
+}
+
+thead {
+	background-color: #778899;
+	color: white;
+}
+
+
+
+input[type="button"] {
+  overflow: hidden;
+
+  margin: 10px;
+  padding: 12px 12px;
+
+  text-align: center;
+
+  background-color:  #FFF;
+  color: #2b90d9;
+  border: 0 none;
+  border-radius: 4px;
+
+
+  -webkit-appearance: none;
+  -moz-appearance:    none;
+  appearance:         none;
+ 
+  justify-content: center;
+  align-items: center;
+
+}
+
+input[type="button"]:active {
+    color:  #FFFFFF;
+      background-color:  #2b90d9;
+
+
+}
+
