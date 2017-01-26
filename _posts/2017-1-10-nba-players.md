@@ -1,6 +1,6 @@
 ---
-title: From Pauley to the Pros
-teaser: Explore Bruins in the NBA
+title: UCLA Basketball&#58; From Pauley to the Pros
+teaser: In light of UCLA basketball's recent resurgence, explore some of the former Bruins in the NBA
 
 authors:
     - mahir_eusufzai
@@ -10,8 +10,8 @@ key_takeaways:
     - Some third thing
 
 featured_image:
-    url: grades-ge/scatterplot.png
-og_image: grades-ge/scatterplot.png
+    url: nba-players/graph.png
+og_image: nba-players/graph.png
 scripts:
     - //ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js
     - //cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js
@@ -34,33 +34,86 @@ This post investigates the quantity and quality of these players over the tenure
 ### Trends over Time
 
 Below you can toggle between various metrics to explore trends.
+<br><br>
 
- <input type="button" id="vorp" value="NBA Performance" />
- <input type="button" id="pick" value="Draft Position" />
- <input type="button" id="yrsCollege" value="Years Spent in College" />
- <input type="button" id="numPlayers" value="Number of Players Drafted" />
+<blockquote>
+<p id="vorp-def" class="metric-def" style="display:inline-block"> <b>NBA Performance</b> is measured by VORP (value over replacement player) during the player's best year </p>
 
-> The first is **VORP**, which measures how much a player contributes to the team's win over the average replacement player. While this is far from a perfect metric, star players usually have higher VORP's than role players, who usually have higher VORP's than benchwarmers.  Specifically, the graph below compares player's VORP during their best year in order to normalize the difference between active and retired players.
+<p id="pos-def" class="metric-def" style="display:none"> <b>Draft Position</b> shows the earliest draft pick for each year. </p>
 
- <div id="chart"></div>
+<p id="yrs-def" class="metric-def" style="display:none"> <b>Years at UCLA</b> shows the average years playing for UCLA before entering the NBA </p>
 
+<p id="num-drafted-def" class="metric-def" style="display:none"> <b>Number of Players Drafted</b> indicates how many Bruins were drafted into the NBA in a given year. </p>
+</blockquote>
+<div id="wrapper" style="text-align: center">    
+    <div id="yourdiv" style="display: inline-block;">
+		<input type="button" id="vorp" class ="toggleButton 1 active" value="NBA Performance" />
+		<input type="button" id="pick" class ="toggleButton 1" value="Draft Position" />
+		<input type="button" id="yrsCollege" class ="toggleButton 1" value="Years at UCLA" />
+		<input type="button" id="numPlayers" class ="toggleButton 1" value="Number of Players Drafted" />
+    </div>
+</div>
+
+<br>
+
+<div id="chart"></div>
+<div id="VORP_paragraph" class="chart_paragraph">
+<blockquote>
 <p> 
 <ul>
-<li/> Performance is measured with VORP (how much a player contributes to the team’s wins vs the average replacement player)
-<li/> The graph compares VORP in each player’s best year (not cumulative VORP) in order to normalize differences between active players and retired players
-<li/> If multiple players were drafted in a particular year, the graph adds their respective VORPS
+<li/> If multiple players were drafted in a particular year, their VORP's are added.
 <li/> A time frame of 1969 to 2009 is used, since VORP data was not thoroughly available before 1969, and players drafted after 2009 have likely not hit their peak performance. 
  </ul>
 </p>
+</blockquote>
+</div>
 
+<div id="Draft_paragraph" class="chart_paragraph" style="display:none" >
+<blockquote>
+<p> 
+<ul>
+<li/> An early draft number indicates that a particular player was a top prospect.
+<li/> If multiple players were drafted in a particular year, the earliest pick is taken.
+<li/> Undrafted players and players selected using a territorial pick were omitted.
+ </ul>
+</p>
+</blockquote>
+</div>
+
+<div id="Yrs_paragraph" class="chart_paragraph" style="display:none" >
+<blockquote>
+<p> 
+<ul>
+<li/> If multiple players were drafted in the same year, the average was taken
+ </ul>
+</p>
+</blockquote>
+</div>
+
+<div id="Num_drafted_paragraph" class="chart_paragraph" style="display:none" >
+<blockquote>
+<p> 
+<ul>
+<li/> Undrafted players were omitted.
+</ul>
+</p>
+</blockquote>
+</div>
+
+<br> 
 
 ### Notable Players 
 
 
- <h3> Top 5 VORP </h3>
+<div id="wrapper" style="text-align: center">    
+    <div id="yourdiv" style="display: inline-block;">
+		 <input type="button" id="top-VORP" class ="toggleButton 2 active" value="VORP" />
+		 <input type="button" id="top-all-star" class ="toggleButton 2" value="All-Star" />
+		 <input type="button" id="top-recent" class ="toggleButton 2" value="Recent Players" />
+ 	</div>
+ </div>
 
-
-<table>
+<table id="VORP-table" class ="top-player-table">
     <thead>
         <tr>
             <th>Name</th>
@@ -70,12 +123,12 @@ Below you can toggle between various metrics to explore trends.
     </thead>
     <tbody>
         <tr>
-            <td>Kareem Abdul Jabbar</td>
+            <td>Kareem Abdul-Jabbar</td>
             <td>1969</td>
             <td>10.5</td>
         </tr>
         <tr>
-            <td>Russel Westbrook</td>
+            <td>Russell Westbrook</td>
             <td>2008</td>
             <td>8.3</td>
         </tr>
@@ -97,11 +150,7 @@ Below you can toggle between various metrics to explore trends.
     </tbody>
 </table>
 
-
-<br/>
-
-<h3> Top 5 All Star Appearances </h3>
-<table>
+<table id="all-star-table" class ="top-player-table" style="display:none">
     <thead>
         <tr>
             <th>Name</th>
@@ -111,12 +160,12 @@ Below you can toggle between various metrics to explore trends.
     </thead>
     <tbody>
         <tr>
-            <td>Kareem Abdul Jabbar</td>
+            <td>Kareem Abdul-Jabbar</td>
             <td>1969</td>
             <td>19</td>
         </tr>
         <tr>
-            <td>Russel Westbrook</td>
+            <td>Russell Westbrook</td>
             <td>2008</td>
             <td>5</td>
         </tr>
@@ -138,10 +187,7 @@ Below you can toggle between various metrics to explore trends.
     </tbody>
 </table>
 
-<br/>
-
-<h3> Top 5 Recent Draft </h3>
-<table>
+<table id="recent-table" class="top-player-table" style="display:none">
     <thead>
         <tr>
             <th>Name</th>
