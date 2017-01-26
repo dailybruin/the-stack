@@ -1,3 +1,6 @@
+.top-player {
+	width: 100%;
+}
 tr {
 	height: 50%;
 }
@@ -13,14 +16,24 @@ td {
 }
 
 thead {
-	background-color: #778899;
+	background-color: #2b90d9;
 	color: white;
 }
 
+.metric-def {
+	font-size: 20px;
+}
 
+.toggleButton.active, .active{
+    color:  white;
+      background-color:  #2b90d9;
+}
 
-input[type="button"] {
-  overflow: hidden;
+.toggleButton:hover {
+	cursor: pointer
+}
+.toggleButton{
+   overflow: hidden;
 
   margin: 10px;
   padding: 12px 12px;
@@ -30,7 +43,7 @@ input[type="button"] {
   background-color:  #FFF;
   color: #2b90d9;
   border: 0 none;
-  border-radius: 4px;
+  border-radius: 10px;
 
 
   -webkit-appearance: none;
@@ -40,12 +53,13 @@ input[type="button"] {
   justify-content: center;
   align-items: center;
 
-}
-
-input[type="button"]:active {
-    color:  #FFFFFF;
-      background-color:  #2b90d9;
+  font-size: 90%; */
 
 
 }
 
+div.c3-tooltip-container {
+	max-width: 400px;
+	text-align: center;
+
+}

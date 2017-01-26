@@ -1,15 +1,7 @@
-
-
-
 var JSON_data;
-var names_array = [], VORP_array = [];
- //var JSON_data = JSON.parse("/datasets/nba-players/tooltip_VORP.json");
+
 $.getJSON('/datasets/nba-players/tooltip_VORP.json', function(data) {         
     JSON_data = data;
-    for (var key in JSON_data['NAME']) {
-        names_array.push(JSON_data['NAME'][key]);
-    }
-
 });
 
 function tooltip_contents(d, defaultTitleFormat, defaultValueFormat, color) {
@@ -27,17 +19,17 @@ function tooltip_contents(d, defaultTitleFormat, defaultValueFormat, color) {
         if (! (d[i] && (d[i].value || d[i].value === 0))) { continue; }
 
         if (! text) {
-            title = d[i].x.getFullYear(); // SHOW X-VALUE
-            text = "<table class='" + CLASS.tooltip + "'>" + (title || title === 0 ? "<tr><th colspan='2'>" + title + "</th></tr>" : "");
+            year = d[i].x.getFullYear(); // SHOW X-VALUE
+            text = "<table class='" + CLASS.tooltip + "'>" + (year || year === 0 ? "<tr><th colspan='2'>" + year + "</th></tr>" : "");
         }
 
         name = nameFormat(d[i].name); //d[i].name = "MAX_VORP"
         value = valueFormat(d[i].value, d[i].ratio, d[i].id, d[i].index); //value = VORP value
         bgcolor = $$.levelColor ? $$.levelColor(d[i].value) : color(d[i].id);
         
-        var bestPlayerName = JSON_data["NAME"][title];
-        var bestPlayerVORP = JSON_data["MAX_VORP"][title];
-
+        var bestPlayerName = JSON_data["NAME"][year];
+        var bestPlayerVORP = JSON_data["MAX_VORP"][year] == -99 ? "N/A" : JSON_data["MAX_VORP"][year] ;
+        var bestPlayerText = (year in JSON_data["NAME"]) ? bestPlayerName + " (" + bestPlayerVORP + " VORP) " : "N/A";
 
         text += "<tr class='" + CLASS.tooltipName + "-" + d[i].id + "'>";
         text += "<td class='name'><span style='background-color:" + bgcolor + "'></span>" + name + "</td>";
@@ -45,7 +37,7 @@ function tooltip_contents(d, defaultTitleFormat, defaultValueFormat, color) {
         text += "</tr>";      
         text += "<tr>";
         text += "<td>" + "Top Player: " + "</td>";
-        text += "<td class='value'>"+ bestPlayerName + " (" + bestPlayerVORP + ") "+"</td> </tr>";      
+        text += "<td class='value'>"+ bestPlayerText +"</td> </tr>";    
     }
 
     return text + "</table>";    
@@ -58,15 +50,6 @@ var titles2 = ['vva', 'g'];
 var chart = c3.generate({
     tooltip: {
         contents: tooltip_contents,
-        /*
-        format: {
-            value: function (value, ratio, id, index) {
-               // alert(chart.tooltip.title);
-                return value +  " (Top Player: \n" + names_array[index] + ")";
-                //return JSON_data["MAX_VORP"]["1999"];
-            }
-        }
-        */
     },
 
     data: {
@@ -90,9 +73,49 @@ var chart = c3.generate({
              padding: {top:1, bottom:0}
         }
     },
+    color: {
+        pattern: ['#2b90d9', '#FFCC00', '#2b90d9', '#FFCC00'],
+    }
 
 });
 
+$('.toggleButton.1').click( function () {
+    $('.toggleButton.1').removeClass('active')
+    $(this).addClass('active');
+
+    var paragraphs = document.getElementsByClassName("chart_paragraph");
+    for(var i=0; i<paragraphs.length; ++i){
+      var s = paragraphs[i].style;
+      s.display = 'none';
+   };
+   var metrics = document.getElementsByClassName("metric-def");
+    for(var i=0; i<metrics.length; ++i){
+      var s = metrics[i].style;
+      s.display = 'none';
+   };
+});
+
+$('.toggleButton.2').click( function () {
+    $('.toggleButton.2').removeClass('active')
+    $(this).addClass('active');
+
+    var els = document.getElementsByClassName("top-player-table");
+    for(var i=0; i<els.length; ++i){
+      var s = els[i].style;
+      s.display = 'none';
+   };
+
+});
+
+$('#top-VORP').on('click', function () {
+    document.getElementById("VORP-table").style = "display:block";
+});
+$('#top-all-star').on('click', function () {
+    document.getElementById("all-star-table").style = "display:block";
+});
+$('#top-recent').on('click', function () {
+    document.getElementById("recent-table").style = "display:block";
+});
 
 $('#vorp').on('click', function () {
 
@@ -101,6 +124,9 @@ $('#vorp').on('click', function () {
         url: '/datasets/nba-players/maxVORP.csv',
         unload: chart.url, 
     });
+
+    document.getElementById("VORP_paragraph").style = "display:block";
+    document.getElementById("vorp-def").style = "display:block";
 });
 
 $('#pick').on('click', function () {
@@ -110,7 +136,12 @@ $('#pick').on('click', function () {
         url: '/datasets/nba-players/pick.csv',
         unload: chart.url, 
     });
+
+
+    document.getElementById("Draft_paragraph").style = "display:block";
+    document.getElementById("pos-def").style = "display:block";
 });
+
 
 $('#yrsCollege').on('click', function () {
 
@@ -119,6 +150,9 @@ $('#yrsCollege').on('click', function () {
         url: '/datasets/nba-players/yrs_mean.csv',
         unload: chart.url, 
     });
+
+    document.getElementById("Yrs_paragraph").style = "display:block";
+    document.getElementById("yrs-def").style = "display:block";
 });
 
 $('#numPlayers').on('click', function () {
@@ -128,4 +162,10 @@ $('#numPlayers').on('click', function () {
         url: '/datasets/nba-players/numPlayers_2.csv',
         unload: chart.url, 
     });
+
+    document.getElementById("Num_drafted_paragraph").style = "display:block";
+    document.getElementById("num-drafted-def").style = "display:block";
 });
+
+
+
