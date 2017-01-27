@@ -1,6 +1,7 @@
-.top-player {
+.top-player-table {
 	width: 100%;
 }
+
 tr {
 	height: 50%;
 }
@@ -49,7 +50,7 @@ thead {
   -webkit-appearance: none;
   -moz-appearance:    none;
   appearance:         none;
- 
+
   justify-content: center;
   align-items: center;
 
