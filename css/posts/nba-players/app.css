@@ -5,6 +5,15 @@
 tr {
 	height: 50%;
 }
+
+#chart > div > table > tbody > tr > th {
+	text-align: center;
+}
+
+.c3-tooltip td.value {
+	text-align: center;
+}
+
 td {
 	font-weight: normal;
 	font-size: 1em;
