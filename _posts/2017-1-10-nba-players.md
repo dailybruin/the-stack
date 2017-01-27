@@ -19,8 +19,8 @@ scripts:
     - /js/posts/nba-players/graphs.js
 
 stylesheets:
-    - /css/posts/nba-players/app.css
     - //cdnjs.cloudflare.com/ajax/libs/c3/0.4.10/c3.min.css
+    - /css/posts/nba-players/app.css
 
 ---
 
@@ -59,10 +59,10 @@ Below you can toggle between various metrics to explore trends.
 <div id="chart"></div>
 <div id="VORP_paragraph" class="chart_paragraph">
 <blockquote>
-<p> 
+<p>
 <ul>
 <li/> If multiple players were drafted in a particular year, their VORP's are added.
-<li/> A time frame of 1969 to 2009 is used, since VORP data was not thoroughly available before 1969, and players drafted after 2009 have likely not hit their peak performance. 
+<li/> A time frame of 1969 to 2009 is used, since VORP data was not thoroughly available before 1969, and players drafted after 2009 have likely not hit their peak performance.
  </ul>
 </p>
 </blockquote>
@@ -70,7 +70,7 @@ Below you can toggle between various metrics to explore trends.
 
 <div id="Draft_paragraph" class="chart_paragraph" style="display:none" >
 <blockquote>
-<p> 
+<p>
 <ul>
 <li/> An early draft number indicates that a particular player was a top prospect.
 <li/> If multiple players were drafted in a particular year, the earliest pick is taken.
@@ -82,7 +82,7 @@ Below you can toggle between various metrics to explore trends.
 
 <div id="Yrs_paragraph" class="chart_paragraph" style="display:none" >
 <blockquote>
-<p> 
+<p>
 <ul>
 <li/> If multiple players were drafted in the same year, the average was taken
  </ul>
@@ -92,7 +92,7 @@ Below you can toggle between various metrics to explore trends.
 
 <div id="Num_drafted_paragraph" class="chart_paragraph" style="display:none" >
 <blockquote>
-<p> 
+<p>
 <ul>
 <li/> Undrafted players were omitted.
 </ul>
@@ -100,9 +100,9 @@ Below you can toggle between various metrics to explore trends.
 </blockquote>
 </div>
 
-<br> 
+<br>
 
-### Notable Players 
+### Notable Players
 
 
 <div id="wrapper" style="text-align: center">    
