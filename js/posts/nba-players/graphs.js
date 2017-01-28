@@ -65,12 +65,12 @@ var chart = c3.generate({
             type: 'timeseries',
             tick: {
                 format: '%Y'
-            }
+            },
         },
         y: {
             min: 0,
             // Range includes padding, set 0 if no padding needed
-             padding: {top:1, bottom:0}
+             padding: {top:1, bottom:0},
         }
     },
     color: {
@@ -115,6 +115,9 @@ $('#top-all-star').on('click', function () {
 });
 $('#top-recent').on('click', function () {
     document.getElementById("recent-table").style = "display:table";
+});
+$('#top-one-and-done').on('click', function () {
+    document.getElementById("one-and-done-table").style = "display:table";
 });
 
 $('#vorp').on('click', function () {

@@ -10,8 +10,8 @@ key_takeaways:
     - Some third thing
 
 featured_image:
-    url: nba-players/graph.png
-og_image: nba-players/graph.png
+    url: nba-players/thumbnail.png
+og_image: nba-players/thumbnail.png
 scripts:
     - //ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js
     - //cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js
@@ -110,6 +110,8 @@ Below you can toggle between various metrics to explore trends.
 		 <input type="button" id="top-VORP" class ="toggleButton 2 active" value="VORP" />
 		 <input type="button" id="top-all-star" class ="toggleButton 2" value="All-Star" />
 		 <input type="button" id="top-recent" class ="toggleButton 2" value="Recent Players" />
+		 <input type="button" id="top-one-and-done" class ="toggleButton 2" value="One-and-Done Players" />
+
  	</div>
  </div>
 
@@ -223,3 +225,52 @@ Below you can toggle between various metrics to explore trends.
         </tr>
     </tbody>
 </table>
+
+<table id="one-and-done-table" class="top-player-table" style="display:none">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Draft Year</th>
+            <th> Pick </th>
+        </tr>
+    </thead>
+    <tbody>
+         <tr>
+            <td>Trevor Ariza</td>
+            <td>2004</td>
+            <td>43</td>
+        </tr>
+        <tr>
+            <td>Kevin Love </td>
+            <td>2008</td>
+            <td>5</td>
+        </tr>
+        <tr>
+            <td>Jrue Holiday</td>
+            <td>2009</td>
+            <td>17</td>
+        </tr>
+        <tr>
+            <td>Shabazz Muhammad</td>
+            <td>2013</td>
+            <td>14</td>
+        </tr>
+        <tr>
+            <td>Zach LaVine</td>
+            <td>2014</td>
+            <td>13</td>
+        </tr>
+         <tr>
+            <td>Kevon Looney</td>
+            <td>2014</td>
+            <td>30</td>
+        </tr>
+    </tbody>
+</table>
+
+
+<br>
+
+### Data Collection
+
+Statistics of the players were taken from http://wwww.basketball-reference.com.
