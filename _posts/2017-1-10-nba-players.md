@@ -295,6 +295,8 @@ Of the 3, Ball is the most likely to someday sit on the pedestal of UCLA greats.
 
 > Ball's statistics are up-to-date as of January 29th 2017.  Kidd's statistics are an average of his 2-year college career.
 
+<br> 
+
 #### Vitals of Lonzo Ball vs Jason Kidd
 
 <table class="vitals-table">
@@ -320,13 +322,13 @@ Of the 3, Ball is the most likely to someday sit on the pedestal of UCLA greats.
 <br>
 
 
-Admittedly, similar college production and vitals are insufficient evidence to conclude that Ball will follow in Kidd's footsteps, but the comparison does warrant some attention. If Ball does follow a similar career path as Kidd, then he may end up as one of the most successful NBA players out of UCLA.
+Admittedly, similar college production and vitals are insufficient evidence to conclude that Ball will follow Kidd's footsteps, but the comparison does warrant some attention. If Ball does follow a similar career path as Kidd, then he may end up as one of the most successful NBA players out of UCLA.
 
 #### VORP of Best Year: Kidd vs UCLA Greats
 <div id='vorp-kidd-comparison-chart'></div>
 
 <br> 
-The chart above indicates that if Ball's career is identical to Kidd's, he could end up as the 4th best player out of UCLA, as measured by Value-Over-Replacement-Player in a player's best year in the NBA.
+The chart above indicates that if Ball's career is identical to Kidd's, he could end up as the 4th best player out of UCLA (measured by VORP in a player's best NBA year).
 <br>
 
 ### Data Collection and Discussion of VORP
