@@ -10,8 +10,8 @@ key_takeaways:
     - Lonzo Ball could end up as one of the top 5 NBA players from UCLA
 
 featured_image:
-    url: nba-players/thumbnail.png
-og_image: nba-players/thumbnail.png
+    url: nba-players/lonzo_thumbnail.png
+og_image: nba-players/lonzo_thumbnail.png
 scripts:
     - //ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js
     - //cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js
