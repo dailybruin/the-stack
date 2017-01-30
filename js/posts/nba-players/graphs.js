@@ -68,7 +68,7 @@ var chart = c3.generate({
             },
         },
         y: {
-            min: 0,
+            min: -1,
             // Range includes padding, set 0 if no padding needed
              padding: {top:1, bottom:0},
         }
@@ -130,6 +130,7 @@ $('#vorp').on('click', function () {
         url: '/datasets/nba-players/maxVORP.csv',
         unload: chart.url,
     });
+    chart.axis.min({y: -1});
 
     document.getElementById("VORP_paragraph").style = "display:block";
     document.getElementById("vorp-def").style = "display:block";
@@ -143,7 +144,7 @@ $('#pick').on('click', function () {
         unload: chart.url,
         bindto: '#line-chart'
     });
-
+    chart.axis.min({y: 0});
 
     document.getElementById("Draft_paragraph").style = "display:block";
     document.getElementById("pos-def").style = "display:block";
@@ -158,6 +159,7 @@ $('#yrsCollege').on('click', function () {
         unload: chart.url,
         bindto: '#line-chart'
     });
+    chart.axis.min({y: 0});
 
     document.getElementById("Yrs_paragraph").style = "display:block";
     document.getElementById("yrs-def").style = "display:block";
@@ -171,6 +173,7 @@ $('#numPlayers').on('click', function () {
         unload: chart.url,
         bindto: '#line-chart'
     });
+    chart.axis.min({y: 0});
 
     document.getElementById("Num_drafted_paragraph").style = "display:block";
     document.getElementById("num-drafted-def").style = "display:block";
