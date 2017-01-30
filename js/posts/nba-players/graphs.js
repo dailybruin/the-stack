@@ -246,7 +246,7 @@ var vorp_bar_chart = c3.generate({
             type: 'category',
             tick: {
                 rotate: 0,
-                multiline: false
+                multiline: true
             },
             height: 130
         },
