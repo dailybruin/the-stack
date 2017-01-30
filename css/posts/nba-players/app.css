@@ -44,8 +44,8 @@ thead {
 }
 
 .toggleButton.active, .active{
-    color:  white;
-      background-color:  #2b90d9;
+  color:  white;
+  background-color:  #2b90d9;
 }
 
 .toggleButton:hover {
