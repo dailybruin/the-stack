@@ -109,16 +109,16 @@ $('.toggleButton.2').click( function () {
 });
 
 $('#top-VORP').on('click', function () {
-    document.getElementById("VORP-table").style = "display:table";
+    document.getElementById("VORP-table").style.display = "table";
 });
 $('#top-all-star').on('click', function () {
-    document.getElementById("all-star-table").style = "display:table";
+    document.getElementById("all-star-table").style.display = "table";
 });
 $('#top-recent').on('click', function () {
-    document.getElementById("recent-table").style = "display:table";
+    document.getElementById("recent-table").style.display = "table";
 });
 $('#top-one-and-done').on('click', function () {
-    document.getElementById("one-and-done-table").style = "display:table";
+    document.getElementById("one-and-done-table").style.display = "table";
 });
 
 $('#vorp').on('click', function () {
