@@ -2,6 +2,9 @@
 	width: 100%;
 }
 
+.vitals-table {
+  width: 100%;
+}
 tr {
 	height: 50%;
 }

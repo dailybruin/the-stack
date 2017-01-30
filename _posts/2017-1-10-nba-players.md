@@ -1,13 +1,13 @@
 ---
 title: UCLA Basketball&#58; From Pauley to the Pros
-teaser: In light of UCLA basketball's recent resurgence, explore some of the former Bruins in the NBA
+teaser: In light of UCLA basketball's recent resurgence, explore some of the past and present Bruins in the NBA
 
 authors:
     - mahir_eusufzai
 key_takeaways:
     - UCLA basketball has consistently produced NBA players through the years
-    - Top players include Kareem Abdul Jabbar, Russel Westbrook, and Kevin Love.
-    - Some third thing
+    - Top players include Kareem Abdul-Jabbar, Russell Westbrook, and Kevin Love.
+    - Lonzo Ball could end up as one of the top 5 NBA players from UCLA
 
 featured_image:
     url: nba-players/thumbnail.png
@@ -56,7 +56,8 @@ Below you can toggle between various metrics to explore trends.
 
 <br>
 
-<div id="chart"></div>
+<div id='line-chart'></div>
+
 <div id="VORP_paragraph" class="chart_paragraph">
 <blockquote>
 <p>
@@ -271,6 +272,57 @@ Below you can toggle between various metrics to explore trends.
 
 <br>
 
-### Data Collection
+### Where does Lonzo Rank?
 
-Statistics of the players were taken from http://wwww.basketball-reference.com.
+This year's revitalized UCLA basketball showcases at least 2 players expected to be selected in the NBA Draft: **Lonzo Ball (exp. 2nd pick)**, **TJ Leaf (exp. 20th - 22nd pick)** , and possibly a third player in **Ike Anigbogu.**
+
+Of the 3, Ball is the most likely to someday sit on the pedestal of UCLA greats.  While forcasting the trajectory of any NBA prospect is a non-trivial task, examining the career of a similar player may proffer some guidance.
+
+
+#### College Stats of Lonzo Ball vs Jason Kidd
+<div id='bar-chart'></div>
+<br>
+
+> Ball's statistics are up-to-date as of January 29th 2017.  Kidd's statistics are an average of his 2-year college career.
+
+#### Vitals of Lonzo Ball vs Jason Kidd
+
+<table class="vitals-table">
+	<thead>
+		<tr> 
+			<td> </td>
+			<td> Height </td>
+			<td> Weight </td>
+		</tr>
+	</thead>
+	<tr> 
+		<td> Lonzo Ball </td>
+		<td> 6-6 </td>
+		<td> 190 lbs </td>
+	</tr>
+	<tr>
+		<td> Jason Kidd </td>
+		<td> 6-4 </td>
+		<td> 205 lbs </td>
+	</tr>
+</table>
+
+<br>
+
+
+Admittedly, similar college production and vitals are insufficient evidence to conclude that Ball will follow in Kidd's footsteps, but the comparison does warrant some attention. If Ball does follow a similar career path as Kidd, then he may end up as one of the most successful NBA players out of UCLA.
+
+#### VORP of Best Year: Kidd vs UCLA Greats
+<div id='vorp-kidd-comparison-chart'></div>
+
+<br> 
+The chart above indicates that if Ball's career is identical to Kidd's, he could end up as the 4th best player out of UCLA, as measured by Value-Over-Replacement-Player in a player's best year in the NBA.
+<br>
+
+### Data Collection and Discussion of VORP
+
+* Statistics of the players were taken from [Basketball Reference](http://wwww.basketball-reference.com).
+* Mock Draft projections were referenced from [SI](http://www.si.com/nba/2017/01/27/nba-mock-draft-prospects-rankings-lonzo-ball-markelle-fultz) and [DraftExpress](http://www.draftexpress.com/nba-mock-draft/2017/)
+* Value over Replacement Player (VORP) was chosen as a metric to evaluate players since it's influenced by a variety of contributions, including points, assists, rebounds, and turnovers, whereas a metric like Points per Game only measures one dimension of a player's performance.  
+* Additionally, when discussing VORP, it is usually measured as a cumulative statistic over a player's career.  However, 'Vorp of Player's Best Year' was selected in order to normalize the difference between retired players and active players.  **In other words, VORP of Best Year is a measure of a player's performance during their 'prime'.**
+* More information about VORP can be found [here:](http://www.basketball-reference.com/about/bpm.html)
