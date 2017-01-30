@@ -75,7 +75,8 @@ var chart = c3.generate({
     },
     color: {
         pattern: ['#2b90d9', '#FFCC00', '#2b90d9', '#FFCC00'],
-    }
+    },
+    bindto: '#line-chart'
 
 });
 
@@ -123,6 +124,8 @@ $('#top-one-and-done').on('click', function () {
 $('#vorp').on('click', function () {
 
     chart.load({
+        bindto: '#line-chart',
+
         //url: 'pick.csv',
         url: '/datasets/nba-players/maxVORP.csv',
         unload: chart.url,
@@ -138,6 +141,7 @@ $('#pick').on('click', function () {
         //url: 'pick.csv',
         url: '/datasets/nba-players/pick.csv',
         unload: chart.url,
+        bindto: '#line-chart'
     });
 
 
@@ -152,6 +156,7 @@ $('#yrsCollege').on('click', function () {
         //url: 'pick.csv',
         url: '/datasets/nba-players/yrs_mean.csv',
         unload: chart.url,
+        bindto: '#line-chart'
     });
 
     document.getElementById("Yrs_paragraph").style = "display:block";
@@ -164,8 +169,89 @@ $('#numPlayers').on('click', function () {
         //url: 'pick.csv',
         url: '/datasets/nba-players/numPlayers_2.csv',
         unload: chart.url,
+        bindto: '#line-chart'
     });
 
     document.getElementById("Num_drafted_paragraph").style = "display:block";
     document.getElementById("num-drafted-def").style = "display:block";
+});
+
+
+
+
+var bar_chart = c3.generate({
+    data: {
+        x: 'x',
+        columns: [
+            ['x', 'PPG', 'APG', 'RPG'],
+            ['Ball', 14.9, 8.0, 5.8],
+            ['Kidd', 14.9, 8.4, 5.9],
+        ],
+        type: 'bar'
+    },
+    bar: {
+        width: {
+            ratio: 0.5 // this makes bar width 50% of length between ticks
+        },
+        // or
+        //width: 100 // this makes bar width 100px
+    },
+    size: {
+        height: 400
+    },
+     axis: {
+        x: {
+            type: 'category',
+            tick: {
+                rotate: 0,
+                multiline: false
+            },
+            height: 130
+        },
+        rotated: true
+     },
+     bindto: '#bar-chart'
+});
+
+var vorp_bar_chart = c3.generate({
+    data: {
+        x: 'x',
+        columns: [
+            ['x', 'Baron Davis', 'Reggie Miller', 'Jason Kidd (Lonzo Ball?)', 'Kevin Love', 'Russell Westbrook', 'Kareem Abdul-Jabbar'],
+            ['VORP of Best Year', 5.2, 5.2, 6.7, 7.3, 8.3, 10.5],
+   
+        ],
+        type: 'bar',
+        color: function (color, d) {
+            // d will be 'id' when called for legends
+            return (d.index == 2 ? '#104E8B':'#87CEFA' );
+           },
+        legend: {
+            position: 'right'
+        },
+    },
+    bar: {
+        width: {
+            ratio: 0.5 // this makes bar width 50% of length between ticks
+        },
+        // or
+        //width: 100 // this makes bar width 100px
+    },
+   
+    size: {
+        height: 400
+    },
+     axis: {
+        x: {
+            type: 'category',
+            tick: {
+                rotate: 0,
+                multiline: false
+            },
+            height: 130
+        },
+        rotated: false
+     },
+    bindto: '#vorp-kidd-comparison-chart'
+
 });
