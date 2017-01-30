@@ -103,6 +103,16 @@ Below you can toggle between various metrics to explore trends.
 
 <br>
 
+#### Interesting Facts:
+
+* In both 1974 and 2008, UCLA sent two All-Star players to the NBA in the same year (**Bill Walton** and **Jamal Wilkes** in '74, **Russell Westbrook** and **Kevin Love** in '08).
+
+* In 2006, the "Years Spent at UCLA" starts to decline. This can be attributed to the **"one-and-done" phenomenon** that began from the 2006 rule in which players were required to be at least one year removed from high school before entering the NBA Draft.  This forced many talented players to spend a year in college before moving on to the NBA.
+
+* **6 players from UCLA's 1995-championship-team went to the NBA.**  However, none of those players flourished in the NBA. 
+
+<br>
+
 ### Notable Players
 
 
