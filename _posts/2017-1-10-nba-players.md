@@ -170,7 +170,7 @@ Below you can toggle between various metrics to explore trends.
         <tr>
             <td>Russell Westbrook</td>
             <td>2008</td>
-            <td>5</td>
+            <td>6</td>
         </tr>
         <tr>
             <td>Marques Johnson</td>
