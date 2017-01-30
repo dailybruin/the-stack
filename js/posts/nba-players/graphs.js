@@ -219,7 +219,7 @@ var vorp_bar_chart = c3.generate({
         columns: [
             ['x', 'Baron Davis', 'Reggie Miller', 'Jason Kidd (Lonzo Ball?)', 'Kevin Love', 'Russell Westbrook', 'Kareem Abdul-Jabbar'],
             ['VORP of Best Year', 5.2, 5.2, 6.7, 7.3, 8.3, 10.5],
-   
+
         ],
         type: 'bar',
         color: function (color, d) {
@@ -237,7 +237,7 @@ var vorp_bar_chart = c3.generate({
         // or
         //width: 100 // this makes bar width 100px
     },
-   
+
     size: {
         height: 400
     },
@@ -248,7 +248,7 @@ var vorp_bar_chart = c3.generate({
                 rotate: 0,
                 multiline: true
             },
-            height: 130
+            height: 60
         },
         rotated: false
      },
