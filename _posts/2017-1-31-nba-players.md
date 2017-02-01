@@ -289,7 +289,7 @@ This year's revitalized UCLA basketball showcases at least 2 players expected to
 Of the three, Ball is the most likely to someday sit on the pedestal of UCLA greats.  While forecasting the trajectory of any NBA prospect is not a trivial task, examining the career of a similar player may proffer some guidance.
 
 
-#### College stats of Lonzo Ball vs Jason Kidd
+#### College stats of Lonzo Ball vs. Jason Kidd
 <div id='bar-chart'></div>
 <br>
 
@@ -297,7 +297,7 @@ Of the three, Ball is the most likely to someday sit on the pedestal of UCLA gre
 
 <br> 
 
-#### Vitals of Lonzo Ball vs Jason Kidd
+#### Vitals of Lonzo Ball vs. Jason Kidd
 
 <table class="vitals-table">
 	<thead>
@@ -324,7 +324,7 @@ Of the three, Ball is the most likely to someday sit on the pedestal of UCLA gre
 
 Admittedly, similar college production and vitals are insufficient evidence to conclude that Ball will follow Kidd's footsteps, but the comparison does warrant some attention. If Ball does follow a similar career path as Kidd, then he may end up as one of the most successful NBA players out of UCLA.
 
-#### VORP of Best Year: Kidd vs UCLA Greats
+#### VORP of Best Year: Kidd vs. UCLA Greats
 <div id='vorp-kidd-comparison-chart'></div>
 
 <br> 
