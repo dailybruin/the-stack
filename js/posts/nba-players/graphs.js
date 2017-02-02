@@ -126,8 +126,8 @@ $('#vorp').on('click', function () {
     chart.load({
         bindto: '#line-chart',
 
-        //url: 'pick.csv',
-        url: '/datasets/nba-players/maxVORP.csv',
+        url: 'https://raw.githubusercontent.com/daily-bruin/the-stack/master/datasets/nba-players/maxVorp.csv',
+        //url: '/datasets/nba-players/maxVORP.csv',
         unload: chart.url,
     });
     chart.axis.min({y: -1});
@@ -139,8 +139,8 @@ $('#vorp').on('click', function () {
 $('#pick').on('click', function () {
 
     chart.load({
-        //url: 'pick.csv',
-        url: '/datasets/nba-players/pick.csv',
+        url: 'https://raw.githubusercontent.com/daily-bruin/the-stack/master/datasets/nba-players/pick.csv',
+        //url: '/datasets/nba-players/pick.csv',
         unload: chart.url,
         bindto: '#line-chart'
     });
@@ -154,8 +154,8 @@ $('#pick').on('click', function () {
 $('#yrsCollege').on('click', function () {
 
     chart.load({
-        //url: 'pick.csv',
-        url: '/datasets/nba-players/yrs_mean.csv',
+        url: 'https://raw.githubusercontent.com/daily-bruin/the-stack/master/datasets/nba-players/yrs_mean.csv',
+        //url: '/datasets/nba-players/yrs_mean.csv',
         unload: chart.url,
         bindto: '#line-chart'
     });
@@ -168,8 +168,8 @@ $('#yrsCollege').on('click', function () {
 $('#numPlayers').on('click', function () {
 
     chart.load({
-        //url: 'pick.csv',
-        url: '/datasets/nba-players/numPlayers_2.csv',
+        url: 'https://raw.githubusercontent.com/daily-bruin/the-stack/master/datasets/nba-players/maxVorp.csv',
+        //url: '/datasets/nba-players/numPlayers_2.csv',
         unload: chart.url,
         bindto: '#line-chart'
     });
