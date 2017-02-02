@@ -168,7 +168,7 @@ $('#yrsCollege').on('click', function () {
 $('#numPlayers').on('click', function () {
 
     chart.load({
-        url: 'https://raw.githubusercontent.com/daily-bruin/the-stack/master/datasets/nba-players/maxVorp.csv',
+        url: 'https://raw.githubusercontent.com/daily-bruin/the-stack/master/datasets/nba-players/numPlayers_2.csv',
         //url: '/datasets/nba-players/numPlayers_2.csv',
         unload: chart.url,
         bindto: '#line-chart'
