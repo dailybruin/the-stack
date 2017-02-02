@@ -10,8 +10,8 @@ key_takeaways:
     - Lonzo Ball could end up as one of the top 5 NBA players from UCLA
 
 featured_image:
-    url: nba-players/lonzo_thumbnail.png
-og_image: nba-players/lonzo_thumbnail.png
+    url: nba-players/lonzo_thumbnail_updated.png
+og_image: nba-players/lonzo_thumbnail_updated.png
 scripts:
     - //ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js
     - //cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js
@@ -37,13 +37,13 @@ Below you can toggle between various metrics to explore trends.
 <br><br>
 
 <blockquote>
-<p id="vorp-def" class="metric-def" style="display:inline-block"> <b>"NBA Performance"</b> is measured by VORP (value over replacement player) during the player's best year </p>
+<p id="vorp-def" class="metric-def" style="display:inline-block"> <b>NBA Performance</b> is measured by VORP (value over replacement player) during the player's best year </p>
 
-<p id="pos-def" class="metric-def" style="display:none"> <b>"Draft Position"</b> shows the earliest draft pick for each year. </p>
+<p id="pos-def" class="metric-def" style="display:none"> <b>Draft Position</b> shows the earliest draft pick for each year. </p>
 
-<p id="yrs-def" class="metric-def" style="display:none"> <b>"Years at UCLA"</b> shows the average number of years playing for UCLA before entering the NBA </p>
+<p id="yrs-def" class="metric-def" style="display:none"> <b>Years at UCLA</b> shows the average number of years playing for UCLA before entering the NBA </p>
 
-<p id="num-drafted-def" class="metric-def" style="display:none"> <b>"Number of Players Drafted"</b> indicates how many Bruins were drafted into the NBA in a given year. </p>
+<p id="num-drafted-def" class="metric-def" style="display:none"> <b>Number of Players Drafted</b> indicates how many Bruins were drafted into the NBA in a given year. </p>
 </blockquote>
 <div id="wrapper" style="text-align: center">    
     <div id="yourdiv" style="display: inline-block;">
@@ -284,7 +284,7 @@ Below you can toggle between various metrics to explore trends.
 
 ### Where does Lonzo rank?
 
-This year's revitalized UCLA basketball showcases at least 2 players expected to be selected in the NBA draft: **Lonzo Ball, expected second pick;** **T.J. Leaf, expected 20th to 22nd pick;** , and possibly a third player in **Ike Anigbogu.**
+This year's revitalized UCLA basketball showcases at least 2 players expected to be selected in the NBA draft: **Lonzo Ball, expected second pick;** **T.J. Leaf, expected 20th to 22nd pick;** and possibly a third player in **Ike Anigbogu.**
 
 Of the three, Ball is the most likely to someday sit on the pedestal of UCLA greats.  While forecasting the trajectory of any NBA prospect is not a trivial task, examining the career of a similar player may proffer some guidance.
 
@@ -293,11 +293,11 @@ Of the three, Ball is the most likely to someday sit on the pedestal of UCLA gre
 <div id='bar-chart'></div>
 <br>
 
-> Ball's statistics are up to date as of Jan. 29, 2017.  Kidd's statistics are an average of his 2-year college career.
+> Ball's statistics are up to date as of Jan. 29, 2017.  Kidd's statistics are an average of his 2-year college career at Cal.
 
 <br>
 
-#### Vitals of Lonzo Ball vs. Jason Kidd
+#### Vitals of Lonzo Ball (UCLA) vs. Jason Kidd (Cal)
 
 <table class="vitals-table">
 	<thead>
