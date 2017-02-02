@@ -284,16 +284,16 @@ Below you can toggle between various metrics to explore trends.
 
 ### Where does Lonzo rank?
 
-This year's revitalized UCLA basketball showcases at least 2 players expected to be selected in the NBA draft: **Lonzo Ball, expected second pick;** **T.J. Leaf, expected 20th to 22nd pick;** , and possibly a third player in **Ike Anigbogu.**
+This year's revitalized UCLA basketball showcases at least 2 players expected to be selected in the NBA draft: **Lonzo Ball, expected second pick;** **T.J. Leaf, expected 20th to 22nd pick;** and possibly a third player in **Ike Anigbogu.**
 
 Of the three, Ball is the most likely to someday sit on the pedestal of UCLA greats.  While forecasting the trajectory of any NBA prospect is not a trivial task, examining the career of a similar player may proffer some guidance.
 
 
-#### College stats of Lonzo Ball vs. Jason Kidd
+#### College stats of Lonzo Ball (UCLA) vs. Jason Kidd (Cal)
 <div id='bar-chart'></div>
 <br>
 
-> Ball's statistics are up to date as of Jan. 29, 2017.  Kidd's statistics are an average of his 2-year college career.
+> Ball's statistics are up to date as of Jan. 29, 2017.  Kidd's statistics are an average of his 2-year college career at Cal.
 
 <br>
 
