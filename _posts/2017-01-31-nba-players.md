@@ -297,7 +297,7 @@ Of the three, Ball is the most likely to someday sit on the pedestal of UCLA gre
 
 <br>
 
-#### Vitals of Lonzo Ball vs. Jason Kidd
+#### Vitals of Lonzo Ball (UCLA) vs. Jason Kidd (Cal)
 
 <table class="vitals-table">
 	<thead>
