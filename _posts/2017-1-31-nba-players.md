@@ -1,17 +1,17 @@
 ---
-title: UCLA Men's Basketball&#58; From Pauley to the Pros
-teaser: In light of UCLA Men's Basketball's recent resurgence, explore some of the past and present Bruins in the NBA
+title: UCLA men's basketball&#58; From Pauley to the Pros
+teaser: In light of UCLA men's basketball's recent resurgence, explore some of the past and present Bruins in the NBA
 
 authors:
     - mahir_eusufzai
 key_takeaways:
-    - UCLA Men's Basketball has consistently produced NBA players through the years
+    - UCLA men's basketball has consistently produced NBA players through the years
     - Top players include Kareem Abdul-Jabbar, Russell Westbrook, and Kevin Love.
     - Lonzo Ball could end up as one of the top 5 NBA players from UCLA
 
 featured_image:
-    url: nba-players/lonzo_thumbnail.png
-og_image: nba-players/lonzo_thumbnail.png
+    url: nba-players/lonzo_thumbnail_updated.png
+og_image: nba-players/lonzo_thumbnail_updated.png
 scripts:
     - //ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js
     - //cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js
