@@ -37,13 +37,13 @@ Below you can toggle between various metrics to explore trends.
 <br><br>
 
 <blockquote>
-<p id="vorp-def" class="metric-def" style="display:inline-block"> <b>"NBA Performance"</b> is measured by VORP (value over replacement player) during the player's best year </p>
+<p id="vorp-def" class="metric-def" style="display:inline-block"> <b>NBA Performance</b> is measured by VORP (value over replacement player) during the player's best year </p>
 
-<p id="pos-def" class="metric-def" style="display:none"> <b>"Draft Position"</b> shows the earliest draft pick for each year. </p>
+<p id="pos-def" class="metric-def" style="display:none"> <b>Draft Position</b> shows the earliest draft pick for each year. </p>
 
-<p id="yrs-def" class="metric-def" style="display:none"> <b>"Years at UCLA"</b> shows the average number of years playing for UCLA before entering the NBA </p>
+<p id="yrs-def" class="metric-def" style="display:none"> <b>Years at UCLA</b> shows the average number of years playing for UCLA before entering the NBA </p>
 
-<p id="num-drafted-def" class="metric-def" style="display:none"> <b>"Number of Players Drafted"</b> indicates how many Bruins were drafted into the NBA in a given year. </p>
+<p id="num-drafted-def" class="metric-def" style="display:none"> <b>Number of Players Drafted</b> indicates how many Bruins were drafted into the NBA in a given year. </p>
 </blockquote>
 <div id="wrapper" style="text-align: center">    
     <div id="yourdiv" style="display: inline-block;">
