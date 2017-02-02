@@ -55,8 +55,8 @@ var chart = c3.generate({
     data: {
     	x: 'YEAR',
     	xFormat: '%Y',
-        //url: 'out.csv',
-        url: '/datasets/nba-players/maxVORP.csv',
+        url: 'https://raw.githubusercontent.com/daily-bruin/the-stack/master/datasets/nba-players/maxVorp.csv',
+        //url: '/datasets/nba-players/maxVORP.csv',
 
         //type: 'timeseries'
     },
