@@ -132,8 +132,8 @@ $('#vorp').on('click', function () {
     });
     chart.axis.min({y: -1});
 
-    document.getElementById("VORP_paragraph").style = "display:block";
-    document.getElementById("vorp-def").style = "display:block";
+    document.getElementById("VORP_paragraph").style.display = "block";
+    document.getElementById("vorp-def").style.display = "block";
 });
 
 $('#pick').on('click', function () {
@@ -146,8 +146,8 @@ $('#pick').on('click', function () {
     });
     chart.axis.min({y: 0});
 
-    document.getElementById("Draft_paragraph").style = "display:block";
-    document.getElementById("pos-def").style = "display:block";
+    document.getElementById("Draft_paragraph").style.display = "block";
+    document.getElementById("pos-def").style.display = "block";
 });
 
 
@@ -161,8 +161,8 @@ $('#yrsCollege').on('click', function () {
     });
     chart.axis.min({y: 0});
 
-    document.getElementById("Yrs_paragraph").style = "display:block";
-    document.getElementById("yrs-def").style = "display:block";
+    document.getElementById("Yrs_paragraph").style.display = "block";
+    document.getElementById("yrs-def").style.display = "block";
 });
 
 $('#numPlayers').on('click', function () {
@@ -175,8 +175,8 @@ $('#numPlayers').on('click', function () {
     });
     chart.axis.min({y: 0});
 
-    document.getElementById("Num_drafted_paragraph").style = "display:block";
-    document.getElementById("num-drafted-def").style = "display:block";
+    document.getElementById("Num_drafted_paragraph").style.display = "block";
+    document.getElementById("num-drafted-def").style.display = "block";
 });
 
 
