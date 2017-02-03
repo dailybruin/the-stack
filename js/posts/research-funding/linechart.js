@@ -27,7 +27,7 @@ function initLineChart (data) {
     
     svg.append("g")
         .attr("transform", "translate(60," + height + ")")
-        .call(d3.axisBottom(x).ticks(3))
+        .call(d3.axisBottom(x).ticks(3).tickFormat(d3.format("d")))
         .select(".domain")
         .remove();
     
