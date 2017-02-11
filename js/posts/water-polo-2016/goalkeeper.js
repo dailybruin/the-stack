@@ -37,10 +37,8 @@ function initGoalkeeperChart(data) {
     updateGoalkeeperChart(data[2]);
     
     // Dropdown function - invokes update
-    $('#goalkeeperDropdown').change(function(option) {
-        var dataNumber = Number($('#goalkeeperDropdown').val());
-        svg.selectAll('g').remove();
-        updateGoalkeeperChart(data[dataNumber]);
+    $('#lineChartDropdown').change(function(option) {
+        console.log(option);
     });
     
     function updateGoalkeeperChart(player) {
