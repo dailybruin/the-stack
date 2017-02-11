@@ -34,8 +34,9 @@ function initBarChart (data) {
         .select(".domain")
         .append("text")
         .attr("transform", "rotate(-90)")
-        .attr("y", 6)
+        .attr("y", 0)
         .attr("dy", "0.71em")
+        .text('hello, world');
 
     g.selectAll("rect")
         .data(data)
@@ -48,17 +49,32 @@ function initBarChart (data) {
         .attr("fill", "red");
     
     function updateData(val) {
-        // change data depending on selection
-        switch (val) {
-            case "0":
-                y.domain(d3.extent(data, function(d) {return d.total;}));
-                break;
-            default:
-                y.domain(d3.extent(data, function(d) {return d.subcategories[0].departments[val - 1].total}));
-                break;
-        }
-        
-        // update components
-        svg.select('.y-axis').transition().duration(400).call(d3.axisLeft(y).ticks(5));
+        // change domain of y axis
+        y.domain(d3.extent(data, function (d) {
+            if (val == '0') 
+                return d.total;
+            return d.subcategories[0].departments[val - 1].total;
+        }));
+        // update y axis
+        svg.select('.y-axis')
+                .transition()
+                .duration(400)
+                .ease(d3.easePolyInOut)
+                .call(d3.axisLeft(y).ticks(5));
+        // modify rect height
+        svg.selectAll('rect')
+                .transition()
+                .duration(400)
+                .ease(d3.easePolyInOut)
+                .attr('y', function(d) {
+                    if (val == '0')
+                        return y(d.total);
+                    return y(d.subcategories[0].departments[val - 1].total);
+                })
+                .attr('height', function(d) {
+                    if (val == '0')
+                        return height - y(d.total);
+                    return height - y(d.subcategories[0].departments[val - 1].total)
+                });
     }
 }
