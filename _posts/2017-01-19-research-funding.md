@@ -7,8 +7,8 @@ stylesheets:
 scripts:
   - //d3js.org/d3.v4.min.js
   - //d3js.org/d3-transition.v1.min.js
-  - //code.jquery.com/jquery-1.11.2.js
   - /js/posts/research-funding/linechart.js
+  - /js/posts/research-funding/donutchart.js
   - /js/posts/research-funding/index.js
 ---
 <div id='line-chart-wrapper'>
