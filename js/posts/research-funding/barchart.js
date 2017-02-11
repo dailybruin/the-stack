@@ -16,37 +16,24 @@ function initBarChart (data) {
 
   var g = svg.append("g").attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-  // var x = d3.scaleLinear()
-  //   .rangeRound([0, width - 50]);
-
   var x = d3.scaleBand().rangeRound([0, width]).padding(0.2);
-
   var y = d3.scaleLinear()
-    .rangeRound([height - 10, 0]);
-
-  // var line = d3.line()
-  //   .x(function(d) {return x(d.year);})
-  //   .y(function(d) {return y(d.total);});
-
-  console.log(data)
+    .rangeRound([height, 0]);
 
   x.domain(["2013", "2014", "2015", "2016", "2017"]);
-  y.domain(d3.extent(data, function(d) {return d.total;}));
+  y.domain([0, d3.max(data, function(d) { return d.total })])
+
+  var yAxis = d3.axisLeft(y);
 
   g.append("g")
     .attr("transform", "translate(0," + height + ")")
     .call(d3.axisBottom(x).ticks(3).tickFormat(d3.format("d")))
-    .select(".domain");
 
   g.append("g")
     .attr("class", ".y.axis")
-    // .attr("transform", "translate(50,5)")
-    .call(d3.axisLeft(y).ticks(5))
-    .select(".domain")
+    .call(yAxis)
     .append("text")
     .attr("transform", "rotate(-90)")
-    .attr("y", 6)
-    .attr("dy", "0.71em")
 
   g.selectAll("rect")
     .data(data)
@@ -56,64 +43,24 @@ function initBarChart (data) {
       .attr("y", function(d) { return y(d.total) })
       .attr("width", x.bandwidth())
       .attr("height", function(d) { return height - y(d.total) })
-      .attr("fill", "red");
+      .attr("fill", "red")
 
-
-  // svg.append("path")
-  //   .attr("transform", "translate(60,5)")
-  //   .datum(data)
-  //   .attr("fill", "none")
-  //   .attr("stroke", "steelblue")
-  //   .attr("stroke-linejoin", "round")
-  //   .attr("stroke-linecap", "round")
-  //   .attr("stroke-width", 1.5)
-  //   .attr("d", line);
-
-  var g = svg.append("g") ;
 
   function updateData() {
+    console.log("updating!");
     // Get the data again
-    d3.json("/datasets/research-funding/dummy.json", function(err, data) {
-      // Scale the range of the data again
-      // x.domain(d3.extent(data, function(d) { return d.year; }));
-      y.domain([0, d3.max(data, function(d) {return d.subcategories[0].departments[0].total; })]);
+    y.domain([0, d3.max(data, function(d) {return d.subcategories[0].departments[0].total; })]);
 
-      // Select the section we want to apply our changes to
-      var svg = d3.select("#bar-chart-wrapper svg")
+    g.select("g.y.axis")
+      .transition()
+      .duration(500)
+      .ease(d3.easeSinInOut)
+      .call(yAxis)
 
-      // var xAxis = svg.append("g")
-      //   .attr("transform", "translate(60," + height + ")")
-      //   .call(d3.axisBottom(x).ticks(3).tickFormat(d3.format("d")))
-      //   .select(".domain")
-      //   .remove();
-
-      var yAxis = svg.append("g")
-        .attr("transform", "translate(50,5)")
-        .call(d3.axisLeft(y).ticks(5))
-        .select(".domain")
-        .append("text")
-        //      .attr("fill", "#000")
-        .attr("transform", "rotate(-90)")
-        .attr("y", 6)
-        .attr("dy", "0.71em")
-        //      .attr("text-anchor", "end")
-        .text("Price ($)");
-
-      // Make the changes
-      // svg.select(".line")
-      //   .transition() // change the line
-      //   .duration(750)
-      //   .attr("d", line(data));
-      // svg.select(".x.axis") // change the x axis
-      //   .transition()
-      //   .duration(750)
-      //   .call(d3.axisBottom(x).ticks(3).tickFormat(d3.format("d")));
-
-      svg.select(".y.axis") // change the y axis
-        .transition()
-        .duration(750)
-        .call(d3.axisLeft(y).ticks(5))
-
-    });
+    g.selectAll("rect")
+      // .transition()
+      // .duration(500)
+      .data(data)
+      .enter()
   }
 }
