@@ -40,13 +40,13 @@ function initBarChart (data) {
     var bar = g.selectAll("rect")
         .data(data);
 
-    bar.enter()
-        .append("rect")
-        .attr("x", function(d) { return x(d.year) })
-        .attr("y", function(d) { return y(d.total) })
-        .attr("width", x.bandwidth())
-        .attr("height", function(d) { return height - y(d.total) })
-        .attr("fill", "red");
+    // bar.enter()
+    //     .append("rect")
+    //     .attr("x", function(d) { return x(d.year) })
+    //     .attr("y", function(d) { return y(d.total) })
+    //     .attr("width", x.bandwidth())
+    //     .attr("height", function(d) { return height - y(d.total) })
+    //     .attr("fill", "red");
 
     function updateData(val) {
         // change data depending on selection
@@ -56,8 +56,8 @@ function initBarChart (data) {
 
                 bar.enter()
                 .append("rect")
-                //.attr("y", 6)
                 //.attr("dy", "0.71em")
+                .attr("transform", "translate(0," + height + ")")
                 .attr("x", function(d) { return x(d.year) })
                 //.attr("y", function(d) { return y(d.total) })
                 .attr("width", x.bandwidth())
@@ -72,12 +72,12 @@ function initBarChart (data) {
 
                 bar.enter()
                 .append("rect")
-                //.attr("y", 6)
                 //.attr("dy", "0.71em")
+                .attr("transform", "translate(0," + height + ")")
                 .attr("x", function(d) { return x(d.year) })
                 //.attr("y", function(d) { return y(d.total) })
                 .attr("width", x.bandwidth())
-                .attr("height", function(d) { return height + margin.top + margin.bottom - y(d.subcategories[0].departments[val-1].total) })
+                .attr("height", function(d) { return height - y(d.subcategories[0].departments[val-1].total) })
                 .attr("fill", "red");
 
                 y.domain(d3.extent(data, function(d) {return d.subcategories[0].departments[val - 1].total}));
@@ -87,5 +87,6 @@ function initBarChart (data) {
 
         // update components
         svg.select('.y-axis').transition().duration(400).call(d3.axisLeft(y).ticks(5));
+        bar.transition().duration(400).attr("height",height);
     }
 }
