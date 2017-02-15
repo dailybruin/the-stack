@@ -8,12 +8,21 @@ function initDropdown(data) {
     return acc;
   }, [])
 
+  var dropdown = document.getElementById('barChartDropdown');
+
+  subcategories.forEach(function(s) {
+    var option = document.createElement("option");
+    option.value = s;
+    option.text = s;
+    dropdown.appendChild(option);
+  })
+
   console.log(subcategories);
 }
 
 function initBarChart(data) {
   // Dropdown function - invokes update
-  var select = document.getElementById('lineChartDropdown');
+  var select = document.getElementById('barChartDropdown');
   select.addEventListener("change", function() {
       updateData(select.value);
   })
@@ -67,7 +76,7 @@ function initBarChart(data) {
       y.domain(d3.extent(data, function (d) {
           if (val == '0')
               return d.total;
-          return d.subcategories[0].departments[val - 1].total;
+          return d.subcategories.find(x => x.name ===  val).total || 0;
       }));
       // update y axis
       svg.select('.y-axis')
@@ -83,12 +92,14 @@ function initBarChart(data) {
         .attr('y', function(d) {
             if (val == '0')
               return y(d.total);
-            return y(d.subcategories[0].departments[val - 1].total);
+            let total = d.subcategories.find(x => x.name ===  val).total || 0;
+            return y(total);
         })
         .attr('height', function(d) {
             if (val == '0')
               return height - y(d.total);
-            return height - y(d.subcategories[0].departments[val - 1].total)
+            let total = d.subcategories.find(x => x.name ===  val).total || 0;
+            return height - y(total);
         });
     }
 }

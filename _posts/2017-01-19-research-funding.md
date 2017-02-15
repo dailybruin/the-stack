@@ -13,10 +13,9 @@ scripts:
   - /js/posts/research-funding/index.js
 ---
 <div id='bar-chart-wrapper'>
-    <select style="margin: 0 auto; display: flex; width: 300px; height: 3em;" class="ui selection dropdown" id='lineChartDropdown'>
-        <option value='0'>TOTAL</option>
-        <option value='1'>BIOENGINEERING</option>
-        <option value='2'>COMPUTER SCIENCE</option>
+    <select style="margin: 0 auto; display: flex; width: 300px; height: 3em;" class="ui selection dropdown" id='barChartDropdown'>
+        <option value='0'>ALL</option>
+
     </select>
 </div>
 <div id='donut-chart-wrapper'>
