@@ -60,9 +60,9 @@ function initBarChart (data) {
                 bar.enter()
                 .append("rect")
                 //.attr("dy", "0.71em")
-                .attr("transform", "translate(0," + height + ")")
+                //.attr("transform", "translate(0," + height + ")")
                 .attr("x", function(d) { return x(d.year) })
-                //.attr("y", function(d) { return y(d.total) })
+                .attr("y", function(d) { return y(d.total) })
                 .attr("width", x.bandwidth())
                 .attr("height", function(d) { return height - y(d.total) })
                 .attr("fill", "red");
@@ -77,11 +77,11 @@ function initBarChart (data) {
                 bar.enter()
                 .append("rect")
                 //.attr("dy", "0.71em")
-                .attr("transform", "translate(0," + height + ")")
+                //.attr("transform", "translate(0," + height + ")")
                 .attr("x", function(d) { return x(d.year) })
-                //.attr("y", function(d) { return y(d.total) })
+                .attr("y", function(d) { return y(d.total) })
                 .attr("width", x.bandwidth())
-                .attr("height", function(d) { return height - y(d.subcategories[0].departments[val-1].total) })
+                .attr("height", function(d) { return height - y(d.total) }) //need to change
                 .attr("fill", "red");
 
                 break;
@@ -89,6 +89,6 @@ function initBarChart (data) {
 
         // update components
         svg.select('.y-axis').transition().duration(400).call(d3.axisLeft(y).ticks(5));
-        bar.transition().duration(400).attr("height",height);
+        //bar.transition().duration(400).attr("height",height);
     }
 }
