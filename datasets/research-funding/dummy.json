@@ -14,7 +14,8 @@
             "name" : "Computer Science",
             "total" : 30
           }
-        ]
+        ],
+        "total" : 40
       }
     ]
 
@@ -34,7 +35,8 @@
             "name" : "Computer Science",
             "total" : 30
           }
-        ]
+        ],
+        "total" : 60
       }
     ]
 
@@ -54,7 +56,8 @@
             "name" : "Computer Science",
             "total" : 10
           }
-        ]
+        ],
+        "total" : 40
       }
     ]
 
@@ -74,7 +77,8 @@
             "name" : "Computer Science",
             "total" : 40
           }
-        ]
+        ],
+        "total" : 140
       }
     ]
 
@@ -94,7 +98,8 @@
             "name" : "Computer Science",
             "total" : 60
           }
-        ]
+        ],
+        "total" : 140
       }
     ]
 
