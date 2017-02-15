@@ -38,16 +38,17 @@ function initBarChart (data) {
         .attr("dy", "0.71em")
         .text('hello, world');
 
-    g.selectAll("rect")
-        .data(data)
-        .enter()
-        .append("rect")
-        .attr("x", function(d) { return x(d.year) })
-        .attr("y", function(d) { return y(d.total) })
-        .attr("width", x.bandwidth())
-        .attr("height", function(d) { return height - y(d.total) })
-        .attr("fill", "red");
-    
+    var bar = g.selectAll("rect")
+        .data(data);
+
+     bar.enter()
+         .append("rect")
+         .attr("x", function(d) { return x(d.year) })
+         .attr("y", function(d) { return y(d.total) })
+         .attr("width", x.bandwidth())
+         .attr("height", function(d) { return height - y(d.total) })
+         .attr("fill", "red");
+
     function updateData(val) {
         // change domain of y axis
         y.domain(d3.extent(data, function (d) {
