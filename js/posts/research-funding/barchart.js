@@ -37,7 +37,7 @@ function initBarChart (data) {
         .attr("y", 6)
         .attr("dy", "0.71em")
 
-    g.selectAll("rect")
+    var bar = g.selectAll("rect")
         .data(data)
         .enter()
         .append("rect")
