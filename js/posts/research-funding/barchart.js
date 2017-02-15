@@ -1,4 +1,4 @@
-function initDropdown(data) {
+function initBarChartDropdown(data) {
   var subcategories = data.reduce(function(acc, item) {
     item.subcategories.forEach(function(s) {
       if (acc.indexOf(s.name) == -1) {
@@ -16,8 +16,6 @@ function initDropdown(data) {
     option.text = s;
     dropdown.appendChild(option);
   })
-
-  console.log(subcategories);
 }
 
 function initBarChart(data) {
@@ -26,6 +24,8 @@ function initBarChart(data) {
   select.addEventListener("change", function() {
       updateData(select.value);
   })
+
+  var color = d3.scaleOrdinal(d3.schemeCategory20c);
 
   // Dimensions of canvas/graph
   var margin = {top: 30, right: 20, bottom: 30, left: 50},
@@ -69,7 +69,9 @@ function initBarChart(data) {
        .attr("y", function(d) { return y(d.total) })
        .attr("width", x.bandwidth())
        .attr("height", function(d) { return height - y(d.total) })
-       .attr("fill", "red");
+       .attr("fill", function(d,i) {
+         return color(i);
+       });
 
   function updateData(val) {
       // change domain of y axis
