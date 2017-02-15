@@ -77,5 +77,47 @@ function initBarChart (data) {
                         return height - y(d.total);
                     return height - y(d.subcategories[0].departments[val - 1].total)
                 });
+        
+//        // change data depending on selection
+//        switch (val) {
+//            case "0":
+//
+//                y.domain(d3.extent(data, function(d) {return d.total;}));
+//
+//                bar.exit().remove();
+//
+//                bar.enter()
+//                .append("rect")
+//                //.attr("dy", "0.71em")
+//                //.attr("transform", "translate(0," + height + ")")
+//                .attr("x", function(d) { return x(d.year) })
+//                .attr("y", function(d) { return y(d.total) })
+//                .attr("width", x.bandwidth())
+//                .attr("height", function(d) { return height - y(d.total) })
+//                .attr("fill", "red");
+//
+//                break;
+//            default:
+//
+//                y.domain(d3.extent(data, function(d) {return d.subcategories[0].departments[val - 1].total}));
+//                
+//                bar.exit().remove();
+//
+//                bar.enter()
+//                .append("rect")
+//                //.attr("dy", "0.71em")
+//                //.attr("transform", "translate(0," + height + ")")
+//                .attr("x", function(d) { return x(d.year) })
+//                .attr("y", function(d) { return y(d.total) })
+//                .attr("width", x.bandwidth())
+//                .attr("height", function(d) { return height - y(d.total) }) //need to change
+//                .attr("fill", "red");
+//
+//                break;
+//        }
+//
+//        // update components
+//        svg.select('.y-axis').transition().duration(400).call(d3.axisLeft(y).ticks(5));
+//        //bar.transition().duration(400).attr("height",height);
     }
 }
