@@ -56,8 +56,8 @@ function initBarChart (data) {
 
                 bar.enter()
                 .append("rect")
-                .attr("y", 6)
-                .attr("dy", "0.71em")
+                //.attr("y", 6)
+                //.attr("dy", "0.71em")
                 .attr("x", function(d) { return x(d.year) })
                 //.attr("y", function(d) { return y(d.total) })
                 .attr("width", x.bandwidth())
@@ -72,8 +72,8 @@ function initBarChart (data) {
 
                 bar.enter()
                 .append("rect")
-                .attr("y", 6)
-                .attr("dy", "0.71em")
+                //.attr("y", 6)
+                //.attr("dy", "0.71em")
                 .attr("x", function(d) { return x(d.year) })
                 //.attr("y", function(d) { return y(d.total) })
                 .attr("width", x.bandwidth())
