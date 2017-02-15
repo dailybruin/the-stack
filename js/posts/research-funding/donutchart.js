@@ -1,3 +1,14 @@
+function initDonutChartDropdown(data) {
+  let dropdown = document.getElementById('donutChartDropdown');
+
+  data.forEach(function(s) {
+    var option = document.createElement("option");
+    option.value = s.year;
+    option.text = s.year;
+    dropdown.appendChild(option);
+  })
+}
+
 function initDonutChart(data) {
 	var width = 360;
 	var height = 360;

@@ -18,5 +18,9 @@ scripts:
 
     </select>
 </div>
+
 <div id='donut-chart-wrapper'>
+  <select style="margin: 0 auto; display: flex; width: 300px; height: 3em;" class="ui selection dropdown" id='donutChartDropdown'>
+      <option value='0'>ALL</option>
+  </select>
 </div>
