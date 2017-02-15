@@ -52,6 +52,9 @@ function initBarChart (data) {
         // change data depending on selection
         switch (val) {
             case "0":
+
+                y.domain(d3.extent(data, function(d) {return d.total;}));
+
                 bar.exit().remove();
 
                 bar.enter()
@@ -64,10 +67,11 @@ function initBarChart (data) {
                 .attr("height", function(d) { return height - y(d.total) })
                 .attr("fill", "red");
 
-                y.domain(d3.extent(data, function(d) {return d.total;}));
-
                 break;
             default:
+
+                y.domain(d3.extent(data, function(d) {return d.subcategories[0].departments[val - 1].total}));
+                
                 bar.exit().remove();
 
                 bar.enter()
@@ -80,8 +84,6 @@ function initBarChart (data) {
                 .attr("height", function(d) { return height - y(d.subcategories[0].departments[val-1].total) })
                 .attr("fill", "red");
 
-                y.domain(d3.extent(data, function(d) {return d.subcategories[0].departments[val - 1].total}));
-                
                 break;
         }
 
