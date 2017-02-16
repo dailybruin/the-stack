@@ -42,7 +42,9 @@ function initBarChart(data) {
   var y = d3.scaleLinear().rangeRound([height - 10, 0]);
 
   // Set domain for x and y variables
-  x.domain(["2013", "2014", "2015", "2016", "2017"]);
+  x.domain(data.map(function(d) {return d.year}));
+  //console.log(data.map(function(d) {return d.year}));
+
   y.domain(d3.extent(data, function(d) {return d.total;}));
 
   g.append("g")
