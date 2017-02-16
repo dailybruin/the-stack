@@ -45,8 +45,8 @@ function initDonutChart(data) {
 
   data.push(all)
   
-	var width = 360;
-	var height = 360;
+	var width = 400;
+	var height = 400;
 	var radius = Math.min(width, height) / 2;
 
 	var color = d3.scaleOrdinal(d3.schemeCategory20c);
@@ -65,7 +65,7 @@ function initDonutChart(data) {
   		',' + (height / 2) + ')');
 
 	var arc = d3.arc()
-  	.innerRadius(100)
+  	.innerRadius(130)
   	.outerRadius(radius);
 
 	var pie = d3.pie()
@@ -97,4 +97,51 @@ function initDonutChart(data) {
       return arc(i(t));
     };
   }
+
+  legendRectSize = 18;
+  legendSpacing = 4;
+  var legend = svg.selectAll('.legend')                     
+          .data(data[0].sponsors)                                   
+          .enter()                                                
+          .append('g')                                            
+          .attr('class', 'legend')                                
+          .attr('transform', function(d, i) {                     
+            var height = legendRectSize + legendSpacing;          
+            var offset =  height * color.domain().length / 2;     
+            var horz = -3 * legendRectSize;                       
+            var vert = i * height - offset;                       
+            return 'translate(' + horz + ',' + vert + ')';        
+          });                                                     
+
+        legend.append('rect')                                     
+          .attr('width', legendRectSize)                          
+          .attr('height', legendRectSize)                         
+          .style('fill', function(d,i) { return color(i);});                                
+          //.style('stroke', color);                                
+
+        legend.append('text')                                     
+          .attr('x', legendRectSize + legendSpacing)              
+          .attr('y', legendRectSize - legendSpacing)              
+          .text(function(d) {  
+          		//hacky switch statement
+          		if (d.name == "Federal Government") {
+          			return "Federal Govt.";
+          		}
+          		else if (d.name == "Business & For-Profit") {
+          			return "Business & Profit";
+          		}
+          		else if (d.name == "State & Other Government") {
+          			return "State & Other Govt.";
+          		}
+          		else if (d.name == "Higher Education") {
+          			return "Higher Education";
+          		}
+          		else if (d.name == "Charitable & Non-Profit Organizations") {
+          			return "Non-Profit";
+          		}
+          		else {
+          			return d.name; 
+          		}
+          });  
+ 
 }
