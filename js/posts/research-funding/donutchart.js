@@ -10,6 +10,41 @@ function initDonutChartDropdown(data) {
 }
 
 function initDonutChart(data) {
+  var all = data.reduce(function(acc, item) {
+    acc["total"] += item.total;
+    acc["sponsors"].forEach(function(s,i) {
+      s.total += item.sponsors[i].total
+    })
+    return acc;
+  }, {
+    "year" : 0,
+    "total": 0,
+    "sponsors" : [
+      {
+        "name" : "Federal Government",
+        "total": 0
+      },
+      {
+        "name" : "Business & For-Profit",
+        "total" : 0
+      },
+      {
+        "name" : "State & Other Government",
+        "total" : 0
+      },
+      {
+        "name" : "Higher Education",
+        "total" : 0
+      },
+      {
+        "name" : "Charitable & Non-Profit Organizations",
+        "total" : 0
+      }
+    ]
+  });
+
+  data.push(all)
+  
 	var width = 360;
 	var height = 360;
 	var radius = Math.min(width, height) / 2;
