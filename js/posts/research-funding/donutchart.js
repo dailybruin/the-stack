@@ -44,9 +44,10 @@ function initDonutChart(data) {
   });
 
   data.push(all)
-  
+
 	var width = 400;
 	var height = 400;
+
 	var radius = Math.min(width, height) / 2;
 
 	var color = d3.scaleOrdinal(d3.schemeCategory20c);
@@ -82,7 +83,7 @@ function initDonutChart(data) {
   	});
 
   function change(year) {
-    pie.value(function(d) { return d.total; });
+    // pie.value(function(d) { return d.total; });
     var newData = data.find(x => x.year == year).sponsors;
     path = path
       .data(pie(newData));
@@ -100,29 +101,29 @@ function initDonutChart(data) {
 
   legendRectSize = 18;
   legendSpacing = 4;
-  var legend = svg.selectAll('.legend')                     
-          .data(data[0].sponsors)                                   
-          .enter()                                                
-          .append('g')                                            
-          .attr('class', 'legend')                                
-          .attr('transform', function(d, i) {                     
-            var height = legendRectSize + legendSpacing;          
-            var offset =  height * color.domain().length / 2;     
-            var horz = -3 * legendRectSize;                       
-            var vert = i * height - offset;                       
-            return 'translate(' + horz + ',' + vert + ')';        
-          });                                                     
+  var legend = svg.selectAll('.legend')
+          .data(data[0].sponsors)
+          .enter()
+          .append('g')
+          .attr('class', 'legend')
+          .attr('transform', function(d, i) {
+            var height = legendRectSize + legendSpacing;
+            var offset =  height * color.domain().length / 2;
+            var horz = -3 * legendRectSize;
+            var vert = i * height - offset;
+            return 'translate(' + horz + ',' + vert + ')';
+          });
 
-        legend.append('rect')                                     
-          .attr('width', legendRectSize)                          
-          .attr('height', legendRectSize)                         
-          .style('fill', function(d,i) { return color(i);});                                
-          //.style('stroke', color);                                
+        legend.append('rect')
+          .attr('width', legendRectSize)
+          .attr('height', legendRectSize)
+          .style('fill', function(d,i) { return color(i);});
+          //.style('stroke', color);
 
-        legend.append('text')                                     
-          .attr('x', legendRectSize + legendSpacing)              
-          .attr('y', legendRectSize - legendSpacing)              
-          .text(function(d) {  
+        legend.append('text')
+          .attr('x', legendRectSize + legendSpacing)
+          .attr('y', legendRectSize - legendSpacing)
+          .text(function(d) {
           		//hacky switch statement
           		if (d.name == "Federal Government") {
           			return "Federal Govt.";
@@ -140,8 +141,8 @@ function initDonutChart(data) {
           			return "Non-Profit";
           		}
           		else {
-          			return d.name; 
+          			return d.name;
           		}
-          });  
- 
+          });
+
 }
