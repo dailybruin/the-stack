@@ -43,7 +43,7 @@ function initDonutChart(data) {
     ]
   });
 
-  data.push(all);
+  data.unshift(all);
 
     var width = 400;
     var height = 400;
@@ -104,15 +104,15 @@ function initDonutChart(data) {
         console.log(d);
         var select = document.getElementById('donutChartDropdown');
         var h = '';
-//        if (select.value == '0') {
-//            h += '<p><b>ALL</b></p><hr />';
-//            h += '<p><b>' + d.data.name + '</b></p>';
-//        }
-//        else {
-//            h+= '<p><b>' + select.value + '</b></p><hr />';
-//            var sponsor = d.data;
-//            h += '<p><b>' + sponsor.name + ':</b> ' + sponsor.total + '</p>';
-//        }
+        if (select.value == '0') {
+            h += '<p><b>ALL</b></p><hr />';
+            h += '<p><b>' + d.data.name + ':</b> ' + d.data.total + '</p>';
+        }
+        else {
+            h+= '<p><b>' + select.value + '</b></p><hr />';
+            var sponsor = d.data;
+            h += '<p><b>' + sponsor.name + ':</b> ' + sponsor.total + '</p>';
+        }
         return h;
     }    
     
