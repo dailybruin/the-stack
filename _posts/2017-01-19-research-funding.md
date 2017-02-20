@@ -1,5 +1,6 @@
 ---
 title: Research Funding
+teaser: The Daily Bruin analyzed research funding data to determine the key sponsors and departments receiving grants.
 authors:
   - yiling_liu
   - jeffrey_chan
