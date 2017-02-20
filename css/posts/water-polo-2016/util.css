@@ -14,6 +14,12 @@
     margin: 0;
 }
 
+.tooltip hr {
+    height: 2px;
+    color: black;
+    margin: 5px 0;
+}
+
 .goal-border {
     stroke: #C2C6CC;
     stroke-width: 10;
