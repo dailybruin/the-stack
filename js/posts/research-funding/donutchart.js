@@ -43,7 +43,7 @@ function initDonutChart(data) {
     ]
   });
 
-  data.unshift(all);
+  data.push(all);
 
     var width = 400;
     var height = 400;
@@ -79,7 +79,7 @@ function initDonutChart(data) {
   	.sort(null);
 
 	var path = svg.selectAll('path')
-  	.data(pie(data[0].sponsors))
+  	.data(pie(data.find(x => x.year == select.value).sponsors))
   	.enter()
   	.append('path')
   	.attr('d', arc)
