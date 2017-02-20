@@ -102,12 +102,14 @@ function initBarChart(data) {
         var select = document.getElementById('barChartDropdown');
         var h = '';
         if (select.value == '0') {
+            h += '<p><b>ALL</b></p><hr />';
             h += '<p><b>' + d.year + ' Total:</b> ' + d.total + '</p>';
             var subcategories = d.subcategories;
             for (var k = 0; k < subcategories.length; k++)
                 h+= '<p><b>' + subcategories[k].name + ':</b> ' + subcategories[k].total + '</p>';
         }
         else {
+            h+= '<p><b>' + select.value + '</b></p><hr />';
             var departments = d.subcategories.find(x => x.name === select.value).departments;
             for (var k = 0; k < departments.length; k++)
                 h += '<p><b>' + departments[k].name + ':</b> ' + departments[k].total + '</p>';

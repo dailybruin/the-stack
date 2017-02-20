@@ -43,19 +43,24 @@ function initDonutChart(data) {
     ]
   });
 
-  data.push(all)
+  data.push(all);
 
-	var width = 400;
-	var height = 400;
+    var width = 400;
+    var height = 400;
 
-	var radius = Math.min(width, height) / 2;
+    var radius = Math.min(width, height) / 2;
 
-	var color = d3.scaleOrdinal(d3.schemeCategory20c);
+    var color = d3.scaleOrdinal(d3.schemeCategory20c);
 
   var select = document.getElementById('donutChartDropdown');
   select.addEventListener("change", function() {
     change(select.value);
   })
+  
+    // initialize tooltip
+    var tooltip = d3.select("#donut-chart-wrapper").append("div")
+                      .attr("class", "tooltip")
+                      .style('display', 'none');
 
 	var svg = d3.select('#donut-chart-wrapper')
   	.append('svg')
@@ -80,8 +85,37 @@ function initDonutChart(data) {
   	.attr('d', arc)
   	.attr('fill', function(d, i) {
   		return color(i);
-  	});
+  	})
+    .on("mouseover", function(d) { 
+        tooltip.style('display', 'inline');
+        d3.select(this).style('opacity', 0.7);
+    })
+    .on("mousemove", function(d) { 
+        tooltip.html(fillTooltip(d))
+        .style("left", (d3.event.pageX + 20) + "px")
+        .style("top", (d3.event.pageY - 12) + "px");
+    })
+    .on("mouseout", function(d) {
+        tooltip.style("display", "none");
+        d3.select(this).style('opacity', 1);
+    });
 
+    function fillTooltip(d) {
+        console.log(d);
+        var select = document.getElementById('donutChartDropdown');
+        var h = '';
+//        if (select.value == '0') {
+//            h += '<p><b>ALL</b></p><hr />';
+//            h += '<p><b>' + d.data.name + '</b></p>';
+//        }
+//        else {
+//            h+= '<p><b>' + select.value + '</b></p><hr />';
+//            var sponsor = d.data;
+//            h += '<p><b>' + sponsor.name + ':</b> ' + sponsor.total + '</p>';
+//        }
+        return h;
+    }    
+    
   function change(year) {
     // pie.value(function(d) { return d.total; });
     var newData = data.find(x => x.year == year).sponsors;
