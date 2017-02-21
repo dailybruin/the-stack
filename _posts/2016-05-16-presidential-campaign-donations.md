@@ -5,7 +5,7 @@ authors:
   - ryan_leou
   - chang_liu
 key_takeaways:
-  - UC donors gave overwhelmingly more to Democratic candidates than Republican. 
+  - UC donors gave overwhelmingly more to Democratic candidates than Republican.
   - Professors and health workers gave the most money in total contributions.
   - UCLA, UC Berkeley, and UC San Francisco gave the most money total out of all UC campuses.
 featured_image:
@@ -23,6 +23,7 @@ scripts:
   - //code.jquery.com/jquery-1.11.2.js
   - //cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/semantic.min.js
   - //cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/components/dropdown.min.js
+  - /js/lib/util.js
   - /js/posts/presidential-campaign-donations/bar-charts.js
   - /js/posts/presidential-campaign-donations/donut-chart.js
   - //cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/components/form.min.js
@@ -40,7 +41,7 @@ Because the Daily Bruin does not have the resources to conduct comprehensive pol
 
 <div id="donut-chart"></div>
 
-> The second graph breaks down contributions by job type. Hover over the x-axis to see how we organized job titles for each category. Toggle between different candidates in the dropdown menu. Use the checkbox selection to switch between amount donated and number of contributions. Each job type is further broken down by campus, represented by the different colors on the side. 
+> The second graph breaks down contributions by job type. Hover over the x-axis to see how we organized job titles for each category. Toggle between different candidates in the dropdown menu. Use the checkbox selection to switch between amount donated and number of contributions. Each job type is further broken down by campus, represented by the different colors on the side.
 
 <div id="nav-container" style="width: 720px; background-color: white; height: 72px; padding: 5px 10px;">
   <div id="nav" style="height: 62px; width: 720px;">
@@ -139,5 +140,3 @@ Because the Daily Bruin does not have the resources to conduct comprehensive pol
 -Data is current through April.
 
 *Story by Ryan Leou. Graphics by Nick Liu, Alex Guziak, Amber Won, Jennifer Xu, Li-Wei Chi, Jeffrey Chan, Vivian Zhang & Chang Liu.*
-
-

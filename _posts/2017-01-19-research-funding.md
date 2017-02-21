@@ -16,6 +16,7 @@ stylesheets:
 scripts:
   - //d3js.org/d3.v4.min.js
   - //d3js.org/d3-transition.v1.min.js
+  - /js/lib/util.js
   - /js/posts/research-funding/barchart.js
   - /js/posts/research-funding/donutchart.js
   - /js/posts/research-funding/index.js

@@ -1,13 +1,17 @@
 .tooltip {
-    position: absolute;
-    color: black;
-    background-color: white;
-    opacity: 0.8;
-    
-    padding: 10px;
-    
-    border: 1px solid rgba(0, 0, 0, 0.2);          
-    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+  position: absolute;
+  color: black;
+  background-color: white;
+  opacity: 0.8;
+
+  padding: 10px;
+
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+.tooltip .perc {
+  float: right;
 }
 
 .tooltip p {
