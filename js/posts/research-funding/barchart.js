@@ -24,7 +24,7 @@ function initBarChart(data) {
     select.addEventListener("change", function() {
         updateData(select.value);
     });
-    
+
     // initialize tooltip
     var tooltip = d3.select("#bar-chart-wrapper").append("div")
                       .attr("class", "tooltip")
@@ -55,9 +55,9 @@ function initBarChart(data) {
         .attr("transform", "translate(0," + height + ")")
         .call(d3.axisBottom(x).ticks(3).tickFormat(d3.format("d")))
         .select(".domain");
-    g.append("text")             
+    g.append("text")
       .attr("transform",
-            "translate(" + (width/2) + " ," + 
+            "translate(" + (width/2) + " ," +
                            (height + margin.top + 10) + ")")
       .style("text-anchor", "middle")
       .text("Year");
@@ -73,7 +73,7 @@ function initBarChart(data) {
         .attr("dy", "1em")
         .style("text-anchor", "top")
         .text("Funding ($)");
-    
+
     var bar = g.selectAll("rect")
                 .data(data);
 
@@ -84,11 +84,11 @@ function initBarChart(data) {
         .attr("width", x.bandwidth())
         .attr("height", function(d) { return height - y(d.total) })
         .attr("fill", function(d,i) { return color(i); })
-        .on("mouseover", function(d) { 
+        .on("mouseover", function(d) {
                             tooltip.style('display', 'inline');
                             d3.select(this).style('opacity', 0.7);
                         })
-        .on("mousemove", function(d) { 
+        .on("mousemove", function(d) {
                             tooltip.html(fillTooltip(d))
                                     .style("left", (d3.event.pageX + 20) + "px")
                                     .style("top", (d3.event.pageY - 12) + "px");
@@ -97,26 +97,28 @@ function initBarChart(data) {
                             tooltip.style("display", "none");
                             d3.select(this).style('opacity', 1);
                         });
-    
+
     function fillTooltip(d) {
         var select = document.getElementById('barChartDropdown');
         var h = '';
         if (select.value == '0') {
             h += '<p><b>ALL</b></p><hr />';
-            h += '<p><b>' + d.year + ' Total:</b> ' + d.total + '</p>';
+            h += '<p><b>' + d.year + ' Total:</b> $' + numberWithCommas(d.total) + '</p>';
             var subcategories = d.subcategories;
             for (var k = 0; k < subcategories.length; k++)
-                h+= '<p><b>' + subcategories[k].name + ':</b> ' + subcategories[k].total + '</p>';
+                h+= '<p><b>' + subcategories[k].name + ':</b> $' + numberWithCommas(subcategories[k].total) + '</p>';
         }
         else {
-            h+= '<p><b>' + select.value + '</b></p><hr />';
-            var departments = d.subcategories.find(x => x.name === select.value).departments;
+            h += '<p><b>' + select.value + '</b></p><hr />';
+            var cat = d.subcategories.find(x => x.name === select.value);
+            h += '<p><b>' + d.year + ' Total:</b> $' + numberWithCommas(cat.total) + '</p>';
+            var departments = cat.departments
             for (var k = 0; k < departments.length; k++)
-                h += '<p><b>' + departments[k].name + ':</b> ' + departments[k].total + '</p>';
+                h += '<p><b>' + departments[k].name + ':</b> $' + numberWithCommas(departments[k].total) + '</p>';
         }
         return h;
     }
-    
+
     function updateData(val) {
         // change domain of y axis
         y.domain(d3.extent(data, function (d) {
@@ -124,14 +126,14 @@ function initBarChart(data) {
                 return d.total;
             return d.subcategories.find(x => x.name ===  val).total || 0;
         }));
-        
+
         // update y axis
         svg.select('.y-axis')
             .transition()
             .duration(400)
             .ease(d3.easePolyInOut)
             .call(d3.axisLeft(y).ticks(5));
-        
+
         // modify rect height
         svg.selectAll('rect')
             .transition()
