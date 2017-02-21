@@ -9,6 +9,8 @@ function initDonutChartDropdown(data) {
   });
 }
 
+let currData = undefined;
+
 function initDonutChart(data) {
   var all = data.reduce(function(acc, item) {
     acc["total"] += item.total;
@@ -45,12 +47,12 @@ function initDonutChart(data) {
 
   data.push(all);
 
-    var width = 400;
-    var height = 400;
+  var width = 400;
+  var height = 400;
 
-    var radius = Math.min(width, height) / 2;
+  var radius = Math.min(width, height) / 2;
 
-    var color = d3.scaleOrdinal(d3.schemeCategory20c);
+  var color = d3.scaleOrdinal(d3.schemeCategory20c);
 
   var select = document.getElementById('donutChartDropdown');
   select.addEventListener("change", function() {
@@ -78,8 +80,10 @@ function initDonutChart(data) {
   	.value(function(d) { return d.total; })
   	.sort(null);
 
+  currData = data.find(x => x.year == select.value)
+
 	var path = svg.selectAll('path')
-  	.data(pie(data.find(x => x.year == select.value).sponsors))
+  	.data(currData.sponsors)
   	.enter()
   	.append('path')
   	.attr('d', arc)
@@ -101,26 +105,29 @@ function initDonutChart(data) {
     });
 
     function fillTooltip(d) {
-        console.log(d);
-        var select = document.getElementById('donutChartDropdown');
-        var h = '';
-        if (select.value == '0') {
-            h += '<p><b>ALL</b></p><hr />';
-            h += '<p><b>' + d.data.name + ':</b> ' + d.data.total + '</p>';
-        }
-        else {
-            h+= '<p><b>' + select.value + '</b></p><hr />';
-            var sponsor = d.data;
-            h += '<p><b>' + sponsor.name + ':</b> ' + sponsor.total + '</p>';
-        }
-        return h;
+      var select = document.getElementById('donutChartDropdown');
+
+      var h = '';
+
+      if (select.value == '0') {
+          let perc = (d.data.total/currData.total)*100;
+          h += '<p><b>ALL</b><span class="perc">' + perc.toFixed(1) + '%</span></p><hr />';
+          h += '<p><b>' + d.data.name + ':</b> $' + numberWithCommas(d.data.total) + '</p></div>';
+      }
+      else {
+        var sponsor = d.data;
+        let perc = (sponsor.total/currData.total)*100;
+        h += '<p><b>' + select.value + '</b><span class="perc">' + perc.toFixed(1) + '%</span></p><hr />';
+        h += '<p><b>' + sponsor.name + ':</b> $' + numberWithCommas(sponsor.total) + '</p>';
+      }
+
+      return h;
     }
 
   function change(year) {
-    // pie.value(function(d) { return d.total; });
-    var newData = data.find(x => x.year == year).sponsors;
+    currData = data.find(x => x.year == year);
     path = path
-      .data(pie(newData));
+      .data(pie(currData.sponsors));
 
     path.transition().duration(400).ease(d3.easePolyInOut).attrTween("d", arcTween);
   }

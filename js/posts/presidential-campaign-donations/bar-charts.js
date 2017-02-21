@@ -1,17 +1,9 @@
-function capitalizeFirstLetter(string) {
-  return string.charAt(0).toUpperCase() + string.slice(1);
-}
-
-function numberWithCommas(x) {
-  return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-}
-
 var offset = $('#nav-container').offset().top  + 505
 $(window).scroll(function() {
   if ($(window).scrollTop() > offset) {
     $('#nav-container').addClass('affixed');
   }
-  else { 
+  else {
     $('#nav-container').removeClass('affixed');
 
   }
@@ -130,7 +122,7 @@ function updateHorizontalBar() {
   d3.selectAll('.dataRect')
     .each(function() { d3.select(this).remove(); });
 
-  // setTimeout(function() { 
+  // setTimeout(function() {
 
     var dataRects = barSVG.selectAll(".dataRect")
       .data(curr_cand.colleges)
@@ -189,7 +181,7 @@ function updateHorizontalBarType() {
 
   if (curr_filter == "contributions") {
     var colleges = curr_cand.colleges.map(function(d) { return d.name; })
-    var cont = curr_cand.colleges_contributions; 
+    var cont = curr_cand.colleges_contributions;
 
     for (var i = 0; i < colleges.length; i++) {
       d3.selectAll('.dataRect.' + colleges[i]).select('rect')
@@ -227,19 +219,19 @@ d3.json("/datasets/presidential-campaign-donations/result.json", function(error,
   initHorizontalBar();
   updateHorizontalBar();
 
-  $( ".ui.radio.checkbox" ).checkbox( { 
+  $( ".ui.radio.checkbox" ).checkbox( {
     onChange: function(value) {
       var d = $('#d2').prop('checked');
       if (d) {
         curr_filter = "total";
       }
       else {
-        curr_filter = "contributions"; 
+        curr_filter = "contributions";
       }
       updateVerticalBar();
       updateHorizontalBarType();
     }
-           
+
   });
 
   $('#d1').dropdown({
