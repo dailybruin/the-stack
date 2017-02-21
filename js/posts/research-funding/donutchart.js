@@ -1,4 +1,6 @@
 function initDonutChartDropdown(data) {
+
+	//old dropdown code
   let dropdown = document.getElementById('donutChartDropdown');
 
   data.forEach(function(s) {
@@ -7,6 +9,13 @@ function initDonutChartDropdown(data) {
     option.text = s.year;
     dropdown.appendChild(option);
   });
+
+  //new range slider
+  var range = document.getElementById('donut-year-range');
+  range.addEventListener("input", function() {
+      var label = document.getElementById('donut-year-label');
+      label.innerHTML = range.value;
+  })
 }
 
 let currData = undefined;
@@ -54,8 +63,12 @@ function initDonutChart(data) {
 
   var color = d3.scaleOrdinal(d3.schemeCategory20c);
 
-  var select = document.getElementById('donutChartDropdown');
-  select.addEventListener("change", function() {
+  var select = document.getElementById('donut-year-range');
+  select.addEventListener("input", function() {
+    change(select.value);
+  })
+  //for IE10 and other browsers that don't support oninput listener
+   select.addEventListener("change", function() {
     change(select.value);
   })
 
