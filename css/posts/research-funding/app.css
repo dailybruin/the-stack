@@ -42,3 +42,5 @@ table th, table td {
   text-align: center;
   /*background: rgba(184, 229, 255, 0.5);*/
 }
+
+/*.y-axis > g.tick > line, .x-axis > g.tick > line { display : none; }*/
