@@ -117,13 +117,16 @@ function initBarChart(data) {
                 h += '<p><b>' + subcategories[k].name + ':</b> $' + numberWithCommas(subcategories[k].total) + '</p>';
           }
       }
+      // subcategory selected
       else {
           var cat = d.subcategories.find(x => x.name === select.value);
-          h += '<p><b>' + select.value + '</b> (' + d.year + ')' + '<span style="float: right">$' + numberWithCommas(cat.total) + '</span></p><hr />';
+          h += '<p><b>' + select.value + '</b> (' + d.year + ')</p><hr />';
 
           var departments = cat.departments
           for (var k = 0; k < departments.length; k++)
               h += '<p><b>' + departments[k].name + ':</b> $' + numberWithCommas(departments[k].total) + '</p>';
+
+          h += '<p style="background: yellow;"><b>Total:</b> $' + numberWithCommas(d.total) + '</p>';
       }
       return h;
     }
