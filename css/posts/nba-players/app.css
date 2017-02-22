@@ -1,0 +1,84 @@
+* {
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+  box-sizing: border-box;         /* Opera/IE 8+ */
+}
+
+.top-player-table {
+	width: 100%;
+}
+
+.vitals-table {
+  width: 100%;
+}
+tr {
+	height: 50%;
+}
+
+#chart > div > table > tbody > tr > th {
+	text-align: center;
+}
+
+.c3-tooltip td.value {
+	text-align: center;
+}
+
+td {
+	font-weight: normal;
+	font-size: 1em;
+  	webkit-box-shadow: 0 2px 2px -2px #0E1119;
+	-moz-box-shadow: 0 2px 2px -2px #0E1119;
+	box-shadow: 0 2px 2px -2px #0E1119;
+
+	width: 20%;
+	text-align: center;
+}
+
+thead {
+	background-color: #2b90d9;
+	color: white;
+}
+
+.metric-def {
+	font-size: 20px;
+}
+
+.toggleButton.active, .active{
+  color:  white;
+  background-color:  #2b90d9;
+}
+
+.toggleButton:hover {
+	cursor: pointer
+}
+.toggleButton{
+   overflow: hidden;
+
+  margin: 7px;
+  padding: 12px 12px;
+
+  text-align: center;
+
+  background-color:  #FFF;
+  color: #2b90d9;
+  border: 0 none;
+  border-radius: 10px;
+
+
+  -webkit-appearance: none;
+  -moz-appearance:    none;
+  appearance:         none;
+
+  justify-content: center;
+  align-items: center;
+
+  font-size: 90%; */
+
+
+}
+
+div.c3-tooltip-container {
+	max-width: 400px;
+	text-align: center;
+
+}

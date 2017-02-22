@@ -4,6 +4,8 @@ teaser: The Daily Bruin analyzed research funding data to determine the key spon
 authors:
   - yiling_liu
   - jeffrey_chan
+  - natalie_ethell
+  - mahir_eusufzai
   - chang_liu
 key_takeaways:
   - The federal government funded the majority of UCLA research projects in the fiscal year 2014-2015.
@@ -111,6 +113,8 @@ For instance, NIH funding depends on the [yearly budget](https://officeofbudget.
 “If you look at the budget, a lot of the federal funding stems from the political climate – whatever’s happening in Washington right now,” said Kathy Kawamura, an assistant director at UCLA Office of Contract and Grant Administration. “We don’t necessarily know but there is enough of a understanding that (funding) is not going to be completely cut (next year).”
 
 #### Types of research that gets funded
+> For the years 2015-2017, public data was not available to show the detailed breakdown of funding awarded to each department.
+
 The data shows that research in math and the sciences gets more funding than research in the social sciences and humanities.
 
 <div id='bar-chart-wrapper'>

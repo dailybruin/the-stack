@@ -44,18 +44,18 @@ function initBarChart(data) {
 
     var g = svg.append("g").attr("transform", "translate(" + margin.left + "," + margin.top + ")");
     var x = d3.scaleBand().rangeRound([0, width]).padding(0.2);
-    var y = d3.scaleLinear().rangeRound([height - 10, 0]);
+    var y = d3.scaleLinear().rangeRound([height, 0]);
 
     // Set domain for x and y variables
     x.domain(data.map(function(d) {return d.year}));
 
     y.domain(d3.extent(data, function(d) {
-      console.log(parseInt(d.total));
       return parseInt(d.total);
     }));
 
     g.append("g")
         .attr("transform", "translate(0," + height + ")")
+        .attr("class", "x-axis")
         .call(d3.axisBottom(x).ticks(3).tickFormat(d3.format("d")))
         .select(".domain");
     g.append("text")
@@ -63,11 +63,11 @@ function initBarChart(data) {
             "translate(" + (width/2) + " ," +
                            (height + margin.top + 10) + ")")
       .style("text-anchor", "middle")
-      .text("Year");
+      .text("Fiscal Year");
 
     g.append("g")
         .attr("class", "y-axis")
-        .call(d3.axisLeft(y).ticks(5))
+        .call(d3.axisLeft(y).ticks(5).tickFormat(d3.format('.1s')))
         .select(".domain");
     g.append('text')
         .attr('transform', 'rotate(-90)')
@@ -94,7 +94,9 @@ function initBarChart(data) {
       .on("mousemove", function(d) {
         tooltip.html(fillTooltip(d))
           .style("left", (d3.event.pageX + 20) + "px")
-          .style("top", (d3.event.pageY - 12) + "px");
+          .style("top", function() {
+            return (d3.event.pageY - (this.children.length / 2) * 15) + "px";
+          });
       })
       .on("mouseout", function(d) {
         tooltip.style("display", "none");
@@ -105,16 +107,20 @@ function initBarChart(data) {
       var select = document.getElementById('barChartDropdown');
       var h = '';
       if (select.value == '0') {
-          h += '<p><b>ALL</b></p><hr />';
-          h += '<p><b>' + d.year + ' Total:</b> $' + numberWithCommas(d.total) + '</p>';
-          var subcategories = d.subcategories;
-          for (var k = 0; k < subcategories.length; k++)
-              h+= '<p><b>' + subcategories[k].name + ':</b> $' + numberWithCommas(subcategories[k].total) + '</p>';
+          h += '<p><b>ALL</b> (' + d.year + ')<span style="float: right">$' + numberWithCommas(d.total) + '</span></p><hr />';
+
+          if (d.year == '2015' || d.year == '2016') {
+            h += '<p>Public data breaking down the funding by departments was not available for this year</p>';
+          } else {
+            var subcategories = d.subcategories;
+            for (var k = 0; k < subcategories.length; k++)
+                h += '<p><b>' + subcategories[k].name + ':</b> $' + numberWithCommas(subcategories[k].total) + '</p>';
+          }
       }
       else {
-          h += '<p><b>' + select.value + '</b></p><hr />';
           var cat = d.subcategories.find(x => x.name === select.value);
-          h += '<p><b>' + d.year + ' Total:</b> $' + numberWithCommas(cat.total) + '</p>';
+          h += '<p><b>' + select.value + '</b> (' + d.year + ')' + '<span style="float: right">$' + numberWithCommas(cat.total) + '</span></p><hr />';
+
           var departments = cat.departments
           for (var k = 0; k < departments.length; k++)
               h += '<p><b>' + departments[k].name + ':</b> $' + numberWithCommas(departments[k].total) + '</p>';
@@ -130,18 +136,32 @@ function initBarChart(data) {
             return d.subcategories.find(x => x.name ===  val).total || 0;
         }));
 
+        x.domain( data.map(d => d.year).filter(x => {
+          if (val != '0') { return (x != '2015' && x != '2016') }
+          else return true;
+        }));
+
         // update y axis
         svg.select('.y-axis')
             .transition()
             .duration(400)
             .ease(d3.easePolyInOut)
-            .call(d3.axisLeft(y).ticks(5));
+            .call(d3.axisLeft(y).ticks(5).tickFormat(d3.format('.1s')));
+
+        svg.select('.x-axis')
+            .transition()
+            .duration(400)
+            .ease(d3.easePolyInOut)
+            .call(d3.axisBottom(x).ticks(3).tickFormat(d3.format('d')));
 
         // modify rect height
         svg.selectAll('rect')
             .transition()
             .duration(400)
             .ease(d3.easePolyInOut)
+            .attr("x", function(d) { return x(d.year) })
+            .attr("width", x.bandwidth())
+
             .attr('y', function(d) {
                     if (val == '0')
                         return y(d.total);
