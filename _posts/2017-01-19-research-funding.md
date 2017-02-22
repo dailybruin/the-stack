@@ -40,6 +40,27 @@ Nonfederal funding sources make up the remaining 39.6 percent of awarded money t
 #### But - the money is not always guaranteed
 Obtaining a grant for research is not always as easy as cashing a check.
 
+<div id="table">
+  <table cellpadding="0" cellspacing="0">
+    <thead>
+      <tr>
+        <th>State</th>
+        <th>UC Students from this State</th>
+        <th>538 Margin (%)</th>
+        <th>Impact of 1 Vote (%)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>asdf</td>
+        <td>asdf</td>
+        <td>asdf</td>
+        <td>asdf</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
 For instance, NIH funding depends on the [yearly budget](https://officeofbudget.od.nih.gov/) for federal agencies that the president of the U.S. submits to Congress. How much money the federal government allocates to the NIH ultimately decides how much it can fund biomedical research at universities.
 
 “If you look at the budget, a lot of the federal funding stems from the political climate – whatever’s happening in Washington right now,” said Kathy Kawamura, an assistant director at UCLA Office of Contract and Grant Administration. “We don’t necessarily know but there is enough of a understanding that (funding) is not going to be completely cut (next year).”
