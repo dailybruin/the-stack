@@ -31,37 +31,77 @@ Federal agency sponsors include the National Institutes of Health, National Scie
 
 Nonfederal funding sources make up the remaining 39.6 percent of awarded money to UCLA research. The funders include for-profit businesses, non-profit organizations and state or local governments.
 
-<div align="center">
-  <label id="donut-year-label"> 2010 </label>
-  <input type="range" name="Year" id="donut-year-range" value="2010" min="2010" max="2015">
-</div>
-
 <div id='donut-chart-wrapper'>
   <select style="margin: 0 auto; display: flex; width: 300px; height: 3em;" class="ui selection dropdown" id='donutChartDropdown'>
-      <option value='0'>ALL</option>
+      <option value='0'>2010-2015</option>
   </select>
 </div>
 
 #### Funding is not always guaranteed
 Obtaining a grant for research is not always as easy as cashing a check.
 
+<h5 style="text-align: center;">Distribution of Awards by Federal Agency Sponsor, FY 2015</h5>
 <div id="table">
   <table cellpadding="0" cellspacing="0">
     <thead>
       <tr>
-        <th>State</th>
-        <th>UC Students from this State</th>
-        <th>538 Margin (%)</th>
-        <th>Impact of 1 Vote (%)</th>
+        <th>Federal Agency Sponsor</th>
+        <th>Amount Awarded</th>
+        <th>Percentage</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td>asdf</td>
-        <td>asdf</td>
-        <td>asdf</td>
-        <td>asdf</td>
+        <td>NIH</td>
+        <td>$392.8 M</td>
+        <td>62.9%</td>
       </tr>
+      <tr>
+        <td>NSF</td>
+        <td>$84.0 M</td>
+        <td>13.5%</td>
+      </tr>
+      <tr>
+        <td>USDOD</td>
+        <td>$45.1 M</td>
+        <td>7.2%</td>
+      </tr>
+      <tr>
+        <td>USDOE</td>
+        <td>$23.5 M</td>
+        <td>3.8%</td>
+      </tr>
+      <tr>
+        <td>DOVA</td>
+        <td>$23.4 M</td>
+        <td>3.8%</td>
+      </tr>
+      <tr>
+        <td>NASA</td>
+        <td>$20.0 M</td>
+        <td>3.2%</td>
+      </tr>
+      <tr>
+        <td>DOED</td>
+        <td>$4.0 M</td>
+        <td>0.6%</td>
+      </tr>
+      <tr>
+        <td>OTHER FED</td>
+        <td>$3.3 M</td>
+        <td>0.5%</td>
+      </tr>
+      <tr>
+        <td>USDOC</td>
+        <td>$1.9 M</td>
+        <td>0.3%</td>
+      </tr>
+      <tr>
+        <td>Other DHHS</td>
+        <td>$26.4 M</td>
+        <td>4.2%</td>
+      </tr>
+
     </tbody>
   </table>
 </div>
