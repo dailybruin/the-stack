@@ -9,13 +9,6 @@ function initDonutChartDropdown(data) {
     option.text = s.year;
     dropdown.appendChild(option);
   });
-
-  //new range slider
-  var range = document.getElementById('donut-year-range');
-  range.addEventListener("input", function() {
-      var label = document.getElementById('donut-year-label');
-      label.innerHTML = range.value;
-  })
 }
 
 let currData = undefined;
@@ -63,7 +56,7 @@ function initDonutChart(data) {
 
   var color = d3.scaleOrdinal(d3.schemeCategory20c);
 
-  var select = document.getElementById('donut-year-range');
+  var select = document.getElementById('donutChartDropdown');
   select.addEventListener("input", function() {
     change(select.value);
   })
