@@ -20,6 +20,7 @@ scripts:
   - /js/posts/research-funding/barchart.js
   - /js/posts/research-funding/donutchart.js
   - /js/posts/research-funding/index.js
+
 ---
 UCLA prides itself on being a [successful](www.ucla.edu/research) research university, and it’s not difficult to see why. The university received more than $1 billion in research funding last year, and the number of research proposals has also increased each year since fiscal year 2011-2012.
 
@@ -30,6 +31,11 @@ The largest sponsor of UCLA research is the federal government. In fiscal year 2
 Federal agency sponsors include the National Institutes of Health, National Science Foundation, NASA and United States Department of Defense. Of these sponsors, the NIH gave the most funding to UCLA in fiscal year 2014-2015, granting $392.8 million, or 62.9 percent of awarded money from the federal government. NIH grants money to [research](https://grants.nih.gov/grants/grant_basics.htm) that aims to improve health and alleviate burdens of illness.
 
 Nonfederal funding sources make up the remaining 39.6 percent of awarded money to UCLA research. The funders include for-profit businesses, non-profit organizations and state or local governments.
+
+<div align="center">
+  <label id="donut-year-label"> 2010 </label>
+  <input type="range" name="Year" id="donut-year-range" value="2010" min="2010" max="2015">
+</div>
 
 <div id='donut-chart-wrapper'>
   <select style="margin: 0 auto; display: flex; width: 300px; height: 3em;" class="ui selection dropdown" id='donutChartDropdown'>
