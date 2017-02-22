@@ -114,7 +114,7 @@ function initBarChart(data) {
       var select = document.getElementById('barChartDropdown');
       var h = '';
       if (select.value == '0') {
-          h += '<p><b>ALL RESEARCH</b> (' + d.year + ')<span style="float: right; background: yellow;">$' + numberWithCommas(d.total) + '</span></p><hr />';
+          h += '<p><b>All Research</b> (' + d.year + ')<span style="float: right; background: yellow;">$' + numberWithCommas(d.total) + '</span></p><hr />';
 
           if (d.year == '2015' || d.year == '2016') {
             h += '<p>Public data breaking down the funding by departments was not available for this year</p>';
@@ -129,9 +129,14 @@ function initBarChart(data) {
           var cat = d.subcategories.find(x => x.name === select.value);
           h += '<p><b>' + formatDepartment(select.value) + '</b> (' + d.year + ')</p><hr />';
 
-          var departments = cat.departments
-          for (var k = 0; k < departments.length; k++)
-              h += '<p><b>' + formatDepartment(departments[k].name) + ':</b> $' + numberWithCommas(departments[k].total) + '</p>';
+          if (d.year == '2017') {
+            h += '<p>Public data breaking down the funding by departments was not available for this year</p>';
+
+          } else {
+            var departments = cat.departments
+            for (var k = 0; k < departments.length; k++)
+                h += '<p><b>' + formatDepartment(departments[k].name) + ':</b> $' + numberWithCommas(departments[k].total) + '</p>';
+          }
 
           h += '<p style="background: yellow;"><b>Total:</b> $' + numberWithCommas(cat.total) + '</p>';
       }

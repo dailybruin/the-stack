@@ -9,7 +9,7 @@ function numberWithCommas(x) {
 function formatDepartment(d) {
 
   return d.split(' ').map(function(w) {
-    if (w.match(/and|of/i)) { return w.toLowerCase(); }
+    if (w.match((/^and$|^of$|^of\)$/i))) { return w.toLowerCase(); }
     if (w.charAt(0) == '(') {
       return '(' + capitalizeFirstLetter(w.slice(1));
     } else {
