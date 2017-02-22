@@ -136,10 +136,10 @@ function initBarChart(data) {
             return d.subcategories.find(x => x.name ===  val).total || 0;
         }));
 
-        // x.domain( data.map(d => d.year).filter(x => {
-        //   if (val != '0') { return (x != '2015' && x != '2016') }
-        //   else return true;
-        // }));
+        x.domain( data.map(d => d.year).filter(x => {
+          if (val != '0') { return (x != '2015' && x != '2016') }
+          else return true;
+        }));
 
         // update y axis
         svg.select('.y-axis')
@@ -159,6 +159,9 @@ function initBarChart(data) {
             .transition()
             .duration(400)
             .ease(d3.easePolyInOut)
+            .attr("x", function(d) { return x(d.year) })
+            .attr("width", x.bandwidth())
+
             .attr('y', function(d) {
                     if (val == '0')
                         return y(d.total);
