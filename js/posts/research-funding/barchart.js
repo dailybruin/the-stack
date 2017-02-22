@@ -49,7 +49,10 @@ function initBarChart(data) {
     // Set domain for x and y variables
     x.domain(data.map(function(d) {return d.year}));
 
-    y.domain(d3.extent(data, function(d) {return d.total;}));
+    y.domain(d3.extent(data, function(d) {
+      console.log(parseInt(d.total));
+      return parseInt(d.total);
+    }));
 
     g.append("g")
         .attr("transform", "translate(0," + height + ")")
@@ -75,48 +78,48 @@ function initBarChart(data) {
         .text("Funding ($)");
 
     var bar = g.selectAll("rect")
-                .data(data);
+      .data(data);
 
     bar.enter()
-        .append("rect")
-        .attr("x", function(d) { return x(d.year) })
-        .attr("y", function(d) { return y(d.total) })
-        .attr("width", x.bandwidth())
-        .attr("height", function(d) { return height - y(d.total) })
-        .attr("fill", function(d,i) { return color(i); })
-        .on("mouseover", function(d) {
-                            tooltip.style('display', 'inline');
-                            d3.select(this).style('opacity', 0.7);
-                        })
-        .on("mousemove", function(d) {
-                            tooltip.html(fillTooltip(d))
-                                    .style("left", (d3.event.pageX + 20) + "px")
-                                    .style("top", (d3.event.pageY - 12) + "px");
-                        })
-        .on("mouseout", function(d) {
-                            tooltip.style("display", "none");
-                            d3.select(this).style('opacity', 1);
-                        });
+      .append("rect")
+      .attr("x", function(d) { return x(d.year) })
+      .attr("y", function(d) { return y(d.total) })
+      .attr("width", x.bandwidth())
+      .attr("height", function(d) { return height - y(d.total) })
+      .attr("fill", function(d,i) { return color(i); })
+      .on("mouseover", function(d) {
+        tooltip.style('display', 'inline');
+        d3.select(this).style('opacity', 0.7);
+      })
+      .on("mousemove", function(d) {
+        tooltip.html(fillTooltip(d))
+          .style("left", (d3.event.pageX + 20) + "px")
+          .style("top", (d3.event.pageY - 12) + "px");
+      })
+      .on("mouseout", function(d) {
+        tooltip.style("display", "none");
+        d3.select(this).style('opacity', 1);
+      });
 
     function fillTooltip(d) {
-        var select = document.getElementById('barChartDropdown');
-        var h = '';
-        if (select.value == '0') {
-            h += '<p><b>ALL</b></p><hr />';
-            h += '<p><b>' + d.year + ' Total:</b> $' + numberWithCommas(d.total) + '</p>';
-            var subcategories = d.subcategories;
-            for (var k = 0; k < subcategories.length; k++)
-                h+= '<p><b>' + subcategories[k].name + ':</b> $' + numberWithCommas(subcategories[k].total) + '</p>';
-        }
-        else {
-            h += '<p><b>' + select.value + '</b></p><hr />';
-            var cat = d.subcategories.find(x => x.name === select.value);
-            h += '<p><b>' + d.year + ' Total:</b> $' + numberWithCommas(cat.total) + '</p>';
-            var departments = cat.departments
-            for (var k = 0; k < departments.length; k++)
-                h += '<p><b>' + departments[k].name + ':</b> $' + numberWithCommas(departments[k].total) + '</p>';
-        }
-        return h;
+      var select = document.getElementById('barChartDropdown');
+      var h = '';
+      if (select.value == '0') {
+          h += '<p><b>ALL</b></p><hr />';
+          h += '<p><b>' + d.year + ' Total:</b> $' + numberWithCommas(d.total) + '</p>';
+          var subcategories = d.subcategories;
+          for (var k = 0; k < subcategories.length; k++)
+              h+= '<p><b>' + subcategories[k].name + ':</b> $' + numberWithCommas(subcategories[k].total) + '</p>';
+      }
+      else {
+          h += '<p><b>' + select.value + '</b></p><hr />';
+          var cat = d.subcategories.find(x => x.name === select.value);
+          h += '<p><b>' + d.year + ' Total:</b> $' + numberWithCommas(cat.total) + '</p>';
+          var departments = cat.departments
+          for (var k = 0; k < departments.length; k++)
+              h += '<p><b>' + departments[k].name + ':</b> $' + numberWithCommas(departments[k].total) + '</p>';
+      }
+      return h;
     }
 
     function updateData(val) {

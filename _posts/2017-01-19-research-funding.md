@@ -20,7 +20,6 @@ scripts:
   - /js/posts/research-funding/barchart.js
   - /js/posts/research-funding/donutchart.js
   - /js/posts/research-funding/index.js
-
 ---
 UCLA prides itself on being a [successful](www.ucla.edu/research) research university, and it’s not difficult to see why. The university received more than $1 billion in research funding last year, and the number of research proposals has also increased each year since fiscal year 2011-2012.
 
@@ -43,7 +42,7 @@ Nonfederal funding sources make up the remaining 39.6 percent of awarded money t
   </select>
 </div>
 
-#### But - the money is not always guaranteed
+#### Funding is not always guaranteed
 Obtaining a grant for research is not always as easy as cashing a check.
 
 <div id="table">
