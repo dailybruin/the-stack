@@ -53,10 +53,18 @@ function initBarChart(data) {
       return parseInt(d.total);
     }));
 
+    let yAxis = function(y) {
+      return d3.axisLeft(y).ticks(5).tickFormat(d3.format('.2s'))
+    }
+
+    let xAxis = function(x) {
+      return d3.axisBottom(x).ticks(3).tickFormat(d3.format("d")).tickSizeOuter(0)
+    }
+
     g.append("g")
         .attr("transform", "translate(0," + height + ")")
         .attr("class", "x-axis")
-        .call(d3.axisBottom(x).ticks(3).tickFormat(d3.format("d")))
+        .call(xAxis(x))
         .select(".domain");
     g.append("text")
       .attr("transform",
@@ -67,8 +75,9 @@ function initBarChart(data) {
 
     g.append("g")
         .attr("class", "y-axis")
-        .call(d3.axisLeft(y).ticks(5).tickFormat(d3.format('.2s')))
-        .select(".domain");
+        .call(yAxis(y))
+        .select(".domain")
+
     g.append('text')
         .attr('transform', 'rotate(-90)')
         .attr('y', 0 - margin.left)
@@ -79,6 +88,16 @@ function initBarChart(data) {
 
     var bar = g.selectAll("rect")
       .data(data);
+
+    g.selectAll('line.y')
+      .data(y.ticks(5))
+      .enter().append("line")
+      .attr("class", "y-line")
+      .attr("x1", 0)
+      .attr("x2", width)
+      .attr("y1", y)
+      .attr("y2", y)
+      .style("stroke", "#ccc");
 
     // let prevX = undefined;
 
@@ -144,6 +163,7 @@ function initBarChart(data) {
     }
 
     function updateData(val) {
+
         // change domain of y axis
         y.domain(d3.extent(data, function (d) {
             if (val == '0')
@@ -161,13 +181,21 @@ function initBarChart(data) {
             .transition()
             .duration(400)
             .ease(d3.easePolyInOut)
-            .call(d3.axisLeft(y).ticks(5).tickFormat(d3.format('.2s')));
+            .call(yAxis(y));
+
+        g.selectAll('.y-line')
+          .data(y.ticks(5))
+          .transition()
+          .duration(400)
+          .ease(d3.easePolyInOut)
+          .attr("y1", y)
+          .attr("y2", y)
 
         svg.select('.x-axis')
             .transition()
             .duration(400)
             .ease(d3.easePolyInOut)
-            .call(d3.axisBottom(x).ticks(3).tickFormat(d3.format('d')));
+            .call(xAxis(x));
 
         // modify rect height
         svg.selectAll('rect')
