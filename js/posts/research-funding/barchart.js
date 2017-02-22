@@ -94,7 +94,12 @@ function initBarChart(data) {
       .on("mousemove", function(d) {
         tooltip.html(fillTooltip(d))
           .style("left", (d3.event.pageX + 20) + "px")
-          .style("top", (d3.event.pageY - 12) + "px");
+          .style("top", function() {
+            console.log(this.height);
+            console.log(this);
+            console.log(this.children.length);
+            return (d3.event.pageY - (this.children.length / 2) * 10) + "px";
+          });
       })
       .on("mouseout", function(d) {
         tooltip.style("display", "none");
