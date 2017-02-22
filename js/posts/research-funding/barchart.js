@@ -44,7 +44,7 @@ function initBarChart(data) {
 
     var g = svg.append("g").attr("transform", "translate(" + margin.left + "," + margin.top + ")");
     var x = d3.scaleBand().rangeRound([0, width]).padding(0.2);
-    var y = d3.scaleLinear().rangeRound([height, 0]);
+    var y = d3.scaleLinear().rangeRound([height - 10, 0]);
 
     // Set domain for x and y variables
     x.domain(data.map(function(d) {return d.year}));
@@ -117,13 +117,16 @@ function initBarChart(data) {
                 h += '<p><b>' + subcategories[k].name + ':</b> $' + numberWithCommas(subcategories[k].total) + '</p>';
           }
       }
+      // subcategory selected
       else {
           var cat = d.subcategories.find(x => x.name === select.value);
-          h += '<p><b>' + select.value + '</b> (' + d.year + ')' + '<span style="float: right">$' + numberWithCommas(cat.total) + '</span></p><hr />';
+          h += '<p><b>' + select.value + '</b> (' + d.year + ')</p><hr />';
 
           var departments = cat.departments
           for (var k = 0; k < departments.length; k++)
               h += '<p><b>' + departments[k].name + ':</b> $' + numberWithCommas(departments[k].total) + '</p>';
+
+          h += '<p style="background: yellow;"><b>Total:</b> $' + numberWithCommas(d.total) + '</p>';
       }
       return h;
     }
@@ -156,11 +159,19 @@ function initBarChart(data) {
 
         // modify rect height
         svg.selectAll('rect')
+            // .exit().remove()
             .transition()
             .duration(400)
             .ease(d3.easePolyInOut)
             .attr("x", function(d) { return x(d.year) })
             .attr("width", x.bandwidth())
+            .style("display", function(d) {
+              if (val != '0' && (d.year == '2015' || d.year == '2016')) {
+                return "none";
+              }
+              return "block";
+
+            })
 
             .attr('y', function(d) {
                     if (val == '0')
