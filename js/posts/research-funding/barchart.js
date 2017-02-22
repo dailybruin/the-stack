@@ -33,7 +33,7 @@ function initBarChart(data) {
     var color = d3.scaleOrdinal(d3.schemeCategory20c);
 
     // Dimensions of canvas/graph
-    var margin = {top: 30, right: 20, bottom: 70, left: 60},
+    var margin = {top: 30, right: 20, bottom: 70, left: 70},
         width = 650 - margin.left - margin.right,
         height = 350 - margin.top - margin.bottom;
 
@@ -80,6 +80,8 @@ function initBarChart(data) {
     var bar = g.selectAll("rect")
       .data(data);
 
+    // let prevX = undefined;
+
     bar.enter()
       .append("rect")
       .attr("x", function(d) { return x(d.year) })
@@ -99,15 +101,20 @@ function initBarChart(data) {
           });
       })
       .on("mouseout", function(d) {
+        // prevX = d3.event.pageX;
         tooltip.style("display", "none");
         d3.select(this).style('opacity', 1);
       });
+
+    // svg.on("mousemove", function(d) {
+    //   // if
+    // });
 
     function fillTooltip(d) {
       var select = document.getElementById('barChartDropdown');
       var h = '';
       if (select.value == '0') {
-          h += '<p><b>ALL</b> (' + d.year + ')<span style="float: right">$' + numberWithCommas(d.total) + '</span></p><hr />';
+          h += '<p><b>ALL</b> (' + d.year + ')<span style="float: right; background: yellow;">$' + numberWithCommas(d.total) + '</span></p><hr />';
 
           if (d.year == '2015' || d.year == '2016') {
             h += '<p>Public data breaking down the funding by departments was not available for this year</p>';
@@ -126,7 +133,7 @@ function initBarChart(data) {
           for (var k = 0; k < departments.length; k++)
               h += '<p><b>' + departments[k].name + ':</b> $' + numberWithCommas(departments[k].total) + '</p>';
 
-          h += '<p style="background: yellow;"><b>Total:</b> $' + numberWithCommas(d.total) + '</p>';
+          h += '<p style="background: yellow;"><b>Total:</b> $' + numberWithCommas(cat.total) + '</p>';
       }
       return h;
     }
@@ -149,7 +156,7 @@ function initBarChart(data) {
             .transition()
             .duration(400)
             .ease(d3.easePolyInOut)
-            .call(d3.axisLeft(y).ticks(5).tickFormat(d3.format('.1s')));
+            .call(d3.axisLeft(y).ticks(5).tickFormat(d3.format('')));
 
         svg.select('.x-axis')
             .transition()
