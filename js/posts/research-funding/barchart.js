@@ -67,7 +67,7 @@ function initBarChart(data) {
 
     g.append("g")
         .attr("class", "y-axis")
-        .call(d3.axisLeft(y).ticks(5))
+        .call(d3.axisLeft(y).ticks(5).tickFormat(d3.format('00.0s')))
         .select(".domain");
     g.append('text')
         .attr('transform', 'rotate(-90)')
@@ -135,7 +135,7 @@ function initBarChart(data) {
             .transition()
             .duration(400)
             .ease(d3.easePolyInOut)
-            .call(d3.axisLeft(y).ticks(5));
+            .call(d3.axisLeft(y).ticks(5).tickFormat(d3.format('.0s')));
 
         // modify rect height
         svg.selectAll('rect')
