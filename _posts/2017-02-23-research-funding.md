@@ -10,6 +10,9 @@ authors:
 key_takeaways:
   - The federal government funded the majority of UCLA research projects in the fiscal year 2014-2015.
   - Within the College of Letters and Science, research in math and sciences has received almost $62 million more than research in humanities and social sciences so far in fiscal year 2016-2017.
+featured_image:
+    url: research-funding/graph.png
+og_image: research-funding/graph.png
 stylesheets:
   - //cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.6/semantic.min.css
   - //cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/components/dropdown.min.css
