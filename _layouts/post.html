@@ -91,9 +91,9 @@ layout: default
         {% if author.email %}
         <li><a href="mailto:{{ author.email }}"><img src="/img/icons/email.svg" /> {{ author.email }}</a></li>
         {% endif %}
-        {% if author.website %}
+        <!-- {% if author.website %}
         <li><a href="{{ author.website }}"><img src="/img/icons/globe.svg" /> {{ author.website | replace:'http://','' | replace:'https://','' }}</a></li>
-        {% endif %}
+        {% endif %} -->
       </ul>
     </div>
     {% endfor %}
