@@ -115,8 +115,8 @@ For instance, NIH funding depends on the [yearly budget](https://officeofbudget.
 
 “If you look at the budget, a lot of the federal funding stems from the political climate – whatever’s happening in Washington right now,” said Kathy Kawamura, an assistant director at UCLA Office of Contract and Grant Administration. “We don’t necessarily know but there is enough of a understanding that (funding) is not going to be completely cut (next year).”
 
-#### Types of research that gets funded
-> For the years 2015-2016, public data was not available to show the detailed breakdown of funding awarded to each department. FY 2017 is still ongoing so we did not have the comprehensive data at the time of this post.
+#### Types of research that get funded
+> Note: Some departments did not exist before certain years and for that reason have $0 awarded in those years. For the years 2015-2016, public data was not available to show the detailed breakdown of funding awarded to each department. FY 2017 is still ongoing so we did not have the comprehensive data at the time of this post. 
 
 The data shows that research in math and the sciences gets more funding than research in the social sciences and humanities.
 
