@@ -6,6 +6,7 @@ authors:
   - jeffrey_chan
   - natalie_ethell
   - mahir_eusufzai
+  - fay_wu
   - chang_liu
 key_takeaways:
   - The federal government funded the majority of UCLA research projects in the fiscal year 2014-2015.
