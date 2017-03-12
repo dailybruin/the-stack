@@ -11,3 +11,4 @@ scripts:
   - /js/posts/suspicious-activity/app.js
 ---
 <div id="map" style="height: 400px;"></div>
+<svg width="640" height="640" id="bar-chart"></svg>
