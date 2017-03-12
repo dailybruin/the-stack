@@ -9,6 +9,8 @@ scripts:
   - //d3js.org/d3-transition.v1.min.js
   - //unpkg.com/leaflet@1.0.3/dist/leaflet.js
   - /js/posts/suspicious-activity/app.js
+  - /js/posts/suspicious-activity/test.js
 ---
 <div id="map" style="height: 400px;"></div>
 <svg width="640" height="640" id="bar-chart"></svg>
+<svg width="640" height="640" id="test"></svg>
