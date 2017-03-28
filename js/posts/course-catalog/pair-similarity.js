@@ -36,9 +36,6 @@ d3.csv('/datasets/course-catalog/pair-similarity.csv', (error, data) => {
 function pickPairSubjects(data) {
   const pickedSubject1 = d3.select('#pick-subject1').property('value'),
         pickedSubject2 = d3.select('#pick-subject2').property('value');
-  // const selectedData = data.filter((d, i) => {
-  //   return (d.subject1 == subject1 & d.subject2 == subject2) | (d.subject1 == subject2 & d.subject2 == subject1)
-  // });
   renderText(pickedSubject1, pickedSubject2, data);
 }
 
@@ -49,7 +46,11 @@ function renderText(subject1, subject2, data) {
     return (d.subject1 == subject1 & d.subject2 == subject2) | (d.subject1 == subject2 & d.subject2 == subject1);
   });
 
-  d3.select('#pair-similarity-text')
+  d3.select('#pair-similarity-score')
     .datum(selectedData[0])
-    .text(d =>  subject1 == subject2 ? "Please pick 2 different departments" : d.score);
+    .text(d =>  subject1 == subject2 ? "~" : d.score);
+
+  d3.select('#pair-similarity-label')
+    .datum(selectedData[0])
+    .text(d => subject1 == subject2 ? "Pick 2 different departments to compare" : "Similarity Score");
 }
