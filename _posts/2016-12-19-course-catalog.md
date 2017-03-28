@@ -1,6 +1,6 @@
 ---
 title: How are departments at UCLA related?
-teaser: Course catalog allows us to learn subjects that are similar or dissimilar to your major, and answers questions like "what's electrical engineering without the mathematics".
+teaser: ...
 authors:
     - tyson_ni
 featured_image:
