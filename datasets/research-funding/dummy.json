@@ -1,0 +1,107 @@
+[
+  {
+    "year" : "2013",
+    "total" : 100,
+    "subcategories" : [
+      {
+        "name" : "Engineering",
+        "departments" : [
+          {
+            "name" : "Bioengineering",
+            "total" : 10
+          },
+          {
+            "name" : "Computer Science",
+            "total" : 30
+          }
+        ],
+        "total" : 40
+      }
+    ]
+
+  },
+  {
+    "year" : "2014",
+    "total" : 200,
+    "subcategories" : [
+      {
+        "name" : "Engineering",
+        "departments" : [
+          {
+            "name" : "Bioengineering",
+            "total" : 30
+          },
+          {
+            "name" : "Computer Science",
+            "total" : 30
+          }
+        ],
+        "total" : 60
+      }
+    ]
+
+  },
+  {
+    "year" : "2015",
+    "total" : 100,
+    "subcategories" : [
+      {
+        "name" : "Engineering",
+        "departments" : [
+          {
+            "name" : "Bioengineering",
+            "total" : 30
+          },
+          {
+            "name" : "Computer Science",
+            "total" : 10
+          }
+        ],
+        "total" : 40
+      }
+    ]
+
+  },
+  {
+    "year" : "2016",
+    "total" : 300,
+    "subcategories" : [
+      {
+        "name" : "Engineering",
+        "departments" : [
+          {
+            "name" : "Bioengineering",
+            "total" : 100
+          },
+          {
+            "name" : "Computer Science",
+            "total" : 40
+          }
+        ],
+        "total" : 140
+      }
+    ]
+
+  },
+  {
+    "year" : "2017",
+    "total" : 400,
+    "subcategories" : [
+      {
+        "name" : "Engineering",
+        "departments" : [
+          {
+            "name" : "Bioengineering",
+            "total" : 80
+          },
+          {
+            "name" : "Computer Science",
+            "total" : 60
+          }
+        ],
+        "total" : 140
+      }
+    ]
+
+  }
+]
