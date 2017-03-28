@@ -18,6 +18,7 @@ d3.csv('/datasets/course-catalog/pair-similarity.csv', (error, data) => {
     .data(subjects)
     .enter()
     .append('option')
+    .property('selected', d => d == 'Anthropology')
     .text(d => d);
 
   d3.select('#pick-subject2')
@@ -26,29 +27,29 @@ d3.csv('/datasets/course-catalog/pair-similarity.csv', (error, data) => {
     .data(subjects)
     .enter()
     .append('option')
+    .property('selected', d => d == 'Mathematics')
     .text(d => d);
 
-  renderText(subjects[0], subjects[0], data);
+  renderText('Anthropology', 'Mathematics', data);
 })
 
 function pickPairSubjects(data) {
-  const pickedSubject1Index = d3.select('#pick-subject1').property('value'),
-        pickedSubject2Index = d3.select('#pick-subject2').property('value');
-  const selectedData = data.filter((d, i) => {
-    return (d.subject1 == subject1 & d.subject2 == subject2) | (d.subject1 == subject2 & d.subject2 == subject1)
-  });
-  renderText(pickedSubject1, pickedSubject2, data)
+  const pickedSubject1 = d3.select('#pick-subject1').property('value'),
+        pickedSubject2 = d3.select('#pick-subject2').property('value');
+  // const selectedData = data.filter((d, i) => {
+  //   return (d.subject1 == subject1 & d.subject2 == subject2) | (d.subject1 == subject2 & d.subject2 == subject1)
+  // });
+  renderText(pickedSubject1, pickedSubject2, data);
 }
 
 
 
 function renderText(subject1, subject2, data) {
-  console.log(data)
   const selectedData = data.filter((d, i) => {
     return (d.subject1 == subject1 & d.subject2 == subject2) | (d.subject1 == subject2 & d.subject2 == subject1);
   });
 
   d3.select('#pair-similarity-text')
     .datum(selectedData[0])
-    .text(d => d.score);
+    .text(d =>  subject1 == subject2 ? "Please pick 2 different departments" : d.score);
 }
