@@ -11,6 +11,7 @@ stylesheets:
     - /css/posts/course-catalog/container.min.css
     - /css/posts/course-catalog/table.min.css
     - /css/posts/course-catalog/dropdown.min.css
+    - /css/posts/course-catalog/statistic.min.css
     - /css/posts/course-catalog/app.css
 scripts:
     - /js/lib/jquery-3.1.1.min.js
@@ -18,6 +19,7 @@ scripts:
     - /js/posts/course-catalog/libs/d3-tip.js
     - /js/posts/course-catalog/tables.js
     - /js/posts/course-catalog/scatterplot.js
+    - /js/posts/course-catalog/pair-similarity.js
 ---
  
 From Plato to Pluto, the hundreds of subjects taught at UCLA cover much of the knowledge scholars accumulated over time, but if we were to plot every department on a chart, what relations or clusters would we find? 
@@ -48,7 +50,7 @@ Pick a subject and see which 5 subjects are most similar and least similar to it
 
 <br>
 
-<div class="ui equal width center aligned padded grid" id='similar-tables-wrapper'>
+<div class="ui equal width center aligned grid" id='similar-tables-wrapper'>
   <div class='row'>
     <div class='column'>
       <h1>5 Most Similar</h1>
@@ -64,6 +66,22 @@ Pick a subject and see which 5 subjects are most similar and least similar to it
 </div>
 
 ## Find the similarity between any two subjects
+
+<div class='ui equal width center aligned grid'>
+  <div class='row'>
+    <div class='column'>
+      <select class="ui search selection dropdown" id="pick-subject1">
+      </select>
+    </div>
+    <div class='column'>
+      <select class="ui search selection dropdown" id="pick-subject2">
+      </select>
+    </div>
+  </div>
+</div>
+
+<div id='pair-similarity-text'>
+</div>
 
 ## Subject 1 + Subject 2 = ?
 At its best, *Word2vec* should allow us to learn new insights rather than simply quantify existing intuition. For instance, knowing the relationship between *United States* and *Britney Spears* it could allow us to find the Japanese Britney Spears. 
