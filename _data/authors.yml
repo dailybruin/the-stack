@@ -73,14 +73,14 @@ ryan_leou:
     twitter: rleou
 chang_liu:
     name: Chang Liu
-    title: D3 Apprentice
-    bio: Chang is the current editor of this website. He studies Linguistics & Computer Science at UCLA andhen he's not struggling to learn natural / programming languages, he likes to take photos, dance and travel.
+    title: Stack Editor
+    bio: Chang is currently the guy in charge of this website. He studies Linguistics & Computer Science at UCLA. When he's not busy learning both natural and programming languages, he likes to take photos, dance and travel.
     mug: Yes
     email: chliu@media.ucla.edu
     github: shampliu
     website: http://changliu.io
 michael_hull:
-    name: Michael Hull 
+    name: Michael Hull
     title: Assistant Sports Editor
     bio: Hull currently covers men's water polo for the Sports section. He was a writer for the track and field team in the spring of 2016, and for the NCAA champion men's water polo team in 2015.
     mug: Yes
@@ -95,11 +95,35 @@ jeffrey_chan:
     twitter: jeffreyxchan
     github: jeffreyxchan
 carter_wu:
-    name: Carter Wu 
+    name: Carter Wu
     title: Stack Developer
     bio: Carter is one of the developers for The Stack. He is currently studying Computer Science and Engineering, and enjoys working with big data. Outside of school, Carter loves to eat delicious food, play sports, and browse Reddit.
     mug: Yes
     email: xwu@media.ucla.edu
     github: xiaoxuwu
-
-
+yiling_liu:
+    name: Yiling Liu
+    title: Daily Bruin Contributor
+    bio: Yiling writes for the Science and Health beat in the Daily Bruin. She studies biochemistry. In her free time, she enjoys watching good music videos like Luhan's "Lu".
+    mug: Yes
+    email: yliu2@media.ucla.edu
+natalie_ethell:
+    name: Natalie Ethell
+    title: Stack Developer
+    bio: Natalie is a 4th year computer science major. She has been dancing since she was 5 and enjoys any combination of bagels and dogs.
+    mug: Yes
+    email: nethell@media.ucla.edu
+    github: natalieethell
+mahir_eusufzai:
+    name: Mahir Eusufzai
+    title: Stack Developer
+    bio: Mahir is a 4th year CS major. He's a huge Lakers fan and occasionally posts piano/guitar videos on YouTube.  He is frequently mistaken for Mihir Mathur.
+    mug: Yes
+    email: meusufzai@media.ucla.edu 
+fay_wu:
+    name: Fay Wu
+    title: Stack Developer
+    bio: Fay is in her last quarter at UCLA CS and loves oysters.
+    mug: Yes
+    email: mfaywu@ucla.edu
+    github: mfaywu
