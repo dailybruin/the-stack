@@ -1,7 +1,6 @@
 d3.queue()
   .defer(d3.json, '/datasets/course-catalog/similar-subjects.json')
-  .defer(d3.json, '/datasets/course-catalog/subtract-pairs.json')
-  .await((error, similarData, subtractData) => {
+  .await((error, similarData) => {
 
     // process data
     similarData.forEach(d => {
@@ -9,7 +8,6 @@ d3.queue()
     });
 
     renderSubjectTwinTables(similarData);
-    renderSubtractTable(subtractData);
 
   });
 
@@ -37,27 +35,6 @@ function renderSubjectTwinTables(data) {
   populateTable('#least-similar-table', defaultData, 'least_similar');
 }
 
-function renderSubtractTable(data) {
-  const pairs = d3.set(data, d => d.name).values();
-
-  d3.select('#pick-subtract-pair')
-    .on('change', e => pickSubtractPair(data))
-    .selectAll('options')
-    .data(pairs)
-    .enter()
-    .append('option')
-    .text(d => d)
-    .attr('value', (d, i) => i);
-
-  initTable('#subtract-table');
-
-  const defaultData = data.filter((d, i) => {
-    return i === 0;
-  });
-
-  populateTable('#subtract-table', defaultData, 'most_similar');
-}
-
 function getPickedData(selectId, data) {
   const selectedIndex = d3.select(selectId).property('value');
   const selectedData = data.filter((d, i) => {
@@ -71,12 +48,6 @@ function pickSubject(data) {
 
   populateTable('#most-similar-table', selectedData, 'most_similar');
   populateTable('#least-similar-table', selectedData, 'least_similar');
-}
-
-function pickSubtractPair(data) {
-  const selectedData = getPickedData('#pick-subtract-pair', data);
-  
-  populateTable('#subtract-table', selectedData, 'most_similar');
 }
 
 function initTable(table) {

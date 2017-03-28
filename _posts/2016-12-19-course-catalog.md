@@ -83,33 +83,6 @@ Pick a subject and see which 5 subjects are most similar and least similar to it
 <div id='pair-similarity-text'>
 </div>
 
-## Subject 1 + Subject 2 = ?
-At its best, *Word2vec* should allow us to learn new insights rather than simply quantify existing intuition. For instance, knowing the relationship between *United States* and *Britney Spears* it could allow us to find the Japanese Britney Spears. 
-
-In our case, adding the vectors of two departments allows us to learn departments that are similar to *both*.
-
-Which subjects are most similar to ...
-
-## Subject 1 - Subject 2 = ?
-
-We might also wonder: "what's *electrical engineering* without the *mathematics*?"
-
-Pick a pair of subjects, and see the answers to questions that could be phrased in that form:
-
-<select class="ui search selection dropdown" id="pick-subtract-pair">
-</select>
-
-<div class='ui centered grid'>
-  <div class='column'>
-    <h1>5 Closest Subjects</h1>
-    <table class='ui celled table' id='subtract-table'>
-    </table>
-  </div>
-</div>
-
-The "subtraction" analysis, however, is more difficult to understand or validate than "addition", perhaps due to our lack of intuition on how to decompose a subject into other subjects.
-
-
 ## More on course catalog
 
 The algorithm is only as good as the whatever information that's contained in course descriptions. We might break those information down into three categories:

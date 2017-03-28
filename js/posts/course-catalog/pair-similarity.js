@@ -35,7 +35,7 @@ function pickPairSubjects(data) {
   const pickedSubject1Index = d3.select('#pick-subject1').property('value'),
         pickedSubject2Index = d3.select('#pick-subject2').property('value');
   const selectedData = data.filter((d, i) => {
-    return d.subject1 == subject1 & d.subject2 == subject2) | (d.subject1 == subject2 & d.subject2 == subject1
+    return (d.subject1 == subject1 & d.subject2 == subject2) | (d.subject1 == subject2 & d.subject2 == subject1)
   });
   renderText(pickedSubject1, pickedSubject2, data)
 }
