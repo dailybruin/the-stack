@@ -21,6 +21,7 @@ function renderSubjectTwinTables(data) {
       .data(subjects)
       .enter()
       .append('option')
+      .property('selected', d => d == 'Astronomy')
       .text(d => d)
       .attr('value', (d, i) => i);
 
@@ -28,7 +29,7 @@ function renderSubjectTwinTables(data) {
   initTable('#least-similar-table');
 
   const defaultData = data.filter((d, i) => {
-      return i === 0;
+    return d.name == 'Astronomy';
   });
 
   populateTable('#most-similar-table', defaultData, 'most_similar');

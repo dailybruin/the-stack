@@ -39,7 +39,9 @@ Seeing 200 dimensions is not possible but simplifying them down to a 2D chart al
 
 While the dimensionality-reduction technique used here preserves clusters, it does not try to preserve distances. For instance, that *mathematics* is placed closer to *spanish* than *electrical engineering* on the chart does not neccearily suggest any insight, but the fact that they appear in *separate* clusters does matter.
 
-## Similar and dissimilar departments
+<br>
+
+## 5 Most / Least Similar Departments
 
 Using all the dimensions, we could better find relationships between departments.
 
@@ -65,7 +67,9 @@ Pick a subject and see which 5 subjects are most similar and least similar to it
   </div>
 </div>
 
-## Find the similarity between any two subjects
+<br>
+
+## Compare any two departments
 
 <div class='ui equal width center aligned grid'>
   <div class='row'>
@@ -80,10 +84,16 @@ Pick a subject and see which 5 subjects are most similar and least similar to it
   </div>
 </div>
 
-<div id='pair-similarity-text'>
+<div class='ui grid centered statistics'>
+  <div class='blue statistic'>
+    <div id='pair-similarity-score' class='value'></div>
+    <div id='pair-similarity-label' class='label'></div>
+  </div>
 </div>
 
-## More on course catalog
+<br><br>
+
+## Data: course catalog, department objectives
 
 The algorithm is only as good as the whatever information that's contained in course descriptions. We might break those information down into three categories:
 
@@ -99,7 +109,7 @@ Each department might teach only parts of its discipline, and professors might o
 
 If the catalog of several departments were written in the same style, using similar words and phrases, there had to some commonality between those departments. This category allows us to learn *what departments sound like*.
 
-## Data and model
+## Model
 
 After scrapping the course catalog, I merged the course descriptions of every department into a corresponding document.  ...
 
