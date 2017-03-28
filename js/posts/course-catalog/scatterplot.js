@@ -11,7 +11,7 @@ function plot(data, container) {
 
   const aspectRatio = 1,
         containerWidth = $(container).outerWidth(),
-        isMobile = containerWidth < 400? true : false;
+        isMobile = containerWidth < 400;
 
   const containerChartRatio = 0.8,
         chartWidth = containerWidth * containerChartRatio,
