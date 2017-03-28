@@ -13,7 +13,7 @@ function plot(data, container) {
         containerWidth = $(container).outerWidth(),
         isMobile = containerWidth < 400;
 
-  const containerChartRatio = 0.8,
+  const containerChartRatio = 0.85,
         chartWidth = containerWidth * containerChartRatio,
         chartHeight = chartWidth * aspectRatio;
 
@@ -33,52 +33,54 @@ function plot(data, container) {
 
 
   const labeledSubjects = isMobile? [
-    'Mathematics', 'Computer Science', 'Life Sciences', 'Physiological Science', 
-    'Physics', 'Mechanical and Aerospace Engineering', 'Economics', 'Management',
-    'Philosophy', 'Film and Television','Political Science', 'Italian', 'French'
+    'Mathematics', 'Computer Science',
+    'Chemical Engineering', 'Economics', 'Management',
+    'Geography', 'Environment', 'Sociology', 'Communication Studies'
   ] : [
-    'Mathematics', 'Statistics', 'Computer Science', 'Life Sciences', 'Physiological Science', 
-    'Bioengineering', 'Chemical Engineering', 'Economics', 'Management',
-    'Philosophy', 'Film and Television','Political Science', 'Sociology', 
-    'History', 'Classics', 'Italian', 'French', 'Korean', 'Chinese', 'Dance'
+    'Mathematics', 'Computer Science', 'Life Sciences', 'Psychology', 
+    'Chemical Engineering', 'Economics', 'Management', 'Physics', 'Electrical Engineering',
+    'Film and Television','Political Science', 'Sociology', 'Communication Studies', 
+    'History', 'Classics', 'Italian', 'English', 'Korean', 'Chinese', 'Dance',
+    'Geography', 'Environment'
   ];
 
   const labelYOffset = 0,
         labelXOffset = 0;
 
   const specialLabelXOffsets = {
-    'Economics': -8
+    'Psychology': -20
   }, specialLabelYOffsets = {
-    'Film and Television': -5,
-    'Economics': 15,
-    'Bioengineering': 14,
-    'Korean': -6,
-    'Italian': -6
+    'Italian': 10,
+    'Management': -15,
+    'Psychology': 10,
+    'Chinese': 10,
+    'Economics': 10,
+    'Geography': -5
   };
 
   const labels = svg.selectAll('text')
       .data(data.filter(d => {
-        return labeledSubjects.includes(d.name);
+        return labeledSubjects.includes(d.subject);
       }))
       .enter()
       .append('text')
       .attr('x', d => {
-          return d.x_ + labelXOffset + (specialLabelXOffsets[d.name]? specialLabelXOffsets[d.name] : 0);
+          return d.x_ + labelXOffset + (specialLabelXOffsets[d.subject]? specialLabelXOffsets[d.subject] : 0);
       })
       .attr('y', d => {
-          return d.y_ + labelYOffset + (specialLabelYOffsets[d.name]? specialLabelYOffsets[d.name] : 0);
+          return d.y_ + labelYOffset + (specialLabelYOffsets[d.subject]? specialLabelYOffsets[d.subject] : 0);
       })
       .text((d, i) => {
-          //const displayName = d.name.length >= 15? d.name.slice(0, 12) + ' ...' : d.name;
-          return d.name;
-          //return labeledSubjects.includes(d.name)? d.name : '';
+          //const displayName = d.subject.length >= 15? d.subject.slice(0, 12) + ' ...' : d.subject;
+          return d.subject;
+          //return labeledSubjects.includes(d.subject)? d.subject : '';
       })
-      .style('font-size', 11);
+      .style('font-size', 12);
 
   const tip = d3.tip()
   .attr('class', 'scatterplot-tip')
   .html(d => {
-      return "<span>" + d.name + "</span>";
+      return "<span>" + d.subject + "</span>";
   });
 
   svg.call(tip);
