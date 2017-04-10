@@ -1,4 +1,4 @@
-"overall_rating","easiness_rating","workload_rating","clarity_rating","helpfulness_rating","count","first_name","last_name","name","title"
+"overall_rating","easiness_rating","workload_rating","clarity_rating","helpfulness_rating","reviews_count","first_name","last_name","class_code","class_title"
 5,4.6388888888888889,4.4444444444444444,5,5,36,"Miles","Chen","STATS 10","Introduction to Statistical Reasoning"
 4.7894736842105263,4.3157894736842105,4.4210526315789474,4.5789473684210526,4.7368421052631579,90,"Thomas","Gillespie","GEOG 5","People and the Earth's Ecosystems"
 4.6666666666666667,3.9444444444444444,4.1666666666666667,4.5555555555555556,4.6666666666666667,18,"Georgiana","Galateanu","ROMANIA 101A","Elementary Romanian"
