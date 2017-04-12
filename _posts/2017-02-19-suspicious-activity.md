@@ -12,8 +12,9 @@ scripts:
   - /js/posts/suspicious-activity/app.js
   - //maps.googleapis.com/maps/api/js?key=AIzaSyBddbV3QvkJbOe-s1dbPXrxWV1Sy4z8nR0"
   - //api.mapbox.com/mapbox.js/plugins/turf/v2.0.2/turf.min.js
+  - /js/posts/suspicious-activity/test.js
 ---
 
 <div id="map" style="height: 400px;"></div>
 <svg width="640" height="640" id="bar-chart"></svg>
-<!-- - //unpkg.com/leaflet@1.0.3/dist/leaflet.js -->
+<svg width="640" height="640" id="test"></svg>
