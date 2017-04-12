@@ -1,11 +1,10 @@
 Position,UCB,UCD,UCI,UCLA,UCM,UCR,UCSB,UCSC,UCSD,UCSF,UC Total,,Total employees
-Medical center and related personnel,0,5,1,9,0,0,0,0,1,9,25,0.1879699248,99
+Medical center and related personnel,0,5,1,9,0,0,0,0,1,9,25,,99
 Athletics,3,0,0,1,0,1,1,1,0,0,7,,
 Professors/Faculty,3,1,2,6,1,1,1,1,0,0,16,,
 Facilities,1,0,0,0,0,0,0,0,2,3,6,,
 Dining/Housing,3,0,0,1,2,0,0,3,2,2,13,,
-Unknown:,2,5,4,2,2,4,4,2,0,6,31,98,
+Unknown,2,5,4,2,2,4,4,2,0,6,31,98,
 Administration,2,,1,0,0,0,0,0,0,0,3,,
 Contractor,1,,0,0,0,0,0,0,0,0,1,99,
-Other ,3,4,3,6,2,2,2,1,2,6,31,,
-,,,,,,,,,,,133,
+Other,3,4,3,6,2,2,2,1,2,6,31,,
