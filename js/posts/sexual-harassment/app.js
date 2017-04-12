@@ -1,7 +1,6 @@
 // http://stackoverflow.com/questions/11088303/how-to-convert-to-d3s-json-format
-d3.csv("/datasets/sexual-harrassment/uc-sexual-assault-reports.csv", function(error, data) {
+d3.csv("/datasets/sexual-harrassment/positions.csv", function(error, data) {
   if (error) throw error;
-  console.log(data);
 
   var nodesByName = {};
 
@@ -31,8 +30,10 @@ d3.csv("/datasets/sexual-harrassment/uc-sexual-assault-reports.csv", function(er
   	return (nodesByName[value] = {[name]: value});
   }
 
-  console.log(nodes);
-  console.log(root);
+  console.log(data);
+
+  // console.log(nodes);
+  // console.log(root);
 
   // initBubbleChart(data)
 });
