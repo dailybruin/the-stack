@@ -11,13 +11,13 @@ featured_image:
     url: 
 og_image: 
 stylesheets:
-  - /css/posts/bruinwalk-professor-rating/app.css
+  - /css/posts/bruinwalk-class-ratings/app.css
 scripts:
   - https://cdnjs.cloudflare.com/ajax/libs/superagent/3.5.2/superagent.min.js
   - https://cdnjs.cloudflare.com/ajax/libs/vue/2.2.6/vue.min.js
   - https://cdnjs.cloudflare.com/ajax/libs/PapaParse/4.2.0/papaparse.min.js
   - https://www.gstatic.com/charts/loader.js
-  - /js/posts/bruinwalk-professor-ratings/app.js
+  - /js/posts/bruinwalk-class-ratings/app.js
 ---
 
 You wouldn't buy a 3.5-star phone case on Amazon that costs $12, so why "buy" a 2.5-rated class at UCLA that costs $1,200?
