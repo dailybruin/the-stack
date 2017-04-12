@@ -5,7 +5,7 @@
   // alias superagent as `request`
   const request = superagent;
 
-  const DATA_URL = '/datasets/bruinwalk-professor-ratings/ratings.csv';
+  const DATA_URL = '/datasets/bruinwalk-class-ratings/ratings.csv';
   const PRIMARY_COLOR = '#00a5ff';
   const SECONDARY_COLOR_ORANGE = '#ff9040';
   const TERTIARY_COLOR_RED = '#cc4714'
