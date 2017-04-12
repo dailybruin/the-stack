@@ -4,12 +4,12 @@ teaser: Bruinwalk data shows the classes you should take – and avoid – to
 authors:
   - harrison_liddiard
 key_takeaways:
-  - UCLA classes cost up to $1,230 per class for a resident undergrad.
+  - UCLA classes cost up to $1,230 each for a resident undergrad.
   - Students like a professor who can teach well more than they like an easy class.
   - Students never hate easy classes, but they find many hard classes worthwhile too.
 featured_image:
-    url: 
-og_image: 
+    url: bruinwalk-class-ratings/featured_image.svg
+og_image: bruinwalk-class-ratings/featured_image.png
 stylesheets:
   - /css/posts/bruinwalk-class-ratings/app.css
 scripts:
@@ -22,7 +22,7 @@ scripts:
 
 You wouldn't buy a 3.5-star phone case on Amazon that costs $12, so why "buy" a 2.5-rated class at UCLA that costs $1,200?
 
-With a resident UCLA undergraduate paying up to **$1,230** per class in tuition and fees alone<sup><a href="#cite-1">[1]</a></sup> and spending around **100 hours** per class,<sup><a href="#cite-2">[2]</a></sup> a course choice can be an expensive investment of money and time. Our analysis of [Bruinwalk](http://bruinwalk.com) ratings, sourced from thousands of students, can help you make it a good one.
+With a resident UCLA undergraduate paying up to **$1,230** per class in tuition and fees alone<sup><a href="#cite-1">[1]</a></sup> and spending around **100 hours** per class,<sup><a href="#cite-2">[2]</a></sup> a course choice is an expensive investment of money and time. Our analysis of [Bruinwalk](http://bruinwalk.com) ratings, sourced from thousands of students, can help you make it a good one.
 
 It's important to remember that there's more to a professor than their Bruinwalk rating, just like there's more to a student than their GPA. That said, students deserve to know what they're paying for, and ratings and reviews are a good start.
 
