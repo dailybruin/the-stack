@@ -1,12 +1,12 @@
 ---
 title: The 25 best and worst UCLA classes, according to students
-teaser: Bruinwalk.com data shows which classes students recommend, and which they warn against
+teaser: Bruinwalk data shows which classes students recommend, and which they warn against
 authors:
   - harrison_liddiard
 key_takeaways:
-  - Each resident student pays up to $1,230 for each UCLA undergraduate course.
+  - Resident students pay up to $1,230 for each UCLA undergraduate course.
   - Students seem to prefer classes with highly-rated professors than those rated easy, according to data from Bruinwalk.com.
-  - Students don't assign low overall ratings to easy courses, but do rate some difficult courses favorably overall.
+  - Students don’t assign low overall ratings to easy courses, but do rate some difficult courses favorably overall.
 featured_image:
     url: bruinwalk-class-ratings/featured_image.svg
 og_image: bruinwalk-class-ratings/featured_image.png
@@ -22,11 +22,11 @@ scripts:
 
 A UCLA education is a huge investment – each resident UCLA undergraduate student pays up to **$1,230** per class in tuition and fees,<sup><a href="#cite-1">[1]</a></sup> and invests about **100 hours** per class.<sup><a href="#cite-2">[2]</a></sup> 
 
-Our analysis of Bruinwalk ratings, sourced from thousands of students, can help you make that investment worthwhile. There's more to a professor than their Bruinwalk rating, just like there's more to a student than their GPA, but students can use ratings and reviews to select courses that are worth their time and money.
+Our analysis of Bruinwalk ratings, sourced from thousands of students, can help you make that investment worthwhile. There’s more to a professor than their Bruinwalk rating, just like there’s more to a student than their GPA, but students can use ratings and reviews to select courses that are worth their time and money.
 
 ## The data
 
-The data visualized below is sourced from **41,515 ratings** on [bruinwalk.com]((http://bruinwalk.com)), as of February 2017. Each course and professor pairing is rated in five categories: overall, easiness, workload, helpfulness and clarity.
+The data visualized below is sourced from **41,515 ratings** on [bruinwalk.com]((http://bruinwalk.com)) as of February 2017. Students rate each course and professor pairing on five criteria: overall, class easiness, class workload, professor helpfulness and professor clarity.
 
 Only course and professor pairings with **15 or more** ratings were included when analyzing their *average* ratings. These comprise the **577 most-reviewed courses** on Bruinwalk, with a combined total of 14,534 ratings.
 
@@ -75,31 +75,31 @@ Only course and professor pairings with **15 or more** ratings were included whe
   <h3>Distribution of course easiness ratings</h3>
   <figure class="ratings-chart fullwidth" id="easiness"></figure>
 
-  <h2>Correlating categories of ratings</h2>
+  <h2>Correlating rating criteria</h2>
 
   <p>This won’t come as a surprise: <strong>students tend to rate easier classes more favorably overall</strong>. No courses rated easy (easiness rating above 3.50) were rated poorly overall (overall rating below 2.50).</p>
   
   <p>But students have also given high overall ratings to a substantial number of difficult courses. Difficult courses with high overall ratings occupy the upper left corner of the following scatter plot.</p>
 
-  <h3>Students don't assign low overall ratings to easy courses, but do rate some difficult courses favorably overall.</h3>
+  <h3>Students don’t assign low overall ratings to easy courses, but do rate some difficult courses favorably overall.</h3>
   <figure class="ratings-chart fullwidth" id="easiness-vs-overall"></figure>
 
-  <p>Students seem to prefer highly rated professors over easy courses. Courses with higher clarity ratings, or those with <strong>professors who are easier to understand</strong>, are more highly rated overall than courses with low clarity ratings. The clarity rating is the best predictor for students' overall course satisfaction – its line of best fit has an r<sup>2</sup> value of 0.797.</p>
+  <p>Students seem to prefer highly rated professors over easy courses. Courses with higher clarity ratings, or those with <strong>professors who are easier to understand</strong>, are more highly rated overall than courses with low clarity ratings. The clarity rating is the best predictor for students’ overall course satisfaction – its line of best fit has an r<sup>2</sup> value of 0.797.</p>
   
   <p>Clarity only narrowly beats out <strong> helpfulness</strong> in determining a student’s overall course rating (r<sup>2</sup> = 0.703), but it signifcantly beats out both easiness (r<sup>2</sup> = 0.185) and workload (r<sup>2</sup> = 0.182) ratings.</p>
 
-  <h3>A course's clarity rating is the best predictor for its overall rating.</h3>
+  <h3>A course’s clarity rating is the best predictor for its overall rating.</h3>
   <figure class="ratings-chart fullwidth" id="clarity-vs-overall"></figure>
 
 </div>
 
 ## In conclusion
 
-Choosing the right courses and professors can make your investment in a UCLA education much more worthwhile. Each class comes with a high price, so it's important to go out of your way to find good classes – and good professors – whenever possible.
+Choosing the right courses and professors can make your investment in a UCLA education much more worthwhile. Each class comes with a high price, so it’s important to go out of your way to find good classes – and good professors – whenever possible.
 
 ## Get the data
 
-The data used in this post is available on [The Stack's GitHub repo in CSV format](#todo). It's ready to import into Excel or Numbers for quick browsing, or you can parse it using a CSV library in your programming language of choice. 
+The data used in this post is available on [The Stack’s GitHub repo in CSV format](#todo). It’s ready to import into Excel or Numbers for quick browsing, or you can parse it using a CSV library in your programming language of choice. 
 
 Find anything interesting we missed? Tweet us [@_thestack](https://twitter.com/_thestack).
 
