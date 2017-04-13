@@ -1,12 +1,12 @@
 ---
-title: The 25 best and worst UCLA classes according to students
-teaser: Bruinwalk data shows the classes you should take – and avoid – to get the best return on your college investment
+title: The 25 best and worst UCLA classes, according to students
+teaser: Bruinwalk.com data shows which classes students recommend, and which they warn against
 authors:
   - harrison_liddiard
 key_takeaways:
-  - UCLA classes cost up to $1,230 each for a resident undergrad.
-  - Students like a professor who can teach well more than they like an easy class.
-  - Students never hate easy classes, but they find many hard classes worthwhile too.
+  - Each resident student pays up to $1,230 for each UCLA undergraduate course.
+  - Students seem to prefer classes with highly-rated professors than those rated easy, according to data from Bruinwalk.com.
+  - Students don't assign low overall ratings to easy courses, but do rate some difficult courses favorably overall.
 featured_image:
     url: bruinwalk-class-ratings/featured_image.svg
 og_image: bruinwalk-class-ratings/featured_image.png
@@ -20,92 +20,82 @@ scripts:
   - /js/posts/bruinwalk-class-ratings/app.js
 ---
 
-You wouldn't buy a 3.5-star phone case on Amazon that costs $12, so why "buy" a 2.5-rated class at UCLA that costs $1,200?
+A UCLA education is a huge investment – each resident UCLA undergraduate student pays up to **$1,230** per class in tuition and fees,<sup><a href="#cite-1">[1]</a></sup> and invests about **100 hours** per class.<sup><a href="#cite-2">[2]</a></sup> 
 
-With a resident UCLA undergraduate paying up to **$1,230** per class in tuition and fees alone<sup><a href="#cite-1">[1]</a></sup> and spending around **100 hours** per class,<sup><a href="#cite-2">[2]</a></sup> a course choice is an expensive investment of money and time. Our analysis of [Bruinwalk](http://bruinwalk.com) ratings, sourced from thousands of students, can help you make it a good one.
-
-It's important to remember that there's more to a professor than their Bruinwalk rating, just like there's more to a student than their GPA. That said, students deserve to know what they're paying for, and ratings and reviews are a good start.
+Our analysis of Bruinwalk ratings, sourced from thousands of students, can help you make that investment worthwhile. There's more to a professor than their Bruinwalk rating, just like there's more to a student than their GPA, but students can use ratings and reviews to select courses that are worth their time and money.
 
 ## The data
 
-The data used this post is from **41,515 ratings** in a recent Bruinwalk database snapshot. 
+The data visualized below is sourced from **41,515 ratings** on [bruinwalk.com]((http://bruinwalk.com)), as of February 2017. Each course and professor pairing is rated in five categories: overall, easiness, workload, helpfulness and clarity.
 
-For analysis of *average* ratings, I considered only professor/course combinations with **15 or more** ratings. These comprise the **577 most-reviewed courses** on Bruinwalk with a combined total of 14,534 ratings.
-
-The raw data used is available at the end of the post.
+Only course and professor pairings with **15 or more** ratings were included when analyzing their *average* ratings. These comprise the **577 most-reviewed courses** on Bruinwalk, with a combined total of 14,534 ratings.
 
 <div id="app">
 
   <h2>Overall rating</h2>
 
-  <p>Looking for an all-around great class? Look no further than the top 25 overall…</p>
+  <p>Looking for an all-around great class? Look no further than the top 25 overall.</p>
   <h3 id="visualization">The top 25 classes by overall rating</h3>
   <ratings-list :ratings="bestOverall" rating-type="overall_rating" 
                 id="best-overall"></ratings-list>
 
-  <p>…on the other hand, steer clear of these classes to avoid potentially bad professors, frustration and/or heavy workloads.</p>
+  <p>Steer clear of these classes to avoid poorly rated professors, frustration and heavy workloads.</p>
   <h3>The bottom 25 classes by overall rating</h3>
   <ratings-list :ratings="worstOverall" rating-type="overall_rating" 
                 id="worst-overall"></ratings-list>
 
-  <p>Students tend to be somewhat generous on overall rating, skewing the distribution toward the higher end. The most common overall rating given is a <strong>4</strong>, which accounts for <strong>33.8%</strong> of all ratings.</p>
+  <p>The most common overall rating awarded is a <strong>4</strong>, which accounts for <strong>33.8 percent</strong> of all ratings. This skews the distribution toward the higher end, away from the expected average of 2.5. </p>
 
-  <h3>Distribution of overall ratings</h3>
+  <h3>Breakdown of overall ratings</h3>
   <figure class="ratings-chart" id="overall-ratings-count"></figure>
 
-  <h3>Distribution of average overall course ratings</h3>
+  <h3>Distribution of overall course ratings</h3>
   <figure class="ratings-chart fullwidth" id="overall"></figure>
-  <p>📱 <em>Heads up! If you’re on a mobile device, consider exploring these graphs on a desktop computer. It will let you hover over individual courses for information.</em></p>
+  <p>📱 <em>Heads up! If you’re on a mobile device, consider viewing these graphs on a desktop computer to hover over individual courses for more information.</em></p>
 
   <h2>Easiness rating</h2>
 
-  <p>Have a tough quarter and need an easy class to survive? Pick up one of the following…</p>
+  <p>Need an easy class to balance out a tough quarter? Enroll in one of the following.</p>
 
   <h3>The 25 easiest classes</h3>
   <ratings-list :ratings="easiest" rating-type="easiness_rating"
                 id="easiest"></ratings-list>
 
-  <p>…and don’t take one of these unless you're prepared to not have a life for the quarter (or you don’t have a choice 😬).</p>
+  <p>Don’t take one of these unless you don’t have the choice. 😬</p>
 
   <h3>The 25 hardest classes</h3>
   <ratings-list :ratings="hardest" rating-type="easiness_rating" 
                 id="hardest"></ratings-list>
 
-  <p>Students more often rate a course as difficult than as easy. 11 courses have a 1.00 average, the “most difficult” possible rating, while only six courses have a rating above 4.00. The most common easiness rating given is a <strong>2</strong>, which accounts for <strong>39.2%</strong> of all ratings.</p>
+  <p>Students have rated more courses as difficult that easy. Eleven courses have a 1.00 average, the most difficult rating, while only six courses have ratings above 4.00. The most common rating awarded is a <strong>2</strong>, which accounts for <strong>39.2 percent</strong> of easiness ratings.</p>
   
-  <h3>Distribution of easiness ratings</h3>
+  <h3>Breakdown of easiness ratings</h3>
   <figure class="ratings-chart" id="easiness-ratings-count"></figure>
 
-  <h3>Distribution of average course easiness ratings</h3>
+  <h3>Distribution of course easiness ratings</h3>
   <figure class="ratings-chart fullwidth" id="easiness"></figure>
 
-  <h2>Rating correlations</h2>
+  <h2>Correlating categories of ratings</h2>
 
-  <p>This won’t come as a surprise: <strong>students tend to like easier classes</strong>. As an average, students <em>never</em> rate easy courses (easiness rating above 3.50) as poor overall (overall rating below 2.50).</p>
+  <p>This won’t come as a surprise: <strong>students tend to rate easier classes more favorably overall</strong>. No courses rated easy (easiness rating above 3.50) were rated poorly overall (overall rating below 2.50).</p>
   
-  <p>That said, students give high overall ratings to a substantial number of courses with <strong>tough professors</strong>. Difficult-but-good classes are in the upper left corner of the following scatter plot.</p>
+  <p>But students have also given high overall ratings to a substantial number of difficult courses. Difficult courses with high overall ratings occupy the upper left corner of the following scatter plot.</p>
 
-  <h3>Students never hate easy classes, but they think hard classes can be valuable too.</h3>
+  <h3>Students don't assign low overall ratings to easy courses, but do rate some difficult courses favorably overall.</h3>
   <figure class="ratings-chart fullwidth" id="easiness-vs-overall"></figure>
 
-  <p><em>Note: This graph has some clustering along horizontal and vertical lines. This is caused by the fractional division in the calculation of averages.</em></p>
-
-  <p>More than an easy class, students seem to want a good teacher. Students consistently rate courses with <strong>easy-to-understand professors</strong> highly. The clarity of a professor is the most predictive Bruinwalk criterion for a student’s overall course satisfaction. It has an r<sup>2</sup> value of 0.797.</p>
+  <p>Students seem to prefer highly rated professors over easy courses. Courses with higher clarity ratings, or those with <strong>professors who are easier to understand</strong>, are more highly rated overall than courses with low clarity ratings. The clarity rating is the best predictor for students' overall course satisfaction – its line of best fit has an r<sup>2</sup> value of 0.797.</p>
   
-  <p>Professor clarity only narrowly beats out <strong>professor helpfulness</strong> in determining a student’s overall course rating (r<sup>2</sup> = 0.703), but it signifcantly beats out both course easiness (r<sup>2</sup> = 0.185) and course workload (r<sup>2</sup> = 0.182).</p>
+  <p>Clarity only narrowly beats out <strong> helpfulness</strong> in determining a student’s overall course rating (r<sup>2</sup> = 0.703), but it signifcantly beats out both easiness (r<sup>2</sup> = 0.185) and workload (r<sup>2</sup> = 0.182) ratings.</p>
 
-  <h3>There’s a strong correlation between a clear professor and a high overall course rating.</h3>
+  <h3>A course's clarity rating is the best predictor for its overall rating.</h3>
   <figure class="ratings-chart fullwidth" id="clarity-vs-overall"></figure>
 
 </div>
 
 ## In conclusion
 
-I can personally vouch for several of the highly rated professors in this post including Miles Chen (Stats 10), Teofilo Ruiz (History 1B), Carey Nachenberg (CS 32), Alexandr Sherstov (CS 181), Keith Fink (Comm Studies M51B), and Jay Phelan (LS 15). These professors have added huge value to my college academic experience.
-
-I won't mention by name any of the professors I've taken from the bottom 25 lists, but let's just say some of the low ratings are not an exaggeration. Teaching is a difficult job, and unfortunately, not every professor here is cut out for it.
-
-A good professor can make the difference between understanding and remembering significant concepts for years to come and getting next to nothing out of your investment of time and money. With such a high cost per class, it's worth it to go out of your way for good classes – and good professors – whenever possible.
+Choosing the right courses and professors can make your investment in a UCLA education much more worthwhile. Each class comes with a high price, so it's important to go out of your way to find good classes – and good professors – whenever possible.
 
 ## Get the data
 
@@ -118,6 +108,6 @@ Find anything interesting we missed? Tweet us [@_thestack](https://twitter.com/_
     <a id="cite-1" href="#cite-1">[1]:</a> Assumes an average of 3.5 courses taken per quarter. Does not factor in non-tuition fees. While many students pay less due to scholarships, financial aid, etc., many non-residents pay even more. <a href="http://www.ucla.edu/admission/affordability">http://www.ucla.edu/admission/affordability</a>
   </p>
   <p>
-    <a id="cite-2" href="#cite-2">[2]:</a> Assumes 5 hours per week for lecture and discussion plus 5 hours per week for work outside class.
+    <a id="cite-2" href="#cite-2">[2]:</a> Assumes 5 hours per week in class, plus 5 hours per week for work done outside class.
   </p>
 </div>
