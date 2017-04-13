@@ -20,7 +20,7 @@ scripts:
   - /js/posts/bruinwalk-class-ratings/app.js
 ---
 
-A UCLA education is a huge investment – each resident UCLA undergraduate student pays up to **$1,230** per class in tuition and fees,<sup><a href="#cite-1">[1]</a></sup> and invests about **100 hours** per class.<sup><a href="#cite-2">[2]</a></sup> 
+A UCLA education is a huge investment – each resident undergraduate student pays up to **$1,230** per class in tuition and fees,<sup><a href="#cite-1">[1]</a></sup> and invests about **100 hours** per class.<sup><a href="#cite-2">[2]</a></sup> 
 
 Our analysis of Bruinwalk ratings, sourced from thousands of students, can help you make that investment worthwhile. There’s more to a professor than their Bruinwalk rating, just like there’s more to a student than their GPA, but students can use ratings and reviews to select courses that are worth their time and money.
 
