@@ -26,7 +26,7 @@ Our analysis of Bruinwalk ratings, sourced from thousands of students, can help 
 
 ## The data
 
-The data visualized below is sourced from **41,515 ratings** on [bruinwalk.com]((http://bruinwalk.com)) as of February 2017. Students rate each course and professor pairing on five criteria: overall, class easiness, class workload, professor helpfulness and professor clarity.
+The data visualized below is sourced from **41,515 ratings** on [bruinwalk.com]((http://bruinwalk.com)) as of February 2017. Students rate each course and professor pairing on five criteria: overall, class easiness, workload, professor helpfulness and professor clarity.
 
 Only course and professor pairings with **15 or more** ratings were included when analyzing their *average* ratings. These comprise the **577 most-reviewed courses** on Bruinwalk, with a combined total of 14,534 ratings.
 
@@ -81,14 +81,14 @@ Only course and professor pairings with **15 or more** ratings were included whe
   
   <p>But students have also given high overall ratings to a substantial number of difficult courses. Difficult courses with high overall ratings occupy the upper left corner of the following scatter plot.</p>
 
-  <h3>Students don’t assign low overall ratings to easy courses, but do rate some difficult courses favorably overall.</h3>
+  <h3>Students don’t assign low overall ratings to easy courses, but they rate many difficult courses favorably overall.</h3>
   <figure class="ratings-chart fullwidth" id="easiness-vs-overall"></figure>
 
-  <p>Students seem to prefer highly rated professors over easy courses. Courses with higher clarity ratings, or those with <strong>professors who are easier to understand</strong>, are more highly rated overall than courses with low clarity ratings. The clarity rating is the best predictor for students’ overall course satisfaction – its line of best fit has an r<sup>2</sup> value of 0.797.</p>
+  <p>Students seem to prefer clear professors over easy courses. Courses with higher professor clarity ratings, or those with <strong>professors who are easier to understand</strong>, are more highly rated overall than courses with low clarity ratings. The clarity rating is the best predictor for students’ overall course satisfaction – its line of best fit has an r<sup>2</sup> value of 0.797.</p>
   
-  <p>Clarity only narrowly beats out <strong> helpfulness</strong> in determining a student’s overall course rating (r<sup>2</sup> = 0.703), but it signifcantly beats out both easiness (r<sup>2</sup> = 0.185) and workload (r<sup>2</sup> = 0.182) ratings.</p>
+  <p>Professor clarity only narrowly beats out <strong>professor helpfulness</strong> in determining a student’s overall course rating (r<sup>2</sup> = 0.703), but it signifcantly beats out both class easiness (r<sup>2</sup> = 0.185) and workload (r<sup>2</sup> = 0.182) ratings.</p>
 
-  <h3>A course’s clarity rating is the best predictor for its overall rating.</h3>
+  <h3>A professor’s clarity rating is the best predictor of a class’s overall rating.</h3>
   <figure class="ratings-chart fullwidth" id="clarity-vs-overall"></figure>
 
 </div>
