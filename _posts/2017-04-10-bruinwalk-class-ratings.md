@@ -67,7 +67,7 @@ Only course and professor pairings with **15 or more** ratings were included whe
   <ratings-list :ratings="hardest" rating-type="easiness_rating" 
                 id="hardest"></ratings-list>
 
-  <p>Students have rated more courses as difficult that easy. Eleven courses have a 1.00 average, the most difficult rating, while only six courses have ratings above 4.00. The most common rating awarded is a <strong>2</strong>, which accounts for <strong>39.2 percent</strong> of easiness ratings.</p>
+  <p>Students have rated more courses as difficult than easy. Eleven courses have a 1.00 average, the most difficult rating, while only six courses have ratings above 4.00. The most common rating awarded is a <strong>2</strong>, which accounts for <strong>39.2 percent</strong> of easiness ratings.</p>
   
   <h3>Breakdown of easiness ratings</h3>
   <figure class="ratings-chart" id="easiness-ratings-count"></figure>
@@ -86,7 +86,7 @@ Only course and professor pairings with **15 or more** ratings were included whe
 
   <p>Students seem to prefer clear professors over easy courses. Courses with higher professor clarity ratings, or those with <strong>professors who are easier to understand</strong>, are more highly rated overall than courses with low clarity ratings. The clarity rating is the best predictor for students’ overall course satisfaction – its line of best fit has an r<sup>2</sup> value of 0.797.</p>
   
-  <p>Professor clarity only narrowly beats out <strong>professor helpfulness</strong> in determining a student’s overall course rating (r<sup>2</sup> = 0.703), but it signifcantly beats out both class easiness (r<sup>2</sup> = 0.185) and workload (r<sup>2</sup> = 0.182) ratings.</p>
+  <p>Professor clarity only narrowly beats out <strong>professor helpfulness</strong> in predicting a student’s overall course rating (r<sup>2</sup> = 0.703), but it signifcantly beats out both class easiness (r<sup>2</sup> = 0.185) and workload (r<sup>2</sup> = 0.182) ratings.</p>
 
   <h3>A professor’s clarity rating is the best predictor of a class’s overall rating.</h3>
   <figure class="ratings-chart fullwidth" id="clarity-vs-overall"></figure>
