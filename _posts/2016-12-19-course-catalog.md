@@ -22,22 +22,22 @@ scripts:
     - /js/posts/course-catalog/pair-similarity.js
 ---
  
-From Plato to Pluto, the hundreds of subjects taught at UCLA cover much of the knowledge scholars accumulated over time, but how might we plot every department on a chart so as to find relations between fields of study? 
+From Plato to Pluto, the hundreds of subjects taught at UCLA cover much of the knowledge scholars accumulated over time, but how can we identify the relations between different fields of study? With the geography of UCLA as a guide, we could put a divider line near Powell Library and get two buckets – the North and South campuses. Yet intuition and [memes](https://www.facebook.com/photo.php?fbid=1386003851449756&set=gm.227389317732629&type=3&permPage=1) cannot provide a consistent blueprint for how to analyze the relations between subjects.
 
-With the geography of UCLA as a guide, we could put a divider line near Powell Library and get two buckets – the North and South campuses. But what if we want to know whether Art History is closer to History or Classics? Or which subjects are most like and unlike Economics? Intuition can only guide us so far because we are likely familiar with only a small subset of all the world's academic subjects.
-
-Public sources of data on the UCLA Registrar website contain useful information on what each department is about. Using [course descriptions](http://www.registrar.ucla.edu/Academics/Course-Descriptions) as well as [departmental objectives](http://catalog.registrar.ucla.edu/ucla-cat2016-224.html), we apply a variant of the *word2vec* algorithm – a machine learning model that can capture the semantic meaning of words – and quantify each department as a list of numbers. Details are explained later in the post. 
+The good news is that the UCLA Registrar provides valuable information that allow us to more precisely determine what each academic department is about. Using [course descriptions](http://www.registrar.ucla.edu/Academics/Course-Descriptions) as well as [departmental objectives](http://catalog.registrar.ucla.edu/ucla-cat2016-224.html), we apply a variant of the *word2vec* algorithm – a machine learning model that can capture the semantic meaning of words – to quantify each department as a list of numbers. These numbers provide a blueprint for analyzing the links and clusters that relate departments with one another.  Technical details are described later in the article. 
 
 ## Plotting UCLA departments
 
-Essentially, we are locating each department on a "map". And so we can visually summarize this analysis as a scatterplot. A few departments are labeled, but feel free to hover over any point.
+We can locate each department on a map and visually summarize this analysis as a scatterplot. A few departments are labeled, but feel free to hover over any point.
 
   <div class='ui grid centered' id='scatterplot-wrapper'>
       <div class='twelve wide column' id='scatterplot'>
       </div>
   </div>
 
-Note that our model actually provides 200 dimensions for each department; and while the dimensionality-reduction technique used to make the 2D plot guarantees that the most closely related departments are visually clustered together, the visual distances between points do not convey much information. The non-visual analysis in the following sections, however, does not suffer from this loss of information.
+<br>
+
+Our model actually computes 200 dimensions for each department, but we've reduced it down to a 2D chart using a dimensionality-reduction tool called [t-SNE](http://scikit-learn.org/stable/modules/generated/sklearn.manifold.TSNE.html). While the reduced plot preserves the clusters that form in the original, high dimensional space, the visual distances between points do not convey much information. The non-visual analyses in the subsequent sections, however, do not suffer from this issue.
 
 <br>
 
@@ -69,17 +69,35 @@ Pick a subject and see which 5 other subjects are the most and least similar:
 
 ## Grouping departments
 
-We can also group similar departments together.
+We can identify clusters of departments that are similar. It turns out that the algorithmically-generated groups match our intuition pretty well. In fact, they manage to reproduce the North-South campus divide that UCLA students are familiar with. 
 
-**"Social Studies"**
+<h1 style='text-align:center;'>North Campus</h1>
+
+**"Perform"** 
+
+Dance; Design / Media Arts; Ethnomusicology; Film and Television; Music; Music History; Theater
+
+**"Speak"**
+
+Art History; Ancient Near East; Comparative Literature; Chinese; Classics; English; English Composition; French; German; Italian; Japanese; Korean; Linguistics; Philosophy; Scandinavian; Spanish
+
+**"Society"**
 
 Art; Anthropology; Asian American Studies; Communication Studies; Chicana and Chicano Studies; Environment; Education; Gender Studies; General Education Clusters; Geography; History; Political Science; Society and Genetics; Sociology
 
-**"Business"**
+<br>
+
+<h1 style='text-align:center;'>South Campus</h1>
+
+**"Capital"**
 
 Economics; Management
 
-**"Math"** 
+**"Life"** 
+
+Ecology and Evolutionary Biology; Life Sciences; Molecular, Cell, and Developmental Biology; Microbiology, Immunology, and Molecular Genetics; Neuroscience; Psychology; Physiological Science
+
+**"Compute"** 
 
 Computer Science; Electrical Engineering; Mathematics; Program in Computing; Statistics
 
@@ -87,22 +105,11 @@ Computer Science; Electrical Engineering; Mathematics; Program in Computing; Sta
 
 Astronomy; Atmospheric and Oceanic Sciences; Chemical Engineering; Chemistry and Biochemistry; Civil and Environmental Engineering; Earth, Planetary, and Space Sciences; Mechanical and Aerospace Engineering; Physics
 
-**"Performance"** 
+<br>
 
-Dance; Design / Media Arts; Ethnomusicology; Film and Television; Music; Music History; Theater
+## Compare any 2 departments
 
-**"Language"**
-
-Art History; Ancient Near East; Comparative Literature; Chinese; Classics; English; English Composition; French; German; Italian; Japanese; Korean; Linguistics; Philosophy; Scandinavian; Spanish
-
-**"Life Science"** 
-
-Ecology and Evolutionary Biology; Life Sciences; Molecular, Cell, and Developmental Biology; Microbiology, Immunology, and Molecular Genetics; Neuroscience; Psychology; Physiological Science
-
-
-## Compare any two departments
-
-Pick any two subjects. 
+Pick and compare any two subjects. 
 
 (Which two? Your old major and your current major; what you and your significant other study; double majors ...)
 
@@ -126,13 +133,13 @@ Pick any two subjects.
 
 ## Data
 
-We are interested in texts that can capture the essence of academic subjects. For every department, we use the course descriptions of all the classes offered by that department. Many departments also publish a "Scope and Objectives" statement, which we incorporate as well.
+We want texts that can capture the essence of academic subjects. For every department, we use the course descriptions of all the classes offered by that department. Many departments also publish a "Scope and Objectives" statement, which we incorporate as well.
 
 **Course Catalog**
 
-The course catalog reflects the breadth and depth of subjects in the academic world, and how they are taught at UCLA. Thus, keywords of topics and concepts play highlight the differences between disciplines. In addition, course descriptions sometimes refer to pre-requisites in other departments or include classes that are cross-listed in multiple departments. These links provide clues into the cross-pollination between deparments at UCLA. 
+The course catalog reflects the breadth and depth of subjects in the broader academic world, and how they are taught at UCLA. Crucially, keywords of topics that are taught in classes can capture the differences between disciplines. Course descriptions also sometimes refer to pre-requisites in other departments or include classes that are cross-listed in multiple departments. These links provide clues into the linkages between subjects at UCLA. 
 
-However, course descriptions are sparsely worded and simply contain a list of topics rather than fully expressive sentences. They can prevent the algorithm when from fully capturing the semantics.
+However, course descriptions are sparsely worded and usually contain a listing of keywords rather than fully expressive sentences. They can limit the model from fully capturing the semantics.
 
 <figure>
   <img src="/img/posts/department-similarity/math-course-description.png" height="100px" width="630px" />
@@ -141,7 +148,7 @@ However, course descriptions are sparsely worded and simply contain a list of to
 
 **Departmental Objectives**
 
-In contrast to course descriptions, departmental objectives are written in full sentences and paragraphs that better express how each department positions itself, thereby providing information that can be superior to the less expressive course descriptions.
+In contrast to course descriptions, departmental objectives are written in full sentences and paragraphs that better express how each department positions itself, thereby providing contextual information that are missing from the less expressive course descriptions.
 
 <figure>
   <img src="/img/posts/department-similarity/linguistic-objective.png" height="250px" width="400px" />
@@ -151,23 +158,23 @@ In contrast to course descriptions, departmental objectives are written in full 
 
 ## Model
 
-**Texts**
+**Department <-> Document**
 
-For each department, we create a document that combines the course descriptions of all the classes under that department, and if applicable, its objective statement. Quantifying the relations between departments is then a matter of modeling the relations between those documents.
+For each department, we create a document that combines the course descriptions of all the classes under that department, and if applicable, its objective statement. Quantifying the relations between departments is then a matter of modeling the relations between those text documents.
 
 **A Language Model**
 
-A landmark in natural language processing is the [word2vec](https://www.tensorflow.org/tutorials/word2vec) model, which infers the meaning of words by looking at where they are used. For instance, because "king" and "queen" are often surrounded by a similar words (think "castle" or "govern"), the model might guess that they refer the same concept (ie. the head of a monarchy). The model also learns how they differ in gender by observing that "queen" is surrounded by female pronouns while "king" is used together with male pronouns. 
+A landmark achievement in natural language processing is the [word2vec](https://www.tensorflow.org/tutorials/word2vec) model, which can infer the meaning of words by looking at where they are used. For example, by observing how "king" and "queen" are often surrounded by similar words (think "castle" or "govern"), the model guesses that they refer the same concept (ie. the head of a monarchy). The model also learns that they differ in gender by observing how "queen" is used with female pronouns while "king" is used with male pronouns. 
 
-To learn semantic meanings, word2vec tries to predict a word given its surrounding words by training a two-layer neural network. However, the predictive task is tangential to the goal and we are interested in the side product – how much each word contributes to the predictive task (ie. the word vectors). By comparing word vectors, we can then examine the relations between words.
+To learn semantic meanings, word2vec trains a two-layer neural network to predict what a word is given its surrounding words. However, the predictive task is tangential to the goal and we are interested in the side product – how much each word contributes to the predictive task (ie. the word vectors). By comparing word vectors, we can then examine the relations between words.
 
-We use a [paragraph vector](https://cs.stanford.edu/~quocle/paragraph_vector.pdf) model that is similar in spirit to word2vec but examines language at the document level. The [gensim](https://radimrehurek.com/gensim/models/doc2vec.html) implementation of the paragraph vector is used and returns a 200-dimensional vector for each department.
+We use a [paragraph vector](https://cs.stanford.edu/~quocle/paragraph_vector.pdf) model that is similar in spirit to word2vec but examines language at the document level. The [gensim](https://radimrehurek.com/gensim/models/doc2vec.html) implementation is used and it returns a 200-dimensional vector for each department's text document.
 
 **Similarity**
 
-We compute the similarity between any pair of departments as the cosine of the angle between the corresponding document vectors. Like Pearson correlation, cosine similarity ranges between -1 and 1.
+We define the similarity between any pair of departments as the cosine of the angle between the corresponding document vectors. Like Pearson correlation, cosine similarity ranges between -1 and 1.
 
 **Clustering**
 
-We also want to group departments based on how close together they are to one another. The K-means clustering algorithm is used to return 7 groups, each of which contains departments that are closest together in terms of Euclidean distance.
+We also apply the K-means clustering algorithm to return 7 groups based on how close together the document vectors are in terms of Euclidean distance. 
 
