@@ -1,6 +1,6 @@
 ---
-title: How are departments at UCLA related?
-teaser: Explore the relationships between 100 academic subjects as we apply natural language algorithms to "read" from course descriptions.  
+title: How are departments at UCLA related to each other?
+teaser: Explore the relationships between 100 academic subjects as we use natural language processing algorithms to "read" course descriptions.  
 authors:
     - tyson_ni
 featured_image:
@@ -30,19 +30,20 @@ Public sources of data on the UCLA Registrar website contain useful information 
 
 ## Plotting UCLA departments
 
-Essentially, we are locating each department on a "map". And so we can visually summarize this analysis as a 2D scatterplot. A few departments are labeled, but feel free to hover over any point.
+Essentially, we are locating each department on a "map". And so we can visually summarize this analysis as a scatterplot. A few departments are labeled, but feel free to hover over any point.
 
   <div class='ui grid centered' id='scatterplot-wrapper'>
       <div class='twelve wide column' id='scatterplot'>
       </div>
   </div>
 
-Note that our model actually provides 200 dimensions for each department and while the dimensionality-reduction technique used to make the plot guarantees that the most closely related departments are visually clustered together, the visual distances between points do not contain much information. The non-visual analysis in the following sections, however, does not suffer from this loss of information.
+Note that our model actually provides 200 dimensions for each department; and while the dimensionality-reduction technique used to make the 2D plot guarantees that the most closely related departments are visually clustered together, the visual distances between points do not convey much information. The non-visual analysis in the following sections, however, does not suffer from this loss of information.
+
 <br>
 
 ## 5 Most / Least Similar Departments
 
-Pick a subject and see which 5 other subjects are most and least similar:
+Pick a subject and see which 5 other subjects are the most and least similar:
 
 <select class="ui search selection dropdown" id="pick-subject">
 </select>
@@ -58,7 +59,7 @@ Pick a subject and see which 5 other subjects are most and least similar:
     </div>
     <div class='column'>
       <h1>5 Least Similar</h1>
-      <table class='ui celled table' id='least-similar-table'>
+      <table class='ui celled table' id='least-similar-table'>  
       </table>
     </div>
   </div>
@@ -66,9 +67,44 @@ Pick a subject and see which 5 other subjects are most and least similar:
 
 <br>
 
+## Grouping departments
+
+We can also group similar departments together.
+
+**"Social Studies"**
+
+Art; Anthropology; Asian American Studies; Communication Studies; Chicana and Chicano Studies; Environment; Education; Gender Studies; General Education Clusters; Geography; History; Political Science; Society and Genetics; Sociology
+
+**"Business"**
+
+Economics; Management
+
+**"Math"** 
+
+Computer Science; Electrical Engineering; Mathematics; Program in Computing; Statistics
+
+**"Physics"** 
+
+Astronomy; Atmospheric and Oceanic Sciences; Chemical Engineering; Chemistry and Biochemistry; Civil and Environmental Engineering; Earth, Planetary, and Space Sciences; Mechanical and Aerospace Engineering; Physics
+
+**"Performance"** 
+
+Dance; Design / Media Arts; Ethnomusicology; Film and Television; Music; Music History; Theater
+
+**"Language"**
+
+Art History; Ancient Near East; Comparative Literature; Chinese; Classics; English; English Composition; French; German; Italian; Japanese; Korean; Linguistics; Philosophy; Scandinavian; Spanish
+
+**"Life Science"** 
+
+Ecology and Evolutionary Biology; Life Sciences; Molecular, Cell, and Developmental Biology; Microbiology, Immunology, and Molecular Genetics; Neuroscience; Psychology; Physiological Science
+
+
 ## Compare any two departments
 
-Pick any two subjects. (Which two? Your old major and your current major; what you and your significant study; double majors ...)
+Pick any two subjects. 
+
+(Which two? Your old major and your current major; what you and your significant other study; double majors ...)
 
 <div class='ui grid centered'>
   <div class='row'>
@@ -121,13 +157,17 @@ For each department, we create a document that combines the course descriptions 
 
 **A Language Model**
 
-A landmark in natural language processing is the [word2vec](https://www.tensorflow.org/tutorials/word2vec) model, which  infers the meaning of words by looking at where they are used. For instance, because the terms "king" and "queen" are often surrounded by a similar set of words (think "castle" or "govern"), the model might guess that they refer the same concept (ie. the head of a monarchy). The model also learns that they differ in gender by observing that "queen" is usually used together with female pronouns while "king" is used with male pronouns. 
+A landmark in natural language processing is the [word2vec](https://www.tensorflow.org/tutorials/word2vec) model, which infers the meaning of words by looking at where they are used. For instance, because "king" and "queen" are often surrounded by a similar words (think "castle" or "govern"), the model might guess that they refer the same concept (ie. the head of a monarchy). The model also learns how they differ in gender by observing that "queen" is surrounded by female pronouns while "king" is used together with male pronouns. 
 
-To learn semantic meanings, word2vec tries to predict a word given its surrounding words by training a two-layer neural network. However, the predictive task is tangential to the model and we are interested only in the side product – how much each word contributes to the predictive task (ie. the word vectors). By comparing word vectors, we can then examine the relations between words.
+To learn semantic meanings, word2vec tries to predict a word given its surrounding words by training a two-layer neural network. However, the predictive task is tangential to the goal and we are interested in the side product – how much each word contributes to the predictive task (ie. the word vectors). By comparing word vectors, we can then examine the relations between words.
 
 We use a [paragraph vector](https://cs.stanford.edu/~quocle/paragraph_vector.pdf) model that is similar in spirit to word2vec but examines language at the document level. The [gensim](https://radimrehurek.com/gensim/models/doc2vec.html) implementation of the paragraph vector is used and returns a 200-dimensional vector for each department.
 
+**Similarity**
+
+We compute the similarity between any pair of departments as the cosine of the angle between the corresponding document vectors. Like Pearson correlation, cosine similarity ranges between -1 and 1.
+
 **Clustering**
 
-The document vectors allow for comparisons between departments, but we also want to group departments based on how close together they are to one another. The K-means clustering algorithm is used to return 7 groups, each of which contain departments that are closest to each other in terms of Euclidean distance.
+We also want to group departments based on how close together they are to one another. The K-means clustering algorithm is used to return 7 groups, each of which contains departments that are closest together in terms of Euclidean distance.
 
