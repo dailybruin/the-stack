@@ -37,7 +37,7 @@ We can locate each department on a map and visually summarize this analysis as a
 
 <br>
 
-Our model actually computes 200 dimensions for each department, but we've reduced it down to a 2D chart using a dimensionality-reduction tool called [t-SNE](http://scikit-learn.org/stable/modules/generated/sklearn.manifold.TSNE.html). While the reduced plot preserves the clusters that form in the original, high dimensional space, the visual distances between points do not convey much information. The non-visual analyses in the subsequent sections, however, do not suffer from this issue.
+Our model actually computes 200 dimensions for each department, but we reduce it down to a 2D chart using a dimensionality-reduction tool called [t-SNE](http://scikit-learn.org/stable/modules/generated/sklearn.manifold.TSNE.html). While the reduced plot preserves the clusters that form in the original, high dimensional space, the visual distances between points do not convey much information. The non-visual analyses in the subsequent sections, however, do not suffer from this issue.
 
 <br>
 
@@ -69,7 +69,7 @@ Pick a subject and see which 5 other subjects are the most and least similar:
 
 ## Grouping departments
 
-We can identify clusters of departments that are similar. It turns out that the algorithmically-generated groups match our intuition pretty well. In fact, they manage to reproduce the North-South campus divide that UCLA students are familiar with. 
+We can identify clusters of departments that are similar. It turns out that the algorithmically-generated groups match our intuition pretty well. In fact, they manage to reproduce the North-South campus divide that UCLA students are intimately familiar with. 
 
 <h1 style='text-align:center;'>North Campus</h1>
 
@@ -129,11 +129,15 @@ Pick and compare any two subjects.
   </div>
 </div>
 
-<br><br>
+<br>
+
+Cosine similarity ranges between -1 to 1. In our case, a score greater than 0.5 indicates significant similarity, whereas a score less than 0 indicates a lack of similarity.
+
+<br>
 
 ## Data
 
-We want texts that can capture the essence of academic subjects. For every department, we use the course descriptions of all the classes offered by that department. Many departments also publish a "Scope and Objectives" statement, which we incorporate as well.
+We want texts that represent the essence of academic subjects. For every department, we use the course descriptions of all the classes offered by that department. Many departments also publish a "Scope and Objectives" statement, which we incorporate as well.
 
 **Course Catalog**
 
@@ -152,7 +156,7 @@ In contrast to course descriptions, departmental objectives are written in full 
 
 <figure>
   <img src="/img/posts/department-similarity/linguistic-objective.png" height="250px" width="400px" />
-  <figcaption>The Linguistic departmental objective</figcaption>
+  <figcaption>The Linguistics departmental objective</figcaption>
 </figure>
 
 
@@ -160,15 +164,15 @@ In contrast to course descriptions, departmental objectives are written in full 
 
 **Department <-> Document**
 
-For each department, we create a document that combines the course descriptions of all the classes under that department, and if applicable, its objective statement. Quantifying the relations between departments is then a matter of modeling the relations between those text documents.
+For each department, we create a document that combines the course descriptions of all the classes under that department, and if applicable, its objective statement. Quantifying the relations between departments is then a matter of modeling the relations between these text documents.
 
 **A Language Model**
 
-A landmark achievement in natural language processing is the [word2vec](https://www.tensorflow.org/tutorials/word2vec) model, which can infer the meaning of words by looking at where they are used. For example, by observing how "king" and "queen" are often surrounded by similar words (think "castle" or "govern"), the model guesses that they refer the same concept (ie. the head of a monarchy). The model also learns that they differ in gender by observing how "queen" is used with female pronouns while "king" is used with male pronouns. 
+A landmark achievement in natural language processing is the [word2vec](https://www.tensorflow.org/tutorials/word2vec) model, which infers the meaning of words by looking at where they are used. For example, by observing how "king" and "queen" are often surrounded by similar words (think "castle" or "govern"), the model guesses that they refer the same concept (ie. the head of a monarchy). The model also learns that they differ in gender by observing how "queen" is used with female pronouns while "king" is used with male pronouns. 
 
-To learn semantic meanings, word2vec trains a two-layer neural network to predict what a word is given its surrounding words. However, the predictive task is tangential to the goal and we are interested in the side product – how much each word contributes to the predictive task (ie. the word vectors). By comparing word vectors, we can then examine the relations between words.
+To learn semantic meanings, word2vec trains a two-layer neural network to predict which word is used given its surrounding words. However, the predictive task is tangential to the goal, and researchers are instead interested in the side product – how each word contributes to the predictive task (ie. the word vectors). By comparing word vectors, we can then examine the relations between words.
 
-We use a [paragraph vector](https://cs.stanford.edu/~quocle/paragraph_vector.pdf) model that is similar in spirit to word2vec but examines language at the document level. The [gensim](https://radimrehurek.com/gensim/models/doc2vec.html) implementation is used and it returns a 200-dimensional vector for each department's text document.
+We use a [paragraph vector](https://cs.stanford.edu/~quocle/paragraph_vector.pdf) model that is similar to word2vec in spirit but examines language at the document level. The [gensim](https://radimrehurek.com/gensim/models/doc2vec.html) implementation is used and it returns a 200-dimensional vector for each department's texts.
 
 **Similarity**
 
@@ -176,5 +180,5 @@ We define the similarity between any pair of departments as the cosine of the an
 
 **Clustering**
 
-We also apply the K-means clustering algorithm to return 7 groups based on how close together the document vectors are in terms of Euclidean distance. 
+We also apply the K-means algorithm to form 7 groups that have document vectors which are close together in Euclidean distance. 
 
