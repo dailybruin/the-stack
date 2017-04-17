@@ -23,39 +23,41 @@ function plot(data, container) {
       .attr('height', chartHeight)
       .attr('id', 'scatterplot-svg');
 
-  const xScale = d3.scaleLinear().domain(d3.extent(data, d => d.x1)).range([15, chartWidth-15]),
-        yScale = d3.scaleLinear().domain(d3.extent(data, d => d.x2)).range([chartHeight-15, 15]);
+  const chartOffset = isMobile? 20 : 30;
+
+  const xScale = d3.scaleLinear().domain(d3.extent(data, d => d.x1)).range([chartOffset, chartWidth-chartOffset]),
+        yScale = d3.scaleLinear().domain(d3.extent(data, d => d.x2)).range([chartHeight-chartOffset, chartOffset]);
   
   data.forEach((d, i) => {
       d.x_ = xScale(d.x1);
       d.y_ = yScale(d.x2);
   })
 
-
   const labeledSubjects = isMobile? [
-    'Mathematics', 'Computer Science',
-    'Chemical Engineering', 'Economics', 'Management',
-    'Geography', 'Environment', 'Sociology', 'Communication Studies'
+    'Mathematics', 'Geography', 'Statistics',
+    'Environment', 'Sociology', 'Communication Studies', 'Bioengineering'
   ] : [
     'Mathematics', 'Computer Science', 'Life Sciences', 'Psychology', 
-    'Chemical Engineering', 'Economics', 'Management', 'Physics', 'Electrical Engineering',
-    'Film and Television','Political Science', 'Sociology', 'Communication Studies', 
+    'Bioengineering', 'Economics', 'Management', 'Physics',
+    'Theater', 'Sociology', 'Communication Studies', 
     'History', 'Classics', 'Italian', 'English', 'Korean', 'Chinese', 'Dance',
-    'Geography', 'Environment'
+    'Geography', 'Environment', 'Nursing', 'Education'
   ];
 
   const labelYOffset = 0,
         labelXOffset = 0;
 
   const specialLabelXOffsets = {
-    'Psychology': -20
+    'Psychology': -15
   }, specialLabelYOffsets = {
     'Italian': 10,
     'Management': -15,
     'Psychology': 10,
     'Chinese': 10,
     'Economics': 10,
-    'Geography': -5
+    'Geography': -5,
+    'Environment': 10,
+    'Life Sciences': 15
   };
 
   const labels = svg.selectAll('text')
@@ -71,11 +73,9 @@ function plot(data, container) {
           return d.y_ + labelYOffset + (specialLabelYOffsets[d.subject]? specialLabelYOffsets[d.subject] : 0);
       })
       .text((d, i) => {
-          //const displayName = d.subject.length >= 15? d.subject.slice(0, 12) + ' ...' : d.subject;
           return d.subject;
-          //return labeledSubjects.includes(d.subject)? d.subject : '';
       })
-      .style('font-size', 12);
+      .style('font-size', isMobile? 11 : 13);
 
   const tip = d3.tip()
   .attr('class', 'scatterplot-tip')
@@ -91,10 +91,8 @@ function plot(data, container) {
       .append('circle')
       .attr('cx', d => d.x_)
       .attr('cy', d => d.y_)
-      .attr('r', 7)
+      .attr('r', isMobile? 5: 7)
       .attr('class', 'subject-circle default-circle')
-      .attr('fill', 'darkseagreen')
-      .attr('stroke', 'black 1px')
       .on('mouseover', (d, i) => {
           tip.show(d);
           d3.selectAll('circle')
@@ -106,11 +104,11 @@ function plot(data, container) {
       .on('mouseout', (d, i) => {
           tip.hide(d);
           d3.selectAll('circle')
-            .attr('class', 'subject-circle default-circle')
+            .attr('class', 'subject-circle default-circle');
           labels.style('opacity', 1);
       });
 
-  labels.raise()
+  labels.raise();
   
 }
 
@@ -121,4 +119,3 @@ function processData(data) {
   });
   return data;
 }
-
