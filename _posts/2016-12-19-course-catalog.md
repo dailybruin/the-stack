@@ -7,28 +7,28 @@ featured_image:
     url: department-similarity/pair-similarity.png
 og_image: department-similarity/pair-similarity.png
 stylesheets:
-    - /css/posts/course-catalog/grid.min.css
-    - /css/posts/course-catalog/container.min.css
-    - /css/posts/course-catalog/table.min.css
-    - /css/posts/course-catalog/dropdown.min.css
-    - /css/posts/course-catalog/statistic.min.css
-    - /css/posts/course-catalog/app.css
+    - /css/posts/department-similarity/grid.min.css
+    - /css/posts/department-similarity/container.min.css
+    - /css/posts/department-similarity/table.min.css
+    - /css/posts/department-similarity/dropdown.min.css
+    - /css/posts/department-similarity/statistic.min.css
+    - /css/posts/department-similarity/app.css
 scripts:
     - /js/lib/jquery-3.1.1.min.js
-    - /js/posts/course-catalog/libs/d3.min.js
-    - /js/posts/course-catalog/libs/d3-tip.js
-    - /js/posts/course-catalog/tables.js
-    - /js/posts/course-catalog/scatterplot.js
-    - /js/posts/course-catalog/pair-similarity.js
+    - /js/posts/department-similarity/libs/d3.min.js
+    - /js/posts/department-similarity/libs/d3-tip.js
+    - /js/posts/department-similarity/tables.js
+    - /js/posts/department-similarity/scatterplot.js
+    - /js/posts/department-similarity/pair-similarity.js
 ---
  
-From Plato to Pluto, the hundreds of subjects taught at UCLA cover much of the knowledge scholars accumulated over time, but how can we identify the relations between different fields of study? With the geography of UCLA as a guide, we could put a divider line near Powell Library and get two buckets – the North and South campuses. Yet intuition and [memes](https://www.facebook.com/photo.php?fbid=1386003851449756&set=gm.227389317732629&type=3&permPage=1) cannot provide a consistent blueprint for how to analyze the relations between subjects.
+From Plato to Pluto, the hundreds of subjects taught at UCLA cover much of the knowledge scholars accumulated over time, but how can we identify the relations between different fields of study? With the geography of UCLA as a guide, we could draw a line near Powell Library and get the North and South campuses. Yet intuition and [memes](https://www.facebook.com/photo.php?fbid=1386003851449756&set=gm.227389317732629&type=3&permPage=1) cannot provide a consistent way for analyzing the relations between subjects.
 
-The good news is that the UCLA Registrar provides valuable information that allow us to more precisely determine what each academic department is about. Using [course descriptions](http://www.registrar.ucla.edu/Academics/Course-Descriptions) as well as [departmental objectives](http://catalog.registrar.ucla.edu/ucla-cat2016-224.html), we apply a variant of the *word2vec* algorithm – a machine learning model that can capture the semantic meaning of words – to quantify each department as a list of numbers. These numbers provide a blueprint for analyzing the links and clusters that relate departments with one another.  Technical details are described later in the article. 
+The good news is that the UCLA Registrar provides valuable information that allow us to more precisely determine what each academic department is about. Using [course descriptions](http://www.registrar.ucla.edu/Academics/Course-Descriptions) as well as [departmental objectives](http://catalog.registrar.ucla.edu/ucla-cat2016-224.html), we apply a variant of the *word2vec* algorithm – a machine learning model that can capture the semantic meaning of words – to quantify each department as a list of numbers. These numbers provide a blueprint for analyzing the links and clusters that relate one department to another.
 
-## Plotting UCLA departments
+## Re-mapping UCLA departments
 
-We can locate each department on a map and visually summarize this analysis as a scatter plot. A few departments are labeled, but feel free to hover over any point.
+We can visualize this analysis as a scatter plot and locate each department on a "map". A few departments are labeled, but feel free to hover over any point.
 
   <div class='ui grid centered' id='scatterplot-wrapper'>
       <div class='twelve wide column' id='scatterplot'>
@@ -37,13 +37,13 @@ We can locate each department on a map and visually summarize this analysis as a
 
 <br>
 
-Our model actually computes 200 dimensions for each department, but we reduce it down to a 2D chart using a dimensionality-reduction tool called [t-SNE](http://scikit-learn.org/stable/modules/generated/sklearn.manifold.TSNE.html). While the reduced plot preserves the clusters that form in the original, high dimensional space, the visual distances between points do not convey much information. The non-visual analyses in the subsequent sections, however, do not suffer from this issue.
+> Our model computes 200 dimensions for each department, but we reduce it down to a 2D chart using a dimensionality-reduction tool called [t-SNE](http://scikit-learn.org/stable/modules/generated/sklearn.manifold.TSNE.html). While the reduced plot preserves the clusters that form in the original, high dimensional space, the visual distances between points don't convey much information. The non-visual analyses in the subsequent sections, however, don't suffer from this issue.
 
 <br>
 
 ## 5 Most / Least Similar Departments
 
-Pick a subject and see which 5 other subjects are the most and least like it:
+Pick a subject and see which 5 other subjects are most and least like it:
 
 <select class="ui search selection dropdown" id="pick-subject">
 </select>
@@ -77,15 +77,15 @@ We can group together departments that are similar. It turns out that the algori
 
 <h1 style='text-align:center;'>North Campus</h1>
 
-**"Perform"** 
+**Group 1 ("Perform")** 
 
 Dance; Design / Media Arts; Ethnomusicology; Film and Television; Music; Music History; Theater
 
-**"Speak"**
+**Group 2 ("Speak")**
 
 Art History; Ancient Near East; Comparative Literature; Chinese; Classics; English; English Composition; French; German; Italian; Japanese; Korean; Linguistics; Philosophy; Scandinavian; Spanish
 
-**"Society"**
+**Group 3 ("Society")**
 
 Art; Anthropology; Asian American Studies; Communication Studies; Chicana and Chicano Studies; Environment; Education; Gender Studies; General Education Clusters; Geography; History; Political Science; Society and Genetics; Sociology
 
@@ -93,19 +93,19 @@ Art; Anthropology; Asian American Studies; Communication Studies; Chicana and Ch
 
 <h1 style='text-align:center;'>South Campus</h1>
 
-**"Capital"**
+**Group 4 ("Capital")**
 
 Economics; Management
 
-**"Life"** 
+**Group 5 ("Life")** 
 
 Ecology and Evolutionary Biology; Life Sciences; Molecular, Cell, and Developmental Biology; Microbiology, Immunology, and Molecular Genetics; Neuroscience; Psychology; Physiological Science
 
-**"Compute"** 
+**Group 6 ("Compute")** 
 
 Computer Science; Electrical Engineering; Mathematics; Program in Computing; Statistics
 
-**"Physics"** 
+**Group 7 ("Physics")** 
 
 Astronomy; Atmospheric and Oceanic Sciences; Chemical Engineering; Chemistry and Biochemistry; Civil and Environmental Engineering; Earth, Planetary, and Space Sciences; Mechanical and Aerospace Engineering; Physics
 
@@ -137,11 +137,13 @@ Pick and compare any two subjects.
 
 ## Not-so-obvious applications
 
-So far we've quantified departments to make comparisons that mostly match our intuition. In fact, we know the model "works" because the results don't deviate much from common sense. Here are a couple other applications:
+So far we've made comparisons that mostly match our intuition. In fact, we know the model "works" only because the results don't deviate much from common sense. Here are a couple other applications:
 
 * **Departments gain or lose students whenever students switch between majors.** But the relevant data are not public due to privacy regulations, and we can only make an educated guess of the major-switching patterns. First, we could use publicly available [information](http://www.aim.ucla.edu/tables/degrees_program.aspx) to compare the number of students who are admitted into a major to the number of students who graduate from that major. The difference hints at how much a department has gained or lost students. Second, those students tend to switch into other departments that are "similar", and we can use our model to guess the major-switching patterns.
 
 * **The gender / racial composition of departments is a familiar topic, but data are rarely available.** Consider the case where we don't know the demographics of the Sociology program. We could infer the missing information by doing a weighted average of the demographics of departments for which we have information, and the weights are determined by how "similar" every other department is to Sociology.
+
+<br>
 
 ## Data
 
@@ -167,7 +169,6 @@ In contrast to course descriptions, departmental objectives are written in full 
   <figcaption>The Linguistics departmental objective</figcaption>
 </figure>
 
-
 ## Model
 
 **Department <-> Document**
@@ -176,7 +177,7 @@ For each department, we create a document that combines the course descriptions 
 
 **A Language Model**
 
-A landmark achievement in natural language processing is the [word2vec](https://www.tensorflow.org/tutorials/word2vec) model, which infers the meaning of words by looking at where they are used. For example, by observing how "king" and "queen" are often surrounded by similar words (think "castle" or "govern"), the model guesses that they refer the same concept (ie. the head of a monarchy). The model also learns that they differ in gender by observing how "queen" is used with female pronouns while "king" is used with male pronouns. 
+A landmark achievement in natural language processing is the [word2vec](https://www.tensorflow.org/tutorials/word2vec) model, which infers the meaning of words by looking at where they are used. For example, by observing how "king" and "queen" are often surrounded by the same words (think "castle" or "govern"), the model guesses that they refer the same concept (ie. head of monarchy). The model also learns that they differ in gender by noting how they are used with different gender pronouns. 
 
 To learn semantic meanings, word2vec trains a two-layer neural network to predict which word is used given its surrounding words. However, the predictive task is tangential, and researchers are instead interested in the by-product – how each word contributes to the predictive task (ie. the word vectors). By comparing word vectors, we can then examine the relations between words.
 
@@ -188,5 +189,5 @@ We define the similarity between any pair of departments as the cosine of the an
 
 **Clustering**
 
-We also apply the K-means algorithm to form 7 groups that have document vectors which are close together in Euclidean distance. 
+We also apply the K-means algorithm to form 7 groups of departments that have document vectors which are close together in Euclidean distance. 
 
