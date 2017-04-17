@@ -1,10 +1,10 @@
 #scatterplot-svg {
   display: block;
   margin: auto;
-  border: solid gray 1px; }
+  background-color: #fffff4; }
 
 .subject-circle {
-  opacity: 0.6; }
+  opacity: 0.65; }
 
 .default-circle {
   fill: #008fd5; }

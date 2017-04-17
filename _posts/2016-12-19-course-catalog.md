@@ -69,7 +69,7 @@ Pick a subject and see which 5 other subjects are the most and least similar:
 
 ## Grouping departments
 
-We can identify clusters of departments that are similar. It turns out that the algorithmically-generated groups match our intuition pretty well. In fact, they manage to reproduce the North-South campus divide that UCLA students are intimately familiar with. 
+We can group together departments that are similar. It turns out that the algorithmically-generated clusters match our intuition pretty well. In fact, they manage to reproduce the North-South campus divide that UCLA students are intimately familiar with. 
 
 <h1 style='text-align:center;'>North Campus</h1>
 
@@ -170,7 +170,7 @@ For each department, we create a document that combines the course descriptions 
 
 A landmark achievement in natural language processing is the [word2vec](https://www.tensorflow.org/tutorials/word2vec) model, which infers the meaning of words by looking at where they are used. For example, by observing how "king" and "queen" are often surrounded by similar words (think "castle" or "govern"), the model guesses that they refer the same concept (ie. the head of a monarchy). The model also learns that they differ in gender by observing how "queen" is used with female pronouns while "king" is used with male pronouns. 
 
-To learn semantic meanings, word2vec trains a two-layer neural network to predict which word is used given its surrounding words. However, the predictive task is tangential to the goal, and researchers are instead interested in the side product – how each word contributes to the predictive task (ie. the word vectors). By comparing word vectors, we can then examine the relations between words.
+To learn semantic meanings, word2vec trains a two-layer neural network to predict which word is used given its surrounding words. However, the predictive task is tangential, and researchers are instead interested in the by-product – how each word contributes to the predictive task (ie. the word vectors). By comparing word vectors, we can then examine the relations between words.
 
 We use a [paragraph vector](https://cs.stanford.edu/~quocle/paragraph_vector.pdf) model that is similar to word2vec in spirit but examines language at the document level. The [gensim](https://radimrehurek.com/gensim/models/doc2vec.html) implementation is used and it returns a 200-dimensional vector for each department's texts.
 
