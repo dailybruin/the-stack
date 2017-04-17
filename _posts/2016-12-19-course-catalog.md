@@ -73,7 +73,7 @@ Pick a subject and see which 5 other subjects are the most and least like it:
 
 ## Grouping departments
 
-We can group together departments that are similar. It turns out that the algorithmically-generated clusters match our intuition pretty well. In fact, they manage to reproduce the North-South campus divide that UCLA students are intimately familiar with. 
+We can group together departments that are similar. It turns out that the algorithmically-generated clusters match our intuition pretty well. They even manage to reproduce the North-South campus divide that UCLA students are intimately familiar with. 
 
 <h1 style='text-align:center;'>North Campus</h1>
 
@@ -135,9 +135,17 @@ Pick and compare any two subjects.
 
 <br><br>
 
+## Not-so-obvious applications
+
+So far we've quantified departments to make comparisons that mostly match our intuition. In fact, we know the model "works" because the results don't deviate much from common sense. Here are a couple other applications:
+
+* **Departments gain or lose students whenever students switch between majors.** But the relevant data are not public due to privacy regulations, and we can only make an educated guess of the major-switching patterns. First, we could use publicly available [information](http://www.aim.ucla.edu/tables/degrees_program.aspx) to compare the number of students who are admitted into a major to the number of students who graduate from that major. The difference hints at how much a department has gained or lost students. Second, those students tend to switch into other departments that are "similar", and we can use our model to guess the major-switching patterns.
+
+* **The gender / racial composition of departments is a familiar topic, but data are rarely available.** Consider the case where we don't know the demographics of the Sociology program. We could infer the missing information by doing a weighted average of the demographics of departments for which we have information, and the weights are determined by how "similar" every other department is to Sociology.
+
 ## Data
 
-We want texts that represent the essence of academic subjects. For every department, we use the course descriptions of all the classes offered by that department. Many departments also publish a "Scope and Objectives" statement, which we incorporate as well.
+In this project, we want texts that represent the essence of academic subjects. For every department, we use the course descriptions of all the classes offered by that department. Many departments also publish a "Scope and Objectives" statement, which we incorporate as well.
 
 **Course Catalog**
 

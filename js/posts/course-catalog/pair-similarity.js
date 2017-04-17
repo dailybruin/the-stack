@@ -4,6 +4,9 @@ d3.csv('/datasets/course-catalog/pair-similarity.csv', (error, data) => {
     d.score = Number(d.score);
   });
 
+  const defaultSubject1 = 'Anthropology',
+        defaultSubject2 = 'Mathematics';
+
   let subjects = d3.set();
   data.forEach((d, i) => {
     subjects.add(d.subject1);
@@ -18,7 +21,7 @@ d3.csv('/datasets/course-catalog/pair-similarity.csv', (error, data) => {
     .data(subjects)
     .enter()
     .append('option')
-    .property('selected', d => d == 'Anthropology')
+    .property('selected', d => d == defaultSubject1)
     .text(d => d);
 
   d3.select('#pick-subject2')
@@ -27,10 +30,10 @@ d3.csv('/datasets/course-catalog/pair-similarity.csv', (error, data) => {
     .data(subjects)
     .enter()
     .append('option')
-    .property('selected', d => d == 'Mathematics')
+    .property('selected', d => d == defaultSubject2)
     .text(d => d);
 
-  renderText('Anthropology', 'Mathematics', data);
+  renderText(defaultSubject1, defaultSubject2, data);
 })
 
 function pickPairSubjects(data) {
@@ -38,8 +41,6 @@ function pickPairSubjects(data) {
         pickedSubject2 = d3.select('#pick-subject2').property('value');
   renderText(pickedSubject1, pickedSubject2, data);
 }
-
-
 
 function renderText(subject1, subject2, data) {
   const selectedData = data.filter((d, i) => {
