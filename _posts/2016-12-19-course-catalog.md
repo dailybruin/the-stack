@@ -28,7 +28,7 @@ The good news is that the UCLA Registrar provides valuable information that allo
 
 ## Re-mapping UCLA departments
 
-We can visualize this analysis as a scatter plot and locate each department on a "map". A few departments are labeled, but feel free to hover over any point.
+We can visualize this analysis as a scatter plot and locate each department on a "map." A few departments are labeled, but feel free to hover over any point.
 
   <div class='ui grid centered' id='scatterplot-wrapper'>
       <div class='twelve wide column' id='scatterplot'>
@@ -67,7 +67,7 @@ Pick a subject and see which 5 other subjects are most and least like it:
 
 <br>
 
-> Similarity Score: Cosine similarity ranges between -1 to 1. In our case, a score greater than 0.4 indicates significant similarity, and a score around or less than 0 indicates a lack of similarity.
+> Similarity Score: Cosine similarity ranges between -1 to 1. As a rule of thumb, a score greater than 0.5 indicates similarity, and a score around or less than 0 indicates a lack of similarity.
 
 <br>
 
@@ -75,7 +75,7 @@ Pick a subject and see which 5 other subjects are most and least like it:
 
 Pick and compare any two subjects. 
 
-(Which two? Your old major and your current major; what you and your significant other study; double majors ...)
+(Which two? Your old major and your current major, what you and your significant other study, double majors, etc.)
 
 <div class='ui grid centered'>
   <div class='row'>
@@ -97,13 +97,13 @@ Pick and compare any two subjects.
 
 ## Grouping departments
 
-We can group together departments that are similar. It turns out that the algorithmically-generated clusters match our intuition pretty well. They even manage to reproduce the North-South campus divide that UCLA students are intimately familiar with. 
+We can group together departments that are similar. As it turns out, the algorithmically-generated clusters match our intuition pretty well. They even manage to reproduce the North-South campus divide UCLA students are intimately familiar with. 
 
 <h1 style='text-align:center;'>North Campus</h1>
 
 **Group 1 ("Perform")** 
 
-Dance; Design / Media Arts; Ethnomusicology; Film and Television; Music; Music History; Theater
+Dance; Design | Media Arts; Ethnomusicology; Film and Television; Music; Music History; Theater
 
 **Group 2 ("Speak")**
 
@@ -141,9 +141,9 @@ So far we've made comparisons that mostly match our intuition, and the model "wo
 
 * **Departments gain or lose students whenever students switch between majors.** Because the relevant data are subjected to privacy protections, we can only make an educated guess of students' major-switching patterns. First, we could use publicly available [information](http://www.aim.ucla.edu/tables/degrees_program.aspx) to compare the number of students who are admitted into a major to the number of students who graduate from that major. The difference hints at how much a department has gained or lost students. Then, by assuming students are more likely to switch into other similar departments that have gained students, our model could help with guessing how students switch between majors.
 
-* **The gender / racial composition of departments is a familiar topic, but demographic data are rarely collected.** Consider the hypothetical case where we don't know the demographics of Sociology students. We might infer the missing information by doing a weighted average of the demographics in departments for which we have information; and the weights depend on how similar every other department is to Sociology, if we assume that similar departments have similar people.
+* **The gender / racial composition of departments is a familiar topic, but demographic data are rarely collected.** Consider the hypothetical case where we don't know the demographics of Sociology students. We might infer the missing information by doing a weighted average of the demographics in departments for which we have information; and the weights depend on how similar every other department is to Sociology, if we assume similar departments have similar people.
 
-* **Roommate assignments can benefit from considering each applicant's academic interests.** Data on how departments are related could provide additional information for the assignment process. Keep in mind that we don't need to assume students who are in similar departments make for better roommates. If surveys show that people with opposite interests are less likely to have roommate issues, it's something the model can help with as well.
+* **Roommate assignments can benefit from considering each applicant's academic interests.** Data on how departments are related could provide additional information for the assignment process. Keep in mind that we don't need to assume students who study similar subjects make for better roommates. If surveys show that people with opposite interests are less likely to have roommate issues, it's something the model can help with as well.
 
 <br>
 
@@ -164,7 +164,7 @@ However, course descriptions are sparsely worded and usually contain a listing o
 
 **Departmental Objectives**
 
-In contrast to course descriptions, departmental objectives are written in full sentences and paragraphs that better express how each department positions itself, thereby providing contextual information that are missing from the less expressive course descriptions.
+In contrast to course descriptions, departmental objectives are written in full sentences and paragraphs that better express how each department positions itself, thereby providing contextual information which are missing from the less expressive course descriptions.
 
 <figure>
   <img src="/img/posts/department-similarity/linguistic-objective.png" height="250px" width="400px" />
@@ -179,7 +179,7 @@ For each department, we create a document that combines the course descriptions 
 
 **A Language Model**
 
-A landmark achievement in natural language processing is the [word2vec](https://www.tensorflow.org/tutorials/word2vec) model, which infers the meaning of words by looking at where they are used. For example, by observing how "king" and "queen" are often surrounded by the same words (think "castle" or "govern"), the model guesses that they refer the same concept (ie. head of monarchy). The model also learns that they differ in gender by noting how they are used with different gender pronouns. 
+A landmark achievement in natural language processing is the [word2vec](https://www.tensorflow.org/tutorials/word2vec) model, which infers the meaning of words by looking at where they are used. For example, by observing how "king" and "queen" are often surrounded by the same words (think "castle" or "govern"), the model guesses that they refer the same concept (ie. head of monarchy). The model also learns how they differ in gender by noting how they are used with different gender pronouns. 
 
 To learn semantic meanings, word2vec trains a two-layer neural network to predict which word is used given its surrounding words. However, the predictive task is tangential, and researchers are instead interested in the by-product – how each word contributes to the predictive task (ie. the word vectors). By comparing word vectors, we can then examine the relations between words.
 
