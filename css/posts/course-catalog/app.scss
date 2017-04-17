@@ -1,6 +1,7 @@
 $blue: #008fd5;
 $mobile-threshold: 600px;
 
+/* scatterplot */
 #scatterplot-svg {
   display: block;
   margin: auto;
@@ -24,13 +25,24 @@ $mobile-threshold: 600px;
   stroke-width: 2px;
 }
 
-.dropdown {
-  font-size: 16px;
-  @media only screen and (max-width: $mobile-threshold) {
-    font-size: 12px;
+/* tables */
+
+@media only screen and (max-width: 767px) {
+  .ui.table:not(.unstackable) td:first-child, .ui.table:not(.unstackable) {
+    font-weight: normal;
   }
 }
 
+/* pair compairson */
+.dropdown {
+  font-size: 16px;
+  @media only screen and (max-width: $mobile-threshold) {
+    font-size: 13px;
+  }
+}
+
+
+/* scatterplot */
 figcaption {
   text-align: center;
 }

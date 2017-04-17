@@ -28,7 +28,7 @@ The good news is that the UCLA Registrar provides valuable information that allo
 
 ## Plotting UCLA departments
 
-We can locate each department on a map and visually summarize this analysis as a scatterplot. A few departments are labeled, but feel free to hover over any point.
+We can locate each department on a map and visually summarize this analysis as a scatter plot. A few departments are labeled, but feel free to hover over any point.
 
   <div class='ui grid centered' id='scatterplot-wrapper'>
       <div class='twelve wide column' id='scatterplot'>
@@ -43,7 +43,7 @@ Our model actually computes 200 dimensions for each department, but we reduce it
 
 ## 5 Most / Least Similar Departments
 
-Pick a subject and see which 5 other subjects are the most and least similar:
+Pick a subject and see which 5 other subjects are the most and least like it:
 
 <select class="ui search selection dropdown" id="pick-subject">
 </select>
@@ -64,6 +64,10 @@ Pick a subject and see which 5 other subjects are the most and least similar:
     </div>
   </div>
 </div>
+
+<br>
+
+> Similarity Score: Cosine similarity ranges between -1 to 1. In our case, a score greater than 0.5 indicates significant similarity, whereas a score less than 0 indicates a lack of similarity.
 
 <br>
 
@@ -129,11 +133,7 @@ Pick and compare any two subjects.
   </div>
 </div>
 
-<br>
-
-Cosine similarity ranges between -1 to 1. In our case, a score greater than 0.5 indicates significant similarity, whereas a score less than 0 indicates a lack of similarity.
-
-<br>
+<br><br>
 
 ## Data
 

@@ -1,3 +1,4 @@
+/* scatterplot */
 #scatterplot-svg {
   display: block;
   margin: auto;
@@ -16,12 +17,18 @@
   stroke: black;
   stroke-width: 2px; }
 
+/* tables */
+@media only screen and (max-width: 767px) {
+  .ui.table:not(.unstackable) td:first-child, .ui.table:not(.unstackable) {
+    font-weight: normal; } }
+/* pair compairson */
 .dropdown {
   font-size: 16px; }
   @media only screen and (max-width: 600px) {
     .dropdown {
-      font-size: 12px; } }
+      font-size: 13px; } }
 
+/* scatterplot */
 figcaption {
   text-align: center; }
 

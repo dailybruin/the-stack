@@ -13,15 +13,17 @@ d3.queue()
 
 
 function renderSubjectTwinTables(data) {
-  const subjects = d3.set(data, d => d.name).values();
+  const subjects = d3.set(data, d => d.name).values(),
+        defaultSubject = 'Astronomy';
 
   d3.select('#pick-subject')
       .on('change', e => pickSubject(data))
+      
       .selectAll('option')
       .data(subjects)
       .enter()
       .append('option')
-      .property('selected', d => d == 'Astronomy')
+      .property('selected', d => d == defaultSubject)
       .text(d => d)
       .attr('value', (d, i) => i);
 
@@ -29,7 +31,7 @@ function renderSubjectTwinTables(data) {
   initTable('#least-similar-table');
 
   const defaultData = data.filter((d, i) => {
-    return d.name == 'Astronomy';
+    return d.name == defaultSubject;
   });
 
   populateTable('#most-similar-table', defaultData, 'most_similar');
@@ -41,12 +43,11 @@ function getPickedData(selectId, data) {
   const selectedData = data.filter((d, i) => {
       return i == parseInt(selectedIndex);
   });
-  return selectedData
+  return selectedData;
 }
 
 function pickSubject(data) {
   const selectedData = getPickedData('#pick-subject', data);
-
   populateTable('#most-similar-table', selectedData, 'most_similar');
   populateTable('#least-similar-table', selectedData, 'least_similar');
 }
