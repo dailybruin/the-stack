@@ -1,4 +1,4 @@
-d3.csv('/datasets/course-catalog/tsne.csv', (error, data) => {
+d3.csv('/datasets/department-similarity/tsne.csv', (error, data) => {
   data = processData(data);
 
   plot(data, '#scatterplot');

@@ -1,4 +1,4 @@
-d3.csv('/datasets/course-catalog/pair-similarity.csv', (error, data) => {
+d3.csv('/datasets/department-similarity/pair-similarity.csv', (error, data) => {
   // process data
   data.forEach((d, i) => {
     d.score = Number(d.score);

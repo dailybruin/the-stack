@@ -1,5 +1,5 @@
 d3.queue()
-  .defer(d3.json, '/datasets/course-catalog/similar-subjects.json')
+  .defer(d3.json, '/datasets/department-similarity/similar-subjects.json')
   .await((error, similarData) => {
 
     // process data
