@@ -17,9 +17,9 @@ scripts:
     - /js/lib/jquery-3.1.1.min.js
     - /js/posts/department-similarity/libs/d3.min.js
     - /js/posts/department-similarity/libs/d3-tip.js
-    - /js/posts/department-similarity/tables.js
-    - /js/posts/department-similarity/scatterplot.js
-    - /js/posts/department-similarity/pair-similarity.js
+    - /js/posts/department-similarity/tables-compiled.js
+    - /js/posts/department-similarity/scatterplot-compiled.js
+    - /js/posts/department-similarity/pair-similarity-compiled.js
 ---
  
 From Plato to Pluto, the hundreds of subjects taught at UCLA cover much of the knowledge scholars accumulated over time, but how can we identify the relations between different fields of study? With the geography of UCLA as a guide, we could draw a line near Powell Library and get the North and South campuses. Yet intuition and [memes](https://www.facebook.com/photo.php?fbid=1386003851449756&set=gm.227389317732629&type=3&permPage=1) cannot provide a consistent way for analyzing the relations between subjects.
@@ -188,4 +188,6 @@ We use a [paragraph vector](https://cs.stanford.edu/~quocle/paragraph_vector.pdf
 **Clustering**
 
 We also apply the K-means algorithm to form 7 groups of departments that have document vectors which are close together in Euclidean distance. 
+
+<br>
 
