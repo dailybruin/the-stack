@@ -22,9 +22,9 @@ scripts:
     - /js/posts/department-similarity/pair-similarity-compiled.js
 ---
  
-From Plato to Pluto, the hundreds of subjects taught at UCLA cover much of the knowledge scholars accumulated over time, but how can we identify the relations between different fields of study? With the geography of UCLA as a guide, we could draw a line near Powell Library and get the North and South campuses. Yet intuition and [memes](https://www.facebook.com/photo.php?fbid=1386003851449756&set=gm.227389317732629&type=3&permPage=1) cannot provide a consistent way for analyzing the relations between subjects.
+From Plato to Pluto, the hundreds of subjects taught at UCLA cover much of the knowledge scholars accumulated over time. And with the geography of UCLA as a guide, we may even group these hundreds of subjects into the North and South campuses. But this division alone fails to inform us about the finer relationships between academic departments.
 
-The good news is that the UCLA Registrar provides valuable information that allow us to more precisely determine what each academic department is about. Using [course descriptions](http://www.registrar.ucla.edu/Academics/Course-Descriptions) as well as [departmental objectives](http://catalog.registrar.ucla.edu/ucla-cat2016-224.html), we apply a variant of the *word2vec* algorithm – a machine learning model that can capture the semantic meaning of words – to quantify each department as a list of numbers. These numbers provide a blueprint for analyzing the links and clusters that relate one department to another.
+The good news is that the UCLA Registrar provides valuable information that allow us to more precisely determine what each department is about. Using [course descriptions](http://www.registrar.ucla.edu/Academics/Course-Descriptions) as well as [departmental objectives](http://catalog.registrar.ucla.edu/ucla-cat2016-224.html), we apply a variant of the *word2vec* algorithm – a machine learning model that can capture the semantic meaning of words – to quantify each department as a list of numbers. These numbers provide a blueprint for analyzing the links and clusters that relate one department to another.
 
 ## Re-mapping UCLA departments
 
