@@ -1,0 +1,2416 @@
+score,subject1,subject2
+0.61,Art,Art History
+0.52,Art,Arts and Architecture
+0.4,Art,Ancient Near East
+0.3,Art,Anthropology
+0.58,Art,Asian American Studies
+0.2,Art,Astronomy
+0.13,Art,Atmospheric and Oceanic Sciences
+-0.11,Art,Bioengineering
+-0.01,Art,Biostatistics
+0.46,Art,Communication Studies
+-0.06,Art,Chemical Engineering
+-0.07,Art,Chemistry and Biochemistry
+0.38,Art,Comparative Literature
+0.56,Art,Chicana and Chicano Studies
+0.33,Art,Chinese
+-0.08,Art,Computer Science
+-0,Art,Civil and Environmental Engineering
+0.52,Art,Classics
+0.63,Art,Dance
+0.68,Art,Design / Media Arts
+0.03,Art,"Earth, Planetary, and Space Sciences"
+0.38,Art,English
+0.38,Art,English as A Second Language
+0.05,Art,Ecology and Evolutionary Biology
+0.4,Art,English Composition
+-0.01,Art,Economics
+0.2,Art,Environment
+0.4,Art,Education
+-0.02,Art,Electrical Engineering
+0.11,Art,Engineering
+0.42,Art,Ethnomusicology
+0.43,Art,French
+0.41,Art,Film and Television
+0.47,Art,Gender Studies
+0.41,Art,General Education Clusters
+0.56,Art,Global Health
+0.18,Art,Geography
+0.33,Art,German
+0.51,Art,Honors Collegium
+0.37,Art,History
+0.41,Art,Italian
+0.36,Art,Japanese
+0.25,Art,Korean
+0.25,Art,Life Sciences
+0.16,Art,Linguistics
+-0.03,Art,Management
+0.06,Art,Materials Science and Engineering
+-0.08,Art,Mathematics
+0.04,Art,Mechanical and Aerospace Engineering
+0.06,Art,"Molecular, Cell, and Developmental Biology"
+0.42,Art,Music
+0.15,Art,"Microbiology, Immunology, and Molecular Genetics"
+0.38,Art,Music History
+0.12,Art,Neuroscience
+0.07,Art,Nursing
+0.21,Art,Political Science
+0.25,Art,Philosophy
+0.05,Art,Program in Computing
+0.05,Art,Physics
+0.05,Art,Psychology
+-0.05,Art,Physiological Science
+0.46,Art,"Religion, Study of"
+0.36,Art,Scandinavian
+0.21,Art,Society and Genetics
+0.36,Art,Sociology
+0.38,Art,Spanish
+0.01,Art,Statistics
+0.51,Art,Theater
+0.73,Art,World Arts and Cultures
+0.32,Art History,Arts and Architecture
+0.63,Art History,Ancient Near East
+0.38,Art History,Anthropology
+0.47,Art History,Asian American Studies
+0.02,Art History,Astronomy
+-0.01,Art History,Atmospheric and Oceanic Sciences
+-0.19,Art History,Bioengineering
+-0.16,Art History,Biostatistics
+0.41,Art History,Communication Studies
+-0.21,Art History,Chemical Engineering
+-0.26,Art History,Chemistry and Biochemistry
+0.54,Art History,Comparative Literature
+0.36,Art History,Chicana and Chicano Studies
+0.47,Art History,Chinese
+-0.16,Art History,Computer Science
+-0.23,Art History,Civil and Environmental Engineering
+0.8,Art History,Classics
+0.35,Art History,Dance
+0.38,Art History,Design / Media Arts
+-0.1,Art History,"Earth, Planetary, and Space Sciences"
+0.45,Art History,English
+0.1,Art History,English as A Second Language
+0.01,Art History,Ecology and Evolutionary Biology
+0.09,Art History,English Composition
+-0.18,Art History,Economics
+-0.01,Art History,Environment
+0.03,Art History,Education
+-0.16,Art History,Electrical Engineering
+-0.17,Art History,Engineering
+0.38,Art History,Ethnomusicology
+0.57,Art History,French
+0.06,Art History,Film and Television
+0.48,Art History,Gender Studies
+0.46,Art History,General Education Clusters
+0.32,Art History,Global Health
+0.1,Art History,Geography
+0.45,Art History,German
+0.56,Art History,Honors Collegium
+0.64,Art History,History
+0.55,Art History,Italian
+0.47,Art History,Japanese
+0.47,Art History,Korean
+-0.02,Art History,Life Sciences
+0.02,Art History,Linguistics
+-0.24,Art History,Management
+-0.08,Art History,Materials Science and Engineering
+-0.09,Art History,Mathematics
+-0.15,Art History,Mechanical and Aerospace Engineering
+-0.12,Art History,"Molecular, Cell, and Developmental Biology"
+0.2,Art History,Music
+-0.09,Art History,"Microbiology, Immunology, and Molecular Genetics"
+0.41,Art History,Music History
+-0.07,Art History,Neuroscience
+-0.08,Art History,Nursing
+0.19,Art History,Political Science
+0.35,Art History,Philosophy
+-0.11,Art History,Program in Computing
+-0.07,Art History,Physics
+-0.11,Art History,Psychology
+-0.1,Art History,Physiological Science
+0.67,Art History,"Religion, Study of"
+0.43,Art History,Scandinavian
+0.21,Art History,Society and Genetics
+0.31,Art History,Sociology
+0.41,Art History,Spanish
+-0.16,Art History,Statistics
+0.16,Art History,Theater
+0.55,Art History,World Arts and Cultures
+0.16,Arts and Architecture,Ancient Near East
+0.29,Arts and Architecture,Anthropology
+0.37,Arts and Architecture,Asian American Studies
+0.29,Arts and Architecture,Astronomy
+0.2,Arts and Architecture,Atmospheric and Oceanic Sciences
+0.17,Arts and Architecture,Bioengineering
+0.28,Arts and Architecture,Biostatistics
+0.41,Arts and Architecture,Communication Studies
+0.16,Arts and Architecture,Chemical Engineering
+0.16,Arts and Architecture,Chemistry and Biochemistry
+0.29,Arts and Architecture,Comparative Literature
+0.31,Arts and Architecture,Chicana and Chicano Studies
+0.27,Arts and Architecture,Chinese
+0.1,Arts and Architecture,Computer Science
+0.11,Arts and Architecture,Civil and Environmental Engineering
+0.27,Arts and Architecture,Classics
+0.39,Arts and Architecture,Dance
+0.63,Arts and Architecture,Design / Media Arts
+0.22,Arts and Architecture,"Earth, Planetary, and Space Sciences"
+0.26,Arts and Architecture,English
+0.35,Arts and Architecture,English as A Second Language
+0.3,Arts and Architecture,Ecology and Evolutionary Biology
+0.45,Arts and Architecture,English Composition
+0.18,Arts and Architecture,Economics
+0.3,Arts and Architecture,Environment
+0.25,Arts and Architecture,Education
+0.16,Arts and Architecture,Electrical Engineering
+0.31,Arts and Architecture,Engineering
+0.17,Arts and Architecture,Ethnomusicology
+0.34,Arts and Architecture,French
+0.35,Arts and Architecture,Film and Television
+0.25,Arts and Architecture,Gender Studies
+0.26,Arts and Architecture,General Education Clusters
+0.42,Arts and Architecture,Global Health
+0.14,Arts and Architecture,Geography
+0.31,Arts and Architecture,German
+0.29,Arts and Architecture,Honors Collegium
+0.2,Arts and Architecture,History
+0.28,Arts and Architecture,Italian
+0.32,Arts and Architecture,Japanese
+0.29,Arts and Architecture,Korean
+0.38,Arts and Architecture,Life Sciences
+0.35,Arts and Architecture,Linguistics
+0.21,Arts and Architecture,Management
+0.2,Arts and Architecture,Materials Science and Engineering
+0.2,Arts and Architecture,Mathematics
+0.16,Arts and Architecture,Mechanical and Aerospace Engineering
+0.29,Arts and Architecture,"Molecular, Cell, and Developmental Biology"
+0.31,Arts and Architecture,Music
+0.36,Arts and Architecture,"Microbiology, Immunology, and Molecular Genetics"
+0.23,Arts and Architecture,Music History
+0.45,Arts and Architecture,Neuroscience
+0.12,Arts and Architecture,Nursing
+0.19,Arts and Architecture,Political Science
+0.31,Arts and Architecture,Philosophy
+0.26,Arts and Architecture,Program in Computing
+0.17,Arts and Architecture,Physics
+0.28,Arts and Architecture,Psychology
+0.22,Arts and Architecture,Physiological Science
+0.28,Arts and Architecture,"Religion, Study of"
+0.31,Arts and Architecture,Scandinavian
+0.3,Arts and Architecture,Society and Genetics
+0.26,Arts and Architecture,Sociology
+0.38,Arts and Architecture,Spanish
+0.18,Arts and Architecture,Statistics
+0.36,Arts and Architecture,Theater
+0.44,Arts and Architecture,World Arts and Cultures
+0.51,Ancient Near East,Anthropology
+0.33,Ancient Near East,Asian American Studies
+0.11,Ancient Near East,Astronomy
+0,Ancient Near East,Atmospheric and Oceanic Sciences
+-0.13,Ancient Near East,Bioengineering
+0.02,Ancient Near East,Biostatistics
+0.38,Ancient Near East,Communication Studies
+-0.09,Ancient Near East,Chemical Engineering
+-0.15,Ancient Near East,Chemistry and Biochemistry
+0.62,Ancient Near East,Comparative Literature
+0.32,Ancient Near East,Chicana and Chicano Studies
+0.42,Ancient Near East,Chinese
+0.07,Ancient Near East,Computer Science
+-0.08,Ancient Near East,Civil and Environmental Engineering
+0.78,Ancient Near East,Classics
+0.42,Ancient Near East,Dance
+0.31,Ancient Near East,Design / Media Arts
+-0.06,Ancient Near East,"Earth, Planetary, and Space Sciences"
+0.48,Ancient Near East,English
+0.36,Ancient Near East,English as A Second Language
+-0.08,Ancient Near East,Ecology and Evolutionary Biology
+0.27,Ancient Near East,English Composition
+-0.14,Ancient Near East,Economics
+-0.03,Ancient Near East,Environment
+0.09,Ancient Near East,Education
+0.01,Ancient Near East,Electrical Engineering
+-0.01,Ancient Near East,Engineering
+0.31,Ancient Near East,Ethnomusicology
+0.58,Ancient Near East,French
+0.06,Ancient Near East,Film and Television
+0.38,Ancient Near East,Gender Studies
+0.25,Ancient Near East,General Education Clusters
+0.18,Ancient Near East,Global Health
+0.15,Ancient Near East,Geography
+0.6,Ancient Near East,German
+0.51,Ancient Near East,Honors Collegium
+0.57,Ancient Near East,History
+0.63,Ancient Near East,Italian
+0.54,Ancient Near East,Japanese
+0.45,Ancient Near East,Korean
+-0.07,Ancient Near East,Life Sciences
+0.27,Ancient Near East,Linguistics
+-0.04,Ancient Near East,Management
+0.06,Ancient Near East,Materials Science and Engineering
+0.05,Ancient Near East,Mathematics
+-0.03,Ancient Near East,Mechanical and Aerospace Engineering
+-0.12,Ancient Near East,"Molecular, Cell, and Developmental Biology"
+0.27,Ancient Near East,Music
+0.01,Ancient Near East,"Microbiology, Immunology, and Molecular Genetics"
+0.32,Ancient Near East,Music History
+-0.09,Ancient Near East,Neuroscience
+-0.04,Ancient Near East,Nursing
+0.2,Ancient Near East,Political Science
+0.38,Ancient Near East,Philosophy
+0.1,Ancient Near East,Program in Computing
+-0.05,Ancient Near East,Physics
+-0.04,Ancient Near East,Psychology
+-0.02,Ancient Near East,Physiological Science
+0.73,Ancient Near East,"Religion, Study of"
+0.57,Ancient Near East,Scandinavian
+0.18,Ancient Near East,Society and Genetics
+0.25,Ancient Near East,Sociology
+0.52,Ancient Near East,Spanish
+0.11,Ancient Near East,Statistics
+0.15,Ancient Near East,Theater
+0.51,Ancient Near East,World Arts and Cultures
+0.52,Anthropology,Asian American Studies
+0.08,Anthropology,Astronomy
+0.02,Anthropology,Atmospheric and Oceanic Sciences
+-0.17,Anthropology,Bioengineering
+0.13,Anthropology,Biostatistics
+0.57,Anthropology,Communication Studies
+-0.21,Anthropology,Chemical Engineering
+-0.17,Anthropology,Chemistry and Biochemistry
+0.36,Anthropology,Comparative Literature
+0.44,Anthropology,Chicana and Chicano Studies
+0.31,Anthropology,Chinese
+0.03,Anthropology,Computer Science
+-0.18,Anthropology,Civil and Environmental Engineering
+0.45,Anthropology,Classics
+0.39,Anthropology,Dance
+0.23,Anthropology,Design / Media Arts
+0.04,Anthropology,"Earth, Planetary, and Space Sciences"
+0.21,Anthropology,English
+0.18,Anthropology,English as A Second Language
+0.27,Anthropology,Ecology and Evolutionary Biology
+0.17,Anthropology,English Composition
+-0.05,Anthropology,Economics
+0.14,Anthropology,Environment
+0.43,Anthropology,Education
+-0.2,Anthropology,Electrical Engineering
+-0.06,Anthropology,Engineering
+0.19,Anthropology,Ethnomusicology
+0.34,Anthropology,French
+-0.09,Anthropology,Film and Television
+0.54,Anthropology,Gender Studies
+0.49,Anthropology,General Education Clusters
+0.37,Anthropology,Global Health
+0.42,Anthropology,Geography
+0.39,Anthropology,German
+0.51,Anthropology,Honors Collegium
+0.48,Anthropology,History
+0.38,Anthropology,Italian
+0.26,Anthropology,Japanese
+0.28,Anthropology,Korean
+0.23,Anthropology,Life Sciences
+0.36,Anthropology,Linguistics
+0.06,Anthropology,Management
+-0.11,Anthropology,Materials Science and Engineering
+-0.1,Anthropology,Mathematics
+-0.23,Anthropology,Mechanical and Aerospace Engineering
+0.11,Anthropology,"Molecular, Cell, and Developmental Biology"
+0.06,Anthropology,Music
+0.2,Anthropology,"Microbiology, Immunology, and Molecular Genetics"
+0.08,Anthropology,Music History
+0.2,Anthropology,Neuroscience
+0.2,Anthropology,Nursing
+0.29,Anthropology,Political Science
+0.35,Anthropology,Philosophy
+0.08,Anthropology,Program in Computing
+-0.18,Anthropology,Physics
+0.45,Anthropology,Psychology
+0.14,Anthropology,Physiological Science
+0.49,Anthropology,"Religion, Study of"
+0.14,Anthropology,Scandinavian
+0.51,Anthropology,Society and Genetics
+0.62,Anthropology,Sociology
+0.34,Anthropology,Spanish
+0.06,Anthropology,Statistics
+0.05,Anthropology,Theater
+0.48,Anthropology,World Arts and Cultures
+-0.15,Asian American Studies,Astronomy
+-0.16,Asian American Studies,Atmospheric and Oceanic Sciences
+-0.31,Asian American Studies,Bioengineering
+-0.07,Asian American Studies,Biostatistics
+0.63,Asian American Studies,Communication Studies
+-0.33,Asian American Studies,Chemical Engineering
+-0.36,Asian American Studies,Chemistry and Biochemistry
+0.45,Asian American Studies,Comparative Literature
+0.83,Asian American Studies,Chicana and Chicano Studies
+0.44,Asian American Studies,Chinese
+-0.23,Asian American Studies,Computer Science
+-0.3,Asian American Studies,Civil and Environmental Engineering
+0.48,Asian American Studies,Classics
+0.56,Asian American Studies,Dance
+0.38,Asian American Studies,Design / Media Arts
+-0.33,Asian American Studies,"Earth, Planetary, and Space Sciences"
+0.46,Asian American Studies,English
+0.42,Asian American Studies,English as A Second Language
+-0.08,Asian American Studies,Ecology and Evolutionary Biology
+0.42,Asian American Studies,English Composition
+0.12,Asian American Studies,Economics
+0.18,Asian American Studies,Environment
+0.56,Asian American Studies,Education
+-0.32,Asian American Studies,Electrical Engineering
+-0.01,Asian American Studies,Engineering
+0.33,Asian American Studies,Ethnomusicology
+0.45,Asian American Studies,French
+0.2,Asian American Studies,Film and Television
+0.74,Asian American Studies,Gender Studies
+0.54,Asian American Studies,General Education Clusters
+0.51,Asian American Studies,Global Health
+0.18,Asian American Studies,Geography
+0.37,Asian American Studies,German
+0.57,Asian American Studies,Honors Collegium
+0.46,Asian American Studies,History
+0.39,Asian American Studies,Italian
+0.29,Asian American Studies,Japanese
+0.27,Asian American Studies,Korean
+0.07,Asian American Studies,Life Sciences
+0.13,Asian American Studies,Linguistics
+0.14,Asian American Studies,Management
+-0.24,Asian American Studies,Materials Science and Engineering
+-0.28,Asian American Studies,Mathematics
+-0.26,Asian American Studies,Mechanical and Aerospace Engineering
+-0.1,Asian American Studies,"Molecular, Cell, and Developmental Biology"
+0.22,Asian American Studies,Music
+-0.03,Asian American Studies,"Microbiology, Immunology, and Molecular Genetics"
+0.28,Asian American Studies,Music History
+-0.01,Asian American Studies,Neuroscience
+0.15,Asian American Studies,Nursing
+0.47,Asian American Studies,Political Science
+0.19,Asian American Studies,Philosophy
+-0.08,Asian American Studies,Program in Computing
+-0.38,Asian American Studies,Physics
+0.17,Asian American Studies,Psychology
+-0.16,Asian American Studies,Physiological Science
+0.51,Asian American Studies,"Religion, Study of"
+0.28,Asian American Studies,Scandinavian
+0.38,Asian American Studies,Society and Genetics
+0.61,Asian American Studies,Sociology
+0.41,Asian American Studies,Spanish
+-0.06,Asian American Studies,Statistics
+0.26,Asian American Studies,Theater
+0.58,Asian American Studies,World Arts and Cultures
+0.74,Astronomy,Atmospheric and Oceanic Sciences
+0.52,Astronomy,Bioengineering
+0.51,Astronomy,Biostatistics
+0.05,Astronomy,Communication Studies
+0.68,Astronomy,Chemical Engineering
+0.64,Astronomy,Chemistry and Biochemistry
+-0.01,Astronomy,Comparative Literature
+-0.16,Astronomy,Chicana and Chicano Studies
+-0.09,Astronomy,Chinese
+0.44,Astronomy,Computer Science
+0.69,Astronomy,Civil and Environmental Engineering
+0,Astronomy,Classics
+0.19,Astronomy,Dance
+0.26,Astronomy,Design / Media Arts
+0.76,Astronomy,"Earth, Planetary, and Space Sciences"
+-0.05,Astronomy,English
+0.09,Astronomy,English as A Second Language
+0.42,Astronomy,Ecology and Evolutionary Biology
+-0.17,Astronomy,English Composition
+0.2,Astronomy,Economics
+0.25,Astronomy,Environment
+-0.04,Astronomy,Education
+0.67,Astronomy,Electrical Engineering
+0.41,Astronomy,Engineering
+0.13,Astronomy,Ethnomusicology
+0.02,Astronomy,French
+0.1,Astronomy,Film and Television
+-0.08,Astronomy,Gender Studies
+0.01,Astronomy,General Education Clusters
+0.21,Astronomy,Global Health
+0.2,Astronomy,Geography
+-0.04,Astronomy,German
+0.13,Astronomy,Honors Collegium
+-0.02,Astronomy,History
+0.05,Astronomy,Italian
+-0.05,Astronomy,Japanese
+-0.05,Astronomy,Korean
+0.41,Astronomy,Life Sciences
+0.18,Astronomy,Linguistics
+0.13,Astronomy,Management
+0.75,Astronomy,Materials Science and Engineering
+0.65,Astronomy,Mathematics
+0.73,Astronomy,Mechanical and Aerospace Engineering
+0.38,Astronomy,"Molecular, Cell, and Developmental Biology"
+0.25,Astronomy,Music
+0.41,Astronomy,"Microbiology, Immunology, and Molecular Genetics"
+0.14,Astronomy,Music History
+0.4,Astronomy,Neuroscience
+0.07,Astronomy,Nursing
+0.01,Astronomy,Political Science
+0.23,Astronomy,Philosophy
+0.59,Astronomy,Program in Computing
+0.82,Astronomy,Physics
+0.1,Astronomy,Psychology
+0.4,Astronomy,Physiological Science
+0.01,Astronomy,"Religion, Study of"
+-0.04,Astronomy,Scandinavian
+0.2,Astronomy,Society and Genetics
+0.07,Astronomy,Sociology
+0.06,Astronomy,Spanish
+0.46,Astronomy,Statistics
+0.1,Astronomy,Theater
+0.13,Astronomy,World Arts and Cultures
+0.43,Atmospheric and Oceanic Sciences,Bioengineering
+0.32,Atmospheric and Oceanic Sciences,Biostatistics
+-0.08,Atmospheric and Oceanic Sciences,Communication Studies
+0.61,Atmospheric and Oceanic Sciences,Chemical Engineering
+0.44,Atmospheric and Oceanic Sciences,Chemistry and Biochemistry
+-0.17,Atmospheric and Oceanic Sciences,Comparative Literature
+-0.17,Atmospheric and Oceanic Sciences,Chicana and Chicano Studies
+-0.17,Atmospheric and Oceanic Sciences,Chinese
+0.25,Atmospheric and Oceanic Sciences,Computer Science
+0.64,Atmospheric and Oceanic Sciences,Civil and Environmental Engineering
+-0.01,Atmospheric and Oceanic Sciences,Classics
+-0.04,Atmospheric and Oceanic Sciences,Dance
+0.13,Atmospheric and Oceanic Sciences,Design / Media Arts
+0.8,Atmospheric and Oceanic Sciences,"Earth, Planetary, and Space Sciences"
+-0.16,Atmospheric and Oceanic Sciences,English
+-0.08,Atmospheric and Oceanic Sciences,English as A Second Language
+0.55,Atmospheric and Oceanic Sciences,Ecology and Evolutionary Biology
+-0.31,Atmospheric and Oceanic Sciences,English Composition
+0.15,Atmospheric and Oceanic Sciences,Economics
+0.44,Atmospheric and Oceanic Sciences,Environment
+-0.06,Atmospheric and Oceanic Sciences,Education
+0.53,Atmospheric and Oceanic Sciences,Electrical Engineering
+0.33,Atmospheric and Oceanic Sciences,Engineering
+-0.09,Atmospheric and Oceanic Sciences,Ethnomusicology
+-0.17,Atmospheric and Oceanic Sciences,French
+-0.04,Atmospheric and Oceanic Sciences,Film and Television
+-0.17,Atmospheric and Oceanic Sciences,Gender Studies
+0,Atmospheric and Oceanic Sciences,General Education Clusters
+0.19,Atmospheric and Oceanic Sciences,Global Health
+0.29,Atmospheric and Oceanic Sciences,Geography
+-0.22,Atmospheric and Oceanic Sciences,German
+0.08,Atmospheric and Oceanic Sciences,Honors Collegium
+-0.02,Atmospheric and Oceanic Sciences,History
+-0.14,Atmospheric and Oceanic Sciences,Italian
+-0.21,Atmospheric and Oceanic Sciences,Japanese
+-0.17,Atmospheric and Oceanic Sciences,Korean
+0.31,Atmospheric and Oceanic Sciences,Life Sciences
+-0.09,Atmospheric and Oceanic Sciences,Linguistics
+0.07,Atmospheric and Oceanic Sciences,Management
+0.59,Atmospheric and Oceanic Sciences,Materials Science and Engineering
+0.39,Atmospheric and Oceanic Sciences,Mathematics
+0.61,Atmospheric and Oceanic Sciences,Mechanical and Aerospace Engineering
+0.33,Atmospheric and Oceanic Sciences,"Molecular, Cell, and Developmental Biology"
+-0.12,Atmospheric and Oceanic Sciences,Music
+0.31,Atmospheric and Oceanic Sciences,"Microbiology, Immunology, and Molecular Genetics"
+-0.13,Atmospheric and Oceanic Sciences,Music History
+0.34,Atmospheric and Oceanic Sciences,Neuroscience
+0.01,Atmospheric and Oceanic Sciences,Nursing
+-0.02,Atmospheric and Oceanic Sciences,Political Science
+0.09,Atmospheric and Oceanic Sciences,Philosophy
+0.32,Atmospheric and Oceanic Sciences,Program in Computing
+0.68,Atmospheric and Oceanic Sciences,Physics
+0.09,Atmospheric and Oceanic Sciences,Psychology
+0.38,Atmospheric and Oceanic Sciences,Physiological Science
+-0.04,Atmospheric and Oceanic Sciences,"Religion, Study of"
+-0.27,Atmospheric and Oceanic Sciences,Scandinavian
+0.15,Atmospheric and Oceanic Sciences,Society and Genetics
+0.04,Atmospheric and Oceanic Sciences,Sociology
+-0.08,Atmospheric and Oceanic Sciences,Spanish
+0.28,Atmospheric and Oceanic Sciences,Statistics
+-0.08,Atmospheric and Oceanic Sciences,Theater
+-0.04,Atmospheric and Oceanic Sciences,World Arts and Cultures
+0.51,Bioengineering,Biostatistics
+0.02,Bioengineering,Communication Studies
+0.84,Bioengineering,Chemical Engineering
+0.7,Bioengineering,Chemistry and Biochemistry
+-0.29,Bioengineering,Comparative Literature
+-0.28,Bioengineering,Chicana and Chicano Studies
+-0.23,Bioengineering,Chinese
+0.66,Bioengineering,Computer Science
+0.7,Bioengineering,Civil and Environmental Engineering
+-0.25,Bioengineering,Classics
+-0.15,Bioengineering,Dance
+0.08,Bioengineering,Design / Media Arts
+0.49,Bioengineering,"Earth, Planetary, and Space Sciences"
+-0.35,Bioengineering,English
+0,Bioengineering,English as A Second Language
+0.44,Bioengineering,Ecology and Evolutionary Biology
+-0.21,Bioengineering,English Composition
+0.08,Bioengineering,Economics
+0.14,Bioengineering,Environment
+-0.1,Bioengineering,Education
+0.66,Bioengineering,Electrical Engineering
+0.56,Bioengineering,Engineering
+-0.11,Bioengineering,Ethnomusicology
+-0.33,Bioengineering,French
+0.03,Bioengineering,Film and Television
+-0.23,Bioengineering,Gender Studies
+-0.13,Bioengineering,General Education Clusters
+-0.04,Bioengineering,Global Health
+-0.02,Bioengineering,Geography
+-0.35,Bioengineering,German
+-0.05,Bioengineering,Honors Collegium
+-0.25,Bioengineering,History
+-0.26,Bioengineering,Italian
+-0.11,Bioengineering,Japanese
+-0.14,Bioengineering,Korean
+0.4,Bioengineering,Life Sciences
+0.08,Bioengineering,Linguistics
+0.14,Bioengineering,Management
+0.78,Bioengineering,Materials Science and Engineering
+0.44,Bioengineering,Mathematics
+0.73,Bioengineering,Mechanical and Aerospace Engineering
+0.5,Bioengineering,"Molecular, Cell, and Developmental Biology"
+-0,Bioengineering,Music
+0.47,Bioengineering,"Microbiology, Immunology, and Molecular Genetics"
+-0.12,Bioengineering,Music History
+0.46,Bioengineering,Neuroscience
+0.18,Bioengineering,Nursing
+-0.1,Bioengineering,Political Science
+-0.04,Bioengineering,Philosophy
+0.53,Bioengineering,Program in Computing
+0.61,Bioengineering,Physics
+0.28,Bioengineering,Psychology
+0.71,Bioengineering,Physiological Science
+-0.21,Bioengineering,"Religion, Study of"
+-0.2,Bioengineering,Scandinavian
+0.24,Bioengineering,Society and Genetics
+-0.12,Bioengineering,Sociology
+-0.22,Bioengineering,Spanish
+0.48,Bioengineering,Statistics
+-0,Bioengineering,Theater
+-0.08,Bioengineering,World Arts and Cultures
+0.07,Biostatistics,Communication Studies
+0.54,Biostatistics,Chemical Engineering
+0.46,Biostatistics,Chemistry and Biochemistry
+-0.14,Biostatistics,Comparative Literature
+-0.08,Biostatistics,Chicana and Chicano Studies
+-0.19,Biostatistics,Chinese
+0.71,Biostatistics,Computer Science
+0.52,Biostatistics,Civil and Environmental Engineering
+-0.1,Biostatistics,Classics
+0.06,Biostatistics,Dance
+0.17,Biostatistics,Design / Media Arts
+0.46,Biostatistics,"Earth, Planetary, and Space Sciences"
+-0.2,Biostatistics,English
+0.02,Biostatistics,English as A Second Language
+0.35,Biostatistics,Ecology and Evolutionary Biology
+-0.03,Biostatistics,English Composition
+0.43,Biostatistics,Economics
+0.29,Biostatistics,Environment
+0.23,Biostatistics,Education
+0.57,Biostatistics,Electrical Engineering
+0.47,Biostatistics,Engineering
+-0.08,Biostatistics,Ethnomusicology
+-0.13,Biostatistics,French
+-0.04,Biostatistics,Film and Television
+-0.11,Biostatistics,Gender Studies
+0.02,Biostatistics,General Education Clusters
+0.14,Biostatistics,Global Health
+0.15,Biostatistics,Geography
+-0.07,Biostatistics,German
+-0.12,Biostatistics,Honors Collegium
+-0.15,Biostatistics,History
+-0.15,Biostatistics,Italian
+-0.1,Biostatistics,Japanese
+-0.05,Biostatistics,Korean
+0.48,Biostatistics,Life Sciences
+0.28,Biostatistics,Linguistics
+0.43,Biostatistics,Management
+0.47,Biostatistics,Materials Science and Engineering
+0.63,Biostatistics,Mathematics
+0.5,Biostatistics,Mechanical and Aerospace Engineering
+0.36,Biostatistics,"Molecular, Cell, and Developmental Biology"
+0.03,Biostatistics,Music
+0.43,Biostatistics,"Microbiology, Immunology, and Molecular Genetics"
+-0.15,Biostatistics,Music History
+0.53,Biostatistics,Neuroscience
+0.31,Biostatistics,Nursing
+0.25,Biostatistics,Political Science
+0.21,Biostatistics,Philosophy
+0.75,Biostatistics,Program in Computing
+0.42,Biostatistics,Physics
+0.47,Biostatistics,Psychology
+0.47,Biostatistics,Physiological Science
+-0.12,Biostatistics,"Religion, Study of"
+-0.18,Biostatistics,Scandinavian
+0.33,Biostatistics,Society and Genetics
+0.3,Biostatistics,Sociology
+-0.14,Biostatistics,Spanish
+0.87,Biostatistics,Statistics
+-0.05,Biostatistics,Theater
+0,Biostatistics,World Arts and Cultures
+-0.02,Communication Studies,Chemical Engineering
+-0.18,Communication Studies,Chemistry and Biochemistry
+0.44,Communication Studies,Comparative Literature
+0.63,Communication Studies,Chicana and Chicano Studies
+0.32,Communication Studies,Chinese
+0.04,Communication Studies,Computer Science
+-0.1,Communication Studies,Civil and Environmental Engineering
+0.34,Communication Studies,Classics
+0.51,Communication Studies,Dance
+0.44,Communication Studies,Design / Media Arts
+-0.15,Communication Studies,"Earth, Planetary, and Space Sciences"
+0.32,Communication Studies,English
+0.34,Communication Studies,English as A Second Language
+0.02,Communication Studies,Ecology and Evolutionary Biology
+0.24,Communication Studies,English Composition
+0.09,Communication Studies,Economics
+0.23,Communication Studies,Environment
+0.55,Communication Studies,Education
+-0.07,Communication Studies,Electrical Engineering
+0.21,Communication Studies,Engineering
+0.23,Communication Studies,Ethnomusicology
+0.39,Communication Studies,French
+0.28,Communication Studies,Film and Television
+0.68,Communication Studies,Gender Studies
+0.52,Communication Studies,General Education Clusters
+0.43,Communication Studies,Global Health
+0.25,Communication Studies,Geography
+0.35,Communication Studies,German
+0.66,Communication Studies,Honors Collegium
+0.45,Communication Studies,History
+0.39,Communication Studies,Italian
+0.23,Communication Studies,Japanese
+0.22,Communication Studies,Korean
+0.15,Communication Studies,Life Sciences
+0.19,Communication Studies,Linguistics
+0.21,Communication Studies,Management
+-0.03,Communication Studies,Materials Science and Engineering
+-0.12,Communication Studies,Mathematics
+-0.07,Communication Studies,Mechanical and Aerospace Engineering
+-0.03,Communication Studies,"Molecular, Cell, and Developmental Biology"
+0.13,Communication Studies,Music
+0.05,Communication Studies,"Microbiology, Immunology, and Molecular Genetics"
+0.21,Communication Studies,Music History
+0.05,Communication Studies,Neuroscience
+0.31,Communication Studies,Nursing
+0.5,Communication Studies,Political Science
+0.28,Communication Studies,Philosophy
+0.02,Communication Studies,Program in Computing
+-0.25,Communication Studies,Physics
+0.32,Communication Studies,Psychology
+0.08,Communication Studies,Physiological Science
+0.42,Communication Studies,"Religion, Study of"
+0.38,Communication Studies,Scandinavian
+0.61,Communication Studies,Society and Genetics
+0.65,Communication Studies,Sociology
+0.3,Communication Studies,Spanish
+-0,Communication Studies,Statistics
+0.32,Communication Studies,Theater
+0.68,Communication Studies,World Arts and Cultures
+0.75,Chemical Engineering,Chemistry and Biochemistry
+-0.27,Chemical Engineering,Comparative Literature
+-0.28,Chemical Engineering,Chicana and Chicano Studies
+-0.25,Chemical Engineering,Chinese
+0.58,Chemical Engineering,Computer Science
+0.84,Chemical Engineering,Civil and Environmental Engineering
+-0.24,Chemical Engineering,Classics
+-0.08,Chemical Engineering,Dance
+0.07,Chemical Engineering,Design / Media Arts
+0.63,Chemical Engineering,"Earth, Planetary, and Space Sciences"
+-0.24,Chemical Engineering,English
+-0.04,Chemical Engineering,English as A Second Language
+0.42,Chemical Engineering,Ecology and Evolutionary Biology
+-0.22,Chemical Engineering,English Composition
+0.11,Chemical Engineering,Economics
+0.24,Chemical Engineering,Environment
+-0.19,Chemical Engineering,Education
+0.75,Chemical Engineering,Electrical Engineering
+0.55,Chemical Engineering,Engineering
+-0.07,Chemical Engineering,Ethnomusicology
+-0.28,Chemical Engineering,French
+-0.01,Chemical Engineering,Film and Television
+-0.27,Chemical Engineering,Gender Studies
+-0.17,Chemical Engineering,General Education Clusters
+-0.06,Chemical Engineering,Global Health
+0.08,Chemical Engineering,Geography
+-0.32,Chemical Engineering,German
+-0.13,Chemical Engineering,Honors Collegium
+-0.24,Chemical Engineering,History
+-0.22,Chemical Engineering,Italian
+-0.13,Chemical Engineering,Japanese
+-0.18,Chemical Engineering,Korean
+0.31,Chemical Engineering,Life Sciences
+0.1,Chemical Engineering,Linguistics
+0.14,Chemical Engineering,Management
+0.89,Chemical Engineering,Materials Science and Engineering
+0.56,Chemical Engineering,Mathematics
+0.85,Chemical Engineering,Mechanical and Aerospace Engineering
+0.37,Chemical Engineering,"Molecular, Cell, and Developmental Biology"
+0.01,Chemical Engineering,Music
+0.3,Chemical Engineering,"Microbiology, Immunology, and Molecular Genetics"
+-0.08,Chemical Engineering,Music History
+0.35,Chemical Engineering,Neuroscience
+0.06,Chemical Engineering,Nursing
+-0.09,Chemical Engineering,Political Science
+-0.08,Chemical Engineering,Philosophy
+0.57,Chemical Engineering,Program in Computing
+0.73,Chemical Engineering,Physics
+0.08,Chemical Engineering,Psychology
+0.57,Chemical Engineering,Physiological Science
+-0.19,Chemical Engineering,"Religion, Study of"
+-0.22,Chemical Engineering,Scandinavian
+0.12,Chemical Engineering,Society and Genetics
+-0.12,Chemical Engineering,Sociology
+-0.13,Chemical Engineering,Spanish
+0.5,Chemical Engineering,Statistics
+0.01,Chemical Engineering,Theater
+-0.13,Chemical Engineering,World Arts and Cultures
+-0.22,Chemistry and Biochemistry,Comparative Literature
+-0.3,Chemistry and Biochemistry,Chicana and Chicano Studies
+-0.11,Chemistry and Biochemistry,Chinese
+0.48,Chemistry and Biochemistry,Computer Science
+0.56,Chemistry and Biochemistry,Civil and Environmental Engineering
+-0.24,Chemistry and Biochemistry,Classics
+-0.1,Chemistry and Biochemistry,Dance
+0,Chemistry and Biochemistry,Design / Media Arts
+0.63,Chemistry and Biochemistry,"Earth, Planetary, and Space Sciences"
+-0.21,Chemistry and Biochemistry,English
+0.05,Chemistry and Biochemistry,English as A Second Language
+0.5,Chemistry and Biochemistry,Ecology and Evolutionary Biology
+-0.06,Chemistry and Biochemistry,English Composition
+0.08,Chemistry and Biochemistry,Economics
+0.09,Chemistry and Biochemistry,Environment
+-0.19,Chemistry and Biochemistry,Education
+0.53,Chemistry and Biochemistry,Electrical Engineering
+0.34,Chemistry and Biochemistry,Engineering
+-0.15,Chemistry and Biochemistry,Ethnomusicology
+-0.2,Chemistry and Biochemistry,French
+-0.07,Chemistry and Biochemistry,Film and Television
+-0.35,Chemistry and Biochemistry,Gender Studies
+-0.2,Chemistry and Biochemistry,General Education Clusters
+-0.01,Chemistry and Biochemistry,Global Health
+0.01,Chemistry and Biochemistry,Geography
+-0.24,Chemistry and Biochemistry,German
+-0.16,Chemistry and Biochemistry,Honors Collegium
+-0.33,Chemistry and Biochemistry,History
+-0.17,Chemistry and Biochemistry,Italian
+0.01,Chemistry and Biochemistry,Japanese
+0.01,Chemistry and Biochemistry,Korean
+0.48,Chemistry and Biochemistry,Life Sciences
+0.18,Chemistry and Biochemistry,Linguistics
+0.06,Chemistry and Biochemistry,Management
+0.75,Chemistry and Biochemistry,Materials Science and Engineering
+0.51,Chemistry and Biochemistry,Mathematics
+0.59,Chemistry and Biochemistry,Mechanical and Aerospace Engineering
+0.55,Chemistry and Biochemistry,"Molecular, Cell, and Developmental Biology"
+0.08,Chemistry and Biochemistry,Music
+0.5,Chemistry and Biochemistry,"Microbiology, Immunology, and Molecular Genetics"
+-0.12,Chemistry and Biochemistry,Music History
+0.48,Chemistry and Biochemistry,Neuroscience
+-0.01,Chemistry and Biochemistry,Nursing
+-0.17,Chemistry and Biochemistry,Political Science
+-0.04,Chemistry and Biochemistry,Philosophy
+0.6,Chemistry and Biochemistry,Program in Computing
+0.77,Chemistry and Biochemistry,Physics
+0.1,Chemistry and Biochemistry,Psychology
+0.6,Chemistry and Biochemistry,Physiological Science
+-0.25,Chemistry and Biochemistry,"Religion, Study of"
+-0.18,Chemistry and Biochemistry,Scandinavian
+0.05,Chemistry and Biochemistry,Society and Genetics
+-0.14,Chemistry and Biochemistry,Sociology
+-0.07,Chemistry and Biochemistry,Spanish
+0.45,Chemistry and Biochemistry,Statistics
+-0.09,Chemistry and Biochemistry,Theater
+-0.21,Chemistry and Biochemistry,World Arts and Cultures
+0.46,Comparative Literature,Chicana and Chicano Studies
+0.61,Comparative Literature,Chinese
+-0.12,Comparative Literature,Computer Science
+-0.21,Comparative Literature,Civil and Environmental Engineering
+0.69,Comparative Literature,Classics
+0.41,Comparative Literature,Dance
+0.26,Comparative Literature,Design / Media Arts
+-0.21,Comparative Literature,"Earth, Planetary, and Space Sciences"
+0.8,Comparative Literature,English
+0.43,Comparative Literature,English as A Second Language
+-0.19,Comparative Literature,Ecology and Evolutionary Biology
+0.4,Comparative Literature,English Composition
+-0.06,Comparative Literature,Economics
+-0.12,Comparative Literature,Environment
+0.09,Comparative Literature,Education
+-0.28,Comparative Literature,Electrical Engineering
+-0.2,Comparative Literature,Engineering
+0.31,Comparative Literature,Ethnomusicology
+0.79,Comparative Literature,French
+0.15,Comparative Literature,Film and Television
+0.52,Comparative Literature,Gender Studies
+0.35,Comparative Literature,General Education Clusters
+0.23,Comparative Literature,Global Health
+-0.03,Comparative Literature,Geography
+0.8,Comparative Literature,German
+0.56,Comparative Literature,Honors Collegium
+0.44,Comparative Literature,History
+0.82,Comparative Literature,Italian
+0.64,Comparative Literature,Japanese
+0.48,Comparative Literature,Korean
+-0.15,Comparative Literature,Life Sciences
+0.36,Comparative Literature,Linguistics
+-0.09,Comparative Literature,Management
+-0.13,Comparative Literature,Materials Science and Engineering
+-0.1,Comparative Literature,Mathematics
+-0.21,Comparative Literature,Mechanical and Aerospace Engineering
+-0.12,Comparative Literature,"Molecular, Cell, and Developmental Biology"
+0.35,Comparative Literature,Music
+-0.05,Comparative Literature,"Microbiology, Immunology, and Molecular Genetics"
+0.36,Comparative Literature,Music History
+-0.14,Comparative Literature,Neuroscience
+-0.12,Comparative Literature,Nursing
+0.22,Comparative Literature,Political Science
+0.53,Comparative Literature,Philosophy
+-0.05,Comparative Literature,Program in Computing
+-0.17,Comparative Literature,Physics
+-0.07,Comparative Literature,Psychology
+-0.21,Comparative Literature,Physiological Science
+0.61,Comparative Literature,"Religion, Study of"
+0.78,Comparative Literature,Scandinavian
+0.19,Comparative Literature,Society and Genetics
+0.24,Comparative Literature,Sociology
+0.66,Comparative Literature,Spanish
+-0.13,Comparative Literature,Statistics
+0.14,Comparative Literature,Theater
+0.48,Comparative Literature,World Arts and Cultures
+0.26,Chicana and Chicano Studies,Chinese
+-0.19,Chicana and Chicano Studies,Computer Science
+-0.24,Chicana and Chicano Studies,Civil and Environmental Engineering
+0.4,Chicana and Chicano Studies,Classics
+0.55,Chicana and Chicano Studies,Dance
+0.28,Chicana and Chicano Studies,Design / Media Arts
+-0.31,Chicana and Chicano Studies,"Earth, Planetary, and Space Sciences"
+0.45,Chicana and Chicano Studies,English
+0.42,Chicana and Chicano Studies,English as A Second Language
+-0.21,Chicana and Chicano Studies,Ecology and Evolutionary Biology
+0.45,Chicana and Chicano Studies,English Composition
+0.07,Chicana and Chicano Studies,Economics
+0.13,Chicana and Chicano Studies,Environment
+0.6,Chicana and Chicano Studies,Education
+-0.27,Chicana and Chicano Studies,Electrical Engineering
+-0.03,Chicana and Chicano Studies,Engineering
+0.28,Chicana and Chicano Studies,Ethnomusicology
+0.43,Chicana and Chicano Studies,French
+0.2,Chicana and Chicano Studies,Film and Television
+0.78,Chicana and Chicano Studies,Gender Studies
+0.54,Chicana and Chicano Studies,General Education Clusters
+0.47,Chicana and Chicano Studies,Global Health
+0.19,Chicana and Chicano Studies,Geography
+0.41,Chicana and Chicano Studies,German
+0.59,Chicana and Chicano Studies,Honors Collegium
+0.43,Chicana and Chicano Studies,History
+0.37,Chicana and Chicano Studies,Italian
+0.23,Chicana and Chicano Studies,Japanese
+0.2,Chicana and Chicano Studies,Korean
+-0.03,Chicana and Chicano Studies,Life Sciences
+0.17,Chicana and Chicano Studies,Linguistics
+0.09,Chicana and Chicano Studies,Management
+-0.23,Chicana and Chicano Studies,Materials Science and Engineering
+-0.23,Chicana and Chicano Studies,Mathematics
+-0.19,Chicana and Chicano Studies,Mechanical and Aerospace Engineering
+-0.16,Chicana and Chicano Studies,"Molecular, Cell, and Developmental Biology"
+0.19,Chicana and Chicano Studies,Music
+-0.07,Chicana and Chicano Studies,"Microbiology, Immunology, and Molecular Genetics"
+0.29,Chicana and Chicano Studies,Music History
+-0.1,Chicana and Chicano Studies,Neuroscience
+0.16,Chicana and Chicano Studies,Nursing
+0.39,Chicana and Chicano Studies,Political Science
+0.13,Chicana and Chicano Studies,Philosophy
+-0.08,Chicana and Chicano Studies,Program in Computing
+-0.33,Chicana and Chicano Studies,Physics
+0.17,Chicana and Chicano Studies,Psychology
+-0.17,Chicana and Chicano Studies,Physiological Science
+0.44,Chicana and Chicano Studies,"Religion, Study of"
+0.37,Chicana and Chicano Studies,Scandinavian
+0.41,Chicana and Chicano Studies,Society and Genetics
+0.61,Chicana and Chicano Studies,Sociology
+0.44,Chicana and Chicano Studies,Spanish
+-0.11,Chicana and Chicano Studies,Statistics
+0.22,Chicana and Chicano Studies,Theater
+0.56,Chicana and Chicano Studies,World Arts and Cultures
+-0.19,Chinese,Computer Science
+-0.31,Chinese,Civil and Environmental Engineering
+0.54,Chinese,Classics
+0.32,Chinese,Dance
+0.35,Chinese,Design / Media Arts
+-0.2,Chinese,"Earth, Planetary, and Space Sciences"
+0.49,Chinese,English
+0.43,Chinese,English as A Second Language
+0.07,Chinese,Ecology and Evolutionary Biology
+0.41,Chinese,English Composition
+0.05,Chinese,Economics
+-0.03,Chinese,Environment
+0.08,Chinese,Education
+-0.37,Chinese,Electrical Engineering
+-0.04,Chinese,Engineering
+0.3,Chinese,Ethnomusicology
+0.52,Chinese,French
+0.25,Chinese,Film and Television
+0.24,Chinese,Gender Studies
+0.26,Chinese,General Education Clusters
+0.17,Chinese,Global Health
+0.04,Chinese,Geography
+0.5,Chinese,German
+0.33,Chinese,Honors Collegium
+0.34,Chinese,History
+0.55,Chinese,Italian
+0.81,Chinese,Japanese
+0.78,Chinese,Korean
+0.04,Chinese,Life Sciences
+0.25,Chinese,Linguistics
+0.02,Chinese,Management
+-0.12,Chinese,Materials Science and Engineering
+-0.21,Chinese,Mathematics
+-0.31,Chinese,Mechanical and Aerospace Engineering
+-0,Chinese,"Molecular, Cell, and Developmental Biology"
+0.37,Chinese,Music
+-0.02,Chinese,"Microbiology, Immunology, and Molecular Genetics"
+0.28,Chinese,Music History
+0.02,Chinese,Neuroscience
+-0.16,Chinese,Nursing
+0.1,Chinese,Political Science
+0.3,Chinese,Philosophy
+-0.09,Chinese,Program in Computing
+-0.18,Chinese,Physics
+-0.21,Chinese,Psychology
+-0.06,Chinese,Physiological Science
+0.59,Chinese,"Religion, Study of"
+0.46,Chinese,Scandinavian
+0.07,Chinese,Society and Genetics
+0.15,Chinese,Sociology
+0.58,Chinese,Spanish
+-0.15,Chinese,Statistics
+0.15,Chinese,Theater
+0.29,Chinese,World Arts and Cultures
+0.55,Computer Science,Civil and Environmental Engineering
+-0.11,Computer Science,Classics
+-0,Computer Science,Dance
+0.1,Computer Science,Design / Media Arts
+0.3,Computer Science,"Earth, Planetary, and Space Sciences"
+-0.19,Computer Science,English
+0.11,Computer Science,English as A Second Language
+0.19,Computer Science,Ecology and Evolutionary Biology
+-0.07,Computer Science,English Composition
+0.24,Computer Science,Economics
+0.13,Computer Science,Environment
+0.1,Computer Science,Education
+0.74,Computer Science,Electrical Engineering
+0.58,Computer Science,Engineering
+-0.12,Computer Science,Ethnomusicology
+-0.24,Computer Science,French
+0.03,Computer Science,Film and Television
+-0.23,Computer Science,Gender Studies
+-0.19,Computer Science,General Education Clusters
+-0.01,Computer Science,Global Health
+-0.05,Computer Science,Geography
+-0.14,Computer Science,German
+-0.07,Computer Science,Honors Collegium
+-0.25,Computer Science,History
+-0.14,Computer Science,Italian
+-0.08,Computer Science,Japanese
+-0.11,Computer Science,Korean
+0.35,Computer Science,Life Sciences
+0.31,Computer Science,Linguistics
+0.38,Computer Science,Management
+0.53,Computer Science,Materials Science and Engineering
+0.61,Computer Science,Mathematics
+0.57,Computer Science,Mechanical and Aerospace Engineering
+0.28,Computer Science,"Molecular, Cell, and Developmental Biology"
+0.06,Computer Science,Music
+0.34,Computer Science,"Microbiology, Immunology, and Molecular Genetics"
+-0.16,Computer Science,Music History
+0.37,Computer Science,Neuroscience
+0.18,Computer Science,Nursing
+0.13,Computer Science,Political Science
+0.15,Computer Science,Philosophy
+0.8,Computer Science,Program in Computing
+0.44,Computer Science,Physics
+0.33,Computer Science,Psychology
+0.43,Computer Science,Physiological Science
+-0.15,Computer Science,"Religion, Study of"
+-0.14,Computer Science,Scandinavian
+0.16,Computer Science,Society and Genetics
+-0.02,Computer Science,Sociology
+-0.16,Computer Science,Spanish
+0.73,Computer Science,Statistics
+-0.01,Computer Science,Theater
+0,Computer Science,World Arts and Cultures
+-0.2,Civil and Environmental Engineering,Classics
+-0.03,Civil and Environmental Engineering,Dance
+0.08,Civil and Environmental Engineering,Design / Media Arts
+0.63,Civil and Environmental Engineering,"Earth, Planetary, and Space Sciences"
+-0.24,Civil and Environmental Engineering,English
+-0.07,Civil and Environmental Engineering,English as A Second Language
+0.3,Civil and Environmental Engineering,Ecology and Evolutionary Biology
+-0.24,Civil and Environmental Engineering,English Composition
+0.2,Civil and Environmental Engineering,Economics
+0.34,Civil and Environmental Engineering,Environment
+-0.09,Civil and Environmental Engineering,Education
+0.72,Civil and Environmental Engineering,Electrical Engineering
+0.53,Civil and Environmental Engineering,Engineering
+-0.04,Civil and Environmental Engineering,Ethnomusicology
+-0.25,Civil and Environmental Engineering,French
+0.03,Civil and Environmental Engineering,Film and Television
+-0.24,Civil and Environmental Engineering,Gender Studies
+-0.18,Civil and Environmental Engineering,General Education Clusters
+-0.02,Civil and Environmental Engineering,Global Health
+0.16,Civil and Environmental Engineering,Geography
+-0.26,Civil and Environmental Engineering,German
+-0.07,Civil and Environmental Engineering,Honors Collegium
+-0.19,Civil and Environmental Engineering,History
+-0.18,Civil and Environmental Engineering,Italian
+-0.19,Civil and Environmental Engineering,Japanese
+-0.31,Civil and Environmental Engineering,Korean
+0.19,Civil and Environmental Engineering,Life Sciences
+0.11,Civil and Environmental Engineering,Linguistics
+0.21,Civil and Environmental Engineering,Management
+0.82,Civil and Environmental Engineering,Materials Science and Engineering
+0.52,Civil and Environmental Engineering,Mathematics
+0.87,Civil and Environmental Engineering,Mechanical and Aerospace Engineering
+0.23,Civil and Environmental Engineering,"Molecular, Cell, and Developmental Biology"
+0.01,Civil and Environmental Engineering,Music
+0.22,Civil and Environmental Engineering,"Microbiology, Immunology, and Molecular Genetics"
+-0.11,Civil and Environmental Engineering,Music History
+0.2,Civil and Environmental Engineering,Neuroscience
+0.06,Civil and Environmental Engineering,Nursing
+-0.08,Civil and Environmental Engineering,Political Science
+-0.04,Civil and Environmental Engineering,Philosophy
+0.54,Civil and Environmental Engineering,Program in Computing
+0.69,Civil and Environmental Engineering,Physics
+0.1,Civil and Environmental Engineering,Psychology
+0.38,Civil and Environmental Engineering,Physiological Science
+-0.19,Civil and Environmental Engineering,"Religion, Study of"
+-0.21,Civil and Environmental Engineering,Scandinavian
+0.07,Civil and Environmental Engineering,Society and Genetics
+-0.09,Civil and Environmental Engineering,Sociology
+-0.12,Civil and Environmental Engineering,Spanish
+0.55,Civil and Environmental Engineering,Statistics
+0.07,Civil and Environmental Engineering,Theater
+-0.05,Civil and Environmental Engineering,World Arts and Cultures
+0.3,Classics,Dance
+0.25,Classics,Design / Media Arts
+-0.1,Classics,"Earth, Planetary, and Space Sciences"
+0.63,Classics,English
+0.26,Classics,English as A Second Language
+0,Classics,Ecology and Evolutionary Biology
+0.24,Classics,English Composition
+-0.11,Classics,Economics
+0.03,Classics,Environment
+0.01,Classics,Education
+-0.18,Classics,Electrical Engineering
+-0.23,Classics,Engineering
+0.33,Classics,Ethnomusicology
+0.72,Classics,French
+0.02,Classics,Film and Television
+0.45,Classics,Gender Studies
+0.45,Classics,General Education Clusters
+0.26,Classics,Global Health
+0.1,Classics,Geography
+0.64,Classics,German
+0.57,Classics,Honors Collegium
+0.63,Classics,History
+0.72,Classics,Italian
+0.56,Classics,Japanese
+0.45,Classics,Korean
+-0.03,Classics,Life Sciences
+0.2,Classics,Linguistics
+-0.17,Classics,Management
+-0.07,Classics,Materials Science and Engineering
+-0.14,Classics,Mathematics
+-0.16,Classics,Mechanical and Aerospace Engineering
+-0.06,Classics,"Molecular, Cell, and Developmental Biology"
+0.22,Classics,Music
+0.02,Classics,"Microbiology, Immunology, and Molecular Genetics"
+0.32,Classics,Music History
+-0.01,Classics,Neuroscience
+-0.11,Classics,Nursing
+0.18,Classics,Political Science
+0.44,Classics,Philosophy
+-0.07,Classics,Program in Computing
+-0.09,Classics,Physics
+-0.06,Classics,Psychology
+-0.05,Classics,Physiological Science
+0.72,Classics,"Religion, Study of"
+0.58,Classics,Scandinavian
+0.24,Classics,Society and Genetics
+0.27,Classics,Sociology
+0.59,Classics,Spanish
+-0.08,Classics,Statistics
+0.05,Classics,Theater
+0.47,Classics,World Arts and Cultures
+0.65,Dance,Design / Media Arts
+-0.07,Dance,"Earth, Planetary, and Space Sciences"
+0.38,Dance,English
+0.45,Dance,English as A Second Language
+-0.11,Dance,Ecology and Evolutionary Biology
+0.37,Dance,English Composition
+0.1,Dance,Economics
+0.16,Dance,Environment
+0.51,Dance,Education
+-0.01,Dance,Electrical Engineering
+0.3,Dance,Engineering
+0.58,Dance,Ethnomusicology
+0.31,Dance,French
+0.41,Dance,Film and Television
+0.52,Dance,Gender Studies
+0.35,Dance,General Education Clusters
+0.44,Dance,Global Health
+0.25,Dance,Geography
+0.39,Dance,German
+0.47,Dance,Honors Collegium
+0.25,Dance,History
+0.34,Dance,Italian
+0.28,Dance,Japanese
+0.19,Dance,Korean
+0.13,Dance,Life Sciences
+0.22,Dance,Linguistics
+0.26,Dance,Management
+0.03,Dance,Materials Science and Engineering
+0.04,Dance,Mathematics
+-0.02,Dance,Mechanical and Aerospace Engineering
+-0.07,Dance,"Molecular, Cell, and Developmental Biology"
+0.63,Dance,Music
+0.03,Dance,"Microbiology, Immunology, and Molecular Genetics"
+0.52,Dance,Music History
+-0.02,Dance,Neuroscience
+0.13,Dance,Nursing
+0.21,Dance,Political Science
+0.2,Dance,Philosophy
+0.14,Dance,Program in Computing
+-0.08,Dance,Physics
+0.09,Dance,Psychology
+-0.08,Dance,Physiological Science
+0.43,Dance,"Religion, Study of"
+0.33,Dance,Scandinavian
+0.3,Dance,Society and Genetics
+0.4,Dance,Sociology
+0.33,Dance,Spanish
+0.05,Dance,Statistics
+0.6,Dance,Theater
+0.74,Dance,World Arts and Cultures
+0.09,Design / Media Arts,"Earth, Planetary, and Space Sciences"
+0.2,Design / Media Arts,English
+0.45,Design / Media Arts,English as A Second Language
+0.15,Design / Media Arts,Ecology and Evolutionary Biology
+0.38,Design / Media Arts,English Composition
+0.14,Design / Media Arts,Economics
+0.25,Design / Media Arts,Environment
+0.34,Design / Media Arts,Education
+0.16,Design / Media Arts,Electrical Engineering
+0.37,Design / Media Arts,Engineering
+0.33,Design / Media Arts,Ethnomusicology
+0.17,Design / Media Arts,French
+0.55,Design / Media Arts,Film and Television
+0.29,Design / Media Arts,Gender Studies
+0.2,Design / Media Arts,General Education Clusters
+0.41,Design / Media Arts,Global Health
+0.17,Design / Media Arts,Geography
+0.19,Design / Media Arts,German
+0.35,Design / Media Arts,Honors Collegium
+0.21,Design / Media Arts,History
+0.22,Design / Media Arts,Italian
+0.33,Design / Media Arts,Japanese
+0.31,Design / Media Arts,Korean
+0.3,Design / Media Arts,Life Sciences
+0.16,Design / Media Arts,Linguistics
+0.19,Design / Media Arts,Management
+0.15,Design / Media Arts,Materials Science and Engineering
+0.09,Design / Media Arts,Mathematics
+0.13,Design / Media Arts,Mechanical and Aerospace Engineering
+0.14,Design / Media Arts,"Molecular, Cell, and Developmental Biology"
+0.54,Design / Media Arts,Music
+0.25,Design / Media Arts,"Microbiology, Immunology, and Molecular Genetics"
+0.36,Design / Media Arts,Music History
+0.21,Design / Media Arts,Neuroscience
+0.05,Design / Media Arts,Nursing
+0.16,Design / Media Arts,Political Science
+0.16,Design / Media Arts,Philosophy
+0.18,Design / Media Arts,Program in Computing
+0.04,Design / Media Arts,Physics
+0.06,Design / Media Arts,Psychology
+0.04,Design / Media Arts,Physiological Science
+0.35,Design / Media Arts,"Religion, Study of"
+0.26,Design / Media Arts,Scandinavian
+0.23,Design / Media Arts,Society and Genetics
+0.23,Design / Media Arts,Sociology
+0.19,Design / Media Arts,Spanish
+0.18,Design / Media Arts,Statistics
+0.65,Design / Media Arts,Theater
+0.65,Design / Media Arts,World Arts and Cultures
+-0.21,"Earth, Planetary, and Space Sciences",English
+-0.17,"Earth, Planetary, and Space Sciences",English as A Second Language
+0.69,"Earth, Planetary, and Space Sciences",Ecology and Evolutionary Biology
+-0.3,"Earth, Planetary, and Space Sciences",English Composition
+0.12,"Earth, Planetary, and Space Sciences",Economics
+0.35,"Earth, Planetary, and Space Sciences",Environment
+-0.16,"Earth, Planetary, and Space Sciences",Education
+0.5,"Earth, Planetary, and Space Sciences",Electrical Engineering
+0.2,"Earth, Planetary, and Space Sciences",Engineering
+-0.18,"Earth, Planetary, and Space Sciences",Ethnomusicology
+-0.16,"Earth, Planetary, and Space Sciences",French
+-0.04,"Earth, Planetary, and Space Sciences",Film and Television
+-0.24,"Earth, Planetary, and Space Sciences",Gender Studies
+-0.05,"Earth, Planetary, and Space Sciences",General Education Clusters
+0.08,"Earth, Planetary, and Space Sciences",Global Health
+0.4,"Earth, Planetary, and Space Sciences",Geography
+-0.2,"Earth, Planetary, and Space Sciences",German
+-0.05,"Earth, Planetary, and Space Sciences",Honors Collegium
+-0.11,"Earth, Planetary, and Space Sciences",History
+-0.13,"Earth, Planetary, and Space Sciences",Italian
+-0.17,"Earth, Planetary, and Space Sciences",Japanese
+-0.14,"Earth, Planetary, and Space Sciences",Korean
+0.37,"Earth, Planetary, and Space Sciences",Life Sciences
+0.01,"Earth, Planetary, and Space Sciences",Linguistics
+0.03,"Earth, Planetary, and Space Sciences",Management
+0.62,"Earth, Planetary, and Space Sciences",Materials Science and Engineering
+0.51,"Earth, Planetary, and Space Sciences",Mathematics
+0.55,"Earth, Planetary, and Space Sciences",Mechanical and Aerospace Engineering
+0.45,"Earth, Planetary, and Space Sciences","Molecular, Cell, and Developmental Biology"
+-0.09,"Earth, Planetary, and Space Sciences",Music
+0.42,"Earth, Planetary, and Space Sciences","Microbiology, Immunology, and Molecular Genetics"
+-0.2,"Earth, Planetary, and Space Sciences",Music History
+0.43,"Earth, Planetary, and Space Sciences",Neuroscience
+-0,"Earth, Planetary, and Space Sciences",Nursing
+-0.15,"Earth, Planetary, and Space Sciences",Political Science
+0.11,"Earth, Planetary, and Space Sciences",Philosophy
+0.39,"Earth, Planetary, and Space Sciences",Program in Computing
+0.76,"Earth, Planetary, and Space Sciences",Physics
+0.12,"Earth, Planetary, and Space Sciences",Psychology
+0.48,"Earth, Planetary, and Space Sciences",Physiological Science
+-0.15,"Earth, Planetary, and Space Sciences","Religion, Study of"
+-0.2,"Earth, Planetary, and Space Sciences",Scandinavian
+0.17,"Earth, Planetary, and Space Sciences",Society and Genetics
+-0.01,"Earth, Planetary, and Space Sciences",Sociology
+-0.09,"Earth, Planetary, and Space Sciences",Spanish
+0.37,"Earth, Planetary, and Space Sciences",Statistics
+-0.08,"Earth, Planetary, and Space Sciences",Theater
+-0.13,"Earth, Planetary, and Space Sciences",World Arts and Cultures
+0.42,English,English as A Second Language
+-0.18,English,Ecology and Evolutionary Biology
+0.49,English,English Composition
+-0.05,English,Economics
+-0.07,English,Environment
+0.01,English,Education
+-0.29,English,Electrical Engineering
+-0.26,English,Engineering
+0.32,English,Ethnomusicology
+0.78,English,French
+0.2,English,Film and Television
+0.47,English,Gender Studies
+0.3,English,General Education Clusters
+0.15,English,Global Health
+-0.01,English,Geography
+0.78,English,German
+0.4,English,Honors Collegium
+0.35,English,History
+0.82,English,Italian
+0.54,English,Japanese
+0.37,English,Korean
+-0.14,English,Life Sciences
+0.38,English,Linguistics
+-0.11,English,Management
+-0.17,English,Materials Science and Engineering
+-0.12,English,Mathematics
+-0.22,English,Mechanical and Aerospace Engineering
+-0.04,English,"Molecular, Cell, and Developmental Biology"
+0.39,English,Music
+-0.04,English,"Microbiology, Immunology, and Molecular Genetics"
+0.47,English,Music History
+-0.07,English,Neuroscience
+-0.18,English,Nursing
+0.15,English,Political Science
+0.38,English,Philosophy
+-0.1,English,Program in Computing
+-0.19,English,Physics
+-0.15,English,Psychology
+-0.19,English,Physiological Science
+0.55,English,"Religion, Study of"
+0.74,English,Scandinavian
+0.09,English,Society and Genetics
+0.12,English,Sociology
+0.66,English,Spanish
+-0.2,English,Statistics
+0.28,English,Theater
+0.35,English,World Arts and Cultures
+-0.07,English as A Second Language,Ecology and Evolutionary Biology
+0.77,English as A Second Language,English Composition
+0.14,English as A Second Language,Economics
+0.05,English as A Second Language,Environment
+0.36,English as A Second Language,Education
+0.04,English as A Second Language,Electrical Engineering
+0.32,English as A Second Language,Engineering
+0.21,English as A Second Language,Ethnomusicology
+0.38,English as A Second Language,French
+0.41,English as A Second Language,Film and Television
+0.22,English as A Second Language,Gender Studies
+0.08,English as A Second Language,General Education Clusters
+0.33,English as A Second Language,Global Health
+0.02,English as A Second Language,Geography
+0.38,English as A Second Language,German
+0.29,English as A Second Language,Honors Collegium
+0.09,English as A Second Language,History
+0.45,English as A Second Language,Italian
+0.51,English as A Second Language,Japanese
+0.48,English as A Second Language,Korean
+0.19,English as A Second Language,Life Sciences
+0.37,English as A Second Language,Linguistics
+0.25,English as A Second Language,Management
+0.04,English as A Second Language,Materials Science and Engineering
+0.02,English as A Second Language,Mathematics
+0.04,English as A Second Language,Mechanical and Aerospace Engineering
+0.15,English as A Second Language,"Molecular, Cell, and Developmental Biology"
+0.51,English as A Second Language,Music
+0.34,English as A Second Language,"Microbiology, Immunology, and Molecular Genetics"
+0.3,English as A Second Language,Music History
+0.17,English as A Second Language,Neuroscience
+0.15,English as A Second Language,Nursing
+0.08,English as A Second Language,Political Science
+0.1,English as A Second Language,Philosophy
+0.2,English as A Second Language,Program in Computing
+-0.12,English as A Second Language,Physics
+0.04,English as A Second Language,Psychology
+0.05,English as A Second Language,Physiological Science
+0.32,English as A Second Language,"Religion, Study of"
+0.49,English as A Second Language,Scandinavian
+0.07,English as A Second Language,Society and Genetics
+0.11,English as A Second Language,Sociology
+0.54,English as A Second Language,Spanish
+0.08,English as A Second Language,Statistics
+0.34,English as A Second Language,Theater
+0.4,English as A Second Language,World Arts and Cultures
+-0.18,Ecology and Evolutionary Biology,English Composition
+0.07,Ecology and Evolutionary Biology,Economics
+0.44,Ecology and Evolutionary Biology,Environment
+-0.12,Ecology and Evolutionary Biology,Education
+0.16,Ecology and Evolutionary Biology,Electrical Engineering
+0.15,Ecology and Evolutionary Biology,Engineering
+-0.14,Ecology and Evolutionary Biology,Ethnomusicology
+-0.06,Ecology and Evolutionary Biology,French
+-0.1,Ecology and Evolutionary Biology,Film and Television
+-0.17,Ecology and Evolutionary Biology,Gender Studies
+0.23,Ecology and Evolutionary Biology,General Education Clusters
+0.21,Ecology and Evolutionary Biology,Global Health
+0.41,Ecology and Evolutionary Biology,Geography
+-0.17,Ecology and Evolutionary Biology,German
+-0.02,Ecology and Evolutionary Biology,Honors Collegium
+-0.02,Ecology and Evolutionary Biology,History
+-0.05,Ecology and Evolutionary Biology,Italian
+-0.01,Ecology and Evolutionary Biology,Japanese
+0.09,Ecology and Evolutionary Biology,Korean
+0.64,Ecology and Evolutionary Biology,Life Sciences
+-0.02,Ecology and Evolutionary Biology,Linguistics
+0.02,Ecology and Evolutionary Biology,Management
+0.38,Ecology and Evolutionary Biology,Materials Science and Engineering
+0.14,Ecology and Evolutionary Biology,Mathematics
+0.2,Ecology and Evolutionary Biology,Mechanical and Aerospace Engineering
+0.73,Ecology and Evolutionary Biology,"Molecular, Cell, and Developmental Biology"
+-0.11,Ecology and Evolutionary Biology,Music
+0.65,Ecology and Evolutionary Biology,"Microbiology, Immunology, and Molecular Genetics"
+-0.17,Ecology and Evolutionary Biology,Music History
+0.69,Ecology and Evolutionary Biology,Neuroscience
+0.06,Ecology and Evolutionary Biology,Nursing
+-0.12,Ecology and Evolutionary Biology,Political Science
+0,Ecology and Evolutionary Biology,Philosophy
+0.24,Ecology and Evolutionary Biology,Program in Computing
+0.4,Ecology and Evolutionary Biology,Physics
+0.31,Ecology and Evolutionary Biology,Psychology
+0.71,Ecology and Evolutionary Biology,Physiological Science
+-0.07,Ecology and Evolutionary Biology,"Religion, Study of"
+-0.25,Ecology and Evolutionary Biology,Scandinavian
+0.38,Ecology and Evolutionary Biology,Society and Genetics
+0.11,Ecology and Evolutionary Biology,Sociology
+-0.05,Ecology and Evolutionary Biology,Spanish
+0.21,Ecology and Evolutionary Biology,Statistics
+-0.1,Ecology and Evolutionary Biology,Theater
+-0.11,Ecology and Evolutionary Biology,World Arts and Cultures
+0.02,English Composition,Economics
+-0.06,English Composition,Environment
+0.36,English Composition,Education
+-0.2,English Composition,Electrical Engineering
+0.08,English Composition,Engineering
+0.16,English Composition,Ethnomusicology
+0.4,English Composition,French
+0.33,English Composition,Film and Television
+0.24,English Composition,Gender Studies
+0.12,English Composition,General Education Clusters
+0.26,English Composition,Global Health
+-0.05,English Composition,Geography
+0.46,English Composition,German
+0.14,English Composition,Honors Collegium
+0.01,English Composition,History
+0.42,English Composition,Italian
+0.58,English Composition,Japanese
+0.51,English Composition,Korean
+0.15,English Composition,Life Sciences
+0.54,English Composition,Linguistics
+0.11,English Composition,Management
+-0.18,English Composition,Materials Science and Engineering
+-0.04,English Composition,Mathematics
+-0.18,English Composition,Mechanical and Aerospace Engineering
+0.05,English Composition,"Molecular, Cell, and Developmental Biology"
+0.48,English Composition,Music
+0.18,English Composition,"Microbiology, Immunology, and Molecular Genetics"
+0.28,English Composition,Music History
+0.16,English Composition,Neuroscience
+0.18,English Composition,Nursing
+0.05,English Composition,Political Science
+0.18,English Composition,Philosophy
+0.09,English Composition,Program in Computing
+-0.24,English Composition,Physics
+0.03,English Composition,Psychology
+-0.07,English Composition,Physiological Science
+0.29,English Composition,"Religion, Study of"
+0.51,English Composition,Scandinavian
+-0.04,English Composition,Society and Genetics
+0.06,English Composition,Sociology
+0.58,English Composition,Spanish
+-0.01,English Composition,Statistics
+0.29,English Composition,Theater
+0.28,English Composition,World Arts and Cultures
+0.46,Economics,Environment
+0.32,Economics,Education
+0.21,Economics,Electrical Engineering
+0.43,Economics,Engineering
+-0.07,Economics,Ethnomusicology
+-0.09,Economics,French
+0.16,Economics,Film and Television
+-0.04,Economics,Gender Studies
+0.01,Economics,General Education Clusters
+0.25,Economics,Global Health
+0.15,Economics,Geography
+-0.02,Economics,German
+-0.04,Economics,Honors Collegium
+0.03,Economics,History
+-0.11,Economics,Italian
+-0.11,Economics,Japanese
+-0,Economics,Korean
+0.23,Economics,Life Sciences
+0.09,Economics,Linguistics
+0.72,Economics,Management
+0.05,Economics,Materials Science and Engineering
+0.29,Economics,Mathematics
+0.16,Economics,Mechanical and Aerospace Engineering
+0.13,Economics,"Molecular, Cell, and Developmental Biology"
+-0.01,Economics,Music
+0.14,Economics,"Microbiology, Immunology, and Molecular Genetics"
+-0.08,Economics,Music History
+0.18,Economics,Neuroscience
+0.15,Economics,Nursing
+0.5,Economics,Political Science
+0.06,Economics,Philosophy
+0.22,Economics,Program in Computing
+0,Economics,Physics
+0.16,Economics,Psychology
+0.03,Economics,Physiological Science
+-0.21,Economics,"Religion, Study of"
+-0.14,Economics,Scandinavian
+0.18,Economics,Society and Genetics
+0.26,Economics,Sociology
+-0.15,Economics,Spanish
+0.38,Economics,Statistics
+-0.08,Economics,Theater
+-0.02,Economics,World Arts and Cultures
+0.22,Environment,Education
+0.18,Environment,Electrical Engineering
+0.48,Environment,Engineering
+-0.06,Environment,Ethnomusicology
+-0.04,Environment,French
+0.15,Environment,Film and Television
+0.01,Environment,Gender Studies
+0.42,Environment,General Education Clusters
+0.44,Environment,Global Health
+0.64,Environment,Geography
+-0.09,Environment,German
+0.19,Environment,Honors Collegium
+0.14,Environment,History
+-0.01,Environment,Italian
+-0.15,Environment,Japanese
+-0.1,Environment,Korean
+0.4,Environment,Life Sciences
+-0.16,Environment,Linguistics
+0.47,Environment,Management
+0.14,Environment,Materials Science and Engineering
+0.03,Environment,Mathematics
+0.18,Environment,Mechanical and Aerospace Engineering
+0.3,Environment,"Molecular, Cell, and Developmental Biology"
+-0.18,Environment,Music
+0.29,Environment,"Microbiology, Immunology, and Molecular Genetics"
+-0.11,Environment,Music History
+0.29,Environment,Neuroscience
+0.23,Environment,Nursing
+0.32,Environment,Political Science
+-0.05,Environment,Philosophy
+0.13,Environment,Program in Computing
+0.06,Environment,Physics
+0.22,Environment,Psychology
+0.3,Environment,Physiological Science
+0,Environment,"Religion, Study of"
+-0.17,Environment,Scandinavian
+0.41,Environment,Society and Genetics
+0.36,Environment,Sociology
+-0.08,Environment,Spanish
+0.27,Environment,Statistics
+0.03,Environment,Theater
+0.11,Environment,World Arts and Cultures
+-0.05,Education,Electrical Engineering
+0.35,Education,Engineering
+0.06,Education,Ethnomusicology
+-0.03,Education,French
+0.2,Education,Film and Television
+0.46,Education,Gender Studies
+0.3,Education,General Education Clusters
+0.41,Education,Global Health
+0.21,Education,Geography
+0.09,Education,German
+0.37,Education,Honors Collegium
+0.07,Education,History
+-0.01,Education,Italian
+-0.02,Education,Japanese
+0.04,Education,Korean
+0.29,Education,Life Sciences
+0.21,Education,Linguistics
+0.41,Education,Management
+-0.17,Education,Materials Science and Engineering
+-0.06,Education,Mathematics
+-0.14,Education,Mechanical and Aerospace Engineering
+-0.06,Education,"Molecular, Cell, and Developmental Biology"
+0.11,Education,Music
+0.11,Education,"Microbiology, Immunology, and Molecular Genetics"
+-0.04,Education,Music History
+0.13,Education,Neuroscience
+0.45,Education,Nursing
+0.48,Education,Political Science
+0.21,Education,Philosophy
+0.12,Education,Program in Computing
+-0.25,Education,Physics
+0.48,Education,Psychology
+-0.01,Education,Physiological Science
+0.06,Education,"Religion, Study of"
+-0.02,Education,Scandinavian
+0.42,Education,Society and Genetics
+0.67,Education,Sociology
+0.01,Education,Spanish
+0.21,Education,Statistics
+0.22,Education,Theater
+0.45,Education,World Arts and Cultures
+0.6,Electrical Engineering,Engineering
+-0.04,Electrical Engineering,Ethnomusicology
+-0.32,Electrical Engineering,French
+0.1,Electrical Engineering,Film and Television
+-0.28,Electrical Engineering,Gender Studies
+-0.32,Electrical Engineering,General Education Clusters
+-0.08,Electrical Engineering,Global Health
+0.01,Electrical Engineering,Geography
+-0.32,Electrical Engineering,German
+-0.12,Electrical Engineering,Honors Collegium
+-0.25,Electrical Engineering,History
+-0.24,Electrical Engineering,Italian
+-0.24,Electrical Engineering,Japanese
+-0.23,Electrical Engineering,Korean
+0.18,Electrical Engineering,Life Sciences
+0.08,Electrical Engineering,Linguistics
+0.27,Electrical Engineering,Management
+0.73,Electrical Engineering,Materials Science and Engineering
+0.74,Electrical Engineering,Mathematics
+0.85,Electrical Engineering,Mechanical and Aerospace Engineering
+0.14,Electrical Engineering,"Molecular, Cell, and Developmental Biology"
+0.11,Electrical Engineering,Music
+0.21,Electrical Engineering,"Microbiology, Immunology, and Molecular Genetics"
+-0.03,Electrical Engineering,Music History
+0.21,Electrical Engineering,Neuroscience
+0.05,Electrical Engineering,Nursing
+-0,Electrical Engineering,Political Science
+0.02,Electrical Engineering,Philosophy
+0.66,Electrical Engineering,Program in Computing
+0.68,Electrical Engineering,Physics
+0.13,Electrical Engineering,Psychology
+0.31,Electrical Engineering,Physiological Science
+-0.25,Electrical Engineering,"Religion, Study of"
+-0.19,Electrical Engineering,Scandinavian
+-0.01,Electrical Engineering,Society and Genetics
+-0.16,Electrical Engineering,Sociology
+-0.19,Electrical Engineering,Spanish
+0.61,Electrical Engineering,Statistics
+0.09,Electrical Engineering,Theater
+-0.01,Electrical Engineering,World Arts and Cultures
+0.03,Engineering,Ethnomusicology
+-0.26,Engineering,French
+0.27,Engineering,Film and Television
+-0.09,Engineering,Gender Studies
+-0.04,Engineering,General Education Clusters
+0.25,Engineering,Global Health
+0.17,Engineering,Geography
+-0.19,Engineering,German
+0.04,Engineering,Honors Collegium
+-0.21,Engineering,History
+-0.18,Engineering,Italian
+-0.06,Engineering,Japanese
+-0.05,Engineering,Korean
+0.44,Engineering,Life Sciences
+0.08,Engineering,Linguistics
+0.61,Engineering,Management
+0.52,Engineering,Materials Science and Engineering
+0.38,Engineering,Mathematics
+0.54,Engineering,Mechanical and Aerospace Engineering
+0.23,Engineering,"Molecular, Cell, and Developmental Biology"
+0.18,Engineering,Music
+0.34,Engineering,"Microbiology, Immunology, and Molecular Genetics"
+-0.03,Engineering,Music History
+0.36,Engineering,Neuroscience
+0.3,Engineering,Nursing
+0.13,Engineering,Political Science
+-0.02,Engineering,Philosophy
+0.5,Engineering,Program in Computing
+0.28,Engineering,Physics
+0.29,Engineering,Psychology
+0.38,Engineering,Physiological Science
+-0.12,Engineering,"Religion, Study of"
+-0.17,Engineering,Scandinavian
+0.27,Engineering,Society and Genetics
+0.12,Engineering,Sociology
+-0.12,Engineering,Spanish
+0.5,Engineering,Statistics
+0.23,Engineering,Theater
+0.19,Engineering,World Arts and Cultures
+0.33,Ethnomusicology,French
+0.24,Ethnomusicology,Film and Television
+0.29,Ethnomusicology,Gender Studies
+0.34,Ethnomusicology,General Education Clusters
+0.28,Ethnomusicology,Global Health
+0.11,Ethnomusicology,Geography
+0.26,Ethnomusicology,German
+0.3,Ethnomusicology,Honors Collegium
+0.33,Ethnomusicology,History
+0.36,Ethnomusicology,Italian
+0.29,Ethnomusicology,Japanese
+0.25,Ethnomusicology,Korean
+-0.05,Ethnomusicology,Life Sciences
+0.1,Ethnomusicology,Linguistics
+-0.1,Ethnomusicology,Management
+0,Ethnomusicology,Materials Science and Engineering
+0.01,Ethnomusicology,Mathematics
+0.02,Ethnomusicology,Mechanical and Aerospace Engineering
+-0.06,Ethnomusicology,"Molecular, Cell, and Developmental Biology"
+0.75,Ethnomusicology,Music
+-0.1,Ethnomusicology,"Microbiology, Immunology, and Molecular Genetics"
+0.83,Ethnomusicology,Music History
+-0.07,Ethnomusicology,Neuroscience
+0.04,Ethnomusicology,Nursing
+0.03,Ethnomusicology,Political Science
+0.1,Ethnomusicology,Philosophy
+-0.02,Ethnomusicology,Program in Computing
+-0.05,Ethnomusicology,Physics
+-0.08,Ethnomusicology,Psychology
+-0.09,Ethnomusicology,Physiological Science
+0.48,Ethnomusicology,"Religion, Study of"
+0.31,Ethnomusicology,Scandinavian
+0.12,Ethnomusicology,Society and Genetics
+0.17,Ethnomusicology,Sociology
+0.33,Ethnomusicology,Spanish
+-0.07,Ethnomusicology,Statistics
+0.38,Ethnomusicology,Theater
+0.59,Ethnomusicology,World Arts and Cultures
+0.17,French,Film and Television
+0.46,French,Gender Studies
+0.45,French,General Education Clusters
+0.32,French,Global Health
+0.1,French,Geography
+0.84,French,German
+0.47,French,Honors Collegium
+0.51,French,History
+0.87,French,Italian
+0.6,French,Japanese
+0.46,French,Korean
+-0.04,French,Life Sciences
+0.28,French,Linguistics
+-0.11,French,Management
+-0.16,French,Materials Science and Engineering
+-0.18,French,Mathematics
+-0.23,French,Mechanical and Aerospace Engineering
+0.02,French,"Molecular, Cell, and Developmental Biology"
+0.3,French,Music
+0.08,French,"Microbiology, Immunology, and Molecular Genetics"
+0.41,French,Music History
+0.01,French,Neuroscience
+-0.13,French,Nursing
+0.12,French,Political Science
+0.35,French,Philosophy
+-0.08,French,Program in Computing
+-0.18,French,Physics
+-0.06,French,Psychology
+-0.09,French,Physiological Science
+0.64,French,"Religion, Study of"
+0.81,French,Scandinavian
+0.21,French,Society and Genetics
+0.23,French,Sociology
+0.73,French,Spanish
+-0.17,French,Statistics
+0.19,French,Theater
+0.44,French,World Arts and Cultures
+0.12,Film and Television,Gender Studies
+-0.08,Film and Television,General Education Clusters
+0.18,Film and Television,Global Health
+0.06,Film and Television,Geography
+0.16,Film and Television,German
+0.11,Film and Television,Honors Collegium
+0.02,Film and Television,History
+0.17,Film and Television,Italian
+0.18,Film and Television,Japanese
+0.08,Film and Television,Korean
+-0.02,Film and Television,Life Sciences
+0.02,Film and Television,Linguistics
+0.2,Film and Television,Management
+0.05,Film and Television,Materials Science and Engineering
+-0.02,Film and Television,Mathematics
+0.09,Film and Television,Mechanical and Aerospace Engineering
+-0.04,Film and Television,"Molecular, Cell, and Developmental Biology"
+0.45,Film and Television,Music
+0.04,Film and Television,"Microbiology, Immunology, and Molecular Genetics"
+0.32,Film and Television,Music History
+-0.05,Film and Television,Neuroscience
+-0.03,Film and Television,Nursing
+0.04,Film and Television,Political Science
+-0.03,Film and Television,Philosophy
+0.1,Film and Television,Program in Computing
+-0.03,Film and Television,Physics
+-0.16,Film and Television,Psychology
+-0.16,Film and Television,Physiological Science
+0.15,Film and Television,"Religion, Study of"
+0.39,Film and Television,Scandinavian
+-0.09,Film and Television,Society and Genetics
+-0.04,Film and Television,Sociology
+0.19,Film and Television,Spanish
+0.05,Film and Television,Statistics
+0.71,Film and Television,Theater
+0.46,Film and Television,World Arts and Cultures
+0.58,Gender Studies,General Education Clusters
+0.43,Gender Studies,Global Health
+0.21,Gender Studies,Geography
+0.51,Gender Studies,German
+0.66,Gender Studies,Honors Collegium
+0.49,Gender Studies,History
+0.47,Gender Studies,Italian
+0.2,Gender Studies,Japanese
+0.12,Gender Studies,Korean
+-0.02,Gender Studies,Life Sciences
+0.16,Gender Studies,Linguistics
+-0.08,Gender Studies,Management
+-0.17,Gender Studies,Materials Science and Engineering
+-0.2,Gender Studies,Mathematics
+-0.2,Gender Studies,Mechanical and Aerospace Engineering
+-0.15,Gender Studies,"Molecular, Cell, and Developmental Biology"
+0.17,Gender Studies,Music
+-0.05,Gender Studies,"Microbiology, Immunology, and Molecular Genetics"
+0.3,Gender Studies,Music History
+-0.09,Gender Studies,Neuroscience
+0.05,Gender Studies,Nursing
+0.33,Gender Studies,Political Science
+0.31,Gender Studies,Philosophy
+-0.17,Gender Studies,Program in Computing
+-0.31,Gender Studies,Physics
+0.22,Gender Studies,Psychology
+-0.18,Gender Studies,Physiological Science
+0.47,Gender Studies,"Religion, Study of"
+0.4,Gender Studies,Scandinavian
+0.52,Gender Studies,Society and Genetics
+0.65,Gender Studies,Sociology
+0.34,Gender Studies,Spanish
+-0.21,Gender Studies,Statistics
+0.21,Gender Studies,Theater
+0.6,Gender Studies,World Arts and Cultures
+0.6,General Education Clusters,Global Health
+0.43,General Education Clusters,Geography
+0.37,General Education Clusters,German
+0.61,General Education Clusters,Honors Collegium
+0.48,General Education Clusters,History
+0.38,General Education Clusters,Italian
+0.19,General Education Clusters,Japanese
+0.22,General Education Clusters,Korean
+0.37,General Education Clusters,Life Sciences
+0.03,General Education Clusters,Linguistics
+-0.02,General Education Clusters,Management
+-0.19,General Education Clusters,Materials Science and Engineering
+-0.29,General Education Clusters,Mathematics
+-0.24,General Education Clusters,Mechanical and Aerospace Engineering
+0.22,General Education Clusters,"Molecular, Cell, and Developmental Biology"
+0.1,General Education Clusters,Music
+0.22,General Education Clusters,"Microbiology, Immunology, and Molecular Genetics"
+0.32,General Education Clusters,Music History
+0.26,General Education Clusters,Neuroscience
+0.22,General Education Clusters,Nursing
+0.32,General Education Clusters,Political Science
+0.24,General Education Clusters,Philosophy
+-0.12,General Education Clusters,Program in Computing
+-0.23,General Education Clusters,Physics
+0.25,General Education Clusters,Psychology
+0.24,General Education Clusters,Physiological Science
+0.42,General Education Clusters,"Religion, Study of"
+0.22,General Education Clusters,Scandinavian
+0.71,General Education Clusters,Society and Genetics
+0.67,General Education Clusters,Sociology
+0.24,General Education Clusters,Spanish
+-0.15,General Education Clusters,Statistics
+-0.05,General Education Clusters,Theater
+0.38,General Education Clusters,World Arts and Cultures
+0.37,Global Health,Geography
+0.25,Global Health,German
+0.47,Global Health,Honors Collegium
+0.26,Global Health,History
+0.23,Global Health,Italian
+0.09,Global Health,Japanese
+0.16,Global Health,Korean
+0.51,Global Health,Life Sciences
+0.06,Global Health,Linguistics
+0.23,Global Health,Management
+-0.06,Global Health,Materials Science and Engineering
+-0.1,Global Health,Mathematics
+-0.08,Global Health,Mechanical and Aerospace Engineering
+0.26,Global Health,"Molecular, Cell, and Developmental Biology"
+0.2,Global Health,Music
+0.33,Global Health,"Microbiology, Immunology, and Molecular Genetics"
+0.14,Global Health,Music History
+0.31,Global Health,Neuroscience
+0.27,Global Health,Nursing
+0.34,Global Health,Political Science
+0.18,Global Health,Philosophy
+0.14,Global Health,Program in Computing
+-0.09,Global Health,Physics
+0.26,Global Health,Psychology
+0.1,Global Health,Physiological Science
+0.27,Global Health,"Religion, Study of"
+0.11,Global Health,Scandinavian
+0.44,Global Health,Society and Genetics
+0.5,Global Health,Sociology
+0.19,Global Health,Spanish
+0.03,Global Health,Statistics
+0.12,Global Health,Theater
+0.46,Global Health,World Arts and Cultures
+0.06,Geography,German
+0.26,Geography,Honors Collegium
+0.31,Geography,History
+0.14,Geography,Italian
+0.02,Geography,Japanese
+0.1,Geography,Korean
+0.22,Geography,Life Sciences
+-0.04,Geography,Linguistics
+0.14,Geography,Management
+0.04,Geography,Materials Science and Engineering
+0,Geography,Mathematics
+-0.01,Geography,Mechanical and Aerospace Engineering
+0.17,Geography,"Molecular, Cell, and Developmental Biology"
+-0.09,Geography,Music
+0.16,Geography,"Microbiology, Immunology, and Molecular Genetics"
+-0,Geography,Music History
+0.13,Geography,Neuroscience
+0.07,Geography,Nursing
+0.15,Geography,Political Science
+0.01,Geography,Philosophy
+-0.05,Geography,Program in Computing
+-0,Geography,Physics
+0.12,Geography,Psychology
+0.22,Geography,Physiological Science
+0.23,Geography,"Religion, Study of"
+-0.04,Geography,Scandinavian
+0.43,Geography,Society and Genetics
+0.46,Geography,Sociology
+0.1,Geography,Spanish
+0.1,Geography,Statistics
+0.08,Geography,Theater
+0.14,Geography,World Arts and Cultures
+0.42,German,Honors Collegium
+0.44,German,History
+0.81,German,Italian
+0.62,German,Japanese
+0.42,German,Korean
+-0.03,German,Life Sciences
+0.48,German,Linguistics
+-0.03,German,Management
+-0.2,German,Materials Science and Engineering
+-0.07,German,Mathematics
+-0.29,German,Mechanical and Aerospace Engineering
+-0.01,German,"Molecular, Cell, and Developmental Biology"
+0.31,German,Music
+0.07,German,"Microbiology, Immunology, and Molecular Genetics"
+0.33,German,Music History
+-0.01,German,Neuroscience
+-0.1,German,Nursing
+0.15,German,Political Science
+0.49,German,Philosophy
+-0.03,German,Program in Computing
+-0.21,German,Physics
+0.02,German,Psychology
+-0.16,German,Physiological Science
+0.58,German,"Religion, Study of"
+0.77,German,Scandinavian
+0.24,German,Society and Genetics
+0.26,German,Sociology
+0.7,German,Spanish
+-0.13,German,Statistics
+0.16,German,Theater
+0.37,German,World Arts and Cultures
+0.59,Honors Collegium,History
+0.48,Honors Collegium,Italian
+0.31,Honors Collegium,Japanese
+0.24,Honors Collegium,Korean
+0.11,Honors Collegium,Life Sciences
+0.09,Honors Collegium,Linguistics
+-0.05,Honors Collegium,Management
+-0.01,Honors Collegium,Materials Science and Engineering
+-0.18,Honors Collegium,Mathematics
+-0.08,Honors Collegium,Mechanical and Aerospace Engineering
+-0.04,Honors Collegium,"Molecular, Cell, and Developmental Biology"
+0.19,Honors Collegium,Music
+0.07,Honors Collegium,"Microbiology, Immunology, and Molecular Genetics"
+0.3,Honors Collegium,Music History
+-0.02,Honors Collegium,Neuroscience
+0.12,Honors Collegium,Nursing
+0.38,Honors Collegium,Political Science
+0.32,Honors Collegium,Philosophy
+-0.06,Honors Collegium,Program in Computing
+-0.09,Honors Collegium,Physics
+0.13,Honors Collegium,Psychology
+0.03,Honors Collegium,Physiological Science
+0.55,Honors Collegium,"Religion, Study of"
+0.48,Honors Collegium,Scandinavian
+0.57,Honors Collegium,Society and Genetics
+0.56,Honors Collegium,Sociology
+0.31,Honors Collegium,Spanish
+-0.07,Honors Collegium,Statistics
+0.14,Honors Collegium,Theater
+0.61,Honors Collegium,World Arts and Cultures
+0.49,History,Italian
+0.36,History,Japanese
+0.38,History,Korean
+-0.11,History,Life Sciences
+0.07,History,Linguistics
+-0.07,History,Management
+-0.19,History,Materials Science and Engineering
+-0.2,History,Mathematics
+-0.22,History,Mechanical and Aerospace Engineering
+-0.11,History,"Molecular, Cell, and Developmental Biology"
+0.07,History,Music
+-0.12,History,"Microbiology, Immunology, and Molecular Genetics"
+0.4,History,Music History
+-0.1,History,Neuroscience
+-0.04,History,Nursing
+0.38,History,Political Science
+0.17,History,Philosophy
+-0.2,History,Program in Computing
+-0.24,History,Physics
+-0.05,History,Psychology
+-0.12,History,Physiological Science
+0.74,History,"Religion, Study of"
+0.34,History,Scandinavian
+0.3,History,Society and Genetics
+0.48,History,Sociology
+0.33,History,Spanish
+-0.15,History,Statistics
+0.1,History,Theater
+0.39,History,World Arts and Cultures
+0.66,Italian,Japanese
+0.47,Italian,Korean
+-0.03,Italian,Life Sciences
+0.34,Italian,Linguistics
+-0.1,Italian,Management
+-0.1,Italian,Materials Science and Engineering
+-0.11,Italian,Mathematics
+-0.17,Italian,Mechanical and Aerospace Engineering
+0.06,Italian,"Molecular, Cell, and Developmental Biology"
+0.36,Italian,Music
+0.12,Italian,"Microbiology, Immunology, and Molecular Genetics"
+0.42,Italian,Music History
+0.02,Italian,Neuroscience
+-0.14,Italian,Nursing
+0.1,Italian,Political Science
+0.43,Italian,Philosophy
+-0.11,Italian,Program in Computing
+-0.12,Italian,Physics
+0,Italian,Psychology
+-0.04,Italian,Physiological Science
+0.65,Italian,"Religion, Study of"
+0.79,Italian,Scandinavian
+0.21,Italian,Society and Genetics
+0.19,Italian,Sociology
+0.73,Italian,Spanish
+-0.15,Italian,Statistics
+0.23,Italian,Theater
+0.45,Italian,World Arts and Cultures
+0.82,Japanese,Korean
+0.06,Japanese,Life Sciences
+0.48,Japanese,Linguistics
+-0.1,Japanese,Management
+-0,Japanese,Materials Science and Engineering
+-0.07,Japanese,Mathematics
+-0.17,Japanese,Mechanical and Aerospace Engineering
+0.06,Japanese,"Molecular, Cell, and Developmental Biology"
+0.42,Japanese,Music
+0.08,Japanese,"Microbiology, Immunology, and Molecular Genetics"
+0.34,Japanese,Music History
+0.09,Japanese,Neuroscience
+-0.16,Japanese,Nursing
+0.01,Japanese,Political Science
+0.33,Japanese,Philosophy
+0,Japanese,Program in Computing
+-0.07,Japanese,Physics
+-0.16,Japanese,Psychology
+0.03,Japanese,Physiological Science
+0.63,Japanese,"Religion, Study of"
+0.63,Japanese,Scandinavian
+0.05,Japanese,Society and Genetics
+0.04,Japanese,Sociology
+0.68,Japanese,Spanish
+-0.03,Japanese,Statistics
+0.17,Japanese,Theater
+0.27,Japanese,World Arts and Cultures
+0.12,Korean,Life Sciences
+0.34,Korean,Linguistics
+-0.02,Korean,Management
+-0.11,Korean,Materials Science and Engineering
+-0.02,Korean,Mathematics
+-0.27,Korean,Mechanical and Aerospace Engineering
+0.09,Korean,"Molecular, Cell, and Developmental Biology"
+0.34,Korean,Music
+0.11,Korean,"Microbiology, Immunology, and Molecular Genetics"
+0.31,Korean,Music History
+0.12,Korean,Neuroscience
+-0,Korean,Nursing
+0.07,Korean,Political Science
+0.26,Korean,Philosophy
+-0.01,Korean,Program in Computing
+-0.1,Korean,Physics
+-0.16,Korean,Psychology
+0.08,Korean,Physiological Science
+0.54,Korean,"Religion, Study of"
+0.42,Korean,Scandinavian
+0.04,Korean,Society and Genetics
+0.14,Korean,Sociology
+0.54,Korean,Spanish
+-0.03,Korean,Statistics
+0.05,Korean,Theater
+0.15,Korean,World Arts and Cultures
+0.22,Life Sciences,Linguistics
+0.22,Life Sciences,Management
+0.29,Life Sciences,Materials Science and Engineering
+0.17,Life Sciences,Mathematics
+0.14,Life Sciences,Mechanical and Aerospace Engineering
+0.79,Life Sciences,"Molecular, Cell, and Developmental Biology"
+0.12,Life Sciences,Music
+0.81,Life Sciences,"Microbiology, Immunology, and Molecular Genetics"
+-0.06,Life Sciences,Music History
+0.85,Life Sciences,Neuroscience
+0.36,Life Sciences,Nursing
+0.06,Life Sciences,Political Science
+0.13,Life Sciences,Philosophy
+0.39,Life Sciences,Program in Computing
+0.28,Life Sciences,Physics
+0.51,Life Sciences,Psychology
+0.69,Life Sciences,Physiological Science
+-0.13,Life Sciences,"Religion, Study of"
+-0.17,Life Sciences,Scandinavian
+0.51,Life Sciences,Society and Genetics
+0.3,Life Sciences,Sociology
+-0.04,Life Sciences,Spanish
+0.34,Life Sciences,Statistics
+-0.03,Life Sciences,Theater
+0.05,Life Sciences,World Arts and Cultures
+0.08,Linguistics,Management
+0.19,Linguistics,Materials Science and Engineering
+0.27,Linguistics,Mathematics
+0.09,Linguistics,Mechanical and Aerospace Engineering
+0.2,Linguistics,"Molecular, Cell, and Developmental Biology"
+0.33,Linguistics,Music
+0.2,Linguistics,"Microbiology, Immunology, and Molecular Genetics"
+0.15,Linguistics,Music History
+0.27,Linguistics,Neuroscience
+0.08,Linguistics,Nursing
+0.12,Linguistics,Political Science
+0.51,Linguistics,Philosophy
+0.38,Linguistics,Program in Computing
+0.13,Linguistics,Physics
+0.21,Linguistics,Psychology
+0.13,Linguistics,Physiological Science
+0.21,Linguistics,"Religion, Study of"
+0.31,Linguistics,Scandinavian
+0.12,Linguistics,Society and Genetics
+0.06,Linguistics,Sociology
+0.48,Linguistics,Spanish
+0.24,Linguistics,Statistics
+0.05,Linguistics,Theater
+0.1,Linguistics,World Arts and Cultures
+0.05,Management,Materials Science and Engineering
+0.22,Management,Mathematics
+0.14,Management,Mechanical and Aerospace Engineering
+0.09,Management,"Molecular, Cell, and Developmental Biology"
+-0.02,Management,Music
+0.12,Management,"Microbiology, Immunology, and Molecular Genetics"
+-0.16,Management,Music History
+0.17,Management,Neuroscience
+0.35,Management,Nursing
+0.36,Management,Political Science
+-0.08,Management,Philosophy
+0.31,Management,Program in Computing
+-0.08,Management,Physics
+0.24,Management,Psychology
+0.12,Management,Physiological Science
+-0.15,Management,"Religion, Study of"
+-0.14,Management,Scandinavian
+0.2,Management,Society and Genetics
+0.2,Management,Sociology
+-0.13,Management,Spanish
+0.4,Management,Statistics
+0.12,Management,Theater
+0.07,Management,World Arts and Cultures
+0.54,Materials Science and Engineering,Mathematics
+0.87,Materials Science and Engineering,Mechanical and Aerospace Engineering
+0.32,Materials Science and Engineering,"Molecular, Cell, and Developmental Biology"
+0.15,Materials Science and Engineering,Music
+0.34,Materials Science and Engineering,"Microbiology, Immunology, and Molecular Genetics"
+-0.03,Materials Science and Engineering,Music History
+0.31,Materials Science and Engineering,Neuroscience
+-0.03,Materials Science and Engineering,Nursing
+-0.15,Materials Science and Engineering,Political Science
+0.04,Materials Science and Engineering,Philosophy
+0.58,Materials Science and Engineering,Program in Computing
+0.83,Materials Science and Engineering,Physics
+0.07,Materials Science and Engineering,Psychology
+0.5,Materials Science and Engineering,Physiological Science
+-0.09,Materials Science and Engineering,"Religion, Study of"
+-0.12,Materials Science and Engineering,Scandinavian
+0.1,Materials Science and Engineering,Society and Genetics
+-0.12,Materials Science and Engineering,Sociology
+0.03,Materials Science and Engineering,Spanish
+0.49,Materials Science and Engineering,Statistics
+0.09,Materials Science and Engineering,Theater
+-0.01,Materials Science and Engineering,World Arts and Cultures
+0.62,Mathematics,Mechanical and Aerospace Engineering
+0.15,Mathematics,"Molecular, Cell, and Developmental Biology"
+0.16,Mathematics,Music
+0.18,Mathematics,"Microbiology, Immunology, and Molecular Genetics"
+0.04,Mathematics,Music History
+0.24,Mathematics,Neuroscience
+0.08,Mathematics,Nursing
+0.03,Mathematics,Political Science
+0.28,Mathematics,Philosophy
+0.63,Mathematics,Program in Computing
+0.67,Mathematics,Physics
+0.07,Mathematics,Psychology
+0.2,Mathematics,Physiological Science
+-0.17,Mathematics,"Religion, Study of"
+-0.08,Mathematics,Scandinavian
+-0.01,Mathematics,Society and Genetics
+-0.07,Mathematics,Sociology
+-0.03,Mathematics,Spanish
+0.57,Mathematics,Statistics
+-0.12,Mathematics,Theater
+-0.07,Mathematics,World Arts and Cultures
+0.18,Mechanical and Aerospace Engineering,"Molecular, Cell, and Developmental Biology"
+0.14,Mechanical and Aerospace Engineering,Music
+0.21,Mechanical and Aerospace Engineering,"Microbiology, Immunology, and Molecular Genetics"
+0.02,Mechanical and Aerospace Engineering,Music History
+0.2,Mechanical and Aerospace Engineering,Neuroscience
+-0.01,Mechanical and Aerospace Engineering,Nursing
+-0.06,Mechanical and Aerospace Engineering,Political Science
+-0.03,Mechanical and Aerospace Engineering,Philosophy
+0.57,Mechanical and Aerospace Engineering,Program in Computing
+0.76,Mechanical and Aerospace Engineering,Physics
+0.05,Mechanical and Aerospace Engineering,Psychology
+0.35,Mechanical and Aerospace Engineering,Physiological Science
+-0.18,Mechanical and Aerospace Engineering,"Religion, Study of"
+-0.15,Mechanical and Aerospace Engineering,Scandinavian
+0.02,Mechanical and Aerospace Engineering,Society and Genetics
+-0.16,Mechanical and Aerospace Engineering,Sociology
+-0.06,Mechanical and Aerospace Engineering,Spanish
+0.52,Mechanical and Aerospace Engineering,Statistics
+0.09,Mechanical and Aerospace Engineering,Theater
+0.02,Mechanical and Aerospace Engineering,World Arts and Cultures
+0.08,"Molecular, Cell, and Developmental Biology",Music
+0.9,"Molecular, Cell, and Developmental Biology","Microbiology, Immunology, and Molecular Genetics"
+-0.02,"Molecular, Cell, and Developmental Biology",Music History
+0.8,"Molecular, Cell, and Developmental Biology",Neuroscience
+0.2,"Molecular, Cell, and Developmental Biology",Nursing
+-0.11,"Molecular, Cell, and Developmental Biology",Political Science
+0.05,"Molecular, Cell, and Developmental Biology",Philosophy
+0.27,"Molecular, Cell, and Developmental Biology",Program in Computing
+0.31,"Molecular, Cell, and Developmental Biology",Physics
+0.42,"Molecular, Cell, and Developmental Biology",Psychology
+0.77,"Molecular, Cell, and Developmental Biology",Physiological Science
+-0.13,"Molecular, Cell, and Developmental Biology","Religion, Study of"
+-0.08,"Molecular, Cell, and Developmental Biology",Scandinavian
+0.4,"Molecular, Cell, and Developmental Biology",Society and Genetics
+0.04,"Molecular, Cell, and Developmental Biology",Sociology
+0.03,"Molecular, Cell, and Developmental Biology",Spanish
+0.22,"Molecular, Cell, and Developmental Biology",Statistics
+-0.05,"Molecular, Cell, and Developmental Biology",Theater
+-0.1,"Molecular, Cell, and Developmental Biology",World Arts and Cultures
+0.15,Music,"Microbiology, Immunology, and Molecular Genetics"
+0.77,Music,Music History
+0.11,Music,Neuroscience
+0.02,Music,Nursing
+-0.1,Music,Political Science
+0.14,Music,Philosophy
+0.22,Music,Program in Computing
+0.1,Music,Physics
+-0.09,Music,Psychology
+-0.04,Music,Physiological Science
+0.35,Music,"Religion, Study of"
+0.42,Music,Scandinavian
+-0.03,Music,Society and Genetics
+-0.05,Music,Sociology
+0.41,Music,Spanish
+0.05,Music,Statistics
+0.55,Music,Theater
+0.5,Music,World Arts and Cultures
+-0.05,"Microbiology, Immunology, and Molecular Genetics",Music History
+0.81,"Microbiology, Immunology, and Molecular Genetics",Neuroscience
+0.27,"Microbiology, Immunology, and Molecular Genetics",Nursing
+-0.1,"Microbiology, Immunology, and Molecular Genetics",Political Science
+0.1,"Microbiology, Immunology, and Molecular Genetics",Philosophy
+0.36,"Microbiology, Immunology, and Molecular Genetics",Program in Computing
+0.31,"Microbiology, Immunology, and Molecular Genetics",Physics
+0.52,"Microbiology, Immunology, and Molecular Genetics",Psychology
+0.73,"Microbiology, Immunology, and Molecular Genetics",Physiological Science
+-0.09,"Microbiology, Immunology, and Molecular Genetics","Religion, Study of"
+0.02,"Microbiology, Immunology, and Molecular Genetics",Scandinavian
+0.44,"Microbiology, Immunology, and Molecular Genetics",Society and Genetics
+0.15,"Microbiology, Immunology, and Molecular Genetics",Sociology
+0.1,"Microbiology, Immunology, and Molecular Genetics",Spanish
+0.32,"Microbiology, Immunology, and Molecular Genetics",Statistics
+0.03,"Microbiology, Immunology, and Molecular Genetics",Theater
+0.06,"Microbiology, Immunology, and Molecular Genetics",World Arts and Cultures
+0,Music History,Neuroscience
+-0.04,Music History,Nursing
+-0.02,Music History,Political Science
+0.02,Music History,Philosophy
+-0,Music History,Program in Computing
+-0.07,Music History,Physics
+-0.18,Music History,Psychology
+-0.1,Music History,Physiological Science
+0.47,Music History,"Religion, Study of"
+0.47,Music History,Scandinavian
+0.03,Music History,Society and Genetics
+0.07,Music History,Sociology
+0.35,Music History,Spanish
+-0.15,Music History,Statistics
+0.44,Music History,Theater
+0.51,Music History,World Arts and Cultures
+0.28,Neuroscience,Nursing
+-0.04,Neuroscience,Political Science
+0.12,Neuroscience,Philosophy
+0.41,Neuroscience,Program in Computing
+0.3,Neuroscience,Physics
+0.58,Neuroscience,Psychology
+0.77,Neuroscience,Physiological Science
+-0.06,Neuroscience,"Religion, Study of"
+-0.13,Neuroscience,Scandinavian
+0.42,Neuroscience,Society and Genetics
+0.17,Neuroscience,Sociology
+0,Neuroscience,Spanish
+0.34,Neuroscience,Statistics
+-0.04,Neuroscience,Theater
+-0.04,Neuroscience,World Arts and Cultures
+0.2,Nursing,Political Science
+0.09,Nursing,Philosophy
+0.14,Nursing,Program in Computing
+-0.07,Nursing,Physics
+0.5,Nursing,Psychology
+0.27,Nursing,Physiological Science
+-0.05,Nursing,"Religion, Study of"
+-0.08,Nursing,Scandinavian
+0.36,Nursing,Society and Genetics
+0.29,Nursing,Sociology
+-0.12,Nursing,Spanish
+0.21,Nursing,Statistics
+-0.03,Nursing,Theater
+0.15,Nursing,World Arts and Cultures
+0.38,Political Science,Philosophy
+0.08,Political Science,Program in Computing
+-0.19,Political Science,Physics
+0.22,Political Science,Psychology
+-0.07,Political Science,Physiological Science
+0.19,Political Science,"Religion, Study of"
+0.02,Political Science,Scandinavian
+0.35,Political Science,Society and Genetics
+0.6,Political Science,Sociology
+-0.05,Political Science,Spanish
+0.31,Political Science,Statistics
+-0.02,Political Science,Theater
+0.24,Political Science,World Arts and Cultures
+0.13,Philosophy,Program in Computing
+0.2,Philosophy,Physics
+0.22,Philosophy,Psychology
+0.05,Philosophy,Physiological Science
+0.28,Philosophy,"Religion, Study of"
+0.35,Philosophy,Scandinavian
+0.31,Philosophy,Society and Genetics
+0.25,Philosophy,Sociology
+0.31,Philosophy,Spanish
+0.15,Philosophy,Statistics
+-0.14,Philosophy,Theater
+0.21,Philosophy,World Arts and Cultures
+0.53,Program in Computing,Physics
+0.24,Program in Computing,Psychology
+0.34,Program in Computing,Physiological Science
+-0.05,Program in Computing,"Religion, Study of"
+-0.09,Program in Computing,Scandinavian
+0.09,Program in Computing,Society and Genetics
+0.07,Program in Computing,Sociology
+0.03,Program in Computing,Spanish
+0.77,Program in Computing,Statistics
+0.08,Program in Computing,Theater
+0.08,Program in Computing,World Arts and Cultures
+0.01,Physics,Psychology
+0.42,Physics,Physiological Science
+-0.17,Physics,"Religion, Study of"
+-0.16,Physics,Scandinavian
+-0.02,Physics,Society and Genetics
+-0.21,Physics,Sociology
+-0.03,Physics,Spanish
+0.43,Physics,Statistics
+-0.08,Physics,Theater
+-0.13,Physics,World Arts and Cultures
+0.51,Psychology,Physiological Science
+-0.12,Psychology,"Religion, Study of"
+-0.15,Psychology,Scandinavian
+0.56,Psychology,Society and Genetics
+0.43,Psychology,Sociology
+-0.1,Psychology,Spanish
+0.33,Psychology,Statistics
+-0.05,Psychology,Theater
+0.19,Psychology,World Arts and Cultures
+-0.08,Physiological Science,"Religion, Study of"
+-0.16,Physiological Science,Scandinavian
+0.52,Physiological Science,Society and Genetics
+0.11,Physiological Science,Sociology
+-0.04,Physiological Science,Spanish
+0.35,Physiological Science,Statistics
+-0.12,Physiological Science,Theater
+-0.12,Physiological Science,World Arts and Cultures
+0.53,"Religion, Study of",Scandinavian
+0.21,"Religion, Study of",Society and Genetics
+0.32,"Religion, Study of",Sociology
+0.6,"Religion, Study of",Spanish
+-0.09,"Religion, Study of",Statistics
+0.28,"Religion, Study of",Theater
+0.52,"Religion, Study of",World Arts and Cultures
+0.12,Scandinavian,Society and Genetics
+0.03,Scandinavian,Sociology
+0.65,Scandinavian,Spanish
+-0.13,Scandinavian,Statistics
+0.3,Scandinavian,Theater
+0.47,Scandinavian,World Arts and Cultures
+0.69,Society and Genetics,Sociology
+0.09,Society and Genetics,Spanish
+0.15,Society and Genetics,Statistics
+-0.09,Society and Genetics,Theater
+0.35,Society and Genetics,World Arts and Cultures
+0.11,Sociology,Spanish
+0.21,Sociology,Statistics
+0.03,Sociology,Theater
+0.44,Sociology,World Arts and Cultures
+-0.16,Spanish,Statistics
+0.21,Spanish,Theater
+0.35,Spanish,World Arts and Cultures
+0.03,Statistics,Theater
+0.05,Statistics,World Arts and Cultures
+0.56,Theater,World Arts and Cultures
