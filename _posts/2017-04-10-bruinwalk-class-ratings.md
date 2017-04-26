@@ -50,7 +50,7 @@ Only course and professor pairings with **15 or more** ratings were included whe
   <figure class="ratings-chart" id="overall-ratings-count"></figure>
 
   <h3>Distribution of overall course ratings</h3>
-  <figure class="ratings-chart fullwidth" id="overall"></figure>
+  <figure class="ratings-chart" id="overall"></figure>
   <p>📱 <em>Heads up! If you’re on a mobile device, consider viewing these graphs on a desktop computer to hover over individual courses for more information.</em></p>
 
   <h2>Easiness rating</h2>
@@ -73,7 +73,7 @@ Only course and professor pairings with **15 or more** ratings were included whe
   <figure class="ratings-chart" id="easiness-ratings-count"></figure>
 
   <h3>Distribution of course easiness ratings</h3>
-  <figure class="ratings-chart fullwidth" id="easiness"></figure>
+  <figure class="ratings-chart" id="easiness"></figure>
 
   <h2>Correlating rating criteria</h2>
 
