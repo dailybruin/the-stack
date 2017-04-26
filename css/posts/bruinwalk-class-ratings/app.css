@@ -42,8 +42,15 @@
 .ratings-list .professor {
   text-transform: capitalize;
 }
+
 .ratings-chart {
   margin-bottom: 2em;
+}
+
+/* pie chart tooltip is the last <g> tag */
+.ratings-chart svg g:last-child {
+  /* prevent tooltip flickering on mouseover */
+  pointer-events: none;
 }
 
 div.google-visualization-tooltip {
