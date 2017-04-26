@@ -1,3 +1,9 @@
+// bubbleChartDropdown - invokes update function
+var select = document.getElementById('bubbleChartDropdown')
+select.addEventListener("change", () => {
+  updateBubbleChart(select.value);
+})
+
 // http://stackoverflow.com/questions/11088303/how-to-convert-to-d3s-json-format
 d3.csv("/datasets/sexual-harassment/positions.csv", function(error, data) {
   if (error) throw error;
@@ -17,8 +23,6 @@ d3.csv("/datasets/sexual-harassment/positions.csv", function(error, data) {
       ret += row;
     })
   });
-  console.log(ret);
-  console.log(encodeURI(ret));
   
   initBubbleChart(encodeURI(ret));
 });

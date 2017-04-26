@@ -8,17 +8,14 @@ function initBubbleChart(csvURI) {
   var color = d3.scaleOrdinal(d3.schemeCategory20c);
 
   var pack = d3.pack()
-  .size([width, height])
-  .padding(1.5);
+              .size([width, height])
+              .padding(1.5);
 
   d3.csv(csvURI, function(d) {
-    console.log('d', d);
     d.value = +d.value;
     if (d.value) return d;
   }, function(error, classes) {
     if (error) throw error;
-
-    console.log(classes);
 
     var root = d3.hierarchy({children: classes})
                 .sum(function(d) { return d.value; })
@@ -59,4 +56,8 @@ function initBubbleChart(csvURI) {
     node.append("title")
         .text(function(d) { return d.id + "\n" + format(d.value); });
   });
+}
+
+function updateBubbleChart (value) {
+  console.log('updateBubbleChart')
 }
