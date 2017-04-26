@@ -4,14 +4,25 @@ L.mapbox.accessToken = 'pk.eyJ1IjoiYmVuc29uaGFuIiwiYSI6ImNpdW4wc2V3NzAwZzAydG13e
 var map = L.mapbox.map('map', 'mapbox.light')
   .setView([34.0689, -118.442], 12);
 
-d3.csv('/datasets/suspicious-activity/location.csv', function(data) {
-  data.forEach(function(d) {
-    d.Lat = +d.Lat;
-    d.Long = +d.Long;
-  });
-  for (i = 0; i < data.length; i++) {
-    L.marker([data[i].Lat, data[i].Long]).addTo(map);
-  }
+$(document).ready(function () {
+  $('.gender').hide();
+  $('#myselect').change(function () {
+    $('.gender').hide();
+    $('#'+$(this).val()).show();
+    var gender = $(this);
+    d3.csv('/datasets/suspicious-activity/test.csv', function(data) {
+      data.forEach(function(d) {
+        //convert to numbers
+        d.Lat = +d.Lat;
+        d.Long = +d.Long;
+      });
+      for (i = 0; i < data.length; i++) {
+        if (data[i].Sex == gender.text()) {
+          L.marker([data[i].Lat, data[i].Long]).addTo(map);
+        }
+      }
+    });
+  })
 });
 
 //Graph

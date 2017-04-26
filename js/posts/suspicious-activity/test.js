@@ -19,7 +19,7 @@ d3.csv('/datasets/suspicious-activity/data.csv', function(err, data) {
     }
     else if (d.Sex=="F") {
       mf[1] +=1;
-     } 
+     }
      console.log (mf);
   })
 
@@ -47,14 +47,13 @@ d3.csv('/datasets/suspicious-activity/data.csv', function(err, data) {
     .data(mf)
     .enter().append("rect")
       .attr("class", "bar")
-      .attr("x", function(d, i) { 
+      .attr("x", function(d, i) {
         return i == 0 ? x('M') : x('F');
-        // return x('M'); 
+        // return x('M');
       })
-      .attr("y", function(d) { 
-        return y(d); 
+      .attr("y", function(d) {
+        return y(d);
       })
       .attr("width", x.bandwidth())
       .attr("height", function(d) { return height - y(d); });
 });
-

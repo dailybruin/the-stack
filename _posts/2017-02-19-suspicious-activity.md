@@ -9,12 +9,18 @@ scripts:
   - //d3js.org/d3-transition.v1.min.js
   - //api.mapbox.com/mapbox.js/v3.0.1/mapbox.js
   - //api.mapbox.com/mapbox.js/v3.0.1/mapbox.css
-  - /js/posts/suspicious-activity/app.js
   - //maps.googleapis.com/maps/api/js?key=AIzaSyBddbV3QvkJbOe-s1dbPXrxWV1Sy4z8nR0"
   - //api.mapbox.com/mapbox.js/plugins/turf/v2.0.2/turf.min.js
+  - //ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js
   - /js/posts/suspicious-activity/test.js
+  - /js/posts/suspicious-activity/app.js
 ---
-
+<select id="myselect">
+  <option value="male">Male</option>
+  <option value="female">Female</option>
+</select>
+<p id="male" class="gender">Male</p>
+<p id="female" class="gender">Female</p>
 <div id="map" style="height: 400px;"></div>
 <svg width="640" height="640" id="bar-chart"></svg>
 <svg width="640" height="640" id="test"></svg>
