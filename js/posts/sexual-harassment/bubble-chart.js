@@ -59,5 +59,6 @@ function initBubbleChart(csvURI) {
 }
 
 function updateBubbleChart (value) {
-  console.log('updateBubbleChart')
+  d3.selectAll('.node').remove();
+  initBubbleChart(dataList[value]);
 }
