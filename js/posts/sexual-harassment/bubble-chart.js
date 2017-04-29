@@ -32,7 +32,18 @@ function initBubbleChart(csvURI) {
                   .data(pack(root).leaves())
                   .enter().append("g")
                   .attr("class", "node")
-                  .attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")"; });
+                  .attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")"; })
+                  .on('mousemove', function(d) {
+                    this.style.opacity = 0.7;
+                    tooltip.html(fillTooltip(d))
+                           .style('display', 'inline')
+                           .style('left', (d3.event.pageX + 10) + 'px')
+                           .style('top', (d3.event.pageY + 10) + 'px');
+                  })
+                  .on('mouseout', function() {
+                    d3.select(this).style('opacity', 1);
+                    tooltip.style('display', 'none');
+                  })
 
     node.append("circle")
         .attr("id", function(d) { return d.id; })
@@ -52,13 +63,37 @@ function initBubbleChart(csvURI) {
         .attr("x", -15) // <== HARD CODED VALUE -- jeffrey
         .attr("y", function(d, i, nodes) { return 13 + (i - nodes.length / 2 - 0.5) * 10; })
         .text(function(d) { return d; });
-
-    node.append("title")
-        .text(function(d) { return d.id + "\n" + format(d.value); });
   });
 }
 
 function updateBubbleChart (value) {
   d3.selectAll('.node').remove();
   initBubbleChart(dataList[value]);
+}
+
+function fillTooltip (d) {
+  var html = '';
+  
+  // SCHOOL NAME
+  html += '<h1><u>'
+  switch (d.class) {
+    case 'ucla': html += 'UC Los Angeles'; break;
+    case 'ucb': html += 'UC Berkeley'; break;
+    case 'ucm': html += 'UC Merced'; break;
+    case 'ucsd': html += 'UC San Diego'; break;
+    case 'ucsb': html += 'UC Santa Barbara'; break;
+    case 'ucsf': html += 'UC San Francisco'; break;
+    case 'ucd': html += 'UC Davis'; break;
+    case 'ucsc': html += 'UC Santa Cruz'; break;
+    case 'uci': html += 'UC Irvine'; break;
+    case 'ucr': html += 'UC Riverside'; break;
+  }
+  html += '</u></h1>'
+
+  // PACKAGE
+  html += '<p>'
+  html += d.package.split('.')[1];
+  html += '</p>'
+
+  return html;
 }

@@ -27,6 +27,12 @@ select.addEventListener("change", () => {
   updateBubbleChart(select.value);
 })
 
+// initialize tooltip
+var tooltip = d3.select('.bubble-chart-wrapper')
+                .append('div')
+                .attr('class', 'tooltip')
+                .style('display', 'none');
+
 function formatCSV(data, baseString) {
   const BASE = baseString;
   const COLLEGES = ["UCB","UCD","UCI","UCLA","UCM","UCR","UCSB","UCSC","UCSD","UCSF"];
