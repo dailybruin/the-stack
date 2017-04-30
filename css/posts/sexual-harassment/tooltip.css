@@ -1,0 +1,26 @@
+.tooltip h1,
+.tooltip h2,
+.tooltip p {
+    margin: 0;
+}
+
+.tooltip .left {
+  display: inline-block;
+  float: left;
+  padding-right: 15px; 
+  border-right: 1px dotted rgba(0,0,0, 0.4);
+  position: relative; 
+  padding-top: 7px;
+  padding-bottom: 7px;
+  padding-left: 5px;
+}
+
+.tooltip .right {
+  display: inline-block;
+  float: right;
+  padding-top: 23px;
+  padding-bottom: 12px;
+  height: auto;
+  font-size: 2em;
+  padding-left: 15px;
+}

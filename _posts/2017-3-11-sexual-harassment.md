@@ -8,6 +8,7 @@ scripts:
 
 stylesheets:
     - /css/tooltip.css
+    - /css/posts/sexual-harassment/tooltip.css
 ---
 
 <select style='margin:0 auto; display: flex; width: 200px; height: 3em;' id='bubbleChartDropdown'>

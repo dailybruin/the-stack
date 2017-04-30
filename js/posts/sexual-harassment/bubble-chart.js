@@ -35,6 +35,10 @@ function initBubbleChart(csvURI) {
                   .attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")"; })
                   .on('mousemove', function(d) {
                     this.style.opacity = 0.7;
+                    var re = new RegExp('^' + d.package + '.*');
+                    d3.selectAll('.node').style('transition', '.5s').style('opacity', function (d) {
+                      if (re.test(d.id)) { return 1; } else { return 0.5; }
+                    });
                     tooltip.html(fillTooltip(d))
                            .style('display', 'inline')
                            .style('left', (d3.event.pageX + 10) + 'px')
@@ -42,6 +46,7 @@ function initBubbleChart(csvURI) {
                   })
                   .on('mouseout', function() {
                     d3.select(this).style('opacity', 1);
+                    d3.selectAll('.node').style('opacity', 1);
                     tooltip.style('display', 'none');
                   })
 
@@ -75,7 +80,7 @@ function fillTooltip (d) {
   var html = '';
   
   // SCHOOL NAME
-  html += '<h1><u>'
+  html += "<div class='left'><h1><b><u>";
   switch (d.class) {
     case 'ucla': html += 'UC Los Angeles'; break;
     case 'ucb': html += 'UC Berkeley'; break;
@@ -88,12 +93,27 @@ function fillTooltip (d) {
     case 'uci': html += 'UC Irvine'; break;
     case 'ucr': html += 'UC Riverside'; break;
   }
-  html += '</u></h1>'
+  html += '</u></b></h1>';
 
   // PACKAGE
-  html += '<p>'
+  html += "<p>";
   html += d.package.split('.')[1];
-  html += '</p>'
+  html += '</p>';
+  
+  // NUMBER OF PEOPLE
+  var numberOfPeople = +d.value;
+  html += '<p>';
+  html += numberOfPeople + ' People'
+  html += '</p></div>';
+  
+  // PERCENTAGE
+  html += "<div class='right'><span class='percentage'>"
+  var totalPeopleInClass = 0;
+  d.parent.children.forEach(function(d) {
+    totalPeopleInClass += (+d.data.value);
+  });
+  html += Math.round(((numberOfPeople / totalPeopleInClass)*100)*10)/10 + '%';
+  html += '</span></div>'
 
   return html;
 }
