@@ -39,7 +39,7 @@ Only course and professor pairings with **15 or more** ratings were included whe
   <ratings-list :ratings="bestOverall" rating-type="overall_rating" 
                 id="best-overall"></ratings-list>
 
-  <p>Steer clear of these classes to avoid poorly rated professors, frustration and heavy workloads.</p>
+  <p>Steer clear of these classes to avoid poorly rated professors and potential frustration.</p>
   <h3>The bottom 25 classes by overall rating</h3>
   <ratings-list :ratings="worstOverall" rating-type="overall_rating" 
                 id="worst-overall"></ratings-list>
@@ -61,8 +61,7 @@ Only course and professor pairings with **15 or more** ratings were included whe
   <ratings-list :ratings="easiest" rating-type="easiness_rating"
                 id="easiest"></ratings-list>
 
-  <p>Don’t take one of these unless you don’t have the choice. 😬</p>
-
+  <p>Don’t take one of these classes unless you’re prepared to put in a lot of work.</p>
   <h3>The 25 hardest classes</h3>
   <ratings-list :ratings="hardest" rating-type="easiness_rating" 
                 id="hardest"></ratings-list>
