@@ -49,17 +49,19 @@ var x = d3.scaleBand().rangeRound([0, width]).padding(0.1),
 var g = svg.append("g")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
+var color = d3.scaleOrdinal(d3.schemeCategory20c);
+
 function initBarChart(data) {
   
 
   let genders = ["male", "female"];
   let races = ["B", "W", "H", "I", "O"];
-  let ages; // 18 - 81
+  let ages = ["18-20", "21-40", "41-65", "65+"]
 
   let breakdown = {
     gender: new Array(2).fill(0),
     race: new Array(5).fill(0),
-    ages: []
+    age: new Array(4).fill(0)
   }
   
   data.forEach(function(d) {
@@ -71,7 +73,21 @@ function initBarChart(data) {
     if (r == -1) r = 4; // set to other if no race
     breakdown.race[r] += 1;
 
-    // do age
+    let a = d.Age;
+    let ind = -1;
+    if (a > 18) {
+      ind = 0;
+      if (a > 20) {
+        ind = 1;
+        if (a > 40) {
+          ind = 2;
+          if (a > 65) {
+            ind = 3;
+          } 
+        }
+      }
+    }
+    if (ind !== -1) breakdown.age[ind] += 1;
   });
 
   console.log(breakdown);
@@ -95,15 +111,14 @@ function initBarChart(data) {
         .text("Frequency");
 
   document.getElementById('bar-select').addEventListener('change', function(e) {
-    console.log(e.target.value);
 
     currFilter = e.target.value;
     if (currFilter == 'gender') {
       currDomain = genders;
     } else if (currFilter == 'race') {
       currDomain = races;
-    } else {
-      // handle ages
+    } else if (currFilter == 'age') {
+      currDomain = ages;
     }
 
     update(currFilter, currDomain);
@@ -112,7 +127,6 @@ function initBarChart(data) {
   function update(filt, dom) {
     x.domain(dom);
     let newData = breakdown[filt];
-    console.log(newData);
 
     y.domain([0, Math.max.apply(null, newData)]);
 
@@ -130,18 +144,18 @@ function initBarChart(data) {
 
     g.selectAll(".bar")
       .remove()
+
+    g.selectAll(".bar")
       .data(newData)
       .enter().append("rect")
         .attr("class", "bar")
         .attr("x", function(d, i) {
-          console.log(i);
-          console.log(dom);
-          console.log(dom[i]);
           return x(dom[i]);
         })
+        .attr('fill', function(d, i) {
+          return color(i);
+        })
         .attr("y", function(d) {
-          console.log('y is ', d);
-          console.log(y(d));
           return y(d);
 
         })
