@@ -51,6 +51,7 @@ function formatCSV(data, baseString) {
       }
 
       let row = BASE + '.' + type + '.' + c.toLowerCase() + ',' + total + '\n';
+      console.log(row);
       ret += row;
     })
   });

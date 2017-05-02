@@ -11,6 +11,10 @@ function initBubbleChart(csvURI) {
               .size([width, height])
               .padding(1.5);
 
+  var x = d3.scaleBand()
+    .range([0, width])
+    .round(.1);
+
   d3.csv(csvURI, function(d) {
     d.value = +d.value;
     if (d.value) return d;
@@ -24,7 +28,12 @@ function initBubbleChart(csvURI) {
                     var id, i = id.lastIndexOf(".");
                     d.id = id;
                     d.package = id.slice(0, i);
+                    var j = id.indexOf(".");
+                    d.position = id.slice(j + 1, i);
+                    console.log("Position:");
+                    console.log(d.position);
                     d.class = id.slice(i + 1);
+                    d.classnposition = d.class + " " + d.position;
                   }
                 });
 
@@ -63,12 +72,47 @@ function initBubbleChart(csvURI) {
 
     node.append("text")
         .attr("clip-path", function(d) { return "url(#clip-" + d.id + ")"; })
-        .selectAll("tspan")
-        .data(function(d) { return d.class.split(/(?=[A-Z][^A-Z])/g); })
-        .enter().append("tspan")
-        .attr("x", -15) // <== HARD CODED VALUE -- jeffrey
-        .attr("y", function(d, i, nodes) { return 13 + (i - nodes.length / 2 - 0.5) * 10; })
-        .text(function(d) { return d; });
+        .attr("text-anchor", "middle")
+        .text(function(d) { return d.class; })
+        .style("font-size", function(d, i, nodes) { return d.r / 2 + "px";});
+    node.append("text")
+        .attr("clip-path", function(d) { return "url(#clip-" + d.id + ")"; })
+        .attr("text-anchor", "middle")
+        // hard-coded by natalie
+        .attr("dy", function(d) {if(d.r > 40) return d.r / 40; else if(d.r > 30) return d.r / 30; else return d.r / 20;})
+        .text(function(d) { return d.position; })
+        .style("font-size", function(d) { if(d.r > 40) return "11px"; else if(d.r > 30) return "8px"; else return d.r / 4 + "px";})
+        .call(wrap, x.bandwidth());
+
+    node.append("title")
+        .text(function(d) { return d.id + "\n" + format(d.value); });
+  });
+}
+
+// http://stackoverflow.com/questions/24784302/wrapping-text-in-d3
+function wrap(text, width) {
+  text.each(function(d) {
+    var text = d3.select(this),
+        words = text.text().split(/\s+/).reverse(),
+        word,
+        line = [],
+        lineNumber = 0,
+        lineHeight = 1.1, // ems
+        y = text.attr("y"),
+        dy = parseFloat(text.attr("dy")),
+        tspan = text.text(null).append("tspan").attr("x", 0).attr("y", y).attr("dy", dy + "em");
+    while (word = words.pop()) {
+      console.log(word);
+      console.log(d.r);
+      line.push(word);
+      tspan.text(line.join(" "));
+      if (tspan.node().getComputedTextLength() > d.r * 1.75) {
+        line.pop();
+        tspan.text(line.join(" "));
+        line = [word];
+        tspan = text.append("tspan").attr("x", 0).attr("y", 0).attr("dy", ++lineNumber * lineHeight + dy + "em").text(word);
+      }
+    }
   });
 }
 
