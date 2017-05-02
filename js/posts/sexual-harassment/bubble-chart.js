@@ -46,7 +46,7 @@ function initBubbleChart(csvURI) {
                     this.style.opacity = 0.7;
                     var re = new RegExp('^' + d.package + '.*');
                     d3.selectAll('.node').style('transition', '.5s').style('opacity', function (d) {
-                      if (re.test(d.id)) { return 1; } else { d3.select(this).select('text').style('opacity', 0); return 0.5; }
+                      if (re.test(d.id)) { return 1; } else { d3.select(this).selectAll('text').style('opacity', 0); return 0.5; }
                     });
                     tooltip.html(fillTooltip(d))
                            .style('display', 'inline')
@@ -83,9 +83,6 @@ function initBubbleChart(csvURI) {
         .text(function(d) { return d.position; })
         .style("font-size", function(d) { if(d.r > 40) return "11px"; else if(d.r > 30) return "8px"; else return d.r / 4 + "px";})
         .call(wrap, x.bandwidth());
-
-    node.append("title")
-        .text(function(d) { return d.id + "\n" + format(d.value); });
   });
 }
 
