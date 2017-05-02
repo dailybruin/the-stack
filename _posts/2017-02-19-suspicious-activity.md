@@ -20,4 +20,10 @@ scripts:
 </select>
 
 <div id="map" style="height: 400px;"></div>
+
+<select id="bar-select">
+  <option value="gender">Gender</option>
+  <option value="race">Race</option>
+  <option value="age">Age</option>
+</select>
 <svg width="640" height="640" id="bar-chart"></svg>

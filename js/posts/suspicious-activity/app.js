@@ -50,6 +50,7 @@ var g = svg.append("g")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
 function initBarChart(data) {
+  
 
   let genders = ["male", "female"];
   let races = ["B", "W", "H", "I", "O"];
@@ -67,6 +68,7 @@ function initBarChart(data) {
     breakdown.gender[g] += 1; 
 
     let r = races.indexOf(d.Race);
+    if (r == -1) r = 4; // set to other if no race
     breakdown.race[r] += 1;
 
     // do age
@@ -74,36 +76,85 @@ function initBarChart(data) {
 
   console.log(breakdown);
 
-  x.domain(genders);
-  y.domain([0, 250]);
+  let currFilter = "gender";
+  let currDomain = genders; 
 
   g.append("g")
-      .attr("class", "axis axis--x")
-      .attr("transform", "translate(0," + height + ")")
-      .call(d3.axisBottom(x));
+        .attr("class", "axis axis--x")
+        .attr("transform", "translate(0," + height + ")")
+        .call(d3.axisBottom(x));
 
-  g.append("g")
-      .attr("class", "axis axis--y")
-      .call(d3.axisLeft(y).ticks(10))
-    .append("text")
-      .attr("transform", "rotate(-90)")
-      .attr("y", 6)
-      .attr("dy", "0.71em")
-      .attr("text-anchor", "end")
-      .text("Frequency");
+    g.append("g")
+        .attr("class", "axis axis--y")
+        .call(d3.axisLeft(y).ticks(10))
+      .append("text")
+        .attr("transform", "rotate(-90)")
+        .attr("y", 6)
+        .attr("dy", "0.71em")
+        .attr("text-anchor", "end")
+        .text("Frequency");
 
-  g.selectAll(".bar")
-    .data(breakdown.gender)
-    .enter().append("rect")
-      .attr("class", "bar")
-      .attr("x", function(d, i) {
-        return x(genders[i]);
-      })
-      .attr("y", function(d) {
-        return y(d);
-      })
-      .attr("width", x.bandwidth())
-      .attr("height", function(d) { return height - y(d); });
+  document.getElementById('bar-select').addEventListener('change', function(e) {
+    console.log(e.target.value);
+
+    currFilter = e.target.value;
+    if (currFilter == 'gender') {
+      currDomain = genders;
+    } else if (currFilter == 'race') {
+      currDomain = races;
+    } else {
+      // handle ages
+    }
+
+    update(currFilter, currDomain);
+  })
+
+  function update(filt, dom) {
+    x.domain(dom);
+    let newData = breakdown[filt];
+    console.log(newData);
+
+    y.domain([0, Math.max.apply(null, newData)]);
+
+    svg.select('.axis--y')
+        .transition()
+        .duration(400)
+        .ease(d3.easePolyInOut)
+        .call(d3.axisLeft(y).ticks(10));
+    
+    svg.select('.axis--x')
+        .transition()
+        .duration(400)
+        .ease(d3.easePolyInOut)
+        .call(d3.axisBottom(x));
+
+    g.selectAll(".bar")
+      .remove()
+      .data(newData)
+      .enter().append("rect")
+        .attr("class", "bar")
+        .attr("x", function(d, i) {
+          console.log(i);
+          console.log(dom);
+          console.log(dom[i]);
+          return x(dom[i]);
+        })
+        .attr("y", function(d) {
+          console.log('y is ', d);
+          console.log(y(d));
+          return y(d);
+
+        })
+        .attr("width", x.bandwidth())
+        .attr("height", function(d) { return height - y(d); });
+
+   }
+
+   update(currFilter, currDomain);
+
+
+
+  
 
 }
 
