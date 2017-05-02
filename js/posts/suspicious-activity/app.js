@@ -15,6 +15,7 @@ $(document).ready(function () {
 
     data.forEach(d => {
       let m = L.marker([d.Lat, d.Long], {icon: icon}).addTo(map);
+      
       all_markers.push({
         marker: m,
         data: d
@@ -69,7 +70,6 @@ $(document).ready(function () {
           }
         }
         all_markers.forEach(m => {
-          console.log(Number(m.data.Age));
           if ((m.data.Sex.toLowerCase() == gender || gender == "all") &&
               (m.data.Race == race || race == "all") &&
               ((Number(m.data.Age) >= age_lower && Number(m.data.Age) <= age_upper) || age_lower == 1000)) {
