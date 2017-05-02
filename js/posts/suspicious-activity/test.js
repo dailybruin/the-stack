@@ -13,14 +13,14 @@ d3.csv('/datasets/suspicious-activity/data.csv', function(err, data) {
   // var mf = {"M":0,"F":0};
   var mf = [0, 0]; // M = 0, F = 1
   var formattedData = data.forEach(function(d) {
-    console.log(d);
+
     if (d.Sex=="M") {
       mf[0] +=1;
     }
     else if (d.Sex=="F") {
       mf[1] +=1;
      }
-     console.log (mf);
+
   })
 
   if (err) throw err;

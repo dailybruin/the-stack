@@ -19,8 +19,7 @@ scripts:
   <option value="male">Male</option>
   <option value="female">Female</option>
 </select>
-<p id="male" class="gender">Male</p>
-<p id="female" class="gender">Female</p>
+
 <div id="map" style="height: 400px;"></div>
 <svg width="640" height="640" id="bar-chart"></svg>
 <svg width="640" height="640" id="test"></svg>

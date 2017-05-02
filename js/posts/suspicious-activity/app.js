@@ -5,24 +5,57 @@ var map = L.mapbox.map('map', 'mapbox.light')
   .setView([34.0689, -118.442], 12);
 
 $(document).ready(function () {
-  $('.gender').hide();
-  $('#myselect').change(function () {
-    $('.gender').hide();
-    $('#'+$(this).val()).show();
-    var gender = $(this);
-    d3.csv('/datasets/suspicious-activity/test.csv', function(data) {
-      data.forEach(function(d) {
-        //convert to numbers
-        d.Lat = +d.Lat;
-        d.Long = +d.Long;
+  d3.csv('/datasets/suspicious-activity/test.csv', function(data) {
+    data.forEach(d => { d.Lat = +d.Lat; d.Long = +d.Long; });
+
+    let visibleMarkers = [];
+
+    let icon = new L.Icon.Default();
+    icon.options.shadowSize = [0,0];
+
+    data.forEach(d => {
+      let m = L.marker([d.Lat, d.Long], {icon: icon}).addTo(map);
+      visibleMarkers.push({
+        marker: m,
+        data: d
       });
-      for (i = 0; i < data.length; i++) {
-        if (data[i].Sex == gender.text()) {
-          L.marker([data[i].Lat, data[i].Long]).addTo(map);
-        }
-      }
     });
-  })
+
+    $('#myselect').change(function () {
+      console.log($(this).value);
+    });
+
+    document.getElementById('myselect').addEventListener('change', function(e) {
+      let val = e.target.value;
+
+      visibleMarkers.forEach(m => {
+        if (m.data.Sex.toLowerCase() !== val) {
+          $(m.marker._icon).hide();
+        }
+      })
+    })
+
+
+
+  });
+  
+  // $('#myselect').change(function () {
+  //   $('.gender').hide();
+  //   $('#'+$(this).val()).show();
+  //   var gender = $(this);
+  //   d3.csv('/datasets/suspicious-activity/test.csv', function(data) {
+  //     data.forEach(function(d) {
+  //       //convert to numbers
+  //       d.Lat = +d.Lat;
+  //       d.Long = +d.Long;
+  //     });
+  //     for (i = 0; i < data.length; i++) {
+  //       if (data[i].Sex == gender.text()) {
+  //         L.marker([data[i].Lat, data[i].Long]).addTo(map);
+  //       }
+  //     }
+  //   });
+  // })
 });
 
 //Graph
