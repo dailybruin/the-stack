@@ -8,54 +8,80 @@ $(document).ready(function () {
   d3.csv('/datasets/suspicious-activity/test.csv', function(data) {
     data.forEach(d => { d.Lat = +d.Lat; d.Long = +d.Long; });
 
-    let visibleMarkers = [];
+    let all_markers = [];
 
     let icon = new L.Icon.Default();
     icon.options.shadowSize = [0,0];
 
     data.forEach(d => {
       let m = L.marker([d.Lat, d.Long], {icon: icon}).addTo(map);
-      visibleMarkers.push({
+      all_markers.push({
         marker: m,
         data: d
       });
     });
 
-    $('#myselect').change(function () {
+    // all_markers.forEach(m => {
+    //   $(m.marker._icon).hide();
+    // })
+
+    $('#gender_select').change(function () {
       console.log($(this).value);
     });
 
-    document.getElementById('myselect').addEventListener('change', function(e) {
-      let val = e.target.value;
+    let gender = "all";
+    let race = "all";
+    let age_lower = 1000;
+    let age_upper = 1000;
 
-      visibleMarkers.forEach(m => {
-        if (m.data.Sex.toLowerCase() !== val) {
-          $(m.marker._icon).hide();
+    document.querySelectorAll('select').forEach(s => {
+      s.addEventListener('change', function(e) {
+        let sel = e.target.id;
+        let val = e.target.value;
+        if (sel == "gender_select") {
+          gender = val;
         }
+        else if (sel == "race_select") {
+          race = val;
+        }
+        else if (sel == "age_select") {
+          switch (Number(val)) {
+            case 0:
+              age_lower = 0;
+              age_upper = 20;
+              break;
+            case 1:
+              age_lower = 21;
+              age_upper = 40;
+              break;
+            case 2:
+              age_lower = 41;
+              age_upper = 65;
+              break;
+            case 3:
+              age_lower = 65;
+              age_upper = 100;
+              break;
+            case 4:
+              age_lower = 1000;
+              age_upper = 1000;
+              break;
+          }
+        }
+        all_markers.forEach(m => {
+          console.log(Number(m.data.Age));
+          if ((m.data.Sex.toLowerCase() == gender || gender == "all") &&
+              (m.data.Race == race || race == "all") &&
+              ((Number(m.data.Age) >= age_lower && Number(m.data.Age) <= age_upper) || age_lower == 1000)) {
+            $(m.marker._icon).show();
+          }
+          else {
+            $(m.marker._icon).hide();
+          }
+        })
       })
     })
-
-
-
   });
-  
-  // $('#myselect').change(function () {
-  //   $('.gender').hide();
-  //   $('#'+$(this).val()).show();
-  //   var gender = $(this);
-  //   d3.csv('/datasets/suspicious-activity/test.csv', function(data) {
-  //     data.forEach(function(d) {
-  //       //convert to numbers
-  //       d.Lat = +d.Lat;
-  //       d.Long = +d.Long;
-  //     });
-  //     for (i = 0; i < data.length; i++) {
-  //       if (data[i].Sex == gender.text()) {
-  //         L.marker([data[i].Lat, data[i].Long]).addTo(map);
-  //       }
-  //     }
-  //   });
-  // })
 });
 
 //Graph
