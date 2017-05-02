@@ -14,9 +14,27 @@ scripts:
   - //ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js
   - /js/posts/suspicious-activity/app.js
 ---
-<select id="myselect">
+<select id="gender_select">
+  <option value="all">All</option>
   <option value="male">Male</option>
   <option value="female">Female</option>
+</select>
+<select id="race_select">
+  <option value="all">All</option>
+  <option value="I">Indian</option>
+  <option value="W">White</option>
+  <option value="B">Black</option>
+  <option value="H">H</option>
+  <option value="C">Chinese</option>
+  <option value="O">O</option>
+  <option value="A">A</option>
+</select>
+<select id="age_select">
+  <option value="4">All</option>
+  <option value="0">Under 20</option>
+  <option value="1">21-40</option>
+  <option value="2">41-65</option>
+  <option value="3">65+</option>
 </select>
 
 <div id="map" style="height: 400px;"></div>
