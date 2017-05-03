@@ -50,7 +50,7 @@ function formatCSV(data, baseString) {
         case 'Punishment': type = d.Punishment; break;
       }
 
-      let row = BASE + '.' + type + '.' + c.toLowerCase() + ',' + total + '\n';
+      let row = BASE + '.' + type + '.' + c + ',' + total + '\n';
       console.log(row);
       ret += row;
     })

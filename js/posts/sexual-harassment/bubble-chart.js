@@ -124,16 +124,16 @@ function fillTooltip (d) {
   // SCHOOL NAME
   html += "<div class='left'><h1><b><u>";
   switch (d.class) {
-    case 'ucla': html += 'UC Los Angeles'; break;
-    case 'ucb': html += 'UC Berkeley'; break;
-    case 'ucm': html += 'UC Merced'; break;
-    case 'ucsd': html += 'UC San Diego'; break;
-    case 'ucsb': html += 'UC Santa Barbara'; break;
-    case 'ucsf': html += 'UC San Francisco'; break;
-    case 'ucd': html += 'UC Davis'; break;
-    case 'ucsc': html += 'UC Santa Cruz'; break;
-    case 'uci': html += 'UC Irvine'; break;
-    case 'ucr': html += 'UC Riverside'; break;
+    case 'UCLA': html += 'UC Los Angeles'; break;
+    case 'UCB': html += 'UC Berkeley'; break;
+    case 'UCM': html += 'UC Merced'; break;
+    case 'UCSD': html += 'UC San Diego'; break;
+    case 'UCSB': html += 'UC Santa Barbara'; break;
+    case 'UCSF': html += 'UC San Francisco'; break;
+    case 'UCD': html += 'UC Davis'; break;
+    case 'UCSC': html += 'UC Santa Cruz'; break;
+    case 'UCI': html += 'UC Irvine'; break;
+    case 'UCR': html += 'UC Riverside'; break;
   }
   html += '</u></b></h1>';
 
