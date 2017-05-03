@@ -46,7 +46,13 @@ function initBubbleChart(csvURI) {
                     this.style.opacity = 0.7;
                     var re = new RegExp('^' + d.package + '.*');
                     d3.selectAll('.node').style('transition', '.5s').style('opacity', function (d) {
-                      if (re.test(d.id)) { return 1; } else { d3.select(this).selectAll('text').style('opacity', 0); return 0.5; }
+                      if (re.test(d.id)) { return 1; } 
+                      else { 
+                        d3.select(this)
+                          .selectAll('text')
+                          .style('transition', '.5s')
+                          .style('opacity', 0); return 0.5;
+                      }
                     });
                     tooltip.html(fillTooltip(d))
                            .style('display', 'inline')
