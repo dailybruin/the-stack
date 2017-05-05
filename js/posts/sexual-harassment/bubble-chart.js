@@ -30,8 +30,6 @@ function initBubbleChart(csvURI) {
                     d.package = id.slice(0, i);
                     var j = id.indexOf(".");
                     d.position = id.slice(j + 1, i);
-                    console.log("Position:");
-                    console.log(d.position);
                     d.class = id.slice(i + 1);
                     d.classnposition = d.class + " " + d.position;
                   }
@@ -105,8 +103,6 @@ function wrap(text, width) {
         dy = parseFloat(text.attr("dy")),
         tspan = text.text(null).append("tspan").attr("x", 0).attr("y", y).attr("dy", dy + "em");
     while (word = words.pop()) {
-      console.log(word);
-      console.log(d.r);
       line.push(word);
       tspan.text(line.join(" "));
       if (tspan.node().getComputedTextLength() > d.r * 1.75) {

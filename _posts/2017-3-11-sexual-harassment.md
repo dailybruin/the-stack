@@ -5,6 +5,7 @@ scripts:
     - //d3js.org/d3.v4.min.js
     - /js/posts/sexual-harassment/app.js
     - /js/posts/sexual-harassment/bubble-chart.js
+    - /js/posts/sexual-harassment/table.js
 
 stylesheets:
     - /css/tooltip.css
@@ -19,3 +20,4 @@ stylesheets:
 <div class='bubble-chart-wrapper'>
   <svg width="640" height="640" id="bubble-chart"></svg>
 </div>
+<div class='table-wrapper'></div>

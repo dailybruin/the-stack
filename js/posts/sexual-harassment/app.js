@@ -16,6 +16,7 @@ d3.csv("/datasets/sexual-harassment/positions.csv", function(error, positionData
       dataList.push(encodedPunishmentData);
     
       initBubbleChart(encodedPositionData);
+      initTable(encodedPositionData);
 
     });
   });
@@ -51,7 +52,6 @@ function formatCSV(data, baseString) {
       }
 
       let row = BASE + '.' + type + '.' + c + ',' + total + '\n';
-      console.log(row);
       ret += row;
     })
   });
