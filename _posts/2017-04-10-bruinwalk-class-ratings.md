@@ -76,16 +76,16 @@ Only course and professor pairings with **15 or more** ratings were included whe
 
   <h2>Correlating rating criteria</h2>
 
-  <p>This won’t come as a surprise: <strong>students tend to rate easier classes more favorably overall</strong>. No courses rated easy (easiness rating above 3.50) were rated poorly overall (overall rating below 2.50).</p>
+  <p>This won’t come as a surprise: <strong>Students tend to rate easier classes more favorably overall</strong>. No courses rated easy (easiness rating above 3.50) were rated poorly overall (overall rating below 2.50).</p>
   
   <p>But students have also given high overall ratings to a substantial number of difficult courses. Difficult courses with high overall ratings occupy the upper left corner of the following scatter plot.</p>
 
   <h3>Students don’t assign low overall ratings to easy courses, but they rate many difficult courses favorably overall.</h3>
   <figure class="ratings-chart fullwidth" id="easiness-vs-overall"></figure>
 
-  <p>Students seem to prefer clear professors over easy courses. Courses with higher professor clarity ratings, or those with <strong>professors who are easier to understand</strong>, are more highly rated overall than courses with low clarity ratings. The clarity rating is the best predictor for students’ overall course satisfaction – its line of best fit has an r<sup>2</sup> value of 0.797.</p>
+  <p>Students seem to prefer clear professors over easy courses. Courses with higher professor clarity ratings, or those with <strong>professors who are easier to understand</strong>, are more highly rated overall than courses with low clarity ratings. The clarity rating is the best predictor for students’ overall course satisfaction – its line of best fit has an R<sup>2</sup> value of 0.797.</p>
   
-  <p>Professor clarity only narrowly beats out <strong>professor helpfulness</strong> in predicting a student’s overall course rating (r<sup>2</sup> = 0.703), but it signifcantly beats out both class easiness (r<sup>2</sup> = 0.185) and workload (r<sup>2</sup> = 0.182) ratings.</p>
+  <p>Professor clarity only narrowly beats out <strong>professor helpfulness</strong> in predicting a student’s overall course rating (R<sup>2</sup> = 0.703), but it signifcantly beats out both class easiness (R<sup>2</sup> = 0.185) and workload (R<sup>2</sup> = 0.182) ratings.</p>
 
   <h3>A professor’s clarity rating is the best predictor of a class’s overall rating.</h3>
   <figure class="ratings-chart fullwidth" id="clarity-vs-overall"></figure>
@@ -104,7 +104,7 @@ Find anything interesting we missed? Tweet us [@_thestack](https://twitter.com/_
 
 <div class="footnotes">
   <p>
-    <a id="cite-1" href="#cite-1">[1]:</a> Assumes an average of 3.5 courses taken per quarter. Does not factor in non-tuition fees. While many students pay less due to scholarships, financial aid, etc., many non-residents pay even more. <a href="http://www.ucla.edu/admission/affordability">http://www.ucla.edu/admission/affordability</a>
+    <a id="cite-1" href="#cite-1">[1]:</a> Assumes an average of 3.5 courses taken per quarter. Does not factor in nontuition fees. While many students pay less due to scholarships, financial aid, etc., many nonresidents pay even more. <a href="http://www.ucla.edu/admission/affordability">http://www.ucla.edu/admission/affordability</a>
   </p>
   <p>
     <a id="cite-2" href="#cite-2">[2]:</a> Assumes 5 hours per week in class, plus 5 hours per week for work done outside class.
