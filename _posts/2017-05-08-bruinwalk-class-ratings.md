@@ -5,7 +5,7 @@ authors:
   - harrison_liddiard
 key_takeaways:
   - Resident students pay up to $1,230 for each UCLA undergraduate course.
-  - Students seem to prefer classes with highly-rated professors than those as rated easy, according to data from Bruinwalk.com.
+  - Students seem to prefer classes with highly-rated professors than those rated as easy, according to data from Bruinwalk.com.
   - Students rarely award a low overall rating to an easy course, but they also rate many difficult courses favorably.
 featured_image:
     url: bruinwalk-class-ratings/featured_image.svg
