@@ -5,8 +5,8 @@ authors:
   - harrison_liddiard
 key_takeaways:
   - Resident students pay up to $1,230 for each UCLA undergraduate course.
-  - Students seem to prefer classes with highly-rated professors than those rated easy, according to data from Bruinwalk.com.
-  - Students don’t assign low overall ratings to easy courses, but do rate some difficult courses favorably overall.
+  - Students seem to prefer classes with highly-rated professors than those as rated easy, according to data from Bruinwalk.com.
+  - Students rarely award a low overall rating to an easy course, but they also rate many difficult courses favorably.
 featured_image:
     url: bruinwalk-class-ratings/featured_image.svg
 og_image: bruinwalk-class-ratings/featured_image.png
@@ -26,7 +26,7 @@ Our analysis of Bruinwalk ratings, sourced from thousands of students, can help 
 
 ## The data
 
-The data visualized below is sourced from **41,515 ratings** on [bruinwalk.com]((http://bruinwalk.com)) as of February 2017. Students rate each course and professor pairing on five criteria: overall, class easiness, workload, professor helpfulness and professor clarity.
+The data visualized below is sourced from **41,515 ratings** on [bruinwalk.com]((http://bruinwalk.com)) as of February 2017. Students rate each course and professor pairing on five criteria: overall rating, class easiness, workload, professor helpfulness and professor clarity.
 
 Only course and professor pairings with **15 or more** ratings were included when analyzing their *average* ratings. These comprise the **577 most-reviewed courses** on Bruinwalk, with a combined total of 14,534 ratings.
 
@@ -44,7 +44,7 @@ Only course and professor pairings with **15 or more** ratings were included whe
   <ratings-list :ratings="worstOverall" rating-type="overall_rating" 
                 id="worst-overall"></ratings-list>
 
-  <p>The most common overall rating awarded is a <strong>4</strong>, which accounts for <strong>33.8 percent</strong> of all ratings. This skews the distribution toward the higher end, away from the expected average of 2.5. </p>
+  <p>The most common overall rating students award is a <strong>4</strong>, which accounts for <strong>33.8 percent</strong> of all ratings. This skews the distribution toward the higher end, away from the expected average of 2.5. </p>
 
   <h3>Breakdown of overall ratings</h3>
   <figure class="ratings-chart" id="overall-ratings-count"></figure>
@@ -66,7 +66,9 @@ Only course and professor pairings with **15 or more** ratings were included whe
   <ratings-list :ratings="hardest" rating-type="easiness_rating" 
                 id="hardest"></ratings-list>
 
-  <p>Students have rated more courses as difficult than easy. Eleven courses have a 1.00 average, the most difficult rating, while only six courses have ratings above 4.00. The most common rating awarded is a <strong>2</strong>, which accounts for <strong>39.2 percent</strong> of easiness ratings.</p>
+  <p>Students have rated more courses as difficult than easy. Of the courses with 15 or more ratings, eleven have a 1.00 average, the most difficult rating. Only six of these courses have ratings above 4.00.</p>
+  
+  <p>The most common rating students award is a <strong>2</strong>, which accounts for <strong>39.2 percent</strong> of all easiness ratings.</p>
   
   <h3>Breakdown of easiness ratings</h3>
   <figure class="ratings-chart" id="easiness-ratings-count"></figure>
@@ -80,7 +82,7 @@ Only course and professor pairings with **15 or more** ratings were included whe
   
   <p>But students have also given high overall ratings to a substantial number of difficult courses. Difficult courses with high overall ratings occupy the upper left corner of the following scatter plot.</p>
 
-  <h3>Students don’t assign low overall ratings to easy courses, but they rate many difficult courses favorably overall.</h3>
+  <h3>Students rarely award a low overall rating to an easy course, but they also rate many difficult courses favorably.</h3>
   <figure class="ratings-chart fullwidth" id="easiness-vs-overall"></figure>
 
   <p>Students seem to prefer clear professors over easy courses. Courses with higher professor clarity ratings, or those with <strong>professors who are easier to understand</strong>, are more highly rated overall than courses with low clarity ratings. The clarity rating is the best predictor for students’ overall course satisfaction – its line of best fit has an R<sup>2</sup> value of 0.797.</p>
