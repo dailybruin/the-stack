@@ -14,7 +14,7 @@ d3.csv("/datasets/sexual-harassment/positions.csv", function(error, positionData
       dataList.push(encodedPositionData);
       dataList.push(encodedGenderData);
       dataList.push(encodedPunishmentData);
-    
+
       initBubbleChart(encodedPositionData);
       initTable(encodedPositionData);
 
@@ -22,13 +22,19 @@ d3.csv("/datasets/sexual-harassment/positions.csv", function(error, positionData
   });
 });
 
-// bubbleChartDropdown - invokes update function
+// bubbleChartDropdown - invokes update of bubble chart
 var select = document.getElementById('bubbleChartDropdown')
 select.addEventListener("change", () => {
   updateBubbleChart(select.value);
 })
 
-// initialize tooltip
+// tableDropdown - invokes update of table
+var select = document.getElementById('tableDropdown')
+select.addEventListener('change', () => {
+  updateTable(select.value)
+})
+
+// initialize bubble tooltip
 var tooltip = d3.select('.bubble-chart-wrapper')
                 .append('div')
                 .attr('class', 'tooltip')

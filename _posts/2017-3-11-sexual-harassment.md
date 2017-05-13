@@ -20,4 +20,10 @@ stylesheets:
 <div class='bubble-chart-wrapper'>
   <svg width="640" height="640" id="bubble-chart"></svg>
 </div>
+
+<select style='margin:0 auto; display: flex; width: 200px; height: 3em;' id='tableDropdown'>
+  <option value='0'>POSITIONS</option>
+  <option value='1'>GENDERS</option>
+  <option value='2'>PUNISHMENTS</option>
+</select>
 <div class='table-wrapper'></div>
