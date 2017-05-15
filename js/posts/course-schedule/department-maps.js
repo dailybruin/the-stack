@@ -6,21 +6,58 @@ L.tileLayer('https://api.mapbox.com/styles/v1/mapbox/streets-v10/tiles/256/{z}/{
 }).addTo(mymap);
 
 var courses;
-var markers = [];
+var markerGroup = L.layerGroup().addTo(mymap);
 
-d3.json('/datasets/course-schedule/department-map-data.json', function(data){
+d3.json('/datasets/course-schedule/department-map-data_2.json', function(data){
     courses = data;
 
-    var current = data[0]['Computer Science'];
+    var current = data['Computer Science'];
 
-    for(var i = 0; i < current.length; i++){
-        var marker = L.marker([current[i]['lat'][0], current[i]['long'][0]], {
-            icon:	new L.NumberedDivIcon({number: current[i]['n_class'][0]})
-        }).addTo(mymap).bindPopup(current[i]['building'][0]).openPopup();
-        markers.push(marker);
-        console.log(current[i]);
+    var marker = L.marker([current[0]['lat'][0], current[0]['long'][0]], {
+        icon:	new L.NumberedDivIcon()
+    }).addTo(markerGroup).bindPopup(current[0]['building'][0]);
+
+
+    for(var i = 1; i < current.length; i++){
+        marker = L.marker([current[i]['lat'][0], current[i]['long'][0]], {
+            icon:	new L.NumberedDivIcon({number: current[i]['class_pct'][0]})
+        }).addTo(markerGroup).bindPopup(current[i]['building'][0]);
     }
-    console.log(data[0]['Computer Science'])
+
+    const subjects = Object.keys(data), defaultDepartment = 'Computer Science';
+    console.log(subjects);
+
+    d3.select('#pick-department')
+        .on('change', e => pickDepartment(data))
+
+    .selectAll('option')
+        .data(subjects)
+        .enter()
+        .append('option')
+        .property('selected', d => d == defaultDepartment)
+    .text(d => d)
+    .attr('value', (d, i) => i);
 });
 
-const defaultDepartment = 'Anthropology';
+function pickDepartment(data){
+    var dept = $('#pick-department option:selected').text();
+    var current = data[dept];
+
+    mymap.removeLayer(markerGroup);
+    markerGroup = L.layerGroup().addTo(mymap);
+
+    var marker = L.marker([current[0]['lat'][0], current[0]['long'][0]], {
+        icon:	new L.NumberedDivIcon()
+    }).addTo(markerGroup).bindPopup(current[0]['building'][0]);
+
+    for(var i = 1; i < current.length; i++){
+        marker = L.marker([current[i]['lat'][0], current[i]['long'][0]], {
+            icon:	new L.NumberedDivIcon({number: current[i]['class_pct'][0]})
+        }).addTo(markerGroup).bindPopup(current[i]['building'][0]);
+    }
+}
+
+
+
+
+
