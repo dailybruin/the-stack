@@ -1,10 +1,10 @@
 L.NumberedDivIcon = L.Icon.extend({
     options: {
-        iconUrl: 'http://www.charliecroom.com/marker_hole.png',
+        iconUrl: 'http://i.imgur.com/hIDLvAW.png',
         number: '',
         shadowUrl: null,
         iconSize: new L.Point(25, 41),
-        iconAnchor: new L.Point(13, 41),
+        iconAnchor: new L.Point(32, 64),
         popupAnchor: new L.Point(0, -33),
         className: 'leaflet-div-icon'
     },

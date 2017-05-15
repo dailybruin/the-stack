@@ -20,5 +20,12 @@ scripts:
     - /js/posts/course-schedule/numbered-markers.js
     - /js/posts/course-schedule/department-maps.js
 ---
+
+<div class='ui grid centered'>
+  <div class='row'>
+    <select class="ui search selection dropdown" id="pick-department"></select>
+  </div>
+</div>
  
 <div id="mapid"></div>
+
