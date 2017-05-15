@@ -1,17 +1,22 @@
 //Map
 L.mapbox.accessToken = 'pk.eyJ1IjoiYmVuc29uaGFuIiwiYSI6ImNpdW4wc2V3NzAwZzAydG13eTB6bDdrdGMifQ.3qVecRB6mpgc1X-pURkDng';
+L.MakiMarkers.accessToken = "pk.eyJ1IjoiYmVuc29uaGFuIiwiYSI6ImNpdW4wc2V3NzAwZzAydG13eTB6bDdrdGMifQ.3qVecRB6mpgc1X-pURkDng";
 var map = L.mapbox.map('map', 'mapbox.light')
   .setView([34.0689, -118.442], 12);
 
 $(document).ready(function () {
   d3.csv('/datasets/suspicious-activity/suspicious.csv', function(data) {
 
-
     data.forEach(d => { d.Lat = +d.Lat; d.Long = +d.Long; });
 
     let all_markers = [];
 
-    let icon = new L.Icon.Default();
+    let icon = new L.MakiMarkers.Icon({
+      // icon: "marker", 
+      color: "#4169e1",
+      size: "m"
+    });
+
     icon.options.shadowSize = [0,0];
 
     data.forEach(d => {
@@ -82,18 +87,48 @@ $(document).ready(function () {
       })
     })
     initBarChart(data);
+  });
 
-    document.getElementById('myselect').addEventListener('change', function(e) {
-      let val = e.target.value;
+  d3.csv('/datasets/suspicious-activity/arrests_loc.csv', function(data) {
+    data.forEach(d => { 
+      d.Lat = +d.Lat; d.Long = +d.Long; 
+    });
 
-      visibleMarkers.forEach(m => {
+    let all_markers = [];
 
-        if (m.data.Sex.toLowerCase() !== val) {
-          $(m.marker._icon).hide(); // add class "hidden"
-          // $('.hidden').show();
-        }
+    let icon = new L.MakiMarkers.Icon({
+      // icon: "marker", 
+      color: "#ff4040", 
+      size: "m"
+    });
+    icon.options.shadowSize = [0,0];
+
+    data.forEach(d => {
+      let m = L.marker([d.Lat, d.Long], {icon: icon}).addTo(map);
+
+      all_markers.push({
+        marker: m,
+        data: d
       });
     });
+
+    // map.addLayer({
+    //   "id": "markers",
+    //   "type": "symbol",
+    //   "source": "markers",
+    //   "layout": {
+    //       "icon-image": "{marker-symbol}-15",
+    //       "text-field": "{title}",
+    //       "text-font": ["Open Sans Semibold", "Arial Unicode MS Bold"],
+    //       "text-offset": [0, 0.6],
+    //       "text-anchor": "top"
+    //   },
+    //   "paint": {
+    //       "text-size": 12,
+    //       "icon-color" : "#ff0000"
+    //   }
+    // });
+    
   });
 });
 

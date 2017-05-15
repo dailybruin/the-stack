@@ -12,6 +12,7 @@ scripts:
   - //maps.googleapis.com/maps/api/js?key=AIzaSyBddbV3QvkJbOe-s1dbPXrxWV1Sy4z8nR0"
   - //api.mapbox.com/mapbox.js/plugins/turf/v2.0.2/turf.min.js
   - //ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js
+  - /js/posts/suspicious-activity/Leaflet.MakiMarkers.js
   - /js/posts/suspicious-activity/app.js
 ---
 <select id="gender_select">
