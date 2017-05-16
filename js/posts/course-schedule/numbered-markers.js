@@ -1,11 +1,10 @@
 L.NumberedDivIcon = L.Icon.extend({
     options: {
-        iconUrl: 'http://i.imgur.com/hIDLvAW.png',
+        iconUrl: '/img/posts/course-schedule/numbered-icon2.png',
         number: '',
-        shadowUrl: null,
-        iconSize: new L.Point(25, 41),
-        iconAnchor: new L.Point(32, 64),
-        popupAnchor: new L.Point(0, -33),
+        iconSize: [25, 60],
+        iconAnchor: [32, 64],
+        popupAnchor: [0, -33],
         className: 'leaflet-div-icon'
     },
 
@@ -19,10 +18,6 @@ L.NumberedDivIcon = L.Icon.extend({
         div.appendChild ( numdiv );
         this._setIconStyles(div, 'icon');
         return div;
-    },
-
-    //you could change this to add a shadow like in the normal marker if you really wanted
-    createShadow: function () {
-        return null;
     }
+
 });
