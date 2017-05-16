@@ -1,9 +1,9 @@
 L.NumberedDivIcon = L.Icon.extend({
     options: {
-        iconUrl: '/img/posts/course-schedule/numbered-icon2.png',
+        iconUrl: '/img/posts/course-schedule/numbered-icon.png',
         number: '',
-        iconSize: [25, 60],
-        iconAnchor: [32, 64],
+        iconSize: [84, 84],
+        iconAnchor: [42, 66],
         popupAnchor: [0, -33],
         className: 'leaflet-div-icon'
     },

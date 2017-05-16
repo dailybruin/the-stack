@@ -5,10 +5,10 @@
 
 .leaflet-marker-icon .number{
     position: relative;
-    bottom: 50px;
-    left: 20px;
+    bottom: 70px;
+    left: 25px;
     font-size: 12px;
-    width: 25px;
+    width: 30px;
     text-align: center;
 }
 
