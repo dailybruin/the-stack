@@ -10,7 +10,7 @@ var markerGroup = L.layerGroup().addTo(mymap);
 d3.json('/datasets/course-schedule/department-map-data.json', function(data){
     const subjects = Object.keys(data), defaultDepartment = 'Computer Science';
 
-    d3.select('#pick-department')
+    d3.select('#pick-department-map')
         .on('change', e => pickDepartment(data))
     .selectAll('option')
         .data(subjects)
@@ -24,7 +24,7 @@ d3.json('/datasets/course-schedule/department-map-data.json', function(data){
 });
 
 function pickDepartment(data){
-    var dept = $('#pick-department option:selected').text();
+    var dept = $('#pick-department-map option:selected').text();
     var current = data[dept];
 
     mymap.removeLayer(markerGroup);
@@ -38,7 +38,7 @@ function pickDepartment(data){
         popup += "Number of students: "  + current[i]['student_cnt'] + " (" + current[i]['student_pct'] + ")";
 
         marker = L.marker([current[i]['lat'][0], current[i]['long'][0]], {
-            icon:	new L.NumberedDivIcon({number: current[i]['class_pct'][0]})
+            icon:	new L.NumberedDivIcon({number: current[i]['building_code'][0] + "<br>" + current[i]['class_pct'][0]})
         }).addTo(markerGroup).bindPopup(popup);
     }
 

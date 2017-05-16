@@ -21,6 +21,7 @@ scripts:
     - /js/posts/course-schedule/numbered-markers.js
     - /js/posts/course-schedule/center-marker.js
     - /js/posts/course-schedule/department-maps.js
+    - /js/posts/course-schedule/department-time.js
 ---
 
 
@@ -30,7 +31,7 @@ Pick a department to see the distribution of that department's classes around ca
 
 **Note:** Percentages may not add to 100% as those <1% are excluded from the map.
 
-<select class="ui search selection dropdown" id="pick-department"></select>
+<select class="ui search selection dropdown" id="pick-department-map"></select>
  
 <div id="mapid"></div>
 
@@ -39,4 +40,13 @@ Pick a department to see the distribution of that department's classes around ca
 Using the latitude values of the center of each department calculated from the previous section,
 we can now rank each department on how north or south campus-y it really is. The values range from
 -1 (most south campus) to +1 (most north campus), with Bruin Walk being the origin.
+
+# When are the classes for my department held?
+Pick a department to see the hourly distribution of that department's classes within the day.
+
+<select class="ui search selection dropdown" id="pick-department-time"></select>
+<br>
+
+<img src="" id="department-time-graph">
+
 
