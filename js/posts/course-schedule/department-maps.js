@@ -5,31 +5,13 @@ L.tileLayer('https://api.mapbox.com/styles/v1/mapbox/streets-v10/tiles/256/{z}/{
     maxZoom: 18
 }).addTo(mymap);
 
-var courses;
 var markerGroup = L.layerGroup().addTo(mymap);
 
-d3.json('/datasets/course-schedule/department-map-data_2.json', function(data){
-    courses = data;
-
-    var current = data['Computer Science'];
-
-    var marker = L.marker([current[0]['lat'][0], current[0]['long'][0]], {
-        icon:	new L.NumberedDivIcon()
-    }).addTo(markerGroup).bindPopup(current[0]['building'][0]);
-
-
-    for(var i = 1; i < current.length; i++){
-        marker = L.marker([current[i]['lat'][0], current[i]['long'][0]], {
-            icon:	new L.NumberedDivIcon({number: current[i]['class_pct'][0]})
-        }).addTo(markerGroup).bindPopup(current[i]['building'][0]);
-    }
-
+d3.json('/datasets/course-schedule/department-map-data.json', function(data){
     const subjects = Object.keys(data), defaultDepartment = 'Computer Science';
-    console.log(subjects);
 
     d3.select('#pick-department')
         .on('change', e => pickDepartment(data))
-
     .selectAll('option')
         .data(subjects)
         .enter()
@@ -37,6 +19,8 @@ d3.json('/datasets/course-schedule/department-map-data_2.json', function(data){
         .property('selected', d => d == defaultDepartment)
     .text(d => d)
     .attr('value', (d, i) => i);
+
+    pickDepartment(data);
 });
 
 function pickDepartment(data){
@@ -46,15 +30,23 @@ function pickDepartment(data){
     mymap.removeLayer(markerGroup);
     markerGroup = L.layerGroup().addTo(mymap);
 
-    var marker = L.marker([current[0]['lat'][0], current[0]['long'][0]], {
-        icon:	new L.NumberedDivIcon()
-    }).addTo(markerGroup).bindPopup(current[0]['building'][0]);
+    mymap.setView(new L.LatLng(current[0]['lat'][0], current[0]['long'][0]), 17);
 
     for(var i = 1; i < current.length; i++){
+        var popup = "<b>" + current[i]['building'][0] + '</b><br>';
+        popup += "Number of classes: " + current[i]['class_cnt'] + " (" + current[i]['class_pct'] + ")<br>";
+        popup += "Number of students: "  + current[i]['student_cnt'] + " (" + current[i]['student_pct'] + ")";
+
         marker = L.marker([current[i]['lat'][0], current[i]['long'][0]], {
             icon:	new L.NumberedDivIcon({number: current[i]['class_pct'][0]})
-        }).addTo(markerGroup).bindPopup(current[i]['building'][0]);
+        }).addTo(markerGroup).bindPopup(popup);
     }
+
+    // center
+    var marker = L.marker([current[0]['lat'][0], current[0]['long'][0]], {
+        icon: centerIcon,
+        opacity: 0.7
+    }).addTo(markerGroup).bindPopup(current[0]['building'][0]);
 }
 
 

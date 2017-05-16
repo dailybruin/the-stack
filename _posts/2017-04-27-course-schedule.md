@@ -10,6 +10,7 @@ og_image: department-similarity/pair-similarity.png
 stylesheets:
     - //api.mapbox.com/mapbox-gl-js/v0.36.0/mapbox-gl.css
     - //unpkg.com/leaflet@1.0.3/dist/leaflet.css
+    - /css/posts/course-schedule/dropdown.min.css
     - /css/posts/course-schedule/app.css
 scripts:
     - /js/lib/jquery-3.1.1.min.js
@@ -18,14 +19,24 @@ scripts:
     - //api.mapbox.com/mapbox-gl-js/v0.36.0/mapbox-gl.js
     - //unpkg.com/leaflet@1.0.3/dist/leaflet.js
     - /js/posts/course-schedule/numbered-markers.js
+    - /js/posts/course-schedule/center-marker.js
     - /js/posts/course-schedule/department-maps.js
 ---
 
-<div class='ui grid centered'>
-  <div class='row'>
-    <select class="ui search selection dropdown" id="pick-department"></select>
-  </div>
-</div>
+
+
+# Where are the classes located for my department?
+Pick a department to see the distribution of that department's classes around campus.
+
+**Note:** Percentages may not add to 100% as those <1% are excluded from the map.
+
+<select class="ui search selection dropdown" id="pick-department"></select>
  
 <div id="mapid"></div>
+
+# How north or south campus-y is my department?
+
+Using the latitude values of the center of each department calculated from the previous section,
+we can now rank each department on how north or south campus-y it really is. The values range from
+-1 (most south campus) to +1 (most north campus), with Bruin Walk being the origin.
 
