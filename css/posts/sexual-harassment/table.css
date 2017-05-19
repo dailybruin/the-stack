@@ -1,0 +1,22 @@
+table {
+  width: 100%;
+}
+
+thead {
+  vertical-align: top;
+}
+
+th {
+	font-weight: bold;
+	cursor: s-resize;
+  color: white;
+  background-color: #333;
+}
+
+tr:nth-of-type(odd) {
+  background: #eee;
+}
+
+td, th {
+  border: 1px solid #ccc;
+}
