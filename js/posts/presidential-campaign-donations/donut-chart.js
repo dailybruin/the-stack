@@ -167,7 +167,7 @@ d3.json("/datasets/presidential-campaign-donations/result.json", function(error,
 
         var h = '<b style="width: 100%; border-bottom: 2px solid ' + colorScale(i) + ';">' + d.data["name"].toUpperCase() + '</b><br><br><p style="width:100%; background-color: yellow;"><b>TOTAL: </b>$' + numberWithCommas(Math.round(d.data["colleges_total"])) + '</p><br>';
 
-        for (var j = 0; j < d.data.jobs.length; j++) { 
+        for (var j = 0; j < d.data.jobs.length; j++) {
           h += '<b>' + (d.data.jobs[j]["title"] + "</b>: $" + numberWithCommas(Math.round(d.data.jobs[j]["total"])) + "</br>");
         }
 

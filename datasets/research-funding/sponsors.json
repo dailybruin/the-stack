@@ -1,0 +1,161 @@
+[
+  {
+    "year" : 2015,
+    "total" : 1033159101,
+    "sponsors" : [
+      {
+        "name" : "Federal Government",
+        "total": 624347937
+      },
+      {
+        "name" : "Business & For-Profit",
+        "total" : 100110899
+
+      },
+      {
+        "name" : "State & Other Government",
+        "total" : 112394526
+      },
+      {
+        "name" : "Higher Education",
+        "total" : 73557417
+      },
+      {
+        "name" : "Charitable & Non-Profit Organizations",
+        "total" : 122748322
+      }
+    ]
+  },
+  {
+    "year" : 2014,
+    "total" : 972467059,
+    "sponsors" : [
+      {
+        "name" : "Federal Government",
+        "total": 572103673
+      },
+      {
+        "name" : "Business & For-Profit",
+        "total" : 85884367
+
+      },
+      {
+        "name" : "State & Other Government",
+        "total" : 142141893
+      },
+      {
+        "name" : "Higher Education",
+        "total" : 67187721
+      },
+      {
+        "name" : "Charitable & Non-Profit Organizations",
+        "total" : 105149405
+      }
+    ]
+  },
+  {
+    "year" : 2013,
+    "total" : 893603316,
+    "sponsors" : [
+      {
+        "name" : "Federal Government",
+        "total": 538518759
+      },
+      {
+        "name" : "Business & For-Profit",
+        "total" : 78756173
+
+      },
+      {
+        "name" : "State & Other Government",
+        "total" : 102951501
+      },
+      {
+        "name" : "Higher Education",
+        "total" : 68583133
+      },
+      {
+        "name" : "Charitable & Non-Profit Organizations",
+        "total" : 104793750
+      }
+    ]
+  },
+  {
+    "year" : 2012,
+    "total" : 1011808031,
+    "sponsors" : [
+      {
+        "name" : "Federal Government",
+        "total": 674261057
+      },
+      {
+        "name" : "Business & For-Profit",
+        "total" : 92107880
+      },
+      {
+        "name" : "State & Other Government",
+        "total" : 84561959
+      },
+      {
+        "name" : "Higher Education",
+        "total" : 67611177
+      },
+      {
+        "name" : "Charitable & Non-Profit Organizations",
+        "total" : 93265958
+      }
+    ]
+  },
+  {
+    "year" : 2011,
+    "total" : 1077641319,
+    "sponsors" : [
+      {
+        "name" : "Federal Government",
+        "total": 752860695
+      },
+      {
+        "name" : "Business & For-Profit",
+        "total" : 63473413
+      },
+      {
+        "name" : "State & Other Government",
+        "total" : 100873876
+      },
+      {
+        "name" : "Higher Education",
+        "total" : 66639839
+      },
+      {
+        "name" : "Charitable & Non-Profit Organizations",
+        "total" : 93793496
+      }
+    ]
+  },
+  {
+    "year" : 2010,
+    "total" : 1046010017,
+    "sponsors" : [
+      {
+        "name" : "Federal Government",
+        "total": 707022707
+      },
+      {
+        "name" : "Business & For-Profit",
+        "total" : 58293077
+      },
+      {
+        "name" : "State & Other Government",
+        "total" : 102061532
+      },
+      {
+        "name" : "Higher Education",
+        "total" : 60112029
+      },
+      {
+        "name" : "Charitable & Non-Profit Organizations",
+        "total" : 118520672
+      }
+    ]
+  }
+]

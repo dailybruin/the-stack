@@ -7,7 +7,7 @@
   <meta name="description" content="{% if page.teaser %}{{ page.teaser | strip_html }}{% else %}{{ site.meta_description }}{% endif %}" />
 
   <!-- Open Graph -->
-  <meta property="og:title" content="{% if page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}" />
+  <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}" />
   <meta property="og:type" content="{% if page.title %}article{% else %}website{% endif %}" />
   <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
   <meta property="og:image" content="{% if page.og_image %}{{ site.url }}{{ site.image_url }}/{{ page.og_image }}{% else %}{{ site.url }}/img/nameplate@2x.png{% endif %}" />
