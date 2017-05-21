@@ -44,8 +44,8 @@ function initBubbleChart(csvURI) {
                     this.style.opacity = 0.7;
                     var re = new RegExp('^' + d.package + '.*');
                     d3.selectAll('.node').style('transition', '.5s').style('opacity', function (d) {
-                      if (re.test(d.id)) { return 1; } 
-                      else { 
+                      if (re.test(d.id)) { return 1; }
+                      else {
                         d3.select(this)
                           .selectAll('text')
                           .style('transition', '.5s')
@@ -122,7 +122,7 @@ function updateBubbleChart (value) {
 
 function fillTooltip (d) {
   var html = '';
-  
+
   // SCHOOL NAME
   html += "<div class='left'><h1><b><u>";
   switch (d.class) {
@@ -143,13 +143,13 @@ function fillTooltip (d) {
   html += "<p>";
   html += d.package.split('.')[1];
   html += '</p>';
-  
+
   // NUMBER OF PEOPLE
   var numberOfPeople = +d.value;
   html += '<p>';
   html += numberOfPeople + ' People'
   html += '</p></div>';
-  
+
   // PERCENTAGE
   html += "<div class='right'><span class='percentage'>"
   var totalPeopleInClass = 0;

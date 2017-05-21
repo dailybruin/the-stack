@@ -42,7 +42,10 @@ function initTable(csvURI) {
       })
 
       var sortAscending = true;
-      var table = d3.select('.table-wrapper').append('table');
+      var table = d3.select('.table-wrapper')
+                    .append('table')
+                    .attr('cellspacing', 0) // controls spacing of cells
+                    .attr('cellpadding', 5) // controls padding of cells
 
       // appends column headers to table
       var headers = table.append('thead')

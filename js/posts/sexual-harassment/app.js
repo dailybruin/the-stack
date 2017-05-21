@@ -23,15 +23,15 @@ d3.csv("/datasets/sexual-harassment/positions.csv", function(error, positionData
 });
 
 // bubbleChartDropdown - invokes update of bubble chart
-var select = document.getElementById('bubbleChartDropdown')
-select.addEventListener("change", () => {
-  updateBubbleChart(select.value);
+var bubbleChartSelect = document.getElementById('bubbleChartDropdown')
+bubbleChartSelect.addEventListener("change", () => {
+  updateBubbleChart(bubbleChartSelect.value);
 })
 
 // tableDropdown - invokes update of table
-var select = document.getElementById('tableDropdown')
-select.addEventListener('change', () => {
-  updateTable(select.value)
+var tableSelect = document.getElementById('tableDropdown')
+tableSelect.addEventListener('change', () => {
+  updateTable(tableSelect.value)
 })
 
 // initialize bubble tooltip
