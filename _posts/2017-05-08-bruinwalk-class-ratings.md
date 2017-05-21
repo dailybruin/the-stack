@@ -1,6 +1,6 @@
 ---
 title: The 25 best and worst UCLA classes, according to students
-teaser: Bruinwalk data shows which classes students recommend, and which they warn against
+teaser: Bruinwalk data reveals the classes students most recommend, and the ones they most criticize
 authors:
   - harrison_liddiard
 key_takeaways:
