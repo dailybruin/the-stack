@@ -54,7 +54,12 @@ function initTable(csvURI) {
                         .data(titles)
                         .enter()
                         .append('th')
-                        .text(d => d)
+                        .text(d => {
+                            if (d === 'Medical Center and Related Personnel')
+                                return 'Medical Center'
+                            return d
+                        })
+                        .attr('title', d => d)
                         .on('click', function (d) {
                             headers.attr('class', 'header');
                             if (sortAscending) {

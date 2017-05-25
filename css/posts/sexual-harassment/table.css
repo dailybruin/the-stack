@@ -1,5 +1,15 @@
+.table-container {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.table-wrapper {
+    overflow-x: auto;
+}
+
 table {
-  width: 100%;
+  width: auto;
 }
 
 thead {
@@ -10,11 +20,11 @@ th {
 	font-weight: bold;
 	cursor: s-resize;
   color: white;
-  background-color: #333;
+  background-color: rgb(49, 130, 189);
 }
 
-tr:nth-of-type(odd) {
-  background: #eee;
+tr:nth-of-type(even) {
+  background: rgb(158, 202, 225);;
 }
 
 td, th {
