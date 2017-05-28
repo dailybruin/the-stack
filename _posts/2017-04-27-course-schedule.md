@@ -1,12 +1,12 @@
 ---
-title: Analyzing the distribution of classes by department, location, and time.
-teaser: Explore the relationships between 100 academic subjects as we use natural language processing algorithms to "read" course descriptions.  
+title: When and where do departments hold lectures?
+teaser: ...
 authors:
     - jerry_li
     - tyson_ni
 featured_image:
-    url: department-similarity/pair-similarity.png
-og_image: department-similarity/pair-similarity.png
+    url: course-schedule/map-screenshot.png
+og_image: course-schedule/map-screenshot.png
 stylesheets:
     - /css/posts/department-similarity/grid.min.css
     - /css/posts/department-similarity/container.min.css
@@ -79,7 +79,7 @@ we can now rank each department on how north or south campus-y it really is. The
 </div>
 
 
-# When are the classes for my department held?
+## When are the classes for my department held?
 
 All departments ...
 
