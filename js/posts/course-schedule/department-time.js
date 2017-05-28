@@ -1,5 +1,5 @@
 d3.json('/datasets/course-schedule/department-name-map.json', function(data){
-    const subjects = Object.keys(data).sort(), defaultDepartment = 'Computer Science';
+    const subjects = Object.keys(data).sort(), defaultDepartment = 'Anthropology';
 
     d3.select('#pick-department-time')
         .on('change', e => pickDepartmentTime(data))
