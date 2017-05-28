@@ -10,7 +10,7 @@ L.tileLayer('https://api.mapbox.com/styles/v1/mapbox/streets-v10/tiles/256/{z}/{
 var markerGroup = L.layerGroup().addTo(mymap);
 
 d3.json('/datasets/course-schedule/department-map-data.json', function(data){
-    const subjects = Object.keys(data), defaultDepartment = 'Computer Science';
+    const subjects = Object.keys(data), defaultDepartment = 'Anthropology';
 
     d3.select('#pick-department-map')
         .on('change', e => pickDepartment(data))
