@@ -27,13 +27,17 @@ scripts:
 
 
 # Where are the classes located for my department?
-Pick a department to see the distribution of that department's classes around campus.
+Pick a department to see the distribution of that department's classes around campus. You can click
+on each marker to see a more detailed breakdown of the percentages, including percentages that take into account class size.
 
-**Note:** Percentages may not add to 100% as those <1% are excluded from the map.
+The red and black circle indicates the weighed average location for that particular department.
 
-<select class="ui search selection dropdown" id="pick-department-map"></select>
- 
-<div id="mapid"></div>
+**Note:** Percentages may not add to 100% as those less than 1% are excluded from the map.
+
+<div id="course-location">
+    <select class="ui search selection dropdown" id="pick-department-map"></select>
+    <div id="mapid"></div>
+</div>
 
 # How north or south campus-y is my department?
 

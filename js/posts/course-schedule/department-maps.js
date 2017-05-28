@@ -1,4 +1,6 @@
-var mymap = L.map('mapid').setView([34.0711224,-118.4418554], 17);
+var mymap = L.map('mapid', {scrollWheelZoom: false}).setView([34.0711224,-118.4418554], 17);
+
+mymap.once('focus', function() { mymap.scrollWheelZoom.enable(); });
 
 L.tileLayer('https://api.mapbox.com/styles/v1/mapbox/streets-v10/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoiamVycnlsaW5ldyIsImEiOiJjajIwc2E1YXkwMmt6MzNuMXZnaWRjb2lhIn0.u0AHZNQd8_8hFmpaVvI1nQ', {
     attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
@@ -38,15 +40,16 @@ function pickDepartment(data){
         popup += "Number of students: "  + current[i]['student_cnt'] + " (" + current[i]['student_pct'] + ")";
 
         marker = L.marker([current[i]['lat'][0], current[i]['long'][0]], {
-            icon:	new L.NumberedDivIcon({number: current[i]['building_code'][0] + "<br>" + current[i]['class_pct'][0]})
+            icon:	new L.NumberedDivIcon({number: current[i]['building_code'][0] + "<br><b>" + current[i]['class_pct'][0] + "</b>"})
         }).addTo(markerGroup).bindPopup(popup);
     }
 
     // center
     var marker = L.marker([current[0]['lat'][0], current[0]['long'][0]], {
         icon: centerIcon,
-        opacity: 0.7
-    }).addTo(markerGroup).bindPopup(current[0]['building'][0]);
+        opacity: 0.7,
+        zIndexOffset: 1000
+    }).addTo(markerGroup);
 }
 
 

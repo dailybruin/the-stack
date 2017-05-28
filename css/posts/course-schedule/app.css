@@ -5,16 +5,28 @@
 
 .leaflet-marker-icon .number{
     position: relative;
-    bottom: 70px;
-    left: 25px;
-    font-size: 12px;
-    width: 30px;
+    bottom: 72px;
+    left: 12px;
+    font-size: 11px;
+    width: 60px;
     text-align: center;
 }
 
+.leaflet-marker-icon .number b {
+    font-size: 15px;
+    position: relative;
+    bottom: 3px;
+}
+
+#course-location{
+    height: 95vh;
+    width: 100%;
+}
+
 #mapid {
-    height: 600px;
-    width: 600px;
+    margin-top: 20px;
+    height: 80%;
+    width: 100%;
 }
 
 .dropdown {
