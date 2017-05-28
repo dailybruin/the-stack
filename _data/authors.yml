@@ -127,3 +127,10 @@ fay_wu:
     mug: Yes
     email: mfaywu@ucla.edu
     github: mfaywu
+jerry_li:
+    name: Jerry Li
+    title: Stack Developer
+    bio: Jerry
+    mug:
+    email: jerrylinew@ucla.edu
+    github: jerrylinew
