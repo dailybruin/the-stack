@@ -27,4 +27,6 @@ stylesheets:
   <option value='1'>GENDERS</option>
   <option value='2'>PUNISHMENTS</option>
 </select>
-<div class='table-wrapper'></div>
+<div class='table-container'>
+    <div class='table-wrapper'></div>
+</div>

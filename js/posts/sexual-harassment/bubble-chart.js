@@ -147,7 +147,10 @@ function fillTooltip (d) {
   // NUMBER OF PEOPLE
   var numberOfPeople = +d.value;
   html += '<p>';
-  html += numberOfPeople + ' People'
+  if (numberOfPeople === 1)
+    html += numberOfPeople + ' Person'
+  else
+    html += numberOfPeople + ' People'
   html += '</p></div>';
 
   // PERCENTAGE
