@@ -46,6 +46,7 @@ function initTable(csvURI) {
                     .append('table')
                     .attr('cellspacing', 0) // controls spacing of cells
                     .attr('cellpadding', 5) // controls padding of cells
+                    .attr('align', 'center')
 
       // appends column headers to table
       var headers = table.append('thead')
