@@ -18,7 +18,7 @@ stylesheets:
   <option value='1'>GENDERS</option>
   <option value='2'>PUNISHMENTS</option>
 </select>
-<div class='bubble-chart-wrapper'>
+<div class='bubble-chart-wrapper' style='text-align: center;'>
   <svg width="640" height="640" id="bubble-chart"></svg>
 </div>
 
@@ -28,5 +28,5 @@ stylesheets:
   <option value='2'>PUNISHMENTS</option>
 </select>
 <div class='table-container'>
-    <div class='table-wrapper'></div>
+    <div class='table-wrapper' style='display: block;'></div>
 </div>
