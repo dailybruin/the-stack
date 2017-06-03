@@ -29,6 +29,10 @@
     width: 100%;
 }
 
+.similar-tables-wrapper{
+    margin-bottom: 30px !important;
+}
+
 .dropdown {
     font-size: 16px; }
 @media only screen and (max-width: 600px) {
