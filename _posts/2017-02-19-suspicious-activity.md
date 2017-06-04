@@ -53,10 +53,16 @@ scripts:
 <input class="map_select" type="checkbox" name="type" value="suspicious" checked> Suspicious Activity
 
 <div id="map" style="height: 400px;"></div>
-
-<select id="bar-select">
+<h1>Suspicious Activity</h1>
+<select id="suspicious-bar-select">
   <option value="gender">Gender</option>
   <option value="race">Race</option>
   <option value="age">Age</option>
 </select>
-<svg width="640" height="640" id="bar-chart"></svg>
+<svg width="640" height="300" id="suspicious-bar-chart"></svg>
+<h1>Arrests</h1>
+<select id="arrest-bar-select">
+  <option value="gender">Gender</option>
+  <option value="race">Race</option>
+</select>
+<svg width="640" height="300" id="arrest-bar-chart"></svg>

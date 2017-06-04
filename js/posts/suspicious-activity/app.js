@@ -113,7 +113,8 @@ $(document).ready(function () {
           })
         })
       })
-      initBarChart(suspicious_data); // TODO: merge both data
+      initBarChart(suspicious_data, "suspicious"); 
+      initBarChart(arrest_data, "arrest"); 
     });
 
 
@@ -123,20 +124,20 @@ $(document).ready(function () {
   
 });
 
-var svg = d3.select("#bar-chart"),
-    margin = {top: 20, right: 20, bottom: 30, left: 40},
-    width = +svg.attr("width") - margin.left - margin.right,
-    height = +svg.attr("height") - margin.top - margin.bottom;
+function initBarChart(data, type) {
+  let svg = d3.select("#" + type + "-bar-chart"),
+      margin = {top: 20, right: 20, bottom: 30, left: 40},
+      width = +svg.attr("width") - margin.left - margin.right,
+      height = +svg.attr("height") - margin.top - margin.bottom;
 
-var x = d3.scaleBand().rangeRound([0, width]).padding(0.1),
-    y = d3.scaleLinear().rangeRound([height, 0]);
+  let x = d3.scaleBand().rangeRound([0, width]).padding(0.1),
+      y = d3.scaleLinear().rangeRound([height, 0]);
 
-var g = svg.append("g")
-    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+  let g = svg.append("g")
+      .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-var color = d3.scaleOrdinal(d3.schemeCategory20c);
+  let color = d3.scaleOrdinal(d3.schemeCategory20c);
 
-function initBarChart(data) {
   
 
   let genders = ["male", "female"];
@@ -175,8 +176,6 @@ function initBarChart(data) {
     if (ind !== -1) breakdown.age[ind] += 1;
   });
 
-  console.log(breakdown);
-
   let currFilter = "gender";
   let currDomain = genders; 
 
@@ -187,7 +186,7 @@ function initBarChart(data) {
 
     g.append("g")
         .attr("class", "axis axis--y")
-        .call(d3.axisLeft(y).ticks(10))
+        .call(d3.axisLeft(y).ticks(4))
       .append("text")
         .attr("transform", "rotate(-90)")
         .attr("y", 6)
@@ -195,7 +194,7 @@ function initBarChart(data) {
         .attr("text-anchor", "end")
         .text("Frequency");
 
-  document.getElementById('bar-select').addEventListener('change', function(e) {
+  document.getElementById(type + '-bar-select').addEventListener('change', function(e) {
 
     currFilter = e.target.value;
     if (currFilter == 'gender') {
