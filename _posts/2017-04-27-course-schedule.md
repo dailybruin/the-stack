@@ -17,7 +17,6 @@ stylesheets:
 scripts:
     - /js/lib/jquery-3.1.1.min.js
     - /js/posts/department-similarity/libs/d3.min.js
-    - /js/posts/department-similarity/libs/d3-tip.js
     - //api.mapbox.com/mapbox-gl-js/v0.36.0/mapbox-gl.js
     - //unpkg.com/leaflet@1.0.3/dist/leaflet.js
     - /js/posts/course-schedule/numbered-markers.js

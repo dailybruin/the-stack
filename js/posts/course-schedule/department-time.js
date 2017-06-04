@@ -2,14 +2,14 @@ d3.json('/datasets/course-schedule/department-name-map.json', function(data){
     const subjects = Object.keys(data).sort(), defaultDepartment = 'Anthropology';
 
     d3.select('#pick-department-time')
-        .on('change', e => pickDepartmentTime(data))
+        .on('change', function(e) {pickDepartmentTime(data);})
     .selectAll('option')
         .data(subjects)
         .enter()
         .append('option')
-        .property('selected', d => d == defaultDepartment)
-    .text(d => d)
-    .attr('value', (d, i) => i);
+        .property('selected', function(d) {return d == defaultDepartment;})
+    .text(function(d) {return d;})
+    .attr('value', function(d, i) {return i;});
 
     pickDepartmentTime(data);
 });
