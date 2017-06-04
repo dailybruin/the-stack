@@ -1,6 +1,6 @@
 ---
 title: When and where do departments hold lectures?
-teaser: ...
+teaser: Did you know that Ethnomusicology is more of a south campus department than a north campus one?
 authors:
     - jerry_li
     - tyson_ni
@@ -26,6 +26,17 @@ scripts:
     - /js/posts/course-schedule/department-time.js
 ---
 
+Have you wondered why you always seem to have lectures at 8 AM every
+morning in Broad or Bunche while your roommates get to sleep in
+until noon? It turns out there are interesting patterns in the times
+and location of your classes depending on your department.
+
+We scraped the UCLA Registrar archives in order to collect data on
+when and where each department hold their lectures. In particular,
+we gathered registrar information on all UCLA classes held during the 
+quarters Fall 2012 to Winter 2017. After filtering out the 
+discussions and cleaning the data, we analyzed the distribution of the times
+and locations each department hold their lectures.
 
 
 ## Where are the classes located for my department?
@@ -42,7 +53,12 @@ The red circle indicates the weighed average location for that particular depart
     <div id="mapid"></div>
 </div>
 
-
+We can see some interesting patterns in this visualization. The General Education 
+Clusters in particular has a weighted center in the middle of nowhere, as around half of its
+classes are on the Hill and the other half are on campus. Some departments,
+like Design / Media Arts have almost all of their classes concentrated in one 
+building, while others like Statistics are experiencing a diaspora with no
+particular building to call its home. More analysis on this are done later in the post.
 
 ## How north or south campus-y is my department?
 
