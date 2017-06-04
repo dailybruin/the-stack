@@ -15,28 +15,42 @@ scripts:
   - /js/posts/suspicious-activity/Leaflet.MakiMarkers.js
   - /js/posts/suspicious-activity/app.js
 ---
-<select id="gender_select">
+<select id="gender_select" class="map_select">
   <option value="all">All</option>
   <option value="male">Male</option>
   <option value="female">Female</option>
 </select>
-<select id="race_select">
+<select id="race_select" class="map_select">
   <option value="all">All</option>
-  <option value="I">Indian</option>
-  <option value="W">White</option>
+  <option value="I">American Indian</option>
+  <option value="Z">Asian Indian</option>
   <option value="B">Black</option>
-  <option value="H">H</option>
+  <option value="D">Cambodian</option>
   <option value="C">Chinese</option>
-  <option value="O">O</option>
-  <option value="A">A</option>
+  <option value="F">Filipino</option>
+  <option value="G">Guamanian</option>
+  <option value="U">Hawaiian</option>
+  <option value="H">Hispanic / Latin / Mexican</option>
+  <option value="J">Japanese</option>
+  <option value="K">Korean</option>
+  <option value="L">Laotian</option>
+  <option value="O">Other</option>
+  <option value="A">Other Asian</option>
+  <option value="P">Pacific Islander</option>
+  <option value="S">Samoan</option>
+  <option value="X">Unknown</option>
+  <option value="V">Vietnamese</option>
+  <option value="W">White</option>
 </select>
-<select id="age_select">
+<select id="age_select" class="map_select">
   <option value="4">All</option>
   <option value="0">Under 20</option>
   <option value="1">21-40</option>
   <option value="2">41-65</option>
   <option value="3">65+</option>
 </select>
+<input class="map_select" type="checkbox" name="type" value="arrest" checked> Arrests
+<input class="map_select" type="checkbox" name="type" value="suspicious" checked> Suspicious Activity
 
 <div id="map" style="height: 400px;"></div>
 
