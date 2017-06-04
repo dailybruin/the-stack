@@ -28,47 +28,32 @@ scripts:
 
 Have you wondered why you always seem to have lectures at 8 AM every
 morning in Broad or Bunche while your roommates get to sleep in
-until noon? It turns out there are interesting patterns in the times
-and location of your classes depending on your department.
-
-We scraped the UCLA Registrar archives in order to collect data on
-when and where each department hold their lectures. In particular,
-we gathered registrar information on all UCLA classes held during the 
-quarters Fall 2012 to Winter 2017. After filtering out the 
-discussions and cleaning the data, we analyzed the distribution of the times
-and locations each department hold their lectures.
-
+until noon? It turns out there are interesting patterns in the location
+and times of your classes depending on your department. The class schedules we used were scraped from the UCLA Registrar archives and spanned all UCLA classes held between Fall 2012 to Winter 2017.
 
 ## Where are the classes located for my department?
-Pick a department to see the distribution of that department's classes around the buildings on 
-campus. You can click on each marker to see a more detailed breakdown of the percentages, including
-percentages that take into account class size.
+Pick a department to see the geographic distribution of that department's classes. 
 
-The red circle indicates the weighed average location for that particular department.
+* Each *box* displays the **percent of classes that are held in the corresponding building**, and you can click on it to see a more detailed breakdown, including a percentage that takes class size into account. (Note: Percentages don't always add up to 100% as those less than 1% are excluded.)
 
-**Note:** Percentages may not add to 100% as those less than 1% are excluded from the map.
+* The *red circle* indicates the **weighed average location** for that particular department.
+
 
 <div id="course-location">
     <select class="ui search selection dropdown" id="pick-department-map"></select>
     <div id="mapid"></div>
 </div>
 
-We can see some interesting patterns in this visualization. The General Education 
-Clusters in particular has a weighted center in the middle of nowhere, as around half of its
-classes are on the Hill and the other half are on campus. Some departments,
-like Design / Media Arts have almost all of their classes concentrated in one 
-building, while others like Statistics are experiencing a diaspora with no
-particular building to call its home. More analysis on this are done later in the post.
+Some interesting patterns:
+
+* Some departments, like Design / Media Arts have almost all of their classes concentrated in one building, while others like Statistics are experiencing a diaspora with no particular building to call its home. More on this later in the post.
+* The General Education Clusters in particular has a weighted center in the middle of "nowhere", as around half of its classes are on the Hill and the other half are on campus.
 
 ## How north or south campus-y is my department?
 
-Using the latitude values of the center of each department calculated from the previous section,
-we can now rank each department on how north or south campus-y it really is, by its geography. We
-converted the latitude values into distance in meters above (positive) or below (negative) Bruin Walk,
-which is set as the origin and the dividing line between north and south campus.
+Using the latitude (ie. vertical) values of the center of each department, we can now rank each department on how north or south campus-y it is, by its geography. We also converted the latitudes into distances (in meters) from Bruin Walk, which we used as a dividing line between north and south campuses.
 
-**Note:** We decided to only include the forty most popular departments (by number of classes) on these
-tables, in case you were wondering why department "X" isn't on the list.
+> Note: In case you are wondering why your favorite department isn't on the list, We include only the 40 largest departments (by number of students) in the following tables.
 
 <br>
 
@@ -97,6 +82,7 @@ the visual and performing arts, followed by social science, and finally the lang
 
 ## How spread out are departments?
 
+Some departments hold lectures that are scattered around campus while others are concentrated around few buildings. For each department, we calculate the **percentage of classes that took place in its 3 most common buildings**. This type of analysis is sometimes used by economists to detect whether industries are monopolized by a few companies.
 
 <div class="ui equal width center aligned grid similar-tables-wrapper">
   <div class='row'>
@@ -111,19 +97,20 @@ the visual and performing arts, followed by social science, and finally the lang
   </div>
 </div>
 
-
-
 ## When are the classes for my department held?
 
-All departments ...
+Scheduling patterns are also evident in when classes are held. Let's take a look at how many **student-hours in total are spent in each hour period**. (For example, if 100 students are in a class that lasts 30 minutes, then 50 student-hours are counted.) The "average" time is labeled and it provides a rough summary of each distribution. 
 
 <img src="/img/posts/course-schedule/all-department-times.png" height='60%' width='80%'>
 
-Pick a department to see the hourly distribution of that department's classes within the day.
+Pick a department to see its hourly distribution.
 
 <select class="ui search selection dropdown" id="pick-department-time"></select>
 <br>
 
 <img src="" id="department-time-graph" height='60%' width='80%'>
+
+Some interesting patterns:
+
 
 
