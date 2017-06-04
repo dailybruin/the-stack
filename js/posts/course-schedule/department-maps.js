@@ -10,17 +10,17 @@ L.tileLayer('https://api.mapbox.com/styles/v1/mapbox/streets-v10/tiles/256/{z}/{
 var markerGroup = L.layerGroup().addTo(mymap);
 
 d3.json('/datasets/course-schedule/department-map-data.json', function(data){
-    const subjects = Object.keys(data), defaultDepartment = 'Anthropology';
+    var subjects = Object.keys(data), defaultDepartment = 'Anthropology';
 
     d3.select('#pick-department-map')
-        .on('change', e => pickDepartment(data))
+        .on('change', function(e) {pickDepartment(data);})
     .selectAll('option')
         .data(subjects)
         .enter()
         .append('option')
-        .property('selected', d => d == defaultDepartment)
-    .text(d => d)
-    .attr('value', (d, i) => i);
+        .property('selected', function(d) {return d == defaultDepartment;})
+    .text(function(d) {return d;})
+    .attr('value', function(d, i) {return i;});
 
     pickDepartment(data);
 });
