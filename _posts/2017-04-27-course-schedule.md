@@ -1,6 +1,6 @@
 ---
 title: When and where do departments hold lectures?
-teaser: Did you know that Ethnomusicology is more of a south campus department than a north campus one?
+teaser: Morning or late classes, departments with or without homes, North or South campuses, and more.
 authors:
     - jerry_li
     - tyson_ni
@@ -27,13 +27,12 @@ scripts:
 
 Have you wondered why you always seem to have lectures at 8 AM every
 morning in Broad or Bunche while your roommates get to sleep in
-until noon? It turns out there are interesting patterns in the location
-and times of your classes depending on your department. The class schedules we used were scraped from the UCLA Registrar archives and included all classes held between Fall 2012 to Winter 2017.
+until noon? It turns out there are patterns that determine when and where departments schedule their classes. The class schedules we used were scraped from the UCLA Registrar archives and included all classes held between Fall 2012 to Winter 2017.
 
 ## Where are the classes located for my department?
 Pick a department to see the geographic distribution of that department's classes. 
 
-* Each *box* displays the **percent of classes that are held in the corresponding building**, and you can click on it to see a more detailed breakdown, including a percentage that takes class size into account. (Note: Percentages don't always add up to 100% as those less than 1% are excluded.)
+* Each *box* displays the **percent of classes that are held in the corresponding building**, and you can click on it to see a more detailed breakdown, including a number that takes class size into account. (Note: Buildings that account for less than 1% of the total are excluded.)
 
 * The *red circle* indicates the **weighed average location** for that particular department.
 
@@ -43,7 +42,7 @@ Pick a department to see the geographic distribution of that department's classe
     <div id="mapid"></div>
 </div>
 
-Some interesting patterns:
+A couple interesting patterns:
 
 * Some departments, like *Design / Media Arts* have almost all of their classes concentrated in one building, while others like *Statistics* resembles a diaspora that has no particular buildings to call home. More on this later in the post.
 * The *GE Clusters* in particular has a weighted center in the middle of "nowhere", as around half of its classes are on the Hill and the other half are on campus.
@@ -52,7 +51,7 @@ Some interesting patterns:
 
 ## How spread out are departments?
 
-Some departments hold lectures that are scattered in many buildings around campus while others are concentrated in few buildings. For each department, we calculate the **percentage of classes that took place in its 3 most common buildings**. This type of analysis is sometimes used by economists to detect whether an industry is monopolized by a few companies.
+Some departments hold lectures in many buildings that are scattered around campus while others are concentrated in two or three buildings. For each department, we calculate the **percentage of classes that took place in its 3 most common buildings**. This type of analysis is sometimes used by economists to detect whether an industry is monopolized by a few companies.
 
 <div class="ui equal width center aligned grid similar-tables-wrapper">
   <div class='row'>
@@ -71,9 +70,9 @@ Some departments hold lectures that are scattered in many buildings around campu
 
 ## How north or south campus-y is my department?
 
-Using the latitude (ie. vertical) values of each department's center, we can now rank departments based on how north or south campus-y it is. We also convert the latitudes into distances (in meters) from Bruin Walk, which we use as a dividing line between north and south campuses.
+Using the latitude (ie. vertical) values of each department's center, we can now rank departments based on how north or south campus-y they are. We also convert the latitudes into distances from Bruin Walk (in meters), which we use as a dividing line.
 
-> Note: In case you are wondering why your favorite department isn't on the list, We include only the 40 largest departments (by number of students) in the following tables.
+> Note: In case you're wondering why your favorite department isn't on the list, We include only the 40 largest departments (by number of students) in the following tables.
 
 <br>
 
@@ -90,13 +89,11 @@ Using the latitude (ie. vertical) values of each department's center, we can now
     </div>
 </div>
 
-As we can see, the related departments ended up being clustered fairly well. The furthest south campus
-departments were the life sciences and biology, followed by engineering and then the other sciences. 
-Interestingly enough, the music departments ended up being slightly on the south campus side, mostly due to
-the location of the Schoenberg Music Building.
-
-The north campus departments came in clusters of similar subjects as well. Furthest north were
-the visual and performing arts, followed by social science, and finally the language departments.
+As we can see, [related departments](http://stack.dailybruin.com/2017/04/23/department-similarity/) tend to be clustered together geographically. The furthest south campus
+departments are in the biological sciences, followed by engineering and then the other sciences. 
+Interestingly enough, the music departments is slightly on the south campus side, due to
+the location of the Schoenberg Music Building. Furthest north are
+the visual and performing arts, followed by social sciences, and finally the language departments.
 
 <br>
 
@@ -113,8 +110,8 @@ Pick a department to see its hourly distribution.
 
 <img src="" id="department-time-graph" height='60%' width='80%'>
 
-Some interesting patterns:
+A few interesting patterns:
 
-* Departments with earliest class times include: *Music History*, *Program in Computing*, *Chemistry and Biochemistry*, *Spanish*, and *Life Sciences*.
-* Departments with the most late class times include: *Communication Studies*, *Film and Television*, *Chemical Engineering*, *Management*, and *Political Science*.
+* Some departments with earliest class times include: *Music History*, *Program in Computing*, *Chemistry and Biochemistry*, *Spanish*, *Mathematics*, and *Life Sciences*.
+* Some departments with latest class times include: *Communication Studies*, *Film and Television*, *Chemical Engineering*, *Management*, *Political Science*, and *Gender Studies*.
 
