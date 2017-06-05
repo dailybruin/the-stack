@@ -4,6 +4,28 @@ L.MakiMarkers.accessToken = "pk.eyJ1IjoiYmVuc29uaGFuIiwiYSI6ImNpdW4wc2V3NzAwZzAy
 var map = L.mapbox.map('map', 'mapbox.light')
   .setView([34.0689, -118.442], 12);
 
+function getAge(birthday) {
+  let d = new Date(String(birthday));
+
+  if ( Object.prototype.toString.call(d) === "[object Date]" ) {
+    // it is a date
+    if ( isNaN( d.getTime() ) ) {  // d.valueOf() could also work
+      // date is not valid
+      return -1;
+    }
+    else {
+      // date is valid
+      let ageDifMs = Date.now() - d.getTime();
+      let ageDate = new Date(ageDifMs); // miliseconds from epoch
+      return Math.abs(ageDate.getUTCFullYear() - 1970);
+    }
+  }
+  else {
+    // not a date
+    return -1; 
+  }
+}
+
 $(document).ready(function () {
   let all_markers = [];
   let gender = "all";
@@ -35,7 +57,11 @@ $(document).ready(function () {
     });
 
     d3.csv('/datasets/suspicious-activity/arrests_loc.csv', function(arrest_data) {
-      arrest_data.forEach(d => { d.Lat = +d.Lat; d.Long = +d.Long; });
+      arrest_data.forEach(d => { 
+        d.Lat = +d.Lat; 
+        d.Long = +d.Long; 
+        d.Age = getAge(d["DOB"]);
+      });
 
       let icon2 = new L.MakiMarkers.Icon({
         // icon: "marker", 

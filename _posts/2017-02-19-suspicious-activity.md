@@ -64,5 +64,6 @@ scripts:
 <select id="arrest-bar-select">
   <option value="gender">Gender</option>
   <option value="race">Race</option>
+  <option value="age">Age</option>
 </select>
 <svg width="640" height="300" id="arrest-bar-chart"></svg>
