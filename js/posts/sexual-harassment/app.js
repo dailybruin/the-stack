@@ -1,11 +1,18 @@
 dataList = [];
+jsonDataList = [];
 
 d3.csv("/datasets/sexual-harassment/positions.csv", function(error, positionData) {
   if (error) throw error;
+
+  jsonDataList.push(positionData);
   d3.csv('/datasets/sexual-harassment/genders.csv', function (error1, genderData) {
     if (error1) throw error;
+
+    jsonDataList.push(genderData);
     d3.csv('/datasets/sexual-harassment/punishments.csv', function (error2, punishmentData) {
       if (error2) throw error;
+
+      jsonDataList.push(punishmentData);
 
       var encodedPositionData = encodeURI(formatCSV(positionData, 'Position'));
       var encodedGenderData = encodeURI(formatCSV(genderData, 'Gender'));
@@ -15,7 +22,7 @@ d3.csv("/datasets/sexual-harassment/positions.csv", function(error, positionData
       dataList.push(encodedGenderData);
       dataList.push(encodedPunishmentData);
 
-      initBubbleChart(encodedPositionData);
+      initBubbleChart(encodedPositionData, 0);
       initTable(encodedPositionData);
 
     });
