@@ -131,10 +131,10 @@ $(document).ready(function () {
                 (m.data.Race == race || race == "all") &&
                 ((Number(m.data.Age) >= age_lower && Number(m.data.Age) <= age_upper) || age_lower == 1000) &&
                 ((m.type == 'arrest' && arrest == true) || (m.type == 'suspicious' && suspicious == true))) {
-              $(m.marker._icon).show();
+              $(m.marker._icon).removeClass('hidden');
             }
             else {
-              $(m.marker._icon).hide();
+              $(m.marker._icon).addClass('hidden');
             }
           })
         })

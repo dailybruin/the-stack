@@ -5,6 +5,7 @@ stylesheets:
   - //cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/components/dropdown.min.css
   - //unpkg.com/leaflet@1.0.3/dist/leaflet.css
   - //api.mapbox.com/mapbox.js/v3.0.1/mapbox.css
+  - /css/posts/suspicious-activity/app.css
 scripts:
   - //d3js.org/d3.v4.min.js
   - //d3js.org/d3-transition.v1.min.js
