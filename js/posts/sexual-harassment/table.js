@@ -39,6 +39,10 @@ function initTable(csvURI) {
           newSchool.data.School = schoolName
           newData.push(newSchool)
         }
+      });
+
+      newData.sort((a, b) => {
+        return a.school > b.school;
       })
 
       var sortAscending = true;
