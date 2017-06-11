@@ -1,6 +1,9 @@
 //Map
 L.mapbox.accessToken = 'pk.eyJ1IjoiYmVuc29uaGFuIiwiYSI6ImNpdW4wc2V3NzAwZzAydG13eTB6bDdrdGMifQ.3qVecRB6mpgc1X-pURkDng';
 L.MakiMarkers.accessToken = "pk.eyJ1IjoiYmVuc29uaGFuIiwiYSI6ImNpdW4wc2V3NzAwZzAydG13eTB6bDdrdGMifQ.3qVecRB6mpgc1X-pURkDng";
+var monthNames = ["January", "February", "March", "April", "May", "June",
+  "July", "August", "September", "October", "November", "December"
+];
 var map = L.mapbox.map('map', 'mapbox.light')
   .setView([34.0689, -118.442], 12);
 
@@ -23,6 +26,53 @@ function getAge(birthday) {
   else {
     // not a date
     return -1; 
+  }
+}
+
+function formatDate(date) {
+  
+  let d = new Date(date);
+  return `${monthNames[d.getMonth()]} ${d.getDay()}, ${d.getFullYear()}`;
+}
+
+function formatRace(race) {
+  switch(race) {
+    case 'A': 
+      return "Other Asian";
+    case 'B':
+      return "Black";
+    case 'C':
+      return "Chinese";
+    case 'D':
+      return "Cambodian";
+    case 'F':
+      return "Filipino";
+    case 'G':
+      return "Guamanian";
+    case 'H':
+      return "Hispanic / Latino / Mexican";
+    case 'I':
+      return "American Indian";
+    case 'J':
+      return "Japanese";
+    case 'K':
+      return "Korean";
+    case 'L':
+      return "Laotian";
+    case 'O':
+      return "Other";
+    case 'P':
+      return "Pacific Islander";
+    case 'S':
+      return "Samoan";
+    case 'V':
+      return "Vietnamese";
+    case 'W':
+      return "White";
+    case 'Z':
+      return "Asian Indian";
+    default:
+      return "Unknown";
   }
 }
 
@@ -49,6 +99,10 @@ $(document).ready(function () {
     suspicious_data.forEach(d => {
       let m = L.marker([d.Lat, d.Long], {icon: icon1}).addTo(map);
 
+      m.bindTooltip(`${d.Location}<br/>${formatDate(d.LogDate)}<br/><b>Age:</b> 
+                     ${d.Age} <b>Sex:</b> ${d.Sex == "Male" ? "M" : "F"} <b>Race:</b> 
+                     ${formatRace(d.Race)}`);
+
       all_markers.push({
         marker: m,
         data: d,
@@ -71,7 +125,12 @@ $(document).ready(function () {
       icon2.options.shadowSize = [0,0];
 
       arrest_data.forEach(d => {
+        console.log(d);
         let m = L.marker([d.Lat, d.Long], {icon: icon2}).addTo(map);
+
+        m.bindTooltip(`${d.Location}<br/>${formatDate(d.LogDate)}<br/><b>Age:</b> 
+                       ${d.Age} <b>Sex:</b> ${d.Sex == "Male" ? "M" : "F"} <b>Race:</b> 
+                       ${formatRace(d.Race)}<br><b>Charge:</b> ${d.Charge}`);
 
         all_markers.push({
           marker: m,
