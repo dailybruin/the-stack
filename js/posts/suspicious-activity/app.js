@@ -29,6 +29,19 @@ function getAge(birthday) {
   }
 }
 
+function truncate(string) {
+  let ret = '';
+  let sp = string.split(' ');
+  sp.forEach((w, i) => {
+    if (i !== 0 && i % 4 == 0) {
+      ret += '<br>';
+    }
+    ret += w + ' ';
+  })
+
+  return ret;
+}
+
 function formatDate(date) {
   
   let d = new Date(date);
@@ -101,7 +114,7 @@ $(document).ready(function () {
 
       m.bindTooltip(`${d.Location}<br/>${formatDate(d.LogDate)}<br/><b>Age:</b> 
                      ${d.Age} <b>Sex:</b> ${d.Sex == "Male" ? "M" : "F"} <b>Race:</b> 
-                     ${formatRace(d.Race)}`);
+                     ${formatRace(d.Race)}`, {className: 'tooltip'});
 
       all_markers.push({
         marker: m,
@@ -125,12 +138,11 @@ $(document).ready(function () {
       icon2.options.shadowSize = [0,0];
 
       arrest_data.forEach(d => {
-        console.log(d);
         let m = L.marker([d.Lat, d.Long], {icon: icon2}).addTo(map);
 
         m.bindTooltip(`${d.Location}<br/>${formatDate(d.LogDate)}<br/><b>Age:</b> 
                        ${d.Age} <b>Sex:</b> ${d.Sex == "Male" ? "M" : "F"} <b>Race:</b> 
-                       ${formatRace(d.Race)}<br><b>Charge:</b> ${d.Charge}`);
+                       ${formatRace(d.Race)}<br><b>Charge:</b> ${truncate(d.Charge)}`, {className: 'tooltip'});
 
         all_markers.push({
           marker: m,

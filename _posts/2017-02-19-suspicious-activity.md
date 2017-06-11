@@ -1,5 +1,8 @@
 ---
 title: Suspicious Activity
+authors:
+  - benson_han
+  - chang_liu
 stylesheets:
   - //cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.6/semantic.min.css
   - //cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/components/dropdown.min.css
