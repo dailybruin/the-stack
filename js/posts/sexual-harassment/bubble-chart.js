@@ -1,4 +1,8 @@
-function initBubbleChart(csvURI) {
+currVal = 0;
+
+function initBubbleChart(csvURI, v) {
+  currVal = v;
+
   var svg = d3.select("#bubble-chart"),
       width = +svg.attr("width"),
       height = +svg.attr("height");
@@ -117,7 +121,7 @@ function wrap(text, width) {
 
 function updateBubbleChart (value) {
   d3.selectAll('.node').remove();
-  initBubbleChart(dataList[value]);
+  initBubbleChart(dataList[value], value);
 }
 
 function fillTooltip (d) {
@@ -140,9 +144,22 @@ function fillTooltip (d) {
   html += '</u></b></h1>';
 
   // PACKAGE
+  let key = d.package.split('.')[1];
   html += "<p>";
-  html += d.package.split('.')[1];
+  if (currVal == 1) { // format gender
+    let formatted = key.split('/').map(c => {
+      return c == "M" ? "Male" : "Female"
+    });
+
+    formatted[0] += " Complainent";
+    formatted[1] += " Respondent";
+
+    html += formatted.join(', ');
+  } else {
+    html += key;
+  }
   html += '</p>';
+  
 
   // NUMBER OF PEOPLE
   var numberOfPeople = +d.value;
@@ -151,7 +168,7 @@ function fillTooltip (d) {
     html += numberOfPeople + ' Person'
   else
     html += numberOfPeople + ' People'
-  html += '</p></div>';
+  html += '</p><p>test</p></div>';
 
   // PERCENTAGE
   html += "<div class='right'><span class='percentage'>"
