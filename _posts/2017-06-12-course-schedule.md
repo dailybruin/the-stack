@@ -42,10 +42,8 @@ Pick a department to see the geographic distribution of that department's classe
     <div id="mapid"></div>
 </div>
 
-A couple interesting patterns:
-
-* Some departments, like *Design | Media Arts* have almost all of their classes concentrated in one building, while others like the statistics department resembles a diaspora that has no particular buildings to call home. More on this later in the post.
-* The GE cluster classes in particular have a weighted center in the middle of "nowhere," as around half of them are on the Hill and the other half are on campus.
+Some departments, like *Design | Media Arts* have almost all of their classes concentrated in one building, while others like the statistics department resembles a diaspora that has no particular buildings to call home. (More on this later in the post.)
+The GE cluster classes in particular have a weighted center in the middle of "nowhere," as around half of them are on the Hill and the other half are on campus.
 
 <br>
 
