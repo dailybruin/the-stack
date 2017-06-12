@@ -70,7 +70,7 @@ Some departments hold lectures in many buildings scattered around campus while o
 
 Using the latitude (ie. vertical) values of each department's center, we can now rank departments based on how North or South Campus they are. We also convert the latitudes into distances from Bruin Walk (in meters), which we use as a dividing line.
 
-> Note: In case you're wondering why your favorite department isn't on the list, We include only the 40 largest departments (by number of students) in the following tables.
+> Note: In case you're wondering why your favorite department isn't on the list, we included only the 40 largest departments (by number of students) in the following tables.
 
 <br>
 
