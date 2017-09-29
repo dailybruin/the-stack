@@ -9,6 +9,7 @@ stylesheets:
   - //unpkg.com/leaflet@1.0.3/dist/leaflet.css
   - //api.mapbox.com/mapbox.js/v3.0.1/mapbox.css
   - /css/posts/suspicious-activity/app.css
+  - /css/posts/presidential-campaign-donations/tooltip.css
 scripts:
   - //d3js.org/d3.v4.min.js
   - //d3js.org/d3-transition.v1.min.js
@@ -27,22 +28,22 @@ scripts:
 <select id="race_select" class="map_select">
   <option value="all">All</option>
   <option value="I">American Indian</option>
-  <option value="Z">Asian Indian</option>
+  <!-- <option value="Z">Asian Indian</option> -->
   <option value="B">Black</option>
-  <option value="D">Cambodian</option>
+  <!-- <option value="D">Cambodian</option> -->
   <option value="C">Chinese</option>
-  <option value="F">Filipino</option>
-  <option value="G">Guamanian</option>
-  <option value="U">Hawaiian</option>
+  <!-- <option value="F">Filipino</option> -->
+  <!-- <option value="G">Guamanian</option> -->
+  <!-- <option value="U">Hawaiian</option> -->
   <option value="H">Hispanic / Latin / Mexican</option>
-  <option value="J">Japanese</option>
-  <option value="K">Korean</option>
-  <option value="L">Laotian</option>
+  <!-- <option value="J">Japanese</option> -->
+  <!-- <option value="K">Korean</option> -->
+  <!-- <option value="L">Laotian</option> -->
   <option value="O">Other</option>
   <option value="A">Other Asian</option>
   <option value="P">Pacific Islander</option>
-  <option value="S">Samoan</option>
-  <option value="X">Unknown</option>
+  <!-- <option value="S">Samoan</option> -->
+  <!-- <option value="X">Unknown</option> -->
   <option value="V">Vietnamese</option>
   <option value="W">White</option>
 </select>

@@ -222,6 +222,10 @@ $(document).ready(function () {
 });
 
 function initBarChart(data, type) {
+  var tooltip = d3.select("body").append("div")
+    .attr("class", "horizontal-tip")
+    .style("display", "none");
+
   let svg = d3.select("#" + type + "-bar-chart"),
       margin = {top: 20, right: 20, bottom: 30, left: 40},
       width = +svg.attr("width") - margin.left - margin.right,
@@ -238,7 +242,8 @@ function initBarChart(data, type) {
   
 
   let genders = ["male", "female"];
-  let races = ["A", "B", "C", "D", "F", "G", "H", "I", "J", "K", "L", "O", "P", "S", "U", "V", "W", "X", "Z"];
+  // let races = ["A", "B", "C", "D", "F", "G", "H", "I", "J", "K", "L", "O", "P", "S", "U", "V", "W", "X", "Z"];
+  let races = ['A', 'B', 'C', 'H', 'I', 'O', 'P', 'V', 'W'];
   let ages = ["18-20", "21-40", "41-65", "65+"]
 
   let breakdown = {
@@ -341,7 +346,33 @@ function initBarChart(data, type) {
 
         })
         .attr("width", x.bandwidth())
-        .attr("height", function(d) { return height - y(d); });
+        .attr("height", function(d) { return height - y(d); })
+        .on("mousemove", function(d, i) {
+          this.style.opacity = "0.6";
+
+          var header = currDomain[i];
+          if (currFilter === 'race') {
+            header = formatRace(header);
+          }
+
+          let total = newData.reduce((a, b) => { return a + b; });
+          let val = d;
+          let perc = +((val / total) * 100).toFixed(2);
+
+          var h = '<div class="left"><p><b style="border-bottom: 2px solid ' + color(i) + ';">' + header.toUpperCase() + '</b></p><p style="width:100%; background-color: yellow;"><b>' + 'TOTAL' + '</b>: ' + val + '<p></div>';
+          h += '<div class="right">' + perc + '%</div>';
+
+          tooltip.html(h)
+            .style("left", (d3.event.pageX+12) + "px")
+            .style("top", (d3.event.pageY-10) + "px")
+            .style("display","block")
+            .style("opacity","1")
+
+        })
+        .on('mouseout', function() {
+          this.style.opacity = "1";
+          tooltip.html("").style("display","none");
+        });
 
    }
 
