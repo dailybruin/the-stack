@@ -1,0 +1,69 @@
+.ratings-list {
+  font-size: 0.85em;
+  background-color: white;
+  border: 1px solid #ccc;
+  margin-bottom: 2em;
+  border-collapse: collapse;
+  line-height: 1.25;
+}
+
+.ratings-list th, 
+.ratings-list td {
+  padding: 0.5em 1em;  
+  margin: 0;
+}
+
+.ratings-list tr {
+  padding: 0 0.5em;
+}
+
+.ratings-list th {
+  text-align: left;
+  vertical-align: bottom;
+  text-transform: uppercase;
+  color: #444;
+  font-size: 0.9em;
+  border-bottom: 1px solid #666;
+}
+
+.ratings-list td {
+  vertical-align: top;
+  border-bottom: 1px solid #ccc;
+}
+
+.ratings-list tbody tr:nth-child(odd) {
+   background-color: rgba(0,0,0, 0.025);
+}
+
+.ratings-list .rating {
+  font-weight: 600;
+}
+
+.ratings-list .professor {
+  text-transform: capitalize;
+}
+
+.ratings-chart {
+  margin-bottom: 2em;
+}
+
+/* pie chart tooltip is the last <g> tag */
+.ratings-chart svg g:last-child {
+  /* prevent tooltip flickering on mouseover */
+  pointer-events: none;
+}
+
+div.google-visualization-tooltip {
+  padding: 1em 1em 0;
+}
+
+.footnotes {
+  margin-top: 2em;
+  font-size: 0.8em;
+}
+
+@media (max-width: 420px) {
+  .ratings-list .ratings-count {
+    display: none;
+  }
+}

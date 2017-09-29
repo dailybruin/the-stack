@@ -1,0 +1,41 @@
+.leaflet-div-icon {
+    background: transparent !important;
+    border: none !important;
+}
+
+.leaflet-marker-icon .number{
+    position: relative;
+    bottom: 72px;
+    left: 12px;
+    font-size: 11px;
+    width: 60px;
+    text-align: center;
+}
+
+.leaflet-marker-icon .number b {
+    font-size: 15px;
+    position: relative;
+    bottom: 3px;
+}
+
+#course-location{
+    height: 84vh;
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+#mapid {
+    margin-top: 20px;
+    height: 90%;
+    width: 100%;
+}
+
+.similar-tables-wrapper{
+    margin-bottom: 30px !important;
+}
+
+.dropdown {
+    font-size: 16px; }
+@media only screen and (max-width: 600px) {
+    .dropdown {
+        font-size: 13px; } }
