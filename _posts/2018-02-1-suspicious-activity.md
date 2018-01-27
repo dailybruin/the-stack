@@ -3,6 +3,8 @@ title: Suspicious Activity
 authors:
   - benson_han
   - chang_liu
+  - madeleine_pauker
+  - rupan_bharanidaran
 stylesheets:
   - //cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.6/semantic.min.css
   - //cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/components/dropdown.min.css
@@ -20,6 +22,7 @@ scripts:
   - /js/posts/suspicious-activity/Leaflet.MakiMarkers.js
   - /js/posts/suspicious-activity/app.js
 ---
+
 <select id="gender_select" class="map_select">
   <option value="all">All</option>
   <option value="male">Male</option>
