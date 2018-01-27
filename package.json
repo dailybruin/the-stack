@@ -1,0 +1,37 @@
+{
+  "name": "the-stack",
+  "version": "1.0.0",
+  "description": "The Daily Bruin's data and tech blog.",
+  "main": "index.js",
+  "repository": "https://github.com/daily-bruin/the-stack",
+  "author": "Daily Bruin Online <online@dailybruin.com>",
+  "license": "AGPL-3.0",
+  "scripts": {
+    "precommit": "lint-staged"
+  },
+  "eslintConfig": {
+    "extends": ["airbnb-base", "prettier"]
+  },
+  "prettier": {
+    "overrides": [
+      {
+        "files": "*.js",
+        "options": {
+          "singleQuote": true,
+          "trailingComma": "es5"
+        }
+      }
+    ]
+  },
+  "lint-staged": {
+    "*.{js,scss,json,md}": ["prettier --write", "git add"]
+  },
+  "devDependencies": {
+    "eslint": "^4.16.0",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "husky": "^0.14.3",
+    "lint-staged": "^6.1.0",
+    "prettier": "^1.10.2"
+  }
+}
