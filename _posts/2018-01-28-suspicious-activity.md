@@ -10,7 +10,7 @@ authors:
   - benson_han
   - chang_liu
 stylesheets:
-  - //cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.6/semantic.min.css
+  # - //cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.6/semantic.min.css
   - //cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/components/dropdown.min.css
   - //unpkg.com/leaflet@1.0.3/dist/leaflet.css
   - //api.mapbox.com/mapbox.js/v3.0.1/mapbox.css
@@ -130,14 +130,14 @@ The demographic categories come from UCPD classifications.
 <input class="map_select" type="checkbox" name="type" value="suspicious" checked> Suspicious Activity
 
 <div id="map" style="height: 400px;"></div>
-<h1>Suspicious Activity</h1>
+<h1 class="graph-title">Suspicious Activity</h1>
 <select id="suspicious-bar-select">
   <option value="gender">Gender</option>
   <option value="race">Race</option>
   <option value="age">Age</option>
 </select>
 <svg width="640" height="300" id="suspicious-bar-chart"></svg>
-<h1>Arrests</h1>
+<h1 class="graph-title">Arrests</h1>
 <select id="arrest-bar-select">
   <option value="gender">Gender</option>
   <option value="race">Race</option>
