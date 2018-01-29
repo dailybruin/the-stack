@@ -1,6 +1,6 @@
 ---
 title: Suspicious Activity
-teaser: The teaser goes here!
+teaser: Comparing who university police stop for suspicious activity with who they arrest, and looking at how the demographics of those stopped and arrested compare with Westwood's demographics.
 featured_image:
     url: suspicious-activity/map.png
 og_image: suspicious-activity/map.png
