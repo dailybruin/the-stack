@@ -1,9 +1,9 @@
 ---
 title: Suspicious Activity
-teaser: Morning or late classes, departments with or without homes, North or South campuses, and more.
+teaser: The teaser goes here!
 featured_image:
-    url: course-schedule/map-screenshot.png
-og_image: course-schedule/map-screenshot.png
+    url: suspicious-activity/map.png
+og_image: suspicious-activity/map.png
 authors:
   - madeleine_pauker
   - rupan_bharanidaran
