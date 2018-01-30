@@ -1,5 +1,5 @@
 ---
-title: Suspicious Activity
+title: Demographics of UCPD Stops and Arrests
 teaser: Comparing who university police stop for suspicious activity with who they arrest, and looking at how the demographics of those stopped and arrested compare with Westwood's demographics.
 featured_image:
     url: suspicious-activity/map.png
