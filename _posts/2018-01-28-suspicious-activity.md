@@ -32,19 +32,19 @@ areas of Los Angeles surrounding it. UCPD emails a daily log of reported crimes,
 arrests and field contacts between officers and civilians to subscribers of the
 UCPD Daily Log, dailypolicelog@lists.ucla.edu. The Daily Bruin analyzed these
 daily logs from July 1, 2015, to June 31, 2016 and looked at the demographics of
-two categories: arrests and field contacts classified as “Suspicious Activity”.
+two categories: arrests and field contacts classified as “suspicious activity”.
 
 UCPD Lt. Kevin Kilgore explained that if a community member sees someone doing
 something they believe is suspicious, such as loitering around a bicycle rack,
 they may report the person to UCPD. Officers will then search for the person and
 try to determine whether they are engaging in criminal activity. If not taken
-into custody, they will record the interaction as a “Suspicious Activity” field
+into custody, they will record the interaction as a “suspicious activity” field
 contact. If officers have reasonable suspicion the person is in the process of
 committing a crime, they will arrest them. Officers also stop civilians if they
 themselves suspect someone is engaging in criminal activity.
 
-We aimed to determine how gender, race and age compare for Suspicious Activity
-field contacts and arrests. African Americans and Latinos have historically been
+We aimed to determine how gender, race and age compare for suspicious activity
+field contacts and arrests. Blacks and Latinos have historically been
 subject to racial profiling by police while driving and walking. A 2016 Stanford
 [study](https://news.stanford.edu/2016/06/28/stanford-researchers-develop-new-statistical-test-shows-racial-profiling-police-traffic-stops/)
 found that North Carolina police stopped black and Latino motorists at higher
@@ -64,31 +64,31 @@ view each encounter with a civilian as an individual event. For example, Kilgore
 said, if an officer is dispatched and told to look for a secretary or a nurse,
 they should not assume the individual’s gender.
 
-We wanted to see if certain groups might be stopped for Suspicious Activity at
+We wanted to see if certain groups might be stopped for suspicious activity at
 higher rates than others. Whites and Asians make up about 63 percent and 23
-percent of Westwood residents, respectively, and Latinos and African-Americans
+percent of Westwood residents, respectively, and Latinos and blacks
 comprise 7 percent and 2 percent of the population, according to the
 [LA Times](http://maps.latimes.com/neighborhoods/neighborhood/westwood/#ethnicity).
 Countywide, whites and Asians account for 26.5 percent and 15 percent of the
-population, while Latinos and African Americans make up 48.5 percent and 9
+population, while Latinos and blacks make up 48.5 percent and 9
 percent of Los Angeles County.
 
-However, African Americans made up nearly 29 percent of UCPD Suspicious Activity
+However, blacks made up nearly 29 percent of UCPD suspicious activity
 stops from July 2015 to June 2016, while Latinos made up 10.5 percent. Whites
 accounted for 46.5 percent of stops, and demographics classified as Asian made
-up 6 percent of stops. African Americans and Latinos are clearly overrepresented
+up 6 percent of stops. Blacks and Latinos are clearly overrepresented
 in who community members or officers deem suspicious, while whites and Asians
 are underrepresented.
 
-The data also shows that UCPD officers made more arrests of African Americans
-and Latinos than they filed Suspicious Activity reports for the same
+The data also shows that UCPD officers made more arrests of blacks
+and Latinos than they filed suspicious activity reports for the same
 demographics. Thirty-one percent and 23 percent of total arrests in the
-year-long time period were of African-Americans and Latinos, respectively.
-Whites were arrested at a lower rate than they were stopped for Suspicious
-Activity, making up 34 percent of arrests, while Asians were arrested about as
-frequently as they were stopped for Suspicious Activity, at 6 percent.
+year-long time period were of blacks and Latinos, respectively.
+Whites were arrested at a lower rate than they were stopped for suspicious
+activity, making up 34 percent of arrests, while Asians were arrested about as
+frequently as they were stopped for suspicious activity, at 6 percent.
 
-Below is a map of arrests and Suspicious Activity field contacts from July 2015
+Below is a map of arrests and suspicious activity field contacts from July 2015
 to June 2016 and graphs comparing gender, race and age across both categories.
 The demographic categories come from UCPD classifications.
 
