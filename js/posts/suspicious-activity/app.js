@@ -127,10 +127,10 @@ $(document).ready(function() {
       let m = L.marker([d.Lat, d.Long], { icon: icon1 }).addTo(map);
 
       m.bindTooltip(
-        `${d.Location}<br/>${formatDate(d.LogDate)}<br/><b>Age:</b> 
+        `${d.Location}<br/>${formatDate(d.LogDate)}<br/><b>Age:</b>
                      ${d.Age} <b>Sex:</b> ${
           d.Sex == 'Male' ? 'M' : 'F'
-        } <b>Race:</b> 
+        } <b>Race:</b>
                      ${formatRace(d.Race)}`,
         { className: 'tooltip' }
       );
@@ -162,10 +162,10 @@ $(document).ready(function() {
         let m = L.marker([d.Lat, d.Long], { icon: icon2 }).addTo(map);
 
         m.bindTooltip(
-          `${d.Location}<br/>${formatDate(d.LogDate)}<br/><b>Age:</b> 
+          `${d.Location}<br/>${formatDate(d.LogDate)}<br/><b>Age:</b>
                        ${d.Age} <b>Sex:</b> ${
             d.Sex == 'Male' ? 'M' : 'F'
-          } <b>Race:</b> 
+          } <b>Race:</b>
                        ${formatRace(d.Race)}<br><b>Charge:</b> ${truncate(
             d.Charge
           )}`,
@@ -242,6 +242,12 @@ $(document).ready(function() {
       });
       initBarChart(suspicious_data, 'suspicious');
       initBarChart(arrest_data, 'arrest');
+
+      $(window).resize(() => {
+        initBarChart(suspicious_data, 'suspicious');
+        initBarChart(arrest_data, 'arrest');
+      })
+
     });
   });
 });
@@ -253,10 +259,16 @@ function initBarChart(data, type) {
     .attr('class', 'horizontal-tip')
     .style('display', 'none');
 
+  // console.log($(".svg-container").width());
+
   let svg = d3.select('#' + type + '-bar-chart'),
-    margin = { top: 20, right: 20, bottom: 30, left: 40 },
-    width = +svg.attr('width') - margin.left - margin.right,
-    height = +svg.attr('height') - margin.top - margin.bottom;
+    margin = { top: 0, right: 20, bottom: 0, left: 20 },
+    width = +$(".svg-container").width() - margin.left - margin.right,
+    height = +$(".svg-container").outerHeight() - margin.top - margin.bottom;
+
+  svg.selectAll("*").remove()
+  console.log(width)
+    // console.log(height)
 
   let x = d3
       .scaleBand()

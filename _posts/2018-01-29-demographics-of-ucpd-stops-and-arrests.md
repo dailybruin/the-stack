@@ -136,11 +136,15 @@ The demographic categories come from UCPD classifications.
   <option value="race">Race</option>
   <option value="age">Age</option>
 </select>
-<svg width="640" height="300" id="suspicious-bar-chart"></svg>
+<div class="svg-container">
+  <svg class="svg-content" viewBox="0 0 640 300" preserveAspectRatio="xMidYMid meet" id="suspicious-bar-chart"></svg>
+</div>
 <h1 class="graph-title">Arrests</h1>
 <select id="arrest-bar-select">
   <option value="gender">Gender</option>
   <option value="race">Race</option>
   <option value="age">Age</option>
 </select>
-<svg width="640" height="300" id="arrest-bar-chart"></svg>
+<div class="svg-container">
+  <svg class="svg-content" viewBox="0 0 640 300" preserveAspectRatio="xMidYMid meet" id="arrest-bar-chart"></svg>
+</div>
