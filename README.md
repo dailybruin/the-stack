@@ -40,6 +40,6 @@ TL;DR
 
 Pull requests which do not conform to the above will not be accepted. If you have any questions on how something should be done, please ask the data editor.
 
-##[Brand guidelines](https://github.com/daily-bruin/brand/tree/master/stack)
+## [Brand guidelines](https://github.com/daily-bruin/brand/tree/master/stack)
 
 ![Stack swag](http://i.imgur.com/L5kgSYu.png)
