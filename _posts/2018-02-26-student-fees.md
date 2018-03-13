@@ -1,6 +1,6 @@
 ---
 title: Student Fees BETA
-teaser: Explore the relationships between 100 academic subjects as we use natural language processing algorithms to "read" course descriptions.  
+teaser: Explore the relationships between 100 academic subjects as we use natural language processing algorithms to "read" course descriptions.
 authors:
     - tyson_ni
 featured_image:
@@ -14,10 +14,10 @@ scripts:
     - /js/posts/student-fees/zhaoalex.js
     - /js/posts/student-fees/yangrichard.js
 ---
- 
+
 From Plato to Pluto, the hundreds of subjects taught at UCLA cover much of the knowledge scholars accumulated over time. And with the geography of UCLA as a guide, we may even group these hundreds of subjects into the North and South campuses. But this division alone fails to inform us about the finer relationships between academic departments.
 
-The good news is that the UCLA Registrar provides valuable information that allow us to more precisely determine what each department is about. Using [course descriptions](http://www.registrar.ucla.edu/Academics/Course-Descriptions) as well as [departmental objectives](http://catalog.registrar.ucla.edu/ucla-cat2016-224.html), we apply a variant of the *word2vec* algorithm – a machine learning model that can capture the semantic meaning of words – to quantify each department as a list of numbers. These numbers provide a blueprint for analyzing the links and clusters that relate one department to another.
+The good news is that the UCLA Registrar provides valuable information that allow us to more precisely determine what each department is about. Using [course descriptions](http://www.registrar.ucla.edu/Academics/Course-Descriptions) as well as [departmental objectives](http://catalog.registrar.ucla.edu/ucla-cat2016-224.html), we apply a variant of the _word2vec_ algorithm – a machine learning model that can capture the semantic meaning of words – to quantify each department as a list of numbers. These numbers provide a blueprint for analyzing the links and clusters that relate one department to another.
 
 ## Re-mapping UCLA departments
 
@@ -33,12 +33,6 @@ Richard Yang stuff
 
 ## 5 Most / Least Similar Departments
 
-Alex Zhao stuff
-
-<div id='donut-chart'></div>
-
-<br>
-
 Pick a subject and see which 5 other subjects are most and least like it:
 
 > Similarity Score: Cosine similarity ranges between -1 to 1. As a rule of thumb, a score greater than 0.5 indicates similarity, and a score around or less than 0 indicates a lack of similarity.
@@ -47,18 +41,17 @@ Pick a subject and see which 5 other subjects are most and least like it:
 
 ## Compare any 2 departments
 
-Pick and compare any two subjects. 
+Pick and compare any two subjects.
 
 (Which two? Your old major and your current major, what you and your significant other study, double majors, etc.)
 
-
 ## Grouping departments
 
-We can group together departments that are similar. As it turns out, the algorithmically-generated clusters match our intuition pretty well. They even manage to reproduce the North-South campus divide UCLA students are intimately familiar with. 
+We can group together departments that are similar. As it turns out, the algorithmically-generated clusters match our intuition pretty well. They even manage to reproduce the North-South campus divide UCLA students are intimately familiar with.
 
 <h1 style='text-align:center;'>North Campus</h1>
 
-**Group 1 ("Perform")** 
+**Group 1 ("Perform")**
 
 Dance; Design | Media Arts; Ethnomusicology; Film and Television; Music; Music History; Theater
 
@@ -78,15 +71,15 @@ Art; Anthropology; Asian American Studies; Communication Studies; Chicana and Ch
 
 Economics; Management
 
-**Group 5 ("Life")** 
+**Group 5 ("Life")**
 
 Ecology and Evolutionary Biology; Life Sciences; Molecular, Cell, and Developmental Biology; Microbiology, Immunology, and Molecular Genetics; Neuroscience; Psychology; Physiological Science
 
-**Group 6 ("Compute")** 
+**Group 6 ("Compute")**
 
 Computer Science; Electrical Engineering; Mathematics; Program in Computing; Statistics
 
-**Group 7 ("Matter")** 
+**Group 7 ("Matter")**
 
 Astronomy; Atmospheric and Oceanic Sciences; Chemical Engineering; Chemistry and Biochemistry; Civil and Environmental Engineering; Earth, Planetary, and Space Sciences; Mechanical and Aerospace Engineering; Physics
 
@@ -110,7 +103,7 @@ In this project, we want texts that represent the essence of academic subjects. 
 
 **Course Catalog**
 
-The course catalog reflects the breadth and depth of subjects in the academic world, and how they are taught at UCLA. Crucially, keywords of topics that are taught in classes can capture the intellectual linkages between disciplines. Course descriptions also sometimes refer to pre-requisites in other departments or classes that are cross-listed in multiple departments. These links provide clues into the organizational linkages between subjects at UCLA. 
+The course catalog reflects the breadth and depth of subjects in the academic world, and how they are taught at UCLA. Crucially, keywords of topics that are taught in classes can capture the intellectual linkages between disciplines. Course descriptions also sometimes refer to pre-requisites in other departments or classes that are cross-listed in multiple departments. These links provide clues into the organizational linkages between subjects at UCLA.
 
 However, course descriptions are sparsely worded and usually contain a listing of keywords rather than fully expressive sentences. They can limit the model from fully capturing the semantics.
 
@@ -136,7 +129,7 @@ For each department, we create a document that combines the course descriptions 
 
 **A Language Model**
 
-A landmark achievement in natural language processing is the [word2vec](https://www.tensorflow.org/tutorials/word2vec) model, which infers the meaning of words by looking at where they are used. For example, by observing how "king" and "queen" are often surrounded by the same words (think "castle" or "govern"), the model guesses that they refer the same concept (ie. head of monarchy). The model also learns how they differ in gender by noting how they are used with different gender pronouns. 
+A landmark achievement in natural language processing is the [word2vec](https://www.tensorflow.org/tutorials/word2vec) model, which infers the meaning of words by looking at where they are used. For example, by observing how "king" and "queen" are often surrounded by the same words (think "castle" or "govern"), the model guesses that they refer the same concept (ie. head of monarchy). The model also learns how they differ in gender by noting how they are used with different gender pronouns.
 
 To learn semantic meanings, word2vec trains a two-layer neural network to predict which word is used given its surrounding words. However, the predictive task is tangential, and researchers are instead interested in the by-product – how each word contributes to the predictive task (ie. the word vectors). By comparing word vectors, we can then examine the relations between words.
 
@@ -144,7 +137,6 @@ We use a [paragraph vector](https://cs.stanford.edu/~quocle/paragraph_vector.pdf
 
 **Clustering**
 
-We also apply the K-means algorithm to form 7 groups of departments that have document vectors which are close together in Euclidean distance. 
+We also apply the K-means algorithm to form 7 groups of departments that have document vectors which are close together in Euclidean distance.
 
 <br>
-
