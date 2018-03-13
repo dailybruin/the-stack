@@ -4,6 +4,7 @@
     position: relative;
   }
   
+  /* Donut chart legend CSS */
   .legend {
     font-size: 12px;
     font-family: Helvetica;
@@ -15,14 +16,21 @@
   
   .labels text {
     font-family: Helvetica;
-    font-size: 10px;
+    font-size: 12px;
     text-anchor: middle;
     fill: black;
   }
-  
-  path {
-    cursor: pointer;
+
+  .lines {
+    opacity: 0.5;
+    stroke: black;
+    stroke-width: 2px;
+    fill: none;
   }
+  
+  /*path {
+    cursor: pointer;
+  }*/
   
   .d3-tip {
     font-family: Helvetica;

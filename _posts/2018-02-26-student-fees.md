@@ -33,6 +33,12 @@ Richard Yang stuff
 
 ## 5 Most / Least Similar Departments
 
+Alex Zhao stuff
+
+<div id='donut-chart'></div>
+
+<br>
+
 Pick a subject and see which 5 other subjects are most and least like it:
 
 > Similarity Score: Cosine similarity ranges between -1 to 1. As a rule of thumb, a score greater than 0.5 indicates similarity, and a score around or less than 0 indicates a lack of similarity.
