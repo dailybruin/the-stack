@@ -1,0 +1,38 @@
+#donut-chart {
+    width: 500px;
+    height: 500px;
+    position: relative;
+  }
+  
+  .legend {
+    font-size: 12px;
+    font-family: Helvetica;
+  }
+  
+  rect {
+    stroke-width: 2;
+  }
+  
+  .labels text {
+    font-family: Helvetica;
+    font-size: 10px;
+    text-anchor: middle;
+    fill: black;
+  }
+  
+  path {
+    cursor: pointer;
+  }
+  
+  .d3-tip {
+    font-family: Helvetica;
+    font-size: 12px;
+    text-align: center;
+    line-height: 1.5;
+    font-weight: bold;
+    padding: 6px;
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    border-radius: 2px;
+    pointer-events: none;
+  }
