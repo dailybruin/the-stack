@@ -35,7 +35,7 @@ Richard Yang stuff
 
 Alex Zhao stuff
 
-<div class='donut-chart'></div>
+<div id='donut-chart'></div>
 
 <br>
 
