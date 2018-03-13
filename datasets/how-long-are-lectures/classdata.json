@@ -3219,6 +3219,52 @@
          }
       }
    },
+   "Hindi-Urdu (HIN-URD)": {
+      "School": "",
+      "NorthOrSouth": "",
+      "Fall": {
+         "Upper": {
+            "avg_lecture_size": 25.0,
+            "avg_lecture_length_day": 0.0,
+            "avg_num_lectures_week": 0.0,
+            "avg_lecture_length_week": 0.0
+         },
+         "Lower": {
+            "avg_lecture_size": 100.0,
+            "avg_lecture_length_day": 0.0,
+            "avg_num_lectures_week": 0.0,
+            "avg_lecture_length_week": 0.0
+         }
+      },
+      "Winter": {
+         "Upper": {
+            "avg_lecture_size": 25.0,
+            "avg_lecture_length_day": 0.0,
+            "avg_num_lectures_week": 0.0,
+            "avg_lecture_length_week": 0.0
+         },
+         "Lower": {
+            "avg_lecture_size": 100.0,
+            "avg_lecture_length_day": 0.0,
+            "avg_num_lectures_week": 0.0,
+            "avg_lecture_length_week": 0.0
+         }
+      },
+      "Spring": {
+         "Upper": {
+            "avg_lecture_size": 25.0,
+            "avg_lecture_length_day": 0.0,
+            "avg_num_lectures_week": 0.0,
+            "avg_lecture_length_week": 0.0
+         },
+         "Lower": {
+            "avg_lecture_size": 100.0,
+            "avg_lecture_length_day": 0.0,
+            "avg_num_lectures_week": 0.0,
+            "avg_lecture_length_week": 0.0
+         }
+      }
+   },
    "History (HIST)": {
       "School": "",
       "NorthOrSouth": "",
