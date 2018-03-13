@@ -114,13 +114,10 @@ let interest_rate = svg
 let tip = d3
   .tip()
   .attr('class', 'd3-tip')
-  .offset([-10, 0])
   .html(
     d =>
       `<strong>Amount:</strong> <span style='color:white'>$${d.amount}</span>`
   );
-
-svg.call(tip);
 
 interest_rate
   .selectAll('rect')
@@ -131,8 +128,24 @@ interest_rate
   .attr('y', d => y(d.y1))
   .attr('height', d => y(d.y0) - y(d.y1))
   .style('fill', d => color(d.name))
-  .on('mouseover', tip.show)
-  .on('mouseout', tip.hide);
+  .on('mouseover', (d, i, nodes) => {
+    tip
+      .style('left', d3.event.pageX + 10 + 'px')
+      .style('top', d3.event.pageY + 10 + 'px')
+      .show(d);
+  })
+  .on('mousemove', d => {
+    console.log('mouse move');
+    tip
+      .style('left', d3.event.pageX + 10 + 'px')
+      .style('top', d3.event.pageY + 10 + 'px');
+  })
+  .on('mouseout', (d, i, nodes) => {
+    tip.hide(d);
+  });
+
+svg.call(tip);
+
 /*
 let legend = svg.selectAll(".legend")
                 .data(color.domain().slice().reverse())
