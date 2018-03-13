@@ -7,7 +7,7 @@ var dataset = [
   { label: "Mathematical", count: "31.4"}
 ];
 
-// Dataset constants
+// Dataset constants (for percentage calculation)
 const sum = d3.sum(dataset.map(d => { return d.count; }));
 
 // Donut chart constants
@@ -26,14 +26,12 @@ const cornerRadius = 5;
 
 // Label constants
 const labelRadius = donutRadius + 25;
-//const labelArcDist = 25;
-//const hoverArcDist = 2;
 
+/*
 // Legend constants
 const legendRectSize = 18;
 const legendSpacing = 4;
-
-let midAngle = d => { return d.startAngle + (d.endAngle - d.startAngle) / 2; };
+*/
 
 // Chart color
 var donutColor = d3.scaleOrdinal(d3.schemeCategory10);
@@ -68,12 +66,6 @@ var labelArc = d3.arc()
   .outerRadius(labelRadius)
   .innerRadius(labelRadius);
 
-/*
-var hoverArc = d3.arc()
-  .outerRadius(radius + hoverArcDist)
-  .innerRadius(radius + hoverArcDist);
-*/
-
 // Pie-ify the data
 var pie = d3.pie()
   .value(d => { return d.count; })
@@ -90,6 +82,9 @@ var path = donutSvg.select(".slices")
   .attr("fill", d => {
     return donutColor(d.data.label);
   });
+
+// For labels and polylines, we need to find the angle of the middle of the slice
+let midAngle = d => { return d.startAngle + (d.endAngle - d.startAngle) / 2; };
 
 // Create all labels
 var labels = donutSvg.select(".labels")
@@ -122,7 +117,7 @@ var polylines = donutSvg.select(".lines")
     return [arc.centroid(d), labelArc.centroid(d), pos];
   })
 
-// labels inside chart
+// labels inside slices
 /*
   .each((d, i, nodes) => {
     var centroid = arc.centroid(d);
@@ -132,8 +127,6 @@ var polylines = donutSvg.select(".lines")
       .attr("dy", "0.33em")
       //.text(Math.round(10000 * d.data.count / sum) / 100 + "%");
   })*/
-
-//path.call(tip);
 
 // Setup listeners for tooltip (mouse on, mouse move, and mouse off)
 
@@ -173,6 +166,7 @@ path.on("mouseout", (d, i, nodes) => {
 })
 
 /*
+// Create legend
 var legend = svg.selectAll(".legend")
   .data(donutColor.domain())
   .enter()
