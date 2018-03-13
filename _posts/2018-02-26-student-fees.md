@@ -12,6 +12,7 @@ scripts:
     - https://cdnjs.cloudflare.com/ajax/libs/d3/4.13.0/d3.min.js
     - https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.7.1/d3-tip.min.js
     - /js/posts/student-fees/zhaoalex.js
+    - /js/posts/student-fees/yangrichard.js
 ---
  
 From Plato to Pluto, the hundreds of subjects taught at UCLA cover much of the knowledge scholars accumulated over time. And with the geography of UCLA as a guide, we may even group these hundreds of subjects into the North and South campuses. But this division alone fails to inform us about the finer relationships between academic departments.
@@ -20,12 +21,9 @@ The good news is that the UCLA Registrar provides valuable information that allo
 
 ## Re-mapping UCLA departments
 
-We can visualize this analysis as a scatter plot and locate each department on a "map." A few departments are labeled, but feel free to hover over any point.
+Richard Yang stuff
 
-  <div class='ui grid centered' id='scatterplot-wrapper'>
-      <div class='twelve wide column' id='scatterplot'>
-      </div>
-  </div>
+  <div class='bar-chart'></div>
 
 <br>
 
@@ -37,28 +35,6 @@ We can visualize this analysis as a scatter plot and locate each department on a
 
 Pick a subject and see which 5 other subjects are most and least like it:
 
-<select class="ui search selection dropdown" id="pick-subject">
-</select>
-
-<br>
-
-<div class="ui equal width center aligned grid" id='similar-tables-wrapper'>
-  <div class='row'>
-    <div class='column'>
-      <h1>5 Most Similar</h1>
-      <table class='ui celled table' id='most-similar-table'>
-      </table>
-    </div>
-    <div class='column'>
-      <h1>5 Least Similar</h1>
-      <table class='ui celled table' id='least-similar-table'>  
-      </table>
-    </div>
-  </div>
-</div>
-
-<br>
-
 > Similarity Score: Cosine similarity ranges between -1 to 1. As a rule of thumb, a score greater than 0.5 indicates similarity, and a score around or less than 0 indicates a lack of similarity.
 
 <br>
@@ -69,23 +45,6 @@ Pick and compare any two subjects.
 
 (Which two? Your old major and your current major, what you and your significant other study, double majors, etc.)
 
-<div class='ui grid centered'>
-  <div class='row'>
-    <select class="ui search selection dropdown" id="pick-subject1"></select>
-  </div>
-  <div class='row'>
-    <select class="ui search selection dropdown" id="pick-subject2"></select>
-  </div>
-</div>
-
-<div class='ui grid centered statistics'>
-  <div class='blue statistic'>
-    <div id='pair-similarity-score' class='value'></div>
-    <div id='pair-similarity-label' class='label'></div>
-  </div>
-</div>
-
-<br><br>
 
 ## Grouping departments
 
