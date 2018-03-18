@@ -1,0 +1,22 @@
+body {
+  font: 10px sans-serif;
+  position: relative;
+  padding: 100px;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.x.axis path {
+  display: none;
+}
+
+label {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}

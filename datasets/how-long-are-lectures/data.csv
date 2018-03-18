@@ -1,27 +1,158 @@
 name,value
-A,.08167
-B,.01492
-C,.02782
-D,.04253
-E,.12702
-F,.02288
-G,.02015
-H,.06094
-I,.06966
-J,.00153
-K,.00772
-L,.04025
-M,.02406
-N,.06749
-O,.07507
-P,.01929
-Q,.00095
-R,.05987
-S,.06327
-T,.09056
-U,.02758
-V,.00978
-W,.02360
-X,.00150
-Y,.01974
-Z,.00074
+dummy, 0
+Bioengineering (BIOENGR),3
+Islamic Studies (ISLM ST),2
+Life Sciences (LIFESCI),2
+Education (EDUC),6
+Music History (MSC HST),4
+Engineering (ENGR),3
+Civic Engagement (CIVIC),5
+Conservation of Archaeological and Ethnographic Materials (CAEM),5
+International Development Studies (INTL DV),5
+Latin American Studies (LATN AM),5
+Jewish Studies (JEWISH),2
+Indo-European Studies (I E STD),2
+Southeast Asian (SEASIAN),5
+Aerospace Studies (AERO ST),3
+Hungarian (HNGAR),3
+Polish (POLSH),2
+Turkic Languages (TURKIC),4
+Neurobiology (NEURBIO),1
+Mathematics (MATH),2
+"Earth, Planetary, and Space Sciences (EPS SCI)",2
+Disability Studies (DIS STD),4
+Public Policy (PUB PLC),4
+Scandinavian (SCAND),2
+Environmental Health Sciences (ENV HLT),3
+Iranian,2
+Computer Science (COM SCI),3
+Statistics (STATS),2
+Electrical Engineering (EL ENGR),3
+Sociology (SOCIOL),3
+"Lesbian, Gay, Bisexual, Transgender, and Queer Studies (LGBTQS)",3
+Civil and Environmental Engineering (C&EE),3
+Neuroscience (Graduate) (NEURO),3
+Political Science (POL SCI),3
+Italian,2
+Art,6
+Nursing,5
+University Studies (UNIV ST),3
+History (HIST),3
+Psychology (PSYCH),2
+Chinese (CHIN),2
+Vietnamese (VIETMSE),2
+Chemistry and Biochemistry (CHEM),2
+Physics and Biology in Medicine (PBMED),3
+Physiological Science (PHYSCI),3
+Korean (KOREA),3
+Middle Eastern Studies (M E STD),2
+Philosophy (PHILOS),3
+Art History (ART HIS),4
+Neuroscience (NEUROSC),2
+Mechanical and Aerospace Engineering (MECH&AE),3
+Ethnomusicology (ETHNMUS),4
+Naval Science (NAV SCI),4
+Spanish (SPAN),3
+"Molecular, Cellular, and Integrative Physiology (MC&IP)",3
+Latin,2
+Epidemiology (EPIDEM),4
+Economics (ECON),2
+Honors Collegium (HNRS),3
+Biological Chemistry (BIOL CH),2
+Human Genetics (HUM GEN),3
+Oral Biology (ORL BIO),2
+South Asian (S ASIAN),2
+Thai,2
+Biomedical Research (BMD RES),3
+Psychiatry and Biobehavioral Sciences (PSYCTRY),3
+Theater,5
+Bioinformatics (Graduate) (BIOINFO),3
+Design / Media Arts (DESMA),5
+Armenian (ARMENIA),3
+Greek,2
+African American Studies (AF AMER),3
+Urban Planning (URBN PL),4
+International and Area Studies (I A STD),3
+Physiology (PHYSIOL),3
+Musicology (MUSCLG),5
+Chicana and Chicano Studies (CHICANO),4
+Indonesian (INDO),2
+Dance,3
+World Arts and Cultures (WL ARTS),3
+Archaeology (ARCHEOL),6
+Arabic,3
+Japanese (JAPAN),2
+Program in Computing (COMPTNG),1
+Classics (CLASSIC),2
+Swahili,2
+Atmospheric and Oceanic Sciences (A&O SCI),2
+Anthropology (ANTHRO),3
+"Molecular, Cell, and Developmental Biology (MCD BIO)",2
+Music Industry (MSC IND),4
+Pathology and Laboratory Medicine (PATH),2
+Environment (ENVIRON),3
+Applied Linguistics (APPLING),3
+Comparative Literature (COM LIT),3
+Semitic,4
+Filipino (FILIPNO),2
+Asian American Studies (ASIA AM),3
+French (FRNCH),2
+Arts and Architecture (ART&ARC),5
+Romanian (ROMANIA),4
+Materials Science and Engineering (MAT SCI),4
+Medicine (MED),3
+Biomathematics (BIOMATH),3
+Portuguese (PORTGSE),3
+Gender Studies (GENDER),3
+Biostatistics (BIOSTAT),3
+Health Policy and Management (HLT POL),4
+English (ENGL),4
+Molecular and Medical Pharmacology (M PHARM),3
+Indigenous Languages of the Americas (IL AMER),3
+Gerontology (GRNTLGY),3
+Social Welfare (SOC WLF),4
+Global Studies (GLBL ST),4
+German,3
+Near Eastern Languages (NR EAST),2
+Music (MUSC),4
+Ecology and Evolutionary Biology (EE BIOL),2
+Public Health (PUB HLT),4
+Management (MGMT),4
+Labor and Workplace Studies (LBR&WS),5
+American Sign Language (ASL),2
+Science Education (SCI EDU),2
+Dutch,1
+American Indian Studies (AM IND),4
+Ancient Near East (AN N EA),3
+Yiddish (YIDDSH),3
+Hindi-Urdu (HIN-URD),2
+Community Health Sciences (COM HLT),5
+"Religion, Study of (RELIGN)",2
+English Composition (ENGCOMP),3
+Serbian/Croatian (SRB CRO),2
+African Studies (AFRC ST),5
+Molecular Biology (MOL BIO),3
+Law,3
+Clusters (CLUSTER),2
+Astronomy (ASTR),2
+International Migration Studies (I M STD),5
+Military Science (MIL SCI),3
+Hebrew,1
+Geography (GEOG),3
+Linguistics (LING),3
+Communication (COMM),3
+Physics,2
+Architecture and Urban Design (ARCH&UD),5
+Chemical Engineering (CH ENGR),3
+"Microbiology, Immunology, and Molecular Genetics (MIMG)",3
+Molecular Toxicology (MOL TOX),1
+Arts Education (ARTS ED),5
+English as A Second Language (ESL),3
+Slavic (SLAVC),2
+Film and Television (FILM TV),5
+Society and Genetics (SOC GEN),3
+Asian,3
+Information Studies (INF STD),6
+Central and East European Studies (C&EE ST),2
+Digital Humanities (DGT HUM),2
+Russian (RUSSN),2
