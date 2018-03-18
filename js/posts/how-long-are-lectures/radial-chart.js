@@ -13,7 +13,7 @@ var svg = d3.select("body").append("svg")
   .append("g")
     .attr("transform", "translate(" + width/2 + "," + height/2 + ")");
 
-d3.csv("/Users/dinkar/the_stack/the-stack/datasets/how-long-are-lectures/data.csv", function(error, data) {
+d3.csv("/datasets/how-long-are-lectures/data.csv", function(error, data) {
 
   var extent = d3.extent(data, function(d) { return d.value; });
   var barScale = d3.scale.linear()
