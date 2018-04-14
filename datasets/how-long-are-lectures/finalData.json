@@ -3634,7 +3634,7 @@
     }
   },
   "Chicana and Chicano Studies (CHICANO)": {
-    "NorthOrSouth": "",
+    "NorthOrSouth": "North",
     "School": "",
     "Spring": {
       "Upper": {
@@ -3680,7 +3680,7 @@
     }
   },
   "Indonesian (INDO)": {
-    "NorthOrSouth": "",
+    "NorthOrSouth": "North",
     "School": "",
     "Spring": {
       "Upper": {
@@ -3726,7 +3726,7 @@
     }
   },
   "Dance": {
-    "NorthOrSouth": "",
+    "NorthOrSouth": "North",
     "School": "",
     "Spring": {
       "Upper": {
@@ -3772,7 +3772,7 @@
     }
   },
   "World Arts and Cultures (WL ARTS)": {
-    "NorthOrSouth": "",
+    "NorthOrSouth": "North",
     "School": "",
     "Spring": {
       "Upper": {
@@ -3818,7 +3818,7 @@
     }
   },
   "Archaeology (ARCHEOL)": {
-    "NorthOrSouth": "",
+    "NorthOrSouth": "North",
     "School": "",
     "Spring": {
       "Upper": {
@@ -3864,7 +3864,7 @@
     }
   },
   "Arabic": {
-    "NorthOrSouth": "",
+    "NorthOrSouth": "North",
     "School": "",
     "Spring": {
       "Upper": {
@@ -3910,7 +3910,7 @@
     }
   },
   "Neurology (NEURLGY)": {
-    "NorthOrSouth": "",
+    "NorthOrSouth": "South",
     "School": "",
     "Spring": {
       "Upper": {
@@ -3956,7 +3956,7 @@
     }
   },
   "Japanese (JAPAN)": {
-    "NorthOrSouth": "",
+    "NorthOrSouth": "North",
     "School": "",
     "Spring": {
       "Upper": {
@@ -4002,7 +4002,7 @@
     }
   },
   "Program in Computing (COMPTNG)": {
-    "NorthOrSouth": "",
+    "NorthOrSouth": "South",
     "School": "",
     "Spring": {
       "Upper": {
@@ -4048,7 +4048,7 @@
     }
   },
   "Classics (CLASSIC)": {
-    "NorthOrSouth": "",
+    "NorthOrSouth": "North",
     "School": "",
     "Spring": {
       "Upper": {
@@ -4094,7 +4094,7 @@
     }
   },
   "Swahili": {
-    "NorthOrSouth": "",
+    "NorthOrSouth": "North",
     "School": "",
     "Spring": {
       "Upper": {
@@ -4140,7 +4140,7 @@
     }
   },
   "Atmospheric and Oceanic Sciences (A&O SCI)": {
-    "NorthOrSouth": "",
+    "NorthOrSouth": "South",
     "School": "",
     "Spring": {
       "Upper": {
@@ -4186,7 +4186,7 @@
     }
   },
   "Anthropology (ANTHRO)": {
-    "NorthOrSouth": "",
+    "NorthOrSouth": "North",
     "School": "",
     "Spring": {
       "Upper": {
@@ -4232,7 +4232,7 @@
     }
   },
   "Molecular, Cell, and Developmental Biology (MCD BIO)": {
-    "NorthOrSouth": "",
+    "NorthOrSouth": "South",
     "School": "",
     "Spring": {
       "Upper": {
@@ -4278,7 +4278,7 @@
     }
   },
   "Music Industry (MSC IND)": {
-    "NorthOrSouth": "",
+    "NorthOrSouth": "North",
     "School": "",
     "Spring": {
       "Upper": {
@@ -4324,7 +4324,7 @@
     }
   },
   "Pathology and Laboratory Medicine (PATH)": {
-    "NorthOrSouth": "",
+    "NorthOrSouth": "South",
     "School": "",
     "Spring": {
       "Upper": {
@@ -4370,7 +4370,7 @@
     }
   },
   "Environment (ENVIRON)": {
-    "NorthOrSouth": "",
+    "NorthOrSouth": "South",
     "School": "",
     "Spring": {
       "Upper": {
@@ -4416,7 +4416,7 @@
     }
   },
   "Medical History (MED HIS)": {
-    "NorthOrSouth": "",
+    "NorthOrSouth": "North",
     "School": "",
     "Spring": {
       "Upper": {
@@ -4462,7 +4462,7 @@
     }
   },
   "Applied Linguistics (APPLING)": {
-    "NorthOrSouth": "",
+    "NorthOrSouth": "North",
     "School": "",
     "Spring": {
       "Upper": {
@@ -4508,7 +4508,7 @@
     }
   },
   "Comparative Literature (COM LIT)": {
-    "NorthOrSouth": "",
+    "NorthOrSouth": "North",
     "School": "",
     "Spring": {
       "Upper": {
@@ -4554,7 +4554,7 @@
     }
   },
   "Semitic": {
-    "NorthOrSouth": "",
+    "NorthOrSouth": "North",
     "School": "",
     "Spring": {
       "Upper": {
@@ -4600,7 +4600,7 @@
     }
   },
   "Filipino (FILIPNO)": {
-    "NorthOrSouth": "",
+    "NorthOrSouth": "North",
     "School": "",
     "Spring": {
       "Upper": {
@@ -4646,7 +4646,7 @@
     }
   },
   "Asian American Studies (ASIA AM)": {
-    "NorthOrSouth": "",
+    "NorthOrSouth": "North",
     "School": "",
     "Spring": {
       "Upper": {
@@ -4692,7 +4692,7 @@
     }
   },
   "French (FRNCH)": {
-    "NorthOrSouth": "",
+    "NorthOrSouth": "North",
     "School": "",
     "Spring": {
       "Upper": {
@@ -4738,7 +4738,7 @@
     }
   },
   "Arts and Architecture (ART&ARC)": {
-    "NorthOrSouth": "",
+    "NorthOrSouth": "North",
     "School": "",
     "Spring": {
       "Upper": {
@@ -4784,7 +4784,7 @@
     }
   },
   "Romanian (ROMANIA)": {
-    "NorthOrSouth": "",
+    "NorthOrSouth": "North",
     "School": "",
     "Spring": {
       "Upper": {
@@ -4830,7 +4830,7 @@
     }
   },
   "Materials Science and Engineering (MAT SCI)": {
-    "NorthOrSouth": "",
+    "NorthOrSouth": "South",
     "School": "",
     "Spring": {
       "Upper": {
@@ -4876,7 +4876,7 @@
     }
   },
   "Medicine (MED)": {
-    "NorthOrSouth": "",
+    "NorthOrSouth": "South",
     "School": "",
     "Spring": {
       "Upper": {
@@ -4922,7 +4922,7 @@
     }
   },
   "Biomathematics (BIOMATH)": {
-    "NorthOrSouth": "",
+    "NorthOrSouth": "South",
     "School": "",
     "Spring": {
       "Upper": {
@@ -4968,7 +4968,7 @@
     }
   },
   "Portuguese (PORTGSE)": {
-    "NorthOrSouth": "",
+    "NorthOrSouth": "North",
     "School": "",
     "Spring": {
       "Upper": {
@@ -5014,7 +5014,7 @@
     }
   },
   "Gender Studies (GENDER)": {
-    "NorthOrSouth": "",
+    "NorthOrSouth": "North",
     "School": "",
     "Spring": {
       "Upper": {
@@ -5060,7 +5060,7 @@
     }
   },
   "Biostatistics (BIOSTAT)": {
-    "NorthOrSouth": "",
+    "NorthOrSouth": "South",
     "School": "",
     "Spring": {
       "Upper": {
@@ -5106,7 +5106,7 @@
     }
   },
   "Health Policy and Management (HLT POL)": {
-    "NorthOrSouth": "",
+    "NorthOrSouth": "North",
     "School": "",
     "Spring": {
       "Upper": {
@@ -5152,7 +5152,7 @@
     }
   },
   "Management-PhD (MGMTPHD)": {
-    "NorthOrSouth": "",
+    "NorthOrSouth": "North",
     "School": "",
     "Spring": {
       "Upper": {
@@ -5198,7 +5198,7 @@
     }
   },
   "English (ENGL)": {
-    "NorthOrSouth": "",
+    "NorthOrSouth": "North",
     "School": "",
     "Spring": {
       "Upper": {
@@ -5244,7 +5244,7 @@
     }
   },
   "Molecular and Medical Pharmacology (M PHARM)": {
-    "NorthOrSouth": "",
+    "NorthOrSouth": "South",
     "School": "",
     "Spring": {
       "Upper": {
@@ -5290,7 +5290,7 @@
     }
   },
   "Indigenous Languages of the Americas (IL AMER)": {
-    "NorthOrSouth": "",
+    "NorthOrSouth": "North",
     "School": "",
     "Spring": {
       "Upper": {
@@ -5336,7 +5336,7 @@
     }
   },
   "Gerontology (GRNTLGY)": {
-    "NorthOrSouth": "",
+    "NorthOrSouth": "North",
     "School": "",
     "Spring": {
       "Upper": {
@@ -5382,7 +5382,7 @@
     }
   },
   "Social Welfare (SOC WLF)": {
-    "NorthOrSouth": "",
+    "NorthOrSouth": "North",
     "School": "",
     "Spring": {
       "Upper": {
@@ -5428,7 +5428,7 @@
     }
   },
   "Global Studies (GLBL ST)": {
-    "NorthOrSouth": "",
+    "NorthOrSouth": "North",
     "School": "",
     "Spring": {
       "Upper": {
@@ -5474,7 +5474,7 @@
     }
   },
   "German": {
-    "NorthOrSouth": "",
+    "NorthOrSouth": "North",
     "School": "",
     "Spring": {
       "Upper": {
@@ -5520,7 +5520,7 @@
     }
   },
   "Near Eastern Languages (NR EAST)": {
-    "NorthOrSouth": "",
+    "NorthOrSouth": "North",
     "School": "",
     "Spring": {
       "Upper": {
@@ -5566,7 +5566,7 @@
     }
   },
   "Afrikaans (AFRKAAN)": {
-    "NorthOrSouth": "",
+    "NorthOrSouth": "North",
     "School": "",
     "Spring": {
       "Upper": {
@@ -5612,7 +5612,7 @@
     }
   },
   "Music (MUSC)": {
-    "NorthOrSouth": "",
+    "NorthOrSouth": "North",
     "School": "",
     "Spring": {
       "Upper": {
@@ -5658,7 +5658,7 @@
     }
   },
   "Electrical and Computer Engineering (EC ENGR)": {
-    "NorthOrSouth": "",
+    "NorthOrSouth": "South",
     "School": "",
     "Spring": {
       "Upper": {
@@ -5704,7 +5704,7 @@
     }
   },
   "Ecology and Evolutionary Biology (EE BIOL)": {
-    "NorthOrSouth": "",
+    "NorthOrSouth": "North",
     "School": "",
     "Spring": {
       "Upper": {
@@ -5750,7 +5750,7 @@
     }
   },
   "Public Health (PUB HLT)": {
-    "NorthOrSouth": "",
+    "NorthOrSouth": "North",
     "School": "",
     "Spring": {
       "Upper": {
@@ -5796,7 +5796,7 @@
     }
   },
   "Surgery": {
-    "NorthOrSouth": "",
+    "NorthOrSouth": "South",
     "School": "",
     "Spring": {
       "Upper": {
@@ -5842,7 +5842,7 @@
     }
   },
   "Food Studies (FOOD ST)": {
-    "NorthOrSouth": "",
+    "NorthOrSouth": "North",
     "School": "",
     "Spring": {
       "Upper": {
@@ -5888,7 +5888,7 @@
     }
   },
   "Management (MGMT)": {
-    "NorthOrSouth": "",
+    "NorthOrSouth": "North",
     "School": "",
     "Spring": {
       "Upper": {
@@ -5934,7 +5934,7 @@
     }
   },
   "Social Science (SOC SC)": {
-    "NorthOrSouth": "",
+    "NorthOrSouth": "North",
     "School": "",
     "Spring": {
       "Upper": {
@@ -5980,7 +5980,7 @@
     }
   },
   "Labor and Workplace Studies (LBR&WS)": {
-    "NorthOrSouth": "",
+    "NorthOrSouth": "North",
     "School": "",
     "Spring": {
       "Upper": {
@@ -6026,7 +6026,7 @@
     }
   },
   "American Sign Language (ASL)": {
-    "NorthOrSouth": "",
+    "NorthOrSouth": "North",
     "School": "",
     "Spring": {
       "Upper": {
@@ -6072,7 +6072,7 @@
     }
   },
   "Science Education (SCI EDU)": {
-    "NorthOrSouth": "",
+    "NorthOrSouth": "North",
     "School": "",
     "Spring": {
       "Upper": {
@@ -6118,7 +6118,7 @@
     }
   },
   "Dutch": {
-    "NorthOrSouth": "",
+    "NorthOrSouth": "North",
     "School": "",
     "Spring": {
       "Upper": {
@@ -6164,7 +6164,7 @@
     }
   },
   "American Indian Studies (AM IND)": {
-    "NorthOrSouth": "",
+    "NorthOrSouth": "North",
     "School": "",
     "Spring": {
       "Upper": {
@@ -6210,7 +6210,7 @@
     }
   },
   "Ancient Near East (AN N EA)": {
-    "NorthOrSouth": "",
+    "NorthOrSouth": "North",
     "School": "",
     "Spring": {
       "Upper": {
@@ -6256,7 +6256,7 @@
     }
   },
   "Yiddish (YIDDSH)": {
-    "NorthOrSouth": "",
+    "NorthOrSouth": "North",
     "School": "",
     "Spring": {
       "Upper": {
@@ -6302,7 +6302,7 @@
     }
   },
   "Hindi-Urdu (HIN-URD)": {
-    "NorthOrSouth": "",
+    "NorthOrSouth": "North",
     "School": "",
     "Spring": {
       "Upper": {
@@ -6348,7 +6348,7 @@
     }
   },
   "Community Health Sciences (COM HLT)": {
-    "NorthOrSouth": "",
+    "NorthOrSouth": "North",
     "School": "",
     "Spring": {
       "Upper": {
@@ -6394,7 +6394,7 @@
     }
   },
   "Religion, Study of (RELIGN)": {
-    "NorthOrSouth": "",
+    "NorthOrSouth": "North",
     "School": "",
     "Spring": {
       "Upper": {
@@ -6440,7 +6440,7 @@
     }
   },
   "Computational and Systems Biology (C&S BIO)": {
-    "NorthOrSouth": "",
+    "NorthOrSouth": "South",
     "School": "",
     "Spring": {
       "Upper": {
@@ -6486,7 +6486,7 @@
     }
   },
   "English Composition (ENGCOMP)": {
-    "NorthOrSouth": "",
+    "NorthOrSouth": "North",
     "School": "",
     "Spring": {
       "Upper": {
@@ -6532,7 +6532,7 @@
     }
   },
   "Serbian/Croatian (SRB CRO)": {
-    "NorthOrSouth": "",
+    "NorthOrSouth": "North",
     "School": "",
     "Spring": {
       "Upper": {
@@ -6578,7 +6578,7 @@
     }
   },
   "Social Thought (SOC THT)": {
-    "NorthOrSouth": "",
+    "NorthOrSouth": "North",
     "School": "",
     "Spring": {
       "Upper": {
@@ -6624,7 +6624,7 @@
     }
   },
   "African Studies (AFRC ST)": {
-    "NorthOrSouth": "",
+    "NorthOrSouth": "North",
     "School": "",
     "Spring": {
       "Upper": {
@@ -6670,7 +6670,7 @@
     }
   },
   "Molecular Biology (MOL BIO)": {
-    "NorthOrSouth": "",
+    "NorthOrSouth": "South",
     "School": "",
     "Spring": {
       "Upper": {
@@ -6716,7 +6716,7 @@
     }
   },
   "Law": {
-    "NorthOrSouth": "",
+    "NorthOrSouth": "North",
     "School": "",
     "Spring": {
       "Upper": {
@@ -6762,7 +6762,7 @@
     }
   },
   "Clusters (CLUSTER)": {
-    "NorthOrSouth": "",
+    "NorthOrSouth": "North",
     "School": "",
     "Spring": {
       "Upper": {
@@ -6808,7 +6808,7 @@
     }
   },
   "Astronomy (ASTR)": {
-    "NorthOrSouth": "",
+    "NorthOrSouth": "South",
     "School": "",
     "Spring": {
       "Upper": {
@@ -6854,7 +6854,7 @@
     }
   },
   "International Migration Studies (I M STD)": {
-    "NorthOrSouth": "",
+    "NorthOrSouth": "North",
     "School": "",
     "Spring": {
       "Upper": {
@@ -6900,7 +6900,7 @@
     }
   },
   "Military Science (MIL SCI)": {
-    "NorthOrSouth": "",
+    "NorthOrSouth": "North",
     "School": "",
     "Spring": {
       "Upper": {
@@ -6946,7 +6946,7 @@
     }
   },
   "Hebrew": {
-    "NorthOrSouth": "",
+    "NorthOrSouth": "North",
     "School": "",
     "Spring": {
       "Upper": {
@@ -6992,7 +6992,7 @@
     }
   },
   "Geography (GEOG)": {
-    "NorthOrSouth": "",
+    "NorthOrSouth": "North",
     "School": "",
     "Spring": {
       "Upper": {
@@ -7038,7 +7038,7 @@
     }
   },
   "Linguistics (LING)": {
-    "NorthOrSouth": "",
+    "NorthOrSouth": "North",
     "School": "",
     "Spring": {
       "Upper": {
@@ -7084,7 +7084,7 @@
     }
   },
   "Communication (COMM)": {
-    "NorthOrSouth": "",
+    "NorthOrSouth": "North",
     "School": "",
     "Spring": {
       "Upper": {
@@ -7130,7 +7130,7 @@
     }
   },
   "Management-Master of Science in Business Analytics (MGMTMSA)": {
-    "NorthOrSouth": "",
+    "NorthOrSouth": "North",
     "School": "",
     "Spring": {
       "Upper": {
@@ -7176,7 +7176,7 @@
     }
   },
   "Physics": {
-    "NorthOrSouth": "",
+    "NorthOrSouth": "South",
     "School": "",
     "Spring": {
       "Upper": {
@@ -7222,7 +7222,7 @@
     }
   },
   "Architecture and Urban Design (ARCH&UD)": {
-    "NorthOrSouth": "",
+    "NorthOrSouth": "North",
     "School": "",
     "Spring": {
       "Upper": {
@@ -7268,7 +7268,7 @@
     }
   },
   "Chemical Engineering (CH ENGR)": {
-    "NorthOrSouth": "",
+    "NorthOrSouth": "South",
     "School": "",
     "Spring": {
       "Upper": {
@@ -7314,7 +7314,7 @@
     }
   },
   "Microbiology, Immunology, and Molecular Genetics (MIMG)": {
-    "NorthOrSouth": "",
+    "NorthOrSouth": "South",
     "School": "",
     "Spring": {
       "Upper": {
@@ -7360,7 +7360,7 @@
     }
   },
   "Molecular Toxicology (MOL TOX)": {
-    "NorthOrSouth": "",
+    "NorthOrSouth": "South",
     "School": "",
     "Spring": {
       "Upper": {
@@ -7406,7 +7406,7 @@
     }
   },
   "Arts Education (ARTS ED)": {
-    "NorthOrSouth": "",
+    "NorthOrSouth": "North",
     "School": "",
     "Spring": {
       "Upper": {
@@ -7452,7 +7452,7 @@
     }
   },
   "English as A Second Language (ESL)": {
-    "NorthOrSouth": "",
+    "NorthOrSouth": "North",
     "School": "",
     "Spring": {
       "Upper": {
@@ -7498,7 +7498,7 @@
     }
   },
   "Slavic (SLAVC)": {
-    "NorthOrSouth": "",
+    "NorthOrSouth": "North",
     "School": "",
     "Spring": {
       "Upper": {
@@ -7544,7 +7544,7 @@
     }
   },
   "Film and Television (FILM TV)": {
-    "NorthOrSouth": "",
+    "NorthOrSouth": "North",
     "School": "",
     "Spring": {
       "Upper": {
@@ -7590,7 +7590,7 @@
     }
   },
   "Society and Genetics (SOC GEN)": {
-    "NorthOrSouth": "",
+    "NorthOrSouth": "South",
     "School": "",
     "Spring": {
       "Upper": {
@@ -7636,7 +7636,7 @@
     }
   },
   "Asian": {
-    "NorthOrSouth": "",
+    "NorthOrSouth": "North",
     "School": "",
     "Spring": {
       "Upper": {
@@ -7682,7 +7682,7 @@
     }
   },
   "Information Studies (INF STD)": {
-    "NorthOrSouth": "",
+    "NorthOrSouth": "North",
     "School": "",
     "Spring": {
       "Upper": {
@@ -7728,7 +7728,7 @@
     }
   },
   "Central and East European Studies (C&EE ST)": {
-    "NorthOrSouth": "",
+    "NorthOrSouth": "North",
     "School": "",
     "Spring": {
       "Upper": {
@@ -7774,7 +7774,7 @@
     }
   },
   "Digital Humanities (DGT HUM)": {
-    "NorthOrSouth": "",
+    "NorthOrSouth": "North",
     "School": "",
     "Spring": {
       "Upper": {
@@ -7820,7 +7820,7 @@
     }
   },
   "Russian (RUSSN)": {
-    "NorthOrSouth": "",
+    "NorthOrSouth": "North",
     "School": "",
     "Spring": {
       "Upper": {
