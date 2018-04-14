@@ -1,8 +1,6 @@
-console.log("RUNNING APP.JS")
-
-var width = 960,
-    height = 500,
-    barHeight = height / 2 - 40;
+var width = 800,
+    height = 800,
+    barHeight = height / 2 - 80;
 
 var formatNumber = d3.format("s");
 
@@ -12,11 +10,13 @@ var color = d3.scale.ordinal()
 var svg = d3.select("#radial-chart").append("svg")
     .attr("width", width)
     .attr("height", height)
+    .attr("class", "radial-chart")
   .append("g")
     .attr("transform", "translate(" + width/2 + "," + height/2 + ")");
 
 d3.csv("/datasets/how-long-are-lectures/data.csv", function(error, data) {
 
+  console.log(data)
   var extent = d3.extent(data, function(d) { return d.value; });
   var barScale = d3.scale.linear()
       .domain(extent)
@@ -33,24 +33,24 @@ d3.csv("/datasets/how-long-are-lectures/data.csv", function(error, data) {
       .scale(x).orient("left")
       .ticks(3)
       .tickFormat(formatNumber);
-      
+
   var circles = svg.selectAll("circle")
           .data(x.ticks(3))
         .enter().append("circle")
           .attr("r", function(d) {return barScale(d);})
           .style("fill", "none")
-          .style("stroke", "black")
+          .style("stroke", "#00a5ff")
           .style("stroke-dasharray", "2,2")
           .style("stroke-width",".5px");
 
   var arc = d3.svg.arc();
-  
+
   var segments = svg.selectAll("path")
           .data(data)
         .enter().append("path")
-          .each(function(d,i) { 
+          .each(function(d,i) {
             d.innerRadius = 0;
-            d.outerRadius = barScale(+d.value); 
+            d.outerRadius = barScale(+d.value);
             d.startAngle = (i * 2 * Math.PI) / numBars;
             d.endAngle = ((i + 1) * 2 * Math.PI) / numBars;
           })
@@ -77,40 +77,35 @@ d3.csv("/datasets/how-long-are-lectures/data.csv", function(error, data) {
     .call(xAxis);
 
   // Labels
-  var labelRadius = barHeight * 1.025;
-
   var labels = svg.append("g")
       .classed("labels", true);
-
-  labels.append("def")
-        .append("path")
-        .attr("id", "label-path")
-        .attr("d", "m0 " + -labelRadius + " a" + labelRadius + " " + labelRadius + " 0 1,1 -0.01 0");
 
   labels.selectAll("text")
         .data(data)
       .enter().append("text")
-        .style("text-anchor", "middle")
-        .style("font-weight","bold")
-        .style("fill", function(d, i) {return "#3e3e3e";})
-        .append("textPath")
+        .each(function(d) { d.angle = (d.startAngle + d.endAngle) / 2; })
+        .attr("dy", ".35em")
         .attr("class","textpath")
-        .attr("xlink:href", "#label-path")
-        .attr("startOffset", function(d,i) {return i * 100 / numBars + 50 / numBars + '%';})
+        .attr("transform", function(d) {
+          return "rotate(" + (d.angle * 180 / Math.PI - 90) + ")"
+              + "translate(" + (d.innerRadius + (barHeight*1.025)) + ")"
+              + (d.angle > Math.PI ? "rotate(180)" : "");
+              })
+        .style("text-anchor", function(d) { return d.angle > Math.PI ? "end" : null; })
         .text(function(d) {return d.name.toUpperCase(); });
 
   d3.select("input").on("change", change);
 
   function change() {
-    
+
     if (this.checked) {
      labels.selectAll(".textpath").sort(function(a,b) { return b.value - a.value; });
      segments.sort(function(a,b) { return b.value - a.value; });
 
-    }else {
+    } else {
       labels.selectAll(".textpath").sort(function(a,b) { return d3.ascending(a.name, b.name) });
       segments.sort(function(a,b) { return d3.ascending(a.name, b.name); });
-    }; 
+    };
 
     segments.transition().duration(2000).delay(100)
             .attrTween("d", function(d,index) {
@@ -123,5 +118,6 @@ d3.csv("/datasets/how-long-are-lectures/data.csv", function(error, data) {
       .attr("startOffset", function(d,i) {return i * 100 / numBars + 50 / numBars + '%'; })
   }
 
-
 });
+
+console.log("finished loading js")

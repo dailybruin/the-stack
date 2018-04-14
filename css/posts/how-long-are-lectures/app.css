@@ -1,7 +1,7 @@
 body {
   font: 10px sans-serif;
   position: relative;
-  width: 960px;
+  padding: 100px;
 }
 
 .axis path,
@@ -16,7 +16,10 @@ body {
 }
 
 label {
-  position: absolute;
   top: 10px;
   right: 10px;
+}
+
+.radial-chart {
+  padding: 200px;
 }

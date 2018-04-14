@@ -15,7 +15,7 @@ stylesheets:
   - /css/posts/presidential-campaign-donations/tooltip.css
 scripts:
   - //d3js.org/d3.v3.min.js # need v3 instead of v4 for radial bar chart
-  - //d3js.org/d3-transition.v1.min.js
+  # - //d3js.org/d3-transition.v1.min.js
   - //api.mapbox.com/mapbox.js/v3.0.1/mapbox.js
   - //maps.googleapis.com/maps/api/js?key=AIzaSyBddbV3QvkJbOe-s1dbPXrxWV1Sy4z8nR0"
   - //api.mapbox.com/mapbox.js/plugins/turf/v2.0.2/turf.min.js
@@ -25,5 +25,4 @@ scripts:
 ---
 
 <label><input type="checkbox"> Sort values</label>
-
 <div id="radial-chart"></div>
