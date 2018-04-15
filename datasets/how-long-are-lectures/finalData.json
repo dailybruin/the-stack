@@ -1,7 +1,7 @@
 {
   "Bioengineering (BIOENGR)": {
     "NorthOrSouth": "South",
-    "School": "",
+    "School": "School of Engineering and Applied Science",
     "Spring": {
       "Upper": {
         "avg_lecture_size": 27.76,
@@ -47,7 +47,7 @@
   },
   "Islamic Studies (ISLM ST)": {
     "NorthOrSouth": "North",
-    "School": "",
+    "School": "The College of Letters and Science",
     "Spring": {
       "Upper": {
         "avg_lecture_size": 28.333333333333332,
@@ -93,7 +93,7 @@
   },
   "Life Sciences (LIFESCI)": {
     "NorthOrSouth": "South",
-    "School": "",
+    "School": "The College of Letters and Science",
     "Spring": {
       "Upper": {
         "avg_lecture_size": 215.0,
@@ -231,7 +231,7 @@
   },
   "Music History (MSC HST)": {
     "NorthOrSouth": "North",
-    "School": "",
+    "School": "The College of Letters and Science",
     "Spring": {
       "Upper": {
         "avg_lecture_size": 15.5,
@@ -277,7 +277,7 @@
   },
   "Engineering (ENGR)": {
     "NorthOrSouth": "South",
-    "School": "",
+    "School": "School of Engineering and Applied Science",
     "Spring": {
       "Upper": {
         "avg_lecture_size": 117.16666666666667,
@@ -323,7 +323,7 @@
   },
   "Civic Engagement (CIVIC)": {
     "NorthOrSouth": "North",
-    "School": "",
+    "School": "The College of Letters and Science",
     "Spring": {
       "Upper": {
         "avg_lecture_size": 14.142857142857142,
@@ -369,7 +369,7 @@
   },
   "Conservation of Archaeological and Ethnographic Materials (CAEM)": {
     "NorthOrSouth": "North",
-    "School": "",
+    "School": "The College of Letters and Science",
     "Spring": {
       "Upper": {
         "avg_lecture_size": 4.0,
@@ -415,7 +415,7 @@
   },
   "International Development Studies (INTL DV)": {
     "NorthOrSouth": "North",
-    "School": "",
+    "School": "The College of Letters and Science",
     "Spring": {
       "Upper": {
         "avg_lecture_size": 49.875,
@@ -461,7 +461,7 @@
   },
   "Latin American Studies (LATN AM)": {
     "NorthOrSouth": "North",
-    "School": "",
+    "School": "The College of Letters and Science",
     "Spring": {
       "Upper": {
         "avg_lecture_size": 0.0,
@@ -507,7 +507,7 @@
   },
   "Jewish Studies (JEWISH)": {
     "NorthOrSouth": "North",
-    "School": "",
+    "School": "The College of Letters and Science",
     "Spring": {
       "Upper": {
         "avg_lecture_size": 26.0,
@@ -553,7 +553,7 @@
   },
   "Indo-European Studies (I E STD)": {
     "NorthOrSouth": "North",
-    "School": "",
+    "School": "The College of Letters and Science",
     "Spring": {
       "Upper": {
         "avg_lecture_size": 10.0,
@@ -599,7 +599,7 @@
   },
   "Southeast Asian (SEASIAN)": {
     "NorthOrSouth": "North",
-    "School": "",
+    "School": "The College of Letters and Science",
     "Spring": {
       "Upper": {
         "avg_lecture_size": 25.0,
@@ -644,8 +644,8 @@
     }
   },
   "Aerospace Studies (AERO ST)": {
-    "NorthOrSouth": "South",
-    "School": "",
+    "NorthOrSouth": "North",
+    "School": "The College of Letters and Science",
     "Spring": {
       "Upper": {
         "avg_lecture_size": 32.5,
@@ -691,7 +691,7 @@
   },
   "Hungarian (HNGAR)": {
     "NorthOrSouth": "North",
-    "School": "",
+    "School": "The College of Letters and Science",
     "Spring": {
       "Upper": {
         "avg_lecture_size": 10.0,
@@ -737,7 +737,7 @@
   },
   "Polish (POLSH)": {
     "NorthOrSouth": "North",
-    "School": "",
+    "School": "The College of Letters and Science",
     "Spring": {
       "Upper": {
         "avg_lecture_size": 15.0,
@@ -783,7 +783,7 @@
   },
   "Turkic Languages (TURKIC)": {
     "NorthOrSouth": "North",
-    "School": "",
+    "School": "The College of Letters and Science",
     "Spring": {
       "Upper": {
         "avg_lecture_size": 22.5,
@@ -829,7 +829,7 @@
   },
   "Neurobiology (NEURBIO)": {
     "NorthOrSouth": "South",
-    "School": "",
+    "School": "The College of Letters and Science",
     "Spring": {
       "Upper": {
         "avg_lecture_size": 17.333333333333332,
@@ -875,7 +875,7 @@
   },
   "Mathematics (MATH)": {
     "NorthOrSouth": "South",
-    "School": "",
+    "School": "The College of Letters and Science",
     "Spring": {
       "Upper": {
         "avg_lecture_size": 39.629629629629626,
@@ -921,7 +921,7 @@
   },
   "Earth, Planetary, and Space Sciences (EPS SCI)": {
     "NorthOrSouth": "South",
-    "School": "",
+    "School": "The College of Letters and Science",
     "Spring": {
       "Upper": {
         "avg_lecture_size": 29.26923076923077,
@@ -967,7 +967,7 @@
   },
   "Disability Studies (DIS STD)": {
     "NorthOrSouth": "North",
-    "School": "",
+    "School": "The College of Letters and Science",
     "Spring": {
       "Upper": {
         "avg_lecture_size": 36.75,
@@ -1059,7 +1059,7 @@
   },
   "Scandinavian (SCAND)": {
     "NorthOrSouth": "North",
-    "School": "",
+    "School": "The College of Letters and Science",
     "Spring": {
       "Upper": {
         "avg_lecture_size": 27.5,
@@ -1151,7 +1151,7 @@
   },
   "Iranian": {
     "NorthOrSouth": "North",
-    "School": "",
+    "School": "The College of Letters and Science",
     "Spring": {
       "Upper": {
         "avg_lecture_size": 37.15384615384615,
@@ -1243,7 +1243,7 @@
   },
   "Ukrainian (UKRN)": {
     "NorthOrSouth": "North",
-    "School": "",
+    "School": "The College of Letters and Science",
     "Spring": {
       "Upper": {
         "avg_lecture_size": 0.0,
@@ -1289,7 +1289,7 @@
   },
   "Statistics (STATS)": {
     "NorthOrSouth": "South",
-    "School": "",
+    "School": "The College of Letters and Science",
     "Spring": {
       "Upper": {
         "avg_lecture_size": 67.47826086956522,
@@ -1335,7 +1335,7 @@
   },
   "Electrical Engineering (EL ENGR)": {
     "NorthOrSouth": "South",
-    "School": "",
+    "School": "School of Engineering and Applied Science",
     "Spring": {
       "Upper": {
         "avg_lecture_size": 0.0,
@@ -1381,7 +1381,7 @@
   },
   "Sociology (SOCIOL)": {
     "NorthOrSouth": "North",
-    "School": "",
+    "School": "The College of Letters and Science",
     "Spring": {
       "Upper": {
         "avg_lecture_size": 90.41666666666667,
@@ -1427,7 +1427,7 @@
   },
   "Lesbian, Gay, Bisexual, Transgender, and Queer Studies (LGBTQS)": {
     "NorthOrSouth": "North",
-    "School": "",
+    "School": "The College of Letters and Science",
     "Spring": {
       "Upper": {
         "avg_lecture_size": 15.666666666666666,
@@ -1473,7 +1473,7 @@
   },
   "Civil and Environmental Engineering (C&EE)": {
     "NorthOrSouth": "South",
-    "School": "",
+    "School": "School of Engineering and Applied Science",
     "Spring": {
       "Upper": {
         "avg_lecture_size": 36.73913043478261,
@@ -1519,7 +1519,7 @@
   },
   "Neuroscience (Graduate) (NEURO)": {
     "NorthOrSouth": "South",
-    "School": "",
+    "School": "The College of Letters and Science",
     "Spring": {
       "Upper": {
         "avg_lecture_size": 0.0,
@@ -1565,7 +1565,7 @@
   },
   "Political Science (POL SCI)": {
     "NorthOrSouth": "North",
-    "School": "",
+    "School": "The College of Letters and Science",
     "Spring": {
       "Upper": {
         "avg_lecture_size": 72.82666666666667,
@@ -1611,7 +1611,7 @@
   },
   "Italian": {
     "NorthOrSouth": "North",
-    "School": "",
+    "School": "The College of Letters and Science",
     "Spring": {
       "Upper": {
         "avg_lecture_size": 28.333333333333332,
@@ -1749,7 +1749,7 @@
   },
   "University Studies (UNIV ST)": {
     "NorthOrSouth": "North",
-    "School": "",
+    "School": "The College of Letters and Science",
     "Spring": {
       "Upper": {
         "avg_lecture_size": 0.0,
@@ -1795,7 +1795,7 @@
   },
   "History (HIST)": {
     "NorthOrSouth": "North",
-    "School": "",
+    "School": "The College of Letters and Science",
     "Spring": {
       "Upper": {
         "avg_lecture_size": 68.76190476190476,
@@ -1887,7 +1887,7 @@
   },
   "Psychology (PSYCH)": {
     "NorthOrSouth": "North",
-    "School": "",
+    "School": "The College of Letters and Science",
     "Spring": {
       "Upper": {
         "avg_lecture_size": 85.63953488372093,
@@ -1933,7 +1933,7 @@
   },
   "Chinese (CHIN)": {
     "NorthOrSouth": "North",
-    "School": "",
+    "School": "The College of Letters and Science",
     "Spring": {
       "Upper": {
         "avg_lecture_size": 34.57142857142857,
@@ -1979,7 +1979,7 @@
   },
   "Vietnamese (VIETMSE)": {
     "NorthOrSouth": "North",
-    "School": "",
+    "School": "The College of Letters and Science",
     "Spring": {
       "Upper": {
         "avg_lecture_size": 34.0,
@@ -2071,7 +2071,7 @@
   },
   "Chemistry and Biochemistry (CHEM)": {
     "NorthOrSouth": "South",
-    "School": "",
+    "School": "The College of Letters and Science",
     "Spring": {
       "Upper": {
         "avg_lecture_size": 64.63888888888889,
@@ -2163,7 +2163,7 @@
   },
   "Physiological Science (PHYSCI)": {
     "NorthOrSouth": "South",
-    "School": "",
+    "School": "The College of Letters and Science",
     "Spring": {
       "Upper": {
         "avg_lecture_size": 41.25,
@@ -2209,7 +2209,7 @@
   },
   "Korean (KOREA)": {
     "NorthOrSouth": "North",
-    "School": "",
+    "School": "The College of Letters and Science",
     "Spring": {
       "Upper": {
         "avg_lecture_size": 31.285714285714285,
@@ -2255,7 +2255,7 @@
   },
   "Middle Eastern Studies (M E STD)": {
     "NorthOrSouth": "North",
-    "School": "",
+    "School": "The College of Letters and Science",
     "Spring": {
       "Upper": {
         "avg_lecture_size": 29.166666666666668,
@@ -2301,7 +2301,7 @@
   },
   "Philosophy (PHILOS)": {
     "NorthOrSouth": "North",
-    "School": "",
+    "School": "The College of Letters and Science",
     "Spring": {
       "Upper": {
         "avg_lecture_size": 49.9,
@@ -2347,7 +2347,7 @@
   },
   "Art History (ART HIS)": {
     "NorthOrSouth": "North",
-    "School": "",
+    "School": "The College of Letters and Science",
     "Spring": {
       "Upper": {
         "avg_lecture_size": 40.892857142857146,
@@ -2393,7 +2393,7 @@
   },
   "Neuroscience (NEUROSC)": {
     "NorthOrSouth": "South",
-    "School": "",
+    "School": "The College of Letters and Science",
     "Spring": {
       "Upper": {
         "avg_lecture_size": 60.18181818181818,
@@ -2439,7 +2439,7 @@
   },
   "Mechanical and Aerospace Engineering (MECH&AE)": {
     "NorthOrSouth": "South",
-    "School": "",
+    "School": "School of Engineering and Applied Science",
     "Spring": {
       "Upper": {
         "avg_lecture_size": 57.02564102564103,
@@ -2531,7 +2531,7 @@
   },
   "Naval Science (NAV SCI)": {
     "NorthOrSouth": "North",
-    "School": "",
+    "School": "The College of Letters and Science",
     "Spring": {
       "Upper": {
         "avg_lecture_size": 23.8,
@@ -2577,7 +2577,7 @@
   },
   "Spanish (SPAN)": {
     "NorthOrSouth": "North",
-    "School": "",
+    "School": "The College of Letters and Science",
     "Spring": {
       "Upper": {
         "avg_lecture_size": 32.027027027027025,
@@ -2623,7 +2623,7 @@
   },
   "Molecular, Cellular, and Integrative Physiology (MC&IP)": {
     "NorthOrSouth": "South",
-    "School": "",
+    "School": "The College of Letters and Science",
     "Spring": {
       "Upper": {
         "avg_lecture_size": 0.0,
@@ -2669,7 +2669,7 @@
   },
   "Latin": {
     "NorthOrSouth": "North",
-    "School": "",
+    "School": "The College of Letters and Science",
     "Spring": {
       "Upper": {
         "avg_lecture_size": 21.25,
@@ -2761,7 +2761,7 @@
   },
   "Economics (ECON)": {
     "NorthOrSouth": "North",
-    "School": "",
+    "School": "The College of Letters and Science",
     "Spring": {
       "Upper": {
         "avg_lecture_size": 144.40425531914894,
@@ -2807,7 +2807,7 @@
   },
   "Honors Collegium (HNRS)": {
     "NorthOrSouth": "North",
-    "School": "",
+    "School": "The College of Letters and Science",
     "Spring": {
       "Upper": {
         "avg_lecture_size": 21.966666666666665,
@@ -2853,7 +2853,7 @@
   },
   "Biological Chemistry (BIOL CH)": {
     "NorthOrSouth": "South",
-    "School": "",
+    "School": "The College of Letters and Science",
     "Spring": {
       "Upper": {
         "avg_lecture_size": 10.0,
@@ -2991,7 +2991,7 @@
   },
   "South Asian (S ASIAN)": {
     "NorthOrSouth": "North",
-    "School": "",
+    "School": "The College of Letters and Science",
     "Spring": {
       "Upper": {
         "avg_lecture_size": 0.0,
@@ -3037,7 +3037,7 @@
   },
   "Thai": {
     "NorthOrSouth": "North",
-    "School": "",
+    "School": "The College of Letters and Science",
     "Spring": {
       "Upper": {
         "avg_lecture_size": 25.0,
@@ -3083,7 +3083,7 @@
   },
   "Biomedical Research (BMD RES)": {
     "NorthOrSouth": "South",
-    "School": "",
+    "School": "The College of Letters and Science",
     "Spring": {
       "Upper": {
         "avg_lecture_size": 20.0,
@@ -3313,7 +3313,7 @@
   },
   "Armenian (ARMENIA)": {
     "NorthOrSouth": "North",
-    "School": "",
+    "School": "The College of Letters and Science",
     "Spring": {
       "Upper": {
         "avg_lecture_size": 22.77777777777778,
@@ -3359,7 +3359,7 @@
   },
   "Greek": {
     "NorthOrSouth": "North",
-    "School": "",
+    "School": "The College of Letters and Science",
     "Spring": {
       "Upper": {
         "avg_lecture_size": 15.0,
@@ -3405,7 +3405,7 @@
   },
   "African American Studies (AF AMER)": {
     "NorthOrSouth": "North",
-    "School": "",
+    "School": "The College of Letters and Science",
     "Spring": {
       "Upper": {
         "avg_lecture_size": 26.4,
@@ -3497,7 +3497,7 @@
   },
   "International and Area Studies (I A STD)": {
     "NorthOrSouth": "North",
-    "School": "",
+    "School": "The College of Letters and Science",
     "Spring": {
       "Upper": {
         "avg_lecture_size": 32.142857142857146,
@@ -3543,7 +3543,7 @@
   },
   "Physiology (PHYSIOL)": {
     "NorthOrSouth": "South",
-    "School": "",
+    "School": "The College of Letters and Science",
     "Spring": {
       "Upper": {
         "avg_lecture_size": 0.0,
@@ -3635,7 +3635,7 @@
   },
   "Chicana and Chicano Studies (CHICANO)": {
     "NorthOrSouth": "North",
-    "School": "",
+    "School": "The College of Letters and Science",
     "Spring": {
       "Upper": {
         "avg_lecture_size": 46.816326530612244,
@@ -3681,7 +3681,7 @@
   },
   "Indonesian (INDO)": {
     "NorthOrSouth": "North",
-    "School": "",
+    "School": "The College of Letters and Science",
     "Spring": {
       "Upper": {
         "avg_lecture_size": 21.5,
@@ -3819,7 +3819,7 @@
   },
   "Archaeology (ARCHEOL)": {
     "NorthOrSouth": "North",
-    "School": "",
+    "School": "The College of Letters and Science",
     "Spring": {
       "Upper": {
         "avg_lecture_size": 15.0,
@@ -3865,7 +3865,7 @@
   },
   "Arabic": {
     "NorthOrSouth": "North",
-    "School": "",
+    "School": "The College of Letters and Science",
     "Spring": {
       "Upper": {
         "avg_lecture_size": 29.444444444444443,
@@ -3957,7 +3957,7 @@
   },
   "Japanese (JAPAN)": {
     "NorthOrSouth": "North",
-    "School": "",
+    "School": "The College of Letters and Science",
     "Spring": {
       "Upper": {
         "avg_lecture_size": 29.571428571428573,
@@ -4003,7 +4003,7 @@
   },
   "Program in Computing (COMPTNG)": {
     "NorthOrSouth": "South",
-    "School": "",
+    "School": "The College of Letters and Science",
     "Spring": {
       "Upper": {
         "avg_lecture_size": 0.0,
@@ -4049,7 +4049,7 @@
   },
   "Classics (CLASSIC)": {
     "NorthOrSouth": "North",
-    "School": "",
+    "School": "The College of Letters and Science",
     "Spring": {
       "Upper": {
         "avg_lecture_size": 43.0,
@@ -4095,7 +4095,7 @@
   },
   "Swahili": {
     "NorthOrSouth": "North",
-    "School": "",
+    "School": "The College of Letters and Science",
     "Spring": {
       "Upper": {
         "avg_lecture_size": 0.0,
@@ -4141,7 +4141,7 @@
   },
   "Atmospheric and Oceanic Sciences (A&O SCI)": {
     "NorthOrSouth": "South",
-    "School": "",
+    "School": "The College of Letters and Science",
     "Spring": {
       "Upper": {
         "avg_lecture_size": 55.166666666666664,
@@ -4187,7 +4187,7 @@
   },
   "Anthropology (ANTHRO)": {
     "NorthOrSouth": "North",
-    "School": "",
+    "School": "The College of Letters and Science",
     "Spring": {
       "Upper": {
         "avg_lecture_size": 63.8125,
@@ -4233,7 +4233,7 @@
   },
   "Molecular, Cell, and Developmental Biology (MCD BIO)": {
     "NorthOrSouth": "South",
-    "School": "",
+    "School": "The College of Letters and Science",
     "Spring": {
       "Upper": {
         "avg_lecture_size": 46.392857142857146,
@@ -4371,7 +4371,7 @@
   },
   "Environment (ENVIRON)": {
     "NorthOrSouth": "South",
-    "School": "",
+    "School": "The College of Letters and Science",
     "Spring": {
       "Upper": {
         "avg_lecture_size": 60.333333333333336,
@@ -4463,7 +4463,7 @@
   },
   "Applied Linguistics (APPLING)": {
     "NorthOrSouth": "North",
-    "School": "",
+    "School": "The College of Letters and Science",
     "Spring": {
       "Upper": {
         "avg_lecture_size": 77.0,
@@ -4509,7 +4509,7 @@
   },
   "Comparative Literature (COM LIT)": {
     "NorthOrSouth": "North",
-    "School": "",
+    "School": "The College of Letters and Science",
     "Spring": {
       "Upper": {
         "avg_lecture_size": 17.0,
@@ -4555,7 +4555,7 @@
   },
   "Semitic": {
     "NorthOrSouth": "North",
-    "School": "",
+    "School": "The College of Letters and Science",
     "Spring": {
       "Upper": {
         "avg_lecture_size": 10.0,
@@ -4601,7 +4601,7 @@
   },
   "Filipino (FILIPNO)": {
     "NorthOrSouth": "North",
-    "School": "",
+    "School": "The College of Letters and Science",
     "Spring": {
       "Upper": {
         "avg_lecture_size": 0.0,
@@ -4647,7 +4647,7 @@
   },
   "Asian American Studies (ASIA AM)": {
     "NorthOrSouth": "North",
-    "School": "",
+    "School": "The College of Letters and Science",
     "Spring": {
       "Upper": {
         "avg_lecture_size": 32.80555555555556,
@@ -4693,7 +4693,7 @@
   },
   "French (FRNCH)": {
     "NorthOrSouth": "North",
-    "School": "",
+    "School": "The College of Letters and Science",
     "Spring": {
       "Upper": {
         "avg_lecture_size": 29.25,
@@ -4785,7 +4785,7 @@
   },
   "Romanian (ROMANIA)": {
     "NorthOrSouth": "North",
-    "School": "",
+    "School": "The College of Letters and Science",
     "Spring": {
       "Upper": {
         "avg_lecture_size": 21.666666666666668,
@@ -4831,7 +4831,7 @@
   },
   "Materials Science and Engineering (MAT SCI)": {
     "NorthOrSouth": "South",
-    "School": "",
+    "School": "School of Engineering and Applied Science",
     "Spring": {
       "Upper": {
         "avg_lecture_size": 39.5625,
@@ -4969,7 +4969,7 @@
   },
   "Portuguese (PORTGSE)": {
     "NorthOrSouth": "North",
-    "School": "",
+    "School": "The College of Letters and Science",
     "Spring": {
       "Upper": {
         "avg_lecture_size": 28.571428571428573,
@@ -5015,7 +5015,7 @@
   },
   "Gender Studies (GENDER)": {
     "NorthOrSouth": "North",
-    "School": "",
+    "School": "The College of Letters and Science",
     "Spring": {
       "Upper": {
         "avg_lecture_size": 29.833333333333332,
@@ -5199,7 +5199,7 @@
   },
   "English (ENGL)": {
     "NorthOrSouth": "North",
-    "School": "",
+    "School": "The College of Letters and Science",
     "Spring": {
       "Upper": {
         "avg_lecture_size": 28.108695652173914,
@@ -5291,7 +5291,7 @@
   },
   "Indigenous Languages of the Americas (IL AMER)": {
     "NorthOrSouth": "North",
-    "School": "",
+    "School": "The College of Letters and Science",
     "Spring": {
       "Upper": {
         "avg_lecture_size": 0.0,
@@ -5429,7 +5429,7 @@
   },
   "Global Studies (GLBL ST)": {
     "NorthOrSouth": "North",
-    "School": "",
+    "School": "The College of Letters and Science",
     "Spring": {
       "Upper": {
         "avg_lecture_size": 262.5,
@@ -5475,7 +5475,7 @@
   },
   "German": {
     "NorthOrSouth": "North",
-    "School": "",
+    "School": "The College of Letters and Science",
     "Spring": {
       "Upper": {
         "avg_lecture_size": 28.125,
@@ -5521,7 +5521,7 @@
   },
   "Near Eastern Languages (NR EAST)": {
     "NorthOrSouth": "North",
-    "School": "",
+    "School": "The College of Letters and Science",
     "Spring": {
       "Upper": {
         "avg_lecture_size": 0.0,
@@ -5567,7 +5567,7 @@
   },
   "Afrikaans (AFRKAAN)": {
     "NorthOrSouth": "North",
-    "School": "",
+    "School": "The College of Letters and Science",
     "Spring": {
       "Upper": {
         "avg_lecture_size": 0.0,
@@ -5659,7 +5659,7 @@
   },
   "Electrical and Computer Engineering (EC ENGR)": {
     "NorthOrSouth": "South",
-    "School": "",
+    "School": "School of Engineering and Applied Science",
     "Spring": {
       "Upper": {
         "avg_lecture_size": 43.72222222222222,
@@ -5705,7 +5705,7 @@
   },
   "Ecology and Evolutionary Biology (EE BIOL)": {
     "NorthOrSouth": "North",
-    "School": "",
+    "School": "The College of Letters and Science",
     "Spring": {
       "Upper": {
         "avg_lecture_size": 67.82978723404256,
@@ -5935,7 +5935,7 @@
   },
   "Social Science (SOC SC)": {
     "NorthOrSouth": "North",
-    "School": "",
+    "School": "The College of Letters and Science",
     "Spring": {
       "Upper": {
         "avg_lecture_size": 0.0,
@@ -6027,7 +6027,7 @@
   },
   "American Sign Language (ASL)": {
     "NorthOrSouth": "North",
-    "School": "",
+    "School": "The College of Letters and Science",
     "Spring": {
       "Upper": {
         "avg_lecture_size": 33.0,
@@ -6119,7 +6119,7 @@
   },
   "Dutch": {
     "NorthOrSouth": "North",
-    "School": "",
+    "School": "The College of Letters and Science",
     "Spring": {
       "Upper": {
         "avg_lecture_size": 25.0,
@@ -6165,7 +6165,7 @@
   },
   "American Indian Studies (AM IND)": {
     "NorthOrSouth": "North",
-    "School": "",
+    "School": "The College of Letters and Science",
     "Spring": {
       "Upper": {
         "avg_lecture_size": 16.6,
@@ -6211,7 +6211,7 @@
   },
   "Ancient Near East (AN N EA)": {
     "NorthOrSouth": "North",
-    "School": "",
+    "School": "The College of Letters and Science",
     "Spring": {
       "Upper": {
         "avg_lecture_size": 28.545454545454547,
@@ -6257,7 +6257,7 @@
   },
   "Yiddish (YIDDSH)": {
     "NorthOrSouth": "North",
-    "School": "",
+    "School": "The College of Letters and Science",
     "Spring": {
       "Upper": {
         "avg_lecture_size": 25.0,
@@ -6303,7 +6303,7 @@
   },
   "Hindi-Urdu (HIN-URD)": {
     "NorthOrSouth": "North",
-    "School": "",
+    "School": "The College of Letters and Science",
     "Spring": {
       "Upper": {
         "avg_lecture_size": 25.0,
@@ -6395,7 +6395,7 @@
   },
   "Religion, Study of (RELIGN)": {
     "NorthOrSouth": "North",
-    "School": "",
+    "School": "The College of Letters and Science",
     "Spring": {
       "Upper": {
         "avg_lecture_size": 37.9375,
@@ -6487,7 +6487,7 @@
   },
   "English Composition (ENGCOMP)": {
     "NorthOrSouth": "North",
-    "School": "",
+    "School": "The College of Letters and Science",
     "Spring": {
       "Upper": {
         "avg_lecture_size": 16.428571428571427,
@@ -6533,7 +6533,7 @@
   },
   "Serbian/Croatian (SRB CRO)": {
     "NorthOrSouth": "North",
-    "School": "",
+    "School": "The College of Letters and Science",
     "Spring": {
       "Upper": {
         "avg_lecture_size": 15.0,
@@ -6579,7 +6579,7 @@
   },
   "Social Thought (SOC THT)": {
     "NorthOrSouth": "North",
-    "School": "",
+    "School": "The College of Letters and Science",
     "Spring": {
       "Upper": {
         "avg_lecture_size": 5.0,
@@ -6625,7 +6625,7 @@
   },
   "African Studies (AFRC ST)": {
     "NorthOrSouth": "North",
-    "School": "",
+    "School": "The College of Letters and Science",
     "Spring": {
       "Upper": {
         "avg_lecture_size": 0.0,
@@ -6763,7 +6763,7 @@
   },
   "Clusters (CLUSTER)": {
     "NorthOrSouth": "North",
-    "School": "",
+    "School": "The College of Letters and Science",
     "Spring": {
       "Upper": {
         "avg_lecture_size": 80.0,
@@ -6809,7 +6809,7 @@
   },
   "Astronomy (ASTR)": {
     "NorthOrSouth": "South",
-    "School": "",
+    "School": "The College of Letters and Science",
     "Spring": {
       "Upper": {
         "avg_lecture_size": 31.25,
@@ -6855,7 +6855,7 @@
   },
   "International Migration Studies (I M STD)": {
     "NorthOrSouth": "North",
-    "School": "",
+    "School": "The College of Letters and Science",
     "Spring": {
       "Upper": {
         "avg_lecture_size": 0.0,
@@ -6901,7 +6901,7 @@
   },
   "Military Science (MIL SCI)": {
     "NorthOrSouth": "North",
-    "School": "",
+    "School": "The College of Letters and Science",
     "Spring": {
       "Upper": {
         "avg_lecture_size": 28.0,
@@ -6947,7 +6947,7 @@
   },
   "Hebrew": {
     "NorthOrSouth": "North",
-    "School": "",
+    "School": "The College of Letters and Science",
     "Spring": {
       "Upper": {
         "avg_lecture_size": 21.0,
@@ -6993,7 +6993,7 @@
   },
   "Geography (GEOG)": {
     "NorthOrSouth": "North",
-    "School": "",
+    "School": "The College of Letters and Science",
     "Spring": {
       "Upper": {
         "avg_lecture_size": 93.85714285714286,
@@ -7039,7 +7039,7 @@
   },
   "Linguistics (LING)": {
     "NorthOrSouth": "North",
-    "School": "",
+    "School": "The College of Letters and Science",
     "Spring": {
       "Upper": {
         "avg_lecture_size": 38.41379310344828,
@@ -7085,7 +7085,7 @@
   },
   "Communication (COMM)": {
     "NorthOrSouth": "North",
-    "School": "",
+    "School": "The College of Letters and Science",
     "Spring": {
       "Upper": {
         "avg_lecture_size": 78.14583333333333,
@@ -7177,7 +7177,7 @@
   },
   "Physics": {
     "NorthOrSouth": "South",
-    "School": "",
+    "School": "The College of Letters and Science",
     "Spring": {
       "Upper": {
         "avg_lecture_size": 41.31428571428572,
@@ -7269,7 +7269,7 @@
   },
   "Chemical Engineering (CH ENGR)": {
     "NorthOrSouth": "South",
-    "School": "",
+    "School": "School of Engineering and Applied Science",
     "Spring": {
       "Upper": {
         "avg_lecture_size": 53.72222222222222,
@@ -7315,7 +7315,7 @@
   },
   "Microbiology, Immunology, and Molecular Genetics (MIMG)": {
     "NorthOrSouth": "South",
-    "School": "",
+    "School": "The College of Letters and Science",
     "Spring": {
       "Upper": {
         "avg_lecture_size": 55.416666666666664,
@@ -7407,7 +7407,7 @@
   },
   "Arts Education (ARTS ED)": {
     "NorthOrSouth": "North",
-    "School": "",
+    "School": "School of the Arts and Architecture",
     "Spring": {
       "Upper": {
         "avg_lecture_size": 19.166666666666668,
@@ -7453,7 +7453,7 @@
   },
   "English as A Second Language (ESL)": {
     "NorthOrSouth": "North",
-    "School": "",
+    "School": "The College of Letters and Science",
     "Spring": {
       "Upper": {
         "avg_lecture_size": 20.0,
@@ -7499,7 +7499,7 @@
   },
   "Slavic (SLAVC)": {
     "NorthOrSouth": "North",
-    "School": "",
+    "School": "The College of Letters and Science",
     "Spring": {
       "Upper": {
         "avg_lecture_size": 15.0,
@@ -7591,7 +7591,7 @@
   },
   "Society and Genetics (SOC GEN)": {
     "NorthOrSouth": "South",
-    "School": "",
+    "School": "The College of Letters and Science",
     "Spring": {
       "Upper": {
         "avg_lecture_size": 50.86666666666667,
@@ -7637,7 +7637,7 @@
   },
   "Asian": {
     "NorthOrSouth": "North",
-    "School": "",
+    "School": "The College of Letters and Science",
     "Spring": {
       "Upper": {
         "avg_lecture_size": 35.0,
@@ -7729,7 +7729,7 @@
   },
   "Central and East European Studies (C&EE ST)": {
     "NorthOrSouth": "North",
-    "School": "",
+    "School": "The College of Letters and Science",
     "Spring": {
       "Upper": {
         "avg_lecture_size": 22.5,
@@ -7775,7 +7775,7 @@
   },
   "Digital Humanities (DGT HUM)": {
     "NorthOrSouth": "North",
-    "School": "",
+    "School": "The College of Letters and Science",
     "Spring": {
       "Upper": {
         "avg_lecture_size": 30.0,
@@ -7821,7 +7821,7 @@
   },
   "Russian (RUSSN)": {
     "NorthOrSouth": "North",
-    "School": "",
+    "School": "The College of Letters and Science",
     "Spring": {
       "Upper": {
         "avg_lecture_size": 12.952380952380953,
