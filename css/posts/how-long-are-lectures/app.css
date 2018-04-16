@@ -15,11 +15,23 @@ body {
   display: none;
 }
 
+svg {
+  overflow: visible;
+  padding: 200px;
+}
+
 label {
+  position: absolute;
   top: 10px;
   right: 10px;
 }
 
-.radial-chart {
-  padding: 200px;
+select {
+  height: 100%;
+  width: 100%;
+  font-size: 20px;
+}
+
+option {
+  font-size: 20px;
 }
