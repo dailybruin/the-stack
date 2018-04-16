@@ -3,25 +3,26 @@ var selected_div = "all"
 var selected_campus = "all"
 var selected_filter = "avg_lecture_length_day"
 
-function onAllChange() {
+window.onAllChange =  function() {
   document.getElementById("sort").checked = false;
-  d3.select('svg').remove();
+  var svg = d3.selectAll("svg");
+  svg.remove();
   reload();
 }
 
-function onQuarterChange(value) {
+window.onQuarterChange = function(value) {
   selected_quarter = value;
   onAllChange();
 }
-function onDivChange(value) {
+window.onDivChange = function(value) {
   selected_div = value;
   onAllChange();
 }
-function onCampusChange(value) {
+window.onCampusChange = function(value) {
   selected_campus = value;
   onAllChange();
 }
-function onFilterChange(value) {
+window.onFilterChange = function(value) {
   selected_filter = value;
   onAllChange();
 }
@@ -67,13 +68,13 @@ function reload() {
   var color = d3.scale.ordinal()
       .range(["#8dd3c7","#ffffb3","#bebada","#fb8072","#80b1d3","#fdb462","#b3de69","#fccde5","#d9d9d9","#bc80bd","#ccebc5","#ffed6f"]);
 
-  var svg = d3.select("body").append("svg")
+  var svg = d3.select("#radial-chart").append("svg")
       .attr("width", width)
       .attr("height", height)
     .append("g")
       .attr("transform", "translate(" + width/2 + "," + height/2 + ")");
 
-  d3.json("../../../datasets/how-long-are-lectures/FINAL_DATA.json", function(error, data) {
+  d3.json("/datasets/how-long-are-lectures/FINAL_DATA.json", function(error, data) {
 
     data = data.sort(compare)
     data = data.filter(d => calculateValue(d)!==0)
@@ -204,3 +205,4 @@ function reload() {
 }
 
 reload();
+document.getElementById("sort").checked = false;

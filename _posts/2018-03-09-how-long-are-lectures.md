@@ -24,5 +24,32 @@ scripts:
   - /js/posts/how-long-are-lectures/app.js
 ---
 
-<label><input type="checkbox"> Sort values</label>
+<label><input id="sort" type="checkbox"> Sort values</label>
+
+<select name="text" onchange="onQuarterChange(this.value)">
+  <option value="all" selected>All</option>
+  <option value="Fall">Fall</option>
+  <option value="Winter">Winter</option>
+  <option value="Spring">Spring</option>
+</select>
+
+<select name="text" onchange="onDivChange(this.value)">
+  <option value="all" selected>All</option>
+  <option value="Upper">Upper</option>
+  <option value="Lower">Lower</option>
+</select>
+
+<select name="text" onchange="onCampusChange(this.value)">
+  <option value="all" selected>All</option>
+  <option value="North">North</option>
+  <option value="South">South</option>
+</select>
+
+<select name="text" onchange="onFilterChange(this.value)">
+  <option value="avg_lecture_length_day">Average lecture length per day</option>
+  <option value="avg_lecture_length_week">Average lecture length per week</option>
+  <option value="avg_num_lectures_week">Average number of lectures per week</option>
+  <option value="avg_lecture_size">Average lecture size</option>
+</select>
+
 <div id="radial-chart"></div>
