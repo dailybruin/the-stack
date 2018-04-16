@@ -139,7 +139,7 @@
   },
   "Education (EDUC)": {
     "NorthOrSouth": "North",
-    "School": "",
+    "School": "School of Education and Information Studies",
     "Spring": {
       "Upper": {
         "avg_lecture_size": 27.4,
@@ -185,7 +185,7 @@
   },
   "Management-Master of Financial Engineering (MGMTMFE)": {
     "NorthOrSouth": "South",
-    "School": "",
+    "School": "Anderson School of Management",
     "Spring": {
       "Upper": {
         "avg_lecture_size": 0.0,
@@ -829,7 +829,7 @@
   },
   "Neurobiology (NEURBIO)": {
     "NorthOrSouth": "South",
-    "School": "The College of Letters and Science",
+    "School": "David Geffen School of Medicine",
     "Spring": {
       "Upper": {
         "avg_lecture_size": 17.333333333333332,
@@ -1013,7 +1013,7 @@
   },
   "Public Policy (PUB PLC)": {
     "NorthOrSouth": "North",
-    "School": "",
+    "School": "Luskin School of Public Affairs",
     "Spring": {
       "Upper": {
         "avg_lecture_size": 26.666666666666668,
@@ -1105,7 +1105,7 @@
   },
   "Environmental Health Sciences (ENV HLT)": {
     "NorthOrSouth": "South",
-    "School": "",
+    "School": "Fielding School of Public Health",
     "Spring": {
       "Upper": {
         "avg_lecture_size": 32.375,
@@ -1197,7 +1197,7 @@
   },
   "Computer Science (COM SCI)": {
     "NorthOrSouth": "South",
-    "School": "",
+    "School": "School of Engineering and Applied Science",
     "Spring": {
       "Upper": {
         "avg_lecture_size": 93.53846153846153,
@@ -1657,7 +1657,7 @@
   },
   "Art": {
     "NorthOrSouth": "North",
-    "School": "",
+    "School": "School of the Arts and Architecture",
     "Spring": {
       "Upper": {
         "avg_lecture_size": 16.82608695652174,
@@ -1703,7 +1703,7 @@
   },
   "Nursing": {
     "NorthOrSouth": "North",
-    "School": "",
+    "School": "School of Nursing",
     "Spring": {
       "Upper": {
         "avg_lecture_size": 44.111111111111114,
@@ -1841,7 +1841,7 @@
   },
   "Graduate Student Professional Development (GRAD PD)": {
     "NorthOrSouth": "North",
-    "School": "",
+    "School": "Graduate Division",
     "Spring": {
       "Upper": {
         "avg_lecture_size": 0.0,
@@ -2025,7 +2025,7 @@
   },
   "Global Health (GLB HLT)": {
     "NorthOrSouth": "North",
-    "School": "",
+    "School": "The College of Letters and Science",
     "Spring": {
       "Upper": {
         "avg_lecture_size": 87.5,
@@ -2117,7 +2117,7 @@
   },
   "Physics and Biology in Medicine (PBMED)": {
     "NorthOrSouth": "South",
-    "School": "",
+    "School": "David Geffen School of Medicine",
     "Spring": {
       "Upper": {
         "avg_lecture_size": 0.0,
@@ -2485,7 +2485,7 @@
   },
   "Ethnomusicology (ETHNMUS)": {
     "NorthOrSouth": "North",
-    "School": "",
+    "School": "School of the Arts and Architecture",
     "Spring": {
       "Upper": {
         "avg_lecture_size": 19.08888888888889,
@@ -2715,7 +2715,7 @@
   },
   "Epidemiology (EPIDEM)": {
     "NorthOrSouth": "South",
-    "School": "",
+    "School": "Fielding School of Public Health",
     "Spring": {
       "Upper": {
         "avg_lecture_size": 46.75,
@@ -2899,7 +2899,7 @@
   },
   "Human Genetics (HUM GEN)": {
     "NorthOrSouth": "South",
-    "School": "",
+    "School": "David Geffen School of Medicine",
     "Spring": {
       "Upper": {
         "avg_lecture_size": 20.0,
@@ -2945,7 +2945,7 @@
   },
   "Oral Biology (ORL BIO)": {
     "NorthOrSouth": "South",
-    "School": "",
+    "School": "School of Dentistry",
     "Spring": {
       "Upper": {
         "avg_lecture_size": 0.0,
@@ -3129,7 +3129,7 @@
   },
   "Psychiatry and Biobehavioral Sciences (PSYCTRY)": {
     "NorthOrSouth": "South",
-    "School": "",
+    "School": "David Geffen School of Medicine",
     "Spring": {
       "Upper": {
         "avg_lecture_size": 0.0,
@@ -3175,7 +3175,7 @@
   },
   "Theater": {
     "NorthOrSouth": "North",
-    "School": "",
+    "School": "School of Theater, Film and Television",
     "Spring": {
       "Upper": {
         "avg_lecture_size": 22.4020618556701,
@@ -3221,7 +3221,7 @@
   },
   "Bioinformatics (Graduate) (BIOINFO)": {
     "NorthOrSouth": "South",
-    "School": "",
+    "School": "Life Sciences",
     "Spring": {
       "Upper": {
         "avg_lecture_size": 0.0,
@@ -3267,7 +3267,7 @@
   },
   "Design / Media Arts (DESMA)": {
     "NorthOrSouth": "North",
-    "School": "",
+    "School": "School of the Arts and Architecture",
     "Spring": {
       "Upper": {
         "avg_lecture_size": 22.285714285714285,
@@ -3451,7 +3451,7 @@
   },
   "Urban Planning (URBN PL)": {
     "NorthOrSouth": "North",
-    "School": "",
+    "School": "Luskin School of Public Affairs",
     "Spring": {
       "Upper": {
         "avg_lecture_size": 36.5,
@@ -3589,7 +3589,7 @@
   },
   "Musicology (MUSCLG)": {
     "NorthOrSouth": "North",
-    "School": "",
+    "School": "Herb Alpert School of Music",
     "Spring": {
       "Upper": {
         "avg_lecture_size": 0.0,
@@ -3727,7 +3727,7 @@
   },
   "Dance": {
     "NorthOrSouth": "North",
-    "School": "",
+    "School": "School of the Arts and Architecture",
     "Spring": {
       "Upper": {
         "avg_lecture_size": 15.318181818181818,
@@ -3773,7 +3773,7 @@
   },
   "World Arts and Cultures (WL ARTS)": {
     "NorthOrSouth": "North",
-    "School": "",
+    "School": "School of the Arts and Architecture",
     "Spring": {
       "Upper": {
         "avg_lecture_size": 12.833333333333334,
@@ -3911,7 +3911,7 @@
   },
   "Neurology (NEURLGY)": {
     "NorthOrSouth": "South",
-    "School": "",
+    "School": "David Geffen School of Medicine",
     "Spring": {
       "Upper": {
         "avg_lecture_size": 2.0,
@@ -4279,7 +4279,7 @@
   },
   "Music Industry (MSC IND)": {
     "NorthOrSouth": "North",
-    "School": "",
+    "School": "Herb Alpert School of Music",
     "Spring": {
       "Upper": {
         "avg_lecture_size": 30.636363636363637,
@@ -4325,7 +4325,7 @@
   },
   "Pathology and Laboratory Medicine (PATH)": {
     "NorthOrSouth": "South",
-    "School": "",
+    "School": "David Geffen School of Medicine",
     "Spring": {
       "Upper": {
         "avg_lecture_size": 0.0,
@@ -4417,7 +4417,7 @@
   },
   "Medical History (MED HIS)": {
     "NorthOrSouth": "North",
-    "School": "",
+    "School": "David Geffen School of Medicine",
     "Spring": {
       "Upper": {
         "avg_lecture_size": 20.0,
@@ -4739,7 +4739,7 @@
   },
   "Arts and Architecture (ART&ARC)": {
     "NorthOrSouth": "North",
-    "School": "",
+    "School": "School of the Arts and Architecture",
     "Spring": {
       "Upper": {
         "avg_lecture_size": 20.0,
@@ -4877,7 +4877,7 @@
   },
   "Medicine (MED)": {
     "NorthOrSouth": "South",
-    "School": "",
+    "School": "David Geffen School of Medicine",
     "Spring": {
       "Upper": {
         "avg_lecture_size": 25.0,
@@ -4923,7 +4923,7 @@
   },
   "Biomathematics (BIOMATH)": {
     "NorthOrSouth": "South",
-    "School": "",
+    "School": "David Geffen School of Medicine",
     "Spring": {
       "Upper": {
         "avg_lecture_size": 0.0,
@@ -5061,7 +5061,7 @@
   },
   "Biostatistics (BIOSTAT)": {
     "NorthOrSouth": "South",
-    "School": "",
+    "School": "Fielding School of Public Health",
     "Spring": {
       "Upper": {
         "avg_lecture_size": 109.33333333333333,
@@ -5107,7 +5107,7 @@
   },
   "Health Policy and Management (HLT POL)": {
     "NorthOrSouth": "North",
-    "School": "",
+    "School": "Fielding School of Public Health",
     "Spring": {
       "Upper": {
         "avg_lecture_size": 33.25,
@@ -5153,7 +5153,7 @@
   },
   "Management-PhD (MGMTPHD)": {
     "NorthOrSouth": "North",
-    "School": "",
+    "School": "Anderson School of Management",
     "Spring": {
       "Upper": {
         "avg_lecture_size": 0.0,
@@ -5245,7 +5245,7 @@
   },
   "Molecular and Medical Pharmacology (M PHARM)": {
     "NorthOrSouth": "South",
-    "School": "",
+    "School": "David Geffen School of Medicine",
     "Spring": {
       "Upper": {
         "avg_lecture_size": 12.0,
@@ -5337,7 +5337,7 @@
   },
   "Gerontology (GRNTLGY)": {
     "NorthOrSouth": "North",
-    "School": "",
+    "School": "Luskin School of Public Affairs",
     "Spring": {
       "Upper": {
         "avg_lecture_size": 13.0,
@@ -5383,7 +5383,7 @@
   },
   "Social Welfare (SOC WLF)": {
     "NorthOrSouth": "North",
-    "School": "",
+    "School": "Luskin School of Public Affairs",
     "Spring": {
       "Upper": {
         "avg_lecture_size": 200.0,
@@ -5613,7 +5613,7 @@
   },
   "Music (MUSC)": {
     "NorthOrSouth": "North",
-    "School": "",
+    "School": "Herb Alpert School of Music",
     "Spring": {
       "Upper": {
         "avg_lecture_size": 13.129032258064516,
@@ -5751,7 +5751,7 @@
   },
   "Public Health (PUB HLT)": {
     "NorthOrSouth": "North",
-    "School": "",
+    "School": "Fielding School of Public Health",
     "Spring": {
       "Upper": {
         "avg_lecture_size": 60.333333333333336,
@@ -5797,7 +5797,7 @@
   },
   "Surgery": {
     "NorthOrSouth": "South",
-    "School": "",
+    "School": "David Geffen School of Medicine",
     "Spring": {
       "Upper": {
         "avg_lecture_size": 0.0,
@@ -5843,7 +5843,7 @@
   },
   "Food Studies (FOOD ST)": {
     "NorthOrSouth": "North",
-    "School": "",
+    "School": "The College of Letters and Science",
     "Spring": {
       "Upper": {
         "avg_lecture_size": 20.0,
@@ -5889,7 +5889,7 @@
   },
   "Management (MGMT)": {
     "NorthOrSouth": "North",
-    "School": "",
+    "School": "Anderson School of Management",
     "Spring": {
       "Upper": {
         "avg_lecture_size": 73.78787878787878,
@@ -5981,7 +5981,7 @@
   },
   "Labor and Workplace Studies (LBR&WS)": {
     "NorthOrSouth": "North",
-    "School": "",
+    "School": "The College of Letters and Science",
     "Spring": {
       "Upper": {
         "avg_lecture_size": 39.17391304347826,
@@ -6073,7 +6073,7 @@
   },
   "Science Education (SCI EDU)": {
     "NorthOrSouth": "North",
-    "School": "",
+    "School": "School of Education and Information Studies",
     "Spring": {
       "Upper": {
         "avg_lecture_size": 25.0,
@@ -6349,7 +6349,7 @@
   },
   "Community Health Sciences (COM HLT)": {
     "NorthOrSouth": "North",
-    "School": "",
+    "School": "Fielding School of Public Health",
     "Spring": {
       "Upper": {
         "avg_lecture_size": 32.42857142857143,
@@ -6441,7 +6441,7 @@
   },
   "Computational and Systems Biology (C&S BIO)": {
     "NorthOrSouth": "South",
-    "School": "",
+    "School": "The College of Letters and Science",
     "Spring": {
       "Upper": {
         "avg_lecture_size": 17.5,
@@ -6671,7 +6671,7 @@
   },
   "Molecular Biology (MOL BIO)": {
     "NorthOrSouth": "South",
-    "School": "",
+    "School": "Life Sciences",
     "Spring": {
       "Upper": {
         "avg_lecture_size": 0.0,
@@ -6717,7 +6717,7 @@
   },
   "Law": {
     "NorthOrSouth": "North",
-    "School": "",
+    "School": "School of Law",
     "Spring": {
       "Upper": {
         "avg_lecture_size": 0.0,
@@ -7131,7 +7131,7 @@
   },
   "Management-Master of Science in Business Analytics (MGMTMSA)": {
     "NorthOrSouth": "North",
-    "School": "",
+    "School": "Anderson School of Management",
     "Spring": {
       "Upper": {
         "avg_lecture_size": 0.0,
@@ -7223,7 +7223,7 @@
   },
   "Architecture and Urban Design (ARCH&UD)": {
     "NorthOrSouth": "North",
-    "School": "",
+    "School": "School of the Arts and Architecture",
     "Spring": {
       "Upper": {
         "avg_lecture_size": 23.285714285714285,
@@ -7361,7 +7361,7 @@
   },
   "Molecular Toxicology (MOL TOX)": {
     "NorthOrSouth": "South",
-    "School": "",
+    "School": "Fielding School of Public Health",
     "Spring": {
       "Upper": {
         "avg_lecture_size": 0.0,
@@ -7545,7 +7545,7 @@
   },
   "Film and Television (FILM TV)": {
     "NorthOrSouth": "North",
-    "School": "",
+    "School": "School of Theater, Film and Television",
     "Spring": {
       "Upper": {
         "avg_lecture_size": 38.2972972972973,
@@ -7683,7 +7683,7 @@
   },
   "Information Studies (INF STD)": {
     "NorthOrSouth": "North",
-    "School": "",
+    "School": "School of Education and Information Studies",
     "Spring": {
       "Upper": {
         "avg_lecture_size": 17.75,
