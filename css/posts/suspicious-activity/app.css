@@ -1,0 +1,22 @@
+.leaflet-marker-icon {
+  opacity: 1;
+  top: 0px;
+  transition: all 350ms ease-in-out;
+}
+.hidden {
+  top: -10px;
+  opacity: 0;
+  transition: all 350ms ease-in-out;
+}
+
+.tooltip {
+  width: min-content;
+}
+
+#map {
+  margin-bottom: 2rem;
+}
+
+.graph-title {
+  font-size: 2rem;
+}
