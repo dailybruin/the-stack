@@ -369,7 +369,7 @@ const candidates = [
     totalRaised: 600,
     sources: [{ name: 'self', amount: 600 }],
     totalSpent: 287.99,
-    allocation: [{ description: 'Campaign T-Shirts', amount: 287.99 }],
+    allocation: [{ description: 'T-Shirts', amount: 287.99 }],
   },
   {
     name: 'Roberto Vasquez',

@@ -1,5 +1,8 @@
 const ctx = document.getElementById('chart');
 
+ctx.height = 300;
+
+
 const purchaseCategories = [
   'T-Shirts',
   'Flyers',
@@ -28,8 +31,54 @@ const colors = [
   '#ffff99',
 ];
 
+const barOptions = {
 
+  tooltips: {
+    enabled: true,
+    mode: 'index',
+    callbacks: {
+      label(tooltipItem, data) {
+        if (tooltipItem.xLabel) {
+          return `${
+            data.datasets[tooltipItem.datasetIndex].label
+            }: $${tooltipItem.xLabel.toFixed(2)}`;
+        }
+        return '';
+      },
+      afterBody(tooltipItems, data) {
+        const total = tooltipItems.reduce((accumulator, { xLabel }) => {
+          if (xLabel) {
+            return accumulator + xLabel
+          }
+          return accumulator
+        }, 0)
 
+        return `Total: $${total.toFixed(2)}`;
+      }
+    },
+  },
+  scales: {
+    xAxes: [
+      {
+        ticks: {
+          beginAtZero: true,
+          autoSkip: false,
+          callback: (value) =>`$${value}`,
+
+        },
+        stacked: true,
+      },
+    ],
+    yAxes: [
+      {
+        gridLines: {
+          display: false,
+        },
+        stacked: true,
+      },
+    ],
+  },
+};
 
 function createData(candidates) {
   const datasets = [];
@@ -53,68 +102,57 @@ function createData(candidates) {
   return {
     labels: candidates.map(candidate => candidate.name),
     datasets,
-  }
+  };
 }
 
 const chart = new Chart(ctx, {
-  type: 'bar',
-  // data: createData(candidates.filter(candidate => candidate.totalSpent !== 0)),
-  data: createData(candidates),
-  options: {
-    tooltips: {
-      enabled: true,
-      mode: 'single',
-      callbacks: {
-        label (tooltipItem, data) {
-          return `${
-            data.datasets[tooltipItem.datasetIndex].label
-            }: $${tooltipItem.yLabel.toFixed(2)}`;
-        },
-      },
-    },
-    scales: {
-      xAxes: [
-        {
-          stacked: true,
-          ticks: {
-            autoSkip: false,
-          },
-        },
-      ],
-      yAxes: [{ stacked: true }],
-    },
-  },
+  type: 'horizontalBar',
+  data: createData(candidates.filter(candidate => candidate.totalSpent !== 0)),
+  // data: createData(candidates),
+  options: barOptions,
 });
 
 const positions = document.getElementById('positions');
 const slates = document.getElementById('slates');
 const showAll = document.getElementById('show-all-candidates');
 
-function filterCandidates(event) {
-  const {value} = event.target;
+function filterCandidates() {
 
   let filteredCandidates = candidates;
 
-  switch (event.target.id) {
-    case "positions":
-      filteredCandidates = value !== "All" ? candidates.filter(candidate => candidate.position === event.target.value) : candidates;
-      break;
-    case "slates":
-      filteredCandidates = value !== "All" ? candidates.filter(candidate => candidate.slate === event.target.value) : candidates;
-      break;
-    case 'show-all-candidates':
-      if (event.target.checked) {
-        filteredCandidates = candidates.filter(candidate => candidate.totalSpent !== 0);
-      }
-      break;
-    default:
-      break;
+  if (positions.value !== 'All') {
+    filteredCandidates = filteredCandidates.filter(
+      candidate => candidate.position === positions.value
+    );
+  }
+  if (slates.value !== 'All') {
+    filteredCandidates = filteredCandidates.filter(
+      candidate => candidate.slate === slates.value
+    );
+  }
+  if (showAll.checked) {
+    filteredCandidates = filteredCandidates.filter(
+      candidate => candidate.totalSpent !== 0
+    );
+  }
+
+  return filteredCandidates;
+}
+
+function onChange() {
+  showAll.disabled = false;
+  let filteredCandidates = filterCandidates();
+
+  if (filteredCandidates.length === 0) {
+    showAll.checked = false;
+    showAll.disabled = true;
+    filteredCandidates = filterCandidates();
   }
 
   chart.data = createData(filteredCandidates);
   chart.update();
 }
 
-positions.addEventListener('change', filterCandidates);
-slates.addEventListener('change', filterCandidates);
-showAll.addEventListener('change', filterCandidates);
+positions.addEventListener('change', onChange);
+slates.addEventListener('change', onChange);
+showAll.addEventListener('change', onChange);

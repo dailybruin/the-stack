@@ -41,7 +41,7 @@ lorem ipsum amit dolor
   <option>Candidates Operating Clearly</option>
 </select>
 
-<input id="show-all-candidates" type="checkbox">Show all candidates
+<input id="show-all-candidates" type="checkbox" checked>Show all candidates
 
 
 <canvas id="chart"></canvas>
