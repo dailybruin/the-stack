@@ -28,33 +28,38 @@ const colors = [
   '#ffff99',
 ];
 
-const completeDataset = [];
 
-let i = 0;
-for (category of purchaseCategories) {
-  const datum = {
-    label: category,
-    data: candidates.map(candidate => {
-      const x = candidate.allocation.find(
-        purchase => purchase.description === category
-      );
-      if (x) {
-        return x.amount;
-      }
-    }),
-    backgroundColor: colors[i++],
-  };
-  completeDataset.push(datum);
+
+
+function createData(candidates) {
+  const datasets = [];
+  let i = 0;
+  for (category of purchaseCategories) {
+    const datum = {
+      label: category,
+      data: candidates.map(candidate => {
+        const x = candidate.allocation.find(
+          purchase => purchase.description === category
+        );
+        if (x) {
+          return x.amount;
+        }
+      }),
+      backgroundColor: colors[i++],
+    };
+    datasets.push(datum);
+  }
+
+  return {
+    labels: candidates.map(candidate => candidate.name),
+    datasets,
+  }
 }
-
-const datasets = completeDataset;
 
 const chart = new Chart(ctx, {
   type: 'bar',
-  data: {
-    labels: candidates.map(candidate => candidate.name),
-    datasets,
-  },
+  // data: createData(candidates.filter(candidate => candidate.totalSpent !== 0)),
+  data: createData(candidates),
   options: {
     tooltips: {
       enabled: true,
@@ -85,14 +90,31 @@ const positions = document.getElementById('positions');
 const slates = document.getElementById('slates');
 const showAll = document.getElementById('show-all-candidates');
 
-function changeChart(event) {
-  const filteredCandidates = candidates.filter(candidate => candidate.position === event.target.value);
-  // chart.data.datasets.forEach((dataset) => {
-  //   dataset.data = ;
-  // });
+function filterCandidates(event) {
+  const {value} = event.target;
+
+  let filteredCandidates = candidates;
+
+  switch (event.target.id) {
+    case "positions":
+      filteredCandidates = value !== "All" ? candidates.filter(candidate => candidate.position === event.target.value) : candidates;
+      break;
+    case "slates":
+      filteredCandidates = value !== "All" ? candidates.filter(candidate => candidate.slate === event.target.value) : candidates;
+      break;
+    case 'show-all-candidates':
+      if (event.target.checked) {
+        filteredCandidates = candidates.filter(candidate => candidate.totalSpent !== 0);
+      }
+      break;
+    default:
+      break;
+  }
+
+  chart.data = createData(filteredCandidates);
   chart.update();
 }
 
-positions.addEventListener('change', changeChart);
-// slates.addEventListener('change', changeChart);
-// showAll.addEventListener('change', changeChart);
+positions.addEventListener('change', filterCandidates);
+slates.addEventListener('change', filterCandidates);
+showAll.addEventListener('change', filterCandidates);
