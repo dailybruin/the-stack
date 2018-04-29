@@ -1,4 +1,4 @@
-let ctx = document.getElementById('chart');
+const ctx = document.getElementById('chart');
 
 const purchaseCategories = [
   'T-Shirts',
@@ -28,7 +28,7 @@ const colors = [
   '#ffff99',
 ];
 
-const datasets = [];
+const completeDataset = [];
 
 let i = 0;
 for (category of purchaseCategories) {
@@ -44,10 +44,12 @@ for (category of purchaseCategories) {
     }),
     backgroundColor: colors[i++],
   };
-  datasets.push(datum);
+  completeDataset.push(datum);
 }
 
-const myChart = new Chart(ctx, {
+const datasets = completeDataset;
+
+const chart = new Chart(ctx, {
   type: 'bar',
   data: {
     labels: candidates.map(candidate => candidate.name),
@@ -78,3 +80,19 @@ const myChart = new Chart(ctx, {
     },
   },
 });
+
+const positions = document.getElementById('positions');
+const slates = document.getElementById('slates');
+const showAll = document.getElementById('show-all-candidates');
+
+function changeChart(event) {
+  const filteredCandidates = candidates.filter(candidate => candidate.position === event.target.value);
+  // chart.data.datasets.forEach((dataset) => {
+  //   dataset.data = ;
+  // });
+  chart.update();
+}
+
+positions.addEventListener('change', changeChart);
+// slates.addEventListener('change', changeChart);
+// showAll.addEventListener('change', changeChart);
