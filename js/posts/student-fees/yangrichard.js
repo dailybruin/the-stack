@@ -1,4 +1,4 @@
-let data = [
+const data = [
   {
     interest_rate: '< 4%',
     Default: 60,
@@ -30,46 +30,42 @@ let margin = {
   height = 315 - margin.top - margin.bottom,
   that = this;
 
-let x = d3
+const x = d3
   .scaleBand()
   .rangeRound([0, width])
   .padding(0.1);
 
-let y = d3.scaleLinear().rangeRound([height, 0]);
+const y = d3.scaleLinear().rangeRound([height, 0]);
 
-let color = d3.scaleOrdinal(d3.schemeCategory20);
+const color = d3.scaleOrdinal(d3.schemeCategory20);
 
-let xAxis = d3.axisBottom(x);
+const xAxis = d3.axisBottom(x);
 
-let yAxis = d3.axisLeft(y).tickFormat(d3.format('200'));
+const yAxis = d3.axisLeft(y).tickFormat(d3.format('200'));
 
-let svg = d3
+const svg = d3
   .select('.bar-chart')
   .append('svg')
   .attr('width', width + margin.left + margin.right)
   .attr('height', height + margin.top + margin.bottom)
   .append('g')
-  .attr('transform', 'translate(' + margin.left + ',' + margin.top + ')');
+  .attr('transform', `translate(${  margin.left  },${  margin.top  })`);
 
 color.domain(
-  d3.keys(data[0]).filter(function(key) {
-    return key !== 'interest_rate';
-  })
+  d3.keys(data[0]).filter((key) => key !== 'interest_rate')
 );
 
 let maxvalue = 0;
 data.forEach(d => {
   let y0 = 0;
-  d.rates = color.domain().map(name => {
-    return {
-      name: name,
-      y0: y0,
+  d.rates = color.domain().map(name => ({
+      name,
+      y0,
       y1: (y0 += +d[name]),
       amount: d[name],
-    };
-  });
+    }));
   if (y0 > maxvalue) maxvalue = y0;
-  //choose one, first for absolute scale, second for 100% scale
+  // choose one, first for absolute scale, second for 100% scale
   /*
     d.rates.forEach(function (name) {
         name.y0 /= maxvalue;
@@ -82,14 +78,10 @@ data.forEach(d => {
   });
 });
 
-data.sort(function(a, b) {
-  return b.rates[0].y1 - a.rates[0].y1;
-});
+data.sort((a, b) => b.rates[0].y1 - a.rates[0].y1);
 
 x.domain(
-  data.map(function(d) {
-    return d.interest_rate;
-  })
+  data.map((d) => d.interest_rate)
 );
 
 svg
@@ -103,7 +95,7 @@ svg
   .attr('class', 'y axis')
   .call(yAxis);
 
-let interest_rate = svg
+const interest_rate = svg
   .selectAll('.interest-rate')
   .data(data)
   .enter()
@@ -111,7 +103,7 @@ let interest_rate = svg
   .attr('class', 'interest-rate')
   .attr('transform', d => `translate(${x(d.interest_rate)}, 0)`);
 
-let tip = d3
+const tip = d3
   .tip()
   .attr('class', 'd3-tip')
   .html(
@@ -130,15 +122,15 @@ interest_rate
   .style('fill', d => color(d.name))
   .on('mouseover', (d, i, nodes) => {
     tip
-      .style('left', d3.event.pageX + 10 + 'px')
-      .style('top', d3.event.pageY + 10 + 'px')
+      .style('left', `${d3.event.pageX + 10  }px`)
+      .style('top', `${d3.event.pageY + 10  }px`)
       .show(d);
   })
   .on('mousemove', d => {
     console.log('mouse move');
     tip
-      .style('left', d3.event.pageX + 10 + 'px')
-      .style('top', d3.event.pageY + 10 + 'px');
+      .style('left', `${d3.event.pageX + 10  }px`)
+      .style('top', `${d3.event.pageY + 10  }px`);
   })
   .on('mouseout', (d, i, nodes) => {
     tip.hide(d);
