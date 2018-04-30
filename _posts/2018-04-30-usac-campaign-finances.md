@@ -51,7 +51,7 @@ The second and final deadline for candidates to turn in their expense accounts w
     <option>Leaders Influencing Tomorrow</option>
     <option>Candidates Operating Clearly</option>
   </select>
-  <input id="show-all-candidates" type="checkbox" checked>
+  <input id="show-all-candidates" type="checkbox">
   <label for="show-all-candidates">Show all candidates</label>
 </div>
 

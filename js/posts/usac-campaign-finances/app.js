@@ -130,7 +130,7 @@ function filterCandidates() {
       candidate => candidate.slate === slates.value
     );
   }
-  if (showAll.checked) {
+  if (!showAll.checked) {
     filteredCandidates = filteredCandidates.filter(
       candidate => candidate.totalSpent !== 0
     );
