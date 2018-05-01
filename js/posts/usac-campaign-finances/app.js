@@ -140,12 +140,9 @@ function filterCandidates() {
 }
 
 function onChange() {
-  showAll.disabled = false;
   let filteredCandidates = filterCandidates();
 
   if (filteredCandidates.length === 0) {
-    showAll.checked = false;
-    showAll.disabled = true;
     filteredCandidates = filterCandidates();
   }
 
