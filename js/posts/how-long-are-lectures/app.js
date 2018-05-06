@@ -59,8 +59,8 @@ function compare(a, b) {
 
 function reload() {
 
-  var width = 1000,
-      height = 1000,
+  var width = 750,
+      height = 750,
       barHeight = height / 2 - 80;
 
   var formatNumber = d3.format("s");
@@ -71,6 +71,7 @@ function reload() {
   var svg = d3.select("#radial-chart").append("svg")
       .attr("width", width)
       .attr("height", height)
+      .attr("preserveAspectRatio", "xMidYMin")
     .append("g")
       .attr("transform", "translate(" + width/2 + "," + height/2 + ")");
 

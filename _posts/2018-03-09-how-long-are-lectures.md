@@ -24,8 +24,6 @@ scripts:
   - /js/posts/how-long-are-lectures/app.js
 ---
 
-<label><input id="sort" type="checkbox"> Sort values</label>
-
 <select name="text" onchange="onQuarterChange(this.value)">
   <option value="all" selected>All</option>
   <option value="Fall">Fall</option>
@@ -51,5 +49,7 @@ scripts:
   <option value="avg_num_lectures_week">Average number of lectures per week</option>
   <option value="avg_lecture_size">Average lecture size</option>
 </select>
+
+<label><input id="sort" type="checkbox"> Sort values</label>
 
 <div id="radial-chart"></div>
