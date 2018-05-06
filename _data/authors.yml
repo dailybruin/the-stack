@@ -119,7 +119,7 @@ mahir_eusufzai:
     title: Stack Developer
     bio: Mahir is a 4th year CS major. He's a huge Lakers fan and occasionally posts piano/guitar videos on YouTube.  He is frequently mistaken for Mihir Mathur.
     mug: Yes
-    email: meusufzai@media.ucla.edu 
+    email: meusufzai@media.ucla.edu
 fay_wu:
     name: Fay Wu
     title: Stack Developer
@@ -142,13 +142,13 @@ jerry_li:
     email: jerrylinew@ucla.edu
     github: jerrylinew
 rupan_bharanidaran:
-    name: Rupan Bharanidaran 
+    name: Rupan Bharanidaran
     title: News Editor
     bio: Bharanidaran is the news editor at the Daily Bruin and a fourth-year political science and economics student. He helped input data from the crime logs and enjoys reading books and analyzing campaign contribution data in his free time.
     mug: Yes
     email: rbharanidaran@media.ucla.edu
 madeleine_pauker:
-    name: Madeleine Pauker 
+    name: Madeleine Pauker
     title: Managing Editor
     bio: Pauker is the managing editor of the Daily Bruin and a third-year world arts and cultures student. She recorded data from 365 days of crime logs to create this post.
     mug: Yes
@@ -165,3 +165,12 @@ henna_dialani:
     bio: Henna is part of the Stack and a third year Stats major. When not working with data, she's exploring LA and its food.
     mug: Yes
     email: hdialani@media.ucla.edu
+nathan_smith:
+    name: Nathan Smith
+    title: Assistant Online Editor
+    bio: Smith is an assistant online editor at the Daily Bruin and a second-year computer science student. When he's not scrolling through USAC PDFs or staring at lines of code, he enjoys Eggo waffles, visiting museums and writing about electric scooters.
+    mug: Yes
+    email: nsmith@media.ucla.edu
+    github: nathunsmitty
+    twitter: nathunsmitty
+    website: http://nathansmith.io
