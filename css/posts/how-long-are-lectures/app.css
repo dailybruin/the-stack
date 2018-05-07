@@ -11,7 +11,17 @@ body {
   shape-rendering: crispEdges;
 }
 
-.x.axis path {
+.axis {
+      font: 15px sans-serif;
+}
+
+path {
+  stroke: steelblue;
+  stroke-width: 2;
+  fill: none;
+}
+
+.x.axis.radial path {
   display: none;
 }
 
@@ -29,4 +39,22 @@ select {
 
 option {
   font-size: 20px;
+}
+
+.dot {
+  stroke: none;
+}
+
+.tooltip {
+  position: absolute;
+  font-size: 12px;
+  width: auto;
+  height: auto;
+  pointer-events: none;
+  background-color: white;
+}
+
+.tooltip-box {
+  padding: 5px;
+  color: white;
 }

@@ -53,3 +53,4 @@ scripts:
 <label><input id="sort" type="checkbox"> Sort values</label>
 
 <div id="radial-chart"></div>
+<div id="scatterplot"></div>
