@@ -88,6 +88,7 @@ let makeWifiCompBarChart = () => {
       .attr("width", xScale.bandwidth())
       .attr("height", d => yScale(d))
       .attr("x", (d, i) => xScale(networks[i]))
+      .attr("y", 1);
     //.attr("y", d => yScale(d));
 
     // Update old bars

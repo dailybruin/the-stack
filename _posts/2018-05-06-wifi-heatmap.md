@@ -17,6 +17,13 @@ scripts:
 
 Wifi.
 
+To be added/worked on:
+- Top/bottom 10 (20?) wifi locations
+- Map out strongest/weakest points on campus?
+- Look into Mapbox?
+- Scripts for pre-dividing data (so calculations aren't done every time)
+- GeoJSONs for campus areas
+
 <div class="rough-wifi-heatmap-wrapper">
   <div class="wifi-heatmap-text-wrapper">
     <p class="wifi-heatmap-str">HOVER TO SEE VALUE</p>
