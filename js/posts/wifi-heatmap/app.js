@@ -98,7 +98,7 @@ let redraw = () => {
     let path = d3
     .geoPath()
     .projection(chosenProjection);
-
+    svg.selectAll("path").remove();
     svg
     .selectAll("path")
     .data(uclaPath.features)
