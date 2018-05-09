@@ -2,7 +2,7 @@ const long2 = -118.437; //-118.438059;
 const long1 = -118.456; //-118.453508;
 const lat2 = 34.08; //34.079024;
 const lat1 = 34.06; //34.058690;
-const setDist = 0.0002;
+const setDist = 0.0003;
 const numLat = Math.trunc((lat2 - lat1) / setDist);
 const numLong = Math.trunc((long2 - long1) / setDist);
 const latUnit = (lat2 - lat1) / numLat;
@@ -38,29 +38,92 @@ let findLongLat = (x, y) => {
   ];
 };
 
+let menu2Metric = menuValue => {
+  switch (menuValue) {
+    case "UCLA_WIFI":
+      return "UCLA_WIFI_Average";
+      break;
+    case "UCLA_WEB":
+      return "UCLA_WEB_Average";
+      break;
+    case "UCLA_WIFI_RES":
+      return "UCLA_WIFI_RES_Average";
+      break;
+    case "UCLA_WEB_RES":
+      return "UCLA_WEB_RES_Average";
+      break;
+    case "UCLA_SECURE_RES":
+      return "UCLA_SECURE_RES_Average";
+      break;
+    case "eduroam":
+      return "eduroam_Average";
+      break;
+    case "all":
+    default:
+      return "totalAverage";
+  }
+}
+
 let calcMetric = (metricType, wifiObj) => {
+  let specificArray = [];
   switch (metricType) {
+    case "UCLA_WIFI_Average":
+      specificArray = wifiObj.UCLA_WIFI;
+      break;
+    case "UCLA_WEB_Average":
+      specificArray = wifiObj.UCLA_WEB;
+      break;
+    case "UCLA_WIFI_RES_Average":
+      specificArray = wifiObj.UCLA_WIFI_RES;
+      break;
+    case "UCLA_WEB_RES_Average":
+      specificArray = wifiObj.UCLA_WEB_RES;
+      break;
+    case "UCLA_SECURE_RES_Average":
+      specificArray = wifiObj.UCLA_SECURE_RES;
+      break;
+    case "eduroam_Average":
+      specificArray = wifiObj.eduroam;
+      break;
     case "totalAverage":
+    default:
       let grandTotal = 0;
       let grandCount = 0;
       for (specificWifi in wifiObj) {
         grandTotal += wifiObj[specificWifi][0];
         grandCount += wifiObj[specificWifi][1];
       }
-      if(grandCount === 0)
-        return 0;
-      return grandTotal / grandCount;
-      break;
+      specificArray = [grandTotal, grandCount];
   }
+  if(specificArray[1] === 0)
+    return 0;
+  return specificArray[0] / specificArray[1];
 };
 
 let wifiArr = zeros([numLong, numLat]);
 let uclaPath = 0;
 let grid = 0;
+let wifiSD = 0;
+let wifiMean = 0;
 
 const colorRelative = d3.scaleLinear()
-  .domain([-90, -67, -30, 0])
-  .range(["red", "yellow", "green", "#FDFDFD"]) //#D3D3D3
+  .domain([-90, -78, -66, -54, -42, -30, 0])
+  .range(["#b2182b", "#ef8a62", "#fddbc7", "#d1e5f0", "#67a9f0", "#2166ac", "#FDFDFD"]) //#D3D3D3
+//["#ffffcc", "#c7e9b4", "#7fcdbb", "#41bbc4", "#2c7fb8", "#253494", "#FDFDFD"]
+//["#b2182b", "#ef8a62", "#fddbc7", "#f8f6e9", "#d1e5f0", "#67a9f0", "#2166ac", "#FDFDFD"]
+
+var heatMapMenu = d3
+  .select(".rough-wifi-heatmap-wrapper")
+  .append("div");
+
+heatMapMenu
+  .append("select")
+  .selectAll("option")
+  .data(["all", "UCLA_WIFI", "UCLA_WEB", "UCLA_WIFI_RES", "UCLA_WEB_RES", "UCLA_SECURE_RES", "eduroam"])
+  .enter()
+  .append("option")
+  .attr("value", d => d)
+  .text(d => d)
 
 let svg = d3
   .select(".rough-wifi-heatmap-wrapper")
@@ -82,12 +145,12 @@ let redraw = () => {
     .projection(chosenProjection);
 
   svg
-  .attr("width", width)
-  .attr("height", width)
-  .selectAll("path")
-  .remove();
-  console.log("?", grid)
-  console.log("?", uclaPath)
+    .attr("width", width)
+    .attr("height", width)
+    .selectAll("path")
+    .remove();
+
+  let menuMetric = menu2Metric(heatMapMenu.select("select").property("value"));
   svg
     .selectAll(".grid")
     .data(grid.features)
@@ -95,11 +158,11 @@ let redraw = () => {
     .append("path")
     .attr("d", path)
     .attr("stroke", d => {
-      return colorRelative(calcMetric("totalAverage", d.properties.data))
+      return colorRelative(calcMetric(menuMetric, d.properties.data))
     })
-    .attr("fill", d => colorRelative(calcMetric("totalAverage", d.properties.data)))
+    .attr("fill", d => colorRelative(calcMetric(menuMetric, d.properties.data)))
     .on("mouseover", d => {
-      d3.select(".wifi-heatmap-str").text(`str: ${calcMetric("totalAverage", d.properties.data)}`);
+      d3.select(".wifi-heatmap-str").text(`str: ${calcMetric(menuMetric, d.properties.data)}`);
       d3.select(".wifi-heatmap-lat").text(`lat: ${d.properties.bottom}, ${d.properties.top}`);
       d3.select(".wifi-heatmap-lon").text(`lon: ${d.properties.left}, ${d.properties.right}`);
     })
@@ -108,7 +171,7 @@ let redraw = () => {
       d3.select(".wifi-heatmap-lat").text(`HOVER TO SEE VALUE`);
       d3.select(".wifi-heatmap-lon").text(`HOVER TO SEE VALUE`);
     });
-    svg
+  svg
     .selectAll(".outline")
     .data(uclaPath.features)
     .enter()
@@ -124,7 +187,8 @@ Promise
   ])
   .then(data => {
     uclaPath = data[0];
-    console.log("asdf", uclaPath);
+    wifiSD = d3.deviation(data[1], d => d.strength);
+    wifiMean = d3.mean(data[1], d => d.strength);
     data[1].forEach(el => {
       if (el.name !== "UCLA_WIFI" && el.name !== "UCLA_WEB" && el.name !== "UCLA_WIFI_RES" &&
         el.name !== "UCLA_WEB_RES" && el.name !== "UCLA_SECURE_RES" && el.name !== "eduroam")
@@ -135,7 +199,6 @@ Promise
       wifiArr[x][y][el.name][0] += parseInt(el.strength);
       wifiArr[x][y][el.name][1] += 1;
     });
-    console.log(wifiArr)
     let coordinates = [],
       c = {
         x: long1,
@@ -162,14 +225,16 @@ Promise
           },
           geometry: {
             type: 'Polygon',
-            coordinates: [[
-              // top-left/top-right/bottom-right/bottom-left/top-left
-              [tLx, tLy],
-              [tRx, tRy],
-              [bRx, bRy],
-              [bLx, bLy],
-              [tLx, tLy]
-            ]]
+            coordinates: [
+              [
+                // top-left/top-right/bottom-right/bottom-left/top-left
+                [tLx, tLy],
+                [tRx, tRy],
+                [bRx, bRy],
+                [bLx, bLy],
+                [tLx, tLy]
+              ]
+            ]
           }
         }
         futureFeatures.push(square);
@@ -183,51 +248,8 @@ Promise
       type: 'FeatureCollection',
       features: futureFeatures
     };
+    heatMapMenu.on('change', redraw)
     redraw();
   })
 
 window.addEventListener("resize", redraw);
-
-
-
-
-
-/*
-
-
-      
-    let width = document.getElementsByClassName("rough-wifi-heatmap-wrapper")[0].clientWidth;
-  //width = Math.round(width/100)*100;
-  let unitWidth = Math.trunc(width / numLong);
-  svg
-    .attr("width", width)
-    .attr("height", width)
-    .selectAll("rect")
-    .data(finalData)
-    .enter()
-    .append("rect")
-    .attr("fill", d => colorRelative(d[0]))
-    .attr("stroke", d => colorRelative(d[0]))
-    .attr("x", d => d[1] * unitWidth)
-    .attr("y", d => d[2] * unitWidth)
-    .attr("width", unitWidth)
-    .attr("height", unitWidth)
-    .on("mouseover", d => {
-      d3.select(".wifi-heatmap-str").text(`str: ${d[0]}`);
-      d3.select(".wifi-heatmap-lat").text(`lat: ${findLongLat(d[1], d[2])[1][0]}, ${findLongLat(d[1], d[2])[1][1]}`);
-      d3.select(".wifi-heatmap-lon").text(`lon: ${findLongLat(d[1], d[2])[0][0]}, ${findLongLat(d[1], d[2])[0][1]}`);
-    })
-    .on("mouseout", d => {
-      d3.select(".wifi-heatmap-str").text(`HOVER TO SEE VALUE`);
-      d3.select(".wifi-heatmap-lat").text(`HOVER TO SEE VALUE`);
-      d3.select(".wifi-heatmap-lon").text(`HOVER TO SEE VALUE`);
-    });
-      svg
-      .selectAll("path")
-      .data(uclaPath.features)
-      .enter()
-      .append("path")
-      .attr("d", path)
-      .attr("stroke", "black")
-      .attr("fill", "none");
-      */
