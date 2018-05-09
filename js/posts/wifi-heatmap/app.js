@@ -5,11 +5,17 @@ function zeros(dimensions) {
   }
   return array;
 }
+/*
+-118.456
+-118.437
+34.06
+34.08
+*/
 
-const long2 = -118.438059;
-const long1 = -118.453508;
-const lat2 = 34.079024;
-const lat1 = 34.058690;
+const long2 = -118.437;//-118.438059;
+const long1 = -118.456;//-118.453508;
+const lat2 = 34.08;//34.079024;
+const lat1 = 34.06;//34.058690;
 const setDist = 0.0002;
 const numLat = Math.trunc((lat2 - lat1) / setDist);
 const numLong = Math.trunc((long2 - long1) / setDist);
@@ -36,7 +42,7 @@ const colorRelative = d3.scaleLinear()
 */
 const colorRelative = d3.scaleLinear()
 .domain([-90, -67, -30, 0])
-.range(["red", "yellow", "green", "grey"])
+.range(["red", "yellow", "green", "#FDFDFD"]) //#D3D3D3
 
 let findIndex = (long, lat) => {
   let latDum = Math.trunc((lat - lat1) / latUnit);
@@ -64,8 +70,15 @@ let svg = d3
 .select(".rough-wifi-heatmap-wrapper")
 .append("svg");
 
+let uclaPath = 0;
+
+Promise
+.all([d3.json("/datasets/wifi-heatmap/ucla-outline.geojson")])
+.then( mapData => { uclaPath = mapData[0]; } )
+
 let redraw = () => {
     let width = document.getElementsByClassName("rough-wifi-heatmap-wrapper")[0].clientWidth;
+    //let height = document.getElementsByClassName("rough-wifi-heatmap-wrapper")[0].clientHeight;
     //width = Math.round(width/100)*100;
     let unitWidth = Math.trunc(width/numLong);
     console.log("lol", width, unitWidth);
@@ -77,6 +90,24 @@ let redraw = () => {
     .attr("y", d => d[2] * unitWidth)
     .attr("width", unitWidth)
     .attr("height", unitWidth);
+    
+    let chosenProjection = d3
+    .geoEquirectangular()
+    .fitSize([numLong * unitWidth, numLat * unitWidth], uclaPath);
+
+    let path = d3
+    .geoPath()
+    .projection(chosenProjection);
+
+    svg
+    .selectAll("path")
+    .data(uclaPath.features)
+    .enter()
+    .append("path")
+    .attr("d", path)
+    .attr("stroke", "black")
+    .attr("fill", "none");
+
 }
 
 
@@ -117,6 +148,9 @@ setTimeout(() => {
     d3.select(".wifi-heatmap-lat").text(`HOVER TO SEE VALUE`);
     d3.select(".wifi-heatmap-lon").text(`HOVER TO SEE VALUE`);
   });
+  redraw();
 }, 1000);
+
+//redraw();
 
 window.addEventListener("resize", redraw);
