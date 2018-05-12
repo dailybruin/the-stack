@@ -15,6 +15,13 @@ var scatterSelections = {
   "selected_filter2": "avg_lecture_length_week",
 }
 
+var filter_map = {
+  "avg_lecture_size": "Lecture Size",
+  "avg_lecture_length_day": "Lecture Length (Day)",
+  "avg_lecture_length_week": "Lecture Length (Week)",
+  "avg_num_lectures_week": "Number of Lectures"
+}
+
 window.onAllChange =  function() {
   document.getElementById("sort").checked = false;
   var svg = d3.selectAll("svg");
@@ -86,6 +93,75 @@ function calculateValue(d, chart) {
   else
     var average = 0
   return average;
+}
+
+function calculateAverage(d) {
+  //console.log(d)
+  var selected_quarter;
+  var selected_div;
+  var selected_campus;
+  var selected_school;
+  var selected_filter1;
+  var selected_filter2;
+  selected_quarter = scatterSelections["selected_quarter"];
+  selected_div = scatterSelections["selected_div"];
+  selected_campus = scatterSelections["selected_campus"];
+  selected_school = scatterSelections["selected_school"];
+  selected_filter1 = scatterSelections["selected_filter1"];
+  selected_filter2 = scatterSelections["selected_filter2"];
+
+  quarters = selected_quarter === "all" ? ["Fall", "Winter", "Spring"] : [selected_quarter]
+  divs = selected_div === "all" ? ["Upper", "Lower"] : [selected_div]
+  campuses = selected_campus === "all" ? ["North", "South"] : [selected_campus]
+  schools = selected_school === "all" ? [
+    "Anderson School of Management",
+    "David Geffen School of Medicine",
+    "Fielding School of Public Health",
+    "Graduate Division",
+    "Herb Alpert School of Music",
+    "Life Sciences",
+    "Luskin School of Public Affairs",
+    "School of Dentistry",
+    "School of Education and Information Studies",
+    "School of Engineering and Applied Science",
+    "School of Law",
+    "School of Nursing",
+    "School of Theater, Film and Television",
+    "School of the Arts and Architecture",
+    "The College of Letters and Science"
+  ] : [selected_school]
+
+  var output1 = []
+  var output2 = []
+  quarters.forEach(quarter => {
+    divs.forEach(div => {
+      campuses.forEach(campus => {
+        schools.forEach(school => {
+          if (d.NorthOrSouth == campus && d.School == school) {
+            if (d[quarter][div][selected_filter1] !== 0){
+              output1.push(d[quarter][div][selected_filter1])
+            }
+            if (d[quarter][div][selected_filter2] !== 0){
+              output2.push(d[quarter][div][selected_filter2])
+            }
+            //console.log(d[quarter][div][selected_filter1])
+          }
+        })
+      })
+    })
+  })
+
+  if (output1.length !== 0)
+    var average1 = (output1.reduce((a, b) => a + b, 0)/output1.length);
+  else
+    var average1 = 0
+
+  if (output2.length !== 0)
+    var average2 = (output2.reduce((a, b) => a + b, 0)/output2.length);
+  else
+    var average2 = 0
+
+  return [[selected_filter1, average1], [selected_filter2, average2]];
 }
 
 function filterScatter(d, filter) {
@@ -345,7 +421,8 @@ function makeVis(data) {
     .attr('x', width) // x-offset from xAxis
     .attr('y', -6) // y-offset from xAxis
     .style('text-anchor', 'end') // right-justify
-    .text('Lecture Size');
+    .text(filter_map[scatterSelections["selected_filter1"]])
+    //.text('Lecture Size');
 
   // Add y-axis to canvas
   canvas.append('g')
@@ -356,7 +433,8 @@ function makeVis(data) {
     .attr('transform', 'rotate(-90)') // rotate text
     .attr('y', 15) // y-offset from yAxis
     .style('text-anchor', 'end')
-    .text('Lecture Length');
+    .text(filter_map[scatterSelections["selected_filter2"]])
+    //.text('Lecture Length');
 
   // Add tooltip to scatterplot div, visible on mouseover
   var tooltip = d3.select('#scatterplot').append('div')
@@ -365,8 +443,11 @@ function makeVis(data) {
 
   // Tooltip mouseover event handler
   var tipMouseover = function(d) {
+    var arr = calculateAverage(d)
     var color = colorScale(d.School);
-    var html = "<div class='tooltip-box' style='background-color: " + color + ";'> Major: " + d.major + "<br/>" + "Average Lecture Length: " + d.Fall.Lower.avg_lecture_length_week + "<br/>" + "Average Lecture Size: " + d.Fall.Lower.avg_lecture_size + "</div>";
+    var x_label = "Average " + filter_map[arr[0][0]] + ": " + Math.round(arr[0][1]);
+    var y_label = "Average " + filter_map[arr[1][0]] + ": " + Math.round(arr[1][1]);
+    var html = "<div class='tooltip-box' style='background-color: " + color + ";'> Major: " + d.major + "<br/>" + x_label + "<br/>" + y_label + "</div>";
     tooltip.html(html)
       .style('left', (d3.event.pageX + 15) + 'px')
       .style('top', (d3.event.pageY - 28) + 'px')
