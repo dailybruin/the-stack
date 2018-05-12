@@ -391,7 +391,6 @@ function reload() {
 }
 
 function makeVis(data) {
-  //for (var i in data) console.log(data[i]);
   var x_filter = scatterSelections["selected_filter1"]
   var y_filter = scatterSelections["selected_filter2"]
 
@@ -482,8 +481,18 @@ function makeVis(data) {
     .append('circle')
     .attr('class', 'dot')
     .attr('r', 5.5) // radius size
-    .attr('cx', function(d) { return 960 / (dynamic_bounds[x_filter] + margin.right) * filterScatter(d, 1) }) // 960px wide, but adjust data point properly to the corresponding x-axis value
-    .attr('cy', function(d) { return ((600 - margin.top - margin.bottom) / dynamic_bounds[y_filter]) * (dynamic_bounds[y_filter] - filterScatter(d, 2)) }) // 600px wide, adjust data point to corresponding y-axis value
+    .attr('cx', function(d) { 
+      // remove 0s
+      var valx = filterScatter(d, 1);
+      var valy = filterScatter(d, 2);
+      return (Math.round(valx) == 0 || Math.round(valy) == 0) ? null : 960 / (dynamic_bounds[x_filter] + margin.right) * valx;
+    }) // 960px wide, but adjust data point properly to the corresponding x-axis value
+    .attr('cy', function(d) { 
+      // remove 0s
+      var valx = filterScatter(d, 1);
+      var valy = filterScatter(d, 2);
+      return (Math.round(valx) == 0 || Math.round(valy) == 0) ? null : ((600 - margin.top - margin.bottom) / dynamic_bounds[y_filter]) * (dynamic_bounds[y_filter] - valy) 
+    }) // 600px wide, adjust data point to corresponding y-axis value
     .style("fill", function(d) { return colorScale(d.School); })
     .on("mouseover", tipMouseover)
     .on("mouseout", tipMouseout);
