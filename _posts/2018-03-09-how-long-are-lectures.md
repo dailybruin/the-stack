@@ -6,6 +6,7 @@ featured_image:
 og_image: suspicious-activity/map.png
 authors:
   - rishub_kumar
+  - henna_dialani
 stylesheets:
   # - //cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.6/semantic.min.css
   - //cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/components/dropdown.min.css
