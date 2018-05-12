@@ -15,11 +15,20 @@ var scatterSelections = {
   "selected_filter2": "avg_lecture_length_week",
 }
 
+// depending on filter, render chart description and axis accordingly
 var filter_map = {
   "avg_lecture_size": "Lecture Size",
   "avg_lecture_length_day": "Lecture Length (Day)",
   "avg_lecture_length_week": "Lecture Length (Week)",
   "avg_num_lectures_week": "Number of Lectures"
+}
+
+// depending on filter, alter the max bounds of the axis
+var dynamic_bounds = {
+  "avg_lecture_size": 300,
+  "avg_lecture_length_day": 250,
+  "avg_lecture_length_week": 400,
+  "avg_num_lectures_week": 5
 }
 
 window.onAllChange =  function() {
@@ -383,6 +392,9 @@ function reload() {
 
 function makeVis(data) {
   //for (var i in data) console.log(data[i]);
+  var x_filter = scatterSelections["selected_filter1"]
+  var y_filter = scatterSelections["selected_filter2"]
+
   var margin = { top: 20, right: 20, bottom: 30, left: 40 },
       width = 960 - margin.left - margin.right,
       height = 600 - margin.top - margin.bottom;
@@ -396,10 +408,10 @@ function makeVis(data) {
   // Define scales
   var colorScale = d3.scale.category10();
   var xScale = d3.scale.linear()
-    .domain([0, 500]) // TODO: set a better bound through the max function
+    .domain([0, dynamic_bounds[x_filter]]) // TODO: set a better bound through the max function
     .range([0, width])
   var yScale = d3.scale.linear()
-    .domain([0, 600]) // TODO: set a better bound through the max function
+    .domain([0, dynamic_bounds[y_filter]]) // TODO: set a better bound through the max function
     .range([height, 0]); // y-axis is upper left downwards
 
   // Define axes
@@ -421,7 +433,7 @@ function makeVis(data) {
     .attr('x', width) // x-offset from xAxis
     .attr('y', -6) // y-offset from xAxis
     .style('text-anchor', 'end') // right-justify
-    .text(filter_map[scatterSelections["selected_filter1"]])
+    .text(filter_map[x_filter])
     //.text('Lecture Size');
 
   // Add y-axis to canvas
@@ -433,7 +445,7 @@ function makeVis(data) {
     .attr('transform', 'rotate(-90)') // rotate text
     .attr('y', 15) // y-offset from yAxis
     .style('text-anchor', 'end')
-    .text(filter_map[scatterSelections["selected_filter2"]])
+    .text(filter_map[y_filter])
     //.text('Lecture Length');
 
   // Add tooltip to scatterplot div, visible on mouseover
@@ -470,8 +482,8 @@ function makeVis(data) {
     .append('circle')
     .attr('class', 'dot')
     .attr('r', 5.5) // radius size
-    .attr('cx', function(d) { return 960 / (500 + margin.right) * filterScatter(d, 1) })
-    .attr('cy', function(d) { return ((600 - margin.top - margin.bottom) / 600) * (600 - filterScatter(d, 2)) })
+    .attr('cx', function(d) { return 960 / (dynamic_bounds[x_filter] + margin.right) * filterScatter(d, 1) })
+    .attr('cy', function(d) { return ((600 - margin.top - margin.bottom) / dynamic_bounds[y_filter]) * (dynamic_bounds[y_filter] - filterScatter(d, 2)) })
     .style("fill", function(d) { return colorScale(d.School); })
     .on("mouseover", tipMouseover)
     .on("mouseout", tipMouseout);
