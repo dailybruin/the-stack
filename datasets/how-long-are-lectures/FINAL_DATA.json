@@ -189,7 +189,7 @@
   },
   {
     "NorthOrSouth": "North",
-    "School": "",
+    "School": "School of Education and Information Studies",
     "Winter": {
       "Upper": {
         "avg_lecture_size": 26.4,
@@ -236,7 +236,7 @@
   },
   {
     "NorthOrSouth": "South",
-    "School": "",
+    "School": "Anderson School of Management",
     "Winter": {
       "Upper": {
         "avg_lecture_size": 0,
@@ -565,7 +565,7 @@
   },
   {
     "NorthOrSouth": "South",
-    "School": "",
+    "School": "David Geffen School of Medicine",
     "Winter": {
       "Upper": {
         "avg_lecture_size": 0,
@@ -753,7 +753,7 @@
   },
   {
     "NorthOrSouth": "South",
-    "School": "",
+    "School": "Life Sciences",
     "Winter": {
       "Upper": {
         "avg_lecture_size": 0,
@@ -847,7 +847,7 @@
   },
   {
     "NorthOrSouth": "South",
-    "School": "The College of Letters and Science",
+    "School": "David Geffen School of Medicine",
     "Winter": {
       "Upper": {
         "avg_lecture_size": 23.5,
@@ -1035,7 +1035,7 @@
   },
   {
     "NorthOrSouth": "North",
-    "School": "",
+    "School": "Luskin School of Public Affairs",
     "Winter": {
       "Upper": {
         "avg_lecture_size": 30,
@@ -1129,7 +1129,7 @@
   },
   {
     "NorthOrSouth": "South",
-    "School": "",
+    "School": "Fielding School of Public Health",
     "Winter": {
       "Upper": {
         "avg_lecture_size": 36.666666666666664,
@@ -1223,7 +1223,7 @@
   },
   {
     "NorthOrSouth": "South",
-    "School": "",
+    "School": "School of Engineering and Applied Science",
     "Winter": {
       "Upper": {
         "avg_lecture_size": 97.23809523809524,
@@ -1646,7 +1646,7 @@
   },
   {
     "NorthOrSouth": "North",
-    "School": "",
+    "School": "School of the Arts and Architecture",
     "Winter": {
       "Upper": {
         "avg_lecture_size": 20.454545454545453,
@@ -1693,7 +1693,7 @@
   },
   {
     "NorthOrSouth": "North",
-    "School": "",
+    "School": "School of Nursing",
     "Winter": {
       "Upper": {
         "avg_lecture_size": 43.75,
@@ -2022,7 +2022,7 @@
   },
   {
     "NorthOrSouth": "North",
-    "School": "",
+    "School": "The College of Letters and Science",
     "Winter": {
       "Upper": {
         "avg_lecture_size": 150,
@@ -2116,7 +2116,7 @@
   },
   {
     "NorthOrSouth": "South",
-    "School": "",
+    "School": "David Geffen School of Medicine",
     "Winter": {
       "Upper": {
         "avg_lecture_size": 0,
@@ -2492,7 +2492,7 @@
   },
   {
     "NorthOrSouth": "North",
-    "School": "",
+    "School": "School of the Arts and Architecture",
     "Winter": {
       "Upper": {
         "avg_lecture_size": 18.3953488372093,
@@ -2727,7 +2727,7 @@
   },
   {
     "NorthOrSouth": "South",
-    "School": "",
+    "School": "Fielding School of Public Health",
     "Winter": {
       "Upper": {
         "avg_lecture_size": 58.5,
@@ -2962,7 +2962,7 @@
   },
   {
     "NorthOrSouth": "South",
-    "School": "",
+    "School": "School of Dentistry",
     "Winter": {
       "Upper": {
         "avg_lecture_size": 0,
@@ -3150,7 +3150,7 @@
   },
   {
     "NorthOrSouth": "South",
-    "School": "",
+    "School": "David Geffen School of Medicine",
     "Winter": {
       "Upper": {
         "avg_lecture_size": 0,
@@ -3197,7 +3197,7 @@
   },
   {
     "NorthOrSouth": "North",
-    "School": "",
+    "School": "School of Theater, Film and Television",
     "Winter": {
       "Upper": {
         "avg_lecture_size": 25.51219512195122,
@@ -3244,7 +3244,7 @@
   },
   {
     "NorthOrSouth": "North",
-    "School": "",
+    "School": "School of the Arts and Architecture",
     "Winter": {
       "Upper": {
         "avg_lecture_size": 21.5,
@@ -3432,7 +3432,7 @@
   },
   {
     "NorthOrSouth": "North",
-    "School": "",
+    "School": "Luskin School of Public Affairs",
     "Winter": {
       "Upper": {
         "avg_lecture_size": 21.666666666666668,
@@ -3573,7 +3573,7 @@
   },
   {
     "NorthOrSouth": "North",
-    "School": "",
+    "School": "Herb Alpert School of Music",
     "Winter": {
       "Upper": {
         "avg_lecture_size": 0,
@@ -3714,7 +3714,7 @@
   },
   {
     "NorthOrSouth": "North",
-    "School": "",
+    "School": "School of Education and Information Studies",
     "Winter": {
       "Upper": {
         "avg_lecture_size": 22,
@@ -3808,7 +3808,7 @@
   },
   {
     "NorthOrSouth": "North",
-    "School": "",
+    "School": "School of the Arts and Architecture",
     "Winter": {
       "Upper": {
         "avg_lecture_size": 15,
@@ -3902,7 +3902,7 @@
   },
   {
     "NorthOrSouth": "South",
-    "School": "",
+    "School": "David Geffen School of Medicine",
     "Winter": {
       "Upper": {
         "avg_lecture_size": 2,
@@ -4278,7 +4278,7 @@
   },
   {
     "NorthOrSouth": "North",
-    "School": "",
+    "School": "Herb Alpert School of Music",
     "Winter": {
       "Upper": {
         "avg_lecture_size": 26,
@@ -4325,7 +4325,7 @@
   },
   {
     "NorthOrSouth": "South",
-    "School": "",
+    "School": "David Geffen School of Medicine",
     "Winter": {
       "Upper": {
         "avg_lecture_size": 0,
@@ -4419,7 +4419,7 @@
   },
   {
     "NorthOrSouth": "North",
-    "School": "",
+    "School": "David Geffen School of Medicine",
     "Winter": {
       "Upper": {
         "avg_lecture_size": 20,
@@ -4513,7 +4513,7 @@
   },
   {
     "NorthOrSouth": "North",
-    "School": "",
+    "School": "Graduate Division",
     "Winter": {
       "Upper": {
         "avg_lecture_size": 0,
@@ -4795,7 +4795,7 @@
   },
   {
     "NorthOrSouth": "North",
-    "School": "",
+    "School": "School of the Arts and Architecture",
     "Winter": {
       "Upper": {
         "avg_lecture_size": 20,
@@ -4936,7 +4936,7 @@
   },
   {
     "NorthOrSouth": "South",
-    "School": "",
+    "School": "David Geffen School of Medicine",
     "Winter": {
       "Upper": {
         "avg_lecture_size": 0,
@@ -4983,7 +4983,7 @@
   },
   {
     "NorthOrSouth": "South",
-    "School": "",
+    "School": "David Geffen School of Medicine",
     "Winter": {
       "Upper": {
         "avg_lecture_size": 0,
@@ -5030,7 +5030,7 @@
   },
   {
     "NorthOrSouth": "North",
-    "School": "",
+    "School": "School of the Arts and Architecture",
     "Winter": {
       "Upper": {
         "avg_lecture_size": 22.75,
@@ -5218,7 +5218,7 @@
   },
   {
     "NorthOrSouth": "South",
-    "School": "",
+    "School": "Fielding School of Public Health",
     "Winter": {
       "Upper": {
         "avg_lecture_size": 100,
@@ -5312,7 +5312,7 @@
   },
   {
     "NorthOrSouth": "North",
-    "School": "",
+    "School": "Fielding School of Public Health",
     "Winter": {
       "Upper": {
         "avg_lecture_size": 36.5,
@@ -5359,7 +5359,7 @@
   },
   {
     "NorthOrSouth": "North",
-    "School": "",
+    "School": "Anderson School of Management",
     "Winter": {
       "Upper": {
         "avg_lecture_size": 0,
@@ -5547,7 +5547,7 @@
   },
   {
     "NorthOrSouth": "North",
-    "School": "",
+    "School": "Luskin School of Public Affairs",
     "Winter": {
       "Upper": {
         "avg_lecture_size": 16,
@@ -5594,7 +5594,7 @@
   },
   {
     "NorthOrSouth": "North",
-    "School": "",
+    "School": "Luskin School of Public Affairs",
     "Winter": {
       "Upper": {
         "avg_lecture_size": 200,
@@ -5829,7 +5829,7 @@
   },
   {
     "NorthOrSouth": "North",
-    "School": "",
+    "School": "Herb Alpert School of Music",
     "Winter": {
       "Upper": {
         "avg_lecture_size": 13.064516129032258,
@@ -5923,7 +5923,7 @@
   },
   {
     "NorthOrSouth": "North",
-    "School": "",
+    "School": "School of the Arts and Architecture",
     "Winter": {
       "Upper": {
         "avg_lecture_size": 14.545454545454545,
@@ -5970,7 +5970,7 @@
   },
   {
     "NorthOrSouth": "North",
-    "School": "",
+    "School": "Fielding School of Public Health",
     "Winter": {
       "Upper": {
         "avg_lecture_size": 10.5,
@@ -6017,7 +6017,7 @@
   },
   {
     "NorthOrSouth": "South",
-    "School": "",
+    "School": "David Geffen School of Medicine",
     "Winter": {
       "Upper": {
         "avg_lecture_size": 0,
@@ -6064,7 +6064,7 @@
   },
   {
     "NorthOrSouth": "North",
-    "School": "",
+    "School": "The College of Letters and Science",
     "Winter": {
       "Upper": {
         "avg_lecture_size": 0,
@@ -6111,7 +6111,7 @@
   },
   {
     "NorthOrSouth": "North",
-    "School": "",
+    "School": "Anderson School of Management",
     "Winter": {
       "Upper": {
         "avg_lecture_size": 77.46666666666667,
@@ -6158,7 +6158,7 @@
   },
   {
     "NorthOrSouth": "North",
-    "School": "",
+    "School": "The College of Letters and Science",
     "Winter": {
       "Upper": {
         "avg_lecture_size": 62.625,
@@ -6252,7 +6252,7 @@
   },
   {
     "NorthOrSouth": "North",
-    "School": "",
+    "School": "School of Education and Information Studies",
     "Winter": {
       "Upper": {
         "avg_lecture_size": 25,
@@ -6346,7 +6346,7 @@
   },
   {
     "NorthOrSouth": "South",
-    "School": "",
+    "School": "David Geffen School of Medicine",
     "Winter": {
       "Upper": {
         "avg_lecture_size": 12,
@@ -6534,7 +6534,7 @@
   },
   {
     "NorthOrSouth": "North",
-    "School": "",
+    "School": "Fielding School of Public Health",
     "Winter": {
       "Upper": {
         "avg_lecture_size": 44,
@@ -6628,7 +6628,7 @@
   },
   {
     "NorthOrSouth": "South",
-    "School": "",
+    "School": "The College of Letters and Science",
     "Winter": {
       "Upper": {
         "avg_lecture_size": 10,
@@ -6910,7 +6910,7 @@
   },
   {
     "NorthOrSouth": "North",
-    "School": "",
+    "School": "School of Law",
     "Winter": {
       "Upper": {
         "avg_lecture_size": 0,
@@ -7286,7 +7286,7 @@
   },
   {
     "NorthOrSouth": "North",
-    "School": "",
+    "School": "School of Theater, Film and Television",
     "Winter": {
       "Upper": {
         "avg_lecture_size": 36.10526315789474,
@@ -7521,7 +7521,7 @@
   },
   {
     "NorthOrSouth": "South",
-    "School": "",
+    "School": "Fielding School of Public Health",
     "Winter": {
       "Upper": {
         "avg_lecture_size": 0,
@@ -7850,7 +7850,7 @@
   },
   {
     "NorthOrSouth": "South",
-    "School": "",
+    "School": "Life Sciences",
     "Winter": {
       "Upper": {
         "avg_lecture_size": 0,
@@ -7897,7 +7897,7 @@
   },
   {
     "NorthOrSouth": "North",
-    "School": "",
+    "School": "Anderson School of Management",
     "Winter": {
       "Upper": {
         "avg_lecture_size": 0,

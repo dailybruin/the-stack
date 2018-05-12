@@ -10,7 +10,10 @@
     "precommit": "lint-staged"
   },
   "eslintConfig": {
-    "extends": ["airbnb-base", "prettier"]
+    "extends": [
+      "airbnb-base",
+      "prettier"
+    ]
   },
   "prettier": {
     "overrides": [
@@ -24,9 +27,13 @@
     ]
   },
   "lint-staged": {
-    "*.{js,scss,json,md}": ["prettier --write", "git add"]
+    "*.{js,scss,json,md}": [
+      "prettier --write",
+      "git add"
+    ]
   },
   "devDependencies": {
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "eslint": "^4.16.0",
     "eslint-config-airbnb": "^16.1.0",
     "eslint-config-airbnb-base": "^12.1.0",

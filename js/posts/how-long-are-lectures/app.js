@@ -1,7 +1,19 @@
-var selected_quarter = "all"
-var selected_div = "all"
-var selected_campus = "all"
-var selected_filter = "avg_lecture_length_day"
+var radialSelections = {
+  "selected_quarter": "all",
+  "selected_div": "all",
+  "selected_campus": "all",
+  "selected_school": "all",
+  "selected_filter": "avg_lecture_length_day",
+}
+
+var scatterSelections = {
+  "selected_quarter": "all",
+  "selected_div": "all",
+  "selected_campus": "all",
+  "selected_school": "all",
+  "selected_filter1": "avg_lecture_size",
+  "selected_filter2": "avg_lecture_length_week",
+}
 
 window.onAllChange =  function() {
   document.getElementById("sort").checked = false;
@@ -10,41 +22,124 @@ window.onAllChange =  function() {
   reload();
 }
 
-window.onQuarterChange = function(value) {
-  selected_quarter = value;
-  onAllChange();
-}
-window.onDivChange = function(value) {
-  selected_div = value;
-  onAllChange();
-}
-window.onCampusChange = function(value) {
-  selected_campus = value;
-  onAllChange();
-}
-window.onFilterChange = function(value) {
-  selected_filter = value;
+window.onRadialChange = function(field, value) {
+  radialSelections[field] = value;
   onAllChange();
 }
 
+window.onScatterChange = function(field, value) {
+  scatterSelections[field] = value;
+  onAllChange();
+}
 
-function calculateValue(d, index) {
+function calculateValue(d, chart) {
+  // TODO: change this lol
+  var selected_quarter;
+  var selected_div;
+  var selected_campus;
+  var selected_school;
+  var selected_filter;
+  selected_quarter = radialSelections["selected_quarter"];
+  selected_div = radialSelections["selected_div"];
+  selected_campus = radialSelections["selected_campus"];
+  selected_school = radialSelections["selected_school"];
+  selected_filter = radialSelections["selected_filter"];
+
   quarters = selected_quarter === "all" ? ["Fall", "Winter", "Spring"] : [selected_quarter]
   divs = selected_div === "all" ? ["Upper", "Lower"] : [selected_div]
   campuses = selected_campus === "all" ? ["North", "South"] : [selected_campus]
+  schools = selected_school === "all" ? [
+    "Anderson School of Management",
+    "David Geffen School of Medicine",
+    "Fielding School of Public Health",
+    "Graduate Division",
+    "Herb Alpert School of Music",
+    "Life Sciences",
+    "Luskin School of Public Affairs",
+    "School of Dentistry",
+    "School of Education and Information Studies",
+    "School of Engineering and Applied Science",
+    "School of Law",
+    "School of Nursing",
+    "School of Theater, Film and Television",
+    "School of the Arts and Architecture",
+    "The College of Letters and Science"
+  ] : [selected_school]
 
   var output = []
   quarters.forEach(quarter => {
     divs.forEach(div => {
       campuses.forEach(campus => {
-        if (d.NorthOrSouth == campus) {
-          if (d[quarter][div][selected_filter] !== 0){
-            output.push(d[quarter][div][selected_filter])
+        schools.forEach(school => {
+          if (d.NorthOrSouth == campus && d.School == school) {
+            if (d[quarter][div][selected_filter] !== 0){
+              output.push(d[quarter][div][selected_filter])
+            }
           }
-        }
+        })
       })
     })
   })
+
+  if (output.length !== 0)
+    var average = (output.reduce((a, b) => a + b, 0)/output.length);
+  else
+    var average = 0
+  return average;
+}
+
+function filterScatter(d, filter) {
+  var selected_quarter;
+  var selected_div;
+  var selected_campus;
+  var selected_school;
+  var selected_filter;
+  selected_quarter = scatterSelections["selected_quarter"];
+  selected_div = scatterSelections["selected_div"];
+  selected_campus = scatterSelections["selected_campus"];
+  selected_school = scatterSelections["selected_school"];
+  if (filter == 1) {
+    selected_filter = scatterSelections["selected_filter1"];
+  } 
+  if (filter == 2) {
+    selected_filter = scatterSelections["selected_filter2"];
+  }
+
+  quarters = selected_quarter === "all" ? ["Fall", "Winter", "Spring"] : [selected_quarter]
+  divs = selected_div === "all" ? ["Upper", "Lower"] : [selected_div]
+  campuses = selected_campus === "all" ? ["North", "South"] : [selected_campus]
+  schools = selected_school === "all" ? [
+    "Anderson School of Management",
+    "David Geffen School of Medicine",
+    "Fielding School of Public Health",
+    "Graduate Division",
+    "Herb Alpert School of Music",
+    "Life Sciences",
+    "Luskin School of Public Affairs",
+    "School of Dentistry",
+    "School of Education and Information Studies",
+    "School of Engineering and Applied Science",
+    "School of Law",
+    "School of Nursing",
+    "School of Theater, Film and Television",
+    "School of the Arts and Architecture",
+    "The College of Letters and Science"
+  ] : [selected_school]
+
+  var output = []
+  quarters.forEach(quarter => {
+    divs.forEach(div => {
+      campuses.forEach(campus => {
+        schools.forEach(school => {
+          if (d.NorthOrSouth == campus && d.School == school) {
+            if (d[quarter][div][selected_filter] !== 0){
+              output.push(d[quarter][div][selected_filter])
+            }
+          }
+        })
+      })
+    })
+  });
 
   if (output.length !== 0)
     var average = (output.reduce((a, b) => a + b, 0)/output.length);
@@ -78,9 +173,9 @@ function reload() {
   d3.json("/datasets/how-long-are-lectures/FINAL_DATA.json", function(error, data) {
 
     data = data.sort(compare)
-    data = data.filter(d => calculateValue(d)!==0)
+    data = data.filter((d, index) => calculateValue(d)!==0)
 
-    var extent = d3.extent(data, function(d, index) { return calculateValue(d, index) });
+    var extent = d3.extent(data, function(d) { return calculateValue(d) });
 
     var barScale = d3.scale.linear()
         .domain(extent)
@@ -204,12 +299,7 @@ function reload() {
     // scatterplot
     d3.json("/datasets/how-long-are-lectures/FINAL_DATA.json", function(error, data) {
       if (error) return;
-      let arr = [];
-      for (var i in data) {
-        arr.push(data[i]);
-      }
-      //console.log(data);
-      makeVis(arr);
+      makeVis(data);
     });
 
   });
@@ -299,8 +389,8 @@ function makeVis(data) {
     .append('circle')
     .attr('class', 'dot')
     .attr('r', 5.5) // radius size
-    .attr('cx', function(d) { return 960 / (500 + margin.right) * d.Fall.Lower.avg_lecture_size })
-    .attr('cy', function(d) { return ((600 - margin.top - margin.bottom) / 600) * (600 - d.Fall.Lower.avg_lecture_length_week) })
+    .attr('cx', function(d) { return 960 / (500 + margin.right) * filterScatter(d, 1) })
+    .attr('cy', function(d) { return ((600 - margin.top - margin.bottom) / 600) * (600 - filterScatter(d, 2)) })
     .style("fill", function(d) { return colorScale(d.School); })
     .on("mouseover", tipMouseover)
     .on("mouseout", tipMouseout);
