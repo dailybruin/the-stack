@@ -482,8 +482,8 @@ function makeVis(data) {
     .append('circle')
     .attr('class', 'dot')
     .attr('r', 5.5) // radius size
-    .attr('cx', function(d) { return 960 / (dynamic_bounds[x_filter] + margin.right) * filterScatter(d, 1) })
-    .attr('cy', function(d) { return ((600 - margin.top - margin.bottom) / dynamic_bounds[y_filter]) * (dynamic_bounds[y_filter] - filterScatter(d, 2)) })
+    .attr('cx', function(d) { return 960 / (dynamic_bounds[x_filter] + margin.right) * filterScatter(d, 1) }) // 960px wide, but adjust data point properly to the corresponding x-axis value
+    .attr('cy', function(d) { return ((600 - margin.top - margin.bottom) / dynamic_bounds[y_filter]) * (dynamic_bounds[y_filter] - filterScatter(d, 2)) }) // 600px wide, adjust data point to corresponding y-axis value
     .style("fill", function(d) { return colorScale(d.School); })
     .on("mouseover", tipMouseover)
     .on("mouseout", tipMouseout);
