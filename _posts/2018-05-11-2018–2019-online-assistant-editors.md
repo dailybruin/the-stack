@@ -87,6 +87,12 @@ Ashley joined the Daily Bruin this past fall on the Bruinwalk team and since the
 
 <canvas id="ashley"></canvas>
 
+When asked what love is, Ashley coded:
+
+```js
+let love = “cashew butter”;
+```
+
 ## Main Site Director – Mike Zhang
 
 <img src="/img/posts/assistant-editors/mike.jpg" alt="Baby Mike!">
