@@ -15,7 +15,6 @@ Promise.all([
   d3.csv("/datasets/wifi-heatmap/WifiData.csv"),
   d3.json("/datasets/wifi-heatmap/ucla-outline.geojson")
 ]).then(data => {
-  // console.log(data[1])
   locMap[data[2].features[1].properties.name] = {
     feature: data[2].features[1],
     strengths: Array(6).fill(0),
@@ -30,15 +29,12 @@ Promise.all([
     };
   });
 
-  console.log([parseFloat(data[1][0].longitude), parseFloat(data[1][0].latitude)])
-
   data[1].forEach(d => {
     let x = networks.indexOf(d.name);
     if (x !== -1) {
       for (loc in locMap) {
         if (!locMap.hasOwnProperty(loc)) continue;
-        // locMap[loc].strengths[x] += parseInt(d.strength);
-        // locMap[loc].counts[x]++;
+
         if (d3.geoContains(locMap[loc].feature, [parseFloat(d.longitude), parseFloat(d.latitude)])) {
           locMap[loc].strengths[x] += parseInt(d.strength, 10);
           locMap[loc].counts[x]++;
@@ -118,12 +114,12 @@ let makeWifiCompBarChart = () => {
     bars.exit().remove();
   }
 
-  // Dropdown logic: TODO WIP
-  var locations = Object.keys(locMap);
+  // Dropdown logic
+  let locations = Object.keys(locMap);
 
   // Handler for dropdown value change
-  var dropdownChange = function () {
-    let newOption = d3.select(this).property('value');
+  let dropdownChange = function () {
+    let newOption = d3.select(this).property("value");
     let newData = locMap[newOption];
 
     let avgStr = Array(6);
@@ -138,7 +134,7 @@ let makeWifiCompBarChart = () => {
     updateBars(avgStr);
   };
 
-  var dropdown = d3.select("#avg-network-str-bar-chart")
+  let dropdown = d3.select("#avg-network-str-bar-chart")
     .insert("select", "svg")
     .on("change", dropdownChange);
 
@@ -147,8 +143,6 @@ let makeWifiCompBarChart = () => {
     .enter().append("option")
     .attr("value", d => d)
     .text(d => d);
-
-  // var initialData = locMap[.....];
 
   let initialData = Array(6);
   for (i = 0; i < 6; i++) {
