@@ -32,6 +32,7 @@ To be added/worked on:
   - Could even zoom into buildings and zoom out for detailed view?
   - Buildings are also big with lots of varying wifi signals; what do we do about that (if anything)?
 - Gaussian blur could be fun, but look into feasibility and appearance
+- Switch to SECURE_RES or WIFI_RES on the heatmap and you can see points that very much aren't on the Hill; not a good sign, hopefully our data isn't too bad haha
 
 <div class="rough-wifi-heatmap-wrapper">
   <div class="wifi-heatmap-text-wrapper">
