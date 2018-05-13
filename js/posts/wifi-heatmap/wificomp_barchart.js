@@ -8,27 +8,45 @@ const width = 1000 - margin.left - margin.right;
 const height = 500 - margin.top - margin.bottom;
 
 const networks = ["eduroam", "UCLA_WEB", "UCLA_WIFI", "UCLA_WEB_RES", "UCLA_WIFI_RES", "UCLA_SECURE_RES"];
-let strengths = Array(6).fill(0);
-let counts = Array(6).fill(0);
-let avgStr = Array(6).fill(0);
-
-// TODO WIP
-let locMap = {
-  all: [1, 2, 3, 4, 5]
-}
+let locMap = {};
 
 Promise.all([
-  d3.csv("/datasets/wifi-heatmap/WifiData.csv", data => {
-    let x = networks.indexOf(data.name);
-    if (x !== -1) {
-      strengths[x] += parseInt(data.strength);
-      counts[x]++;
-    }
-  })
-]).then(x => {
-  avgStr = strengths.map((s, i) => {
-    return s / counts[i]
+  d3.json("/datasets/wifi-heatmap/ucla-buildings.geojson"),
+  d3.csv("/datasets/wifi-heatmap/WifiData.csv"),
+  d3.json("/datasets/wifi-heatmap/ucla-outline.geojson")
+]).then(data => {
+  // console.log(data[1])
+  locMap[data[2].features[1].properties.name] = {
+    feature: data[2].features[1],
+    strengths: Array(6).fill(0),
+    counts: Array(6).fill(0)
+  };
+
+  data[0].features.forEach(f => {
+    locMap[f.properties.name] = {
+      feature: f,
+      strengths: Array(6).fill(0),
+      counts: Array(6).fill(0)
+    };
   });
+
+  console.log([parseFloat(data[1][0].longitude), parseFloat(data[1][0].latitude)])
+
+  data[1].forEach(d => {
+    let x = networks.indexOf(d.name);
+    if (x !== -1) {
+      for (loc in locMap) {
+        if (!locMap.hasOwnProperty(loc)) continue;
+        // locMap[loc].strengths[x] += parseInt(d.strength);
+        // locMap[loc].counts[x]++;
+        if (d3.geoContains(locMap[loc].feature, [parseFloat(d.longitude), parseFloat(d.latitude)])) {
+          locMap[loc].strengths[x] += parseInt(d.strength, 10);
+          locMap[loc].counts[x]++;
+        }
+      }
+    }
+  });
+
   makeWifiCompBarChart();
 })
 
@@ -47,7 +65,7 @@ let makeWifiCompBarChart = () => {
     .attr("x", width / 2)
     .attr("y", -40)
     .attr("text-anchor", "middle")
-    .text("Strengths of Different Wifi Networks by Location");
+    .text("Strengths of Different Wifi Networks by Location (higher is better)");
 
   // Initalize scales
   const xScale = d3.scaleBand()
@@ -75,7 +93,7 @@ let makeWifiCompBarChart = () => {
 
   // Function to update bars
   let updateBars = data => {
-    yScale.domain([0, d3.max(data)]);
+    yScale.domain([0, d3.min(data)]);
     yAxisDrawn.call(yAxis);
 
     const bars = barGroup.selectAll(".bar")
@@ -94,7 +112,7 @@ let makeWifiCompBarChart = () => {
     // Update old bars
     bars.transition().duration(250)
       //.attr("y", d => yScale(d))
-      .attr("height", d => height - yScale(d));
+      .attr("height", d => yScale(d));
 
     // Delete removed bars
     bars.exit().remove();
@@ -108,7 +126,16 @@ let makeWifiCompBarChart = () => {
     let newOption = d3.select(this).property('value');
     let newData = locMap[newOption];
 
-    updateBars(newData);
+    let avgStr = Array(6);
+    for (i = 0; i < 6; i++) {
+      avgStr[i] = newData.strengths[i] / newData.counts[i];
+      if (isNaN(avgStr[i])) {
+        avgStr = Array(6).fill(0);
+        break;
+      }
+    }
+
+    updateBars(avgStr);
   };
 
   var dropdown = d3.select("#avg-network-str-bar-chart")
@@ -122,5 +149,11 @@ let makeWifiCompBarChart = () => {
     .text(d => d);
 
   // var initialData = locMap[.....];
-  updateBars(avgStr);
+
+  let initialData = Array(6);
+  for (i = 0; i < 6; i++) {
+    initialData[i] = locMap["UCLA (All)"].strengths[i] / locMap["UCLA (All)"].counts[i];
+  }
+
+  updateBars(initialData);
 }
