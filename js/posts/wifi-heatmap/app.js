@@ -161,6 +161,7 @@ let redraw = () => {
   svg
     .attr("width", width)
     .attr("height", width)
+    .attr("stroke", "gray")
     .selectAll("rect")
     .remove();
 
