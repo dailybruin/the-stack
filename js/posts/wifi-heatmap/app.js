@@ -2,12 +2,11 @@ const long2 = -118.437; //-118.438059;
 const long1 = -118.456; //-118.453508;
 const lat2 = 34.08; //34.079024;
 const lat1 = 34.06; //34.058690;
-const setDist = 0.0003;
+const setDist = 0.0002;
 const numLat = Math.trunc((lat2 - lat1) / setDist);
 const numLong = Math.trunc((long2 - long1) / setDist);
 const latUnit = (lat2 - lat1) / numLat;
 const longUnit = (long2 - long1) / numLong;
-
 
 let zeros = dimensions => {
   let array = [];
@@ -95,23 +94,24 @@ let calcMetric = (metricType, wifiObj) => {
       }
       specificArray = [grandTotal, grandCount];
   }
-  if(specificArray[1] === 0)
+  if (specificArray[1] === 0)
     return 0;
   return specificArray[0] / specificArray[1];
 };
 
 let wifiArr = zeros([numLong, numLat]);
 let uclaPath = 0;
+let uclaBuildings = 0;
 let grid = 0;
 let wifiSD = 0;
 let wifiMean = 0;
 
 const colorRelative = d3.scaleLinear()
-  .domain([-90, -78, -66, -54, -42, -30, 0])
-  .range(["#b2182b", "#ef8a62", "#fddbc7", "#d1e5f0", "#67a9f0", "#2166ac", "#FDFDFD"]) //#D3D3D3
+  .domain([-90, -67, -30, 0])
+  .range(["red", "yellow", "green", "#FDFDFD"]) //#D3D3D3
 //["#ffffcc", "#c7e9b4", "#7fcdbb", "#41bbc4", "#2c7fb8", "#253494", "#FDFDFD"]
 //["#b2182b", "#ef8a62", "#fddbc7", "#f8f6e9", "#d1e5f0", "#67a9f0", "#2166ac", "#FDFDFD"]
-
+//
 var heatMapMenu = d3
   .select(".rough-wifi-heatmap-wrapper")
   .append("div");
@@ -128,6 +128,14 @@ heatMapMenu
 let svg = d3
   .select(".rough-wifi-heatmap-wrapper")
   .append("svg");
+
+let contentWrapper = svg.append("g");
+
+let filter = svg.append("defs")
+  .append("filter")
+  .attr("id", "blur")
+  .append("feGaussianBlur")
+  .attr("stdDeviation", 0.5);
 
 let redraw = () => {
   let width = document.getElementsByClassName("rough-wifi-heatmap-wrapper")[0].clientWidth;
@@ -147,11 +155,17 @@ let redraw = () => {
   svg
     .attr("width", width)
     .attr("height", width)
+    .selectAll("rect")
+    .remove();
+
+  contentWrapper
+    .attr("width", width)
+    .attr("height", width)
     .selectAll("path")
     .remove();
 
   let menuMetric = menu2Metric(heatMapMenu.select("select").property("value"));
-  svg
+  contentWrapper
     .selectAll(".grid")
     .data(grid.features)
     .enter()
@@ -161,6 +175,7 @@ let redraw = () => {
       return colorRelative(calcMetric(menuMetric, d.properties.data))
     })
     .attr("fill", d => colorRelative(calcMetric(menuMetric, d.properties.data)))
+    //.attr("filter", "url(#blur)")
     .on("mouseover", d => {
       d3.select(".wifi-heatmap-str").text(`str: ${calcMetric(menuMetric, d.properties.data)}`);
       d3.select(".wifi-heatmap-lat").text(`lat: ${d.properties.bottom}, ${d.properties.top}`);
@@ -171,7 +186,8 @@ let redraw = () => {
       d3.select(".wifi-heatmap-lat").text(`HOVER TO SEE VALUE`);
       d3.select(".wifi-heatmap-lon").text(`HOVER TO SEE VALUE`);
     });
-  svg
+
+  contentWrapper
     .selectAll(".outline")
     .data(uclaPath.features)
     .enter()
@@ -179,14 +195,36 @@ let redraw = () => {
     .attr("d", path)
     .attr("stroke", "black")
     .attr("fill", "none");
+
+  contentWrapper
+    .selectAll(".buildings")
+    .data(uclaBuildings.features)
+    .enter()
+    .append("path")
+    .attr("d", path)
+    .attr("stroke", "steelblue")
+    .attr("fill", "steelblue")
+    .attr("fill-opacity", "0.25");
+
+  svg.append("rect")
+    .attr("width", width)
+    .attr("height", width)
+    .style("fill", "none")
+    .style("pointer-events", "all")
+    .call(d3.zoom()
+      .scaleExtent([1, 3])
+      .on("zoom", () => contentWrapper.attr("transform", d3.event.transform)));
+
 }
 
 Promise
   .all([d3.json("/datasets/wifi-heatmap/ucla-outline.geojson"),
-    d3.csv("/datasets/wifi-heatmap/WifiData.csv")
+    d3.csv("/datasets/wifi-heatmap/WifiData.csv"),
+    d3.json("/datasets/wifi-heatmap/map-6.geojson")
   ])
   .then(data => {
     uclaPath = data[0];
+    uclaBuildings = data[2];
     wifiSD = d3.deviation(data[1], d => d.strength);
     wifiMean = d3.mean(data[1], d => d.strength);
     data[1].forEach(el => {
@@ -253,3 +291,57 @@ Promise
   })
 
 window.addEventListener("resize", redraw);
+
+
+
+
+
+/*
+
+,
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [-118.45466494560242, 34.06900488250283],
+          [-118.44858169555664, 34.06900488250283],
+          [-118.44858169555664, 34.074390461292076],
+          [-118.45466494560242, 34.074390461292076],
+          [-118.45466494560242, 34.06900488250283]
+        ]
+      ]
+    }
+
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -118.456,
+              34.06
+            ],
+            [
+              -118.437,
+              34.06
+            ],
+            [
+              -118.437,
+              34.08
+            ],
+            [
+              -118.456,
+              34.08
+            ],
+            [
+              -118.456,
+              34.06
+            ]
+          ]
+        ]
+      }
+    },
+
+*/
