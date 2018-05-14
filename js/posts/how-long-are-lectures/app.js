@@ -32,14 +32,14 @@ var dynamic_bounds = {
 }
 
 window.onAllChange =  function() {
-  document.getElementById("sort").checked = false;
+  document.getElementById("checkboxTwoInput").checked = false;
   var svg = d3.selectAll("svg");
   svg.remove();
   reload();
 }
 
 window.onRadialChange = function(field, value) {
-  radialSelections[field] = value;
+  radialSelections[field] = value.toString();
   onAllChange();
 }
 
@@ -185,7 +185,7 @@ function filterScatter(d, filter) {
   selected_school = scatterSelections["selected_school"];
   if (filter == 1) {
     selected_filter = scatterSelections["selected_filter1"];
-  } 
+  }
   if (filter == 2) {
     selected_filter = scatterSelections["selected_filter2"];
   }
@@ -259,7 +259,52 @@ function reload() {
 
     data = data.sort(compare)
     data = data.filter((d, index) => calculateValue(d)!==0)
-
+    var dummy = {
+      "Winter": {
+        "Upper": {
+          "avg_lecture_size": 0,
+          "avg_lecture_length_day": 0,
+          "avg_lecture_length_week": 0,
+          "avg_num_lectures_week": 0
+        },
+        "Lower": {
+          "avg_lecture_size": 0,
+          "avg_lecture_length_day": 0,
+          "avg_lecture_length_week": 0,
+          "avg_num_lectures_week": 0
+        }
+      },
+      "Spring": {
+        "Upper": {
+          "avg_lecture_size": 0,
+          "avg_lecture_length_day": 0,
+          "avg_lecture_length_week": 0,
+          "avg_num_lectures_week": 0
+        },
+        "Lower": {
+          "avg_lecture_size": 0,
+          "avg_lecture_length_day": 0,
+          "avg_lecture_length_week": 0,
+          "avg_num_lectures_week": 0
+        }
+      },
+      "major": "Partayyy",
+      "Fall": {
+        "Upper": {
+          "avg_lecture_size": 0,
+          "avg_lecture_length_day": 0,
+          "avg_lecture_length_week": 0,
+          "avg_num_lectures_week": 0
+        },
+        "Lower": {
+          "avg_lecture_size": 0,
+          "avg_lecture_length_day": 0,
+          "avg_lecture_length_week": 0,
+          "avg_num_lectures_week": 0
+        }
+      }
+    }
+    data.push(dummy);
     var extent = d3.extent(data, function(d) { return calculateValue(d) });
 
     var barScale = d3.scale.linear()
@@ -481,18 +526,18 @@ function makeVis(data) {
     .append('circle')
     .attr('class', 'dot')
     .attr('r', 5.5) // radius size
-    .attr('cx', function(d) { 
+    .attr('cx', function(d) {
       // remove 0s
       var valx = filterScatter(d, 1);
-      return ((960 - margin.left - margin.right) / dynamic_bounds[x_filter]) * valx; 
+      return ((960 - margin.left - margin.right) / dynamic_bounds[x_filter]) * valx;
       //x_filter != "avg_num_lectures_week" ? 960 / (dynamic_bounds[x_filter] + margin.right) * valx : 960 / 5 * valx - margin.right / 2;
     }) // 960px wide, but adjust data point properly to the corresponding x-axis value
-    .attr('cy', function(d) { 
+    .attr('cy', function(d) {
       var valy = filterScatter(d, 2);
       return ((600 - margin.top - margin.bottom) / dynamic_bounds[y_filter]) * (dynamic_bounds[y_filter] - valy);
     }) // 600px wide, adjust data point to corresponding y-axis value
     .style("fill", function(d) { return colorScale(d.School); })
-    .style("display", function(d) { 
+    .style("display", function(d) {
       var valx = filterScatter(d, 1);
       var valy = filterScatter(d, 2);
       return Math.round(valx) == 0 || Math.round(valy) == 0 ? "none" : null;
@@ -502,4 +547,4 @@ function makeVis(data) {
 }
 
 reload();
-document.getElementById("sort").checked = false;
+document.getElementById("checkboxTwoInput").checked = false;

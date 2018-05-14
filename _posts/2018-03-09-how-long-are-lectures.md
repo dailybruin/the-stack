@@ -1,43 +1,38 @@
 ---
 title: How Long Are Lectures?
-teaser: Insert teaser here
+teaser: How Big/Long Are Your Lectures?
 featured_image:
-    url: suspicious-activity/map.png
-og_image: suspicious-activity/map.png
+    url: how-long-are-lectures/radial-graph.png
+og_image: how-long-are-lectures/radial-graph.png
 authors:
   - rishub_kumar
   - henna_dialani
   - kyle_wong
+  - dinkar_khattar
 stylesheets:
   # - //cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.6/semantic.min.css
-  - //cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/components/dropdown.min.css
-  - //unpkg.com/leaflet@1.0.3/dist/leaflet.css
-  - //api.mapbox.com/mapbox.js/v3.0.1/mapbox.css
   - /css/posts/how-long-are-lectures/app.css
-  - /css/posts/presidential-campaign-donations/tooltip.css
+  - /css/posts/how-long-are-lectures/select.css
 scripts:
   - //d3js.org/d3.v3.min.js # need v3 instead of v4 for radial bar chart
   # - //d3js.org/d3-transition.v1.min.js
-  - //api.mapbox.com/mapbox.js/v3.0.1/mapbox.js
-  - //maps.googleapis.com/maps/api/js?key=AIzaSyBddbV3QvkJbOe-s1dbPXrxWV1Sy4z8nR0"
-  - //api.mapbox.com/mapbox.js/plugins/turf/v2.0.2/turf.min.js
   - //ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js
-  - /js/posts/suspicious-activity/Leaflet.MakiMarkers.js
   - /js/posts/how-long-are-lectures/app.js
+  - /js/posts/how-long-are-lectures/select-style.js
 ---
-Have you ever wondered which lectures seem to drag on more than others? Especially after a night out, where it's easy to just skip a lecture in an auditorium filled with 200 people? Or when you've definitely not completed your readings in a class of (insert small lecture number) and your professor can see your sheepish expression? At the Stack we analyzed Registrar data to look at lecture lengths and class sizes across the different departments of UCLA for the academic year 2017-2018. 
+Have you ever wondered which lectures seem to drag on more than others? Especially after a night out, where it's easy to just skip a lecture in an auditorium filled with 200 people? Or when you've definitely not completed your readings in a class of (insert small lecture number) and your professor can see your sheepish expression? At the Stack we analyzed Registrar data to look at lecture lengths and class sizes across the different departments of UCLA for the academic year 2017-2018.
 
-There was a lot of data to be gathered from UCLA's Registrar website. We wanted to look at lecture lengths and lecture sizes across different filters (so you could also play around with the data and see patterns within the data) - be it school, North or South campus, quarter, and upper or lower division classes. For the academic year 2017-2018, the average lecture length per day was 100.68 minutes. We compared this across the different undergraduate schools and saw that Art had the highest average at 216.86 minutes while Program in Computing had the lowest at 50.0. Art had the highest average number of lecture minutes per week at 383.24 minutes - that’s 6.4 hours for a single class’s lectures (excluding discussions!) in a week. 
+There was a lot of data to be gathered from UCLA's Registrar website. We wanted to look at lecture lengths and lecture sizes across different filters (so you could also play around with the data and see patterns within the data) - be it school, North or South campus, quarter, and upper or lower division classes. For the academic year 2017-2018, the average lecture length per day was 100.68 minutes. We compared this across the different undergraduate schools and saw that Art had the highest average at 216.86 minutes while Program in Computing had the lowest at 50.0. Art had the highest average number of lecture minutes per week at 383.24 minutes - that’s 6.4 hours for a single class’s lectures (excluding discussions!) in a week.
 
-Below is a bar chart showing the top 20 departments by lecture length ranged from Art to ___, while the bottom 20 departments (excluding the departments with 0 minutes), are showed in the graph on the right. 
+Below is a bar chart showing the top 20 departments by lecture length ranged from Art to ___, while the bottom 20 departments (excluding the departments with 0 minutes), are showed in the graph on the right.
 
 Meanwhile, the average lecture size was ____. The department with highest average lecture size was _____ and the department with lowest average lecture size was _____. We looked at lecture size and lecture length in conjunction in the scatterplot below.
 
-Unhappy with how courses are designed? From Beth Lazazzera, Vice Chair of Undergraduate Affairs, we found that each faculty member determines the length and and frequency of lectures when the course is first created and/or revised. Afterwards, the course (and its lecture lengths) must be approved by their department and the Faculty Executive Committee of their School or College. So you know who to look to the next time you have to sit through a long seminar for a required core class that no one wants to take. 
+Unhappy with how courses are designed? From Beth Lazazzera, Vice Chair of Undergraduate Affairs, we found that each faculty member determines the length and and frequency of lectures when the course is first created and/or revised. Afterwards, the course (and its lecture lengths) must be approved by their department and the Faculty Executive Committee of their School or College. So you know who to look to the next time you have to sit through a long seminar for a required core class that no one wants to take.
 
 
 
-<select name="text" onchange="onRadialChange('selected_quarter', this.value)">
+<!-- <select name="text" onchange="onRadialChange('selected_quarter', this.value)">
   <option value="all" selected>All</option>
   <option value="Fall">Fall</option>
   <option value="Winter">Winter</option>
@@ -56,92 +51,179 @@ Unhappy with how courses are designed? From Beth Lazazzera, Vice Chair of Underg
   <option value="South">South</option>
 </select>
 
-<select name="text" onchange="onRadialChange('selected_school', this.value)">
-  <option value="all" selected>All</option>
-  <option value="Anderson School of Management">Anderson School of 
-  Management</option>
-  <option value="David Geffen School of Medicine">David Geffen School of Medicine</option>
-  <option value="Fielding School of Public Health">Fielding School of Public Health</option>
-  <option value="Graduate Division">Graduate Division</option>
-  <option value="Herb Alpert School of Music">Herb Alpert School of Music</option>
-  <option value="Life Sciences">Life Sciences</option>
-  <option value="Luskin School of Public Affairs">Luskin School of Public Affairs</option>
-  <option value="School of Dentistry">School of Dentistry</option>
-  <option value="School of Education and Information Studies">School of Education and Information Studies</option>
-  <option value="School of Engineering and Applied Science">School of Engineering and Applied Science</option>
-  <option value="School of Law">School of Law</option>
-  <option value="School of Nursing">School of Nursing</option>
-  <option value="School of Theater, Film and Television">School of Theater, Film and Television</option>
-  <option value="School of the Arts and Architecture">School of the Arts and Architecture</option>
-  <option value="The College of Letters and Science">The College of Letters and Science</option>
-  </select>
-
 <select name="text" onchange="onRadialChange('selected_filter', this.value)">
   <option value="avg_lecture_length_day">Average lecture length per day</option>
   <option value="avg_lecture_length_week">Average lecture length per week</option>
   <option value="avg_num_lectures_week">Average number of lectures per week</option>
   <option value="avg_lecture_size">Average lecture size</option>
-</select>
-
-<label><input id="sort" type="checkbox"> Sort values</label>
-
-<div id="radial-chart"></div>
+</select> -->
 
 
+<div class="filters1">
+<div class="typo1">Show me <br/>
+    <div class="list"><span class="placeholder-quarter-radial">All quarters</span>
+        <ul class="list__ul1">
+            <li data-value="all"><a href="">All quarters</a></li>
+            <li data-value="Fall"><a href="fall">Fall</a></li>
+            <li data-value="Winter"><a href="">Winter</a></li>
+            <li data-value="Spring"><a href="">Spring</a></li>
+        </ul>
+    </div>
+</div>
 
+<div class="typo2">Show me <br/>
+    <div class="list"><span class="placeholder-div-radial">Upper and Lower Divs</span>
+        <ul class="list__ul2">
+            <li data-value="all"><a href="">Upper and Lower Divs</a></li>
+            <li data-value="Upper"><a href="">Upper Divs</a></li>
+            <li data-value="Lower"><a href="">Lower Divs</a></li>
+        </ul>
+    </div>
+</div>
 
-<select name="text" onchange="onScatterChange('selected_quarter', this.value)">
-  <option value="all" selected>All</option>
-  <option value="Fall">Fall</option>
-  <option value="Winter">Winter</option>
-  <option value="Spring">Spring</option>
-</select>
+<div class="typo3">Show me <br/>
+    <div class="list"><span class="placeholder-campus-radial">North and South Campus</span>
+        <ul class="list__ul3">
+            <li data-value="all"><a href="">North and South Campus</a></li>
+            <li data-value="North"><a href="">North Campus</a></li>
+            <li data-value="South"><a href="">South Campus</a></li>
+        </ul>
+    </div>
+</div>
+</div>
+<br/>
+<div class="filters2">
+<div class="typo4">Show me <br/>
+    <div class="list"><span class="placeholder-num-radial">Average lecture length per day</span>
+        <ul class="list__ul4">
+            <li data-value="avg_lecture_length_day"><a href="">Average lecture length per day</a></li>
+            <li data-value="avg_lecture_length_week"><a href="">Average lecture length per week</a></li>
+            <li data-value="avg_num_lectures_week"><a href="">Average number of lectures per week</a></li>
+            <li data-value="avg_lecture_size"><a href="">Average lecture size</a></li>
+        </ul>
+    </div>
+</div>
 
-<select name="text" onchange="onScatterChange('selected_div', this.value)">
-  <option value="all" selected>All</option>
-  <option value="Upper">Upper</option>
-  <option value="Lower">Lower</option>
-</select>
+<div class="typo5">Show me <br/>
+    <div class="list"><span class="placeholder-school-radial">All Schools</span>
+        <ul class="list__ul5">
+            <li data-value="all"><a href="">All Schools</a></li>
+            <li data-value="Anderson School of Management"><a href="">Anderson School of Management</a></li>
+            <li data-value="David Geffen School of Medicine"><a href="">David Geffen School of Medicine</a></li>
+            <li data-value="Fielding School of Public Health"><a href="">Fielding School of Public Health</a></li>
+            <li data-value="Graduate Division"><a href="">Graduate Division</a></li>
+            <li data-value="Herb Alpert School of Music"><a href="">Herb Alpert School of Music</a></li>
+            <li data-value="Life Sciences"><a href="">Life Sciences</a></li>
+            <li data-value="Luskin School of Public Affairs"><a href="">Luskin School of Public Affairs</a></li>
+            <li data-value="School of Dentistry"><a href="">School of Dentistry</a></li>
+            <li data-value="School of Education and Information Studies"><a href="">School of Education and Information Studies</a></li>
+            <li data-value="School of Engineering and Applied Science"><a href="">School of Engineering and Applied Science</a></li>
+            <li data-value="School of Law"><a href="">School of Law</a></li>
+            <li data-value="School of Nursing"><a href="">School of Nursing</a></li>
+            <li data-value="School of Theater, Film and Television"><a href="">School of Theater, Film and Television</a></li>
+            <li data-value="School of the Arts and Architecture"><a href="">School of the Arts and Architecture</a></li>
+            <li data-value="The College of Letters and Science"><a href="">The College of Letters and Science</a></li>
+        </ul>
+    </div>
+</div>
+</div>
 
-<select name="text" onchange="onScatterChange('selected_campus', this.value)">
-  <option value="all" selected>All</option>
-  <option value="North">North</option>
-  <option value="South">South</option>
-</select>
+<br/>
 
-<select name="text" onchange="onScatterChange('selected_school', this.value)">
-  <option value="all" selected>All</option>
-  <option value="Anderson School of Management">Anderson School of 
-  Management</option>
-  <option value="David Geffen School of Medicine">David Geffen School of Medicine</option>
-  <option value="Fielding School of Public Health">Fielding School of Public Health</option>
-  <option value="Graduate Division">Graduate Division</option>
-  <option value="Herb Alpert School of Music">Herb Alpert School of Music</option>
-  <option value="Life Sciences">Life Sciences</option>
-  <option value="Luskin School of Public Affairs">Luskin School of Public Affairs</option>
-  <option value="School of Dentistry">School of Dentistry</option>
-  <option value="School of Education and Information Studies">School of Education and Information Studies</option>
-  <option value="School of Engineering and Applied Science">School of Engineering and Applied Science</option>
-  <option value="School of Law">School of Law</option>
-  <option value="School of Nursing">School of Nursing</option>
-  <option value="School of Theater, Film and Television">School of Theater, Film and Television</option>
-  <option value="School of the Arts and Architecture">School of the Arts and Architecture</option>
-  <option value="The College of Letters and Science">The College of Letters and Science</option>
-  </select>
+<h1 style="width: 30%; margin-top:1%">Sort Values</h1>
+<section class="sort-check">
+    <div class="checkboxTwo">
+        <input type="checkbox" value="1" id="checkboxTwoInput" name="" />
+        <label for="checkboxTwoInput"></label>
+    </div>
+</section>
 
-<select name="text" onchange="onScatterChange('selected_filter1', this.value)">
-  <option value="avg_lecture_size">Average lecture size</option>
-  <option value="avg_lecture_length_day">Average lecture length per day</option>
-  <option value="avg_lecture_length_week">Average lecture length per week</option>
-  <option value="avg_num_lectures_week">Average number of lectures per week</option>
-</select>
+<div id="radial-chart" class="radial-chart"></div>
 
-<select name="text" onchange="onScatterChange('selected_filter2', this.value)">
-  <option value="avg_lecture_length_week">Average lecture length per week</option>
-  <option value="avg_lecture_length_day">Average lecture length per day</option>
-  <option value="avg_num_lectures_week">Average number of lectures per week</option>
-  <option value="avg_lecture_size">Average lecture size</option>
-</select>
+<div class="filters3">
+
+<div class="typo6">Show me <br/>
+    <div class="list"><span class="placeholder-quarter-scatter">All quarters</span>
+        <ul class="list__ul6">
+            <li data-value="all"><a href="">All quarters</a></li>
+            <li data-value="Fall"><a href="fall">Fall</a></li>
+            <li data-value="Winter"><a href="">Winter</a></li>
+            <li data-value="Spring"><a href="">Spring</a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="typo7">Show me <br/>
+    <div class="list"><span class="placeholder-div-scatter">Upper and Lower Divs</span>
+        <ul class="list__ul7">
+            <li data-value="all"><a href="">Upper and Lower Divs</a></li>
+            <li data-value="Upper"><a href="">Upper Divs</a></li>
+            <li data-value="Lower"><a href="">Lower Divs</a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="typo8">Show me <br/>
+    <div class="list"><span class="placeholder-campus-scatter">North and South Campus</span>
+        <ul class="list__ul8">
+            <li data-value="all"><a href="">North and South Campus</a></li>
+            <li data-value="North"><a href="">North Campus</a></li>
+            <li data-value="South"><a href="">South Campus</a></li>
+        </ul>
+    </div>
+</div>
+</div>
+
+<br/>
+
+<div class="filters4">
+
+<div class="typo9">Show me <br/>
+    <div class="list"><span class="placeholder-school-scatter">All Schools</span>
+        <ul class="list__ul9">
+            <li data-value="all"><a href="">All Schools</a></li>
+            <li data-value="Anderson School of Management"><a href="">Anderson School of Management</a></li>
+            <li data-value="David Geffen School of Medicine"><a href="">David Geffen School of Medicine</a></li>
+            <li data-value="Fielding School of Public Health"><a href="">Fielding School of Public Health</a></li>
+            <li data-value="Graduate Division"><a href="">Graduate Division</a></li>
+            <li data-value="Herb Alpert School of Music"><a href="">Herb Alpert School of Music</a></li>
+            <li data-value="Life Sciences"><a href="">Life Sciences</a></li>
+            <li data-value="Luskin School of Public Affairs"><a href="">Luskin School of Public Affairs</a></li>
+            <li data-value="School of Dentistry"><a href="">School of Dentistry</a></li>
+            <li data-value="School of Education and Information Studies"><a href="">School of Education and Information Studies</a></li>
+            <li data-value="School of Engineering and Applied Science"><a href="">School of Engineering and Applied Science</a></li>
+            <li data-value="School of Law"><a href="">School of Law</a></li>
+            <li data-value="School of Nursing"><a href="">School of Nursing</a></li>
+            <li data-value="School of Theater, Film and Television"><a href="">School of Theater, Film and Television</a></li>
+            <li data-value="School of the Arts and Architecture"><a href="">School of the Arts and Architecture</a></li>
+            <li data-value="The College of Letters and Science"><a href="">The College of Letters and Science</a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="typo10">Show me <br/>
+    <div class="list"><span class="placeholder-filter1-scatter">Average lecture size</span>
+        <ul class="list__ul10">
+            <li data-value="avg_lecture_length_day"><a href="">Average lecture size</a></li>
+            <li data-value="avg_lecture_length_week"><a href="">Average lecture length per day</a></li>
+            <li data-value="avg_num_lectures_week"><a href="">Average number of lectures per week</a></li>
+            <li data-value="avg_lecture_size"><a href="">Average lecture length per week</a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="typo11">Show me <br/>
+    <div class="list"><span class="placeholder-filter2-scatter">Average lecture length per week</span>
+        <ul class="list__ul11">
+            <li data-value="avg_lecture_length_day"><a href="">Average lecture length per week</a></li>
+            <li data-value="avg_lecture_length_week"><a href="">Average lecture length per day</a></li>
+            <li data-value="avg_num_lectures_week"><a href="">Average number of lectures per week</a></li>
+            <li data-value="avg_lecture_size"><a href="">Average lecture size</a></li>
+        </ul>
+    </div>
+</div>
+
+</div>
 
 
 <div id="scatterplot"></div>
