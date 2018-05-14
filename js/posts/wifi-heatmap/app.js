@@ -107,11 +107,17 @@ let wifiSD = 0;
 let wifiMean = 0;
 
 const colorRelative = d3.scaleLinear()
-  .domain([-90, -67, -30, 0])
-  .range(["red", "yellow", "green", "#FDFDFD"]) //#D3D3D3
+  .domain([-90, -78, -66, -54, -42, -30, 0])
+  .range(["#ffffcc", "#c7e9b4", "#7fcdbb", "#41bbc4", "#2c7fb8", "#253494", "#FDFDFD"]) //#D3D3D3
+//[-90, -78, -66, -54, -42, -30, 0]
 //["#ffffcc", "#c7e9b4", "#7fcdbb", "#41bbc4", "#2c7fb8", "#253494", "#FDFDFD"]
+
+//[-90, -67, -30, 0]
+//["red", "yellow", "green", "#FDFDFD"]
+
+//[-90, -78, -66, -54, -42, -30, 0]
+//["#b2182b", "#ef8a62", "#fddbc7", "#d1e5f0", "#67a9f0", "#2166ac", "#FDFDFD"]
 //["#b2182b", "#ef8a62", "#fddbc7", "#f8f6e9", "#d1e5f0", "#67a9f0", "#2166ac", "#FDFDFD"]
-//
 var heatMapMenu = d3
   .select(".rough-wifi-heatmap-wrapper")
   .append("div");
@@ -202,9 +208,9 @@ let redraw = () => {
     .enter()
     .append("path")
     .attr("d", path)
-    .attr("stroke", "steelblue")
-    .attr("fill", "steelblue")
-    .attr("fill-opacity", "0.25");
+    .attr("stroke", "#e67300")
+    .attr("fill", "#e67300")
+    .attr("fill-opacity", "0.10");
 
   svg.append("rect")
     .attr("width", width)
