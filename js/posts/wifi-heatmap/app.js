@@ -312,9 +312,11 @@ window.addEventListener("resize", redraw);
       ]
     }
 
-    {
+        {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "name": "Outside UCLA Bounding Box"
+      },
       "geometry": {
         "type": "Polygon",
         "coordinates": [

@@ -3,7 +3,9 @@
   "features": [
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "name": "UCLA (All)"
+      },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
