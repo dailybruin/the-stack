@@ -204,10 +204,10 @@ Unhappy with how courses are designed? From Beth Lazazzera, Vice Chair of Underg
 <div class="typo10">Show me <br/>
     <div class="list"><span class="placeholder-filter1-scatter">Average lecture size</span>
         <ul class="list__ul10">
-            <li data-value="avg_lecture_length_day"><a href="">Average lecture size</a></li>
-            <li data-value="avg_lecture_length_week"><a href="">Average lecture length per day</a></li>
+            <li data-value="avg_lecture_size"><a href="">Average lecture size</a></li>
+            <li data-value="avg_lecture_length_day"><a href="">Average lecture length per day</a></li>
             <li data-value="avg_num_lectures_week"><a href="">Average number of lectures per week</a></li>
-            <li data-value="avg_lecture_size"><a href="">Average lecture length per week</a></li>
+            <li data-value="avg_lecture_length_week"><a href="">Average lecture length per week</a></li>
         </ul>
     </div>
 </div>
@@ -215,8 +215,8 @@ Unhappy with how courses are designed? From Beth Lazazzera, Vice Chair of Underg
 <div class="typo11">Show me <br/>
     <div class="list"><span class="placeholder-filter2-scatter">Average lecture length per week</span>
         <ul class="list__ul11">
-            <li data-value="avg_lecture_length_day"><a href="">Average lecture length per week</a></li>
-            <li data-value="avg_lecture_length_week"><a href="">Average lecture length per day</a></li>
+            <li data-value="avg_lecture_length_week"><a href="">Average lecture length per week</a></li>
+            <li data-value="avg_lecture_length_day"><a href="">Average lecture length per day</a></li>
             <li data-value="avg_num_lectures_week"><a href="">Average number of lectures per week</a></li>
             <li data-value="avg_lecture_size"><a href="">Average lecture size</a></li>
         </ul>

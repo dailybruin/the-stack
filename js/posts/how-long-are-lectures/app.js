@@ -25,7 +25,7 @@ var filter_map = {
 
 // depending on filter, alter the max bounds of the axis
 var dynamic_bounds = {
-  "avg_lecture_size": 300,
+  "avg_lecture_size": 400,
   "avg_lecture_length_day": 250,
   "avg_lecture_length_week": 400,
   "avg_num_lectures_week": 5
