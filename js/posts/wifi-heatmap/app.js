@@ -105,10 +105,15 @@ let uclaBuildings = 0;
 let grid = 0;
 let wifiSD = 0;
 let wifiMean = 0;
-
+/*
+const colorRelative = d3.scaleLinear()
+  .domain([-90, -67, -30, 0])
+  .range(["red", "yellow", "green", "#FDFDFD"]) //#D3D3D3
+*/
 const colorRelative = d3.scaleLinear()
   .domain([-90, -78, -66, -54, -42, -30, 0])
   .range(["#ffffcc", "#c7e9b4", "#7fcdbb", "#41bbc4", "#2c7fb8", "#253494", "#FDFDFD"]) //#D3D3D3
+
 //[-90, -78, -66, -54, -42, -30, 0]
 //["#ffffcc", "#c7e9b4", "#7fcdbb", "#41bbc4", "#2c7fb8", "#253494", "#FDFDFD"]
 
@@ -118,7 +123,7 @@ const colorRelative = d3.scaleLinear()
 //[-90, -78, -66, -54, -42, -30, 0]
 //["#b2182b", "#ef8a62", "#fddbc7", "#d1e5f0", "#67a9f0", "#2166ac", "#FDFDFD"]
 //["#b2182b", "#ef8a62", "#fddbc7", "#f8f6e9", "#d1e5f0", "#67a9f0", "#2166ac", "#FDFDFD"]
-var heatMapMenu = d3
+let heatMapMenu = d3
   .select(".rough-wifi-heatmap-wrapper")
   .append("div");
 
@@ -133,7 +138,15 @@ heatMapMenu
 
 let svg = d3
   .select(".rough-wifi-heatmap-wrapper")
-  .append("svg");
+  .append("svg")
+  .style("border", "1px gray solid");
+
+let buildingTooltip = d3
+  .select(".rough-wifi-heatmap-wrapper")
+  .append("div")
+  .classed("building-name", true)
+  .style("opacity", 0)
+  .style("position", "absolute");
 
 let contentWrapper = svg.append("g");
 
@@ -172,6 +185,7 @@ let redraw = () => {
     .remove();
 
   let menuMetric = menu2Metric(heatMapMenu.select("select").property("value"));
+
   contentWrapper
     .selectAll(".grid")
     .data(grid.features)
@@ -181,18 +195,8 @@ let redraw = () => {
     .attr("stroke", d => {
       return colorRelative(calcMetric(menuMetric, d.properties.data))
     })
-    .attr("fill", d => colorRelative(calcMetric(menuMetric, d.properties.data)))
-    //.attr("filter", "url(#blur)")
-    .on("mouseover", d => {
-      d3.select(".wifi-heatmap-str").text(`str: ${calcMetric(menuMetric, d.properties.data)}`);
-      d3.select(".wifi-heatmap-lat").text(`lat: ${d.properties.bottom}, ${d.properties.top}`);
-      d3.select(".wifi-heatmap-lon").text(`lon: ${d.properties.left}, ${d.properties.right}`);
-    })
-    .on("mouseout", d => {
-      d3.select(".wifi-heatmap-str").text(`HOVER TO SEE VALUE`);
-      d3.select(".wifi-heatmap-lat").text(`HOVER TO SEE VALUE`);
-      d3.select(".wifi-heatmap-lon").text(`HOVER TO SEE VALUE`);
-    });
+    .attr("fill", d => colorRelative(calcMetric(menuMetric, d.properties.data)));
+  //.attr("filter", "url(#blur)");
 
   contentWrapper
     .selectAll(".outline")
@@ -203,31 +207,62 @@ let redraw = () => {
     .attr("stroke", "black")
     .attr("fill", "none");
 
+  svg
+    //.append("rect")
+    .attr("width", width)
+    .attr("height", width)
+    //.style("fill", "none")
+    //.style("pointer-events", "all")
+    .call(d3.zoom()
+      .scaleExtent([1, 3])
+      .on("zoom", () => contentWrapper.attr("transform", d3.event.transform)));
+
   contentWrapper
     .selectAll(".buildings")
     .data(uclaBuildings.features)
     .enter()
     .append("path")
     .attr("d", path)
-    .attr("stroke", "#e67300")
-    .attr("fill", "#e67300")
-    .attr("fill-opacity", "0.10");
-
-  svg.append("rect")
-    .attr("width", width)
-    .attr("height", width)
-    .style("fill", "none")
+    .attr("stroke", "black")
+    .attr("fill", "black") //#e67300
+    .attr("fill-opacity", "0.10")
     .style("pointer-events", "all")
-    .call(d3.zoom()
-      .scaleExtent([1, 3])
-      .on("zoom", () => contentWrapper.attr("transform", d3.event.transform)));
+    //.each(d => d3.select(this).classed(`${d.properties.name}-path`, true))
+    .on("mousemove", (d, i, nodes) => {
+      d3
+        .select(nodes[i])
+        .attr("fill", "steelblue")
+        .attr("stroke", "steelblue");
+      const coords = d3.mouse(contentWrapper.node());
+      buildingTooltip.style("opacity", 100);
+      buildingTooltip
+        .style("left", `${d3.event.pageX + 20}px`)
+        .style("top", `${d3.event.pageY - 20}px`)
+        .style("position", "absolute")
+        //.attr("style", 'left:' + (d3.event.clientX + 20) + 'px; top:' + (d3.event.clientY - 20) + 'px')
+        .html(d.properties.name);
+      //d3.select(".wifi-heatmap-str").text(`str: ${calcMetric(menuMetric, d.properties.data)}`);
+      //d3.select(".wifi-heatmap-lat").text(`lat: ${d.properties.bottom}, ${d.properties.top}`);
+      //d3.select(".wifi-heatmap-lon").text(`lon: ${d.properties.left}, ${d.properties.right}`);
+    })
+    .on("mouseout", (d, i, nodes) => {
+      d3
+        .select(nodes[i])
+        .attr("fill", "black")
+        .attr("stroke", "black");
+      buildingTooltip.style("opacity", 0);
+      //d3.select(".wifi-heatmap-str").text(`HOVER TO SEE VALUE`);
+      //d3.select(".wifi-heatmap-lat").text(`HOVER TO SEE VALUE`);
+      //d3.select(".wifi-heatmap-lon").text(`HOVER TO SEE VALUE`);
+    });
+
 
 }
 
 Promise
   .all([d3.json("/datasets/wifi-heatmap/ucla-outline.geojson"),
     d3.csv("/datasets/wifi-heatmap/WifiData.csv"),
-    d3.json("/datasets/wifi-heatmap/map-6.geojson")
+    d3.json("/datasets/wifi-heatmap/map-7xd.geojson") //change to map6 here
   ])
   .then(data => {
     uclaPath = data[0];
