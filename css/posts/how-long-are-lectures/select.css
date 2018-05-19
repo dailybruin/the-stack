@@ -5,11 +5,11 @@
 }
 
 [class^=typo] {
-  width: 100%;
+  min-width: 33%;
 }
 
 .typo4 {
-  width: 50%
+  min-width: 33%;
 }
 
 .transition {
@@ -19,6 +19,7 @@
 .list {
   position: relative;
   margin-bottom: 5px;
+  margin-top: 10px;
 }
 
 .list ul {
@@ -31,6 +32,11 @@
   margin-left: 0px;
   background-color: white;
   opacity: 20%;
+
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  z-index: 1;
+  margin-top: -5px;
 }
 
 .list ul .active {
@@ -39,6 +45,7 @@
 
 .list li {
   list-style: none;
+  padding: 3px;
 }
 
 .list li:first-child a {
@@ -68,8 +75,13 @@
 }
 
 [class^=placeholder] {
-  border-bottom: 2px solid;
+  border-radius: 5px;
+  border: 1px solid #ccc;
   cursor: pointer;
+  padding: 5px;
+}
+[class^=placeholder]:after {
+  content: "";
 }
 [class^=placeholder]:hover {
   color: #888888;
