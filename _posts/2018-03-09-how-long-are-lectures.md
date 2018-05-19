@@ -17,6 +17,7 @@ scripts:
   - //d3js.org/d3.v3.min.js # need v3 instead of v4 for radial bar chart
   # - //d3js.org/d3-transition.v1.min.js
   - //ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js
+  - /js/posts/how-long-are-lectures/test.js
   - /js/posts/how-long-are-lectures/app.js
   - /js/posts/how-long-are-lectures/select-style.js
 ---
@@ -32,7 +33,8 @@ There was a lot of data to be gathered from UCLA's Registrar website. We wanted 
 <p>
 Below is a bar chart showing the top 20 departments by lecture length ranged from Art to ___, while the bottom 20 departments (excluding the departments with 0 minutes), are showed in the graph on the right.
 
-Meanwhile, the average lecture size was ____. The department with highest average lecture size was _____ and the department with lowest average lecture size was _____. We looked at lecture size and lecture length in conjunction in the scatterplot below.
+Meanwhile, the average lecture size was \_**\_. The department with highest average lecture size was \_\_\_** and the department with lowest average lecture size was **\_**. We looked at lecture size and lecture length in conjunction in the scatterplot below.
+
 </p>
 
 <p>
@@ -204,6 +206,5 @@ Unhappy with how courses are designed? From Beth Lazazzera, Vice Chair of Underg
 </div>
 
 </div>
-
 
 <div id="scatterplot"></div>
