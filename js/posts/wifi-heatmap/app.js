@@ -105,15 +105,20 @@ let uclaBuildings = 0;
 let grid = 0;
 let wifiSD = 0;
 let wifiMean = 0;
+
+const colorRelative = d3.scaleLinear()
+  .domain([-90, -20, 0])
+  .range(["#FDFDFD", "#1d73d6", "#FDFDFD"]) //#D3D3D3
 /*
 const colorRelative = d3.scaleLinear()
   .domain([-90, -67, -30, 0])
   .range(["red", "yellow", "green", "#FDFDFD"]) //#D3D3D3
 */
+/*
 const colorRelative = d3.scaleLinear()
   .domain([-90, -78, -66, -54, -42, -30, 0])
   .range(["#ffffcc", "#c7e9b4", "#7fcdbb", "#41bbc4", "#2c7fb8", "#253494", "#FDFDFD"]) //#D3D3D3
-
+*/
 //[-90, -78, -66, -54, -42, -30, 0]
 //["#ffffcc", "#c7e9b4", "#7fcdbb", "#41bbc4", "#2c7fb8", "#253494", "#FDFDFD"]
 
@@ -213,9 +218,13 @@ let redraw = () => {
     .attr("height", width)
     //.style("fill", "none")
     //.style("pointer-events", "all")
+    
+    
     .call(d3.zoom()
       .scaleExtent([1, 3])
-      .on("zoom", () => contentWrapper.attr("transform", d3.event.transform)));
+      .on("zoom", () => {
+        return contentWrapper.attr("transform", d3.event.transform)
+      }));
 
   contentWrapper
     .selectAll(".buildings")
@@ -231,12 +240,12 @@ let redraw = () => {
     .on("mousemove", (d, i, nodes) => {
       d3
         .select(nodes[i])
-        .attr("fill", "steelblue")
-        .attr("stroke", "steelblue");
+        .attr("fill", "#ea8f27")
+        .attr("stroke", "#ea8f27");
       const coords = d3.mouse(contentWrapper.node());
       buildingTooltip.style("opacity", 100);
       buildingTooltip
-        .style("left", `${d3.event.pageX + 20}px`)
+        .style("left", `${d3.event.pageX + 10}px`)
         .style("top", `${d3.event.pageY - 20}px`)
         .style("position", "absolute")
         //.attr("style", 'left:' + (d3.event.clientX + 20) + 'px; top:' + (d3.event.clientY - 20) + 'px')
