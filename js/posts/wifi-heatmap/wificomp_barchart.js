@@ -11,12 +11,12 @@ const networks = ["eduroam", "UCLA_WEB", "UCLA_WIFI", "UCLA_WEB_RES", "UCLA_WIFI
 let locMap = {};
 
 Promise.all([
-  d3.json("/datasets/wifi-heatmap/ucla-buildings.geojson"),
+  d3.json("/datasets/wifi-heatmap/map-7xd.geojson"),
   d3.csv("/datasets/wifi-heatmap/WifiData.csv"),
   d3.json("/datasets/wifi-heatmap/ucla-outline.geojson")
 ]).then(data => {
-  locMap[data[2].features[1].properties.name] = {
-    feature: data[2].features[1],
+  locMap[data[2].features[0].properties.name] = {
+    feature: data[2].features[0],
     strengths: Array(6).fill(0),
     counts: Array(6).fill(0)
   };
@@ -126,8 +126,7 @@ let makeWifiCompBarChart = () => {
     for (i = 0; i < 6; i++) {
       avgStr[i] = newData.strengths[i] / newData.counts[i];
       if (isNaN(avgStr[i])) {
-        avgStr = Array(6).fill(0);
-        break;
+        avgStr[i] = 0;
       }
     }
 

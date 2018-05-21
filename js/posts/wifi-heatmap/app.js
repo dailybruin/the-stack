@@ -218,8 +218,8 @@ let redraw = () => {
     .attr("height", width)
     //.style("fill", "none")
     //.style("pointer-events", "all")
-    
-    
+
+
     .call(d3.zoom()
       .scaleExtent([1, 3])
       .on("zoom", () => {

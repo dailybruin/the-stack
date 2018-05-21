@@ -1,11 +1,11 @@
 ---
-title:  wifi heatmap
+title: wifi heatmap
 teaser: teasetease
 featured_image:
     url: usac-campaign-finances/visualization.png
 og_image: usac-campaign-finances/visualization.png
 authors:
-  - nathan_smith
+  - alex_zhao
 stylesheets:
   - /css/posts/wifi-heatmap/app.css
 scripts:
