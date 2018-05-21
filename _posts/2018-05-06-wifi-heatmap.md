@@ -5,14 +5,15 @@ featured_image:
     url: usac-campaign-finances/visualization.png
 og_image: usac-campaign-finances/visualization.png
 authors:
-  - nathan_smith
+  - alex_zhao
 stylesheets:
   - /css/posts/wifi-heatmap/app.css
 scripts:
   - //d3js.org/d3.v5.min.js
   - //cdnjs.cloudflare.com/ajax/libs/d3-tip/0.9.0/d3-tip.min.js
-  - /js/posts/wifi-heatmap/app.js
+  - /js/posts/wifi-heatmap/heatmap.js
   - /js/posts/wifi-heatmap/wificomp_barchart.js
+  - /js/posts/wifi-heatmap/dataloading.js
 ---
 
 Wifi.
