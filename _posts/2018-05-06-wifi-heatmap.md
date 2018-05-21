@@ -13,6 +13,7 @@ scripts:
   - //cdnjs.cloudflare.com/ajax/libs/d3-tip/0.9.0/d3-tip.min.js
   - /js/posts/wifi-heatmap/app.js
   - /js/posts/wifi-heatmap/wificomp_barchart.js
+  - /js/posts/wifi-heatmap/dataloading.js
 ---
 
 Wifi.
