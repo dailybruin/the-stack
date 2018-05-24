@@ -219,10 +219,17 @@
 .post-list {
   margin-left: 0;
   list-style: none;
+  display: flex;
+  flex-wrap: wrap;
 
   > li {
     margin-bottom: $spacing-unit + ($spacing-unit/2);
-    border-bottom: 1px solid $grey-color-light;
+    // border-bottom: 1px solid $grey-color-light;
+    flex-basis: 27%;
+    max-width: 27%;
+    padding: 2%;
+    margin: 1%;
+    border: 1px solid #666;
 
     &:last-child {
       margin-bottom: 0;

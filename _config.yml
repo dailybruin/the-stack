@@ -27,7 +27,7 @@ defaults:
 # Outputting
 permalink: pretty # don't have `.html` on the end of permalinks
 timezone: America/Los_Angeles
-paginate: 10 # items per page
+paginate: 12 # items per page
 paginate_path: "/page/:num/"
 
 # Build settings
