@@ -225,11 +225,12 @@
   > li {
     margin-bottom: $spacing-unit + ($spacing-unit/2);
     // border-bottom: 1px solid $grey-color-light;
+    border: 1px solid #666;
     flex-basis: 27%;
     max-width: 27%;
     padding: 2%;
     margin: 1%;
-    border: 1px solid #666;
+    // 3 Columns: (27 + 2*2 + 1*2) = 33%
 
     &:last-child {
       margin-bottom: 0;
