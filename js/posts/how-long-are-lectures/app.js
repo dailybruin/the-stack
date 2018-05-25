@@ -35,6 +35,7 @@ var dynamic_bounds = {
 
 window.onAllChange = function() {
   document.getElementById('checkboxTwoInput').checked = false;
+  sorted = false;
   var svg = d3.selectAll('svg');
   svg.remove();
   reload();
@@ -51,17 +52,11 @@ window.onScatterChange = function(field, value) {
 };
 
 function calculateValue(d, chart) {
-  // TODO: change this lol
-  var selected_quarter;
-  var selected_div;
-  var selected_campus;
-  var selected_school;
-  var selected_filter;
-  selected_quarter = radialSelections['selected_quarter'];
-  selected_div = radialSelections['selected_div'];
-  selected_campus = radialSelections['selected_campus'];
-  selected_school = radialSelections['selected_school'];
-  selected_filter = radialSelections['selected_filter'];
+  var selected_quarter = radialSelections['selected_quarter'];
+  var selected_div = radialSelections['selected_div'];
+  var selected_campus = radialSelections['selected_campus'];
+  var selected_school = radialSelections['selected_school'];
+  var selected_filter = radialSelections['selected_filter'];
 
   quarters =
     selected_quarter === 'all'
@@ -112,19 +107,12 @@ function calculateValue(d, chart) {
 }
 
 function calculateAverage(d) {
-  //console.log(d)
-  var selected_quarter;
-  var selected_div;
-  var selected_campus;
-  var selected_school;
-  var selected_filter1;
-  var selected_filter2;
-  selected_quarter = scatterSelections['selected_quarter'];
-  selected_div = scatterSelections['selected_div'];
-  selected_campus = scatterSelections['selected_campus'];
-  selected_school = scatterSelections['selected_school'];
-  selected_filter1 = scatterSelections['selected_filter1'];
-  selected_filter2 = scatterSelections['selected_filter2'];
+  var selected_quarter = scatterSelections['selected_quarter'];
+  var selected_div = scatterSelections['selected_div'];
+  var selected_campus = scatterSelections['selected_campus'];
+  var selected_school = scatterSelections['selected_school'];
+  var selected_filter1 = scatterSelections['selected_filter1'];
+  var selected_filter2 = scatterSelections['selected_filter2'];
 
   quarters =
     selected_quarter === 'all'
@@ -185,15 +173,11 @@ function calculateAverage(d) {
 }
 
 function filterScatter(d, filter) {
-  var selected_quarter;
-  var selected_div;
-  var selected_campus;
-  var selected_school;
+  var selected_quarter = scatterSelections['selected_quarter'];
+  var selected_div = scatterSelections['selected_div'];
+  var selected_campus = scatterSelections['selected_campus'];
+  var selected_school = scatterSelections['selected_school'];
   var selected_filter;
-  selected_quarter = scatterSelections['selected_quarter'];
-  selected_div = scatterSelections['selected_div'];
-  selected_campus = scatterSelections['selected_campus'];
-  selected_school = scatterSelections['selected_school'];
   if (filter == 1) {
     selected_filter = scatterSelections['selected_filter1'];
   }
@@ -290,13 +274,11 @@ function reload() {
     error,
     data
   ) {
-    console.log(sorted);
     if (sorted) {
       data = data.sort((a, b) => calculateValue(b) - calculateValue(a));
     } else {
       data = data.sort(compare);
     }
-    console.log(data);
 
     data = data.filter((d, index) => calculateValue(d) !== 0);
 
@@ -477,7 +459,12 @@ function reload() {
         return d.major.toUpperCase();
       });
 
-    d3.select('input').on('change', change);
+    d3.select('.checkboxTwo').on('click', function(e) {
+      d3.event.preventDefault();
+      sorted = !sorted;
+      change(sorted);
+      d3.select('input').property('checked', sorted);
+    });
 
     // scatterplot
     d3.json('/datasets/how-long-are-lectures/FINAL_DATA.json', function(
@@ -488,14 +475,8 @@ function reload() {
       makeVis(data);
     });
 
-    function change() {
-      if (this.checked) {
-        sorted = true;
-      } else {
-        sorted = false;
-      }
-
-      if (this.checked) {
+    function change(sorted) {
+      if (sorted) {
         labels.selectAll('.text_lab').sort(function(a, b) {
           return calculateValue(b) - calculateValue(a);
         });

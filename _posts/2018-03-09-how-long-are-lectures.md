@@ -17,7 +17,6 @@ scripts:
   - //d3js.org/d3.v3.min.js # need v3 instead of v4 for radial bar chart
   # - //d3js.org/d3-transition.v1.min.js
   - //ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js
-  - /js/posts/how-long-are-lectures/test.js
   - /js/posts/how-long-are-lectures/app.js
   - /js/posts/how-long-are-lectures/select-style.js
 ---
@@ -122,17 +121,9 @@ The following graph features an interactive radial chart to provide a visualizat
 
 <div id="radial-chart" class="radial-chart"></div>
 
-
-
-
-
-
-
-
 <p class="para">
 The following graph features an interactive scatterplot where you can mouse over the data points to learn more about different insights related to a particular department, such as average lecture length per day, average lecture length per week, average lecture size, and average number of lectures per week. Play around with the filters to find some patterns! The first four filters manipulate the dataset, the fifth filter changes the x-axis of the scatterplot, and the sixth filter changes the y-axis of the scatterplot.
 </p><br/><br/>
-
 
 <div class="filters3">
 
