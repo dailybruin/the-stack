@@ -660,7 +660,7 @@ function makeVis(data) {
       // remove 0s
       var valx = filterScatter(d, 1);
       return (
-        (960 - margin.left - margin.right) / dynamic_bounds[x_filter] * valx
+        (750 - margin.left - margin.right) / dynamic_bounds[x_filter] * valx
       );
       //x_filter != "avg_num_lectures_week" ? 960 / (dynamic_bounds[x_filter] + margin.right) * valx : 960 / 5 * valx - margin.right / 2;
     }) // 960px wide, but adjust data point properly to the corresponding x-axis value
