@@ -26,18 +26,16 @@ Have you ever wondered which lectures seem to drag on more than others? Especial
 </p>
 
 <p class="para">
-There were lots of data to be gathered from UCLA's Registrar website. We wanted to look at lecture lengths and lecture sizes across different filters (so you could also play around with the data and see patterns within the data) - be it school, North or South campus, quarter, or upper or lower division classes. For the 2017-2018 academic year, the average lecture length per day was 100.68 minutes. We compared this across the different undergraduate schools and saw that Art had the highest average at 216.86 minutes while Program in Computing had the lowest at 50.0. Art had the highest average number of lecture minutes per week at 383.24 minutes - that’s 6.4 hours for a single class’s lectures (excluding discussions!) in a week. On the other hand, Physiology had the lowest average number of lecture minutes per week at 80.
+There were lots of data to be gathered from UCLA's Registrar website. We wanted to look at lecture lengths and lecture sizes across different filters (so you could also play around with the data and see patterns within the data) - be it school, North or South campus, quarter, or upper or lower division classes. For the 2017-2018 academic year, the **average lecture length** per day was **100.68 minutes**. We compared this across the different undergraduate schools and saw that Art had the highest average at 216.86 minutes while Program in Computing had the lowest at 50.0. Art had the highest average number of lecture minutes per week at 383.24 minutes - that’s 6.4 hours for a single class’s lectures (excluding discussions!) in a week. On the other hand, Physiology had the lowest average number of lecture minutes per week at 80.
 </p>
 
 <p class="para">
-Below is a bar chart showing the top 20 departments by lecture length ranged from Art to ___, while the bottom 20 departments (excluding the departments with 0 minutes), are showed in the graph on the right.
+Across all departments in all schools, we found that the **top 20 departments** by **lecture length** ranged from Art to Yiddish, while the bottom 20 departments ranged from Physiology to Life Sciences. You can use the interactive radial chart below to visualize the departments with respect to filters such as average lecture length per day, average lecture length per week, average lecture size, and average number of lectures per week. 
 
-Meanwhile, the average lecture size was \_**\_. The department with highest average lecture size was \_\_\_** and the department with lowest average lecture size was **\_**. We looked at lecture size and lecture length in conjunction in the scatterplot below.
 
 </p>
 
 <p class="para">
-The following graph features an interactive radial chart to provide a visualization of departments with respect to filters such as average lecture length per day, average lecture length per week, average lecture size, and average number of lectures per week. 
 </p><br/><br/>
 
 <div class="filters1">
@@ -122,7 +120,8 @@ The following graph features an interactive radial chart to provide a visualizat
 <div id="radial-chart" class="radial-chart"></div>
 
 <p class="para">
-The following graph features an interactive scatterplot where you can mouse over the data points to learn more about different insights related to a particular department, such as average lecture length per day, average lecture length per week, average lecture size, and average number of lectures per week. Play around with the filters to find some patterns! The first four filters manipulate the dataset, the fifth filter changes the x-axis of the scatterplot, and the sixth filter changes the y-axis of the scatterplot.
+We also looked for patterns using the interactive scatterplot below where you can mouse over the data points to learn more about different insights related to a particular department, such as average lecture length per day, average lecture length per week, average lecture size, and average number of lectures per week. Play around with the filters to find some trends! The first four filters manipulate the dataset, the fifth filter changes the x-axis of the scatterplot, and the sixth filter changes the y-axis of the scatterplot.
+
 </p><br/><br/>
 
 <div class="filters3">
