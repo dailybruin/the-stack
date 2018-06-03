@@ -26,11 +26,11 @@ Have you ever wondered which lectures seem to drag on more than others? Especial
 </p>
 
 <p class="para">
-There were lots of data to be gathered from UCLA's Registrar website. We wanted to look at lecture lengths and lecture class sizes across different filters (so you could also play around with the data and see patterns within the data) - be it school, North or South campus, quarter, or upper or lower division classes. For the 2017-2018 academic year, the average lecture length per day was 100.68 minutes. We compared this across the different undergraduate schools and saw that Art had the highest average at 216.86 minutes while Program in Computing had the lowest at 50.0. Art had the highest average number of lecture minutes per week at 383.24 minutes - that’s 6.4 hours for a single class’s lectures (excluding discussions!) in a week. On the other hand, Physiology had the lowest average number of lecture minutes per week at 80.
+There were lots of data to be gathered from UCLA's Registrar website. We wanted to look at lecture lengths and lecture class sizes across different filters (so you could also play around with the data and see patterns within the data) - be it school, North or South campus, quarter, or upper or lower division classes. For the 2017-2018 academic year, the <b>average lecture length per day</b> was <b>100.68 minutes</b>. We compared this across the different undergraduate schools and saw that Art had the highest average at 216.86 minutes while Program in Computing had the lowest at 50.0. Art had the highest average number of lecture minutes per week at 383.24 minutes - that’s 6.4 hours for a single class’s lectures (excluding discussions!) in a week. On the other hand, Physiology had the lowest average number of lecture minutes per week at 80.
 </p>
 
 <p class="para">
-Across all departments in all schools, we found that <b>the top 20 departments</b> by lecture length ranged from Art to Yiddish, while <b>the bottom 20 departments</b> ranged from Physiology to Life Sciences. You can use the interactive radial chart below to visualize the departments with respect to filters such as average lecture length per day, average lecture length per week, average lecture size, and average number of lectures per week. 
+Across all departments in all schools, we found that <b>the top 20 departments</b> by lecture length ranged from <b>Art</b> to <b>Yiddish</b>, while <b>the bottom 20 departments</b> ranged from <b>Physiology</b> to <b>Life Sciences</b>. You can use the <i>interactive radial chart</i> below to visualize the departments with respect to filters such as average lecture length per day, average lecture length per week, average lecture size, and average number of lectures per week. 
 
 
 </p>
@@ -120,7 +120,7 @@ Across all departments in all schools, we found that <b>the top 20 departments</
 <div id="radial-chart" class="radial-chart"></div>
 
 <p class="para">
-We also looked for patterns using the interactive scatterplot below where you can mouse over the data points to learn more about different insights related to a particular department, such as average lecture length per day, average lecture length per week, average lecture size, and average number of lectures per week. Play around with the filters to find some trends! The first four filters manipulate the dataset, the fifth filter changes the x-axis of the scatterplot, and the sixth filter changes the y-axis of the scatterplot.
+We also looked for patterns using the <i>interactive scatterplot</i> below where you can mouse over the data points to learn more about different insights related to a particular department, such as average lecture length per day, average lecture length per week, average lecture size, and average number of lectures per week. Play around with the filters to find some trends! The first four filters manipulate the dataset, the fifth filter changes the x-axis of the scatterplot, and the sixth filter changes the y-axis of the scatterplot.
 
 </p><br/><br/>
 
