@@ -26,11 +26,11 @@ Have you ever wondered which lectures seem to drag on more than others? Especial
 </p>
 
 <p class="para">
-There were lots of data to be gathered from UCLA's Registrar website. We wanted to look at lecture lengths and lecture sizes across different filters (so you could also play around with the data and see patterns within the data) - be it school, North or South campus, quarter, or upper or lower division classes. For the 2017-2018 academic year, the **average lecture length** per day was **100.68 minutes**. We compared this across the different undergraduate schools and saw that Art had the highest average at 216.86 minutes while Program in Computing had the lowest at 50.0. Art had the highest average number of lecture minutes per week at 383.24 minutes - that’s 6.4 hours for a single class’s lectures (excluding discussions!) in a week. On the other hand, Physiology had the lowest average number of lecture minutes per week at 80.
+There were lots of data to be gathered from UCLA's Registrar website. We wanted to look at lecture lengths and lecture sizes across different filters (so you could also play around with the data and see patterns within the data) - be it school, North or South campus, quarter, or upper or lower division classes. For the 2017-2018 academic year, the average lecture length per day was 100.68 minutes. We compared this across the different undergraduate schools and saw that Art had the highest average at 216.86 minutes while Program in Computing had the lowest at 50.0. Art had the highest average number of lecture minutes per week at 383.24 minutes - that’s 6.4 hours for a single class’s lectures (excluding discussions!) in a week. On the other hand, Physiology had the lowest average number of lecture minutes per week at 80.
 </p>
 
 <p class="para">
-Across all departments in all schools, we found that the **top 20 departments** by **lecture length** ranged from Art to Yiddish, while the bottom 20 departments ranged from Physiology to Life Sciences. You can use the interactive radial chart below to visualize the departments with respect to filters such as average lecture length per day, average lecture length per week, average lecture size, and average number of lectures per week. 
+Across all departments in all schools, we found that the top 20 departments by lecture length ranged from Art to Yiddish, while the bottom 20 departments ranged from Physiology to Life Sciences. You can use the interactive radial chart below to visualize the departments with respect to filters such as average lecture length per day, average lecture length per week, average lecture size, and average number of lectures per week. 
 
 
 </p>
