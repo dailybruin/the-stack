@@ -244,22 +244,27 @@ function reload() {
 
   var formatNumber = d3.format('s');
 
-  var color = d3.scale
-    .ordinal()
-    .range([
-      '#8dd3c7',
-      '#ffffb3',
-      '#bebada',
-      '#fb8072',
-      '#80b1d3',
-      '#fdb462',
-      '#b3de69',
-      '#fccde5',
-      '#d9d9d9',
-      '#bc80bd',
-      '#ccebc5',
-      '#ffed6f',
-    ]);
+  // function hashCode(str) {
+  //   return str.split('').reduce((prevHash, currVal) => (((prevHash << 5) - prevHash) + currVal.charCodeAt(0))|0, 0);
+  // }
+
+  function hashCode(str){
+    var hash = 0;
+    if (str.length == 0) return hash;
+    for (i = 0; i < str.length; i++) {
+        char = str.charCodeAt(i);
+        hash = ((hash<<7)-hash)+char;
+        hash = hash & hash; // Convert to 32bit integer
+    }
+    return hash;
+  }
+
+  function color(name) {
+    var colors = ['#C9A0DC', '#BEE64B', '#EDED44', '#50BFE6', '#F79A8F', '#AAF0D1', '#FFCC33', '#BF8FCC', '#00CCCC', '#DEA681']
+    var num=Math.abs(hashCode(name));
+    num=num%colors.length;
+    return (colors[num])
+  }
 
   var svg = d3
     .select('#radial-chart')
@@ -327,7 +332,7 @@ function reload() {
         },
       },
     };
-    data.push(dummy);
+    // data.push(dummy);
 
     var extent = d3.extent(data, function(d) {
       return calculateValue(d);
@@ -382,6 +387,7 @@ function reload() {
         d.endAngle = (i + 1) * 2 * Math.PI / numBars;
       })
       .style('fill', function(d) {
+        // console.log(color(d.major))
         return color(d.major);
       })
       .attr('d', arc);
