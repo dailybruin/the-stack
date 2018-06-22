@@ -6,7 +6,7 @@ authors:
 key_takeaways:
     - We built Meow because no free, easy-to-use social media scheduling services existed.
     - It's built for newsrooms, and its defining feature is simplicity.
-    - The code is [open source on GitHub](https://github.com/daily-bruin/meow/). We'd love for you to use it and contribute.
+    - The code is [open source on GitHub](https://github.com/dailybruin/meow/). We'd love for you to use it and contribute.
 featured_image:
     url: meow-behind-the-scenes/meow_banner.svg
 og_image: meow-behind-the-scenes/meow_banner.png
@@ -43,7 +43,7 @@ It’s not flashy and it only does what it has to do, but it’s fast and it wor
 
 ## The future of Meow
 
-We don’t want to be the only ones benefiting from Meow, so we developed it as [free, open-source software](https://github.com/daily-bruin/meow/).
+We don’t want to be the only ones benefiting from Meow, so we developed it as [free, open-source software](https://github.com/dailybruin/meow/).
 
 This means the code base for Meow is open and any developer is allowed to play with the code and send suggested modifications back to us, turning Meow into a collaborative project. If you want to take Meow in an entirely different direction, you’re free to use any of our code as a base as long as you allow others to do the same.
 
