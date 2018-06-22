@@ -9,7 +9,7 @@
   window.Stack = {
     apply: function(){
       console.log('Good luck!');
-      window.location = "http://apply.uclastudentmedia.com/applications/daily-bruin/software-engineering-intern/";
+      window.location = "http://apply.uclastudentmedia.com/applications/dailybruin/software-engineering-intern/";
     }
   };
 

@@ -100,7 +100,7 @@ Choosing the right courses and professors can make your investment in a UCLA edu
 
 ## Get the data
 
-The data used in this post is available on [The Stack’s GitHub repo in CSV format](https://github.com/daily-bruin/the-stack/blob/master/datasets/bruinwalk-class-ratings/ratings.csv). It’s ready to import into Excel or Numbers for quick browsing, or you can parse it using a CSV library in your programming language of choice. 
+The data used in this post is available on [The Stack’s GitHub repo in CSV format](https://github.com/dailybruin/the-stack/blob/master/datasets/bruinwalk-class-ratings/ratings.csv). It’s ready to import into Excel or Numbers for quick browsing, or you can parse it using a CSV library in your programming language of choice. 
 
 Find anything interesting we missed? Tweet us [@_thestack](https://twitter.com/_thestack).
 
