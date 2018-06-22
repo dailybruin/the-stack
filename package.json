@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "The Daily Bruin's data and tech blog.",
   "main": "index.js",
-  "repository": "https://github.com/daily-bruin/the-stack",
+  "repository": "https://github.com/dailybruin/the-stack",
   "author": "Daily Bruin Online <online@dailybruin.com>",
   "license": "AGPL-3.0",
   "scripts": {

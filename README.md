@@ -1,4 +1,4 @@
-![Stack logo](https://raw.githubusercontent.com/daily-bruin/the-stack/master/img/nameplate%402x.png)
+![Stack logo](https://raw.githubusercontent.com/dailybruin/the-stack/master/img/nameplate%402x.png)
 
 # The Stack
 
@@ -6,7 +6,7 @@ Daily Bruin's data journalism and newsroom tech blog.
 
 ## Installation (Mac/Linux)
 
-1. clone repository: `git clone https://github.com/daily-bruin/the-stack.git`
+1. clone repository: `git clone https://github.com/dailybruin/the-stack.git`
 2. `cd` into the newly created directory
 3. run `./setup.sh`
 3. run `jekyll serve`
@@ -36,10 +36,10 @@ Alternatively, use a VM:
 TL;DR
 
 1. Develop on your own feature branch. Only the data editor should commit to master.
-2. Follow the coding practices outlined in [the docs](https://github.com/daily-bruin/the-stack/tree/master/docs) and the conventions established in existing posts.
+2. Follow the coding practices outlined in [the docs](https://github.com/dailybruin/the-stack/tree/master/docs) and the conventions established in existing posts.
 
 Pull requests which do not conform to the above will not be accepted. If you have any questions on how something should be done, please ask the data editor.
 
-## [Brand guidelines](https://github.com/daily-bruin/brand/tree/master/stack)
+## [Brand guidelines](https://github.com/dailybruin/brand/tree/master/stack)
 
 ![Stack swag](http://i.imgur.com/L5kgSYu.png)
