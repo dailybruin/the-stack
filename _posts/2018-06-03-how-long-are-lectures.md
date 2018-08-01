@@ -40,7 +40,7 @@ Across all departments in all schools, we found that <b>the top 20 departments</
 </p><br/><br/>
 
 <div class="filters1">
-<div class="typo1">Show me <br/>
+<div class="typo1">Show me these quarters: <br/>
     <div class="list"><span class="placeholder-quarter-radial">All quarters</span>
         <ul class="list__ul1">
             <li data-value="all"><a href="">All quarters</a></li>
@@ -51,7 +51,7 @@ Across all departments in all schools, we found that <b>the top 20 departments</
     </div>
 </div>
 
-<div class="typo2">Show me <br/>
+<div class="typo2">Show me these class levels: <br/>
     <div class="list"><span class="placeholder-div-radial">Upper and Lower Divs</span>
         <ul class="list__ul2">
             <li data-value="all"><a href="">Upper and Lower Divs</a></li>
@@ -61,7 +61,7 @@ Across all departments in all schools, we found that <b>the top 20 departments</
     </div>
 </div>
 
-<div class="typo3">Show me <br/>
+<div class="typo3">Show me these types of classes: <br/>
     <div class="list"><span class="placeholder-campus-radial">North and South Campus</span>
         <ul class="list__ul3">
             <li data-value="all"><a href="">North and South Campus</a></li>
@@ -73,7 +73,7 @@ Across all departments in all schools, we found that <b>the top 20 departments</
 </div>
 <br/>
 <div class="filters2">
-<div class="typo4">Show me <br/>
+<div class="typo4">Show me this filter: <br/>
     <div class="list"><span class="placeholder-num-radial">Average lecture length per day</span>
         <ul class="list__ul4">
             <li data-value="avg_lecture_length_day"><a href="">Average lecture length per day</a></li>
@@ -84,7 +84,7 @@ Across all departments in all schools, we found that <b>the top 20 departments</
     </div>
 </div>
 
-<div class="typo5">Show me <br/>
+<div class="typo5">Show me these schools: <br/>
     <div class="list"><span class="placeholder-school-radial">All Schools</span>
         <ul class="list__ul5">
             <li data-value="all"><a href="">All Schools</a></li>
@@ -127,7 +127,7 @@ We also looked for patterns using the <i>interactive scatterplot</i> below where
 
 <div class="filters3">
 
-<div class="typo6">Show me <br/>
+<div class="typo6">Show me these quarters: <br/>
     <div class="list"><span class="placeholder-quarter-scatter">All quarters</span>
         <ul class="list__ul6">
             <li data-value="all"><a href="">All quarters</a></li>
@@ -138,7 +138,7 @@ We also looked for patterns using the <i>interactive scatterplot</i> below where
     </div>
 </div>
 
-<div class="typo7">Show me <br/>
+<div class="typo7">Show me these class levels: <br/>
     <div class="list"><span class="placeholder-div-scatter">Upper and Lower Divs</span>
         <ul class="list__ul7">
             <li data-value="all"><a href="">Upper and Lower Divs</a></li>
@@ -148,7 +148,7 @@ We also looked for patterns using the <i>interactive scatterplot</i> below where
     </div>
 </div>
 
-<div class="typo8">Show me <br/>
+<div class="typo8">Show me these types of classes: <br/>
     <div class="list"><span class="placeholder-campus-scatter">North and South Campus</span>
         <ul class="list__ul8">
             <li data-value="all"><a href="">North and South Campus</a></li>
@@ -163,7 +163,7 @@ We also looked for patterns using the <i>interactive scatterplot</i> below where
 
 <div class="filters4">
 
-<div class="typo9">Show me <br/>
+<div class="typo9">Show me these schools: <br/>
     <div class="list"><span class="placeholder-school-scatter">All Schools</span>
         <ul class="list__ul9">
             <li data-value="all"><a href="">All Schools</a></li>
@@ -186,7 +186,7 @@ We also looked for patterns using the <i>interactive scatterplot</i> below where
     </div>
 </div>
 
-<div class="typo10">Show me <br/>
+<div class="typo10">Show me this as the x-axis: <br/>
     <div class="list"><span class="placeholder-filter1-scatter">Average lecture size</span>
         <ul class="list__ul10">
             <li data-value="avg_lecture_size"><a href="">Average lecture size</a></li>
@@ -197,7 +197,7 @@ We also looked for patterns using the <i>interactive scatterplot</i> below where
     </div>
 </div>
 
-<div class="typo11">Show me <br/>
+<div class="typo11">Show me this as the y-axis: <br/>
     <div class="list"><span class="placeholder-filter2-scatter">Average lecture length per week</span>
         <ul class="list__ul11">
             <li data-value="avg_lecture_length_week"><a href="">Average lecture length per week</a></li>
