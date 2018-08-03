@@ -25,6 +25,10 @@ path {
   fill: none;
 }
 
+.legend {
+  font-size: 12px;
+}
+
 .x.axis.radial path {
   display: none;
 }

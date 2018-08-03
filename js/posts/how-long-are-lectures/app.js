@@ -688,6 +688,28 @@ function makeVis(data) {
     })
     .on('mouseover', tipMouseover)
     .on('mouseout', tipMouseout);
+
+  var legend = canvas.selectAll('.legend')
+    .data(colorScale.domain())
+    .enter()
+    .append('g')
+    .attr('class', 'legend')
+    .attr('transform', function(d, i) {
+      var height = 12;
+      var offset = height * colorScale.domain().length / 2;
+      var horiz = 750;
+      var vert = i * height - offset + 75;
+      return 'translate(' + horiz + ',' + vert + ')';
+    });
+  legend.append('rect')
+    .attr('width', 8)
+    .attr('height', 8)
+    .style('fill', colorScale)
+    .style('stroke', colorScale);
+  legend.append('text')
+    .attr('x', 12)
+    .attr('y', 8)
+    .text(function(d) { return d; });
 }
 
 reload();
