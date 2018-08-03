@@ -286,6 +286,7 @@ function reload() {
     }
 
     data = data.filter((d, index) => calculateValue(d) !== 0);
+    barCharts(data);
 
     var dummy = {
       Winter: {
@@ -332,7 +333,7 @@ function reload() {
         },
       },
     };
-    // data.push(dummy);
+    data.push(dummy);
 
     var extent = d3.extent(data, function(d) {
       return calculateValue(d);
@@ -710,6 +711,146 @@ function makeVis(data) {
     .attr('x', 12)
     .attr('y', 8)
     .text(function(d) { return d; });
+}
+
+function barCharts(data) {
+  var data_new = data.slice()
+  data_new_bottom = data_new.sort((a, b) => calculateValue(a) - calculateValue(b));
+  data_new_bottom = data_new_bottom.slice(0,19)
+  width = 800
+  height = 500
+
+  var x = d3.scale.ordinal()
+    .rangeRoundBands([0, width], .1);
+
+  var y = d3.scale.linear()
+    .range([height, 0]);
+
+  var xAxis = d3.svg.axis()
+    .scale(x)
+    .orient("bottom");
+
+  var yAxis = d3.svg.axis()
+    .scale(y)
+    .orient("left")
+
+  var tip = d3.tip()
+    .attr('class', 'd3-tip')
+    .offset([-10, 0])
+    .html(function(d) {
+      return "<strong>Frequency:</strong> <span style='color:red'>" + calculateValue(d) + "</span>";
+    })
+
+  var svg = d3.select("#barBottom").append("svg")
+    .attr("width", width)
+    .attr("height", height)
+  .append("g")
+
+  svg.call(tip);
+
+  x.domain(data_new_bottom.map(function(d) { return (d.major); }));
+  y.domain([0, d3.max(data_new_bottom, function(d) { return (calculateValue(d)); })]);
+
+  svg.append("g")
+      .attr("class", "x axis")
+      .attr("transform", "translate(0," + height + ")")
+      .call(xAxis)
+        .selectAll("text")
+        .style("text-anchor", "end")
+        .attr("dx", "-.8em")
+        .attr("dy", ".15em")
+        .attr("transform", "rotate(-65)");
+
+  svg.append("g")
+      .attr("class", "y axis")
+      .call(yAxis)
+    .append("text")
+      .attr("y", 6)
+      .attr("dy", ".71em")
+      .style("text-anchor", "end")
+      .text(filter_map[radialSelections['selected_filter']]);
+
+  svg.selectAll(".barBottom")
+      .data(data_new_bottom)
+    .enter().append("rect")
+      .attr("class", "barBottom")
+      .attr("x", function(d) { return x(d.major); })
+      .attr("width", x.rangeBand())
+      .attr("y", function(d) { return y(calculateValue(d)); })
+      .attr("height", function(d) { return height - y(calculateValue(d)); })
+      .on('mouseover', tip.show)
+      .on('mouseout', tip.hide)
+
+  data_new_top = data_new.sort((a, b) => calculateValue(b) - calculateValue(a));
+  data_new = data_new.slice(0,19)
+  width = 800
+  height = 500
+
+  var x = d3.scale.ordinal()
+    .rangeRoundBands([0, width], .1);
+
+  var y = d3.scale.linear()
+    .range([height, 0]);
+
+  var xAxis = d3.svg.axis()
+    .scale(x)
+    .orient("bottom");
+
+  var yAxis = d3.svg.axis()
+    .scale(y)
+    .orient("left")
+
+  var tip = d3.tip()
+    .attr('class', 'd3-tip')
+    .offset([-10, 0])
+    .html(function(d) {
+      return "<strong>Frequency:</strong> <span style='color:red'>" + calculateValue(d) + "</span>";
+    })
+
+  var svg = d3.select("#barTop").append("svg")
+    .attr("width", width)
+    .attr("height", height)
+  .append("g")
+
+  svg.call(tip);
+
+  x.domain(data_new.map(function(d) { return (d.major); }));
+  y.domain([0, d3.max(data_new, function(d) { return (calculateValue(d)); })]);
+
+  svg.append("g")
+      .attr("class", "x axis")
+      .attr("transform", "translate(0," + height + ")")
+      .call(xAxis)
+        .selectAll("text")
+        .style("text-anchor", "end")
+        .attr("dx", "-.8em")
+        .attr("dy", ".15em")
+        .attr("transform", "rotate(-65)");
+
+  svg.append("g")
+      .attr("class", "y axis")
+      .call(yAxis)
+    .append("text")
+      .attr("y", 6)
+      .attr("dy", ".71em")
+      .style("text-anchor", "end")
+      .text(filter_map[radialSelections['selected_filter']]);
+
+  svg.selectAll(".barTop")
+      .data(data_new)
+    .enter().append("rect")
+      .attr("class", "barTop")
+      .attr("x", function(d) { return x(d.major); })
+      .attr("width", x.rangeBand())
+      .attr("y", function(d) { return y(calculateValue(d)); })
+      .attr("height", function(d) { return height - y(calculateValue(d)); })
+      .on('mouseover', tip.show)
+      .on('mouseout', tip.hide)
+
+  function type(d) {
+    calculateValue(d) = +calculateValue(d);
+    return d;
+  }
 }
 
 reload();

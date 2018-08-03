@@ -16,6 +16,7 @@ stylesheets:
 scripts:
   - //d3js.org/d3.v3.min.js # need v3 instead of v4 for radial bar chart
   # - //d3js.org/d3-transition.v1.min.js
+  - //labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js
   - //ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js
   - /js/posts/how-long-are-lectures/app.js
   - /js/posts/how-long-are-lectures/select-style.js
@@ -30,7 +31,7 @@ There were lots of data to be gathered from UCLA's Registrar website. We wanted 
 </p>
 
 <p class="para">
-Across all departments in all schools, we found that <b>the top 20 departments</b> by lecture length ranged from <b>Art</b> to <b>Yiddish</b>, while <b>the bottom 20 departments</b> ranged from <b>Physiology</b> to <b>Life Sciences</b>. You can use the <i>interactive radial chart</i> below to visualize the departments with respect to filters such as average lecture length per day, average lecture length per week, average lecture size, and average number of lectures per week. The lecture lengths in minutes are relative to the lowest value. We also categorized departments by North and South campus, partially based on Stack's previous post on <a href="http://stack.dailybruin.com/2017/04/23/department-similarity/">departmental similarity.</a>. 
+Across all departments in all schools, we found that <b>the top 20 departments</b> by lecture length ranged from <b>Art</b> to <b>Yiddish</b>, while <b>the bottom 20 departments</b> ranged from <b>Physiology</b> to <b>Life Sciences</b>. You can use the <i>interactive radial chart</i> below to visualize the departments with respect to filters such as average lecture length per day, average lecture length per week, average lecture size, and average number of lectures per week. The lecture lengths in minutes are relative to the lowest value. We also categorized departments by North and South campus, partially based on Stack's previous post on <a href="http://stack.dailybruin.com/2017/04/23/department-similarity/">departmental similarity.</a>.
 
 
 
@@ -88,18 +89,11 @@ Across all departments in all schools, we found that <b>the top 20 departments</
     <div class="list"><span class="placeholder-school-radial">All Schools</span>
         <ul class="list__ul5">
             <li data-value="all"><a href="">All Schools</a></li>
-            <li data-value="Anderson School of Management"><a href="">Anderson School of Management</a></li>
             <li data-value="David Geffen School of Medicine"><a href="">David Geffen School of Medicine</a></li>
             <li data-value="Fielding School of Public Health"><a href="">Fielding School of Public Health</a></li>
-            <li data-value="Graduate Division"><a href="">Graduate Division</a></li>
-            <li data-value="Herb Alpert School of Music"><a href="">Herb Alpert School of Music</a></li>
-            <li data-value="Life Sciences"><a href="">Life Sciences</a></li>
             <li data-value="Luskin School of Public Affairs"><a href="">Luskin School of Public Affairs</a></li>
-            <li data-value="School of Dentistry"><a href="">School of Dentistry</a></li>
             <li data-value="School of Education and Information Studies"><a href="">School of Education and Information Studies</a></li>
             <li data-value="School of Engineering and Applied Science"><a href="">School of Engineering and Applied Science</a></li>
-            <li data-value="School of Law"><a href="">School of Law</a></li>
-            <li data-value="School of Nursing"><a href="">School of Nursing</a></li>
             <li data-value="School of Theater, Film and Television"><a href="">School of Theater, Film and Television</a></li>
             <li data-value="School of the Arts and Architecture"><a href="">School of the Arts and Architecture</a></li>
             <li data-value="The College of Letters and Science"><a href="">The College of Letters and Science</a></li>
@@ -119,6 +113,13 @@ Across all departments in all schools, we found that <b>the top 20 departments</
 </section>
 
 <div id="radial-chart" class="radial-chart"></div>
+
+<h1 style="width: 30%; margin-top:1%">Bottom 20: </h1>
+<div id="barBottom" class="barBottom"></div>
+
+<h1 style="width: 30%; margin-top:1%">Top 20:</h1>
+<div id="barTop" class="barTop"></div>
+
 
 <p class="para">
 We also looked for patterns using the <i>interactive scatterplot</i> below where you can mouse over the data points to learn more about different insights related to a particular department, such as average lecture length per day, average lecture length per week, average lecture size, and average number of lectures per week. Play around with the filters to find some trends! The first four filters manipulate the dataset, the fifth filter changes the x-axis of the scatterplot, and the sixth filter changes the y-axis of the scatterplot.
@@ -167,18 +168,11 @@ We also looked for patterns using the <i>interactive scatterplot</i> below where
     <div class="list"><span class="placeholder-school-scatter">All Schools</span>
         <ul class="list__ul9">
             <li data-value="all"><a href="">All Schools</a></li>
-            <li data-value="Anderson School of Management"><a href="">Anderson School of Management</a></li>
             <li data-value="David Geffen School of Medicine"><a href="">David Geffen School of Medicine</a></li>
             <li data-value="Fielding School of Public Health"><a href="">Fielding School of Public Health</a></li>
-            <li data-value="Graduate Division"><a href="">Graduate Division</a></li>
-            <li data-value="Herb Alpert School of Music"><a href="">Herb Alpert School of Music</a></li>
-            <li data-value="Life Sciences"><a href="">Life Sciences</a></li>
             <li data-value="Luskin School of Public Affairs"><a href="">Luskin School of Public Affairs</a></li>
-            <li data-value="School of Dentistry"><a href="">School of Dentistry</a></li>
             <li data-value="School of Education and Information Studies"><a href="">School of Education and Information Studies</a></li>
             <li data-value="School of Engineering and Applied Science"><a href="">School of Engineering and Applied Science</a></li>
-            <li data-value="School of Law"><a href="">School of Law</a></li>
-            <li data-value="School of Nursing"><a href="">School of Nursing</a></li>
             <li data-value="School of Theater, Film and Television"><a href="">School of Theater, Film and Television</a></li>
             <li data-value="School of the Arts and Architecture"><a href="">School of the Arts and Architecture</a></li>
             <li data-value="The College of Letters and Science"><a href="">The College of Letters and Science</a></li>
