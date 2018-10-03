@@ -67,7 +67,7 @@ Using [Google’s well-documented APIs](https://developers.google.com/analytics/
 
 We even added a bare-bones [custom query page](http://lyst.dailybruin.com/custom) to manually query the data using the APIs.
 
-Feel free to [peruse our analytics with lyst](http://lyst.dailybruin.com/). And of course, keep in mind that lyst doesn't tell the whole story. In addition to [dailybruin.com](http://dailybruin.com), readers get to our stories via the 9,000 papers we put on stands daily and our [iOS app](https://itunes.apple.com/us/app/the-ucla-daily-bruin/id784097181).
+Feel free to [peruse our analytics with lyst](http://lyst.dailybruin.com/). And of course, keep in mind that lyst doesn't tell the whole story. In addition to [dailybruin.com](http://dailybruin.com), readers get to our stories via the 9,000 papers we put on stands daily and our [iOS app](https://itunes.apple.com/us/app/the-ucla-dailybruin/id784097181).
 
 ## What’s next?
 

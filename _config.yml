@@ -12,7 +12,7 @@ baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://stack.dailybruin.com" # the base hostname & protocol for your site
 image_url: /img/posts # corresponds to directory for post images (cf. https://github.com/opattison/jekyll-figure-image-tag#why-yaml-is-useful-for-storing-images)
 twitter_username: _thestack
-github_username:  daily-bruin
+github_username:  dailybruin
 
 # Defaults
 defaults:
@@ -27,7 +27,7 @@ defaults:
 # Outputting
 permalink: pretty # don't have `.html` on the end of permalinks
 timezone: America/Los_Angeles
-paginate: 10 # items per page
+paginate: 12 # items per page
 paginate_path: "/page/:num/"
 
 # Build settings

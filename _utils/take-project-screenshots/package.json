@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/daily-bruin/the-stack.git"
+    "url": "git+https://github.com/dailybruin/the-stack.git"
   },
   "keywords": [
     "screenshot",
@@ -18,9 +18,9 @@
   "author": "Harrison Liddiard <omniaura5@gmail.com> (http://harrisonliddiard.com)",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/daily-bruin/the-stack/issues"
+    "url": "https://github.com/dailybruin/the-stack/issues"
   },
-  "homepage": "https://github.com/daily-bruin/the-stack#readme",
+  "homepage": "https://github.com/dailybruin/the-stack#readme",
   "dependencies": {
     "phantomjs2": "^2.0.0",
     "webshot": "^0.16.0",
