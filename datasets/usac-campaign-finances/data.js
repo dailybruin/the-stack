@@ -68,7 +68,7 @@ const candidates = [
     slate: 'Bruins United',
     totalRaised: 536.21,
     sources: [{ name: 'self', amount: 600 }],
-    totalSpent: 536.21,
+    totalSpent: 547.19,
     allocation: [
       { description: 'T-Shirts', amount: 147.45, slateExpense: true },
       { description: 'Flyers', amount: 37.65, slateExpense: true },
@@ -99,7 +99,7 @@ const candidates = [
     slate: 'Independent',
     totalRaised: 600,
     sources: [{ name: 'self', amount: 600 }],
-    totalSpent: 139.89,
+    totalSpent: 548.87,
     allocation: [
       { description: 'T-Shirts', amount: 121.22 },
       { description: 'Website', amount: 18.67 },
@@ -107,8 +107,7 @@ const candidates = [
       { description: 'Banner Mounting Materials', amount: 133.75},
       { description: 'Flyers', amount: 146.83 },
       { description: 'Banner', amount: 71.40 },
-      { description: 'Facebook Promotion - Video', amount: 15.00 },
-      { description: 'BFacebook Promotion - Post', amount: 10.00 },
+      { description: 'Facebook Promotions', amount: 25.00 },
 
 
     ],
@@ -119,7 +118,7 @@ const candidates = [
     slate: 'Bruins United',
     totalRaised: 600,
     sources: [{ name: 'self', amount: 600 }],
-    totalSpent: 465.21,
+    totalSpent: 476.19,
     allocation: [
       { description: 'T-Shirts', amount: 147.45, slateExpense: true },
       { description: 'Flyers', amount: 37.65, slateExpense: true },
@@ -163,7 +162,7 @@ const candidates = [
     slate: 'Bruins United',
     totalRaised: 600,
     sources: [{ name: 'self', amount: 600 }],
-    totalSpent: 465.21,
+    totalSpent: 476.19,
     allocation: [
       { description: 'T-Shirts', amount: 147.45, slateExpense: true },
       { description: 'Flyers', amount: 37.65, slateExpense: true },
@@ -181,7 +180,7 @@ const candidates = [
     slate: 'Bruins United',
     totalRaised: 600,
     sources: [{ name: 'self', amount: 600 }],
-    totalSpent: 541.21,
+    totalSpent: 582.67,
     allocation: [
       { description: 'T-Shirts', amount: 147.45, slateExpense: true },
       { description: 'Flyers', amount: 37.65, slateExpense: true },
@@ -199,13 +198,12 @@ const candidates = [
     slate: 'Independent',
     totalRaised: 349.43,
     sources: [{ name: 'self', amount: 349.43 }],
-    totalSpent: 349.43,
+    totalSpent: 590.90,
     allocation: [
       { description: 'T-Shirts', amount: 254.54 },
       { description: 'Stickers', amount: 94.89 },
-      { description: 'Flyers', amount: 98.95 },
+      { description: 'Flyers', amount: 175.60 },
       { description: 'Poster', amount: 65.87 },
-      { description: 'Flyers', amount: 76.65 },
     ],
   },
   {
@@ -214,12 +212,13 @@ const candidates = [
     slate: 'Independent',
     totalRaised: 0,
     sources: [],
-    totalSpent: 0,
+    totalSpent: 281.39,
     allocation: [
-    { description: 'PVC Pipes', amount: 254.54 },
-    { description: 'Flyers', amount: 94.89 },
-    { description: 'Mesh Banner', amount: 98.95 },
-    { description: 'Steel Pipe', amount: 65.87 },
+    { description: 'PVC Pipes', amount: 60.30 },
+    { description: 'Postcards', amount: 75 },
+    { description: 'Mesh Banner', amount: 90 },
+    { description: 'Steel Pipe', amount: 31.10 },
+    { description: 'Shipping', amount: 24.99 },
     ],
   },
   {
@@ -248,7 +247,7 @@ const candidates = [
     slate: 'Leaders Influencing Tomorrow',
     totalRaised: 0,
     sources: [],
-    totalSpent: 0,
+    totalSpent: 242.83,
     allocation: [
     { description: 'Signboard Banner', amount: 48.00},
     { description: 'Flyers', amount: 38.57, slateExpense: true },
@@ -265,16 +264,14 @@ const candidates = [
     slate: 'Independent',
     totalRaised: 171,
     sources: [{ name: 'self', amount: 171 }],
-    totalSpent: 171,
+    totalSpent: 531,
     allocation: [
       { description: 'Flyers', amount: 50 },
       { description: 'Signboard', amount: 55 },
       { description: 'Stickers', amount: 30 },
       { description: 'Website', amount: 36 },
       { description: 'T-Shirts', amount: 280 },
-      { description: 'Facebook Advertisements', amount: 30 },
-      { description: 'Facebook Advertisements', amount: 20 },
-      { description: 'Facebook Advertisements', amount: 30 },
+      { description: 'Facebook Promotions', amount: 80 },
     ],
   },
   {
@@ -283,7 +280,7 @@ const candidates = [
     slate: 'Bruins United',
     totalRaised: 600,
     sources: [{ name: 'self', amount: 600 }],
-    totalSpent: 536.21,
+    totalSpent: 547.19,
     allocation: [
       { description: 'T-Shirts', amount: 147.45, slateExpense: true },
       { description: 'Flyers', amount: 37.65, slateExpense: true },
@@ -301,16 +298,15 @@ const candidates = [
     slate: 'Independent',
     totalRaised: 600,
     sources: [{ name: 'Individual Contributors', amount: 460 }],
-    totalSpent: recalc,
+    totalSpent: 594.90,
     allocation: [
       { description: 'T-Shirts', amount: 302.17 },
       { description: 'Signboard', amount: 78.98 },
-      { description: 'Campaign Stickers', amount: 28.6 },
+      { description: 'Campaign Stickers', amount: 28.60 },
       { description: 'Flyers', amount: 85.00 },
       { description: 'Wood (including lumber fee)', amount: 16.75 },
       { description: 'Sand', amount: 8.40 },
-      { description: 'Facebook Page Promotion', amount: 25 },
-      { description: 'Facebook Event Promotion', amount: 50 },
+      { description: 'Facebook Promotions', amount: 75 },
     ],
   },
   {
@@ -319,8 +315,18 @@ const candidates = [
     slate: 'Independent',
     totalRaised: 600,
     sources: [{ name: 'self', amount: 600 }],
-    totalSpent: 0,
-    allocation: [],
+    totalSpent: 581.48,
+    allocation: [
+       { description: 'Flyers', amount: 61.94 },
+       { description: 'Banner', amount: 53.23 },
+       { description: 'T-Shirts', amount: 400 },
+       { description: 'Sand', amount: 11.20 },
+       { description: 'Screws', amount: 8.38 },
+       { description: 'Lumber', amount: 12.74 },
+       { description: 'Facebook Promotions', amount: 9 },
+       { description: 'Shipping', amount: 24.99 },
+
+    ],
   },
   {
     name: 'Jessica Kim',
@@ -328,7 +334,7 @@ const candidates = [
     slate: 'Bruins United',
     totalRaised: 600,
     sources: [{ name: 'Parent', amount: 600 }],
-    totalSpent: 567.71,
+    totalSpent: 578.69,
     allocation: [
       { description: 'T-Shirts', amount: 147.45, slateExpense: true },
       { description: 'Flyers', amount: 37.65, slateExpense: true },
@@ -355,10 +361,20 @@ const candidates = [
     slate: 'Independent',
     totalRaised: 250,
     sources: [{ name: 'Individual Contributors', amount: 250 }],
-    totalSpent: 243.45,
+    totalSpent: 582.91,
     allocation: [
       { description: 'T-Shirts', amount: 198.45 },
       { description: 'Stickers', amount: 45 },
+      { description: 'Website', amount: 32.45 },
+      { description: 'Postcards', amount: 141.34 },
+      { description: 'Banner', amount: 73.35 },
+      { description: 'Sandbags', amount: 11.20 },
+      { description: 'Fire Plushie', amount: 30 },
+      { description: 'Lumber', amount: 12.74 },
+      { description: 'Screws', amount: 8.38 },
+      { description: 'Facebook Promotions', amount: 30 },
+
+
     ],
   },
   {
@@ -402,7 +418,7 @@ const candidates = [
     slate: 'Bruins United',
     totalRaised: 600,
     sources: [{ name: 'self', amount: 350 }, { name: 'Barpay', amount: 250 }],
-    totalSpent: 488.71,
+    totalSpent: 526.69,
     allocation: [
       { description: 'T-Shirts', amount: 147.45, slateExpense: true },
       { description: 'Flyers', amount: 37.65, slateExpense: true },
@@ -420,7 +436,7 @@ const candidates = [
     slate: 'Bruins United',
     totalRaised: 600,
     sources: [{ name: 'self', amount: 600 }],
-    totalSpent: 567.71,
+    totalSpent: 578.69,
     allocation: [
       { description: 'T-Shirts', amount: 147.45, slateExpense: true },
       { description: 'Flyers', amount: 37.65, slateExpense: true },
@@ -437,11 +453,11 @@ const candidates = [
     slate: 'Independent',
     totalRaised: 505.41,
     sources: [{ name: 'self', amount: 175 }],
-    totalSpent: 175,
+    totalSpent: 490.64,
     allocation: [
     { description: 'T-Shirts', amount: 350 },
     { description: 'Flyers', amount: 86.22 },
-    { description: 'Signboard Supplies', amount: 61 },
+    { description: 'Signboard Supplies', amount: 54.42 },
     ],
   },
   {
@@ -476,7 +492,7 @@ const candidates = [
     slate: 'Independent',
     totalRaised: 600,
     sources: [{ name: 'self', amount: 600 }],
-    totalSpent: 287.99,
+    totalSpent: 545.53,
     allocation: [{ description: 'T-Shirts', amount: 287.99 },
     { description: 'Mesh Banner', amount: 139.99 },
     { description: 'Flyers', amount: 112.99 },
@@ -489,7 +505,7 @@ const candidates = [
     slate: 'Leaders Influencing Tomorrow',
     totalRaised: 500,
     sources: [],
-        totalSpent: 242.83,
+    totalSpent: 242.83,
     allocation: [
     { description: 'Signboard Banner', amount: 48.00},
     { description: 'Flyers', amount: 38.57, slateExpense: true },
@@ -532,7 +548,7 @@ const candidates = [
     slate: 'Bruins United',
     totalRaised: 600,
     sources: [{ name: 'self', amount: 600 }],
-    totalSpent: 488.71,
+    totalSpent: 499.69,
     allocation: [
       { description: 'T-Shirts', amount: 147.45, slateExpense: true },
       { description: 'Flyers', amount: 37.65, slateExpense: true },
