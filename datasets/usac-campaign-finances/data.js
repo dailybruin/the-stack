@@ -9,7 +9,7 @@ const candidates = [
     allocation: [
     { description: 'Copy Paper', amount: 17.07 },
       { description: 'Printer Ink', amount: 19.59 },
-      { description: 'Vinyl Banner', amount: 28.67 },
+      { description: 'Banner', amount: 28.67 },
       ],
   },
   {
@@ -87,9 +87,9 @@ const candidates = [
     sources: [],
     totalSpent: 553.26,
     allocation: [
-    { description: 'Standard Postcards', amount: 119.83 },
-    { description: 'Vinyl', amount: 106.95 },
-    { description: 'Campaign Shirts', amount: 309.29 },
+    { description: 'Postcards', amount: 119.83 },
+    { description: 'Banner', amount: 106.95 },
+    { description: 'T-Shirts', amount: 309.29 },
     { description: 'Nails and wood', amount: 17.19 },
     ],
   },
@@ -216,7 +216,7 @@ const candidates = [
     allocation: [
     { description: 'PVC Pipes', amount: 60.30 },
     { description: 'Postcards', amount: 75 },
-    { description: 'Mesh Banner', amount: 90 },
+    { description: 'Banner', amount: 90 },
     { description: 'Steel Pipe', amount: 31.10 },
     { description: 'Shipping', amount: 24.99 },
     ],
@@ -302,7 +302,7 @@ const candidates = [
     allocation: [
       { description: 'T-Shirts', amount: 302.17 },
       { description: 'Signboard', amount: 78.98 },
-      { description: 'Campaign Stickers', amount: 28.60 },
+      { description: 'Stickers', amount: 28.60 },
       { description: 'Flyers', amount: 85.00 },
       { description: 'Wood (including lumber fee)', amount: 16.75 },
       { description: 'Sand', amount: 8.40 },
@@ -494,7 +494,7 @@ const candidates = [
     sources: [{ name: 'self', amount: 600 }],
     totalSpent: 545.53,
     allocation: [{ description: 'T-Shirts', amount: 287.99 },
-    { description: 'Mesh Banner', amount: 139.99 },
+    { description: 'Banner', amount: 139.99 },
     { description: 'Flyers', amount: 112.99 },
     { description: 'Banner Supplies', amount: 4.56 },
     ],
