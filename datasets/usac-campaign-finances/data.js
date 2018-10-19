@@ -7,9 +7,8 @@ const candidates = [
     sources: [],
     totalSpent: 65.33,
     allocation: [
-    { description: 'Copy Paper', amount: 17.07 },
-      { description: 'Printer Ink', amount: 19.59 },
-      { description: 'Banner', amount: 28.67 },
+    { description: 'Flyer Expenses', amount: 36.66 },
+      { description: 'Signboard Expenses', amount: 28.67 },
       ],
   },
   {
@@ -21,8 +20,8 @@ const candidates = [
     totalSpent: 499.55,
     allocation: [
       { description: 'Website', amount: 20.16 },
-      { description: 'Signboard', amount: 132.56 },
-      { description: 'Flyers', amount: 146.83 },
+      { description: 'Signboard Expenses', amount: 132.56 },
+      { description: 'Flyer Expenses', amount: 146.83 },
       { description: 'T-Shirts', amount: 200 },
     ],
   },
@@ -34,11 +33,9 @@ const candidates = [
     sources: [{ name: 'self', amount: 600 }],
     totalSpent: 509.99,
     allocation: [
-      { description: 'T-Shirts', amount: 67.00 },
-      { description: 'T-Shirt Design Printing', amount: 170.00 },
-      { description: 'Banner', amount: 114.95 },
-      { description: 'Flyers', amount: 138.95 },
-      { description: 'Signboard Expenses', amount: 19.09 },
+      { description: 'T-Shirts', amount: 237.00 },
+      { description: 'Signboard Expenses', amount: 134.04 },
+      { description: 'Flyer Expenses', amount: 138.95 },
     ],
   },
   {
@@ -71,12 +68,10 @@ const candidates = [
     totalSpent: 547.19,
     allocation: [
       { description: 'T-Shirts', amount: 147.45 },
-      { description: 'Flyers', amount: 37.65 },
-      { description: 'Signboard', amount: 105.11 },
+      { description: 'Flyer Expenses', amount: 37.65 },
+      { description: 'Signboard Expenses', amount: 113.51 },
       { description: 'Water Bottles', amount: 246.0 },
       { description: 'Website', amount: 2.58 },
-      { description: 'Banner', amount: 2.55 },
-      { description: 'Signboard Expenses', amount: 5.85 },
     ],
   },
   {
@@ -88,9 +83,8 @@ const candidates = [
     totalSpent: 553.26,
     allocation: [
     { description: 'Postcards', amount: 119.83 },
-    { description: 'Banner', amount: 106.95 },
+    { description: 'Signboard Expenses', amount: 124.14 },
     { description: 'T-Shirts', amount: 309.29 },
-    { description: 'Signboard Expenses', amount: 17.19 },
     ],
   },
   {
@@ -104,9 +98,8 @@ const candidates = [
       { description: 'T-Shirts', amount: 121.22 },
       { description: 'Website', amount: 18.67 },
       { description: 'Blue Books', amount: 32.00 },
-      { description: 'Signboard Expenses', amount: 133.75},
-      { description: 'Flyers', amount: 146.83 },
-      { description: 'Banner', amount: 71.40 },
+      { description: 'Signboard Expenses', amount: 205.15},
+      { description: 'Flyer Expenses', amount: 146.83 },
       { description: 'Facebook Promotions', amount: 25.00 },
 
 
@@ -121,13 +114,10 @@ const candidates = [
     totalSpent: 476.19,
     allocation: [
       { description: 'T-Shirts', amount: 147.45 },
-      { description: 'Flyers', amount: 37.65 },
-      { description: 'Signboard', amount: 105.11 },
+      { description: 'Flyer Expenses', amount: 37.65 },
+      { description: 'Signboard Expenses', amount: 113.51 },
       { description: 'Bottle Openers', amount: 175 },
       { description: 'Website', amount: 2.58 },
-      { description: 'Banner', amount: 2.55 },
-      { description: 'Signboard Expenses', amount: 5.85 },
-
     ],
   },
   {
@@ -138,13 +128,12 @@ const candidates = [
     sources: [],
     totalSpent: 242.83,
     allocation: [
-    { description: 'Signboard Expenses', amount: 48.00},
-    { description: 'Flyers', amount: 38.57 },
+    { description: 'Signboard Expenses', amount: 63.47},
+    { description: 'Flyer Expenses', amount: 38.57 },
     { description: 'Lighters', amount: 3.43 },
     { description: 'Website', amount: 4.96 },
     { description: 'Stickers', amount: 25.25 },
     { description: 'T-Shirts', amount: 107.15 },
-    { description: 'Signboard Materials', amount: 15.47 },
     ],
   },
   {
@@ -165,13 +154,10 @@ const candidates = [
     totalSpent: 476.19,
     allocation: [
       { description: 'T-Shirts', amount: 147.45 },
-      { description: 'Flyers', amount: 37.65 },
-      { description: 'Signboard', amount: 105.11 },
+      { description: 'Flyer Expenses', amount: 37.65 },
+      { description: 'Signboard Expenses', amount: 113.51 },
       { description: 'Bottle Openers', amount: 175 },
       { description: 'Website', amount: 2.58 },
-      { description: 'Banner', amount: 2.55 },
-      { description: 'Signboard Expenses', amount: 5.85 },
-
     ],
   },
   {
@@ -183,12 +169,10 @@ const candidates = [
     totalSpent: 582.67,
     allocation: [
       { description: 'T-Shirts', amount: 147.45 },
-      { description: 'Flyers', amount: 37.65 },
-      { description: 'Signboard', amount: 105.11 },
+      { description: 'Flyer Expenses', amount: 37.65 },
+      { description: 'Signboard Expenses', amount: 113.51 },
       { description: 'Single Use Coffee Cups', amount: 251 },
       { description: 'Website', amount: 2.58 },
-      { description: 'Banner', amount: 2.55 },
-      { description: 'Signboard Expenses', amount: 5.85 },
       { description: 'Coffee', amount: 30.48 },
     ],
   },
@@ -202,7 +186,7 @@ const candidates = [
     allocation: [
       { description: 'T-Shirts', amount: 254.54 },
       { description: 'Stickers', amount: 94.89 },
-      { description: 'Flyers', amount: 175.60 },
+      { description: 'Flyer Expenses', amount: 175.60 },
       { description: 'Poster', amount: 65.87 },
     ],
   },
@@ -214,10 +198,8 @@ const candidates = [
     sources: [],
     totalSpent: 281.39,
     allocation: [
-    { description: 'Signboard Expenses', amount: 60.30 },
+    { description: 'Signboard Expenses', amount: 181.40 },
     { description: 'Postcards', amount: 75 },
-    { description: 'Banner', amount: 90 },
-    { description: 'Signboard Expenses', amount: 31.10 },
     { description: 'Shipping', amount: 24.99 },
     ],
   },
@@ -229,7 +211,7 @@ const candidates = [
     sources: [],
     totalSpent: 74.99,
     allocation: [
-    { description: 'Banner', amount: 74.99 },
+    { description: 'Signboard Expenses', amount: 74.99 },
     ],
   },
   {
@@ -249,13 +231,12 @@ const candidates = [
     sources: [],
     totalSpent: 242.83,
     allocation: [
-    { description: 'Signboard Expenses', amount: 48.00},
-    { description: 'Flyers', amount: 38.57 },
+    { description: 'Signboard Expenses', amount: 63.47},
+    { description: 'Flyer Expenses', amount: 38.57 },
     { description: 'Lighters', amount: 3.43 },
     { description: 'Website', amount: 4.96 },
     { description: 'Stickers', amount: 25.25 },
     { description: 'T-Shirts', amount: 107.15 },
-    { description: 'Signboard Materials', amount: 15.47 },
     ],
   },
   {
@@ -266,8 +247,8 @@ const candidates = [
     sources: [{ name: 'self', amount: 171 }],
     totalSpent: 531,
     allocation: [
-      { description: 'Flyers', amount: 50 },
-      { description: 'Signboard', amount: 55 },
+      { description: 'Flyer Expenses', amount: 50 },
+      { description: 'Signboard Expenses', amount: 55 },
       { description: 'Stickers', amount: 30 },
       { description: 'Website', amount: 36 },
       { description: 'T-Shirts', amount: 280 },
@@ -283,13 +264,10 @@ const candidates = [
     totalSpent: 547.19,
     allocation: [
       { description: 'T-Shirts', amount: 147.45 },
-      { description: 'Flyers', amount: 37.65 },
-      { description: 'Signboard', amount: 105.11 },
+      { description: 'Flyer Expenses', amount: 37.65 },
+      { description: 'Signboard Expenses', amount: 113.51 },
       { description: 'Credit Card Holders', amount: 246 },
       { description: 'Website', amount: 2.58 },
-      { description: 'Banner', amount: 2.55 },
-      { description: 'Signboard Expenses', amount: 5.85 },
-
     ],
   },
   {
@@ -301,11 +279,9 @@ const candidates = [
     totalSpent: 594.90,
     allocation: [
       { description: 'T-Shirts', amount: 302.17 },
-      { description: 'Signboard', amount: 78.98 },
+      { description: 'Signboard Expenses', amount: 104.13 },
       { description: 'Stickers', amount: 28.60 },
-      { description: 'Flyers', amount: 85.00 },
-      { description: 'Signboard Expenses', amount: 16.75 },
-      { description: 'Signboard Expenses', amount: 8.40 },
+      { description: 'Flyer Expenses', amount: 85.00 },
       { description: 'Facebook Promotions', amount: 75 },
     ],
   },
@@ -317,12 +293,9 @@ const candidates = [
     sources: [{ name: 'self', amount: 600 }],
     totalSpent: 581.48,
     allocation: [
-       { description: 'Flyers', amount: 61.94 },
-       { description: 'Banner', amount: 53.23 },
+       { description: 'Flyer Expenses', amount: 61.94 },
+       { description: 'Signboard Expenses', amount: 85.55 },
        { description: 'T-Shirts', amount: 400 },
-       { description: 'Signboard Expenses', amount: 11.20 },
-       { description: 'Screws', amount: 8.38 },
-       { description: 'Signboard Expenses', amount: 12.74 },
        { description: 'Facebook Promotions', amount: 9 },
        { description: 'Shipping', amount: 24.99 },
 
@@ -337,13 +310,10 @@ const candidates = [
     totalSpent: 578.69,
     allocation: [
       { description: 'T-Shirts', amount: 147.45 },
-      { description: 'Flyers', amount: 37.65 },
-      { description: 'Signboard', amount: 105.11 },
+      { description: 'Flyer Expenses', amount: 37.65 },
+      { description: 'Signboard Expenses', amount: 113.51 },
       { description: 'Credit Card Holders', amount: 277.5 },
       { description: 'Website', amount: 2.58 },
-      { description: 'Banner', amount: 2.55 },
-      { description: 'Signboard Expenses', amount: 5.85 },
-
     ],
   },
   {
@@ -367,11 +337,8 @@ const candidates = [
       { description: 'Stickers', amount: 45 },
       { description: 'Website', amount: 32.45 },
       { description: 'Postcards', amount: 141.34 },
-      { description: 'Banner', amount: 73.35 },
-      { description: 'Signboard Expensesbags', amount: 11.20 },
+      { description: 'Signboard Expenses', amount: 105.67 },
       { description: 'Fire Plushie', amount: 30 },
-      { description: 'Signboard Expenses', amount: 12.74 },
-      { description: 'Screws', amount: 8.38 },
       { description: 'Facebook Promotions', amount: 30 },
 
 
@@ -394,13 +361,12 @@ const candidates = [
     sources: [],
     totalSpent: 242.83,
     allocation: [
-    { description: 'Signboard Expenses', amount: 48.00},
-    { description: 'Flyers', amount: 38.57 },
+    { description: 'Signboard Expenses', amount: 63.47},
+    { description: 'Flyer Expenses', amount: 38.57 },
     { description: 'Lighters', amount: 3.43 },
     { description: 'Website', amount: 4.96 },
     { description: 'Stickers', amount: 25.25 },
     { description: 'T-Shirts', amount: 107.15 },
-    { description: 'Signboard Materials', amount: 15.47 },
     ],
   },
   {
@@ -421,13 +387,10 @@ const candidates = [
     totalSpent: 526.69,
     allocation: [
       { description: 'T-Shirts', amount: 147.45 },
-      { description: 'Flyers', amount: 37.65 },
-      { description: 'Signboard', amount: 105.11 },
+      { description: 'Flyer Expenses', amount: 64.65 },
+      { description: 'Signboard Expenses', amount: 113.51 },
       { description: 'Credit Card Holders', amount: 198.5 },
       { description: 'Website', amount: 2.58 },
-      { description: 'Banner', amount: 2.55 },
-      { description: 'Signboard Expenses', amount: 5.85 },
-      { description: 'Lior Money Flyers', amount: 27.00 },
     ],
   },
   {
@@ -439,12 +402,10 @@ const candidates = [
     totalSpent: 578.69,
     allocation: [
       { description: 'T-Shirts', amount: 147.45 },
-      { description: 'Flyers', amount: 37.65 },
-      { description: 'Signboard', amount: 105.11 },
+      { description: 'Flyer Expenses', amount: 37.65 },
+      { description: 'Signboard Expenses', amount: 113.51 },
       { description: 'Mood Cups', amount: 277.5 },
       { description: 'Website', amount: 2.58 },
-      { description: 'Banner', amount: 2.55 },
-      { description: 'Signboard Expenses', amount: 5.85 },
     ],
   },
   {
@@ -456,7 +417,7 @@ const candidates = [
     totalSpent: 490.64,
     allocation: [
     { description: 'T-Shirts', amount: 350 },
-    { description: 'Flyers', amount: 86.22 },
+    { description: 'Flyer Expenses', amount: 86.22 },
     { description: 'Signboard Expenses', amount: 54.42 },
     ],
   },
@@ -477,13 +438,12 @@ const candidates = [
     sources: [],
     totalSpent: 242.83,
     allocation: [
-    { description: 'Signboard Expenses', amount: 48.00},
-    { description: 'Flyers', amount: 38.57 },
+    { description: 'Signboard Expenses', amount: 63.47},
+    { description: 'Flyer Expenses', amount: 38.57 },
     { description: 'Lighters', amount: 3.43 },
     { description: 'Website', amount: 4.96 },
     { description: 'Stickers', amount: 25.25 },
     { description: 'T-Shirts', amount: 107.15 },
-    { description: 'Signboard Materials', amount: 15.47 },
     ],
   },
   {
@@ -494,9 +454,8 @@ const candidates = [
     sources: [{ name: 'self', amount: 600 }],
     totalSpent: 545.53,
     allocation: [{ description: 'T-Shirts', amount: 287.99 },
-    { description: 'Banner', amount: 139.99 },
-    { description: 'Flyers', amount: 112.99 },
-    { description: 'Signboard Expenses', amount: 4.56 },
+    { description: 'Signboard Expenses', amount: 144.55 },
+    { description: 'Flyer Expenses', amount: 112.99 },
     ],
   },
   {
@@ -507,13 +466,12 @@ const candidates = [
     sources: [],
     totalSpent: 242.83,
     allocation: [
-    { description: 'Signboard Expenses', amount: 48.00},
-    { description: 'Flyers', amount: 38.57 },
+    { description: 'Signboard Expenses', amount: 63.47},
+    { description: 'Flyer Expenses', amount: 38.57 },
     { description: 'Lighters', amount: 3.43 },
     { description: 'Website', amount: 4.96 },
     { description: 'Stickers', amount: 25.25 },
     { description: 'T-Shirts', amount: 107.15 },
-    { description: 'Signboard Materials', amount: 15.47 },
 ],
   },
   {
@@ -524,13 +482,12 @@ const candidates = [
     sources: [],
     totalSpent: 242.83,
     allocation: [
-    { description: 'Signboard Expenses', amount: 48.00},
-    { description: 'Flyers', amount: 38.57 },
+    { description: 'Signboard Expenses', amount: 63.47},
+    { description: 'Flyer Expenses', amount: 38.57 },
     { description: 'Lighters', amount: 3.43 },
     { description: 'Website', amount: 4.96 },
     { description: 'Stickers', amount: 25.25 },
     { description: 'T-Shirts', amount: 107.15 },
-    { description: 'Signboard Materials', amount: 15.47 },
 ],
   },
   {
@@ -551,13 +508,10 @@ const candidates = [
     totalSpent: 499.69,
     allocation: [
       { description: 'T-Shirts', amount: 147.45 },
-      { description: 'Flyers', amount: 37.65 },
-      { description: 'Signboard', amount: 105.11 },
+      { description: 'Flyer Expenses', amount: 37.65 },
+      { description: 'Signboard Expenses', amount: 113.51 },
       { description: 'Credit Card Holders', amount: 198.5 },
       { description: 'Website', amount: 2.58 },
-      { description: 'Banner', amount: 2.55 },
-      { description: 'Signboard Expenses', amount: 5.85 },
-
     ],
   },
   {
@@ -568,13 +522,12 @@ const candidates = [
     sources: [],
     totalSpent: 242.83,
     allocation: [
-    { description: 'Signboard Expenses', amount: 48.00},
-    { description: 'Flyers', amount: 38.57 },
+    { description: 'Signboard Expenses', amount: 63.47},
+    { description: 'Flyer Expenses', amount: 38.57 },
     { description: 'Lighters', amount: 3.43 },
     { description: 'Website', amount: 4.96 },
     { description: 'Stickers', amount: 25.25 },
     { description: 'T-Shirts', amount: 107.15 },
-    { description: 'Signboard Materials', amount: 15.47 },
 ],
   },
 ];
