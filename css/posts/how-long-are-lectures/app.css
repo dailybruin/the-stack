@@ -107,8 +107,9 @@ input {
 }
 
 .radial-chart {
-  margin-top: 0;
-  margin-bottom: 20%;
+  margin-top: 5%;
+  margin-left: 25%;
+  margin-bottom: 15%;
 }
 
 .para {
@@ -116,24 +117,21 @@ input {
   font-family: "Open Sans", sans-serif;
 }
 
+#scatterplot {
+  margin-left: 5%;
+}
+
+
 /* ---------------------BAR CHARTS---------------------------------------------*/
 
 .barBottom {
-  fill: #29B6F6;
-  padding-bottom: 35%;
-}
-
-.barBottom:hover {
-  fill: #01579b ;
+  margin-left: 25%;
+  margin-bottom: 20%;
 }
 
 .barTop {
-  fill: #29B6F6;
-  padding-bottom: 45%;
-}
-
-.barTop:hover {
-  fill: #01579b ;
+  margin-left: 25%;
+  margin-bottom: 20%;
 }
 
 .d3-tip {

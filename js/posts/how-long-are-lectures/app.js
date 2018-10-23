@@ -738,7 +738,7 @@ function barCharts(data) {
     .attr('class', 'd3-tip')
     .offset([-10, 0])
     .html(function(d) {
-      return "<strong>Frequency:</strong> <span style='color:red'>" + calculateValue(d) + "</span>";
+      return "<strong>Frequency:</strong> <span style='color:steelblue'>" + calculateValue(d) + "</span>";
     })
 
   var svg = d3.select("#barBottom").append("svg")
@@ -773,6 +773,7 @@ function barCharts(data) {
   svg.selectAll(".barBottom")
       .data(data_new_bottom)
     .enter().append("rect")
+      .attr("fill", "steelblue")
       .attr("class", "barBottom")
       .attr("x", function(d) { return x(d.major); })
       .attr("width", x.rangeBand())
@@ -804,7 +805,7 @@ function barCharts(data) {
     .attr('class', 'd3-tip')
     .offset([-10, 0])
     .html(function(d) {
-      return "<strong>Frequency:</strong> <span style='color:red'>" + calculateValue(d) + "</span>";
+      return "<strong>Frequency:</strong> <span style='color:steelblue'>" + calculateValue(d) + "</span>";
     })
 
   var svg = d3.select("#barTop").append("svg")
@@ -839,6 +840,7 @@ function barCharts(data) {
   svg.selectAll(".barTop")
       .data(data_new)
     .enter().append("rect")
+      .attr("fill", "steelblue")
       .attr("class", "barTop")
       .attr("x", function(d) { return x(d.major); })
       .attr("width", x.rangeBand())
