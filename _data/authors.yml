@@ -156,20 +156,20 @@ madeleine_pauker:
 rishub_kumar:
     name: Rishub Kumar
     title: Stack Developer
-    bio: Rishub is a 4th year CS major
+    bio: Kumar is a UCLA alumnus and a previous Daily Bruin staffer. 
     mug: Yes
     email: rishub@ucla.edu
 dinkar_khattar:
     name: Dinkar Khattar
     title: Stack Developer
-    bio: Dinkar is a second year CS major. He's probably the guy you see yoyo-ing and/or riding a bird down Charles E. Young Drive.
+    bio: Khattar is a third-year computer science student. He’s probably the guy you see yoyo-ing and/or riding a Bird down Charles E. Young Drive.
     mug: Yes
     email: dinkarkhattar@g.ucla.edu
     github: dkok97
 henna_dialani:
     name: Henna Dialani
     title: Stack Developer
-    bio: Henna is the 2018-2019 Stack editor and a third year Statistics major. When not working with data, she's exploring LA and its food.
+    bio: Dialani is the 2018-2019 Stack editor and a fourth-year statistics student. When not working with data, she’s exploring Los Angeles and its food.
     mug: Yes
     email: hdialani@media.ucla.edu
     github: hennadialani
@@ -185,7 +185,7 @@ nathan_smith:
 kyle_wong:
     name: Kyle Wong
     title: Stack Developer
-    bio: Kyle is a 2nd year CS major who enjoys attending hackathons.
+    bio: Kyle is a third-year computer science student who enjoys attending hackathons.
     mug: Yes
     email: kylewong@ucla.edu
     github: kylewong975
