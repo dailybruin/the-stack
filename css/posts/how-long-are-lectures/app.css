@@ -1,3 +1,20 @@
+
+@media (min-width: 300px) and (max-width: 900px) {
+  .graphs {
+    display: none;
+  }
+}
+
+@media (min-width: 1201px) {
+  .phone-text {
+    display: none;
+  }
+}
+
+.phone-text {
+  color: grey;
+}
+
 body {
   font: 14px sans-serif;
   position: relative;
@@ -131,7 +148,7 @@ input {
 
 .barTop {
   margin-left: 25%;
-  margin-bottom: 20%;
+  margin-bottom: 27%;
 }
 
 .d3-tip {

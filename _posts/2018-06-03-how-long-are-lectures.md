@@ -33,12 +33,12 @@ There were lots of data to be gathered from UCLA's Registrar website. We wanted 
 <p class="para">
 Across all departments in all schools, we found that <b>the top 20 departments</b> by lecture length ranged from <b>Art</b> to <b>Yiddish</b>, while <b>the bottom 20 departments</b> ranged from <b>Physiology</b> to <b>Life Sciences</b>. You can use the <i>interactive radial chart</i> below to visualize the departments with respect to filters such as average lecture length per day, average lecture length per week, average lecture size, and average number of lectures per week. The lecture lengths in minutes are relative to the lowest value. We also categorized departments by North and South campus, partially based on Stack's previous post on <a href="http://stack.dailybruin.com/2017/04/23/department-similarity/">departmental similarity.</a>.
 
-
-
 </p>
 
-<p class="para">
-</p><br/><br/>
+<br/>
+
+<i class="phone-text"> Graphs are not viewable on mobile devices. Check out the article on a desktop screen and be amazed. </i> <br/><br/>
+<div class = "graphs">
 
 <div class="filters1">
 <div class="typo1">Show me these quarters: <br/>
@@ -120,11 +120,15 @@ Across all departments in all schools, we found that <b>the top 20 departments</
 <h1 style="width: 30%; margin-top:1%">Top 20:</h1>
 <div id="barTop" class="barTop"></div>
 
+</div>
 
 <p class="para">
 We also looked for patterns using the <i>interactive scatterplot</i> below where you can mouse over the data points to learn more about different insights related to a particular department, such as average lecture length per day, average lecture length per week, average lecture size, and average number of lectures per week. Play around with the filters to find some trends! The first four filters manipulate the dataset, the fifth filter changes the x-axis of the scatterplot, and the sixth filter changes the y-axis of the scatterplot.
 
-</p><br/><br/>
+</p><br/>
+
+<i class="phone-text"> Graphs are not viewable on mobile devices. Check out the article on a desktop screen and be amazed. </i> <br/><br/>
+<div class = "graphs">
 
 <div class="filters3">
 
@@ -205,6 +209,8 @@ We also looked for patterns using the <i>interactive scatterplot</i> below where
 </div>
 
 <div id="scatterplot"></div>
+
+</div>
 
 <p class="para">
 Unhappy with how courses are designed? From Beth Lazazzera, Vice Chair of Undergraduate Affairs, we found that each faculty member determines the length and frequency of lectures when the course was first created and/or revised. Afterwards, the course (and its lecture lengths) must be approved by their department and the Faculty Executive Committee of their School or College. Now you know who to look for the next time you have to sit through a long seminar for a required core class that no one wants to take.
