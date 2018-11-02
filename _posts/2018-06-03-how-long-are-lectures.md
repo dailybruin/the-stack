@@ -213,5 +213,5 @@ We also looked for patterns using the <i>interactive scatterplot</i> below where
 </div>
 
 <p class="para">
-Unhappy with how courses are designed? From Beth Lazazzera, Vice Chair of Undergraduate Affairs, we found that each faculty member determines the length and frequency of lectures when the course was first created and/or revised. Afterwards, the course (and its lecture lengths) must be approved by their department and the Faculty Executive Committee of their School or College. Now you know who to look for the next time you have to sit through a long seminar for a required core class that no one wants to take.
+Wondering how courses are designed? From Beth Lazazzera, Vice Chair of Undergraduate Affairs, we found that each faculty member determines the length and frequency of lectures when the course was first created and/or revised. Afterwards, the course (and its lecture lengths) must be approved by their department and the Faculty Executive Committee of their School or College. 
 </p>
