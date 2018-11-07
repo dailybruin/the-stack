@@ -4,26 +4,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <title>{% if page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
-  <meta name="description" content="{% if page.teaser %}{{ page.teaser | strip_html }}{% else %}{{ site.meta_description }}{% endif %}"
-  />
+  <meta name="description" content="{% if page.teaser %}{{ page.teaser | strip_html }}{% else %}{{ site.meta_description }}{% endif %}" />
 
   <!-- Open Graph -->
   <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}" />
   <meta property="og:type" content="{% if page.title %}article{% else %}website{% endif %}" />
-  <meta property="og:description" content="{% if page.teaser %}{{ page.teaser | strip_html }}{% else %}{{ site.meta_description }}{% endif %}"
-  />
+  <meta property="og:description" content="{% if page.teaser %}{{ page.teaser | strip_html }}{% else %}{{ site.meta_description }}{% endif %}" />
   <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
-  <meta property="og:image" content="{% if page.og_image %}{{ site.url }}{{ site.image_url }}/{{ page.og_image }}{% else %}{{ site.url }}/img/nameplate@2x.png{% endif %}"
-  />
+  <meta property="og:image" content="{% if page.og_image %}{{ site.url }}{{ site.image_url }}/{{ page.og_image }}{% else %}{{ site.url }}/img/nameplate@2x.png{% endif %}" />
 
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}" />
-  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ " /feed.xml
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml
     " | prepend: site.baseurl | prepend: site.url }}" />
   <link rel="icon" href="/img/favicon.ico" />
 
   <!-- stylesheets -->
-  <link href="http://fonts.googleapis.com/css?family=Hind:400,300,600|Open+Sans:400,400italic,700,700italic" rel="stylesheet"
+  <link href="https://fonts.googleapis.com/css?family=Hind:400,300,600|Open+Sans:400,400italic,700,700italic" rel="stylesheet"
     type="text/css" />
-  <link href="{{ " /css/main.css " | prepend: site.baseurl }}" rel="stylesheet" /> {% for stylesheet in page.stylesheets %}
+  <link href="{{ " /css/main.css " | prepend: site.baseurl }}" rel="stylesheet" /> {% for stylesheet in
+  page.stylesheets %}
   <link href="{{ stylesheet }}" rel="stylesheet" /> {% endfor %}
 </head>
