@@ -9,7 +9,7 @@ meta_description: > # shortened description for meta description tag
   Daily Bruin’s data journalism and newsroom tech blog. We investigate public
   data, experiment with technology and apply quantitative insights to real life.
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://stack.dailybruin.com" # the base hostname & protocol for your site
+url: "https://stack.dailybruin.com" # the base hostname & protocol for your site
 image_url: /img/posts # corresponds to directory for post images (cf. https://github.com/opattison/jekyll-figure-image-tag#why-yaml-is-useful-for-storing-images)
 twitter_username: _thestack
 github_username:  dailybruin
