@@ -32,9 +32,9 @@ We hope you'll join us in this exciting data experiment, whether that be as a re
 
 If you have any feedback or questions, email us at [online@media.ucla.edu](mailto:online@media.ucla.edu).
 
-Follow us [on Twitter](https://twitter.com/_thestack/).
+Follow us [on Twitter](https://twitter.com/dailybruin/).
 
-[Write a guest post](https://docs.google.com/a/media.ucla.edu/forms/d/1LS6u4b-MZk2Vh7OKwm8oK2pdpQbWJfozc0lx-6Dj450/viewform?usp=send_form) on The Stack or apply to the [Stack](https://apply.uclastudentmedia.com/applications/daily-bruin/data-journalism-intern/fall-2018/).
+Apply to the [Stack](https://apply.uclastudentmedia.com/applications/daily-bruin/data-journalism-intern/fall-2018/).
 
 ---
 
