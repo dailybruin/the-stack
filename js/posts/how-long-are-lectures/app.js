@@ -31,8 +31,8 @@ var scatterSelections = {
 // depending on filter, render chart description and axis accordingly
 var filter_map = {
   avg_lecture_size: 'Lecture Size',
-  avg_lecture_length_day: 'Lecture Length (Minutes per Day)',
-  avg_lecture_length_week: 'Lecture Length (Minutes per Week)',
+  avg_lecture_length_day: 'Lecture Length (Minutes/Day)',
+  avg_lecture_length_week: 'Lecture Length (Minutes/Week)',
   avg_num_lectures_week: 'Number of Lectures',
 };
 
