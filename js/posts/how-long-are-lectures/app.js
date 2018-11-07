@@ -228,6 +228,24 @@ function compare(a, b) {
   return d3.ascending(a.major, b.major);
 }
 
+function hashCode(str){
+  var hash = 0;
+  if (str.length == 0) return hash;
+  for (i = 0; i < str.length; i++) {
+      char = str.charCodeAt(i);
+      hash = ((hash<<7)-hash)+char;
+      hash = hash & hash; // Convert to 32bit integer
+  }
+  return hash;
+}
+
+function color(name) {
+  var colors = ['#C9A0DC', '#BEE64B', '#EDED44', '#50BFE6', '#F79A8F', '#AAF0D1', '#FFCC33', '#BF8FCC', '#00CCCC', '#DEA681']
+  var num=Math.abs(hashCode(name));
+  num=num%colors.length;
+  return (colors[num])
+}
+
 function reload() {
   var width = 750,
     height = 750,
@@ -238,24 +256,6 @@ function reload() {
   // function hashCode(str) {
   //   return str.split('').reduce((prevHash, currVal) => (((prevHash << 5) - prevHash) + currVal.charCodeAt(0))|0, 0);
   // }
-
-  function hashCode(str){
-    var hash = 0;
-    if (str.length == 0) return hash;
-    for (i = 0; i < str.length; i++) {
-        char = str.charCodeAt(i);
-        hash = ((hash<<7)-hash)+char;
-        hash = hash & hash; // Convert to 32bit integer
-    }
-    return hash;
-  }
-
-  function color(name) {
-    var colors = ['#C9A0DC', '#BEE64B', '#EDED44', '#50BFE6', '#F79A8F', '#AAF0D1', '#FFCC33', '#BF8FCC', '#00CCCC', '#DEA681']
-    var num=Math.abs(hashCode(name));
-    num=num%colors.length;
-    return (colors[num])
-  }
 
   var svg = d3
     .select('#radial-chart')
@@ -770,7 +770,7 @@ function barCharts(data) {
   svg.selectAll(".barBottom")
       .data(data_new_bottom)
     .enter().append("rect")
-      .attr("fill", "steelblue")
+      .attr("fill", "#004e79")
       .attr("class", "barBottom")
       .attr("x", function(d) { return x(d.major); })
       .attr("width", x.rangeBand())
@@ -837,7 +837,7 @@ function barCharts(data) {
   svg.selectAll(".barTop")
       .data(data_new)
     .enter().append("rect")
-      .attr("fill", "steelblue")
+      .attr("fill", "#004e79")
       .attr("class", "barTop")
       .attr("x", function(d) { return x(d.major); })
       .attr("width", x.rangeBand())
