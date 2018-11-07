@@ -1,5 +1,16 @@
 var sorted = false;
 
+const schools_used = [
+    'David Geffen School of Medicine',
+    'Fielding School of Public Health',
+    'Luskin School of Public Affairs',
+    'School of Education and Information Studies',
+    'School of Engineering and Applied Science',
+    'School of Theater, Film and Television',
+    'School of the Arts and Architecture',
+    'The College of Letters and Science',
+  ]
+
 var radialSelections = {
   selected_quarter: 'all',
   selected_div: 'all',
@@ -67,18 +78,11 @@ function calculateValue(d, chart) {
   schools =
     selected_school === 'all'
       ? [
-          'Anderson School of Management',
           'David Geffen School of Medicine',
           'Fielding School of Public Health',
-          'Graduate Division',
-          'Herb Alpert School of Music',
-          'Life Sciences',
           'Luskin School of Public Affairs',
-          'School of Dentistry',
           'School of Education and Information Studies',
           'School of Engineering and Applied Science',
-          'School of Law',
-          'School of Nursing',
           'School of Theater, Film and Television',
           'School of the Arts and Architecture',
           'The College of Letters and Science',
@@ -123,18 +127,11 @@ function calculateAverage(d) {
   schools =
     selected_school === 'all'
       ? [
-          'Anderson School of Management',
           'David Geffen School of Medicine',
           'Fielding School of Public Health',
-          'Graduate Division',
-          'Herb Alpert School of Music',
-          'Life Sciences',
           'Luskin School of Public Affairs',
-          'School of Dentistry',
           'School of Education and Information Studies',
           'School of Engineering and Applied Science',
-          'School of Law',
-          'School of Nursing',
           'School of Theater, Film and Television',
           'School of the Arts and Architecture',
           'The College of Letters and Science',
@@ -194,18 +191,12 @@ function filterScatter(d, filter) {
   schools =
     selected_school === 'all'
       ? [
-          'Anderson School of Management',
           'David Geffen School of Medicine',
           'Fielding School of Public Health',
-          'Graduate Division',
-          'Herb Alpert School of Music',
           'Life Sciences',
           'Luskin School of Public Affairs',
-          'School of Dentistry',
           'School of Education and Information Studies',
           'School of Engineering and Applied Science',
-          'School of Law',
-          'School of Nursing',
           'School of Theater, Film and Television',
           'School of the Arts and Architecture',
           'The College of Letters and Science',
@@ -680,7 +671,9 @@ function makeVis(data) {
       );
     }) // 600px wide, adjust data point to corresponding y-axis value
     .style('fill', function(d) {
-      return colorScale(d.School);
+      if (schools_used.includes(d.School)) {
+        return colorScale(d.School);
+      }
     })
     .style('display', function(d) {
       var valx = filterScatter(d, 1);
@@ -710,7 +703,11 @@ function makeVis(data) {
   legend.append('text')
     .attr('x', 12)
     .attr('y', 8)
-    .text(function(d) { return d; });
+    .text(function(d) {
+      if (schools_used.includes(d)) {
+        return d;
+      }
+    });
 }
 
 function barCharts(data) {
