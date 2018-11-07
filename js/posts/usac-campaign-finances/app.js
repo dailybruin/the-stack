@@ -5,8 +5,8 @@ ctx.height = 300;
 
 const purchaseCategories = [
   'T-Shirts',
-  'Flyers',
-  'Signboard',
+  'Flyer Expenses',
+  'Signboard Expenses',
   'Credit Card Holders',
   'Website',
   'Bottle Openers',
@@ -15,6 +15,14 @@ const purchaseCategories = [
   'Single Use Coffee Cups',
   'Candidate Clothing',
   'Mood Cups',
+  'Postcards',
+  'Blue Books',
+  'Facebook Promotions',
+  'Lighters',
+  'Coffee',
+  'Poster',
+  'Shipping',
+  'Fire Plushie',
 ];
 
 const colors = [
@@ -29,6 +37,14 @@ const colors = [
   '#cab2d6',
   '#6a3d9a',
   '#ffff99',
+  '#838D36',
+  '#5F8842',
+  '#3E8151',
+  '#1E785F',
+  '#076D6A',
+  '#1A616D',
+  '#31546A',
+  '#424660',
 ];
 
 const barOptions = {

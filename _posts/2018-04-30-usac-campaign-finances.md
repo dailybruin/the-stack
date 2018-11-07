@@ -6,6 +6,7 @@ featured_image:
 og_image: usac-campaign-finances/visualization.png
 authors:
   - nathan_smith
+  - henna_dialani
 scripts:
   - //cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js
   - /datasets/usac-campaign-finances/data.js
@@ -27,6 +28,18 @@ Only two candidates – independent candidate Jamie Kennerk running for external
 Bruins United was the only slate to use campaign money to promote the slate. No candidate from Leaders Influencing Tomorrow or For the People reported raising any money. Sokoler reported raising $300 but did not note any of his expenditures as slate expenditures.
 
 The second and final deadline for candidates to turn in their expense accounts was midnight Sunday. The Stack will update this post when information from those accounts becomes available.
+
+This post was updated October 28 at 10pm. 
+
+After the second and final expense reporting deadline on April 29, an additional 13 candidates reported their expenses, including all the 7 slate members of Leaders Influencing Tomorrow. The 31 candidates spent an additional $6215.75, bringing the total amount spent by candidates to $13170.14 in the Spring 2018 elections. Common expenditures included additional signboard expenses and paid Facebook promotions. 
+
+Candidates other than Andrew Sokoler became creative with their spending. Ayesha Haleem, a candidate for general representative, spent $32 on blue books to attach to her flyers in order to making them more enticing to students to take her flyers.
+
+Julia Ho-Gonzalez, a candidate for facilities commissioner, spent $30 on a fire plushie. Both candidates were elected to office as general representative 1 and facilities commissioner respectively. The Stack has yet to see if their offices will carry on this legacy of spending.
+
+This was also the first year the Election Board [reimbursed candidates](https://dailybruin.com/2018/05/20/usac-candidates-say-campaigns-mostly-unchanged-even-with-reimbursements/). All 39 candidates, regardless of if they won, were reimbursed up to $107.14 for their campaign expenses. 
+
+
 
 <div>
   <select name="position" id="positions">
