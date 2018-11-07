@@ -1,6 +1,6 @@
 ---
 title: How Long Are Lectures?
-teaser: How Long/Large Are Your Lectures?
+teaser: Length of lectures per day, number of lectures per week, and other comparisons among all departments
 featured_image:
     url: how-long-are-lectures/radial-graph.png
 og_image: how-long-are-lectures/radial-graph.png
