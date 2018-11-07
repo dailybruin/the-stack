@@ -1,6 +1,6 @@
 ---
 title: How Long Are Lectures?
-teaser: How Long/Large Are Your Lectures?
+teaser: Length of lectures per day, number of lectures per week, and other comparisons among all departments
 featured_image:
     url: how-long-are-lectures/radial-graph.png
 og_image: how-long-are-lectures/radial-graph.png
@@ -31,7 +31,7 @@ There were lots of data to be gathered from UCLA's Registrar website. We wanted 
 </p>
 
 <p class="para">
-Across all departments in all schools, we found that <b>the top 20 departments</b> by lecture length ranged from <b>Art</b> to <b>Yiddish</b>, while <b>the bottom 20 departments</b> ranged from <b>Physiology</b> to <b>Life Sciences</b>. You can use the <i>interactive radial chart</i> below to visualize the departments with respect to filters such as average lecture length per day, average lecture length per week, average lecture size, and average number of lectures per week. The lecture lengths in minutes are relative to the lowest value. We also categorized departments by North and South campus, partially based on Stack's previous post on <a href="http://stack.dailybruin.com/2017/04/23/department-similarity/">departmental similarity.</a>.
+Across all departments in all schools, we found that <b>the top 20 departments</b> by lecture length ranged from <b>Art</b> to <b>Yiddish</b>, while <b>the bottom 20 departments</b> ranged from <b>Physiology</b> to <b>Life Sciences</b>. You can use the <i>interactive radial chart</i> below to visualize the departments with respect to filters such as average lecture length per day, average lecture length per week, average lecture size, and average number of lectures per week. The lecture lengths in minutes are relative to the lowest value. We also categorized departments by North and South campus, partially based on Stack's previous post on <a href="http://stack.dailybruin.com/2017/04/23/department-similarity/">departmental similarity</a>.
 
 </p>
 
