@@ -31,8 +31,8 @@ var scatterSelections = {
 // depending on filter, render chart description and axis accordingly
 var filter_map = {
   avg_lecture_size: 'Lecture Size',
-  avg_lecture_length_day: 'Lecture Length (Day)',
-  avg_lecture_length_week: 'Lecture Length (Week)',
+  avg_lecture_length_day: 'Lecture Length (Minutes per Day)',
+  avg_lecture_length_week: 'Lecture Length (Minutes per Week)',
   avg_num_lectures_week: 'Number of Lectures',
 };
 
@@ -308,7 +308,7 @@ function reload() {
           avg_num_lectures_week: 0,
         },
       },
-      major: 'Partayyy',
+      major: '',
       Fall: {
         Upper: {
           avg_lecture_size: 0,
@@ -622,7 +622,7 @@ function makeVis(data) {
     var html =
       "<div class='tooltip-box' style='background-color: " +
       color +
-      ";'> Major: " +
+      ";'> Department: " +
       d.major +
       '<br/>' +
       x_label +
