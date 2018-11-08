@@ -153,26 +153,6 @@ madeleine_pauker:
     bio: Pauker is the managing editor of the Daily Bruin and a third-year world arts and cultures student. She recorded data from 365 days of crime logs to create this post.
     mug: Yes
     email: mpauker@media.ucla.edu
-rishub_kumar:
-    name: Rishub Kumar
-    title: Stack Developer
-    bio: Kumar is a UCLA alumnus and a previous Daily Bruin staffer. 
-    mug: Yes
-    email: rkumar1@media.ucla.edu
-dinkar_khattar:
-    name: Dinkar Khattar
-    title: Stack Developer
-    bio: Khattar is a third-year computer science student. He’s probably the guy you see yoyo-ing and/or riding a Bird down Charles E. Young Drive.
-    mug: Yes
-    email: dkhattar@media.ucla.edu
-    github: dkok97
-henna_dialani:
-    name: Henna Dialani
-    title: Stack Developer
-    bio: Dialani is the 2018-2019 Stack editor and a fourth-year statistics student. When not working with data, she’s exploring Los Angeles and its food.
-    mug: Yes
-    email: hdialani@media.ucla.edu
-    github: hennadialani
 nathan_smith:
     name: Nathan Smith
     title: Assistant Online Editor
@@ -181,12 +161,4 @@ nathan_smith:
     email: nsmith@media.ucla.edu
     github: nathunsmitty
     twitter: nathunsmitty
-    website: http://nathansmith.io
-kyle_wong:
-    name: Kyle Wong
-    title: Stack Developer
-    bio: Wong is a third-year computer science student who enjoys attending hackathons.
-    mug: Yes
-    email: kwong@media.ucla.edu
-    github: kylewong975
-    website: http://kylewong.me
+    website: https://nathansmith.io
