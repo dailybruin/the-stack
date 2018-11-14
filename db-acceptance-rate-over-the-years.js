@@ -1,15 +1,4 @@
-<!doctype html>
-<html>
-  <head>
-    <meta charset='UTF-8'/>
-    <title>Daily Bruin Acceptance Rate from 2016-18</title>
-    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-  </head>
-  <body>
-    <h4>Double Click on the tags in the legend to view specific lines, and Single Click to delete/add lines.</h4>
-    <div id="myDiv"></div>
-     <div id="hover-info" style="margin-left: 80px;"></div> 
-    <script>
+
       var myPlot = document.getElementById('myDiv'),
           hoverInfo = document.getElementById('hover-info');
         var data = [{ 
@@ -215,7 +204,3 @@
         .on('plotly_unhover', function(data){
             hoverInfo.innerHTML = '';
         }); 
-
-    </script>
-  </body>
-</html>
