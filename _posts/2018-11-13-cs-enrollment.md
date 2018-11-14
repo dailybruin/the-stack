@@ -18,13 +18,19 @@
     - /css/posts/research-funding/app.css
     scripts: 
     - /js/posts/cs-enrollment/ratio-linechart.js
+    - //cdn.plot.ly/plotly-latest.min.js
+    - //cdn.plot.ly/plotly-latest.min.js
 ---
-text text text text introduce the article and what we're goin gto be talking about
+text text text text introduce the article and what we're going to be talking about
 
-##subtitle 
+## hello
 text text 
-<div id='ratio-chart'>
-<script src="/js/posts/cs-enrollment/ratio-linechart.js"></script>
+
+<div id="tester-wrapper"> 
+    <select style="width:600px;height:250px;" id='tester'></div>
+
+## hi world
+
 
 <div id="div1"></div>
 <div id="div2"></div>
