@@ -21,9 +21,11 @@
 ---
 text text text text introduce the article and what we're goin gto be talking about
 
-###subtitle 
+##subtitle 
 text text 
-<div id='line-chart-wrapper'>
+<div id='ratio-chart'>
 <script src="/js/posts/cs-enrollment/ratio-linechart.js"></script>
-    
+
+<div id="div1"></div>
+<div id="div2"></div>
     
