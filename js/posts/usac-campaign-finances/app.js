@@ -31,7 +31,7 @@ const colors = [
   '#b2df8a',
   '#33a02c',
   '#fb9a99',
-  '#e31a1c',
+  '#424660',
   '#fdbf6f',
   '#ff7f00',
   '#cab2d6',
@@ -44,7 +44,7 @@ const colors = [
   '#076D6A',
   '#1A616D',
   '#31546A',
-  '#424660',
+  '#e31a1c',
 ];
 
 const barOptions = {
