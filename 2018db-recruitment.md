@@ -1,8 +1,9 @@
 ---
-title: 
-teaser:
-featured_image:
-og_image:
+title: Analysis of the Daily Bruin's 2018 Interns
+teaser: Find out how competitive each section was and the years and majors of their interns
+featured_image: 
+  url: ../img/featuredimage.png
+og_image: ../img/featuredimage.png
 authors:
   - Alexander Chan
   - Andrew Kan
