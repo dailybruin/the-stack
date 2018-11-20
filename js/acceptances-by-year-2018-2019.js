@@ -17,6 +17,6 @@
 		  showlegend: false
 		};
 
-		Plotly.newPlot('myDiv', data, layout);
+		Plotly.newPlot('myDiv', data, layout,{displayModeBar: false});
 
 
