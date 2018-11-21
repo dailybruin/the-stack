@@ -1,16 +1,18 @@
- ---
+---
 title: Analysis of the Daily Bruin's 2018 Interns
 teaser: Find out how competitive each section was and the years and majors of their interns
-featured_image: 
-  url: 2018db-recruitment/img/featuredimage.png
-og_image: 2018db-recruitment/img/featuredimage.png
 authors:
-  - Alexander Chan
-  - Andrew Kan
-  - Saachi Kudtarkar
+    - Alexander Chan
+    - andrew_kan
+    - saachi_kudtarkar
+key_takeaways:
+    - yolo
+featured_image:
+    url: 2018db-recruitment/featuredimage.png
+og_image: 2018db-recruitment/featuredimage.png
 scripts:
-  - /js/posts/2018db-recruitment/acceptances-by-year-2018-2019.js
-  - /js/posts/2018db-recruitment/db-acceptance-rate-over-the-years.js
+    - /js/posts/2018db-recruitment/acceptances-by-year-2018-2019.js
+    - /js/posts/2018db-recruitment/db-acceptance-rate-over-the-years.js
 ---
 
 <p class = "para">
