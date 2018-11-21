@@ -8,7 +8,6 @@ authors:
   - Alexander Chan
   - Andrew Kan
   - Saachi Kudtarkar
-stylesheets:
 scripts:
   - /js/posts/2018db-recruitment/acceptances-by-year-2018-2019.js
   - /js/posts/2018db-recruitment/db-acceptance-rate-over-the-years.js
