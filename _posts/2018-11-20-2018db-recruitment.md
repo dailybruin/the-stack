@@ -6,7 +6,9 @@ authors:
     - andrew_kan
     - saachi_kudtarkar
 key_takeaways:
-    - yolo
+    - Overall statistics were similar to last year
+    - Online cut its interns hired, but Graphics, News, and Opinion grew
+    - Half of the interns are first years and all interns come from a diverse range of majors
 featured_image:
     url: 2018db-recruitment/featuredimage.png
 og_image: 2018db-recruitment/featuredimage.png
