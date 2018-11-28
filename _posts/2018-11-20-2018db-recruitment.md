@@ -72,16 +72,18 @@ Though second and third year students were well represented in certain sections,
 
 <p class = "para">
 Daily Bruin's incoming class represents a total of 74 undergraduate and graduate majors. The most diverse section is News, with 23 majors represented. The least diverse sections is Online, with 7 majors represented. 
-(Note:double majors are counted uniquely as a major.)
+(Note: double majors are counted uniquely as a major.)
 </p>
 
 <p class ="para">
-In some sections, a single major comprises the significant plurality of the secion. For example, 40% of the 15 Arts section new-hires are English majors, and interestingly, 33% of the 12 Illustrations section new-hires are Psychology majors. Computer Science and Computer Science & Engineering majors comprise 35% and 29%, respectively, of new-hires. 
+In some sections, a single major comprises the significant plurality of the secion. For example, 40% of the 15 Arts section new-hires are English majors, and interestingly, 33% of the 12 Illustrations section new-hires are Psychology majors. Computer Science and Computer Science & Engineering majors comprise 35% and 29%, respectively, of Online section new-hires. 
 </p>
 
 <p class="para">
 Over all sections of the Daily Bruin, English, Psychology, and Economics majors represent the plurality of the incoming class.  
 </p>
+
+<br/>
 
 <p class = "para">
 Even though the stats and process may seem daunting, new and returning applicants should not be afraid to apply in the future. The Daily Bruin offers its staff countless opportunities to express their journalistic side, whether it be through reporting breaking news, designing stunning illustrations, or creating blog posts. The experience is well worth the application.
