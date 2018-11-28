@@ -6,7 +6,7 @@
       name: 'First Years',
       type: 'bar',
       marker: {
-        color: 'rgb(255, 128, 255)'
+        color: '#32A287'
       },
       text: ['First Years: 8', 'First Years: 6', 'First Years: 12', 'First Years: 9', 'First Years: 1', 'First Years: 4',
       'First Years: 15', 'First Years: 8', 'First Years: 14', 'First Years: 11', 'First Years: 10', 'First Years: 7'
@@ -20,7 +20,7 @@
       name: 'Second Years',
       type: 'bar',
       marker: {
-        color: 'rgb(255, 153, 0)'
+        color: '#ADA8B6'
       },
       text: ['Second Years: 2', 'Second Years: 0', 'Second Years: 4', 'Second Years: 1', 'Second Years: 4', 'Second Years: 4',
       'Second Years: 6', 'Second Years: 1', 'Second Years: 3', 'Second Years: 0', 'Second Years: 2', 'Second Years: 11'
@@ -34,7 +34,7 @@
       name: 'Third Years',
       type: 'bar',
       marker: {
-        color: 'rgb(51, 204, 51)'
+        color: '#FFEEDB'
       },
       text: ['Third Years: 3', 'Third Years: 3', 'Third Years: 2', 'Third Years: 0', 'Third Years: 3', 'Third Years: 3',
       'Third Years: 7', 'Third Years: 6', 'Third Years: 5', 'Third Years: 4', 'Third Years: 3', 'Third Years: 3'
@@ -48,7 +48,7 @@
       name: 'Fourth Years',
       type: 'bar',
       marker: {
-        color: 'rgb(51, 153, 255)'
+        color: '#4C3B4D'
       },
       text: ['Fourth Years: 0', 'Fourth Years: 0', 'Fourth Years: 1', 'Fourth Years: 0', 'Fourth Years: 1', 'Fourth Years: 1',
             'Fourth Years: 5', 'Fourth Years: 1', 'Fourth Years: 0', 'Fourth Years: 0', 'Fourth Years: 2', 'Fourth Years: 4'
@@ -62,7 +62,7 @@
       name: 'Graduate Students',
       type: 'bar',
       marker: {
-        color: 'rgb(153, 51, 255)'
+        color: '#A53860'
       },
       text: ['Graduate Students: 2', 'Graduate Students: 0', 'Graduate Students: 0', 'Graduate Students: 0', 'Graduate Students: 0', 'Graduate Students: 0',
             'Graduate Students: 2', 'Graduate Students: 1', 'Graduate Students: 0', 'Graduate Students: 0', 'Graduate Students: 1', 'Graduate Students: 0'

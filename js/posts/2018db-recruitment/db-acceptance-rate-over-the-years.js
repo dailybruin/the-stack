@@ -70,7 +70,7 @@ var data = [{
     width: 3
   },
   marker: {
-    color: '#32A287'
+    color: '#F2C14E'
   }
 }, {
   x: ['Fall 2016', 'Fall 2017', 'Fall 2018'],
@@ -246,7 +246,7 @@ var data = [{
     width: 3
   },
   marker: {
-    color: '#C4D6B0'
+    color: '#4D9078'
   }
 },];
 
