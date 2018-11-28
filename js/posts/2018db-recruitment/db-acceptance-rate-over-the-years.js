@@ -255,14 +255,14 @@ var layout = {
   paper_bgcolor: 'rgba(0,0,0,0)',
   plot_bgcolor: 'rgba(0,0,0,0)',
   width: 1000,
-  title: 'Daily Bruin Acceptance Rate Over the Years',
+  title: 'Acceptance Rates from 2016-18',
   yaxis: {
     title: 'Percent (%)',
     showline: true,
     range: [0, 105] /* 105 so that it shows the 100 points */
   },
   xaxis: {
-    title: 'Quarter',
+    title: 'Year',
     showline: false
   },
   showlegend: true,
