@@ -1,21 +1,65 @@
-var data = [{
-  values: [105, 39, 41, 15, 7],
-  labels: ['First Year Students (Total): 105<br><br>Arts: 8<br>Blogging: 6<br>Copy: 12<br>Design: 9<br>Graphics: 1<br>Illustrations: 4<br>News: 15<br>Online: 8<br>Opinion: 14<br>Photo: 11<br>Sports: 10<br>Video: 7<br>',
-    'Second Year Students (Total): 39<br><br>Arts: 2<br>Blogging: 0<br>Copy: 4<br>Design: 1<br>Graphics: 4<br>Illustrations: 4<br>News: 6<br>Online: 1<br>Opinion: 4<br>Photo: 0<br>Sports: 2<br>Video: 11<br>',
-    'Third Year Students (Total): 41<br><br>Arts: 3<br>Blogging: 3<br>Copy: 2<br>Design: 0<br>Graphics: 3<br>Illustrations: 3<br>News: 7<br>Online: 6<br>Opinion: 6<br>Photo: 4<br>Sports: 3<br>Video: 3<br>',
-    'Fourth Year Students (Total): 15<br><br>Arts: 0<br>Blogging: 0<br>Copy: 1<br>Design: 0<br>Graphics: 1<br>Illustrations: 1<br>News: 5<br>Online: 1<br>Opinion: 0<br>Photo: 0<br>Sports: 2<br>Video: 4<br>',
-    'Graduate Students (Total): 7<br><br>Arts: 2<br>Blogging: 0<br>Copy: 0<br>Design: 0<br>Graphics: 0<br>Illustrations: 0<br>News: 2<br>Online: 1<br>Opinion: 0<br>Photo: 0<br>Sports: 1<br>Video: 1<br>'
-  ],
-  hoverinfo: 'label+percent',
-  type: 'pie'
-}];
 
-var layout = {
-  title: 'Breakdown by Year, Acceptances 2018-2019',
-  height: 600,
-  width: 1200,
-  showlegend: false
-};
+
+    var trace1 = {
+      x: ['Arts', 'Blogging', 'Copy', 'Design', 'Graphics', 'Illustrations', 'News', 'Online', 'Opinion', 'Photo', 'Sports', 'Video'],
+      y: [8, 6, 12, 9, 1, 4, 15, 8, 14, 11, 10, 7],
+      name: 'First Years',
+      type: 'bar', 
+      marker: {
+        color: 'rgb(255, 128, 255)'
+      }
+    };
+
+    var trace2 = {
+      x: ['Arts', 'Blogging', 'Copy', 'Design', 'Graphics', 'Illustrations', 'News', 'Online', 'Opinion', 'Photo', 'Sports', 'Video'],
+      y: [2, 0, 4, 1, 4, 4, 6, 1, 3, 0, 2, 11],
+      name: 'Second Years',
+      type: 'bar',
+      marker: {
+        color: 'rgb(255, 153, 0)'
+      }
+    };
+
+    var trace3 = {
+      x: ['Arts', 'Blogging', 'Copy', 'Design', 'Graphics', 'Illustrations', 'News', 'Online', 'Opinion', 'Photo', 'Sports', 'Video'],
+      y: [3, 3, 2, 0, 3, 3, 7, 6, 5, 4, 3, 3],
+      name: 'Third Years',
+      type: 'bar',
+      marker: {
+        color: 'rgb(51, 204, 51)'
+      }
+    };
+
+    var trace4 = {
+      x: ['Arts', 'Blogging', 'Copy', 'Design', 'Graphics', 'Illustrations', 'News', 'Online', 'Opinion', 'Photo', 'Sports', 'Video'],
+      y: [0, 0, 1, 0, 1, 1, 5, 1, 0, 0, 2, 4],
+      name: 'Fourth Years',
+      type: 'bar',
+      marker: {
+        color: 'rgb(51, 153, 255)'
+      }
+    };
+
+    var trace5 = {
+      x: ['Arts', 'Blogging', 'Copy', 'Design', 'Graphics', 'Illustrations', 'News', 'Online', 'Opinion', 'Photo', 'Sports', 'Video'],
+      y: [2, 0, 0, 0, 0, 0, 2, 1, 0, 0, 1, 0],
+      name: 'Graduate Students',
+      type: 'bar',
+      marker: {
+        color: 'rgb(153, 51, 255)'
+      }
+    };
+
+    var data = [trace1, trace2, trace3, trace4, trace5];
+    var layout = {
+      barmode: 'stack', 
+      title: '2018 Acceptances by Age Group'
+
+    };
+
+
+
+
 
 Plotly.newPlot('acceptance-rate-by-year-graph', data, layout, {
   displayModeBar: false
