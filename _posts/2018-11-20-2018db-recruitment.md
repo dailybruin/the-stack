@@ -30,6 +30,11 @@ The application process itself spans the course of two weeks. First, prospective
 
 <div id="acceptance-rate-years-graph" align="center"></div>
 <div id="acceptance-rate-years-hover-info" style="margin-left: 80px;"></div>
+<p class = "para" align="center"><strong>
+*Double click on a section to view just its line or go back to all the sections. Single click on a section to add or remove its line from the graph.
+</strong></p>
+
+<br>
 
 <p class = "para">
 The application process remains ever competitive. This year boasted a 43 percent overall acceptance rate, comparable to last year’s 42 percent but still a drop to 2016’s 50 percent. The number of applied and accepted interns remained fairly constant; 209 out of 490 interns were accepted this year versus 206 out of 488 interns who were accepted last year.
