@@ -31,9 +31,14 @@ text text text text introduce the article and what we're going to be talking abo
 Below you can see how the amount of faculty within the Computer Science department has changed relative to the faculty in the overall School of Engineering. 
 
 <div>
-<a href="https://plot.ly/~MattieSanseverino/3/?share_key=AhGyoJp7qBmCF4HOXtbMGT" target="_blank" title="Plot 3" style="display: block; text-align: center;"><img src="https://plot.ly/~MattieSanseverino/3.png?share_key=AhGyoJp7qBmCF4HOXtbMGT" alt="Plot 3" style="max-width: 100%;width: 600px;"  width="600" height="500" onerror="this.onerror=null;this.src='https://plot.ly/404.png';" /></a>
-<script data-plotly="MattieSanseverino:3" sharekey-plotly="AhGyoJp7qBmCF4HOXtbMGT" src="https://plot.ly/embed.js" async></script>
+<a href="https://plot.ly/~MattieSanseverino/5/?share_key=3JyeDJ470xGsvNpg522Qno" target="_blank" title="Plot 5" style="display: block; text-align: center;"><img src="https://plot.ly/~MattieSanseverino/5.png?share_key=3JyeDJ470xGsvNpg522Qno" alt="Plot 5" style="max-width: 100%;width: 600px;"  width="600" onerror="this.onerror=null;this.src='https://plot.ly/404.png';" /></a>
+<script data-plotly="MattieSanseverino:5" sharekey-plotly="3JyeDJ470xGsvNpg522Qno" src="https://plot.ly/embed.js" async></script>
 </div>
+<div>
+<a href="https://plot.ly/~MattieSanseverino/7/?share_key=4Of6oJPZ6ITegIGW4UsABd" target="_blank" title="Plot 7" style="display: block; text-align: center;"><img src="https://plot.ly/~MattieSanseverino/7.png?share_key=4Of6oJPZ6ITegIGW4UsABd" alt="Plot 7" style="max-width: 100%;width: 600px;"  width="600" onerror="this.onerror=null;this.src='https://plot.ly/404.png';" /></a>
+<script data-plotly="MattieSanseverino:7" sharekey-plotly="4Of6oJPZ6ITegIGW4UsABd" src="https://plot.ly/embed.js" async></script>
+</div>
+
 
 
 
