@@ -25,7 +25,7 @@ The start of each school year brings new beginnings for the Daily Bruin as its a
 </p>
 
 <p class = "para">
-The application process itself spans the course of two? weeks. First, prospective interns fill out an application online, which typically involves a resume drop and responses to short answer questions. The editors then select a subset of the applicants to interview in person. Once the interns have been chosen, they undergo training that spans the rest of the quarter.
+The application process itself spans the course of two weeks. First, prospective interns fill out an application online, which typically involves a resume drop and responses to short answer questions. The editors then select a subset of the applicants to interview in person. Once the interns have been chosen, they undergo training that spans the rest of the quarter.
 </p>
 
 <div id="acceptance-rate-years-graph" align="center"></div>
@@ -36,11 +36,11 @@ The application process remains ever competitive. This year boasted a 43 percent
 </p>
 
 <p class = "para">
-Online (including the Stack), the most-applied-to section at 132 applications, became intensely more harsh with its applicants this year. Not only does the section continue to have double the applicants of other major sections, it also halved its accepted interns this year to 17. This resulted in the section this year having a stark 13 percent acceptance rate.
+Online (including the Stack), the most-applied-to section at 132 applications, became even more competitive with its applicants this year. Not only does the section continue to have double the applicants of other major sections, but it also halved its accepted interns this year to 17. This resulted in the section this year having a stark 13 percent acceptance rate.
 </p>
 
 <p class = "para">
-Not all was woe for this year’s applicants however. Graphics has a major boost in intern power, increasing its intern size from five the past two years to nine this year. News will also experience growth changes. While the number of applicants nearly doubled from last year, it also took 50 percent more interns. Opinion is the last of the growing trio, jumping from 11 interns in 2017 to 24 this year.
+Not all was woe for this year’s applicants however. Graphics has a major boost in intern power, increasing its intern size from five the past two years to nine this year. News also experienced growth changes; While the number of applicants nearly doubled from last year, it also took 50 percent more interns. Opinion is the last of the growing trio, jumping from 11 interns in 2017 to 24 this year.
 </p>
 
 <div id="acceptance-rate-by-year-graph" align="center"></div>
