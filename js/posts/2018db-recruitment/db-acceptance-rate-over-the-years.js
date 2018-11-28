@@ -268,8 +268,7 @@ var layout = {
   showlegend: true,
   legend: {
     traceorder: 'normal',
-    borderwidth: 3,
-    bgcolor: '#9BD1E5',
+    borderwidth: 1.5,
     bordercolor: '#6A8EAE',
     x: -0.27,
     /* position of legend is lower left */
