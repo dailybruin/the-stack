@@ -156,7 +156,7 @@ madeleine_pauker:
 rishub_kumar:
     name: Rishub Kumar
     title: Stack Developer
-    bio: Kumar is a UCLA alumnus and a previous Daily Bruin staffer. 
+    bio: Kumar is a UCLA alumnus and a previous Daily Bruin staffer.
     mug: Yes
     email: rkumar1@media.ucla.edu
 dinkar_khattar:
@@ -190,6 +190,12 @@ kyle_wong:
     email: kwong@media.ucla.edu
     github: kylewong975
     website: http://kylewong.me
+alexander_chan:
+    name: Alexander Chan
+    bio: Alex is a graduate student in the Statistics Department. He likes stats, a lot. Previously, a software engineering intern at Amazon AWS, American Express, and data science intern at a start-up in France.
+    mug: Yes
+    email: achan@media.ucla.edu
+    github: alexander-chan
 andrew_kan:
     name: Andrew Kan
     title: Stack Developer
@@ -198,13 +204,9 @@ andrew_kan:
     email: akan@media.ucla.edu
     github: kandrewz
 saachi_kudtarkar:
-    name: Saachi Kudtarkar 
+    name: Saachi Kudtarkar
     title: Stack Developer
-    bio: 
-    mug: No 
-    email: skudtarkar@media.ucla.edu 
-    github: saachinator 
-alexander_chan:
-    name: Alexander Chan
-    title: Stack Developer
-    bio: Hi I'm Alex
+    bio:
+    mug: No
+    email: skudtarkar@media.ucla.edu
+    github: saachinator
