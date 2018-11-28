@@ -252,6 +252,8 @@ var data = [{
 
 var layout = {
   /* background color */
+  paper_bgcolor: 'rgba(0,0,0,0)',
+  plot_bgcolor: 'rgba(0,0,0,0)',
   width: 1000,
   title: 'Daily Bruin Acceptance Rate Over the Years',
   yaxis: {

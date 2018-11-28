@@ -4,7 +4,7 @@
       x: ['Arts', 'Blogging', 'Copy', 'Design', 'Graphics', 'Illustrations', 'News', 'Online', 'Opinion', 'Photo', 'Sports', 'Video'],
       y: [8, 6, 12, 9, 1, 4, 15, 8, 14, 11, 10, 7],
       name: 'First Years',
-      type: 'bar', 
+      type: 'bar',
       marker: {
         color: 'rgb(255, 128, 255)'
       }
@@ -52,7 +52,9 @@
 
     var data = [trace1, trace2, trace3, trace4, trace5];
     var layout = {
-      barmode: 'stack', 
+      paper_bgcolor: 'rgba(0,0,0,0)',
+      plot_bgcolor: 'rgba(0,0,0,0)',
+      barmode: 'stack',
       title: '2018 Acceptances by Age Group'
 
     };
