@@ -64,7 +64,6 @@ Though second and third year students were well represented in certain sections,
 
 <div id="majors-graph"></div>
 /* INSERT MAJORS HIRED GRAPH HERE */
-
 <p class = "para">
 Even though the stats and process may seem daunting, new and returning applicants should not be afraid to apply in the future. The Daily Bruin offers its staff countless opportunities to express their journalistic side, whether it be through reporting breaking news, designing stunning illustrations, or creating blog posts. The experience is well worth the application.
 </p>
