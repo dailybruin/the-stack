@@ -49,6 +49,11 @@ Not all was woe for this year’s applicants, however. Graphics has a major boos
 </p>
 
 <div id="acceptance-rate-by-year-graph" align="center"></div>
+<p class = "para" align="center"><strong>
+*Double-click on the legend to view specific age groups or go back to the original graph. Single-click on a section to add or remove its bar from the graph.
+</strong></p>
+
+<br>
 
 <p class = "para">
 This year, first year students comprised the majority of the incoming Daily Bruin intern class, at a total of 51%. They dominated the Photo and Design intern classes, comprising 73% and 90% of each class, respectively. Furthermore, nearly seven times more freshmen were admitted than seniors.
