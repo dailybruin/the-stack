@@ -12,18 +12,17 @@
     url: research-funding/graph.png
     og_image: research-funding/graph.png
     stylesheets: 
-    - //cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.6/semantic.min.css
-    - //cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/components/dropdown.min.css
-    - /css/posts/water-polo-2016/util.css
-    - /css/posts/research-funding/app.css
+    - /css/posts/cs-course-enrollment/tiles.css
+    - /css/posts/cs-course-enrollment/reset.css
     scripts: 
     - /js/posts/cs-enrollment/ratio-linechart.js
     - /js/posts/cs-enrollment/bar_graph.js
     - //cdn.plot.ly/plotly-latest.min.js
     - //cdn.plot.ly/plotly-latest.min.js
-    - //ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js
-    - //cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js
-    - //cdnjs.cloudflare.com/ajax/libs/c3/0.4.10/c3.min.js
+    - //d3js.org/d3.v5.min.js
+    - //use.typekit.com/dkx5efl.js
+    - /js/posts/cs-enrollment/tiles.js
+    - /js/posts/cs-enrollment/jquery-3.3.1.min.js
 ---
 text text text text introduce the article and what we're going to be talking about
 
@@ -40,6 +39,40 @@ Below you can see how the amount of faculty within the Computer Science departme
 </div>
 
 
+## CS tile chart for average lecture size
+<div id="container">
+    <div id="legend" class="rbow2">
+        <ul>
+            <li class="q1-8"></li>
+            <li class="q2-8"></li>
+            <li class="q3-8"></li>
+            <li class="q4-8"></li>
+            <li class="q5-8"></li>
+            <li class="q6-8"></li>
+            <li class="q7-8"></li>
+            <li class="q8-8"></li>
+        </ul>
+        <p class="more">larger class</p>
+        <p class="less">smaller class</p>
+    </div>
+    <div id="year"></div>
+    <div id="section"></div>
+    <div id="vis"></div> 
+    <div id="controls">
+        <div class="section">
+            <fieldset id="sectype">
+                <input type="radio" id="Primary" name = "type" value ="Primary" checked = "checked"/><label for="Primary" class="sel"><span class="lectureSize">Lecture Size</span></label>
+                <input type="radio" id="Secondary" name="type" value="Secondary"/><label for="Secondary"><span class="sectionSize">Section Size</span></label>
+            </fieldset>
+        </div>
+        <div id="slider"></div>
+    </div>
+    <div id="dist">
+        <h2 class="title">Average Lecture Size for CS Classes in 2009</h2>
+        <div class='svg'></div>
+    </div>
+</div>
+
 
 
 
@@ -52,4 +85,6 @@ data analysis text ?? I don't have all the data yet
 
 <div id="div1"></div>
 <div id="div2"></div>
+
+
     
