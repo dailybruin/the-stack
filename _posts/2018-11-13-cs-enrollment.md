@@ -21,8 +21,10 @@
     - //cdn.plot.ly/plotly-latest.min.js
     - //d3js.org/d3.v5.min.js
     - //use.typekit.com/dkx5efl.js
+    - //unpkg.com/d3-simple-slider
     - /js/posts/cs-enrollment/tiles.js
     - /js/posts/cs-enrollment/jquery-3.3.1.min.js
+    - 
 ---
 text text text text introduce the article and what we're going to be talking about
 
@@ -39,6 +41,10 @@ link=false&modebar=false"></iframe>
 
 
 ## CS tile chart for average lecture size
+As the enrollment for CS and CSE majors (including freshmen and transfer) increases by 66% from 2000 to 2018, we also found that the enrollment number for CS classes has more than doubled from 2009 to 2017. Despite the surging demand, the number of CS classes offered has barely increased from 2009 to 2017. Some rare exceptions are CS 35L and CS M152A, which are classes that are taught by TA. 
+
+As expected (as you might have noticed too), the average lecture size for CS classes increased from 36 in 2009 to 80 in 2017. You can use the interactive chart to examine how the lecture size for each CS course has changed from 2009-2017. Interestingly, we found out that more sections have been added to each lectures to accommodate more students and have kept the size of the sections pretty consistent at 30 to 50 students from 2009 to 2017.
+
 <div id="container">
     <div id="legend" class="rbow2">
         <ul>
