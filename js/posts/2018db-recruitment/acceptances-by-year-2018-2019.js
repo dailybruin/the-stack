@@ -8,17 +8,15 @@ var data = [{
   ],
   hoverinfo: 'label+percent',
   type: 'pie'
-}]
+}];
 
 var layout = {
   title: 'Breakdown by Year, Acceptances 2018-2019',
   height: 600,
-  width: 500,
+  width: 1200,
   showlegend: false
 };
 
 Plotly.newPlot('acceptance-rate-by-year-graph', data, layout, {
   displayModeBar: false
-}, {
-  responsive = true
 });

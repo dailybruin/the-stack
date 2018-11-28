@@ -43,7 +43,7 @@ Online (including the Stack), the most-applied-to section at 132 applications, b
 Not all was woe for this year’s applicants however. Graphics has a major boost in intern power, increasing its intern size from five the past two years to nine this year. News will also experience growth changes. While the number of applicants nearly doubled from last year, it also took 50 percent more interns. Opinion is the last of the growing trio, jumping from 11 interns in 2017 to 24 this year.
 </p>
 
-<div id="acceptance-rate-by-year-graph" align="center">acceptance rate by year graph goes here</div>
+<div id="acceptance-rate-by-year-graph" align="center"></div>
 
 <p class = "para">
 This year, first year students comprised the majority of the incoming Daily Bruin intern class, at a total of 51%. They dominated the Photo and Design intern classes, comprising 73% and 90% of each class, respectively. Furthermore, nearly seven times more freshmen were admitted than seniors.
