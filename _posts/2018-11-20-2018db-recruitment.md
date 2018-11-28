@@ -30,7 +30,7 @@ The application process itself spans the course of two? weeks. First, prospectiv
 
 <div id="acceptance-rate-years-graph" align="center"></div>
 <div id="acceptance-rate-years-hover-info" style="margin-left: 80px;"></div>
-<p class = "para"><strong>
+<p class = "para" align="center"><strong>
 *Double click on a section to view just its line or go back to all the sections. Single click on a section to add or remove its line from the graph.
 </strong></p>
 
