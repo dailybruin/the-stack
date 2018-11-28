@@ -24,6 +24,120 @@ var data = [{
   } /* color of line */
 }, {
   x: ['Fall 2016', 'Fall 2017', 'Fall 2018'],
+  y: [59, 53, 54],
+  name: 'Arts',
+  mode: 'lines+markers',
+  text: ['Arts: Fall 2016<br />Acceptance Rate: 59%<br />Applied: 29 <br />Accepted: 17',
+    'Arts: Fall 2017<br />Acceptance Rate: 53%<br />Applied: 30 <br />Accepted: 16',
+    'Arts: Fall 2018<br />Acceptance Rate: 54%<br />Applied: 28 <br />Accepted: 15'
+  ],
+  hoverinfo: "text",
+  line: {
+    dash: 'dot',
+    width: 3
+  },
+  marker: {
+    color: '#F865B0'
+  }
+}, {
+  x: ['Fall 2016', 'Fall 2017', 'Fall 2018'],
+  y: [50, 70, 90],
+  name: 'Blogging',
+  mode: 'lines+markers',
+  text: ['Blogging: Fall 2016<br />Acceptance Rate: 50%<br />Applied: 22 <br />Accepted: 11',
+    'Blogging: Fall 2017<br />Acceptance Rate: 70%<br />Applied: 10 <br />Accepted: 7',
+    'Blogging: Fall 2018<br />Acceptance Rate: 90%<br />Applied: 10 <br />Accepted: 9'
+  ],
+  hoverinfo: "text",
+  line: {
+    dash: 'dot',
+    width: 3
+  },
+  marker: {
+    color: '#48304D'
+  }
+}, {
+  x: ['Fall 2016', 'Fall 2017', 'Fall 2018'],
+  y: [43, 50, 37],
+  name: 'Copy',
+  mode: 'lines+markers',
+  text: ['Copy: Fall 2016<br />Acceptance Rate: 43%<br />Applied: 42 <br />Accepted: 18',
+    'Copy: Fall 2017<br />Acceptance Rate: 50%<br />Applied: 42 <br />Accepted: 21',
+    'Copy: Fall 2018<br />Acceptance Rate: 37%<br />Applied: 51 <br />Accepted: 19'
+  ],
+  hoverinfo: "text",
+  line: {
+    width: 3
+  },
+  marker: {
+    color: '#32A287'
+  }
+}, {
+  x: ['Fall 2016', 'Fall 2017', 'Fall 2018'],
+  y: [45, 24, 48],
+  name: 'Design',
+  mode: 'lines+markers',
+  text: ['Design: Fall 2016<br />Acceptance Rate: 45%<br />Applied: 31 <br />Accepted: 14',
+    'Design: Fall 2017<br />Acceptance Rate: 24%<br />Applied: 42 <br />Accepted: 10',
+    'Design: Fall 2018<br />Acceptance Rate: 48%<br />Applied: 21 <br />Accepted: 10'
+  ],
+  hoverinfo: "text",
+  line: {
+    width: 3
+  },
+  marker: {
+    color: '#FBCAEF'
+  }
+}, {
+  x: ['Fall 2016', 'Fall 2017', 'Fall 2018'],
+  y: [100, 71, 100],
+  name: 'Graphics',
+  mode: 'lines+markers',
+  text: ['Graphics: Fall 2016<br />Acceptance Rate: 100%<br />Applied: 5 <br />Accepted: 5',
+    'Graphics: Fall 2017<br />Acceptance Rate: 71%<br />Applied: 7 <br />Accepted: 5',
+    'Graphics: Fall 2018<br />Acceptance Rate: 100%<br />Applied: 9 <br />Accepted: 9'
+  ],
+  hoverinfo: "text",
+  line: {
+    width: 3
+  },
+  marker: {
+    color: '#E9AFA3'
+  }
+}, {
+  x: ['Fall 2016', 'Fall 2017', 'Fall 2018'],
+  y: [69, 80, 92],
+  name: 'Illustrations',
+  mode: 'lines+markers',
+  text: ['Illustrations: Fall 2016<br />Acceptance Rate: 69%<br />Applied: 16 <br />Accepted: 11',
+    'Illustrations: Fall 2017<br />Acceptance Rate: 80%<br />Applied: 15 <br />Accepted: 12',
+    'Illustrations: Fall 2018<br />Acceptance Rate: 92%<br />Applied: 13 <br />Accepted: 12'
+  ],
+  hoverinfo: "text",
+  line: {
+    width: 3
+  },
+  marker: {
+    color: '#AEC5EB'
+  }
+},  {
+  x: ['Fall 2016', 'Fall 2017', 'Fall 2018'],
+  y: [72, 69, 52],
+  name: 'News',
+  mode: 'lines+markers',
+  text: ['News: Fall 2016<br />Acceptance Rate: 72%<br />Applied: 36 <br />Accepted: 26',
+    'News: Fall 2017<br />Acceptance Rate: 69%<br />Applied: 35 <br /> Accepted: 24',
+    'News: Fall 2018<br />Acceptance Rate: 52%<br />Applied: 67 <br /> Accepted: 35'
+  ],
+  hoverinfo: "text",
+  line: {
+    width: 3
+  },
+  marker: {
+    color: '#6C464E'
+  }
+}, {
+  x: ['Fall 2016', 'Fall 2017', 'Fall 2018'],
   y: [38, 26, 13],
   name: 'Online',
   mode: 'lines+markers',
@@ -74,85 +188,16 @@ var data = [{
   }
 }, {
   x: ['Fall 2016', 'Fall 2017', 'Fall 2018'],
-  y: [43, 50, 37],
-  name: 'Copy',
+  y: [67],
+  name: 'Radio',
   mode: 'lines+markers',
-  text: ['Copy: Fall 2016<br />Acceptance Rate: 43%<br />Applied: 42 <br />Accepted: 18',
-    'Copy: Fall 2017<br />Acceptance Rate: 50%<br />Applied: 42 <br />Accepted: 21',
-    'Copy: Fall 2018<br />Acceptance Rate: 37%<br />Applied: 51 <br />Accepted: 19'
-  ],
+  text: ['Radio: Fall 2016<br />Acceptance Rate: 67%<br />Applied: 12 <br />Accepted: 8', ],
   hoverinfo: "text",
   line: {
     width: 3
   },
   marker: {
-    color: '#32A287'
-  }
-}, {
-  x: ['Fall 2016', 'Fall 2017', 'Fall 2018'],
-  y: [72, 69, 52],
-  name: 'News',
-  mode: 'lines+markers',
-  text: ['News: Fall 2016<br />Acceptance Rate: 72%<br />Applied: 36 <br />Accepted: 26',
-    'News: Fall 2017<br />Acceptance Rate: 69%<br />Applied: 35 <br /> Accepted: 24',
-    'News: Fall 2018<br />Acceptance Rate: 52%<br />Applied: 67 <br /> Accepted: 35'
-  ],
-  hoverinfo: "text",
-  line: {
-    width: 3
-  },
-  marker: {
-    color: '#6C464E'
-  }
-}, {
-  x: ['Fall 2016', 'Fall 2017', 'Fall 2018'],
-  y: [69, 79, 90],
-  name: 'Video',
-  mode: 'lines+markers',
-  text: ['Video: Fall 2016<br />Acceptance Rate: 69%<br />Applied: 32 <br />Accepted: 22',
-    'Video: Fall 2017<br />Acceptance Rate: 79%<br />Applied: 28 <br />Accepted: 22',
-    'Video: Fall 2018<br />Acceptance Rate: 90%<br />Applied: 29 <br />Accepted: 26'
-  ],
-  hoverinfo: "text",
-  line: {
-    dash: 'dot',
-    width: 3
-  },
-  marker: {
-    color: '#C4D6B0'
-  }
-}, {
-  x: ['Fall 2016', 'Fall 2017', 'Fall 2018'],
-  y: [45, 24, 48],
-  name: 'Design',
-  mode: 'lines+markers',
-  text: ['Design: Fall 2016<br />Acceptance Rate: 45%<br />Applied: 31 <br />Accepted: 14',
-    'Design: Fall 2017<br />Acceptance Rate: 24%<br />Applied: 42 <br />Accepted: 10',
-    'Design: Fall 2018<br />Acceptance Rate: 48%<br />Applied: 21 <br />Accepted: 10'
-  ],
-  hoverinfo: "text",
-  line: {
-    width: 3
-  },
-  marker: {
-    color: '#FBCAEF'
-  }
-}, {
-  x: ['Fall 2016', 'Fall 2017', 'Fall 2018'],
-  y: [59, 53, 54],
-  name: 'A&E',
-  mode: 'lines+markers',
-  text: ['A&E: Fall 2016<br />Acceptance Rate: 59%<br />Applied: 29 <br />Accepted: 17',
-    'A&E: Fall 2017<br />Acceptance Rate: 53%<br />Applied: 30 <br />Accepted: 16',
-    'A&E: Fall 2018<br />Acceptance Rate: 54%<br />Applied: 28 <br />Accepted: 15'
-  ],
-  hoverinfo: "text",
-  line: {
-    dash: 'dot',
-    width: 3
-  },
-  marker: {
-    color: '#F865B0'
+    color: '#F9DEC9'
   }
 }, {
   x: ['Fall 2016', 'Fall 2017', 'Fall 2018'],
@@ -170,24 +215,7 @@ var data = [{
   marker: {
     color: '#E637BF'
   }
-}, {
-  x: ['Fall 2016', 'Fall 2017', 'Fall 2018'],
-  y: [50, 70, 90],
-  name: 'Blogging',
-  mode: 'lines+markers',
-  text: ['Blogging: Fall 2016<br />Acceptance Rate: 50%<br />Applied: 22 <br />Accepted: 11',
-    'Blogging: Fall 2017<br />Acceptance Rate: 70%<br />Applied: 10 <br />Accepted: 7',
-    'Blogging: Fall 2018<br />Acceptance Rate: 90%<br />Applied: 10 <br />Accepted: 9'
-  ],
-  hoverinfo: "text",
-  line: {
-    dash: 'dot',
-    width: 3
-  },
-  marker: {
-    color: '#48304D'
-  }
-}, {
+},  {
   x: ['Fall 2016', 'Fall 2017', 'Fall 2018'],
   y: [69, 80, 78],
   name: 'Sports',
@@ -203,52 +231,24 @@ var data = [{
   marker: {
     color: '#3A405A'
   }
-}, {
+},  {
   x: ['Fall 2016', 'Fall 2017', 'Fall 2018'],
-  y: [69, 80, 92],
-  name: 'Illustrations',
+  y: [69, 79, 90],
+  name: 'Video',
   mode: 'lines+markers',
-  text: ['Illustrations: Fall 2016<br />Acceptance Rate: 69%<br />Applied: 16 <br />Accepted: 11',
-    'Illustrations: Fall 2017<br />Acceptance Rate: 80%<br />Applied: 15 <br />Accepted: 12',
-    'Illustrations: Fall 2018<br />Acceptance Rate: 92%<br />Applied: 13 <br />Accepted: 12'
+  text: ['Video: Fall 2016<br />Acceptance Rate: 69%<br />Applied: 32 <br />Accepted: 22',
+    'Video: Fall 2017<br />Acceptance Rate: 79%<br />Applied: 28 <br />Accepted: 22',
+    'Video: Fall 2018<br />Acceptance Rate: 90%<br />Applied: 29 <br />Accepted: 26'
   ],
   hoverinfo: "text",
   line: {
+    dash: 'dot',
     width: 3
   },
   marker: {
-    color: '#AEC5EB'
+    color: '#C4D6B0'
   }
-}, {
-  x: ['Fall 2016', 'Fall 2017', 'Fall 2018'],
-  y: [67],
-  name: 'Radio',
-  mode: 'lines+markers',
-  text: ['Radio: Fall 2016<br />Acceptance Rate: 67%<br />Applied: 12 <br />Accepted: 8', ],
-  hoverinfo: "text",
-  line: {
-    width: 3
-  },
-  marker: {
-    color: '#F9DEC9'
-  }
-}, {
-  x: ['Fall 2016', 'Fall 2017', 'Fall 2018'],
-  y: [100, 71, 100],
-  name: 'Graphics',
-  mode: 'lines+markers',
-  text: ['Graphics: Fall 2016<br />Acceptance Rate: 100%<br />Applied: 5 <br />Accepted: 5',
-    'Graphics: Fall 2017<br />Acceptance Rate: 71%<br />Applied: 7 <br />Accepted: 5',
-    'Graphics: Fall 2018<br />Acceptance Rate: 100%<br />Applied: 9 <br />Accepted: 9'
-  ],
-  hoverinfo: "text",
-  line: {
-    width: 3
-  },
-  marker: {
-    color: '#E9AFA3'
-  }
-}, ];
+},];
 
 var layout = {
   /* background color */
