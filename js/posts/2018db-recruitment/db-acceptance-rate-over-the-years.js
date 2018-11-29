@@ -16,7 +16,7 @@ var data = [{
   hoverinfo: "text",
   /* shows the above on hover */
   line: {
-    width: 3
+    width: 1.5
   },
   /* width of lines */
   marker: {
@@ -33,8 +33,8 @@ var data = [{
   ],
   hoverinfo: "text",
   line: {
-    dash: 'dot',
-    width: 3
+
+    width: 1.5
   },
   marker: {
     color: '#F865B0'
@@ -50,8 +50,8 @@ var data = [{
   ],
   hoverinfo: "text",
   line: {
-    dash: 'dot',
-    width: 3
+
+    width: 1.5
   },
   marker: {
     color: '#48304D'
@@ -67,7 +67,7 @@ var data = [{
   ],
   hoverinfo: "text",
   line: {
-    width: 3
+    width: 1.5
   },
   marker: {
     color: '#F2C14E'
@@ -83,7 +83,7 @@ var data = [{
   ],
   hoverinfo: "text",
   line: {
-    width: 3
+    width: 1.5
   },
   marker: {
     color: '#FBCAEF'
@@ -99,7 +99,7 @@ var data = [{
   ],
   hoverinfo: "text",
   line: {
-    width: 3
+    width: 1.5
   },
   marker: {
     color: '#E9AFA3'
@@ -115,7 +115,7 @@ var data = [{
   ],
   hoverinfo: "text",
   line: {
-    width: 3
+    width: 1.5
   },
   marker: {
     color: '#AEC5EB'
@@ -131,7 +131,7 @@ var data = [{
   ],
   hoverinfo: "text",
   line: {
-    width: 3
+    width: 1.5
   },
   marker: {
     color: '#6C464E'
@@ -147,8 +147,8 @@ var data = [{
   ],
   hoverinfo: "text",
   line: {
-    dash: 'dot',
-    width: 3
+
+    width: 1.5
   },
   marker: {
     color: '#381D2A'
@@ -164,7 +164,7 @@ var data = [{
   ],
   hoverinfo: "text",
   line: {
-    width: 3
+    width: 1.5
   },
   marker: {
     color: '#BA5624'
@@ -180,8 +180,8 @@ var data = [{
   ],
   hoverinfo: "text",
   line: {
-    dash: 'dot',
-    width: 3
+
+    width: 1.5
   },
   marker: {
     color: '#44CF6C'
@@ -194,7 +194,7 @@ var data = [{
   text: ['Radio: Fall 2016<br />Acceptance Rate: 67%<br />Applied: 12 <br />Accepted: 8', ],
   hoverinfo: "text",
   line: {
-    width: 3
+    width: 1.5
   },
   marker: {
     color: '#F9DEC9'
@@ -209,8 +209,8 @@ var data = [{
   ],
   hoverinfo: "text",
   line: {
-    dash: 'dot',
-    width: 3
+
+    width: 1.5
   },
   marker: {
     color: '#E637BF'
@@ -226,7 +226,7 @@ var data = [{
   ],
   hoverinfo: "text",
   line: {
-    width: 3
+    width: 1.5
   },
   marker: {
     color: '#3A405A'
@@ -242,8 +242,8 @@ var data = [{
   ],
   hoverinfo: "text",
   line: {
-    dash: 'dot',
-    width: 3
+
+    width: 1.5
   },
   marker: {
     color: '#4D9078'
