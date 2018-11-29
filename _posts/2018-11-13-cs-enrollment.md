@@ -24,9 +24,16 @@
     - //unpkg.com/d3-simple-slider
     - /js/posts/cs-enrollment/tiles.js
     - /js/posts/cs-enrollment/jquery-3.3.1.min.js
-    - 
+    - /js/posts/cs-enrollment/waffle.js
 ---
 text text text text introduce the article and what we're going to be talking about
+
+
+## CS Applications in context
+
+<div class='waffle'></div>
+
+
 
 ## CS vs. Engineering Faculty 
 Below you can see how the amount of faculty within the Computer Science department has changed relative to the faculty in the overall School of Engineering. 
