@@ -70,6 +70,9 @@ The second most represented age groups were second and third year students. The 
 Though second and third year students were well represented in certain sections, the proportion of accepted interns per class decreased as age increased.
 </p>
 
+<p class = "para" align="center">
+<strong>*Single-click</strong> on a section in the legend to add or remove it from the pie chart.
+</p>
 <div id="majors-graph" align="center"></div>
 
 <p class = "para">

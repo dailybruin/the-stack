@@ -31,5 +31,5 @@ var layout = {
 Plotly.newPlot('majors-graph', data, layout, {
   displayModeBar: false
 }).then(gd => {
-  gd.on('plotly_legendclick', () => false)
+  gd.on('plotly_legendclick', () => true)
 });
