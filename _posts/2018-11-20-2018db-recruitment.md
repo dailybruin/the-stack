@@ -77,7 +77,7 @@ Though second and third year students were well represented in certain sections,
 
 <p class = "para">
 Daily Bruin's incoming class represents a total of 74 undergraduate and graduate majors. The most diverse section is News, with 23 majors represented. The least diverse sections is Online, with only 7 majors represented.
-(Note: Double majors are counted as two people with single majors.)
+(Note: Double majors are counted uniquely as a major.)
 </p>
 
 <p class ="para">
