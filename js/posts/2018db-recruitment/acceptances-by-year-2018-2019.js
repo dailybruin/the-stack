@@ -76,7 +76,7 @@
       plot_bgcolor: 'rgba(0,0,0,0)',
       hover_bgcolor:'rgba(128, 128, 128, 0)',
       barmode: 'stack',
-      title: '2018 Acceptances by Age Group'
+      title: '2018 Acceptances by Year'
 
     };
 

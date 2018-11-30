@@ -39,7 +39,7 @@ The application process itself spans the course of two weeks. First, prospective
 <br>
 
 <p class = "para">
-The opportunity to be hired as a Daily Bruin intern remains competitive. This year boasted a 43 percent overall acceptance rate, comparable to last year’s 42 percent but still a drop to 2016’s 50 percent. The number of applied and accepted interns remained fairly constant; 209 out of 490 interns were accepted this year versus 206 out of 488 interns who were accepted last year. (Note: Radio separated from the Daily Bruin after 2016 and Social did not accept applications for 2018)
+The opportunity to be hired as a Daily Bruin intern remains competitive. This year boasted a 43 percent overall acceptance rate, comparable to last year’s 42 percent but still a drop to 2016’s 50 percent. The number of applied and accepted interns remained fairly constant; 209 out of 490 interns were accepted this year versus 206 out of 488 interns who were accepted last year. (Note: Radio separated from the Daily Bruin after 2016 and Social Media did not accept applications for 2018)
 </p>
 
 <p class = "para">

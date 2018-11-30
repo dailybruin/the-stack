@@ -9,9 +9,9 @@ var data = [{
   /* Section */
   mode: 'lines+markers',
   /* shows line and point */
-  text: ['Overall: Fall 2016<br />Acceptance Rate: 50%<br />Applied: 232<br />Accepted: 464',
-    'Overall: Fall 2017<br />Acceptance Rate: 42%<br />Applied: 206<br />Accepted: 488',
-    'Overall: Fall 2018<br />Acceptance Rate: 43%<br />Applied: 209<br />Accepted: 490'
+  text: ['Overall: Fall 2016<br />Acceptance Rate: 50%<br />Applied: 464<br />Accepted: 232',
+    'Overall: Fall 2017<br />Acceptance Rate: 42%<br />Applied: 488<br />Accepted: 206',
+    'Overall: Fall 2018<br />Acceptance Rate: 43%<br />Applied: 490<br />Accepted: 209'
   ],
   hoverinfo: "text",
   /* shows the above on hover */
@@ -202,10 +202,10 @@ var data = [{
 }, {
   x: ['Fall 2016', 'Fall 2017', 'Fall 2018'],
   y: [33, 32],
-  name: 'Social',
+  name: 'Social Media',
   mode: 'lines+markers',
-  text: ['Social: Fall 2016<br />Acceptance Rate: 33%<br />Applied: 21 <br />Accepted: 7',
-    'Social: Fall 2017<br />Acceptance Rate: 32%<br />Applied: 44 <br />Accepted: 14'
+  text: ['Social Media: Fall 2016<br />Acceptance Rate: 33%<br />Applied: 21 <br />Accepted: 7',
+    'Social Media: Fall 2017<br />Acceptance Rate: 32%<br />Applied: 44 <br />Accepted: 14'
   ],
   hoverinfo: "text",
   line: {
