@@ -498,6 +498,3 @@ function selectDistChartBar(course) {
 	d3.selectAll('#dist .chart text.' + course).classed('hidden', false);
 
 };
-
-
-
