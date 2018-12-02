@@ -82,8 +82,6 @@
 
 
 
-
-
 Plotly.newPlot('acceptance-rate-by-year-graph', data, layout, {
   displayModeBar: false
 });
