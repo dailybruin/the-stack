@@ -13,6 +13,7 @@
 }
 
 #legend {
+	margin-left: 24px;
 	clear: left;
 	width: 140px;
 	color: #777;
@@ -35,7 +36,8 @@
 	clear: both;
 	padding-inline-start: 0px;
 	margin-block-start: 0em;
-    margin-block-end: 0em;
+	margin-block-end: 0em;
+	margin-left: 0px;
 }
 
 #legend li {

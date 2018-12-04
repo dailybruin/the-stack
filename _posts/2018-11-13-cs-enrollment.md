@@ -26,7 +26,6 @@
     - /js/posts/cs-enrollment/jquery-3.3.1.min.js
     - /js/posts/cs-enrollment/waffle.js
 ---
-text text text text introduce the article and what we're going to be talking about
 
 <br> 
 ## CS Applications in context
@@ -56,9 +55,6 @@ link=false&modebar=false"></iframe>
 
 
 <br>
-<br>
-
-## CS tile chart for average lecture size
 <br>
 ## Heatmap for CS Lecture and Section Size
 As the enrollment for CS and CSE majors (including freshmen and transfer) increases by 66% from 2000 to 2018, we also found that the enrollment number for CS classes has more than doubled from 2009 to 2017. Despite the surging demand, the number of CS classes offered has barely increased from 2009 to 2017. Some rare exceptions are CS 35L and CS M152A, which are classes that are taught by TA. 
