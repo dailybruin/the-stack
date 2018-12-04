@@ -59,15 +59,12 @@ link=false&modebar=false"></iframe>
 <br>
 <br>
 
-<<<<<<< HEAD
 ## CS tile chart for average lecture size
 <br>
-=======
 ## Heatmap for CS Lecture and Section Size
->>>>>>> e6a361baaf21093f20c649fc4c178e0da307c295
 As the enrollment for CS and CSE majors (including freshmen and transfer) increases by 66% from 2000 to 2018, we also found that the enrollment number for CS classes has more than doubled from 2009 to 2017. Despite the surging demand, the number of CS classes offered has barely increased from 2009 to 2017. Some rare exceptions are CS 35L and CS M152A, which are classes that are taught by TA. 
 <br><br>
-As expected (as you might have noticed too), the average lecture size for CS classes increased from 36 in 2009 to 80 in 2017. You can use the interactive chart to examine how the lecture size for each CS course has changed from 2009-2017. Interestingly, we found out that more sections have been added to each lectures to accommodate more students and have kept the size of the sections pretty consistent at 30 to 50 students from 2009 to 2017.
+As there are more students at UCLA, he average lecture size for CS classes increased from 36 in 2009 to 80 in 2017. You can use the interactive chart to examine how the lecture size for each CS course has changed from 2009-2017. Interestingly, we found out that more sections have been added to each lectures to accommodate more students and have kept the size of the sections pretty consistent at 30 to 50 students from 2009 to 2017.
 
 <div id="container">
     <div id="legend" class="rbow2">

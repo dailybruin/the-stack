@@ -20,11 +20,11 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 :focus {
 	outline: 0;
 }
-body {
+/* body {
 	line-height: 1;
 	color: black;
 	background: white;
-}
+} */
 ol, ul {
 	list-style: none;
 }
