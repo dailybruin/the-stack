@@ -1,6 +1,6 @@
 ---
     title: Breaking Down the Computer Science Department -- Bit by Bit
-    teaser: As the tech world has been intensely growing, explore the changes in UCLA's CS department over time.
+    teaser: As the tech world has intensely grows, explore the changes in UCLA's CS department over time.
     authors:
     - keith_atienza
     - lik_teng_ung
@@ -26,7 +26,9 @@
     - /js/posts/cs-enrollment/jquery-3.3.1.min.js
     - /js/posts/cs-enrollment/waffle.js
 ---
-
+<p>
+    Over the past years, UCLA's Computer Science Department has experienced a significant amount of growth. The enrollment in the department has risen, which correlates with an increase in both class size and the student to faculty ratio. 
+</p>
 <br> 
 ## CS Applications in context
 
