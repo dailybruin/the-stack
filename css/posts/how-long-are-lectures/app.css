@@ -1,0 +1,186 @@
+
+@media (min-width: 300px) and (max-width: 900px) {
+  .graphs {
+    display: none;
+  }
+}
+
+@media (min-width: 1201px) {
+  .phone-text {
+    display: none;
+  }
+}
+
+.phone-text {
+  color: grey;
+}
+
+html {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  font: 14px sans-serif;
+  position: relative;
+}
+
+.filters1, .filters2, .filters3, .filters4 {
+  display: flex;
+  flex-flow: row;
+  font-size: 13px
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.axis {
+      font: 15px sans-serif;
+}
+
+path {
+  stroke-width: 2;
+  fill: none;
+}
+
+.legend {
+  font-size: 12px;
+}
+
+.x.axis.radial path {
+  display: none;
+}
+
+svg {
+  overflow: visible;
+  padding: 60px 0;
+  font-size: 8px;
+}
+
+option {
+  font-size: 20px;
+}
+
+.dot {
+  stroke: none;
+}
+
+.tooltip {
+  position: absolute;
+  font-size: 12px;
+  width: auto;
+  height: auto;
+  pointer-events: none;
+  background-color: white;
+}
+
+.tooltip-box {
+  padding: 5px;
+  color: white;
+}
+
+input {
+  -webkit-appearance: none;
+}
+
+.checkboxTwo {
+    width: 80px;
+    height: 30px;
+    background: #333;
+    border-radius: 50px;
+    position: relative;
+}
+
+.checkboxTwo:before {
+    content: '';
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    height: 2px;
+    width: 55px;
+    background: #111;
+}
+
+.checkboxTwo label {
+    display: block;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    transition: all .5s ease;
+    cursor: pointer;
+    position: absolute;
+    top: 7.2px;
+    z-index: 1;
+    left: 12px;
+    background: #ddd;
+}
+
+.checkboxTwo input[type=checkbox]:checked + label {
+    left: 55px;
+    background: #26ca28;
+}
+
+.sort-check {
+  width: 75%;
+}
+
+.radial-chart {
+  margin-top: 5%;
+  margin-left: 25%;
+  margin-bottom: 15%;
+}
+
+.para {
+  font-size: 16px;
+  font-family: "Open Sans", sans-serif;
+}
+
+#scatterplot {
+  margin-left: 5%;
+}
+
+
+/* ---------------------BAR CHARTS---------------------------------------------*/
+
+.barBottom {
+  margin-left: 25%;
+  margin-bottom: 20%;
+}
+
+.barTop {
+  margin-left: 25%;
+  margin-bottom: 27%;
+}
+
+.d3-tip {
+  line-height: 1;
+  font-weight: bold;
+  padding: 12px;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  border-radius: 2px;
+}
+
+/* Creates a small triangle extender for the tooltip */
+.d3-tip:after {
+  box-sizing: border-box;
+  display: inline;
+  font-size: 10px;
+  width: 100%;
+  line-height: 1;
+  color: rgba(0, 0, 0, 0.8);
+  content: "\25BC";
+  position: absolute;
+  text-align: center;
+}
+
+/* Style northward tooltips differently */
+.d3-tip.n:after {
+  margin: -1px 0 0 0;
+  top: 100%;
+  left: 0;
+}

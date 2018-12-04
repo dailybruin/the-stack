@@ -153,6 +153,26 @@ madeleine_pauker:
     bio: Pauker is the managing editor of the Daily Bruin and a third-year world arts and cultures student. She recorded data from 365 days of crime logs to create this post.
     mug: Yes
     email: mpauker@media.ucla.edu
+rishub_kumar:
+    name: Rishub Kumar
+    title: Stack Developer
+    bio: Kumar is a UCLA alumnus and a previous Daily Bruin staffer.
+    mug: Yes
+    email: rkumar1@media.ucla.edu
+dinkar_khattar:
+    name: Dinkar Khattar
+    title: Stack Developer
+    bio: Khattar is a third-year computer science student. He’s probably the guy you see yoyo-ing and/or riding a Bird down Charles E. Young Drive.
+    mug: Yes
+    email: dkhattar@media.ucla.edu
+    github: dkok97
+henna_dialani:
+    name: Henna Dialani
+    title: Stack Developer
+    bio: Dialani is the 2018-2019 Stack editor and a fourth-year statistics student. When not working with data, she’s exploring Los Angeles and its food.
+    mug: Yes
+    email: hdialani@media.ucla.edu
+    github: hennadialani
 nathan_smith:
     name: Nathan Smith
     title: Assistant Online Editor
@@ -179,7 +199,31 @@ keith_atienza:
     name: Keith Atienza
     title: Stack Developer
     bio: Hello I am Keith
-    
-
-
-
+kyle_wong:
+    name: Kyle Wong
+    title: Stack Developer
+    bio: Wong is a third-year computer science student who enjoys attending hackathons.
+    mug: Yes
+    email: kwong@media.ucla.edu
+    github: kylewong975
+    website: http://kylewong.me
+alexander_chan:
+    name: Alexander Chan
+    bio: Alex is a graduate student in the Statistics Department. He likes stats, a lot. Previously, a software engineering intern at Amazon AWS, American Express, and data science intern at a start-up in France.
+    mug: Yes
+    email: achan@media.ucla.edu
+    github: alexander-chan
+andrew_kan:
+    name: Andrew Kan
+    title: Stack Developer
+    bio: Kan is a first-year computer science and engineering student who enjoys longforms and any type of puzzle.
+    mug: no
+    email: akan@media.ucla.edu
+    github: kandrewz
+saachi_kudtarkar:
+    name: Saachi Kudtarkar
+    title: Stack Developer
+    bio:
+    mug: No
+    email: skudtarkar@media.ucla.edu
+    github: saachinator
