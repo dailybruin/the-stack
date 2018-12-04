@@ -1,4 +1,4 @@
-@import url(reset.css);
+/* @import url(reset.css); */
 #container {
 	font: 13px/16px "ff-dagny-web-pro-1","ff-dagny-web-pro-2",sans-serif;
 	color: #333;
@@ -34,6 +34,9 @@
 	list-style-type: none;
 	overflow: hidden;
 	clear: both;
+	padding-inline-start: 0px;
+	margin-block-start: 0em;
+    margin-block-end: 0em;
 }
 
 #legend li {
@@ -45,6 +48,7 @@
 
 #legend p {
 	margin-top: 3px;
+	margin-bottom: 0px;
 }
 
 #legend p.more {
@@ -232,6 +236,14 @@ h2.title {
 	margin: 0 120px 0 120px;
 }
 
+#controls fieldset {
+	border:0;
+}
+
+#controls .section {
+	margin: 40px 0 40px 0;
+}
+
 #dist svg rect {
 	fill: #ddd;
 }
@@ -258,6 +270,8 @@ h2.title {
     position: absolute;
     z-index:200;
 }
+
+
 
 
 

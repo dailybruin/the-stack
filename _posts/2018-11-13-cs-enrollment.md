@@ -14,7 +14,6 @@
     og_image: research-funding/graph.png
     stylesheets: 
     - /css/posts/cs-course-enrollment/tiles.css
-    - /css/posts/cs-course-enrollment/reset.css
     scripts: 
     - /js/posts/cs-enrollment/ratio-linechart.js
     - /js/posts/cs-enrollment/bar_graph.js
