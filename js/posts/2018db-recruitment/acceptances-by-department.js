@@ -25,6 +25,8 @@ var data = [{
 
 var layout = {
 	title: '2018 Acceptances by Department',
+  paper_bgcolor: 'rgba(0,0,0,0)',
+  plot_bgcolor: 'rgba(0,0,0,0)',
 	height: 700,
   width: 1100,
 };
