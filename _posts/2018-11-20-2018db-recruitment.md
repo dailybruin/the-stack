@@ -77,7 +77,7 @@ Though second- and third-year students were well represented in certain sections
 <div id="majors-graph" align="center"></div>
 
 <p class = "para">
-Daily Bruin's incoming class represents a total of 74 undergraduate and graduate majors. The most section with the most majors is News, with 23 majors represented. The section with the least majors is Online, with only 7 majors represented. (Note: Double majors are counted uniquely as a major)
+Daily Bruin's incoming class represents a total of 74 undergraduate and graduate majors. The most section with the most majors is News, with 23 majors represented. The section with the least majors is Online, with only 7 majors represented. (Note: Double majors are counted as two unique majors if they are from separate departments.)
 </p>
 
 <p class ="para">
@@ -91,5 +91,5 @@ Overall, English, Psychology, and Economics represented the top three majors of 
 <br/>
 
 <p class = "para">
-Although the stats and process may seem daunting, new and returning applicants should not be afraid to apply in the future. The Daily Bruin offers its staff opportunities to express their journalistic side, whether it be through reporting breaking news, designing stunning illustrations, or creating blog posts. Applications for the winter quarter will open early January.
+To new and returning applicants, it is still possible to become part of the Daily Bruin this year. The Daily Bruin will be recruiting again during winter and spring quarter. Applications for winter quarter recruitment will open early January.
 </p>

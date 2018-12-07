@@ -24,7 +24,7 @@ var data = [{
 }];
 
 var layout = {
-	title: '2018 Acceptances by Department',
+	title: '2018 Acceptances by Major Division/School',
   paper_bgcolor: 'rgba(0,0,0,0)',
   plot_bgcolor: 'rgba(0,0,0,0)',
 	height: 700,
