@@ -2,13 +2,13 @@
 
     var trace1 = {
       x: ['Arts', 'Blogging', 'Copy', 'Design', 'Graphics', 'Illustrations', 'News', 'Online', 'Opinion', 'Photo', 'Sports', 'Video'],
-      y: [8, 6, 12, 9, 1, 4, 15, 8, 14, 11, 10, 7],
+      y: [8, 6, 15, 9, 1, 4, 15, 8, 14, 11, 10, 7],
       name: 'First Years',
       type: 'bar',
       marker: {
         color: '#32A287'
       },
-      text: ['First Years: 8', 'First Years: 6', 'First Years: 12', 'First Years: 9', 'First Years: 1', 'First Years: 4',
+      text: ['First Years: 8', 'First Years: 6', 'First Years: 15', 'First Years: 9', 'First Years: 1', 'First Years: 4',
       'First Years: 15', 'First Years: 8', 'First Years: 14', 'First Years: 11', 'First Years: 10', 'First Years: 7'
     ],
       hoverinfo: 'text'
@@ -30,13 +30,13 @@
 
     var trace3 = {
       x: ['Arts', 'Blogging', 'Copy', 'Design', 'Graphics', 'Illustrations', 'News', 'Online', 'Opinion', 'Photo', 'Sports', 'Video'],
-      y: [3, 3, 2, 0, 3, 3, 7, 6, 5, 4, 3, 3],
+      y: [3, 3, 2, 0, 3, 4, 7, 6, 5, 4, 3, 3],
       name: 'Third Years',
       type: 'bar',
       marker: {
         color: '#FFEEDB'
       },
-      text: ['Third Years: 3', 'Third Years: 3', 'Third Years: 2', 'Third Years: 0', 'Third Years: 3', 'Third Years: 3',
+      text: ['Third Years: 3', 'Third Years: 3', 'Third Years: 2', 'Third Years: 0', 'Third Years: 3', 'Third Years: 4',
       'Third Years: 7', 'Third Years: 6', 'Third Years: 5', 'Third Years: 4', 'Third Years: 3', 'Third Years: 3'
     ],
       hoverinfo: 'text'

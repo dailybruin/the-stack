@@ -11,7 +11,7 @@ var data = [{
   /* shows line and point */
   text: ['Overall: Fall 2016<br />Acceptance Rate: 50%<br />Applied: 464<br />Accepted: 232',
     'Overall: Fall 2017<br />Acceptance Rate: 42%<br />Applied: 488<br />Accepted: 206',
-    'Overall: Fall 2018<br />Acceptance Rate: 43%<br />Applied: 490<br />Accepted: 209'
+    'Overall: Fall 2018<br />Acceptance Rate: 43%<br />Applied: 494<br />Accepted: 213'
   ],
   hoverinfo: "text",
   /* shows the above on hover */
@@ -58,12 +58,12 @@ var data = [{
   }
 }, {
   x: ['Fall 2016', 'Fall 2017', 'Fall 2018'],
-  y: [43, 50, 37],
+  y: [43, 50, 43],
   name: 'Copy',
   mode: 'lines+markers',
   text: ['Copy: Fall 2016<br />Acceptance Rate: 43%<br />Applied: 42 <br />Accepted: 18',
     'Copy: Fall 2017<br />Acceptance Rate: 50%<br />Applied: 42 <br />Accepted: 21',
-    'Copy: Fall 2018<br />Acceptance Rate: 37%<br />Applied: 51 <br />Accepted: 19'
+    'Copy: Fall 2018<br />Acceptance Rate: 43%<br />Applied: 51 <br />Accepted: 22'
   ],
   hoverinfo: "text",
   line: {
@@ -106,12 +106,12 @@ var data = [{
   }
 }, {
   x: ['Fall 2016', 'Fall 2017', 'Fall 2018'],
-  y: [69, 80, 92],
+  y: [69, 80, 76],
   name: 'Illustrations',
   mode: 'lines+markers',
   text: ['Illustrations: Fall 2016<br />Acceptance Rate: 69%<br />Applied: 16 <br />Accepted: 11',
     'Illustrations: Fall 2017<br />Acceptance Rate: 80%<br />Applied: 15 <br />Accepted: 12',
-    'Illustrations: Fall 2018<br />Acceptance Rate: 92%<br />Applied: 13 <br />Accepted: 12'
+    'Illustrations: Fall 2018<br />Acceptance Rate: 76%<br />Applied: 17 <br />Accepted: 13'
   ],
   hoverinfo: "text",
   line: {
