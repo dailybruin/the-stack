@@ -36,6 +36,6 @@ var layout = {
 	height: 700,
   width: 1100,
 };
-Plotly.newPlot('majors-graph', data, layout, {responsive: true, displayModeBar: false}).then(gd => {
+Plotly.newPlot('majors-graph', data, layout, {displayModeBar: false}).then(gd => {
   gd.on('plotly_legendclick', () => true)
 });

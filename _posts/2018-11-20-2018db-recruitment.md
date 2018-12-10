@@ -51,7 +51,7 @@ Not every section lowered the amount of interns hired however. Graphics has a ma
 
 </p>
 
-<p class = "para">
+<p class = "para" align="center">
 <strong>*Double-click</strong> on the legend to view specific age groups or go back to the original graph. <strong>Single-click</strong> on a section to add or remove its bar from the graph.
 </p>
 <div id="acceptance-rate-by-year-graph" align="center"></div>

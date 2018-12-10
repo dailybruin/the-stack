@@ -11,7 +11,7 @@
       text: ['First years: 8', 'First years: 6', 'First years: 15', 'First years: 9', 'First years: 1', 'First years: 4',
       'First years: 15', 'First years: 8', 'First years: 14', 'First years: 11', 'First years: 10', 'First years: 7'
     ],
-      hoverinfo: 'text',
+      hoverinfo: 'text'
     };
 
     var trace2 = {
@@ -76,10 +76,10 @@
       plot_bgcolor: 'rgba(0,0,0,0)',
       hover_bgcolor:'rgba(128, 128, 128, 0)',
       barmode: 'stack',
-      title: '2018 Acceptances by Year'
-
+      title: '2018 Acceptances by Year',
+      autosize: false
     };
 
 
 
-Plotly.newPlot('acceptance-rate-by-year-graph', data, layout, {displayModeBar: false});
+Plotly.newPlot('acceptance-rate-by-year-graph', data, layout, {  displayModeBar: false});
