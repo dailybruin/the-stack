@@ -3,13 +3,13 @@
     var trace1 = {
       x: ['Arts', 'Blogging', 'Copy', 'Design', 'Graphics', 'Illustrations', 'News', 'Online', 'Opinion', 'Photo', 'Sports', 'Video'],
       y: [8, 6, 15, 9, 1, 4, 15, 8, 14, 11, 10, 7],
-      name: 'First Years',
+      name: 'First years',
       type: 'bar',
       marker: {
         color: '#32A287'
       },
-      text: ['First Years: 8', 'First Years: 6', 'First Years: 15', 'First Years: 9', 'First Years: 1', 'First Years: 4',
-      'First Years: 15', 'First Years: 8', 'First Years: 14', 'First Years: 11', 'First Years: 10', 'First Years: 7'
+      text: ['First years: 8', 'First years: 6', 'First years: 15', 'First years: 9', 'First years: 1', 'First years: 4',
+      'First years: 15', 'First years: 8', 'First years: 14', 'First years: 11', 'First years: 10', 'First years: 7'
     ],
       hoverinfo: 'text',
     };
@@ -17,13 +17,13 @@
     var trace2 = {
       x: ['Arts', 'Blogging', 'Copy', 'Design', 'Graphics', 'Illustrations', 'News', 'Online', 'Opinion', 'Photo', 'Sports', 'Video'],
       y: [2, 0, 4, 1, 4, 4, 6, 1, 3, 0, 2, 11],
-      name: 'Second Years',
+      name: 'Second years',
       type: 'bar',
       marker: {
         color: '#ADA8B6'
       },
-      text: ['Second Years: 2', 'Second Years: 0', 'Second Years: 4', 'Second Years: 1', 'Second Years: 4', 'Second Years: 4',
-      'Second Years: 6', 'Second Years: 1', 'Second Years: 3', 'Second Years: 0', 'Second Years: 2', 'Second Years: 11'
+      text: ['Second years: 2', 'Second years: 0', 'Second years: 4', 'Second years: 1', 'Second years: 4', 'Second years: 4',
+      'Second years: 6', 'Second years: 1', 'Second years: 3', 'Second years: 0', 'Second years: 2', 'Second years: 11'
     ],
       hoverinfo: 'text'
     };
@@ -31,13 +31,13 @@
     var trace3 = {
       x: ['Arts', 'Blogging', 'Copy', 'Design', 'Graphics', 'Illustrations', 'News', 'Online', 'Opinion', 'Photo', 'Sports', 'Video'],
       y: [3, 3, 2, 0, 3, 4, 7, 6, 5, 4, 3, 3],
-      name: 'Third Years',
+      name: 'Third years',
       type: 'bar',
       marker: {
         color: '#FFEEDB'
       },
-      text: ['Third Years: 3', 'Third Years: 3', 'Third Years: 2', 'Third Years: 0', 'Third Years: 3', 'Third Years: 4',
-      'Third Years: 7', 'Third Years: 6', 'Third Years: 5', 'Third Years: 4', 'Third Years: 3', 'Third Years: 3'
+      text: ['Third years: 3', 'Third years: 3', 'Third years: 2', 'Third years: 0', 'Third years: 3', 'Third years: 4',
+      'Third years: 7', 'Third years: 6', 'Third years: 5', 'Third years: 4', 'Third years: 3', 'Third years: 3'
     ],
       hoverinfo: 'text'
     };
@@ -45,13 +45,13 @@
     var trace4 = {
       x: ['Arts', 'Blogging', 'Copy', 'Design', 'Graphics', 'Illustrations', 'News', 'Online', 'Opinion', 'Photo', 'Sports', 'Video'],
       y: [0, 0, 1, 0, 1, 1, 5, 1, 0, 0, 2, 4],
-      name: 'Fourth Years',
+      name: 'Fourth years',
       type: 'bar',
       marker: {
         color: '#4C3B4D'
       },
-      text: ['Fourth Years: 0', 'Fourth Years: 0', 'Fourth Years: 1', 'Fourth Years: 0', 'Fourth Years: 1', 'Fourth Years: 1',
-            'Fourth Years: 5', 'Fourth Years: 1', 'Fourth Years: 0', 'Fourth Years: 0', 'Fourth Years: 2', 'Fourth Years: 4'
+      text: ['Fourth years: 0', 'Fourth years: 0', 'Fourth years: 1', 'Fourth years: 0', 'Fourth years: 1', 'Fourth years: 1',
+            'Fourth years: 5', 'Fourth years: 1', 'Fourth years: 0', 'Fourth years: 0', 'Fourth years: 2', 'Fourth years: 4'
     ],
       hoverinfo: 'text'
     };
@@ -59,13 +59,13 @@
     var trace5 = {
       x: ['Arts', 'Blogging', 'Copy', 'Design', 'Graphics', 'Illustrations', 'News', 'Online', 'Opinion', 'Photo', 'Sports', 'Video'],
       y: [2, 0, 0, 0, 0, 0, 2, 1, 0, 0, 1, 0],
-      name: 'Graduate Students',
+      name: 'Graduate students',
       type: 'bar',
       marker: {
         color: '#A53860'
       },
-      text: ['Graduate Students: 2', 'Graduate Students: 0', 'Graduate Students: 0', 'Graduate Students: 0', 'Graduate Students: 0', 'Graduate Students: 0',
-            'Graduate Students: 2', 'Graduate Students: 1', 'Graduate Students: 0', 'Graduate Students: 0', 'Graduate Students: 1', 'Graduate Students: 0'
+      text: ['Graduate students: 2', 'Graduate students: 0', 'Graduate students: 0', 'Graduate students: 0', 'Graduate students: 0', 'Graduate students: 0',
+            'Graduate students: 2', 'Graduate students: 1', 'Graduate students: 0', 'Graduate students: 0', 'Graduate students: 1', 'Graduate students: 0'
     ],
       hoverinfo: 'text'
     };
@@ -82,4 +82,4 @@
 
 
 
-Plotly.newPlot('acceptance-rate-by-year-graph', data, layout, {responsive: true, displayModeBar: false});
+Plotly.newPlot('acceptance-rate-by-year-graph', data, layout, {displayModeBar: false});
