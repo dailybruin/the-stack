@@ -1,6 +1,6 @@
 ---
-title: Analysis of the Daily Bruin's 2018 Interns
-teaser: Find out how competitive each section was and the years and majors of their interns
+title: Analysis of the Daily Bruin's Fall 2018 Interns
+teaser: Find out how competitive each section was and the years and majors of their interns.
 authors:
   - alexander_chan
   - andrew_kan
