@@ -279,11 +279,7 @@ var layout = {
   height: 700
 };
 
-Plotly.newPlot('acceptance-rate-years-graph', data, layout, {
-  displayModeBar: false
-}, {
-  responsive: true
-});
+Plotly.newPlot('acceptance-rate-years-graph', data, layout, {responsive: true, displayModeBar: false});
 
 myPlot.on('plotly_hover', function (data) { /* code to display the hover info I pulled from somewhere */
     var infotext = data.points.map(function (d) {

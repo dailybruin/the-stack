@@ -77,7 +77,7 @@ Though second- and third-year students were well represented in certain sections
 <div id="majors-graph" align="center"></div>
 
 <p class = "para">
-Daily Bruin's incoming class represents a total of 74 undergraduate and graduate majors. The most section with the most majors is News, with 23 majors represented. The section with the least majors is Online, with only 7 majors represented. (Note: Double majors are counted as two unique majors if they are from separate departments.)
+Daily Bruin's incoming class represents a total of 74 undergraduate and graduate majors. The section with the most majors is News, with 23 majors represented. The section with the least majors is Online, with only 7 majors represented. (Note: Double majors are counted as two unique majors if they are from separate departments.)
 </p>
 
 <p class ="para">

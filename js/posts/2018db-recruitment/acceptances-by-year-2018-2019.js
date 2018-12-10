@@ -11,7 +11,7 @@
       text: ['First Years: 8', 'First Years: 6', 'First Years: 15', 'First Years: 9', 'First Years: 1', 'First Years: 4',
       'First Years: 15', 'First Years: 8', 'First Years: 14', 'First Years: 11', 'First Years: 10', 'First Years: 7'
     ],
-      hoverinfo: 'text'
+      hoverinfo: 'text',
     };
 
     var trace2 = {
@@ -82,6 +82,4 @@
 
 
 
-Plotly.newPlot('acceptance-rate-by-year-graph', data, layout, {
-  displayModeBar: false
-});
+Plotly.newPlot('acceptance-rate-by-year-graph', data, layout, {responsive: true, displayModeBar: false});
