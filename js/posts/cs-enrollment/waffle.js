@@ -1,5 +1,12 @@
         var cs_data = [
             {
+                "year": 2018,
+                "all": 29969,
+                "cs": 13068,
+                "admit": 1213,
+                "enroll": 370
+            },
+            {
                 "year": 2017,
                 "all": 27613,
                 "cs": 11281,
@@ -118,8 +125,8 @@
                 "admit": 589,
                 "enroll": 180
             }
-        ]
 
+        ]
 
         // READ DATA ====================
 
@@ -167,8 +174,8 @@
         });
 
 
-        var svgWidth = 1350;
-        var svgHeight = 600;
+        var svgWidth = 1700;
+        var svgHeight = 750;
 
         var svg = d3.select(".waffle")
             .append("svg")
@@ -176,7 +183,7 @@
             .attr("height", svgHeight);
 
         var x = d3.scaleLinear()
-            .domain([0, 204]) // (10 + 2) * 17 - 10 boxes + 2 padding * 17 bars
+            .domain([0, 216]) // (10 + 2) * 17 - 10 boxes + 2 padding * 17 bars
             .range([0, svgWidth])
 
         var y = d3.scaleLinear()
@@ -188,6 +195,8 @@
 
 
         // DRAW WAFFLE RECTANGLES ==============
+
+        colors = ['#6bc4ea', '#e8455a', '#fccb3f', '#1fd343']
 
         var waffle = function (ref, data, yearCounter = 0, xValue = 0, yValue = 50) { // y Value a little higher from svgHeight
             var squaresPerRow = 10;
@@ -203,20 +212,20 @@
                 .attr("class", "square")
                 .attr("x", function (d, i) { return x(xValue) + x(1) * (i % squaresPerRow); })
                 .attr("y", function (d, i) { return y(yValue) - Math.floor(i / squaresPerRow) * y(0.82); })
-                .attr("width", x(0.9))
+                .attr("width", x(0.8))
                 .attr("height", y(0.75)) // need to put yScale, but not too important as long as width is greater than height
                 .attr("fill", function (d) {
                     if (d.category == 'other') {
-                        return '#518ff5';
+                        return colors[0];
                     }
                     else if (d.category == 'cs-app') {
-                        return '#27a768';
+                        return colors[1];
                     }
                     else if (d.category == 'cs-admit') {
-                        return '#f5bc1a';
+                        return colors[2];
                     }
                     else {
-                        return '#de5347';
+                        return colors[3];//return '#de5347';
                     }
                 })
                 .attr("class", function (d) {
@@ -242,7 +251,7 @@
         dataset = dataset.reverse();
         dataset.forEach(function (d, i) {
             waffle(svg, d, 2001 + i, xValue);
-            xValue = xValue + 12;
+            xValue = xValue + 11.5;
         });
 
         // ====================
@@ -252,8 +261,8 @@
 
 
         var axisScale = d3.scaleBand()
-            .domain(d3.range(2001, 2018))
-            .range([0, svgWidth]);
+            .domain(d3.range(2001, 2019))
+            .range([0, svgWidth - x(7)]);
 
         var axis = d3.axisBottom()
             .scale(axisScale);
@@ -272,7 +281,26 @@
             .attr('fill', 'black')
             .text('Academic Year of Admissions');
 
+         var yaxisScale = d3.scaleLinear()
+                             .domain([30000, 0]) // there are about 30,000 applicants in the latest admissions year
+                             .range([0, svgHeight - 90]);
 
+        var yaxis = d3.axisRight()
+                    .scale(yaxisScale)
+                    .ticks(10);
+
+        svg.append('g')
+            .call(yaxis)
+            .attr("transform", "translate(" + (svgWidth - x(6.5)) + ",20)");
+
+        svg.append('text')
+            .attr('x', svgWidth - x(9))
+            .attr('y', svgHeight - y(55.5))
+            .style("alignment-baseline", "middle")
+            .style("font-size", 10)
+            .style("font-family", "Helvetica, Arial, sans-serif")
+            .attr('fill', 'black')
+            .text('# of students');
 
         // ===================
 
@@ -280,7 +308,7 @@
         // DRAW LEGEND
 
 
-        var keys = ['Each square represents about 50 students.', 'Non-CS/CSE Applications', 'CS/CSE Applications, Rejected', 'CS/CSE Applications, Admitted not Enrolled', 'CS/CSE Applications, Enrolled'];
+        var keys = ['Each square represents about 50 students.', 'Non-CS/CSE Engineering Applications', 'CS/CSE Applications, Rejected', 'CS/CSE Applications, Admitted not Enrolled', 'CS/CSE Applications, Enrolled'];
 
 
         var legend = svg.selectAll('.legend')
@@ -304,16 +332,16 @@
                     return '#B0B0B0'
                 }
                 else if (i == 1) {
-                    return '#518ff5';
+                    return colors[0];
                 }
                 else if (i == 2) {
-                    return '#27a768';
+                    return colors[1];
                 }
                 else if (i == 3) {
-                    return '#f5bc1a';
+                    return colors[2];
                 }
                 else {
-                    return '#de5347';
+                    return colors[3];
                 }
             })
             .attr('class', function (d, i) {
@@ -383,9 +411,11 @@
         //INTERACTIVE
         var ypos = [];
         var ind;
-        for (ind = 2001; ind < 2018; ind++) {
+        for (ind = 2001; ind < 2019; ind++) {
             ypos.push(d3.select('#bar' + ind + ' :last-child').attr('y'));
         }
+
+        colors2 = ['#e8f8ff', '#ffc9d0', '#f9ebc2', '#cff7d7']
 
         revdata = cs_data.reverse();
 
@@ -398,11 +428,11 @@
                     // d3.selectAll(".other")
                     //     .attr("fill", "pink");
                     d3.selectAll(".cs-admit")
-                        .attr("fill", "#eed89c");
+                        .attr("fill", colors2[2]);
                     d3.selectAll(".cs-app")
-                        .attr("fill", "#a9c9b9");
+                        .attr("fill", colors2[1]);
                     d3.selectAll(".cs-enrollee")
-                        .attr("fill", "#ecc2be");
+                        .attr("fill", colors2[3]);
 
 
                     svg.selectAll('.data-numbers')
@@ -414,10 +444,10 @@
                             return d.all - d.cs;
                         })
                         .attr('x', function (d, i) {
-                            return i * svgWidth / 17 + x(4.5);
+                            return i * svgWidth / 18.8 + x(5);
                         })
                         .attr('y', function (d, i) {
-                            return ypos[i] - y(1.5);
+                            return ypos[i] - y(1);
                         })
                         .style("alignment-baseline", "middle")
                         .style("font-size", 13)
@@ -428,13 +458,13 @@
             .on("mouseout", function () {
                 if (clicked == false) {
                     d3.selectAll(".other")
-                        .attr("fill", "#518ff5");
+                        .attr("fill", colors[0]);
                     d3.selectAll(".cs-admit")
-                        .attr("fill", "#f5bc1a");
+                        .attr("fill", colors[2]);
                     d3.selectAll(".cs-app")
-                        .attr("fill", "#27a768");
+                        .attr("fill", colors[1]);
                     d3.selectAll(".cs-enrollee")
-                        .attr("fill", "#de5347");
+                        .attr("fill", colors[3]);
 
                     d3.selectAll('.data-numbers')
                         .remove();
@@ -449,11 +479,11 @@
 
                 if (clicked == false) {
                     d3.selectAll(".other")
-                        .attr("fill", "#9ebcee");
+                        .attr("fill", colors2[0]);
                     d3.selectAll(".cs-app")
-                        .attr("fill", "#a9c9b9");
+                        .attr("fill", colors2[1]);
                     d3.selectAll(".cs-enrollee")
-                        .attr("fill", "#ecc2be");
+                        .attr("fill", colors2[3]);
 
                     svg.selectAll('.data-numbers')
                         .data(revdata)
@@ -464,10 +494,10 @@
                             return d.admit - d.enroll;
                         })
                         .attr('x', function (d, i) {
-                            return i * svgWidth / 17 + x(4.5);
+                            return i * svgWidth / 18.8 + x(5);
                         })
                         .attr('y', function (d, i) {
-                            return ypos[i] - y(1.5);
+                            return ypos[i] - y(1);
                         })
                         .style("alignment-baseline", "middle")
                         .style("font-size", 13)
@@ -476,14 +506,14 @@
             })
             .on("mouseout", function () {
                 if (clicked == false) {
-                    d3.selectAll(".cs-admit")
-                        .attr("fill", "#f5bc1a");
                     d3.selectAll(".other")
-                        .attr("fill", "#518ff5");
+                        .attr("fill", colors[0]);
+                    d3.selectAll(".cs-admit")
+                        .attr("fill", colors[2]);
                     d3.selectAll(".cs-app")
-                        .attr("fill", "#27a768");
+                        .attr("fill", colors[1]);
                     d3.selectAll(".cs-enrollee")
-                        .attr("fill", "#de5347");
+                        .attr("fill", colors[3]);
 
                     d3.selectAll('.data-numbers')
                         .remove();
@@ -497,11 +527,11 @@
 
                 if (clicked == false) {
                     d3.selectAll(".other")
-                        .attr("fill", "#9ebcee");
+                        .attr("fill", colors2[0]);
                     d3.selectAll(".cs-admit")
-                        .attr("fill", "#eed89c");
+                        .attr("fill", colors2[2]);
                     d3.selectAll(".cs-enrollee")
-                        .attr("fill", "#ecc2be");
+                        .attr("fill", colors2[3]);
 
                     svg.selectAll('.data-numbers')
                         .data(revdata)
@@ -512,10 +542,10 @@
                             return d.cs - d.admit;
                         })
                         .attr('x', function (d, i) {
-                            return i * svgWidth / 17 + x(4.5);
+                            return i * svgWidth / 18.8 + x(5);
                         })
                         .attr('y', function (d, i) {
-                            return ypos[i] - y(1.5);
+                            return ypos[i] - y(1);
                         })
                         .style("alignment-baseline", "middle")
                         .style("font-size", 13)
@@ -524,14 +554,14 @@
             })
             .on("mouseout", function () {
                 if (clicked == false) {
-                    d3.selectAll(".cs-admit")
-                        .attr("fill", "#f5bc1a");
                     d3.selectAll(".other")
-                        .attr("fill", "#518ff5");
+                        .attr("fill", colors[0]);
+                    d3.selectAll(".cs-admit")
+                        .attr("fill", colors[2]);
                     d3.selectAll(".cs-app")
-                        .attr("fill", "#27a768");
+                        .attr("fill", colors[1]);
                     d3.selectAll(".cs-enrollee")
-                        .attr("fill", "#de5347");
+                        .attr("fill", colors[3]);
 
                     d3.selectAll('.data-numbers')
                         .remove();
@@ -544,11 +574,11 @@
                 //     .attr("fill", "pink");
                 if (clicked == false) {
                     d3.selectAll(".other")
-                        .attr("fill", "#9ebcee");
+                        .attr("fill", colors2[0]);
                     d3.selectAll(".cs-admit")
-                        .attr("fill", "#eed89c");
+                        .attr("fill", colors2[2]);
                     d3.selectAll(".cs-app")
-                        .attr("fill", "#a9c9b9");
+                        .attr("fill", colors2[1]);
 
                     svg.selectAll('.data-numbers')
                         .data(revdata)
@@ -559,10 +589,10 @@
                             return d.enroll;
                         })
                         .attr('x', function (d, i) {
-                            return i * svgWidth / 17 + x(4.5);
+                            return i * svgWidth / 18.8 + x(5);
                         })
                         .attr('y', function (d, i) {
-                            return ypos[i] - y(1.5);
+                            return ypos[i] - y(1);
                         })
                         .style("alignment-baseline", "middle")
                         .style("font-size", 13)
@@ -571,21 +601,21 @@
             })
             .on("mouseout", function () {
                 if (clicked == false) {
-                    d3.selectAll(".cs-admit")
-                        .attr("fill", "#f5bc1a");
                     d3.selectAll(".other")
-                        .attr("fill", "#518ff5");
+                        .attr("fill", colors[0]);
+                    d3.selectAll(".cs-admit")
+                        .attr("fill", colors[2]);
                     d3.selectAll(".cs-app")
-                        .attr("fill", "#27a768");
+                        .attr("fill", colors[1]);
                     d3.selectAll(".cs-enrollee")
-                        .attr("fill", "#de5347");
+                        .attr("fill", colors[3]);
 
                     d3.selectAll('.data-numbers')
                         .remove();
                 }
             });
 
-        var keys1 = ['Non-CS/CSE Applications: ', 'CS/CSE Applications, Rejected: ', 'CS/CSE Applications, Admitted not Enrolled: ', 'CS/CSE Applications, Enrolled: '];
+        var keys1 = ['Non-CS/CSE Engineering Applications: ', 'CS/CSE Applications, Rejected: ', 'CS/CSE Applications, Admitted not Enrolled: ', 'CS/CSE Applications, Enrolled: '];
         var keys2 = ['Admissions Year: ', 'Total Engineering Applications: ', 'Total CS/CSE Applications: ', 'Total CS/CSE Admits: ', 'Total CS/CSE Enrollees: '];
 
         svg.selectAll('.bar')
@@ -601,22 +631,22 @@
                     d3.selectAll('.bar ' + ':not(.square' + year + ')')
                         .attr('fill', '#fbe8ea');
                     d3.selectAll('.cs-admit.square' + year + '')
-                        .attr('fill', '#f5bc1a');
+                        .attr('fill', colors[2]);
                     d3.selectAll('.cs-enrollee.square' + year + '')
-                        .attr('fill', '#de5347');
+                        .attr('fill', colors[3]);
                     d3.selectAll('.cs-app.square' + year + '')
-                        .attr('fill', '#27a768');
+                        .attr('fill', colors[1]);
                     d3.selectAll('.other.square' + year + '')
-                        .attr('fill', '#518ff5');
+                        .attr('fill', colors[0]);
 
                     d3.select('.legend.cs-admit')
-                        .attr('fill', '#f5bc1a');
+                        .attr('fill', colors[2]);
                     d3.select('.cs-enrollee.legend')
-                        .attr('fill', '#de5347');
+                        .attr('fill', colors[3]);
                     d3.select('.cs-app.legend')
-                        .attr('fill', '#27a768');
+                        .attr('fill', colors[1]);
                     d3.select('.other.legend')
-                        .attr('fill', '#518ff5');
+                        .attr('fill', colors[0]);
 
                     var yearnums = [];
 
@@ -692,16 +722,16 @@
                         .attr('height', y(1))
                         .attr('fill', function (d, i) {
                             if (i == 1) {
-                                return '#518ff5';
+                                return colors[1];
                             }
                             else if (i == 2) {
-                                return '#27a768';
+                                return colors[2];
                             }
                             else if (i == 3) {
-                                return '#f5bc1a';
+                                return colors[3];
                             }
                             else {
-                                return '#de5347';
+                                return colors[0];
                             }
                         })
                         .attr('class', function (d, i) {
@@ -747,13 +777,13 @@
                 }
                 else {
                     d3.selectAll(".cs-admit")
-                        .attr("fill", "#f5bc1a");
+                        .attr("fill", colors[2]);
                     d3.selectAll(".other")
-                        .attr("fill", "#518ff5");
+                        .attr("fill", colors[0]);
                     d3.selectAll(".cs-app")
-                        .attr("fill", "#27a768");
+                        .attr("fill", colors[1]);
                     d3.selectAll(".cs-enrollee")
-                        .attr("fill", "#de5347");
+                        .attr("fill", colors[3]);
 
                     d3.selectAll('.clicked-legend').remove();
                     d3.selectAll('.clicked-legend-border').remove();
@@ -779,16 +809,16 @@
                                 return '#B0B0B0'
                             }
                             else if (i == 1) {
-                                return '#518ff5';
+                                return colors[0];
                             }
                             else if (i == 2) {
-                                return '#27a768';
+                                return colors[1];
                             }
                             else if (i == 3) {
-                                return '#f5bc1a';
+                                return colors[2];
                             }
                             else {
-                                return '#de5347';
+                                return colors[3];
                             }
                         })
                         .attr('class', function (d, i) {
