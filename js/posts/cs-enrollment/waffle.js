@@ -423,6 +423,8 @@
 
         svg.selectAll(".other")
             .on("mouseover", function () {
+                d3.selectAll(".other")
+                    .attr('style', "cursor:pointer");
 
                 if (clicked == false) {
                     // d3.selectAll(".other")
@@ -476,6 +478,8 @@
             .on("mouseover", function () {
                 // d3.selectAll(".cs-admit")
                 //     .attr("fill", "pink");
+                d3.selectAll(".cs-admit")
+                    .attr('style', "cursor:pointer");
 
                 if (clicked == false) {
                     d3.selectAll(".other")
@@ -525,6 +529,9 @@
                 // d3.selectAll(".cs-admit")
                 //     .attr("fill", "pink");
 
+                d3.selectAll(".cs-app")
+                    .attr('style', "cursor:pointer");
+
                 if (clicked == false) {
                     d3.selectAll(".other")
                         .attr("fill", colors2[0]);
@@ -572,6 +579,9 @@
             .on("mouseover", function () {
                 // d3.selectAll(".cs-admit")
                 //     .attr("fill", "pink");
+
+                d3.selectAll(".cs-enrollee")
+                    .attr('style', "cursor:pointer");
                 if (clicked == false) {
                     d3.selectAll(".other")
                         .attr("fill", colors2[0]);

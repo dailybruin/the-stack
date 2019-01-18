@@ -1,17 +1,17 @@
 ---
-    title: Breaking Down the Computer Science Department -- Bit by Bit
-    teaser: As the tech world has intensely grows, explore the changes in UCLA's CS department over time.
+    title: Breaking Down the Growth of the Computer Science Department -- Bit by Bit
+    teaser: As the tech industry experiences intensive growth, explore the changes in UCLA's Computer Science department over time.
     authors:
     - keith_atienza
     - lik_teng_ung
     - mattie_sanseverino
     key_takeaways: 
-    - Applications and enrollment in the CS department has greatly increased over the years.
-    - The student to faculty ratio within HSSEAS and the CS department has grown since 2013.
+    - The number of applications for Computer Science majors greatly increased over the years, outpacing admission numbers and increasing selectivity.
+    - The student-to-faculty ratio within School of Engineering and the Computer Science department has grown since 2013.
     - Since 2009, upper and lower division lectures have increased in size. 
     featured_image:
-    url: research-funding/graph.png
-    og_image: research-funding/graph.png
+        url: cs-enrollment/waffle_chart.png
+    og_image: cs-enrollment/waffle_chart.png
     stylesheets: 
     - /css/posts/cs-course-enrollment/tiles.css
     scripts: 
@@ -27,12 +27,28 @@
     - /js/posts/cs-enrollment/waffle.js
 ---
 <p>
-    Over the past years, UCLA's Computer Science Department has experienced a significant amount of growth. The enrollment in the department has risen, which correlates with an increase in both class size and the student to faculty ratio. 
+    According to the Bureau of Labor Statistics, the employment of software developers is <a href="https://www.bls.gov/ooh/computer-and-information-technology/software-developers.htm#tab-6">expected to increase</a>
+    by 24% between 2016 and 2026. While this is but one of the many specialties a Computer Science student might undertake, the demand for Computer Science graduates continue to climb across the tech industry. 
+ </p>
+ <p>   
+    In pace with the tech world, UCLA's Computer Science Department experienced a significant amount of growth in the past two decades. According to the 2018 QS World University Rankings, UCLA's Computer Science program currently <a href="https://www.theguardian.com/higher-education-network/2018/feb/28/qs-world-university-rankings-2018-computer-science">ranks 13th</a> in the world. UCLA currently offers three different majors in the discipline: Computer Science, Computer Science and Engineering, and Computer Engineering, the last added recently in 2017. In this report, we explore the expansion of the department in three different perspectives: <b>admissions</b>, <b>student-to-faculty ratio</b>, and <b>lecture sizes</b>.
 </p>
 <br> 
-## CS Applications in context
-
+## Computer Science Admissions Data (with School of Engineering in Context)
+<p><b>*</b> Hover over a colored area to display its count
+<br><b>**</b> Click on a bar to display admissions year data</p>
 <div class='waffle'></div>
+<br>
+<p>
+    The chart above shows the admission statistics of Computer Science majors since 2001, relative to the overall applications that the School of Engineering receives each year. There is a definite growth in Computer Science applications starting from around 2011, but it is interesting to see the downward trend that began after 2001 to which we cannot associate a particular explanation. The applications for the three Computer Science majors in 2018 composed about 43% of the total applications to the School of Engineering, much higher than the other engineering specializations, although it did not match the composition in 2001 where it stood at around 60%. 
+
+</p>
+<p>
+    In addition, the number of applications more than doubled in the span of roughly two decades and the enrollees to the program roughly doubled as well. Interestingly, there is an increase of 100 students that enrolled into the programs between 2017 and 2018, the most the department has had since 2001.
+</p>
+<p>
+    It is evident in the figure below that computer science admissions rate has shown decreasing trend since around 2011. The latest data in 2018 shows the 9.28% admissions rate in computer science majors compared to 14.08% in the overall UCLA applications, which suggests the relative selectivity of the major in terms of overall applications in recent years.
+</p>
 
 <iframe width="95%" height="500" frameborder="0" scrolling="no" src="//plot.ly/~keithatienza19/41.embed"></iframe>
 
