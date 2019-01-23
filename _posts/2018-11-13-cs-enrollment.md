@@ -10,13 +10,8 @@
     - The student-to-faculty ratio within School of Engineering and the Computer Science department has grown since 2013.
     - Since 2009, upper and lower division lectures have increased in size. 
     featured_image:
-<<<<<<< HEAD
-    url: cs-enrollment/graph.png
-    og_image: cs-enrollment/graph.png
-=======
         url: cs-enrollment/waffle_chart.png
     og_image: cs-enrollment/waffle_chart.png
->>>>>>> 0e174008019b544baa8daed2ca7b3ff55cad9bcc
     stylesheets: 
     - /css/posts/cs-course-enrollment/tiles.css
     scripts: 
