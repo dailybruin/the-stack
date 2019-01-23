@@ -10,8 +10,8 @@
     - The student to faculty ratio within HSSEAS and the CS department has grown since 2013.
     - Since 2009, upper and lower division lectures have increased in size. 
     featured_image:
-    url: research-funding/graph.png
-    og_image: research-funding/graph.png
+    url: cs-enrollment/graph.png
+    og_image: cs-enrollment/graph.png
     stylesheets: 
     - /css/posts/cs-course-enrollment/tiles.css
     scripts: 
@@ -51,17 +51,17 @@ link=false&modebar=false"></iframe>
 
 
 <br>
-<p>While the total enrollment in the Henry Samueli School of Engineering rose 9.64% 2013 to 2016, from 3,160 to 3,480 enrolled undergraduate students, the total rise in faculty FTE within the School of Engineering rose 1.13%. Thus, the student to faculty FTE ratio has changed from 3.65:1.00 to 4.00:1.00. </p>
-<br>
-<p>Since the enrollment in the Computer Science Department has grown dramatically, the percent of CS/CSE majors within HSSEAS rising from 13.7% in 2013 to 21.0% in 2016, one would expect the growth of FTE within the Computer Science Department to grow more dramatically than that of the HSSEAS, as well as reflect the growth in enrolled students. However, the number of enrolled students in the department increased significantly compared to the growth in FTE, with the student to FTE ratio rising from ___ in 2013 to ___ in 2016. </p>
+<p>While the total enrollment in the Henry Samueli School of Engineering rose 9.64% 2013 to 2016, from 3,160 to 3,480 enrolled undergraduate students, the total rise in faculty FTE within the School of Engineering rose 1.13%. Thus, the student to faculty FTE ratio has changed from 3.65:1.00 to 4.00:1.00. 
+</p>
+<p>Since the enrollment in the Computer Science Department has grown dramatically, the percent of CS/CSE majors within HSSEAS rose from 13.7% in 2013 to 21.0% in 2016, one would expect the growth of FTE within the Computer Science Department to grow more dramatically than that of the HSSEAS, as well as reflect the growth in enrolled students. However, we expect that the student to faculty ratio within the CS Department has risen in a similar fashion to HSSEAS. </p>
 
 
 <br>
 <br>
 ## Heatmap for CS Lecture and Section Size
-As the enrollment for CS and CSE majors (including freshmen and transfer) increases by 66% from 2000 to 2018, we also found that the enrollment number for CS classes has more than doubled from 2009 to 2017. Despite the surging demand, the number of CS classes offered has barely increased from 2009 to 2017. Some rare exceptions are CS 35L and CS M152A, which are classes that are taught by TA. 
+As the enrollment for CS and CSE majors (including freshmen and transfer) increases by 66% from 2000 to 2018, we also found that the enrollment number for CS classes has more than doubled from 2009 to 2017. Despite the surging demand, the number of CS classes offered has barely increased from 2009 to 2017. Some rare exceptions are CS 35L and CS M152A, which are classes that are taught by TAs. 
 <br><br>
-As there are more students at UCLA, he average lecture size for CS classes increased from 36 in 2009 to 80 in 2017. You can use the interactive chart to examine how the lecture size for each CS course has changed from 2009-2017. Interestingly, we found out that more sections have been added to each lectures to accommodate more students and have kept the size of the sections pretty consistent at 30 to 50 students from 2009 to 2017.
+As there are more students at UCLA, the average lecture size for CS classes increased from 36 in 2009 to 80 in 2017. You can use the interactive chart to examine how the lecture size for each CS course has changed from 2009-2017. Interestingly, we found that more discussion sections have been added to each lecture to accommodate more students and have kept the size of the sections pretty consistent at 30 to 50 students from 2009 to 2017.
 
 <div id="container">
     <div id="legend" class="rbow2">
