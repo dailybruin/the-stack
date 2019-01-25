@@ -174,8 +174,8 @@
         });
 
 
-        var svgWidth = 1700;
-        var svgHeight = 750;
+        var svgWidth = 1350;
+        var svgHeight = 650;
 
         var svg = d3.select(".waffle")
             .append("svg")
@@ -394,7 +394,7 @@
             .attr('class', 'unclicked-legend-border')
             .attr('x', x(3.7))
             .attr('y', y(1.8))
-            .attr('width', x(45))
+            .attr('width', x(50))
             .attr('height', y(13))
             .style("stroke", 'black')
             .style("fill", "none")
@@ -713,7 +713,7 @@
                         .attr('class', 'clicked-legend-border')
                         .attr('x', x(3.7))
                         .attr('y', y(1.8))
-                        .attr('width', x(50))
+                        .attr('width', x(57))
                         .attr('height', y(22.5))
                         .style("stroke", 'black')
                         .style("fill", "none")
@@ -881,7 +881,7 @@
                         .attr('class', 'unclicked-legend-border')
                         .attr('x', x(3.7))
                         .attr('y', y(1.8))
-                        .attr('width', x(45))
+                        .attr('width', x(50))
                         .attr('height', y(13))
                         .style("stroke", 'black')
                         .style("fill", "none")

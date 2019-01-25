@@ -50,7 +50,7 @@
     It is evident in the figure below that computer science admissions rate has shown decreasing trend since around 2011. The latest data in 2018 shows the 9.28% admissions rate in computer science majors compared to 14.08% in the overall UCLA applications, which suggests the relative selectivity of the major in terms of overall applications in recent years.
 </p>
 
-<iframe width="1400" height="600" frameborder="0" scrolling="no" src="//plot.ly/~keithatienza19/41.embed"></iframe>
+<iframe width="1300" height="500" frameborder="0" scrolling="no" src="//plot.ly/~keithatienza19/41.embed"></iframe>
 
 
 
@@ -59,11 +59,11 @@
 <p>Below you can see how the amount of faculty within the Computer Science department has changed relative to the faculty in the overall School of Engineering. </p>
 <br> 
 
-<iframe align="center" width="1300" height="400" frameborder="0" scrolling="no" src="//plot.ly/~MattieSanseverino/5.embed?link=false&modebar=false&width=100%&height=50%"></iframe>
+<iframe align="center" width="1200" height="400" frameborder="0" scrolling="no" src="//plot.ly/~MattieSanseverino/5.embed?link=false&modebar=false&width=100%&height=50%"></iframe>
 
 <p>Computer Science majors have grown in popularity relative to other engineering majors. Relative to the enrollment in the overall School of Engineering, the enrollment in the Computer Science Department has grown significantly. For example, the percentage of Computer Science majors within the School of Engineering has risen from 13.7% in 2013 to 21.0% in 2016. </p>
 
-<iframe align="center" width="1300" height="400" frameborder="0" scrolling="no" src="//plot.ly/~MattieSanseverino/13.embed?
+<iframe align="center" width="1200" height="400" frameborder="0" scrolling="no" src="//plot.ly/~MattieSanseverino/13.embed?
 link=false&modebar=false"></iframe>
 <p><i>FTE stands for Full-Time-Equivalent, and according to UCLA’s Workforce Methodology, FTE is calculated based on the number of hours per week that faculty members work. For example, an FTE of 0.5 is given for a person who works half-time (20 hours per week) while an FTE of 1.0 is given for a full-time employee. </i></p>
 
