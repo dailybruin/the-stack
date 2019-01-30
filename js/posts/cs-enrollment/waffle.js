@@ -174,7 +174,7 @@
         });
 
 
-        var svgWidth = 1350;
+        var svgWidth = 1200;
         var svgHeight = 650;
 
         var svg = d3.select(".waffle")
@@ -291,13 +291,13 @@
 
         svg.append('g')
             .call(yaxis)
-            .attr("transform", "translate(" + (svgWidth - x(6.5)) + ",20)");
+            .attr("transform", "translate(" + (svgWidth - x(7.5)) + ",20)");
 
         svg.append('text')
-            .attr('x', svgWidth - x(9))
-            .attr('y', svgHeight - y(55.5))
+            .attr('x', svgWidth - x(9.5))
+            .attr('y', svgHeight - y(55.2))
             .style("alignment-baseline", "middle")
-            .style("font-size", 10)
+            .style("font-size", 9)
             .style("font-family", "Helvetica, Arial, sans-serif")
             .attr('fill', 'black')
             .text('# of students');
@@ -308,7 +308,7 @@
         // DRAW LEGEND
 
 
-        var keys = ['Each square represents about 50 students.', 'Non-CS/CSE Engineering Applications', 'CS/CSE Applications, Rejected', 'CS/CSE Applications, Admitted not Enrolled', 'CS/CSE Applications, Enrolled'];
+        var keys = ['Each square represents about 50 students.', 'Non-CS/CSE Engineering Applications', 'CS/CSE/CE Applications, Rejected', 'CS/CSE/CE Applications, Admitted not Enrolled', 'CS/CSE/CE Applications, Enrolled'];
 
 
         var legend = svg.selectAll('.legend')
@@ -384,7 +384,7 @@
         svg.append('line')
             .attr('class', 'unclicked-dash')
             .attr('x1', x(4.5))
-            .attr('x2', x(47))
+            .attr('x2', x(56))
             .attr('y1', y(5))
             .attr('y2', y(5))
             .attr('stroke', 'black')
@@ -394,7 +394,7 @@
             .attr('class', 'unclicked-legend-border')
             .attr('x', x(3.7))
             .attr('y', y(1.8))
-            .attr('width', x(50))
+            .attr('width', x(55))
             .attr('height', y(13))
             .style("stroke", 'black')
             .style("fill", "none")
@@ -625,8 +625,8 @@
                 }
             });
 
-        var keys1 = ['Non-CS/CSE Engineering Applications: ', 'CS/CSE Applications, Rejected: ', 'CS/CSE Applications, Admitted not Enrolled: ', 'CS/CSE Applications, Enrolled: '];
-        var keys2 = ['Admissions Year: ', 'Total Engineering Applications: ', 'Total CS/CSE Applications: ', 'Total CS/CSE Admits: ', 'Total CS/CSE Enrollees: '];
+        var keys1 = ['Non-CS/CSE/CE Engineering Applications: ', 'CS/CSE/CE Applications, Rejected: ', 'CS/CSE/CE Applications, Admitted not Enrolled: ', 'CS/CSE/CE Applications, Enrolled: '];
+        var keys2 = ['Admissions Year: ', 'Total Engineering Applications: ', 'Total CS/CSE/CE Applications: ', 'Total CS/CSE/CE Admits: ', 'Total CS/CSE/CE Enrollees: '];
 
         svg.selectAll('.bar')
             .on('mousedown', function (d, index) {
@@ -776,7 +776,7 @@
                     svg.append('line')
                         .attr('class', 'clicked-dash')
                         .attr('x1', x(4.5))
-                        .attr('x2', x(53))
+                        .attr('x2', x(57))
                         .attr('y1', y(5))
                         .attr('y2', y(5))
                         .attr('stroke', 'black')
@@ -871,7 +871,7 @@
                     svg.append('line')
                         .attr('class', 'unclicked-dash')
                         .attr('x1', x(4.5))
-                        .attr('x2', x(47))
+                        .attr('x2', x(53))
                         .attr('y1', y(5))
                         .attr('y2', y(5))
                         .attr('stroke', 'black')
@@ -881,7 +881,7 @@
                         .attr('class', 'unclicked-legend-border')
                         .attr('x', x(3.7))
                         .attr('y', y(1.8))
-                        .attr('width', x(50))
+                        .attr('width', x(55))
                         .attr('height', y(13))
                         .style("stroke", 'black')
                         .style("fill", "none")
