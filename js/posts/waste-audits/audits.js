@@ -1,9 +1,9 @@
 // Load and munge data, then make the visualization.
-let landfillFileName = "../../datasets/waste-audits/Landfill&Other.csv";
+let landfillFileName = "/datasets/waste-audits/LandfillOther.csv";
 let landfillFields = ["Landfill", "Construction", "OCC"];
-let recyclingFileName = "../../datasets/waste-audits/Recycling.csv";
+let recyclingFileName = "/datasets/waste-audits/Recycling.csv";
 let recyclingFields = ["Recycling", "Paper", "Plastic", "Metal", "Glass", "Straws & Utensils"];
-let compostFileName = "../../datasets/waste-audits/Compost.csv";
+let compostFileName = "/datasets/waste-audits/Compost.csv";
 let compostFields = ["Compost", "Liquid", "Edible", "Non-edible", "Napkins"];
 
 let dropdown = d3.select("#dropdown-menu")

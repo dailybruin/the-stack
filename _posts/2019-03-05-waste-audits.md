@@ -7,12 +7,12 @@ key_takeaways:
   - In non-dining buildings, around 30% of trash by weight is placed in the landfill bin, 30% in the recycling bin, and 40% in the compost bin.
   - In dining halls, roughly 80% of food waste is edible.
 featured_image:
-  url: 2018db-recruitment/featured_image.png
-og_image: 2018db-recruitment/featured_image.png
+  url: waste-audits/placeholder.png
+og_image: waste-audits/placeholder.png
 stylesheets:
   - /css/posts/waste-audits/app.css
 scripts:
-  - //https://d3js.org/d3.v3.min.js
+  - //https://d3js.org/d3.v5.min.js
   - /js/posts/waste-audits/audits.js
 ---
 <style>
