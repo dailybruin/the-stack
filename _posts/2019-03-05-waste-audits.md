@@ -61,7 +61,7 @@ scripts:
 <div id="interactive"><h1>Interactive goes here</h1></div>
 
  <div id="title">
-    <p style="font: 36px Garamond; text-align: center">UCLA Waste Bin Breakdown</p>
+    <p style="font: 36px Garamond; text-align: center">UCLA Waste Bin Breakdown (% by weight)</p>
   </div>
 
   <div id="dropdown-menu"></div>
@@ -79,7 +79,6 @@ scripts:
       <li>tried to make transitions work for like 2 hours but never did correctly :( </li>
       <li>get copy illustrations, message nicole</li>
       <li>make backend for interactive work, talk with neil</li>
-      <li>make numbers show up in middle of bars instead of having to use tooltip</li>
       <li>integrate numerical weights somewhere</li>
     </ul>
   </p>

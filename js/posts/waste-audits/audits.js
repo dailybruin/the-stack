@@ -1,9 +1,9 @@
 // Load and munge data, then make the visualization.
-let landfillFileName = "/datasets/waste-audits/LandfillOther.csv";
+let landfillFileName = "./Landfill&Other.csv";
 let landfillFields = ["Landfill", "Construction", "OCC"];
-let recyclingFileName = "/datasets/waste-audits/Recycling.csv";
+let recyclingFileName = "./Recycling.csv";
 let recyclingFields = ["Recycling", "Paper", "Plastic", "Metal", "Glass", "Straws & Utensils"];
-let compostFileName = "/datasets/waste-audits/Compost.csv";
+let compostFileName = "./Compost.csv";
 let compostFields = ["Compost", "Liquid", "Edible", "Non-edible", "Napkins"];
 
 let dropdown = d3.select("#dropdown-menu")
@@ -158,37 +158,15 @@ let makeLandfillVis = function (landfillMap) {
       .attr("y", function (d, i) { return yScale(d); })
       .attr("height", function (d, i) { return height - yScale(d); });
 
-    //WORKING ON TEXT ON BARS
-    bars.selectAll("text")
-      .data(data)
-      .enter()
+    bars.enter()
       .append("text")
+      .attr("x", function (d, i) { return xScale(landfillFields[i]); })
+      .attr("dx", 43)
+      .attr("text-anchor", "middle")
+      .attr("y", function (d, i) { return yScale(d); })
+      .attr("dy", -3)
+      .attr("font-weight", "bold")
       .text(function (d) { return d; });
-
-    let isMobile = window.innerWidth <= 767 ? true : false;
-    let tooltip = d3.select("body").append("div") //tooltip stuff
-      .style("position", "absolute")
-      .style("z-index", "10") //depth of the tooltip
-      .style("visibility", "hidden") //makes the tooltip hidden
-      .style("color", "white")
-      .style("padding", "8px")
-      .style("background-color", "rgba(0, 0, 0, 0.75)")
-      .style("border-radius", "6px")
-      .style("font", "12px sans-serif")
-      .text("tooltip");
-    //where tooltip code will go
-    if (!isMobile) {
-      bars.on("mouseover", function (d, i) {
-        tooltip.html(d + '%'); //creates the text when you mouseover
-        tooltip.style("visibility", "visible"); //makes the tooltip visible
-      })
-        .on("mousemove", function () {
-          return tooltip.style("top", (d3.event.pageY - 10) + "px").style("left", (d3.event.pageX + 10) + "px"); //makes the tooltip next to the cursor
-        })
-        .on("mouseout", function () {
-          return tooltip.style("visibility", "hidden") //makes the tooltip disappear when you cursor out
-        });
-    }
   };
 
   updateLandfillBars(landfillMap[dropdownValue]);
@@ -279,30 +257,15 @@ let makeRecyclingVis = function (recyclingMap) {
       .attr("y", function (d, i) { return yScale(d); })
       .attr("height", function (d, i) { return height - yScale(d); });
 
-    let isMobile = window.innerWidth <= 767 ? true : false;
-    let tooltip = d3.select("body").append("div") //tooltip stuff
-      .style("position", "absolute")
-      .style("z-index", "10") //depth of the tooltip
-      .style("visibility", "hidden") //makes the tooltip hidden
-      .style("color", "white")
-      .style("padding", "8px")
-      .style("background-color", "rgba(0, 0, 0, 0.75)")
-      .style("border-radius", "6px")
-      .style("font", "12px sans-serif")
-      .text("tooltip");
-    //where tooltip code will go
-    if (!isMobile) {
-      bars.on("mouseover", function (d, i) {
-        tooltip.html(d + '%'); //creates the text when you mouseover
-        tooltip.style("visibility", "visible"); //makes the tooltip visible
-      })
-        .on("mousemove", function () {
-          return tooltip.style("top", (d3.event.pageY - 10) + "px").style("left", (d3.event.pageX + 10) + "px"); //makes the tooltip next to the cursor
-        })
-        .on("mouseout", function () {
-          return tooltip.style("visibility", "hidden") //makes the tooltip disappear when you cursor out
-        });
-    }
+    bars.enter()
+      .append("text")
+      .attr("x", function (d, i) { return xScale(recyclingFields[i]); })
+      .attr("dx", 34)
+      .attr("text-anchor", "middle")
+      .attr("y", function (d, i) { return yScale(d); })
+      .attr("dy", -3)
+      .attr("font-weight", "bold")
+      .text(function (d) { return d; });
   };
 
   updateRecyclingBars(recyclingMap[dropdownValue]);
@@ -389,30 +352,15 @@ let makeCompostVis = function (compostMap) {
       .attr("y", function (d, i) { return yScale(d); })
       .attr("height", function (d, i) { return height - yScale(d); });
 
-    let isMobile = window.innerWidth <= 767 ? true : false;
-    let tooltip = d3.select("body").append("div") //tooltip stuff
-      .style("position", "absolute")
-      .style("z-index", "10") //depth of the tooltip
-      .style("visibility", "hidden") //makes the tooltip hidden
-      .style("color", "white")
-      .style("padding", "8px")
-      .style("background-color", "rgba(0, 0, 0, 0.75)")
-      .style("border-radius", "6px")
-      .style("font", "12px sans-serif")
-      .text("tooltip");
-    //where tooltip code will go
-    if (!isMobile) {
-      bars.on("mouseover", function (d, i) {
-        tooltip.html(d + '%'); //creates the text when you mouseover
-        tooltip.style("visibility", "visible"); //makes the tooltip visible
-      })
-        .on("mousemove", function () {
-          return tooltip.style("top", (d3.event.pageY - 10) + "px").style("left", (d3.event.pageX + 10) + "px"); //makes the tooltip next to the cursor
-        })
-        .on("mouseout", function () {
-          return tooltip.style("visibility", "hidden") //makes the tooltip disappear when you cursor out
-        });
-    }
+    bars.enter()
+      .append("text")
+      .attr("x", function (d, i) { return xScale(compostFields[i]); })
+      .attr("dx", 38)
+      .attr("text-anchor", "middle")
+      .attr("y", function (d, i) { return yScale(d); })
+      .attr("dy", -3)
+      .attr("font-weight", "bold")
+      .text(function (d) { return d; });
   };
 
   updateCompostBars(compostMap[dropdownValue]);
