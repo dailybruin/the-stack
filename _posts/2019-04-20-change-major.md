@@ -1,5 +1,5 @@
 ---
-title: Wanna Switch? UCLA Students' Major Changes from Admissions to Graduation
+title: UCLA Students' Major Changes from Admissions to Graduation
 teaser: A look at how UCLA Students change their majors from their time of admissions to eventual degree, data aggregated from 2013-2018.
 authors:
   - jeanette_lin
