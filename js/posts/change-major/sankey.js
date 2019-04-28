@@ -147,7 +147,7 @@
         for(var key in d[0]){
             majors.push(key)
         }
-        generateVis(dataset["Business Economics"], true);
+        generateVis(dataset["Chemistry"], true);
 
         majors2 = majors.slice(0, 87);
         var majors3 = majors.slice(87);
@@ -156,7 +156,7 @@
         var menu = d3.select(".dropdown").append("select")
         .attr("id", "dropdown1");
         menu
-        .style("margin-left", "150px")
+        .style("margin-left", "200px")
         .selectAll("option")
         .data(majors2)
         .enter()
@@ -173,8 +173,8 @@
         .attr("id", "dropdown2");
 
         menu2
-        .style("float", "right")
-        .style("margin-right", "150px")
+        //.style("float", "right")
+        .style("margin-left", "300px")
         .selectAll("option")
         .data(majors3)
         .enter()
