@@ -19,6 +19,7 @@ scripts:
 
 ---
 
-  <div id="dropdown"></div>
-  <div id="chart"></div>
-  <div id="label"></div>
+<div class="dropdown"></div>
+<div class="dropdown2"></div>
+<div id="chart"></div>
+<div id="label"></div>

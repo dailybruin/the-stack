@@ -28,7 +28,7 @@
             .attr("id", "sankeyg");
         //
 
-    function generateVis(dataset){
+    function generateVis(dataset, switchin){
         
 
         // establish sankey object and calculate node 
@@ -88,7 +88,8 @@
             .on('mouseout', function() {
                 d3.selectAll("path").style('stroke-opacity', 0.5);
             })
-            .attr("stroke", d => mcolor(d.target.name))
+            .attr("stroke", d => {if(switchin) return(mcolor(d.target.name))
+                                    else return(mcolor(d.source.name))})
             .attr("class", function(d) {
                 link_index = link_index + 1;
                 return("node-" + link_index)})
@@ -138,18 +139,44 @@
     
     
     d3.json('/datasets/change-major/major_datav2.json').then(function(d){
-        var dataset = d;
+
+        var dataset = d[0];
 
         majors = []
+        majors.push("Select an Admissions Major")
         for(var key in d[0]){
             majors.push(key)
         }
-        generateVis(d[0]["Aerospace Engineering"]);
+        generateVis(dataset["Business Economics"], true);
 
-        var menu = d3.select("#dropdown");
-        menu.append("select")
+        majors2 = majors.slice(0, 87);
+        var majors3 = majors.slice(87);
+        majors3.unshift("Select a Graduation Major");
+
+        var menu = d3.select(".dropdown").append("select")
+        .attr("id", "dropdown1");
+        menu
+        .style("margin-left", "150px")
         .selectAll("option")
-        .data(majors)
+        .data(majors2)
+        .enter()
+        .append("option")
+        .attr("value", function(d){
+            return d;
+        })
+        .text(function(d){
+            return d;
+        });
+
+        var menu2 = d3.select(".dropdown")
+        .append("select")
+        .attr("id", "dropdown2");
+
+        menu2
+        .style("float", "right")
+        .style("margin-right", "150px")
+        .selectAll("option")
+        .data(majors3)
         .enter()
         .append("option")
         .attr("value", function(d){
@@ -160,15 +187,31 @@
         });
 
         menu.on("change", function(){
-            var selected_major = d3.select(this)
-                .select("select")
+            var selected_major = d3.select("#dropdown1")
                 .property("value");
+            if(selected_major == "Select an Admissions Major") return;
+
+            document.getElementById('dropdown2').value = 'Select a Graduation Major';
 
             var current = document.getElementById("sankeyg");
             while(current.firstChild) current.removeChild(current.firstChild);
-            generateVis(d[0][selected_major]);
+            var switchout = true;
+            generateVis(dataset[selected_major], switchout);
         })
 
+        menu2.on("change", function(){
+            var selected_major2 = d3.select("#dropdown2")
+                .property("value");
+            console.log(selected_major2)
+            if(selected_major2 == "Select a Graduation Major") return;
+            
+            document.getElementById('dropdown1').value = 'Select an Admissions Major';
+
+            var current = document.getElementById("sankeyg");
+            while(current.firstChild) current.removeChild(current.firstChild);
+            var switchout = false;
+            generateVis(dataset[selected_major2], switchout);
+        })
         
     });
 
