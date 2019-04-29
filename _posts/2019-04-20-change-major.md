@@ -48,7 +48,7 @@ The major with the highest rate of switches out was Business Economics, with rou
 
 > \"maybe a block quote from student profiles like this?\"
 
-[blip of guy who switched out]. 
+Shashwat Agarwal is one of the students who switched out of Business Economics to Economics. He believes that many switch out of Business Economics due to the high GPA required from the pre-requisite classes.  More about the Business Economics requirements can be found [here](https://economics.ucla.edu/undergraduate/current-students/majors-and-minors/business-economics-b/). Although many are unable to stay in the Business Economics major, Shawshwat believes that the Economics major does provide more variety and open more doorways to different types of career paths. 
 
 The Economics Department is not available to comment at this time. 
 
@@ -59,5 +59,9 @@ The five majors with the highest total number of students switching in are Econo
 Students also generally stay within the same field of studies. Notably, there were only 11 students out of almost 3,000 who switched out of the Engineering department onto other majors in this dataset. Furthermore, Life Sciences and Physical Sciences have roughly 20% of its students switching to other fields, while Humanities and Social Sciences have less than 5% of switches out of the field.
 
 It’s well-known that switching into the Engineering department from other departments is not an easy-task, as indicated by this [reference](https://www.seasoasa.ucla.edu/ls-to-engineering/) on their website. While statistics regarding students switching in to the Engineering department is not readily reflected in the data, one such success story is .
+
+Kristie Liu, a current second-year, had successfully switched from Linguistics and Computer Science in the Humanities department to Computer Science in the Engineering department. Since she decided to transfer while she was a freshman, the process took over two quarters, as she had to take several pre-requisite computer science and mathematics courses in order to apply. Kristie believes that all her hard work paid off and this switch in majors tailors more towards her passion. In regard to those considering switching into the Engineering department, Kristie recommends focusing on grades since this transfer is extremely GPA-oriented.  
+
+Although switching majors can be daunting, Furn Techalertumpai, a student who transferred from Mathematics/Economics to Computer Science, recommends that "if you find something you are passionate in, do it! College is really a time for you to explore different fields you might have not thought of or discovered before." She understands that self-doubt and lack of exposure can stand as obstacles, but with the help and support of peers at UCLA, she was able to learn to ask for help and to never give up on exploring her passions.
 
 > \"maybe another block quote from student profiles like this?\"
