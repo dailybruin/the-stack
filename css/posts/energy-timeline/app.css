@@ -1,0 +1,28 @@
+/*
+@media (min-width: 300px) and (max-width: 900px) {
+  .graphs {
+    display: none;
+  }
+}
+
+@media (min-width: 1201px) {
+  .phone-text {
+    display: none;
+  }
+}
+
+.phone-text {
+  color: grey;
+} */
+
+html {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  font: 14px sans-serif;
+  position: relative;
+}
+
+/* ---------------------TIMELINE---------------------------------------------*/
