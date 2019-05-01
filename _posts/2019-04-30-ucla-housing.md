@@ -12,8 +12,8 @@ stylesheets:
   - /css/posts/2018db-recruitment/app.css
 scripts:
   - //cdn.plot.ly/plotly-latest.min.js
-  - /js/posts/2018db-recruitment/acceptances-by-year-2018-2019.js
-  - /js/posts/2018db-recruitment/db-acceptance-rate-over-the-years.js
-  - /js/posts/2018db-recruitment/acceptances-by-department.js
+  - /js/posts/ucla-housing/app.js
 ---
+
+<div id="westwood-apt-bubble-map" align="center"></div>
 
