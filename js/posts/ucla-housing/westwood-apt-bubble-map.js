@@ -1,5 +1,5 @@
 
-Plotly.d3.csv('/datasets/ucla-housing/department-map-data.json', function(err, rows){
+Plotly.d3.csv('/datasets/ucla-housing/price_by_street.csv', function(err, rows){
 
     function unpack(rows, key) {
         return rows.map(function(row) { return row[key]; });
