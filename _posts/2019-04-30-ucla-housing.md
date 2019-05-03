@@ -12,8 +12,10 @@ stylesheets:
   - /css/posts/2018db-recruitment/app.css
 scripts:
   - //cdn.plot.ly/plotly-latest.min.js
-  - /js/posts/ucla-housing/app.js
+  - /js/posts/ucla-housing/westwood-apt-bubble-map.js
+  - /js/posts/ucla-housing/listing-over-year.js
 ---
 
 <div id="westwood-apt-bubble-map" align="center"></div>
+<div id="listing-over-year" align="center"></div>
 
