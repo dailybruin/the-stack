@@ -10,6 +10,7 @@ key_takeaways:
 featured_image:
   url: change-major/featured_image.png
 scripts:
+ - //ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js
  - //d3js.org/d3.v5.min.js
  - //unpkg.com/d3-array@1
  - //unpkg.com/d3-collection@1
