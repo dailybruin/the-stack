@@ -109,7 +109,7 @@ var margin = { top: 50, right: 10, bottom: 10, left: 10 },
     if(height < 300) {
         width = width + 200;
         widthExtentLeft = 150;
-        widthExtentRight = 300;
+        widthExtentRight = 370;
         height = 1.2 *  width;
         fontsize = 8;
         box_width = 10;
@@ -212,7 +212,7 @@ function generateVis(dataset, switchin) {
         .data(nodes)
         .join("text")
         .attr("x", d => {if(width < 600) {
-                            if(d.x1 < width / 2) return(d.x0 - 3 * (d.name.length) - 45)
+                            if(d.x1 < width / 2) return(d.x0 - 3 * (d.name.length) - 50)
                             else return(d.x1 + 8)}
                         else if(d.x1 < width / 2) return( d.x0 - 5 * (d.name.length) - 70 ) 
                         else return(d.x1 + 8)})
@@ -336,7 +336,7 @@ d3.json('/datasets/change-major/major_datav2.json').then(function (d) {
 var label_rects = d3.select("#label")
     .append("svg")
     .attr("width", width)
-    .attr("height", 200);
+    .attr("height", 80);
 
 
 
