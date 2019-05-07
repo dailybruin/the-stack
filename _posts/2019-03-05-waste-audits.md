@@ -1,6 +1,6 @@
 ---
 title: UCLA Waste Bin Breakdown
-teaser: Learn how often students recycle and compost, and test your trash-sorting skills
+teaser: Learn how much students recycle and compost, and test your trash-sorting skills
 authors:
   - andrew_kan
 key_takeaways:
@@ -12,9 +12,10 @@ og_image: waste-audits/placeholder.png
 stylesheets:
   - /css/posts/waste-audits/app.css
 scripts:
-  - //https://d3js.org/d3.v5.min.js
   - /js/posts/waste-audits/audits.js
 ---
+
+<script src="http://d3js.org/d3.v3.min.js"></script>
 <style>
     select {
       display: block;
@@ -49,7 +50,7 @@ scripts:
     }
   </style>
 <p>
-  Walking around campus, one can easily spot the trio of landfill, recycling, and compost bins. Recycling and composting is more eco-friendly than throwing everything into the landfill, but how often do students actually do so? The Daily Bruin investigates how students sort their trash into these bins around campus.
+  Walking around campus, one can spot the iconic trio of landfill, recycling, and compost bins nearly everywhere. These three bins are more eco-friendly than just a general trash bin, but do students actually put their trash into the recycling and compost bins? The Daily Bruin investigates how students sort their trash into these bins around campus.
 </p>
 
 <p>
@@ -77,8 +78,7 @@ scripts:
     Things to do:
     <ul style="font-size: 14px">
       <li>tried to make transitions work for like 2 hours but never did correctly :( </li>
-      <li>get copy illustrations, message nicole</li>
       <li>make backend for interactive work, talk with neil</li>
-      <li>integrate numerical weights somewhere</li>
+      <li>make canvases and yaxises and stuff global so that we can take updatefunctions out and make them global</li>
     </ul>
   </p>
