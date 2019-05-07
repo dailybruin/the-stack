@@ -23,18 +23,23 @@ let landfillCanvas;
 let landfillxScale;
 let landfillheight;
 let landfillyScale;
-let recycilngCanvas;
+let recyclingCanvas;
+let recyclingxScale;
+let recyclingheight;
+let recyclingyScale;
 let compostCanvas;
+let compostxScale;
+let compostheight;
+let compostyScale;
 let changeDuration = 300;
 let delayDuration = 100;
 
 // Handler for dropdown value change
 let DropdownChange = function() {
   dropdownValue = d3.select(this).property('value');
-  console.log(landfillMap[dropdownValue]);
   updateLandfillBars(landfillMap[dropdownValue]);
-  makeRecyclingVis(recyclingMap);
-  makeCompostVis(compostMap);
+  updateRecyclingBars(recyclingMap[dropdownValue]);
+  updateCompostBars(compostMap[dropdownValue]);
 };
 
 dropdown.on('change', DropdownChange);
@@ -48,7 +53,6 @@ d3.csv(landfillFileName, function(error, data) {
     // { cerealName: [ bar1Val, bar2Val, ... ] }
     landfillFields.forEach(function(field) {
       landfillMap[place].push(+d[field]);
-      //console.log(+d[field]);
     });
   });
   // Get names of places, for dropdown
@@ -77,7 +81,6 @@ d3.csv(recyclingFileName, function(error, data) {
     // { cerealName: [ bar1Val, bar2Val, ... ] }
     recyclingFields.forEach(function(field) {
       recyclingMap[place].push(+d[field]);
-      //console.log(+d[field]);
     });
   });
   makeRecyclingVis(recyclingMap);
@@ -92,7 +95,6 @@ d3.csv(compostFileName, function(error, data) {
     // { cerealName: [ bar1Val, bar2Val, ... ] }
     compostFields.forEach(function(field) {
       compostMap[place].push(+d[field]);
-      //console.log(+d[field]);
     });
   });
   makeCompostVis(compostMap);
@@ -101,10 +103,10 @@ d3.csv(compostFileName, function(error, data) {
 let updateLandfillBars = function(data) {
   let bars = landfillCanvas.selectAll('.bar').data(data);
   // Add bars for new data
-  d3.select('.bar')
+  landfillCanvas
+    .selectAll('.bar')
     .select('*')
     .remove();
-  d3.selectAll('.values').remove();
 
   bars
     .enter()
@@ -123,12 +125,19 @@ let updateLandfillBars = function(data) {
     })
     .attr('height', function(d, i) {
       return landfillheight - landfillyScale(d);
+    })
+    .text(function(d) {
+      return d;
     });
 
-  bars
+  let values = landfillCanvas.selectAll('.text').data(data);
+  landfillCanvas.selectAll('.label').remove();
+  values
     .enter()
     .append('text')
-    .attr('class', 'values')
+    .attr('class', 'label')
+    .transition()
+    .delay(changeDuration)
     .style('fill', 'black')
     .attr('text-anchor', 'middle')
     .attr('x', function(d, i) {
@@ -162,12 +171,6 @@ let makeLandfillVis = function(landfillMap) {
     .linear()
     .range([landfillheight, 0])
     .domain(d3.extent([0, 100]));
-
-  // Delete old canvas and create new canvasas
-
-  /*d3.select('#landfillGraph')
-    .selectAll('*')
-    .remove(); */
 
   landfillCanvas = d3
     .select('#landfillGraph')
@@ -221,45 +224,96 @@ let makeLandfillVis = function(landfillMap) {
 
 //---------------------------------------------------------------------------------------------------------
 // Load and munge data, then make the visualization.
+let updateRecyclingBars = function(data) {
+  let bars = recyclingCanvas.selectAll('.bar').data(data);
+  // Add bars for new data
+  recyclingCanvas
+    .selectAll('.bar')
+    .select('*')
+    .remove();
+
+  bars
+    .enter()
+    .append('rect')
+    .attr('class', 'bar');
+  bars
+    .transition()
+    .duration(changeDuration)
+    .ease('linear')
+    .attr('x', function(d, i) {
+      return recyclingxScale(recyclingFields[i]);
+    })
+    .attr('width', recyclingxScale.rangeBand())
+    .attr('y', function(d, i) {
+      return recyclingyScale(d);
+    })
+    .attr('height', function(d, i) {
+      return recyclingheight - recyclingyScale(d);
+    })
+    .text(function(d) {
+      return d;
+    });
+
+  let values = recyclingCanvas.selectAll('.text').data(data);
+  recyclingCanvas.selectAll('.label').remove();
+  values
+    .enter()
+    .append('text')
+    .attr('class', 'label')
+    .transition()
+    .delay(changeDuration)
+    .style('fill', 'black')
+    .attr('text-anchor', 'middle')
+    .attr('x', function(d, i) {
+      return recyclingxScale(recyclingFields[i]);
+    })
+    .attr('dx', 43)
+    .attr('y', function(d, i) {
+      return recyclingyScale(d);
+    })
+    .attr('dy', -3)
+    .attr('font-weight', 'bold')
+    .text(function(d) {
+      return d;
+    });
+};
 
 let makeRecyclingVis = function(recyclingMap) {
   // Define dimensions of vis
   let margin = { top: 30, right: 30, bottom: 70, left: 40 },
-    width = 530 - margin.left - margin.right,
-    height = 490 - margin.top - margin.bottom;
+    width = 530 - margin.left - margin.right;
+  recyclingheight = 490 - margin.top - margin.bottom;
 
   // Make x scale
-  let xScale = d3.scale
+  recyclingxScale = d3.scale
     .ordinal()
     .domain(recyclingFields)
     .rangeRoundBands([0, width], 0.1);
 
   // Make y scale, the domain will be defined on bar update
-  let yScale = d3.scale.linear().range([height, 0]);
+  recyclingyScale = d3.scale
+    .linear()
+    .range([recyclingheight, 0])
+    .domain(d3.extent([0, 100]));
 
-  // Delete old canvas and create new canvasas
-  d3.select('#recyclingGraph')
-    .selectAll('*')
-    .remove();
-
-  let canvas = d3
+  recyclingCanvas = d3
     .select('#recyclingGraph')
     .append('svg')
     .attr('width', width + margin.left + margin.right)
-    .attr('height', height + margin.top + margin.bottom)
+    .attr('height', recyclingheight + margin.top + margin.bottom)
     .append('g')
     .attr('transform', 'translate(' + margin.left + ',' + margin.top + ')');
 
   // Make x-axis and add to canvas
   let xAxis = d3.svg
     .axis()
-    .scale(xScale)
+    .scale(recyclingxScale)
     .orient('bottom');
 
-  canvas
+  recyclingCanvas
     .append('g')
     .attr('class', 'x axis')
-    .attr('transform', 'translate(0,' + height + ')')
+    .attr('transform', 'translate(0,' + recyclingheight + ')')
     .call(xAxis)
     .append('text')
     .attr('x', 180)
@@ -271,10 +325,10 @@ let makeRecyclingVis = function(recyclingMap) {
   // Make y-axis and add to canvas
   let yAxis = d3.svg
     .axis()
-    .scale(yScale)
+    .scale(recyclingyScale)
     .orient('left');
 
-  let yAxisHandleForUpdate = canvas
+  let yAxisHandleForUpdate = recyclingCanvas
     .append('g')
     .attr('class', 'y axis')
     .call(yAxis);
@@ -289,92 +343,98 @@ let makeRecyclingVis = function(recyclingMap) {
     .attr('font-weight', 'bold')
     .attr('font-size', '18px');
 
-  let updateRecyclingBars = function(data) {
-    // First update the y-axis domain to match data
-    yScale.domain(d3.extent([0, 100]));
-    yAxisHandleForUpdate.call(yAxis);
-
-    let bars = canvas.selectAll('.bar').data(data);
-    console.log('recycling bars: ' + bars);
-    // Add bars for new data
-    bars
-      .enter()
-      .append('rect')
-      .attr('class', 'bar')
-      .attr('x', function(d, i) {
-        return xScale(recyclingFields[i]);
-      })
-      .attr('width', xScale.rangeBand())
-      .attr('y', function(d, i) {
-        return yScale(d);
-      })
-      .attr('height', function(d, i) {
-        return height - yScale(d);
-      });
-
-    bars
-      .enter()
-      .append('text')
-      .attr('x', function(d, i) {
-        return xScale(recyclingFields[i]);
-      })
-      .attr('dx', 34)
-      .attr('text-anchor', 'middle')
-      .attr('y', function(d, i) {
-        return yScale(d);
-      })
-      .attr('dy', -3)
-      .attr('font-weight', 'bold')
-      .text(function(d) {
-        return d;
-      });
-  };
-
   updateRecyclingBars(recyclingMap[dropdownValue]);
 };
+let updateCompostBars = function(data) {
+  let bars = compostCanvas.selectAll('.bar').data(data);
+  // Add bars for new data
+  compostCanvas
+    .selectAll('.bar')
+    .select('*')
+    .remove();
 
-//---------------------------------------------------------------------------------------------------------
-// Load and munge data, then make the visualization.
+  bars
+    .enter()
+    .append('rect')
+    .attr('class', 'bar');
+  bars
+    .transition()
+    .duration(changeDuration)
+    .ease('linear')
+    .attr('x', function(d, i) {
+      return compostxScale(compostFields[i]);
+    })
+    .attr('width', compostxScale.rangeBand())
+    .attr('y', function(d, i) {
+      return compostyScale(d);
+    })
+    .attr('height', function(d, i) {
+      return compostheight - compostyScale(d);
+    })
+    .text(function(d) {
+      return d;
+    });
+
+  let values = compostCanvas.selectAll('.text').data(data);
+  compostCanvas.selectAll('.label').remove();
+  values
+    .enter()
+    .append('text')
+    .attr('class', 'label')
+    .transition()
+    .delay(changeDuration)
+    .style('fill', 'black')
+    .attr('text-anchor', 'middle')
+    .attr('x', function(d, i) {
+      return compostxScale(compostFields[i]);
+    })
+    .attr('dx', 34)
+    .attr('y', function(d, i) {
+      return compostyScale(d);
+    })
+    .attr('dy', -3)
+    .attr('font-weight', 'bold')
+    .text(function(d) {
+      return d;
+    });
+};
 
 let makeCompostVis = function(compostMap) {
   // Define dimensions of vis
   let margin = { top: 30, right: 30, bottom: 70, left: 40 },
-    width = 450 - margin.left - margin.right,
-    height = 490 - margin.top - margin.bottom;
+    width = 450 - margin.left - margin.right;
+  compostheight = 490 - margin.top - margin.bottom;
 
   // Make x scale
-  let xScale = d3.scale
+  compostxScale = d3.scale
     .ordinal()
     .domain(compostFields)
     .rangeRoundBands([0, width], 0.1);
 
   // Make y scale, the domain will be defined on bar update
-  let yScale = d3.scale.linear().range([height, 0]);
+  compostyScale = d3.scale
+    .linear()
+    .range([compostheight, 0])
+    .domain(d3.extent([0, 100]));
 
-  // Delete old canvas and create new canvas
-
-  d3.select('#compostGraph')
-    .selectAll('*')
-    .remove();
-
-  let canvas = d3
+  compostCanvas = d3
     .select('#compostGraph')
     .append('svg')
     .attr('width', width + margin.left + margin.right)
-    .attr('height', height + margin.top + margin.bottom)
+    .attr('height', compostheight + margin.top + margin.bottom)
     .append('g')
     .attr('transform', 'translate(' + margin.left + ',' + margin.top + ')');
 
   // Make x-axis and add to canvas
   let xAxis = d3.svg
     .axis()
-    .scale(xScale)
+    .scale(compostxScale)
     .orient('bottom');
 
-  canvas
+  compostCanvas
     .append('g')
     .attr('class', 'x axis')
-    .attr('transform', 'translate(0,' + height + ')')
+    .attr('transform', 'translate(0,' + compostheight + ')')
     .call(xAxis)
     .append('text')
     .attr('x', 190)
@@ -386,10 +446,10 @@ let makeCompostVis = function(compostMap) {
   // Make y-axis and add to canvas
   let yAxis = d3.svg
     .axis()
-    .scale(yScale)
+    .scale(compostyScale)
     .orient('left');
 
-  let yAxisHandleForUpdate = canvas
+  let yAxisHandleForUpdate = compostCanvas
     .append('g')
     .attr('class', 'y axis')
     .call(yAxis);
@@ -403,47 +463,6 @@ let makeCompostVis = function(compostMap) {
     .text('Percentage')
     .attr('font-weight', 'bold')
     .attr('font-size', '18px');
-
-  let updateCompostBars = function(data) {
-    // First update the y-axis domain to match data
-    yScale.domain(d3.extent([0, 100]));
-    yAxisHandleForUpdate.call(yAxis);
-
-    let bars = canvas.selectAll('.bar').data(data);
-
-    // Add bars for new data
-    bars
-      .enter()
-      .append('rect')
-      .attr('class', 'bar')
-      .attr('x', function(d, i) {
-        return xScale(compostFields[i]);
-      })
-      .attr('width', xScale.rangeBand())
-      .attr('y', function(d, i) {
-        return yScale(d);
-      })
-      .attr('height', function(d, i) {
-        return height - yScale(d);
-      });
-
-    bars
-      .enter()
-      .append('text')
-      .attr('x', function(d, i) {
-        return xScale(compostFields[i]);
-      })
-      .attr('dx', 38)
-      .attr('text-anchor', 'middle')
-      .attr('y', function(d, i) {
-        return yScale(d);
-      })
-      .attr('dy', -3)
-      .attr('font-weight', 'bold')
-      .text(function(d) {
-        return d;
-      });
-  };
 
   updateCompostBars(compostMap[dropdownValue]);
 };

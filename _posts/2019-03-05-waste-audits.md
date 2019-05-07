@@ -68,11 +68,8 @@ scripts:
   <div id="dropdown-menu"></div>
   <div class="graph-container">
     <div id="landfillGraph"></div>
-    <div id="landfillLegend"></div>
     <div id="recyclingGraph"></div>
-    <div id="recyclingLegend"></div>
     <div id="compostGraph"></div>
-    <div id="compostLegend"></div>
   </div>
   <p style="font-size: 15px">
     Things to do:
