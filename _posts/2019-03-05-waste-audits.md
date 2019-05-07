@@ -10,45 +10,19 @@ featured_image:
   url: waste-audits/placeholder.png
 og_image: waste-audits/placeholder.png
 stylesheets:
+  - //cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.6/semantic.min.css
+  - //cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/components/dropdown.min.css
   - /css/posts/waste-audits/app.css
 scripts:
+  - //code.jquery.com/jquery-1.11.2.js
+  - //cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/semantic.min.js
+  - //cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/components/dropdown.min.js
+  - //cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/components/form.min.js
   - /js/posts/waste-audits/audits.js
 ---
 
 <script src="http://d3js.org/d3.v3.min.js"></script>
-<style>
-    select {
-      display: block;
-    }
 
-    #landfillGraph .bar {
-      fill: tan;
-      opacity: 0.8;
-    }
-
-    #recyclingGraph .bar {
-      fill: lightblue;
-      opacity: 0.8;
-    }
-
-    #compostGraph .bar {
-      fill: lightgreen;
-      opacity: 0.8;
-    }
-
-    .axis path,
-    .axis line {
-      fill: none;
-      stroke: #000;
-      shape-rendering: crispEdges;
-    }
-
-    .graph-container {
-      display: flex;
-      flex-wrap: wrap;
-      flex-direction: row;
-    }
-  </style>
 <p>
   Walking around campus, one can spot the iconic trio of landfill, recycling, and compost bins nearly everywhere. These three bins are more eco-friendly than just a general trash bin, but do students actually put their trash into the recycling and compost bins? The Daily Bruin investigates how students sort their trash into these bins around campus.
 </p>
@@ -75,6 +49,6 @@ scripts:
     Things to do:
     <ul style="font-size: 14px">
       <li>make backend for interactive work, talk with neil</li>
-      <li>make stuff prettier and write some more analysis</li>
+      <li>make stuff prettier and write some more analyasis</li>
     </ul>
   </p>
