@@ -74,8 +74,7 @@ scripts:
   <p style="font-size: 15px">
     Things to do:
     <ul style="font-size: 14px">
-      <li>tried to make transitions work for like 2 hours but never did correctly :( </li>
       <li>make backend for interactive work, talk with neil</li>
-      <li>make canvases and yaxises and stuff global so that we can take updatefunctions out and make them global</li>
+      <li>make stuff prettier and write some more analysis</li>
     </ul>
   </p>

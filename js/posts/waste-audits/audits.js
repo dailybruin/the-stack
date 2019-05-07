@@ -17,7 +17,7 @@ let dropdown = d3.select('#dropdown-menu').insert('select', 'svg');
 let landfillMap = {};
 let recyclingMap = {};
 let compostMap = {};
-let landfills;
+let places;
 let dropdownValue;
 let landfillCanvas;
 let landfillxScale;
@@ -56,10 +56,10 @@ d3.csv(landfillFileName, function(error, data) {
     });
   });
   // Get names of places, for dropdown
-  landfills = Object.keys(landfillMap).sort();
+  places = Object.keys(landfillMap).sort();
   dropdown
     .selectAll('option')
-    .data(landfills)
+    .data(places)
     .enter()
     .append('option')
     .attr('value', function(d) {
@@ -68,7 +68,7 @@ d3.csv(landfillFileName, function(error, data) {
     .text(function(d) {
       return d[0].toUpperCase() + d.slice(1, d.length); // capitalize 1st letter
     });
-  dropdownValue = landfills[0];
+  dropdownValue = places[0];
   makeLandfillVis(landfillMap);
 });
 
@@ -267,7 +267,7 @@ let updateRecyclingBars = function(data) {
     .attr('x', function(d, i) {
       return recyclingxScale(recyclingFields[i]);
     })
-    .attr('dx', 43)
+    .attr('dx', 34)
     .attr('y', function(d, i) {
       return recyclingyScale(d);
     })
@@ -316,7 +316,7 @@ let makeRecyclingVis = function(recyclingMap) {
     .attr('transform', 'translate(0,' + recyclingheight + ')')
     .call(xAxis)
     .append('text')
-    .attr('x', 180)
+    .attr('x', 175)
     .attr('y', 40)
     .text('Recycling Bins')
     .attr('font-size', '18px')
@@ -388,7 +388,7 @@ let updateCompostBars = function(data) {
     .attr('x', function(d, i) {
       return compostxScale(compostFields[i]);
     })
-    .attr('dx', 34)
+    .attr('dx', 33)
     .attr('y', function(d, i) {
       return compostyScale(d);
     })
@@ -437,7 +437,7 @@ let makeCompostVis = function(compostMap) {
     .attr('transform', 'translate(0,' + compostheight + ')')
     .call(xAxis)
     .append('text')
-    .attr('x', 190)
+    .attr('x', 138)
     .attr('y', 40)
     .text('Compost Bins')
     .attr('font-size', '18px')
