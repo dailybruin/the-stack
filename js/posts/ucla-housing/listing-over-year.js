@@ -1,4 +1,4 @@
-Plotly.d3.csv('/datasets/posts/ucla-housing/listing_over_year.csv', function(err, rows){
+Plotly.d3.csv('/datasets/ucla-housing/listing_over_year.csv', function(err, rows){
     function unpack(rows, key) {
           return rows.map(function(row) { return row[key]; });
     }
