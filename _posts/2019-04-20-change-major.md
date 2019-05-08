@@ -58,7 +58,7 @@ Jessica Gonzalez is an Undergraduate Student Affairs Officer at the Ecology and 
 
 The five majors with the highest total number of students switching in are Economics, Sociology, Psychobiology, Political Science, and Psychology. While 76% of Economics degrees were awarded to students who switched into the major, the majority come from Business Economics at 50%. Additionally, around 50% Sociology degrees awarded across the five-year span of the dataset are given to students who switched into the major.
 
-<iframe width="900" height="700" frameborder="0" scrolling="no" style="display:block;margin:auto;" src="//plot.ly/~jeanettelin8/3.embed?showlink=false"></iframe>
+<iframe id="bar-chart" frameborder="0" scrolling="no" style="display:block;margin:auto;" src="//plot.ly/~jeanettelin8/5.embed?showlink=false"></iframe>
 
 Life Sciences and Physical Sciences have roughly 20% of its students switching to other fields, while Humanities and Social Sciences have less than 5% of switches out of the field. While Life Sciences is the most popular category by admitted students, Social Sciences ultimately becomes the field with most degrees awarded in the dataset.
 

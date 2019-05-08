@@ -109,7 +109,7 @@ var margin = { top: 50, right: 10, bottom: 10, left: 10 },
     if(height < 300) {
         width = width + 200;
         widthExtentLeft = 150;
-        widthExtentRight = 370;
+        widthExtentRight = 400;
         height = 1.2 *  width;
         fontsize = 8;
         box_width = 10;
@@ -121,9 +121,11 @@ function generateVis(dataset, switchin) {
     d3.select('#chart').select('*').remove();
 
     // append the svg canvas to the page
-    var svg = d3.select("#chart").append("svg")
-        .attr("width", width + margin.left + margin.right)
-        .attr("height", height + margin.top + margin.bottom)
+    var svg = d3.select("#chart")
+        .style("overflow-x", "scroll")
+        .append("svg")
+        .attr("width", width + margin.left + margin.right + "px")
+        .attr("height", height + margin.top + margin.bottom + "px")
         .append("g")
         .attr("transform",
             "translate(" + margin.left + "," + margin.top + ")")
@@ -264,7 +266,8 @@ d3.json('/datasets/change-major/major_datav2.json').then(function (d) {
     var menu = d3.select(".dropdown").append("select")
         .attr("id", "dropdown1");
     menu
-        .style("margin-left", "200px")
+        .style("margin-left", function(){if(width > 600) return("200px")
+                                        else return("80px")})
         .selectAll("option")
         .data(majors2)
         .enter()
@@ -282,7 +285,8 @@ d3.json('/datasets/change-major/major_datav2.json').then(function (d) {
 
     menu2
         //.style("float", "right")
-        .style("margin-left", "300px")
+        .style("margin-left", function() {if(width > 600) return("300px")
+                                            else return("80px")})
         .selectAll("option")
         .data(majors3)
         .enter()
@@ -347,7 +351,8 @@ label_rects.selectAll(".label-rect")
     .classed("label-rect", true)
     .attr("width", box_width)
     .attr("height", box_width)
-    .attr("x", (d, i) => (i) * (width / 12 + 10) + (width / 4))
+    .attr("x", (d, i) => {if(box_width > 15) return((i) * (width / 12 + 10) + (width / 4))
+                            else return(i * (width / 12 + 7)) + (width/12)})
     .attr("y", 10)
     .attr("fill", function (d, i) {
         if (d === "Life Sciences") return ("#A2F2A3")
@@ -364,7 +369,7 @@ label_rects.selectAll(".label-text")
     .append("text")
     .attr("class", "label-text")
     .attr("x", (d, i) => {if(box_width > 15) return( i * (width / 12 + 10) + (width / 4) + (box_width + 5))
-        else return(i * (width / 12 + 10) + (width / 4) + (box_width - 15))})
+        else return((i * (width / 12 + 10)) + (width/12) + (box_width - 25))})
                             
     .attr("y", function(){if(box_width < 20) return(25)
                             else return(20)})
@@ -373,4 +378,8 @@ label_rects.selectAll(".label-text")
     .style("font", function() {if(box_width > 15) return("10px sans-serif")
                     else return("6px sans-serif")});
 
-
+// change bar graph's size width="900" height="600"
+d3.select('iframe')
+    .attr("width", function(){if(width > 600) return('900')
+                                else return('500')})
+    .attr('height', '600');
