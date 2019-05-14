@@ -110,7 +110,7 @@ var margin = { top: 50, right: 10, bottom: 10, left: 10 },
         width = width + 200;
         widthExtentLeft = 150;
         widthExtentRight = 400;
-        height = 1.2 *  width;
+        height = 1 *  width;
         fontsize = 8;
         box_width = 10;
     }
