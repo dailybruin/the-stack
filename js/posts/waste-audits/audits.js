@@ -18,7 +18,7 @@ let landfillMap = {};
 let recyclingMap = {};
 let compostMap = {};
 let places;
-let dropdownValue;
+let dropdownValue = 'Hedrick Lounges';
 let landfillCanvas;
 let landfillxScale;
 let landfillheight;
@@ -56,7 +56,7 @@ d3.csv(landfillFileName, function(error, data) {
     });
   });
   // Get names of places, for dropdown
-  places = Object.keys(landfillMap).sort();
+  places = Object.keys(landfillMap);
   dropdown
     .selectAll('option')
     .data(places)
@@ -143,7 +143,7 @@ let updateLandfillBars = function(data) {
     .attr('x', function(d, i) {
       return landfillxScale(landfillFields[i]);
     })
-    .attr('dx', 43)
+    .attr('dx', 42)
     .attr('y', function(d, i) {
       return landfillyScale(d);
     })
@@ -156,7 +156,7 @@ let updateLandfillBars = function(data) {
 
 let makeLandfillVis = function(landfillMap) {
   // Define dimensions of vis
-  let margin = { top: 30, right: 30, bottom: 70, left: 40 },
+  let margin = { top: 43, right: 30, bottom: 70, left: 40 },
     width = 360 - margin.left - margin.right;
   landfillheight = 490 - margin.top - margin.bottom;
 
@@ -211,7 +211,7 @@ let makeLandfillVis = function(landfillMap) {
 
   yAxisHandleForUpdate
     .append('text')
-    .attr('y', -25)
+    .attr('y', -35)
     .attr('x', 60)
     .attr('dy', '.71em')
     .style('text-anchor', 'end')
@@ -280,7 +280,7 @@ let updateRecyclingBars = function(data) {
 
 let makeRecyclingVis = function(recyclingMap) {
   // Define dimensions of vis
-  let margin = { top: 30, right: 30, bottom: 70, left: 40 },
+  let margin = { top: 43, right: 30, bottom: 70, left: 40 },
     width = 530 - margin.left - margin.right;
   recyclingheight = 490 - margin.top - margin.bottom;
 
@@ -333,7 +333,7 @@ let makeRecyclingVis = function(recyclingMap) {
     .attr('class', 'y axis')
     .call(yAxis);
 
-  yAxisHandleForUpdate
+  /*yAxisHandleForUpdate
     .append('text')
     .attr('y', -25)
     .attr('x', 60)
@@ -341,7 +341,7 @@ let makeRecyclingVis = function(recyclingMap) {
     .style('text-anchor', 'end')
     .text('Percentage')
     .attr('font-weight', 'bold')
-    .attr('font-size', '18px');
+    .attr('font-size', '18px');*/
 
   updateRecyclingBars(recyclingMap[dropdownValue]);
 };
@@ -401,7 +401,7 @@ let updateCompostBars = function(data) {
 
 let makeCompostVis = function(compostMap) {
   // Define dimensions of vis
-  let margin = { top: 30, right: 30, bottom: 70, left: 40 },
+  let margin = { top: 43, right: 30, bottom: 70, left: 40 },
     width = 450 - margin.left - margin.right;
   compostheight = 490 - margin.top - margin.bottom;
 
@@ -454,7 +454,7 @@ let makeCompostVis = function(compostMap) {
     .attr('class', 'y axis')
     .call(yAxis);
 
-  yAxisHandleForUpdate
+  /*yAxisHandleForUpdate
     .append('text')
     .attr('y', -25)
     .attr('x', 60)
@@ -462,7 +462,7 @@ let makeCompostVis = function(compostMap) {
     .style('text-anchor', 'end')
     .text('Percentage')
     .attr('font-weight', 'bold')
-    .attr('font-size', '18px');
+    .attr('font-size', '18px');*/
 
   updateCompostBars(compostMap[dropdownValue]);
 };

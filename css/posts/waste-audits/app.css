@@ -29,3 +29,7 @@ select {
   flex-wrap: wrap;
   flex-direction: row;
 }
+
+p {
+  font-size: 18px;
+}
