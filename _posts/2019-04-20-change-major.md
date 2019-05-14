@@ -1,6 +1,6 @@
 ---
-title: UCLA Students' Major Changes from Admissions to Graduation
-teaser: A look at how UCLA Students change their majors from admissions to attained degree, data aggregated from 2013-2018.
+title: Strike it Rich with a Major Switch
+teaser: A look at how UCLA students change their majors from admissions to their attained degree, data aggregated from 2013-2018.
 authors:
   - jeanette_lin
   - keith_atienza
