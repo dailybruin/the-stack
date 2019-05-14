@@ -1,11 +1,12 @@
 ---
-title: UCLA Waste Bin Breakdown
+title: UCLA Trash Breakdown
 teaser: See how students sort trash and test your trash-sorting skills with a game
 authors:
   - andrew_kan
 key_takeaways:
   - In non-dining buildings, around 30% of trash by weight is placed in the landfill bin, 30% in the recycling bin, and 40% in the compost bin.
-  - In dining halls, roughly 80% of food waste is edible.
+  - In the dining halls, 70-90% of food waste is still edible.
+  - The breakdown of trash UCLA students generate is similar to average American.
 featured_image:
   url: waste-audits/placeholder.png
 og_image: waste-audits/placeholder.png
@@ -24,11 +25,11 @@ scripts:
 <script src="http://d3js.org/d3.v3.min.js"></script>
 
 <p>
-  Walking around campus, one can spot the iconic trio of landfill, recycling, and compost bins nearly everywhere. These three bins are more eco-friendly than just a general trash bin, but do students actually put their trash into the recycling and compost bins? The Daily Bruin investigates how students sort their trash into these bins around campus.
+  Walking around campus, one can spot the iconic trio of landfill, recycling, and compost bins nearly everywhere. Recycling and composting are more eco-friendly than throwing everything into landfill, but do students actually use these bins? The Daily Bruin investigates how students sort their trash into these bins around campus.
 </p>
 
-<p>
-  Ever wondered what bin you should put your just-finished burger into? Try testing your trash-sorting skills with the interactive game below. Simply drag the waste items into the correct waste bin and compare your score with others!
+<p id="interactive-introduction">
+  Think you already throw your trash in the correct bins? Think you don't but could if you tried? Think you're better than the average UCLA student at sorting trash? Try testing your trash-sorting skills with the interactive game below. Simply drag the waste items into the correct waste bin and compare your score with others!
 </p>
 
 <div>
@@ -38,7 +39,6 @@ scripts:
  <div id="title">
     <p style="font: 36px Garamond; text-align: center">UCLA Waste Bin Breakdown (% by weight)</p>
   </div>
-  <br/>
   <div id="dropdown-menu"></div>
   <div class="graph-container">
     <div id="landfillGraph"></div>
@@ -48,7 +48,7 @@ scripts:
 
 #### Dining Halls
 
-  <p>The vast amount of waste is still edible or liquid, with non-edible only 30% by weight for DeNeve and Covel and less than 10% for </p>
+  <p>	At both Covel and DeNeve, 70% of food waste is edible. Feast is even more wasteful; 90% of its waste still edible. This may seem like a lot, but the average American isn't much better. According to a 2017 Natural Resources Defense Council report https://www.nrdc.org/sites/default/files/food-waste-city-level-report.pdf, the average American’s food waste is 68% edible. That doesn't excuse UCLA students from wasting so much food though. We have full control over how much food we take and eat and are constantly reminded of the Zero Food Waste by 2020 initiative when we return our plates. We have already normalized not taking trays, now it's time to normalize not wasting food.</p>
 
 #### The Hill
 
@@ -57,12 +57,12 @@ scripts:
 
 #### On-campus
 
-  <p>Powell Library has significantly more trash being composted and significantly less trash being sent to landfill than on the hill. This may be because the average student eats more often in Powell Library than in their room and because students have less landfill trash to throw away on campus.
+  <p>Powell Library sends less than 14% of its trash to landfill, much less than the Hill. This may be because the average student has less landfill trash, such as cardboard, to throw away on campus than on the Hill. Nevertheless, it shows that students are correctly sorting their trash in Powell Library. The different types of recyled materials indicate that students also know which types of trash can be recycled.
   </p>
 
 #### Conclusion
 
-  <p>UCLA students are not much better with their trash than the average American. Though the amount and types of trash differ per person, more awareness and conscious effort by students could reduce the amount of trash we send to landfill every year, especially in the dining halls.
+  <p>UCLA students are as good as handling their trash as the average American. This isn't necessarily bad though. Americans now recycle and compost more than twice as much than in the 1990s (from less than 15% to 34.7%). However, we can always do better. Though the amount and types of trash differ per person, students can be more aware and make a conscious effort to sort their trash and generate less food waste, especially at dining halls. Let's strive for a greener UCLA.
   </p>
 
   <p style="font-size: 15px">

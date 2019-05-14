@@ -11,7 +11,13 @@ let recyclingFields = [
   'Utensils',
 ];
 let compostFileName = '/datasets/waste-audits/Compost.csv';
-let compostFields = ['Compost', 'Liquid', 'Edible', 'Non-edible', 'Napkins'];
+let compostFields = [
+  'Compost',
+  'Liquid',
+  'Edible Food',
+  'Inedible Food',
+  'Napkins',
+];
 
 let dropdown = d3.select('#dropdown-menu').insert('select', 'svg');
 let landfillMap = {};
@@ -156,9 +162,9 @@ let updateLandfillBars = function(data) {
 
 let makeLandfillVis = function(landfillMap) {
   // Define dimensions of vis
-  let margin = { top: 43, right: 30, bottom: 70, left: 40 },
+  let margin = { top: 50, right: 30, bottom: 70, left: 40 },
     width = 360 - margin.left - margin.right;
-  landfillheight = 490 - margin.top - margin.bottom;
+  landfillheight = 500 - margin.top - margin.bottom;
 
   // Make x scale
   landfillxScale = d3.scale
@@ -192,10 +198,10 @@ let makeLandfillVis = function(landfillMap) {
     .attr('transform', 'translate(0,' + landfillheight + ')')
     .call(xAxis)
     .append('text')
-    .attr('x', 90)
-    .attr('y', 40)
-    .text('Landfill Bins')
-    .attr('font-size', '18px')
+    .attr('x', 111)
+    .attr('y', 50)
+    .text('Landfill')
+    .attr('font-size', '24px')
     .attr('font-weight', 'bold');
 
   // Make y-axis and add to canvas
@@ -212,12 +218,12 @@ let makeLandfillVis = function(landfillMap) {
   yAxisHandleForUpdate
     .append('text')
     .attr('y', -35)
-    .attr('x', 60)
+    .attr('x', 75)
     .attr('dy', '.71em')
     .style('text-anchor', 'end')
     .text('Percentage')
     .attr('font-weight', 'bold')
-    .attr('font-size', '18px');
+    .attr('font-size', '22px');
 
   updateLandfillBars(landfillMap[dropdownValue]);
 };
@@ -267,7 +273,7 @@ let updateRecyclingBars = function(data) {
     .attr('x', function(d, i) {
       return recyclingxScale(recyclingFields[i]);
     })
-    .attr('dx', 34)
+    .attr('dx', 32)
     .attr('y', function(d, i) {
       return recyclingyScale(d);
     })
@@ -280,9 +286,9 @@ let updateRecyclingBars = function(data) {
 
 let makeRecyclingVis = function(recyclingMap) {
   // Define dimensions of vis
-  let margin = { top: 43, right: 30, bottom: 70, left: 40 },
-    width = 530 - margin.left - margin.right;
-  recyclingheight = 490 - margin.top - margin.bottom;
+  let margin = { top: 50, right: 30, bottom: 70, left: 40 },
+    width = 500 - margin.left - margin.right;
+  recyclingheight = 500 - margin.top - margin.bottom;
 
   // Make x scale
   recyclingxScale = d3.scale
@@ -316,10 +322,10 @@ let makeRecyclingVis = function(recyclingMap) {
     .attr('transform', 'translate(0,' + recyclingheight + ')')
     .call(xAxis)
     .append('text')
-    .attr('x', 175)
-    .attr('y', 40)
-    .text('Recycling Bins')
-    .attr('font-size', '18px')
+    .attr('x', 167)
+    .attr('y', 50)
+    .text('Recycling')
+    .attr('font-size', '24px')
     .attr('font-weight', 'bold');
 
   // Make y-axis and add to canvas
@@ -388,7 +394,7 @@ let updateCompostBars = function(data) {
     .attr('x', function(d, i) {
       return compostxScale(compostFields[i]);
     })
-    .attr('dx', 33)
+    .attr('dx', 37)
     .attr('y', function(d, i) {
       return compostyScale(d);
     })
@@ -401,9 +407,9 @@ let updateCompostBars = function(data) {
 
 let makeCompostVis = function(compostMap) {
   // Define dimensions of vis
-  let margin = { top: 43, right: 30, bottom: 70, left: 40 },
-    width = 450 - margin.left - margin.right;
-  compostheight = 490 - margin.top - margin.bottom;
+  let margin = { top: 50, right: 30, bottom: 70, left: 40 },
+    width = 500 - margin.left - margin.right;
+  compostheight = 500 - margin.top - margin.bottom;
 
   // Make x scale
   compostxScale = d3.scale
@@ -437,10 +443,10 @@ let makeCompostVis = function(compostMap) {
     .attr('transform', 'translate(0,' + compostheight + ')')
     .call(xAxis)
     .append('text')
-    .attr('x', 138)
-    .attr('y', 40)
-    .text('Compost Bins')
-    .attr('font-size', '18px')
+    .attr('x', 165)
+    .attr('y', 50)
+    .text('Compost')
+    .attr('font-size', '24px')
     .attr('font-weight', 'bold');
 
   // Make y-axis and add to canvas
