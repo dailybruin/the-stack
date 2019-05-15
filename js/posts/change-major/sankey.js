@@ -99,15 +99,15 @@ function mcolor(name) {
 //
 
 
-var margin = { top: 50, right: 10, bottom: 10, left: 10 },
-    width = document.getElementsByClassName('post-content')[0].clientWidth,
+var margin = { top: 50, right: 30, bottom: 10, left: 30 },
+    width = document.getElementsByClassName('post-content')[0].clientWidth - 100,
     height = (3.2/7) * width - margin.top - margin.bottom,
     fontsize = 12,
-    widthExtentLeft = 250,
+    widthExtentLeft = 300,
     widthExtentRight =  width - 300,
     box_width = 20;
     if(height < 300) {
-        width = width + 200;
+        width = width + 300;
         widthExtentLeft = 150;
         widthExtentRight = 400;
         height = 1 *  width;
@@ -314,7 +314,6 @@ d3.json('/datasets/change-major/major_datav2.json').then(function (d) {
     menu2.on("change", function () {
         var selected_major2 = d3.select("#dropdown2")
             .property("value");
-        console.log(selected_major2)
         if (selected_major2 == "Select a Graduation Major") return;
 
         document.getElementById('dropdown1').value = 'Select an Admissions Major';
@@ -326,7 +325,19 @@ d3.json('/datasets/change-major/major_datav2.json').then(function (d) {
     })
 
     generateVis(dataset["Chemistry"], true);
-    window.addEventListener('resize', () => generateVis(dataset['Chemistry'], true));
+    // window.addEventListener('resize', () => {
+    //     var admajor = d3.select("#dropdown1").property("value");
+    //     var grmajor = d3.select("#dropdown2").property("value");
+    //     if (admajor === "Select an Admissions Major"){
+    //         generateVis(dataset[grmajor], false)
+    //     }
+    //     else
+    //     {
+    //         generateVis(dataset[admajor], true)
+    //     }
+        
+        
+    // });
 
 });
 
@@ -351,7 +362,7 @@ label_rects.selectAll(".label-rect")
     .classed("label-rect", true)
     .attr("width", box_width)
     .attr("height", box_width)
-    .attr("x", (d, i) => {if(box_width > 15) return((i) * (width / 12 + 10) + (width / 4))
+    .attr("x", (d, i) => {if(box_width > 15) return((i) * (width / 12 + 10) + (width / 4) + 30)
                             else return(i * (width / 12 + 7)) + (width/12)})
     .attr("y", 10)
     .attr("fill", function (d, i) {
@@ -368,7 +379,7 @@ label_rects.selectAll(".label-text")
     .enter()
     .append("text")
     .attr("class", "label-text")
-    .attr("x", (d, i) => {if(box_width > 15) return( i * (width / 12 + 10) + (width / 4) + (box_width + 5))
+    .attr("x", (d, i) => {if(box_width > 15) return( i * (width / 12 + 10) + (width / 4) + (box_width + 5) + 30)
         else return((i * (width / 12 + 10)) + (width/12) + (box_width - 25))})
                             
     .attr("y", function(){if(box_width < 20) return(25)
