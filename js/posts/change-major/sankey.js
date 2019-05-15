@@ -392,5 +392,7 @@ label_rects.selectAll(".label-text")
 // change bar graph's size width="900" height="600"
 d3.select('iframe')
     .attr("width", function(){if(width > 600) return('900')
-                                else return('500')})
+                                else return('400')})
+    .attr("src", function(){if(width > 600) return("//plot.ly/~jeanettelin8/9.embed?showlink=false")
+                            else return("//plot.ly/~jeanettelin8/5.embed?showlink=false")})
     .attr('height', '600');
