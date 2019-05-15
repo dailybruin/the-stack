@@ -263,7 +263,7 @@ d3.json('/datasets/change-major/major_datav2.json').then(function (d) {
     var majors3 = majors.slice(87);
     majors3.unshift("Select a Graduation Major");
 
-    var menu = d3.select(".dropdown").append("select")
+    var menu = d3.select(".dropdown").append("select").style("width", "250px")
         .attr("id", "dropdown1");
     menu
         .style("margin-left", function(){if(width > 600) return("200px")
@@ -280,12 +280,12 @@ d3.json('/datasets/change-major/major_datav2.json').then(function (d) {
         });
 
     var menu2 = d3.select(".dropdown")
-        .append("select")
+        .append("select").style("width", "250px")
         .attr("id", "dropdown2");
 
     menu2
         //.style("float", "right")
-        .style("margin-left", function() {if(width > 600) return("300px")
+        .style("margin-left", function() {if(width > 600) return("380px")
                                             else return("80px")})
         .selectAll("option")
         .data(majors3)
