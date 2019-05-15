@@ -34,6 +34,6 @@ select {
   flex-direction: row;
 }
 
-p {
+#text {
   font-size: 18px;
 }

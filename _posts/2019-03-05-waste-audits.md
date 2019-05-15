@@ -14,27 +14,144 @@ stylesheets:
   - //cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.6/semantic.min.css
   - //cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/components/dropdown.min.css
   - /css/posts/waste-audits/app.css
+  - https://waste-bin-interactive.herokuapp.com/static/style.css
+  - https://waste-bin-interactive.herokuapp.com/static/css/main.57768156.chunk.css
 scripts:
   - //code.jquery.com/jquery-1.11.2.js
   - //cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/semantic.min.js
   - //cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/components/dropdown.min.js
   - //cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/components/form.min.js
   - /js/posts/waste-audits/audits.js
+  - https://waste-bin-interactive.herokuapp.com/static/js/2.0fc3e1c0.chunk.js
+  - https://waste-bin-interactive.herokuapp.com/static/js/main.7ed6124d.chunk.js
 ---
 
 <script src="http://d3js.org/d3.v3.min.js"></script>
 
-<p>
+<p class="text">
   Walking around campus, one can spot the iconic trio of landfill, recycling, and compost bins nearly everywhere. Recycling and composting are more eco-friendly than throwing everything into landfill, but do students actually use these bins? The Daily Bruin investigates how students sort their trash into these bins around campus.
 </p>
 
-<p id="interactive-introduction">
+<p class="text" id="interactive-introduction">
   Think you already throw your trash in the correct bins? Think you don't but could if you tried? Think you're better than the average UCLA student at sorting trash? Try testing your trash-sorting skills with the interactive game below. Simply drag the waste items into the correct waste bin and compare your score with others!
 </p>
 
-<div>
+<div id="interactive">
+  <h1 style="text-align:center;color:green">How well do you know your waste bins?</h1>
+  <h1 style="text-align:center;color:green">Try to drag the waste items into the correct bin</h1>
+  <div id="item-container">
+    <div class="item-item" id="item0"></div>
+    <div class="item-item" id="item1"></div>
+    <div class="item-item" id="item2"></div>
+    <div class="item-item" id="item3"></div>
+    <div class="item-item" id="item4"></div>
+    <div class="item-item" id="item5"></div>
+    <div class="item-item" id="item6"></div>
+    <div class="item-item" id="item7"></div>
+    <div class="item-item" id="item8"></div>
+    <div class="item-item" id="item9"></div>
+    <div class="item-item" id="item10"></div>
+    <div class="item-item" id="item11"></div>
+  </div><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br class="hidden-br" /><br class="hidden-br" /><br
+    class="hidden-br" /><br class="hidden-br" /><br class="hidden-br" /><br class="hidden-mobile-br" /><br
+    class="hidden-mobile-br" /><br class="hidden-mobile-br" /><br class="hidden-mobile-br" /><br
+    class="hidden-hidden-br" /><br class="hidden-hidden-br" /><br class="hidden-hidden-br" /><br
+    class="hidden-hidden-br" /><br class="hidden-hidden-br" /><br class="hidden-hidden-br" /><br
+    class="hidden-hidden-br" /><br class="hidden-hidden-br" /><br class="hidden-hidden-br" /><br
+    class="hidden-hidden-hidden-br" /><br class="hidden-hidden-hidden-br" /><br class="hidden-hidden-hidden-br" /><br
+    class="hidden-hidden-hidden-br" /><br class="hidden-hidden-hidden-br" />
+  <div class="bin">
+    <div id="recyclingbin" class="bin-item bin-one">
+      <h3 style="text-align:center;color:#00008b">Recycling</h3><img class="bin-img" src="https://waste-bin-interactive.herokuapp.com/static/images/recyclingbin.png" />
+      <div id="bin1"></div>
+    </div>
+    <div id="compostbin" class="bin-item bin-two">
+      <h3 style="text-align:center;color:#006400">Compost</h3><img class="bin-img" src="https://waste-bin-interactive.herokuapp.com/static/images/compostbin.png" />
+      <div id="bin2"></div>
+    </div>
+    <div id="landfillbin" class="bin-item bin-three">
+      <h3 style="text-align:center">Landfill</h3><img class="bin-img" src="https://waste-bin-interactive.herokuapp.com/static/images/landfillbin.png" />
+      <div id="bin3"></div>
+    </div>
+  </div><br /><br />
+  <script>
+    ! function (l) {
+      function e(e) {
+        for (var r, t, n = e[0], o = e[1], u = e[2], f = 0, i = []; f < n.length; f++) t = n[f], p[t] && i.push(p[t][
+          0]), p[t] = 0;
+        for (r in o) Object.prototype.hasOwnProperty.call(o, r) && (l[r] = o[r]);
+        for (s && s(e); i.length;) i.shift()();
+        return c.push.apply(c, u || []), a()
+      }
+
+      function a() {
+        for (var e, r = 0; r < c.length; r++) {
+          for (var t = c[r], n = !0, o = 1; o < t.length; o++) {
+            var u = t[o];
+            0 !== p[u] && (n = !1)
+          }
+          n && (c.splice(r--, 1), e = f(f.s = t[0]))
+        }
+        return e
+      }
+      var t = {},
+        p = {
+          1: 0
+        },
+        c = [];
+
+      function f(e) {
+        if (t[e]) return t[e].exports;
+        var r = t[e] = {
+          i: e,
+          l: !1,
+          exports: {}
+        };
+        return l[e].call(r.exports, r, r.exports, f), r.l = !0, r.exports
+      }
+      f.m = l, f.c = t, f.d = function (e, r, t) {
+        f.o(e, r) || Object.defineProperty(e, r, {
+          enumerable: !0,
+          get: t
+        })
+      }, f.r = function (e) {
+        "undefined" != typeof Symbol && Symbol.toStringTag && Object.defineProperty(e, Symbol.toStringTag, {
+          value: "Module"
+        }), Object.defineProperty(e, "__esModule", {
+          value: !0
+        })
+      }, f.t = function (r, e) {
+        if (1 & e && (r = f(r)), 8 & e) return r;
+        if (4 & e && "object" == typeof r && r && r.__esModule) return r;
+        var t = Object.create(null);
+        if (f.r(t), Object.defineProperty(t, "default", {
+            enumerable: !0,
+            value: r
+          }), 2 & e && "string" != typeof r)
+          for (var n in r) f.d(t, n, function (e) {
+            return r[e]
+          }.bind(null, n));
+        return t
+      }, f.n = function (e) {
+        var r = e && e.__esModule ? function () {
+          return e.default
+        } : function () {
+          return e
+        };
+        return f.d(r, "a", r), r
+      }, f.o = function (e, r) {
+        return Object.prototype.hasOwnProperty.call(e, r)
+      }, f.p = "/";
+      var r = window.webpackJsonp = window.webpackJsonp || [],
+        n = r.push.bind(r);
+      r.push = e, r = r.slice();
+      for (var o = 0; o < r.length; o++) e(r[o]);
+      var s = n;
+      a()
+    }([])
+
+  </script>
 </div>
-<div id="interactive"><h1>Interactive goes here</h1></div>
 
  <div id="title">
     <p style="font: 36px Garamond; text-align: center">UCLA Waste Bin Breakdown (% by weight)</p>
@@ -48,21 +165,21 @@ scripts:
 
 #### Dining Halls
 
-  <p>	At both Covel and DeNeve, 70% of food waste is edible. Feast is even more wasteful; 90% of its waste still edible. This may seem like a lot, but the average American isn't much better. According to a 2017 Natural Resources Defense Council report https://www.nrdc.org/sites/default/files/food-waste-city-level-report.pdf, the average American’s food waste is 68% edible. That doesn't excuse UCLA students from wasting so much food though. We have full control over how much food we take and eat and are constantly reminded of the Zero Food Waste by 2020 initiative when we return our plates. We have already normalized not taking trays, now it's time to normalize not wasting food.</p>
+  <p class="text">	At both Covel and DeNeve, 70% of food waste is edible. Feast is even more wasteful; 90% of its waste still edible. This may seem like a lot, but the average American isn't much better. According to a 2017 Natural Resources Defense Council report https://www.nrdc.org/sites/default/files/food-waste-city-level-report.pdf, the average American’s food waste is 68% edible. That doesn't excuse UCLA students from wasting so much food though. We have full control over how much food we take and eat and are constantly reminded of the Zero Food Waste by 2020 initiative when we return our plates. We have already normalized not taking trays, now it's time to normalize not wasting food.</p>
 
 #### The Hill
 
-  <p>Adding a recycling and compost bin has definitely helped redirect waste on the hill, with 78% of waste going into recycling or compost in Hedrick lounges and 64% of the waste going into compost in Hedrick bathrooms. The student rooms, however, are still 100% landfill, because there is no designated recycling or landfill bin in the room. As shown by the lounge data, perhaps adding compost and recycling bins into student rooms may help further reduce landfill waste. Similar to the dining halls, student recycling and compost percentages are similar to the rest of America. According to a 2018 EPA report, 52.5% of trash is sent to landfill, 25.8% is recycled, and 8.9% is composted, with the other 12.8% combusted.
+<p class="text">Adding a recycling and compost bin has definitely helped redirect waste on the hill, with 78% of waste going into recycling or compost in Hedrick lounges and 64% of the waste going into compost in Hedrick bathrooms. The student rooms, however, are still 100% landfill, because there is no designated recycling or landfill bin in the room. As shown by the lounge data, perhaps adding compost and recycling bins into student rooms may help further reduce landfill waste. Similar to the dining halls, student recycling and compost percentages are similar to the rest of America. According to a 2018 EPA report, 52.5% of trash is sent to landfill, 25.8% is recycled, and 8.9% is composted, with the other 12.8% combusted.
   </p>
 
 #### On-campus
 
-  <p>Powell Library sends less than 14% of its trash to landfill, much less than the Hill. This may be because the average student has less landfill trash, such as cardboard, to throw away on campus than on the Hill. Nevertheless, it shows that students are correctly sorting their trash in Powell Library. The different types of recyled materials indicate that students also know which types of trash can be recycled.
+  <p class="text">Powell Library sends less than 14% of its trash to landfill, much less than the Hill. This may be because the average student has less landfill trash, such as cardboard, to throw away on campus than on the Hill. Nevertheless, it shows that students are correctly sorting their trash in Powell Library. The different types of recyled materials indicate that students also know which types of trash can be recycled.
   </p>
 
 #### Conclusion
 
-  <p>UCLA students are as good as handling their trash as the average American. This isn't necessarily bad though. Americans now recycle and compost more than twice as much than in the 1990s (from less than 15% to 34.7%). However, we can always do better. Though the amount and types of trash differ per person, students can be more aware and make a conscious effort to sort their trash and generate less food waste, especially at dining halls. Let's strive for a greener UCLA.
+  <p class="text">UCLA students are as good as handling their trash as the average American. This isn't necessarily bad though. Americans now recycle and compost more than twice as much than in the 1990s (from less than 15% to 34.7%). However, we can always do better. Though the amount and types of trash differ per person, students can be more aware and make a conscious effort to sort their trash and generate less food waste, especially at dining halls. Let's strive for a greener UCLA.
   </p>
 
   <p style="font-size: 15px">
