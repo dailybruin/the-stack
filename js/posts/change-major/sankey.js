@@ -108,8 +108,8 @@ var margin = { top: 50, right: 30, bottom: 10, left: 30 },
     box_width = 20;
     if(height < 300) {
         width = width + 300;
-        widthExtentLeft = 150;
-        widthExtentRight = 400;
+        widthExtentLeft = 190;
+        widthExtentRight = 340;
         height = width - 100;
         fontsize = 8;
         box_width = 10;
