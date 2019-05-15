@@ -1,9 +1,9 @@
 ---
-title: UCLA Students' Major Changes from Admissions to Graduation
-teaser: A look at how UCLA Students change their majors from admissions to attained degree, data aggregated from 2013-2018.
+title: Strike It Rich with a Major Switch
+teaser: A look at how UCLA students change their majors from admissions to their attained degree, data aggregated from 2013-2018.
 authors:
-  - jeanette_lin
   - keith_atienza
+  - jeanette_lin
 key_takeaways:
   - Roughly 30% of UCLA students change their majors, with the highest changes seen among Business Economics, Sociology, Psychobiology, Political Science, and Psychology students. 
   - Around 20% of admitted Life Sciences and Physical Sciences students switch to other fields, while less than 5% of Humanities, Engineering, or Social Sciences students switch. 
