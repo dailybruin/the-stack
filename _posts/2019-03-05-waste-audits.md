@@ -15,7 +15,7 @@ stylesheets:
   - //cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/components/dropdown.min.css
   - /css/posts/waste-audits/app.css
   - https://waste-bin-interactive.herokuapp.com/static/style.css
-  - https://waste-bin-interactive.herokuapp.com/static/css/main.57768156.chunk.css
+  - https://waste-bin-interactive.herokuapp.com/static/css/main.1c22b5ee.chunk.css
 scripts:
   - //code.jquery.com/jquery-1.11.2.js
   - //cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/semantic.min.js
@@ -32,13 +32,11 @@ scripts:
   Walking around campus, one can spot the iconic trio of landfill, recycling, and compost bins nearly everywhere. Recycling and composting are more eco-friendly than throwing everything into landfill, but do students actually use these bins? The Daily Bruin investigates how students sort their trash into these bins around campus.
 </p>
 
-<p class="text" id="interactive-introduction">
+<h3 class="text" id="interactive-introduction">
   Think you already throw your trash in the correct bins? Think you don't but could if you tried? Think you're better than the average UCLA student at sorting trash? Try testing your trash-sorting skills with the interactive game below. Simply drag the waste items into the correct waste bin and compare your score with others!
-</p>
+</h3>
 
 <div id="interactive">
-  <h1 style="text-align:center;color:green">How well do you know your waste bins?</h1>
-  <h1 style="text-align:center;color:green">Try to drag the waste items into the correct bin</h1>
   <div id="item-container">
     <div class="item-item" id="item0"></div>
     <div class="item-item" id="item1"></div>
