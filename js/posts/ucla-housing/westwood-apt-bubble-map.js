@@ -3,7 +3,7 @@ Plotly.d3.csv('/datasets/ucla-housing/price_by_street.csv', function(err, rows){
           return rows.map(function(row) { return row[key]; });
     }
 
-    scl = [[0, '#ffffd9'],
+    var scl = [[0, '#ffffd9'],
         [0.125, '#edf8b1'],
         [0.25, '#c6e9b4'],
         [0.375, '#7ecdbb'],
