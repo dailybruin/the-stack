@@ -1,6 +1,6 @@
 ---
-title: Bruins' Apartment Analyzed
-teaser: Find out how apartment rent prices have changed over the year, where are bruins living, and talks of affordable housing.
+title: Bruins' Apartments Analyzed
+teaser: Find out how apartment rent prices have changed over the year, where are bruins living, and talk of affordable housing.
 authors:
   - lik_teng_ung
 featured_image:
@@ -37,9 +37,10 @@ The average price for a shared bedroom increased by 16.8%, from an average of $6
 The top 10 popular street for apartment renting are Kelton Avenue (920 listings), Midvale Avenue (601 listings), Veteran Avenue (528 listings), Gayley Avenue (449 listings), Wilshire Boulevard (439 listings), and among others. It’s unsurprising since UCLA students prefer to live closer to UCLA campus.
 
 <div>
-    <a href="https://plot.ly/~unglikteng/50/?share_key=HPEqksdNovQoeMd281GCUV" target="_blank" title="plot from API (7)" style="display: block; text-align: center;"><img src="https://plot.ly/~unglikteng/50.png?share_key=HPEqksdNovQoeMd281GCUV" alt="plot from API (7)" style="max-width: 100%;width: 600px;"  width="600" onerror="this.onerror=null;this.src='https://plot.ly/404.png';" /></a>
-    <script data-plotly="unglikteng:50" sharekey-plotly="HPEqksdNovQoeMd281GCUV" src="https://plot.ly/embed.js" async></script>
+    <a href="https://plot.ly/~unglikteng/54/?share_key=UXAJO50yZgylZ0pJd7lCoz" target="_blank" title="plot from API (2)" style="display: block; text-align: center;"><img src="https://plot.ly/~unglikteng/54.png?share_key=UXAJO50yZgylZ0pJd7lCoz" alt="plot from API (2)" style="max-width: 100%;width: 600px;"  width="600" onerror="this.onerror=null;this.src='https://plot.ly/404.png';" /></a>
+    <script data-plotly="unglikteng:54" sharekey-plotly="UXAJO50yZgylZ0pJd7lCoz" src="https://plot.ly/embed.js" async></script>
 </div>
+
 
 We created to rank a list of 32 streets by their average renting price. The renting price for apartments in these popular streets are fairly reasonable (they aren’t among the most expensive). For comparison; Midvale Avenue (#7), Gayley Avenue (#25), Kelton Avenue (#26), Wilshire Boulevard (#27), Veteran Avenue (#28)
 
