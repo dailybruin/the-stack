@@ -11,8 +11,6 @@ featured_image:
   url: waste-audits/placeholder.png
 og_image: waste-audits/placeholder.png
 stylesheets:
-  - //cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.6/semantic.min.css
-  - //cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/components/dropdown.min.css
   - /css/posts/waste-audits/app.css
   - https://waste-bin-interactive.herokuapp.com/static/style.css
   - https://waste-bin-interactive.herokuapp.com/static/css/main.1c22b5ee.chunk.css
@@ -163,27 +161,26 @@ scripts:
 
 #### Dining Halls
 
-  <p class="text">	At both Covel and DeNeve, 70% of food waste is edible. Feast is even more wasteful; 90% of its waste still edible. This may seem like a lot, but the average American isn't much better. According to a 2017 Natural Resources Defense Council report https://www.nrdc.org/sites/default/files/food-waste-city-level-report.pdf, the average American’s food waste is 68% edible. That doesn't excuse UCLA students from wasting so much food though. We have full control over how much food we take and eat and are constantly reminded of the Zero Food Waste by 2020 initiative when we return our plates. We have already normalized not taking trays, now it's time to normalize not wasting food.</p>
+  <p className="text">	At both Covel and DeNeve, 70% of food waste is edible. Feast is even more wasteful; 90% of its waste still edible. This may seem like a lot, but the average American isn't much better. According to a 2017 Natural Resources Defense Council report https://www.nrdc.org/sites/default/files/food-waste-city-level-report.pdf, the average American’s food waste is 68% edible. That doesn't excuse UCLA students from wasting so much food though. We have full control over how much food we take and eat and are constantly reminded of the Zero Food Waste by 2020 initiative when we return our plates. We have already normalized not taking trays, now it's time to normalize not wasting food.</p>
 
 #### The Hill
 
-<p class="text">Adding a recycling and compost bin has definitely helped redirect waste on the hill, with 78% of waste going into recycling or compost in Hedrick lounges and 64% of the waste going into compost in Hedrick bathrooms. The student rooms, however, are still 100% landfill, because there is no designated recycling or landfill bin in the room. As shown by the lounge data, perhaps adding compost and recycling bins into student rooms may help further reduce landfill waste. Similar to the dining halls, student recycling and compost percentages are similar to the rest of America. According to a 2018 EPA report, 52.5% of trash is sent to landfill, 25.8% is recycled, and 8.9% is composted, with the other 12.8% combusted.
+<p className="text">Adding a recycling and compost bin has definitely helped redirect waste on the hill, with 78% of waste going into recycling or compost in Hedrick lounges and 64% of the waste going into compost in Hedrick bathrooms. Dorms, however, are still 100% landfill, because there is no designated recycling or landfill bin in the room. As shown by the lounge data, perhaps adding compost and recycling bins into student rooms may help further reduce landfill waste. Similar to the dining halls, student recycling and compost percentages are similar to the rest of America. According to a 2018 EPA report, 52.5% of trash is sent to landfill, 25.8% is recycled, and 8.9% is composted, with the other 12.8% combusted.
   </p>
 
 #### On-campus
 
-  <p class="text">Powell Library sends less than 14% of its trash to landfill, much less than the Hill. This may be because the average student has less landfill trash, such as cardboard, to throw away on campus than on the Hill. Nevertheless, it shows that students are correctly sorting their trash in Powell Library. The different types of recyled materials indicate that students also know which types of trash can be recycled.
+  <p className="text">Powell Library sends less than 14% of its trash to landfill, much less than the Hill. This may be because the average student has less landfill trash, such as cardboard, to throw away on campus than on the Hill. Nevertheless, it shows that students are correctly sorting their trash in Powell Library. The different types of recyled materials indicate that students also know which types of trash can be recycled.
   </p>
 
 #### Conclusion
 
-  <p class="text">UCLA students are as good as handling their trash as the average American. This isn't necessarily bad though. Americans now recycle and compost more than twice as much than in the 1990s (from less than 15% to 34.7%). However, we can always do better. Though the amount and types of trash differ per person, students can be more aware and make a conscious effort to sort their trash and generate less food waste, especially at dining halls. Let's strive for a greener UCLA.
+  <p className="text">UCLA students are as good as handling their trash as the average American. This isn't necessarily bad though. Americans now recycle and compost more than twice as much than in the 1990s (from less than 15% to 34.7%). However, we can always do better. Though the amount and types of trash differ per person, students can be more aware and make a conscious effort to sort their trash and generate less food waste, especially at dining halls. Let's strive for a greener UCLA.
   </p>
 
   <p style="font-size: 15px">
     Things to do:
     <ul style="font-size: 14px">
-      <li>make backend for interactive work, talk with neil</li>
       <li>make stuff prettier and write some more analysis</li>
     </ul>
   </p>
