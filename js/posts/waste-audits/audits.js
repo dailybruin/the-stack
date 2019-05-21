@@ -218,7 +218,7 @@ let makeLandfillVis = function(landfillMap) {
   yAxisHandleForUpdate
     .append('text')
     .attr('y', -35)
-    .attr('x', 75)
+    .attr('x', 88)
     .attr('dy', '.71em')
     .style('text-anchor', 'end')
     .text('Percentage')
@@ -273,7 +273,7 @@ let updateRecyclingBars = function(data) {
     .attr('x', function(d, i) {
       return recyclingxScale(recyclingFields[i]);
     })
-    .attr('dx', 32)
+    .attr('dx', 31)
     .attr('y', function(d, i) {
       return recyclingyScale(d);
     })

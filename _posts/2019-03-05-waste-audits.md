@@ -6,7 +6,7 @@ authors:
 key_takeaways:
   - In non-dining buildings, around 30% of trash by weight is placed in the landfill bin, 30% in the recycling bin, and 40% in the compost bin.
   - In the dining halls, 70-90% of food waste is still edible.
-  - The breakdown of trash UCLA students generate is similar to average American.
+  - UCLA students have a similar trash breakdown to the average American.
 featured_image:
   url: waste-audits/placeholder.png
 og_image: waste-audits/placeholder.png
@@ -24,15 +24,15 @@ scripts:
   - https://waste-bin-interactive.herokuapp.com/static/js/main.7ed6124d.chunk.js
 ---
 
-<script src="http://d3js.org/d3.v3.min.js"></script>
+<script src="https://d3js.org/d3.v3.min.js"></script>
 
 <p class="text">
   Walking around campus, one can spot the iconic trio of landfill, recycling, and compost bins nearly everywhere. Recycling and composting are more eco-friendly than throwing everything into landfill, but do students actually use these bins? The Daily Bruin investigates how students sort their trash into these bins around campus.
 </p>
 
-<h3 class="text" id="interactive-introduction">
+<p class="text" id="interactive-introduction">
   Think you already throw your trash in the correct bins? Think you don't but could if you tried? Think you're better than the average UCLA student at sorting trash? Try testing your trash-sorting skills with the interactive game below. Simply drag the waste items into the correct waste bin and compare your score with others!
-</h3>
+</p>
 
 <div id="interactive">
   <div id="item-container">
@@ -161,7 +161,7 @@ scripts:
 
 #### Dining Halls
 
-  <p className="text">	At both Covel and DeNeve, 70% of food waste is edible. Feast is even more wasteful; 90% of its waste still edible. This may seem like a lot, but the average American isn't much better. According to a 2017 Natural Resources Defense Council report https://www.nrdc.org/sites/default/files/food-waste-city-level-report.pdf, the average American’s food waste is 68% edible. That doesn't excuse UCLA students from wasting so much food though. We have full control over how much food we take and eat and are constantly reminded of the Zero Food Waste by 2020 initiative when we return our plates. We have already normalized not taking trays, now it's time to normalize not wasting food.</p>
+  <p className="text">	At both Covel and DeNeve, 70% of food waste is edible. Feast is even more wasteful; 90% of its waste still edible. This may seem like a lot, but the average American isn't much better. According to a <a href="https://www.nrdc.org/sites/default/files/food-waste-city-level-report.pdf">2017 Natural Resources Defense Council report</a>, the average American’s food waste is 68% edible. That doesn't excuse UCLA students from wasting so much food though. We have full control over how much food we take and eat and are constantly reminded of the Zero Food Waste by 2020 initiative when we return our plates. We have already normalized not taking trays, now it's time to normalize not wasting food.</p>
 
 #### The Hill
 
@@ -176,11 +176,4 @@ scripts:
 #### Conclusion
 
   <p className="text">UCLA students are as good as handling their trash as the average American. This isn't necessarily bad though. Americans now recycle and compost more than twice as much than in the 1990s (from less than 15% to 34.7%). However, we can always do better. Though the amount and types of trash differ per person, students can be more aware and make a conscious effort to sort their trash and generate less food waste, especially at dining halls. Let's strive for a greener UCLA.
-  </p>
-
-  <p style="font-size: 15px">
-    Things to do:
-    <ul style="font-size: 14px">
-      <li>make stuff prettier and write some more analysis</li>
-    </ul>
   </p>

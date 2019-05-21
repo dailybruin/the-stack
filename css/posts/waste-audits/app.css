@@ -2,10 +2,6 @@ select {
   display: block;
 }
 
-#interactive-introduction {
-  font-weight: bold;
-}
-
 #landfillGraph .bar {
   fill: tan;
   opacity: 0.8;
@@ -40,4 +36,5 @@ select {
 
 .h3 {
   font-size: 24px;
+  font-weight: 600;
 }
