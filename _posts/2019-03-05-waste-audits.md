@@ -22,8 +22,9 @@ scripts:
   - /js/posts/waste-audits/audits.js
   - https://waste-bin-interactive.herokuapp.com/static/js/2.0fc3e1c0.chunk.js
   - https://waste-bin-interactive.herokuapp.com/static/js/main.7ed6124d.chunk.js
-  - https://d3js.org/d3.v3.min.js 
 ---
+
+<script src="https://d3js.org/d3.v3.min.js"></script>
 
 <p class="text">
   Walking around campus, one can spot the iconic trio of landfill, recycling, and compost bins nearly everywhere. Recycling and composting are more eco-friendly than throwing everything into landfill, but do students actually use these bins? The Daily Bruin investigates how students sort their trash into these bins around campus.
