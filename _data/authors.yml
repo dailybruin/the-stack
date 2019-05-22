@@ -217,3 +217,21 @@ mattie_sanseverino:
     mug: Yes
     email: msanseverino@media.ucla.edu
     github: mattiesansev
+keith_atienza:
+    name: Keith Atienza
+    title: Stack Developer
+    bio: Atienza is a third-year applied mathematics and statistics student who loves stand-up comedy and being lit.
+    mug: Yes
+    email: katienza@media.ucla.edu
+    github: atienzak
+jeanette_lin:
+    name: Jeanette Lin
+    title: Stack Developer
+    bio: Lin is a third-year statistics student. Outside of school and data analysis projects, she loves hiking, going to the beach, and drinking boba. 
+    mug: Yes
+    email: jlin1@media.ucla.edu
+    github: jeanettelin8
+michael_huang:
+    name: Michael Huang
+    title: Stack Developer
+    bio: Michael is lit.
