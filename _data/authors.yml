@@ -185,21 +185,22 @@ nathan_smith:
 mattie_sanseverino:
     name: Mattie Sanseverino
     title: Stack Developer
-    bio: Mattie is a 1st year Computer Science student. She loves the ocean and anything that contains too much sugar for her own good.
+    bio: Mattie is a 1st year computer science student. She loves the ocean and anything that contains too much sugar for her own good.
     mug: Yes
     email: msanseverino@media.ucla.edu
     github: mattiesansev
 lik_teng_ung:
     name: Lik Teng Ung
     title: Stack Developer
-    bio: Ung is a stack contributor at the Daily Bruin and a third-year Statistics and Political Science student. He's an avid political poll watcher, Pythonistas and boba connoisseur.
+    bio: Ung is a stack contributor at the Daily Bruin and a third-year statistics and political science student. He's an avid political poll watcher, Pythonistas and boba connoisseur.
     email: lung@media.ucla.edu
     mug: Yes
 keith_atienza:
     name: Keith Atienza
     title: Stack Developer
-    bio: Keith is a third-year Applied Mathematics and Statistics student who loves stand-up comedy and being lit.
+    bio: Keith is a third-year applied mathematics and statistics student who loves stand-up comedy and being lit.
     mug: Yes
+    github: atienzak
     email: katienza@media.ucla.edu
 kyle_wong:
     name: Kyle Wong
