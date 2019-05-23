@@ -10,6 +10,7 @@ key_takeaways:
   - Students share their personal stories and advice on switching majors that allowed them to pursue their passions and career interests.
 featured_image:
   url: change-major/featured_image.png
+og_image: change-major/featured_image.png
 scripts:
  - //ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js
  - //d3js.org/d3.v5.min.js
