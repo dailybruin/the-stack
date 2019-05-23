@@ -3,16 +3,23 @@ Plotly.d3.csv('individual_apt.csv', function(err, rows){
           return rows.map(function(row) { return row[key]; });
     }
 
-    var scl = [[0, '#ffffd9'],
-        [0.125, '#edf8b1'],
-        [0.25, '#c6e9b4'],
-        [0.375, '#7ecdbb'],
-        [0.5, '#40b5c4'],
-        [0.625, '#1d90c0'],
-        [0.75, '#225da8'],
-        [0.875, '#243392'],
-        [1, '#081d58']],
-        button_layer_2_height = 1.2;
+    // var scl = [[0, '#ffffd9'],
+    //     [0.125, '#edf8b1'],
+    //     [0.25, '#c6e9b4'],
+    //     [0.375, '#7ecdbb'],
+    //     [0.5, '#40b5c4'],
+    //     [0.625, '#1d90c0'],
+    //     [0.75, '#225da8'],
+    //     [0.875, '#243392'],
+    //     [1, '#081d58']],
+    
+    var scl = [[0, "#ffd700"],
+                [0.167, "#ffb14e"],
+                [0.333, "#fa8775"],
+                [0.5, "#ea5f94"],
+                [0.667, "#cd34b5"],
+                [0.833, "#9d02d7"],
+                [1,"#0000ff"]]
     
     var apt_name = unpack(rows, 'place_name'),
         shared = unpack(rows, 'shared'),
@@ -90,10 +97,10 @@ Plotly.d3.csv('individual_apt.csv', function(err, rows){
           colorscale: scl,
           reversescale: false,
           opacity: 1.0,
-        //   size: rentPrice,
-        //   sizemode: 'diameter',
-        //   sizeref: 2.*Math.max(...rentPrice)/(7.5**2),
-        //   sizemin: 2,
+          size: price_shared,
+          sizemode: 'diameter',
+          sizeref: 6.*Math.max(...price_shared)/(7.5**2),
+          sizemin: 0,
           colorbar:{
             thickness: 10,
             titleside: 'right',
@@ -122,10 +129,10 @@ Plotly.d3.csv('individual_apt.csv', function(err, rows){
           colorscale: scl,
           reversescale: false,
           opacity: 1.0,
-        //   size: rentPrice,
-        //   sizemode: 'diameter',
-        //   sizeref: 2.*Math.max(...rentPrice)/(7.5**2),
-        //   sizemin: 2,
+          size: price_single,
+          sizemode: 'diameter',
+          sizeref: 6.*Math.max(...price_single)/(7.5**2),
+          sizemin: 0,
           colorbar:{
             thickness: 10,
             titleside: 'right',
@@ -154,10 +161,10 @@ Plotly.d3.csv('individual_apt.csv', function(err, rows){
           colorscale: scl,
           reversescale: false,
           opacity: 1.0,
-        //   size: rentPrice,
-        //   sizemode: 'diameter',
-        //   sizeref: 2.*Math.max(...rentPrice)/(7.5**2),
-        //   sizemin: 2,
+          size: num_listing,
+          sizemode: 'diameter',
+          sizeref: 6.*Math.max(...num_listing)/(7.5**2),
+          sizemin: 0,
           colorbar:{
             thickness: 10,
             titleside: 'right',
@@ -200,9 +207,9 @@ Plotly.d3.csv('individual_apt.csv', function(err, rows){
             pad: {'r': 10, 't': 10},
             showactive: true,
             type: 'buttons',
-            x: 0.1,
+            x: 0.35,
             xanchor: 'left',
-            y: button_layer_2_height,
+            y: 0,
             yanchor: 'center'
         },
     
@@ -210,6 +217,7 @@ Plotly.d3.csv('individual_apt.csv', function(err, rows){
 
     layout = {
       title: "Price of Shared Bedroom Apartment", 
+      height: 650,
       dragmode: 'zoom',
       mapbox: {
         center: {
@@ -226,7 +234,7 @@ Plotly.d3.csv('individual_apt.csv', function(err, rows){
       margin: {
         l: 150,
         r: 150,
-        t: 100,
+        t: 50,
         b: 100
       },
       showlegend: false,
