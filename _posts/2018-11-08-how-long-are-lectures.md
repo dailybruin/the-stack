@@ -31,7 +31,7 @@ There were lots of data we gathered from the UCLA Registrar. We wanted to look a
 </p>
 
 <p class="para">
-Across all departments in all schools, we found that the <b>top 20 departments</b> by lecture length ranged from <b>Art</b> to <b>Yiddish</b>, while the <b>bottom 20 departments</b> ranged from <b>Physiology</b> to <b>Life Sciences</b>. You can use the <i>interactive radial chart below</i> to visualize the departments with respect to filters such as average lecture length per day, average lecture length per week, average lecture size and average number of lectures per week. We filtered out schools with only one department represented. The lecture lengths in minutes are relative to the lowest value. We also categorized departments by North and South Campus, partially based on Stack's previous post on <a href="http://stack.dailybruin.com/2017/04/23/department-similarity/">departmental similarity</a>..
+Across all departments in all schools, we found that the <b>top 20 departments</b> by lecture length ranged from <b>Art</b> to <b>Yiddish</b>, while the <b>bottom 20 departments</b> ranged from <b>Physiology</b> to <b>Life Sciences</b>. You can use the <i>interactive radial chart below</i> to visualize the departments with respect to filters such as average lecture length per day, average lecture length per week, average lecture size and average number of lectures per week. We filtered out schools with only one department represented. The lecture lengths in minutes are relative to the lowest value. We also categorized departments by North and South Campus, partially based on Stack's previous post on <a href="http://stack.dailybruin.com/2017/04/23/department-similarity/">departmental similarity</a>.
 
 </p>
 
