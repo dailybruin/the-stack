@@ -14,8 +14,8 @@ let compostFileName = '/datasets/waste-audits/Compost.csv';
 let compostFields = [
   'Compost',
   'Liquid',
-  'Edible Food',
-  'Inedible Food',
+  'Edible',
+  'Inedible',
   'Napkins',
 ];
 
@@ -287,7 +287,7 @@ let updateRecyclingBars = function(data) {
 let makeRecyclingVis = function(recyclingMap) {
   // Define dimensions of vis
   let margin = { top: 50, right: 30, bottom: 70, left: 40 },
-    width = 500 - margin.left - margin.right;
+    width = 450 - margin.left - margin.right;
   recyclingheight = 500 - margin.top - margin.bottom;
 
   // Make x scale
@@ -408,7 +408,7 @@ let updateCompostBars = function(data) {
 let makeCompostVis = function(compostMap) {
   // Define dimensions of vis
   let margin = { top: 50, right: 30, bottom: 70, left: 40 },
-    width = 500 - margin.left - margin.right;
+    width = 450 - margin.left - margin.right;
   compostheight = 500 - margin.top - margin.bottom;
 
   // Make x scale

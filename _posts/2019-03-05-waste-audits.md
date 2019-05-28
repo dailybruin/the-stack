@@ -21,7 +21,7 @@ scripts:
   - //cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/components/form.min.js
   - /js/posts/waste-audits/audits.js
   - https://waste-bin-interactive.herokuapp.com/static/js/2.0fc3e1c0.chunk.js
-  - https://waste-bin-interactive.herokuapp.com/static/js/main.7ed6124d.chunk.js
+  - https://waste-bin-interactive.herokuapp.com/static/js/main.9248e23c.chunk.js
 ---
 
 <script src="https://d3js.org/d3.v3.min.js"></script>
@@ -31,7 +31,7 @@ scripts:
 </p>
 
 <p class="text" id="interactive-introduction">
-  Think you already throw your trash in the correct bins? Think you don't but could if you tried? Think you're better than the average UCLA student at sorting trash? Try testing your trash-sorting skills with the interactive game below. Simply drag the waste items into the correct waste bin and compare your score with others!
+  Try testing your trash-sorting skills with the interactive game below. Simply drag the waste items into the correct waste bin and compare your score with others when you are done.
 </p>
 
 <div id="interactive">
@@ -149,6 +149,10 @@ scripts:
   </script>
 </div>
 
+#### Data Collection
+
+<p>The following data was obtained from Campus Facilities Management. All trash audits conducted to gather this data were conducted within the past 2018-19 school year by either Campus Facilities or student organizations.</p>
+
  <div id="title">
     <p style="font: 36px Garamond; text-align: center">UCLA Waste Bin Breakdown (% by weight)</p>
   </div>
@@ -161,19 +165,29 @@ scripts:
 
 #### Dining Halls
 
-  <p className="text">	At both Covel and DeNeve, 70% of food waste is edible. Feast is even more wasteful; 90% of its waste still edible. This may seem like a lot, but the average American isn't much better. According to a <a href="https://www.nrdc.org/sites/default/files/food-waste-city-level-report.pdf">2017 Natural Resources Defense Council report</a>, the average American’s food waste is 68% edible. That doesn't excuse UCLA students from wasting so much food though. We have full control over how much food we take and eat and are constantly reminded of the Zero Food Waste by 2020 initiative when we return our plates. We have already normalized not taking trays, now it's time to normalize not wasting food.</p>
+  <p className="text">	At both Covel and DeNeve, 70% of food waste is still edible. Feast-goers waste even more food; 90% of Feast's food waste is edible. These are large percentages, but the average American isn't much better. According to a <a href="https://www.nrdc.org/sites/default/files/food-waste-city-level-report.pdf">2017 Natural Resources Defense Council report</a>, the average American’s food waste is 68% edible. </p>
+
+  <p>Insert picture of zero food waste initiative here</p>
 
 #### The Hill
 
-<p className="text">Adding a recycling and compost bin has definitely helped redirect waste on the hill, with 78% of waste going into recycling or compost in Hedrick lounges and 64% of the waste going into compost in Hedrick bathrooms. Dorms, however, are still 100% landfill, because there is no designated recycling or landfill bin in the room. As shown by the lounge data, perhaps adding compost and recycling bins into student rooms may help further reduce landfill waste. Similar to the dining halls, student recycling and compost percentages are similar to the rest of America. According to a 2018 EPA report, 52.5% of trash is sent to landfill, 25.8% is recycled, and 8.9% is composted, with the other 12.8% combusted.
+<p className="text">Adding a recycling and compost bin has definitely helped redirect waste on the hill, with 78% of waste going into recycling or compost in Hedrick lounges and 64% of the waste going into compost in Hedrick bathrooms. Dorms, however, are still 100% landfill, because there is no designated recycling or landfill bin in the room. As shown by the lounge data, perhaps adding compost and recycling bins into student rooms may help further reduce landfill waste. Similar to the dining halls, student recycling and compost percentages are similar to the rest of America. According to a <a href="https://www.epa.gov/facts-and-figures-about-materials-waste-and-recycling/national-overview-facts-and-figures-materials">2015 EPA report</a>, 52.5% of trash is sent to landfill, 25.8% is recycled, and 8.9% is composted, with the other 12.8% combusted.
   </p>
 
-#### On-campus
+  <p>insert picture of bins in lounge here</p>
 
-  <p className="text">Powell Library sends less than 14% of its trash to landfill, much less than the Hill. This may be because the average student has less landfill trash, such as cardboard, to throw away on campus than on the Hill. Nevertheless, it shows that students are correctly sorting their trash in Powell Library. The different types of recyled materials indicate that students also know which types of trash can be recycled.
+#### On-Campus
+
+  <p className="text">Powell Library sends less than 14% of its trash to landfill, half that of the Hill. This may be because the students have less landfill trash, such as cardboard or plastic wrapping, to throw away on campus. Nevertheless, it shows that students are correctly sorting their trash on campus. The landfill-recycling-compost trash bin clusters with image instructions are likely a contributing factor. 
   </p>
+
+  <p>insert picture of bins that tell you what to place your trash in here</p>
 
 #### Conclusion
 
-  <p className="text">UCLA students are as good as handling their trash as the average American. This isn't necessarily bad though. Americans now recycle and compost more than twice as much than in the 1990s (from less than 15% to 34.7%). However, we can always do better. Though the amount and types of trash differ per person, students can be more aware and make a conscious effort to sort their trash and generate less food waste, especially at dining halls. Let's strive for a greener UCLA.
+  <p className="text">UCLA students, for better or worse, are as good as handling their trash as the average American. However, Americans (and probably UCLA students) are also recycling and composting more than twice as much compared to the 1990s, according to the EPA report. Hopefully UCLA's and other nation-wide green initiatives continue to move UCLA towards a greener future. 
   </p>
+
+<p>
+Todos: change text, move stuff around
+</p>
