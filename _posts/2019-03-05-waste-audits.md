@@ -34,8 +34,11 @@ scripts:
   First try testing your trash-sorting skills with the interactive game below. Simply drag the waste items into the correct waste bin until all the items have been sorted. Compare your score with others when you are done.
 </p>
 
+<br />
+
 <div id="interactive">
-  <div id="item-container">
+  <br />
+<div id="item-container">
     <div class="item-item" id="item0"></div>
     <div class="item-item" id="item1"></div>
     <div class="item-item" id="item2"></div>
@@ -149,6 +152,8 @@ scripts:
   </script>
 </div>
 
+<br />
+
 #### Data Collection
 
 <p>The following data was obtained from Campus Facilities Management. All trash audits conducted to gather this data were conducted within the past 2018-19 school year by either Campus Facilities or student organizations.</p>
@@ -165,7 +170,7 @@ scripts:
 
 #### Dining Halls
 
-  <p className="text">	At both Covel and DeNeve, 70% of food waste is still edible. Feast-goers waste even more food; 90% of Feast's food waste is edible. These are large percentages, but the average American isn't much better. According to a <a href="https://www.nrdc.org/sites/default/files/food-waste-city-level-report.pdf">2017 Natural Resources Defense Council report</a>, the average American’s food waste is 68% edible. </p>
+  <p className="text">At both Covel and DeNeve, 70% of food waste is still edible. Feast-goers waste even more food; 90% of Feast's food waste is edible. These are large percentages, but the average American isn't much better. According to a <a href="https://www.nrdc.org/sites/default/files/food-waste-city-level-report.pdf">2017 Natural Resources Defense Council report</a>, the average American’s food waste is 68% edible.</p>
 
   <p>(Insert picture of zero food waste initiative here)</p>
 

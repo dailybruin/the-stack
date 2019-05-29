@@ -2,6 +2,10 @@ select {
   display: block;
 }
 
+#interactive {
+  border: 0.5px solid black;
+}
+
 #landfillGraph .bar {
   fill: tan;
   opacity: 0.8;
