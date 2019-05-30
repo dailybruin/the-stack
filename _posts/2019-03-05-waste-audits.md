@@ -6,7 +6,7 @@ authors:
 key_takeaways:
   - In non-dining buildings, around 30% of trash by weight is placed in the landfill bin, 30% in the recycling bin, and 40% in the compost bin.
   - In the dining halls, 70-90% of food waste is still edible.
-  - UCLA students have a similar trash breakdown to the average American.
+  - UCLA students have a similar trash composition to the average American.
 featured_image:
   url: waste-audits/game.png
 og_image: waste-audits/game.png
@@ -176,19 +176,18 @@ scripts:
 
 #### The Hill
 
-<p className="text">Adding a recycling and compost bin in the Hill dorms has helped redirect waste on the hill, with 78% of waste going to recycling or compost in Hedrick lounges and 64% of the waste going to compost in Hedrick bathrooms. Student room trash, however, is 100% landfill since there is no designated recycling or landfill bin in student rooms. As shown by the Hedrick lounge data, adding compost and recycling bins into student rooms could help further reduce landfill waste. Similarly to the dining halls, trash breakdown percentages on the Hill are similar to the rest of America. According to a <a href="https://www.epa.gov/facts-and-figures-about-materials-waste-and-recycling/national-overview-facts-and-figures-materials">2018 EPA report</a>, 52.5% of U.S. trash was sent to landfill, 25.8% was recycled, 8.9% was composted, and 12.8% was combusted in 2015.
+<p className="text">Adding a recycling and compost bin in the Hill dorms has helped redirect waste on the hill, with 78% of waste going to recycling or compost in Hedrick lounges and 64% of the waste going to compost in Hedrick bathrooms. Trash from students’ rooms, however, is 100% landfill since there is no designated recycling or compost bin in student rooms (compost bins have since been added to certain dorms since this data was collected). Similarly to the dining halls, trash breakdown percentages on the Hill are similar to the rest of America. According to a <a href="https://www.epa.gov/facts-and-figures-about-materials-waste-and-recycling/national-overview-facts-and-figures-materials">2018 EPA report</a>, 52.5% of U.S. trash was sent to landfill, 25.8% was recycled, 8.9% was composted, and 12.8% was combusted in 2015.
   </p>
 
   <p>(insert picture of bins in lounge here)</p>
 
 #### On-Campus
 
-  <p className="text">Powell Library sends less than 14% of its trash to landfill, half that of the Hill. This may be because the students have less landfill trash, such as cardboard or plastic wrapping, to throw away on campus. Nevertheless, it shows that students are correctly sorting their trash on campus. The landfill-recycling-compost trash bin clusters with image instructions are likely a contributing factor.
+  <p className="text">Powell Library sends less than 14% of its trash to landfill, half that of the Hill. This may be because the students have less landfill trash, such as cardboard or plastic wrapping, to throw away on campus. Nevertheless, the data shows that students are using the recycling and compost bins. Image instructions on each of the three trash bins are likely a contributing factor to this.
   </p>
 
   <p>(insert picture of bins that tell you what to place your trash in here)</p>
 
 #### Conclusion
 
-  <p className="text">UCLA students, for better or worse, are as good at sorting their trash as the average American. However, Americans (and probably UCLA students) are also recycling and composting more than twice as much compared to the 1990s according to the aforementioned EPA report. Hopefully UCLA's and other nation-wide green initiatives continue to push UCLA towards a greener future.
-  </p>
+  <p className="text">UCLA students, for better or worse, are about as good at sorting their trash as the average American. However, Americans (and probably UCLA students) are also recycling and composting more than twice as much compared to the 1990s according to the aforementioned EPA report. With continued efforts from both students and the school, we can keep pushing UCLA towards a greener future.</p>
