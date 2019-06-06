@@ -172,21 +172,21 @@ scripts:
 
   <p className="text">Nearly 70% of food waste is still edible at both Covel and DeNeve. Feast-goers waste even more food; 90% of Feast's food waste is edible. These statistics are comparable to the food waste of the average American. According to a <a href="https://www.nrdc.org/sites/default/files/food-waste-city-level-report.pdf">2017 Natural Resources Defense Council report</a>, the average American’s food waste is 68% edible.</p>
 
-  <p>(Insert picture of zero food waste initiative here)</p>
+ <!--  <p>(Insert picture of zero food waste initiative here)</p> -->
 
 #### The Hill
 
-<p className="text">Adding a recycling and compost bin in the Hill dorms has helped redirect waste on the hill. In Hedrick Hall, 78% of waste from the lounges is recycled or composted, and 64% of waste from the bathrooms is composted. Trash from students’ rooms, however, is 100% landfill since there is no designated recycling or compost bin in student rooms. Compost bins have since been added to certain dorms. Similarly to the dining halls, trash breakdown percentages on the Hill are around the same as the rest of America. According to a <a href="https://www.epa.gov/facts-and-figures-about-materials-waste-and-recycling/national-overview-facts-and-figures-materials">2018 EPA report</a>, 52.5% of U.S. trash was sent to landfill, 25.8% was recycled, 8.9% was composted, and 12.8% was combusted in 2015.
+<p className="text">Adding a recycling and compost bin in the Hill dorms has helped redirect waste on the hill. In Hedrick Hall, 78% of waste from the lounges is recycled or composted, and 64% of waste from the bathrooms is composted. Trash from students’ rooms, however, is 100% landfill. Compost and recycling bins have since been added to certain dorms. According to Facilities Management data, if all the trash was recycled and composted correctly, up to 83% of trash in Hedrick Hall rooms and 90% of trash in Hedrick Hall bathrooms and lounges could be diverted from landfills. Similarly to the dining halls, trash breakdown percentages on the Hill are around the same as the rest of America. According to a <a href="https://www.epa.gov/facts-and-figures-about-materials-waste-and-recycling/national-overview-facts-and-figures-materials">2018 EPA report</a>, 52.5% of U.S. trash was sent to landfill, 25.8% was recycled, 8.9% was composted, and 12.8% was combusted in 2015.
   </p>
 
-  <p>(insert picture of bins in lounge here)</p>
+  <!-- <p>(insert picture of bins in lounge here)</p> -->
 
 #### On-Campus
 
   <p className="text">Powell Library sends much less trash to landfill than the Hill. It’s trash is only 14% landfill by weight, compared to 30% from the Hill. This may be because the students have less landfill trash, such as cardboard or plastic wrapping, to throw away on campus. Nevertheless, the data shows that students are using the recycling and compost bins.
   </p>
 
-  <p>(insert picture of bins that tell you what to place your trash in here)</p>
+  <!-- <p>(insert picture of bins that tell you what to place your trash in here)</p> -->
 
 #### Conclusion
 
