@@ -30,7 +30,7 @@ The application process itself spans the course of two weeks. First, prospective
 </p>
 
 <p class = "para" align="center">
-<strong>*Double-click</strong> on the legend to view specific sections or go back to the original graph. <strong>Single-click</strong> on a section to add or remove its line from the graph.
+<strong>Double-click</strong> on the legend to view specific sections or go back to the original graph. <strong>Single-click</strong> on a section to add or remove its line from the graph.
 </p>
 <div id="acceptance-rate-years-graph" align="center"></div>
 <div id="acceptance-rate-years-hover-info" style="margin-left: 80px;"></div>
@@ -52,7 +52,7 @@ Not every section lowered the amount of interns hired however. Graphics has a ma
 </p>
 
 <p class = "para" align="center">
-<strong>*Double-click</strong> on the legend to view specific age groups or go back to the original graph. <strong>Single-click</strong> on a section to add or remove its bar from the graph.
+<strong>Double-click</strong> on the legend to view specific age groups or go back to the original graph. <strong>Single-click</strong> on a section to add or remove its bar from the graph.
 </p>
 <div id="acceptance-rate-by-year-graph" align="center"></div>
 
@@ -72,7 +72,7 @@ Though second- and third-year students were well represented in certain sections
 </p>
 
 <p class = "para" align="center">
-<strong>*Single-click</strong> on a section in the legend to add or remove it from the pie chart.
+<strong>Single-click</strong> on a section in the legend to add or remove it from the pie chart.
 </p>
 <div id="majors-graph" align="center"></div>
 
