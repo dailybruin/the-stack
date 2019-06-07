@@ -21,7 +21,7 @@ scripts:
   - //cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/components/form.min.js
   - /js/posts/waste-audits/audits.js
   - https://waste-bin-interactive.herokuapp.com/static/js/2.0fc3e1c0.chunk.js
-  - https://waste-bin-interactive.herokuapp.com/static/js/main.9248e23c.chunk.js
+  - https://waste-bin-interactive.herokuapp.com/static/js/main.a2e2e6f7.chunk.js
 ---
 
 <script src="https://d3js.org/d3.v3.min.js"></script>
