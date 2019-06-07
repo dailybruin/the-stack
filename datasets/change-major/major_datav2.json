@@ -1,0 +1,345 @@
+[{
+"Aerospace Engineering":{"nodes": [{"name":"Aerospace Engineering"},{"name":"Aerospace Engineering "},{"name":"Mechanical Engineering"}]
+, "links":[{"source":0,"target":1,"value":159},{"source":0,"target":2,"value":23}]},                         
+"African American Studies":{"nodes":[{"name":"African American Studies"},{"name":"African American Studies "}] 
+, "links": [{"source":0,"target":1,"value":63}]},                   
+"American Literature & Culture":{"nodes": [{"name":"American Literature & Culture"},{"name":"American Literature & Culture "},{"name":"English"}] 
+, "links":[{"source":0,"target":1,"value":61},{"source":0,"target":2,"value":24}] },               
+"Anthropology":{"nodes": [{"name":"Anthropology"},{"name":"Anthropology "},{"name":"Sociology"}] 
+, "links":[{"source":0,"target":1,"value":914},{"source":0,"target":2,"value":13}] },                                  
+"Applied Linguistics":{"nodes": [{"name":"Applied Linguistics"},{"name":"Applied Linguistics "}] 
+, "links":[{"source":0,"target":1,"value":33}] },                           
+"Applied Mathematics" :{"nodes": [{"name":"Applied Mathematics"},{"name":"Applied Mathematics "},{"name":"Economics"},{"name":"Financial Actuarial Mathematics"},{"name":"Mathematics Of Computation"},{"name":"Mathematics/Economics"},{"name":"Statistics"}] 
+, "links":[{"source":0,"target":1,"value":255},{"source":0,"target":2,"value":13},{"source":0,"target":3,"value":13},{"source":0,"target":4,"value":12},{"source":0,"target":5,"value":10},{"source":0,"target":6,"value":14}] },                          
+"Architectural Studies" :{"nodes": [{"name":"Architectural Studies"},{"name":"Architectural Studies "}] 
+, "links":[{"source":0,"target":1,"value":58}] },                        
+"Art":{"nodes": [{"name":"Art"},{"name":"Art "}] 
+, "links":[{"source":0,"target":1,"value":244}] },                                           
+"Art History" :{"nodes": [{"name":"Art History"},{"name":"Art History "}] 
+, "links":[{"source":0,"target":1,"value":255}] },                                  
+"Asian American Studies" :{"nodes": [{"name":"Asian American Studies"},{"name":"Asian American Studies "}] 
+, "links":[{"source":0,"target":1,"value":37}] },                       
+"Asian Humanities" :{"nodes": [{"name":"Asian Humanities"},{"name":"Asian Humanities "}] 
+, "links":[{"source":0,"target":1,"value":16}] },                             
+"Asian Studies" :{"nodes": [{"name":"Asian Studies"},{"name":"Asian Studies "},{"name":"International Development Studies"}]
+, "links":[{"source":0,"target":1,"value":89},{"source":0,"target":2,"value":19}] },                                
+"Astrophysics" :{"nodes": [{"name":"Astrophysics"},{"name":"Astrophysics "}] 
+, "links":[{"source":0,"target":1,"value":52}] },                                 
+"Atmospheric And Oceanic Sciences" :{"nodes": [{"name":"Atmospheric And Oceanic Sciences"},{"name":"Atmospheric And Oceanic Sciences "}] 
+, "links":[{"source":0,"target":1,"value":10}] },          
+"Biochemistry" :{"nodes": [{"name":"Biochemistry"},{"name":"Biochemistry "},{"name":"Anthropology"},{"name":"Biology"},{"name":"Business Economics"},{"name":"Chemical Engineering"},{"name":"Economics"},{"name":"History"},{"name":"Human Biology And Society"},{"name":"MIMG"},{"name":"MCDB"},{"name":"Neuroscience"},{"name":"Physiological Science"},{"name":"Political Science"},{"name":"Psychobiology"},{"name":"Psychology"},{"name":"Sociology"}]
+, "links":[{"source":0,"target":1,"value":748},{"source":0,"target":2,"value":40},{"source":0,"target":3,"value":131},{"source":0,"target":4,"value":14},{"source":0,"target":5,"value":19},{"source":0,"target":6,"value":24},{"source":0,"target":7,"value":15},{"source":0,"target":8,"value":11},{"source":0,"target":9,"value":41},{"source":0,"target":10,"value":29},{"source":0,"target":11,"value":27},{"source":0,"target":12,"value":51},{"source":0,"target":13,"value":38},{"source":0,"target":14,"value":62},{"source":0,"target":15,"value":43},{"source":0,"target":16,"value":38}] },                                 
+"Bioengineering" :{"nodes": [{"name":"Bioengineering"},{"name":"Bioengineering "},{"name":"Computer Science"},{"name":"Electrical Engineering"}]
+, "links":[{"source":0,"target":1,"value":205},{"source":0,"target":2,"value":15},{"source":0,"target":3,"value":11}] },                               
+"Biology":{"nodes": [{"name":"Biology"},{"name":"Biology "},{"name":"Anthropology"},{"name":"Biochemistry"},{"name":"Business Economics"},{"name":"Chicana & Chicano Studies"},{"name":"Classical Civilization"},{"name":"Communication Studies"},{"name":"Ecology, Behavior & Evolution"},{"name":"Economics"},{"name":"English"},{"name":"Environmental Science"},{"name":"Gender Studies"},{"name":"Geography"},{"name":"Geography/Environmental Studies"},{"name":"History"},{"name":"Human Biology And Society"},{"name":"International Development Studies"},{"name":"MIMG"},{"name":"MCDB"},{"name":"Neuroscience"},{"name":"Physiological Science"},{"name":"Political Science"},{"name":"Psychobiology"},{"name":"Psychology"},{"name":"Sociology"},{"name":"Spanish"},{"name":"Statistics"}] 
+, "links":[{"source":0,"target":1,"value":1169},{"source":0,"target":2,"value":81},{"source":0,"target":3,"value":35},{"source":0,"target":4,"value":17},{"source":0,"target":5,"value":12},{"source":0,"target":6,"value":10},{"source":0,"target":7,"value":10},{"source":0,"target":8,"value":14},{"source":0,"target":9,"value":35},{"source":0,"target":10,"value":51},{"source":0,"target":11,"value":25},{"source":0,"target":12,"value":14},{"source":0,"target":13,"value":11},{"source":0,"target":14,"value":11},{"source":0,"target":15,"value":39},{"source":0,"target":16,"value":37},{"source":0,"target":17,"value":16},{"source":0,"target":18,"value":111},{"source":0,"target":19,"value":119},{"source":0,"target":20,"value":52},{"source":0,"target":21,"value":149},{"source":0,"target":22,"value":75},{"source":0,"target":23,"value":285},{"source":0,"target":24,"value":113},{"source":0,"target":25,"value":91},{"source":0,"target":26,"value":16},{"source":0,"target":27,"value":10}]},                                       
+"Business Economics"  :{"nodes": [{"name":"Business Economics"},{"name":"Business Economics "},{"name":"Anthropology"},{"name":"Applied Mathematics"},{"name":"Art History"},{"name":"Biology"},{"name":"Chicana & Chicano Studies"},{"name":"Communication Studies"},{"name":"Economics"},{"name":"English"},{"name":"Financial Actuarial Mathematics"},{"name":"Geography"},{"name":"Geography/Environmental Studies"},{"name":"Global Studies"},{"name":"History"},{"name":"International Development Studies"},{"name":"Mathematics/Economics"},{"name":"Philosophy"},{"name":"Political Science"},{"name":"Psychobiology"},{"name":"Psychology"},{"name":"Sociology"},{"name":"Statistics"}] 
+, "links":[{"source":0,"target":1,"value":695},{"source":0,"target":2,"value":15},{"source":0,"target":3,"value":15},{"source":0,"target":4,"value":10},{"source":0,"target":5,"value":10},{"source":0,"target":6,"value":12},{"source":0,"target":7,"value":76},{"source":0,"target":8,"value":1108},{"source":0,"target":9,"value":25},{"source":0,"target":10,"value":16},{"source":0,"target":11,"value":27},{"source":0,"target":12,"value":15},{"source":0,"target":13,"value":19},{"source":0,"target":14,"value":57},{"source":0,"target":15,"value":64},{"source":0,"target":16,"value":28},{"source":0,"target":17,"value":13},{"source":0,"target":18,"value":259},{"source":0,"target":19,"value":23},{"source":0,"target":20,"value":50},{"source":0,"target":21,"value":167},{"source":0,"target":22,"value":30}] },                          
+"Chemical Engineering"  :{"nodes":[{"name":"Chemical Engineering"},{"name":"Chemical Engineering "},{"name":"Computer Science"}] 
+, "links":[{"source":0,"target":1,"value":281},{"source":0,"target":2,"value":14}] },                        
+"Chemistry":{"nodes": [{"name":"Chemistry"},{"name":"Chemistry "},{"name":"Anthropology"},{"name":"Biochemistry"},{"name":"Biology"},{"name":"Chemical Engineering"},{"name":"Economics"},{"name":"Environmental Science"},{"name":"Psychobiology"},{"name":"Psychology"},{"name":"Sociology"}] ,
+ "links":[{"source":0,"target":1,"value":251},{"source":0,"target":2,"value":12},{"source":0,"target":3,"value":186},{"source":0,"target":4,"value":19},{"source":0,"target":5,"value":19},{"source":0,"target":6,"value":12},{"source":0,"target":7,"value":16},{"source":0,"target":8,"value":26},{"source":0,"target":9,"value":13},{"source":0,"target":10,"value":14}] },                                     
+"Chemistry - Material Science" :{"nodes": [{"name":"Chemistry - Material Science"},{"name":"Chemistry - Material Science "}] ,
+ "links":[{"source":0,"target":1,"value":36}] },                 
+"Chicana & Chicano Studies" :{"nodes": [{"name":"Chicana & Chicano Studies"},{"name":"Chicana & Chicano Studies "}]
+, "links":[{"source":0,"target":1,"value":96}] },                    
+"Chinese"  :{"nodes": [{"name":"Chinese"},{"name":"Chinese "}] 
+, "links":[{"source":0,"target":1,"value":28}] },                                     
+"Civil Engineering" :{"nodes": [{"name":"Civil Engineering"},{"name":"Civil Engineering "},{"name":"Computer Science"},{"name":"Mechanical Engineering"}] 
+, "links":[{"source":0,"target":1,"value":277},{"source":0,"target":2,"value":16},{"source":0,"target":3,"value":20}] },                            
+"Classical Civilization":{"nodes": [{"name":"Classical Civilization"},{"name":"Classical Civilization "}] 
+, "links":[{"source":0,"target":1,"value":11}]},                        
+"Cognitive Science" :{"nodes": [{"name":"Cognitive Science"},{"name":"Cognitive Science "},{"name":"Psychology"}] 
+, "links":[{"source":0,"target":1,"value":102},{"source":0,"target":2,"value":38}] },                            
+"Communication Studies" :{"nodes":[{"name":"Communication Studies"},{"name":"Communication Studies "}] 
+, "links":[{"source":0,"target":1,"value":424}] },                        
+"Comparative Literature":{"nodes": [{"name":"Comparative Literature"},{"name":"Comparative Literature "},{"name":"English"}] 
+, "links":[{"source":0,"target":1,"value":37},{"source":0,"target":2,"value":51}] },                      
+"Computer Science" :{"nodes": [{"name":"Computer Science"},{"name":"Computer Science "}] 
+, "links":[{"source":0,"target":1,"value":275}] },                             
+"Computer Science & Engineering" :{"nodes": [{"name":"Computer Science & Engineering"},{"name":"Computer Science & Engineering "},{"name":"Computer Science"},{"name":"Electrical Engineering"}] 
+, "links":[{"source":0,"target":1,"value":90},{"source":0,"target":2,"value":237},{"source":0,"target":3,"value":10}] },               
+"Dance" :{"nodes": [{"name":"Dance"},{"name":"Dance "},{"name":"Psychology"}] 
+, "links":[{"source":0,"target":1,"value":67},{"source":0,"target":2,"value":10}] },                                        
+"Design Media Arts"   :{"nodes": [{"name":"Design Media Arts"},{"name":"Design Media Arts "}] 
+, "links":[{"source":0,"target":1,"value":191}]},                         
+"Ecology, Behavior & Evolution"  :{"nodes": [{"name":"Ecology, Behavior & Evolution"},{"name":"Ecology, Behavior & Evolution "}]
+, "links":[{"source":0,"target":1,"value":14}] },               
+"Economics" :{"nodes": [{"name":"Economics"},{"name":"Economics "},{"name":"Applied Mathematics"},{"name":"Business Economics"},{"name":"Communication Studies"},{"name":"English"},{"name":"Geography/Environmental Studies"},{"name":"History"},{"name":"International Development Studies"},{"name":"Mathematics/Economics"},{"name":"Political Science"},{"name":"Psychology"},{"name":"Sociology"},{"name":"Statistics"}]
+, "links":[{"source":0,"target":1,"value":519},{"source":0,"target":2,"value":11},{"source":0,"target":3,"value":143},{"source":0,"target":4,"value":11},{"source":0,"target":5,"value":11},{"source":0,"target":6,"value":10},{"source":0,"target":7,"value":25},{"source":0,"target":8,"value":16},{"source":0,"target":9,"value":23},{"source":0,"target":10,"value":78},{"source":0,"target":11,"value":14},{"source":0,"target":12,"value":38},{"source":0,"target":13,"value":10}] },                                    
+"Electrical Engineering":{"nodes": [{"name":"Electrical Engineering"},{"name":"Electrical Engineering "},{"name":"Computer Science"},{"name":"Computer Science & Engineering"},{"name":"Economics"},{"name":"Mechanical Engineering"}] 
+, "links":[{"source":0,"target":1,"value":582},{"source":0,"target":2,"value":108},{"source":0,"target":3,"value":48},{"source":0,"target":4,"value":11},{"source":0,"target":5,"value":13}] },                        
+"English" :{"nodes": [{"name":"English"},{"name":"English "},{"name":"American Literature & Culture"},{"name":"Communication Studies"},{"name":"Film & Television"},{"name":"Political Science"},{"name":"Sociology"}] 
+, "links":[{"source":0,"target":1,"value":977},{"source":0,"target":2,"value":16},{"source":0,"target":3,"value":26},{"source":0,"target":4,"value":16},{"source":0,"target":5,"value":18},{"source":0,"target":6,"value":21}] },                                      
+"Environmental Science" :{"nodes": [{"name":"Environmental Science"},{"name":"Environmental Science "},{"name":"Geography/Environmental Studies"},{"name":"Psychology"}] 
+, "links":[{"source":0,"target":1,"value":133},{"source":0,"target":2,"value":18},{"source":0,"target":3,"value":13}] },                        
+"Ethnomusicology" :{"nodes": [{"name":"Ethnomusicology"},{"name":"Ethnomusicology "}] 
+, "links":[{"source":0,"target":1,"value":89}] },                              
+"Film & Television" :{"nodes": [{"name":"Film & Television"},{"name":"Film & Television "}] 
+, "links": [{"source":0,"target":1,"value":71}] },                            
+"Financial Actuarial Mathematics"  :{"nodes": [{"name":"Financial Actuarial Mathematics"},{"name":"Financial Actuarial Mathematics "},{"name":"Economics"}] 
+, "links":[{"source":0,"target":1,"value":142},{"source":0,"target":2,"value":12}]},             
+"French"  :{"nodes": [{"name":"French"},{"name":"French "}]
+, "links":[{"source":0,"target":1,"value":29}]},                                      
+"Gender Studies" :{"nodes": [{"name":"Gender Studies"},{"name":"Gender Studies "},{"name":"Sociology"}] 
+, "links":[{"source":0,"target":1,"value":236},{"source":0,"target":2,"value":31}] },                               
+"Geography":{"nodes": [{"name":"Geography"},{"name":"Geography "},{"name":"Geography/Environmental Studies"}]
+, "links":[{"source":0,"target":1,"value":102},{"source":0,"target":2,"value":27}] },                                     
+"Geography/Environmental Studies" :{"nodes": [{"name":"Geography/Environmental Studies"},{"name":"Geography/Environmental Studies "},{"name":"Geography"}] 
+, "links":[{"source":0,"target":1,"value":101},{"source":0,"target":2,"value":21}]},              
+"Geology"  :{"nodes": [{"name":"Geology"},{"name":"Geology "}] 
+, "links":[{"source":0,"target":1,"value":16}] },                                     
+"Global Studies"  :{"nodes": [{"name":"Global Studies"},{"name":"Global Studies "},{"name":"Asian Studies"},{"name":"International Development Studies"},{"name":"Political Science"}] 
+, "links":[{"source":0,"target":1,"value":60},{"source":0,"target":2,"value":11},{"source":0,"target":3,"value":31},{"source":0,"target":4,"value":18}] },                              
+"History"  :{"nodes": [{"name":"History"},{"name":"History "},{"name":"Political Science"}] 
+, "links":[{"source":0,"target":1,"value":980},{"source":0,"target":2,"value":15}]},                                     
+"Human Biology And Society" :{"nodes": [{"name":"Human Biology And Society"},{"name":"Human Biology And Society "},{"name":"Anthropology"},{"name":"Biology"},{"name":"MCDB"},{"name":"Physiological Science"},{"name":"Political Science"},{"name":"Psychobiology"},{"name":"Psychology"},{"name":"Sociology"}] 
+, "links":[{"source":0,"target":1,"value":99},{"source":0,"target":2,"value":15},{"source":0,"target":3,"value":31},{"source":0,"target":4,"value":10},{"source":0,"target":5,"value":17},{"source":0,"target":6,"value":12},{"source":0,"target":7,"value":41},{"source":0,"target":8,"value":17},{"source":0,"target":9,"value":15}] },
+"International Development Studies": {"nodes": [{"name":"International Development Studies"},{"name":"International Development Studies "},{"name":"Political Science"}] 
+, "links":[{"source":0,"target":1,"value":134},{"source":0,"target":2,"value":16}] },            
+"Japanese" :{"nodes": [{"name":"Japanese"},{"name":"Japanese "},{"name":"Asian Humanities"}] 
+, "links":[{"source":0,"target":1,"value":103},{"source":0,"target":2,"value":19}] },                                     
+"Jewish Studies"  :{"nodes": [{"name":"Jewish Studies"},{"name":"Jewish Studies "}] 
+, "links":[{"source":0,"target":1,"value":12}] },                              
+"Korean" :{"nodes": [{"name":"Korean"},{"name":"Korean "}] 
+, "links":[{"source":0,"target":1,"value":14}] },                                       
+"Latin-American Studies" :{"nodes": [{"name":"Latin-American Studies"},{"name":"Latin-American Studies "}] 
+, "links":[{"source":0,"target":1,"value":18}] },                     
+"Linguistics":{"nodes": [{"name":"Linguistics"},{"name":"Linguistics "},{"name":"Applied Linguistics"},{"name":"Sociology"}] 
+, "links":[{"source":0,"target":1,"value":101},{"source":0,"target":2,"value":54},{"source":0,"target":3,"value":10}] },                                   
+"Linguistics & Anthropology" :{"nodes": [{"name":"Linguistics & Anthropology"},{"name":"Linguistics & Anthropology "}] 
+, "links":[{"source":0,"target":1,"value":12}]},                   
+"Linguistics & Asian Languages & Cultures":{"nodes": [{"name":"Linguistics & Asian Lang. & Cultures"},{"name":"Linguistics & Asian Lang. & Cultures "},{"name":"Applied Linguistics"},{"name":"Linguistics"}] 
+, "links":[{"source":0,"target":1,"value":29},{"source":0,"target":2,"value":11},{"source":0,"target":3,"value":10}] },      
+"Linguistics & Computer Science" :{"nodes": [{"name":"Linguistics & Computer Science"},{"name":"Linguistics & Computer Science "},{"name":"Linguistics"}] 
+, "links":[{"source":0,"target":1,"value":10},{"source":0,"target":2,"value":11}] },               
+"Linguistics & Psychology":{"nodes": [{"name":"Linguistics & Psychology"},{"name":"Linguistics & Psychology "},{"name":"Applied Linguistics"},{"name":"Sociology"}] 
+, "links":[{"source":0,"target":1,"value":55},{"source":0,"target":2,"value":17},{"source":0,"target":3,"value":11}]},                      
+"Marine Biology" :{"nodes": [{"name":"Marine Biology"},{"name":"Marine Biology "}]
+, "links":[{"source":0,"target":1,"value":20}] },                               
+"Materials Engineering" :{"nodes": [{"name":"Materials Engineering"},{"name":"Materials Engineering "},{"name":"Computer Science"},{"name":"Electrical Engineering"}] 
+, "links":[{"source":0,"target":1,"value":106},{"source":0,"target":2,"value":14},{"source":0,"target":3,"value":12}]},                        
+"Mathematics" :{"nodes": [{"name":"Mathematics"},{"name":"Mathematics "},{"name":"Applied Mathematics"},{"name":"Economics"},{"name":"Mathematics/Economics"}] 
+, "links":[{"source":0,"target":1,"value":123},{"source":0,"target":2,"value":89},{"source":0,"target":3,"value":10},{"source":0,"target":4,"value":14}] },                                  
+"Mathematics - Applied Science" :{"nodes": [{"name":"Mathematics - Applied Science"},{"name":"Mathematics - Applied Science "},{"name":"Applied Mathematics"},{"name":"Economics"},{"name":"Financial Actuarial Mathematics"},{"name":"Mathematics/Economics"}] 
+, "links":[{"source":0,"target":1,"value":78},{"source":0,"target":2,"value":12},{"source":0,"target":3,"value":16},{"source":0,"target":4,"value":29},{"source":0,"target":5,"value":10}] },                
+"Mathematics For Teaching":{"nodes":[{"name":"Mathematics For Teaching"},{"name":"Mathematics For Teaching "}]
+, "links":[{"source":0,"target":1,"value":26}] },                      
+"Mathematics Of Computation"  :{"nodes": [{"name":"Mathematics Of Computation"},{"name":"Mathematics Of Computation "}] 
+, "links":[{"source":0,"target":1,"value":13}]},                  
+"Mathematics/Economics" :{"nodes": [{"name":"Mathematics/Economics"},{"name":"Mathematics/Economics "},{"name":"Applied Mathematics"},{"name":"Business Economics"},{"name":"Economics"},{"name":"Financial Actuarial Mathematics"},{"name":"Statistics"}]
+, "links":[{"source":0,"target":1,"value":321},{"source":0,"target":2,"value":20},{"source":0,"target":3,"value":14},{"source":0,"target":4,"value":46},{"source":0,"target":5,"value":29},{"source":0,"target":6,"value":11}] },                        
+"Mechanical Engineering" :{"nodes": [{"name":"Mechanical Engineering"},{"name":"Mechanical Engineering "},{"name":"Computer Science"},{"name":"Electrical Engineering"}] 
+, "links":[{"source":0,"target":1,"value":387},{"source":0,"target":2,"value":22},{"source":0,"target":3,"value":12}] },                       
+"Microbiology - Immunology - Molecular Genetics (MIMG)":{"nodes": [{"name":"MIMG"},{"name":"MIMG "},{"name":"Anthropology"},{"name":"Biology"},{"name":"Human Biology And Society"},{"name":"MCDB"},{"name":"Physiological Science"},{"name":"Political Science"},{"name":"Psychobiology"},{"name":"Psychology"},{"name":"Sociology"}] 
+, "links":[{"source":0,"target":1,"value":347},{"source":0,"target":2,"value":15},{"source":0,"target":3,"value":49},{"source":0,"target":4,"value":10},{"source":0,"target":5,"value":20},{"source":0,"target":6,"value":31},{"source":0,"target":7,"value":14},{"source":0,"target":8,"value":56},{"source":0,"target":9,"value":18},{"source":0,"target":10,"value":12}] },
+"Molecular, Cell, & Developmental Biology (MCDB)":{"nodes": [{"name":"MCDB"},{"name":"MCDB "},{"name":"Biology"},{"name":"Human Biology And Society"},{"name":"MIMG"},{"name":"Neuroscience"},{"name":"Physiological Science"},{"name":"Psychobiology"},{"name":"Psychology"}] 
+, "links":[{"source":0,"target":1,"value":341},{"source":0,"target":2,"value":91},{"source":0,"target":3,"value":10},{"source":0,"target":4,"value":25},{"source":0,"target":5,"value":13},{"source":0,"target":6,"value":37},{"source":0,"target":7,"value":52},{"source":0,"target":8,"value":19}] },      
+"Music" :{"nodes": [{"name":"Music"},{"name":"Music "}] 
+, "links":[{"source":0,"target":1,"value":186}] },                                        
+"Musicology":{"nodes": [{"name":"Musicology"},{"name":"Musicology "}] 
+, "links":[{"source":0,"target":1,"value":29}] },                                    
+"Neuroscience":{"nodes": [{"name":"Neuroscience"},{"name":"Neuroscience "},{"name":"Anthropology"},{"name":"Biology"},{"name":"Cognitive Science"},{"name":"Economics"},{"name":"English"},{"name":"History"},{"name":"Human Biology And Society"},{"name":"MIMG"},{"name":"MCDB"},{"name":"Physiological Science"},{"name":"Political Science"},{"name":"Psychobiology"},{"name":"Psychology"},{"name":"Sociology"}]
+, "links":[{"source":0,"target":1,"value":450},{"source":0,"target":2,"value":22},{"source":0,"target":3,"value":81},{"source":0,"target":4,"value":10},{"source":0,"target":5,"value":11},{"source":0,"target":6,"value":14},{"source":0,"target":7,"value":11},{"source":0,"target":8,"value":11},{"source":0,"target":9,"value":10},{"source":0,"target":10,"value":17},{"source":0,"target":11,"value":25},{"source":0,"target":12,"value":21},{"source":0,"target":13,"value":97},{"source":0,"target":14,"value":30},{"source":0,"target":15,"value":25}] },                                  
+"Nursing - Four Year Program" :{"nodes": [{"name":"Nursing - Four Year Program"},{"name":"Nursing - Four Year Program "}] 
+, "links":[{"source":0,"target":1,"value":241}]},                  
+"Philosophy" :{"nodes": [{"name":"Philosophy"},{"name":"Philosophy "},{"name":"History"}]
+, "links":[{"source":0,"target":1,"value":486},{"source":0,"target":2,"value":11}]},                               
+"Physics" :{"nodes": [{"name":"Physics"},{"name":"Physics "},{"name":"Computer Science"},{"name":"Economics"},{"name":"Electrical Engineering"},{"name":"History"}] 
+, "links":[{"source":0,"target":1,"value":235},{"source":0,"target":2,"value":11},{"source":0,"target":3,"value":12},{"source":0,"target":4,"value":10},{"source":0,"target":5,"value":10}] },                                    
+"Physiological Science":{"nodes": [{"name":"Physiological Science"},{"name":"Physiological Science "},{"name":"Anthropology"},{"name":"Biology"},{"name":"Economics"},{"name":"English"},{"name":"History"},{"name":"Human Biology And Society"},{"name":"MIMG"},{"name":"MCDB"},{"name":"Neuroscience"},{"name":"Political Science"},{"name":"Psychobiology"},{"name":"Psychology"},{"name":"Sociology"}] 
+, "links":[{"source":0,"target":1,"value":361},{"source":0,"target":2,"value":36},{"source":0,"target":3,"value":225},{"source":0,"target":4,"value":17},{"source":0,"target":5,"value":17},{"source":0,"target":6,"value":13},{"source":0,"target":7,"value":13},{"source":0,"target":8,"value":16},{"source":0,"target":9,"value":28},{"source":0,"target":10,"value":13},{"source":0,"target":11,"value":28},{"source":0,"target":12,"value":152},{"source":0,"target":13,"value":55},{"source":0,"target":14,"value":53}] },                         
+"Political Science":{"nodes": [{"name":"Political Science"},{"name":"Political Science "},{"name":"Business Economics"},{"name":"Chicana & Chicano Studies"},{"name":"Communication Studies"},{"name":"Economics"},{"name":"English"},{"name":"History"},{"name":"International Development Studies"},{"name":"Psychology"},{"name":"Sociology"}] 
+, "links":[{"source":0,"target":1,"value":1650},{"source":0,"target":2,"value":11},{"source":0,"target":3,"value":12},{"source":0,"target":4,"value":26},{"source":0,"target":5,"value":29},{"source":0,"target":6,"value":10},{"source":0,"target":7,"value":20},{"source":0,"target":8,"value":20},{"source":0,"target":9,"value":17},{"source":0,"target":10,"value":24}] },                             
+"Psychobiology":{"nodes": [{"name":"Psychobiology"},{"name":"Psychobiology "},{"name":"Anthropology"},{"name":"Biology"},{"name":"Economics"},{"name":"English"},{"name":"Human Biology And Society"},{"name":"MIMG"},{"name":"MCDB"},{"name":"Neuroscience"},{"name":"Physiological Science"},{"name":"Political Science"},{"name":"Psychology"},{"name":"Sociology"}] 
+, "links":[{"source":0,"target":1,"value":550},{"source":0,"target":2,"value":23},{"source":0,"target":3,"value":50},{"source":0,"target":4,"value":13},{"source":0,"target":5,"value":10},{"source":0,"target":6,"value":10},{"source":0,"target":7,"value":11},{"source":0,"target":8,"value":14},{"source":0,"target":9,"value":19},{"source":0,"target":10,"value":16},{"source":0,"target":11,"value":19},{"source":0,"target":12,"value":130},{"source":0,"target":13,"value":32}]},                                 
+"Psychology":{"nodes": [{"name":"Psychology"},{"name":"Psychology "},{"name":"Anthropology"},{"name":"Chicana & Chicano Studies"},{"name":"Communication Studies"},{"name":"Economics"},{"name":"English"},{"name":"History"},{"name":"Political Science"},{"name":"Psychobiology"},{"name":"Sociology"}] 
+, "links":[{"source":0,"target":1,"value":1744},{"source":0,"target":2,"value":19},{"source":0,"target":3,"value":19},{"source":0,"target":4,"value":33},{"source":0,"target":5,"value":24},{"source":0,"target":6,"value":16},{"source":0,"target":7,"value":22},{"source":0,"target":8,"value":28},{"source":0,"target":9,"value":39},{"source":0,"target":10,"value":117}] },                                   
+"Sociology" :{"nodes": [{"name":"Sociology"},{"name":"Sociology "},{"name":"Communication Studies"},{"name":"Political Science"},{"name":"Psychology"}] 
+, "links":[{"source":0,"target":1,"value":1051},{"source":0,"target":2,"value":21},{"source":0,"target":3,"value":18},{"source":0,"target":4,"value":20}] },                                    
+"Spanish" :{"nodes": [{"name":"Spanish"},{"name":"Spanish "},{"name":"Spanish And Community And Culture"}] 
+, "links":[{"source":0,"target":1,"value":86},{"source":0,"target":2,"value":13}]},                                      
+"Spanish And Community And Culture":{"nodes": [{"name":"Spanish And Community And Culture"},{"name":"Spanish And Community And Culture "}]
+, "links":[{"source":0,"target":1,"value":12}] },            
+"Statistics" :{"nodes": [{"name":"Statistics"},{"name":"Statistics "}] 
+, "links":[{"source":0,"target":1,"value":177}] },                                   
+"Study Of Religion":{"nodes": [{"name":"Study Of Religion"},{"name":"Study Of Religion "}]
+, "links":[{"source":0,"target":1,"value":16}] },                             
+"Theater":{"nodes": [{"name":"Theater"},{"name":"Theater "}] 
+, "links":[{"source":0,"target":1,"value":321}]},                                       
+"Undeclared"  :{"nodes": [{"name":"Undeclared"},{"name":"Aerospace Engineering"},{"name":"Anthropology"},{"name":"Applied Mathematics"},{"name":"Art History"},{"name":"Atmospheric And Oceanic Sciences"},{"name":"Biochemistry"},{"name":"Bioengineering"},{"name":"Biology"},{"name":"Business Economics"},{"name":"Chemical Engineering"},{"name":"Chicana & Chicano Studies"},{"name":"Civil Engineering"},{"name":"Cognitive Science"},{"name":"Communication Studies"},{"name":"Computer Science"},{"name":"Computer Science & Engineering"},{"name":"Economics"},{"name":"Electrical Engineering"},{"name":"English"},{"name":"Environmental Science"},{"name":"Film & Television"},{"name":"Gender Studies"},{"name":"Geography"},{"name":"Geography/Environmental Studies"},{"name":"Global Studies"},{"name":"History"},{"name":"Human Biology And Society"},{"name":"International Development Studies"},{"name":"Materials Engineering"},{"name":"Mathematics/Economics"},{"name":"Mechanical Engineering"},{"name":"MIMG"},{"name":"MCDB"},{"name":"Neuroscience"},{"name":"Philosophy"},{"name":"Physics"},{"name":"Physiological Science"},{"name":"Political Science"},{"name":"Psychobiology"},{"name":"Psychology"},{"name":"Sociology"},{"name":"Statistics"}] 
+, "links":[{"source":0,"target":1,"value":13},{"source":0,"target":2,"value":98},{"source":0,"target":3,"value":29},{"source":0,"target":4,"value":18},{"source":0,"target":5,"value":10},{"source":0,"target":6,"value":30},{"source":0,"target":7,"value":32},{"source":0,"target":8,"value":168},{"source":0,"target":9,"value":94},{"source":0,"target":10,"value":41},{"source":0,"target":11,"value":21},{"source":0,"target":12,"value":45},{"source":0,"target":13,"value":25},{"source":0,"target":14,"value":289},{"source":0,"target":15,"value":85},{"source":0,"target":16,"value":12},{"source":0,"target":17,"value":299},{"source":0,"target":18,"value":36},{"source":0,"target":19,"value":147},{"source":0,"target":20,"value":64},{"source":0,"target":21,"value":19},{"source":0,"target":22,"value":23},{"source":0,"target":23,"value":60},{"source":0,"target":24,"value":64},{"source":0,"target":25,"value":33},{"source":0,"target":26,"value":168},{"source":0,"target":27,"value":71},{"source":0,"target":28,"value":80},{"source":0,"target":29,"value":11},{"source":0,"target":30,"value":27},{"source":0,"target":31,"value":79},{"source":0,"target":32,"value":42},{"source":0,"target":33,"value":39},{"source":0,"target":34,"value":38},{"source":0,"target":35,"value":10},{"source":0,"target":36,"value":32},{"source":0,"target":37,"value":96},{"source":0,"target":38,"value":392},{"source":0,"target":39,"value":237},{"source":0,"target":40,"value":289},{"source":0,"target":41,"value":381}, {"source":0,"target":42,"value":26}] },                                  
+"World Arts & Culture" : {"nodes":[{"name":"World Arts & Culture"},{"name":"World Arts & Culture "}] 
+, "links":[{"source":0,"target":1,"value":111}]},
+"Aerospace Engineering ":{"nodes": [{"name":"Aerospace Engineering"},{"name":"Aerospace Engineering "},{"name":"Undeclared"}] 
+, "links": [{"source":1,"target":0,"value":159},{"source":2,"target":0,"value":13}] },                          
+"African American Studies ":{"nodes": [{"name":"African American Studies"},{"name":"African American Studies "}]
+, "links": [{"source":1,"target":0,"value":63}] },                   
+"American Literature & Culture ":{"nodes": [{"name":"American Literature & Culture"},{"name":"American Literature & Culture "},{"name":"English"}]
+, "links": [{"source":1,"target":0,"value":61},{"source":2,"target":0,"value":16}] },               
+"Anthropology ":{"nodes": [{"name":"Anthropology"},{"name":"Anthropology "},{"name":"Biochemistry"},{"name":"Biology"},{"name":"Business Economics"},{"name":"Chemistry"},{"name":"Human Biology And Society"},{"name":"MIMG"},{"name":"Neuroscience"},{"name":"Physiological Science"},{"name":"Psychobiology"},{"name":"Psychology"},{"name":"Undeclared"}] 
+, "links": [{"source":1,"target":0,"value":914},{"source":2,"target":0,"value":40},{"source":3,"target":0,"value":81},{"source":4,"target":0,"value":15},{"source":5,"target":0,"value":12},{"source":6,"target":0,"value":15},{"source":7,"target":0,"value":15},{"source":8,"target":0,"value":22},{"source":9,"target":0,"value":36},{"source":10,"target":0,"value":23},{"source":11,"target":0,"value":19},{"source":12,"target":0,"value":98}]},                                  
+"Applied Linguistics ":{"nodes": [{"name":"Applied Linguistics"},{"name":"Applied Linguistics "},{"name":"Linguistics"},{"name":"Linguistics & Asian Lang. & Cultures"},{"name":"Linguistics & Psychology"}] 
+, "links": [{"source":1,"target":0,"value":33},{"source":2,"target":0,"value":54},{"source":3,"target":0,"value":11},{"source":4,"target":0,"value":17}]},                           
+"Applied Mathematics " :{"nodes": [{"name":"Applied Mathematics"},{"name":"Applied Mathematics "},{"name":"Business Economics"},{"name":"Economics"},{"name":"Mathematics"},{"name":"Mathematics - Applied Science"},{"name":"Mathematics/Economics"},{"name":"Undeclared"}] 
+, "links": [{"source":1,"target":0,"value":255},{"source":2,"target":0,"value":15},{"source":3,"target":0,"value":11},{"source":4,"target":0,"value":89},{"source":5,"target":0,"value":12},{"source":6,"target":0,"value":20},{"source":7,"target":0,"value":29}]},                          
+"Architectural Studies " :{"nodes": [{"name":"Architectural Studies"},{"name":"Architectural Studies "}] 
+, "links": [{"source":1,"target":0,"value":58}]},                        
+"Art ":{"nodes": [{"name":"Art"},{"name":"Art "}] 
+, "links": [{"source":1,"target":0,"value":244}] },                                           
+"Art History " :{"nodes": [{"name":"Art History"},{"name":"Art History "},{"name":"Business Economics"},{"name":"Undeclared"}] 
+, "links": [{"source":1,"target":0,"value":255},{"source":2,"target":0,"value":10},{"source":3,"target":0,"value":18}] },                                  
+"Asian American Studies " :{"nodes":  [{"name":"Asian American Studies"},{"name":"Asian American Studies "}] 
+, "links": [{"source":1,"target":0,"value":37}] },                       
+"Asian Humanities " :{"nodes": [{"name":"Asian Humanities"},{"name":"Asian Humanities "},{"name":"Japanese"}] 
+, "links": [{"source":1,"target":0,"value":16},{"source":2,"target":0,"value":19}] },                             
+"Asian Studies " :{"nodes": [{"name":"Asian Studies"},{"name":"Asian Studies "},{"name":"Global Studies"}]
+, "links": [{"source":1,"target":0,"value":89},{"source":2,"target":0,"value":11}] },                                
+"Astrophysics " :{"nodes": [{"name":"Astrophysics"},{"name":"Astrophysics "}] 
+, "links": [{"source":1,"target":0,"value":52}] },                                 
+"Atmospheric And Oceanic Sciences " :{"nodes": [{"name":"Atmospheric And Oceanic Sciences"},{"name":"Atmospheric And Oceanic Sciences "},{"name":"Undeclared"}] 
+, "links": [{"source":1,"target":0,"value":10},{"source":2,"target":0,"value":10}] },          
+"Biochemistry " :{"nodes": [{"name":"Biochemistry"},{"name":"Biochemistry "},{"name":"Biology"},{"name":"Chemistry"},{"name":"Undeclared"}] 
+, "links": [{"source":1,"target":0,"value":748},{"source":2,"target":0,"value":35},{"source":3,"target":0,"value":186},{"source":4,"target":0,"value":30}] },                                 
+"Bioengineering " :{"nodes": [{"name":"Bioengineering"},{"name":"Bioengineering "},{"name":"Undeclared"}]
+, "links": [{"source":1,"target":0,"value":205},{"source":2,"target":0,"value":32}] },                               
+"Biology ": {"nodes": [{"name":"Biology"},{"name":"Biology "},{"name":"Biochemistry"},{"name":"Business Economics"},{"name":"Chemistry"},{"name":"Human Biology And Society"},{"name":"MIMG"},{"name":"MCDB"},{"name":"Neuroscience"},{"name":"Physiological Science"},{"name":"Psychobiology"},{"name":"Undeclared"}] 
+, "links": [{"source":1,"target":0,"value":1169},{"source":2,"target":0,"value":131},{"source":3,"target":0,"value":10},{"source":4,"target":0,"value":19},{"source":5,"target":0,"value":31},{"source":6,"target":0,"value":49},{"source":7,"target":0,"value":91},{"source":8,"target":0,"value":81},{"source":9,"target":0,"value":225},{"source":10,"target":0,"value":50},{"source":11,"target":0,"value":168}]},                                       
+"Business Economics "  :{"nodes": [{"name":"Business Economics"},{"name":"Business Economics "},{"name":"Biochemistry"},{"name":"Biology"},{"name":"Economics"},{"name":"Mathematics/Economics"},{"name":"Political Science"},{"name":"Undeclared"}] 
+, "links": [{"source":1,"target":0,"value":695},{"source":2,"target":0,"value":14},{"source":3,"target":0,"value":17},{"source":4,"target":0,"value":143},{"source":5,"target":0,"value":14},{"source":6,"target":0,"value":11},{"source":7,"target":0,"value":94}] },                          
+"Chemical Engineering "  :{"nodes": [{"name":"Chemical Engineering"},{"name":"Chemical Engineering "},{"name":"Biochemistry"},{"name":"Chemistry"},{"name":"Undeclared"}] 
+, "links": [{"source":1,"target":0,"value":281},{"source":2,"target":0,"value":19},{"source":3,"target":0,"value":19},{"source":4,"target":0,"value":41}] },                        
+"Chemistry ":{"nodes": [{"name":"Chemistry"},{"name":"Chemistry "}]
+, "links": [{"source":1,"target":0,"value":251}] },                                     
+"Chemistry - Material Science " :{"nodes": [{"name":"Chemistry - Material Science"},{"name":"Chemistry - Material Science "}]
+, "links": [{"source":1,"target":0,"value":36}] },                 
+"Chicana & Chicano Studies " :{"nodes": [{"name":"Chicana & Chicano Studies"},{"name":"Chicana & Chicano Studies "},{"name":"Biology"},{"name":"Business Economics"},{"name":"Political Science"},{"name":"Psychology"},{"name":"Undeclared"}]  
+, "links": [{"source":1,"target":0,"value":96},{"source":2,"target":0,"value":12},{"source":3,"target":0,"value":12},{"source":4,"target":0,"value":12},{"source":5,"target":0,"value":19},{"source":6,"target":0,"value":21}] },                    
+"Chinese " :{"nodes": [{"name":"Chinese"},{"name":"Chinese "}] 
+, "links": [{"source":1,"target":0,"value":28}] },                                     
+"Civil Engineering " :{"nodes": [{"name":"Civil Engineering"},{"name":"Civil Engineering "},{"name":"Undeclared"}]
+, "links": [{"source":1,"target":0,"value":277},{"source":2,"target":0,"value":45}] },                            
+"Classical Civilization ":{"nodes": [{"name":"Classical Civilization"},{"name":"Classical Civilization "},{"name":"Biology"}]
+, "links": [{"source":1,"target":0,"value":11},{"source":2,"target":0,"value":10}] },                        
+"Cognitive Science " :{"nodes": [{"name":"Cognitive Science"},{"name":"Cognitive Science "},{"name":"Neuroscience"},{"name":"Undeclared"}] 
+, "links": [{"source":1,"target":0,"value":102},{"source":2,"target":0,"value":10},{"source":3,"target":0,"value":25}] },                            
+"Communication Studies " :{"nodes": [{"name":"Communication Studies"},{"name":"Communication Studies "},{"name":"Biology"},{"name":"Business Economics"},{"name":"Economics"},{"name":"English"},{"name":"Political Science"},{"name":"Psychology"},{"name":"Sociology"},{"name":"Undeclared"}] 
+, "links": [{"source":1,"target":0,"value":424},{"source":2,"target":0,"value":10},{"source":3,"target":0,"value":76},{"source":4,"target":0,"value":11},{"source":5,"target":0,"value":26},{"source":6,"target":0,"value":26},{"source":7,"target":0,"value":33},{"source":8,"target":0,"value":21},{"source":9,"target":0,"value":289}]},                        
+"Comparative Literature ":{"nodes": [{"name":"Comparative Literature"},{"name":"Comparative Literature "}]
+, "links": [{"source":1,"target":0,"value":37}] },                      
+"Computer Science " :{"nodes": [{"name":"Computer Science"},{"name":"Computer Science "},{"name":"Bioengineering"},{"name":"Chemical Engineering"},{"name":"Civil Engineering"},{"name":"Computer Science & Engineering"},{"name":"Electrical Engineering"},{"name":"Materials Engineering"},{"name":"Mechanical Engineering"},{"name":"Physics"},{"name":"Undeclared"}] 
+, "links": [{"source":1,"target":0,"value":275},{"source":2,"target":0,"value":15},{"source":3,"target":0,"value":14},{"source":4,"target":0,"value":16},{"source":5,"target":0,"value":237},{"source":6,"target":0,"value":108},{"source":7,"target":0,"value":14},{"source":8,"target":0,"value":22},{"source":9,"target":0,"value":11},{"source":10,"target":0,"value":85}] },                             
+"Computer Science & Engineering " :{"nodes": [{"name":"Computer Science & Engineering"},{"name":"Computer Science & Engineering "},{"name":"Electrical Engineering"},{"name":"Undeclared"}] 
+, "links": [{"source":1,"target":0,"value":90},{"source":2,"target":0,"value":48},{"source":3,"target":0,"value":12}] },               
+"Dance " :{"nodes": [{"name":"Dance"},{"name":"Dance "}] 
+, "links": [{"source":1,"target":0,"value":67}] },                                        
+"Design Media Arts " :{"nodes": [{"name":"Design Media Arts"},{"name":"Design Media Arts "}]
+, "links": [{"source":1,"target":0,"value":191}]},                         
+"Ecology, Behavior & Evolution "  :{"nodes": [{"name":"Ecology, Behavior & Evolution"},{"name":"Ecology, Behavior & Evolution "},{"name":"Biology"}] 
+, "links": [{"source":1,"target":0,"value":14},{"source":2,"target":0,"value":14}]},               
+"Economics " :{"nodes": [{"name":"Economics"},{"name":"Economics "},{"name":"Applied Mathematics"},{"name":"Biochemistry"},{"name":"Biology"},{"name":"Business Economics"},{"name":"Chemistry"},{"name":"Electrical Engineering"},{"name":"Financial Actuarial Mathematics"},{"name":"Mathematics"},{"name":"Mathematics - Applied Science"},{"name":"Mathematics/Economics"},{"name":"Neuroscience"},{"name":"Physics"},{"name":"Physiological Science"},{"name":"Political Science"},{"name":"Psychobiology"},{"name":"Psychology"},{"name":"Undeclared"}] 
+, "links": [{"source":1,"target":0,"value":519},{"source":2,"target":0,"value":13},{"source":3,"target":0,"value":24},{"source":4,"target":0,"value":35},{"source":5,"target":0,"value":1108},{"source":6,"target":0,"value":12},{"source":7,"target":0,"value":11},{"source":8,"target":0,"value":12},{"source":9,"target":0,"value":10},{"source":10,"target":0,"value":16},{"source":11,"target":0,"value":46},{"source":12,"target":0,"value":11},{"source":13,"target":0,"value":12},{"source":14,"target":0,"value":17},{"source":15,"target":0,"value":29},{"source":16,"target":0,"value":13},{"source":17,"target":0,"value":24},{"source":18,"target":0,"value":299}] },                                    
+"Electrical Engineering ":{"nodes": [{"name":"Electrical Engineering"},{"name":"Electrical Engineering "},{"name":"Bioengineering"},{"name":"Computer Science & Engineering"},{"name":"Materials Engineering"},{"name":"Mechanical Engineering"},{"name":"Physics"},{"name":"Undeclared"}]
+, "links": [{"source":1,"target":0,"value":582},{"source":2,"target":0,"value":11},{"source":3,"target":0,"value":10},{"source":4,"target":0,"value":12},{"source":5,"target":0,"value":12},{"source":6,"target":0,"value":10},{"source":7,"target":0,"value":36}]},                        
+"English " :{"nodes": [{"name":"English"},{"name":"English "},{"name":"American Literature & Culture"},{"name":"Biology"},{"name":"Business Economics"},{"name":"Comparative Literature"},{"name":"Economics"},{"name":"Neuroscience"},{"name":"Physiological Science"},{"name":"Political Science"},{"name":"Psychobiology"},{"name":"Psychology"},{"name":"Undeclared"}]
+, "links": [{"source":1,"target":0,"value":977},{"source":2,"target":0,"value":24},{"source":3,"target":0,"value":51},{"source":4,"target":0,"value":25},{"source":5,"target":0,"value":51},{"source":6,"target":0,"value":11},{"source":7,"target":0,"value":14},{"source":8,"target":0,"value":17},{"source":9,"target":0,"value":10},{"source":10,"target":0,"value":10},{"source":11,"target":0,"value":16},{"source":12,"target":0,"value":147}] },                                      
+"Environmental Science " :{"nodes": [{"name":"Environmental Science"},{"name":"Environmental Science "},{"name":"Biology"},{"name":"Chemistry"},{"name":"Undeclared"}]
+, "links": [{"source":1,"target":0,"value":133},{"source":2,"target":0,"value":25},{"source":3,"target":0,"value":16},{"source":4,"target":0,"value":64}] },                        
+"Ethnomusicology " :{"nodes": [{"name":"Ethnomusicology"},{"name":"Ethnomusicology "}] 
+, "links": [{"source":1,"target":0,"value":89}] },                              
+"Film & Television " :{"nodes": [{"name":"Film & Television"},{"name":"Film & Television "},{"name":"English"},{"name":"Undeclared"}] 
+, "links": [{"source":1,"target":0,"value":71},{"source":2,"target":0,"value":16},{"source":3,"target":0,"value":19}] },                            
+"Financial Actuarial Mathematics "  :{"nodes":  [{"name":"Financial Actuarial Mathematics"},{"name":"Financial Actuarial Mathematics "},{"name":"Applied Mathematics"},{"name":"Business Economics"},{"name":"Mathematics - Applied Science"},{"name":"Mathematics/Economics"}] 
+, "links": [{"source":1,"target":0,"value":142},{"source":2,"target":0,"value":13},{"source":3,"target":0,"value":16},{"source":4,"target":0,"value":29},{"source":5,"target":0,"value":29}] },             
+"French "  :{"nodes": [{"name":"French"},{"name":"French "}] 
+, "links": [{"source":1,"target":0,"value":29}]},                                      
+"Gender Studies " :{"nodes": [{"name":"Gender Studies"},{"name":"Gender Studies "},{"name":"Biology"},{"name":"Undeclared"}] 
+, "links": [{"source":1,"target":0,"value":236},{"source":2,"target":0,"value":14},{"source":3,"target":0,"value":23}] },                               
+"Geography ":{"nodes": [{"name":"Geography"},{"name":"Geography "},{"name":"Biology"},{"name":"Business Economics"},{"name":"Geography/Environmental Studies"},{"name":"Undeclared"}] 
+, "links": [{"source":1,"target":0,"value":102},{"source":2,"target":0,"value":11},{"source":3,"target":0,"value":27},{"source":4,"target":0,"value":21},{"source":5,"target":0,"value":60}] },                                     
+"Geography/Environmental Studies " :{"nodes": [{"name":"Geography/Environmental Studies"},{"name":"Geography/Environmental Studies "},{"name":"Biology"},{"name":"Business Economics"},{"name":"Economics"},{"name":"Environmental Science"},{"name":"Geography"},{"name":"Undeclared"}] 
+, "links": [{"source":1,"target":0,"value":101},{"source":2,"target":0,"value":11},{"source":3,"target":0,"value":15},{"source":4,"target":0,"value":10},{"source":5,"target":0,"value":18},{"source":6,"target":0,"value":27},{"source":7,"target":0,"value":64}] },              
+"Geology "  :{"nodes": [{"name":"Geology"},{"name":"Geology "}] 
+, "links": [{"source":1,"target":0,"value":16}]},                                     
+"Global Studies "  :{"nodes": [{"name":"Global Studies"},{"name":"Global Studies "},{"name":"Business Economics"},{"name":"Undeclared"}] 
+, "links": [{"source":1,"target":0,"value":60},{"source":2,"target":0,"value":19},{"source":3,"target":0,"value":33}]},                              
+"History "  :{"nodes": [{"name":"History"},{"name":"History "},{"name":"Biochemistry"},{"name":"Biology"},{"name":"Business Economics"},{"name":"Economics"},{"name":"Neuroscience"},{"name":"Philosophy"},{"name":"Physics"},{"name":"Physiological Science"},{"name":"Political Science"},{"name":"Psychology"},{"name":"Undeclared"}] 
+, "links": [{"source":1,"target":0,"value":980},{"source":2,"target":0,"value":15},{"source":3,"target":0,"value":39},{"source":4,"target":0,"value":57},{"source":5,"target":0,"value":25},{"source":6,"target":0,"value":11},{"source":7,"target":0,"value":11},{"source":8,"target":0,"value":10},{"source":9,"target":0,"value":13},{"source":10,"target":0,"value":20},{"source":11,"target":0,"value":22},{"source":12,"target":0,"value":168}] },                                     
+"Human Biology And Society " :{"nodes": [{"name":"Human Biology And Society"},{"name":"Human Biology And Society "},{"name":"Biochemistry"},{"name":"Biology"},{"name":"MIMG"},{"name":"MCDB"},{"name":"Neuroscience"},{"name":"Physiological Science"},{"name":"Psychobiology"},{"name":"Undeclared"}] 
+, "links": [{"source":1,"target":0,"value":99},{"source":2,"target":0,"value":11},{"source":3,"target":0,"value":37},{"source":4,"target":0,"value":10},{"source":5,"target":0,"value":10},{"source":6,"target":0,"value":11},{"source":7,"target":0,"value":13},{"source":8,"target":0,"value":10},{"source":9,"target":0,"value":71}] },
+"International Development Studies ": {"nodes": [{"name":"International Development Studies"},{"name":"International Development Studies "},{"name":"Asian Studies"},{"name":"Biology"},{"name":"Business Economics"},{"name":"Economics"},{"name":"Global Studies"},{"name":"Political Science"},{"name":"Undeclared"}] 
+, "links": [{"source":1,"target":0,"value":134},{"source":2,"target":0,"value":19},{"source":3,"target":0,"value":16},{"source":4,"target":0,"value":64},{"source":5,"target":0,"value":16},{"source":6,"target":0,"value":31},{"source":7,"target":0,"value":20},{"source":8,"target":0,"value":80}] },            
+"Japanese " :{"nodes": [{"name":"Japanese"},{"name":"Japanese "}]  
+, "links": [{"source":1,"target":0,"value":103}] },                                     
+"Jewish Studies "  :{"nodes": [{"name":"Jewish Studies"},{"name":"Jewish Studies "}] 
+, "links": [{"source":1,"target":0,"value":12}] },                              
+"Korean " :{"nodes": [{"name":"Korean"},{"name":"Korean "}] 
+, "links": [{"source":1,"target":0,"value":14}] },                                       
+"Latin-American Studies " :{"nodes": [{"name":"Latin-American Studies"},{"name":"Latin-American Studies "}] 
+, "links": [{"source":1,"target":0,"value":18}]},                     
+"Linguistics ":{"nodes": [{"name":"Linguistics"},{"name":"Linguistics "},{"name":"Linguistics & Asian Languages & Cultures"},{"name":"Linguistics & Computer Science"}] 
+, "links": [{"source":1,"target":0,"value":101},{"source":2,"target":0,"value":10},{"source":3,"target":0,"value":11}]},                                   
+"Linguistics & Anthropology " :{"nodes":  [{"name":"Linguistics & Anthropology"},{"name":"Linguistics & Anthropology "}] 
+, "links": [{"source":1,"target":0,"value":12}] },                   
+"Linguistics & Asian Languages & Cultures ":{"nodes": [{"name":"Linguistics & Asian Lang. & Cultures"},{"name":"Linguistics & Asian Lang. & Cultures "}] 
+, "links": [{"source":1,"target":0,"value":29}] },      
+"Linguistics & Computer Science " :{"nodes": [{"name":"Linguistics & Computer Science"},{"name":"Linguistics & Computer Science "}]
+, "links": [{"source":1,"target":0,"value":10}] },               
+"Linguistics & Psychology ":{"nodes": [{"name":"Linguistics & Psychology"},{"name":"Linguistics & Psychology "}]
+, "links": [{"source":1,"target":0,"value":55}] },                      
+"Marine Biology " :{"nodes": [{"name":"Marine Biology"},{"name":"Marine Biology "}]
+, "links": [{"source":1,"target":0,"value":20}] },                               
+"Materials Engineering " :{"nodes": [{"name":"Materials Engineering"},{"name":"Materials Engineering "},{"name":"Undeclared"}] 
+, "links": [{"source":1,"target":0,"value":106},{"source":2,"target":0,"value":11}] },                        
+"Mathematics " :{"nodes": [{"name":"Mathematics"},{"name":"Mathematics "}] 
+, "links": [{"source":1,"target":0,"value":123}] },                                  
+"Mathematics - Applied Science " :{"nodes": [{"name":"Mathematics - Applied Science"},{"name":"Mathematics - Applied Science "}] 
+, "links": [{"source":1,"target":0,"value":78}] },                
+"Mathematics For Teaching ":{"nodes": [{"name":"Mathematics For Teaching"},{"name":"Mathematics For Teaching "}]
+, "links": [{"source":1,"target":0,"value":26}]},                      
+"Mathematics Of Computation "  :{"nodes": [{"name":"Mathematics Of Computation"},{"name":"Mathematics Of Computation "},{"name":"Applied Mathematics"}]
+, "links": [{"source":1,"target":0,"value":13},{"source":2,"target":0,"value":12}] },                  
+"Mathematics/Economics " :{"nodes": [{"name":"Mathematics/Economics"},{"name":"Mathematics/Economics "},{"name":"Applied Mathematics"},{"name":"Business Economics"},{"name":"Economics"},{"name":"Mathematics"},{"name":"Mathematics - Applied Science"},{"name":"Undeclared"}]
+, "links": [{"source":1,"target":0,"value":321},{"source":2,"target":0,"value":10},{"source":3,"target":0,"value":28},{"source":4,"target":0,"value":23},{"source":5,"target":0,"value":14},{"source":6,"target":0,"value":10},{"source":7,"target":0,"value":27}] },                        
+"Mechanical Engineering " :{"nodes": [{"name":"Mechanical Engineering"},{"name":"Mechanical Engineering "},{"name":"Aerospace Engineering"},{"name":"Civil Engineering"},{"name":"Electrical Engineering"},{"name":"Undeclared"}]
+, "links": [{"source":1,"target":0,"value":387},{"source":2,"target":0,"value":23},{"source":3,"target":0,"value":20},{"source":4,"target":0,"value":13},{"source":5,"target":0,"value":79}]},                       
+"Microbiology - Immunology - Molecular Genetics (MIMG) ":{"nodes": [{"name":"MIMG"},{"name":"MIMG "},{"name":"Biochemistry"},{"name":"Biology"},{"name":"MCDB"},{"name":"Neuroscience"},{"name":"Physiological Science"},{"name":"Psychobiology"},{"name":"Undeclared"}] 
+, "links": [{"source":1,"target":0,"value":347},{"source":2,"target":0,"value":41},{"source":3,"target":0,"value":111},{"source":4,"target":0,"value":25},{"source":5,"target":0,"value":10},{"source":6,"target":0,"value":16},{"source":7,"target":0,"value":11},{"source":8,"target":0,"value":42}] },
+"Molecular, Cell, & Developmental Biology (MCDB) ":{"nodes": [{"name":"MCDB"},{"name":"MCDB "},{"name":"Biochemistry"},{"name":"Biology"},{"name":"Human Biology And Society"},{"name":"MIMG"},{"name":"Neuroscience"},{"name":"Physiological Science"},{"name":"Psychobiology"},{"name":"Undeclared"}] 
+, "links": [{"source":1,"target":0,"value":341},{"source":2,"target":0,"value":29},{"source":3,"target":0,"value":119},{"source":4,"target":0,"value":10},{"source":5,"target":0,"value":20},{"source":6,"target":0,"value":17},{"source":7,"target":0,"value":28},{"source":8,"target":0,"value":14},{"source":9,"target":0,"value":39}]},      
+"Music " :{"nodes": [{"name":"Music"},{"name":"Music "}]
+, "links": [{"source":1,"target":0,"value":186}] },                                        
+"Musicology ":{"nodes": [{"name":"Musicology"},{"name":"Musicology "}] 
+, "links": [{"source":1,"target":0,"value":29}] },                                    
+"Neuroscience ":{"nodes": [{"name":"Neuroscience"},{"name":"Neuroscience "},{"name":"Biochemistry"},{"name":"Biology"},{"name":"MCDB"},{"name":"Physiological Science"},{"name":"Psychobiology"},{"name":"Undeclared"}] 
+, "links": [{"source":1,"target":0,"value":450},{"source":2,"target":0,"value":27},{"source":3,"target":0,"value":52},{"source":4,"target":0,"value":13},{"source":5,"target":0,"value":13},{"source":6,"target":0,"value":19},{"source":7,"target":0,"value":38}] },                                  
+"Nursing - Four Year Program " :{"nodes": [{"name":"Nursing - Four Year Program"},{"name":"Nursing - Four Year Program "}] 
+, "links": [{"source":1,"target":0,"value":241}] },                  
+"Philosophy " :{"nodes": [{"name":"Philosophy"},{"name":"Philosophy "},{"name":"Business Economics"},{"name":"Undeclared"}] 
+, "links": [{"source":1,"target":0,"value":486},{"source":2,"target":0,"value":13},{"source":3,"target":0,"value":10}] },                               
+"Physics " :{"nodes": [{"name":"Physics"},{"name":"Physics "},{"name":"Undeclared"}] 
+, "links": [{"source":1,"target":0,"value":235},{"source":2,"target":0,"value":32}] },                                    
+"Physiological Science ":{"nodes": [{"name":"Physiological Science"},{"name":"Physiological Science "},{"name":"Biochemistry"},{"name":"Biology"},{"name":"Human Biology And Society"},{"name":"MIMG"},{"name":"MCDB"},{"name":"Neuroscience"},{"name":"Psychobiology"},{"name":"Undeclared"}] 
+, "links": [{"source":1,"target":0,"value":361},{"source":2,"target":0,"value":51},{"source":3,"target":0,"value":149},{"source":4,"target":0,"value":17},{"source":5,"target":0,"value":31},{"source":6,"target":0,"value":37},{"source":7,"target":0,"value":25},{"source":8,"target":0,"value":16},{"source":9,"target":0,"value":96}] },                         
+"Political Science ":{"nodes": [{"name":"Political Science"},{"name":"Political Science "},{"name":"Biochemistry"},{"name":"Biology"},{"name":"Business Economics"},{"name":"Economics"},{"name":"English"},{"name":"Global Studies"},{"name":"History"},{"name":"Human Biology And Society"},{"name":"International Development Studies"},{"name":"MIMG"},{"name":"Neuroscience"},{"name":"Physiological Science"},{"name":"Psychobiology"},{"name":"Psychology"},{"name":"Sociology"},{"name":"Undeclared"}] 
+, "links": [{"source":1,"target":0,"value":1650},{"source":2,"target":0,"value":38},{"source":3,"target":0,"value":75},{"source":4,"target":0,"value":259},{"source":5,"target":0,"value":78},{"source":6,"target":0,"value":18},{"source":7,"target":0,"value":18},{"source":8,"target":0,"value":15},{"source":9,"target":0,"value":12},{"source":10,"target":0,"value":16},{"source":11,"target":0,"value":14},{"source":12,"target":0,"value":21},{"source":13,"target":0,"value":28},{"source":14,"target":0,"value":19},{"source":15,"target":0,"value":28},{"source":16,"target":0,"value":18},{"source":17,"target":0,"value":392}]},                             
+"Psychobiology ":{"nodes": [{"name":"Psychobiology"},{"name":"Psychobiology "},{"name":"Biochemistry"},{"name":"Biology"},{"name":"Business Economics"},{"name":"Chemistry"},{"name":"Human Biology And Society"},{"name":"MIMG"},{"name":"MCDB"},{"name":"Neuroscience"},{"name":"Physiological Science"},{"name":"Psychology"},{"name":"Undeclared"}] 
+, "links": [{"source":1,"target":0,"value":550},{"source":2,"target":0,"value":62},{"source":3,"target":0,"value":285},{"source":4,"target":0,"value":23},{"source":5,"target":0,"value":26},{"source":6,"target":0,"value":41},{"source":7,"target":0,"value":56},{"source":8,"target":0,"value":52},{"source":9,"target":0,"value":97},{"source":10,"target":0,"value":152},{"source":11,"target":0,"value":39},{"source":12,"target":0,"value":237}] },                                 
+"Psychology ":{"nodes": [{"name":"Psychology"},{"name":"Psychology "},{"name":"Biochemistry"},{"name":"Biology"},{"name":"Business Economics"},{"name":"Chemistry"},{"name":"Cognitive Science"},{"name":"Dance"},{"name":"Economics"},{"name":"Environmental Science"},{"name":"Human Biology And Society"},{"name":"MIMG"},{"name":"MCDB"},{"name":"Neuroscience"},{"name":"Physiological Science"},{"name":"Political Science"},{"name":"Psychobiology"},{"name":"Sociology"},{"name":"Undeclared"}] 
+, "links": [{"source":1,"target":0,"value":1744},{"source":2,"target":0,"value":43},{"source":3,"target":0,"value":113},{"source":4,"target":0,"value":50},{"source":5,"target":0,"value":13},{"source":6,"target":0,"value":38},{"source":7,"target":0,"value":10},{"source":8,"target":0,"value":14},{"source":9,"target":0,"value":13},{"source":10,"target":0,"value":17},{"source":11,"target":0,"value":18},{"source":12,"target":0,"value":19},{"source":13,"target":0,"value":30},{"source":14,"target":0,"value":55},{"source":15,"target":0,"value":17},{"source":16,"target":0,"value":130},{"source":17,"target":0,"value":20},{"source":18,"target":0,"value":289}] },                                   
+"Sociology " :{"nodes": [{"name":"Sociology"},{"name":"Sociology "},{"name":"Anthropology"},{"name":"Biochemistry"},{"name":"Biology"},{"name":"Business Economics"},{"name":"Chemistry"},{"name":"Economics"},{"name":"English"},{"name":"Gender Studies"},{"name":"Human Biology And Society"},{"name":"Linguistics"},{"name":"Linguistics & Psychology"},{"name":"MIMG"},{"name":"Neuroscience"},{"name":"Physiological Science"},{"name":"Political Science"},{"name":"Psychobiology"},{"name":"Psychology"},{"name":"Undeclared"}] 
+, "links": [{"source":1,"target":0,"value":1051},{"source":2,"target":0,"value":13},{"source":3,"target":0,"value":38},{"source":4,"target":0,"value":91},{"source":5,"target":0,"value":167},{"source":6,"target":0,"value":14},{"source":7,"target":0,"value":38},{"source":8,"target":0,"value":21},{"source":9,"target":0,"value":31},{"source":10,"target":0,"value":15},{"source":11,"target":0,"value":10},{"source":12,"target":0,"value":11},{"source":13,"target":0,"value":12},{"source":14,"target":0,"value":25},{"source":15,"target":0,"value":53},{"source":16,"target":0,"value":24},{"source":17,"target":0,"value":32},{"source":18,"target":0,"value":117},{"source":19,"target":0,"value":381}]},                                    
+"Spanish " :{"nodes": [{"name":"Spanish"},{"name":"Spanish "},{"name":"Biology"}] 
+, "links": [{"source":1,"target":0,"value":86},{"source":2,"target":0,"value":16}]},                                      
+"Spanish And Community And Culture ":{"nodes": [{"name":"Spanish And Community And Culture"},{"name":"Spanish And Community And Culture "},{"name":"Spanish"}] 
+, "links": [{"source":1,"target":0,"value":12},{"source":2,"target":0,"value":13}]},            
+"Statistics " :{"nodes": [{"name":"Statistics"},{"name":"Statistics "},{"name":"Applied Mathematics"},{"name":"Biology"},{"name":"Business Economics"},{"name":"Economics"},{"name":"Mathematics/Economics"},{"name":"Undeclared"}] 
+, "links": [{"source":1,"target":0,"value":177},{"source":2,"target":0,"value":14},{"source":3,"target":0,"value":10},{"source":4,"target":0,"value":30},{"source":5,"target":0,"value":10},{"source":6,"target":0,"value":11},{"source":7,"target":0,"value":26}] },                                   
+"Study Of Religion ": {"nodes":[{"name":"Study Of Religion"},{"name":"Study Of Religion "}] 
+, "links": [{"source":1,"target":0,"value":16}] },                             
+"Theater ":{"nodes":[{"name":"Theater"},{"name":"Theater "}] 
+, "links": [{"source":1,"target":0,"value":321}] },                                                                      
+"World Arts & Culture " : {"nodes": [{"name":"World Arts & Culture"},{"name":"World Arts & Culture "}]
+, "links": [{"source":1,"target":0,"value":111}] 
+}  
+}]
