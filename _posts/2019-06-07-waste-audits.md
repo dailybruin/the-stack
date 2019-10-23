@@ -183,8 +183,8 @@ scripts:
 
 #### On-Campus
 
-  <p className="text">Powell Library sends much less trash to landfill than the Hill. It’s trash is only 14% landfill by weight, compared to 30% from the Hill. This may be because the students have less landfill trash, such as cardboard or plastic wrapping, to throw away on campus. Nevertheless, the data shows that students are using the recycling and compost bins.
-  </p>
+  <p className="text">Powell Library sends much less trash to landfill than the Hill. It’s trash is only 14% landfill by weight, compared to 30% from the Hill. This may be because the students have less landfill trash, such as cardboard or plastic wrapping, to throw away on campus. Nevertheless, the data shows that students are using the recycling and compost bins. </p>
+
 
   <!-- <p>(insert picture of bins that tell you what to place your trash in here)</p> -->
 
