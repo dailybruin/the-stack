@@ -16,13 +16,32 @@ driver = webdriver.Chrome('./chromedriver')
 driver.get("https://sa.ucla.edu/ro/Public/SOC/Results?t=19F&sBy=subject&sName=Mathematics+%28MATH%29&subj=MATH&crsCatlg=Enter+a+Catalog+Number+or+Class+Title+%28Optional%29&catlg=&cls_no=&btnIsInIndex=btn_inIndex")
 driver.maximize_window()
 # iterate through all the pages in the department
-while(page_num == 1):
-    wait = WebDriverWait(driver, 5)
+while(page_num <= 4):
+    wait = WebDriverWait(driver, 3)
+    """wait.until(EC.element_to_be_clickable(
+        (By.XPATH, "//ul[@class='jPag-pages']")))
+    page_col = driver.find_element_by_xpath(
+        "//ul[@class='jPag-pages']")
+    pages = page_col.find_elements_by_tag_name("a")
+    for page in pages:
+        if (page.text == str(page_num) and page_num != 1):
+            # driver.execute_script("arguments[0].click();", page)
+            page.click()"""
+    """wait.until(EC.presence_of_element_located(
+        (By.XPATH, "//input[@id='pageCount']")))
+    page = driver.find_element_by_id("pageCount")
+    driver.execute_script(
+        "arguments[0].setAttribute('value', {page_num})", page)
+    driver.set_page_load_timeout(3)"""
+    # wait for up to 5 seconds for the page to be clickable
+
     # wait for up to 5 seconds for the expand all classes to be clickable, then click it
     expand_button = wait.until(
         EC.element_to_be_clickable((By.XPATH, "//a[@id='expandAll']")))
     expand_button.click()
 
+    # wait for up to 3 seconds for the new page to load
+    driver.set_page_load_timeout(3)
     # get and return all the status columns when they're loaded
     innerHTML = wait.until(EC.visibility_of_all_elements_located(
         (By.XPATH, "//div[@class='statusColumn']")))
