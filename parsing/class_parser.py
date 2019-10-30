@@ -23,6 +23,8 @@ driver.maximize_window()
 all_pages = driver.find_element_by_class_name("jPag-pages")
 pages = all_pages.find_elements_by_tag_name("li")
 num_pages = len(pages)
+open_classes = 0
+closed_classes = 0
 while(page_num <= num_pages):
     wait = WebDriverWait(driver, timeout)
     # wait for up to 3 seconds for the page to be clickable
@@ -38,10 +40,12 @@ while(page_num <= num_pages):
         (By.XPATH, "//div[@class='row-fluid class-title']")))
     # wait for up to 5 seconds for the expand all classes to be clickable, then click it
     """expand_button = wait.until(
-        EC.element_to_be_clickable((By.XPATH, "//a[@id='expandAll']")))
+        EC.element_to_be_clickable((By.XPATH, "//*[@id='expandAll']")))
     expand_button.click()"""
+    wait.until(EC.visibility_of_element_located(
+        (By.XPATH, "//*[@id='expandAll']")))
     actions = ActionChains(driver)
-    expand_button = driver.find_element_by_xpath("//a[@id='expandAll']")
+    expand_button = driver.find_element_by_xpath("//*[@id='expandAll']")
     actions.move_to_element(expand_button).click().perform()
     # get and return all the status columns when they're loaded
     innerHTML = wait.until(EC.visibility_of_all_elements_located(
@@ -55,8 +59,6 @@ while(page_num <= num_pages):
 
     # get the div for each of the classes
     all_classes = soup.find_all("div", class_="row-fluid class-title")
-    open_classes = 0
-    closed_classes = 0
     for a in all_classes:
         # status is the enrollment status of the class, what we want
         status = a.find_all('div', class_="statusColumn")
@@ -69,11 +71,15 @@ while(page_num <= num_pages):
         for s in status:
             status_text = s.find('p').text
             if (status_text != "Status"):
-                print(status_text + '\n')
-            if (status_text.find('Closed') == 0):
-                closed_classes += 1
-            if (status_text.find('Open') == 0):
-                open_classes += 1
+                if (status_text.find('Closed') == 0):
+                    print(0)
+                    print(0)
+                    closed_classes += 1
+                if (status_text.find('Open') == 0):
+                    number_text = re.findall("[0-9]+", status_text)
+                    for i in number_text:
+                        print(i + " ")
+                    open_classes += 1
     page_num += 1
 
 print("Open Classes " + str(open_classes))
