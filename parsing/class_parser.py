@@ -11,14 +11,15 @@ import unittest
 import re
 
 page_num = 1
-timeout = 10
+timeout = 15
 
 driver = webdriver.Chrome('./chromedriver')
 # have selenium get the department website
-# driver.get("https://sa.ucla.edu/ro/Public/SOC/Results?t=19F&sBy=subject&sName=Computer+Science+%28COM+SCI%29&subj=COM+SCI&crsCatlg=Enter+a+Catalog+Number+or+Class+Title+%28Optional%29&catlg=&cls_no=&btnIsInIndex=btn_inIndex")
-driver.get("https://sa.ucla.edu/ro/Public/SOC/Results?t=19F&sBy=subject&sName=Mathematics+%28MATH%29&subj=MATH&crsCatlg=Enter+a+Catalog+Number+or+Class+Title+%28Optional%29&catlg=&cls_no=&btnIsInIndex=btn_inIndex")
-# driver.get("https://sa.ucla.edu/ro/Public/SOC/Results?t=19F&sBy=subject&sName=English+%28ENGL%29&subj=ENGL&crsCatlg=Enter+a+Catalog+Number+or+Class+Title+%28Optional%29&catlg=&cls_no=&btnIsInIndex=btn_inIndex")
+driver.get("https://sa.ucla.edu/ro/Public/SOC/Results?t=20W&sBy=subject&sName=Computer+Science+%28COM+SCI%29&subj=COM+SCI&crsCatlg=Enter+a+Catalog+Number+or+Class+Title+%28Optional%29&catlg=&cls_no=&btnIsInIndex=btn_inIndex")
+#driver.get("https://sa.ucla.edu/ro/Public/SOC/Results?t=19F&sBy=subject&sName=Mathematics+%28MATH%29&subj=MATH&crsCatlg=Enter+a+Catalog+Number+or+Class+Title+%28Optional%29&catlg=&cls_no=&btnIsInIndex=btn_inIndex")
+#driver.get("https://sa.ucla.edu/ro/Public/SOC/Results?t=19F&sBy=subject&sName=English+%28ENGL%29&subj=ENGL&crsCatlg=Enter+a+Catalog+Number+or+Class+Title+%28Optional%29&catlg=&cls_no=&btnIsInIndex=btn_inIndex")
 driver.maximize_window()
+driver.execute_script("window.scrollTo(0, 200)") 
 # iterate through all the pages in the department
 all_pages = driver.find_element_by_class_name("jPag-pages")
 pages = all_pages.find_elements_by_tag_name("li")
@@ -34,12 +35,11 @@ while(page_num <= num_pages):
         page_string)
     actions.move_to_element(cur_page).click().perform()
     # wait for the results to load
-    wait.until(EC.visibility_of_element_located(
+    wait.until(EC.visibility_of_all_elements_located(
         (By.XPATH, "//div[@class='row-fluid class-title']")))
     # wait for up to 5 seconds for the expand all classes to be clickable, then click it
-    """expand_button = wait.until(
+    wait.until(
         EC.element_to_be_clickable((By.XPATH, "//a[@id='expandAll']")))
-    expand_button.click()"""
     actions = ActionChains(driver)
     expand_button = driver.find_element_by_xpath("//a[@id='expandAll']")
     actions.move_to_element(expand_button).click().perform()
@@ -69,11 +69,17 @@ while(page_num <= num_pages):
         for s in status:
             status_text = s.find('p').text
             if (status_text != "Status"):
-                print(status_text + '\n')
-            if (status_text.find('Closed') == 0):
-                closed_classes += 1
-            if (status_text.find('Open') == 0):
-                open_classes += 1
+                
+                if (status_text.find('Closed') == 0):
+                    closed_classes += 1
+                    print(0)
+                    print(0)
+                    print(0)
+                if (status_text.find('Open') == 0):
+                    number_text = re.findall("[0-9]+", status_text)
+                    for i in number_text:
+                        print(i)
+                    open_classes += 1
     page_num += 1
 
 print("Open Classes " + str(open_classes))
