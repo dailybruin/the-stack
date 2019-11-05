@@ -14,7 +14,9 @@ import csv
 import itertools
 
 page_num = 1
-timeout = 20
+timeout = 10
+open_classes = 0
+closed_classes = 0
 
 # get the time to create the name of the file + make the file
 hour = time.localtime().tm_hour
@@ -25,6 +27,7 @@ file = open('{}-{}-{}.csv'.format(day, hour, sec), 'w')
 file_writer = csv.writer(file, delimiter=',')
 
 driver = webdriver.Chrome('./chromedriver')
+wait = WebDriverWait(driver, timeout)
 
 # have selenium get the department website
 # driver.get("https://sa.ucla.edu/ro/Public/SOC/Results?t=20W&sBy=subject&sName=Computer+Science+%28COM+SCI%29&subj=COM+SCI&crsCatlg=Enter+a+Catalog+Number+or+Class+Title+%28Optional%29&catlg=&cls_no=&btnIsInIndex=btn_inIndex")
@@ -34,12 +37,13 @@ driver = webdriver.Chrome('./chromedriver')
 # driver.get("https://sa.ucla.edu/ro/Public/SOC/Results?t=20W&sBy=subject&sName=Life+Sciences+%28LIFESCI%29&subj=LIFESCI&crsCatlg=Enter+a+Catalog+Number+or+Class+Title+%28Optional%29&catlg=&cls_no=&btnIsInIndex=btn_inIndex")
 dep_file = open('departments.txt', 'r')
 # dep_reader = csv.reader(dep_file, delimiter=',')
-link1 = "https://sa.ucla.edu/ro/Public/SOC/Results?t=19F&sBy=subject&sName="
+link1 = "https://sa.ucla.edu/ro/Public/SOC/Results?t=20W&sBy=subject&sName="
 link2 = "%28"
 link3 = "%29&subj="
 link4 = "&crsCatlg=Enter+a+Catalog+Number+or+Class+Title+%28Optional%29&catlg=&cls_no=&btnIsInIndex=btn_inIndex"
 for dep, dep_abbrv in itertools.zip_longest(*[dep_file]*2):
     driver.get(link1+dep+link2+dep_abbrv+link3+dep_abbrv+link4)
+    # driver.get("https://sa.ucla.edu/ro/Public/SOC/Results?t=19F&sBy=subject&sName=Mathematics+%28MATH%29&subj=MATH&crsCatlg=Enter+a+Catalog+Number+or+Class+Title+%28Optional%29&catlg=&cls_no=&btnIsInIndex=btn_inIndex")
     driver.maximize_window()
     driver.execute_script("window.scrollTo(0, 200)")
     # iterate through all the pages in the department
@@ -51,10 +55,11 @@ for dep, dep_abbrv in itertools.zip_longest(*[dep_file]*2):
         num_pages = 1
         open_classes = 0
         closed_classes = 0
+    page_num = 1
     num_tries = 0
     max_tries = 10
+    classes_on_page = 5
     while(page_num <= num_pages):
-        wait = WebDriverWait(driver, timeout)
         # wait for up to 3 seconds for the page to be clickable, if there is more than 1 page
         if (num_pages > 1):
             page_string = "ul.jPag-pages li:nth-child(" + \
@@ -66,8 +71,11 @@ for dep, dep_abbrv in itertools.zip_longest(*[dep_file]*2):
                 page_string)
             actions.move_to_element(cur_page).click().perform()
         # wait for the results to load
-        wait.until(EC.visibility_of_all_elements_located(
-            (By.XPATH, "//div[@class='row-fluid class-title']")))
+        try:
+            wait.until(EC.visibility_of_all_elements_located(
+                (By.XPATH, "//div[@class='row-fluid class-title']")))
+        except:
+            break
         # wait for up to 5 seconds for the expand all classes to be clickable, then click it
         wait.until(EC.element_to_be_clickable(
             (By.XPATH, "//a[@id='expandAll']")))
@@ -90,7 +98,8 @@ for dep, dep_abbrv in itertools.zip_longest(*[dep_file]*2):
         # if you can't get the status column because expand all classes didn't work, just move on to the next page
         try:
             innerHTML = wait.until(EC.visibility_of_all_elements_located(
-                (By.XPATH, "//div[@class='statusColumn']")))    # file_writer.writerow(innerHTML)
+                (By.XPATH, "//div[@class='statusColumn']")))   # file_writer.writerow(innerHTML)
+            time.sleep(2)
             # give the HTML to the beautiful soup object
             innerHTML = driver.execute_script(
                 "return document.body.innerHTML")
@@ -132,3 +141,4 @@ for dep, dep_abbrv in itertools.zip_longest(*[dep_file]*2):
 
     file_writer.writerow(["Open Classes " + str(open_classes)])
     file_writer.writerow(["Closed Classes " + str(closed_classes)])
+file.close()
