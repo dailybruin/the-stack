@@ -1,0 +1,20 @@
+class parser csv file name format:
+  day-hour-second.csv
+We really only care about day/hour, second is to distinguish the day/hour files from different people
+
+CSV data format:
+  class name
+  spots filled, spots total, spots left
+0,0,0 means class is closed/full
+-1,-1,-1 means class is waitlisted
+
+At the end of the CSV file is the total # of open/closed classes found
+
+General way of how program works:
+iterate through departments by getting its link
+  iterate through pages by clicking on the page num
+    press the expand all classes button
+      get the text of all the classes
+        determine if its closed/open/waitlisted and print to csv
+
+if at any step something fails, we wait/press it again/skip to the next department/page

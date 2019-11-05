@@ -9,21 +9,32 @@ from selenium.webdriver.common.action_chains import ActionChains
 import time
 import unittest
 import re
+import datetime as dt
+import csv
 
 page_num = 1
 timeout = 20
+
+# get the time to create the name of the file + make the file
+hour = time.localtime().tm_hour
+day = time.localtime().tm_mday
+sec = time.localtime().tm_sec
+
+file = open('{}-{}-{}.csv'.format(day, hour, sec), 'w')
+file_writer = csv.writer(file, delimiter=',')
 
 driver = webdriver.Chrome('./chromedriver')
 
 # have selenium get the department website
 # driver.get("https://sa.ucla.edu/ro/Public/SOC/Results?t=20W&sBy=subject&sName=Computer+Science+%28COM+SCI%29&subj=COM+SCI&crsCatlg=Enter+a+Catalog+Number+or+Class+Title+%28Optional%29&catlg=&cls_no=&btnIsInIndex=btn_inIndex")
-# driver.get("https://sa.ucla.edu/ro/Public/SOC/Results?t=19F&sBy=subject&sName=Mathematics+%28MATH%29&subj=MATH&crsCatlg=Enter+a+Catalog+Number+or+Class+Title+%28Optional%29&catlg=&cls_no=&btnIsInIndex=btn_inIndex")
-driver.get("https://sa.ucla.edu/ro/Public/SOC/Results?t=19F&sBy=subject&sName=English+%28ENGL%29&subj=ENGL&crsCatlg=Enter+a+Catalog+Number+or+Class+Title+%28Optional%29&catlg=&cls_no=&btnIsInIndex=btn_inIndex")
+driver.get("https://sa.ucla.edu/ro/Public/SOC/Results?t=19F&sBy=subject&sName=Mathematics+%28MATH%29&subj=MATH&crsCatlg=Enter+a+Catalog+Number+or+Class+Title+%28Optional%29&catlg=&cls_no=&btnIsInIndex=btn_inIndex")
+# driver.get("https://sa.ucla.edu/ro/Public/SOC/Results?t=19F&sBy=subject&sName=English+%28ENGL%29&subj=ENGL&crsCatlg=Enter+a+Catalog+Number+or+Class+Title+%28Optional%29&catlg=&cls_no=&btnIsInIndex=btn_inIndex")
 # driver.get("https://sa.ucla.edu/ro/Public/SOC/Results?t=19F&sBy=subject&sName=Psychology+%28PSYCH%29&subj=PSYCH&crsCatlg=Enter+a+Catalog+Number+or+Class+Title+%28Optional%29&catlg=&cls_no=&btnIsInIndex=btn_inIndex")
 # driver.get("https://sa.ucla.edu/ro/Public/SOC/Results?t=20W&sBy=subject&sName=Life+Sciences+%28LIFESCI%29&subj=LIFESCI&crsCatlg=Enter+a+Catalog+Number+or+Class+Title+%28Optional%29&catlg=&cls_no=&btnIsInIndex=btn_inIndex")
 driver.maximize_window()
 driver.execute_script("window.scrollTo(0, 200)")
 # iterate through all the pages in the department
+
 try:
     all_pages = driver.find_element_by_class_name("jPag-pages")
     pages = all_pages.find_elements_by_tag_name("li")
@@ -67,7 +78,7 @@ while(page_num <= num_pages):
     # if you can't get the status column because expand all classes didn't work, just move on to the next page
     try:
         innerHTML = wait.until(EC.visibility_of_all_elements_located(
-            (By.XPATH, "//div[@class='statusColumn']")))    # print(innerHTML)
+            (By.XPATH, "//div[@class='statusColumn']")))    # file_writer.writerow(innerHTML)
         # give the HTML to the beautiful soup object
         innerHTML = driver.execute_script("return document.body.innerHTML")
         soup = BeautifulSoup(innerHTML, "html.parser")
@@ -82,26 +93,28 @@ while(page_num <= num_pages):
             status = a.find_all('div', class_="statusColumn")
             # class_name is the name of the current class
             class_name = a.find_all("h3", class_="head")
-            # print out the class name
+            # file_writer.writerow out the class name
             for c in class_name:
-                print(c.find('a').text)
-            # print out the enrollment status for each of the lecs for the class
+                file_writer.writerow([c.find('a').text])
+            # file_writer.writerow out the enrollment status for each of the lecs for the class
             for s in status:
                 status_text = s.find('p').text
                 if (status_text != "Status"):
                     if (status_text.find('Closed') == 0):
                         closed_classes += 1
-                        print(0)
-                        print(0)
-                        print(0)
+                        file_writer.writerow([0, 0, 0])
                     if (status_text.find('Open') == 0):
                         number_text = re.findall("[0-9]+", status_text)
+                        arr_text = []
                         for i in number_text:
-                            print(i)
+                            arr_text.append(i)
+                        file_writer.writerow(arr_text)
                         open_classes += 1
+                    if (status_text.find('Waitlist') == 0):
+                        file_writer.writerow([-1, -1, -1])
     except:
         pass
     page_num += 1
 
-print("Open Classes " + str(open_classes))
-print("Closed Classes " + str(closed_classes))
+file_writer.writerow(["Open Classes " + str(open_classes)])
+file_writer.writerow(["Closed Classes " + str(closed_classes)])
