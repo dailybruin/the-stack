@@ -1,365 +1,356 @@
-Aerospace Studies 
-AERO ST
-African American Studies 
-AF AMER
-African Studies 
-AFRC ST
-Afrikaans 
+Aerospace+Studies+
+AERO+ST
+African+American+Studies+
+AF+AMER
+African+Studies+
+AFRC+ST
+Afrikaans+
 AFRKAAN
-American Indian Studies 
-AM IND
-American Sign Language 
+American+Indian+Studies+
+AM+IND
+American+Sign+Language+
 ASL
-Ancient Near East 
-AN N EA
-Anesthesiology 
+Ancient+Near+East+
+AN+N+EA
+Anesthesiology+
 ANES
-Anthropology 
+Anthropology+
 ANTHRO
-Applied Linguistics 
+Applied+Linguistics+
 APPLING
 Arabic
 ARABIC
-Archaeology 
+Archaeology+
 ARCHEOL
-Architecture and Urban Design 
-ARCH\u0026UD
-Armenian 
+Architecture+and+Urban+Design+
+ARCH%26UD
+Armenian+
 ARMENIA
 Art
 ART
-Art History 
-ART HIS
-Arts and Architecture 
-ART\u0026ARC
-Arts Education 
-ARTS ED
+Art+History+
+ART+HIS
+Arts+and+Architecture+
+ART%26ARC
+Arts+Education+
+ARTS+ED
 Asian
 ASIAN
-Asian American Studies 
-ASIA AM
-Astronomy 
+Asian+American+Studies+
+ASIA+AM
+Astronomy+
 ASTR
-Atmospheric and Oceanic Sciences 
-A\u0026O SCI
-Bioengineering 
+Atmospheric+and+Oceanic+Sciences+
+A%26O+SCI
+Bioengineering+
 BIOENGR
-Bioinformatics 
+Bioinformatics+
 BIOINFO
-Bioinformatics 
+Bioinformatics+
 BIOINFR
-Biological Chemistry 
-BIOL CH
-Biomathematics 
+Biological+Chemistry+
+BIOL+CH
+Biomathematics+
 BIOMATH
-Biomedical Research 
-BMD RES
-Biostatistics 
+Biomedical+Research+
+BMD+RES
+Biostatistics+
 BIOSTAT
-Central and East European Studies 
-C\u0026EE ST
-Chemical Engineering 
-CH ENGR
-Chemistry and Biochemistry 
+Central+and+East+European+Studies+
+C%26EE+ST
+Chemical+Engineering+
+CH+ENGR
+Chemistry+and+Biochemistry+
 CHEM
-Chicana and Chicano Studies 
+Chicana+and+Chicano+Studies+
 CHICANO
-Chinese 
+Chinese+
 CHIN
-Civil and Environmental Engineering 
-C\u0026EE
-Classics 
+Civil+and+Environmental+Engineering+
+C%26EE
+Classics+
 CLASSIC
-Clusters 
+Clusters+
 CLUSTER
-Communication 
+Communication+
 COMM
-Community Engagement and Social Change 
+Community+Engagement+and+Social+Change+
 CESC
-Community Health Sciences 
-COM HLT
-Comparative Literature 
-COM LIT
-Computational and Systems Biology 
-C\u0026S BIO
-Computer Science 
-COM SCI
-Conservation of Archaeological and Ethnographic Materials 
+Community+Health+Sciences+
+COM+HLT
+Comparative+Literature+
+COM+LIT
+Computational+and+Systems+Biology+
+C%26S+BIO
+Computer+Science+
+COM+SCI
+Conservation+of+Archaeological+and+Ethnographic+Materials+
 CAEM
-Czech 
+Czech+
 CZCH
 Dance
 DANCE
-Dentistry 
+Dentistry+
 DENT
-Design / Media Arts 
+Design+/+Media+Arts+
 DESMA
-Digital Humanities 
-DGT HUM
-Disability Studies 
-DIS STD
+Digital+Humanities+
+DGT+HUM
+Disability+Studies+
+DIS+STD
 Dutch
 DUTCH
-Earth
- Planetary
- and Space Sciences 
-EPS SCI
-Ecology and Evolutionary Biology 
-EE BIOL
-Economics 
+Earth%2C+Planetary%2C+and+Space+Sciences+
+EPS+SCI
+Ecology+and+Evolutionary+Biology+
+EE+BIOL
+Economics+
 ECON
-Education 
+Education+
 EDUC
-Electrical and Computer Engineering 
-EC ENGR
-Engineering 
+Electrical+and+Computer+Engineering+
+EC+ENGR
+Engineering+
 ENGR
-English 
+English+
 ENGL
-English as A Second Language 
+English+as+A+Second+Language+
 ESL
-English Composition 
+English+Composition+
 ENGCOMP
-Environment 
+Environment+
 ENVIRON
-Environmental Health Sciences 
-ENV HLT
-Epidemiology 
+Environmental+Health+Sciences+
+ENV+HLT
+Epidemiology+
 EPIDEM
-Ethnomusicology 
+Ethnomusicology+
 ETHNMUS
-Family Medicine 
-FAM MED
-Filipino 
+Family+Medicine+
+FAM+MED
+Filipino+
 FILIPNO
-Film and Television 
-FILM TV
-Food Studies 
-FOOD ST
-French 
+Film+and+Television+
+FILM+TV
+Food+Studies+
+FOOD+ST
+French+
 FRNCH
-Gender Studies 
+Gender+Studies+
 GENDER
-Geography 
+Geography+
 GEOG
 German
 GERMAN
-Gerontology 
+Gerontology+
 GRNTLGY
-Global Health 
-GLB HLT
-Global Jazz Studies 
-GJ STDS
-Global Studies 
-GLBL ST
-Graduate Student Professional Development 
-GRAD PD
+Global+Health+
+GLB+HLT
+Global+Jazz+Studies+
+GJ+STDS
+Global+Studies+
+GLBL+ST
+Graduate+Student+Professional+Development+
+GRAD+PD
 Greek
 GREEK
-Health Policy and Management 
-HLT POL
+Health+Policy+and+Management+
+HLT+POL
 Hebrew
 HEBREW
-Hindi-Urdu 
+Hindi-Urdu+
 HIN-URD
-History 
+History+
 HIST
-Honors Collegium 
+Honors+Collegium+
 HNRS
-Human Genetics 
-HUM GEN
-Hungarian 
+Human+Genetics+
+HUM+GEN
+Hungarian+
 HNGAR
-Indigenous Languages of the Americas 
-IL AMER
-Indo-European Studies 
-I E STD
-Indonesian 
+Indigenous+Languages+of+the+Americas+
+IL+AMER
+Indo-European+Studies+
+I+E+STD
+Indonesian+
 INDO
-Information Studies 
-INF STD
-International and Area Studies 
-I A STD
-International Development Studies 
-INTL DV
-International Migration Studies 
-I M STD
+Information+Studies+
+INF+STD
+International+and+Area+Studies+
+I+A+STD
+International+Development+Studies+
+INTL+DV
+International+Migration+Studies+
+I+M+STD
 Iranian
 IRANIAN
-Islamic Studies 
-ISLM ST
+Islamic+Studies+
+ISLM+ST
 Italian
 ITALIAN
-Japanese 
+Japanese+
 JAPAN
-Jewish Studies 
+Jewish+Studies+
 JEWISH
-Korean 
+Korean+
 KOREA
-Labor and Workplace Studies 
-LBR\u0026WS
+Labor+and+Workplace+Studies+
+LBR%26WS
 Latin
 LATIN
-Latin American Studies 
-LATN AM
+Latin+American+Studies+
+LATN+AM
 Law
 LAW
-Law 
+Law+
 UG-LAW
 Lesbian
- Gay
- Bisexual
- Transgender
- and Queer Studies 
++Gay
++Bisexual
++Transgender
++and+Queer+Studies+
 LGBTQS
-Life Sciences 
+Life+Sciences+
 LIFESCI
-Linguistics 
+Linguistics+
 LING
-Management 
+Management+
 MGMT
-Management-Executive MBA 
+Management-Executive+MBA+
 MGMTEX
-Management-Full-Time MBA 
+Management-Full-Time+MBA+
 MGMTFT
-Management-Fully Employed MBA 
+Management-Fully+Employed+MBA+
 MGMTFE
-Management-Global Executive MBA Asia Pacific 
+Management-Global+Executive+MBA+Asia+Pacific+
 MGMTGEX
-Management-Master of Financial Engineering 
+Management-Master+of+Financial+Engineering+
 MGMTMFE
-Management-Master of Science in Business Analytics 
+Management-Master+of+Science+in+Business+Analytics+
 MGMTMSA
-Management-PhD 
+Management-PhD+
 MGMTPHD
-Materials Science and Engineering 
-MAT SCI
-Mathematics 
+Materials+Science+and+Engineering+
+MAT+SCI
+Mathematics+
 MATH
-Mechanical and Aerospace Engineering 
-MECH\u0026AE
-Medicine 
+Mechanical+and+Aerospace+Engineering+
+MECH%26AE
+Medicine+
 MED
-Microbiology
- Immunology
- and Molecular Genetics 
+Microbiology%2C+Immunology%2C+and+Molecular+Genetics+
 MIMG
-Middle Eastern Studies 
-M E STD
-Military Science 
-MIL SCI
-Molecular and Medical Pharmacology 
-M PHARM
-Molecular Biology 
-MOL BIO
-Molecular Toxicology 
-MOL TOX
-Molecular
- Cell
- and Developmental Biology 
-MCD BIO
-Molecular
- Cellular
- and Integrative Physiology 
-MC\u0026IP
-Music 
+Middle+Eastern+Studies+
+M+E+STD
+Military+Science+
+MIL+SCI
+Molecular+and+Medical+Pharmacology+
+M+PHARM
+Molecular+Biology+
+MOL+BIO
+Molecular+Toxicology+
+MOL+TOX
+Molecular%2C+Cell%2C+and+Developmental+Biology+
+MCD+BIO
+Molecular%2C+Cellular%2C+and+Integrative+Physiology+
+MC%26IP
+Music+
 MUSC
-Music Industry 
-MSC IND
-Musicology 
+Music+Industry+
+MSC+IND
+Musicology+
 MUSCLG
-Naval Science 
-NAV SCI
-Near Eastern Languages 
-NR EAST
-Neurobiology 
+Naval+Science+
+NAV+SCI
+Near+Eastern+Languages+
+NR+EAST
+Neurobiology+
 NEURBIO
-Neurology 
+Neurology+
 NEURLGY
-Neuroscience 
+Neuroscience+
 NEURO
-Neuroscience 
+Neuroscience+
 NEUROSC
-Neurosurgery 
+Neurosurgery+
 NEURSGY
 Nursing
 NURSING
-Obstetrics and Gynecology 
+Obstetrics+and+Gynecology+
 OBGYN
-Ophthalmology 
+Ophthalmology+
 OPTH
-Oral Biology 
-ORL BIO
-Orthopaedic Surgery 
+Oral+Biology+
+ORL+BIO
+Orthopaedic+Surgery+
 ORTHPDC
-Pathology and Laboratory Medicine 
+Pathology+and+Laboratory+Medicine+
 PATH
-Pediatrics 
+Pediatrics+
 PEDS
-Philosophy 
+Philosophy+
 PHILOS
 Physics
 PHYSICS
-Physics and Biology in Medicine 
+Physics+and+Biology+in+Medicine+
 PBMED
-Physiological Science 
+Physiological+Science+
 PHYSCI
-Physiology 
+Physiology+
 PHYSIOL
-Polish 
+Polish+
 POLSH
-Political Science 
-POL SCI
-Portuguese 
+Political+Science+
+POL+SCI
+Portuguese+
 PORTGSE
-Program in Computing 
+Program+in+Computing+
 COMPTNG
-Psychiatry and Biobehavioral Sciences 
+Psychiatry+and+Biobehavioral+Sciences+
 PSYCTRY
-Psychology 
+Psychology+
 PSYCH
-Public Affairs 
-PUB AFF
-Public Health 
-PUB HLT
-Public Policy 
-PUB PLC
-Radiation Oncology 
-RAD ONC
-Religion
- Study of 
+Public+Affairs+
+PUB+AFF
+Public+Health+
+PUB+HLT
+Public+Policy+
+PUB+PLC
+Radiation+Oncology+
+RAD+ONC
+Religion%2C+Study+of+
 RELIGN
-Romanian 
+Romanian+
 ROMANIA
-Russian 
+Russian+
 RUSSN
-Scandinavian 
+Scandinavian+
 SCAND
-Science Education 
-SCI EDU
+Science+Education+
+SCI+EDU
 Semitic
 SEMITIC
-Serbian/Croatian 
-SRB CRO
-Slavic 
+Serbian/Croatian+
+SRB+CRO
+Slavic+
 SLAVC
-Social Science 
-SOC SC
-Social Thought 
-SOC THT
-Social Welfare 
-SOC WLF
-Society and Genetics 
-SOC GEN
-Sociology 
+Social+Science+
+SOC+SC
+Social+Thought+
+SOC+THT
+Social+Welfare+
+SOC+WLF
+Society+and+Genetics+
+SOC+GEN
+Sociology+
 SOCIOL
-South Asian 
-S ASIAN
-Southeast Asian 
+South+Asian+
+S+ASIAN
+Southeast+Asian+
 SEASIAN
-Spanish 
+Spanish+
 SPAN
-Statistics 
+Statistics+
 STATS
 Surgery
 SURGERY
@@ -369,17 +360,17 @@ Thai
 THAI
 Theater
 THEATER
-Turkic Languages 
+Turkic+Languages+
 TURKIC
-University Studies 
-UNIV ST
-Urban Planning 
-URBN PL
+University+Studies+
+UNIV+ST
+Urban+Planning+
+URBN+PL
 Urology
 UROLOGY
-Vietnamese 
+Vietnamese+
 VIETMSE
-World Arts and Cultures 
-WL ARTS
-Yiddish 
+World+Arts+and+Cultures+
+WL+ARTS
+Yiddish+
 YIDDSH
