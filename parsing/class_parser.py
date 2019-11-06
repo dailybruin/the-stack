@@ -24,14 +24,16 @@ day = time.localtime().tm_mday
 sec = time.localtime().tm_sec
 
 print("Starting script")
-file = open('/data/{}-{}-{}.csv'.format(day, hour, sec), 'w')
+file = open('data/{}-{}-{}.csv'.format(day, hour, sec), 'w')
 file_writer = csv.writer(file, delimiter=',')
-
+"""
 chrome_options = Options()
 chrome_options.add_argument('--headless')
 chrome_options.add_argument('--no-sandbox')
 chrome_options.add_argument('--disable-dev-shm-usage')
-driver = webdriver.Chrome('./chromedriver',chrome_options=chrome_options)
+driver = webdriver.Chrome('./chromedriver', chrome_options=chrome_options)
+"""
+driver = webdriver.Chrome('./chromedriver')
 wait = WebDriverWait(driver, timeout)
 
 # have selenium get the department website
