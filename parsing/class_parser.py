@@ -120,7 +120,6 @@ for dep, dep_abbrv in itertools.zip_longest(*[dep_file]*2):
                     status_text = s.find('p').text
                     if (status_text != "Status"):
                         if (status_text.find('Closed') == 0):
-                            closed_classes += 1
                             file_writer.writerow([0, 0, 0])
                         if (status_text.find('Open') == 0):
                             number_text = re.findall("[0-9]+", status_text)
@@ -128,7 +127,6 @@ for dep, dep_abbrv in itertools.zip_longest(*[dep_file]*2):
                             for i in number_text:
                                 arr_text.append(i)
                             file_writer.writerow(arr_text)
-                            open_classes += 1
                         if (status_text.find('Waitlist') == 0):
                             file_writer.writerow([-1, -1, -1])
         except:
