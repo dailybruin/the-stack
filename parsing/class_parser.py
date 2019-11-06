@@ -29,7 +29,7 @@ driver = webdriver.Chrome('./chromedriver')
 wait = WebDriverWait(driver, timeout)
 
 # have selenium get the department website
-dep_file = open('d.txt', 'r')
+dep_file = open('departments.txt', 'r')
 link1 = "https://sa.ucla.edu/ro/Public/SOC/Results?t=20W&sBy=subject&sName="
 link2 = "%28"
 link3 = "%29&subj="
