@@ -35,7 +35,7 @@ wait = WebDriverWait(driver, timeout)
 # driver.get("https://sa.ucla.edu/ro/Public/SOC/Results?t=19F&sBy=subject&sName=English+%28ENGL%29&subj=ENGL&crsCatlg=Enter+a+Catalog+Number+or+Class+Title+%28Optional%29&catlg=&cls_no=&btnIsInIndex=btn_inIndex")
 # driver.get("https://sa.ucla.edu/ro/Public/SOC/Results?t=19F&sBy=subject&sName=Psychology+%28PSYCH%29&subj=PSYCH&crsCatlg=Enter+a+Catalog+Number+or+Class+Title+%28Optional%29&catlg=&cls_no=&btnIsInIndex=btn_inIndex")
 # driver.get("https://sa.ucla.edu/ro/Public/SOC/Results?t=20W&sBy=subject&sName=Life+Sciences+%28LIFESCI%29&subj=LIFESCI&crsCatlg=Enter+a+Catalog+Number+or+Class+Title+%28Optional%29&catlg=&cls_no=&btnIsInIndex=btn_inIndex")
-dep_file = open('departments.txt', 'r')
+dep_file = open('d.txt', 'r')
 # dep_reader = csv.reader(dep_file, delimiter=',')
 link1 = "https://sa.ucla.edu/ro/Public/SOC/Results?t=20W&sBy=subject&sName="
 link2 = "%28"
@@ -118,7 +118,8 @@ for dep, dep_abbrv in itertools.zip_longest(*[dep_file]*2):
                 class_name = a.find_all("h3", class_="head")
                 # file_writer.writerow out the class name
                 for c in class_name:
-                    file_writer.writerow([c.find('a').text])
+                    cl = dep_abbrv[:-1] + ' ' + c.find('a').text
+                    file_writer.writerow([cl])
                 # file_writer.writerow out the enrollment status for each of the lecs for the class
                 for s in status:
                     status_text = s.find('p').text
