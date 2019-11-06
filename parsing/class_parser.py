@@ -15,8 +15,7 @@ import itertools
 
 page_num = 1
 timeout = 10
-open_classes = 0
-closed_classes = 0
+status_column_load = 2
 
 # get the time to create the name of the file + make the file
 hour = time.localtime().tm_hour
@@ -30,20 +29,13 @@ driver = webdriver.Chrome('./chromedriver')
 wait = WebDriverWait(driver, timeout)
 
 # have selenium get the department website
-# driver.get("https://sa.ucla.edu/ro/Public/SOC/Results?t=20W&sBy=subject&sName=Computer+Science+%28COM+SCI%29&subj=COM+SCI&crsCatlg=Enter+a+Catalog+Number+or+Class+Title+%28Optional%29&catlg=&cls_no=&btnIsInIndex=btn_inIndex")
-# driver.get("https://sa.ucla.edu/ro/Public/SOC/Results?t=19F&sBy=subject&sName=Mathematics+%28MATH%29&subj=MATH&crsCatlg=Enter+a+Catalog+Number+or+Class+Title+%28Optional%29&catlg=&cls_no=&btnIsInIndex=btn_inIndex")
-# driver.get("https://sa.ucla.edu/ro/Public/SOC/Results?t=19F&sBy=subject&sName=English+%28ENGL%29&subj=ENGL&crsCatlg=Enter+a+Catalog+Number+or+Class+Title+%28Optional%29&catlg=&cls_no=&btnIsInIndex=btn_inIndex")
-# driver.get("https://sa.ucla.edu/ro/Public/SOC/Results?t=19F&sBy=subject&sName=Psychology+%28PSYCH%29&subj=PSYCH&crsCatlg=Enter+a+Catalog+Number+or+Class+Title+%28Optional%29&catlg=&cls_no=&btnIsInIndex=btn_inIndex")
-# driver.get("https://sa.ucla.edu/ro/Public/SOC/Results?t=20W&sBy=subject&sName=Life+Sciences+%28LIFESCI%29&subj=LIFESCI&crsCatlg=Enter+a+Catalog+Number+or+Class+Title+%28Optional%29&catlg=&cls_no=&btnIsInIndex=btn_inIndex")
 dep_file = open('d.txt', 'r')
-# dep_reader = csv.reader(dep_file, delimiter=',')
 link1 = "https://sa.ucla.edu/ro/Public/SOC/Results?t=20W&sBy=subject&sName="
 link2 = "%28"
 link3 = "%29&subj="
 link4 = "&crsCatlg=Enter+a+Catalog+Number+or+Class+Title+%28Optional%29&catlg=&cls_no=&btnIsInIndex=btn_inIndex"
 for dep, dep_abbrv in itertools.zip_longest(*[dep_file]*2):
     driver.get(link1+dep+link2+dep_abbrv+link3+dep_abbrv+link4)
-    # driver.get("https://sa.ucla.edu/ro/Public/SOC/Results?t=19F&sBy=subject&sName=Mathematics+%28MATH%29&subj=MATH&crsCatlg=Enter+a+Catalog+Number+or+Class+Title+%28Optional%29&catlg=&cls_no=&btnIsInIndex=btn_inIndex")
     driver.maximize_window()
     driver.execute_script("window.scrollTo(0, 200)")
     # iterate through all the pages in the department
@@ -53,12 +45,9 @@ for dep, dep_abbrv in itertools.zip_longest(*[dep_file]*2):
         num_pages = len(pages)
     except:
         num_pages = 1
-        open_classes = 0
-        closed_classes = 0
     page_num = 1
     num_tries = 0
     max_tries = 10
-    classes_on_page = 5
     while(page_num <= num_pages):
         # wait for up to 3 seconds for the page to be clickable, if there is more than 1 page
         if (num_pages > 1):
@@ -99,7 +88,7 @@ for dep, dep_abbrv in itertools.zip_longest(*[dep_file]*2):
         try:
             innerHTML = wait.until(EC.visibility_of_all_elements_located(
                 (By.XPATH, "//div[@class='statusColumn']")))   # file_writer.writerow(innerHTML)
-            time.sleep(2)
+            time.sleep(status_column_load)
             # give the HTML to the beautiful soup object
             innerHTML = driver.execute_script(
                 "return document.body.innerHTML")
@@ -116,7 +105,7 @@ for dep, dep_abbrv in itertools.zip_longest(*[dep_file]*2):
                 status = a.find_all('div', class_="statusColumn")
                 # class_name is the name of the current class
                 class_name = a.find_all("h3", class_="head")
-                # file_writer.writerow out the class name
+                # file_writer.writerow out the class name and department abbreviation
                 for c in class_name:
                     cl = dep_abbrv[:-1] + ' ' + c.find('a').text
                     file_writer.writerow([cl])
@@ -139,7 +128,4 @@ for dep, dep_abbrv in itertools.zip_longest(*[dep_file]*2):
         except:
             pass
         page_num += 1
-
-    file_writer.writerow(["Open Classes " + str(open_classes)])
-    file_writer.writerow(["Closed Classes " + str(closed_classes)])
 file.close()
