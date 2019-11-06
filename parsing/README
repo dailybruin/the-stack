@@ -41,3 +41,63 @@ status_column_load: we check that the expand all classes button has been pressed
 so we just sleep for status_column_load seconds, currently 2 seconds
 
 4-23-5.csv is one of Andrew's test csvs on all the classes (doesn't have department abbreviation in front)
+
+
+
+# Docker stuff
+build the image by running
+```
+docker-compose build
+```
+
+then actually run the image in a container by running
+```
+docker-compose up
+```
+Note: It will keep running. If you want it to stop, use CTRL C twice.
+
+this command will show you the currently running docker containers. 
+```
+docker container ls
+```
+
+If you want to "ssh" into any of them, run
+```
+docker exec -it UNIQUE_ID_CONTAINER_FROM_DOCKER_CONAINER_LS bash
+```
+
+## Volumes
+
+We save our csv files in volumes, not the container. This is safer because they container could restart and we would lose data.
+Even if you stop the container, you can still access the data it created.
+
+This will list all volumes
+```
+docker volumes ls
+```
+
+
+This command will show you the file path to the volumes
+```
+docker volumes inspect ID_OF_VOLUME_FROM_PREV_COMMAND
+```
+
+Lastly, you will need to run
+```
+sudo cat path/to/volumes/directory/d-h-m.csv
+```
+To see the file. You can also use other terminal utilities like `vim` or `emacs` but you have to `sudo` them.
+
+## Docker container doesn't stop
+If that happens, run this command
+```
+docker container stop UNIQUE_ID_OF_CONTAINER_FROM_DOCKER_CONTAINER_LS
+```
+
+If docker is taking too much storage, you can `prune` the images and delete containers you aren't using. 
+```
+docker image prune
+```
+```
+docker container rm UNIQUE_ID_OF_CONTAINER
+```
