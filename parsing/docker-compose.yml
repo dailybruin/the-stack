@@ -1,0 +1,13 @@
+version: "3"
+
+services:
+  web:
+    build: .
+    image: ucla_registrar
+    command: cron -f
+    volumes:
+            - class-data:/data
+
+volumes:
+        class-data:
+              

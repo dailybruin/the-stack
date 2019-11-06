@@ -2,6 +2,7 @@
 
 from bs4 import BeautifulSoup
 from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
@@ -15,21 +16,26 @@ import itertools
 
 page_num = 1
 timeout = 10
-status_column_load = 2
+status_column_load = 3
 
 # get the time to create the name of the file + make the file
 hour = time.localtime().tm_hour
 day = time.localtime().tm_mday
 sec = time.localtime().tm_sec
 
-file = open('{}-{}-{}.csv'.format(day, hour, sec), 'w')
+print("Starting script")
+file = open('/data/{}-{}-{}.csv'.format(day, hour, sec), 'w')
 file_writer = csv.writer(file, delimiter=',')
 
-driver = webdriver.Chrome('./chromedriver')
+chrome_options = Options()
+chrome_options.add_argument('--headless')
+chrome_options.add_argument('--no-sandbox')
+chrome_options.add_argument('--disable-dev-shm-usage')
+driver = webdriver.Chrome('./chromedriver',chrome_options=chrome_options)
 wait = WebDriverWait(driver, timeout)
 
 # have selenium get the department website
-dep_file = open('departments.txt', 'r')
+dep_file = open('d.txt', 'r')
 link1 = "https://sa.ucla.edu/ro/Public/SOC/Results?t=20W&sBy=subject&sName="
 link2 = "%28"
 link3 = "%29&subj="
