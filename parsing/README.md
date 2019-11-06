@@ -1,15 +1,24 @@
+# Class Parser
+
 departments.txt format:
+```
   department name (edited for link)
   department abbreviation (edited for link)
+```
 Ex:
+```
   Biological+Chemistry+
   BIOL+CH
+```
 
 class parser csv file name format:
+```
   day-hour-second.csv
+```
 We really only care about day/hour, second is to distinguish the day/hour files ran at the same time from different people
 
 CSV data format:
+```
   department abbreviation class name
   spots filled, spots total, spots left
 0,0,0 means class is closed/full
@@ -17,26 +26,34 @@ CSV data format:
 Ex:
   AERO+ST A - Leadership Laboratory
   0,120,120
-Department abbreviation is AERO+ST, aka Aerospace Studies
-Class name is A - Leadership Laboratory
-it has 0 spots filled, 120 spots total, and 120 spots open
+```
+Department abbreviation is `AERO+ST`, aka Aerospace Studies
 
-- some classes may have multiple rows of data, this is for the class being held at different times/professors
-  - we only get class data, not discussion data
-  - we also do not get professor data
+Class name is `A - Leadership Laboratory`
+
+it has `0` spots filled, `120` spots total, and `120` spots open
+
+### Other Notes
+* some classes may have multiple rows of data, this is for the class being held at different times/professors
+* we only get class data, not discussion data
+* we also do not get professor data
 
 General way of how program works:
+```
 iterate through departments by getting its link
   iterate through pages by clicking on the page nums
     press the expand all classes button
       get the text of all the classes
         determine if its closed/open/waitlisted and print to csv
+```
 
 if at any step something fails, we wait/press it again/skip to the next department/page
 
 important variables:
-timeout: how long we wait for a page to load, currently 10 seconds
-status_column_load: we check that the expand all classes button has been pressed by seeing if each class has a status_column html div
+
+`timeout`: how long we wait for a page to load, currently 10 seconds
+
+`status_column_load`: we check that the expand all classes button has been pressed by seeing if each class has a status_column html div
   However, we can't wait for a certain # of them to have loaded (for all the classes) (the java version of selenium lets you do this but not python)
 so we just sleep for status_column_load seconds, currently 2 seconds
 
