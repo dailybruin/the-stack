@@ -17,6 +17,7 @@ import itertools
 page_num = 1
 timeout = 10
 status_column_load = 3
+max_tries = 10
 
 # get the time to create the name of the file + make the file
 hour = time.localtime().tm_hour
@@ -37,7 +38,7 @@ driver = webdriver.Chrome('./chromedriver')
 wait = WebDriverWait(driver, timeout)
 
 # have selenium get the department website
-dep_file = open('d.txt', 'r')
+dep_file = open('departments.txt', 'r')
 link1 = "https://sa.ucla.edu/ro/Public/SOC/Results?t=20W&sBy=subject&sName="
 link2 = "%28"
 link3 = "%29&subj="
@@ -55,7 +56,6 @@ for dep, dep_abbrv in itertools.zip_longest(*[dep_file]*2):
         num_pages = 1
     page_num = 1
     num_tries = 0
-    max_tries = 10
     while(page_num <= num_pages):
         # wait for up to 3 seconds for the page to be clickable, if there is more than 1 page
         if (num_pages > 1):
