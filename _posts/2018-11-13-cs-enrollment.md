@@ -60,7 +60,6 @@ It is evident in the figure below that computer science admissions rate has show
 
 
 ## Computer Science vs. Engineering Faculty 
-<br>
 <p>Below you can see the growth of the CS and CSE students within HSSEAS. </p>
 <br> 
 
