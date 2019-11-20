@@ -34,7 +34,6 @@ by 24% between 2016 and 2026. While this is but one of the many specialties a Co
 <p>   
 In pace with the tech world, UCLA's Computer Science Department experienced a significant amount of growth in the past two decades. According to the 2018 QS World University Rankings, UCLA's Computer Science program currently <a href="https://www.theguardian.com/higher-education-network/2018/feb/28/qs-world-university-rankings-2018-computer-science">ranks 13th</a> in the world. UCLA currently offers three different majors in the discipline: Computer Science, Computer Science and Engineering, and Computer Engineering, the last added recently in 2017. In this report, we explore the expansion of the department in three different perspectives: <b>admissions</b>, <b>student-to-faculty ratio</b>, and <b>lecture sizes</b>.
 </p>
-<br> 
 
 ## Computer Science Admissions Data (with School of Engineering in Context)
 
