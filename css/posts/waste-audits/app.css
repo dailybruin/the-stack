@@ -1,0 +1,48 @@
+select {
+  display: block;
+}
+
+.item {
+  font-size: 15px;
+}
+
+#interactive {
+  border: 0.5px solid black;
+}
+
+#landfillGraph .bar {
+  fill: tan;
+  opacity: 0.8;
+}
+
+#recyclingGraph .bar {
+  fill: lightblue;
+  opacity: 0.8;
+}
+
+#compostGraph .bar {
+  fill: lightgreen;
+  opacity: 0.8;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.graph-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+#text {
+  font-size: 18px;
+}
+
+.h3 {
+  font-size: 24px;
+  font-weight: 600;
+}
