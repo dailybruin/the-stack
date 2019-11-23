@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<gpx xmlns="http://www.topografix.com/GPX/1/1" creator="GaiaGPS" version="1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
+  <trk>
+    <name>Covel Commons to Murphy Sculpture Garden, Los Angeles, CA, USA</name>
+    <trkseg>
+      <trkpt lat="34.072814" lon="-118.449471">
+        <ele>135.2</ele>
+        <time>2019-11-03T20:58:05Z</time>
+      </trkpt>
+      <trkpt lat="34.072809" lon="-118.449480">
+        <ele>134.9</ele>
+        <time>2019-11-03T20:58:07Z</time>
+      </trkpt>
+      <trkpt lat="34.072806" lon="-118.449465">
+        <ele>135.0</ele>
+        <time>2019-11-03T20:58:08Z</time>
+      </trkpt>
+      <trkpt lat="34.072828" lon="-118.449442">
+        <ele>134.1</ele>
+        <time>2019-11-03T20:58:11Z</time>
+      </trkpt>
+      <trkpt lat="34.072917" lon="-118.449433">
+        <ele>134.0</ele>
+        <time>2019-11-03T20:58:17Z</time>
+      </trkpt>
+      <trkpt lat="34.073117" lon="-118.449172">
+        <ele>133.7</ele>
+        <time>2019-11-03T20:58:45Z</time>
+      </trkpt>
+      <trkpt lat="34.073216" lon="-118.448883">
+        <ele>130.0</ele>
+        <time>2019-11-03T20:59:06Z</time>
+      </trkpt>
+      <trkpt lat="34.073226" lon="-118.448699">
+        <ele>130.4</ele>
+        <time>2019-11-03T20:59:19Z</time>
+      </trkpt>
+      <trkpt lat="34.073173" lon="-118.448345">
+        <ele>126.0</ele>
+        <time>2019-11-03T20:59:47Z</time>
+      </trkpt>
+      <trkpt lat="34.073178" lon="-118.448193">
+        <ele>124.0</ele>
+        <time>2019-11-03T20:59:57Z</time>
+      </trkpt>
+      <trkpt lat="34.073162" lon="-118.447987">
+        <ele>123.8</ele>
+        <time>2019-11-03T21:00:12Z</time>
+      </trkpt>
+      <trkpt lat="34.073177" lon="-118.447848">
+        <ele>122.0</ele>
+        <time>2019-11-03T21:00:21Z</time>
+      </trkpt>
+      <trkpt lat="34.073250" lon="-118.447662">
+        <ele>120.0</ele>
+        <time>2019-11-03T21:00:36Z</time>
+      </trkpt>
+      <trkpt lat="34.073262" lon="-118.447544">
+        <ele>120.0</ele>
+        <time>2019-11-03T21:00:44Z</time>
+      </trkpt>
+      <trkpt lat="34.073278" lon="-118.447514">
+        <ele>121.0</ele>
+        <time>2019-11-03T21:00:46Z</time>
+      </trkpt>
+      <trkpt lat="34.073288" lon="-118.447027">
+        <ele>121.6</ele>
+        <time>2019-11-03T21:01:20Z</time>
+      </trkpt>
+      <trkpt lat="34.073278" lon="-118.446869">
+        <ele>120.0</ele>
+        <time>2019-11-03T21:01:32Z</time>
+      </trkpt>
+      <trkpt lat="34.073296" lon="-118.446606">
+        <ele>122.0</ele>
+        <time>2019-11-03T21:01:50Z</time>
+      </trkpt>
+      <trkpt lat="34.073265" lon="-118.446459">
+        <ele>122.0</ele>
+        <time>2019-11-03T21:02:00Z</time>
+      </trkpt>
+      <trkpt lat="34.073268" lon="-118.446425">
+        <ele>120.0</ele>
+        <time>2019-11-03T21:02:03Z</time>
+      </trkpt>
+      <trkpt lat="34.073208" lon="-118.446044">
+        <ele>122.0</ele>
+        <time>2019-11-03T21:02:27Z</time>
+      </trkpt>
+      <trkpt lat="34.073228" lon="-118.445583">
+        <ele>124.0</ele>
+        <time>2019-11-03T21:03:02Z</time>
+      </trkpt>
+      <trkpt lat="34.073225" lon="-118.445364">
+        <ele>124.0</ele>
+        <time>2019-11-03T21:03:16Z</time>
+      </trkpt>
+      <trkpt lat="34.073234" lon="-118.445273">
+        <ele>123.0</ele>
+        <time>2019-11-03T21:03:23Z</time>
+      </trkpt>
+      <trkpt lat="34.073255" lon="-118.445229">
+        <ele>124.0</ele>
+        <time>2019-11-03T21:03:27Z</time>
+      </trkpt>
+      <trkpt lat="34.073201" lon="-118.444780">
+        <ele>123.0</ele>
+        <time>2019-11-03T21:04:06Z</time>
+      </trkpt>
+      <trkpt lat="34.073239" lon="-118.444686">
+        <ele>124.2</ele>
+        <time>2019-11-03T21:04:15Z</time>
+      </trkpt>
+      <trkpt lat="34.073242" lon="-118.444649">
+        <ele>124.5</ele>
+        <time>2019-11-03T21:04:18Z</time>
+      </trkpt>
+      <trkpt lat="34.073236" lon="-118.444603">
+        <ele>125.1</ele>
+        <time>2019-11-03T21:04:21Z</time>
+      </trkpt>
+      <trkpt lat="34.073253" lon="-118.444239">
+        <ele>123.0</ele>
+        <time>2019-11-03T21:04:46Z</time>
+      </trkpt>
+      <trkpt lat="34.073271" lon="-118.443372">
+        <ele>125.0</ele>
+        <time>2019-11-03T21:05:46Z</time>
+      </trkpt>
+      <trkpt lat="34.073292" lon="-118.443143">
+        <ele>126.4</ele>
+        <time>2019-11-03T21:06:02Z</time>
+      </trkpt>
+      <trkpt lat="34.073360" lon="-118.442815">
+        <ele>126.0</ele>
+        <time>2019-11-03T21:06:27Z</time>
+      </trkpt>
+      <trkpt lat="34.073391" lon="-118.442737">
+        <ele>128.0</ele>
+        <time>2019-11-03T21:06:37Z</time>
+      </trkpt>
+      <trkpt lat="34.073386" lon="-118.442675">
+        <ele>129.0</ele>
+        <time>2019-11-03T21:06:48Z</time>
+      </trkpt>
+      <trkpt lat="34.073540" lon="-118.442669">
+        <ele>132.0</ele>
+        <time>2019-11-03T21:07:26Z</time>
+      </trkpt>
+      <trkpt lat="34.073543" lon="-118.442431">
+        <ele>131.0</ele>
+        <time>2019-11-03T21:07:45Z</time>
+      </trkpt>
+      <trkpt lat="34.073512" lon="-118.442286">
+        <ele>135.0</ele>
+        <time>2019-11-03T21:07:57Z</time>
+      </trkpt>
+      <trkpt lat="34.073506" lon="-118.442169">
+        <ele>135.0</ele>
+        <time>2019-11-03T21:08:07Z</time>
+      </trkpt>
+      <trkpt lat="34.073527" lon="-118.441913">
+        <ele>137.0</ele>
+        <time>2019-11-03T21:08:24Z</time>
+      </trkpt>
+      <trkpt lat="34.073538" lon="-118.441881">
+        <ele>136.0</ele>
+        <time>2019-11-03T21:08:25Z</time>
+      </trkpt>
+      <trkpt lat="34.073535" lon="-118.441843">
+        <ele>135.0</ele>
+        <time>2019-11-03T21:08:28Z</time>
+      </trkpt>
+      <trkpt lat="34.073558" lon="-118.441768">
+        <ele>136.0</ele>
+        <time>2019-11-03T21:08:33Z</time>
+      </trkpt>
+      <trkpt lat="34.073587" lon="-118.441740">
+        <ele>138.2</ele>
+        <time>2019-11-03T21:08:36Z</time>
+      </trkpt>
+      <trkpt lat="34.073596" lon="-118.441714">
+        <ele>138.0</ele>
+        <time>2019-11-03T21:08:38Z</time>
+      </trkpt>
+      <trkpt lat="34.073974" lon="-118.441577">
+        <ele>140.0</ele>
+        <time>2019-11-03T21:09:19Z</time>
+      </trkpt>
+      <trkpt lat="34.074104" lon="-118.441515">
+        <ele>138.0</ele>
+        <time>2019-11-03T21:09:36Z</time>
+      </trkpt>
+      <trkpt lat="34.074515" lon="-118.441151">
+        <ele>142.0</ele>
+        <time>2019-11-03T21:10:16Z</time>
+      </trkpt>
+      <trkpt lat="34.074548" lon="-118.441142">
+        <ele>142.0</ele>
+        <time>2019-11-03T21:10:22Z</time>
+      </trkpt>
+      <trkpt lat="34.074564" lon="-118.441100">
+        <ele>142.0</ele>
+        <time>2019-11-03T21:10:26Z</time>
+      </trkpt>
+      <trkpt lat="34.074563" lon="-118.440850">
+        <ele>142.0</ele>
+        <time>2019-11-03T21:10:42Z</time>
+      </trkpt>
+      <trkpt lat="34.074587" lon="-118.440825">
+        <ele>142.0</ele>
+        <time>2019-11-03T21:10:44Z</time>
+      </trkpt>
+      <trkpt lat="34.074725" lon="-118.440527">
+        <ele>142.0</ele>
+        <time>2019-11-03T21:11:05Z</time>
+      </trkpt>
+      <trkpt lat="34.074777" lon="-118.440473">
+        <ele>142.4</ele>
+        <time>2019-11-03T21:11:13Z</time>
+      </trkpt>
+    </trkseg>
+  </trk>
+</gpx>

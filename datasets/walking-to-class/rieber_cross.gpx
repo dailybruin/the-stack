@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<gpx xmlns="http://www.topografix.com/GPX/1/1" creator="GaiaGPS" version="1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
+  <trk>
+    <name>Rieber to de neve crosswalk</name>
+    <trkseg>
+      <trkpt lat="34.072551" lon="-118.451936">
+        <ele>156.8</ele>
+        <time>2019-11-03T20:27:03Z</time>
+      </trkpt>
+      <trkpt lat="34.072579" lon="-118.451889">
+        <ele>155.8</ele>
+        <time>2019-11-03T20:27:20Z</time>
+      </trkpt>
+      <trkpt lat="34.072584" lon="-118.451837">
+        <ele>156.0</ele>
+        <time>2019-11-03T20:27:25Z</time>
+      </trkpt>
+      <trkpt lat="34.072574" lon="-118.451520">
+        <ele>158.0</ele>
+        <time>2019-11-03T20:27:46Z</time>
+      </trkpt>
+      <trkpt lat="34.072489" lon="-118.451419">
+        <ele>156.0</ele>
+        <time>2019-11-03T20:27:52Z</time>
+      </trkpt>
+      <trkpt lat="34.072274" lon="-118.451217">
+        <ele>151.3</ele>
+        <time>2019-11-03T20:28:16Z</time>
+      </trkpt>
+      <trkpt lat="34.072011" lon="-118.451106">
+        <ele>153.3</ele>
+        <time>2019-11-03T20:28:40Z</time>
+      </trkpt>
+      <trkpt lat="34.071716" lon="-118.451096">
+        <ele>148.0</ele>
+        <time>2019-11-03T20:28:59Z</time>
+      </trkpt>
+      <trkpt lat="34.071771" lon="-118.451135">
+        <ele>147.0</ele>
+        <time>2019-11-03T20:29:15Z</time>
+      </trkpt>
+      <trkpt lat="34.071650" lon="-118.451083">
+        <ele>150.2</ele>
+        <time>2019-11-03T20:29:27Z</time>
+      </trkpt>
+      <trkpt lat="34.071201" lon="-118.450735">
+        <ele>144.2</ele>
+        <time>2019-11-03T20:30:10Z</time>
+      </trkpt>
+      <trkpt lat="34.071168" lon="-118.450637">
+        <ele>143.1</ele>
+        <time>2019-11-03T20:30:16Z</time>
+      </trkpt>
+      <trkpt lat="34.071208" lon="-118.450523">
+        <ele>140.0</ele>
+        <time>2019-11-03T20:30:22Z</time>
+      </trkpt>
+      <trkpt lat="34.071255" lon="-118.450211">
+        <ele>137.2</ele>
+        <time>2019-11-03T20:30:40Z</time>
+      </trkpt>
+      <trkpt lat="34.071249" lon="-118.450163">
+        <ele>136.6</ele>
+        <time>2019-11-03T20:30:43Z</time>
+      </trkpt>
+      <trkpt lat="34.071060" lon="-118.449795">
+        <ele>133.0</ele>
+        <time>2019-11-03T20:31:13Z</time>
+      </trkpt>
+      <trkpt lat="34.070750" lon="-118.449594">
+        <ele>130.6</ele>
+        <time>2019-11-03T20:31:40Z</time>
+      </trkpt>
+      <trkpt lat="34.070691" lon="-118.449546">
+        <ele>130.8</ele>
+        <time>2019-11-03T20:31:45Z</time>
+      </trkpt>
+      <trkpt lat="34.070640" lon="-118.449484">
+        <ele>131.0</ele>
+        <time>2019-11-03T20:31:53Z</time>
+      </trkpt>
+    </trkseg>
+  </trk>
+</gpx>

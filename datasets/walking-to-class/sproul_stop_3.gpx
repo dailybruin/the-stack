@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<gpx xmlns="http://www.topografix.com/GPX/1/1" creator="GaiaGPS" version="1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
+  <trk>
+    <name>Sproul Cove to Covel Commons, Los Angeles, CA, USA</name>
+    <trkseg>
+      <trkpt lat="34.071504" lon="-118.450680">
+        <ele>143.7</ele>
+        <time>2019-11-03T20:36:25Z</time>
+      </trkpt>
+      <trkpt lat="34.071605" lon="-118.450676">
+        <ele>143.6</ele>
+        <time>2019-11-03T20:36:33Z</time>
+      </trkpt>
+      <trkpt lat="34.071631" lon="-118.450626">
+        <ele>144.0</ele>
+        <time>2019-11-03T20:36:39Z</time>
+      </trkpt>
+      <trkpt lat="34.071661" lon="-118.450614">
+        <ele>142.0</ele>
+        <time>2019-11-03T20:36:41Z</time>
+      </trkpt>
+      <trkpt lat="34.072758" lon="-118.449457">
+        <ele>135.5</ele>
+        <time>2019-11-03T20:39:16Z</time>
+      </trkpt>
+    </trkseg>
+  </trk>
+</gpx>

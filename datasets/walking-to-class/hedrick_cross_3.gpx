@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<gpx xmlns="http://www.topografix.com/GPX/1/1" creator="GaiaGPS" version="1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
+  <trk>
+    <name>The Study to DeNeve Crosswalk</name>
+    <trkseg>
+      <trkpt lat="34.073172" lon="-118.452132">
+        <ele>159.6</ele>
+        <time>2019-11-03T20:45:48Z</time>
+      </trkpt>
+      <trkpt lat="34.073176" lon="-118.452111">
+        <ele>159.7</ele>
+        <time>2019-11-03T20:45:50Z</time>
+      </trkpt>
+      <trkpt lat="34.073173" lon="-118.452122">
+        <ele>159.6</ele>
+        <time>2019-11-03T20:45:52Z</time>
+      </trkpt>
+      <trkpt lat="34.073245" lon="-118.452038">
+        <ele>159.3</ele>
+        <time>2019-11-03T20:46:00Z</time>
+      </trkpt>
+      <trkpt lat="34.070730" lon="-118.449491">
+        <ele>130.2</ele>
+        <time>2019-11-03T20:51:44Z</time>
+      </trkpt>
+    </trkseg>
+  </trk>
+</gpx>

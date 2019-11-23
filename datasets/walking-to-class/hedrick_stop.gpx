@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx version="1.1" creator="GPSBabel - http://www.gpsbabel.org" xmlns="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <metadata>
+    <time>2019-11-16T23:13:52.622Z</time>
+    <bounds minlat="34.072358000" minlon="-118.451979000" maxlat="34.073238000" maxlon="-118.449408000"/>
+  </metadata>
+  <trk>
+    <name>Stop sign to hedrick</name>
+    <trkseg>
+      <trkpt lat="34.073238000" lon="-118.451979000">
+        <ele>159.700</ele>
+        <time>2019-11-03T20:45:08Z</time>
+      </trkpt>
+      <trkpt lat="34.073205000" lon="-118.451916000">
+        <ele>160.000</ele>
+        <time>2019-11-03T20:44:51Z</time>
+      </trkpt>
+      <trkpt lat="34.073086000" lon="-118.451767000">
+        <ele>157.800</ele>
+        <time>2019-11-03T20:44:27Z</time>
+      </trkpt>
+      <trkpt lat="34.072784000" lon="-118.451685000">
+        <ele>156.000</ele>
+        <time>2019-11-03T20:44:01Z</time>
+      </trkpt>
+      <trkpt lat="34.072640000" lon="-118.451455000">
+        <ele>150.700</ele>
+        <time>2019-11-03T20:43:30Z</time>
+      </trkpt>
+      <trkpt lat="34.072461000" lon="-118.451224000">
+        <ele>149.000</ele>
+        <time>2019-11-03T20:43:11Z</time>
+      </trkpt>
+      <trkpt lat="34.072433000" lon="-118.451204000">
+        <ele>150.800</ele>
+        <time>2019-11-03T20:43:08Z</time>
+      </trkpt>
+      <trkpt lat="34.072358000" lon="-118.450976000">
+        <ele>148.000</ele>
+        <time>2019-11-03T20:42:46Z</time>
+      </trkpt>
+      <trkpt lat="34.072519000" lon="-118.450789000">
+        <ele>144.800</ele>
+        <time>2019-11-03T20:42:18Z</time>
+      </trkpt>
+      <trkpt lat="34.072524000" lon="-118.450747000">
+        <ele>145.500</ele>
+        <time>2019-11-03T20:42:14Z</time>
+      </trkpt>
+      <trkpt lat="34.072642000" lon="-118.450665000">
+        <ele>143.400</ele>
+        <time>2019-11-03T20:42:02Z</time>
+      </trkpt>
+      <trkpt lat="34.072658000" lon="-118.450615000">
+        <ele>141.000</ele>
+        <time>2019-11-03T20:41:56Z</time>
+      </trkpt>
+      <trkpt lat="34.072702000" lon="-118.450564000">
+        <ele>140.000</ele>
+        <time>2019-11-03T20:41:50Z</time>
+      </trkpt>
+      <trkpt lat="34.072785000" lon="-118.450430000">
+        <ele>139.200</ele>
+        <time>2019-11-03T20:41:36Z</time>
+      </trkpt>
+      <trkpt lat="34.072729000" lon="-118.449956000">
+        <ele>138.000</ele>
+        <time>2019-11-03T20:41:06Z</time>
+      </trkpt>
+      <trkpt lat="34.072700000" lon="-118.449625000">
+        <ele>138.000</ele>
+        <time>2019-11-03T20:40:41Z</time>
+      </trkpt>
+      <trkpt lat="34.072710000" lon="-118.449474000">
+        <ele>134.500</ele>
+        <time>2019-11-03T20:40:28Z</time>
+      </trkpt>
+      <trkpt lat="34.072738000" lon="-118.449408000">
+        <ele>133.900</ele>
+        <time>2019-11-03T20:40:17Z</time>
+      </trkpt>
+    </trkseg>
+  </trk>
+</gpx>

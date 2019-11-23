@@ -1,0 +1,23 @@
+
+#vis{
+    height: 84vh;
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+#mapid {
+    margin-top: 20px;
+    height: 90%;
+    width: 70%;
+    float: left;
+    /*display: inline;*/
+}
+
+#stats {
+    margin-top: 20px;
+    border: 1px solid blue;
+    float: right;
+    width: 29%;
+    height: 90%;
+    /*display: inline;*/
+}

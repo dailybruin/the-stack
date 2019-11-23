@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<gpx xmlns="http://www.topografix.com/GPX/1/1" creator="GaiaGPS" version="1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
+  <trk>
+    <name>Study to de neve </name>
+    <trkseg>
+      <trkpt lat="34.073297" lon="-118.452011">
+        <ele>161.2</ele>
+        <time>2019-11-03T20:45:50Z</time>
+      </trkpt>
+      <trkpt lat="34.073353" lon="-118.452026">
+        <ele>160.6</ele>
+        <time>2019-11-03T20:46:00Z</time>
+      </trkpt>
+      <trkpt lat="34.073079" lon="-118.451857">
+        <ele>159.3</ele>
+        <time>2019-11-03T20:46:41Z</time>
+      </trkpt>
+      <trkpt lat="34.073024" lon="-118.451839">
+        <ele>158.9</ele>
+        <time>2019-11-03T20:46:44Z</time>
+      </trkpt>
+      <trkpt lat="34.072936" lon="-118.451836">
+        <ele>158.0</ele>
+        <time>2019-11-03T20:46:50Z</time>
+      </trkpt>
+      <trkpt lat="34.072530" lon="-118.451620">
+        <ele>158.7</ele>
+        <time>2019-11-03T20:47:31Z</time>
+      </trkpt>
+      <trkpt lat="34.072481" lon="-118.451627">
+        <ele>158.0</ele>
+        <time>2019-11-03T20:47:34Z</time>
+      </trkpt>
+      <trkpt lat="34.072332" lon="-118.451520">
+        <ele>157.6</ele>
+        <time>2019-11-03T20:47:50Z</time>
+      </trkpt>
+      <trkpt lat="34.072285" lon="-118.451452">
+        <ele>156.4</ele>
+        <time>2019-11-03T20:48:00Z</time>
+      </trkpt>
+      <trkpt lat="34.072088" lon="-118.451393">
+        <ele>155.0</ele>
+        <time>2019-11-03T20:48:16Z</time>
+      </trkpt>
+      <trkpt lat="34.071816" lon="-118.451359">
+        <ele>153.1</ele>
+        <time>2019-11-03T20:48:39Z</time>
+      </trkpt>
+      <trkpt lat="34.071768" lon="-118.451362">
+        <ele>153.2</ele>
+        <time>2019-11-03T20:48:43Z</time>
+      </trkpt>
+      <trkpt lat="34.071677" lon="-118.451340">
+        <ele>149.0</ele>
+        <time>2019-11-03T20:48:51Z</time>
+      </trkpt>
+      <trkpt lat="34.071766" lon="-118.451296">
+        <ele>149.0</ele>
+        <time>2019-11-03T20:49:07Z</time>
+      </trkpt>
+      <trkpt lat="34.071773" lon="-118.451244">
+        <ele>150.7</ele>
+        <time>2019-11-03T20:49:15Z</time>
+      </trkpt>
+      <trkpt lat="34.071692" lon="-118.451158">
+        <ele>150.8</ele>
+        <time>2019-11-03T20:49:20Z</time>
+      </trkpt>
+      <trkpt lat="34.071705" lon="-118.451124">
+        <ele>151.3</ele>
+        <time>2019-11-03T20:49:21Z</time>
+      </trkpt>
+      <trkpt lat="34.071260" lon="-118.450856">
+        <ele>147.0</ele>
+        <time>2019-11-03T20:50:06Z</time>
+      </trkpt>
+      <trkpt lat="34.071225" lon="-118.450806">
+        <ele>144.9</ele>
+        <time>2019-11-03T20:50:09Z</time>
+      </trkpt>
+      <trkpt lat="34.071197" lon="-118.450788">
+        <ele>144.0</ele>
+        <time>2019-11-03T20:50:10Z</time>
+      </trkpt>
+      <trkpt lat="34.071171" lon="-118.450715">
+        <ele>145.4</ele>
+        <time>2019-11-03T20:50:14Z</time>
+      </trkpt>
+      <trkpt lat="34.071164" lon="-118.450634">
+        <ele>143.7</ele>
+        <time>2019-11-03T20:50:17Z</time>
+      </trkpt>
+      <trkpt lat="34.071247" lon="-118.450046">
+        <ele>134.0</ele>
+        <time>2019-11-03T20:50:49Z</time>
+      </trkpt>
+      <trkpt lat="34.071219" lon="-118.449924">
+        <ele>133.0</ele>
+        <time>2019-11-03T20:50:57Z</time>
+      </trkpt>
+      <trkpt lat="34.071199" lon="-118.449879">
+        <ele>132.0</ele>
+        <time>2019-11-03T20:51:00Z</time>
+      </trkpt>
+      <trkpt lat="34.071080" lon="-118.449782">
+        <ele>133.3</ele>
+        <time>2019-11-03T20:51:09Z</time>
+      </trkpt>
+      <trkpt lat="34.071070" lon="-118.449752">
+        <ele>133.6</ele>
+        <time>2019-11-03T20:51:11Z</time>
+      </trkpt>
+      <trkpt lat="34.070722" lon="-118.449491">
+        <ele>129.7</ele>
+        <time>2019-11-03T20:51:44Z</time>
+      </trkpt>
+    </trkseg>
+  </trk>
+</gpx>
