@@ -192,6 +192,8 @@
             .domain([0, 56])
             .range([0, svgHeight])
 
+  
+
 
         // =============================
 
@@ -895,3 +897,7 @@
 
 
             });
+
+            if(screen.width < 500){
+                svg.attr("transform", "scale(.70, .8) translate(-250, 0)");
+            };
