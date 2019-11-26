@@ -50,8 +50,11 @@ d3.select('#end_location')
         .text(function (d) {return d;});
 
 
-generateRoutes("Hedrick", "Sculpture Garden");
-calculateStats();
+//generateRoutes("Hedrick", "Sculpture Garden");
+// calculateStats();
+
+var x = generateLayer("/datasets/walking-to-class/hedrick_anderson_bruinwalk.gpx", "red");
+mymap.addLayer(x);
 
 function generateRoutes(start, end) {
 	
@@ -103,7 +106,9 @@ function generateLayer(filePath, color) {
 	    color: color
 	  }
 	}).on('loaded', function(e) {
-	  // mymap.fitBounds(e.target.getBounds());
+	  console.log(e.target.get_distance_imp());
+	  console.log(e.target.get_elevation_gain());
+	  console.log(e.target.get_elevation_loss());
 	}));
 }
 
@@ -113,51 +118,55 @@ function generateLayer(filePath, color) {
 async function calculateStats() {
 	let route_data = "start,stop,route,trial,distance,elevation_gain,elevation_loss,number_stairs\n";
 
-	for (s in start_locations) {
-		let start = start_locations[s];
+	let filePath = "/datasets/walking-to-class/cross_powell_2.gpx";
+	let s = await getStats(filePath);
+	console.log(filePath + ": " + s[0] + ", " + s[1] + ", " + s[2]);
 
-		for (let i = 1; i <= 3; i++) {
-			let path = "/datasets/walking-to-class/";
-			let suffix = i != 1 ? "_" + i + ".gpx" : ".gpx"; 
+	// for (s in start_locations) {
+	// 	let start = start_locations[s];
+
+	// 	for (let i = 1; i <= 3; i++) {
+	// 		let path = "/datasets/walking-to-class/";
+	// 		let suffix = i != 1 ? "_" + i + ".gpx" : ".gpx"; 
 		
-			if (start != "cross") {
-				let route_cross = path + start + "_cross" + suffix;
-				let cross_stats = await getStats(route_cross);
-				route_data += (start + ",cross,A," + i + "," + cross_stats[0] + "," + cross_stats[1] + "," + cross_stats[2] + ",\n");
-			}	
+	// 		if (start != "cross") {
+	// 			let route_cross = path + start + "_cross" + suffix;
+	// 			let cross_stats = await getStats(route_cross);
+	// 			route_data += (start + ",cross,A," + i + "," + cross_stats[0] + "," + cross_stats[1] + "," + cross_stats[2] + ",\n");
+	// 		}	
 
-			let route_stop = path + start + "_stop" + suffix; 
-			let stop_stats = await getStats(route_stop);
+	// 		let route_stop = path + start + "_stop" + suffix; 
+	// 		let stop_stats = await getStats(route_stop);
 
-			route_data += (start + ",stop,A," + i + "," + stop_stats[0] + "," + stop_stats[1] + "," + stop_stats[2] + ",\n");
-		}
-	}
+	// 		route_data += (start + ",stop,A," + i + "," + stop_stats[0] + "," + stop_stats[1] + "," + stop_stats[2] + ",\n");
+	// 	}
+	// }
 
-	for (e in end_locations) {
-		let end = end_locations[e];
+	// for (e in end_locations) {
+	// 	let end = end_locations[e];
 
-		for (let i = 1; i <= 3; i++) {
-			let path = "/datasets/walking-to-class/";
-			let suffix = i != 1 ? "_" + i + ".gpx" : ".gpx"; 
+	// 	for (let i = 1; i <= 3; i++) {
+	// 		let path = "/datasets/walking-to-class/";
+	// 		let suffix = i != 1 ? "_" + i + ".gpx" : ".gpx"; 
 
-			if (end != "powell" || i == 1) {
-				let route_A = path + "cross_" + end + suffix;
-				let a_stats = await getStats(route_A);
-				route_data += ("cross," + end + ",A," + i + "," + a_stats[0] + "," + a_stats[1] + "," + a_stats[2] + ",\n");
-			}
+	// 		if (end != "powell" || i == 1) {
+	// 			let route_A = path + "cross_" + end + suffix;
+	// 			let a_stats = await getStats(route_A);
+	// 			route_data += ("cross," + end + ",A," + i + "," + a_stats[0] + "," + a_stats[1] + "," + a_stats[2] + ",\n");
+	// 		}
 			
-			if (end == "sculpture" || end == "powell") {
-				let route_B = path + "stop_" + end + suffix;
-				let b_stats = await getStats(route_B);
-				route_data += ("stop," + end + ",A," + i + "," + b_stats[0] + "," + b_stats[1] + "," + b_stats[2] + ",\n");
-			} else if (end != "target" || i < 3){
-				let route_B = path + "cross_" + end + "_B" + suffix;
-				let b_stats = await getStats(route_B);
-				route_data += ("cross," + end + ",B," + i + "," + b_stats[0] + "," + b_stats[1] + "," + b_stats[2] + ",\n");
-			}
+	// 		if (end == "sculpture" || end == "powell") {
+	// 			let route_B = path + "stop_" + end + suffix;
+	// 			let b_stats = await getStats(route_B);
+	// 			route_data += ("stop," + end + ",A," + i + "," + b_stats[0] + "," + b_stats[1] + "," + b_stats[2] + ",\n");
+	// 		} else if (end != "target" || i < 3){
+	// 			let route_B = path + "cross_" + end + "_B" + suffix;
+	// 			let b_stats = await getStats(route_B);
+	// 			route_data += ("cross," + end + ",B," + i + "," + b_stats[0] + "," + b_stats[1] + "," + b_stats[2] + ",\n");
+	// 		}
 
-		}
-	}
+	// 	}
+	// }
 
 	// console.log("\n\n" + route_data);
 
@@ -182,37 +191,6 @@ function getStats(filePath) {
 			g = e.target.get_elevation_gain();
 			l = e.target.get_elevation_loss();
 			resolve([d, g, l]);
-		});
-	});
-}
-
-function getElevationGain(filePath){
-	return new Promise(resolve => {
-		let x = new L.GPX(filePath, {
-			async: true,
-			marker_options: {
-				startIconUrl: '',
-		  		endIconUrl: '',
-		    	shadowUrl: ''
-			}
-		}).on('loaded', function(e) {
-			console.log(filePath + ": " + e.target.get_elevation_gain());
-		  	resolve(e.target.get_elevation_gain());
-		});
-	});
-}
-
-function getElevationLoss(filePath){
-	return new Promise(resolve => {
-		let x = new L.GPX(filePath, {
-			async: true,
-			marker_options: {
-				startIconUrl: '',
-		  		endIconUrl: '',
-		    	shadowUrl: ''
-			}
-		}).on('loaded', function(e) {
-		  	resolve(e.target.get_elevation_loss());
 		});
 	});
 }

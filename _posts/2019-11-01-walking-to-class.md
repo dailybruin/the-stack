@@ -31,8 +31,14 @@ scripts:
     <div id="stats">
         <h4>Route A</h4>
         <p>Distance</p>
+        <p>feet elevation gain</p>
+        <p>feet elevation loss</p>
+        <p>stairs</p>
         <h4>Route B</h4>
         <p>Distance</p>
+        <p>feet elevation gain</p>
+        <p>feet elevation loss</p>
+        <p>stairs</p>
     </div>
 </div>
 
