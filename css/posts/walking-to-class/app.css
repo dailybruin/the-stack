@@ -8,16 +8,93 @@
 #mapid {
     margin-top: 20px;
     height: 90%;
-    width: 70%;
+    width: 65%;
     float: left;
-    /*display: inline;*/
 }
 
 #stats {
     margin-top: 20px;
-    border: 1px solid blue;
+    background-color: rgb(210,210,210);
     float: right;
-    width: 29%;
+    width: 35%;
     height: 90%;
-    /*display: inline;*/
+}
+
+#stats_table {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#stats_table td, #stats_table th {
+  padding: 8px;
+}
+
+
+#stats_table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  font-weight: bolder;
+  font-size: 20px;
+}
+
+#route_A {
+    color: green;
+}
+
+#route_B {
+    color: blue;
+}
+
+#stats h2 {
+    text-align: center;
+    margin: 30px;
+}
+
+.header_cell {
+    font-weight: bold;
+    text-align: center;
+}
+
+
+#stats h4 {
+    text-align: center;
+    padding-top: 40px;
+}
+
+.btn-group {
+    width: 90%;
+    margin: auto;
+    position: relative;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.btn {
+    color: #fff;
+    background-color: #337ab7;
+    /*margin-left: -1px;*/
+    font-weight: 400;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    border: 1px solid transparent;
+    padding: 6px 12px;
+    font-size: 14px;
+}
+
+.btn-group input {
+    position: absolute;
+    clip: rect(0, 0, 0, 0);
+}
+
+.btn-group input:checked + .btn {
+    color: #fff;
+    background-color: #286090;
+}
+
+.btn:hover {
+    color: #fff;
+    background-color: #286090;
 }
