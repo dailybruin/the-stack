@@ -12,15 +12,34 @@ featured_image:
 og_image: class-fill-ups/placeholder.png
 stylesheets:
   - /css/posts/class-fill-ups/app.css
+  - /js/posts/class-fill-ups/graphs/src/App.css
+  - https://unpkg.com/react-vis/dist/style.css
 scripts:
+  - /js/posts/class-fill-ups/graphs/src/AppMD.js
+  - https://unpkg.com/react@16/umd/react.development.js
+  - https://unpkg.com/react-dom@16/umd/react-dom.development.js
+  - https://unpkg.com/babel-standalone@6/babel.min.js
+  - https://unpkg.com/react-vis/dist/dist.min.js
 ---
 
 #### YO what up
 
 <p class="text">you should be seeing this text</p>
 
+<div id="graph"></div>
+
 #### Data Collection
+
+the reason we sometimes have spikes in total students enrolled in a class is bc the web site refreshes its data while the scraper is scraping and so the scraper scrapes that class twice (once from before it updated and once after)
 
 #### Which classes fill up the fastest?
 
 #### Conclusion
+
+<link rel="stylesheet" href="https://unpkg.com/react-vis/dist/style.css">
+<script src="https://unpkg.com/react-vis/dist/dist.min.js"></script>
+<script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+<script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+<script type="text/babel" src="/js/posts/class-fill-ups/graphs/src/AppMD.js"></script>

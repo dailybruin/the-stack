@@ -1,6 +1,4 @@
 import React from 'react';
-import { curveCatmullRom } from 'd3-shape';
-
 import {
   XYPlot,
   XAxis,
@@ -10,78 +8,171 @@ import {
   VerticalGridLines,
   LineSeries,
   LineSeriesCanvas,
+  Crosshair,
 } from 'react-vis';
 
+const graphSize = 600;
+
+const DATA = [
+  [
+    { x: 0, y: 0 },
+    { x: 1, y: 15 },
+    { x: 2, y: 33 },
+    { x: 3, y: 70 },
+    { x: 4, y: 100 },
+    { x: 5, y: 100 },
+    { x: 6, y: 100 },
+  ],
+  [
+    { x: 0, y: 5 },
+    { x: 1, y: 10 },
+    { x: 2, y: 20 },
+    { x: 3, y: 65 },
+    { x: 4, y: 80 },
+    { x: 5, y: 100 },
+    { x: 6, y: 100 },
+  ],
+];
+
+const DATES = ['0', 'Jan', 'Feb', 'March', 'April', 'May', 'June'];
+const CLASSES = ['Class A', 'Class B'];
+
 export default class Example extends React.Component {
-  state = {
-    useCanvas: false,
+  constructor(props) {
+    super(props);
+    this.state = {
+      useCanvas: false,
+      values: [],
+      mouseY: 0,
+    };
+  }
+
+  _onMouseLeave = () => {
+    this.setState({ values: [] });
   };
+
+  _onNearestX = (value, { index }) => {
+    this.setState({ values: DATA.map(d => d[index]) });
+    this.setState({ mouseY: window.event.clientY });
+  };
+
   render() {
     const { useCanvas } = this.state;
     const Line = useCanvas ? LineSeriesCanvas : LineSeries;
+    const lineSize = '4px';
+    const values = this.state.values;
+    const mouseY = this.state.mouseY;
+    let classInfo = [];
+
+    if (values[0]) {
+      classInfo = [];
+      let padding = graphSize + 50;
+      let div = (
+        <div style={{ paddingLeft: padding }}>
+          <h1>Date: {DATES[values[0].x]}</h1>
+        </div>
+      );
+      classInfo.push(div);
+
+      for (let i = 0; i < values.length; i++) {
+        let div = (
+          <div style={{ paddingLeft: padding }}>
+            <h1>{CLASSES[i]}</h1>
+            <p>Percent Full: {values[i].y}%</p>
+          </div>
+        );
+        classInfo.push(div);
+      }
+    }
 
     return (
-      <div>
-        <XYPlot width={300} height={300}>
-          <HorizontalGridLines />
-          <VerticalGridLines />
-          <XAxis />
-          <YAxis />
-          <ChartLabel
-            text="X Axis"
-            className="alt-x-label"
-            includeMargin={false}
-            xPercent={0.025}
-            yPercent={1.01}
-          />
-
-          <ChartLabel
-            text="Y Axis"
-            className="alt-y-label"
-            includeMargin={false}
-            xPercent={0.06}
-            yPercent={0.06}
-            style={{
-              transform: 'rotate(-90)',
-              textAnchor: 'end',
-            }}
-          />
-          <Line
-            className="first-series"
-            data={[
-              { x: 1, y: 3 },
-              { x: 2, y: 5 },
-              { x: 3, y: 15 },
-              { x: 4, y: 12 },
-            ]}
-          />
-          <Line className="second-series" data={null} />
-          <Line
-            className="third-series"
-            curve={'curveMonotoneX'}
-            data={[
-              { x: 1, y: 10 },
-              { x: 2, y: 4 },
-              { x: 3, y: 2 },
-              { x: 4, y: 15 },
-            ]}
-            strokeDasharray={useCanvas ? [7, 3] : '7, 3'}
-          />
-          <Line
-            className="fourth-series"
-            curve={curveCatmullRom.alpha(0.5)}
-            style={{
-              // note that this can not be translated to the canvas version
-              strokeDasharray: '2 2',
-            }}
-            data={[
-              { x: 1, y: 7 },
-              { x: 2, y: 11 },
-              { x: 3, y: 9 },
-              { x: 4, y: 2 },
-            ]}
-          />
-        </XYPlot>
+      <div
+        style={{
+          paddingTop: '30px',
+          paddingLeft: '30px',
+        }}
+      >
+        <div
+          style={{
+            float: 'left',
+          }}
+        >
+          <XYPlot
+            onMouseLeave={this._onMouseLeave}
+            width={graphSize}
+            height={graphSize}
+            style={{ float: 'left', display: 'inline-block' }}
+          >
+            <HorizontalGridLines />
+            <VerticalGridLines />
+            <XAxis tickFormat={v => DATES[v]} />
+            <YAxis />
+            <ChartLabel
+              text="Date"
+              className="alt-x-label"
+              includeMargin={false}
+              xPercent={0.028}
+              yPercent={1.08}
+              style={{
+                fontWeight: 'bold',
+              }}
+            />
+            <ChartLabel
+              text="Percentage Full"
+              className="alt-y-label"
+              includeMargin={false}
+              xPercent={0.18}
+              yPercent={0.06}
+              style={{
+                textAnchor: 'end',
+                fontWeight: 'bold',
+              }}
+            />
+            <Line
+              className="classA"
+              color="green"
+              strokeWidth={lineSize}
+              data={DATA[0]}
+            />
+            <Line
+              className="classB"
+              color="green"
+              strokeWidth={lineSize}
+              data={DATA[1]}
+              onNearestX={this._onNearestX}
+            />
+            <Line
+              className="classFull"
+              color="red"
+              strokeWidth="6px"
+              data={[
+                { x: 0, y: 100 },
+                { x: 6, y: 100 },
+              ]}
+            />
+            {values ? (
+              <Crosshair
+                values={values}
+                itemsFormat={values => {
+                  return [
+                    { title: CLASSES[0], value: values[0].y + '%' },
+                    { title: CLASSES[1], value: values[1].y + '%' },
+                  ];
+                }}
+                titleFormat={values => {
+                  return { title: 'Day', value: values[0].x };
+                }}
+                style={{
+                  line: {},
+                  box: { position: 'absolute', top: mouseY },
+                  title: {},
+                }}
+              ></Crosshair>
+            ) : null}
+          </XYPlot>
+        </div>
+        {classInfo}
+        <p>add dropdown menu(s?) to add up to 5? classes</p>
       </div>
     );
   }
