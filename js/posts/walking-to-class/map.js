@@ -12,14 +12,14 @@ var baseLayer = L.tileLayer('https://api.mapbox.com/styles/v1/mapbox/streets-v10
 mymap.addLayer(baseLayer);
 
 var start_locations = {
-	"Hedrick" : "hedrick", 
+	"Hedrick" : "hedrick",
 	"Rieber" : "rieber",
 	"Sproul" : "sproul",
 	"De Neve" : "cross"
 };
 
 var end_locations = {
-	"Sculpture Garden" : "sculpture", 
+	"Sculpture Garden" : "sculpture",
 	"Powell" : "powell",
 	"Boelter" : "boelter",
 	"Target" : "target"
@@ -49,6 +49,12 @@ d3.select('#end_location')
     	.attr("value", function (d) {return d;})
         .text(function (d) {return d;});
 
+function generate_graph(start, end){
+	var path = "/datasets/walking-to-class/";
+	var route_A_hill = path + start_locations[start] + "_cross.json";
+	var route_A_campus = path + "cross_" + end_locations[end] + ".gpx";
+}
+
 
 //generateRoutes("Hedrick", "Sculpture Garden");
 // calculateStats();
@@ -57,7 +63,7 @@ var x = generateLayer("/datasets/walking-to-class/hedrick_anderson_bruinwalk.gpx
 mymap.addLayer(x);
 
 function generateRoutes(start, end) {
-	
+
 	mymap.eachLayer(function(layer){
 		if (layer != baseLayer) {
 			layer.remove();
@@ -65,14 +71,14 @@ function generateRoutes(start, end) {
 	});
 
 	var path = "/datasets/walking-to-class/";
-	var route_A_hill = path + start_locations[start] + "_cross.gpx"; 
+	var route_A_hill = path + start_locations[start] + "_cross.gpx";
 	var route_A_campus = path + "cross_" + end_locations[end] + ".gpx";
 
 	if (end == "Sculpture Garden" || end == "Powell") {
-		var route_B_hill = path + start_locations[start] + "_stop.gpx"; 
+		var route_B_hill = path + start_locations[start] + "_stop.gpx";
 		var route_B_campus = path + "stop_" + end_locations[end] + ".gpx";
 	} else {
-		var route_B_hill = path + start_locations[start] + "_cross.gpx"; 
+		var route_B_hill = path + start_locations[start] + "_cross.gpx";
 		var route_B_campus = path + "cross_" + end_locations[end] + "_B.gpx";
 	}
 
@@ -127,15 +133,15 @@ async function calculateStats() {
 
 	// 	for (let i = 1; i <= 3; i++) {
 	// 		let path = "/datasets/walking-to-class/";
-	// 		let suffix = i != 1 ? "_" + i + ".gpx" : ".gpx"; 
-		
+	// 		let suffix = i != 1 ? "_" + i + ".gpx" : ".gpx";
+
 	// 		if (start != "cross") {
 	// 			let route_cross = path + start + "_cross" + suffix;
 	// 			let cross_stats = await getStats(route_cross);
 	// 			route_data += (start + ",cross,A," + i + "," + cross_stats[0] + "," + cross_stats[1] + "," + cross_stats[2] + ",\n");
-	// 		}	
+	// 		}
 
-	// 		let route_stop = path + start + "_stop" + suffix; 
+	// 		let route_stop = path + start + "_stop" + suffix;
 	// 		let stop_stats = await getStats(route_stop);
 
 	// 		route_data += (start + ",stop,A," + i + "," + stop_stats[0] + "," + stop_stats[1] + "," + stop_stats[2] + ",\n");
@@ -147,14 +153,14 @@ async function calculateStats() {
 
 	// 	for (let i = 1; i <= 3; i++) {
 	// 		let path = "/datasets/walking-to-class/";
-	// 		let suffix = i != 1 ? "_" + i + ".gpx" : ".gpx"; 
+	// 		let suffix = i != 1 ? "_" + i + ".gpx" : ".gpx";
 
 	// 		if (end != "powell" || i == 1) {
 	// 			let route_A = path + "cross_" + end + suffix;
 	// 			let a_stats = await getStats(route_A);
 	// 			route_data += ("cross," + end + ",A," + i + "," + a_stats[0] + "," + a_stats[1] + "," + a_stats[2] + ",\n");
 	// 		}
-			
+
 	// 		if (end == "sculpture" || end == "powell") {
 	// 			let route_B = path + "stop_" + end + suffix;
 	// 			let b_stats = await getStats(route_B);
@@ -194,7 +200,3 @@ function getStats(filePath) {
 		});
 	});
 }
-
-
-
-

@@ -17,9 +17,10 @@ scripts:
     - //api.mapbox.com/mapbox.js/plugins/leaflet-omnivore/v0.2.0/leaflet-omnivore.min.js
     - //unpkg.com/leaflet@1.0.3/dist/leaflet.js
     - //cdnjs.cloudflare.com/ajax/libs/leaflet-gpx/1.4.0/gpx.min.js
+    - //cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.js
     - /js/posts/walking-to-class/map.js
+    - /js/posts/walking-to-class/graph.js
 ---
-
 
 
 <div id="dropdowns">
@@ -42,5 +43,4 @@ scripts:
     </div>
 </div>
 
-
-
+<canvas id="chart"></canvas>
