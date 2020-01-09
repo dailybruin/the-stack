@@ -98,3 +98,96 @@
     color: #fff;
     background-color: #286090;
 }
+
+.chartcont {
+width: 70%;
+}
+
+.selected {
+background-color: red;
+}
+
+
+#whole {
+width: 100%;
+display: flex;
+-webkit-flex-direction: row;
+justify-content: space-between;
+}
+
+#description {
+width: 60%;
+}
+
+#interactive {
+display: flex;
+-webkit-flex-direction: row;
+width: 100%;
+}
+
+.chartholder {
+width: 100%;
+}
+
+.chartcont0 {
+#height: 50vh;
+}
+
+#sliderholder {
+width: 35%;
+text-align: left;
+display: flex;
+-webkit-flex-direction: column;
+justify-content: space-around;
+padding: 1%;
+}
+
+.slider{
+width: 100%;
+background-color: red;
+}
+#top {
+display: flex;
+-webkit-flex-direction: row;
+justify-content: space-around;
+} #top div {
+padding: 1%;
+}
+
+#sliders {
+width: 55%;
+}
+
+#wait {
+width: 35%;
+display: flex;
+-webkit-flex-direction: column;
+justify-content: center;
+}
+#weight {
+padding: 3%;
+margin: 15%;
+text-align: center;
+font-size: 120%;
+font-weight: bold;
+}
+#inclinevalue, #speedvalue {
+width: 100%;/Users/yamlet/stack
+text-align: center;
+}
+
+#cals {
+width: 70%;
+margin: 5%;
+text-align: right;
+}
+
+@media only screen and (max-width: 600px) {
+  #interactive, #whole {
+    -webkit-flex-direction: column;
+  } #description, .chartcont {
+  width: 100%;
+  } #sliderholder {
+  display: none;
+  }
+}
