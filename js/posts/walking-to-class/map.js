@@ -70,6 +70,7 @@ d3.selectAll("input[name='speed']")
 
 generateRoutes("Hedrick", "Powell");
 loadStats("Hedrick", "Powell");
+generateRoutesforGraph("Hedrick", "Powell");
 // calculateStats();
 
 
@@ -194,13 +195,13 @@ function generateRoutesforGraph(start, end) {
 	var route_B = path + start_locations[start] + "_" + end_locations[end] + "_B.json";
 
 	var ctxA = document.getElementById('chartA');
-	generateGraph(route_A, ctxA);
+	generateGraph(route_A, ctxA, "green");
 
 	var ctxB = document.getElementById('chartB');
-	generateGraph(route_B, ctxB);
+	generateGraph(route_B, ctxB, "blue");
 }
 
-function generateGraph(path, ctx) {
+function generateGraph(path, ctx, col) {
 	$.getJSON(path, function(data) {
 	  data = $.parseJSON(data)
 	  distance = data.distance
@@ -222,7 +223,7 @@ function generateGraph(path, ctx) {
 	          {
 	            label: "Elevation",
 	            data: elev,
-	            borderColor: 'orange',
+	            borderColor: col,
 	            backgroundColor: 'transparent',
 	            pointStyle: "line"
 	          }
@@ -232,7 +233,7 @@ function generateGraph(path, ctx) {
 	        cubicInterpolationMode: "monotone",
 	        scales: {
 	          xAxes: [{
-	            display: false,
+	            display: false
 	          }]
 	        },
 	        tooltips: {

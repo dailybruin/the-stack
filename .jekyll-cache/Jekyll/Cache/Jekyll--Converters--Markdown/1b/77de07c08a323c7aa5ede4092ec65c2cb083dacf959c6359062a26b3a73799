@@ -1,29 +1,4 @@
----
-title: Walking to Class
-teaser: How far are different lecture halls?
-authors:
-    - interns
-featured_image:
-    url:
-og_image:
-stylesheets:
-    - //api.mapbox.com/mapbox-gl-js/v0.36.0/mapbox-gl.css
-    - //unpkg.com/leaflet@1.0.3/dist/leaflet.css
-    - /css/posts/course-schedule/dropdown.min.css
-    - /css/posts/walking-to-class/app.css
-scripts:
-    - /js/lib/jquery-3.1.1.min.js
-    - //d3js.org/d3.v3.min.js
-    - //api.mapbox.com/mapbox-gl-js/v0.36.0/mapbox-gl.js
-    - //api.mapbox.com/mapbox.js/plugins/leaflet-omnivore/v0.2.0/leaflet-omnivore.min.js
-    - //unpkg.com/leaflet@1.0.3/dist/leaflet.js
-    - //cdnjs.cloudflare.com/ajax/libs/leaflet-gpx/1.4.0/gpx.min.js
-    - //cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.js
-    - /js/posts/walking-to-class/map.js
----
-
-
-<div id="dropdowns">
+I"Ò<div id="dropdowns">
         <span>I'm walking from </span>
         <select class="ui search selection dropdown" id="start_location"></select>
         <span> to </span>
@@ -65,22 +40,23 @@ scripts:
                 <td id="time_B"></td>
             </tr>
         </table>
-        <div id="aligned">  
+        <div id="aligned">
+        <div class="label">Aligned</div>  
         <div class="chart_container">
         <canvas id="chartA"></canvas>  
         </div>
 
-        <div class="chart_container">
-        <canvas id="chartB"></canvas>  
-        </div>
-        </div>
+  <div class="chart_container">
+    <canvas id="chart_b"></canvas>  
+  </div>
+</div>
         <h4>How fast do you walk?</h4>
         <div class="btn-group" data-toggle="buttons">
-            <input type="radio" id="slow" name="speed" value="24">
+            <input type="radio" id="slow" name="speed" value="24" />
             <label class="btn" for="slow">Slow (~2.5mph)</label>
-            <input type="radio" id="medium" name="speed" value="20" checked>
+            <input type="radio" id="medium" name="speed" value="20" checked="" />
             <label class="btn" for="medium">Medium (~3mph)</label>
-            <input type="radio" id="fast" name="speed" value="15">
+            <input type="radio" id="fast" name="speed" value="15" />
             <label class="btn" for="fast">Fast (~4mph)</label>
         </div>
     </div>
@@ -88,3 +64,4 @@ scripts:
 
 <canvas id="chartA"></canvas>
 <canvas id="chartB"></canvas>
+:ET

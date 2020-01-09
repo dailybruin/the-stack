@@ -98,3 +98,19 @@
     color: #fff;
     background-color: #286090;
 }
+
+#chartA,
+#chartB {
+    width: 225px;
+    height: 300px;
+}
+.label {
+    text-align: center;
+    width: 600px;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 20px;
+}
+.chart_container {
+    float: left;
+}
