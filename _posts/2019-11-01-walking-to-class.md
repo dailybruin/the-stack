@@ -18,7 +18,10 @@ scripts:
     - //api.mapbox.com/mapbox.js/plugins/leaflet-omnivore/v0.2.0/leaflet-omnivore.min.js
     - //unpkg.com/leaflet@1.0.3/dist/leaflet.js
     - //cdnjs.cloudflare.com/ajax/libs/leaflet-gpx/1.4.0/gpx.min.js
+    - //cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js
     - /js/posts/walking-to-class/map.js
+    - /js/posts/walking-to-class/bernard.js
+    - /js/posts/walking-to-class/bubble-chart.js
 ---
 
 
@@ -161,12 +164,6 @@ scripts:
 </div>
 </div>
 
-<div class='chartholder'>
-<h4>Effect of incline on calories (cals per minute)</h4>
-<div class='chartcont0'>
-<canvas id='inclinechart'></canvas>
-</div>
-</div>
 
 </div>
 

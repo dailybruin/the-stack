@@ -99,6 +99,11 @@
     background-color: #286090;
 }
 
+#buttns {
+border: 100px solid;
+padding: 50%;
+}
+
 .chartcont {
 width: 70%;
 }

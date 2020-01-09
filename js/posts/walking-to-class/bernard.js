@@ -522,8 +522,6 @@ var data = [
 ];
 
 
-document.getElementById('dropdowns').style.display = 'none';
-document.getElementById('vis').style.display = 'none';
 
 var startbuttons = $('#start').find('button');
 
