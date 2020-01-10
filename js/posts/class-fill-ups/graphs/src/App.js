@@ -10,7 +10,6 @@ import {
   LineSeriesCanvas,
   Crosshair,
 } from 'react-vis';
-
 const graphSize = 600;
 
 const DATA = [
@@ -37,7 +36,7 @@ const DATA = [
 const DATES = ['0', 'Jan', 'Feb', 'March', 'April', 'May', 'June'];
 const CLASSES = ['Class A', 'Class B'];
 
-export default class Example extends React.Component {
+export default class Chart extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -66,7 +65,7 @@ export default class Example extends React.Component {
 
     if (values[0]) {
       classInfo = [];
-      let padding = graphSize + 50;
+      let padding = 50;
       let div = (
         <div style={{ paddingLeft: padding }}>
           <h1>Date: {DATES[values[0].x]}</h1>
@@ -86,22 +85,19 @@ export default class Example extends React.Component {
     }
 
     return (
-      <div
-        style={{
-          paddingTop: '30px',
-          paddingLeft: '30px',
-        }}
-      >
+      <div>
         <div
           style={{
-            float: 'left',
+            paddingTop: '30px',
+            paddingLeft: '30px',
+            display: 'flex',
+            justifyContent: 'flex-start',
           }}
         >
           <XYPlot
             onMouseLeave={this._onMouseLeave}
             width={graphSize}
             height={graphSize}
-            style={{ float: 'left', display: 'inline-block' }}
           >
             <HorizontalGridLines />
             <VerticalGridLines />
@@ -170,8 +166,10 @@ export default class Example extends React.Component {
               ></Crosshair>
             ) : null}
           </XYPlot>
+          <div style={{ display: 'flex', flexDirection: 'column' }}>
+            {classInfo}
+          </div>
         </div>
-        {classInfo}
         <p>add dropdown menu(s?) to add up to 5? classes</p>
       </div>
     );

@@ -11,15 +11,14 @@ featured_image:
   url: class-fill-ups/placeholder.png
 og_image: class-fill-ups/placeholder.png
 stylesheets:
-  - /css/posts/class-fill-ups/app.css
-  - /js/posts/class-fill-ups/graphs/src/App.css
   - https://unpkg.com/react-vis/dist/style.css
 scripts:
-  - /js/posts/class-fill-ups/graphs/src/AppMD.js
+  - /js/posts/class-fill-ups/graphs/src/ChartMD.jsx
   - https://unpkg.com/react@16/umd/react.development.js
   - https://unpkg.com/react-dom@16/umd/react-dom.development.js
   - https://unpkg.com/babel-standalone@6/babel.min.js
   - https://unpkg.com/react-vis/dist/dist.min.js
+  - https://unpkg.com/react-bootstrap@next/dist/react-bootstrap.min.js
 ---
 
 #### YO what up
@@ -41,5 +40,8 @@ the reason we sometimes have spikes in total students enrolled in a class is bc 
 <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
 <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
 <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+<script src="https://unpkg.com/react-bootstrap@next/dist/react-bootstrap.min.js" crossorigin></script>
 
-<script type="text/babel" src="/js/posts/class-fill-ups/graphs/src/AppMD.js"></script>
+<script type="text/babel" src="/js/posts/class-fill-ups/graphs/src/ChartMD.jsx"></script>
+
+<!-- <script type="text/babel" src="/js/posts/class-fill-ups/graphs/src/dropdown.jsx"></script> -->
