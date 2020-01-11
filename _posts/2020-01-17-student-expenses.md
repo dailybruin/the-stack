@@ -25,9 +25,6 @@ scripts:
   - //cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/components/dropdown.min.js
   - //cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/components/form.min.js
   - /js/posts/waste-audits/audits.js
-  - https://waste-bin-interactive.herokuapp.com/static/js/2.0fc3e1c0.chunk.js
-  - https://waste-bin-interactive.herokuapp.com/static/js/main.a2e2e6f7.chunk.js
-
 
   - https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" 
 ---
