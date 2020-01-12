@@ -1,5 +1,5 @@
 /* Mobile Styles */
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 479px) {
     #mapid {
         margin-top: 20px;
         height: 400px;
@@ -9,10 +9,14 @@
     .btn {
         display: block;
     }
+
+    #aligned {
+        height: 280px;
+    }
 }
 
 /* Tablet Styles */
-@media only screen and (min-width: 401px) and (max-width: 960px) {
+@media only screen and (min-width: 480px) and (max-width: 960px) {
     #mapid {
         margin-top: 20px;
         height: 400px;
@@ -20,10 +24,14 @@
     }
     #stats {
         width: 100%;
-        height: 500px;
+        height: 600px;
     }
     .btn {
         display: block;
+    }
+
+    #aligned {
+        height: 140px;
     }
 }
 
@@ -53,8 +61,8 @@
   width: 100%;
 }
 
-#stats_table td, #stats_table th {
-  padding: 8px;
+#stats_table td{
+  padding: 4px;
 }
 
 
@@ -222,4 +230,14 @@ text-align: right;
   } #sliderholder {
   display: none;
   }
+
+#chartA,
+#chartB {
+    width: 225px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.chart_container {
+    float: left;
 }
