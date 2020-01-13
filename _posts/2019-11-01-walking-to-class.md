@@ -121,17 +121,26 @@ ASDfkjsadlkfjsad;lkfjasld;fkj
 <p>So, depending on your route, walking through Bruinwalk might be both harder and longer.</p>
 
 </div>
+</div>
+
+<div id='interactive'>
+
+<div class='chartholder'>
+<h4>Effect of speed on calories (cals per minute)</h4>
+<div class='chartcont0'>
+<canvas id='speedchart'></canvas>
+</div>
+
 
 <div id='sliderholder'>
-
 <h4>See how speed and incline affect calories burned</h4>
 
 <div id='top'>
+
 <div id='sliders'>
 <b>Speed</b>
 <div id='speedvalue'></div>
 <input class='slider' id='speedslider' type="range" min=".90" max="1.80" value="1.35" step='0.05'>
-
 <b>Incline (gradient)</b>
 <div id='inclinevalue'></div>
 <input class='slider' id='inclineslider' type="range" min="-10" max="10" value="0" step='.5'>
@@ -141,7 +150,6 @@ ASDfkjsadlkfjsad;lkfjasld;fkj
 <div><b>Your Weight in lbs (optional)</b></div>
 <input id='weight' type='number' min='0' max='500' value='150'>
 </div>
-
 
 </div>
 
@@ -153,20 +161,8 @@ ASDfkjsadlkfjsad;lkfjasld;fkj
 
 </div>
 
-<div id='interactive'>
-
-
-
-<div class='chartholder'>
-<h4>Effect of speed on calories (cals per minute)</h4>
-<div class='chartcont0'>
-<canvas id='speedchart'></canvas>
-</div>
-</div>
-
 
 </div>
-
 
 
 

@@ -704,10 +704,22 @@ var myspeed = new Chart(ctx, {
         maintainAspectRatio: true,
         aspectRatio: 1.5,
         scales: {
+            xAxes: [{
+                display: true,
+                scaleLabel: {
+                    display: true,
+                    labelString: 'Speed (Meters Per Second)'
+                }
+            }],
             yAxes: [{
+                display: true,
+                scaleLabel: {
+                    display: true,
+                    labelString: 'Calories Burned per Mile'
+                },
                 ticks: {
-                    beginAtZero: true,
                     suggestedMax: 200,
+                    beginAtZero: true,
                 }
             }]
         }
@@ -726,12 +738,12 @@ function speedchart() {
             label: 'Average Incline of Bruinwalk Hill',
             data: getspeedpoints(8.2),
             fill: false,
-            borderColor: 'rgba(191, 85, 236, 1)',
+            borderColor: 'rgba(255, 0, 0, 1)',
         }, {
             label: 'Average Incline of Charles E. Young Drive',
             data: getspeedpoints(5.5),
             fill: false,
-            borderColor: 'rgba(191, 85, 236, 1)',
+            borderColor: 'rgba(255, 165, 0, 1)',
         }],
     }
 }
@@ -753,6 +765,7 @@ myspeed.data = speedchart();
 myspeed.update();
 }
 
+/*
 
 var ctx = document.getElementById('inclinechart');
 var myincline = new Chart(ctx, {
@@ -814,37 +827,4 @@ myincline.data = inclinechart();
 myincline.update();
 }
 
-function updatecharts() {
-updatespeed();
-updateincline();
-}
-
-// 8.18
-// .082 average gradient of the bruinwalk hill
-// 6.52
-// .055 average gradient of cheyoung hill
-
-
-
-
-
-
-
-
-
-//calcEnergy();
-
-/*
-function createData(num) {
-    return {
-        labels: ['Target', 'Court of Sciences', 'Powell Library', 'Anderson School of Buisness', 'Luskin School of Public Affairs'],
-        datasets: [{
-            label: 'distance',
-            data: gendata(num, false)
-        }, {
-            label: 'distance2',
-            data: gendata(num, true)
-        }]
-    }
-}
 */

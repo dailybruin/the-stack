@@ -155,6 +155,8 @@ width: 60%;
 display: flex;
 -webkit-flex-direction: row;
 width: 100%;
+} #interactive > div {
+border: 1px solid blue;
 }
 
 .chartholder {
@@ -162,7 +164,7 @@ width: 100%;
 }
 
 .chartcont0 {
-#height: 50vh;
+width: 120vh;
 }
 
 #sliderholder {
