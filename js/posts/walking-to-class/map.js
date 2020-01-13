@@ -35,6 +35,7 @@ d3.select('#start_location')
         	let end = $('#end_location option:selected').text();
         	generateRoutes(start, end);
         	loadStats(start, end);
+        	generateRoutesforGraph(start, end);
         })
     	.selectAll('option')
         .data(Object.keys(start_locations))
@@ -49,6 +50,7 @@ d3.select('#end_location')
         	let end = $('#end_location option:selected').text();
         	generateRoutes(start, end);
         	loadStats(start, end);
+        	generateRoutesforGraph(start, end);
         })
     	.selectAll('option')
         .data(Object.keys(end_locations))
@@ -68,6 +70,8 @@ d3.selectAll("input[name='speed']")
 
 generateRoutes("Hedrick", "Powell");
 loadStats("Hedrick", "Powell");
+generateRoutesforGraph("Hedrick", "Powell")
+
 // calculateStats();
 
 
@@ -185,6 +189,71 @@ function getStats(filePath) {
 	});
 }
 
+
+function generateRoutesforGraph(start, end) {
+	var path = "/datasets/walking-to-class/";
+	var route_A = path + start_locations[start] + "_" + end_locations[end] + "_A.json";
+	var route_B = path + start_locations[start] + "_" + end_locations[end] + "_B.json";
+
+	var ctxA = document.getElementById('chartA');
+	generateGraph(route_A, ctxA,"green");
+
+	var ctxB = document.getElementById('chartB');
+	generateGraph(route_B, ctxB, "blue");
+}
+
+function generateGraph(path, ctx, col) {
+	console.log(path);
+	$.getJSON(path, function(data) {
+	  data = $.parseJSON(data)
+	  console.log(data);
+	  distance = data.distance
+	  elevation = data.elevation
+	  dist = []
+	  for (var key in distance) {
+	      dist.push(distance[key])
+	  }
+	  elev = []
+	  for (var key in elevation) {
+	      elev.push(elevation[key])
+	  }
+
+	  var myLineChart = new Chart(ctx, {
+	      type: "line",
+	      data: {
+	        labels: dist,
+	        datasets: [
+	          {
+	            label: "Elevation",
+	            data: elev,
+	            borderColor: col,
+	            backgroundColor: 'transparent',
+	            pointStyle: "line"
+	          }
+	        ]
+	      },
+	      options: {
+	        cubicInterpolationMode: "monotone",
+	        scales: {
+	          	xAxes: [{
+	            	display: false,
+	          	}],
+	          	yAxes: [{
+					display: true,
+					scaleLabel: {
+						display: true,
+						labelString: 'Elevation (ft)'
+					}
+				}]
+	        },
+	        tooltips: {
+	                enabled: true,
+	                mode: 'point',
+	            },
+	    }
+	  });
+	});
+}
 
 
 

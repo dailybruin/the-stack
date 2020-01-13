@@ -21,6 +21,7 @@ scripts:
     - //unpkg.com/leaflet@1.0.3/dist/leaflet.js
     - //cdnjs.cloudflare.com/ajax/libs/leaflet-gpx/1.4.0/gpx.min.js
     - //cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js
+    - //cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.js
     - /js/posts/walking-to-class/map.js
     - /js/posts/walking-to-class/bernard.js
     - /js/posts/walking-to-class/bubble-chart.js
@@ -69,6 +70,14 @@ ASDfkjsadlkfjsad;lkfjasld;fkj
             <td id="time_B"></td>
         </tr>
     </table>
+    <div id="aligned">  
+      <div class="chart_container">
+        <canvas id="chartA"></canvas>  
+      </div>
+      <div class="chart_container">
+        <canvas id="chartB"></canvas>  
+      </div>
+    </div>
     <h4>How fast do you walk?</h4>
     <div class="btn-group" data-toggle="buttons">
         <input type="radio" id="slow" name="speed" value="24">
