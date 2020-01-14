@@ -6,8 +6,8 @@ authors:
   - annie_zhang
   - maddy_blasingame
 key_takeaways:
-  - College is expensive
-  - add other takeaways
+  - College is, on average, two times more expensive for out-of-state and international students as it is for in-state students.
+  - Additionally, out-of-state students bear higher travel costs and international students also bear costs unique to them like higher standardized testing fees and visa costs
 featured_image:
   url: student-expenses/flight_global_distribution.png
 og_image: student-expenses/flight_global_distribution.png
