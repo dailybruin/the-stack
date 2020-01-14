@@ -188,72 +188,73 @@ function getStats(filePath) {
 		});
 	});
 }
-
-
 function generateRoutesforGraph(start, end) {
 	var path = "/datasets/walking-to-class/";
 	var route_A = path + start_locations[start] + "_" + end_locations[end] + "_A.json";
 	var route_B = path + start_locations[start] + "_" + end_locations[end] + "_B.json";
-
-	var ctxA = document.getElementById('chartA');
-	generateGraph(route_A, ctxA,"green");
-
-	var ctxB = document.getElementById('chartB');
-	generateGraph(route_B, ctxB, "blue");
+    getelevationpoints(route_A, 'green');
+    getelevationpoints(route_B, 'blue');
 }
 
-function generateGraph(path, ctx, col) {
-	console.log(path);
-	$.getJSON(path, function(data) {
-	  data = $.parseJSON(data)
-	  console.log(data);
-	  distance = data.distance
-	  elevation = data.elevation
-	  dist = []
-	  for (var key in distance) {
-	      dist.push(distance[key])
-	  }
-	  elev = []
-	  for (var key in elevation) {
-	      elev.push(elevation[key])
-	  }
+var config = {
+  type: "scatter",
+  options: {
+    cubicInterpolationMode: "monotone",
+    scales: {
+        xAxes: [{
+          gridLines: {
+            offsetGridLines: false,
+          }
+        }],
+        yAxes: [{
+            display: true,
+            scaleLabel: {
+                display: true,
+                labelString: 'Elevation (ft)'
+            }
+        }]
+    },
+    tooltips: {
+            enabled: true,
+            mode: 'point',
+        },
+    legend: {
+    display: false,
+    }
+    }
+};
+var ctx = document.getElementById('chartA').getContext('2d');
+var myLineChart = new Chart(ctx, config);
 
-	  var myLineChart = new Chart(ctx, {
-	      type: "line",
-	      data: {
-	        labels: dist,
-	        datasets: [
-	          {
-	            label: "Elevation",
-	            data: elev,
-	            borderColor: col,
-	            backgroundColor: 'transparent',
-	            pointStyle: "line"
-	          }
-	        ]
-	      },
-	      options: {
-	        cubicInterpolationMode: "monotone",
-	        scales: {
-	          	xAxes: [{
-	            	display: false,
-	          	}],
-	          	yAxes: [{
-					display: true,
-					scaleLabel: {
-						display: true,
-						labelString: 'Elevation (ft)'
-					}
-				}]
-	        },
-	        tooltips: {
-	                enabled: true,
-	                mode: 'point',
-	            },
-	    }
-	  });
-	});
-}
+function getelevationpoints(path, color) {
+    var points = [];
+    $.getJSON(path, function(data) {
+    data = $.parseJSON(data)
+    distance = data.distance
+    elevation = data.elevation
+    for (var key in distance) {
+        points.push({
+            x: distance[key],
+            y: elevation[key]
+        })
+    }
+    
+    var newDataset = {
+        label: 'please work!',
+        data: points,
+        fill: false,
+        borderColor: color,
+        showLine: true,
+        pointRadius: 0,
+    }
+    
+    if (config.data.datasets.length > 1) {
+    config.data.datasets.pop();
+    config.data.datasets.pop();
+    }
+    config.data.datasets.push(newDataset);
+    myLineChart.update();
+})}
 
 
 

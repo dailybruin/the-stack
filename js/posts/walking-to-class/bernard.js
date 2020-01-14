@@ -527,6 +527,7 @@ var startbuttons = $('#start').find('button');
 
 for(i=0; i<startbuttons.length; i++) {
 startbuttons[i].addEventListener('click', function() {
+if (this.classList == 'selected') {return;}
 for(j=0; j<startbuttons.length; j++) {
 startbuttons[j].classList.remove('selected');
 };
@@ -536,14 +537,15 @@ changeChart('distance(mi)');
 };
 
 var compare = $('#compare').find('button');
-
 for (i=0; i<compare.length; i++) {
 compare[i].addEventListener('click', function() {
+if (this.classList == 'selected') {return;}
 for (j=0; j<compare.length; j++) {
 compare[j].classList.remove('selected');
 };
 this.classList.add('selected');
-changeChart('normaltime');
+if (this.value == 0) {changeChart('distance(mi)')}
+else {changeChart('normaltime')};
 })
 }
 
@@ -575,11 +577,11 @@ function createData(num, type) {
         datasets: [{
             label: 'Charles E. Young Drive',
             data: gendata(num, false, type),
-            backgroundColor: 'rgba(255, 0, 0, 1)',
+            backgroundColor: 'green',
         }, {
             label: 'Bruinwalk',
             data: gendata(num, true, type),
-            backgroundColor: 'rgba(0, 0, 255, 1)',
+            backgroundColor: 'blue',
         }]
     }
 }
@@ -701,7 +703,7 @@ var myspeed = new Chart(ctx, {
     type: 'line',
     data: speedchart(),
     options: {
-        maintainAspectRatio: true,
+        maintainAspectRatio: false,
         aspectRatio: 1.5,
         scales: {
             xAxes: [{
