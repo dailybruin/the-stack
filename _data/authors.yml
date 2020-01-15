@@ -238,7 +238,15 @@ michael_huang:
 laurel_woods:
   name: Laurel Woods
   title: Stack Developer
-  bio: Laurel is a second year student who's somewhere in the middle of Computer Science and Cognitive Science. She loves anything outdoorsy, especially if her dog is there.
+  bio: Laurel is a second-year student who's somewhere in the middle of Computer Science and Cognitive Science. She loves anything outdoorsy, especially if her dog is there.
   mug: Yes
   email: lwoods@media.ucla.edu
   github: laurelrwoods
+bernard_mendez:
+  name: Bernard Mendez
+  title: Stack Developer/News Reporter
+  bio: Bernard is a second-year math student. Bernard also <a href='https://dailybruin.com/author/bernard-mendez/'>writes for the Daily Bruin's science and health section</a>. In his free time, Bernard enjoys wearing sweaters
+  mug: Yes
+  email: bmendez@media.ucla.edu
+  github: bernardmendez
+  website: http://bernardmendez.com

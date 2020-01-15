@@ -3,8 +3,11 @@ title: Walking to Class
 teaser: How far are different lecture halls?
 authors:
     - laurel_woods
+    - bernard_mendez
 key_takeaways:
-    - hi
+    - Students who live in Hedrick on average climb 118 more per what? stairs than those<students who live in Deneve and burn 28.3% more calories per mile.
+    - Walking up the hill on Charles E. Young drive is approximately 25% harder than walking up the Bruin walk hill.
+    - Walking at a slower speed burns more calories per mile than walking at a moderate speed according to an equation developed by the United States Army.
 featured_image:
     url:
 og_image:
@@ -27,7 +30,15 @@ scripts:
     - /js/posts/walking-to-class/bubble-chart.js
 ---
 
-ASDfkjsadlkfjsad;lkfjasld;fkj
+<p>Walking to class may be one of the most important things UCLA students will do during their career in Westwood, but it can be confusing, especially for first-year students. Bruinwalk may seem like the only path, but as your world view expands, you may realize there are other ways to get to class.</p>
+
+<p>This project helps you explore new routes from the dorms to campus and provides various statistics about each route. So, whether you are hoping not to get lost, want the quickest possible route to class, or simply want to take the path of least resistance after a long day of school, this project will help you customize your walking experience.</p>
+
+<h1>About the Data</h1>
+<p>We collected the data from <a href='https://openrouteservice.org'>openrouteservice</a>, which allowed us to draw routes and extract raw gpx files. We extracted the latitude, longitude and elevation of data points along the route to calculate the total distance and elevation change along path. To calculate calories, we used an equation developed by the United States Army that estimates energy expenditure based on gradient and walking speed.</p>
+
+<p>You can choose from popular dorm locations, such as Hedrick and Sproul as the starting points, and popular areas on and around campus, such as Powell, the Court of Sciences and the Westwood Target as the ending points. Due to the limitations of the routing service, we offer the two fastest and easiest paths for each route. In total, there are 48 routes.</p>
+
 
 <div id='choices'>
 
@@ -138,12 +149,11 @@ ASDfkjsadlkfjsad;lkfjasld;fkj
 
 <p>In order to calculate calories, we used an equation developed by the United States Army that estimates energy expenditure for healthy, military age adults at a given incline. We modifdied the equation to show the caloric output during walking at a gradient as a function of speed, body mass, and gradient. </p>
 
-<p>The equation has some interesting implications. According to the equation, walking at a slower speed burns more calories per mile than walking at a moderate speed, likely because a slow walker spends more time walking and thus spends more time burning calories. So, if you are trying to uphold certain New Years Resolutions, go ahead and take your time. </p>
-
-<p>The hill on Charles E. Young drive has an average gradient of 5.5%, whereas the Bruinwalk hill has an average gradient of 8.2%. According to the equation, this means that walking up the Bruinwalk hill is approximately 25% harder than walking up Charles E. Young drive hill. </p>
+<p>The equation shows that gradient, the elevation increase divided by the total distance traveled, has an effect on caloric intake. Notably, the equation shows that walking up the hill via Bruinwalk, which has an average gradient of 8.2%,  is approximately 25% more difficult than walking back via Charles E. Young, which has an average gradient of 5.5%.</p>
 
 <p>So, depending on your route, walking through Bruinwalk might be both harder and longer.</p>
 
+<p>The equation also shows that walking at a slower speed burns more calories per mile than walking at a moderate speed, likely because walking slowly takes longer and spends more time burning calories. So, if you are trying to uphold certain New Years Resolutions, go ahead and take your time. </p>
 
 <h3>Calorie Burning Calculator</h3>
 
