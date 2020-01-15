@@ -202,6 +202,10 @@ var config = {
     cubicInterpolationMode: "monotone",
     scales: {
         xAxes: [{
+          scaleLabel: {
+          display: true,
+          labelString: 'Distance (mi)',
+          },
           gridLines: {
             offsetGridLines: false,
           }

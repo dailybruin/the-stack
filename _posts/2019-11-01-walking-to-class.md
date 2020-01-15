@@ -99,19 +99,21 @@ ASDfkjsadlkfjsad;lkfjasld;fkj
 <div class='chartcont'>
 <div id='comparebuttons'>
 <div id='start'>
+<span><b>From:</b></span>
 <button value='0' class='selected'>sproul</button>
 <button value='10'>rieber</button>
 <button value='20'>deneve</button>
 <button value='30'>hedrick</button>
 </div>
 <div id='compare'>
-<button value='0' class='selected'>Distance</button>
-<button value='1'>Time</button>
+<button value='0' class='selected'>Distance (mi)</button>
+<button value='1'>Distance (m)</button>
+<button value='2'>Time</button>
 </div>
 </div>
 
 <div id='chart0'>
-<canvas id="chart" style='height: 80vh;'></canvas>
+<canvas id="comparechart" style='height: 80vh;'></canvas>
 </div>
 </div>
 </div>
@@ -149,7 +151,7 @@ ASDfkjsadlkfjsad;lkfjasld;fkj
 
 <div class='chartholder'>
 <div class='chartcont0'>
-<canvas id='speedchart' style='height: 70vh'></canvas>
+<canvas id='speedchart' style='height: 100vh'></canvas>
 </div>
 </div>
 
@@ -177,7 +179,7 @@ ASDfkjsadlkfjsad;lkfjasld;fkj
 
 <div id='bubblewrap0'>
 <div id='bubblewrap1'>
-<canvas id="bubble-chart"></canvas>
+<canvas id="bubble-chart" style='height: 70vh'></canvas>
 </div>
 </div>
 

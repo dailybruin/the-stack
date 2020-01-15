@@ -545,6 +545,7 @@ compare[j].classList.remove('selected');
 };
 this.classList.add('selected');
 if (this.value == 0) {changeChart('distance(mi)')}
+if (this.value == 1) {changeChart('distance(m)')}
 else {changeChart('normaltime')};
 })
 }
@@ -558,11 +559,11 @@ return parseInt(sel[0].value);
 function gendata(num, opt, type) {
     var dis = [];
     if (opt === false) {
-        for(i=0; i<5; i++)
+        for(i=1; i<5; i++)
         dis.push(data[num + 2*i][type].toFixed(2));
     }
     else if (opt === true) {
-        for(i=0; i<5; i++)
+        for(i=1; i<5; i++)
         dis.push(data[num + 2*i+1][type].toFixed(2));
     } else {
     alert('error');
@@ -572,8 +573,9 @@ function gendata(num, opt, type) {
 }
 
 function createData(num, type) {
+    
     return {
-        labels: ['Target', 'Court of Sciences', 'Powell Library', 'Anderson School of Buisness', 'Luskin School of Public Affairs'],
+        labels: ['Court of Sciences', 'Powell Library', 'Anderson School of Buisness', 'Luskin School of Public Affairs'],
         datasets: [{
             label: 'Charles E. Young Drive',
             data: gendata(num, false, type),
@@ -594,7 +596,7 @@ myChart0.update();
 
 
 
-var ctx = document.getElementById('chart');
+var ctx = document.getElementById('comparechart');
 var myChart0 = new Chart(ctx, {
     type: 'horizontalBar',
     data: createData(findsel(), 'distance(mi)'),
@@ -655,11 +657,6 @@ speedslider.addEventListener('input', function() {
     updatecals();
 });
 
-speedslider.addEventListener('change', function() {
-updateincline();
-});
-
-
 var inclineslider = document.getElementById('inclineslider');
 var inclinevalue = document.getElementById('inclinevalue');
 
@@ -671,7 +668,7 @@ inclineslider.addEventListener('input', function() {
 })
 
 inclineslider.addEventListener('change', function() {
-updatespeed();
+updatespeed()
 });
 
 function calories(lbs, speed, gradient) {
@@ -682,7 +679,6 @@ function calories(lbs, speed, gradient) {
 function updatecals() {
 cals.innerHTML = calories(weight.value, speedslider.value, inclineslider.value).toFixed(1);
 cals2.innerHTML = (calories(150, speedslider.value, inclineslider.value)*60).toFixed(1);
-
 }
 
 var cals = document.getElementById('calories');
@@ -698,11 +694,38 @@ weight.addEventListener('input', function() {
 })
 
 
-var ctx = document.getElementById('speedchart');
-var myspeed = new Chart(ctx, {
+
+var config0 = {
     type: 'line',
-    data: speedchart(),
+    data: {
+        labels: ['0.8 m/s', '1.0 m/s', '1.2 m/s', '1.4 m/s', '1.6 m/s', '1.8 m/s', '2.0 m/s', '2.2 m/s'],
+        datasets: [{
+            label: 'Average Incline of Bruinwalk Hill',
+            data: getspeedpoints(8.2),
+            fill: false,
+            borderColor: 'rgba(255, 0, 0, 1)',
+        }, {
+            label: 'Average Incline of Charles E. Young Drive',
+            data: getspeedpoints(5.5),
+            fill: false,
+            borderColor: 'rgba(255, 165, 0, 1)',
+        }, {
+            label: 'Incline = ' + inclineslider.value,
+            data: getspeedpoints(0),
+            fill: false,
+            borderColor: 'rgba(123, 239, 178, 1)',
+        }]
+    },
     options: {
+        animation: {
+            duration: 1000,
+            
+        },
+        title: {
+            display: true,
+            fontSize: 20,
+            text: 'Calories per Mile',
+        },
         maintainAspectRatio: false,
         aspectRatio: 1.5,
         scales: {
@@ -726,28 +749,20 @@ var myspeed = new Chart(ctx, {
             }]
         }
     },
-});
+}
+var ctx = document.getElementById('speedchart');
+var myspeed = new Chart(ctx, config0);
+
 
 function speedchart() {
-    return {
-        labels: ['0.8 m/s', '1.0 m/s', '1.2 m/s', '1.4 m/s', '1.6 m/s', '1.8 m/s', '2.0 m/s', '2.2 m/s'],
-        datasets: [{
-            label: 'Incline = ' + inclineslider.value,
-            data: getspeedpoints(inclineslider.value),
-            fill: false,
-            borderColor: 'rgba(123, 239, 178, 1)',
-        }, {
-            label: 'Average Incline of Bruinwalk Hill',
-            data: getspeedpoints(8.2),
-            fill: false,
-            borderColor: 'rgba(255, 0, 0, 1)',
-        }, {
-            label: 'Average Incline of Charles E. Young Drive',
-            data: getspeedpoints(5.5),
-            fill: false,
-            borderColor: 'rgba(255, 165, 0, 1)',
-        }],
-    }
+    var newDataset0 = {
+        label: 'Incline = ' + inclineslider.value,
+        data: getspeedpoints(inclineslider.value),
+        fill: false,
+        borderColor: 'rgba(123, 239, 178, 1)',
+    };
+    config0.data.datasets.push(newDataset0);
+    myspeed.update();
 }
 
 function getspeedpoints(incline) {
@@ -763,8 +778,8 @@ function getspeedpoints(incline) {
 
 
 function updatespeed() {
-myspeed.data = speedchart();
-myspeed.update();
+config0.data.datasets.pop();
+speedchart();
 }
 
 /*
@@ -830,3 +845,4 @@ myincline.update();
 }
 
 */
+

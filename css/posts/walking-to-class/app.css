@@ -1,8 +1,8 @@
 #topholder {
 display: flex;
 -webkit-flex-direction: row;
-margin-top: 5%;
 margin-bottom: 5%;
+width: 100%;
 }
 
 #mapid {
@@ -120,18 +120,19 @@ justify-content: space-between;
 
 #choices {
 display: flex;
--webkit-flex-direction: column;
+-webkit-flex-direction: row;
 justify-content: center;
 align-items: center;
 background-color: #f3f3f3;
-width: 80vh;
-height: 50vh;
-max-width: 95%;
+width: 100%;
+#height: 15vh;
+#padding: 2%;
 margin-left: auto;
 margin-right: auto;
 text-align: center;
 } #choices > div {
-padding: 5%;
+padding: 2%;
+width: 100%;
 }
 
 
@@ -230,9 +231,9 @@ margin: 5%;
 text-align: right;
 }
 
-#bubblewrap0 {width: 95%}
+#bubblewrap0 {width: 140vh; max-width: 100%;}
 #bubblewrap1 {
-height: 70vh;
+height: 100vh;
 max-width: 100%;
 } #bubble-chart {
 
@@ -280,7 +281,7 @@ max-width: 100%;
     #aligned {
         height: 140px;
     }
-    #interactive, #topholder {
+    #interactive, #topholder, #choices {
     -webkit-flex-direction: column;
     }
     .chartholder, #sliderholder {

@@ -222,6 +222,8 @@ new Chart(document.getElementById("bubble-chart"), {
       ]
     },
     options: {
+        maintainAspectRatio: false,
+        aspectRatio: 1,
       title: {
         display: true,
         text: 'Comparing Routes from Residence Halls'
