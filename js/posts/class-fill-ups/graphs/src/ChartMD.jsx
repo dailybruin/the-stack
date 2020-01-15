@@ -10,7 +10,9 @@ const {
   Crosshair
 } = reactVis;
 
-const { Dropdown, DropdownButton, MenuItem } = ReactBootstrap;
+const { Dropdown, DropdownButton, MenuItem, Image } = ReactBootstrap;
+
+//const { xbutton } = "./img/posts/class-fill-ups/xbutton.png";
 
 const graphSize = 600;
 const max_classes = 2;
@@ -92,13 +94,32 @@ class Chart extends React.Component {
       if (showClass[class_num] == false) {
         showClass[class_num] = true;
         numClassesShown += 1;
+        let xbutton = (
+          <Image
+            src="../../../../img/posts/class-fill-ups/xbutton.png"
+            roundedCircle
+          />
+        );
 
         for (let i = 0; i < CLASSES.length; i++) {
           if (showClass[i]) {
             let div = (
-              <Dropdown.Item onClick={this._removeClass.bind(null, i)}>
+              <div
+                style={{
+                  width: 120,
+                  border: "1px solid brown",
+                  padding: 5,
+                  marginBottom: 10
+                }}
+              >
                 {CLASSES[i]}
-              </Dropdown.Item>
+                <a
+                  style={{ paddingLeft: 10, cursor: "pointer" }}
+                  onClick={this._removeClass.bind(null, i)}
+                >
+                  {xbutton}
+                </a>
+              </div>
             );
             removeDropdownClasses.push(div);
           }
@@ -117,15 +138,35 @@ class Chart extends React.Component {
     let numClassesShown = this.state.numClassesShown;
     let showClass = this.state.showClass;
     let removeDropdownClasses = [];
+
     showClass[class_num] = false;
     numClassesShown -= 1;
 
+    let xbutton = (
+      <Image
+        src="../../../../img/posts/class-fill-ups/xbutton.png"
+        roundedCircle
+      />
+    );
     for (let i = 0; i < CLASSES.length; i++) {
       if (showClass[i]) {
         let div = (
-          <Dropdown.Item onClick={this._removeClass.bind(null, i)}>
+          <div
+            style={{
+              width: 120,
+              border: "1px solid brown",
+              padding: 5,
+              marginBottom: 10
+            }}
+          >
             {CLASSES[i]}
-          </Dropdown.Item>
+            <a
+              style={{ paddingLeft: 10 }}
+              onClick={this._removeClass.bind(null, i)}
+            >
+              {xbutton}
+            </a>
+          </div>
         );
         removeDropdownClasses.push(div);
       }
@@ -149,6 +190,7 @@ class Chart extends React.Component {
 
     let classInfoBox = [];
     let lines = [];
+    let classShown = false;
 
     for (let i = 0; i < CLASSES.length; i++) {
       if (showClass[i]) {
@@ -161,6 +203,7 @@ class Chart extends React.Component {
           />
         );
         lines.push(div);
+        classShown = true;
       }
     }
 
@@ -193,13 +236,7 @@ class Chart extends React.Component {
             {dropdownClasses}
           </DropdownButton>
         </div>
-        {console.log(showClass)}
-        {console.log(removeDropdownClasses)}
-        <div id="removeDropdown">
-          <DropdownButton id="dropdown-basic-button" title="Remove a Class">
-            {removeDropdownClasses}
-          </DropdownButton>
-        </div>
+        {removeDropdownClasses}
         <div
           style={{
             paddingTop: "30px",
@@ -244,7 +281,7 @@ class Chart extends React.Component {
                 { x: 6, y: 100 }
               ]}
             />
-            {values ? (
+            {classShown ? (
               <Crosshair
                 values={values}
                 itemsFormat={values => {
@@ -271,9 +308,11 @@ class Chart extends React.Component {
               ></Crosshair>
             ) : null}
           </XYPlot>
-          <div style={{ display: "flex", flexDirection: "column" }}>
-            {classInfoBox}
-          </div>
+          {classShown ? (
+            <div style={{ display: "flex", flexDirection: "column" }}>
+              {classInfoBox}
+            </div>
+          ) : null}
         </div>
       </div>
     );

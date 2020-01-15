@@ -28,7 +28,7 @@ scripts:
 
 color code the lines and text on the info bar
 
-use a card or something to remove classes instead of a dropdown
+style the card for removing a class
 
 have search bar for choosing class
 
