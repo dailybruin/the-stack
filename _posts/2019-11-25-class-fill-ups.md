@@ -12,6 +12,7 @@ featured_image:
 og_image: class-fill-ups/placeholder.png
 stylesheets:
   - https://unpkg.com/react-vis/dist/style.css
+  - https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css
 scripts:
   - /js/posts/class-fill-ups/graphs/src/ChartMD.jsx
   - https://unpkg.com/react@16/umd/react.development.js
@@ -25,7 +26,9 @@ scripts:
 
 <p class="text">you should be seeing this text</p>
 
-<div id="graph"></div>
+work on making a function to remove classes
+
+<div id="chartMD"></div>
 
 #### Data Collection
 
@@ -36,6 +39,12 @@ the reason we sometimes have spikes in total students enrolled in a class is bc 
 #### Conclusion
 
 <link rel="stylesheet" href="https://unpkg.com/react-vis/dist/style.css">
+<link
+  rel="stylesheet"
+  href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+  integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+  crossorigin="anonymous"
+/>
 <script src="https://unpkg.com/react-vis/dist/dist.min.js"></script>
 <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
 <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>

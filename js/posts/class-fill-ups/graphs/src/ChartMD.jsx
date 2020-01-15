@@ -10,9 +10,7 @@ const {
   Crosshair
 } = reactVis;
 
-const { Dropdown, DropdownButton } = ReactBootstrap;
-
-//const { Dropdown } = "./Dropdown";
+const { Dropdown, DropdownButton, MenuItem } = ReactBootstrap;
 
 const graphSize = 600;
 const max_classes = 2;
@@ -59,22 +57,26 @@ class Chart extends React.Component {
       mouseY: 0,
       showClass: new Array(CLASSES.length).fill(false),
       dropdownClasses: [],
+      removeDropdownClasses: [],
       numClassesShown: 0
     };
+  }
+
+  componentDidMount() {
     this._createDropdownClasses();
   }
 
   _createDropdownClasses() {
-    let temp = this.state.dropdownClasses;
+    let dropdownClasses = this.state.dropdownClasses;
     for (let i = 0; i < CLASSES.length; i++) {
       let div = (
         <Dropdown.Item onClick={this._showClass.bind(null, i)}>
           {CLASSES[i]}
         </Dropdown.Item>
       );
-      temp.push(div);
+      dropdownClasses.push(div);
     }
-    this.setState({ dropdownClasses: temp });
+    this.setState({ dropdownClasses: dropdownClasses });
   }
   _onMouseLeave = () => {
     this.setState({ values: [] });
@@ -87,14 +89,55 @@ class Chart extends React.Component {
 
   _showClass = class_num => {
     let numClassesShown = this.state.numClassesShown;
-    let showClass = this.state.showClass.slice();
-    if (showClass[class_num] == true || numClassesShown < max_classes) {
-      showClass[class_num] = !showClass[class_num];
-      if (showClass[class_num] == 0) {
-        numClassesShown -= 1;
-      } else numClassesShown += 1;
-      this.setState({ showClass: showClass, numClassesShown: numClassesShown });
+    let showClass = this.state.showClass;
+    let removeDropdownClasses = [];
+    if (numClassesShown < max_classes) {
+      if (showClass[class_num] == false) {
+        showClass[class_num] = true;
+        numClassesShown += 1;
+
+        for (let i = 0; i < CLASSES.length; i++) {
+          if (showClass[i]) {
+            let div = (
+              <Dropdown.Item onClick={this._removeClass.bind(null, i)}>
+                {CLASSES[i]}
+              </Dropdown.Item>
+            );
+            removeDropdownClasses.push(div);
+          }
+        }
+
+        this.setState({
+          showClass: showClass,
+          numClassesShown: numClassesShown,
+          removeDropdownClasses: removeDropdownClasses
+        });
+      }
     }
+  };
+
+  _removeClass = class_num => {
+    let numClassesShown = this.state.numClassesShown;
+    let showClass = this.state.showClass;
+    let removeDropdownClasses = [];
+    showClass[class_num] = false;
+    numClassesShown -= 1;
+
+    for (let i = 0; i < CLASSES.length; i++) {
+      if (showClass[i]) {
+        let div = (
+          <Dropdown.Item onClick={this._removeClass.bind(null, i)}>
+            {CLASSES[i]}
+          </Dropdown.Item>
+        );
+        removeDropdownClasses.push(div);
+      }
+    }
+    this.setState({
+      showClass: showClass,
+      numClassesShown: numClassesShown,
+      removeDropdownClasses: removeDropdownClasses
+    });
   };
 
   render() {
@@ -105,6 +148,7 @@ class Chart extends React.Component {
     const mouseY = this.state.mouseY;
     const showClass = this.state.showClass;
     const dropdownClasses = this.state.dropdownClasses;
+    const removeDropdownClasses = this.state.removeDropdownClasses;
 
     let classInfoBox = [];
     let lines = [];
@@ -127,7 +171,7 @@ class Chart extends React.Component {
       let padding = 50;
       let div = (
         <div style={{ paddingLeft: padding }}>
-          <h1>Date: {DATES[values[0].x]}</h1>
+          <h1>Day: {DATES[values[0].x]}</h1>
         </div>
       );
       classInfoBox.push(div);
@@ -147,9 +191,16 @@ class Chart extends React.Component {
 
     return (
       <div>
-        <div id="dropdown">
-          <DropdownButton id="dropdown-basic-button" title="Dropdown button">
+        <div id="dropdown" style={{ paddingBottom: "15px" }}>
+          <DropdownButton id="dropdown-basic-button" title="Choose a Class">
             {dropdownClasses}
+          </DropdownButton>
+        </div>
+        {console.log(showClass)}
+        {console.log(removeDropdownClasses)}
+        <div id="removeDropdown">
+          <DropdownButton id="dropdown-basic-button" title="Remove a Class">
+            {removeDropdownClasses}
           </DropdownButton>
         </div>
         <div
@@ -170,10 +221,10 @@ class Chart extends React.Component {
             <XAxis tickFormat={v => DATES[v]} />
             <YAxis />
             <ChartLabel
-              text="Date"
+              text="Days Passed"
               className="alt-x-label"
               includeMargin={false}
-              xPercent={0.028}
+              xPercent={0.018}
               yPercent={1.08}
               style={{
                 fontWeight: "bold"
@@ -231,10 +282,9 @@ class Chart extends React.Component {
             {classInfoBox}
           </div>
         </div>
-        <p>add dropdown menu(s?) to add up to 5? classes</p>
       </div>
     );
   }
 }
 
-ReactDOM.render(<Chart />, document.getElementById("graph"));
+ReactDOM.render(<Chart />, document.getElementById("chartMD"));
