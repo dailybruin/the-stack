@@ -78,9 +78,6 @@ class Chart extends React.Component {
     }
     this.setState({ dropdownClasses: dropdownClasses });
   }
-  _onMouseLeave = () => {
-    this.setState({ values: [] });
-  };
 
   _onNearestX = (value, { index }) => {
     this.setState({ values: DATA.map(d => d[index]) });
@@ -211,11 +208,7 @@ class Chart extends React.Component {
             justifyContent: "flex-start"
           }}
         >
-          <XYPlot
-            onMouseLeave={this._onMouseLeave}
-            width={graphSize}
-            height={graphSize}
-          >
+          <XYPlot width={graphSize} height={graphSize}>
             <HorizontalGridLines />
             <VerticalGridLines />
             <XAxis tickFormat={v => DATES[v]} />

@@ -26,7 +26,11 @@ scripts:
 
 <p class="text">you should be seeing this text</p>
 
-work on making a function to remove classes
+color code the lines and text on the info bar
+
+use a card or something to remove classes instead of a dropdown
+
+have search bar for choosing class
 
 <div id="chartMD"></div>
 
@@ -52,5 +56,3 @@ the reason we sometimes have spikes in total students enrolled in a class is bc 
 <script src="https://unpkg.com/react-bootstrap@next/dist/react-bootstrap.min.js" crossorigin></script>
 
 <script type="text/babel" src="/js/posts/class-fill-ups/graphs/src/ChartMD.jsx"></script>
-
-<!-- <script type="text/babel" src="/js/posts/class-fill-ups/graphs/src/dropdown.jsx"></script> -->
