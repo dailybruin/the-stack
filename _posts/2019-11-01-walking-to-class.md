@@ -2,7 +2,7 @@
 title: Walking to Class
 teaser: How far are different lecture halls?
 authors:
-    - interns
+    - laurel_woods
 key_takeaways:
     - hi
 featured_image:
