@@ -27,6 +27,7 @@ scripts:
     - //cdnjs.cloudflare.com/ajax/libs/leaflet-gpx/1.4.0/gpx.min.js
     - //cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js
     - //cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.js
+    - //cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@0.7.0
     - /js/posts/walking-to-class/bubble-chart.js
     - /js/posts/walking-to-class/map.js
     - /js/posts/walking-to-class/bernard.js
@@ -119,9 +120,10 @@ scripts:
 <button value='30'>hedrick</button>
 </div>
 <div id='compare'>
-<button value='0' class='selected'>Distance (mi)</button>
-<button value='1'>Distance (m)</button>
-<button value='2'>Time</button>
+<button value='0' class='selected'>Calories</button>
+<button value='1'>Distance (mi)</button>
+<button value='2'>Distance (m)</button>
+<button value='3'>Time (min)</button>
 </div>
 </div>
 

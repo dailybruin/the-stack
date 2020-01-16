@@ -532,7 +532,11 @@ for(j=0; j<startbuttons.length; j++) {
 startbuttons[j].classList.remove('selected');
 };
 this.classList.add('selected');
-changeChart('distance(mi)');
+var sel = document.getElementsByClassName('selected');
+if (sel[1].value == 0) {changeChart('normalcalories'); return}
+if (sel[1].value == 1) {changeChart('distance(mi)'); return}
+if (sel[1].value == 2) {changeChart('distance(m)'); return}
+else {changeChart('normaltime');}
 });
 };
 
@@ -544,15 +548,18 @@ for (j=0; j<compare.length; j++) {
 compare[j].classList.remove('selected');
 };
 this.classList.add('selected');
-if (this.value == 0) {changeChart('distance(mi)')}
-if (this.value == 1) {changeChart('distance(m)')}
-else {changeChart('normaltime')};
+var sel = document.getElementsByClassName('selected');
+if (sel[1].value == 0) {changeChart('normalcalories'); return}
+if (sel[1].value == 1) {changeChart('distance(mi)'); return}
+if (sel[1].value == 2) {changeChart('distance(m)'); return}
+else {changeChart('normaltime');}
+
 })
 }
 
-function findsel() {
+function findsel(num) {
 var sel = document.getElementsByClassName('selected');
-return parseInt(sel[0].value);
+return parseInt(sel[num].value);
 }
 
 
@@ -589,17 +596,20 @@ function createData(num, type) {
 }
 
 function changeChart(type) {
-myChart0.data = createData(findsel(), type);
+myChart0.data = createData(findsel(0), type);
 myChart0.update();
 }
 
 
+Chart.plugins.unregister(ChartDataLabels);
 
 
 var ctx = document.getElementById('comparechart');
 var myChart0 = new Chart(ctx, {
+    plugins: [ChartDataLabels],
+
     type: 'horizontalBar',
-    data: createData(findsel(), 'distance(mi)'),
+    data: createData(findsel(0), 'normalcalories'),
     options: {
         scales: {
             yAxes: [{
@@ -609,7 +619,16 @@ var myChart0 = new Chart(ctx, {
                     beginAtZero: true,
                 },
             }]
-        }
+        },
+        plugins: {
+            // Change options for ALL labels of THIS CHART
+            datalabels: {
+                color: '#36A2EB',
+                align: 'right',
+                anchor: 'end',
+            },
+        },
+        
     },
 });
 
