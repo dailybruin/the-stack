@@ -38,7 +38,7 @@ scripts:
 <p>This project helps you explore new routes from the dorms to campus and provides various statistics about each route. So, whether you are hoping not to get lost, want the quickest possible route to class, or simply want to take the path of least resistance after a long day of school, this project will help you customize your walking experience.</p>
 
 <h1>About the Data</h1>
-<p>We collected the data from <a href='https://openrouteservice.org'>openrouteservice</a>, which allowed us to draw routes and extract raw gpx files. We extracted the latitude, longitude and elevation of data points along the route to calculate the total distance and elevation change along path. To calculate calories, we used an equation developed by the United States Army that estimates energy expenditure based on gradient and walking speed.</p>
+<p>We collected the data from <a href='https://openrouteservice.org'>openrouteservice</a>, which allowed us to draw routes and extract raw gpx files. We extracted the latitude, longitude and elevation of data points along the route to calculate the total distance and elevation change along each path. To calculate calories, we used an equation developed by the United States Army that estimates energy expenditure based on gradient and walking speed.</p>
 
 <p>You can choose from popular dorm locations, such as Hedrick and Sproul as the starting points, and popular areas on and around campus, such as Powell, the Court of Sciences and the Westwood Target as the ending points. Due to the limitations of the routing service, we offer the two fastest and easiest paths for each route. In total, there are 48 routes.</p>
 
@@ -151,7 +151,7 @@ scripts:
 
 <h2>How does walking speed and incline affect calories burned?</h2>
 
-<p>In order to calculate calories, we used an equation developed by the United States Army that estimates energy expenditure for healthy, military age adults at a given incline. We modifdied the equation to show the caloric output during walking at a gradient as a function of speed, body mass, and gradient. </p>
+<p>In order to calculate calories, we used an equation developed by the United States Army that estimates energy expenditure for healthy, military age adults at an incline. We modified the equation to show the caloric output during walking at a gradient as a function of speed, body mass, and gradient. </p>
 
 <p>The equation shows that gradient, the elevation increase divided by the total distance traveled, has an effect on caloric intake. Notably, the equation shows that walking up the hill via Bruinwalk, which has an average gradient of 8.2%,  is approximately 25% more difficult than walking back via Charles E. Young, which has an average gradient of 5.5%.</p>
 
