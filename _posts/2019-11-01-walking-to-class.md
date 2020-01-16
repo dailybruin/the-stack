@@ -1,6 +1,6 @@
 ---
 title: Walking to Class
-teaser: How far are different lecture halls?
+teaser: What is the best way to get to class?
 authors:
     - laurel_woods
     - bernard_mendez
