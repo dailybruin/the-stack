@@ -1,6 +1,6 @@
 ---
 title: Walking to Class
-teaser: What is the best way to get to class?
+teaser: Find which routes to class are the fastest, burn the most calories or have the least amount of stairs.
 authors:
     - laurel_woods
     - bernard_mendez
@@ -8,8 +8,8 @@ authors:
     - justin_chai
 key_takeaways:
     - A student walking from Hedrick to Powell (and back) once a day for class will walk more than 80 miles in a quarter. For an average-speed walker, that's over 26 hours of walking.
-    - Walking up the hill on Charles E. Young drive is approximately 25% harder than walking up the Bruin walk hill.
-    - Walking at a slower speed burns more calories per mile than walking at a moderate speed according to an equation developed by the United States Army.
+    - Walking up the hill on Charles E. Young drive is burns approximately 20% more calories per step than walking up the Bruin walk hill according to an equation developed by the United States Army.
+    - Walking at a slower speed burns more calories per mile than walking at a moderate speed.
 featured_image:
     url: walking-to-class/featured_image.png
 og_image: walking-to-class/featured_image.png
@@ -33,7 +33,7 @@ scripts:
     - /js/posts/walking-to-class/bernard.js
 ---
 
-<p>Walking to class may be one of the most important things UCLA students will do during their career in Westwood, but it can be confusing, especially for first-year students. Bruinwalk may seem like the only path, but as your world view expands, you may realize there are other ways to get to class.</p>
+<p>Walking to and from class is a grievance all UCLA students living on the hill share.</p>
 
 <p>This project helps you explore new routes from the dorms to campus and provides various statistics about each route. So, whether you are hoping not to get lost, want the quickest possible route to class, or simply want to take the path of least resistance after a long day of school, this project will help you customize your walking experience.</p>
 
