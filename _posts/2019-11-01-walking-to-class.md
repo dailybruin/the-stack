@@ -4,13 +4,15 @@ teaser: How far are different lecture halls?
 authors:
     - laurel_woods
     - bernard_mendez
+    - charlotte_huang
+    - justin_chai
 key_takeaways:
-    - Students who live in Hedrick on average climb 118 more per what? stairs than those<students who live in Deneve and burn 28.3% more calories per mile.
+    - A student walking from Hedrick to Powell (and back) once a day for class will walk more than 80 miles in a quarter. For an average-speed walker, that's over 26 hours of walking.
     - Walking up the hill on Charles E. Young drive is approximately 25% harder than walking up the Bruin walk hill.
     - Walking at a slower speed burns more calories per mile than walking at a moderate speed according to an equation developed by the United States Army.
 featured_image:
-    url:
-og_image:
+    url: walking-to-class/featured_image.png
+og_image: walking-to-class/featured_image.png
 stylesheets:
     - //api.mapbox.com/mapbox-gl-js/v0.36.0/mapbox-gl.css
     - //unpkg.com/leaflet@1.0.3/dist/leaflet.css
@@ -25,9 +27,9 @@ scripts:
     - //cdnjs.cloudflare.com/ajax/libs/leaflet-gpx/1.4.0/gpx.min.js
     - //cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js
     - //cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.js
+    - /js/posts/walking-to-class/bubble-chart.js
     - /js/posts/walking-to-class/map.js
     - /js/posts/walking-to-class/bernard.js
-    - /js/posts/walking-to-class/bubble-chart.js
 ---
 
 <p>Walking to class may be one of the most important things UCLA students will do during their career in Westwood, but it can be confusing, especially for first-year students. Bruinwalk may seem like the only path, but as your world view expands, you may realize there are other ways to get to class.</p>
@@ -187,6 +189,11 @@ scripts:
 
 </div>
 
+<br>
+<h3>Walking Route Intensity</h3>
+
+<p>Some students prefer a gradual incline while walking across campus while others would rather do the climb all at once with a few flights of stairs. The bubble chart below displays each walking route we collected data on and plots it according to total distance on the x-axis and total elevation gain on the y-axis. The size of each point corresponds to the number of stairs along the route.</p>
+
 <div id='bubblewrap0'>
 <div id='bubblewrap1'>
 <canvas id="bubble-chart" style='height: 70vh'></canvas>
@@ -194,5 +201,5 @@ scripts:
 </div>
 
 <div>
-<p>The individual routes from residence halls to lecture halls show a general pattern in the relationship between the total elevation change and the total distance. The role a specific residence hall has is in shifting the general pattern in total distance and/or total elevation change. For example, routes starting from De Neve tend to have the shortest total distances and the least total elevation change. Routes from Sproul tend to have greater total distance and elevation change than routes from De Neve, whereas routes from Rieber tend to be comparable in distance to routes from De Neve but have higher total elevation changes. Routes from Hedrick were generally the longest and had the greatest elevation change.</p>
+<p>.</p>
 </div>

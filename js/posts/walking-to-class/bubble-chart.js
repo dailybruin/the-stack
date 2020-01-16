@@ -1,7 +1,3 @@
-// include <canvas id="bubble-chart" width="800" height="800"></canvas> in .md file
-// include script: https://cdn.jsdelivr.net/npm/chart.js@2.8.0
-// Written section: The individual routes from residence halls to lecture halls show a general pattern in the relationship between the total elevation change and the total distance. The role a specific residence hall has is in shifting the general pattern in total distance and/or total elevation change. For example, routes starting from De Neve tend to have the shortest total distances and the least total elevation change. Routes from Sproul tend to have greater total distance and elevation change than routes from De Neve, whereas routes from Rieber tend to be comparable in distance to routes from De Neve but have higher total elevation changes. Routes from Hedrick were generally the longest and had the greatest elevation change.
-
 let start_keys = {
   "hedrick" : "Hedrick", 
   "rieber" : "Rieber",
@@ -73,13 +69,13 @@ async function getData(){
         aspectRatio: 1,
       title: {
         display: true,
-        text: 'Comparing Routes from Residence Halls'
+        text: 'Distance, Elevation, and Stair Count Across Walking Routes'
       }, 
       scales: {
         yAxes: [{ 
           scaleLabel: {
             display: true,
-            labelString: "Total Elevation Change (ft)"
+            labelString: "Total Elevation Gain (ft)"
           }
         }],
         xAxes: [{ 
@@ -92,7 +88,9 @@ async function getData(){
       tooltips: {
         callbacks: {
           label: function(tooltipItem, data) {
-            return data.datasets[tooltipItem.datasetIndex].data[tooltipItem.index].label;
+            let l = data.datasets[tooltipItem.datasetIndex].data[tooltipItem.index].label;
+            let s = data.datasets[tooltipItem.datasetIndex].data[tooltipItem.index].number_stairs;
+            return l + " | " + s + " stairs";
           }
         }
       } 
