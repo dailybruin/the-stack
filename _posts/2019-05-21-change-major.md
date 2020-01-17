@@ -8,7 +8,6 @@ key_takeaways:
   - Roughly 30% of UCLA students change their majors, with the highest changes seen among business economics, sociology, psychobiology, political science and psychology students. 
   - Around 20% of admitted life sciences and physical sciences students switch to other fields, while less than 5% of humanities, engineering or social sciences students switch. 
   - Students share their personal stories and advice on switching majors that allowed them to pursue their passions and career interests.
-  - hi my name is mattie.
 featured_image:
   url: change-major/featured_image.png
 og_image: change-major/featured_image.png
