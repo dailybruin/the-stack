@@ -29,6 +29,10 @@ input {
     padding: 30px 0 10px 0;
 }
 
+.option {
+  width: 10%
+}
+
 /*
 input[type=submit] {
     background-color: #4CAF50;

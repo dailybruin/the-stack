@@ -4,7 +4,7 @@ teaser: Analysis of the various costs of being a student at UCLA as well as a co
 authors:
   - radhika_ahuja
   - annie_zhang
-  - maddy_blasingame
+  - madeline_blasingame
 key_takeaways:
   - College is, on average, two times more expensive for out-of-state and international students as it is for in-state students.
   - Additionally, out-of-state students bear higher travel costs and international students also bear costs unique to them like higher standardized testing fees and visa costs
@@ -14,56 +14,282 @@ og_image: student-expenses/flight_global_distribution.png
 stylesheets:
   - https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.css 
   - https://fonts.googleapis.com/css?family=Lato&display=swap 
-  - /css/posts/student-expenses/quiz.css 
+  - https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+  - https://fonts.googleapis.com/css?family=Playfair+Display+SC|Roboto
+  - /css/posts/student-expenses/quiz.css
 
 scripts:
   - https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js 
+  - https://unpkg.com/leaflet@1.6.0/dist/leaflet.js
   - /js/posts/student-expenses/quiz.js
+  - /js/posts/student-expenses/global-map.js
+  - /js/posts/student-expenses/us-map.js
+  - /js/posts/student-expenses/global-geojson.js
+  - /js/posts/student-expenses/us-geojson.js
+
 ---
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.css" />
 <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
 
+<script src="/js/posts/student-expenses/us-geojson.js"></script>
+<script src="/js/posts/student-expenses/global-geojson.js"></script>
+
 
 ## Introduction
-UCLA students are required to cover not just tuition, rent, and utilities but also travel costs to and from their hometowns, application and standardized test fees, and for some, visa fees and the cost of the TOEFL. Using data from UCLA and outside sources, we've computed the average annual cost of attendance for in-state, out-of-state, and international students. Additionally, we have also created a [cost calculator](#ucla-cost-of-college-calculator) that you can use to calculate your true cost of attendance based on your preferences
+UCLA is the #1 public university in the United States (don’t tell Berkeley). However, this title does not come at an insignificant price to students and their families. There are certain costs that every student can expect to pay like tuition or textbook fees. But, there are many costs students don’t consider when making their college decisions, such as the price of living in the second-largest city in the nation. The price of UCLA can also vary dramatically based on where you come from, whether it be down the block or across the ocean. Using data from UCLA and outside sources, we've computed the average annual cost of attendance for in-state, out-of-state, and international students, to give a sense of the true cost of college. (Note: Emotional cost not included.) All sources have been linked.
 
-### Totals Comparison
+### Comparing Totals
+The total cost of attendance for students varies depending on whether those students are in-state, out-of-state, or international. While the price of living on the Hill or in Westwood is high no matter where your original residence, non-resident students are responsible for the cost of supplemental tuition and can incur higher travel costs, higher application costs, higher prices for standardized tests, and visa fees, all of which will be discussed in later sections.
 
-The average total cost of attendance for students varies depending on whether those students are in-state, out-of-state, or international. While the cost of living in Westwood doesn't depend on whether or not a student is a California resident, non-resident students are responsible for cost of supplemental tuition and can incur higher travel costs, higher application costs, and visa fees, all of which will be discussed in later sections.
+<div>
+	<canvas id="simpleTotals"></canvas>
+</div>
 
-| Type of Student | Average Cost of College | [Tuition](#tuition) | [Housing](#housing) | [Flights](#transportation) | [Living](#cost-of-living) | [Application](#cost-of-applying) |
-|-----------------|-------------------------|---------|---------|---------|--------|-------------|
-| In-State        | $32018.27                      |$13,239         | $12498.2        |  $62.83        | $6084.74       | $133.50              |
-| Out-of-State    | $62302.94                      | $43,093         |  $12498.2       |$493.50         | $6084.74       | $133.50            | 
-| International   | $63756.05                       |  $43,093        |   $12498.2      |$1510.61         |  $6084.74      | $569.50            |
+<script>
+			let simpleTotals = document.getElementById('simpleTotals').getContext('2d');
+
+			Chart.defaults.global.defaultFontFamily = 'Lato';
+			Chart.defaults.global.defaultFontSize = 18;
+			Chart.defaults.global.defaultFontColor = '#777';
+
+			let simpleTotalsDraw = new Chart(simpleTotals, {
+				type: 'horizontalBar', //bar, pie, horizontalbar, etc
+				data: {
+					labels:['In-State', 'Out-of-State','International'],
+					datasets:[{
+						label: 'Total Cost',
+						data: [
+							29262,
+							59546,
+							61056,
+							0
+						],
+						//backgroundColor: 'green'
+						backgroundColor: [
+						'#fdecc2',
+            			'#f8c646',
+       				    '#f5b209',
+						],
+						hoverBorderWidth: 3,
+						hoverBorderColor: '#777'
+					}]
+				},
+				options: {
+					title: {
+						display: true,
+						text: "Cost of Attendance",
+						fontSize: 25
+					},
+					legend: {
+						display: false
+					},
+					scales: {
+        		yAxes: [{
+            	gridLines: {
+                offsetGridLines: true
+            		}
+        		}]
+    			}
+				}
+			})
+</script>
+
+Further, we can also see a clearer breakdown from the costs that comprise the net price:
+
+<div>
+	<canvas id="totalChart"></canvas>
+</div>
+
+<script>
+let totalChart = document.getElementById('totalChart').getContext('2d');
+
+			Chart.defaults.global.defaultFontFamily = 'Lato';
+			Chart.defaults.global.defaultFontSize = 18;
+			Chart.defaults.global.defaultFontColor = '#777';
+
+			let totalChartDraw = new Chart(totalChart, {
+				type: 'horizontalBar', //bar, pie, horizontalbar, etc
+				data: {
+					labels:['In-State', 'Out-of-State', 'International'],
+					datasets:[
+						{
+							label: 'Tuition',
+							data: [13239, 43093, 43093],
+							backgroundColor: '#f7c23a' // red
+						},
+						{
+							label: 'Living',
+							data: [15823.56, 15823.56, 15823.56],
+							backgroundColor: '#fbe19d' // green
+						},
+						{
+							label: 'Travel',
+							data: [62.83, 493.50, 1510.61],
+							backgroundColor: '#f9d16b' // yellow
+						},
+						{
+							label: 'Application',
+							data: [136.25, 136.25, 628.50],
+							backgroundColor: '#f5b209',
+						}],
+						//backgroundColor: 'green'
+						// backgroundColor: [
+						// '#f8c646',
+						// '#f5b209',
+						// ],
+						hoverBorderWidth: 3,
+						hoverBorderColor: '#777',
+					},
+				options: {
+					title: {
+						display: true,
+						text: "Cost Breakdown",
+						fontSize: 25
+					},
+					legend: {
+						display: false
+					},
+					scales: {
+                        yAxes: [{
+                        gridLines: {
+                        offsetGridLines: true
+                        }
+                    }],
+                    xAxes: [{
+                        type: 'logarithmic',
+                        ticks: {
+                            min: 0,
+                            max: 1000000,
+                            callback: function (value, index, values) {
+                                if (value === 100000) return "100K";
+                                if (value === 10000) return "10K";
+                                if (value === 1000) return "1K";
+                                if (value === 100) return "100";
+                                if (value === 10) return "10";
+                                if (value === 0) return "0";
+                                return null;
+                            }
+                    }
+					}]
+					}
+				}
+			})
+</script>
 
 ## Geographic Distribution
 
-#### Global Flight Price Distribution
+The maps below show the distribution of the cost of attending college across the United States and worldwide, for the most represented states and countries. Outside of California, states with higher populations (or large cities) as well as the East coast are well represented and most international students come from Asia.
 
-<img src="/img/posts/student-expenses/flight_global_distribution.png" width="600px" />
+### US Flight Price Distribution
 
-#### US Flight Price Distribution
+<div class="wrapper" style="text-align: center">
+<div id="mapid" style="height: 85vh; width: 70vw; margin-bottom: 5vh; display:inline-block"></div>
+<script src="/js/posts/student-expenses/us-map.js"></script>
+</div>
 
-<img src="/img/posts/student-expenses/flight_us_distribution.png" width="600px" />
+### Global Flight Price Distribution
 
-This map shows the cost of a round trip plane ticket by country for the most represented countries at UCLA. 
-This map shows the cost of a round trip plane ticket by state for the most represented states at UCLA.
+<div class="wrapper" style="text-align: center">
+<div id="g-mapid" style="height: 85vh; width: 70vw; margin-bottom: 5vh; display: inline-block"></div>
+<script src="/js/posts/student-expenses/global-map.js"></script>
+</div>
+
+
+## Cost Calculator
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.css" />
+<link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+<link href="/css/posts/student-expenses/quiz.css " rel="stylesheet">
+
+<div class="quiz">  
+<form>
+		<h2 class="quiz-question">Q1. Where are you from?</h2>
+		<label class="container"> In-State
+			<input class="option" type="radio" name="student-type" value="IN_STATE" required>
+			<span class="checkmark"></span>
+		</label>
+		<label class="container"> Out-of-State
+			<input class="option" type="radio" name="student-type" value="OUT_OF_STATE" required>
+			<span class="checkmark"></span>
+		</label>
+		<label class="container"> International
+			<input class="option" type="radio" name="student-type" value="INTERNATIONAL" required>
+			<span class="checkmark"></span>
+		</label>          
+		<h2 class="quiz-question">Q2. Where do you prefer to live?</h2>
+		<label class="container"> On the Hill
+			<input class="option" type="radio" name="housing" value="HILL" required>
+			<span class="checkmark"></span>
+		</label>
+		<label class="container"> UCLA University Apartments
+			<input class="option" type="radio" name="housing" value="UCLA_OFFCAMPUS" required>
+			<span class="checkmark"></span>
+		</label>
+		<label class="container"> Off-Campus
+			<input class="option" type="radio" name="housing" value="OFFCAMPUS" required>
+			<span class="checkmark"></span>
+		</label>
+		<label class="container"> With a relative (I don't pay for housing)
+			<input class="option" type="radio" name="housing" value="RELATIVE" required>
+			<span class="checkmark"></span>
+		</label>
+		<h2 class="quiz-question">Q3. How many roommates do you prefer to have?</h2>
+		<label class="container"> Single (No roommates)
+			<input class="option" type="radio" name="roommates" value="1" required>
+			<span class="checkmark"></span>
+		</label>
+		<label class="container"> Double
+			<input class="option" type="radio" name="roommates" value="2" required>
+			<span class="checkmark"></span>
+		</label>
+		<label class="container"> Triple
+			<input class="option" type="radio" name="roommates" value="3" required>
+			<span class="checkmark"></span>
+		</label>
+		<label class="container"> More than 3
+			<input class="option" type="radio" name="roommates" value="4" required>
+			<span class="checkmark"></span>
+		</label>       
+		<h2 class="quiz-question">Q4. How many times a year do you go home?</h2>
+		<input class="option" type="text" name="visits" required>
+		<h2 class="quiz-question">Q5. Do you commute to school?</h2>
+		<label class="container"> Yes, with my own car
+			<input class="option" type="radio" name="commute" value="YES-CAR" required>
+			<span class="checkmark"></span>
+		</label>
+		<label class="container"> Yes, by public transport
+			<input class="option" type="radio" name="commute" value="YES-PT" required>
+			<span class="checkmark"></span>
+		</label>
+		<label class="container"> No 
+			<input class="option" type="radio" name="commute" value="NO" required>
+			<span class="checkmark"></span>
+		</label>
+		<div class="quiz-result">
+			<button type="submit"> Submit </button>
+		</div>
+		<div>
+			<canvas id="summaryChart"></canvas>
+		</div>
+    </form>
+</div>
+
+<br>
+<pre id="log">
+</pre>
+
+<script src="/js/posts/student-expenses/quiz.js"></script>
+
 
 ## Breakdown of Costs
 
 ### Tuition
-Sources: According to [UCLA](http://www.admission.ucla.edu/Prospect/budget.html), tuition for the 2019-2020 school year is as follows (note that these amounts are what a student would pay per year):
+According to UCLA, annual tuition for the 2019-2020 school year is as follows. Additionally, the UC Regents Board voted last spring to increase non-resident tuition by $762 per year and allocate 10% of the revenue generated by this increase to financial aid.
 
-| Type of Student | Cost of Tuition |
-|-----------------|-----------------|
-| In-State        | $13,239         |
-| Out-of-State    | $43,093         |
-| International   | $43,093         |
-
-Additionally, the UC Regents Board [voted last spring](https://dailybruin.com/2019/05/16/uc-board-of-regents-votes-to-increase-nonresident-tuition-by-762-per-year/) to increase non-resident tuition by $762 per year and allocate 10% of the revenue generated by this increase to financial aid.
+Tuition for out-of-state and international students is almost 3 times that of in-state students and it continues to rise every year. Many students don’t expect there to be such an inflated price for non-resident students. Matt Chen, a second-year out-of-state student, told us, “when I first saw the general out-of-state tuition, I thought it was crazy.” Although Chen eventually decided on UCLA in order to gain independence and for the opportunities found here, it wasn’t always a given. Chen asserted that if his in-state school and UCLA had been the same price, he would choose UCLA without any doubt and the only reason he had to consider other schools was due to cost. For some students, however, the price can make attending UCLA quite prohibitive. UCLA thrives on its diversity, but many students who could bring important perspectives to our campus are driven away due to the sticker price. 
 
 <div>
 	<canvas id="tuitionChart"></canvas>
@@ -118,77 +344,84 @@ Additionally, the UC Regents Board [voted last spring](https://dailybruin.com/20
 			})
   </script>          
 
-### Housing
-For most students who choose to live near campus, there are three options: living on the hill, living in university owned apartments, or living in non-university owned apartments. We calculated the average annual cost for each option. 
-Note that when we computed the cost of living on the hill, we assumed a meal plan of 14P. 
+### Cost of Living
 
-| Type of Student 		| Average Cost of Housing |
-|-----------------------|-------------------------|
-| Hill            		| $16,625                  |      
-| Off-Campus      		| $10,336.25                 |     
-| University Apartments | $9,364.63						  |
+For most students who choose to live near campus, there are three options: living on the hill, living in university-owned apartments, or living in non-university owned apartments. We calculated the average annual cost for each option. Note that when we computed the cost of living on the hill, we assumed a meal plan of 14P (because it is obviously superior to all other meal plans, but also because it’s the most common).
+Students who live off-campus must additionally cover the costs of food, utilities and WiFi, transportation, and health insurance. Below is the average cost of living for students living on the hill, in university apartments, and in non-university apartments. 
+
+(Note that the transportation cost is the average cost for one adult to have a car in Los Angeles, and it includes gas and insurance but not parking. The cost of insurance is the 2019 - 2020 cost of UC Ship.) 
 
 <div>
-	<canvas id="housingChart"></canvas>
+	<canvas id="costOfLivingChart"></canvas>
 </div>
 
 <script>
-	let housingChart = document.getElementById('housingChart').getContext('2d');
-			Chart.defaults.global.defaultFontFamily = 'Lato';
-			Chart.defaults.global.defaultFontSize = 18;
-			Chart.defaults.global.defaultFontColor = '#777';
-			let housingChartDraw = new Chart(housingChart, {
-				type: 'horizontalBar', //bar, pie, horizontalbar, etc
-				data: {
-					labels:['Hill', 'Off-Campus'],
-					datasets:[{
-						label: 'Cost by Type of Housing',
-						data: [
-							16625,
-							12000,
-							0
-						],
-						//backgroundColor: 'green'
-						backgroundColor: [
-            '#f8c646',
-            '#f5b209',
-						],
-						hoverBorderWidth: 1,
-						hoverBorderColor: '#777'
-					}]
+		let costOfLivingChart = document.getElementById('costOfLivingChart').getContext('2d');
+
+		Chart.defaults.global.defaultFontFamily = 'Lato';
+		Chart.defaults.global.defaultFontSize = 18;
+		Chart.defaults.global.defaultFontColor = '#777';
+
+		let costOfLivingChartDraw = new Chart(costOfLivingChart, {
+			type: 'horizontalBar', //bar, pie, horizontalbar, etc
+			data: {
+				labels:['Hill', 'Off Campus', 'University Apts.'],
+				datasets:[
+					{
+						label: 'Housing',
+						data: [11515, 8518, 9317],
+						backgroundColor: '#f7c23a' // red
+					},
+					{
+						label: 'Food',
+						data: [5193, 2412, 2412],
+						backgroundColor: '#fbe19d' // green
+					},
+					{
+						label: 'Utilities',
+						data: [0, 554, 0],
+						backgroundColor: '#f9d16b' // yellow
+					},
+					{
+						label: 'Insurance',
+						data: [2517, 2517, 2517],
+						backgroundColor: '#f5b209',
+					}],
+					//backgroundColor: 'green'
+					// backgroundColor: [
+					// '#f8c646',
+					// '#f5b209',
+					// ],
+					hoverBorderWidth: 3,
+					hoverBorderColor: '#777',
 				},
-				options: {
-					title: {
-						display: true,
-						text: "Average Cost of Housing",
-						fontSize: 25
-					},
-					legend: {
-						display: false
-					},
-					scales: {
-        		yAxes: [{
-            	gridLines: {
-                offsetGridLines: true
-            		}
-        		}]
-    			}
-				}
-			})
+			options: {
+				title: {
+					display: true,
+					text: "Average Cost of Living",
+					fontSize: 25
+				},
+				legend: {
+					display: false
+				},
+
+			// 	scales: {
+            // xAxes: [{
+            //     stacked: true
+            // }],
+            // yAxes: [{
+            //     stacked: true
+            // }],
+				// }
+			}
+		})
+
 </script>
 
-
 ### Transportation
-A [2015 study](https://www.tandfonline.com/doi/full/10.1080/17445647.2015.1061463) revealed that flight prices could be estimated by the distance travelled and the length of the flight.
-For instance, flights that took less than 3 hours and covered less than 2,000 kilometers one way were 0.256 USD per kilometer to buy a round trip ticket between those cities, while flights that took between 3 and 6 hours and covered between 2,001 and 4,000 kilometers one way were 0.160 USD per kilometer for a round trip ticket. The flights that were used to compute these estimates were all round trip flights from 2010.
 
-Students who live in California may choose to take a bus or a train home instead during school breaks. The average cost of transportation for in-state students reflects this--we computed it by looking at costs of bus and plane tickets.
-
-| Type of Student | Average Cost of Transportation |
-|-----------------|--------------------------------|
-| In-State        | $62.83                 	   |
-| Out-of-State    | $493.50                	   |
-| International   | $1510.61               	   |
+We used the results of a 2015 study to estimate the average cost of flying home once a year based on the distance a student is traveling. Students who live in California, on the other hand, may choose to take a bus or a train home during school breaks. The average cost of transportation for in-state students reflects this—we computed it by looking at the costs of bus and plane tickets.
+UCLA students come from all parts of the world. While this makes us incredibly diverse,  the distance from LAX to a students’ home directly impacts the price of flying, and so many out-of-state and international students only travel home on rare occasions or during longer breaks. April Guo, a fourth-year international student from China, told us, “I only go home once a year and when I go home depends on the price of tickets.” Due to the cost of flying, especially internationally, being so high, many out-of-state and international students can go months without seeing their families and have to track flight prices to determine when it would be cheapest to go home. 
 
 <div>
 	<canvas id="costOfFlyingChart"></canvas>
@@ -237,88 +470,11 @@ let costOfFlyingChartDraw = new Chart(costOfFlyingChart, {
 	})
 </script>
 
-### Cost of Living
-Students who live off campus must cover the costs of food, utilities and WiFi, transportation, and health insurance. Below is the average cost of living for students living on the hill, in university apartments, and in non-university apartments. Note that the transportation cost is the average cost for one adult to have a car in Los Angeles, and it includes gas and insurance but not parking. The cost of insurance is the 2019 - 2020 cost of UCShip.
-
-| Type of Student 		| Average Cost of Living  | Food    | Utilities | Transportation | Insurance |
-|-----------------------|-------------------------|---------|-----------|----------------|-----------|
-| Hill            		| $2,516.70		          | N/A	    | N/A	    | N/A			 | $2,516.70 |     
-| Off-Campus      		| $10,058.70		                  | $2,412  | $2,124    | $3,006     	 | $2,516.70 |   
-| University Apartments | $5678.82						  | $2,412  | N/A	    | $750.12	     | $2,516.70 |
-
-<div>
-	<canvas id="costOfLivingChart"></canvas>
-</div>
-
-<script>
-	let costOfLivingChart = document.getElementById('costOfLivingChart').getContext('2d');
-		Chart.defaults.global.defaultFontFamily = 'Lato';
-		Chart.defaults.global.defaultFontSize = 18;
-		Chart.defaults.global.defaultFontColor = '#777';
-		let costOfLivingChartDraw = new Chart(costOfLivingChart, {
-			type: 'horizontalBar', //bar, pie, horizontalbar, etc
-			data: {
-				labels:['In-State', 'Out-of-State', 'International'],
-				datasets:[
-					{
-						label: 'Food',
-						data: [268, 268, 268],
-						backgroundColor: '#fbe19d' // green
-					},
-					{
-						label: 'Utilities',
-						data: [127.27, 127.27, 127.27],
-						backgroundColor: '#f9d16b' // yellow
-					},
-					{
-						label: 'Transportation',
-						data: [334, 334, 334],
-						backgroundColor: '#f7c23a' // red
-					},
-					{
-						label: 'Insurance',
-						data: [741.9, 741.9, 741.0],
-						backgroundColor: '#f5b209',
-					}],
-					//backgroundColor: 'green'
-					// backgroundColor: [
-					// '#f8c646',
-					// '#f5b209',
-					// ],
-					hoverBorderWidth: 1,
-					hoverBorderColor: '#777',
-				},
-			options: {
-				title: {
-					display: true,
-					text: "Average Cost of Living",
-					fontSize: 25
-				},
-				legend: {
-					display: false
-				},
-			// 	scales: {
-            // xAxes: [{
-            //     stacked: true
-            // }],
-            // yAxes: [{
-            //     stacked: true
-            // }],
-				// }
-			}
-		})
-
-</script>
 
 ### Cost of Applying
-(--this section requires fixing, cost of ACT has changed)
-It also costs money to apply to UCLA--not only is there an application fee, but the mandatory standardized tests come with their own fees as well. These tests are also more expensive for international students--they come with additional fees for being administered outside of the United States. International students are also responsible for the cost of a visa and I-Start, an online resource to help them acclimate to living in the United States.
 
-| Type of Student | Average Application Cost | SAT\ACT (Average) FIX THIS ACT IS NOW 68 | Application Fee | TOEFL | Visa | I-Start |
-|-----------------|--------------------------|-------------------|-----------------|-------|------|---------|
-| In-State        | $133.50                  | $63.50            | $70             | $0    | $0   | $0      |
-| Out-of-State    | $133.50                  | $63.59            | $70             | $0    | $0   | $0      |
-| International   | $539.50                  | $139.50           | $70             | $170  | $160 | $59     |
+There is also a cost associated with getting to UCLA - not only is there an application fee, but also mandatory standardized tests which come with their own fees as well. For international students, these tests are even more expensive as they come with additional fees for being administered outside of the United States. International students are also responsible for the cost of visa and I-Start, an online resource to help them acclimate to living in the United States. An important note is that many international students come from China where there are no testing centers. This means in addition to the international cost of these tests, Chinese students have to travel to nearby countries in order to take their exams. This can take many days and be incredibly expensive. Guo, for example, went to Taiwan twice and Singapore once just to take her exams. Even in countries where testing centers are available, they may not be present in your city, therefore warranting some domestic travel.
+
 
 <div>
 	<canvas id="costOfApplyingChart"></canvas>
@@ -329,6 +485,7 @@ It also costs money to apply to UCLA--not only is there an application fee, but 
 		Chart.defaults.global.defaultFontFamily = 'Lato';
 		Chart.defaults.global.defaultFontSize = 18;
 		Chart.defaults.global.defaultFontColor = '#777';
+
 		let costOfApplyingChartDraw = new Chart(costOfApplyingChart, {
 			type: 'horizontalBar', //bar, pie, horizontalbar, etc
 			data: {
@@ -336,7 +493,7 @@ It also costs money to apply to UCLA--not only is there an application fee, but 
 				datasets:[
 					{
 						label: 'SAT/ACT',
-						data: [63.50, 63.50, 139.50],
+						data: [66.50, 66.50, 139.50],
 						backgroundColor: '#fbe19d' // green
 					},
 					{
@@ -346,7 +503,7 @@ It also costs money to apply to UCLA--not only is there an application fee, but 
 					},
 					{
 						label: 'TOEFL',
-						data: [0, 0, 170],
+						data: [0, 0, 200],
 						backgroundColor: '#f7c23a' // red
 					},
 					{
@@ -385,104 +542,14 @@ It also costs money to apply to UCLA--not only is there an application fee, but 
             // }],
 			// 	}
 			}
-		})
+	 	})
+	// costOfApplyingChart.canvas.responsive = true;
+	// costOfApplyingChart.canvas.parentNode.style.height = '128px';
 </script>
 
-## UCLA Cost of College Calculator
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.css" />
-<link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
-<link href="/css/posts/student-expenses/quiz.css " rel="stylesheet">
-
-<div class="quiz">  
-<form>
-    <h2 class="quiz-question">Q1. Where are you from?</h2>
-    <label class="container"> In-State
-        <input class="option" type="radio" name="student-type" value="IN_STATE" required>
-        <span class="checkmark"></span>
-    </label>
-    <label class="container"> Out-of-State
-        <input class="option" type="radio" name="student-type" value="OUT_OF_STATE" required>
-        <span class="checkmark"></span>
-    </label>
-    <label class="container"> International
-        <input class="option" type="radio" name="student-type" value="INTERNATIONAL" required>
-        <span class="checkmark"></span>
-    </label>
-    <h2 class="quiz-question">Q2. Where do you prefer to live?</h2>
-    <label class="container"> On the Hill
-        <input class="option" type="radio" name="housing" value="HILL" required>
-        <span class="checkmark"></span>
-    </label>
-    <label class="container"> UCLA University Apartments
-        <input class="option" type="radio" name="housing" value="UCLA_OFFCAMPUS" required>
-        <span class="checkmark"></span>
-    </label>
-    <label class="container"> Off-Campus
-        <input class="option" type="radio" name="housing" value="OFFCAMPUS" required>
-        <span class="checkmark"></span>
-    </label>
-    <label class="container"> With a relative (I don't pay for housing)
-        <input class="option" type="radio" name="housing" value="RELATIVE" required>
-        <span class="checkmark"></span>
-    </label>
-    <h2 class="quiz-question">Q3. How many roommates do you prefer to have?</h2>
-    <label class="container"> Single (No roommates)
-        <input class="option" type="radio" name="roommates" value="1" required>
-        <span class="checkmark"></span>
-    </label>
-    <label class="container"> Double
-        <input class="option" type="radio" name="roommates" value="2" required>
-        <span class="checkmark"></span>
-    </label>
-    <label class="container"> Triple
-        <input class="option" type="radio" name="roommates" value="3" required>
-        <span class="checkmark"></span>
-    </label>
-    <label class="container"> More than 3
-        <input class="option" type="radio" name="roommates" value="4" required>
-        <span class="checkmark"></span>
-    </label>           
-    <h2 class="quiz-question">Q4. Do you mind sharing an apartment/having flatmates?</h2>
-    <label class="container"> Yes, I prefer not sharing the apartment
-        <input class="option" type="radio" name="flatmates" value="0" required>
-        <span class="checkmark"></span>
-    </label>
-    <label class="container"> No, I don't mind sharing the apartment
-        <input class="option" type="radio" name="flatmates" value="1" required>
-        <span class="checkmark"></span>
-    </label> 
-    <h2 class="quiz-question">Q5. Do you commute to school?</h2>
-    <label class="container"> Yes, with my own car
-        <input class="option" type="radio" name="commute" value="YES-CAR" required>
-        <span class="checkmark"></span>
-    </label>
-    <label class="container"> Yes, by public transport
-        <input class="option" type="radio" name="commute" value="YES-PT" required>
-        <span class="checkmark"></span>
-    </label>
-    <label class="container"> No 
-        <input class="option" type="radio" name="commute" value="NO" required>
-        <span class="checkmark"></span>
-    </label>
-    <div class="quiz-result">
-        <button type="submit"> Submit </button>
-    </div>
-    <div>
-        <canvas id="summaryChart"></canvas>
-        </div>
-    </form>
-</div>
-
-<br>
-<pre id="log">
-</pre>
-
-<script src="/js/posts/student-expenses/quiz.js"></script>
-
 ## Conclusion
-There are a variety of costs associated with being an undergraduate at UCLA--tuition, housing, health insurance. There are also a number of ways students can bring these costs down: they can, for instance, live in a university apartment as they tend to be cheaper than both the hill and non-university apartments. However, some fees are nonnegotiable: in addition to supplemental tuition for non-residents, there are also higher travel costs for students who live farther away,  and TOEFL, visa, and increased standardized test fees for international students. UCLA is a well regarded research institution--and its high cost is the price students pay to be here.
+
+The price of being a UCLA student adds up, whether it is from tuition, housing, health insurance, or transportation. There are some ways students can try to bring these costs down. For example, the students we talked to discussed how they live a more “frugal” lifestyle to cut costs in any way they can. However, some fees are non-negotiable, like the supplemental tuition for non-residents, the higher travel costs for students who live farther away, TOEFL, visas, and increased standardized test fees for international students. Chen described to us that one of the reasons he was able to choose UCLA was due to the priority his parents place on education, but that doesn’t necessarily mean it’s easy. Although his parents don’t want him to worry, Chen says, “Whenever it comes to academics, I do put a little bit more pressure on myself because I know how much we are paying.” Guo echoed this idea and discussed how international students like herself are more likely to choose traditional majors with higher-paying careers in order to pay back some of the costs of their education. UCLA is the #1 public university in the country, --and its high cost is the price students pay to be here. 
 
 
 
