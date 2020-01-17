@@ -7,9 +7,9 @@ authors:
     - charlotte_huang
     - justin_chai
 key_takeaways:
-    - A student walking from Hedrick to Powell (and back) once a day for class will walk more than 80 miles in a quarter. For an average-speed walker, that's over 26 hours of walking.
-    - Walking up the hill on Charles E. Young drive is burns approximately 20% more calories per step than walking up the Bruin walk hill according to an equation developed by the United States Army.
-    - Walking at a slower speed burns more calories per mile than walking at a moderate speed.
+    - A student walking from Hedrick Hall to Powell Library (and back) once a day for class will walk more than 80 miles in a quarter. For an average-speed walker, that’s around 26 hours of walking.
+    - Walking up the hill on Charles E. Young Drive North burns approximately 20% more calories per step than walking up the Bruin Walk hill, according to an equation developed in part by the United States Army Research Institute of Environmental Medicine.
+    - Walking around UCLA’s campus at slower speed tends to burn more calories per mile than walking at a moderate speed.
 featured_image:
     url: walking-to-class/featured_image.png
 og_image: walking-to-class/featured_image.png
@@ -33,14 +33,14 @@ scripts:
     - /js/posts/walking-to-class/bernard.js
 ---
 
-<p>Walking to and from class is a grievance all UCLA students living on the hill share.</p>
+<p>Walking to and from class is a shared grievance that all UCLA students living on the Hill face.</p>
 
-<p>This project helps you explore new routes from the dorms to campus and provides various statistics about each route. So, whether you are hoping not to get lost, want the quickest possible route to class, or simply want to take the path of least resistance after a long day of school, this project will help you customize your walking experience.</p>
+<p>This project helps you explore new routes from the dorms to campus and provides various statistics about each route. So, whether you are hoping not to get lost, want the quickest possible route to class or simply want to take the path of least resistance after a long day of school, this project will help you customize your walking experience.</p>
 
 <h1>About the Data</h1>
-<p>We collected the data from <a href='https://openrouteservice.org'>openrouteservice</a>, which allowed us to draw routes and extract raw gpx files. We extracted the latitude, longitude and elevation of data points along the route to calculate the total distance and elevation change along each path. To calculate calories, we used an equation developed by the United States Army that estimates energy expenditure based on gradient and walking speed.</p>
+<p>We collected the data from <a href='https://openrouteservice.org'>openrouteservice</a>, which allowed us to draw routes and extract raw GPX files. We extracted the latitude, longitude and elevation of data points along the route to calculate the total distance and elevation change along each path. To calculate calories, we used an equation developed in part by the United States Army Research Institute of Environmental Medicine that estimates energy expenditure based on gradient and walking speed.</p>
 
-<p>You can choose from popular dorm locations, such as Hedrick and Sproul as the starting points, and popular areas on and around campus, such as Powell, the Court of Sciences and the Westwood Target as the ending points. Due to the limitations of the routing service, we offer the two fastest and easiest paths for each route. In total, there are 48 routes.</p>
+<p>You can choose from popular dorm locations, such as Hedrick Hall and Sproul Hall as the starting points, and popular areas on and around campus, such as Powell Library, the Court of Sciences and the Westwood Target as the ending points. Because of the limitations of the routing service, we offer the two fastest and easiest paths for each route. In total, there are 48 routes.</p>
 
 
 <div id='choices'>
@@ -136,28 +136,28 @@ scripts:
 
 <h2>What about accessible routes?</h2>
 
-<p>Although the hills of Westwood are an iconic feature of the UCLA campus, they present a challenge to students with disabilities.</p>
+<p>Although the hills of Westwood are iconic features of the UCLA campus, they present a challenge to students who have disabilities.</p>
 
-<p>Lily Shaw, a fourth-year political science student and USAC Facilities Commissioner, said students with difficulties have a hard time navigating campus because of added barriers and unclear pathways. </p>
+<p>Lily Shaw, a fourth-year political science student and USAC Facilities commissioner, said students with disabilities have a hard time navigating campus because of added barriers and unclear pathways.</p>
 
-<p>“It’s often discouraging for students who have disabilities and know that they're going to struggle to get to class and might be late,” said Shaw. “There's that fear that makes them not want to go to class and then they fall behind academically and further accentuate barriers to academics for students with disabilities.”</p>
+<p>“It’s often discouraging for students who have disabilities and know that they're going to struggle to get to class and might be late,” Shaw said. “There's that fear that makes them not want to go to class and then they fall behind academically and further accentuate barriers to academics for students with disabilities.”</p>
 
-<p>Shaw said the UCLA Transportation department provides a single shuttle van for injured and disabled students, but added the van is criticized for frequently lacking space, canceling routes and forgetting to pick up students. She also said there are plans for a second van, but said she hasn’t seen any promising results.</p>
+<p>Shaw said UCLA Center for Accessible Education provides a single shuttle van for injured and students who have disabilities, but added that the van is criticized for frequently lacking space, canceling routes and forgetting to pick up students. She also said there are plans for a second van, but said she hasn’t seen any promising results.</p>
 
-<p>Shyam Venkatasubramanian, a second-year electrical engineering student, said he tore his meniscus at B-fit during during fall quarter, which made it difficult for him to walk. He said that while he was injured, he had to leave his dorm 40 minutes earlier than he did before the injury in order to get to class.</p>
+<p>Shyam Venkatasubramanian, a second-year electrical engineering student, said he tore his meniscus at Bruin Fitness Center during during fall quarter, which made it difficult for him to walk. He said while he was injured, he had to leave his dorm 40 minutes earlier than he did before his injury in order to get to class.</p>
 
 <p>“I can't afford being late to a midterm or a final because I have an injury,” he said. “If my exam had happened to be North Campus, I probably wouldn't have made it regardless of how early I left.”</p>
 
 
 <h2>How does walking speed and incline affect calories burned?</h2>
 
-<p>In order to calculate calories, we used an equation developed by the United States Army that estimates energy expenditure for healthy, military age adults at an incline. We modified the equation to show the caloric output during walking at a gradient as a function of speed, body mass, and gradient. </p>
+<p>In order to calculate calories, we used an equation developed in part by the United States Army Research Institute of Environmental Medicine that estimates energy expenditure for healthy, military-age adults at an incline. We modified the equation to show the caloric output while walking at a gradient as a function of speed, body mass and gradient. </p>
 
-<p>The equation shows that gradient, the elevation increase divided by the total distance traveled, has an effect on caloric intake. Notably, the equation shows that walking up the hill via Bruinwalk, which has an average gradient of 8.2%,  is approximately 25% more difficult than walking back via Charles E. Young, which has an average gradient of 5.5%.</p>
+<p>The equation shows that gradient, meaning the elevation increase divided by the total distance traveled, has an effect on caloric intake. Notably, the equation shows that walking up the hill via Bruin Walk, which has an average gradient of 8.2%, burns approximately 20% more calories per step than walking up Charles E. Young Drive North, which has an average gradient of 5.5%.</p>
 
-<p>So, depending on your route, walking through Bruinwalk might be both harder and longer.</p>
+<p>So, depending on your route, walking through Bruin Walk might be both harder and longer.</p>
 
-<p>The equation also shows that walking at a slower speed burns more calories per mile than walking at a moderate speed, likely because walking slowly takes longer and spends more time burning calories. So, if you are trying to uphold certain New Years Resolutions, go ahead and take your time. </p>
+<p>The equation also shows that walking at a slower speed around UCLA’s campus tends burns more calories per mile than walking at a moderate speed, likely because walking slowly takes longer, resulting in more time spent burning calories. So, if you are trying to uphold certain New Year’s resolutions, go ahead and take your time.</p>
 
 <h3>Calorie Burning Calculator</h3>
 
@@ -194,7 +194,7 @@ scripts:
 <br>
 <h3>Walking Route Intensity</h3>
 
-<p>Some students prefer a gradual incline while walking across campus while others would rather do the climb all at once with a few flights of stairs. The bubble chart below displays each walking route we collected data on and plots it according to total distance on the x-axis and total elevation gain on the y-axis. The size of each point corresponds to the number of stairs along the route.</p>
+<p>Some students prefer a gradual incline while walking across campus while others would rather make the climb all at once with a few flights of stairs. The bubble chart below displays each walking route we collected data on and plots it according to total distance on the x-axis and total elevation gain on the y-axis. The size of each point corresponds to the number of stairs along the route.</p>
 
 <div id='bubblewrap0'>
 <div id='bubblewrap1'>
