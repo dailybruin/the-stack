@@ -147,15 +147,15 @@ if (form)
         TOTAL_COST += commute_cost;
 
         output = `
-        Tuition:            \$${tuition_cost}
-        Housing:            \$${housing_cost}
-        Utilities:          \$${utilites_cost}
-        Food & Groceries:   \$${groceries_cost}
-        Flights/Travel:     \$${flight_cost}
-        Applications:       \$${application_cost}
-        Insurance:          \$${insurance_cost}
-        Commute:            \$${commute_cost}
-        TOTAL COST:         \$${TOTAL_COST}
+        Tuition:            \$${Math.round(tuition_cost)}
+        Housing:            \$${Math.round(housing_cost)}
+        Utilities:          \$${Math.round(utilites_cost)}
+        Food & Groceries:   \$${Math.round(groceries_cost)}
+        Flights/Travel:     \$${Math.round(flight_cost)}
+        Applications:       \$${Math.round(application_cost)}
+        Insurance:          \$${Math.round(insurance_cost)}
+        Commute:            \$${Math.round(commute_cost)}
+        TOTAL COST:         \$${Math.round(TOTAL_COST)}
         `
 
         log.innerText = output;
