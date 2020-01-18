@@ -43,16 +43,13 @@ UCLA is the #1 public university in the United States. However, this title does 
 ### Comparing Totals
 The total cost of attendance for students varies depending on whether those students are in-state, out-of-state, or international. While the price of living on the Hill or in Westwood is high no matter where your original residence, non-resident students are responsible for the cost of supplemental tuition and can incur higher travel costs, higher application costs, higher prices for standardized tests, and visa fees, all of which will be discussed in later sections.
 
-<div>
-
-<div>
+<div style="display:flex;">
+	<div style="margin-right: 20px;">
 	<canvas id="simpleTotals"></canvas>
-</div>
-
-<div>
+	</div>
+	<div>
 	<canvas id="totalChart"></canvas>
-</div>
-
+	</div>
 </div>
 
 <script>
@@ -85,23 +82,27 @@ The total cost of attendance for students varies depending on whether those stud
 					}]
 				},
 				options: {
+					maintainApectRatio: false,
 					title: {
 						display: true,
 						text: "Cost of Attendance",
-						fontSize: 25
+						fontSize: 20
 					},
 					legend: {
 						display: false
 					},
 					scales: {
-        		yAxes: [{
-            	gridLines: {
-                offsetGridLines: true
-            		}
-        		}]
-    			}
+						yAxes: [{
+						gridLines: {
+						offsetGridLines: true
+							}
+        				}]
+    				}
 				}
 			})
+			
+			simpleTotals.canvas.parentNode.style.height = '500px';
+			simpleTotals.canvas.parentNode.style.width = '550px';
 </script>
 
 <script>
@@ -145,10 +146,11 @@ let totalChart = document.getElementById('totalChart').getContext('2d');
 						hoverBorderColor: '#777',
 					},
 				options: {
+					maintainAspectRatio: false,
 					title: {
 						display: true,
-						text: "Cost Breakdown",
-						fontSize: 25
+						text: "Breakdown",
+						fontSize: 20
 					},
 					legend: {
 						display: false
@@ -178,6 +180,9 @@ let totalChart = document.getElementById('totalChart').getContext('2d');
 					}
 				}
 			})
+
+			totalChart.canvas.parentNode.style.height = '500px';
+			totalChart.canvas.parentNode.style.width = '500px';
 </script>
 
 
@@ -302,8 +307,7 @@ Tuition for out-of-state and international students is almost three times that o
 Although Chen eventually decided on UCLA in order to gain independence and for the opportunities found here, it wasn’t always a given. Chen asserted that if his in-state school and UCLA had been the same price, he would choose UCLA without any doubt, and the only reason he had to consider other schools was due to cost. For some students, however, the price can make attending UCLA quite prohibitive. UCLA thrives on its diversity, but many students who could bring important perspectives to our campus are driven away by the sticker price. 
 
 
-
-<div>
+<div style="position: relative; height: 340px; margin: 0px; padding: 0px">
 	<canvas id="tuitionChart"></canvas>
 </div>
 
@@ -340,7 +344,7 @@ Although Chen eventually decided on UCLA in order to gain independence and for t
 					title: {
 						display: true,
 						text: "Average Cost of Tuition",
-						fontSize: 25
+						fontSize: 20
 					},
 					legend: {
 						display: false
@@ -354,6 +358,7 @@ Although Chen eventually decided on UCLA in order to gain independence and for t
     			}
 				}
 			})
+			tuitionChart.canvas.parentNode.style.width = '650px'; 
   </script>          
 
 ### Cost of Living
@@ -365,8 +370,7 @@ Students who live off campus must additionally cover the costs of food, utilitie
 (Note: The transportation cost is the average cost for one adult to have a car in Los Angeles. It includes gas and insurance but not parking. The cost of insurance is the 2019-2020 cost of the UC Student Health Insurance Plan.)
 
 
-
-<div>
+<div style="position: relative; height: 340px; margin: 0px; padding: 0px">
 	<canvas id="costOfLivingChart"></canvas>
 </div>
 
@@ -414,7 +418,7 @@ Students who live off campus must additionally cover the costs of food, utilitie
 				title: {
 					display: true,
 					text: "Average Cost of Living",
-					fontSize: 25
+					fontSize: 20
 				},
 				legend: {
 					display: false
@@ -431,6 +435,8 @@ Students who live off campus must additionally cover the costs of food, utilitie
 			}
 		})
 
+		costOfLivingChart.canvas.parentNode.style.width = '650px';
+
 </script>
 
 ### Transportation
@@ -444,7 +450,7 @@ UCLA students come from all parts of the world. Since the distance from Los Ange
 Because of the cost of flying being so high, especially internationally, many out-of-state and international students can go months without seeing their families and have to track flight prices to determine when it would be cheapest to go home.
 
 
-<div>
+<div style="position: relative; height: 340px; margin: 0px; padding: 0px">
 	<canvas id="costOfFlyingChart"></canvas>
 </div>
 
@@ -475,7 +481,7 @@ let costOfFlyingChartDraw = new Chart(costOfFlyingChart, {
 				title: {
 					display: true,
 					text: "Average Cost of Flying",
-					fontSize: 25
+					fontSize: 20
 				},
 				legend: {
 					display: false
@@ -489,6 +495,9 @@ let costOfFlyingChartDraw = new Chart(costOfFlyingChart, {
 			}
 		}
 	})
+
+	costOfFlyingChartDraw.canvas.parentNode.style.width = '650px';
+
 </script>
 
 
@@ -497,7 +506,7 @@ let costOfFlyingChartDraw = new Chart(costOfFlyingChart, {
 There is also a cost associated with getting into UCLA – not only is there an application fee, but there are also mandatory standardized tests that come with their own fees. For international students, these tests are even more expensive since they come with additional fees for being administered outside of the United States. International students are also responsible for the cost of a visa and I-iSTART, an online resource to help them acclimate to living in the United States. An important note is that many international students come from China where there are no testing centers. This means that in addition to the international cost of these tests, Chinese students have to travel to nearby countries in order to take their exams. This can take many days and be incredibly expensive. Guo, for example, went to Taiwan twice and Singapore once just to take her exams. Even in countries where testing centers are available, they may not be present in your city, therefore warranting some domestic travel.
 
 
-<div>
+<div style="position: relative; height: 340px; margin: 0px; padding: 0px">
 	<canvas id="costOfApplyingChart"></canvas>
 </div>
 
@@ -549,7 +558,7 @@ There is also a cost associated with getting into UCLA – not only is there an 
 				title: {
 					display: true,
 					text: "Average Cost of Applying",
-					fontSize: 25
+					fontSize: 20
 				},
 				legend: {
 					display: false
@@ -564,8 +573,7 @@ There is also a cost associated with getting into UCLA – not only is there an 
 			// 	}
 			}
 	 	})
-	// costOfApplyingChart.canvas.responsive = true;
-	// costOfApplyingChart.canvas.parentNode.style.height = '128px';
+	costOfApplyingChart.canvas.parentNode.style.width = '650px';
 </script>
 
 ## Conclusion
