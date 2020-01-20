@@ -1,5 +1,5 @@
 const {
-  XYPlot,
+  FlexibleXYPlot,
   XAxis,
   YAxis,
   ChartLabel,
@@ -230,7 +230,7 @@ class Chart extends React.Component {
     }
 
     return (
-      <div>
+      <div style={{ paddingTop: "20px", paddingBottom: "20px" }}>
         <div id="dropdown" style={{ paddingBottom: "15px" }}>
           <DropdownButton id="dropdown-basic-button" title="Choose a Class">
             {dropdownClasses}
@@ -245,7 +245,7 @@ class Chart extends React.Component {
             justifyContent: "flex-start"
           }}
         >
-          <XYPlot width={graphSize} height={graphSize}>
+          <FlexibleXYPlot width={graphSize} height={graphSize}>
             <HorizontalGridLines />
             <VerticalGridLines />
             <XAxis tickFormat={v => DATES[v]} />
@@ -307,7 +307,7 @@ class Chart extends React.Component {
                 }}
               ></Crosshair>
             ) : null}
-          </XYPlot>
+          </FlexibleXYPlot>
           {classShown ? (
             <div style={{ display: "flex", flexDirection: "column" }}>
               {classInfoBox}

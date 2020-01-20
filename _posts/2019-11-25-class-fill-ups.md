@@ -22,10 +22,6 @@ scripts:
   - https://unpkg.com/react-bootstrap@next/dist/react-bootstrap.min.js
 ---
 
-#### YO what up
-
-<p class="text">you should be seeing this text</p>
-
 color code the lines and text on the info bar
 
 style the card for removing a class
@@ -36,9 +32,17 @@ have search bar for choosing class
 
 #### Data Collection
 
-the reason we sometimes have spikes in total students enrolled in a class is bc the web site refreshes its data while the scraper is scraping and so the scraper scrapes that class twice (once from before it updated and once after)
+talk about registrar scraper?
+
+### Data Cleaning
+
+cleaning data
 
 #### Which classes fill up the fastest?
+
+look at common intro classes/get poll from DB
+
+- include interviews from students/faculty?
 
 #### Conclusion
 
