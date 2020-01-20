@@ -14,7 +14,9 @@ const { Dropdown, DropdownButton, MenuItem, Image } = ReactBootstrap;
 
 //const { xbutton } = "./img/posts/class-fill-ups/xbutton.png";
 
-const graphSize = 600;
+const screenScale = 0.8;
+const graphSize =
+  screenScale * screen.width > 500 ? 500 : screenScale * screen.width;
 const max_classes = 2;
 
 const DATA = [
@@ -60,7 +62,8 @@ class Chart extends React.Component {
       showClass: new Array(CLASSES.length).fill(false),
       dropdownClasses: [],
       removeDropdownClasses: [],
-      numClassesShown: 0
+      numClassesShown: 0,
+      isMobile: graphSize == screenScale * screen.width ? true : false
     };
   }
 
@@ -187,6 +190,7 @@ class Chart extends React.Component {
     const showClass = this.state.showClass;
     const dropdownClasses = this.state.dropdownClasses;
     const removeDropdownClasses = this.state.removeDropdownClasses;
+    const isMobile = this.state.isMobile;
 
     let classInfoBox = [];
     let lines = [];
@@ -196,7 +200,6 @@ class Chart extends React.Component {
       if (showClass[i]) {
         let div = (
           <Line
-            color="green"
             strokeWidth={lineSize}
             data={DATA[i]}
             onNearestX={this._onNearestX}
@@ -211,7 +214,11 @@ class Chart extends React.Component {
       let padding = 50;
       let div = (
         <div style={{ paddingLeft: padding }}>
-          <h1>Day: {DATES[values[0].x]}</h1>
+          {isMobile ? (
+            <h4 style={{ width: "max-content" }}>Day: {DATES[values[0].x]}</h4>
+          ) : (
+            <h1 style={{ width: "max-content" }}>Day: {DATES[values[0].x]}</h1>
+          )}
         </div>
       );
       classInfoBox.push(div);
@@ -220,7 +227,11 @@ class Chart extends React.Component {
         if (showClass[i]) {
           let div = (
             <div style={{ paddingLeft: padding }}>
-              <h1>{CLASSES[i]}</h1>
+              {isMobile ? (
+                <h4 style={{ width: "max-content" }}>{CLASSES[i]}</h4>
+              ) : (
+                <h1 style={{ width: "max-content" }}>{CLASSES[i]}</h1>
+              )}
               <p>Percent Full: {values[i].y}%</p>
             </div>
           );
@@ -242,10 +253,12 @@ class Chart extends React.Component {
             paddingTop: "30px",
             paddingLeft: "30px",
             display: "flex",
-            justifyContent: "flex-start"
+            justifyContent: "flex-start",
+            width: graphSize,
+            height: graphSize
           }}
         >
-          <FlexibleXYPlot width={graphSize} height={graphSize}>
+          <FlexibleXYPlot>
             <HorizontalGridLines />
             <VerticalGridLines />
             <XAxis tickFormat={v => DATES[v]} />
@@ -255,7 +268,7 @@ class Chart extends React.Component {
               className="alt-x-label"
               includeMargin={false}
               xPercent={0.018}
-              yPercent={1.08}
+              yPercent={1.1}
               style={{
                 fontWeight: "bold"
               }}
@@ -264,8 +277,8 @@ class Chart extends React.Component {
               text="Percentage Full"
               className="alt-y-label"
               includeMargin={false}
-              xPercent={0.18}
-              yPercent={0.06}
+              xPercent={0.22}
+              yPercent={0.08}
               style={{
                 textAnchor: "end",
                 fontWeight: "bold"
@@ -309,7 +322,13 @@ class Chart extends React.Component {
             ) : null}
           </FlexibleXYPlot>
           {classShown ? (
-            <div style={{ display: "flex", flexDirection: "column" }}>
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                flexWrap: "nowrap"
+              }}
+            >
               {classInfoBox}
             </div>
           ) : null}
