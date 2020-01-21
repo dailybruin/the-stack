@@ -235,6 +235,27 @@ michael_huang:
   name: Michael Huang
   title: Stack Developer
   bio: Michael is lit.
+radhika_ahuja:
+  name: Radhika Ahuja
+  title: Stack Developer
+  bio: Radhika is a fourth-year math of computation student. Outside of school, she enjoys writing, dance, cooking, and other things creative. 
+  mug: yes
+  email: rahuja@media.ucla.edu
+  github: ahujaradhika
+annie_zhang:
+  name: Annie Zhang
+  title: Stack Developer
+  bio: Annie is a third year math major who really enjoys heist novels, murder mystery TV shows, noodles, and setting unrealistic goals.
+  mug: yes
+  email: azhang2@media.ucla.edu
+  github: aczhang777
+madeline_blasingame:
+  name: Madeline Blasingame
+  title: Stack Developer
+  mug: yes
+  bio: Maddy is a first-year stats major whose only goal is to be TikTok famous. 
+  email: mblasingame@media.ucla.edu
+  github: meblasingame
 laurel_woods:
   name: Laurel Woods
   title: Stack Developer
@@ -263,6 +284,3 @@ justin_chai:
   bio: Justin is a first-year linguisitics and computer science major.
   mug: Yes
   email: jchai@media.ucla.edu
-
-
-
