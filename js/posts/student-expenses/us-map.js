@@ -33,10 +33,10 @@ function style(feature) {
 function highlight(e) {
     var layer = e.target;
 
-    layer.setStyle({
-        weight: 3,
-        color: '#ffd32a',
-    });
+    // layer.setStyle({
+    //     weight: 3,
+    //     color: '#ffd32a',
+    // });
 
     if (!L.Browser.ie && !L.Browser.opera && !L.Browser.edge) {
         layer.bringToFront();
@@ -58,7 +58,10 @@ function onEachFeature(feature, layer) {
     layer.on({
         mouseover: highlight,
         mouseout: reset,
-        click: zoomToCountry
+        //click: zoomToCountry
+    });
+    layer.on({
+        click: highlight,
     });
 }
 
@@ -103,10 +106,10 @@ displayInfo.addTo(mymap);
 function highlight(e) {
     var layer = e.target;
 
-    layer.setStyle({
-        weight: 3,
-        color: '#ffd32a'
-    });
+    // layer.setStyle({
+    //     weight: 3,
+    //     color: '#ffd32a'
+    // });
 
     if (!L.Browser.ie && !L.Browser.opera && !L.Browser.edge) {
         layer.bringToFront();

@@ -33,10 +33,10 @@ function style(feature) {
 function ghighlight(g) {
     var glayer = g.target;
 
-    glayer.setStyle({
-        weight: 3,
-        color: '#ffd32a',
-    });
+    // glayer.setStyle({
+    //     weight: 3,
+    //     color: '#ffd32a',
+    // });
 
     if (!L.Browser.ie && !L.Browser.opera && !L.Browser.edge) {
         glayer.bringToFront();
@@ -58,7 +58,10 @@ function gOnEachFeature(feature, glayer) {
     glayer.on({
         mouseover: ghighlight,
         mouseout: greset,
-        click: zoomToCountry
+        //click: zoomToCountry
+    });
+    glayer.on({
+        click: ghighlight,
     });
 }
 
@@ -103,10 +106,10 @@ gdisplayInfo.addTo(globalmap);
 function ghighlight(g) {
     var glayer = g.target;
 
-    glayer.setStyle({
-        weight: 3,
-        color: '#ffd32a'
-    });
+    // glayer.setStyle({
+    //     weight: 3,
+    //     color: '#ffd32a'
+    // });
 
     if (!L.Browser.ie && !L.Browser.opera && !L.Browser.edge) {
         glayer.bringToFront();
