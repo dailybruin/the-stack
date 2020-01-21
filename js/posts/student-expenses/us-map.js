@@ -62,6 +62,10 @@ function onEachFeature(feature, layer) {
     });
 }
 
+function numberWithCommas(x) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
+
 geojson = L.geoJson(statesData, {
     style: style,
     onEachFeature: onEachFeature
@@ -88,7 +92,7 @@ displayInfo.update = function (props) {
                                         text-align: left; \
                                         box-shadow: 0 0 15px rgba(255,255,255,0.2);"> \
         <h2>Total Cost</h2>' +  (props ?
-        '<span style="font-size: 14px;"> <b>' +  'Total Cost (in USD): $' + '</b>' + props.density + '<br />'
+        '<span style="font-size: 14px;"> <b>' +  'Total Cost (in USD): $' + '</b>' + numberWithCommas(props.density) + '<br />'
         + '<b>' + 'State: ' + '</b>' + props.name + '<br /> </span> </div>'
         : 'Hover over a state');
 };

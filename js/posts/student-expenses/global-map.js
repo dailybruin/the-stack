@@ -62,6 +62,10 @@ function gOnEachFeature(feature, glayer) {
     });
 }
 
+function gnumberWithCommas(x) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
+
 ggeojson = L.geoJson(countriesData, {
     style: style,
     onEachFeature: gOnEachFeature
@@ -88,7 +92,7 @@ gdisplayInfo.update = function (props) {
                                         text-align: left; \
                                         box-shadow: 0 0 15px rgba(255,255,255,0.2);"> \
         <h2>Total Cost</h2>' +  (props ?
-        '<span style="font-size: 14px;"> <b>' +  'Total Cost (in USD): $' + '</b>' + props.DENSITY + '<br />'
+        '<span style="font-size: 14px;"> <b>' +  'Total Cost (in USD): $' + '</b>' + gnumberWithCommas(props.DENSITY) + '<br />'
         + '<b>' + 'Country: ' + '</b>' + props.ADMIN + '<br /> </span> </div>'
         : 'Hover over a country');
 };

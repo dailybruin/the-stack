@@ -96,6 +96,10 @@ function commute(answer) {
     return 0;
 }
 
+function numberWithCommas(x) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
+
 var form = document.querySelector("form");
 var log = document.querySelector("#log");
 const button = document.querySelector('button');
@@ -147,15 +151,17 @@ if (form)
         TOTAL_COST += commute_cost;
 
         output = `
-        Tuition:            \$${Math.round(tuition_cost)}
-        Housing:            \$${Math.round(housing_cost)}
-        Utilities:          \$${Math.round(utilites_cost)}
-        Food & Groceries:   \$${Math.round(groceries_cost)}
-        Flights/Travel:     \$${Math.round(flight_cost)}
-        Applications:       \$${Math.round(application_cost)}
-        Insurance:          \$${Math.round(insurance_cost)}
-        Commute:            \$${Math.round(commute_cost)}
-        TOTAL COST:         \$${Math.round(TOTAL_COST)}
+        BREAKDOWN OF COST OF ATTENDANCE*
+        Tuition:            \$${numberWithCommas(Math.round(tuition_cost))}
+        Housing:            \$${numberWithCommas(Math.round(housing_cost))}
+        Utilities:          \$${numberWithCommas(Math.round(utilites_cost))}
+        Food & Groceries:   \$${numberWithCommas(Math.round(groceries_cost))}
+        Cost of Travel:     \$${numberWithCommas(Math.round(flight_cost))}
+        Applications:       \$${numberWithCommas(Math.round(application_cost))}
+        Insurance:          \$${numberWithCommas(Math.round(insurance_cost))}
+        Commute:            \$${numberWithCommas(Math.round(commute_cost))}
+        TOTAL COST:         \$${numberWithCommas(Math.round(TOTAL_COST))}
+        *(numbers are based on averages, evaluated for each background)
         `
 
         log.innerText = output;

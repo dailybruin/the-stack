@@ -9,8 +9,8 @@ key_takeaways:
   - College is, on average, two times more expensive for out-of-state and international students as it is for in-state students.
   - Additionally, out-of-state students bear higher travel costs and international students also bear costs unique to them like higher standardized testing fees and visa costs
 featured_image:
-  url: student-expenses/flight_global_distribution.png
-og_image: student-expenses/flight_global_distribution.png
+  url: student-expenses/us_price_distribution.png
+og_image: student-expenses/us_price_distribution.png
 stylesheets:
   - https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.css 
   - https://fonts.googleapis.com/css?family=Lato&display=swap 
@@ -188,7 +188,7 @@ let totalChart = document.getElementById('totalChart').getContext('2d');
 
 ## Geographic Distribution
 
-The maps below show the distribution of the cost of attending college across the United States and worldwide, for the most represented states and countries. Outside of California, states with higher populations (or large cities) as well as the East coast are well represented and most international students come from Asia.
+The maps below show the distribution of the cost of attending UCLA across the United States and worldwide, for the most represented states and countries. Outside of California, states with higher populations (or large cities) as well as the East coast are well represented and most international students come from Asia.
 
 ### US Cost of Attendance Distribution
 
