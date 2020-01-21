@@ -503,7 +503,7 @@ let costOfFlyingChartDraw = new Chart(costOfFlyingChart, {
 
 ### Cost of Applying
 
-There is also a cost associated with getting into UCLA – not only is there an application fee, but there are also mandatory standardized tests that come with their own fees. For international students, these tests are even more expensive since they come with additional fees for being administered outside of the United States. International students are also responsible for the cost of a visa and I-START, an online resource to help them acclimate to living in the United States. An important note is that many international students come from China where there are no testing centers. This means that in addition to the international cost of these tests, Chinese students have to travel to nearby countries in order to take their exams. This can take many days and be incredibly expensive. Guo, for example, went to Taiwan twice and Singapore once just to take her exams. Even in countries where testing centers are available, they may not be present in your city, therefore warranting some domestic travel.
+There is also a cost associated with getting into UCLA – not only is there an application fee, but there are also mandatory standardized tests that come with their own fees. For international students, these tests are even more expensive since they come with additional fees for being administered outside of the United States. International students are also responsible for the cost of a visa and iSTART, an online resource to help them acclimate to living in the United States. An important note is that many international students come from China where there are no testing centers. This means that in addition to the international cost of these tests, Chinese students have to travel to nearby countries in order to take their exams. This can take many days and be incredibly expensive. Guo, for example, went to Taiwan twice and Singapore once just to take her exams. Even in countries where testing centers are available, they may not be present in your city, therefore warranting some domestic travel.
 
 
 <div style="position: relative; height: 340px; margin: 0px; padding: 0px">
@@ -542,7 +542,7 @@ There is also a cost associated with getting into UCLA – not only is there an 
 						backgroundColor: '#f5b209',
 					},
 					{
-						label: 'I-START',
+						label: 'iSTART',
 						data: [0, 0, 59],
 						backgroundColor: '#f5b209',
 					}],
