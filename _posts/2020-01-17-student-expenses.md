@@ -38,7 +38,7 @@ scripts:
 
 
 ## Introduction
-UCLA is the #1 public university in the United States. However, this title does not come at an insignificant price to students and their families. There are certain costs that every student can expect to pay like tuition or textbook fees. But, there are many other fees students don’t consider when making their college decisions, such as the price of living in the second-largest city in the nation. The price of UCLA can also vary dramatically based on where you come from, whether it be down the block or across the ocean. Using data from UCLA and outside sources, we've computed the average annual cost of attendance for in-state, out-of-state, and international students, to give a sense of the true price of college. All sources have been linked.
+UCLA is the #1 public university in the United States. However, this title does not come at an insignificant price to students and their families. There are certain costs that every student can expect to pay like tuition or textbook fees. But, there are many other fees students don’t consider when making their college decisions, such as the price of living in the second-largest city in the nation. The price of UCLA can also vary dramatically based on where you come from, whether it be down the block or across the ocean. Using data from UCLA and outside sources, we've computed the average annual cost of attendance for in-state, out-of-state, and international students, to give a sense of the true price of college. 
 
 ### Comparing Totals
 The total cost of attendance for students varies depending on whether those students are in-state, out-of-state, or international. While the price of living on the Hill or in Westwood is high no matter where your original residence, non-resident students are responsible for the cost of supplemental tuition and can incur higher travel costs, higher application costs, higher prices for standardized tests, and visa fees, all of which will be discussed in later sections.
@@ -503,7 +503,7 @@ let costOfFlyingChartDraw = new Chart(costOfFlyingChart, {
 
 ### Cost of Applying
 
-There is also a cost associated with getting into UCLA – not only is there an application fee, but there are also mandatory standardized tests that come with their own fees. For international students, these tests are even more expensive since they come with additional fees for being administered outside of the United States. International students are also responsible for the cost of a visa and I-iSTART, an online resource to help them acclimate to living in the United States. An important note is that many international students come from China where there are no testing centers. This means that in addition to the international cost of these tests, Chinese students have to travel to nearby countries in order to take their exams. This can take many days and be incredibly expensive. Guo, for example, went to Taiwan twice and Singapore once just to take her exams. Even in countries where testing centers are available, they may not be present in your city, therefore warranting some domestic travel.
+There is also a cost associated with getting into UCLA – not only is there an application fee, but there are also mandatory standardized tests that come with their own fees. For international students, these tests are even more expensive since they come with additional fees for being administered outside of the United States. International students are also responsible for the cost of a visa and I-START, an online resource to help them acclimate to living in the United States. An important note is that many international students come from China where there are no testing centers. This means that in addition to the international cost of these tests, Chinese students have to travel to nearby countries in order to take their exams. This can take many days and be incredibly expensive. Guo, for example, went to Taiwan twice and Singapore once just to take her exams. Even in countries where testing centers are available, they may not be present in your city, therefore warranting some domestic travel.
 
 
 <div style="position: relative; height: 340px; margin: 0px; padding: 0px">
@@ -542,7 +542,7 @@ There is also a cost associated with getting into UCLA – not only is there an 
 						backgroundColor: '#f5b209',
 					},
 					{
-						label: 'I-Start',
+						label: 'I-START',
 						data: [0, 0, 59],
 						backgroundColor: '#f5b209',
 					}],
