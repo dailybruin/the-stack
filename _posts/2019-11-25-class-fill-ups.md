@@ -26,15 +26,13 @@ color code the lines and text on the info bar
 
 style the card for removing a class
 
-have search bar for choosing class
-
 <div id="chartMD"></div>
 
 #### Data Collection
 
 talk about registrar scraper?
 
-### Data Cleaning
+#### Data Cleaning
 
 cleaning data
 
