@@ -241,16 +241,20 @@ class Chart extends React.Component {
             roundedCircle
           />
         );
-
+        let colorNum = 0;
         for (let i = 0; i < CLASSES.length; i++) {
           if (showClass[i]) {
             let div = (
               <div
                 style={{
-                  width: 120,
-                  border: "1px solid brown",
-                  padding: 5,
-                  marginBottom: 10
+                  minWidth: 120,
+                  borderRadius: "10px",
+                  border: "2px solid",
+                  borderColor: colors[colorNum],
+                  padding: 10,
+                  marginBottom: 10,
+                  display: "inline",
+                  marginRight: 50
                 }}
               >
                 {CLASSES[i]}
@@ -263,6 +267,7 @@ class Chart extends React.Component {
               </div>
             );
             removeDropdownClasses.push(div);
+            colorNum++;
           }
         }
 
@@ -289,20 +294,25 @@ class Chart extends React.Component {
         roundedCircle
       />
     );
+    let colorNum = 0;
     for (let i = 0; i < CLASSES.length; i++) {
       if (showClass[i]) {
         let div = (
           <div
             style={{
-              width: 120,
-              border: "1px solid brown",
-              padding: 5,
-              marginBottom: 10
+              minWidth: 120,
+              borderRadius: "10px",
+              border: "2px solid",
+              borderColor: colors[colorNum],
+              padding: 10,
+              marginBottom: 10,
+              display: "inline",
+              marginRight: 50
             }}
           >
             {CLASSES[i]}
             <a
-              style={{ paddingLeft: 10 }}
+              style={{ paddingLeft: 10, cursor: "pointer" }}
               onClick={this._removeClass.bind(null, i)}
             >
               {xbutton}
@@ -310,6 +320,7 @@ class Chart extends React.Component {
           </div>
         );
         removeDropdownClasses.push(div);
+        colorNum++;
       }
     }
     this.setState({
