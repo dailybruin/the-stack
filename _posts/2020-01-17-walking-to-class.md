@@ -1,6 +1,6 @@
 ---
 title: Walking to Class
-teaser: Find which routes to class are the fastest, burn the most calories or have the least amount of stairs.
+teaser: Running late to class? Trying to avoid endless stairs after a tough workout? Find out which walking routes from the hill to lecture halls and libraries on campus are the fastest, burn the most calories or have the least amount of stairs. 
 authors:
     - laurel_woods
     - bernard_mendez
