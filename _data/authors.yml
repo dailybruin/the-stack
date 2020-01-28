@@ -241,3 +241,52 @@ michael_huang:
   name: Michael Huang
   title: Stack Developer
   bio: Michael is lit.
+radhika_ahuja:
+  name: Radhika Ahuja
+  title: Stack Developer
+  bio: Radhika is a fourth-year math of computation student. Outside of school, she enjoys writing, dance, cooking, and other things creative. 
+  mug: yes
+  email: rahuja@media.ucla.edu
+  github: ahujaradhika
+annie_zhang:
+  name: Annie Zhang
+  title: Stack Developer
+  bio: Annie is a third year math major who really enjoys heist novels, murder mystery TV shows, noodles, and setting unrealistic goals.
+  mug: yes
+  email: azhang2@media.ucla.edu
+  github: aczhang777
+madeline_blasingame:
+  name: Madeline Blasingame
+  title: Stack Developer
+  mug: yes
+  bio: Maddy is a first-year stats major whose only goal is to be TikTok famous. 
+  email: mblasingame@media.ucla.edu
+  github: meblasingame
+laurel_woods:
+  name: Laurel Woods
+  title: Stack Developer
+  bio: Laurel is a second-year student who's somewhere in between computer science and cognitive science. She loves anything outdoorsy, especially if her dog is there.
+  mug: Yes
+  email: lwoods@media.ucla.edu
+  github: laurelrwoods
+bernard_mendez:
+  name: Bernard Mendez
+  title: Stack Developer/News Reporter
+  bio: Bernard is a second-year math student. Bernard also <a href='https://dailybruin.com/author/bernard-mendez/'>writes for the Daily Bruin's science and health section</a>. In his free time, Bernard enjoys wearing sweaters.
+  mug: Yes
+  email: bmendez@media.ucla.edu
+  github: bernardmendez
+  website: http://bernardmendez.com
+charlotte_huang:
+  name: Charlotte Huang
+  title: Stack Developer
+  bio: Charlotte is a junior, majoring in Applied Math and Cognitive Science. She always wants to spend a day eating nothing but dark chocolate and drinking lattes with oat milk.
+  mug: Yes
+  email: chuang@media.ucla.edu
+  github: charlotte0408
+justin_chai:
+  name: Justin Chai
+  title: Stack Developer
+  bio: Justin is a first-year linguisitics and computer science major.
+  mug: Yes
+  email: jchai@media.ucla.edu
