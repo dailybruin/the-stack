@@ -1,0 +1,46 @@
+* {
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+  box-sizing: border-box;         /* Opera/IE 8+ */
+}
+.c3-tooltip td.value {
+	text-align: center;
+}
+.toggleButton.active, .active{
+  color:  white;
+  background-color:  #2b90d9;
+}
+
+.toggleButton:hover {
+	cursor: pointer
+}
+.toggleButton{
+   overflow: hidden;
+
+  margin: 7px;
+  padding: 12px 12px;
+
+  text-align: center;
+
+  background-color:  #FFF;
+  color: #2b90d9;
+  border: 0 none;
+  border-radius: 10px;
+
+
+  -webkit-appearance: none;
+  -moz-appearance:    none;
+  appearance:         none;
+
+  justify-content: center;
+  align-items: center;
+
+  font-size: 90%; */
+
+
+}
+div.c3-tooltip-container {
+	max-width: 400px;
+	text-align: center;
+
+}
