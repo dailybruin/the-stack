@@ -3081,12 +3081,14 @@ const CustomMenu = React.forwardRef(
           onChange={e => setValue(e.target.value)}
           value={value}
         />
-        <ul className="list-unstyled">
-          {React.Children.toArray(children).filter(
-            child =>
-              !value || child.props.children.toLowerCase().startsWith(value)
-          )}
-        </ul>
+        <div style={{ overflowY: "scroll", height: "200px" }}>
+          <ul className="list-unstyled">
+            {React.Children.toArray(children).filter(
+              child =>
+                !value || child.props.children.toLowerCase().startsWith(value)
+            )}
+          </ul>
+        </div>
       </div>
     );
   }
@@ -3150,6 +3152,9 @@ class Chart extends React.Component {
     let numClassesShown = this.state.numClassesShown;
     let showClass = this.state.showClass;
     let removeDropdownClasses = [];
+    let isMobile = this.state.isMobile;
+
+    let displayMobile = isMobile ? "" : "inline";
     if (numClassesShown < max_classes) {
       if (showClass[class_num] == false) {
         showClass[class_num] = true;
@@ -3172,7 +3177,7 @@ class Chart extends React.Component {
                   borderColor: colors[colorNum],
                   padding: 10,
                   marginBottom: 10,
-                  display: "inline",
+                  display: displayMobile,
                   marginRight: 50
                 }}
               >
@@ -3203,10 +3208,12 @@ class Chart extends React.Component {
     let numClassesShown = this.state.numClassesShown;
     let showClass = this.state.showClass;
     let removeDropdownClasses = [];
+    let isMobile = this.state.isMobile;
 
     showClass[class_num] = false;
     numClassesShown -= 1;
 
+    let displayMobile = isMobile ? "" : "inline";
     let xbutton = (
       <Image
         src="../../../../img/posts/class-fill-ups/xbutton.png"
@@ -3225,7 +3232,7 @@ class Chart extends React.Component {
               borderColor: colors[colorNum],
               padding: 10,
               marginBottom: 10,
-              display: "inline",
+              display: displayMobile,
               marginRight: 50
             }}
           >
