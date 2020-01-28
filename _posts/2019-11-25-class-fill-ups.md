@@ -4,7 +4,7 @@ teaser: learn how quickly your classes fill up
 authors:
   - andrew_kan
   - keith_atienza
-  # - sydney_kovach
+  - sydney_kovach
 key_takeaways:
   - classes fill up
 featured_image:
@@ -21,10 +21,6 @@ scripts:
   - https://unpkg.com/react-vis/dist/dist.min.js
   - https://unpkg.com/react-bootstrap@next/dist/react-bootstrap.min.js
 ---
-
-color code the lines and text on the info bar
-
-style the card for removing a class
 
 <div id="chartMD"></div>
 
