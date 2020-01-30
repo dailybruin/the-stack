@@ -235,3 +235,21 @@ michael_huang:
   name: Michael Huang
   title: Stack Developer
   bio: Michael is lit.
+jc_rios:
+  name: Juan C. Rios
+  title: Stack Developer
+  email: jrios@media.ucla.edu
+  bio: Rios is a third-year Computer Engineering student who enjoys programming and music.
+  mug: yes
+kelly_chen:
+  name: Kelly Chen
+  title: Stack Developer
+  email: kchen2@media.ucla.edu
+  bio: Chen is a second-year statistics student. She can usually be found dancing, even when she's not supposed to, and is always looking for her next adventure.
+  mug: yes
+keri_chen:
+  name: Keri Chen
+  title: Stack Developer
+  email: kchen1@media.ucla.edu
+  bio: Chen is a first-year sociology student. When not writing essays and articles, she enjoys watching Vox videos and takes pride in being able to pack for two weeks in a single carry-on.
+  mug: yes
