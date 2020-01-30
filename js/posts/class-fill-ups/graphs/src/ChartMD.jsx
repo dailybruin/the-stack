@@ -28,12 +28,17 @@ const graphSize =
 
 /* max classes that can be shown on the graph and the colors of those classes' lines */
 const max_classes = 3;
-const colors = ["#2e59a8", "#73a2c6", "#8abccf", "#ffffe0"];
+const colors = ["#2e59a8", "#73a2c6", "#0099CC"];
 
+/* array of class names */
 let CLASSES = [];
+/* array of % of class full for every time (json objects) */
 let DATA = [];
-let SEATS_LEFT = [];
+/* array of # of class full for every time (json objects) */
+let SEATS_FILLED = [];
+/* dates scraped */
 let DATES = [];
+/* array of total seats for ecah class */
 let TOTAL_SEATS = [];
 /* index of the time of second pass */
 const SECOND_PASS_DATE = 150;
@@ -85,6 +90,7 @@ class Chart extends React.Component {
       numClassesShown: 0,
       isMobile: graphSize == screenScale * screen.width ? true : false,
       graphSize: graphSize,
+      //THIS LOADING IS HARDCODED BY # OF FILES WE Load
       loading: 5
     };
   }
@@ -107,16 +113,16 @@ class Chart extends React.Component {
       })
       .then(text => {
         for (let i = 0; i < text.length; i++) {
-          for (let j = 0; j < text[i].length ;j++) {
+          for (let j = 0; j < text[i].length; j++) {
             text[i][j].y *= 100;
           }
         }
         text = JSON.stringify(text, function(key, value) {
-            // limit precision of floats
-            if (typeof value === 'number') {
-                return parseFloat(value.toFixed(4));
-            }
-            return value;
+          // limit precision of floats
+          if (typeof value === "number") {
+            return parseFloat(value.toFixed(4));
+          }
+          return value;
         });
         text = JSON.parse(text);
         DATA = text;
@@ -136,12 +142,12 @@ class Chart extends React.Component {
   }
 
   fetchSeats() {
-    fetch("../../../../datasets/class-fill-ups/enroll_data.json")
+    fetch("../../../../datasets/class-fill-ups/seats_filled_data.json")
       .then(res => {
         return res.json();
       })
       .then(text => {
-        SEATS_LEFT = text;
+        SEATS_FILLED = text;
         if (this._isMounted) this.dataLoaded();
       });
   }
@@ -214,7 +220,7 @@ class Chart extends React.Component {
   _onNearestX = (value, { index }) => {
     this.setState({ classOnGraph: DATA.map(d => d[index]) });
     //THIS 270 IS HARDCODED IDK WHY WE NEED TO SUBTRACT BY 270
-    this.setState({ mouseY: window.event.clientY-270 });
+    this.setState({ mouseY: window.event.clientY - 270 });
   };
 
   _showClass = class_num => {
@@ -365,9 +371,7 @@ class Chart extends React.Component {
       let div = (
         <div style={{ paddingLeft: padding }}>
           {isMobile ? (
-            <h4 style={{ width: "max-content"}}>
-              {DATES[classOnGraph[0].x]}
-            </h4>
+            <h4 style={{ width: "max-content" }}>{DATES[classOnGraph[0].x]}</h4>
           ) : (
             <h2 style={{ width: "max-content" }}>{DATES[classOnGraph[0].x]}</h2>
           )}
@@ -393,7 +397,7 @@ class Chart extends React.Component {
                 Percent Full: {classOnGraph[i].y}%
               </p>
               <p style={{ marginBottom: "0px" }}>
-                Seats Left: {SEATS_LEFT[i][classOnGraph[0].x].y}
+                Seats Filled: {SEATS_FILLED[i][classOnGraph[0].x].y}
               </p>
               <p>Total Seats: {TOTAL_SEATS[i]}</p>
             </div>
