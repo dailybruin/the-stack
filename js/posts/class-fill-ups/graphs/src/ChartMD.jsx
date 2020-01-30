@@ -41,7 +41,8 @@ let DATES = [];
 /* array of total seats for ecah class */
 let TOTAL_SEATS = [];
 /* index of the time of second pass */
-const SECOND_PASS_DATE = 214;
+const SECOND_PASS_DATE = 166;
+const LAST_DATE = 299;
 
 /* custom menu component to allow searching for classes */
 const CustomMenu = React.forwardRef(
@@ -124,15 +125,10 @@ class Chart extends React.Component {
         return res.json();
       })
       .then(text => {
-        for (let i = 0; i < text.length; i++) {
-          for (let j = 0; j < text[i].length; j++) {
-            text[i][j].y *= 100;
-          }
-        }
         text = JSON.stringify(text, function(key, value) {
           // limit precision of floats
           if (typeof value === "number") {
-            return parseFloat(value.toFixed(4));
+            return parseFloat(value.toFixed(2));
           }
           return value;
         });
@@ -463,7 +459,7 @@ class Chart extends React.Component {
             <YAxis />
             {isMobile ? null : (
               <ChartLabel
-                text="Days Passed"
+                text="Day"
                 className="alt-x-label"
                 includeMargin={false}
                 xPercent={0.018}
@@ -519,7 +515,7 @@ class Chart extends React.Component {
               strokeWidth="6px"
               data={[
                 { x: 0, y: 100 },
-                { x: 299, y: 100 }
+                { x: LAST_DATE, y: 100 }
               ]}
             />
             {/* Display crosshair if a class has been selected */}
