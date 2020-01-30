@@ -20,12 +20,7 @@ stylesheets:
 scripts:
   - https://code.jquery.com/jquery-3.4.1.min.js
   - //d3js.org/d3.v3.min.js
-  #- https://cdn.plot.ly/plotly-latest.min.js
-#  - https://maps.googleapis.com/maps/api/js?key=AIzaSyAtIR0I3rLXvB4YTJ3L_G2iq4koHzmJgp8&libraries=visualization
-#  - /datasets/ticket-data/january/data.js
- # - https://maps.googleapis.com/maps/api/js?key=AIzaSyAtIR0I3rLXvB4YTJ3L_G2iq4koHzmJgp8&libraries=visualization
-  #- /js/posts/ticket-data/index.js
-  #- https://maps.googleapis.com/maps/api/js?key=AIzaSyAtIR0I3rLXvB4YTJ3L_G2iq4koHzmJgp8&libraries=visualization
+
 
   
 
@@ -33,18 +28,14 @@ scripts:
 ---
 <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 #### Teaser
-<p class="text">The top ticketing citations are for expired meters, prohibited parking/street cleaning, and violating parking time limits. These three violations result in fines of $63, $73, and $58, respectively, with the average parking ticket in the Westwood area costing $64.38 and the median at $63. However, the fines could increase to as much as $171 when factoring in late fees or on a second offense, making parking a little riskier for those without permits.</p>
+<p class="text" style="margin:20px;">The top ticketing citations are for expired meters, prohibited parking/street cleaning, and violating parking time limits. These three violations result in fines of $63, $73, and $58, respectively, with the average parking ticket in the Westwood area costing $64.38 and the median at $63. However, the fines could increase to as much as $171 when factoring in late fees or on a second offense, making parking a little riskier for those without permits.</p>
 
-<p class="text">
-  Walking around campus, one can spot the iconic trio of landfill, recycling, and compost bins nearly everywhere. Recycling and composting are more eco-friendly than throwing everything into landfill, but do students actually use these bins? The Daily Bruin investigates how students sort their trash into these bins on campus and the Hill.
+<br/>
+<p class="text" style="margin:20px;">
+Use the dropdown menu to see the parking distribution for each month in 2018!
 </p>
-
-
-
 <br/>
 
-
-<br/>
 
 <div class="month-select" style="width:200px;">
 <select id='month' onchange='changemonth()'>
@@ -65,44 +56,34 @@ scripts:
 
 
 <div id="map"></div>
-
-
-<script src="/js/posts/ticket-data/index.js"></script>
-
-
-
-
-
-
-
-<script async defer
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAtIR0I3rLXvB4YTJ3L_G2iq4koHzmJgp8&libraries=visualization&callback=initMap">
-</script>
-
-
-
-<br>
-<br>
-<p class="text">
+<br/>
+<p class="text" style="margin:50px;">
 When Should You Move Your Car?
 
 The frequency of parking tickets peaks during January, August, and June, which coincides roughly with move-in and move-out periods.
 </p>
 
-<br>
-<div id="plotly-div"></div>
+<script src="/js/posts/ticket-data/index.js"></script>
+
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAtIR0I3rLXvB4YTJ3L_G2iq4koHzmJgp8&libraries=visualization&callback=initMap">
+</script>
 
 <br>
-<p class="text">
-As seen in this graph, the number of tickets given peaks at the hour of 8AM and spikes again during the hours of 11AM and 12PM. The high number of tickets at 8AM is likely due to street cleaning regulations on Thursdays and Fridays, which likely contributes to the fact that approximately 50% of parking tickets in 2018 were given on Thursdays and Fridays, with ⅓ of Thursday tickets being issued at 8AM.
+
+<br>
+<div  id="plotly-div"></div>
+
+
+<p class="text" style="margin: 50px;">
+As seen in the graph below, the number of tickets given peaks at the hour of 8AM and spikes again during the hours of 11AM and 12PM. The high number of tickets at 8AM is likely due to street cleaning regulations on Thursdays and Fridays (illustrated above), which likely contributes to the fact that approximately 50% of parking tickets in 2018 were given on Thursdays and Fridays, with ⅓ of Thursday tickets being issued at 8AM.
 </p>
-
 
 
 <iframe width="90%" height="500" frameborder="0" scrolling="no" src="//plot.ly/~jeanettelin8/15.embed?showlink=false"></iframe>
 <br>
 #### Contextualizing to the Rest of LA
-<p>
+<p class="text" style="margin:20px;">
 Additionally, there has been controversy over some parking tickets doled out to UCLA students living in the Westwood area beginning in 2015, after university police increased its distribution of citations for cars left in spaces between the street and sidewalk in Westwood Indeed, “PARKED ON SIDEWALK” is one of the top 10 parking violation reasons found in the parking ticket data for the Westwood area.
  
 Generalizing to the rest of LA county, the average ticket is $68. Some ($17.50 for meter violations, and $12.50 for other violations) goes to state and county fees and the remainder ($45.50) goes to the city's general fund to pay for essential municipal services, including police and fire. There are additional distributions for fix-it citations and disabled parking violations.
