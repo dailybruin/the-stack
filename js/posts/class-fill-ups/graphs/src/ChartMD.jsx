@@ -41,7 +41,7 @@ let DATES = [];
 /* array of total seats for ecah class */
 let TOTAL_SEATS = [];
 /* index of the time of second pass */
-const SECOND_PASS_DATE = 150;
+const SECOND_PASS_DATE = 214;
 
 /* custom menu component to allow searching for classes */
 const CustomMenu = React.forwardRef(
@@ -75,6 +75,17 @@ const CustomMenu = React.forwardRef(
   }
 );
 
+/*
+Main things we are rendering:
+Dropdown Menu (to select classes)
+Class boxes (click on them to delete a class)
+Chart
+  labels
+  lines of classes
+  special lines (second pass, full)
+  Crosshair
+Class Info Boxes
+*/
 class Chart extends React.Component {
   _isMounted = false;
   constructor(props) {
@@ -83,8 +94,7 @@ class Chart extends React.Component {
       useCanvas: false,
       classOnGraph: [],
       mouseY: 0,
-      //THIS 1311 IS HARDCODEDDDD, # OF CLASSES
-      showClass: new Array(1311).fill(false),
+      showClass: [],
       dropdownClasses: [],
       removeDropdownClasses: [],
       numClassesShown: 0,
@@ -95,6 +105,7 @@ class Chart extends React.Component {
     };
   }
 
+  /* updates the dimensions of the chart based on screen size */
   updateDimensions() {
     this.setState({
       graphSize:
@@ -106,6 +117,7 @@ class Chart extends React.Component {
     });
   }
 
+  /* these fetch functions get the data from their json files */
   fetchData() {
     fetch("../../../../datasets/class-fill-ups/pct_data.json")
       .then(res => {
@@ -204,11 +216,15 @@ class Chart extends React.Component {
     window.removeEventListener("resize", this.updateDimensions.bind(this));
   }
 
+  /* adds all the classes to the dropdown menu */
   _createDropdownClasses() {
+    let showClass = new Array(CLASSES.length).fill(false);
+    this.setState({ showClass: showClass });
+
     let dropdownClasses = this.state.dropdownClasses;
     for (let i = 0; i < CLASSES.length; i++) {
       let div = (
-        <Dropdown.Item onClick={this._showClass.bind(null, i)}>
+        <Dropdown.Item key={CLASSES[i]} onClick={this._showClass.bind(null, i)}>
           {CLASSES[i]}
         </Dropdown.Item>
       );
@@ -217,12 +233,14 @@ class Chart extends React.Component {
     this.setState({ dropdownClasses: dropdownClasses });
   }
 
+  /* used to track mouse position for the crosshair */
   _onNearestX = (value, { index }) => {
     this.setState({ classOnGraph: DATA.map(d => d[index]) });
     //THIS 270 IS HARDCODED IDK WHY WE NEED TO SUBTRACT BY 270
     this.setState({ mouseY: window.event.clientY - 270 });
   };
 
+  /* shows the classes selected */
   _showClass = class_num => {
     let numClassesShown = this.state.numClassesShown;
     let showClass = this.state.showClass;
@@ -279,6 +297,7 @@ class Chart extends React.Component {
     }
   };
 
+  /* removes a class when its x is clicked */
   _removeClass = class_num => {
     let numClassesShown = this.state.numClassesShown;
     let showClass = this.state.showClass;
@@ -342,7 +361,6 @@ class Chart extends React.Component {
     const removeDropdownClasses = this.state.removeDropdownClasses;
     const isMobile = this.state.isMobile;
     const graphSize = this.state.graphSize;
-
     const loading = this.state.loading;
 
     let classInfoBox = [];
@@ -350,6 +368,7 @@ class Chart extends React.Component {
     let classShown = false;
     let colorNum = 0;
 
+    /* creates all the lines of the classes */
     for (let i = 0; i < CLASSES.length; i++) {
       if (showClass[i]) {
         let div = (
@@ -366,6 +385,7 @@ class Chart extends React.Component {
       }
     }
 
+    /* creates the class info box on the right */
     if (classOnGraph[0]) {
       let padding = 50;
       let div = (
@@ -408,9 +428,11 @@ class Chart extends React.Component {
       }
     }
 
+    /* if all 5 data files haven't been loaded yet, it shows some LOADING text */
     return loading > 0 ? (
       <h1>LOADING, THIS MAY TAKE A WHILE</h1>
     ) : (
+      /* dropdown menu */
       <div style={{ paddingTop: "20px", paddingBottom: "20px" }}>
         <div id="dropdown" style={{ paddingBottom: "15px" }}>
           <Dropdown>
@@ -420,7 +442,10 @@ class Chart extends React.Component {
             </Dropdown.Menu>
           </Dropdown>
         </div>
+        {/* Display classes selected*/}
         {removeDropdownClasses}
+
+        {/* The Chart*/}
         <div
           style={{
             paddingTop: "30px",
@@ -461,7 +486,9 @@ class Chart extends React.Component {
                 }}
               />
             )}
+            {/* Display lines of classes */}
             {lines}
+            {/* Display second pass line */}
             <Line
               className="secondPass"
               color="gray"
@@ -485,6 +512,7 @@ class Chart extends React.Component {
                 }
               ]}
             />
+            {/* Display the class full (100%) line */}
             <Line
               className="classFull"
               color="#F08080"
@@ -494,7 +522,7 @@ class Chart extends React.Component {
                 { x: 299, y: 100 }
               ]}
             />
-
+            {/* Display crosshair if a class has been selected */}
             {classShown ? (
               <Crosshair
                 values={classOnGraph}
@@ -522,6 +550,7 @@ class Chart extends React.Component {
               ></Crosshair>
             ) : null}
           </FlexibleXYPlot>
+          {/* Display class info box if class been shown*/}
           {classShown ? (
             <div
               style={{
