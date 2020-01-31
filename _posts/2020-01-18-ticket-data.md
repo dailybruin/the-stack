@@ -88,7 +88,12 @@ As seen in this graph, the number of tickets given peaks at 8 a.m. and spikes ag
 </p>
 
 
-<iframe width="90%" height="500" frameborder="0" scrolling="no" src="//plot.ly/~jeanettelin8/15.embed?showlink=false"></iframe>
+
+
+<iframe width="100%" height="300px" frameborder="0" scrolling="no" src="//plot.ly/~jeanettelin8/15.embed?showlink=false&width=40%&height=300px&modebar=false"></iframe>
+
+
+
 <br>
 #### Contextualizing to the Rest of LA
 <p class="text" style="margin:30px;">
@@ -108,6 +113,16 @@ If you would like to contest your Westwood parking citation, visit the <a href="
 
 
 <script>
+
+
+
+
+
+
+
+
+
+
 
 
 
