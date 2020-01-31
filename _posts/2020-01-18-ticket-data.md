@@ -90,7 +90,7 @@ As seen in the graph below, the number of tickets given peaks at 8 a.m. and spik
 
 
 <div class="resp-container">
-<iframe class="resp-iframe" width="100%" height="800" frameborder="0" scrolling="no" src="//plot.ly/~jeanettelin8/52.embed?showlink=false&width=40%&height=300px&modebar=false"></iframe>
+<iframe class="resp-iframe" frameborder="0" scrolling="no" src="//plot.ly/~jeanettelin8/52.embed?showlink=false&width=40%&height=300px&modebar=false"></iframe>
 </div>
 
 <br>
