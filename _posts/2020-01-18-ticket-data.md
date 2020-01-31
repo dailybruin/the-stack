@@ -84,13 +84,14 @@ The frequency of parking tickets peaks during January, August and June, which co
 
 
 <p class="text" style="margin: 50px;">
-As seen in this graph, the number of tickets given peaks at 8 a.m. and spikes again at 11 a.m. and noon. The high number of tickets at 8 a.m. is likely because of street cleaning regulations on Thursdays and Fridays, which contributes to the fact that approximately 50% of parking tickets in 2018 were given on Thursdays and Fridays, with one-third of Thursday tickets issued at 8 a.m. No parking/street cleaning was the most common type of parking violation in 2018, with other top violation reasons including meter expiration, parking over time limits and red zones. Daily Bruin posted a <a href="https://dailybruin.com/2019/12/07/graphics-gayley-parking-policies/">graphic</a> in 2019 that cites the parking restrictions for different areas of Westwood.
+As seen in the graph below, the number of tickets given peaks at 8 a.m. and spikes again at 11 a.m. and noon. The high number of tickets at 8 a.m. is likely because of street cleaning regulations on Thursdays and Fridays, which contributes to the fact that approximately 50% of parking tickets in 2018 were given on Thursdays and Fridays, with one-third of Thursday tickets issued at 8 a.m. No parking/street cleaning was the most common type of parking violation in 2018, with other top violation reasons including meter expiration, parking over time limits and red zones. Daily Bruin posted a <a href="https://dailybruin.com/2019/12/07/graphics-gayley-parking-policies/">graphic</a> in 2019 that cites the parking restrictions for different areas of Westwood.
 </p>
 
 
 
- 
- <div id="plotly-div2"></div>
+<div class="resp-container">
+<iframe class="resp-iframe" width="100%" height="800" frameborder="0" scrolling="no" src="//plot.ly/~jeanettelin8/52.embed?showlink=false&width=40%&height=300px&modebar=false"></iframe>
+</div>
 
 <br>
 #### Contextualizing to the Rest of LA
@@ -111,63 +112,6 @@ If you would like to contest your Westwood parking citation, visit the <a href="
 
 
 <script>
-
-
-
-
-trace2 = {
-  line: {color: 'rgba(31,119,180,1)'}, 
-  mode: 'lines+markers', 
-  type: 'scatter', 
-  xsrc: 'jeanettelin8:14:dcc1d9', 
-  x: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23], 
-  ysrc: 'jeanettelin8:14:f196ab', 
-  y: [153, 647, 187, 135, 90, 140, 245, 269, 5105, 1566, 1403, 2787, 2781, 1497, 1283, 1195, 2331, 1114, 472, 490, 161, 139, 128, 33], 
-  frame: null, 
-  xaxis: 'x', 
-  yaxis: 'y', 
-  marker: {
-    line: {color: 'rgba(31,119,180,1)'}, 
-    color: 'rgba(31,119,180,1)'
-  }, 
-  mode: 'markers+lines', 
-  error_x: {color: 'rgba(31,119,180,1)'}, 
-  error_y: {color: 'rgba(31,119,180,1)'}
-};
-data2 = [trace2];
-layout2 = {
-  title: 'Hourly Tickets in 2018', 
-  width: 4, 
-  xaxis: {
-    title: 'Hour', 
-    domain: [0, 1], 
-    tickmode: 'array', 
-    ticktext: ['12AM', '1AM', '2AM', '3AM', '4AM', '5AM', '6AM', '7AM', '8AM', '9AM', '10AM', '11AM', '12PM', '1PM', '2PM', '3PM', '4PM', '5PM', '6PM', '7PM', '8PM', '9PM', '10PM', '11PM'], 
-    tickvals: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23], 
-    automargin: true
-  }, 
-  yaxis: {
-    title: 'Number of Tickets', 
-    domain: [0, 1], 
-    automargin: true
-  }, 
-  margin: {
-    b: 40, 
-    l: 60, 
-    r: 10, 
-    t: 25
-  }, 
-  hovermode: 'closest', 
-  showlegend: false
-};
-Plotly.plot('plotly-div2', {
-  data: data2,
-  layout: layout2
-});
-
-
-
-
 
 
 
