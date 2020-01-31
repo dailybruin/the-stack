@@ -5,11 +5,7 @@
   /*margin: 10px 0;*/
   /*width: 80%;*/
 /*}*/
-@media (min-width:1000px){
-  select {
-    margin-right:100px;
-  }
-}
+
 select {
   margin: 5% 5% 5% 100%;
   width: 150px;
@@ -20,6 +16,7 @@ select {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  background: url(https://www.pngrepo.com/png/122410/170/arrow-of-double-angle-pointing-down.png) 92% / 10% no-repeat #EEE;
 }
 
 #map {
