@@ -244,7 +244,7 @@ michael_huang:
 radhika_ahuja:
   name: Radhika Ahuja
   title: Stack Developer
-  bio: Radhika is a fourth-year math of computation student. Outside of school, she enjoys writing, dance, cooking, and other things creative. 
+  bio: Radhika is a fourth-year math of computation student. Outside of school, she enjoys writing, dance, cooking, and other things creative.
   mug: yes
   email: rahuja@media.ucla.edu
   github: ahujaradhika
@@ -259,7 +259,7 @@ madeline_blasingame:
   name: Madeline Blasingame
   title: Stack Developer
   mug: yes
-  bio: Maddy is a first-year stats major whose only goal is to be TikTok famous. 
+  bio: Maddy is a first-year stats major whose only goal is to be TikTok famous.
   email: mblasingame@media.ucla.edu
   github: meblasingame
 laurel_woods:
@@ -290,3 +290,22 @@ justin_chai:
   bio: Justin is a first-year linguisitics and computer science major.
   mug: Yes
   email: jchai@media.ucla.edu
+jc_rios:
+  name: Juan C. Rios
+  title: Stack Developer
+  email: jrios@media.ucla.edu
+  bio: Rios is a third-year Computer Engineering student who enjoys programming and music.
+  mug: yes
+kelly_chen:
+  name: Kelly Chen
+  title: Stack Developer
+  email: kchen2@media.ucla.edu
+  bio: Chen is a second-year statistics student. She can usually be found dancing, even when she's not supposed to, and is always looking for her next adventure.
+  mug: yes
+keri_chen:
+  name: Keri Chen
+  title: Stack Developer
+  email: kchen1@media.ucla.edu
+  bio: Chen is a first-year sociology student. When not writing essays and articles, she enjoys watching Vox videos and takes pride in being able to pack for two weeks in a single carry-on.
+  mug: yes
+
