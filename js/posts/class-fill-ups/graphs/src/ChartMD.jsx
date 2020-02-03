@@ -41,6 +41,9 @@ let DATES = [];
 /* array of total seats for ecah class */
 let TOTAL_SEATS = [];
 /* index of the time of second pass */
+const YEARS = ["Senior", "Junior", "Sophomore", "Freshman"];
+const FIRST_PASS_DATES = [50, 70, 90, 110];
+const SECOND_PASS_DATES = [180, 200, 220, 240];
 const SECOND_PASS_DATE = 166;
 const LAST_DATE = 299;
 
@@ -102,8 +105,10 @@ class Chart extends React.Component {
       isMobile: graphSize == screenScale * screen.width ? true : false,
       graphSize: graphSize,
       //THIS LOADING IS HARDCODED BY # OF FILES WE Load
-      loading: 5
+      loading: 5,
+      showAcademicYearLines: true
     };
+    this._showAcademicYearLines = this._showAcademicYearLines.bind(this);
   }
 
   /* updates the dimensions of the chart based on screen size */
@@ -135,6 +140,21 @@ class Chart extends React.Component {
         text = JSON.parse(text);
         DATA = text;
         if (this._isMounted) this.dataLoaded();
+        let analysis = new Array(DATA.length).fill(0);
+        for (let i = 0; i < DATA.length; i++) {
+          analysis[i] = DATA[i].findIndex(x => x.y == 100);
+        }
+        while (analysis.indexOf(-1) != -1) {
+          analysis.splice(analysis.indexOf(-1), 1);
+        }
+        console.log(analysis);
+        console.log("Sorted:");
+        console.log(analysis.sort());
+        for (let i = 0; i < DATA.length; i++) {
+          if (DATA[i][100].y == "100" && TOTAL_SEATS[i] > 50) {
+            console.log(CLASSES[i]);
+          }
+        }
       });
   }
 
@@ -192,14 +212,14 @@ class Chart extends React.Component {
 
   componentDidMount() {
     this._isMounted = true;
-    const fetchData = this.fetchData();
     const fetchClasses = this.fetchClasses();
+    const fetchData = this.fetchData();
     const fetchDates = this.fetchDates();
     const fetchSeats = this.fetchSeats();
     const fetchTotalSeats = this.fetchTotalSeats();
     Promise.all([
-      fetchData,
       fetchClasses,
+      fetchData,
       fetchDates,
       fetchSeats,
       fetchTotalSeats
@@ -346,21 +366,31 @@ class Chart extends React.Component {
     });
   };
 
+  _showAcademicYearLines() {
+    let showAcademicYearLines = this.state.showAcademicYearLines;
+    showAcademicYearLines = !showAcademicYearLines;
+    this.setState({ showAcademicYearLines: showAcademicYearLines });
+  }
+
   render() {
     const { useCanvas } = this.state;
     const Line = useCanvas ? LineSeriesCanvas : LineSeries;
     const lineSize = "4px";
-    const classOnGraph = this.state.classOnGraph;
-    const mouseY = this.state.mouseY;
-    const showClass = this.state.showClass;
-    const dropdownClasses = this.state.dropdownClasses;
-    const removeDropdownClasses = this.state.removeDropdownClasses;
-    const isMobile = this.state.isMobile;
-    const graphSize = this.state.graphSize;
-    const loading = this.state.loading;
+    const {
+      classOnGraph,
+      mouseY,
+      showClass,
+      dropdownClasses,
+      removeDropdownClasses,
+      isMobile,
+      graphSize,
+      loading,
+      showAcademicYearLines
+    } = this.state;
 
     let classInfoBox = [];
     let lines = [];
+    let academicYearLines = [];
     let classShown = false;
     let colorNum = 0;
 
@@ -369,6 +399,7 @@ class Chart extends React.Component {
       if (showClass[i]) {
         let div = (
           <Line
+            key={CLASSES[i]}
             strokeWidth={lineSize}
             data={DATA[i]}
             onNearestX={this._onNearestX}
@@ -424,12 +455,98 @@ class Chart extends React.Component {
       }
     }
 
+    if (showAcademicYearLines) {
+      for (let i = 0; i < YEARS.length; i++) {
+        academicYearLines.push(
+          <Line
+            className={"firstPass" + YEARS[i]}
+            color="gray"
+            style={{
+              strokeDasharray: "2 2"
+            }}
+            data={[
+              { x: FIRST_PASS_DATES[i], y: 0 },
+              { x: FIRST_PASS_DATES[i], y: 100 }
+            ]}
+          />
+        );
+        academicYearLines.push(
+          <LabelSeries
+            className={"firstPass" + YEARS[i] + "Label"}
+            labelAnchorX="middle"
+            style={{ opacity: 0.6 }}
+            data={[
+              {
+                x: FIRST_PASS_DATES[i],
+                y: 74 - 8 * i,
+                label: YEARS[i]
+              }
+            ]}
+          />
+        );
+        academicYearLines.push(
+          <Line
+            className={"secondPass" + YEARS[i]}
+            color="gray"
+            style={{
+              strokeDasharray: "2 2"
+            }}
+            data={[
+              { x: SECOND_PASS_DATES[i], y: 0 },
+              { x: SECOND_PASS_DATES[i], y: 100 }
+            ]}
+          />
+        );
+        academicYearLines.push(
+          <LabelSeries
+            className={"secondPass" + YEARS[i] + "Label"}
+            labelAnchorX="middle"
+            style={{ opacity: 0.6 }}
+            data={[
+              {
+                x: SECOND_PASS_DATES[i],
+                y: 74 - 8 * 4 - 8 * i,
+                label: YEARS[i]
+              }
+            ]}
+          />
+        );
+      }
+      academicYearLines.push(
+        <Line
+          className="secondPass"
+          color="gray"
+          style={{
+            strokeDasharray: "2 2"
+          }}
+          data={[
+            { x: SECOND_PASS_DATE, y: 0 },
+            { x: SECOND_PASS_DATE, y: 100 }
+          ]}
+        />
+      );
+      academicYearLines.push(
+        <LabelSeries
+          className="secondPassLabel"
+          labelAnchorX="middle"
+          style={{ opacity: 0.6 }}
+          data={[
+            {
+              x: SECOND_PASS_DATE,
+              y: 50,
+              label: "Second Pass"
+            }
+          ]}
+        />
+      );
+    }
+
     /* if all 5 data files haven't been loaded yet, it shows some LOADING text */
     return loading > 0 ? (
       <h1>LOADING, THIS MAY TAKE A WHILE</h1>
     ) : (
       /* dropdown menu */
-      <div style={{ paddingTop: "20px", paddingBottom: "20px" }}>
+      <div style={{ paddingTop: "10px", paddingBottom: "20px" }}>
         <div id="dropdown" style={{ paddingBottom: "15px" }}>
           <Dropdown>
             <Dropdown.Toggle>Choose a Class</Dropdown.Toggle>
@@ -484,30 +601,6 @@ class Chart extends React.Component {
             )}
             {/* Display lines of classes */}
             {lines}
-            {/* Display second pass line */}
-            <Line
-              className="secondPass"
-              color="gray"
-              style={{
-                strokeDasharray: "2 2"
-              }}
-              data={[
-                { x: SECOND_PASS_DATE, y: 0 },
-                { x: SECOND_PASS_DATE, y: 100 }
-              ]}
-            />
-            <LabelSeries
-              className="secondPassLabbel"
-              labelAnchorX="middle"
-              style={{ opacity: 0.6 }}
-              data={[
-                {
-                  x: SECOND_PASS_DATE,
-                  y: 50,
-                  label: "Second Pass"
-                }
-              ]}
-            />
             {/* Display the class full (100%) line */}
             <Line
               className="classFull"
@@ -518,6 +611,9 @@ class Chart extends React.Component {
                 { x: LAST_DATE, y: 100 }
               ]}
             />
+            {/* Display the academic year lines*/}
+            {academicYearLines}
+
             {/* Display crosshair if a class has been selected */}
             {classShown ? (
               <Crosshair
@@ -559,6 +655,24 @@ class Chart extends React.Component {
             </div>
           ) : null}
         </div>
+        {isMobile ? null : (
+          <button
+            style={{
+              boxShadow: "inset 0px 1px 0px 0px #97c4fe",
+              background:
+                "linear-gradient(to bottom, #3d94f6 5%, #1e62d0 100%)",
+              backgroundColor: "#3d94f6",
+              borderRadius: "6px",
+              border: "1px solid #337fed",
+              display: "inline-block",
+              color: "#ffffff",
+              padding: "6px 24px"
+            }}
+            onClick={this._showAcademicYearLines}
+          >
+            Toggle pass times
+          </button>
+        )}
       </div>
     );
   }
