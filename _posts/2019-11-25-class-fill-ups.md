@@ -23,10 +23,6 @@ scripts:
   - https://unpkg.com/react-bootstrap@next/dist/react-bootstrap.min.js
 ---
 
-Want to see when (if) your class fills up? Pick Here!
-
-<div id="text_dropdownMD"></div>
-
 Want to see the timeline of your class's enrollment? Pick Here!
 
 <div id="chartMD"></div>

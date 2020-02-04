@@ -41,9 +41,9 @@ let DATES = [];
 /* array of total seats for ecah class */
 let TOTAL_SEATS = [];
 /* index of the time of second pass */
-const YEARS = ["Senior", "Junior", "Sophomore", "Freshman"];
-const FIRST_PASS_DATES = [50, 70, 90, 110];
-const SECOND_PASS_DATES = [180, 200, 220, 240];
+const YEARS = ["Junior", "Sophomore", "Freshman"];
+const FIRST_PASS_DATES = [58, 100, 122];
+const SECOND_PASS_DATES = [226, 268, 290];
 const SECOND_PASS_DATE = 166;
 const LAST_DATE = 299;
 
@@ -106,7 +106,8 @@ class Chart extends React.Component {
       graphSize: graphSize,
       //THIS LOADING IS HARDCODED BY # OF FILES WE Load
       loading: 5,
-      showAcademicYearLines: true
+      showAcademicYearLines: true,
+      classHeader: ""
     };
     this._showAcademicYearLines = this._showAcademicYearLines.bind(this);
   }
@@ -258,10 +259,8 @@ class Chart extends React.Component {
 
   /* shows the classes selected */
   _showClass = class_num => {
-    let numClassesShown = this.state.numClassesShown;
-    let showClass = this.state.showClass;
+    let { numClassesShown, showClass, isMobile } = this.state;
     let removeDropdownClasses = [];
-    let isMobile = this.state.isMobile;
 
     let displayMobile = isMobile ? "" : "inline";
     if (numClassesShown < max_classes) {
@@ -304,10 +303,23 @@ class Chart extends React.Component {
           }
         }
 
+        let date_filled = DATA[class_num].findIndex(x => x.y == 100);
+        let classHeader =
+          date_filled == -1 ? (
+            <h3 style={{ textAlign: "center", marginTop: "20px" }}>
+              {CLASSES[class_num]} never filled up!
+            </h3>
+          ) : (
+            <h3 style={{ textAlign: "center", marginTop: "20px" }}>
+              {CLASSES[class_num]} filled up after {DATES[date_filled]}
+            </h3>
+          );
+
         this.setState({
           showClass: showClass,
           numClassesShown: numClassesShown,
-          removeDropdownClasses: removeDropdownClasses
+          removeDropdownClasses: removeDropdownClasses,
+          classHeader: classHeader
         });
       }
     }
@@ -315,13 +327,12 @@ class Chart extends React.Component {
 
   /* removes a class when its x is clicked */
   _removeClass = class_num => {
-    let numClassesShown = this.state.numClassesShown;
-    let showClass = this.state.showClass;
+    let { numClassesShown, showClass, isMobile, classHeader } = this.state;
     let removeDropdownClasses = [];
-    let isMobile = this.state.isMobile;
 
     showClass[class_num] = false;
     numClassesShown -= 1;
+    let aClassShown = false;
 
     let displayMobile = isMobile ? "" : "inline";
     let xbutton = (
@@ -333,6 +344,7 @@ class Chart extends React.Component {
     let colorNum = 0;
     for (let i = 0; i < CLASSES.length; i++) {
       if (showClass[i]) {
+        aClassShown = true;
         let div = (
           <div
             style={{
@@ -359,10 +371,15 @@ class Chart extends React.Component {
         colorNum++;
       }
     }
+
+    if (!aClassShown) {
+      classHeader = null;
+    }
     this.setState({
       showClass: showClass,
       numClassesShown: numClassesShown,
-      removeDropdownClasses: removeDropdownClasses
+      removeDropdownClasses: removeDropdownClasses,
+      classHeader: classHeader
     });
   };
 
@@ -385,7 +402,8 @@ class Chart extends React.Component {
       isMobile,
       graphSize,
       loading,
-      showAcademicYearLines
+      showAcademicYearLines,
+      classHeader
     } = this.state;
 
     let classInfoBox = [];
@@ -418,9 +436,13 @@ class Chart extends React.Component {
       let div = (
         <div style={{ paddingLeft: padding }}>
           {isMobile ? (
-            <h4 style={{ width: "max-content" }}>{DATES[classOnGraph[0].x]}</h4>
+            <h4 style={{ width: "max-content" }}>
+              {DATES[classOnGraph[0].x]} passed
+            </h4>
           ) : (
-            <h2 style={{ width: "max-content" }}>{DATES[classOnGraph[0].x]}</h2>
+            <h2 style={{ width: "max-content" }}>
+              {DATES[classOnGraph[0].x]} passed
+            </h2>
           )}
         </div>
       );
@@ -429,6 +451,7 @@ class Chart extends React.Component {
       colorNum = 0;
       for (let i = 0; i < CLASSES.length; i++) {
         if (showClass[i]) {
+          let date_filled = DATA[i].findIndex(x => x.y == 100);
           let div = (
             <div style={{ paddingLeft: padding }}>
               {isMobile ? (
@@ -436,9 +459,9 @@ class Chart extends React.Component {
                   {CLASSES[i]}
                 </h4>
               ) : (
-                <h2 style={{ width: "max-content", color: colors[colorNum] }}>
+                <h3 style={{ width: "max-content", color: colors[colorNum] }}>
                   {CLASSES[i]}
-                </h2>
+                </h3>
               )}
               <p style={{ marginBottom: "0px" }}>
                 Percent Full: {classOnGraph[i].y}%
@@ -446,7 +469,16 @@ class Chart extends React.Component {
               <p style={{ marginBottom: "0px" }}>
                 Seats Filled: {SEATS_FILLED[i][classOnGraph[0].x].y}
               </p>
-              <p>Total Seats: {TOTAL_SEATS[i]}</p>
+              <p style={{ marginBottom: "0px" }}>
+                Total Seats: {TOTAL_SEATS[i]}
+              </p>
+              {date_filled == -1 ? (
+                <p>{CLASSES[i]} never filled up!</p>
+              ) : (
+                <p>
+                  {CLASSES[i]} filled up after {DATES[date_filled]}
+                </p>
+              )}
             </div>
           );
           classInfoBox.push(div);
@@ -558,6 +590,9 @@ class Chart extends React.Component {
         {/* Display classes selected*/}
         {removeDropdownClasses}
 
+        {/* Class Header*/}
+        {classHeader}
+
         {/* The Chart*/}
         <div
           style={{
@@ -612,7 +647,7 @@ class Chart extends React.Component {
               ]}
             />
             {/* Display the academic year lines*/}
-            {academicYearLines}
+            {isMobile ? null : academicYearLines}
 
             {/* Display crosshair if a class has been selected */}
             {classShown ? (
