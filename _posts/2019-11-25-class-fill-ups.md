@@ -1,5 +1,5 @@
 ---
-title: Class Enrollment Speeds
+title: How quickly do classes fill up?
 teaser: learn how quickly your classes fill up
 authors:
   - andrew_kan
