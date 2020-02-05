@@ -617,7 +617,7 @@ class Chart extends React.Component {
             {isMobile ? null : (
               <XAxis tickValues={PASS_DATES} tickFormat={tickFormatter} />
             )}
-            <YAxis yDomain={[0, 100]} />
+            <YAxis />
             {isMobile ? null : (
               <ChartLabel
                 text="Time passed"
@@ -658,6 +658,16 @@ class Chart extends React.Component {
             />
             {/* Display the academic year lines*/}
             {isMobile ? null : academicYearLines}
+            {/* xAxis Line to make sure base line is always 0 */}
+            <Line
+              key="xAxis"
+              className="xAxis"
+              style={{ opacity: 0 }}
+              data={[
+                { x: 0, y: 0 },
+                { x: LAST_DATE, y: 0 }
+              ]}
+            />
 
             {/* Display crosshair if a class has been selected */}
             {classShown ? (
