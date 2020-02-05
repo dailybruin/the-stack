@@ -560,7 +560,7 @@ class Chart extends React.Component {
 
     /* if all 5 data files haven't been loaded yet, it shows some LOADING text */
     return loading > 0 ? (
-      <h1>LOADING, THIS MAY TAKE A WHILE</h1>
+      <h1>Graph loading</h1>
     ) : (
       /* dropdown menu */
       <div style={{ paddingTop: "10px", paddingBottom: "20px" }}>
