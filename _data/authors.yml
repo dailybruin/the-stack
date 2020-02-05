@@ -174,14 +174,20 @@ henna_dialani:
   email: hdialani@media.ucla.edu
   github: hennadialani
 nathan_smith:
-  name: Nathan Smith
-  title: Assistant Online Editor
-  bio: Smith is an assistant online editor at the Daily Bruin and a second-year computer science student. When he's not scrolling through USAC PDFs or staring at lines of code, he enjoys Eggo waffles, visiting museums and writing about electric scooters.
-  mug: Yes
-  email: nsmith@media.ucla.edu
-  github: nathunsmitty
-  twitter: nathunsmitty
-  website: http://nathansmith.io
+    name: Nathan Smith
+    title: Assistant Online Editor
+    bio: Smith is an assistant online editor at the Daily Bruin and a second-year computer science student. When he's not scrolling through USAC PDFs or staring at lines of code, he enjoys Eggo waffles, visiting museums and writing about electric scooters.
+    mug: Yes
+    email: nsmith@media.ucla.edu
+    github: nathunsmitty
+    twitter: nathunsmitty
+    website: https://nathansmith.io
+lik_teng_ung:
+    name: Lik Teng Ung
+    title: Stack Developer
+    bio: Ung is a stack contributor at the Daily Bruin and a third-year statistics and political science student. He's an avid political poll watcher, Pythonistas and boba connoisseur.
+    email: lung@media.ucla.edu
+    mug: Yes
 kyle_wong:
   name: Kyle Wong
   title: Stack Developer
@@ -235,9 +241,76 @@ michael_huang:
   name: Michael Huang
   title: Stack Developer
   bio: Michael is lit.
+radhika_ahuja:
+  name: Radhika Ahuja
+  title: Stack Developer
+  bio: Radhika is a fourth-year math of computation student. Outside of school, she enjoys writing, dance, cooking, and other things creative.
+  mug: yes
+  email: rahuja@media.ucla.edu
+  github: ahujaradhika
+annie_zhang:
+  name: Annie Zhang
+  title: Stack Developer
+  bio: Annie is a third year math major who really enjoys heist novels, murder mystery TV shows, noodles, and setting unrealistic goals.
+  mug: yes
+  email: azhang2@media.ucla.edu
+  github: aczhang777
+madeline_blasingame:
+  name: Madeline Blasingame
+  title: Stack Developer
+  mug: yes
+  bio: Maddy is a first-year stats major whose only goal is to be TikTok famous.
+  email: mblasingame@media.ucla.edu
+  github: meblasingame
+laurel_woods:
+  name: Laurel Woods
+  title: Stack Developer
+  bio: Laurel is a second-year student who's somewhere in between computer science and cognitive science. She loves anything outdoorsy, especially if her dog is there.
+  mug: Yes
+  email: lwoods@media.ucla.edu
+  github: laurelrwoods
+bernard_mendez:
+  name: Bernard Mendez
+  title: Stack Developer/News Reporter
+  bio: Bernard is a second-year math student. Bernard also <a href='https://dailybruin.com/author/bernard-mendez/'>writes for the Daily Bruin's science and health section</a>. In his free time, Bernard enjoys wearing sweaters.
+  mug: Yes
+  email: bmendez@media.ucla.edu
+  github: bernardmendez
+  website: http://bernardmendez.com
+charlotte_huang:
+  name: Charlotte Huang
+  title: Stack Developer
+  bio: Charlotte is a junior, majoring in Applied Math and Cognitive Science. She always wants to spend a day eating nothing but dark chocolate and drinking lattes with oat milk.
+  mug: Yes
+  email: chuang@media.ucla.edu
+  github: charlotte0408
+justin_chai:
+  name: Justin Chai
+  title: Stack Developer
+  bio: Justin is a first-year linguisitics and computer science major.
+  mug: Yes
+  email: jchai@media.ucla.edu
+jc_rios:
+  name: Juan C. Rios
+  title: Stack Developer
+  email: jrios@media.ucla.edu
+  bio: Rios is a third-year Computer Engineering student who enjoys programming and music.
+  mug: yes
+kelly_chen:
+  name: Kelly Chen
+  title: Stack Developer
+  email: kchen2@media.ucla.edu
+  bio: Chen is a second-year statistics student. She can usually be found dancing, even when she's not supposed to, and is always looking for her next adventure.
+  mug: yes
+keri_chen:
+  name: Keri Chen
+  title: Stack Developer
+  email: kchen1@media.ucla.edu
+  bio: Chen is a first-year sociology student. When not writing essays and articles, she enjoys watching Vox videos and takes pride in being able to pack for two weeks in a single carry-on.
+  mug: yes
 sydney_kovach:
   name: Sydney Kovach
   title: Stack Developer
   email: skovach@media.ucla.edu
   mug: yes
-  bio: Sydney Kovach is a Global Studies and Geography student who loves dancing and taking yoga classes in her free time.
+  bio: Sydney Kovach is a second year Global Studies and Geography student who loves dancing and taking yoga classes in her free time.
