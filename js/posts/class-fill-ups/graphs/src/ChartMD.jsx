@@ -141,21 +141,6 @@ class Chart extends React.Component {
         text = JSON.parse(text);
         DATA = text;
         if (this._isMounted) this.dataLoaded();
-        let analysis = new Array(DATA.length).fill(0);
-        for (let i = 0; i < DATA.length; i++) {
-          analysis[i] = DATA[i].findIndex(x => x.y == 100);
-        }
-        while (analysis.indexOf(-1) != -1) {
-          analysis.splice(analysis.indexOf(-1), 1);
-        }
-        console.log(analysis);
-        console.log("Sorted:");
-        console.log(analysis.sort());
-        for (let i = 0; i < DATA.length; i++) {
-          if (DATA[i][100].y == "100" && TOTAL_SEATS[i] > 50) {
-            console.log(CLASSES[i]);
-          }
-        }
       });
   }
 
@@ -607,8 +592,8 @@ class Chart extends React.Component {
           <FlexibleXYPlot>
             <HorizontalGridLines />
             <VerticalGridLines />
-            <XAxis tickFormat={v => DATES[v]} />
-            <YAxis />
+            {isMobile ? null : <XAxis tickFormat={v => DATES[v]} />}
+            <YAxis yDomain={[0, 100]} />
             {isMobile ? null : (
               <ChartLabel
                 text="Day"
