@@ -81,6 +81,20 @@ const CustomMenu = React.forwardRef(
   }
 );
 
+/* tick formatter for the X axis labels */
+function tickFormatter(t) {
+  return (
+    <tspan>
+      <tspan x="0" dy="1em">
+        {DATES[t].split(" ")[0]} {DATES[t].split(" ")[1]}
+      </tspan>
+      <tspan x="0" dy="1em">
+        {DATES[t].split(" ")[2]} {DATES[t].split(" ")[3]}
+      </tspan>
+    </tspan>
+  );
+}
+
 /*
 Main things we are rendering:
 Dropdown Menu (to select classes)
@@ -601,7 +615,7 @@ class Chart extends React.Component {
             <HorizontalGridLines />
             <VerticalGridLines />
             {isMobile ? null : (
-              <XAxis tickValues={PASS_DATES} tickFormat={v => DATES[v]} />
+              <XAxis tickValues={PASS_DATES} tickFormat={tickFormatter} />
             )}
             <YAxis yDomain={[0, 100]} />
             {isMobile ? null : (
@@ -610,7 +624,7 @@ class Chart extends React.Component {
                 className="alt-x-label"
                 includeMargin={false}
                 xPercent={0.018}
-                yPercent={1.1}
+                yPercent={1.082}
                 style={{
                   fontWeight: "bold"
                 }}
