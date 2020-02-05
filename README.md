@@ -16,6 +16,15 @@ Daily Bruin's data journalism and newsroom tech blog.
 - If you get dependency errors, try `gem install`ing them.
 - If you still get dependency errors, look for a `Gemfile.lock` file in the top level of the local repo, delete it, and re-run `jekyll serve`.
 
+## Helpful Tips
+
+Remember to make fetch happen! To make sure you are updated with master...
+  git checkout master
+  git fetch
+  git pull
+  git checkout [your branch name]
+  git merge master
+
 ## Installation (Windows)
 
 [Follow these instructions](http://jekyll-windows.juthilo.com).
