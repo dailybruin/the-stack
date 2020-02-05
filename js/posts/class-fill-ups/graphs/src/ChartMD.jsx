@@ -45,6 +45,8 @@ const YEARS = ["Junior", "Sophomore", "Freshman"];
 const FIRST_PASS_DATES = [58, 100, 122];
 const SECOND_PASS_DATES = [226, 268, 290];
 const SECOND_PASS_DATE = 166;
+const PASS_DATES = FIRST_PASS_DATES.concat(SECOND_PASS_DATE, SECOND_PASS_DATES);
+
 const LAST_DATE = 299;
 
 /* custom menu component to allow searching for classes */
@@ -476,6 +478,7 @@ class Chart extends React.Component {
       for (let i = 0; i < YEARS.length; i++) {
         academicYearLines.push(
           <Line
+            key={"firstPass" + YEARS[i]}
             className={"firstPass" + YEARS[i]}
             color="gray"
             style={{
@@ -489,6 +492,7 @@ class Chart extends React.Component {
         );
         academicYearLines.push(
           <LabelSeries
+            key={"firstPass" + YEARS[i] + "Label"}
             className={"firstPass" + YEARS[i] + "Label"}
             labelAnchorX="middle"
             style={{ opacity: 0.6 }}
@@ -503,6 +507,7 @@ class Chart extends React.Component {
         );
         academicYearLines.push(
           <Line
+            key={"secondPass" + YEARS[i]}
             className={"secondPass" + YEARS[i]}
             color="gray"
             style={{
@@ -516,6 +521,7 @@ class Chart extends React.Component {
         );
         academicYearLines.push(
           <LabelSeries
+            key={"secondPass" + YEARS[i] + "Label"}
             className={"secondPass" + YEARS[i] + "Label"}
             labelAnchorX="middle"
             style={{ opacity: 0.6 }}
@@ -531,6 +537,7 @@ class Chart extends React.Component {
       }
       academicYearLines.push(
         <Line
+          key="secondPass"
           className="secondPass"
           color="gray"
           style={{
@@ -544,6 +551,7 @@ class Chart extends React.Component {
       );
       academicYearLines.push(
         <LabelSeries
+          key="secondPassLabel"
           className="secondPassLabel"
           labelAnchorX="middle"
           style={{ opacity: 0.6 }}
@@ -592,11 +600,13 @@ class Chart extends React.Component {
           <FlexibleXYPlot>
             <HorizontalGridLines />
             <VerticalGridLines />
-            {isMobile ? null : <XAxis tickFormat={v => DATES[v]} />}
+            {isMobile ? null : (
+              <XAxis tickValues={PASS_DATES} tickFormat={v => DATES[v]} />
+            )}
             <YAxis yDomain={[0, 100]} />
             {isMobile ? null : (
               <ChartLabel
-                text="Day"
+                text="Time passed"
                 className="alt-x-label"
                 includeMargin={false}
                 xPercent={0.018}
@@ -623,6 +633,7 @@ class Chart extends React.Component {
             {lines}
             {/* Display the class full (100%) line */}
             <Line
+              key="classFull"
               className="classFull"
               color="#F08080"
               strokeWidth="6px"
