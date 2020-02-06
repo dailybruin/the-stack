@@ -7,8 +7,8 @@ authors:
   - sydney_kovach
 key_takeaways:
   - Enrollment difficulties can force late graduation and/or gap years, and places administrative burden to certain departments.
-  - Given data from more than 1,300 classes, around 43.55% of classes filled up their allocated seats.
-  - Out of the 43.55% classes that became full, around half were filled during the first pass - the initial enrollment period reserved for 10 units.
+  - Given data from more than 1,300 classes, around 42% of classes filled up their allocated seats.
+  - Out of the 42% of classes that became full, around half were filled during the first pass - the initial enrollment period reserved for 10 units.
 featured_image:
   url: class-fill-ups/placeholder.png
 og_image: class-fill-ups/placeholder.png
