@@ -1,14 +1,14 @@
 ---
-title: How quickly do classes fill up?
-teaser: Determine which classes you should enroll in on your first pass and which you should save for your second pass
+title: How Quickly Do Classes Fill Up?
+teaser: Determine which classes you should enroll during your first or second pass, based on analysis of the recent winter quarter 2020 enrollment.
 authors:
   - andrew_kan
   - keith_atienza
   - sydney_kovach
 key_takeaways:
-  - Enrollment difficulties can force late graduation and/or gap years
-  - 44% of classes during Winter 2020 enrollment completely filled up
-  - Of the classes that completely filled up, about half filled up during first pass
+  - Enrollment difficulties can force late graduation and/or gap years, and places administrative burden to certain departments.
+  - Given data from more than 1,300 classes, around 43.55% of classes filled up their allocated seats.
+  - Out of the 43.55% classes that became full, around half were filled during the first pass - the initial enrollment period reserved for 10 units.
 featured_image:
   url: class-fill-ups/placeholder.png
 og_image: class-fill-ups/placeholder.png
