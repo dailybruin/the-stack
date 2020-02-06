@@ -24,12 +24,13 @@ let DEPARTMENTSPCT = [];
 let TOPPCT = [];
 let DEPARTMENTSIZE = [];
 let classSlice = graphSize == 1000 ? 30 : 20;
+let TIMELINE = [];
 
 class Insights extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      loading: 3,
+      loading: 4,
       isMobile: graphSize == screenScale * screen.width ? true : false,
       graphSize: graphSize,
       classHoveredClass: 10,
@@ -113,12 +114,35 @@ class Insights extends React.Component {
       });
   }
 
+  fetchTimeline() {
+    fetch("../../../../datasets/class-fill-ups/timeline.json")
+      .then(res => {
+        return res.json();
+      })
+      .then(text => {
+        text = JSON.stringify(text, function(key, value) {
+          // limit precision of floats
+          if (typeof value === "number") {
+            return parseFloat(value.toFixed(2));
+          }
+          return value;
+        });
+        text = JSON.parse(text);
+        TIMELINE = text;
+        for (let i = 0; i < 299; i++) {
+          console.log(TIMELINE[i] + "," + i);
+        }
+        if (this._isMounted) this.dataLoaded();
+      });
+  }
+
   componentDidMount() {
     this._isMounted = true;
     const fetchClass = this.fetchClass();
     const fetchPct = this.fetchPct();
     const fetchSize = this.fetchSize();
-    Promise.all([fetchClass, fetchPct, fetchSize]);
+    const fetchTimeline = this.fetchTimeline();
+    Promise.all([fetchClass, fetchPct, fetchSize, fetchTimeline]);
     window.addEventListener("resize", this.updateDimensions.bind(this));
   }
 
@@ -201,7 +225,14 @@ class Insights extends React.Component {
           <Hint
             value={classValue}
             format={point => {
-              return [{ title: point.x, value: point.y + " classes" }];
+              let dep =
+                DEPARTMENTSIZE[
+                  DEPARTMENTSIZE.findIndex(depart => depart.x == point.x)
+                ];
+              return [
+                { title: point.x, value: point.y + " classes" },
+                { title: "Total Classes", value: dep.y }
+              ];
             }}
           ></Hint>
         </XYPlot>
