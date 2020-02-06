@@ -1,0 +1,2 @@
+15 * * * * python3.6 /app/class_parser.py  > /proc/1/fd/1 2>/proc/1/fd/2
+# An empty line is required at the end of this file for a valid cron file.

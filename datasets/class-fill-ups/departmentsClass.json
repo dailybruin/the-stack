@@ -1,0 +1,402 @@
+[
+  {
+    "x": "A&O SCI",
+    "y": 2
+  },
+  {
+    "x": "AF AMER",
+    "y": 7
+  },
+  {
+    "x": "AM IND",
+    "y": 1
+  },
+  {
+    "x": "AN N EA",
+    "y": 3
+  },
+  {
+    "x": "ANTHRO",
+    "y": 8
+  },
+  {
+    "x": "APPLING",
+    "y": 1
+  },
+  {
+    "x": "ARMENIA",
+    "y": 1
+  },
+  {
+    "x": "ART",
+    "y": 13
+  },
+  {
+    "x": "ART HIS",
+    "y": 4
+  },
+  {
+    "x": "ARTS ED",
+    "y": 1
+  },
+  {
+    "x": "ASIA AM",
+    "y": 5
+  },
+  {
+    "x": "ASIAN",
+    "y": 3
+  },
+  {
+    "x": "ASL",
+    "y": 1
+  },
+  {
+    "x": "ASTR",
+    "y": 2
+  },
+  {
+    "x": "BIOENGR",
+    "y": 2
+  },
+  {
+    "x": "BIOL CH",
+    "y": 1
+  },
+  {
+    "x": "C&EE",
+    "y": 6
+  },
+  {
+    "x": "C&S BIO",
+    "y": 1
+  },
+  {
+    "x": "CESC",
+    "y": 2
+  },
+  {
+    "x": "CH ENGR",
+    "y": 2
+  },
+  {
+    "x": "CHEM",
+    "y": 8
+  },
+  {
+    "x": "CHICANO",
+    "y": 11
+  },
+  {
+    "x": "CHIN",
+    "y": 4
+  },
+  {
+    "x": "CLASSIC",
+    "y": 2
+  },
+  {
+    "x": "COM HLT",
+    "y": 1
+  },
+  {
+    "x": "COM LIT",
+    "y": 3
+  },
+  {
+    "x": "COM SCI",
+    "y": 10
+  },
+  {
+    "x": "COMM",
+    "y": 17
+  },
+  {
+    "x": "COMPTNG",
+    "y": 3
+  },
+  {
+    "x": "DANCE",
+    "y": 6
+  },
+  {
+    "x": "DESMA",
+    "y": 11
+  },
+  {
+    "x": "DGT HUM",
+    "y": 2
+  },
+  {
+    "x": "DIS STD",
+    "y": 2
+  },
+  {
+    "x": "EC ENGR",
+    "y": 11
+  },
+  {
+    "x": "ECON",
+    "y": 10
+  },
+  {
+    "x": "EDUC",
+    "y": 9
+  },
+  {
+    "x": "EE BIOL",
+    "y": 15
+  },
+  {
+    "x": "ENGCOMP",
+    "y": 3
+  },
+  {
+    "x": "ENGL",
+    "y": 27
+  },
+  {
+    "x": "ENGR",
+    "y": 2
+  },
+  {
+    "x": "ENV HLT",
+    "y": 1
+  },
+  {
+    "x": "ENVIRON",
+    "y": 5
+  },
+  {
+    "x": "ETHNMUS",
+    "y": 4
+  },
+  {
+    "x": "FILM TV",
+    "y": 5
+  },
+  {
+    "x": "FOOD ST",
+    "y": 2
+  },
+  {
+    "x": "FRNCH",
+    "y": 5
+  },
+  {
+    "x": "GENDER",
+    "y": 10
+  },
+  {
+    "x": "GEOG",
+    "y": 12
+  },
+  {
+    "x": "GERMAN",
+    "y": 2
+  },
+  {
+    "x": "GJ STDS",
+    "y": 1
+  },
+  {
+    "x": "GLBL ST",
+    "y": 2
+  },
+  {
+    "x": "GRNTLGY",
+    "y": 1
+  },
+  {
+    "x": "HIST",
+    "y": 29
+  },
+  {
+    "x": "HLT POL",
+    "y": 1
+  },
+  {
+    "x": "HNRS",
+    "y": 8
+  },
+  {
+    "x": "I A STD",
+    "y": 1
+  },
+  {
+    "x": "INF STD",
+    "y": 3
+  },
+  {
+    "x": "INTL DV",
+    "y": 2
+  },
+  {
+    "x": "IRANIAN",
+    "y": 1
+  },
+  {
+    "x": "ISLM ST",
+    "y": 1
+  },
+  {
+    "x": "ITALIAN",
+    "y": 3
+  },
+  {
+    "x": "JAPAN",
+    "y": 1
+  },
+  {
+    "x": "LATIN",
+    "y": 1
+  },
+  {
+    "x": "LGBTQS",
+    "y": 4
+  },
+  {
+    "x": "LIFESCI",
+    "y": 1
+  },
+  {
+    "x": "LING",
+    "y": 6
+  },
+  {
+    "x": "M E STD",
+    "y": 1
+  },
+  {
+    "x": "M PHARM",
+    "y": 1
+  },
+  {
+    "x": "MAT SCI",
+    "y": 4
+  },
+  {
+    "x": "MATH",
+    "y": 25
+  },
+  {
+    "x": "MCD BIO",
+    "y": 9
+  },
+  {
+    "x": "MECH&AE",
+    "y": 7
+  },
+  {
+    "x": "MGMT",
+    "y": 8
+  },
+  {
+    "x": "MIMG",
+    "y": 6
+  },
+  {
+    "x": "MSC IND",
+    "y": 2
+  },
+  {
+    "x": "MUSCLG",
+    "y": 2
+  },
+  {
+    "x": "NEURBIO",
+    "y": 1
+  },
+  {
+    "x": "NEUROSC",
+    "y": 3
+  },
+  {
+    "x": "OBGYN",
+    "y": 1
+  },
+  {
+    "x": "PHILOS",
+    "y": 16
+  },
+  {
+    "x": "PHYSCI",
+    "y": 13
+  },
+  {
+    "x": "PHYSICS",
+    "y": 10
+  },
+  {
+    "x": "POL SCI",
+    "y": 20
+  },
+  {
+    "x": "PORTGSE",
+    "y": 1
+  },
+  {
+    "x": "PSYCH",
+    "y": 36
+  },
+  {
+    "x": "PSYCTRY",
+    "y": 1
+  },
+  {
+    "x": "PUB AFF",
+    "y": 7
+  },
+  {
+    "x": "PUB HLT",
+    "y": 2
+  },
+  {
+    "x": "PUB PLC",
+    "y": 1
+  },
+  {
+    "x": "RELIGN",
+    "y": 3
+  },
+  {
+    "x": "RUSSN",
+    "y": 2
+  },
+  {
+    "x": "SCAND",
+    "y": 6
+  },
+  {
+    "x": "SOC GEN",
+    "y": 8
+  },
+  {
+    "x": "SOC WLF",
+    "y": 1
+  },
+  {
+    "x": "SOCIOL",
+    "y": 14
+  },
+  {
+    "x": "SPAN",
+    "y": 9
+  },
+  {
+    "x": "STATS",
+    "y": 8
+  },
+  {
+    "x": "THEATER",
+    "y": 3
+  },
+  {
+    "x": "URBN PL",
+    "y": 1
+  },
+  {
+    "x": "WL ARTS",
+    "y": 4
+  }
+]
