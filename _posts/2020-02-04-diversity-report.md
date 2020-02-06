@@ -7,7 +7,9 @@ featured_image:
   url: diversity-report/feature-photo.png
 scripts:
   - /js/posts/sv-map/redirect.js
----<head>
+---
+
+<head>
 <script>
 window.location.href = "https://features.dailybruin.com/2020/diversity-report/";
 </script>
