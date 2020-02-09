@@ -46,4 +46,35 @@ def tweets(candidate_name):
 def all_candidates():
     return CANDIDATES
 
+# access a candidate's personality profile (dictionary of traits)
+def personality(candidate_name):
+    headers = {
+        'Content-Type': 'text/plain;charset=utf-8',
+        'Accept': 'application/json',
+    }
+
+    params = (
+        ('version', '2017-10-13'),
+        ('consumption_preferences', ['true', 'true']),
+        ('raw_scores', ['true/v3/profile?version=2017-10-13', 'true']),
+    )
+
+    data = tweets(candidate_name).encode('utf-8')
+    response = requests.post('https://api.us-south.personality-insights.watson.cloud.ibm.com/instances/24b1ee37-161b-46e0-a4ac-9cd1d16e792c/v3/profile', headers=headers, params=params, data=data, auth=('apikey', 'Evef9Le9VD1b4wMKw3N0dfauvn3EQDVydNOcGxjQf9oM'))
+    parsed = json.loads(response.text)
+
+    trait_dict = {}
+
+    for j in range(len(parsed) - 2):
+        trait_dict[parsed['personality'][j]['name']] = parsed['personality'][j]['percentile']
+
+        for k in range(len(parsed['personality'][j]['children'])):
+            trait_dict[(parsed['personality'][j]['children'][k]['name'])] = parsed['personality'][j]['children'][k]['percentile']
+
+    return trait_dict
+
+    
+
+
+    
     
