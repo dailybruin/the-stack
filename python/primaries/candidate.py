@@ -7,8 +7,6 @@ CANDIDATES = [
     'bernie-sanders', 
     'pete-buttigieg', 
     'amy-klobuchar', 
-    'tom-steyer', 
-    'andrew-yang',
     'donald-trump']
 
 # NOTE: Change FILE_PATH variable before use!
