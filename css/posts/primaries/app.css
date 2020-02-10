@@ -25,3 +25,27 @@
         margin: 0.4em auto;
     }
 }
+
+#radar-wrapper {
+    padding-bottom: 100px;
+}
+
+#bubble-wrapper {
+    display: flex;
+}
+
+#trait_meaning {
+    font-family: 'Roboto', sans-serif;
+    background-color: aliceblue;
+    width: 20vw;
+    padding: 1.4em;
+}
+
+@media (max-width: 800px) {
+    #bubble-wrapper {
+      display: block;
+    }
+    #trait_meaning {
+        width: 80vw;
+    }
+  }

@@ -32,27 +32,47 @@ scripts:
   <script src="/js/posts/primaries/helper.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
 
-  <div style="padding-bottom: 100px">
-  <canvas id="radar-chart"></canvas>
-  <script src="/js/posts/primaries/radar_chart.js"></script>
+  <div id="radar-wrapper">
+    <canvas id="radar-chart"></canvas>
+    <script src="/js/posts/primaries/radar_chart.js"></script>
 
-  <button id="radar-button" onclick="radar_func('Amy Klobuchar', 'amy-klobuchar')">Amy Klobuchar</button>
-  <button id="radar-button" onclick="radar_func('Bernie Sanders', 'bernie-sanders')">Bernie Sanders</button>
-  <button id="radar-button" onclick="radar_func('Donald Trump', 'donald-trump')">Donald Trump</button>
-  <button id="radar-button" onclick="radar_func('Elizabeth Warren', 'elizabeth-warren')">Elizabeth Warren</button>
-  <button id="radar-button" onclick="radar_func('Joe Biden', 'joe-biden')">Joe Biden</button>
-  <button id="radar-button" onclick="radar_func('Pete Buttigieg', 'pete-buttigieg')">Pete Buttigieg</button>
-  <button id="radar-button" onclick="show_all()">All</button>
+<button id="radar-button" onclick="radar_func('Amy Klobuchar', 'amy-klobuchar')">Amy Klobuchar</button>
+<button id="radar-button" onclick="radar_func('Bernie Sanders', 'bernie-sanders')">Bernie Sanders</button>
+<button id="radar-button" onclick="radar_func('Donald Trump', 'donald-trump')">Donald Trump</button>
+<button id="radar-button" onclick="radar_func('Elizabeth Warren', 'elizabeth-warren')">Elizabeth Warren</button>
+<button id="radar-button" onclick="radar_func('Joe Biden', 'joe-biden')">Joe Biden</button>
+<button id="radar-button" onclick="radar_func('Pete Buttigieg', 'pete-buttigieg')">Pete Buttigieg</button>
+<button id="radar-button" onclick="show_all()">All</button>
   </div>
 
+
+<div id="bubble-wrapper">
   <div>
     <canvas id="bubble-chart"></canvas>
   </div>
+    <!-- Default Openness, changes on-click -->
+  <div>
+    <p id="trait_meaning">
+    <strong>Openness</strong>
+    : Openness, or Open to Experience, is the extent to which a person is open to experiencing a variety of activities. 
+    </p>
+  </div>
+</div>
+
   <script src="/js/posts/primaries/bubble_chart.js"></script>
+  <script src="/js/posts/primaries/trait_details.js"></script>
+
+  <script>
+  function trait_meaning_func(trait) {
+    output = "";
+    output = output.concat("<strong>", trait.toString(), "</strong>", ": ", trait_meanings[trait]);
+    document.getElementById("trait_meaning").innerHTML = output;
+  }
+  </script>
 
   <!-- TODO: Remove some traits? or break down into main traits and sub-traits-->
   <!-- TODO: Change scale for media queries -->
-  <select onchange="bubble_func(this.value, 40);">
+  <select onchange="bubble_func(this.value, 40); trait_meaning_func(this.value);">
   <option value='Openness'>Openness</option>
   <option value='Conscientiousness'>Conscientiousness</option>
   <option value='Agreeableness'>Agreeableness</option>
@@ -89,3 +109,8 @@ scripts:
   <option value='Self-consciousness'>Self-consciousness</option>
   <option value='Susceptible to stress'>Susceptible to stress</option>
   </select>
+
+ #### Meaning of Scores (quoted from IBM)
+ 
+  Any score above the mean of 0.5 indicates a greater than average tendency for a characteristic. A score at or above 0.75 indicates readily discernible aspects of the characteristic; such scores are considered high.
+  The opposite statements are true of scores below 0.50 and 0.25, which are considered low.
