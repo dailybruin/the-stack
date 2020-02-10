@@ -82,9 +82,9 @@ def personality(candidate_name):
     return trait_dict
 
 # temporary code to save trait dictionaries
-for i in CANDIDATES:
-    with open('../../datasets/primaries' + i + '_traits.txt', 'w') as outfile:
-        json.dump(personality(i), outfile) 
+# for i in CANDIDATES:
+#    with open('../../js/posts/primaries/' + i + '_traits.js', 'w') as outfile:
+#        json.dump(personality(i), outfile) 
 
     
 
