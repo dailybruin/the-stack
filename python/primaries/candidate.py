@@ -67,7 +67,6 @@ def personality(candidate_name):
         ('raw_scores', ['true/v3/profile?version=2017-10-13', 'true']),
     )
 
-<<<<<<< HEAD
     # load api auth credentials
     with open(CONFIG_FILE, 'r') as config_file:
         config = yaml.load(config_file)
@@ -78,12 +77,6 @@ def personality(candidate_name):
     parsed = json.loads(response.text)
 
     # save dictionary mapping personality trait -> percentile
-=======
-    data = tweets(candidate_name).encode('utf-8')
-    response = requests.post('https://api.us-south.personality-insights.watson.cloud.ibm.com/instances/24b1ee37-161b-46e0-a4ac-9cd1d16e792c/v3/profile', headers=headers, params=params, data=data, auth=('apikey', 'Evef9Le9VD1b4wMKw3N0dfauvn3EQDVydNOcGxjQf9oM'))
-    parsed = json.loads(response.text)
-
->>>>>>> 27b1ae783fd8af93437cf24016893153b5b08df4
     trait_dict = {}
 
     for j in range(len(parsed) - 2):
@@ -91,7 +84,6 @@ def personality(candidate_name):
 
         for k in range(len(parsed['personality'][j]['children'])):
             trait_dict[(parsed['personality'][j]['children'][k]['name'])] = parsed['personality'][j]['children'][k]['percentile']
-<<<<<<< HEAD
     
     return trait_dict
 
@@ -99,10 +91,6 @@ def personality(candidate_name):
 for i in CANDIDATES:
     with open('../../datasets/primaries' + i + '_traits.txt', 'w') as outfile:
         json.dump(personality(i), outfile) 
-=======
-
-    return trait_dict
->>>>>>> 27b1ae783fd8af93437cf24016893153b5b08df4
 
     
 
