@@ -31,7 +31,7 @@ let DEPARTMENTSIZE = [];
 let classSlice = graphSize == 1000 ? 30 : 20;
 //timeline data
 let TIMELINE = [];
-const LAST_TIME = 299;
+const LAST_TIME = 299 - 2;
 //timeline data json'ified
 let TIMEDATA = [];
 //tick times
@@ -390,11 +390,11 @@ class Insights extends React.Component {
         {/* graph of top classes full by % */}
         {isMobile ? (
           <h4>
-            {classSlice} Most Full Departments by Percentage (> 5 classes)
+            {classSlice} Most Full Departments by Percentage (>= 5 classes)
           </h4>
         ) : (
           <h2 style={{ marginLeft: graphSize / 8 }}>
-            {classSlice} Most Full Departments (> 5 classes) by Percentage
+            {classSlice} Most Full Departments (>= 5 classes) by Percentage
           </h2>
         )}
         <XYPlot
