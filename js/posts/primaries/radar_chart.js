@@ -13,7 +13,7 @@ let radarChart = new Chart(document.getElementById("radar-chart"), {
         borderColor: color_code('amy-klobuchar', 1),
         pointBorderColor: "#fff",
         pointBackgroundColor: color_code('amy-klobuchar', 1),
-        data: trait_data('amy-klobuchar').toFixed(2)
+        data: trait_data('amy-klobuchar')
       }, {
         label: "Bernie Sanders",
         fill: true,
@@ -22,7 +22,7 @@ let radarChart = new Chart(document.getElementById("radar-chart"), {
         pointBorderColor: "#fff",
         pointBackgroundColor: color_code('bernie-sanders', 1),
         pointBorderColor: "#fff",
-        data: trait_data('bernie-sanders').toFixed(2)
+        data: trait_data('bernie-sanders')
       }, {
         label: "Donald Trump",
         fill: true,
@@ -31,7 +31,7 @@ let radarChart = new Chart(document.getElementById("radar-chart"), {
         pointBorderColor: "#fff",
         pointBackgroundColor: color_code('donald-trump', 1),
         pointBorderColor: "#fff",
-        data: trait_data('donald-trump').toFixed(2)
+        data: trait_data('donald-trump')
       }, {
         label: "Elizabeth Warren",
         fill: true,
@@ -40,7 +40,7 @@ let radarChart = new Chart(document.getElementById("radar-chart"), {
         pointBorderColor: "#fff",
         pointBackgroundColor: color_code('elizabeth-warren', 1),
         pointBorderColor: "#fff",
-        data: trait_data('elizabeth-warren').toFixed(2)
+        data: trait_data('elizabeth-warren')
       }, {
         label: "Joe Biden",
         fill: true,
@@ -49,7 +49,7 @@ let radarChart = new Chart(document.getElementById("radar-chart"), {
         pointBorderColor: "#fff",
         pointBackgroundColor: color_code('joe-biden', 1),
         pointBorderColor: "#fff",
-        data: trait_data('joe-biden').toFixed(2)
+        data: trait_data('joe-biden')
       }, {
         label: "Pete Buttigieg",
         fill: true,
@@ -58,8 +58,8 @@ let radarChart = new Chart(document.getElementById("radar-chart"), {
         pointBorderColor: "#fff",
         pointBackgroundColor: color_code('pete-buttigieg', 1),
         pointBorderColor: "#fff",
-        data: trait_data('pete-buttigieg').toFixed(2)
-      },
+        data: trait_data('pete-buttigieg')
+      }
       ]
     },
     options: {
@@ -85,7 +85,7 @@ function show_all() {
           borderColor: color_code('amy-klobuchar', 1),
           pointBorderColor: "#fff",
           pointBackgroundColor: color_code('amy-klobuchar', 1),
-          data: trait_data('amy-klobuchar').toFixed(2)
+          data: trait_data('amy-klobuchar')
         }, {
           label: "Bernie Sanders",
           fill: true,
@@ -94,7 +94,7 @@ function show_all() {
           pointBorderColor: "#fff",
           pointBackgroundColor: color_code('bernie-sanders', 1),
           pointBorderColor: "#fff",
-          data: trait_data('bernie-sanders').toFixed(2)
+          data: trait_data('bernie-sanders')
         }, {
           label: "Donald Trump",
           fill: true,
@@ -103,7 +103,7 @@ function show_all() {
           pointBorderColor: "#fff",
           pointBackgroundColor: color_code('donald-trump', 1),
           pointBorderColor: "#fff",
-          data: trait_data('donald-trump').toFixed(2)
+          data: trait_data('donald-trump')
         }, {
           label: "Elizabeth Warren",
           fill: true,
@@ -112,7 +112,7 @@ function show_all() {
           pointBorderColor: "#fff",
           pointBackgroundColor: color_code('elizabeth-warren', 1),
           pointBorderColor: "#fff",
-          data: trait_data('elizabeth-warren').toFixed(2)
+          data: trait_data('elizabeth-warren')
         }, {
           label: "Joe Biden",
           fill: true,
@@ -121,7 +121,7 @@ function show_all() {
           pointBorderColor: "#fff",
           pointBackgroundColor: color_code('joe-biden', 1),
           pointBorderColor: "#fff",
-          data: trait_data('joe-biden').toFixed(2)
+          data: trait_data('joe-biden')
         }, {
           label: "Pete Buttigieg",
           fill: true,
@@ -130,14 +130,14 @@ function show_all() {
           pointBorderColor: "#fff",
           pointBackgroundColor: color_code('pete-buttigieg', 1),
           pointBorderColor: "#fff",
-          data: trait_data('pete-buttigieg').toFixed(2)
-        },
+          data: trait_data('pete-buttigieg')
+        }
         ];
 
     radarChart.update();
 }
 
-//TODO: Create a system of candidate IDs - AK, BS, DT, etc.
+// TODO: Create a system of candidate IDs - AK, BS, DT, etc.
 
 // shows only single candidate
 function radar_func(candidate_name, candidate_id) {
