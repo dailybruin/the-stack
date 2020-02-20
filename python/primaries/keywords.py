@@ -1,0 +1,4 @@
+def get_keywords() :
+	temp = ['college' , 'higher education', 'daca', 'tuition', 'gun control', 'gun violence', 'healthcare', 'environment', 'climate',
+	'undocumented', 'scholarship', 'student visa', 'immigration', 'travel ban', 'stem', 'opt', 'h1b', 'women\'s rights', 'black lives matter', 'racial equality', 'lgbtq', 'student', 'medicare', 'obamacare', 'insurance', 'gun restriction', 'gun law', 'university', 'regents', 'higher-education', 'obama care', 'obama-care', 'nra', 'shooting', 'school', 'women', 'race', 'racial', 'scholar', 'community college', 'loan', 'junior college', 'abortion', 'reproductive', 'planned parenthood', 'ucla', 'public education', 'education', 'sexual harassment', 'title 9', 'title ix', 'title9', 'titleix', 'sexual assault', 'mental health', 'counseling', 'mental illness', 'domestic violence', 'weed', 'marijuana']
+	return temp

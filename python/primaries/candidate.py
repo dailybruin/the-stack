@@ -3,12 +3,13 @@ import requests
 import yaml
 
 CANDIDATES = [
-    'joe-biden', 
-    'elizabeth-warren', 
-    'bernie-sanders', 
-    'pete-buttigieg', 
-    'amy-klobuchar', 
-    'donald-trump']
+    'joe-biden',
+    'elizabeth-warren',
+    'bernie-sanders',
+    'pete-buttigieg',
+    'amy-klobuchar',
+    'donald-trump',
+    'michael-bloomberg']
 
 # NOTE: Change FILE_PATH variable before use!
 # - Navigate to the root directory of 'the-stack' repo on command line, type in pwd and copy the result
@@ -30,7 +31,7 @@ def json_parser():
         unparsed_json = open(FILE_PATH + i + '.json', 'rb')
         parsed_json = json.load(unparsed_json)
 
-        # assign each candidate's tweet text to candidate name 
+        # assign each candidate's tweet text to candidate name
         tweet_data = ""
         for j in range(len(parsed_json)):
             tweet_data = tweet_data + parsed_json[j]['text']
@@ -81,13 +82,9 @@ def personality(candidate_name):
     
     return trait_dict
 
+print(personality('michael-bloomberg'))
+
 # temporary code to save trait dictionaries
 # for i in CANDIDATES:
 #    with open('../../js/posts/primaries/' + i + '_traits.js', 'w') as outfile:
-#        json.dump(personality(i), outfile) 
-
-    
-
-
-    
-    
+#        json.dump(personality(i), outfile)
