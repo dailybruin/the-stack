@@ -1,4 +1,4 @@
-#radar-button {
+#keyword-button {
     display: inline-block;
     padding: 0.35em 1.2em;
     border: 0.15em solid #000000;
@@ -14,31 +14,36 @@
     background-color: #FFFFFF;
 }
 
-#radar-button:hover {
+#keyword-button:hover {
     color: #FFFFFF;
     background-color: #000000;
 }
 
 @media all and (max-width:30em) {
-    #radar-button {
+    #keyword-button {
         display: block;
         margin: 0.4em auto;
     }
 }
 
-#radar-wrapper {
+#keyword-wrapper {
     padding-bottom: 100px;
 }
 
-#bubble-wrapper {
+#bubble-wrapper, #keyword-wrapper {
     display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
-#trait_meaning {
+.info-box {
     font-family: 'Roboto', sans-serif;
-    background-color: aliceblue;
+    font-weight: 300;
+    font-size: small;
+    /*background-color: aliceblue;*/
     width: 20vw;
     padding: 1.4em;
+    border: medium solid #000000;
 }
 
 @media (max-width: 800px) {
