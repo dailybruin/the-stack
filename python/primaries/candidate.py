@@ -8,7 +8,8 @@ CANDIDATES = [
     'bernie-sanders', 
     'pete-buttigieg', 
     'amy-klobuchar', 
-    'donald-trump']
+    'donald-trump',
+    'michael-bloomberg']
 
 # NOTE: Change FILE_PATH variable before use!
 # - Navigate to the root directory of 'the-stack' repo on command line, type in pwd and copy the result
@@ -80,6 +81,8 @@ def personality(candidate_name):
             trait_dict[(parsed['personality'][j]['children'][k]['name'])] = parsed['personality'][j]['children'][k]['percentile']
     
     return trait_dict
+
+print(personality('michael-bloomberg'))
 
 # temporary code to save trait dictionaries
 # for i in CANDIDATES:

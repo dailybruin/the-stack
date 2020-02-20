@@ -28,6 +28,7 @@ scripts:
   <script src="/js/posts/primaries/donald-trump_traits.js"></script>
   <script src="/js/posts/primaries/elizabeth-warren_traits.js"></script>
   <script src="/js/posts/primaries/joe-biden_traits.js"></script>
+  <script src="/js/posts/primaries/michael-bloomberg_traits.js"></script>
   <script src="/js/posts/primaries/pete-buttigieg_traits.js"></script>
   <script src="/js/posts/primaries/helper.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>

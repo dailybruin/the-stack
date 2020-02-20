@@ -11,6 +11,8 @@ function color_code(candidate, opacity) {
         return 'rgba(26, 149, 203, ' + opacity.toString() + ')';  
     else if (candidate == 'joe-biden')
         return "rgba(51, 51, 255, " + opacity.toString() + ")"; 
+    else if (candidate == 'michael-bloomberg')
+        return "rgba(52, 214, 235, " + opacity.toString() + ")";
     else if (candidate == 'pete-buttigieg')
         return 'rgba(176, 206, 255, ' + opacity.toString() + ')'; 
 
@@ -30,6 +32,8 @@ function trait_data(candidate) {
         data = elizabeth_warren_traits;
     else if (candidate == 'joe-biden')
         data = joe_biden_traits;
+    else if (candidate == 'michael-bloomberg')
+        data = michael_bloomberg_traits;
     else if (candidate == 'pete-buttigieg')
         data = pete_buttigieg_traits;
     else
