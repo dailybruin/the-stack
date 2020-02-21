@@ -51,12 +51,12 @@ scripts:
   </script>
 
   <!-- TODO**: Fix styling to even out spacing -->
-  <div id="keyword-wrapper" style="margin-left: 6vw; marigin-right: 6vw;">
+  <div id="keyword-wrapper">
     <div>
       <button id="keyword-button" onclick="keyword_func('college'); search_terms('college');">College</button> <br>
       <button id="keyword-button" onclick="keyword_func('immigration'); search_terms('immigration');">Immigration</button> <br>
       <button id="keyword-button" onclick="keyword_func('mental-health'); search_terms('mental-health');">Mental Health</button> <br>
-      <button id="keyword-button" onclick="keyword_func('discrimination-and-equality'); search_terms('discrimination-and-equality');">Discrimination & Equality</button>
+      <button id="keyword-button" onclick="keyword_func('discrimination-and-equality'); search_terms('discrimination-and-equality');">Discrimination & Equality</button> <br>
       <button id="keyword-button" onclick="keyword_func('healthcare'); search_terms('healthcare');">Healthcare</button> <br>
       <button id="keyword-button" onclick="keyword_func('environment'); search_terms('environment');">Environment</button> <br>
       <button id="keyword-button" onclick="keyword_func('women'); search_terms('women');">Women</button> <br>
@@ -99,7 +99,8 @@ scripts:
   </div>
 </div>
 
-  <script src="/js/posts/primaries/bubble_chart.js"></script>
+<!-- Modify bubble_chart (y constant), to bubble_chart_2 (r constant) to view-->
+  <script src="/js/posts/primaries/bubble_chart_2.js"></script>
   <script src="/js/posts/primaries/trait_details.js"></script>
 
   <div>
