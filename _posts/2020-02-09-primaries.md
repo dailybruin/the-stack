@@ -100,7 +100,7 @@ scripts:
 </div>
 
 <!-- Modify bubble_chart (y constant), to bubble_chart_2 (r constant) to view-->
-  <script src="/js/posts/primaries/bubble_chart_2.js"></script>
+  <script src="/js/posts/primaries/bubble_chart.js"></script>
   <script src="/js/posts/primaries/trait_details.js"></script>
 
   <div>
