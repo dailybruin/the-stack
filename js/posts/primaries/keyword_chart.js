@@ -42,7 +42,7 @@ let keywordChart = new Chart(document.getElementById("keyword-chart"), {
 Chart.defaults.global.defaultFontFamily = 'Roboto';
 Chart.defaults.global.defaultFontSize = 15;
 Chart.defaults.global.defaultFontColor = '#777';
-keywordChart.canvas.parentNode.style.width = '700px'; 
+keywordChart.canvas.parentNode.style.width = '700px';
 
 // Update Keyword Chart on Button Click
 function keyword_func(keyword) {
