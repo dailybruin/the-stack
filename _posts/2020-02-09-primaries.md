@@ -67,13 +67,13 @@ scripts:
     <div>
       <button id="keyword-button" onclick="keyword_func('college'); search_terms('college'); reset(); update_btn_color(this);">College</button> <br>
       <button id="keyword-button" onclick="keyword_func('immigration'); search_terms('immigration'); reset(); update_btn_color(this);">Immigration</button> <br>
-      <button id="keyword-button" onclick="keyword_func('mental-health'); search_terms('mental-health'); reset(); update_btn_color(this);">Mental Health</button> <br>
-      <button id="keyword-button" onclick="keyword_func('discrimination-and-equality'); search_terms('discrimination-and-equality'); reset(); update_btn_color(this);">Discrimination & Equality</button> <br>
+      <button id="keyword-button" onclick="keyword_func('mental health'); search_terms('mental-health'); reset(); update_btn_color(this);">Mental Health</button> <br>
+      <button id="keyword-button" onclick="keyword_func('discrimination and equality'); search_terms('discrimination-and-equality'); reset(); update_btn_color(this);">Discrimination & Equality</button> <br>
       <button id="keyword-button" onclick="keyword_func('healthcare'); search_terms('healthcare'); reset(); update_btn_color(this);">Healthcare</button> <br>
       <button id="keyword-button" onclick="keyword_func('environment'); search_terms('environment'); reset(); update_btn_color(this);">Environment</button> <br>
-      <button id="keyword-button" onclick="keyword_func('women'); search_terms('women'); reset(); update_btn_color(this);">Women's Health</button> <br>
-      <button id="keyword-button" onclick="keyword_func('weed'); search_terms('weed'); reset(); update_btn_color(this);">Marijuana</button> <br>
-      <button id="keyword-button" onclick="keyword_func('gun-rights'); search_terms('gun-rights'); reset(); update_btn_color(this);">Gun Rights</button>
+      <button id="keyword-button" onclick="keyword_func('women\'s health'); search_terms('women'); reset(); update_btn_color(this);">Women's Health</button> <br>
+      <button id="keyword-button" onclick="keyword_func('marijuana'); search_terms('weed'); reset(); update_btn_color(this);">Marijuana</button> <br>
+      <button id="keyword-button" onclick="keyword_func('gun issues'); search_terms('gun-rights'); reset(); update_btn_color(this);">Gun Rights</button>
     </div>
     <div>
       <canvas id="keyword-chart"></canvas>
@@ -167,7 +167,7 @@ scripts:
 <!-- END OF SECTION -->
 
 
- #### Meaning of Scores (quoted from IBM)
+### Meaning of Scores (quoted from IBM)
  
   Any score above the mean of 0.5 indicates a greater than average tendency for a characteristic. A score at or above 0.75 indicates readily discernible aspects of the characteristic; such scores are considered high.
   The opposite statements are true of scores below 0.50 and 0.25, which are considered low.
