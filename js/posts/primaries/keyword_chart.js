@@ -3,7 +3,7 @@ let keywordChart = new Chart(document.getElementById("keyword-chart"), {
   type: 'horizontalBar',
   data: {
       labels: ["Amy Klobuchar", "Bernie Sanders", "Donald Trump", 
-               "Elizabeth Warren", "Joe Biden", "Michael Bloomberg", 
+               "Elizabeth Warren", "Joe Biden",  
                "Pete Buttigieg"],
     datasets: [
       {
@@ -13,10 +13,9 @@ let keywordChart = new Chart(document.getElementById("keyword-chart"), {
                             color_code('donald-trump', 0.9), 
                             color_code('elizabeth-warren', 0.9),
                             color_code('joe-biden', 0.9), 
-                            color_code('michael-bloomberg', 0.9),
                             color_code('pete-buttigieg', 0.9),
                         ],
-        data: [81,133,7,207,51,100,59] //TODO: Enter college data in order of candidates
+        data: [81,133,7,207,51,59] 
       }]
   },
   options: {
@@ -50,14 +49,44 @@ function keyword_func(keyword) {
         color_code('donald-trump', 0.9), 
         color_code('elizabeth-warren', 0.9),
         color_code('joe-biden', 0.9), 
-        color_code('michael-bloomberg', 0.9),
         color_code('pete-buttigieg', 0.9),
         ],
-        data: [81,133,37,107,51,100,59] //TODO: (random data here): Update data according to keyword
-                                        //Eg: function (_keyword_) = _data-val_ for all candidates in order
+        data: get_data_from_keyword(keyword)
+                                        
     }];
 
     keywordChart.update();
+}
+
+//return the correct array
+function get_data_from_keyword(keyword) {
+  if (keyword.localeCompare("college") === 0) {
+    return [81, 133, 7, 207, 51, 59];
+  }
+  if (keyword.localeCompare("immigration") === 0) {
+    return [19, 20, 3, 12, 17, 10];
+  }
+  if (keyword.localeCompare("mental-health") === 0) {
+    return [8, 4, 0, 2, 0, 1];
+  }
+  if (keyword.localeCompare("discrimination-and-equality") === 0) {
+    return [46, 42, 8, 65, 36, 22];
+  }
+  if (keyword.localeCompare("healthcare") === 0) {
+    return [6, 102, 4, 3, 45, 3];
+  }
+  if (keyword.localeCompare("environment") === 0) {
+    return [32, 72, 1, 54, 66, 13];
+  }
+  if (keyword.localeCompare("women") === 0) {
+    return [29, 18, 2, 51, 18, 17];
+  }
+  if (keyword.localeCompare("weed") === 0) {
+    return [0, 6, 0, 10, 2, 0];
+  }
+  if (keyword.localeCompare("gun-rights") === 0) {
+    return [24, 5, 2, 10, 37, 8];
+  }
 }
 
 function show_all() {
@@ -69,10 +98,9 @@ function show_all() {
                           color_code('donald-trump', 0.9), 
                           color_code('elizabeth-warren', 0.9),
                           color_code('joe-biden', 0.9), 
-                          color_code('michael-bloomberg', 0.9),
                           color_code('pete-buttigieg', 0.9),
                       ],
-      data: [81,133,7,207,51,100,59] //TODO: Enter college data in order of candidates
+      data: [81,133,7,207,51,59] //TODO: Enter college data in order of candidates
     },
     {
       label: "Immigration",
@@ -81,10 +109,9 @@ function show_all() {
                           color_code('donald-trump', 0.8), 
                           color_code('elizabeth-warren', 0.8),
                           color_code('joe-biden', 0.8), 
-                          color_code('michael-bloomberg', 0.8),
                           color_code('pete-buttigieg', 0.8),
                       ],
-      data: [41,33,27,27,41,10,29], //TODO: Enter required data in order of candidates
+      data: [41,33,27,27,41,29], //TODO: Enter required data in order of candidates
     },
     {
       label: "Mental Health",
@@ -93,10 +120,9 @@ function show_all() {
                           color_code('donald-trump', 0.7), 
                           color_code('elizabeth-warren', 0.7),
                           color_code('joe-biden', 0.7), 
-                          color_code('michael-bloomberg', 0.7),
                           color_code('pete-buttigieg', 0.7),
                       ],
-      data: [81,133,7,207,51,100,59], //TODO: Enter required data in order of candidates
+      data: [81,133,7,207,51,59], //TODO: Enter required data in order of candidates
     },
     {
       label: "Discrimination & Equality",
@@ -105,10 +131,9 @@ function show_all() {
                           color_code('donald-trump', 0.6), 
                           color_code('elizabeth-warren', 0.6),
                           color_code('joe-biden', 0.6), 
-                          color_code('michael-bloomberg', 0.6),
                           color_code('pete-buttigieg', 0.6),
                       ],
-        data: [81,133,7,207,51,100,59], //TODO: Enter required data in order of candidates
+        data: [81,133,7,207,51,59], //TODO: Enter required data in order of candidates
     },
     {
       label: "Healthcare",
@@ -117,10 +142,9 @@ function show_all() {
                           color_code('donald-trump', 0.5), 
                           color_code('elizabeth-warren', 0.5),
                           color_code('joe-biden', 0.5), 
-                          color_code('michael-bloomberg', 0.5),
                           color_code('pete-buttigieg', 0.5),
                       ],
-      data: [81,133,7,207,51,100,59], //TODO: Enter required data in order of candidates
+      data: [81,133,7,207,51,59], //TODO: Enter required data in order of candidates
     },
     {
       label: "Environment",
@@ -129,10 +153,9 @@ function show_all() {
                           color_code('donald-trump', 0.4), 
                           color_code('elizabeth-warren', 0.4),
                           color_code('joe-biden', 0.4), 
-                          color_code('michael-bloomberg', 0.4),
                           color_code('pete-buttigieg', 0.4),
                       ],
-      data: [81,133,7,207,51,100,59], //TODO: Enter required data in order of candidates
+      data: [81,133,7,207,51,59], //TODO: Enter required data in order of candidates
     },
     {
       label: "Women",
@@ -141,10 +164,9 @@ function show_all() {
                           color_code('donald-trump', 0.3), 
                           color_code('elizabeth-warren', 0.3),
                           color_code('joe-biden', 0.3), 
-                          color_code('michael-bloomberg', 0.3),
                           color_code('pete-buttigieg', 0.3),
                       ],
-      data: [81,133,7,207,51,100,59], //TODO: Enter required data in order of candidates
+      data: [81,133,7,207,51,59], //TODO: Enter required data in order of candidates
     },
     {
       label: "Weed",
@@ -153,10 +175,9 @@ function show_all() {
                           color_code('donald-trump', 0.2), 
                           color_code('elizabeth-warren', 0.2),
                           color_code('joe-biden', 0.2), 
-                          color_code('michael-bloomberg', 0.2),
                           color_code('pete-buttigieg', 0.2),
                       ],
-      data: [81,133,7,207,51,100,59], //TODO: Enter required data in order of candidates 
+      data: [81,133,7,207,51,59], //TODO: Enter required data in order of candidates 
     },
     {
       label: "Gun Rights",
@@ -165,10 +186,9 @@ function show_all() {
                           color_code('donald-trump', 0.1), 
                           color_code('elizabeth-warren', 0.1),
                           color_code('joe-biden', 0.1), 
-                          color_code('michael-bloomberg', 0.1),
                           color_code('pete-buttigieg', 0.1),
                       ],
-      data: [81,133,7,207,51,100,59], //TODO: Enter required data in order of candidates
+      data: [81,133,7,207,51,59], //TODO: Enter required data in order of candidates
     },
   ];
 
