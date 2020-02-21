@@ -27,6 +27,10 @@ let keywordChart = new Chart(document.getElementById("keyword-chart"), {
     scales: {
       xAxes: [{
         stacked: true,
+        ticks: {
+          min: 0,
+          max: 250, 
+        }
       }],
       yAxes: [{
         stacked: true,

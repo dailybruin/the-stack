@@ -24,6 +24,11 @@ def get_keywords() :
 # (New)
 # refinance?
 # public school
+# UC (or UC system)
+# student loan debt
+# student debt
+# predatory lending
+# broke college student
 
 
 # EMPLOYMENT
@@ -35,8 +40,12 @@ def get_keywords() :
 # unemployment
 # Higher Wages
 # Lower Unemployment
+# entrepreneurship
+# creating jobs
+
 
 # IMMIGRATION
+######
 # (Previous)
 # undocumented
 # scholarship
@@ -54,9 +63,20 @@ def get_keywords() :
 # illegal aliens
 # legal immigration
 # border wall?
-######
+# border
+# citizenship
+# immigrant
+# DREAM Act
+# DREAMer
+# muslim ban
+# no ban act
+# deportation
+# immigration detention
+# detention center
+
 
 # MENTAL HEALTH
+######
 # (Previous)
 # mental health
 # counseling
@@ -64,16 +84,24 @@ def get_keywords() :
 ######
 # (New)
 # ptsd
-######
+# trauma
+# mental disorders
+# suicide
+# suicide rates
+# stigma
+# addiction?
+# substance abuse?
+
 
 # DISCRIMINATION & EQUALITY
+######
 # (Previous)
 # women's rights
 # black lives matter
 # racial equality
 # lgbtq
 # women
-# race
+# race (could be race for president?)
 # racial
 # sexual harassment
 # title 9
@@ -94,9 +122,28 @@ def get_keywords() :
 # diverse
 # diversity
 # racism
-######
+# sexism
+# homophobia
+# sexual orientation
+# lgbtq+
+# trans
+# transgender
+# disability
+# bigotry
+# discrimination
+# discriminatory
+# HBCU?
+# ethnic groups
+# equal pay
+# income inequality
+# civil rights
+# violence against women acts
+# vawa
+# xenophobia
+
 
 # HEALTHCARE
+######
 # (Previous)
 # healthcare
 # medicare
@@ -105,6 +152,7 @@ def get_keywords() :
 ######
 # (New)
 # health care
+# universal healthcare
 # health
 # health care plan
 # prescription drugs
@@ -118,22 +166,62 @@ def get_keywords() :
 # clinics
 # pharmacy
 # urgent care
-######
+# hospital
+# caregiver
+# nurses
+# doctors
+# patients
+# sickness?
+# medical 
+# medical bill
+# medical debt
+# healthcare coverage
+# coverage?
+# drug manufacturers
+# drug companies
+# insulin
+# public health
+# medicaid
+
 
 # ENVIRONMENT
+######
 # (Previous)
 # environment
 # climate
+######
+# (New)
 # carbon neutral
 # carbon
 # fossil fuel
 # renewable energy
 # petrol
-######
-# (New)
-######
+# paris agreement
+# green new deal
+# pollution
+# polluters
+# pollutants
+# toxic waste
+# factories?
+# mining
+# drilling
+# offshore drilling
+# big oil
+# oil
+# climate
+# coal
+# antarctica
+# sea levels
+# temperature rising
+# rising temperature
+# warm temperature
+# iceberg
+# glacier
+# kyoto protocol
+
 
 # WOMEN'S HEALTH
+######
 # (Previous)
 # women
 # abortion
@@ -148,17 +236,26 @@ def get_keywords() :
 # ReproRights (twitter handle for reproductive rights)
 # NARAL (twitter handle)
 # AllAboveAllAct (twitter handle)
-######
+# pregnant
+# pregnancy
+# maternity
+# maternity mortality
+# giving birth?
+
 
 # MARIJUANA
+######
 # (Previous)
 # weed
 # marijuana
 ######
 # (New)
-######
+# cannabis
+# drug possession?
+
 
 # GUN RIGHTS
+######
 # (Previous)
 # gun control
 # gun violence
@@ -172,5 +269,21 @@ def get_keywords() :
 # parkland
 # parkland shooting 
 # gun safety
-######
-
+# open fire
+# armed
+# unarmed
+# gunman
+# mass shooting
+# gun industry
+# gun manufacturers
+# gun reform
+# gun safety reform
+# gun
+# weapons
+# assault weapons
+# gun lobby
+# AR-15
+# firearms
+# shooter drills
+# getting shot
+# being shot
