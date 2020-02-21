@@ -63,16 +63,7 @@ let bubble_chart = new Chart(document.getElementById("bubble-chart"), {
             //r: (joe_biden_traits['Openness'] * default_scale).toFixed(2),
             r: 25,
 		  }]
-		}, {
-			label: ["Michael Bloomberg"],
-			backgroundColor: color_code('michael-bloomberg', 0.8),
-			data: [{
-			  x: 'Michael Bloomberg',
-			  y: (michael_bloomberg_traits['Openness'] * default_scale).toFixed(2),			  
-              //r: (michael_bloomberg_traits['Openness'] * default_scale).toFixed(2),
-              r: 25,
-			}]
-		  }, 
+		},  
 		{
 		  label: ["Pete Buttigieg"],
 		  backgroundColor: color_code('pete-buttigieg', 0.8),
@@ -110,7 +101,7 @@ let bubble_chart = new Chart(document.getElementById("bubble-chart"), {
 		}],
 		xAxes: [{ 
 			type: 'category',
-			labels: ['Amy Klobuchar', 'Bernie Sanders', 'Donald Trump', 'Elizabeth Warren', 'Joe Biden', 'Michael Bloomberg', 'Pete Buttigieg'],
+			labels: ['Amy Klobuchar', 'Bernie Sanders', 'Donald Trump', 'Elizabeth Warren', 'Joe Biden', 'Pete Buttigieg'],
 		  	scaleLabel: {
 				display: false,
 				labelString: "Candidates"
@@ -126,7 +117,7 @@ let bubble_chart = new Chart(document.getElementById("bubble-chart"), {
 Chart.defaults.global.defaultFontFamily = 'Roboto';
 Chart.defaults.global.defaultFontSize = 15;
 Chart.defaults.global.defaultFontColor = '#777';
-bubble_chart.canvas.parentNode.style.width = '900px';
+bubble_chart.canvas.parentNode.style.width = '700px';
 
 
 function bubble_func(trait, scale) {
@@ -188,17 +179,7 @@ function bubble_func(trait, scale) {
                   //r: eval('(joe_biden_traits[\'' + trait_str + '\'] * default_scale).toFixed(2)')
                   r: 25,
 				}]
-			  }, 
-			  {
-				label: ["Michael Bloomberg"],
-				backgroundColor: color_code('michael-bloomberg', 0.8),
-				data: [{
-				  x: 'Michael Bloomberg',
-				  y: eval('(michael_bloomberg_traits[\'' + trait_str + '\'] * default_scale).toFixed(2)'),		  
-                  //r: eval('(michael_bloomberg_traits[\'' + trait_str + '\'] * default_scale).toFixed(2)')
-                  r: 25,
-				}]
-			  }, 
+			  },  
 			  {
 			  label: ["Pete Buttigieg"],
 			  backgroundColor: color_code('pete-buttigieg', 0.8),
