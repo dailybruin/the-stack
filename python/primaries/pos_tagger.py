@@ -122,6 +122,10 @@ def main() :
     print('amy-klobuchar')
     print(map_occurances('amy-klobuchar', keywords.get_keywords()))
     
+        
+        
+        
+
 #returns a dictionary that maps words (as passed in) with their occurance counts for the candidate
 def map_occurances(name, words) :
     candidate_tweets = candidate.tweets(name)

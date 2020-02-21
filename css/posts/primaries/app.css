@@ -14,10 +14,10 @@
     background-color: #FFFFFF;
 }
 
-#keyword-button:hover {
+/* #keyword-button:hover {
     color: #FFFFFF;
     background-color: #000000;
-}
+} */
 
 @media all and (max-width:30em) {
     #keyword-button {
