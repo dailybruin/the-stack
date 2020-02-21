@@ -20,18 +20,18 @@ let bubble_chart = new Chart(document.getElementById("bubble-chart"), {
 			backgroundColor: color_code('amy-klobuchar', 0.8),
 			data: [{
 			  x: 'Amy Klobuchar',
-			  //y: (amy_klobuchar_traits['Openness'] * default_scale).toFixed(2),
-			  y: 50,			  
-			  r: (amy_klobuchar_traits['Openness'] * default_scale).toFixed(2),
+			  y: (amy_klobuchar_traits['Openness'] * default_scale).toFixed(2),			  
+              //r: (amy_klobuchar_traits['Openness'] * default_scale).toFixed(2),
+              r: 25,
 			}]
 		  }, {
 			label: ["Bernie Sanders"],
 			backgroundColor: color_code('bernie-sanders', 0.8),
 			data: [{
 			  x: 'Bernie Sanders',
-			  //y: (bernie_sanders_traits['Openness'] * default_scale).toFixed(2),			  
-			  y: 50,			  
-			  r: (bernie_sanders_traits['Openness'] * default_scale).toFixed(2),
+			  y: (bernie_sanders_traits['Openness'] * default_scale).toFixed(2),			  	  
+              //r: (bernie_sanders_traits['Openness'] * default_scale).toFixed(2),
+              r: 25,
 			}]
 		  },
 		  {
@@ -39,9 +39,9 @@ let bubble_chart = new Chart(document.getElementById("bubble-chart"), {
 			backgroundColor: color_code('donald-trump', 0.8),
 			data: [{
 			  x: 'Donald Trump',
-			  //y: (donald_trump_traits['Openness'] * default_scale).toFixed(2),
-			  y: 50,			  
-			  r: (donald_trump_traits['Openness'] * default_scale).toFixed(2),
+			  y: (donald_trump_traits['Openness'] * default_scale).toFixed(2),
+              //r: (donald_trump_traits['Openness'] * default_scale).toFixed(2),
+              r: 25,
 			}]
 		  },
 		  {
@@ -49,9 +49,9 @@ let bubble_chart = new Chart(document.getElementById("bubble-chart"), {
 			backgroundColor: color_code('elizabeth-warren', 0.8),
 			data: [{
 			  x: 'Elizabeth Warren',
-			  //y: (elizabeth_warren_traits['Openness'] * default_scale).toFixed(2),
-			  y: 50,			  
-			  r: (elizabeth_warren_traits['Openness'] * default_scale).toFixed(2),
+			  y: (elizabeth_warren_traits['Openness'] * default_scale).toFixed(2),			  
+              //r: (elizabeth_warren_traits['Openness'] * default_scale).toFixed(2),
+              r: 25,
 			}]
 		  }, 
 		{
@@ -59,18 +59,18 @@ let bubble_chart = new Chart(document.getElementById("bubble-chart"), {
 		  backgroundColor: color_code('joe-biden', 0.8),
 		  data: [{
 			x: 'Joe Biden',
-			//y: (joe_biden_traits['Openness'] * default_scale).toFixed(2),
-			y: 50,			  
-			r: (joe_biden_traits['Openness'] * default_scale).toFixed(2),
+			y: (joe_biden_traits['Openness'] * default_scale).toFixed(2),			  
+            //r: (joe_biden_traits['Openness'] * default_scale).toFixed(2),
+            r: 25,
 		  }]
 		}, {
 			label: ["Michael Bloomberg"],
 			backgroundColor: color_code('michael-bloomberg', 0.8),
 			data: [{
 			  x: 'Michael Bloomberg',
-			  //y: (michael_bloomberg_traits['Openness'] * default_scale).toFixed(2),
-			  y: 50,			  
-			  r: (michael_bloomberg_traits['Openness'] * default_scale).toFixed(2),
+			  y: (michael_bloomberg_traits['Openness'] * default_scale).toFixed(2),			  
+              //r: (michael_bloomberg_traits['Openness'] * default_scale).toFixed(2),
+              r: 25,
 			}]
 		  }, 
 		{
@@ -78,9 +78,9 @@ let bubble_chart = new Chart(document.getElementById("bubble-chart"), {
 		  backgroundColor: color_code('pete-buttigieg', 0.8),
 		  data: [{
 			x: 'Pete Buttigieg',
-			//y: (pete_buttigieg_traits['Openness'] * default_scale).toFixed(2),
-			y: 50,			  
-			r: (pete_buttigieg_traits['Openness'] * default_scale).toFixed(2),
+			y: (pete_buttigieg_traits['Openness'] * default_scale).toFixed(2),		  
+            //r: (pete_buttigieg_traits['Openness'] * default_scale).toFixed(2),
+            r: 25,
 		  }]
 		},  {
 			label: [""],
@@ -100,9 +100,9 @@ let bubble_chart = new Chart(document.getElementById("bubble-chart"), {
 		yAxes: [{ 
 			ticks: {
 				min: 0,
-				max: 100
+				max: 50
 			},
-			display: false,
+			display: true,
 		  scaleLabel: {
 			display: true,
 			labelString: "Openness"
@@ -147,46 +147,46 @@ function bubble_func(trait, scale) {
 			  label: ["Amy Klobuchar"],
 			  backgroundColor: color_code('amy-klobuchar', 0.8),
 			  data: [{
-				x: 'Amy Klobuchar',
-			 	y: 50,			  
-				//y: eval('(amy_klobuchar_traits[\'' + trait_str + '\'] * default_scale).toFixed(2)'),
-				r: eval('(amy_klobuchar_traits[\'' + trait_str + '\'] * default_scale).toFixed(2)'),
+				x: 'Amy Klobuchar',			  
+				y: eval('(amy_klobuchar_traits[\'' + trait_str + '\'] * default_scale).toFixed(2)'),
+                //r: eval('(amy_klobuchar_traits[\'' + trait_str + '\'] * default_scale).toFixed(2)'),
+                r: 25,
 			  }]
 			}, {
 			  label: ["Bernie Sanders"],
 			  backgroundColor: color_code('bernie-sanders', 0.8),
 			  data: [{
-				x: 'Bernie Sanders',
-			  	y: 50,			  
-			  	//y: eval('(bernie_sanders_traits[\'' + trait_str + '\'] * default_scale).toFixed(2)'),
-				r: eval('(bernie_sanders_traits[\'' + trait_str + '\'] * default_scale).toFixed(2)'),
+				x: 'Bernie Sanders',			  
+			  	y: eval('(bernie_sanders_traits[\'' + trait_str + '\'] * default_scale).toFixed(2)'),
+                //r: eval('(bernie_sanders_traits[\'' + trait_str + '\'] * default_scale).toFixed(2)'),
+                r: 25,
 			  }]
 			},  {
 				label: ["Donald Trump"],
 				backgroundColor: color_code('donald-trump', 0.8),
 				data: [{
-				  x: 'Donald Trump',
-				  y: 50,			  
-				  //y: eval('(donald_trump_traits[\'' + trait_str + '\'] * default_scale).toFixed(2)'),
-				  r: eval('(donald_trump_traits[\'' + trait_str + '\'] * default_scale).toFixed(2)'),
+				  x: 'Donald Trump',		  
+				  y: eval('(donald_trump_traits[\'' + trait_str + '\'] * default_scale).toFixed(2)'),
+                  //r: eval('(donald_trump_traits[\'' + trait_str + '\'] * default_scale).toFixed(2)'),
+                  r: 25,
 				}]
 			  },  {
 				label: ["Elizabeth Warren"],
 				backgroundColor: color_code('elizabeth-warren', 0.8),
 				data: [{
-				  x: 'Elizabeth Warren',
-				  y: 50,			  
-				  //y: eval('(elizabeth_warren_traits[\'' + trait_str + '\'] * default_scale).toFixed(2)'),
-				  r: eval('(elizabeth_warren_traits[\'' + trait_str + '\'] * default_scale).toFixed(2)')
+				  x: 'Elizabeth Warren',			  
+				  y: eval('(elizabeth_warren_traits[\'' + trait_str + '\'] * default_scale).toFixed(2)'),
+                  //r: eval('(elizabeth_warren_traits[\'' + trait_str + '\'] * default_scale).toFixed(2)')
+                  r: 25,
 				}]
 			  }, {
 				label: ["Joe Biden"],
 				backgroundColor: color_code('joe-biden', 0.8),
 				data: [{
-				  x: 'Joe Biden',
-				  y: 50,			  
-				  //y: eval('(joe_biden_traits[\'' + trait_str + '\'] * default_scale).toFixed(2)'),
-				  r: eval('(joe_biden_traits[\'' + trait_str + '\'] * default_scale).toFixed(2)')
+				  x: 'Joe Biden',			  
+				  y: eval('(joe_biden_traits[\'' + trait_str + '\'] * default_scale).toFixed(2)'),
+                  //r: eval('(joe_biden_traits[\'' + trait_str + '\'] * default_scale).toFixed(2)')
+                  r: 25,
 				}]
 			  }, 
 			  {
@@ -194,9 +194,9 @@ function bubble_func(trait, scale) {
 				backgroundColor: color_code('michael-bloomberg', 0.8),
 				data: [{
 				  x: 'Michael Bloomberg',
-				  //y: eval('(michael_bloomberg_traits[\'' + trait_str + '\'] * default_scale).toFixed(2)'),
-			  	  y: 50,			  
-				  r: eval('(michael_bloomberg_traits[\'' + trait_str + '\'] * default_scale).toFixed(2)')
+				  y: eval('(michael_bloomberg_traits[\'' + trait_str + '\'] * default_scale).toFixed(2)'),		  
+                  //r: eval('(michael_bloomberg_traits[\'' + trait_str + '\'] * default_scale).toFixed(2)')
+                  r: 25,
 				}]
 			  }, 
 			  {
@@ -204,9 +204,9 @@ function bubble_func(trait, scale) {
 			  backgroundColor: color_code('pete-buttigieg', 0.8),
 			  data: [{
 				x: 'Pete Buttigieg',
-				//y: eval('(pete_buttigieg_traits[\'' + trait_str + '\'] * default_scale).toFixed(2)'),
-				y: 50,			  
-				r: eval('(pete_buttigieg_traits[\'' + trait_str + '\'] * default_scale).toFixed(2)'),
+				y: eval('(pete_buttigieg_traits[\'' + trait_str + '\'] * default_scale).toFixed(2)'),			  
+                //r: eval('(pete_buttigieg_traits[\'' + trait_str + '\'] * default_scale).toFixed(2)'),
+                r: 25,
 			  }]
 			}, {
 				label: [""],
