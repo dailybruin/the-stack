@@ -50,18 +50,30 @@ scripts:
   }  
   </script>
 
+  <script>
+    // function reset() {
+    //   document.getElementById('keyword-button').style.color = "#000000";
+    //   document.getElementById('keyword-button').style.backgroundColor = "#FFFFFF"; 
+    // }
+
+    // function update_btn_color(_this) {
+    //   _this.style.color = "#FFFFFF";
+    //   _this.style.backgroundColor = "#000000";
+    // }
+  </script>
+
   <!-- TODO**: Fix styling to even out spacing -->
   <div id="keyword-wrapper">
     <div>
-      <button id="keyword-button" onclick="keyword_func('college'); search_terms('college');">College</button> <br>
-      <button id="keyword-button" onclick="keyword_func('immigration'); search_terms('immigration');">Immigration</button> <br>
-      <button id="keyword-button" onclick="keyword_func('mental-health'); search_terms('mental-health');">Mental Health</button> <br>
-      <button id="keyword-button" onclick="keyword_func('discrimination-and-equality'); search_terms('discrimination-and-equality');">Discrimination & Equality</button> <br>
-      <button id="keyword-button" onclick="keyword_func('healthcare'); search_terms('healthcare');">Healthcare</button> <br>
-      <button id="keyword-button" onclick="keyword_func('environment'); search_terms('environment');">Environment</button> <br>
-      <button id="keyword-button" onclick="keyword_func('women'); search_terms('women');">Women</button> <br>
-      <button id="keyword-button" onclick="keyword_func('weed'); search_terms('weed');">Weed</button> <br>
-      <button id="keyword-button" onclick="keyword_func('gun-rights'); search_terms('gun-rights');">Gun Rights</button>
+      <button id="keyword-button" onclick="keyword_func('college'); search_terms('college'); reset(); update_btn_color(this);">College</button> <br>
+      <button id="keyword-button" onclick="keyword_func('immigration'); search_terms('immigration'); reset(); update_btn_color(this);">Immigration</button> <br>
+      <button id="keyword-button" onclick="keyword_func('mental-health'); search_terms('mental-health'); reset(); update_btn_color(this);">Mental Health</button> <br>
+      <button id="keyword-button" onclick="keyword_func('discrimination-and-equality'); search_terms('discrimination-and-equality'); reset(); update_btn_color(this);">Discrimination & Equality</button> <br>
+      <button id="keyword-button" onclick="keyword_func('healthcare'); search_terms('healthcare'); reset(); update_btn_color(this);">Healthcare</button> <br>
+      <button id="keyword-button" onclick="keyword_func('environment'); search_terms('environment'); reset(); update_btn_color(this);">Environment</button> <br>
+      <button id="keyword-button" onclick="keyword_func('women'); search_terms('women'); reset(); update_btn_color(this);">Women's Health</button> <br>
+      <button id="keyword-button" onclick="keyword_func('weed'); search_terms('weed'); reset(); update_btn_color(this);">Marijuana</button> <br>
+      <button id="keyword-button" onclick="keyword_func('gun-rights'); search_terms('gun-rights'); reset(); update_btn_color(this);">Gun Rights</button>
     </div>
     <div>
       <canvas id="keyword-chart"></canvas>
