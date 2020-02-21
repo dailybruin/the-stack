@@ -154,7 +154,7 @@ scripts:
 <!-- END OF SECTION -->
 
 
- #### Meaning of Scores (quoted from IBM)
+### Meaning of Scores (quoted from IBM)
  
   Any score above the mean of 0.5 indicates a greater than average tendency for a characteristic. A score at or above 0.75 indicates readily discernible aspects of the characteristic; such scores are considered high.
   The opposite statements are true of scores below 0.50 and 0.25, which are considered low.
