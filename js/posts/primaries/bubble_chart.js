@@ -1,6 +1,6 @@
 // default chart
 //default scale = 50 (TODO: fix for media queries)
-let default_scale = 40;
+let default_scale = 100;
 
 let bubble_chart = new Chart(document.getElementById("bubble-chart"), {
 	type: 'bubble',
@@ -91,7 +91,7 @@ let bubble_chart = new Chart(document.getElementById("bubble-chart"), {
 		yAxes: [{ 
 			ticks: {
 				min: 0,
-				max: 50
+				max: 100
 			},
 			display: true,
 		  scaleLabel: {
