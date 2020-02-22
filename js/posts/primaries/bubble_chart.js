@@ -123,12 +123,12 @@ bubble_chart.canvas.parentNode.style.width = '700px';
 
 function bubble_func(trait, x) {
 
-	radius=10;
-
 	if (x.matches) {
 		labels = ["A.K.", "B.S.", "D.T.", "E.W.", "J.B.", "P.B."];
+		radius = 10;
 	} else {
 		labels = ["Amy Klobuchar", "Bernie Sanders", "Donald Trump", "Elizabeth Warren", "Joe Biden", "Pete Buttigieg"];
+		radius = 25;
 	}
 
 	trait_str = trait.toString()
