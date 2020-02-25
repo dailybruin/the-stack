@@ -6,80 +6,72 @@ let bubble_chart = new Chart(document.getElementById("bubble-chart"), {
 	  labels: 'Openness',
 	  datasets: [
 		{
-			label: [""],
-			data: [{
-				x: 0,
-				y: 0,
-				r: 0
-			}]
-		},
-		{
 			label: "Amy Klobuchar",
-			backgroundColor: color_code('amy-klobuchar', 0.8),
+			backgroundColor: color_codes['amy-klobuchar'],
 			data: [{
 			  x: 'Amy Klobuchar',
-			  y: (amy_klobuchar_traits['Openness'] * default_scale).toFixed(2),			  
+			  y: (amy_klobuchar_traits['Openness'] * default_scale),			  
               r: radius,
 			}]
 		  }, {
 			label: "Bernie Sanders",
-			backgroundColor: color_code('bernie-sanders', 0.8),
+			backgroundColor: color_codes['bernie-sanders'],
 			data: [{
 			  x: 'Bernie Sanders',
-			  y: (bernie_sanders_traits['Openness'] * default_scale).toFixed(2),			  	  
+			  y: (bernie_sanders_traits['Openness'] * default_scale),			  	  
               r: radius,
 			}]
 		  },
 		  {
 			label: "Donald Trump",
-			backgroundColor: color_code('donald-trump', 0.8),
+			backgroundColor: color_codes['donald-trump'],
 			data: [{
 			  x: 'Donald Trump',
-			  y: (donald_trump_traits['Openness'] * default_scale).toFixed(2),
+			  y: (donald_trump_traits['Openness'] * default_scale),
               r: radius,
 			}]
 		  },
 		  {
 			label: "Elizabeth Warren",
-			backgroundColor: color_code('elizabeth-warren', 0.8),
+			backgroundColor: color_codes['elizabeth-warren'],
 			data: [{
 			  x: 'Elizabeth Warren',
-			  y: (elizabeth_warren_traits['Openness'] * default_scale).toFixed(2),			  
+			  y: (elizabeth_warren_traits['Openness'] * default_scale),			  
               r: radius,
 			}]
 		  }, 
 		{
 		  label: "Joe Biden",
-		  backgroundColor: color_code('joe-biden', 0.8),
+		  backgroundColor: color_codes['joe-biden'],
 		  data: [{
 			x: 'Joe Biden',
-			y: (joe_biden_traits['Openness'] * default_scale).toFixed(2),			  
+			y: (joe_biden_traits['Openness'] * default_scale),			  
             r: radius,
 		  }]
 		},  
 		{
 		  label: "Pete Buttigieg",
-		  backgroundColor: color_code('pete-buttigieg', 0.8),
+		  backgroundColor: color_codes['pete-buttigieg'],
 		  data: [{
 			x: 'Pete Buttigieg',
-			y: (pete_buttigieg_traits['Openness'] * default_scale).toFixed(2),		  
+			y: (pete_buttigieg_traits['Openness'] * default_scale),		  
             r: radius,
 		  }]
-		},  {
-			label: [""],
-			data: [{
-				x: 7,
-				y: 6,
-				r: 0
-			}]
-		},
+		},  
 	  ]
 	},
 	options: {
 	tooltips: {
-		enabled: false, //TODO: Display only y, maybe display center points
+		enabled: true,
+		mode: 'single',
+		callbacks: {
+			 label: function(tooltipItems) { 
+				label = candidates[tooltipItems.datasetIndex] + ": " + tooltipItems.yLabel.toFixed(2).toString() + "%";
+				return label;
+			 }  
+		},
 	},
-	  title: {
+	title: {
 		display: true,
 		text: 'Comparison of Personality Traits'
 	  }, scales: {
@@ -120,79 +112,76 @@ function update_bubble_chart(trait, x) {
 	if (x.matches) {
 		labels = candidate_initials;
 		radius = small_radius;
+		bubble_chart.canvas.parentNode.style.width = "340px";
 	} else {
 		labels = candidates;
 		radius = big_radius;
 	}
+
+	bubble_chart.options.scales.xAxes = [{ 
+		type: 'category',
+		labels: labels,
+          scaleLabel: {
+          display: false,
+          labelString: "Candidates"
+          },
+        display: true,
+	  }];
 
 	trait_str = trait.toString()
 		// TODO: Clean this up
 
 		bubble_chart.data.datasets = [
 			{
-				label: [""],
-				data: [{
-					x: 0,
-					y: 0,
-					r: 0
-				}]
-			}, {
 			  label: 'Amy Klobuchar',
-			  backgroundColor: color_code('amy-klobuchar', 0.8),
+			  backgroundColor: color_codes['amy-klobuchar'],
 			  data: [{
 				x: labels[0],			  
-				y: eval('(amy_klobuchar_traits[\'' + trait_str + '\'] * default_scale).toFixed(2)'),
+				y: eval('(amy_klobuchar_traits[\'' + trait_str + '\'] * default_scale)'),
                 r: radius,
 			  }]
 			}, {
 			  label: 'Bernie Sanders', 
-			  backgroundColor: color_code('bernie-sanders', 0.8),
+			  backgroundColor: color_codes['bernie-sanders'],
 			  data: [{
 				x: labels[1],			  
-			  	y: eval('(bernie_sanders_traits[\'' + trait_str + '\'] * default_scale).toFixed(2)'),
+			  	y: eval('(bernie_sanders_traits[\'' + trait_str + '\'] * default_scale)'),
                 r: radius,
 			  }]
 			},  {
 				label: 'Donald Trump',
-				backgroundColor: color_code('donald-trump', 0.8),
+				backgroundColor: color_codes['donald-trump'],
 				data: [{
 				  x: labels[2],		  
-				  y: eval('(donald_trump_traits[\'' + trait_str + '\'] * default_scale).toFixed(2)'),
+				  y: eval('(donald_trump_traits[\'' + trait_str + '\'] * default_scale)'),
                   r: radius,
 				}]
 			  },  {
 				label: 'Elizabeth Warren',
-				backgroundColor: color_code('elizabeth-warren', 0.8),
+				backgroundColor: color_codes['elizabeth-warren'],
 				data: [{
 				  x: labels[3],		  
-				  y: eval('(elizabeth_warren_traits[\'' + trait_str + '\'] * default_scale).toFixed(2)'),
+				  y: eval('(elizabeth_warren_traits[\'' + trait_str + '\'] * default_scale)'),
                   r: radius,
 				}]
 			  }, {
 				label: 'Joe Biden',
-				backgroundColor: color_code('joe-biden', 0.8),
+				backgroundColor: color_codes['joe-biden'],
 				data: [{
 				  x: labels[4],			  
-				  y: eval('(joe_biden_traits[\'' + trait_str + '\'] * default_scale).toFixed(2)'),
+				  y: eval('(joe_biden_traits[\'' + trait_str + '\'] * default_scale)'),
                   r: radius,
 				}]
 			  },  
 			  {
 			  label: "Pete Buttigieg",
-			  backgroundColor: color_code('pete-buttigieg', 0.8),
+			  backgroundColor: color_codes['pete-buttigieg'],
 			  data: [{
 				x: labels[5],
-				y: eval('(pete_buttigieg_traits[\'' + trait_str + '\'] * default_scale).toFixed(2)'),			  
+				y: eval('(pete_buttigieg_traits[\'' + trait_str + '\'] * default_scale)'),			  
                 r: radius,
 			  }]
-			}, {
-				label: [""],
-				data: [{
-					x: 7,
-					y: 6,
-					r: 0
-				}]
-			},
+			 },
 		  ];
 
 	bubble_chart.update();
