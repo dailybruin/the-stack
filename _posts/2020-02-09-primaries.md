@@ -38,6 +38,8 @@ scripts:
   <!-- For each candidate, on hover, we can see how many times they mentioned the certain keyword in their tweets -->
   <!-- Useful analysis could be mentioning topics that have been spoken the most and least about in total (add up numbers), or if a certain candidate is significantly more outspoken about a certain topic -->
 
+  <script src="/js/posts/primaries/keywords.js"></script>
+
   <!-- SECTION: Keywords Chart -->
   <script>
   function search_terms(keyword) {
@@ -45,7 +47,8 @@ scripts:
     output = output.concat("<strong>", keyword.toString(), "</strong> <br>");
     //TODO: concatanate to search terms to output (and add <br> tag after)
     // Eg: func (_keyword_) = college, tuition, student, etc.
-    output = output.concat("{search_terms}");
+    for (var i in keyword_list[keyword])
+      output = output.concat(keyword_list[keyword][i], ", ");
     document.getElementById("search-terms").innerHTML = output;
   }  
   </script>
@@ -73,13 +76,13 @@ scripts:
       <button id="keyword-button" onclick="keyword_func('immigration'); search_terms('immigration'); reset(); update_btn_color(this);">Immigration</button> 
       </div>
       <div>
-      <button id="keyword-button" onclick="keyword_func('mental health'); search_terms('mental-health'); reset(); update_btn_color(this);">Mental Health</button> 
+      <button id="keyword-button" onclick="keyword_func('mental-health'); search_terms('mental-health'); reset(); update_btn_color(this);">Mental Health</button> 
       </div>
       <div>
-      <button id="keyword-button" onclick="keyword_func('discrimination and equality'); search_terms('discrimination-and-equality'); reset(); update_btn_color(this);">Discrimination & Equality</button> 
+      <button id="keyword-button" onclick="keyword_func('discrimination-and-equality'); search_terms('discrimination-and-equality'); reset(); update_btn_color(this);">Discrimination & Equality</button> 
       </div>
       <div>
-      <button id="keyword-button" onclick="keyword_func('discrimination and equality'); search_terms('employment'); reset(); update_btn_color(this);">Employment</button> <!-- TODO: Add employment, pass to keyword_func -->
+      <button id="keyword-button" onclick="keyword_func('discrimination-and-equality'); search_terms('employment'); reset(); update_btn_color(this);">Employment</button> <!-- TODO: Add employment, pass to keyword_func -->
       </div>
       </div>
       <div class="btn-group-2">
@@ -90,13 +93,13 @@ scripts:
       <button id="keyword-button" onclick="keyword_func('environment'); search_terms('environment'); reset(); update_btn_color(this);">Environment</button>
       </div>
       <div>
-      <button id="keyword-button" onclick="keyword_func('women\'s health'); search_terms('women'); reset(); update_btn_color(this);">Women's Health</button>
+      <button id="keyword-button" onclick="keyword_func('women-health'); search_terms('women-health'); reset(); update_btn_color(this);">Women's Health</button>
       </div>
       <div>
-      <button id="keyword-button" onclick="keyword_func('marijuana'); search_terms('weed'); reset(); update_btn_color(this);">Marijuana</button>
+      <button id="keyword-button" onclick="keyword_func('marijuana'); search_terms('marijuana'); reset(); update_btn_color(this);">Marijuana</button>
       </div>
       <div>
-      <button id="keyword-button" onclick="keyword_func('gun issues'); search_terms('gun-rights'); reset(); update_btn_color(this);">Gun Rights</button>
+      <button id="keyword-button" onclick="keyword_func('gun-issues'); search_terms('gun-rights'); reset(); update_btn_color(this);">Gun Rights</button>
       </div>
       </div>
     </div>

@@ -70,10 +70,10 @@ function get_data_from_keyword(keyword) {
   if (keyword.localeCompare("immigration") === 0) {
     return [19, 20, 3, 12, 17, 10];
   }
-  if (keyword.localeCompare("mental health") === 0) {
+  if (keyword.localeCompare("mental-health") === 0) {
     return [8, 4, 0, 2, 0, 1];
   }
-  if (keyword.localeCompare("discrimination and equality") === 0) {
+  if (keyword.localeCompare("discrimination-and-equality") === 0) {
     return [46, 42, 8, 65, 36, 22];
   }
   if (keyword.localeCompare("healthcare") === 0) {
@@ -82,13 +82,13 @@ function get_data_from_keyword(keyword) {
   if (keyword.localeCompare("environment") === 0) {
     return [32, 72, 1, 54, 66, 13];
   }
-  if (keyword.localeCompare("women's health") === 0) {
+  if (keyword.localeCompare("women-health") === 0) {
     return [29, 18, 2, 51, 18, 17];
   }
   if (keyword.localeCompare("marijuana") === 0) {
     return [0, 6, 0, 10, 2, 0];
   }
-  if (keyword.localeCompare("gun issues") === 0) {
+  if (keyword.localeCompare("gun-rights") === 0) {
     return [24, 5, 2, 10, 37, 8];
   }
 }
