@@ -36,14 +36,15 @@ Tempus quam pellentesque nec nam aliquam. Eu mi bibendum neque egestas congue. V
 </select>
 
 
-<label for='departments'>Department</label>
+<label for='departments'>Delect a department</label>
 <select id='departments'>
-    <option>Select a department</option>
 </select>
 
 <div id='numbers'></div>
 
 <canvas id='raceChart' style='height: 400px'></canvas>
+
+<button id='test'>test</button>
 
 <p>
 Ac turpis egestas maecenas pharetra convallis. Fringilla ut morbi tincidunt augue interdum velit. Placerat in egestas erat imperdiet sed. Iaculis eu non diam phasellus. Quisque non tellus orci ac auctor augue mauris. Morbi tristique senectus et netus. Tincidunt id aliquet risus feugiat in ante. Eu consequat ac felis donec et odio pellentesque diam volutpat. Etiam tempor orci eu lobortis elementum nibh tellus molestie. Dui nunc mattis enim ut tellus. Donec massa sapien faucibus et molestie ac. At risus viverra adipiscing at in tellus integer. Nibh mauris cursus mattis molestie a iaculis. Orci phasellus egestas tellus rutrum tellus.

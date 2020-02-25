@@ -1,5 +1,9 @@
+var years = ['', '2010-2011','2011-2012','2012-2013', '2013-2014', '2014-2015', '2015-2016', '2016-2017', '2017-2018', '2018-2019'];
+
+var under;
+
 var config = {
-    type: 'bar',
+    type: 'line',
     data: {
         labels: ['American Indian','Asian','Black','Latino','2+','Unknown','White','Total'],
         datasets: [{
@@ -34,17 +38,67 @@ d3.csv('/datasets/professor-demographics/professor-demographics.csv', function(d
     var categories = [];
     for (i=0; i<data.length/10; i++)
         d3.select('#departments').append('option').html(data[10*i].Year.toUpperCase());
+    
+    
+    
     document.getElementById('departments').addEventListener('change', function() {
-            graph.innerHTML = '';
-            const temp = (this.selectedIndex - 1)*10;
-            for (i=0; i<10; i++)
-                    if (document.getElementById('what').selectedIndex == 0)
-                graph.innerHTML += (data[temp + i].Year) + '<br>' + (data[temp + i].F) + '<br>' + (data[temp + i].M) + '<br>' + (data[temp + i].T) + '<br><br>';
-                    else
-                graph.innerHTML += (data[temp + i].Year) + '<br>' + (data[temp + i].AI) + '<br>' + (data[temp + i].A) + '<br>' + (data[temp + i].B) + '<br>' + (data[temp + i].L) + '<br>' + (data[temp + i].TW) + '<br>' + (data[temp + i].U) + '<br>' + (data[temp + i].U) + '<br>' + (data[temp + i].W) + '<br>' + (data[temp + i].T) + '<br><br>';
+        var fem = [];
+        var mal = [];
+        var ind = [];
+        var ais = [];
+        var bla = [];
+        var lat = [];
+        var two = [];
+        var unk = [];
+        var whi = [];
+        var tot = [];
+        
+        const temp = (this.selectedIndex*10);
+        
+        for (i=0; i<10; i++) {
+            fem.push(data[temp + i].F);
+            mal.push(data[temp + i].M);
+            ind.push(data[temp + i].AI);
+            ais.push(data[temp + i].A);
+            bla.push(data[temp + i].B);
+            lat.push(data[temp + i].L);
+            two.push(data[temp + i].TW);
+            unk.push(data[temp + i].U);
+            whi.push(data[temp + i].W);
+            tot.push(data[temp + i].T);
+        }
+        
+        var gen = [fem, mal, tot];
+        var rac = [ind, ais, bla, lat, two, unk, whi, tot];
+        var opt;
+        
+        if (document.getElementById('what').selectedIndex == 0) {
+            opt = gen;
+        } else {
+            opt = rac;
+        }
+        
+        var pork = {
+            labels: years,
+            datasets: [],
+        };
+        
+        for (i=0; i<opt.length; i++) {
+            pork.datasets.push({label: 'test', data: opt[i]})
+        }
+        
+        myDem.data = pork;
+        myDem.update();
+        console.log(pork.datasets)
         }
     )
 });
+
+
+document.getElementById('test').addEventListener('click', function() {
+    alert(tot[0]);
+})
+
 
 var el = document.getElementsByClassName('author')[0]
 var wrapper = document.createElement('marquee');
