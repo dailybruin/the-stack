@@ -99,7 +99,7 @@ scripts:
       <button id="keyword-button" onclick="keyword_func('marijuana'); search_terms('marijuana'); reset(); update_btn_color(this);">Marijuana</button>
       </div>
       <div>
-      <button id="keyword-button" onclick="keyword_func('gun-issues'); search_terms('gun-rights'); reset(); update_btn_color(this);">Gun Rights</button>
+      <button id="keyword-button" onclick="keyword_func('gun-rights'); search_terms('gun-rights'); reset(); update_btn_color(this);">Gun Rights</button>
       </div>
       </div>
     </div>
@@ -111,9 +111,7 @@ scripts:
       <div class="inner-div">
       <p id="search-terms">
       <strong>College</strong> <br>
-          terms <br>
-          terms <br>
-          terms <br>
+college, higher education, higher-education, tuition, stem, student, university, regents, school, scholar, community college, junior college, loan, ucla, public education, education, public school, UC, student loan, student debt, predatory lending, broke college
       </p>
       </div>
     </div>

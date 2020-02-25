@@ -1,4 +1,4 @@
-let keywords_list = {
+let keyword_list = {
     "college":[
        "college",
        "higher education",
@@ -51,7 +51,7 @@ let keywords_list = {
        "deportation",
        "detention center"
     ],
-    "mental health":[
+    "mental-health":[
        "mental health",
        "mental illness",
        "counseling",
@@ -63,10 +63,10 @@ let keywords_list = {
        "addiction",
        "substance abuse"
     ],
-    "discrimination and equality":[
+    "discrimination-and-equality":[
        "discrimination and equality",
        "lgbtq",
-       "women\\'s rights",
+       "women\'s rights",
        "black lives matter",
        "racial equality",
        "women",
@@ -152,9 +152,9 @@ let keywords_list = {
        "iceberg",
        "kyoto protocol"
     ],
-    "women's health":[
+    "women-health":[
        "women",
-       "women\\'s rights",
+       "women's rights",
        "abortion",
        "reproductive",
        "planned parenthood",
@@ -183,7 +183,7 @@ let keywords_list = {
        "cannabis",
        "drug possession"
     ],
-    "gun issues":[
+    "gun-rights":[
        "gun issue",
        "gun control",
        "gun violence",

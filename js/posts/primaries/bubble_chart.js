@@ -85,6 +85,9 @@ let bubble_chart = new Chart(document.getElementById("bubble-chart"), {
 	  ]
 	},
 	options: {
+	tooltips: {
+		enabled: false, //TODO: Display only y, maybe display center points
+	},
 	  title: {
 		display: true,
 		text: 'Comparison of Personality Traits'
