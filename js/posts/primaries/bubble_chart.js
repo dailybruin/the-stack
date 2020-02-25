@@ -1,7 +1,4 @@
-// default chart
-//default scale = 50 (TODO: fix for media queries)
-let default_scale = 100;
-let radius = 25;
+let radius = big_radius;
 
 let bubble_chart = new Chart(document.getElementById("bubble-chart"), {
 	type: 'bubble',
@@ -22,7 +19,6 @@ let bubble_chart = new Chart(document.getElementById("bubble-chart"), {
 			data: [{
 			  x: 'Amy Klobuchar',
 			  y: (amy_klobuchar_traits['Openness'] * default_scale).toFixed(2),			  
-              //r: (amy_klobuchar_traits['Openness'] * default_scale).toFixed(2),
               r: radius,
 			}]
 		  }, {
@@ -31,7 +27,6 @@ let bubble_chart = new Chart(document.getElementById("bubble-chart"), {
 			data: [{
 			  x: 'Bernie Sanders',
 			  y: (bernie_sanders_traits['Openness'] * default_scale).toFixed(2),			  	  
-              //r: (bernie_sanders_traits['Openness'] * default_scale).toFixed(2),
               r: radius,
 			}]
 		  },
@@ -41,7 +36,6 @@ let bubble_chart = new Chart(document.getElementById("bubble-chart"), {
 			data: [{
 			  x: 'Donald Trump',
 			  y: (donald_trump_traits['Openness'] * default_scale).toFixed(2),
-              //r: (donald_trump_traits['Openness'] * default_scale).toFixed(2),
               r: radius,
 			}]
 		  },
@@ -51,7 +45,6 @@ let bubble_chart = new Chart(document.getElementById("bubble-chart"), {
 			data: [{
 			  x: 'Elizabeth Warren',
 			  y: (elizabeth_warren_traits['Openness'] * default_scale).toFixed(2),			  
-              //r: (elizabeth_warren_traits['Openness'] * default_scale).toFixed(2),
               r: radius,
 			}]
 		  }, 
@@ -61,7 +54,6 @@ let bubble_chart = new Chart(document.getElementById("bubble-chart"), {
 		  data: [{
 			x: 'Joe Biden',
 			y: (joe_biden_traits['Openness'] * default_scale).toFixed(2),			  
-            //r: (joe_biden_traits['Openness'] * default_scale).toFixed(2),
             r: radius,
 		  }]
 		},  
@@ -71,7 +63,6 @@ let bubble_chart = new Chart(document.getElementById("bubble-chart"), {
 		  data: [{
 			x: 'Pete Buttigieg',
 			y: (pete_buttigieg_traits['Openness'] * default_scale).toFixed(2),		  
-            //r: (pete_buttigieg_traits['Openness'] * default_scale).toFixed(2),
             r: radius,
 		  }]
 		},  {
@@ -105,7 +96,7 @@ let bubble_chart = new Chart(document.getElementById("bubble-chart"), {
 		}],
 		xAxes: [{ 
 			type: 'category',
-			labels: ['Amy Klobuchar', 'Bernie Sanders', 'Donald Trump', 'Elizabeth Warren', 'Joe Biden', 'Pete Buttigieg'],
+			labels: candidates,
 		  	scaleLabel: {
 				display: false,
 				labelString: "Candidates"
@@ -124,14 +115,14 @@ Chart.defaults.global.defaultFontSize = 15;
 Chart.defaults.global.defaultFontColor = '#777';
 bubble_chart.canvas.parentNode.style.width = '700px';
 
-function bubble_func(trait, x) {
+function update_bubble_chart(trait, x) {
 
 	if (x.matches) {
-		labels = ["A.K.", "B.S.", "D.T.", "E.W.", "J.B.", "P.B."];
-		radius = 10;
+		labels = candidate_initials;
+		radius = small_radius;
 	} else {
-		labels = ["Amy Klobuchar", "Bernie Sanders", "Donald Trump", "Elizabeth Warren", "Joe Biden", "Pete Buttigieg"];
-		radius = 25;
+		labels = candidates;
+		radius = big_radius;
 	}
 
 	trait_str = trait.toString()
@@ -151,7 +142,6 @@ function bubble_func(trait, x) {
 			  data: [{
 				x: labels[0],			  
 				y: eval('(amy_klobuchar_traits[\'' + trait_str + '\'] * default_scale).toFixed(2)'),
-                //r: eval('(amy_klobuchar_traits[\'' + trait_str + '\'] * default_scale).toFixed(2)'),
                 r: radius,
 			  }]
 			}, {
@@ -160,7 +150,6 @@ function bubble_func(trait, x) {
 			  data: [{
 				x: labels[1],			  
 			  	y: eval('(bernie_sanders_traits[\'' + trait_str + '\'] * default_scale).toFixed(2)'),
-                //r: eval('(bernie_sanders_traits[\'' + trait_str + '\'] * default_scale).toFixed(2)'),
                 r: radius,
 			  }]
 			},  {
@@ -169,7 +158,6 @@ function bubble_func(trait, x) {
 				data: [{
 				  x: labels[2],		  
 				  y: eval('(donald_trump_traits[\'' + trait_str + '\'] * default_scale).toFixed(2)'),
-                  //r: eval('(donald_trump_traits[\'' + trait_str + '\'] * default_scale).toFixed(2)'),
                   r: radius,
 				}]
 			  },  {
@@ -178,7 +166,6 @@ function bubble_func(trait, x) {
 				data: [{
 				  x: labels[3],		  
 				  y: eval('(elizabeth_warren_traits[\'' + trait_str + '\'] * default_scale).toFixed(2)'),
-                  //r: eval('(elizabeth_warren_traits[\'' + trait_str + '\'] * default_scale).toFixed(2)')
                   r: radius,
 				}]
 			  }, {
@@ -187,7 +174,6 @@ function bubble_func(trait, x) {
 				data: [{
 				  x: labels[4],			  
 				  y: eval('(joe_biden_traits[\'' + trait_str + '\'] * default_scale).toFixed(2)'),
-                  //r: eval('(joe_biden_traits[\'' + trait_str + '\'] * default_scale).toFixed(2)')
                   r: radius,
 				}]
 			  },  
@@ -197,7 +183,6 @@ function bubble_func(trait, x) {
 			  data: [{
 				x: labels[5],
 				y: eval('(pete_buttigieg_traits[\'' + trait_str + '\'] * default_scale).toFixed(2)'),			  
-                //r: eval('(pete_buttigieg_traits[\'' + trait_str + '\'] * default_scale).toFixed(2)'),
                 r: radius,
 			  }]
 			}, {

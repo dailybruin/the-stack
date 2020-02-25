@@ -1,6 +1,6 @@
 /*BUTTONS*/
-#keyword-button {
-    display: inline-block;
+.keyword-button {
+    display: block;
     padding: 0.35em 1.2em;
     border: 0.15em solid #000000;
     margin: 0 0.3em 0.3em 0;
@@ -15,7 +15,7 @@
     background-color: #FFFFFF;
 }
 
-#keyword-button:hover {
+.active {
     color: #FFFFFF;
     background-color: #000000;
 }
@@ -26,8 +26,6 @@
         margin: 0.4em auto;
     }
 }
-
-
 
 #keyword-wrapper {
     padding-bottom: 100px;
