@@ -19,18 +19,17 @@ stylesheets:
 scripts:
     - //cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js
     - //cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.js
-    - /js/posts/primaries/amy-klobuchar_traits.js
-    - /js/posts/primaries/bernie-sanders_traits.js
-    - /js/posts/primaries/donald-trump_traits.js
-    - /js/posts/primaries/elizabeth-warren_traits.js
-    - /js/posts/primaries/joe-biden_traits.js
-    - /js/posts/primaries/michael-bloomberg_traits.js
-    - /js/posts/primaries/pete-buttigieg_traits.js
-    - /js/posts/primaries/helper.js
+    - /js/posts/primaries/traits/amy-klobuchar_traits.js
+    - /js/posts/primaries/traits/bernie-sanders_traits.js
+    - /js/posts/primaries/traits/donald-trump_traits.js
+    - /js/posts/primaries/traits/elizabeth-warren_traits.js
+    - /js/posts/primaries/traits/joe-biden_traits.js
+    - /js/posts/primaries/traits/pete-buttigieg_traits.js
     - /js/posts/primaries/keywords.js
+    - /js/posts/primaries/trait_details.js
+    - /js/posts/primaries/helper.js
     - /js/posts/primaries/keyword_chart.js
     - /js/posts/primaries/bubble_chart.js
-    - /js/posts/primaries/trait_details.js
     - https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js
     - /js/posts/primaries/startup.js
 ---
