@@ -133,15 +133,16 @@ def map_occurances(name, words) :
     
     
     issues = []
-    college = ['college', 'higher education', 'higher-education', 'tuition', 'scholarship', 'stem', 'student', 'university', 'regents', 'school', 'scholar', 'community college', 'junior college', 'loan', 'ucla', 'public education', 'education']
-    immigration = ['immigration', 'opt', 'h1b', 'daca', 'undocumented', 'student visa', 'travel ban']
-    mental_health = ['mental health', 'mental illness', 'counseling']
-    discrimination_and_equality = ['discrimination and equality', 'lgbtq', 'women\'s rights', 'black lives matter', 'racial equality', 'women', 'race', 'racial', 'sexual assault', 'sexual harassment', 'title 9', 'title ix', 'titleix', 'domestic violence']
-    healthcare = ['healthcare', 'medicare', 'obamacare', 'insurance']
-    environment = ['environment', 'climate']
-    womens_issues = ['women', 'women\'s rights', 'abortion', 'reproductive', 'planned parenthood', 'sexual harassment', 'sexual assault', 'domestic violence','title 9', 'title ix', 'title9', 'titleix']
-    weed = ['weed', 'marijuana']
-    gun_issues = ['gun issue', 'gun control', 'gun violence', 'gun restriction', 'gun law', 'nra', 'shooting']
+    college = ['college', 'higher education', 'higher-education', 'tuition', 'stem', 'student', 'university', 'regents', 'school', 'scholar', 'community college', 'junior college', 'loan', 'ucla', 'public education', 'education', 'public school', 'UC', 'student loan', 'student debt', 'predatory lending', 'broke college']
+    employment = ['employment', 'job', 'wage', 'minimum wage', 'unemployment', 'entrepreneurship']
+    immigration = ['immigration', 'opt', 'h1b', 'daca', 'undocumented', 'student visa', 'travel ban', 'ice', 'illegal aliens', 'border wall', 'citizenship', 'immigrant', 'dream act', 'dreamer', 'muslim ban', 'no ban act', 'deportation', 'detention center']
+    mental_health = ['mental health', 'mental illness', 'counseling', 'ptsd', 'trauma', 'mental disorder', 'suicide', 'stigma', 'addiction', 'substance abuse']
+    discrimination_and_equality = ['discrimination and equality', 'lgbtq', 'women\'s rights', 'black lives matter', 'racial equality', 'women', 'race', 'racial', 'sexual assault', 'sexual harassment', 'title 9', 'title ix', 'titleix', 'domestic violence', 'female', 'empowerment', 'equal rights ammendment', 'era', 'human rights', 'diverse', 'diversity', 'racism', 'sexism', 'homophobia', 'sexual orientation', 'trans', 'disability', 'bigotry', 'discrimination', 'discriminatory', 'hbcu', 'ethnic group', 'equal pay', 'income inequality', 'civil rights', 'violence against women acts', 'vawa', 'xenophobia']
+    healthcare = ['healthcare', 'medicare', 'obamacare', 'insurance', 'health care', 'prescription', 'affordable care', 'pharmaceuitcals', 'pharma', 'primary care', 'clinic', 'urgent care', 'hospital', 'caregiver', 'nurse', 'doctor', 'medical', 'coverage', 'drug manufacturer', 'drug manufacturering', 'insulin', 'public health', 'medicaid']
+    environment = ['environment', 'climate', 'carbon', 'fossil fuel', 'renewable energy', 'petrol', 'paris aggreement', 'green new deal', 'pollution', 'pollute', 'pollutant', 'toxic', 'mining', 'fracking', 'drilling', 'oil', 'coal', 'sea level', 'temperature', 'glacier', 'iceberg', 'kyoto protocol']
+    womens_issues = ['women', 'women\'s rights', 'abortion', 'reproductive', 'planned parenthood', 'sexual harassment', 'sexual assault', 'domestic violence','title 9', 'title ix', 'title9', 'titleix', 'female', 'contraceptives', 'contraception', 'birth control', 'reprorights', 'naral', 'allaboveallact', 'pregnant', 'pregnancy', 'maternity', 'birth']
+    weed = ['weed', 'marijuana', 'cannabis', 'drug possession']
+    gun_issues = ['gun issue', 'gun control', 'gun violence', 'gun restriction', 'gun law', 'nra', 'shooting', 'background check', 'parkland', 'gun safety', 'open fire', 'armed', 'gunman', 'mass shooting', 'weapon', 'ar-15', 'firearm', 'shot']
     issues.append(college)
     issues.append(immigration)
     issues.append(mental_health)
