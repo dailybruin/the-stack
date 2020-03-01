@@ -43,32 +43,31 @@ Tempus quam pellentesque nec nam aliquam. Eu mi bibendum neque egestas congue. V
 </div>
 
 <div>
-<label for='school'>Select by School</label>
-<select id='school'>
-</select>
+    <label for='school'>Select by School</label>
+    <select id='school'>
+    </select>
 </div>
 
 <div>
-<label for='departments'>Select by Department</label>
-<select id='departments'>
-</select>
+    <label for='departments'>Select by Department</label>
+    <select id='departments'>
+    </select>
 </div>
 
 <div style='width: 130vh;'>
 <canvas id='raceChart' style=''></canvas>
 </div>
 
-<h4 style='margin-top: 30px; text-align: center'>California population compared to UCLA professors</h4>
+<h4 style='margin-top: 30px; text-align: center'>Compared to the California Population</h4>
 
 <div style='display: flex; flex-wrap: wrap; width: 100%; justify-content: space-around'>
 
-<svg id='california' style='min-width: 300px; height: 300px;'>
-</svg>
+<svg id='california' style='width: 250px; height: 300px'></svg>
 
-<svg id='people' style='min-width: 300px; height: 350px'>
-</svg>
+<svg id='people' style='width: 250; height: 300px'></svg>
 
 </div>
+<i style='width: 100%; font-size: 10px; color: grey; user-select: none; padding-bottom: 50px; font-align: right;'>* Each dot represents 1 person out of a 100 person group</i>
 </div>
 
 <h2>How does UCLA stack up with other UC schools?</h2>

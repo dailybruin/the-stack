@@ -1,89 +1,55 @@
 var years = ['2010-2011','2011-2012','2012-2013', '2013-2014', '2014-2015', '2015-2016', '2016-2017', '2017-2018', '2018-2019'];
 
-var colors = ['rgba(255, 0, 0)', 'rgba(0, 255, 0)', 'rgba(0, 0, 255)', 'rgba(255, 0, 0)', 'rgba(0, 255, 0)', 'rgba(0, 0, 255)', 'rgba(255, 0, 0)', 'rgba(0, 255, 0)', 'rgba(0, 0, 255)'];
-
-var female = {
+// var genders = [female, male];
+var genders = [{
     title: 'Female',
     color: '#CC79A7',
-}
-
-var male = {
+    ca: 50,
+}, {
     title: 'Male',
     color: '#56B4E9',
-}
+    ca: 50,
+}];
 
-var genders = [female, male];
-
-var white = {
+//var races = [white, asian, hispanic, black, indian, two, unknown];
+var races = [{
     title: 'White',
     color: '#E69F00',
-}
-
-var asian = {
+    ca: 38,
+}, {
     title: 'Asian/Asian American or Pacific Islander',
     color: '#D55E00',
-}
-
-var chicano = {
+    ca: 14,
+}, {
     title: 'Chicano(a)/Latina(o)/Hispanic',
     color: '#0072B2',
-}
-
-var black = {
+    ca: 39,
+}, {
     title: 'Black or African-American',
     color: '#F0E442',
-}
-
-var indian = {
+    ca: 6,
+}, {
     title: 'American Indian or Alaskan Native',
     color: '#009E73',
-}
-
-var two = {
+    ca: 0,
+}, {
     title: 'Two or More Races',
-    color: '#0077bb'
-}
-
-var unknown = {
+    color: '#009E73',
+    ca: 3,
+}, {
     title: 'Unknown',
-    color: '#ddcc77'
-}
-
-var total = {
+    color: '#ddcc77',
+    ca: 0,
+}, {
     title: 'Total',
     color: '#E69F00',
-};
-
-
-var races = [white, asian, chicano, black, indian, two, unknown];
+    ca: 1,
+}];
 
 var config = {
     type: 'bar',
-    data: {
-        labels: years,
-        datasets: [{
-            label: 'line',
-            type: 'line',
-            data: [1, 2, 3, 4, 5, 6, 7, 8, 1],
-            yAxisID: 'axis-1',
-            fill: false,
-            borderColor: 'rgba(0, 0, 0)',
-        }, {
-            label: 'bar',
-            type: 'bar',
-            backgroundColor: '#FFC20A',
-            data: [10, 3, 3, 4, 5, 6, 7, 8, 4],
-            yAxisID: 'axis-2',
-            stack: 'stack-1',
-        }, {
-            label: 'bar1',
-            type: 'bar',
-            backgroundColor: 'rgba(0, 0, 255, .5)',
-            data: [4, 5, 6, 6, 8, 5, 7, 0, 1],
-            yAxisID: 'axis-2',
-            //stack: 'stack-1',
-            }],
-    },
+    data:
+    {},
     options: {
         title: {
             display: true,
@@ -131,82 +97,260 @@ var myDem = new Chart(ctx, config);
 
 var myrace = d3.select('#raceChart');
 
+var schools = [{
+        name: 'ALL',
+        data: [0],
+    }, {
+        name: 'ANDERSON GRADUATE SCHOOL OF MANAGEMENT (AGSM)',
+        data: [4],
+    }, {
+        name: 'BASIC BIOMEDICAL SCIENCES',
+        data: [85],
+    }, {
+        name: 'FIELDING SCHOOL OF PUBLIC HEALTH (FSPH)',
+        data: [15, 17, 26, 49, 50, 59, 60, 96, 102],
+    }, {
+        name: 'GRADUATE SCHOOL OF EDUCATION AND INFO STUDIES (GSEIS)',
+        data: [31, 45, 64],
+    }, {
+        name: 'HENRY SAMUELI SCHOOL OF ENGINEERING & APPLIED SCIENCE (HSSEAS)',
+        data: [13, 20, 24, 29, 32, 68, 82, 84],
+    }, {
+        name: 'HERB ALPERT SCHOOL OF MUSIC (HASOM)',
+        data: [33, 51, 89, 90],
+    }, {
+        name: 'INST OF ENVIORN & SUSTAINABILITY (IOES)',
+        data: [69],
+    }, {
+        name: 'INSTITUTE OF AMERICAN CULTURES',
+        data: [23],
+    }, {
+        name: 'INTERNATIONAL INSTITUTE',
+        data: [ 73, 92],
+    }, {
+        name: 'L&S GENERAL',
+        data: [67],
+    }, {
+        name: 'L&S HUMANITIES',
+        data: [9, 11, 19, 25, 28, 30, 48, 54, 57, 63, 75, 78, 80, 90, 94, 97, 104, 106, 109, 111, 115],
+    }, {
+        name: 'L&S LIFE SCIENCES',
+        data: [41, 43, 67, 72, 79, 87, 88, 93, 101],
+    }, {
+        name: 'L&S PHYSICAL SCIENCES',
+        data: [12, 21, 42, 65, 70, 83, 98, 100, 110],
+    }, {
+        name: 'L&S SOCIAL SCIENCES',
+        data: [1, 2, 3, 5, 7, 10, 16, 22, 26, 44, 55, 56, 58, 61, 66, 71, 74, 86, 91, 99, 108],
+    }, {
+        name: 'L&S UNDERGRADUATE EDUCATION',
+        data: [46, 62],
+    }, {
+        name: 'LUSKIN SCHOOL OF PUBLIC AFFAIRS (LSPA)',
+        data: [34, 81, 103, 105, 107, 113],
+    }, {
+        name: 'SCHOOL OF ARTS & ARCHITECTURE (SOAA)',
+        data: [6, 8, 32, 40, 51, 53, 89, 114],
+    }, {
+        name: 'SCHOOL OF DENTISTRY',
+        data: [36, 37, 38, 39],
+    }, {
+        name: 'SCHOOL OF LAW',
+        data: [77],
+    }, {
+        name: 'SCHOOL OF NURSING',
+        data: [95],
+    }, {
+        name: 'SCHOOL OF THEATER, FILM & TELEVISION (STFT)',
+        data: [35, 52, 112],
+    }];
+
+for (i=0; i<schools.length; i++) {
+    var school = document.getElementById('school')
+    var temp = document.createElement('option');
+    temp.innerHTML = schools[i].name;
+    school.appendChild(temp)
+}
+
+var temp = [];
+for (i=0; i<116; i++) {
+    temp.push(i);
+}
+schools[0].data = temp;
+console.log(schools[0])
+
+function dept(n, f, m, i, a, b, h, t, u, w, T) {
+    this.name = n;
+    this.total = T;
+    
+    this.races = [w, a, h, b, i, t, u];
+    this.genders = [f, m];
+}
+
 d3.csv('/datasets/professor-demographics/professor-demographics.csv')
     .get(function(data) {
-    var categories = [];
-    for (i=0; i<data.length/10; i++)
-        d3.select('#departments').append('option').html(data[10*i].Year.toUpperCase());
-    
-    
-    document.getElementById('departments').addEventListener('change', function() {
-        const temp = (this.selectedIndex*10);
-        
-        var opt;
-        
-        if (document.getElementById('what').selectedIndex == 0) {
-            opt = genders;
-        } else {
-            opt = races;
-        }
-        
-        for (i=0; i<opt.length; i++) {
-            opt[i].data = [];
-        }
 
-        
-        female.data = [];
-        male.data = [];
-        indian.data = [];
-        asian.data = [];
-        black.data = [];
-        chicano.data = [];
-        two.data = [];
-        unknown.data = [];
-        white.data = [];
-        total.data = [];
-        
-        
-        for (i=1; i<11; i++) {
-            female.data.push(data[temp + i].F);
-            male.data.push(data[temp + i].M);
-            indian.data.push(data[temp + i].AI);
-            asian.data.push(data[temp + i].A);
-            black.data.push(data[temp + i].B);
-            chicano.data.push(data[temp + i].L);
-            two.data.push(data[temp + i].TW);
-            unknown.data.push(data[temp + i].U);
-            white.data.push(data[temp + i].W);
-            total.data.push(data[temp + i].T);
+    var all = [];
+    var allschools = [];
+    var deptName;
+    var deptData;
+    
+    
+    for (i=0; i<data.length/10; i++) {
+        deptName = data[10*i].Year.toUpperCase();
+        d3.select('#departments').append('option')
+            .html(deptName)
+
+        var ftemp = [], mtemp = [], itemp = [], atemp = [], btemp = [], htemp = [], ttemp = [], utemp = [], wtemp = [], Ttemp = [];
+        for (j=1; j<10; j++) { // filling in each category by year
+            ftemp.push(data[i*10 + j].F);
+            mtemp.push(data[i*10 + j].M);
+            itemp.push(data[i*10 + j].AI);
+            atemp.push(data[i*10 + j].A);
+            btemp.push(data[i*10 + j].B);
+            htemp.push(data[i*10 + j].L);
+            ttemp.push(data[i*10 + j].TW);
+            utemp.push(data[i*10 + j].U);
+            wtemp.push(data[i*10 + j].W);
+            Ttemp.push(data[i*10 + j].T);
         }
-                
-        var pork = {
-            labels: years,
-            datasets: [{
-                type: 'line',
-                label: 'Total',
-                data: total.data,
-                //yAxisID: 'axis-1',
-                fill: false,
-                borderColor: 'rgba(0, 0, 0)',
-            }],
-        };
-        
-        for (i=0; i<opt.length; i++) {
-            pork.datasets.push({
-                type: 'bar',
-                label: opt[i].title,
-                backgroundColor: opt[i].color,
-                data: opt[i].data,
-                stack: 'stack-1',
-                borderWidth: 1,
-        });
-        }
-        
-        myDem.data = pork;
-        myDem.update();
-        }
-    )
+        all.push(new dept(deptName, ftemp, mtemp, itemp, atemp, btemp, htemp, ttemp, utemp, wtemp, Ttemp) )
+    }
+    update(all[0])
+
+    document.getElementById('departments').addEventListener('change', function() {
+        //alert((this.selectedIndex))
+        update(all[this.selectedIndex]);
+    })
+    
+    document.getElementById('what').addEventListener('change', function() {
+        update(all[document.getElementById('departments').selectedIndex]);
+    })
+    
+    document.getElementById('school').addEventListener('change', function() {
+        update(all[document.getElementById('departments').selectedIndex]);
+        updateLabels(all)
+    })
+
+
+    
+
 });
+
+function updateLabels(data) {
+    document.getElementById('departments').innerHTML = '';
+    var temp = schools[document.getElementById('school').selectedIndex];
+    console.log(temp);
+    for (i=0; i<temp.data.length; i++) {
+        deptName = data[ temp.data[i] ].name.toUpperCase();
+        console.log(deptName);
+        d3.select('#departments').append('option').html(deptName);
+    }
+}
+
+function update(department) {
+    var opt;
+    var blank = [];
+    var blank2 = [];
+    
+    // reset balls
+    
+    d3.selectAll("#california > circle").remove();
+    d3.selectAll("#people > circle").remove();
+    
+    var california = d3.select('#california').selectAll('circle');
+    var people = d3.select('#people').selectAll('circle');
+    
+    const radius = 10;
+    
+    var config;
+    
+    // configure balls
+    
+    if (document.getElementById('what').selectedIndex == 0) {
+        data = department.genders;
+        config = genders;
+        for (i=0; i<genders.length; i++) {
+            for (j=0; j<genders[i].ca; j++) {
+                blank.push(genders[i].color)
+            }
+        }
+    } else {
+        data = department.races;
+        config = races;
+        for (i=0; i<races.length; i++) {
+            for (j=0; j<races[i].ca; j++) {
+                blank.push(races[i].color)
+            }
+        }
+    }
+    
+    // configuring balls
+    
+    var tot = 0;
+    for (i=0; i<data.length; i++) {
+        tot += parseFloat(data[i][8]);
+    }
+    
+    console.log(tot);
+    
+    for (i=0; i<data.length; i++) {
+        console.log(Math.round(data[i][8] * 100 / tot))
+        for (j=0; j<Math.round(data[i][8] * 100 / tot); j++) {
+            blank2.push(config[i].color)
+        }
+    }
+    
+    const a = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+    
+    // making balls
+
+    for (b=0; b<10; b++) {
+
+        california.data(a)
+            .enter().append('circle')
+            .attr('r', radius + 'px')
+            .attr('fill', function(a) {return blank[a + (b * 10)]})
+            .attr('cx', function(a) {return (a * (2*radius+5) + radius) + 'px'})
+            .attr('cy', function(a) {return (b * (2*radius+5) + radius) + 'px'})
+
+        people.data(a)
+            .enter().append('circle')
+            .attr('r', radius + 'px')
+            .attr('fill', function(a) {return blank2[a + (b*10)]})
+            .attr('cx', function(a) {return (a * (2*radius+5) + radius) + 'px'})
+            .attr('cy', function(a) {return (b * (2*radius+5) + radius) + 'px'})
+    }
+    
+    // Update chart
+    
+    var pork = {
+        labels: years,
+        datasets: [{
+            type: 'line',
+            label: 'Total',
+            data: department.total,
+            fill: false,
+            borderColor: 'rgba(0, 0, 0)',
+        }],
+    };
+            
+    
+    for (i=0; i<data.length; i++) {
+        pork.datasets.push({
+            type: 'bar',
+            label: config[i].title,
+            backgroundColor: config[i].color,
+            data: data[i],
+            stack: 'stack-1',
+            borderWidth: 1,
+        });
+    }
+    
+    myDem.data = pork;
+    myDem.update();
+
+}
 
 
 
@@ -266,69 +410,100 @@ var newChart = new Chart(bernard, config2);
 
 
 
-d3.csv('/datasets/professor-demographics/professor-demographics.csv')
-    .get(function(data) {
-        
-        //document.getElementById('departments').addEventListener('change', function() {
-            const temp = (this.selectedIndex*10 + 10);
-            var a = [1, 2, 4, 5, 6];
-            
-            for (i=0; i<5; i++) {
-                d3.select('#people')
-                    .data(a)
-                    .enter().append('circle')
-                    .append('circle')
-                    .attr('r', '40px')
-                    .attr('fill', 'black')
-            }
-            
-            
-            
-        //})
-        
-        
+$(document).ready(function() {
+    //$('#tort').innerHTML += 'no.';
+    $('#departments').find('option[value=1]').attr('selected', 'selected')
 })
 
-var california = d3.select('#california').selectAll('circle');
 
-var radius = 12;
+    var schools = [{
+            name: 'ALL',
+            data: [0],
+        }, {
+            name: 'ANDERSON GRADUATE SCHOOL OF MANAGEMENT (AGSM)',
+            data: [4],
+        }, {
+            name: 'BASIC BIOMEDICAL SCIENCES',
+            data: [85],
+        }, {
+            name: 'FIELDING SCHOOL OF PUBLIC HEALTH (FSPH)',
+            data: [15, 17, 26, 49, 50, 59, 60, 96, 102],
+        }, {
+            name: 'GRADUATE SCHOOL OF EDUCATION AND INFO STUDIES (GSEIS)',
+            data: [31, 45, 64],
+        }, {
+            name: 'HENRY SAMUELI SCHOOL OF ENGINEERING & APPLIED SCIENCE (HSSEAS)',
+            data: [13, 20, 24, 29, 32, 68, 82, 84],
+        }, {
+            name: 'HERB ALPERT SCHOOL OF MUSIC (HASOM)',
+            data: [33, 51, 89, 90],
+        }, {
+            name: 'INST OF ENVIORN & SUSTAINABILITY (IOES)',
+            data: [69],
+        }, {
+            name: 'INSTITUTE OF AMERICAN CULTURES',
+            data: [23],
+        }, {
+            name: 'INTERNATIONAL INSTITUTE',
+            data: [ 73, 92],
+        }, {
+            name: 'L&S GENERAL',
+            data: [67],
+        }, {
+            name: 'L&S HUMANITIES',
+            data: [9, 11, 19, 25, 28, 30, 48, 54, 57, 63, 75, 78, 80, 90, 94, 97, 104, 106, 109, 111, 115],
+        }, {
+            name: 'L&S LIFE SCIENCES',
+            data: [41, 43, 67, 72, 79, 87, 88, 93, 101],
+        }, {
+            name: 'L&S PHYSICAL SCIENCES',
+            data: [12, 21, 42, 65, 70, 83, 98, 100, 110],
+        }, {
+            name: 'L&S SOCIAL SCIENCES',
+            data: [1, 2, 3, 5, 7, 10, 16, 22, 26, 44, 55, 56, 58, 61, 66, 71, 74, 86, 91, 99, 108],
+        }, {
+            name: 'L&S UNDERGRADUATE EDUCATION',
+            data: [46, 62],
+        }, {
+            name: 'LUSKIN SCHOOL OF PUBLIC AFFAIRS (LSPA)',
+            data: [34, 81, 103, 105, 107, 113],
+        }, {
+            name: 'SCHOOL OF ARTS & ARCHITECTURE (SOAA)',
+            data: [6, 8, 32, 40, 51, 53, 89, 114],
+        }, {
+            name: 'SCHOOL OF DENTISTRY',
+            data: [36, 37, 38, 39],
+        }, {
+            name: 'SCHOOL OF LAW',
+            data: [77],
+        }, {
+            name: 'SCHOOL OF NURSING',
+            data: [95],
+        }, {
+            name: 'SCHOOL OF THEATER, FILM & TELEVISION (STFT)',
+            data: [35, 52, 112],
+        }];
+/*
+    'INSTITUTE OF AMERICAN CULTURES', 23
+    'INTERNATIONAL INSTITUTE', 73, 92
+    'L&S GENERAL', 67
+    'L&S HUMANITIES', 9, 11, 19, 25, 28, 30, 48, 54, 57, 63, 75, 78, 80, 90, 94, 97, 104, 106, 109, 111, 115
+    'L&S LIFE SCIENCES', 41, 43, 67, 72, 79, 87, 88, 93, 101
+    'L&S PHYSICAL SCIENCES', 12, 21, 42, 65, 70, 83, 98, 100, 110
+    'L&S SOCIAL SCIENCES', 1, 2, 3, 5, 7, 10, 16, 22, 26, 44, 55, 56, 58, 61, 66, 71, 74, 86, 91, 99, 108
+    'L&S UNDERGRADUATE EDUCATION', 46, 62
+    'LUSKIN SCHOOL OF PUBLIC AFFAIRS (LSPA)', 34, 81, 103, 105, 107, 113
+    'SCHOOL OF ARTS & ARCHITECTURE (SOAA)', 6, 8, 32, 40, 51, 53, 89, 114
+    'SCHOOL OF DENTISTRY', 36, 37, 38, 39
+    'SCHOOL OF LAW', 77
+    'SCHOOL OF NURSING', 95
+    'SCHOOL OF THEATER, FILM & TELEVISION (STFT)', 35, 52, 112
 
-for (b=0; b<10; b++) {
+ */
 
-    var a = [];
-    for (i=0; i<10; i++) {
-        a.push(i);
-    }
+//var opts = $('#departments option');
+//document.getElementById('departments').getElementsByTagName('option');
 
-
-    california.data(a)
-        .enter().append('circle')
-        .attr('r', radius + 'px')
-        .attr('fill', 'red')
-        .attr('cx', function(a) {return (a * 30 + 12) + 'px'})
-        .attr('cy', function(a) {return (b * 30 + 12) + 'px'})
+for (i=1; i<100; i++) {
+    //document.getElementsByTagName('div')[i].style('display', 'none')
 }
-
-function newDots() {
-    var people = d3.select('#people').selectAll('circle');
-
-    for (b=0; b<10; b++) {
-
-        var a = [];
-    
-        for (i=0; i<10; i++) {
-            a.push(i);
-        }
-    
-
-        people.data(a)
-            .enter().append('circle')
-            .attr('r', radius + 'px')
-            .attr('fill', 'blue')
-            .attr('cx', function(a) {return (a * 30 + 12) + 'px'})
-            .attr('cy', function(a) {return (b * 30 + 12) + 'px'})
-    }
-}
-
-newDots();
-
