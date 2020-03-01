@@ -141,6 +141,19 @@ d3.csv('/datasets/professor-demographics/professor-demographics.csv')
     document.getElementById('departments').addEventListener('change', function() {
         const temp = (this.selectedIndex*10);
         
+        var opt;
+        
+        if (document.getElementById('what').selectedIndex == 0) {
+            opt = genders;
+        } else {
+            opt = races;
+        }
+        
+        for (i=0; i<opt.length; i++) {
+            opt[i].data = [];
+        }
+
+        
         female.data = [];
         male.data = [];
         indian.data = [];
@@ -151,7 +164,8 @@ d3.csv('/datasets/professor-demographics/professor-demographics.csv')
         unknown.data = [];
         white.data = [];
         total.data = [];
-
+        
+        
         for (i=1; i<11; i++) {
             female.data.push(data[temp + i].F);
             male.data.push(data[temp + i].M);
@@ -164,15 +178,7 @@ d3.csv('/datasets/professor-demographics/professor-demographics.csv')
             white.data.push(data[temp + i].W);
             total.data.push(data[temp + i].T);
         }
-        
-        var opt;
-        
-        if (document.getElementById('what').selectedIndex == 0) {
-            opt = genders;
-        } else {
-            opt = races;
-        }
-        
+                
         var pork = {
             labels: years,
             datasets: [{
@@ -192,7 +198,7 @@ d3.csv('/datasets/professor-demographics/professor-demographics.csv')
                 backgroundColor: opt[i].color,
                 data: opt[i].data,
                 stack: 'stack-1',
-                borderWidth: 5,
+                borderWidth: 1,
         });
         }
         
@@ -255,9 +261,74 @@ var config2 = {
     }
 }
 
-
-
-
-
 var bernard = document.getElementById('scatterChart');
 var newChart = new Chart(bernard, config2);
+
+
+
+d3.csv('/datasets/professor-demographics/professor-demographics.csv')
+    .get(function(data) {
+        
+        //document.getElementById('departments').addEventListener('change', function() {
+            const temp = (this.selectedIndex*10 + 10);
+            var a = [1, 2, 4, 5, 6];
+            
+            for (i=0; i<5; i++) {
+                d3.select('#people')
+                    .data(a)
+                    .enter().append('circle')
+                    .append('circle')
+                    .attr('r', '40px')
+                    .attr('fill', 'black')
+            }
+            
+            
+            
+        //})
+        
+        
+})
+
+var california = d3.select('#california').selectAll('circle');
+
+var radius = 12;
+
+for (b=0; b<10; b++) {
+
+    var a = [];
+    for (i=0; i<10; i++) {
+        a.push(i);
+    }
+
+
+    california.data(a)
+        .enter().append('circle')
+        .attr('r', radius + 'px')
+        .attr('fill', 'red')
+        .attr('cx', function(a) {return (a * 30 + 12) + 'px'})
+        .attr('cy', function(a) {return (b * 30 + 12) + 'px'})
+}
+
+function newDots() {
+    var people = d3.select('#people').selectAll('circle');
+
+    for (b=0; b<10; b++) {
+
+        var a = [];
+    
+        for (i=0; i<10; i++) {
+            a.push(i);
+        }
+    
+
+        people.data(a)
+            .enter().append('circle')
+            .attr('r', radius + 'px')
+            .attr('fill', 'blue')
+            .attr('cx', function(a) {return (a * 30 + 12) + 'px'})
+            .attr('cy', function(a) {return (b * 30 + 12) + 'px'})
+    }
+}
+
+newDots();
+
