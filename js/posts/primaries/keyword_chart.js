@@ -6,7 +6,7 @@ let keywordChart = new Chart(document.getElementById("keyword-chart"), {
       {
         label: "College Related Mentions",
         backgroundColor: bg_color,
-        data: [81,133,7,207,51,59] 
+        data: [87, 150, 7, 233 ,55 ,59] 
       }]
   },
   options: {
@@ -49,30 +49,33 @@ function update_keyword_chart(keyword, name) {
 //return the correct array
 function get_data_from_keyword(keyword) {
   if (keyword.localeCompare("college") === 0) {
-    return [81, 133, 7, 207, 51, 59];
+    return [87, 150, 7, 233, 55, 59];
+  }
+  if (keyword.localeCompare("employment") === 0) {
+    return [20, 60, 58, 44, 46, 24];
   }
   if (keyword.localeCompare("immigration") === 0) {
-    return [19, 20, 3, 12, 17, 10];
+    return [114, 129, 35, 150, 111, 98];
   }
   if (keyword.localeCompare("mental-health") === 0) {
-    return [8, 4, 0, 2, 0, 1];
+    return [19, 7, 0, 5, 2, 2];
   }
   if (keyword.localeCompare("discrimination-and-equality") === 0) {
-    return [46, 42, 8, 65, 36, 22];
+    return [104, 159, 77, 239, 167, 131];
   }
   if (keyword.localeCompare("healthcare") === 0) {
-    return [6, 102, 4, 3, 45, 3];
+    return [28, 212, 9, 62, 103, 24];
   }
   if (keyword.localeCompare("environment") === 0) {
-    return [32, 72, 1, 54, 66, 13];
+    return [47, 144, 6, 91, 73, 17];
   }
   if (keyword.localeCompare("women-health") === 0) {
-    return [29, 18, 2, 51, 18, 17];
+    return [37, 21, 7, 55, 20, 19];
   }
   if (keyword.localeCompare("marijuana") === 0) {
-    return [0, 6, 0, 10, 2, 0];
+    return [0, 7, 0, 14, 2, 0];
   }
   if (keyword.localeCompare("gun-rights") === 0) {
-    return [24, 5, 2, 10, 37, 8];
+    return [31, 11, 5, 21, 64, 18];
   }
 } 

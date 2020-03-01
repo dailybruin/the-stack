@@ -21,6 +21,7 @@ let big_radius = 25;   // for desktop
 function display_keywords(keyword, name) {
     output = "";
     output = output.concat("<strong>", name.toString(), "</strong> <br>");
+    output = output.concat("<i>keywords used to find ", name.toString(), " related mentions:</i><br>");
     for (var i = 0; i <= (keyword_list[keyword].length - 2); i++)
       output = output.concat(keyword_list[keyword][i], ", ");
     output = output.concat(keyword_list[keyword][keyword_list[keyword].length - 1]);
