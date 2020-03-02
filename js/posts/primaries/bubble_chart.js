@@ -9,7 +9,7 @@ let bubble_chart = new Chart(document.getElementById("bubble-chart"), {
 			label: "Amy Klobuchar",
 			backgroundColor: color_codes['amy-klobuchar'],
 			data: [{
-			  x: 'Amy Klobuchar',
+			  x: 'Klobuchar',
 			  y: (amy_klobuchar_traits['Openness'] * default_scale),			  
               r: radius,
 			}]
@@ -17,7 +17,7 @@ let bubble_chart = new Chart(document.getElementById("bubble-chart"), {
 			label: "Bernie Sanders",
 			backgroundColor: color_codes['bernie-sanders'],
 			data: [{
-			  x: 'Bernie Sanders',
+			  x: 'Sanders',
 			  y: (bernie_sanders_traits['Openness'] * default_scale),			  	  
               r: radius,
 			}]
@@ -26,7 +26,7 @@ let bubble_chart = new Chart(document.getElementById("bubble-chart"), {
 			label: "Donald Trump",
 			backgroundColor: color_codes['donald-trump'],
 			data: [{
-			  x: 'Donald Trump',
+			  x: 'Trump',
 			  y: (donald_trump_traits['Openness'] * default_scale),
               r: radius,
 			}]
@@ -35,7 +35,7 @@ let bubble_chart = new Chart(document.getElementById("bubble-chart"), {
 			label: "Elizabeth Warren",
 			backgroundColor: color_codes['elizabeth-warren'],
 			data: [{
-			  x: 'Elizabeth Warren',
+			  x: 'Warren',
 			  y: (elizabeth_warren_traits['Openness'] * default_scale),			  
               r: radius,
 			}]
@@ -44,11 +44,29 @@ let bubble_chart = new Chart(document.getElementById("bubble-chart"), {
 		  label: "Joe Biden",
 		  backgroundColor: color_codes['joe-biden'],
 		  data: [{
-			x: 'Joe Biden',
+			x: 'Biden',
 			y: (joe_biden_traits['Openness'] * default_scale),			  
             r: radius,
 		  }]
-		},  
+		}, 
+		// {
+		// 	label: "Michael Bloomberg",
+		// 	backgroundColor: color_codes['michael-bloomberg'],
+		// 	data: [{
+		// 	  x: 'Bloomberg',
+		// 	  y: (michael_bloomberg_traits['Openness'] * default_scale),			  
+		// 	  r: radius,
+		// 	}]
+		//   },  
+		//   {
+		// 	label: "Tulsi Gabbard",
+		// 	backgroundColor: color_codes['tulsi-gabbard'],
+		// 	data: [{
+		// 	  x: 'Gabbard',
+		// 	  y: (tulsi_gabbard_traits['Openness'] * default_scale),			  
+		// 	  r: radius,
+		// 	}]
+		//   },  	
 	  ]
 	},
 	options: {
@@ -164,6 +182,24 @@ function update_bubble_chart(trait, x) {
                   r: radius,
 				}]
 			  },  
+			//   {
+			// 	label: 'Michael Bloomberg',
+			// 	backgroundColor: color_codes['michael-bloomberg'],
+			// 	data: [{
+			// 	  x: labels[5],			  
+			// 	  y: eval('(michael_bloomberg_traits[\'' + trait_str + '\'] * default_scale)'),
+            //       r: radius,
+			// 	}]
+			//   },  
+			//   {
+			// 	label: 'Tulsi Gabbard',
+			// 	backgroundColor: color_codes['tulsi-gabbard'],
+			// 	data: [{
+			// 	  x: labels[6],			  
+			// 	  y: eval('(tulsi_gabbard_traits[\'' + trait_str + '\'] * default_scale)'),
+            //       r: radius,
+			// 	}]
+			//   },  
 		  ];
 
 	bubble_chart.update();

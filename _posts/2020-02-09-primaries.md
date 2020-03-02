@@ -13,6 +13,7 @@ key_takeaways:
 featured_image:
     url: primaries/twitter-cover-3.png
 og_image: primaries/twitter-cover-3.png
+
 stylesheets:
     - https://fonts.googleapis.com/css?family=Lato&display=swap
     - https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.css
@@ -26,7 +27,8 @@ scripts:
     - /js/posts/primaries/traits/donald-trump_traits.js
     - /js/posts/primaries/traits/elizabeth-warren_traits.js
     - /js/posts/primaries/traits/joe-biden_traits.js
-    - /js/posts/primaries/traits/pete-buttigieg_traits.js
+    - /js/posts/primaries/traits/michael-bloomberg_traits.js
+    - /js/posts/primaries/traits/tulsi-gabbard_traits.js
     - /js/posts/primaries/keywords.js
     - /js/posts/primaries/color_codes.js
     - /js/posts/primaries/trait_details.js

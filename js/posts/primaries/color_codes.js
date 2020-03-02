@@ -5,5 +5,5 @@ let color_codes = {
     'elizabeth-warren': 'rgba(26, 149, 203, 0.9)',
     'joe-biden': 'rgba(51, 51, 255, 0.9)',
     'michael-bloomberg': 'rgba(52, 214, 235, 0.9)',
-    'pete-buttigieg': 'rgba(176, 206, 255, 0.9)',
+    'tulsi-gabbard': 'rgba(176, 206, 255, 0.9)',
 };
