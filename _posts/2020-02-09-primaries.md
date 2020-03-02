@@ -11,8 +11,8 @@ key_takeaways:
     - Elizabeth Warren and Bernie Sanders mentioned “college” and “healthcare” in their tweets significantly more than other candidates.
     - Elizabeth Warren and Donald Trump are perceived to have the lowest emotional range through their tweets.
 featured_image:
-    url: walking-to-class/featured_image.png
-og_image: walking-to-class/featured_image.png
+    url: cover-photo.png
+og_image: cover-photo.png
 stylesheets:
     - https://fonts.googleapis.com/css?family=Lato&display=swap
     - https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.css
