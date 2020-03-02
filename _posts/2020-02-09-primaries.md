@@ -12,7 +12,7 @@ key_takeaways:
     - Elizabeth Warren and Donald Trump are perceived to have the lowest emotional range through their tweets.
 featured_image:
     url: primaries/twitter-cover.png
-og_image: walking-to-class/featured_image.png
+og_image: primaries/twitter-cover.png
 stylesheets:
     - https://fonts.googleapis.com/css?family=Lato&display=swap
     - https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.css
@@ -72,9 +72,9 @@ As seen in the graph, Bernie Sanders is significantly more outspoken on the topi
 
 Warren holds a strong lead in how often she mentions women’s health, as well as discrimination and equality. Klobuchar is the candidate who speaks about these issues the second most. These topics are especially pertinent to women, so it is not surprising that all of the males in the field trail Warren and Klobuchar.
 
-All candidates do not speak about mental health nearly as much as other topics. Trump has yet to tweet about mental health. Klobuchar is the most outspoken about it, tweeting on the subject nineteen times.
+All candidates do not speak about mental health nearly as much as other topics. Trump has yet to tweet about mental health. Klobuchar is the most outspoken about it, tweeting on the subject 19 times.
 
-While ideology and issues may be some voters' main concern, others prioritize electability, which cannot be measured before the election. The electorate has differing views on what determines "electability." Delve into each of the candidates' personalities in the graph below.
+While ideology and issues may be some voters' main concern, others prioritize electability, which cannot be measured before the election. The electorate has differing views on what determines "electability," whether it revolve around policy or personality. Delve into each of the candidates' personalities in the graph below.
 <br>
 <!-- SECTION: Personality Chart-->
 <div id="bubble-wrapper">
@@ -118,7 +118,7 @@ While ideology and issues may be some voters' main concern, others prioritize el
  
   Any score above the mean of 0.5 indicates a greater than average tendency for a characteristic. A score at or above 0.75 indicates readily discernible aspects of the characteristic; such scores are considered high. The opposite statements are true of scores below 0.50 and 0.25, which are considered low. The opposite statements are true of scores below 0.50 and 0.25, which are considered low.
   
-  All of the above characteristics and sub-traits are determined using [IBM Watson's Personality Insights program](https://cloud.ibm.com/docs/services/personality-insights?topic=personality-insights-about#about), which analyzed all tweets by candidates since they created their Twitter accounts. Because Biden, Buttigeg, Klobuchar and Warren were the only candidates who qualified for the debate on Feb. 19 as of early February, these are the only democratic candidates that we assessed. In addition, Donald Trump will likely be the Republican nominee, so we included him in our insights. 
+  All of the above characteristics and sub-traits are determined using [IBM Watson's Personality Insights program](https://cloud.ibm.com/docs/services/personality-insights?topic=personality-insights-about#about), which analyzed all tweets by candidates since they created their Twitter accounts. Because Biden, Klobuchar, Sanders and Warren were the only candidates who qualified for the debate on Feb. 19 as of early February, these are the only democratic candidates that we assessed. In addition, Donald Trump will likely be the Republican nominee, so we included him in our insights. 
   
   Amy Klobuchar's overarching personality analysis stands out, as she has significantly higher "agreeableness" and "extraversion" levels than her democratic counterparts. Donald Trump's "extroversion" is considered to be comparable to Klobuchar's, being the highest in the field. Klobuchar, who is known as one of the most moderate candidates, not surprisingly has the highest “agreeableness” score of all candidates.
   
