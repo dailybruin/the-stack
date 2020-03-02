@@ -1,17 +1,23 @@
 // Chart-value Constants
-let candidates = ["Amy Klobuchar", 
-                  "Bernie Sanders", 
-                  "Donald Trump", 
-                  "Elizabeth Warren", 
-                  "Joe Biden"
+let candidates = ["Klobuchar", 
+                  "Sanders", 
+                  "Trump", 
+                  "Warren", 
+                  "Biden",
+                  // "Bloomberg",
+                  // "Gabbard"
                 ];
 let bg_color = [color_codes['amy-klobuchar'], 
                 color_codes['bernie-sanders'],
                 color_codes['donald-trump'], 
                 color_codes['elizabeth-warren'],
                 color_codes['joe-biden'], 
+                // color_codes['michael-bloomberg'],
+                // color_codes['tulsi-gabbard'],
               ];
-let candidate_initials = ["A.K.", "B.S.", "D.T.", "E.W.", "J.B.", "P.B."];
+let candidate_initials = ["A.K.", "B.S.", "D.T.", "E.W.", "J.B.",
+                          // "M.B.", "T.G",
+                          ];
 let default_scale = 100; // scale percentiles to 100
 let small_radius = 10; // for mobile
 let big_radius = 25;   // for desktop
@@ -37,7 +43,6 @@ function make_responsive(x) {
       Chart.defaults.global.responsive = false;
       Chart.defaults.global.maintainAspectRatio = false;
 
-      keywordChart.data.labels = ["Klobuchar", "Sanders", "Trump", "Warren", "Biden", "Buttigieg"];
       keywordChart.canvas.parentNode.style.width = "340px";
 
       update_bubble_chart('Openness', x);

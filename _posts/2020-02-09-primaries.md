@@ -26,7 +26,8 @@ scripts:
     - /js/posts/primaries/traits/donald-trump_traits.js
     - /js/posts/primaries/traits/elizabeth-warren_traits.js
     - /js/posts/primaries/traits/joe-biden_traits.js
-    - /js/posts/primaries/traits/pete-buttigieg_traits.js
+    - /js/posts/primaries/traits/michael-bloomberg_traits.js
+    - /js/posts/primaries/traits/tulsi-gabbard_traits.js
     - /js/posts/primaries/keywords.js
     - /js/posts/primaries/color_codes.js
     - /js/posts/primaries/trait_details.js

@@ -7,5 +7,6 @@ Gemfile.lock
 *.swp
 *.env
 auth.yaml
+__pycache__
 
 .vscode/settings.json

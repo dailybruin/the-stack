@@ -6,19 +6,20 @@ CANDIDATES = [
     'joe-biden',
     'elizabeth-warren',
     'bernie-sanders',
-    'pete-buttigieg',
+    #'pete-buttigieg',
     'amy-klobuchar',
     'donald-trump',
-    'michael-bloomberg']
+    'michael-bloomberg',
+    'tulsi-gabbard']
 
 # NOTE: Change FILE_PATH variable before use!
 # - Navigate to the root directory of 'the-stack' repo on command line, type in pwd and copy the result
 #   then append /datasets/primaries/ to create your path
 # - If you're using Windows, you might have to change backslashes (\) to forward slashes (/)
-FILE_PATH = '/Users/mattiesanseverino/DB/the-stack/datasets/primaries/'
+FILE_PATH = '/Users/ahuja/Desktop/Clubs/stack/the-stack/datasets/primaries/'
 
 # NOTE: This file contains the API token, make sure to include it in your folder before running
-#CONFIG_FILE = 'auth.yaml'
+CONFIG_FILE = 'auth.yaml'
 
 # parse tweet json dataset
 def json_parser():
@@ -76,13 +77,13 @@ def personality(candidate_name):
 
     for j in range(len(parsed) - 2):
         trait_dict[parsed['personality'][j]['name']] = parsed['personality'][j]['percentile']
-
-       for k in range(len(parsed['personality'][j]['children'])):
+        for k in range(len(parsed['personality'][j]['children'])):
             trait_dict[(parsed['personality'][j]['children'][k]['name'])] = parsed['personality'][j]['children'][k]['percentile']
     
     return trait_dict
 
-print(personality('michael-bloomberg'))
+# with open('../../js/posts/primaries/' + 'tulsi-gabbard' + '_traits.js', 'w') as outfile:
+#     json.dump(personality('tulsi-gabbard'), outfile)
 
 # temporary code to save trait dictionaries
 # for i in CANDIDATES:
