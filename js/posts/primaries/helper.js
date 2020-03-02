@@ -3,15 +3,13 @@ let candidates = ["Amy Klobuchar",
                   "Bernie Sanders", 
                   "Donald Trump", 
                   "Elizabeth Warren", 
-                  "Joe Biden", 
-                  "Pete Buttigieg"
+                  "Joe Biden"
                 ];
 let bg_color = [color_codes['amy-klobuchar'], 
                 color_codes['bernie-sanders'],
                 color_codes['donald-trump'], 
                 color_codes['elizabeth-warren'],
                 color_codes['joe-biden'], 
-                color_codes['pete-buttigieg'],
               ];
 let candidate_initials = ["A.K.", "B.S.", "D.T.", "E.W.", "J.B.", "P.B."];
 let default_scale = 100; // scale percentiles to 100

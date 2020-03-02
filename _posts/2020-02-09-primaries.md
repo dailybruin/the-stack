@@ -1,5 +1,5 @@
 ---
-title: US Primaries
+title: Understanding the 2020 Democratic Primary Candidates Through Their Tweets
 teaser: The Democratic presidential primary field is crowded with several candidates whose ideological differences may feel slightly nuanced. Interact with the charts below to determine which candidate you align with most based on the topics they tweet about the most and their personality traits.
 authors:
     - radhika_ahuja
@@ -11,7 +11,7 @@ key_takeaways:
     - Elizabeth Warren and Bernie Sanders mentioned “college” and “healthcare” in their tweets significantly more than other candidates.
     - Elizabeth Warren and Donald Trump are perceived to have the lowest emotional range through their tweets.
 featured_image:
-    url: walking-to-class/featured_image.png
+    url: primaries/cover-photo.png
 og_image: walking-to-class/featured_image.png
 stylesheets:
     - https://fonts.googleapis.com/css?family=Lato&display=swap

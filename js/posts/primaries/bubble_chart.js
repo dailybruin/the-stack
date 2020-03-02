@@ -49,15 +49,6 @@ let bubble_chart = new Chart(document.getElementById("bubble-chart"), {
             r: radius,
 		  }]
 		},  
-		{
-		  label: "Pete Buttigieg",
-		  backgroundColor: color_codes['pete-buttigieg'],
-		  data: [{
-			x: 'Pete Buttigieg',
-			y: (pete_buttigieg_traits['Openness'] * default_scale),		  
-            r: radius,
-		  }]
-		},  
 	  ]
 	},
 	options: {
@@ -173,15 +164,6 @@ function update_bubble_chart(trait, x) {
                   r: radius,
 				}]
 			  },  
-			  {
-			  label: "Pete Buttigieg",
-			  backgroundColor: color_codes['pete-buttigieg'],
-			  data: [{
-				x: labels[5],
-				y: eval('(pete_buttigieg_traits[\'' + trait_str + '\'] * default_scale)'),			  
-                r: radius,
-			  }]
-			 },
 		  ];
 
 	bubble_chart.update();
