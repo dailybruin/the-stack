@@ -1,5 +1,9 @@
 ---
+<<<<<<< HEAD
     title: Breaking Down the Growth of the Computer Science Department -- Bit by Bit
+=======
+    title: Breaking Down the Growth of the Computer Science Department — Bit by Bit
+>>>>>>> 539471634a4dcdc58af382499ef3db90a6d23706
     teaser: As the tech industry experiences intensive growth, explore the changes in UCLA's Computer Science department over time.
     authors:
     - keith_atienza

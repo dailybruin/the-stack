@@ -10,7 +10,14 @@
     "precommit": "lint-staged"
   },
   "eslintConfig": {
+<<<<<<< HEAD
     "extends": ["airbnb-base", "prettier"]
+=======
+    "extends": [
+      "airbnb-base",
+      "prettier"
+    ]
+>>>>>>> 539471634a4dcdc58af382499ef3db90a6d23706
   },
   "prettier": {
     "overrides": [
@@ -24,6 +31,7 @@
     ]
   },
   "lint-staged": {
+<<<<<<< HEAD
     "*.{js,scss,json,md}": ["prettier --write", "git add"]
   },
   "devDependencies": {
@@ -31,13 +39,29 @@
     "eslint": "^4.16.0",
     "eslint-config-airbnb": "^16.1.0",
     "eslint-config-airbnb-base": "^12.1.0",
+=======
+    "*.{js,scss,json,md}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "devDependencies": {
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+>>>>>>> 539471634a4dcdc58af382499ef3db90a6d23706
     "husky": "^0.14.3",
     "lint-staged": "^6.1.0",
     "prettier": "^1.10.2"
   },
   "dependencies": {
     "babel-preset-react": "^6.24.1",
+<<<<<<< HEAD
     "react": "^16.3.2",
     "react-dom": "^16.3.2"
+=======
+    "mongoose": "^5.8.10",
+    "react": "^16.12.0",
+    "react-dom": "^16.3.2",
+    "react-vis": "^1.11.7"
+>>>>>>> 539471634a4dcdc58af382499ef3db90a6d23706
   }
 }
