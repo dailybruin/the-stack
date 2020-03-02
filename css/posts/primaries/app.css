@@ -1,0 +1,127 @@
+/*BUTTONS*/
+.keyword-button {
+    display: block;
+    padding: 0.35em 1.2em;
+    border: 0.15em solid #000000;
+    margin: 0 0.3em 0.3em 0;
+    border-radius: 0.12em;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    color: #000000;
+    text-align: center;
+    transition: all 0.2s;
+    background-color: #FFFFFF;
+}
+
+.active {
+    color: #FFFFFF;
+    background-color: #000000;
+}
+
+@media all and (max-width:30em) {
+    #keyword-button {
+        display: block;
+        margin: 0.4em auto;
+    }
+}
+
+#keyword-wrapper {
+    padding-bottom: 100px;
+}
+
+#bubble-wrapper, #keyword-wrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.info-box {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: small;
+    border: medium solid #000000;
+}
+
+/* TODO: Edit and fix */
+#term-info-box {
+    width: 20vw;
+    padding: 1.2em;
+    margin: 0.2em;
+}
+
+#trait-info-box {
+    /*background-color: aliceblue;*/
+    width: 20vw;
+    padding: 1.2em;
+    margin: 0.2em;
+    margin-top: 2.5em;
+}
+
+#trait_meaning {
+    width: 18vw;
+}
+
+/* Phone Level */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+    
+    #trait_meaning, #search-terms {
+        width: 80vw;
+    }
+    
+    #trait-info-box, #term-info-box {
+        width: 82vw;
+    }
+
+    #btn-group {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 1.2em;
+    }
+
+    #bubble-wrapper, #keyword-wrapper {
+        display: block;
+    }
+}
+
+/* Tablet Level */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1023px) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+
+    #btn-group {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 1.2em;
+    }
+
+    #bubble-wrapper, #keyword-wrapper {
+        display: block;
+    }
+
+    #trait-info-box, #term-info-box {
+        width: 100%;
+        text-align: center;
+        border: none;
+    }
+
+    #trait_meaning, #search-terms {
+        width: 45vw;
+        display: inline-block;
+        border: medium solid black;
+        padding: 1em;
+    }
+
+    #search-terms {
+        width: 25vw;
+    }
+}
+
+#dropdown {
+    padding: 1.2em;
+}
