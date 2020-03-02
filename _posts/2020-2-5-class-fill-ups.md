@@ -1,5 +1,5 @@
 ---
-title: How Quickly Do Classes Fill Up?
+title: How Quickly Do Classes Fill Up??
 teaser: Determine which classes you should enroll during your first or second pass, based on analysis of the recent Winter quarter 2020 enrollment.
 authors:
   - andrew_kan
