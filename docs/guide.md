@@ -3,41 +3,6 @@ layout: page
 permalink: /docs/guide/
 ---
 
-# Guide to Development with The Stack
-Welcome to The Stack! 
-This is a compilation of all tools and skills that are used time and again during the development of projects.
-
-This guide is intended to be a resource for first-time learning as well as a reference guide for common commands and tools until they become muscle memory (they're you're programming training wheels). This can be a lot of information to digest at once if this is all new to you, so don't be afraid to forget things, just open this guide back up. It also references other guides I found online that explain the topic better than I ever could, so I highly recommend going though those. 
-
-The guide is broken down into sections so you can skip to the topics relevant to you, but if it's your first time developing with The Stack, it's recommended that you go through them in order. Having said that, this guide is designed to be as beginner friendly as possible, so feel free to skip over topics you feel comfortable with. There are some more advanced sections for topics you can dive into once you feel comfortable with the basics.  
-
-P.S. Regardless of your previous experience, I recommend going through the [good coding practices section](#good-code-practices).
-
-# Topics
-- [Jekyll](#jekyll)
-- [Markdown](#markdown)
-- [Command Line](#command-line)
-- [Git](#git)
-- [ChartJS](#chartjs) (and basic front-end)
-- [Good Code Practices](#good-code-practices)
-- [What Are APIs?](#what-are-apis) (and some cool ones to use)
-
-# Advanced Topics (coming soon)
-- Web Scraping with Python
-- Python/R (pandas, numpy, etc.)
-- Mapping with Leaflet
-
-# Installations
-- VS Code
-- git
-- python (and pip)
-- markdown render
-- jekyll
-- familiarity with terminal?
-- WSL
-- default onboarding (create media email, add to Slack, create github account, do tutorial, do all installations (create some package maybe?), create required environment)
-(- write some code for path independence in python and js? may not be necessary in js)
-
 ## Jekyll
 TODO: Just improve existing documentation
 
