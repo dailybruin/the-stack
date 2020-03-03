@@ -1,0 +1,133 @@
+<!doctype HTML>
+<meta charset='utf-8'>
+<html>
+
+<head>
+
+  <script src='http://d3js.org/d3.v3.js' type='text/javascript'></script>
+  <script src='http://timelyportfolio.github.io/rCharts_basketball/js/d3.tip.v0.6.3.js' type='text/javascript'></script>
+
+  <style>
+    .rChart {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 800px;
+      height: 400px;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <div></div>
+  <div id=chartPlayer1>
+        <svg width="1440" height="900" viewBox="0 0 1440 900" fill="none" xmlns="http://www.w3.org/2000/svg" id="courtPlayer1">
+          <g clip-path="url(#clip0)">
+          <rect width="1440" height="900" fill="white"/>
+          <rect id="A" x="337.5" y="128.5" width="765" height="628" stroke="black"/>
+          <mask id="path-3-inside-1" fill="white">
+          <path id="B" d="M624 757C624 744.393 626.483 731.91 631.308 720.262C636.132 708.615 643.203 698.032 652.118 689.118C661.032 680.203 671.615 673.132 683.262 668.308C694.91 663.483 707.393 661 720 661C732.607 661 745.09 663.483 756.738 668.308C768.385 673.132 778.968 680.203 787.882 689.118C796.797 698.032 803.868 708.615 808.692 720.262C813.517 731.91 816 744.393 816 757L720 757H624Z"/>
+          </mask>
+          <path id="C" d="M624 757C624 744.393 626.483 731.91 631.308 720.262C636.132 708.615 643.203 698.032 652.118 689.118C661.032 680.203 671.615 673.132 683.262 668.308C694.91 663.483 707.393 661 720 661C732.607 661 745.09 663.483 756.738 668.308C768.385 673.132 778.968 680.203 787.882 689.118C796.797 698.032 803.868 708.615 808.692 720.262C813.517 731.91 816 744.393 816 757L720 757H624Z" stroke="black" stroke-width="2" mask="url(#path-3-inside-1)"/>
+          <mask id="path-4-inside-2" fill="white">
+          <path id="D" d="M817 128C817 140.607 814.504 153.09 809.654 164.738C804.805 176.385 797.697 186.968 788.736 195.882C779.775 204.797 769.137 211.868 757.429 216.692C745.721 221.517 733.173 224 720.5 224C707.827 224 695.279 221.517 683.571 216.692C671.863 211.868 661.225 204.797 652.264 195.882C643.303 186.968 636.195 176.385 631.346 164.738C626.496 153.09 624 140.607 624 128L720.5 128H817Z"/>
+          </mask>
+          <path id="E" d="M817 128C817 140.607 814.504 153.09 809.654 164.738C804.805 176.385 797.697 186.968 788.736 195.882C779.775 204.797 769.137 211.868 757.429 216.692C745.721 221.517 733.173 224 720.5 224C707.827 224 695.279 221.517 683.571 216.692C671.863 211.868 661.225 204.797 652.264 195.882C643.303 186.968 636.195 176.385 631.346 164.738C626.496 153.09 624 140.607 624 128L720.5 128H817Z" stroke="black" stroke-width="2" mask="url(#path-4-inside-2)"/>
+          <rect id="F" x="438.5" y="128.5" width="564" height="145" stroke="black"/>
+          <mask id="path-6-inside-3" fill="white">
+          <path id="G" d="M1003 273C1003 348.056 973.237 420.038 920.258 473.111C867.279 526.184 795.424 556 720.5 556C645.576 556 573.721 526.184 520.742 473.111C467.763 420.038 438 348.056 438 273L720.5 273H1003Z"/>
+          </mask>
+          <path id="I" d="M1003 273C1003 348.056 973.237 420.038 920.258 473.111C867.279 526.184 795.424 556 720.5 556C645.576 556 573.721 526.184 520.742 473.111C467.763 420.038 438 348.056 438 273L720.5 273H1003Z" stroke="black" stroke-width="2" mask="url(#path-6-inside-3)"/>
+          <rect id="J"x="439" y="273" width="563" height="1" fill="white"/>
+          <rect id="K" x="624.5" y="128.5" width="192" height="331" stroke="black"/>
+          <circle id="L" cx="720.5" cy="459.5" r="96" stroke="black"/>
+          </g>
+          <defs>
+          <clipPath id="clip0">
+          <rect width="1440" height="900" fill="white"/>
+          </clipPath>
+          </defs>
+          </svg>
+  </div>
+
+  <script>
+    var params = {
+      "dom": "chartPlayer1",
+      "width": 1440,
+      "height": 900,
+      "data": {
+        "region": ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T",
+          "U", "V", "W"
+        ],
+        "pct": [0.19361, 0.57135, 0.30543, 0.14648, 0.046666, 0.71127, 0.74101, 0.78465, 0.062465, 0.050444, 0.60234,
+          0.43274, 0.72817, 0.72738, 0.43075, 0.62668, 0.40689, 0.36524, 0.00315, 0.11036, 0.014926, 0.70929,
+          0.21949
+        ]
+      },
+      "y": "pct",
+      "colors": ["#FF9872", "#FFB16E", "#FFCB6B", "#FFE569", "#FFFF66", "#C1E659", "#87CE4D", "#53B541"],
+      "id": "chartPlayer1"
+    }
+    var svg = d3.select("svg")
+    tip = d3.tip().html(function (d) {
+      return d.datum().key + ":" + d3.format(".2%")(d.datum().value);
+    });
+
+    /* Invoke the tip in the context of your visualization */
+    svg.call(tip)
+
+    //match the data with the regions
+    svg.selectAll("path, rect")[0].forEach(function (region) {
+      //get the shape with d3
+      var regionShape = d3.select(region)
+      //look for the id of the shape in the data
+      var dataid = d3.values(params.data.region).indexOf(regionShape.attr("id"))
+      //if id is greater than 0 then we found the id in data
+      //in this example we found a region
+      if (dataid >= 0) {
+        regionShape.datum({
+            "key": regionShape.attr("id"),
+            "value": params.data[params.y][dataid]
+          })
+          .attr("class", "regionData")
+      }
+    })
+
+    var heatmapColor = d3.scale.linear()
+      .domain(d3.range(0, 1, 1.0 / (params.colors.length - 1)))
+      .range(params.colors);
+
+    //redundant for now
+    //but might need this in the future
+    var colorScale = d3.scale.linear().domain([0, 1]).range([0, 1]);
+
+    svg.selectAll(".regionData")
+      .style("fill", function (d) {
+        return heatmapColor(colorScale(d.value));
+      })
+      .style("fill-opacity", 0.6)
+      .on("mouseover", function () {
+        d3.select(this).style("stroke-width", 6)
+        tip.show(d3.select(this)).style('top', (event.pageY) + "px").style('left', (event.pageX) + "px")
+
+      })
+      .on("mouseout", function () {
+        d3.select(this).style("stroke-width", 2)
+        tip.hide(d3.select(this))
+      })
+      .on("click", clickedRegion);
+
+    function clickedRegion() {
+      alert("Clicked region " + this.id)
+    }
+  </script>
+</body>
+
+</html>
+
+<script></script>
+</body>
+
+</html>
