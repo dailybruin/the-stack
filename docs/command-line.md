@@ -47,6 +47,8 @@ If this doesn't work for you, you can [easily set it up](https://code.visualstud
 For Macs, type in `open .` (or the directory name instead of '.').
 For Windows, type in `explorer .` (or the directory name instead of '.')
 
+- VS Code also lets you run command line within the application, so you don't need to switch tabs. More details on [setup](https://code.visualstudio.com/docs/editor/integrated-terminal).
+
 (these two links, annoyingly, require you to [sign up first](https://hellowebbooks.com/learn-command-line/))
 - [Use Tab and Up Arrow to type less](ttps://hellowebbooks.com/course/really-friendly-command-line-intro/tired/)
 - [Ctrl-C and Hidden Files](https://hellowebbooks.com/course/really-friendly-command-line-intro/wrong/)
@@ -57,7 +59,7 @@ Exercise
 
 # Resources
 > - [Cheatsheet of Commands](https://ryanstutorials.net/linuxtutorial/cheatsheet.php)
- - [Game](https://overthewire.org/wargames/bandit/bandit0.html): This is a bit advanced, but is a game that teaches you CLI. (Does a better job than 35L :) )
- - [Solutions](https://medium.com/@secttp): to the above game 
- - [VS Code CLI](https://code.visualstudio.com/docs/editor/command-line): Many more shortcuts to use
+> - [Game](https://overthewire.org/wargames/bandit/bandit0.html): This is a bit advanced, but is a game that teaches you CLI. (Does a better job than 35L :) )
+> - [Solutions](https://medium.com/@secttp): to the above game 
+> - [VS Code CLI](https://code.visualstudio.com/docs/editor/command-line): Many more shortcuts to use
 > - [A More Detailed Guide](https://www.learnenough.com/command-line-tutorial/basics)
