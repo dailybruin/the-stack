@@ -244,14 +244,11 @@ michael_huang:
 radhika_ahuja:
   name: Radhika Ahuja
   title: Stack Developer
-<<<<<<< HEAD
   bio: Radhika is a fourth-year math of computation student. Outside of school, she enjoys writing, dance, cooking, and other things creative. 
-=======
-  bio: Radhika is a fourth-year math of computation student. Outside of school, she enjoys writing, dance, cooking, and other things creative.
->>>>>>> 539471634a4dcdc58af382499ef3db90a6d23706
   mug: yes
   email: rahuja@media.ucla.edu
   github: ahujaradhika
+  website: https://ahujaradhika.github.io/
 annie_zhang:
   name: Annie Zhang
   title: Stack Developer
@@ -263,11 +260,7 @@ madeline_blasingame:
   name: Madeline Blasingame
   title: Stack Developer
   mug: yes
-<<<<<<< HEAD
   bio: Maddy is a first-year stats major whose only goal is to be TikTok famous. 
-=======
-  bio: Maddy is a first-year stats major whose only goal is to be TikTok famous.
->>>>>>> 539471634a4dcdc58af382499ef3db90a6d23706
   email: mblasingame@media.ucla.edu
   github: meblasingame
 laurel_woods:
@@ -298,8 +291,6 @@ justin_chai:
   bio: Justin is a first-year linguisitics and computer science major.
   mug: Yes
   email: jchai@media.ucla.edu
-<<<<<<< HEAD
-=======
 jc_rios:
   name: Juan C. Rios
   title: Stack Developer
@@ -324,4 +315,3 @@ sydney_kovach:
   email: skovach@media.ucla.edu
   mug: yes
   bio: Sydney Kovach is a second year Global Studies and Geography student who loves dancing and taking yoga classes in her free time.
->>>>>>> 539471634a4dcdc58af382499ef3db90a6d23706
