@@ -1,1 +1,27 @@
+* {
+    outline: none !important;
+} #changeYear {
+    -webkit-appearance: none;
+    background-color: lightgrey;
+    height: 5px;
+    width: 60%;
+} #changeYear::-webkit-slider-thumb {
+    appearance: none;
+    -webkit-appearance: none;
+    height: 0px;
+    width: 0px;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid grey;
+    border-bottom: 10px solid transparent;
+}
 
+#yrlist span {
+    transform: rotate(90deg);
+    color: darkgrey;
+    font-size: 10px;
+}
+
+#changeYear:hover, #yrlist:hover {
+    cursor: pointer;
+}

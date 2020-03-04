@@ -58,18 +58,31 @@ Tempus quam pellentesque nec nam aliquam. Eu mi bibendum neque egestas congue. V
 <canvas id='raceChart' style=''></canvas>
 </div>
 
-<div style='width: 100%; padding-bottom: 5px; padding-top: 5px; '>
-    <div style='width: 110vh; max-width: 100%; margin-left: auto; margin-right: auto'>
-    <input style='width: 100%;' id='changeYear'
-        type="range" min="2010" max="2018" value="2018" step='1'>
-    </div>
-</div>
 
 <h4 style='margin-top: 30px; text-align: center'>Compared to the California Population</h4>
     
 <div id='balls' style='display: flex; flex-wrap: wrap; width: 100%; justify-content: space-around'>
-    <svg id='california' style='width: 250px; height: 300px'></svg>
-    <svg id='people' style='width: 250; height: 300px'></svg>
+    <svg id='california' style='width: 250px; height: 270px'></svg>
+    <svg id='people' style='width: 250; height: 270px'></svg>
+</div>
+
+<div style='width: 100%; padding-bottom: 5px; '>
+    <div style='width: 60vh; max-width: 100%; margin-left: auto; margin-right: auto'>
+    <input style='width: 100%;' id='changeYear'
+        type="range" min="2010" max="2018" value="2018" step='1'>
+    </div>
+    <div id='yrlist' style='width: 60vh; max-width: 100%; margin-left: auto; margin-right: auto; display: flex; justify-content: space-between'>
+        <span>2010</span>
+        <span>2011</span>
+        <span>2012</span>
+        <span>2013</span>
+        <span>2014</span>
+        <span>2015</span>
+        <span>2016</span>
+        <span>2017</span>
+        <span>2018</span>
+    </div>
+
 </div>
 
 <i style='width: 100%; font-size: 10px; color: grey; user-select: none; font-align: right;'>* Each dot represents 1 person out of a 100 person group</i>
@@ -84,9 +97,12 @@ Tempus quam pellentesque nec nam aliquam. Eu mi bibendum neque egestas congue. V
 Ac turpis egestas maecenas pharetra convallis. Fringilla ut morbi tincidunt augue interdum velit. Placerat in egestas erat imperdiet sed. Iaculis eu non diam phasellus. Quisque non tellus orci ac auctor augue mauris. Morbi tristique senectus et netus. Tincidunt id aliquet risus feugiat in ante. Eu consequat ac felis donec et odio pellentesque diam volutpat. Etiam tempor orci eu lobortis elementum nibh tellus molestie. Dui nunc mattis enim ut tellus. Donec massa sapien faucibus et molestie ac. At risus viverra adipiscing at in tellus integer. Nibh mauris cursus mattis molestie a iaculis. Orci phasellus egestas tellus rutrum tellus.
 </p>
 
-<div style='width: 130vh; margin-left: auto'>
+<div style='width: 130vh; margin-left: auto; display: none'>
 <canvas id='scatterChart' style=''></canvas>
 </div>
+
+<h1 style='color: grey; text-align: center; width: 100%; font-size: 900%; user-select: none'>[  Annie's viz  ]</h1>
+
 
 <p>
 Imperdiet dui accumsan sit amet nulla facilisi morbi. Viverra accumsan in nisl nisi scelerisque eu ultrices vitae auctor. Semper risus in hendrerit gravida. Sed enim ut sem viverra aliquet eget. Pellentesque dignissim enim sit amet venenatis urna cursus. Pellentesque dignissim enim sit amet venenatis urna. Id diam vel quam elementum pulvinar etiam non quam. Fermentum leo vel orci porta non pulvinar neque laoreet suspendisse. Tristique senectus et netus et. Euismod nisi porta lorem mollis aliquam ut porttitor leo a.
@@ -98,6 +114,8 @@ Imperdiet dui accumsan sit amet nulla facilisi morbi. Viverra accumsan in nisl n
 Ac turpis egestas maecenas pharetra convallis. Fringilla ut morbi tincidunt augue interdum velit. Placerat in egestas erat imperdiet sed. Iaculis eu non diam phasellus. Quisque non tellus orci ac auctor augue mauris. Morbi tristique senectus et netus. Tincidunt id aliquet risus feugiat in ante. Eu consequat ac felis donec et odio pellentesque diam volutpat. Etiam tempor orci eu lobortis elementum nibh tellus molestie. Dui nunc mattis enim ut tellus. Donec massa sapien faucibus et molestie ac. At risus viverra adipiscing at in tellus integer. Nibh mauris cursus mattis molestie a iaculis. Orci phasellus egestas tellus rutrum tellus.
 </p>
 
+<h1 style='color: grey; text-align: center; width: 100%; font-size: 900%; user-select: none'>[  JC viz  ]</h1>
+
 <p>
 Imperdiet dui accumsan sit amet nulla facilisi morbi. Viverra accumsan in nisl nisi scelerisque eu ultrices vitae auctor. Semper risus in hendrerit gravida. Sed enim ut sem viverra aliquet eget. Pellentesque dignissim enim sit amet venenatis urna cursus. Pellentesque dignissim enim sit amet venenatis urna. Id diam vel quam elementum pulvinar etiam non quam. Fermentum leo vel orci porta non pulvinar neque laoreet suspendisse. Tristique senectus et netus et. Euismod nisi porta lorem mollis aliquam ut porttitor leo a.
 </p>
@@ -108,6 +126,8 @@ Imperdiet dui accumsan sit amet nulla facilisi morbi. Viverra accumsan in nisl n
 <p>
 Ac turpis egestas maecenas pharetra convallis. Fringilla ut morbi tincidunt augue interdum velit. Placerat in egestas erat imperdiet sed. Iaculis eu non diam phasellus. Quisque non tellus orci ac auctor augue mauris. Morbi tristique senectus et netus. Tincidunt id aliquet risus feugiat in ante. Eu consequat ac felis donec et odio pellentesque diam volutpat. Etiam tempor orci eu lobortis elementum nibh tellus molestie. Dui nunc mattis enim ut tellus. Donec massa sapien faucibus et molestie ac. At risus viverra adipiscing at in tellus integer. Nibh mauris cursus mattis molestie a iaculis. Orci phasellus egestas tellus rutrum tellus.
 </p>
+
+<h1 style='color: grey; text-align: center; width: 100%; font-size: 900%; user-select: none'>[  Charlotte's viz  ]</h1>
 
 <p>
 Imperdiet dui accumsan sit amet nulla facilisi morbi. Viverra accumsan in nisl nisi scelerisque eu ultrices vitae auctor. Semper risus in hendrerit gravida. Sed enim ut sem viverra aliquet eget. Pellentesque dignissim enim sit amet venenatis urna cursus. Pellentesque dignissim enim sit amet venenatis urna. Id diam vel quam elementum pulvinar etiam non quam. Fermentum leo vel orci porta non pulvinar neque laoreet suspendisse. Tristique senectus et netus et. Euismod nisi porta lorem mollis aliquam ut porttitor leo a.
