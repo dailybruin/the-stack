@@ -1,5 +1,11 @@
 * {
     outline: none !important;
+    #font-family: 'Buenard', serif !important;
+} #bernard h2, #bernard p {
+    width: 100vh !important;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
 } #changeYear {
     -webkit-appearance: none;
     background-color: lightgrey;
@@ -24,4 +30,16 @@
 
 #changeYear:hover, #yrlist:hover {
     cursor: pointer;
+}
+
+.comment {
+    font-style: italic;
+    width: 100%;
+    font-size: 10px;
+    color: grey;
+    font-align: right
+}
+
+#bernardgraph {
+    user-select: none !important;
 }
