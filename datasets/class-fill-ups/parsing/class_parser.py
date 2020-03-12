@@ -22,10 +22,11 @@ max_tries = 10
 # get the time to create the name of the file + make the file
 hour = time.localtime().tm_hour
 day = time.localtime().tm_mday
-sec = time.localtime().tm_sec
+quarter = "SPRING"
+year = "2020"
 
 print("Starting script")
-file = open('data/{}-{}-{}.csv'.format(day, hour, sec), 'w')
+file = open('data/{}/{}/{}-{}.csv'.format(year, quarter, day, hour), 'w')
 file_writer = csv.writer(file, delimiter=',')
 """
 chrome_options = Options()
@@ -39,7 +40,7 @@ wait = WebDriverWait(driver, timeout)
 
 # have selenium get the department website
 dep_file = open('departments.txt', 'r')
-link1 = "https://sa.ucla.edu/ro/Public/SOC/Results?t=20W&sBy=subject&sName="
+link1 = "https://sa.ucla.edu/ro/Public/SOC/Results?t=20S&sBy=subject&sName="
 link2 = "%28"
 link3 = "%29&subj="
 link4 = "&crsCatlg=Enter+a+Catalog+Number+or+Class+Title+%28Optional%29&catlg=&cls_no=&btnIsInIndex=btn_inIndex"
@@ -113,10 +114,17 @@ for dep, dep_abbrv in itertools.zip_longest(*[dep_file]*2):
                 status = a.find_all('div', class_="statusColumn")
                 # class_name is the name of the current class
                 class_name = a.find_all("h3", class_="head")
+                # intstructorColumn is the column of the instructor's name
+                instructor_column = a.find_all(
+                    'div', class_="instructorColumn")
+                instructor_name = instructor_column.find_all(
+                    'div', class_="instructor-name-paragraph")
                 # file_writer.writerow out the class name and department abbreviation
                 for c in class_name:
                     cl = dep_abbrv[:-1] + ' ' + c.find('a').text
+                    instructor = instructor_name.text
                     file_writer.writerow([cl])
+                    file_writer.writerow([instructor])
                 # file_writer.writerow out the enrollment status for each of the lecs for the class
                 for s in status:
                     status_text = s.find('p').text
