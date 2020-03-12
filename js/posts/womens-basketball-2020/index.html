@@ -66,7 +66,49 @@
   <script>
     //PARAMETERS
     //let load_pct = load_pct("player1.csv");
-
+    
+    
+    /*
+        players:
+            dean
+            onyenwere
+            osborne
+            miller
+            chou
+     */
+     
+    var player_data = [{
+        name: 'Japreece Dean',
+        dom: 'chartDean',
+        data: [41.20,11.40,18.80,29.70,33.30,35.70],
+    }, {
+        name: 'Michaela Onyenwere',
+        dom: 'chartOnyenwere',
+        data: [26.30,26.70,18.80,30.40,37.30,62.90],
+    }, {
+        name: 'Charisma Osborne',
+        dom: 'chartOsborne',
+        data: [35.10,33.30,33.30,53.30,30.00,58.50],
+    }, {
+        name: 'Lauryn Miller',
+        dom: 'chartMiller',
+        data: [0,0,50,20.00,28.60,54.40],
+    }, {
+        name: 'Natalie Chou',
+        dom: 'chartChou',
+        data: [35.30,17.20,25.00,54.50,33.30,52.60],
+    }];
+    function load_pct(player) {
+        var dom = player_data[player].dom;
+        var id = dom;
+        var params = {
+            dom: dom,
+            id: id,
+            data: player_data[player]
+        };
+        return params;
+    }
+    
     let params = {
       dom: "chartPlayer1",
       id: "chartPlayer1",
