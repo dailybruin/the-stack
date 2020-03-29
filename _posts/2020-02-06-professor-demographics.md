@@ -20,6 +20,15 @@ scripts:
     - //ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js
     - //cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.js
     - /js/posts/professor-demographics/app.js
+    - /js/posts/professor-demographics/data_vars/American_Indian.js
+    - /js/posts/professor-demographics/data_vars/Asian.js
+    - /js/posts/professor-demographics/data_vars/Black.js
+    - /js/posts/professor-demographics/data_vars/Latino.js
+    - /js/posts/professor-demographics/data_vars/Two_Plus.js
+    - /js/posts/professor-demographics/data_vars/Unknown.js
+    - /js/posts/professor-demographics/data_vars/White.js
+    - /js/posts/professor-demographics/chart.js
+    
 ---
 <link href="https://fonts.googleapis.com/css?family=Buenard&display=swap" rel="stylesheet">
 
@@ -114,6 +123,33 @@ Ac turpis egestas maecenas pharetra convallis. Fringilla ut morbi tincidunt augu
 
 <h1 style='color: grey; text-align: center; width: 100%; font-size: 900%; user-select: none'>[  Annie's viz  ]</h1>
 
+<div>
+    <canvas id="proportions_chart"> </canvas>
+</div>
+
+<!-- NOTE: Dummy values!-->
+<select onchange="update_chart(this.value, 'asian');"> 
+<option value='2010'>2010</option>
+<option value='2011'>2011</option>
+<option value='2012'>2012</option>
+<option value='2013'>2013</option>
+<option value='2014'>2014</option>
+<option value='2015'>2015</option>
+<option value='2016'>2016</option>
+<option value='2017'>2017</option>
+<option value='2018'>2018</option>
+</select>
+
+<select>
+<option value='americanIndian'>American Indian</option>
+<option value='asian'>Asian</option>
+<option value='black'>Black</option>
+<option value='latino'>Latino</option>
+<option value='twoPlus'>Two or More Ethnicities</option>
+<option value='unknown'>Unknown</option>
+<option value='white'>White</option>
+</select>
+
 
 <p>
 Imperdiet dui accumsan sit amet nulla facilisi morbi. Viverra accumsan in nisl nisi scelerisque eu ultrices vitae auctor. Semper risus in hendrerit gravida. Sed enim ut sem viverra aliquet eget. Pellentesque dignissim enim sit amet venenatis urna cursus. Pellentesque dignissim enim sit amet venenatis urna. Id diam vel quam elementum pulvinar etiam non quam. Fermentum leo vel orci porta non pulvinar neque laoreet suspendisse. Tristique senectus et netus et. Euismod nisi porta lorem mollis aliquam ut porttitor leo a.
@@ -133,6 +169,8 @@ Imperdiet dui accumsan sit amet nulla facilisi morbi. Viverra accumsan in nisl n
 
 
 <h2>Has UCLA improved diverse hiring?</h2>
+
+
 
 <p>
 Ac turpis egestas maecenas pharetra convallis. Fringilla ut morbi tincidunt augue interdum velit. Placerat in egestas erat imperdiet sed. Iaculis eu non diam phasellus. Quisque non tellus orci ac auctor augue mauris. Morbi tristique senectus et netus. Tincidunt id aliquet risus feugiat in ante. Eu consequat ac felis donec et odio pellentesque diam volutpat. Etiam tempor orci eu lobortis elementum nibh tellus molestie. Dui nunc mattis enim ut tellus. Donec massa sapien faucibus et molestie ac. At risus viverra adipiscing at in tellus integer. Nibh mauris cursus mattis molestie a iaculis. Orci phasellus egestas tellus rutrum tellus.
