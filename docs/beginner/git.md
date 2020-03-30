@@ -1,6 +1,6 @@
 ---
 layout: page
-permalink: /docs/git/
+permalink: /docs/beginner/git/
 ---
 
 ## Git
