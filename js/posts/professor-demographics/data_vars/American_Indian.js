@@ -99,7 +99,7 @@ var americanIndian = {
      },
      "deptNames": {
        "0": "American Indian Studies",
-       "1": "School wide Programs - Luskin School of Public Affairs",
+       "1": "Luskin School of Public Affairs",
        "2": "Public Policy",
        "3": "Gender Studies",
        "4": "Anthropology"

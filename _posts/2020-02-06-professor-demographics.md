@@ -14,6 +14,7 @@ featured_image:
 og_image: /professor-demographics/graph.png
 stylesheets:
     - /css/posts/professor-demographics/app.css
+    - https://fonts.googleapis.com/css?family=Buenard&display=swap
 scripts:
     - //d3js.org/d3.v4.min.js
     - //d3js.org/d3-transition.v1.min.js
@@ -30,7 +31,6 @@ scripts:
     - /js/posts/professor-demographics/chart.js
     
 ---
-<link href="https://fonts.googleapis.com/css?family=Buenard&display=swap" rel="stylesheet">
 
 <div id='bernard' style='font-family: "Buenard", serif'>
 <p>
@@ -121,34 +121,36 @@ Ac turpis egestas maecenas pharetra convallis. Fringilla ut morbi tincidunt augu
 <canvas id='scatterChart' style=''></canvas>
 </div>
 
-<h1 style='color: grey; text-align: center; width: 100%; font-size: 900%; user-select: none'>[  Annie's viz  ]</h1>
-
-<div>
+<div class="anniegraph">
     <canvas id="proportions_chart"> </canvas>
 </div>
 
-<!-- NOTE: Dummy values!-->
-<select onchange="update_chart(this.value, 'asian');"> 
-<option value='2010'>2010</option>
-<option value='2011'>2011</option>
-<option value='2012'>2012</option>
-<option value='2013'>2013</option>
-<option value='2014'>2014</option>
-<option value='2015'>2015</option>
-<option value='2016'>2016</option>
-<option value='2017'>2017</option>
-<option value='2018'>2018</option>
-</select>
-
-<select>
-<option value='americanIndian'>American Indian</option>
-<option value='asian'>Asian</option>
-<option value='black'>Black</option>
-<option value='latino'>Latino</option>
-<option value='twoPlus'>Two or More Ethnicities</option>
-<option value='unknown'>Unknown</option>
-<option value='white'>White</option>
-</select>
+<div class="anniegraph" id="dropdown-wrapper">
+    <div class="dropdown-child">
+    <select class="anniegraph" id="years" name= "years" onchange="YEAR_VAL=this.value; update_chart(YEAR_VAL, ETHNICITY_VAL);"> 
+    <option value='2010'>2010</option>
+    <option value='2011'>2011</option>
+    <option value='2012'>2012</option>
+    <option value='2013'>2013</option>
+    <option value='2014'>2014</option>
+    <option value='2015'>2015</option>
+    <option value='2016'>2016</option>
+    <option value='2017'>2017</option>
+    <option value='2018'>2018</option>
+    </select>
+    </div>
+    <div class="dropdown-child">
+    <select class="anniegraph" id = "ethnicity" name = "ethnicity" onchange="ETHNICITY_VAL=this.value; update_chart(YEAR_VAL, ETHNICITY_VAL);">
+    <option value='americanIndian'>American Indian</option>
+    <option value='asian'>Asian</option>
+    <option value='black'>Black</option>
+    <option value='latino'>Latino</option>
+    <option value='twoPlus'>Two or More Ethnicities</option>
+    <option value='unknown'>Unknown</option>
+    <option value='white'>White</option>
+    </select>
+    </div>
+</div>
 
 
 <p>

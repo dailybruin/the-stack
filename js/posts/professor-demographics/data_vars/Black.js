@@ -40,7 +40,7 @@ var black = {
     "deptNames": {
       "0": "Military Science",
       "1": "African American Studies",
-      "2": "School wide Programs LSPA",
+      "2": "Luskin School of Public Affairs",
       "3": "Ethnomusicology",
       "4": "Gender Studies"
     }
@@ -55,7 +55,7 @@ var black = {
     "deptNames": {
       "0": "African American Studies",
       "1": "Military Science",
-      "2": "Interdepartmental Degree Programs IDPs",
+      "2": "Interdepartmental Degree Programs",
       "3": "Ethnomusicology",
       "4": "Gender Studies"
     }
@@ -71,7 +71,7 @@ var black = {
       "0": "African American Studies",
       "1": "Ethnomusicology",
       "2": "Gender Studies",
-      "3": "Interdepartmental Degree Programs IDPs",
+      "3": "Interdepartmental Degree Programs",
       "4": "Education"
     }
   }, "2015" : {
@@ -85,7 +85,7 @@ var black = {
     "deptNames": {
       "0": "African American Studies",
       "1": "Ethnomusicology",
-      "2": "Interdepartmental Degree Programs IDPs",
+      "2": "Interdepartmental Degree Programs",
       "3": "Gender Studies",
       "4": "Education"
     }

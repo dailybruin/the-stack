@@ -1,6 +1,6 @@
 * {
     outline: none !important;
-    #font-family: 'Buenard', serif !important;
+    font-family: 'Buenard', serif !important;
 } #bernard h2, #bernard p {
     width: 100vh !important;
     max-width: 100%;
@@ -37,9 +37,28 @@
     width: 100%;
     font-size: 10px;
     color: grey;
-    font-align: right
+    font-align: right;
 }
 
 #bernardgraph {
     user-select: none !important;
+}
+
+#dropdown-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.dropdown-child {
+    padding: 1.5em;
+}
+
+.anniegraph {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: auto;
+    /* border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid grey;
+    border-bottom: 10px solid transparent; */
 }
