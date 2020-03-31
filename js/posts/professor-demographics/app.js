@@ -164,7 +164,7 @@ const config = {
             intersect: true
         },
     },
-    
+
 }
 
 
@@ -187,9 +187,9 @@ function dept(n, f, m, i, a, b, h, t, u, w, T) {
 
 d3.csv('/datasets/professor-demographics/professor-demographics.csv')
     .get(function(data) {
-         
+
     var all = [];
-    
+
     for (i=0; i<data.length/10; i++) {
         deptName = data[10*i].Year.toUpperCase();
         d3.select('#departments').append('option')
@@ -210,51 +210,51 @@ d3.csv('/datasets/professor-demographics/professor-demographics.csv')
         }
         all.push(new dept(deptName, ftemp, mtemp, itemp, atemp, btemp, htemp, ttemp, utemp, wtemp, Ttemp) )
     }
-    
+
     update(getdept(all));
     updateBalls(getdept(all));
-    
+
     document.getElementById('departments').addEventListener('change', function() {
         update(getdept(all));
         updateBalls(getdept(all));
     })
-    
+
     document.getElementById('gender').addEventListener('change', function() {
         update(getdept(all));
         updateBalls(getdept(all));
     })
-    
+
     document.getElementById('school').addEventListener('change', function() {
         updateLabels(all);
         updateBalls(getdept(all));
     })
-        
+
     document.getElementById('changeYear').addEventListener('mousemove', function() {
         updateBalls(getdept(all))
     })
 
-    
+
 });
 
 
 function updateBalls(department) {
     var blank = [];
     var blank2 = [];
-    
+
     // reset balls
 
     d3.selectAll("#california > circle").remove();
     d3.selectAll("#people > circle").remove();
-    
+
     var california = d3.select('#california').selectAll('circle');
     var people = d3.select('#people').selectAll('circle');
-    
+
     const radius = 10;
-    
+
     var config;
-    
+
     // configure balls
-    
+
     if (document.getElementById('gender').selectedIndex == 1) {
         data = department.genders;
         config = genders;
@@ -272,25 +272,25 @@ function updateBalls(department) {
             }
         }
     }
-    
+
     // configuring balls
-    
+
     var toThis = parseInt(document.getElementById('changeYear').value);
     toThis -= 2010;
-    
+
     var tot = 0;
     for (i=0; i<data.length; i++) {
         tot += parseFloat(data[i][toThis]);
     }
-        
+
     for (i=0; i<data.length; i++) {
         for (j=0; j<Math.round(data[i][toThis] * 100 / tot); j++) {
             blank2.push(config[i].color)
         }
     }
-    
+
     const a = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
-    
+
     // making balls with d3
 
     for (b=0; b<10; b++) {
@@ -328,7 +328,7 @@ function getdept(all) {
     var selectedSchool = schools[document.getElementById('school').selectedIndex];
     var departmentIndex = document.getElementById('departments').selectedIndex;
     department = all[selectedSchool.data[departmentIndex]];
-    
+
     return department;
 }
 
@@ -336,7 +336,7 @@ function getdept(all) {
 function update(department) {
 
     var opt, config;
-    
+
     if (document.getElementById('gender').selectedIndex == 1) {
         data = department.genders;
         config = genders;
@@ -344,9 +344,9 @@ function update(department) {
         data = department.races;
         config = races;
     }
-    
+
     // Update chart
-    
+
     var pork = {
         labels: years,
         datasets: [{
@@ -357,8 +357,8 @@ function update(department) {
             borderColor: 'rgba(0, 0, 0)',
         }],
     };
-            
-    
+
+
     for (i=0; i<data.length; i++) {
         pork.datasets.push({
             type: 'bar',
@@ -370,7 +370,7 @@ function update(department) {
             barThickness: 60,
         });
     }
-    
+
     myDem.data = pork;
     myDem.options.title.text = department.name;
     myDem.update();
@@ -485,7 +485,7 @@ $(document).ready(function() {
     'SCHOOL OF LAW', 77
     'SCHOOL OF NURSING', 95
     'SCHOOL OF THEATER, FILM & TELEVISION (STFT)', 35, 52, 112
-    
+
     var schools = [{
         name: 'ALL',
         data: [0],
@@ -562,3 +562,138 @@ $(document).ready(function() {
 
 //var schools = d3.csv('/datasets/professor-demographics/school-demographics.csv').then(function(data) {return data});
 //console.log(schools['name'])
+
+
+
+/*
+function generateTableHead(table, data) {
+  let thead = table.createTHead();
+  let row = thead.insertRow();
+  for (let key of data) {
+    let th = document.createElement("th");
+    let text = document.createTextNode(key);
+    th.appendChild(text);
+    row.appendChild(th);
+    console.log('head')
+  }
+}
+
+function generateTable(table, data) {
+  for (let element of data) {
+    let row = table.insertRow();
+    for (key in element) {
+      let cell = row.insertCell();
+      let text = document.createTextNode(element[key]);
+      cell.appendChild(text);
+    }
+  }
+}
+
+let table = document.querySelector("mytable");
+console.log(table)
+let data = Object.keys(female[0]);
+generateTableHead(table, data);
+generateTable(table, mountains);
+*/
+
+var female = [
+  { Department: "Germanic Languages", PercentChange: "140.48%"},
+  { Department: "Chemical and Biomolecular Engnieering", PercentChange: "118.90%"},
+  { Department: "Dental Clinic-Off Campus", PercentChange: "115.38%"},
+  { Department: "Materials Science & Engr (MSE)", PercentChange: "101.60%"},
+  { Department: "Dean, Div of Humanities" , PercentChange: "100%"}
+];
+var femaleHeader = ["Department", "Percent Change in Female Proportion"]
+
+var americanIndian = [
+  { Department: "Sociology", PercentChange: "123.89%"},
+  { Department: "School-wide Programs, LSPA", PercentChange: "83.33%"},
+  { Department: "Anthropology", PercentChange: "68.78%"},
+  { Department: "Aerospace Studies", PercentChange: "61.01%"},
+  { Department: "Nursing" , PercentChange: "51.97%"}
+];
+var americanHeader = ["Department", "Percent Change in American Indian Proportion"]
+
+var asian = [
+  { Department: "Film, TV, & Digital Media", PercentChange: "538.44%"},
+  { Department: "Earth, Planetary & Space Sciences (EPSS)", PercentChange: "331.82%"},
+  { Department: "Int Biology & Physiology", PercentChange: "190.00%"},
+  { Department: "Archaeology", PercentChange: "188.06%"},
+  { Department: "Theater" , PercentChange: "185.06%"}
+];
+var asianHeader = ["Department", "Percent Change in Asian Proportion"]
+
+var black = [
+  { Department: "Community Health Sciences", PercentChange: "204.37%"},
+  { Department: "Chicana/o Studies", PercentChange: "147.83%"},
+  { Department: "Film, TV, & Digital Media", PercentChange: "88.06%"},
+  { Department: "Chemistry and Biochemistry", PercentChange: "78.16%"},
+  { Department: "Theather" , PercentChange: "65.71%"}
+];
+var blackHeader = ["Department", "Percent Change in Black Proportion"]
+
+var latino = [
+  { Department: "Psychology", PercentChange: "207.64%"},
+  { Department: "Mathematics", PercentChange: "143.21%"},
+  { Department: "Military Science", PercentChange: "100.00%"},
+  { Department: "English", PercentChange: "84.23%"},
+  { Department: "Community Health Sciences" , PercentChange: "72.04%"}
+];
+var latinoHeader = ["Department", "Percent Change in Latino Proportion"]
+
+
+function addTable(data, header) {
+
+  var table = document.createElement('TABLE');
+  //table.style.border = '1px solid black';
+
+  var tableBody = document.createElement('TBODY');
+  table.appendChild(tableBody);
+
+  // create header
+  var tr = document.createElement('TR');
+  tableBody.appendChild(tr);
+  for (word of header) {
+    var tdHead = document.createElement('TH');
+    //tdHead.style.border = '1px solid black';
+    tdHead.appendChild(document.createTextNode(word));
+    tr.appendChild(tdHead);
+  }
+
+  // create table body
+  for (let element of data) {
+    var tr = document.createElement('TR');
+    tableBody.appendChild(tr);
+
+    for (key in element) {
+      var td = document.createElement('TD');
+      //td.width = '500';
+      //td.style.border = '1px solid black';
+      td.appendChild(document.createTextNode(element[key]));
+      tr.appendChild(td);
+    }
+  }
+  femaleTable.appendChild(table);
+}
+var femaleTable = document.getElementById("table");
+var originalHTML = femaleTable.innerHTML
+
+addTable(female, femaleHeader);
+function updateTables(){
+  femaleTable.innerHTML = originalHTML
+  if (document.getElementById('tableChoice').selectedIndex == 0) {
+    addTable(female, femaleHeader);
+  } else if (document.getElementById('tableChoice').selectedIndex == 1) {
+    addTable(americanIndian, americanHeader);
+  } else if (document.getElementById('tableChoice').selectedIndex == 2) {
+    addTable(asian, asianHeader);
+  } else if (document.getElementById('tableChoice').selectedIndex == 3) {
+    addTable(black, blackHeader);
+  } else {
+    addTable(latino, latinoHeader);
+  }
+}
+
+document.getElementById('tableChoice').addEventListener('change', function() {
+    updateTables();
+})
