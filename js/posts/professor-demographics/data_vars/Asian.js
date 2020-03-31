@@ -8,11 +8,11 @@ var asian = {
       "4": 0.5680190931
     },
     "deptNames": {
-      "0": "ASIAN AMERICAN STUDIES",
+      "0": "Asian American Studies",
       "1": "Dental Research Inst",
-      "2": "Occupational Envtl Health Cntr CTR O EH",
-      "3": "Materials Science Engr MSE",
-      "4": "ASIAN LANGUAGES AND CULTURES"
+      "2": "Occupational Environmental Health Center",
+      "3": "Materials Science Engineering",
+      "4": "Asian Languages and Cultures"
     }
 }, "2011": {
     "proportions": {
@@ -23,11 +23,11 @@ var asian = {
       "4": 0.5737704918
     },
     "deptNames": {
-      "0": "ASIAN AMERICAN STUDIES",
+      "0": "Asian American Studies",
       "1": "Dental Research Inst",
       "2": "Public Health",
-      "3": "ASIAN LANGUAGES AND CULTURES",
-      "4": "Materials Science Engr MSE"
+      "3": "Asian Languages and Cultures",
+      "4": "Materials Science Engineering"
     }
 }, "2012": {
     "proportions": {
@@ -38,11 +38,11 @@ var asian = {
       "4": 0.5673758865
     },
     "deptNames": {
-      "0": "ASIAN AMERICAN STUDIES",
+      "0": "Asian American Studies",
       "1": "Dental Research Inst",
       "2": "Life Sciences Core Crclm Prgm",
-      "3": "ASIAN LANGUAGES AND CULTURES",
-      "4": "Materials Science Engr MSE"
+      "3": "Asian Languages and Cultures",
+      "4": "Materials Science Engineering"
     }
 }, "2013": {
     "proportions": {
@@ -53,11 +53,11 @@ var asian = {
       "4": 0.5833333333
     },
     "deptNames": {
-      "0": "ASIAN AMERICAN STUDIES",
+      "0": "Asian American Studies",
       "1": "Dental Research Inst",
       "2": "Dean HSSEAS",
-      "3": "ASIAN LANGUAGES AND CULTURES",
-      "4": "Materials Science Engr MSE"
+      "3": "Asian Languages and Cultures",
+      "4": "Materials Science Engineering"
     }
 }, "2014": {
     "proportions": {
@@ -68,11 +68,11 @@ var asian = {
       "4": 0.5849514563
     },
     "deptNames": {
-      "0": "ASIAN AMERICAN STUDIES",
+      "0": "Asian American Studies",
       "1": "Dental Research Inst",
       "2": "Life Sciences Core Crclm Prgm",
       "3": "Dental Clinic",
-      "4": "ASIAN LANGUAGES AND CULTURES"
+      "4": "Asian Languages and Cultures"
     }
 }, "2015": {
     "proportions": {
@@ -85,9 +85,9 @@ var asian = {
     "deptNames": {
       "0": "Dean Div of Humanities",
       "1": "Dental Research Inst",
-      "2": "ASIAN AMERICAN STUDIES",
+      "2": "Asian American Studies",
       "3": "Dental Clinic",
-      "4": "ASIAN LANGUAGES AND CULTURES"
+      "4": "Asian Languages and Cultures"
     }
 }, "2016": {
     "proportions": {
@@ -98,11 +98,11 @@ var asian = {
       "4": 0.5966587112
     },
     "deptNames": {
-      "0": "ASIAN AMERICAN STUDIES",
+      "0": "Asian American Studies",
       "1": "Dean Div of Humanities",
       "2": "Dental Research Inst",
       "3": "Life Sciences Core Crclm Prgm",
-      "4": "ASIAN LANGUAGES AND CULTURES"
+      "4": "Asian Languages and Cultures"
     }
 }, "2017": {
     "proportions": {
@@ -115,8 +115,8 @@ var asian = {
     "deptNames": {
       "0": "Dean Div of Humanities",
       "1": "Dental Research Inst",
-      "2": "ASIAN AMERICAN STUDIES",
-      "3": "Occupational Envtl Health Cntr CTR O EH",
+      "2": "Asian American Studies",
+      "3": "Occupational Environmental Health Center",
       "4": "Dental Clinic"
     }
 }, "2018": {
@@ -128,10 +128,10 @@ var asian = {
       "4": 0.7647058824
     },
     "deptNames": {
-      "0": "ASIAN AMERICAN STUDIES",
+      "0": "Asian American Studies",
       "1": "Dean Div of Humanities",
       "2": "Dental Research Inst",
-      "3": "Occupational Envtl Health Cntr CTR O EH",
+      "3": "Occupational Environmental Health Center",
       "4": "Dental Clinic"
     }
   }

@@ -8,8 +8,8 @@ var unknown = {
       "4": 0.0877192982
     },
     "deptNames": {
-      "0": "Inst for Society Genetics",
-      "1": "Inst of Environ Sustainability",
+      "0": "Inst for Society and Genetics",
+      "1": "Inst of Environmental Sustainability",
       "2": "Statistics",
       "3": "Germanic Languages",
       "4": "Chicana/o Studies"
@@ -23,9 +23,9 @@ var unknown = {
       "4": 0.1017964072
     },
     "deptNames": {
-      "0": "Inst for Society Genetics",
-      "1": "Inst of Environ Sustainability",
-      "2": "Interdepartmental Degree Programs IDPs",
+      "0": "Inst for Society and Genetics",
+      "1": "Inst of Environmental Sustainability",
+      "2": "Interdepartmental Degree Programs",
       "3": "Musicology",
       "4": "Statistics"
     }
@@ -39,10 +39,10 @@ var unknown = {
     },
     "deptNames": {
       "0": "Aerospace Studies",
-      "1": "Interdepartmental Degree Programs IDPs",
+      "1": "Interdepartmental Degree Programs",
       "2": "African American Studies",
       "3": "Italian",
-      "4": "Inst of Environ Sustainability"
+      "4": "Inst of Environmental Sustainability"
     }
   }, "2013" : {
     "proportions": {
@@ -57,7 +57,7 @@ var unknown = {
       "1": "Aerospace Studies",
       "2": "Study of Religion",
       "3": "African American Studies",
-      "4": "Interdepartmental Degree Programs IDPs"
+      "4": "Interdepartmental Degree Programs"
     }
   }, "2014" : {
     "proportions": {
@@ -68,10 +68,10 @@ var unknown = {
       "4": 0.0699300699
     },
     "deptNames": {
-      "0": "School wide Programs - Luskin School of Public Affairs",
+      "0": "Luskin School of Public Affairs",
       "1": "African American Studies",
-      "2": "Interdepartmental Degree Programs IDPs",
-      "3": "Inst of Environ Sustainability",
+      "2": "Interdepartmental Degree Programs",
+      "3": "Inst of Environmental Sustainability",
       "4": "Classics"
     }
   }, "2015" : {
@@ -83,8 +83,8 @@ var unknown = {
       "4": 0.1140939597
     },
     "deptNames": {
-      "0": "School wide Programs LSPA",
-      "1": "Interdepartmental Degree Programs IDPs",
+      "0": "Luskin School of Public Affairs",
+      "1": "Interdepartmental Degree Programs",
       "2": "Environmental Health Sciences",
       "3": "Writing Program",
       "4": "Classics"
@@ -101,7 +101,7 @@ var unknown = {
       "0": "Study of Religion",
       "1": "Statistics",
       "2": "Slavic East European Eurasian Langs",
-      "3": "Getty Convservation Program",
+      "3": "Getty Conservation Program",
       "4": "Environmental Health Sciences"
     }
   }, "2017" : {
@@ -116,8 +116,8 @@ var unknown = {
       "0": "Luskin Cntr for Innovation",
       "1": "Statistics",
       "2": "Slavic East European Eurasian Langs",
-      "3": "Inst of Environ Sustainability",
-      "4": "Interdepartmental Degree Programs IDPs"
+      "3": "Inst of Environmental Sustainability",
+      "4": "Interdepartmental Degree Programs"
     }
   }, "2018" : {
     "proportions": {
@@ -131,7 +131,7 @@ var unknown = {
       "0": "Luskin Cntr for Innovation",
       "1": "Study of Religion",
       "2": "Statistics",
-      "3": "Interdepartmental Degree Programs IDPs",
+      "3": "Interdepartmental Degree Programs",
       "4": "Public Health"
     }
   }

@@ -11,7 +11,7 @@ var latino = {
       "0": "Minor in Biomedical Research",
       "1": "Chicana/o Studies ",
       "2": "Spanish Portuguese",
-      "3": "School wide Programs - Luskin School of Public Affairs",
+      "3": "Luskin School of Public Affairs",
       "4": "American Indian Studies"
     }
   }, "2011" : {
@@ -83,7 +83,7 @@ var latino = {
       "4": 0.5
     },
     "deptNames": {
-      "0": "Inst for Res on Labor Employment",
+      "0": "Inst for Research on Labor Employment",
       "1": "Military Science",
       "2": "Chicana/o Studies",
       "3": "Spanish Portuguese",
@@ -98,7 +98,7 @@ var latino = {
       "4": 0.6071428571
     },
     "deptNames": {
-      "0": "Inst for Res on Labor Employment",
+      "0": "Inst for Research on Labor Employment",
       "1": "Lesbian Gay Bisexual Studies",
       "2": "Military Science",
       "3": "Chicana/o Studies",
@@ -116,7 +116,7 @@ var latino = {
       "0": "Lesbian Gay Bisexual Studies",
       "1": "Military Science",
       "2": "Chicana/o Studies",
-      "3": "Inst for Res on Labor Employment",
+      "3": "Inst for Research on Labor Employment",
       "4": "Spanish Portuguese"
     }
   }, "2018" : {
@@ -131,8 +131,8 @@ var latino = {
       "0": "Chicano Studies Research Center",
       "1": "Chicana/o Studies",
       "2": "Spanish Portuguese",
-      "3": "Inst for Res on Labor Employment",
-      "4": "Cancer Prevention Control Res"
+      "3": "Inst for Research on Labor Employment",
+      "4": "Cancer Prevention Control Research"
     }
   }
   };
