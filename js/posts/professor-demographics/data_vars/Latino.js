@@ -4,15 +4,15 @@ var latino = {
       "0": 1,
       "1": 0.8947368421,
       "2": 0.6334841629,
-      "3": 0.6,
-      "4": 0.5
+      "3": 0.5,
+      "4": 0.2
     },
     "deptNames": {
       "0": "Minor in Biomedical Research",
       "1": "Chicana/o Studies ",
       "2": "Spanish Portuguese",
-      "3": "Luskin School of Public Affairs",
-      "4": "American Indian Studies"
+      "3": "American Indian Studies"
+      "4": "African American Studies"
     }
   }, "2011" : {
     "proportions": {
@@ -50,14 +50,14 @@ var latino = {
       "1": 0.6536796537,
       "2": 0.5,
       "3": 0.4,
-      "4": 0.3333333333
+      "4": 0.167664670658683
     },
     "deptNames": {
       "0": "Chicana/o Studies",
       "1": "Spanish Portuguese",
       "2": "Minor in Biomedical Research",
       "3": "Naval Science",
-      "4": "Health Policy Research Center"
+      "4": "Education"
     }
   }, "2014" : {
     "proportions": {
@@ -121,18 +121,18 @@ var latino = {
     }
   }, "2018" : {
     "proportions": {
-      "0": 1,
-      "1": 0.9192546584,
-      "2": 0.5316455696,
-      "3": 0.4,
-      "4": 0.3333333333
+      "0": 0.9192546584,
+      "1": 0.5316455696,
+      "2": 0.4,
+      "3": 0.3333333333,
+      "4": 0.256410256410256	
     },
     "deptNames": {
-      "0": "Chicano Studies Research Center",
-      "1": "Chicana/o Studies",
-      "2": "Spanish Portuguese",
-      "3": "Inst for Research on Labor Employment",
-      "4": "Cancer Prevention Control Research"
+      "0": "Chicana/o Studies",
+      "1": "Spanish Portuguese",
+      "2": "Inst for Research on Labor Employment",
+      "3": "Minor in Biomedical Research",
+      "4": "Program in Computing"
     }
   }
   };

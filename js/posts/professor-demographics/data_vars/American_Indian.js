@@ -92,17 +92,17 @@ var americanIndian = {
    }, "2016" : {
      "proportions": {
        "0": 1,
-       "1": 0.8333333333,
-       "2": 0.2222222222,
-       "3": 0.1764705882,
-       "4": 0.0718390805
+       "1": 0.2222222222,
+       "2": 0.1764705882,
+       "3": 0.0718390805,
+       "4": 0.0414937759,
      },
      "deptNames": {
        "0": "American Indian Studies",
-       "1": "Luskin School of Public Affairs",
-       "2": "Public Policy",
-       "3": "Gender Studies",
-       "4": "Anthropology"
+       "1": "Public Policy",
+       "2": "Gender Studies",
+       "3": "Anthropology",
+       "4": "Ethnomusicology"
      }
    }, "2017" : {
      "proportions": {

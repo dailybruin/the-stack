@@ -33,61 +33,61 @@ var black = {
     "proportions": {
       "0": 1,
       "1": 0.8571428571,
-      "2": 0.6666666667,
-      "3": 0.2633928571,
-      "4": 0.1704545455
+      "2": 0.2633928571,
+      "3": 0.1704545455,
+      "4": 0.150354609929078
     },
     "deptNames": {
       "0": "Military Science",
       "1": "African American Studies",
-      "2": "Luskin School of Public Affairs",
-      "3": "Ethnomusicology",
-      "4": "Gender Studies"
+      "2": "Ethnomusicology",
+      "3": "Gender Studies"
+      "4": "Education"
     }
   }, "2013" : {
     "proportions": {
       "0": 0.75,
       "1": 0.5,
-      "2": 0.3333333333,
-      "3": 0.2714932127,
-      "4": 0.2150537634
+      "2": 0.2714932127,
+      "3": 0.2150537634,
+      "4": 0.167741935483871
     },
     "deptNames": {
       "0": "African American Studies",
       "1": "Military Science",
-      "2": "Interdepartmental Degree Programs",
-      "3": "Ethnomusicology",
-      "4": "Gender Studies"
+      "2": "Ethnomusicology",
+      "3": "Gender Studies",
+      "4": "Social Welfare"
     }
   }, "2014" : {
     "proportions": {
       "0": 0.8333333333,
       "1": 0.2450980392,
       "2": 0.1941747573,
-      "3": 0.1666666667,
-      "4": 0.1399116348
+      "3": 0.1399116348,
+      "4": 0.135135135135135	
     },
     "deptNames": {
       "0": "African American Studies",
       "1": "Ethnomusicology",
       "2": "Gender Studies",
-      "3": "Interdepartmental Degree Programs",
-      "4": "Education"
+      "3": "Education"
+      "4": "Environmental Health Sciences"
     }
   }, "2015" : {
     "proportions": {
       "0": 1,
       "1": 0.2227272727,
-      "2": 0.2,
-      "3": 0.1595744681,
-      "4": 0.1304347826
+      "2": 0.1595744681,
+      "3": 0.1304347826,
+      "4": 0.12568306010929
     },
     "deptNames": {
       "0": "African American Studies",
       "1": "Ethnomusicology",
-      "2": "Interdepartmental Degree Programs",
-      "3": "Gender Studies",
-      "4": "Education"
+      "2": "Gender Studies",
+      "3": "Education",
+      "4": "Social Welfare"
     }
   }, "2016" : {
     "proportions": {
