@@ -1,12 +1,5 @@
 * {
     outline: none !important;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-    font-family: 'Buenard', serif !important;
->>>>>>> 1673d4e71a1c919b72e1d71cf15787019b292425
-=======
->>>>>>> temp
 } #bernard h2, #bernard p {
     width: 100vh !important;
     max-width: 100%;
@@ -50,7 +43,6 @@
     user-select: none !important;
 }
 
-<<<<<<< HEAD
 #table{
   padding: 10px;
 border-color: white;
@@ -84,7 +76,6 @@ TH {
 
 tr:nth-child(even) {background-color: #f2f2f2;}
 
-=======
 #dropdown-wrapper {
     display: flex;
     justify-content: center;
@@ -103,9 +94,6 @@ tr:nth-child(even) {background-color: #f2f2f2;}
     border-top: 10px solid grey;
     border-bottom: 10px solid transparent; */
 }
-<<<<<<< HEAD
->>>>>>> 1673d4e71a1c919b72e1d71cf15787019b292425
-=======
 
 table {
   border-collapse: collapse;
@@ -133,4 +121,3 @@ TH {
 }
 
 tr:nth-child(even) {background-color: #f2f2f2;}
->>>>>>> temp

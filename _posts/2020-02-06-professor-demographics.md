@@ -28,16 +28,8 @@ scripts:
     - /js/posts/professor-demographics/data_vars/Unknown.js
     - /js/posts/professor-demographics/data_vars/White.js
     - /js/posts/professor-demographics/chart.js
-    
 ---
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
-<div id='bernard' style='font-family: "Buenard", serif'>
->>>>>>> 1673d4e71a1c919b72e1d71cf15787019b292425
-=======
->>>>>>> temp
 <p>
 testLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tincidunt vitae semper quis lectus nulla at volutpat diam. Quis vel eros donec ac odio tempor orci. Amet volutpat consequat mauris nunc congue nisi vitae suscipit tellus. At volutpat diam ut venenatis tellus. Tincidunt dui ut ornare lectus sit amet est placerat. Pellentesque habitant morbi tristique senectus. Tincidunt lobortis feugiat vivamus at augue eget arcu dictum varius. Egestas fringilla phasellus faucibus scelerisque. Odio ut enim blandit volutpat maecenas. Facilisi nullam vehicula ipsum a. Nisi scelerisque eu ultrices vitae auctor. Eget aliquet nibh praesent tristique. Condimentum vitae sapien pellentesque habitant morbi. Diam donec adipiscing tristique risus nec feugiat in. Est sit amet facilisis magna etiam tempor orci eu. Imperdiet sed euismod nisi porta.
 </p>
@@ -122,38 +114,8 @@ Tempus quam pellentesque nec nam aliquam. Eu mi bibendum neque egestas congue. V
 Ac turpis egestas maecenas pharetra convallis. Fringilla ut morbi tincidunt augue interdum velit. Placerat in egestas erat imperdiet sed. Iaculis eu non diam phasellus. Quisque non tellus orci ac auctor augue mauris. Morbi tristique senectus et netus. Tincidunt id aliquet risus feugiat in ante. Eu consequat ac felis donec et odio pellentesque diam volutpat. Etiam tempor orci eu lobortis elementum nibh tellus molestie. Dui nunc mattis enim ut tellus. Donec massa sapien faucibus et molestie ac. At risus viverra adipiscing at in tellus integer. Nibh mauris cursus mattis molestie a iaculis. Orci phasellus egestas tellus rutrum tellus.
 </p>
 
-<div style='width: 130vh; margin-left: auto; display: none'>
-<canvas id='scatterChart' style=''></canvas>
-</div>
 
-<<<<<<< HEAD
-<div style='width: 130vh; margin-left: auto; margin-right: auto'>
-    <canvas id="proportions_chart"> </canvas>
-</div>
 
-<!-- NOTE: Dummy values!-->
-<select id='year' onchange="update_chart();"> 
-<option value='2010'>2010</option>
-<option value='2011'>2011</option>
-<option value='2012'>2012</option>
-<option value='2013'>2013</option>
-<option value='2014'>2014</option>
-<option value='2015'>2015</option>
-<option value='2016'>2016</option>
-<option value='2017'>2017</option>
-<option value='2018'>2018</option>
-</select>
-
-<select id='ethnicity' onchange='update_chart()'>
-<option value='americanIndian'>American Indian</option>
-<option value='asian'>Asian</option>
-<option value='black'>Black</option>
-<option value='latino'>Latino</option>
-<option value='twoPlus'>Two or More Ethnicities</option>
-<option value='unknown'>Unknown</option>
-<option value='white'>White</option>
-</select>
-=======
 <div class="anniegraph">
     <canvas id="proportions_chart"> </canvas>
 </div>
@@ -184,7 +146,6 @@ Ac turpis egestas maecenas pharetra convallis. Fringilla ut morbi tincidunt augu
     </select>
     </div>
 </div>
->>>>>>> 1673d4e71a1c919b72e1d71cf15787019b292425
 
 
 <p>
@@ -204,19 +165,13 @@ Imperdiet dui accumsan sit amet nulla facilisi morbi. Viverra accumsan in nisl n
 </p>
 
 
-<<<<<<< HEAD
 <h2>Has UCLA improved diverse hiring?</h2>
 
-=======
->>>>>>> temp
 <p>
 Yes, gratefully! UCLA on average has improved diverse hiring and the period from year 2010 to 2018 has seen a big increase in the proportion of minority groups, including Female, American Indian, Asian, Black, and Latino. We calculated each year's proportion of the minority groups in every department and the increase in the proportion from 2010 to 2018. For some departments data are not available for the first few years, for which the increase is calculated from the year when the data is available. Same applies for the departments that do not have data in the recent years. Each minority group has different increase in proportion, with Female and Asian on average bigger increases. This can also be validated from the below tables, where we listed the departments that have the biggest increase in the minority group proportion respectively.
 </p>
 
-<<<<<<< HEAD
 <div id='bernardgraph' style='width: 130vh; max-width: 100%;margin-left: auto; margin-right: auto; margin-bottom: 50px;'>
-=======
->>>>>>> temp
 
   <div>
   <label for='gender'>Sort by Gender or Race/Ethnicity</label>
@@ -228,7 +183,6 @@ Yes, gratefully! UCLA on average has improved diverse hiring and the period from
       <option>Latino</option>
   </select>
   </div>
-<<<<<<< HEAD
   </div>
 
   <div id="table"></div>
@@ -236,13 +190,11 @@ Yes, gratefully! UCLA on average has improved diverse hiring and the period from
 <p>
 The top five departments in Female and Asian groups have higher increase in proportion than others. Both of them have higher than or equal to 100 percentage increase in all top five departments, while some of the departments in the rest of the minority groups: American Indian, Black, and Latino have less than 100 percentage increase. Note that here we only examine the increase in one minority group, but not the general increase in all minority groups. Therefore, for the listed departments in one minority group, such as Asian, may decrease in the proportion of the other minority group.
 
-=======
 
 <div id="table"></div>
 
 <p>
 The top five departments in Female and Asian groups have higher increase in proportion than others. Both of them have higher than or equal to 100 percentage increase in all top five departments, while some of the departments in the rest of the minority groups: American Indian, Black, and Latino have less than 100 percentage increase. Note that here we only examine the increase in one minority group, but not the general increase in all minority groups. Therefore, for the listed departments in one minority group, such as Asian, may decrease in the proportion of the other minority group.
->>>>>>> temp
 </p>
 
 <h2>Does diversity matter?</h2>

@@ -102,9 +102,6 @@ $("#ethnicity").change(function() {
      proportionsChart.update();
     update_chart("2016", "twoPlus");
   }
-<<<<<<< HEAD
-}
-=======
   else {
     $("#years").empty();
     for (let i = 0; i < 9; i++) {
@@ -139,4 +136,3 @@ function make_responsive(x) {
   }
 }
 
->>>>>>> 1673d4e71a1c919b72e1d71cf15787019b292425
