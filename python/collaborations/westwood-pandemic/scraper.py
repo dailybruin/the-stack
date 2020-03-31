@@ -7,12 +7,14 @@ from bs4 import BeautifulSoup
 
 business_types = {
     "arts_and_entertainment": "8",
-    #"delivery_and_takeout": "12",
+    # #"delivery_and_takeout": "12",
     "dining": "3",
     "health_and_beauty": "4",
     "services": "2",
     "shopping": "1"
 }
+
+count = 0
 
 path_prefix = "../../../datasets/collaborations/westwood-pandemic/"
 
@@ -32,12 +34,14 @@ for biz_type in business_types:
         # ignore first two items - metadata
         if index < 2:
             continue
+        count += 1
         # edit info as needed
         cur_biz = json.loads(biz.get_text())
         cur_biz.pop("@context")
         cur_biz.pop("@type")
-        cur_biz['address'].pop("@type")
+        cur_biz["address"].pop("@type")
         cur_biz["type"] = biz_type
+        cur_biz["status"] = ""
         # print to json
         if index == len(data) - 1:
             print(json.dumps(cur_biz), file=export_file)
@@ -47,3 +51,5 @@ for biz_type in business_types:
     # close export file
     print("]", file=export_file)
     export_file.close()
+
+print(count)
