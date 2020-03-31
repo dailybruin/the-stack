@@ -42,6 +42,7 @@ for biz_type in business_types:
         cur_biz["address"].pop("@type")
         cur_biz["type"] = biz_type
         cur_biz["status"] = ""
+        cur_biz["open"] = True
         # print to json
         if index == len(data) - 1:
             print(json.dumps(cur_biz), file=export_file)
