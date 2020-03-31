@@ -14,7 +14,6 @@ featured_image:
 og_image: /professor-demographics/graph.png
 stylesheets:
     - /css/posts/professor-demographics/app.css
-    - https://fonts.googleapis.com/css?family=Buenard&display=swap
 scripts:
     - //d3js.org/d3.v4.min.js
     - //d3js.org/d3-transition.v1.min.js
@@ -34,10 +33,13 @@ scripts:
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 <div id='bernard' style='font-family: "Buenard", serif'>
 >>>>>>> 1673d4e71a1c919b72e1d71cf15787019b292425
+=======
+>>>>>>> temp
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tincidunt vitae semper quis lectus nulla at volutpat diam. Quis vel eros donec ac odio tempor orci. Amet volutpat consequat mauris nunc congue nisi vitae suscipit tellus. At volutpat diam ut venenatis tellus. Tincidunt dui ut ornare lectus sit amet est placerat. Pellentesque habitant morbi tristique senectus. Tincidunt lobortis feugiat vivamus at augue eget arcu dictum varius. Egestas fringilla phasellus faucibus scelerisque. Odio ut enim blandit volutpat maecenas. Facilisi nullam vehicula ipsum a. Nisi scelerisque eu ultrices vitae auctor. Eget aliquet nibh praesent tristique. Condimentum vitae sapien pellentesque habitant morbi. Diam donec adipiscing tristique risus nec feugiat in. Est sit amet facilisis magna etiam tempor orci eu. Imperdiet sed euismod nisi porta.
+testLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tincidunt vitae semper quis lectus nulla at volutpat diam. Quis vel eros donec ac odio tempor orci. Amet volutpat consequat mauris nunc congue nisi vitae suscipit tellus. At volutpat diam ut venenatis tellus. Tincidunt dui ut ornare lectus sit amet est placerat. Pellentesque habitant morbi tristique senectus. Tincidunt lobortis feugiat vivamus at augue eget arcu dictum varius. Egestas fringilla phasellus faucibus scelerisque. Odio ut enim blandit volutpat maecenas. Facilisi nullam vehicula ipsum a. Nisi scelerisque eu ultrices vitae auctor. Eget aliquet nibh praesent tristique. Condimentum vitae sapien pellentesque habitant morbi. Diam donec adipiscing tristique risus nec feugiat in. Est sit amet facilisis magna etiam tempor orci eu. Imperdiet sed euismod nisi porta.
 </p>
 
 <h2>Just how diverse are professors at UCLA?</h2>
@@ -202,13 +204,19 @@ Imperdiet dui accumsan sit amet nulla facilisi morbi. Viverra accumsan in nisl n
 </p>
 
 
+<<<<<<< HEAD
 <h2>Has UCLA improved diverse hiring?</h2>
 
+=======
+>>>>>>> temp
 <p>
 Yes, gratefully! UCLA on average has improved diverse hiring and the period from year 2010 to 2018 has seen a big increase in the proportion of minority groups, including Female, American Indian, Asian, Black, and Latino. We calculated each year's proportion of the minority groups in every department and the increase in the proportion from 2010 to 2018. For some departments data are not available for the first few years, for which the increase is calculated from the year when the data is available. Same applies for the departments that do not have data in the recent years. Each minority group has different increase in proportion, with Female and Asian on average bigger increases. This can also be validated from the below tables, where we listed the departments that have the biggest increase in the minority group proportion respectively.
 </p>
 
+<<<<<<< HEAD
 <div id='bernardgraph' style='width: 130vh; max-width: 100%;margin-left: auto; margin-right: auto; margin-bottom: 50px;'>
+=======
+>>>>>>> temp
 
   <div>
   <label for='gender'>Sort by Gender or Race/Ethnicity</label>
@@ -220,6 +228,7 @@ Yes, gratefully! UCLA on average has improved diverse hiring and the period from
       <option>Latino</option>
   </select>
   </div>
+<<<<<<< HEAD
   </div>
 
   <div id="table"></div>
@@ -227,6 +236,13 @@ Yes, gratefully! UCLA on average has improved diverse hiring and the period from
 <p>
 The top five departments in Female and Asian groups have higher increase in proportion than others. Both of them have higher than or equal to 100 percentage increase in all top five departments, while some of the departments in the rest of the minority groups: American Indian, Black, and Latino have less than 100 percentage increase. Note that here we only examine the increase in one minority group, but not the general increase in all minority groups. Therefore, for the listed departments in one minority group, such as Asian, may decrease in the proportion of the other minority group.
 
+=======
+
+<div id="table"></div>
+
+<p>
+The top five departments in Female and Asian groups have higher increase in proportion than others. Both of them have higher than or equal to 100 percentage increase in all top five departments, while some of the departments in the rest of the minority groups: American Indian, Black, and Latino have less than 100 percentage increase. Note that here we only examine the increase in one minority group, but not the general increase in all minority groups. Therefore, for the listed departments in one minority group, such as Asian, may decrease in the proportion of the other minority group.
+>>>>>>> temp
 </p>
 
 <h2>Does diversity matter?</h2>

@@ -1,9 +1,12 @@
 * {
     outline: none !important;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     font-family: 'Buenard', serif !important;
 >>>>>>> 1673d4e71a1c919b72e1d71cf15787019b292425
+=======
+>>>>>>> temp
 } #bernard h2, #bernard p {
     width: 100vh !important;
     max-width: 100%;
@@ -100,4 +103,34 @@ tr:nth-child(even) {background-color: #f2f2f2;}
     border-top: 10px solid grey;
     border-bottom: 10px solid transparent; */
 }
+<<<<<<< HEAD
 >>>>>>> 1673d4e71a1c919b72e1d71cf15787019b292425
+=======
+
+table {
+  border-collapse: collapse;
+  float:center;
+  table-layout: auto;
+  width: 50%;
+  border: 10px;
+  margin-left: 25%;
+  margin-right: 25%;
+}
+
+TD {
+  width: 400px;
+  height: 40px;
+  padding: 10px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+TH {
+  background-color: #0072B2;
+  height: 50px;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+tr:nth-child(even) {background-color: #f2f2f2;}
+>>>>>>> temp

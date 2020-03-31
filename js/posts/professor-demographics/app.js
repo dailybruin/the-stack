@@ -699,4 +699,8 @@ function updateTables(){
 document.getElementById('tableChoice').addEventListener('change', function() {
     updateTables();
 })
+<<<<<<< HEAD
 >>>>>>> 1673d4e71a1c919b72e1d71cf15787019b292425
+=======
+
+>>>>>>> temp
