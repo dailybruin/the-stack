@@ -697,3 +697,4 @@ function updateTables(){
 document.getElementById('tableChoice').addEventListener('change', function() {
     updateTables();
 })
+

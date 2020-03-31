@@ -14,7 +14,6 @@ featured_image:
 og_image: /professor-demographics/graph.png
 stylesheets:
     - /css/posts/professor-demographics/app.css
-    - https://fonts.googleapis.com/css?family=Buenard&display=swap
 scripts:
     - //d3js.org/d3.v4.min.js
     - //d3js.org/d3-transition.v1.min.js
@@ -32,9 +31,8 @@ scripts:
     
 ---
 
-<div id='bernard' style='font-family: "Buenard", serif'>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tincidunt vitae semper quis lectus nulla at volutpat diam. Quis vel eros donec ac odio tempor orci. Amet volutpat consequat mauris nunc congue nisi vitae suscipit tellus. At volutpat diam ut venenatis tellus. Tincidunt dui ut ornare lectus sit amet est placerat. Pellentesque habitant morbi tristique senectus. Tincidunt lobortis feugiat vivamus at augue eget arcu dictum varius. Egestas fringilla phasellus faucibus scelerisque. Odio ut enim blandit volutpat maecenas. Facilisi nullam vehicula ipsum a. Nisi scelerisque eu ultrices vitae auctor. Eget aliquet nibh praesent tristique. Condimentum vitae sapien pellentesque habitant morbi. Diam donec adipiscing tristique risus nec feugiat in. Est sit amet facilisis magna etiam tempor orci eu. Imperdiet sed euismod nisi porta.
+testLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tincidunt vitae semper quis lectus nulla at volutpat diam. Quis vel eros donec ac odio tempor orci. Amet volutpat consequat mauris nunc congue nisi vitae suscipit tellus. At volutpat diam ut venenatis tellus. Tincidunt dui ut ornare lectus sit amet est placerat. Pellentesque habitant morbi tristique senectus. Tincidunt lobortis feugiat vivamus at augue eget arcu dictum varius. Egestas fringilla phasellus faucibus scelerisque. Odio ut enim blandit volutpat maecenas. Facilisi nullam vehicula ipsum a. Nisi scelerisque eu ultrices vitae auctor. Eget aliquet nibh praesent tristique. Condimentum vitae sapien pellentesque habitant morbi. Diam donec adipiscing tristique risus nec feugiat in. Est sit amet facilisis magna etiam tempor orci eu. Imperdiet sed euismod nisi porta.
 </p>
 
 <h2>Just how diverse are professors at UCLA?</h2>
@@ -170,18 +168,26 @@ Imperdiet dui accumsan sit amet nulla facilisi morbi. Viverra accumsan in nisl n
 </p>
 
 
-<h2>Has UCLA improved diverse hiring?</h2>
-
-
-
 <p>
-Ac turpis egestas maecenas pharetra convallis. Fringilla ut morbi tincidunt augue interdum velit. Placerat in egestas erat imperdiet sed. Iaculis eu non diam phasellus. Quisque non tellus orci ac auctor augue mauris. Morbi tristique senectus et netus. Tincidunt id aliquet risus feugiat in ante. Eu consequat ac felis donec et odio pellentesque diam volutpat. Etiam tempor orci eu lobortis elementum nibh tellus molestie. Dui nunc mattis enim ut tellus. Donec massa sapien faucibus et molestie ac. At risus viverra adipiscing at in tellus integer. Nibh mauris cursus mattis molestie a iaculis. Orci phasellus egestas tellus rutrum tellus.
+Yes, gratefully! UCLA on average has improved diverse hiring and the period from year 2010 to 2018 has seen a big increase in the proportion of minority groups, including Female, American Indian, Asian, Black, and Latino. We calculated each year's proportion of the minority groups in every department and the increase in the proportion from 2010 to 2018. For some departments data are not available for the first few years, for which the increase is calculated from the year when the data is available. Same applies for the departments that do not have data in the recent years. Each minority group has different increase in proportion, with Female and Asian on average bigger increases. This can also be validated from the below tables, where we listed the departments that have the biggest increase in the minority group proportion respectively.
 </p>
 
-<h1 style='color: grey; text-align: center; width: 100%; font-size: 900%; user-select: none'>[  Charlotte's viz  ]</h1>
+
+  <div>
+  <label for='gender'>Sort by Gender or Race/Ethnicity</label>
+  <select id='tableChoice'>
+      <option>Female</option>
+      <option>American Indian</option>
+      <option>Asian</option>
+      <option>Black</option>
+      <option>Latino</option>
+  </select>
+  </div>
+
+<div id="table"></div>
 
 <p>
-Imperdiet dui accumsan sit amet nulla facilisi morbi. Viverra accumsan in nisl nisi scelerisque eu ultrices vitae auctor. Semper risus in hendrerit gravida. Sed enim ut sem viverra aliquet eget. Pellentesque dignissim enim sit amet venenatis urna cursus. Pellentesque dignissim enim sit amet venenatis urna. Id diam vel quam elementum pulvinar etiam non quam. Fermentum leo vel orci porta non pulvinar neque laoreet suspendisse. Tristique senectus et netus et. Euismod nisi porta lorem mollis aliquam ut porttitor leo a.
+The top five departments in Female and Asian groups have higher increase in proportion than others. Both of them have higher than or equal to 100 percentage increase in all top five departments, while some of the departments in the rest of the minority groups: American Indian, Black, and Latino have less than 100 percentage increase. Note that here we only examine the increase in one minority group, but not the general increase in all minority groups. Therefore, for the listed departments in one minority group, such as Asian, may decrease in the proportion of the other minority group.
 </p>
 
 <h2>Does diversity matter?</h2>
@@ -193,5 +199,3 @@ Ac turpis egestas maecenas pharetra convallis. Fringilla ut morbi tincidunt augu
 <p>
 Imperdiet dui accumsan sit amet nulla facilisi morbi. Viverra accumsan in nisl nisi scelerisque eu ultrices vitae auctor. Semper risus in hendrerit gravida. Sed enim ut sem viverra aliquet eget. Pellentesque dignissim enim sit amet venenatis urna cursus. Pellentesque dignissim enim sit amet venenatis urna. Id diam vel quam elementum pulvinar etiam non quam. Fermentum leo vel orci porta non pulvinar neque laoreet suspendisse. Tristique senectus et netus et. Euismod nisi porta lorem mollis aliquam ut porttitor leo a.
 </p>
-
-</div>
