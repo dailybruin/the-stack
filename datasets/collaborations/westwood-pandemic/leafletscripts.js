@@ -22,9 +22,9 @@ var baseLayer = L.tileLayer('https://api.mapbox.com/styles/v1/mapbox/streets-v10
     minZoom: 5,
 });
 
-var layer_lists = [dining_json, shopping_json, ae_json
-                //hb_json, services_json,
-];
+
+var layer_lists = [dining_json, shopping_json, ae_json, healthbeauty_json, services_json];
+
 var business_layers = [];
 
 for (let j = 0; j < layer_lists.length; j++) {
