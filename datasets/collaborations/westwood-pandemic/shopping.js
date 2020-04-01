@@ -131,7 +131,7 @@ let shopping_json = [
         "latitude": "34.061976",
         "longitude": "-118.445592"
       },
-      "name": "Francesca’s",
+      "name": "Francesca&#146s",
       "description": "Clothing & Footwear",
       "telephone": "310-208-0409",
       "url": "https://thewestwoodvillage.com/business-details/?ID=348",
@@ -411,7 +411,7 @@ let shopping_json = [
         "latitude": "34.062507",
         "longitude": "-118.443935"
       },
-      "name": "Trader Joe’s",
+      "name": "Trader Joe&#146s",
       "description": "Grocery & Homegoods",
       "telephone": "310-824-1495",
       "url": "https://thewestwoodvillage.com/business-details/?ID=492",
@@ -491,7 +491,7 @@ let shopping_json = [
         "latitude": "34.061731",
         "longitude": "-118.445221"
       },
-      "name": "Victoria’s Secret",
+      "name": "Victoria&#146s Secret",
       "description": "Clothing & Footwear",
       "telephone": "310-209-0882",
       "url": "https://thewestwoodvillage.com/business-details/?ID=507",
@@ -536,7 +536,7 @@ let shopping_json = [
       "telephone": "310-824-0858",
       "url": "https://thewestwoodvillage.com/business-details/?ID=524",
       "type": "shopping",
-      "status": "Guests 60+ can start to shop at 7:00 am. Open: 8:00 am – 9:00 pm",
+      "status": "Guests 60+ can start to shop at 7:00 am. Open: 8:00 am to 9:00 pm",
       "open": true
     }
   ]
