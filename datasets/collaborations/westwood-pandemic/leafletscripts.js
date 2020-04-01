@@ -1,26 +1,23 @@
-
 var baseLayer = L.tileLayer('https://api.mapbox.com/styles/v1/mapbox/streets-v10/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoiamVycnlsaW5ldyIsImEiOiJjajIwc2E1YXkwMmt6MzNuMXZnaWRjb2lhIn0.u0AHZNQd8_8hFmpaVvI1nQ', {
     attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
     maxZoom: 18
 });
 
 var dining_list = [];
-for (var i = 0; i < 87; i++) {
+for (var i = 0; i < dining_json.length; i++) {
     var str1 = "";
-    //console.log(dining_json);
-    console.log(i);
     if (dining_json[i].open == true) {
-        str1 = "Open\n";
+        str1 = "<br/> <em> Open </em> <br/>";
     }
     else {
-        str1 = "Closed\n";
+        str1 = "<br/> <em> Closed </em> <br/>";
     }
     //console.log(dining_json[i]['geo']['latitude']);
     var lat = parseFloat(dining_json[i]['geo']['latitude']);
     var lon = parseFloat(dining_json[i]['geo']['longitude']);
     var latlon = L.latLng(lat,lon);
     //console.log(latlon);
-    var name = dining_json[i].name;
+    var name = "<b>" + dining_json[i].name + "</b>";
     var popup = name.concat("\n", str1, dining_json[i].status);
     dining_list.push((L.marker(L.latLng(lat, lon))).bindPopup(popup));
 }
