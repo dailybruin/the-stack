@@ -9,6 +9,7 @@ authors:
     - jc_rios
 key_takeaways:
     - not a lot of brown people
+    - ucla is very white (despite the fact that the undergrads are very not-white)
 featured_image:
     url: /professor-demographics/graph.png
 og_image: /professor-demographics/graph.png
@@ -30,9 +31,12 @@ scripts:
     - /js/posts/professor-demographics/chart.js
 ---
 
-<p>
-testLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tincidunt vitae semper quis lectus nulla at volutpat diam. Quis vel eros donec ac odio tempor orci. Amet volutpat consequat mauris nunc congue nisi vitae suscipit tellus. At volutpat diam ut venenatis tellus. Tincidunt dui ut ornare lectus sit amet est placerat. Pellentesque habitant morbi tristique senectus. Tincidunt lobortis feugiat vivamus at augue eget arcu dictum varius. Egestas fringilla phasellus faucibus scelerisque. Odio ut enim blandit volutpat maecenas. Facilisi nullam vehicula ipsum a. Nisi scelerisque eu ultrices vitae auctor. Eget aliquet nibh praesent tristique. Condimentum vitae sapien pellentesque habitant morbi. Diam donec adipiscing tristique risus nec feugiat in. Est sit amet facilisis magna etiam tempor orci eu. Imperdiet sed euismod nisi porta.
-</p>
+<h2>About the Data</h2>
+Here are some bullet points to consider including:
+<ul>
+<li>Only considered departments that taught students (undergrad or grad): ones that didn’t tended to be extremely small (often had 5 or less total faculty).</li>
+<li>Also wanted to focus on the faculty students are most likely to interact with, as the demographics of the faculty can shape perceptions of the field: seeing faculty who look like you is encouraging, while the opposite can be discouraging</li>
+</ul>
 
 <h2>Just how diverse are professors at UCLA?</h2>
 
@@ -108,13 +112,24 @@ Tempus quam pellentesque nec nam aliquam. Eu mi bibendum neque egestas congue. V
 
 </div>
 
-<h2>Which departments are the most/least diverse?</h2>
+<h2>Which departments are the most and least diverse?</h2>
+<div class='comment'>contemplating changing this heading to be more specific but idk what to change it to</div>
 
 <p>
-Ac turpis egestas maecenas pharetra convallis. Fringilla ut morbi tincidunt augue interdum velit. Placerat in egestas erat imperdiet sed. Iaculis eu non diam phasellus. Quisque non tellus orci ac auctor augue mauris. Morbi tristique senectus et netus. Tincidunt id aliquet risus feugiat in ante. Eu consequat ac felis donec et odio pellentesque diam volutpat. Etiam tempor orci eu lobortis elementum nibh tellus molestie. Dui nunc mattis enim ut tellus. Donec massa sapien faucibus et molestie ac. At risus viverra adipiscing at in tellus integer. Nibh mauris cursus mattis molestie a iaculis. Orci phasellus egestas tellus rutrum tellus.
+In this chart you can select a year and ethnic group and see the five departments with the highest proportion of faculty belonging to that ethnic group. 
 </p>
 
+<p>
+Departments whose area of focus was a particular ethnic group--like the Asian American Studies department--consistently had high proportions of faculty who also belonged to that ethnic group. For instance, African American Studies had the highest proportion of African American professors every year except one, while Chicana/o Studies and Spanish and Portuguese were always in the top five for Latino professors. 
+</p>
 
+<p>
+For some ethnic groups, the departments that had the greatest proportion of their faculty belonging to that group were almost identical from year to year: across all 9 years, only 10 different departments are in the top 5 for Asian professors, while only 13 are in the top 5 for African American professors. On the other hand, 19 are in the top 5 for white professors.
+</p>
+
+<p>
+It’s also worth exploring the departments that have no professors of certain ethnic groups--the data showed that while it was not uncommon that every year there were at least 20 departments that featured no Asian professors, no African American professors, no Latino professors, or no American Indian professors, rarely was there more than 4 departments that featured no white professors. 
+</p>
 
 <div class="anniegraph">
     <canvas id="proportions_chart"> </canvas>
