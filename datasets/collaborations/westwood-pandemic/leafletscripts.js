@@ -22,7 +22,9 @@ var baseLayer = L.tileLayer('https://api.mapbox.com/styles/v1/mapbox/streets-v10
     minZoom: 5,
 });
 
-var layer_lists = [dining_json, shopping_json, ae_json];
+var layer_lists = [dining_json, shopping_json, ae_json
+                //hb_json, services_json,
+];
 var business_layers = [];
 
 for (let j = 0; j < layer_lists.length; j++) {
@@ -30,17 +32,17 @@ for (let j = 0; j < layer_lists.length; j++) {
     for (let i = 0; i < layer_lists[j].length; i++) {
         var str1 = "";
         if (layer_lists[j][i].open == true) {
-            str1 = "<br> <em>Open</em> <br>";
+            str1 = "<br> <em class='description'>Open</em> <br>";
         }  
         else {
-            str1 = "<br><em>Closed</em><br>";
+            str1 = "<br><em class='description'>Closed</em><br>";
         }
         var lat = parseFloat(layer_lists[j][i]['geo']['latitude']);
         var lon = parseFloat(layer_lists[j][i]['geo']['longitude']);
         var latlon = L.latLng(lat,lon);
     
         var name = "<b style='font-size:14px'>" + layer_lists[j][i].name + "</b>";
-        var popup = name.concat("\n", str1, layer_lists[j][i].status);
+        var popup = name.concat(str1, "<span class='description'>" + layer_lists[j][i].status + "</span");
         if (layer_lists[j][i].open == true)
             business_list.push((L.marker(L.latLng(lat, lon), {icon: greenIcon})).bindPopup(popup));
         else
@@ -59,10 +61,12 @@ var mymap = L.map('mapid', {
 });
 
 var overlay_maps = {
-    "Dining": business_layers[0],
-    "Shopping": business_layers[1],
-    "Arts and Entertainment": business_layers[2]
+    "<span class='labels'> Dining</span>": business_layers[0],
+    "<span class='labels'> Shopping </span>": business_layers[1],
+    "<span class='labels'> Arts and Entertainment </span>": business_layers[2],
+    // "<span class='labels'> Health and Beauty </span>": business_layers[3],
+    // "<span class='labels'> Services </span>": business_layers[4],
 };
 
 mymap.addLayer(baseLayer);
-L.control.layers(overlay_maps).addTo(mymap);
+L.control.layers(overlay_maps,null,{collapsed:false}).addTo(mymap);
