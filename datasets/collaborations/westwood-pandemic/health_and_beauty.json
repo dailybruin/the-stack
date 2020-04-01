@@ -16,8 +16,8 @@
       "telephone": "310-208-6300",
       "url": "https://thewestwoodvillage.com/business-details/?ID=442",
       "type": "health_and_beauty",
-      "status": "*",
-      "open": true
+      "status": "",
+      "open": false
     },
     {
       "address": {
@@ -136,7 +136,7 @@
       "telephone": "310-893-2360",
       "url": "https://thewestwoodvillage.com/business-details/?ID=308",
       "type": "health_and_beauty",
-      "status": "*",
+      "status": "",
       "open": true
     },
     {
@@ -158,26 +158,6 @@
       "type": "health_and_beauty",
       "status": "All monthly memberships frozen, closed until further notice",
       "open": false
-    },
-    {
-      "address": {
-        "addressLocality": "Los Angeles",
-        "addressRegion": "CA",
-        "streetAddress": "1001 Westwood Blvd.",
-        "postalCode": "90024"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": "34.062563",
-        "longitude": "-118.445387"
-      },
-      "name": "CVS",
-      "description": "Pharmacy & Drug, Other Services",
-      "telephone": "310-209-9141",
-      "url": "https://thewestwoodvillage.com/business-details/?ID=318",
-      "type": "health_and_beauty",
-      "status": "*",
-      "open": true
     },
     {
       "address": {
@@ -296,8 +276,8 @@
       "telephone": "310-208-8049",
       "url": "https://thewestwoodvillage.com/business-details/?ID=349",
       "type": "health_and_beauty",
-      "status": "*",
-      "open": true
+      "status": "",
+      "open": false
     },
     {
       "address": {
@@ -323,26 +303,6 @@
       "address": {
         "addressLocality": "Los Angeles",
         "addressRegion": "CA",
-        "streetAddress": "1051 Glendon Ave #117",
-        "postalCode": "90024"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": "34.061664",
-        "longitude": "-118.444328"
-      },
-      "name": "Hair By Annalisa",
-      "description": "Salon & Beauty",
-      "telephone": "310-433-5703",
-      "url": "https://thewestwoodvillage.com/business-details/?ID=363",
-      "type": "health_and_beauty",
-      "status": "*",
-      "open": true
-    },
-    {
-      "address": {
-        "addressLocality": "Los Angeles",
-        "addressRegion": "CA",
         "streetAddress": "1080 Glendon Ave.",
         "postalCode": "90024"
       },
@@ -356,8 +316,8 @@
       "telephone": "310-208-7531",
       "url": "https://thewestwoodvillage.com/business-details/?ID=368",
       "type": "health_and_beauty",
-      "status": "*",
-      "open": true
+      "status": "",
+      "open": false
     },
     {
       "address": {
@@ -376,8 +336,8 @@
       "telephone": "310-209-6288",
       "url": "https://thewestwoodvillage.com/business-details/?ID=375",
       "type": "health_and_beauty",
-      "status": "*",
-      "open": true
+      "status": "",
+      "open": false
     },
     {
       "address": {
@@ -416,8 +376,8 @@
       "telephone": "310-208-0081",
       "url": "https://thewestwoodvillage.com/business-details/?ID=391",
       "type": "health_and_beauty",
-      "status": "*",
-      "open": true
+      "status": "",
+      "open": false
     },
     {
       "address": {
@@ -456,28 +416,8 @@
       "telephone": "310-443-0003",
       "url": "https://thewestwoodvillage.com/business-details/?ID=403",
       "type": "health_and_beauty",
-      "status": "* (copy from other) Temporarily closed ",
-      "open": true
-    },
-    {
-      "address": {
-        "addressLocality": "Los Angeles",
-        "addressRegion": "CA",
-        "streetAddress": "10889 Weyburn Ave.",
-        "postalCode": "90024"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": "34.062654",
-        "longitude": "-118.444833"
-      },
-      "name": "Marina Salon",
-      "description": "Salon & Beauty",
-      "telephone": "310-989-9135",
-      "url": "https://thewestwoodvillage.com/business-details/?ID=295",
-      "type": "health_and_beauty",
-      "status": "*",
-      "open": true
+      "status": "Temporarily closed ",
+      "open": false
     },
     {
       "address": {
@@ -516,28 +456,8 @@
       "telephone": "310-208-6559",
       "url": "https://thewestwoodvillage.com/business-details/?ID=421",
       "type": "health_and_beauty",
-      "status": "*",
-      "open": true
-    },
-    {
-      "address": {
-        "addressLocality": "Los Angeles",
-        "addressRegion": "CA",
-        "streetAddress": "10911 Kinross Ave",
-        "postalCode": "90024"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": "34.06068",
-        "longitude": "-118.445887"
-      },
-      "name": "Patio Nail Spa",
-      "description": "Salon & Beauty",
-      "telephone": "714-589-5340",
-      "url": "https://thewestwoodvillage.com/business-details/?ID=425",
-      "type": "health_and_beauty",
-      "status": "*",
-      "open": true
+      "status": "",
+      "open": false
     },
     {
       "address": {
@@ -556,8 +476,8 @@
       "telephone": "310-998-7746",
       "url": "https://thewestwoodvillage.com/business-details/?ID=427",
       "type": "health_and_beauty",
-      "status": "*",
-      "open": true
+      "status": "",
+      "open": false
     },
     {
       "address": {
@@ -576,88 +496,8 @@
       "telephone": "310-476-4466",
       "url": "https://thewestwoodvillage.com/business-details/?ID=529",
       "type": "health_and_beauty",
-      "status": "*",
-      "open": true
-    },
-    {
-      "address": {
-        "addressLocality": "Los Angeles",
-        "addressRegion": "CA",
-        "streetAddress": "10861 Le Conte Ave.",
-        "postalCode": "90024"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": "34.063785",
-        "longitude": "-118.443722"
-      },
-      "name": "Ralphs Fresh Fare",
-      "description": "Grocery & Homegoods, Pharmacy & Drug",
-      "telephone": "310-824-5994",
-      "url": "https://thewestwoodvillage.com/business-details/?ID=437",
-      "type": "health_and_beauty",
-      "status": "*",
-      "open": true
-    },
-    {
-      "address": {
-        "addressLocality": "Los Angeles",
-        "addressRegion": "CA",
-        "streetAddress": "1001 Glendon Ave.",
-        "postalCode": "90024"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": "34.062498",
-        "longitude": "-118.444162"
-      },
-      "name": "Rite Aid",
-      "description": "Other Services, Pharmacy & Drug",
-      "telephone": "310-209-0708",
-      "url": "https://thewestwoodvillage.com/business-details/?ID=439",
-      "type": "health_and_beauty",
-      "status": "*",
-      "open": true
-    },
-    {
-      "address": {
-        "addressLocality": "Los Angeles",
-        "addressRegion": "CA",
-        "streetAddress": "10930 Weyburn Ave.",
-        "postalCode": "90024"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": "34.062335",
-        "longitude": "-118.446407"
-      },
-      "name": "Scrubs Unlimited",
-      "description": "Clothing & Footwear",
-      "telephone": "310-208-7669",
-      "url": "https://thewestwoodvillage.com/business-details/?ID=445",
-      "type": "health_and_beauty",
-      "status": "*",
-      "open": true
-    },
-    {
-      "address": {
-        "addressLocality": "Los Angeles",
-        "addressRegion": "CA",
-        "streetAddress": "1051 Glendon Ave., Suite 109",
-        "postalCode": "90024"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": "34.061664",
-        "longitude": "-118.444328"
-      },
-      "name": "Sheveux Salon",
-      "description": "Salon & Beauty",
-      "telephone": "562-472-5797",
-      "url": "https://thewestwoodvillage.com/business-details/?ID=448",
-      "type": "health_and_beauty",
-      "status": "*",
-      "open": true
+      "status": "",
+      "open": false
     },
     {
       "address": {
@@ -676,8 +516,8 @@
       "telephone": "310-208-0101",
       "url": "https://thewestwoodvillage.com/business-details/?ID=449",
       "type": "health_and_beauty",
-      "status": "*",
-      "open": true
+      "status": "",
+      "open": false
     },
     {
       "address": {
@@ -696,8 +536,8 @@
       "telephone": "310-208-5000",
       "url": "https://thewestwoodvillage.com/business-details/?ID=455",
       "type": "health_and_beauty",
-      "status": "*",
-      "open": true
+      "status": "",
+      "open": false
     },
     {
       "address": {
@@ -716,28 +556,8 @@
       "telephone": "310-251-6177",
       "url": "https://thewestwoodvillage.com/business-details/?ID=462",
       "type": "health_and_beauty",
-      "status": "*",
-      "open": true
-    },
-    {
-      "address": {
-        "addressLocality": "Los Angeles",
-        "addressRegion": "CA",
-        "streetAddress": "1018 Westwood Blvd",
-        "postalCode": "90024"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": "34.062058",
-        "longitude": "-118.444968"
-      },
-      "name": "Terasaki Research Institute",
-      "description": "Medical Services",
-      "telephone": "310-479-6101",
-      "url": "https://thewestwoodvillage.com/business-details/?ID=472",
-      "type": "health_and_beauty",
-      "status": "*",
-      "open": true
+      "status": "",
+      "open": false
     },
     {
       "address": {
@@ -756,8 +576,8 @@
       "telephone": "510-432-1712",
       "url": "https://thewestwoodvillage.com/business-details/?ID=473",
       "type": "health_and_beauty",
-      "status": "*",
-      "open": true
+      "status": "",
+      "open": false
     },
     {
       "address": {
@@ -776,7 +596,7 @@
       "telephone": "310-443-7722",
       "url": "https://thewestwoodvillage.com/business-details/?ID=476",
       "type": "health_and_beauty",
-      "status": "*",
+      "status": "",
       "open": true
     },
     {
@@ -796,8 +616,8 @@
       "telephone": "424-209-2268",
       "url": "https://thewestwoodvillage.com/business-details/?ID=482",
       "type": "health_and_beauty",
-      "status": "*",
-      "open": true
+      "status": "",
+      "open": false
     },
     {
       "address": {
@@ -817,26 +637,6 @@
       "url": "https://thewestwoodvillage.com/business-details/?ID=483",
       "type": "health_and_beauty",
       "status": "Temporarily closed, memberships frozen",
-      "open": true
-    },
-    {
-      "address": {
-        "addressLocality": "Los Angeles",
-        "addressRegion": "CA",
-        "streetAddress": "10956 1/2 Weyburn Ave.",
-        "postalCode": "90024"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": "34.062417",
-        "longitude": "-118.447036"
-      },
-      "name": "The Yoga Court",
-      "description": "Fitness",
-      "telephone": "310-824-3100",
-      "url": "https://thewestwoodvillage.com/business-details/?ID=487",
-      "type": "health_and_beauty",
-      "status": "*",
       "open": true
     },
     {
@@ -876,8 +676,8 @@
       "telephone": "310-443-0007",
       "url": "https://thewestwoodvillage.com/business-details/?ID=499",
       "type": "health_and_beauty",
-      "status": "*",
-      "open": true
+      "status": "",
+      "open": false
     },
     {
       "address": {
@@ -923,26 +723,6 @@
       "address": {
         "addressLocality": "Los Angeles",
         "addressRegion": "CA",
-        "streetAddress": "1008 Broxton Ave",
-        "postalCode": "90024"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": "34.062402",
-        "longitude": "-118.446917"
-      },
-      "name": "Westwood Acupuncture ",
-      "description": "Holistic Medicine",
-      "telephone": "424-248-3115",
-      "url": "https://thewestwoodvillage.com/business-details/?ID=321",
-      "type": "health_and_beauty",
-      "status": "*",
-      "open": true
-    },
-    {
-      "address": {
-        "addressLocality": "Los Angeles",
-        "addressRegion": "CA",
         "streetAddress": "10921 Wilshire Blvd.",
         "postalCode": "90024"
       },
@@ -956,7 +736,7 @@
       "telephone": "310-208-6666",
       "url": "https://thewestwoodvillage.com/business-details/?ID=514",
       "type": "health_and_beauty",
-      "status": "*",
+      "status": "",
       "open": true
     },
     {
@@ -996,28 +776,8 @@
       "telephone": "310-775-2265",
       "url": "https://thewestwoodvillage.com/business-details/?ID=354",
       "type": "health_and_beauty",
-      "status": "*",
-      "open": true
-    },
-    {
-      "address": {
-        "addressLocality": "Los Angeles",
-        "addressRegion": "CA",
-        "streetAddress": "1050 Gayley Ave.",
-        "postalCode": "90024"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": "34.061501",
-        "longitude": "-118.447164"
-      },
-      "name": "Whole Foods Market",
-      "description": "Grocery & Homegoods",
-      "telephone": "310-824-0858",
-      "url": "https://thewestwoodvillage.com/business-details/?ID=524",
-      "type": "health_and_beauty",
-      "status": "*",
-      "open": true
+      "status": "Closed for entirety of April",
+      "open": false
     },
     {
       "address": {
