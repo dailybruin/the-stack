@@ -123,26 +123,6 @@
       "address": {
         "addressLocality": "Los Angeles",
         "addressRegion": "CA",
-        "streetAddress": "10861 Weyburn Ave.",
-        "postalCode": "90024"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": "34.063105",
-        "longitude": "-118.443621"
-      },
-      "name": "City Target Westwood",
-      "description": "Clothing & Footwear, Grocery & Homegoods, Flowers & Gifts, Pharmacy & Drug",
-      "telephone": "310-893-2360",
-      "url": "https://thewestwoodvillage.com/business-details/?ID=308",
-      "type": "health_and_beauty",
-      "status": "",
-      "open": true
-    },
-    {
-      "address": {
-        "addressLocality": "Los Angeles",
-        "addressRegion": "CA",
         "streetAddress": "1031 Glendon Ave.",
         "postalCode": "90024"
       },
@@ -578,26 +558,6 @@
       "type": "health_and_beauty",
       "status": "",
       "open": false
-    },
-    {
-      "address": {
-        "addressLocality": "Los Angeles",
-        "addressRegion": "CA",
-        "streetAddress": "1035 Gayley Ave.",
-        "postalCode": "90024"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": "34.061296",
-        "longitude": "-118.447523"
-      },
-      "name": "The Farmacy",
-      "description": "Holistic Medicine, Pharmacy & Drug",
-      "telephone": "310-443-7722",
-      "url": "https://thewestwoodvillage.com/business-details/?ID=476",
-      "type": "health_and_beauty",
-      "status": "",
-      "open": true
     },
     {
       "address": {
