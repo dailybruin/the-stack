@@ -23,26 +23,6 @@
       "address": {
         "addressLocality": "Los Angeles",
         "addressRegion": "CA",
-        "streetAddress": "1100 Westwood Blvd.",
-        "postalCode": "90024"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": "34.060825",
-        "longitude": "-118.445248"
-      },
-      "name": "AT&T Wireless",
-      "description": "Wireless Communications",
-      "telephone": "310-208-0319",
-      "url": "https://thewestwoodvillage.com/business-details/?ID=272",
-      "type": "shopping",
-      "status": "Temporarily closed",
-      "open": false
-    },
-    {
-      "address": {
-        "addressLocality": "Los Angeles",
-        "addressRegion": "CA",
         "streetAddress": "10958 Weyburn Ave.",
         "postalCode": "90024"
       },
@@ -76,7 +56,7 @@
       "telephone": "310-893-2360",
       "url": "https://thewestwoodvillage.com/business-details/?ID=308",
       "type": "shopping",
-      "status": "",
+      "status": "M-F 7AM- PM, 8AM - 9M on weekends. First hour of shopping on Tuesdays and Wednesdays limited to people over 65 or with underlying health conditions and pregnant women. In-person product returns suspended with return window extended",
       "open": true
     },
     {
@@ -236,7 +216,7 @@
       "telephone": "310-824-5994",
       "url": "https://thewestwoodvillage.com/business-details/?ID=437",
       "type": "shopping",
-      "status": "",
+      "status": "Open from 6AM - 11PM, 6 AM - 7:30 AM restricted to seniors 60 and above and other high-risk as defined by the CDC ",
       "open": true
     },
     {
