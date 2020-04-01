@@ -64,8 +64,8 @@ var overlay_maps = {
     "<span class='labels'> Dining</span>": business_layers[0],
     "<span class='labels'> Shopping </span>": business_layers[1],
     "<span class='labels'> Arts and Entertainment </span>": business_layers[2],
-    // "<span class='labels'> Health and Beauty </span>": business_layers[3],
-    // "<span class='labels'> Services </span>": business_layers[4],
+    "<span class='labels'> Health and Beauty </span>": business_layers[3],
+    "<span class='labels'> Services </span>": business_layers[4],
 };
 
 mymap.addLayer(baseLayer);
