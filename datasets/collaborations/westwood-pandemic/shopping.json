@@ -23,66 +23,6 @@
       "address": {
         "addressLocality": "Los Angeles",
         "addressRegion": "CA",
-        "streetAddress": "1090 Westwood Blvd.",
-        "postalCode": "90024"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": "34.060828",
-        "longitude": "-118.445277"
-      },
-      "name": "Aahs! Gift Store",
-      "description": "Flowers & Gifts",
-      "telephone": "310-391-3998",
-      "url": "https://thewestwoodvillage.com/business-details/?ID=265",
-      "type": "shopping",
-      "status": "*",
-      "open": true
-    },
-    {
-      "address": {
-        "addressLocality": "Los Angeles",
-        "addressRegion": "CA",
-        "streetAddress": "923 Westwood Blvd.",
-        "postalCode": "90024"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": "34.063435",
-        "longitude": "-118.445281"
-      },
-      "name": "Amazon Hub Locker+ Westwood Village",
-      "description": "Other Services",
-      "telephone": "888-280-4331",
-      "url": "https://thewestwoodvillage.com/business-details/?ID=266",
-      "type": "shopping",
-      "status": "*",
-      "open": true
-    },
-    {
-      "address": {
-        "addressLocality": "Los Angeles",
-        "addressRegion": "CA",
-        "streetAddress": "945 Broxton Ave.",
-        "postalCode": "90024"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": "34.062723",
-        "longitude": "-118.447185"
-      },
-      "name": "American Vintage",
-      "description": "Clothing & Footwear",
-      "telephone": "310-443-2071",
-      "url": "https://thewestwoodvillage.com/business-details/?ID=267",
-      "type": "shopping",
-      "status": "*",
-      "open": true
-    },
-    {
-      "address": {
-        "addressLocality": "Los Angeles",
-        "addressRegion": "CA",
         "streetAddress": "1100 Westwood Blvd.",
         "postalCode": "90024"
       },
@@ -136,7 +76,7 @@
       "telephone": "310-893-2360",
       "url": "https://thewestwoodvillage.com/business-details/?ID=308",
       "type": "shopping",
-      "status": "*",
+      "status": "",
       "open": true
     },
     {
@@ -156,8 +96,8 @@
       "telephone": "310-208-3529",
       "url": "https://thewestwoodvillage.com/business-details/?ID=344",
       "type": "shopping",
-      "status": "*",
-      "open": true
+      "status": "",
+      "open": false
     },
     {
       "address": {
@@ -198,26 +138,6 @@
       "type": "shopping",
       "status": "Temporarily closed",
       "open": false
-    },
-    {
-      "address": {
-        "addressLocality": "Los Angeles",
-        "addressRegion": "CA",
-        "streetAddress": "1087 Gayley Ave",
-        "postalCode": "90024"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": "34.060384",
-        "longitude": "-118.446736"
-      },
-      "name": "Little Branch Vintage",
-      "description": "Flowers & Gifts",
-      "telephone": "800-252-3569",
-      "url": "https://thewestwoodvillage.com/business-details/?ID=399",
-      "type": "shopping",
-      "status": "*",
-      "open": true
     },
     {
       "address": {
@@ -276,8 +196,8 @@
       "telephone": "310-208-3119",
       "url": "https://thewestwoodvillage.com/business-details/?ID=413",
       "type": "shopping",
-      "status": "*",
-      "open": true
+      "status": "",
+      "open": false
     },
     {
       "address": {
@@ -316,7 +236,7 @@
       "telephone": "310-824-5994",
       "url": "https://thewestwoodvillage.com/business-details/?ID=437",
       "type": "shopping",
-      "status": "*",
+      "status": "",
       "open": true
     },
     {
@@ -336,27 +256,7 @@
       "telephone": "310-209-0708",
       "url": "https://thewestwoodvillage.com/business-details/?ID=439",
       "type": "shopping",
-      "status": "* open for seniors and immuno-compromised people from 9-10 am ",
-      "open": true
-    },
-    {
-      "address": {
-        "addressLocality": "Los Angeles",
-        "addressRegion": "CA",
-        "streetAddress": "1067 Broxton Ave.",
-        "postalCode": "90024"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": "34.061259",
-        "longitude": "-118.446169"
-      },
-      "name": "Rocket Fizz",
-      "description": "Retro Candy, Soda Pop, Gifts & More",
-      "telephone": "310-208-4509",
-      "url": "https://thewestwoodvillage.com/business-details/?ID=441",
-      "type": "shopping",
-      "status": "*",
+      "status": "open for seniors and immuno-compromised people from 9-10 am ",
       "open": true
     },
     {
@@ -396,7 +296,7 @@
       "telephone": "310-208-7669",
       "url": "https://thewestwoodvillage.com/business-details/?ID=445",
       "type": "shopping",
-      "status": "*",
+      "status": "Open for quick pickup",
       "open": true
     },
     {
@@ -416,7 +316,7 @@
       "telephone": "310-824-8840",
       "url": "https://thewestwoodvillage.com/business-details/?ID=453",
       "type": "shopping",
-      "status": "*",
+      "status": "",
       "open": true
     },
     {
@@ -436,8 +336,8 @@
       "telephone": "310-208-7656",
       "url": "https://thewestwoodvillage.com/business-details/?ID=457",
       "type": "shopping",
-      "status": "*",
-      "open": true
+      "status": "",
+      "open": false
     },
     {
       "address": {
@@ -476,8 +376,8 @@
       "telephone": "310-209-1888",
       "url": "https://thewestwoodvillage.com/business-details/?ID=467",
       "type": "shopping",
-      "status": "* store might be closed, offering virtual services and appointments for half the locations",
-      "open": true
+      "status": "offering virtual services and appointments for half the locations",
+      "open": false
     },
     {
       "address": {
@@ -496,27 +396,7 @@
       "telephone": "310-443-7722",
       "url": "https://thewestwoodvillage.com/business-details/?ID=476",
       "type": "shopping",
-      "status": "*",
-      "open": true
-    },
-    {
-      "address": {
-        "addressLocality": "Los Angeles",
-        "addressRegion": "CA",
-        "streetAddress": "966 Gayley Ave.",
-        "postalCode": "90024"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": "34.062293",
-        "longitude": "-118.448013"
-      },
-      "name": "The Vape Lounge LA",
-      "description": "Tobacco Shops",
-      "telephone": "310-208-0503",
-      "url": "https://thewestwoodvillage.com/business-details/?ID=486",
-      "type": "shopping",
-      "status": "*",
+      "status": "",
       "open": true
     },
     {
@@ -536,7 +416,7 @@
       "telephone": "310-824-1495",
       "url": "https://thewestwoodvillage.com/business-details/?ID=492",
       "type": "shopping",
-      "status": "*check 10AM - 7PM (Mon-Sat); 9 - 10AM Open to senior customers (age 60 and over) and customers with disabilities who may need extra assistance, closed Sunday",
+      "status": "open 10AM - 7PM (Mon-Sat); 9 - 10AM Open to senior customers (age 60 and over) and customers with disabilities who may need extra assistance",
       "open": true
     },
     {
