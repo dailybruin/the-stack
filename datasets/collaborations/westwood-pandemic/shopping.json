@@ -376,8 +376,8 @@
       "telephone": "310-208-3131",
       "url": "https://thewestwoodvillage.com/business-details/?ID=444",
       "type": "shopping",
-      "status": "*",
-      "open": true
+      "status": "Temporarily closed",
+      "open": false
     },
     {
       "address": {
