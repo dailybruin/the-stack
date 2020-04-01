@@ -1,0 +1,182 @@
+[
+    {
+        "address": {
+          "addressLocality": "Los Angeles",
+          "addressRegion": "CA",
+          "streetAddress": "951 Westwood Blvd. ",
+          "postalCode": "90024"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "34.062754",
+          "longitude": "-118.445587"
+        },
+        "name": "7-Eleven",
+        "description": "Grocery & Homegoods, Treats",
+        "telephone": "310-443-0001 ",
+        "url": "https://thewestwoodvillage.com/business-details/?ID=264",
+        "type": "shopping",
+        "status": "Open 24/7",
+        "open": true
+      },
+      {
+        "address": {
+          "addressLocality": "Los Angeles",
+          "addressRegion": "CA",
+          "streetAddress": "10861 Weyburn Ave.",
+          "postalCode": "90024"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "34.063105",
+          "longitude": "-118.443621"
+        },
+        "name": "City Target Westwood",
+        "description": "Clothing & Footwear, Grocery & Homegoods, Flowers & Gifts, Pharmacy & Drug",
+        "telephone": "310-893-2360",
+        "url": "https://thewestwoodvillage.com/business-details/?ID=308",
+        "type": "shopping",
+        "status": "*",
+        "open": true
+      },
+      {
+        "address": {
+          "addressLocality": "Los Angeles",
+          "addressRegion": "CA",
+          "streetAddress": "10861 Le Conte Ave.",
+          "postalCode": "90024"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "34.063785",
+          "longitude": "-118.443722"
+        },
+        "name": "Ralphs Fresh Fare",
+        "description": "Grocery & Homegoods, Pharmacy & Drug",
+        "telephone": "310-824-5994",
+        "url": "https://thewestwoodvillage.com/business-details/?ID=437",
+        "type": "shopping",
+        "status": "*",
+        "open": true
+      },
+      {
+        "address": {
+          "addressLocality": "Los Angeles",
+          "addressRegion": "CA",
+          "streetAddress": "1001 Glendon Ave.",
+          "postalCode": "90024"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "34.062498",
+          "longitude": "-118.444162"
+        },
+        "name": "Rite Aid",
+        "description": "Other Services, Pharmacy & Drug",
+        "telephone": "310-209-0708",
+        "url": "https://thewestwoodvillage.com/business-details/?ID=439",
+        "type": "shopping",
+        "status": "* open for seniors and immuno-compromised people from 9-10 am ",
+        "open": true
+      },
+      {
+        "address": {
+          "addressLocality": "Los Angeles",
+          "addressRegion": "CA",
+          "streetAddress": "1035 Gayley Ave.",
+          "postalCode": "90024"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "34.061296",
+          "longitude": "-118.447523"
+        },
+        "name": "The Farmacy",
+        "description": "Holistic Medicine, Pharmacy & Drug",
+        "telephone": "310-443-7722",
+        "url": "https://thewestwoodvillage.com/business-details/?ID=476",
+        "type": "services",
+        "status": "*",
+        "open": true
+      },
+      {
+        "address": {
+          "addressLocality": "Los Angeles",
+          "addressRegion": "CA",
+          "streetAddress": "1001 Westwood Blvd.",
+          "postalCode": "90024"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "34.062563",
+          "longitude": "-118.445387"
+        },
+        "name": "CVS",
+        "description": "Pharmacy & Drug, Other Services",
+        "telephone": "310-209-9141",
+        "url": "https://thewestwoodvillage.com/business-details/?ID=318",
+        "type": "services",
+        "status": "*",
+        "open": true
+      },
+      {
+        "address": {
+          "addressLocality": "Los Angeles",
+          "addressRegion": "CA",
+          "streetAddress": "1000 Glendon Ave.",
+          "postalCode": "90024"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "34.062507",
+          "longitude": "-118.443935"
+        },
+        "name": "Trader Joe’s",
+        "description": "Grocery & Homegoods",
+        "telephone": "310-824-1495",
+        "url": "https://thewestwoodvillage.com/business-details/?ID=492",
+        "type": "shopping",
+        "status": "*check 10AM - 7PM (Mon-Sat); 9 - 10AM Open to senior customers (age 60 and over) and customers with disabilities who may need extra assistance, closed Sunday",
+        "open": true
+      },
+      {
+        "address": {
+          "addressLocality": "Los Angeles",
+          "addressRegion": "CA",
+          "streetAddress": "1050 Gayley Ave.",
+          "postalCode": "90024"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "34.061501",
+          "longitude": "-118.447164"
+        },
+        "name": "Whole Foods Market",
+        "description": "Grocery & Homegoods",
+        "telephone": "310-824-0858",
+        "url": "https://thewestwoodvillage.com/business-details/?ID=524",
+        "type": "shopping",
+        "status": "Guests 60+ can start to shop at 7:00 am. Open: 8:00 am – 9:00 pm",
+        "open": true
+      },
+      {
+        "address": {
+          "addressLocality": "Los Angeles",
+          "addressRegion": "CA",
+          "streetAddress": "10921 Wilshire Blvd.",
+          "postalCode": "90024"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "34.058924",
+          "longitude": "-118.444889"
+        },
+        "name": "Westwood Center Pharmacy",
+        "description": "Pharmacy & Drug",
+        "telephone": "310-208-6666",
+        "url": "https://thewestwoodvillage.com/business-details/?ID=514",
+        "type": "health_and_beauty",
+        "status": "* medical services?",
+        "open": true
+      }
+]

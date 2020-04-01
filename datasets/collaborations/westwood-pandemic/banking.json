@@ -1,0 +1,242 @@
+[
+    {
+        "address": {
+          "addressLocality": "Los Angeles",
+          "addressRegion": "CA",
+          "streetAddress": "930 Westwood Blvd.",
+          "postalCode": "90024"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "34.062955",
+          "longitude": "-118.445188"
+        },
+        "name": "Bank of America Westwood Blvd",
+        "description": "Banks",
+        "telephone": "800-622-8731",
+        "url": "https://thewestwoodvillage.com/business-details/?ID=276",
+        "type": "services",
+        "status": "Temporarily closed (ATMs are still open)",
+        "open": false
+      },
+      {
+        "address": {
+          "addressLocality": "Los Angeles",
+          "addressRegion": "CA",
+          "streetAddress": "10960 Wilshire Blvd.",
+          "postalCode": "90024"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "34.057552",
+          "longitude": "-118.446156"
+        },
+        "name": "Bank of America Wilshire Blvd",
+        "description": "Banks",
+        "telephone": "310-996-7867",
+        "url": "https://thewestwoodvillage.com/business-details/?ID=277",
+        "type": "services",
+        "status": "Temporarily closed (ATMs are still open)",
+        "open": false
+      },
+      {
+        "address": {
+          "addressLocality": "Los Angeles",
+          "addressRegion": "CA",
+          "streetAddress": "10901 Wilshire Blvd.",
+          "postalCode": "90024"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "34.058663",
+          "longitude": "-118.443956"
+        },
+        "name": "Chase Bank",
+        "description": "Banks",
+        "telephone": "310-208-0810",
+        "url": "https://thewestwoodvillage.com/business-details/?ID=298",
+        "type": "services",
+        "status": "Open 9:30AM - 4PM M-F, 9:00AM - 4PM Sat, Closed on Sun",
+        "open": true
+      },
+      {
+        "address": {
+          "addressLocality": "Los Angeles",
+          "addressRegion": "CA",
+          "streetAddress": "1072 Westwood Blvd.",
+          "postalCode": "90024"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "34.061188",
+          "longitude": "-118.445038"
+        },
+        "name": "Citibank Westwood Blvd",
+        "description": "Banks",
+        "telephone": "310-208-5556",
+        "url": "https://thewestwoodvillage.com/business-details/?ID=306",
+        "type": "services",
+        "status": "M-F 9AM - 4PM, closed on weekends",
+        "open": true
+      },
+      {
+        "address": {
+          "addressLocality": "Los Angeles",
+          "addressRegion": "CA",
+          "streetAddress": "10900 Wilshire Blvd.",
+          "postalCode": "90024"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "34.058143",
+          "longitude": "-118.443969"
+        },
+        "name": "Citibank Wilshire Blvd",
+        "description": "Banks",
+        "telephone": "1-800-627-3999",
+        "url": "https://thewestwoodvillage.com/business-details/?ID=305",
+        "type": "services",
+        "status": "Temporarily closed",
+        "open": false
+      },
+      {
+        "address": {
+          "addressLocality": "LosAngeles",
+          "addressRegion": "CA",
+          "streetAddress": "10889 Wilshire Blvd.",
+          "postalCode": "90024"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "34.05937592",
+          "longitude": "-118.4436584"
+        },
+        "name": "City National Bank",
+        "description": "Banks",
+        "telephone": "310-888-6950",
+        "url": "https://thewestwoodvillage.com/business-details/?ID=307",
+        "type": "services",
+        "status": "Lobby Hours Temporarily Changed, M-F 10AM - 3PM, closed on weekends ",
+        "open": true
+      },
+      {
+        "address": {
+          "addressLocality": "Los Angeles",
+          "addressRegion": "CA",
+          "streetAddress": "1021 Glendon Ave.",
+          "postalCode": "90024"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "34.062199",
+          "longitude": "-118.444196"
+        },
+        "name": "Comerica Bank",
+        "description": "Banks",
+        "telephone": "310-208-3516",
+        "url": "https://thewestwoodvillage.com/business-details/?ID=311",
+        "type": "services",
+        "status": "Monday – Friday, 10:00 a.m. – 4:00 p.m. PT, Saturday hours remain the same, lobby access limited to 3 customers at a time",
+        "open": true
+      },
+      {
+        "address": {
+          "addressLocality": "Los Angeles",
+          "addressRegion": "CA",
+          "streetAddress": "10850 Wilshire Blvd #100",
+          "postalCode": "90024"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "34.059228",
+          "longitude": "-118.441603"
+        },
+        "name": "First Foundation Bank",
+        "description": "Banks",
+        "telephone": "310-943-8830",
+        "url": "https://thewestwoodvillage.com/business-details/?ID=341",
+        "type": "services",
+        "status": "* probably open",
+        "open": true
+      },
+      {
+        "address": {
+          "addressLocality": "Los Angeles",
+          "addressRegion": "CA",
+          "streetAddress": "10900 Wilshire Blvd.",
+          "postalCode": "90024"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "34.058143",
+          "longitude": "-118.443969"
+        },
+        "name": "Union Bank",
+        "description": "Banks",
+        "telephone": "310-475-7200",
+        "url": "https://thewestwoodvillage.com/business-details/?ID=500",
+        "type": "services",
+        "status": "M-Fri 10:00AM - 04:00PM",
+        "open": true
+      },
+      {
+        "address": {
+          "addressLocality": "Los Angeles",
+          "addressRegion": "CA",
+          "streetAddress": "10866 Wilshire Blvd.",
+          "postalCode": "90024"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "34.058569",
+          "longitude": "-118.441981"
+        },
+        "name": "US Bank",
+        "description": "Banks",
+        "telephone": "310-470-8372",
+        "url": "https://thewestwoodvillage.com/business-details/?ID=503",
+        "type": "services",
+        "status": "Lobby 9:30 a.m. to 4 p.m. M-F, closed on weekends",
+        "open": true
+      },
+      {
+        "address": {
+          "addressLocality": "Los Angeles",
+          "addressRegion": "CA",
+          "streetAddress": "10906 Le Conte Ave.",
+          "postalCode": "90024"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "34.063582",
+          "longitude": "-118.445568"
+        },
+        "name": "Wells Fargo Le Conte",
+        "description": "Banks",
+        "telephone": "424-325-7000",
+        "url": "https://thewestwoodvillage.com/business-details/?ID=512",
+        "type": "services",
+        "status": "Temporarily closed",
+        "open": false
+      },
+      {
+        "address": {
+          "addressLocality": "Los Angeles",
+          "addressRegion": "CA",
+          "streetAddress": "10920 Wilshire Blvd.",
+          "postalCode": "90024"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "34.058464",
+          "longitude": "-118.444826"
+        },
+        "name": "Wells Fargo Wilshire Blvd.",
+        "description": "Banks",
+        "telephone": "310-470-8372",
+        "url": "https://thewestwoodvillage.com/business-details/?ID=511",
+        "type": "services",
+        "status": "Drive-up Open; Banker By Appt",
+        "open": true
+      }
+]

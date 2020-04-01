@@ -1,0 +1,222 @@
+[
+    {
+        "address": {
+          "addressLocality": "Los Angeles",
+          "addressRegion": "CA",
+          "streetAddress": "10921 Wilshire Blvd., Ste. 409",
+          "postalCode": "90024"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "34.058924",
+          "longitude": "-118.444889"
+        },
+        "name": "Angeleno Smile",
+        "description": "Dental Offices",
+        "telephone": "310-824-2624",
+        "url": "https://thewestwoodvillage.com/business-details/?ID=269",
+        "type": "health_and_beauty",
+        "status": "Emergency patients only",
+        "open": true
+      },
+      {
+        "address": {
+          "addressLocality": "Los Angeles",
+          "addressRegion": "CA",
+          "streetAddress": "10921 Wilshire Blvd., Ste. 1008",
+          "postalCode": "90024"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "34.058924",
+          "longitude": "-118.444889"
+        },
+        "name": "ASK Dental Group",
+        "description": "Dental Offices",
+        "telephone": "310-443-4000",
+        "url": "https://thewestwoodvillage.com/business-details/?ID=270",
+        "type": "health_and_beauty",
+        "status": "Closed until April 19",
+        "open": false
+      },
+      {
+        "address": {
+          "addressLocality": "Los Angeles",
+          "addressRegion": "CA",
+          "streetAddress": "918 Westwood Blvd.",
+          "postalCode": "90024"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "34.063023",
+          "longitude": "-118.445289"
+        },
+        "name": "Dr. Martin Hyman Optometrist",
+        "description": "Optical & Eyewear",
+        "telephone": "310-208-3913",
+        "url": "https://thewestwoodvillage.com/business-details/?ID=518",
+        "type": "health_and_beauty",
+        "status": "Only open for emergency visits",
+        "open": true
+      },
+      {
+        "address": {
+          "addressLocality": "Los Angeles",
+          "addressRegion": "CA",
+          "streetAddress": "10930 Weyburn Ave.",
+          "postalCode": "90024"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "34.062335",
+          "longitude": "-118.446407"
+        },
+        "name": "Eyes Of Westwood",
+        "description": "Optical & Eyewear",
+        "telephone": "310-208-1384",
+        "url": "https://thewestwoodvillage.com/business-details/?ID=334",
+        "type": "health_and_beauty",
+        "status": "Open for emergency vists M-F 9am - 1pm",
+        "open": true
+      },
+      {
+        "address": {
+          "addressLocality": "Los Angeles",
+          "addressRegion": "CA",
+          "streetAddress": "1045 Gayley Avenue, 2nd Floor",
+          "postalCode": "90024"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "34.06102",
+          "longitude": "-118.447571"
+        },
+        "name": "UCLA Blood & Platelet Center",
+        "description": "Medical Services",
+        "telephone": "310-794-7197",
+        "url": "https://thewestwoodvillage.com/business-details/?ID=495",
+        "type": "health_and_beauty",
+        "status": "Open with visitor restrictions",
+        "open": true
+      },
+      {
+        "address": {
+          "addressLocality": "Los Angeles",
+          "addressRegion": "CA",
+          "streetAddress": "1082 Glendon Avenue ",
+          "postalCode": "90024"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "34.060798",
+          "longitude": "-118.444355"
+        },
+        "name": "University Vascular Associates ",
+        "description": "Medical Services",
+        "telephone": "310-209-2011",
+        "url": "https://thewestwoodvillage.com/business-details/?ID=501",
+        "type": "health_and_beauty",
+        "status": "Open for emergency cases, telehealth appointments available for non-urgent cases",
+        "open": true
+      },
+      {
+        "address": {
+          "addressLocality": "Los Angeles",
+          "addressRegion": "CA",
+          "streetAddress": "1059 Gayley Ave.",
+          "postalCode": "90024"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "34.060875",
+          "longitude": "-118.447159"
+        },
+        "name": "Village Eyes Optometry",
+        "description": "Optical & Eyewear",
+        "telephone": "310-208-3011",
+        "url": "https://thewestwoodvillage.com/business-details/?ID=508",
+        "type": "health_and_beauty",
+        "status": "Telemedicine visits available, office is temporarily closed",
+        "open": true
+      },
+      {
+        "address": {
+          "addressLocality": "Los Angeles",
+          "addressRegion": "CA",
+          "streetAddress": "1033 Gayley Ave Ste. 106",
+          "postalCode": "90024"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "34.061332",
+          "longitude": "-118.447553"
+        },
+        "name": "Westwood Orthodontics",
+        "description": "Dental Offices",
+        "telephone": "310-208-6333",
+        "url": "https://thewestwoodvillage.com/business-details/?ID=519",
+        "type": "health_and_beauty",
+        "status": "Open for emergency procedures only",
+        "open": true
+      },
+      {
+        "address": {
+          "addressLocality": "Los Angeles",
+          "addressRegion": "CA",
+          "streetAddress": "1033 Gayley Ave., Ste. 102",
+          "postalCode": "90024"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "34.061332",
+          "longitude": "-118.447553"
+        },
+        "name": "Westwood Village Smiles",
+        "description": "Dental Offices",
+        "telephone": "310-775-2265",
+        "url": "https://thewestwoodvillage.com/business-details/?ID=354",
+        "type": "health_and_beauty",
+        "status": "*",
+        "open": true
+      },
+      {
+        "address": {
+          "addressLocality": "Los Angeles",
+          "addressRegion": "CA",
+          "streetAddress": "10921 Wilshire Blvd., Ste. 904",
+          "postalCode": "90024"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "34.058924",
+          "longitude": "-118.444889"
+        },
+        "name": "Zakhor Dental Group",
+        "description": "Dental Offices",
+        "telephone": "310-208-0811",
+        "url": "https://thewestwoodvillage.com/business-details/?ID=526",
+        "type": "health_and_beauty",
+        "status": "Open for emergency procedures and virtual consultations",
+        "open": true
+      },
+      {
+        "address": {
+          "addressLocality": "Los Angeles",
+          "addressRegion": "CA",
+          "streetAddress": "1018 Westwood Blvd",
+          "postalCode": "90024"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "34.062058",
+          "longitude": "-118.444968"
+        },
+        "name": "Terasaki Research Institute",
+        "description": "Medical Services",
+        "telephone": "310-479-6101",
+        "url": "https://thewestwoodvillage.com/business-details/?ID=472",
+        "type": "health_and_beauty",
+        "status": "*",
+        "open": true
+      }
+]

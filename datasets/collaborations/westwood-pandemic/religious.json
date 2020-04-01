@@ -1,0 +1,82 @@
+[
+    {
+        "address": {
+          "addressLocality": "Los Angeles",
+          "addressRegion": "CA",
+          "streetAddress": "1125 Glendon Ave.",
+          "postalCode": "90024"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "34.060306",
+          "longitude": "-118.444323"
+        },
+        "name": "Christian Science Reading Room",
+        "description": "Religious",
+        "telephone": "310-208-3814",
+        "url": "https://thewestwoodvillage.com/business-details/?ID=302",
+        "type": "services",
+        "status": "*",
+        "open": true
+      },
+      {
+        "address": {
+          "addressLocality": "Los Angeles",
+          "addressRegion": "CA",
+          "streetAddress": "10962 Le Conte Ave.",
+          "postalCode": "90024"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "34.0634",
+          "longitude": "-118.447508"
+        },
+        "name": "Jews for Jesus",
+        "description": "Religious",
+        "telephone": "310-443-9553",
+        "url": "https://thewestwoodvillage.com/business-details/?ID=382",
+        "type": "services",
+        "status": "*",
+        "open": true
+      },
+      {
+        "address": {
+          "addressLocality": "Los Angeles",
+          "addressRegion": "CA",
+          "streetAddress": "10808 Le Conte Ave. ",
+          "postalCode": "90024"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "34.063603",
+          "longitude": "-118.441699"
+        },
+        "name": "Westwood Hills Christian Church",
+        "description": "Religious",
+        "telephone": "310-208-8576",
+        "url": "https://thewestwoodvillage.com/business-details/?ID=304",
+        "type": "services",
+        "status": "*",
+        "open": true
+      },
+      {
+        "address": {
+          "addressLocality": "Los Angeles",
+          "addressRegion": "CA",
+          "streetAddress": "1148 Westwood Blvd.",
+          "postalCode": "90024"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "34.060243",
+          "longitude": "-118.444987"
+        },
+        "name": "Westwood Village Synagogue",
+        "description": "Religious",
+        "telephone": "310-824-9987",
+        "url": "https://thewestwoodvillage.com/business-details/?ID=522",
+        "type": "services",
+        "status": "Temporarily closed",
+        "open": true
+      }
+]

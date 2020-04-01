@@ -1359,6 +1359,7 @@
       "status": "Temporarily closed",
       "open": false
     },
+    {"address":{"addressLocality":"Los Angeles","addressRegion":"CA","streetAddress":"930 Hilgard Ave.","postalCode":"90024"},"geo":{"@type":"GeoCoordinates","latitude":"34.063407","longitude":"-118.441017"},"name":"STK Los Angeles","description":"Bars & Nightlife","telephone":"310-208-8765","url":"https://thewestwoodvillage.com/business-details/?ID=461","type":"dining","status":"Temporarily closed","open":false},
     {
       "address": {
         "addressLocality": "Los Angeles",

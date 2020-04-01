@@ -1,0 +1,602 @@
+[
+    {
+      "address": {
+        "addressLocality": "Los Angeles",
+        "addressRegion": "CA",
+        "streetAddress": "10911 Kinross Ave.",
+        "postalCode": "90024"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "34.06056",
+        "longitude": "-118.446042"
+      },
+      "name": "Ali Hair Salon",
+      "description": "Salon & Beauty",
+      "telephone": "310-208-6300",
+      "url": "https://thewestwoodvillage.com/business-details/?ID=442",
+      "type": "health_and_beauty",
+      "status": "*",
+      "open": true
+    },
+    {
+      "address": {
+        "addressLocality": "Los Angeles",
+        "addressRegion": "CA",
+        "streetAddress": "10935 Weyburn Ave.",
+        "postalCode": "90024"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "34.062815",
+        "longitude": "-118.446537"
+      },
+      "name": "Aveda Institute",
+      "description": "Educational",
+      "telephone": "310-209-2000",
+      "url": "https://thewestwoodvillage.com/business-details/?ID=274",
+      "type": "health_and_beauty",
+      "status": "Shipping products and offering curbside pickup",
+      "open": true
+    },
+    {
+      "address": {
+        "addressLocality": "Los Angeles",
+        "addressRegion": "CA",
+        "streetAddress": "1051 Glendon Ave., # 124",
+        "postalCode": "90024"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "34.061664",
+        "longitude": "-118.444328"
+      },
+      "name": "Black Stag Barbershop",
+      "description": "Salon & Beauty",
+      "telephone": "323-708-2800",
+      "url": "https://thewestwoodvillage.com/business-details/?ID=285",
+      "type": "health_and_beauty",
+      "status": "Open for one-on-one appointments only",
+      "open": true
+    },
+    {
+      "address": {
+        "addressLocality": "Los Angeles",
+        "addressRegion": "CA",
+        "streetAddress": "1001 Gayley Ave.",
+        "postalCode": "90024"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "34.061611",
+        "longitude": "-118.448082"
+      },
+      "name": "Capelli Lounge",
+      "description": "Salon & Beauty",
+      "telephone": "310-824-2711",
+      "url": "https://thewestwoodvillage.com/business-details/?ID=294",
+      "type": "health_and_beauty",
+      "status": "Closed until April 19",
+      "open": false
+    },
+    {
+      "address": {
+        "addressLocality": "Los Angeles",
+        "addressRegion": "CA",
+        "streetAddress": "1126 Westwood Blvd.",
+        "postalCode": "90024"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "34.060486",
+        "longitude": "-118.445181"
+      },
+      "name": "European Wax Center",
+      "description": "Salon & Beauty",
+      "telephone": "310-473-6262",
+      "url": "https://thewestwoodvillage.com/business-details/?ID=333",
+      "type": "health_and_beauty",
+      "status": "Temporarily closed",
+      "open": false
+    },
+    {
+      "address": {
+        "addressLocality": "Los Angeles",
+        "addressRegion": "CA",
+        "streetAddress": "956 Gayley Ave.",
+        "postalCode": "90024"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "34.062384",
+        "longitude": "-118.44805"
+      },
+      "name": "Fama Beauty Center",
+      "description": "Salon & Beauty",
+      "telephone": "310-824-7697",
+      "url": "https://thewestwoodvillage.com/business-details/?ID=336",
+      "type": "health_and_beauty",
+      "status": "Temporarily closed",
+      "open": false
+    },
+    {
+      "address": {
+        "addressLocality": "Los Angeles",
+        "addressRegion": "CA",
+        "streetAddress": "10913 Weyburn Ave",
+        "postalCode": "90024"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "34.062825",
+        "longitude": "-118.446069"
+      },
+      "name": "Freddy & Liana’s",
+      "description": "Salon & Beauty",
+      "telephone": "310-208-8049",
+      "url": "https://thewestwoodvillage.com/business-details/?ID=349",
+      "type": "health_and_beauty",
+      "status": "*",
+      "open": true
+    },
+    {
+      "address": {
+        "addressLocality": "Los Angeles",
+        "addressRegion": "CA",
+        "streetAddress": "1051 Glendon Ave., Suite 105",
+        "postalCode": "90024"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "34.061664",
+        "longitude": "-118.444328"
+      },
+      "name": "Goddess Lynne BODY and SKIN",
+      "description": "Salon & Beauty",
+      "telephone": "310-487-3663",
+      "url": "https://thewestwoodvillage.com/business-details/?ID=356",
+      "type": "health_and_beauty",
+      "status": "Virtual consultations and online shipping of products availables",
+      "open": true
+    },
+    {
+      "address": {
+        "addressLocality": "Los Angeles",
+        "addressRegion": "CA",
+        "streetAddress": "1051 Glendon Ave #117",
+        "postalCode": "90024"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "34.061664",
+        "longitude": "-118.444328"
+      },
+      "name": "Hair By Annalisa",
+      "description": "Salon & Beauty",
+      "telephone": "310-433-5703",
+      "url": "https://thewestwoodvillage.com/business-details/?ID=363",
+      "type": "health_and_beauty",
+      "status": "*",
+      "open": true
+    },
+    {
+      "address": {
+        "addressLocality": "Los Angeles",
+        "addressRegion": "CA",
+        "streetAddress": "1080 Glendon Ave.",
+        "postalCode": "90024"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "34.060967",
+        "longitude": "-118.444314"
+      },
+      "name": "Henri Salon & Spa De Beaute",
+      "description": "Salon & Beauty",
+      "telephone": "310-208-7531",
+      "url": "https://thewestwoodvillage.com/business-details/?ID=368",
+      "type": "health_and_beauty",
+      "status": "*",
+      "open": true
+    },
+    {
+      "address": {
+        "addressLocality": "Los Angeles",
+        "addressRegion": "CA",
+        "streetAddress": "1045 Westwood Blvd.",
+        "postalCode": "90024"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "34.061851",
+        "longitude": "-118.445599"
+      },
+      "name": "InStyle Nails & Spa",
+      "description": "Salon & Beauty",
+      "telephone": "310-209-6288",
+      "url": "https://thewestwoodvillage.com/business-details/?ID=375",
+      "type": "health_and_beauty",
+      "status": "*",
+      "open": true
+    },
+    {
+      "address": {
+        "addressLocality": "LosAngeles",
+        "addressRegion": "CA",
+        "streetAddress": "1051 Glendon Ave., Suite 114",
+        "postalCode": "90024"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "34.061664",
+        "longitude": "-118.444328"
+      },
+      "name": "Kut & Style by Mia",
+      "description": "Salon & Beauty",
+      "telephone": "310-980-4507",
+      "url": "https://thewestwoodvillage.com/business-details/?ID=390",
+      "type": "health_and_beauty",
+      "status": "Closed until at least April 2",
+      "open": false
+    },
+    {
+      "address": {
+        "addressLocality": "LosAngeles",
+        "addressRegion": "CA",
+        "streetAddress": "10944 Weyburn Ave.",
+        "postalCode": "90024"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "34.062482",
+        "longitude": "-118.445409"
+      },
+      "name": "La Belle Hair & Skin",
+      "description": "Salon & Beauty",
+      "telephone": "310-208-0081",
+      "url": "https://thewestwoodvillage.com/business-details/?ID=391",
+      "type": "health_and_beauty",
+      "status": "*",
+      "open": true
+    },
+    {
+      "address": {
+        "addressLocality": "Los Angeles",
+        "addressRegion": "CA",
+        "streetAddress": "10889 Weyburn Ave.",
+        "postalCode": "90024"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "34.062654",
+        "longitude": "-118.444833"
+      },
+      "name": "Marina Salon",
+      "description": "Salon & Beauty",
+      "telephone": "310-989-9135",
+      "url": "https://thewestwoodvillage.com/business-details/?ID=295",
+      "type": "health_and_beauty",
+      "status": "*",
+      "open": true
+    },
+    {
+      "address": {
+        "addressLocality": "Los Angeles",
+        "addressRegion": "CA",
+        "streetAddress": "933 Westwood Blvd.",
+        "postalCode": "90024"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "34.063313",
+        "longitude": "-118.445551"
+      },
+      "name": "Massage Envy",
+      "description": "Salon & Beauty",
+      "telephone": "323-505-9920",
+      "url": "https://thewestwoodvillage.com/business-details/?ID=405",
+      "type": "health_and_beauty",
+      "status": "Temporarily closed",
+      "open": false
+    },
+    {
+      "address": {
+        "addressLocality": "Los Angeles",
+        "addressRegion": "CA",
+        "streetAddress": "1061 Gayley Ave.",
+        "postalCode": "90024"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "34.060872",
+        "longitude": "-118.447222"
+      },
+      "name": "Oakley’s Barber Shop",
+      "description": "Salon & Beauty",
+      "telephone": "310-208-6559",
+      "url": "https://thewestwoodvillage.com/business-details/?ID=421",
+      "type": "health_and_beauty",
+      "status": "*",
+      "open": true
+    },
+    {
+      "address": {
+        "addressLocality": "Los Angeles",
+        "addressRegion": "CA",
+        "streetAddress": "10911 Kinross Ave",
+        "postalCode": "90024"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "34.06068",
+        "longitude": "-118.445887"
+      },
+      "name": "Patio Nail Spa",
+      "description": "Salon & Beauty",
+      "telephone": "714-589-5340",
+      "url": "https://thewestwoodvillage.com/business-details/?ID=425",
+      "type": "health_and_beauty",
+      "status": "*",
+      "open": true
+    },
+    {
+      "address": {
+        "addressLocality": "Los Angeles",
+        "addressRegion": "CA",
+        "streetAddress": "1051 Glendon Ave",
+        "postalCode": "90024"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "34.061664",
+        "longitude": "-118.444328"
+      },
+      "name": "Phenix Salon Suites",
+      "description": "Salon & Beauty",
+      "telephone": "310-998-7746",
+      "url": "https://thewestwoodvillage.com/business-details/?ID=427",
+      "type": "health_and_beauty",
+      "status": "*",
+      "open": true
+    },
+    {
+      "address": {
+        "addressLocality": "Los Angeles",
+        "addressRegion": "California",
+        "streetAddress": "1065 Broxton Ave.",
+        "postalCode": "90024"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "34.061332",
+        "longitude": "-118.446317"
+      },
+      "name": "Platinum Black Salon",
+      "description": "Salon & Beauty",
+      "telephone": "310-476-4466",
+      "url": "https://thewestwoodvillage.com/business-details/?ID=529",
+      "type": "health_and_beauty",
+      "status": "*",
+      "open": true
+    },
+    {
+      "address": {
+        "addressLocality": "Los Angeles",
+        "addressRegion": "CA",
+        "streetAddress": "1051 Glendon Ave., Suite 109",
+        "postalCode": "90024"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "34.061664",
+        "longitude": "-118.444328"
+      },
+      "name": "Sheveux Salon",
+      "description": "Salon & Beauty",
+      "telephone": "562-472-5797",
+      "url": "https://thewestwoodvillage.com/business-details/?ID=448",
+      "type": "health_and_beauty",
+      "status": "*",
+      "open": true
+    },
+    {
+      "address": {
+        "addressLocality": "Los Angeles",
+        "addressRegion": "CA",
+        "streetAddress": "1051 Westwood Blvd",
+        "postalCode": "90024"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "34.061619",
+        "longitude": "-118.445579"
+      },
+      "name": "Sigal Gevojanyan Salon",
+      "description": "Salon & Beauty",
+      "telephone": "310-208-0101",
+      "url": "https://thewestwoodvillage.com/business-details/?ID=449",
+      "type": "health_and_beauty",
+      "status": "*",
+      "open": true
+    },
+    {
+      "address": {
+        "addressLocality": "Los Angeles",
+        "addressRegion": "CA",
+        "streetAddress": "943 Westwood Blvd.",
+        "postalCode": "90024"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "34.063218",
+        "longitude": "-118.44558"
+      },
+      "name": "Sontre Nail Spa Skin Care",
+      "description": "Salon & Beauty",
+      "telephone": "310-208-5000",
+      "url": "https://thewestwoodvillage.com/business-details/?ID=455",
+      "type": "health_and_beauty",
+      "status": "*",
+      "open": true
+    },
+    {
+      "address": {
+        "addressLocality": "Los Angeles",
+        "addressRegion": "CA",
+        "streetAddress": "1051 Glendon Ave., Suite 111",
+        "postalCode": "90024"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "34.061664",
+        "longitude": "-118.444328"
+      },
+      "name": "Studio One Eleven",
+      "description": "Salon & Beauty",
+      "telephone": "310-251-6177",
+      "url": "https://thewestwoodvillage.com/business-details/?ID=462",
+      "type": "health_and_beauty",
+      "status": "*",
+      "open": true
+    },
+    {
+      "address": {
+        "addressLocality": "LosAngeles",
+        "addressRegion": "CA",
+        "streetAddress": "1051 Glendon Ave., Suite 122",
+        "postalCode": "90024"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "34.0616642",
+        "longitude": "-118.4443279"
+      },
+      "name": "The Bees Knees Studio",
+      "description": "Salon & Beauty",
+      "telephone": "510-432-1712",
+      "url": "https://thewestwoodvillage.com/business-details/?ID=473",
+      "type": "health_and_beauty",
+      "status": "*",
+      "open": true
+    },
+    {
+      "address": {
+        "addressLocality": "Los Angeles",
+        "addressRegion": "CA",
+        "streetAddress": "1051 Glendon Avenue, Suites 103 & 112",
+        "postalCode": "90024"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "34.061664",
+        "longitude": "-118.444328"
+      },
+      "name": "The Sweetest Lash",
+      "description": "Salon & Beauty",
+      "telephone": "424-209-2268",
+      "url": "https://thewestwoodvillage.com/business-details/?ID=482",
+      "type": "health_and_beauty",
+      "status": "*",
+      "open": true
+    },
+    {
+      "address": {
+        "addressLocality": "Los Angeles",
+        "addressRegion": "CA",
+        "streetAddress": "1132 Westwood Blvd.",
+        "postalCode": "90024"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "34.06042",
+        "longitude": "-118.445128"
+      },
+      "name": "The Tanning Boutique",
+      "description": "Salon & Beauty",
+      "telephone": "310-208-6161",
+      "url": "https://thewestwoodvillage.com/business-details/?ID=483",
+      "type": "health_and_beauty",
+      "status": "Temporarily closed, memberships frozen",
+      "open": true
+    }, 
+    {
+      "address": {
+        "addressLocality": "Los Angeles",
+        "addressRegion": "CA",
+        "streetAddress": "1031 Glendon Ave.",
+        "postalCode": "90024"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "34.062021",
+        "longitude": "-118.44424"
+      },
+      "name": "CorePower Yoga",
+      "description": "Fitness",
+      "telephone": "213-810-3153",
+      "url": "https://thewestwoodvillage.com/business-details/?ID=314",
+      "type": "health_and_beauty",
+      "status": "All monthly memberships frozen, closed until further notice",
+      "open": false
+    },
+    {
+      "address": {
+        "addressLocality": "Los Angeles",
+        "addressRegion": "CA",
+        "streetAddress": "10960 Wilshire Blvd.",
+        "postalCode": "90024"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "34.058023",
+        "longitude": "-118.445995"
+      },
+      "name": "Equinox",
+      "description": "Fitness",
+      "telephone": "310-954-8950",
+      "url": "https://thewestwoodvillage.com/business-details/?ID=331",
+      "type": "health_and_beauty",
+      "status": "Temporarily closed, memberships frozen",
+      "open": false
+    },
+    {
+      "address": {
+        "addressLocality": "Los Angeles",
+        "addressRegion": "CA",
+        "streetAddress": "10921 Wilshire Blvd.",
+        "postalCode": "90024"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "34.058924",
+        "longitude": "-118.444889"
+      },
+      "name": "LA Fitness",
+      "description": "Fitness",
+      "telephone": "310-209-5002",
+      "url": "https://thewestwoodvillage.com/business-details/?ID=392",
+      "type": "health_and_beauty",
+      "status": "Temporarily closed",
+      "open": false
+    },
+    {
+      "address": {
+        "addressLocality": "Los Angeles",
+        "addressRegion": "CA",
+        "streetAddress": "10956 1/2 Weyburn Ave.",
+        "postalCode": "90024"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "34.062417",
+        "longitude": "-118.447036"
+      },
+      "name": "The Yoga Court",
+      "description": "Fitness",
+      "telephone": "310-824-3100",
+      "url": "https://thewestwoodvillage.com/business-details/?ID=487",
+      "type": "health_and_beauty",
+      "status": "*",
+      "open": true
+    }
+  ]

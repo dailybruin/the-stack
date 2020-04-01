@@ -1,0 +1,162 @@
+[
+    {
+        "address": {
+          "addressLocality": "Los Angeles",
+          "addressRegion": "CA",
+          "streetAddress": "1001 Tiverton Ave., #4125",
+          "postalCode": "90024"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "34.062105",
+          "longitude": "-118.442918"
+        },
+        "name": "Bedford Housing",
+        "description": "Educational, Lodging",
+        "telephone": "800-770-1752",
+        "url": "https://thewestwoodvillage.com/business-details/?ID=281",
+        "type": "services",
+        "status": "*",
+        "open": true
+      },
+      {
+        "address": {
+          "addressLocality": "Los Angeles",
+          "addressRegion": "CA",
+          "streetAddress": "927 Hilgard Ave.",
+          "postalCode": "90024"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "34.063193",
+          "longitude": "-118.441732"
+        },
+        "name": "Hilgard House",
+        "description": "Lodging",
+        "telephone": "310-208-3945",
+        "url": "https://thewestwoodvillage.com/business-details/?ID=369",
+        "type": "services",
+        "status": "*",
+        "open": true
+      },
+      {
+        "address": {
+          "addressLocality": "Los Angeles",
+          "addressRegion": "CA",
+          "streetAddress": "1044 Tiverton Ave.",
+          "postalCode": "90024"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "34.060818",
+          "longitude": "-118.442756"
+        },
+        "name": "Palihotel Westwood Village",
+        "description": "Lodging",
+        "telephone": "310-340-1234",
+        "url": "https://thewestwoodvillage.com/business-details/?ID=537",
+        "type": "services",
+        "status": "*",
+        "open": true
+      },
+      {
+        "address": {
+          "addressLocality": "Los Angeles",
+          "addressRegion": "CA",
+          "streetAddress": "10850 Lindbrook Dr",
+          "postalCode": "90024"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "34.060048",
+          "longitude": "-118.442461"
+        },
+        "name": "Plaza la Reina Hotel & Residence",
+        "description": "Lodging",
+        "telephone": "310-986-6888",
+        "url": "https://thewestwoodvillage.com/business-details/?ID=430",
+        "type": "services",
+        "status": "open",
+        "open": true
+      },
+      {
+        "address": {
+          "addressLocality": "Los Angeles",
+          "addressRegion": "CA",
+          "streetAddress": "10940 Wilshire Blvd #600",
+          "postalCode": "90024"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "34.057868",
+          "longitude": "-118.444964"
+        },
+        "name": "Solutions in LA Housing ",
+        "description": "Lodging",
+        "telephone": "310-391-5030",
+        "url": "https://thewestwoodvillage.com/business-details/?ID=454",
+        "type": "services",
+        "status": "*",
+        "open": true
+      },
+      {
+        "address": {
+          "addressLocality": "Los Angeles",
+          "addressRegion": "CA",
+          "streetAddress": "425 Westwood Plaza",
+          "postalCode": "90095"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "34.069191",
+          "longitude": "-118.445714"
+        },
+        "name": "UCLA Meyer & Renee Luskin Conference Center",
+        "description": "Lodging",
+        "telephone": "310-206-8585",
+        "url": "https://thewestwoodvillage.com/business-details/?ID=497",
+        "type": "services",
+        "status": "Open and accepting reservations",
+        "open": true
+      },
+      {
+        "address": {
+          "addressLocality": "Los Angeles",
+          "addressRegion": "CA",
+          "streetAddress": "900 Tiverton Ave.",
+          "postalCode": "90095"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "34.066988",
+          "longitude": "-118.441404"
+        },
+        "name": "UCLA Tiverton House",
+        "description": "Lodging",
+        "telephone": "310-794-0151",
+        "url": "https://thewestwoodvillage.com/business-details/?ID=498",
+        "type": "services",
+        "status": "Visitor restrictions in place",
+        "open": true
+      },
+      {
+        "address": {
+          "addressLocality": "Los Angeles",
+          "addressRegion": "CA",
+          "streetAddress": "930 Hilgard Ave.",
+          "postalCode": "90024"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "34.063287",
+          "longitude": "-118.441237"
+        },
+        "name": "W Hotel Los Angeles – West Beverly Hills",
+        "description": "Lodging",
+        "telephone": "310-208-8765",
+        "url": "https://thewestwoodvillage.com/business-details/?ID=510",
+        "type": "services",
+        "status": "*",
+        "open": true
+      }
+]
