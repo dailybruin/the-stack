@@ -19,8 +19,9 @@ for (var i = 0; i < 87; i++) {
     var lat = parseFloat(dining_json[i]['geo']['latitude']);
     var lon = parseFloat(dining_json[i]['geo']['longitude']);
     var latlon = L.latLng(lat,lon);
-    console.log(latlon);
-    var popup = str1.concat(dining_json[i].status);
+    //console.log(latlon);
+    var name = dining_json[i].name;
+    var popup = name.concat("\n", str1, dining_json[i].status);
     dining_list.push((L.marker(L.latLng(lat, lon))).bindPopup(popup));
 }
 var dining_layer = L.layerGroup(dining_list);
