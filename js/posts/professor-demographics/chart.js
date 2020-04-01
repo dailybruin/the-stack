@@ -1,12 +1,10 @@
-ethnicity = ["americanIndian", "asian", "black", "latino", "twoPlus", "unknown", "white"]
+ethnicity = ["americanIndian", "asian", "black", "latino", "white"]
 years = ["2010", "2011", "2012", "2013", "2014", "2015", "2016", "2017", "2018"]
 color_codes = {
   "americanIndian": ["#006147", "#01825f", "#009e73", "#8fd4c1", "#c2ebe0"],
   "asian": ["#542500", "#9a4400", "#d55e00", "#ed7618", "#f49042"], 
   "black": ["#b6ad2c", "#ccc12f", "#f0e442", "#f2e972", "#ede896"], 
   "latino": ["#002b42", "#005280", "#0072b2", "#257daf", "#5099c3"],
-  "twoPlus": ["#3c476b", "#4b5987", "#6073b1", "#7a8ecc", "#95a7e6"], 
-  "unknown": ["#9e9258", "#baad68", "#ddcc77", "#ebdb8d", "#f1e4a4"],
   "white": ["#8a5f00", "#c18500", "#e69f00", "#e7bc5e", "#f2d082"],
 }
 
@@ -81,7 +79,7 @@ function update_chart(year, ethnicity) {
   proportionsChart.update();
 }
 
-$("#ethnicity").change(function() {
+/*$("#ethnicity").change(function() {
   var cur_ethnicity = $(this);
   var year_prefix = "201";
   if (cur_ethnicity.val() === "twoPlus") {
@@ -119,9 +117,7 @@ $("#ethnicity").change(function() {
      }];
 
      proportionsChart.update();
-  }
-});
-
+  }*/
 let x = window.matchMedia("(max-width: 480px)");
 make_responsive(x);
 

@@ -35,13 +35,13 @@ var black = {
       "1": 0.8571428571,
       "2": 0.2633928571,
       "3": 0.1704545455,
-      "4": 0.150354609929078
+      "4": 0.1503546099
     },
     "deptNames": {
       "0": "Military Science",
       "1": "African American Studies",
       "2": "Ethnomusicology",
-      "3": "Gender Studies"
+      "3": "Gender Studies",
       "4": "Education"
     }
   }, "2013" : {
@@ -71,7 +71,7 @@ var black = {
       "0": "African American Studies",
       "1": "Ethnomusicology",
       "2": "Gender Studies",
-      "3": "Education"
+      "3": "Education",
       "4": "Environmental Health Sciences"
     }
   }, "2015" : {

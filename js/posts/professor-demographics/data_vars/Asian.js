@@ -4,8 +4,8 @@ var asian = {
       "0": 1,
       "1": 1,
       "2": 0.6194690265,
-      "3": 0.56801909315,
-      "4": 0.43283582089,
+      "3": 0.5680190931,
+      "4": 0.4328358208
     },
     "deptNames": {
       "0": "Asian American Studies",
@@ -20,13 +20,13 @@ var asian = {
       "1": 1,
       "2": 0.5815602837,
       "3": 0.5737704918,
-      "4": 0.4233128834,
+      "4": 0.4233128834
     },
     "deptNames": {
       "0": "Asian American Studies",
       "1": "Public Health",
       "2": "Asian Languages and Cultures",
-      "3": "Materials Science Engineering"
+      "3": "Materials Science Engineering",
       "4": "Electrical and Computer Engineering"
     }
 }, "2012": {
@@ -34,15 +34,15 @@ var asian = {
       "0": 1,
       "1": 1,
       "2": 0.619047619,
-      "3": 0.5673758865
+      "3": 0.567375886,
       "4": 0.5
     },
     "deptNames": {
       "0": "Asian American Studies",
       "1": "Life Sciences Core Crclm Prgm",
       "2": "Asian Languages and Cultures",
-      "3": "Materials Science Engineering"
-      "4": "Occupational Environmental Health Center",
+      "3": "Materials Science Engineering",
+      "4": "Occupational Environmental Health Center"
     }
 }, "2013": {
     "proportions": {
@@ -55,7 +55,7 @@ var asian = {
     "deptNames": {
       "0": "Asian American Studies",
       "1": "Asian Languages and Cultures",
-      "2": "Materials Science Engineering"
+      "2": "Materials Science Engineering",
       "3": "Occupational Environmental Health Center",
       "4": "Bioengineering"
     }
@@ -65,12 +65,12 @@ var asian = {
       "1": 0.75,
       "2": 0.5849514563,
       "3": 0.4887218045,
-      "4": 0.4568965517,
+      "4": 0.4568965517
     },
     "deptNames": {
       "0": "Asian American Studies",
       "1": "Life Sciences Core Crclm Prgm",
-      "2": "Asian Languages and Cultures"
+      "2": "Asian Languages and Cultures",
       "3": "Materials Science Engineering",
       "4": "Mechanical Aerospace Engineering"
     }
@@ -100,7 +100,7 @@ var asian = {
     "deptNames": {
       "0": "Asian American Studies",
       "1": "Life Sciences Core Crclm Prgm",
-      "2": "Asian Languages and Cultures"
+      "2": "Asian Languages and Cultures",
       "3": "Occupational Environmental Health Center",
       "4": "Materials Science Engineering"
     }
@@ -110,7 +110,7 @@ var asian = {
       "1": 0.8,
       "2": 0.595454545454545,
       "3": 0.463619402985075,
-      "4": 0.46195652173913,
+      "4": 0.46195652173913
     },
     "deptNames": {
       "0": "Asian American Studies",
@@ -131,7 +131,7 @@ var asian = {
       "0": "Asian American Studies",
       "1": "Occupational Environmental Health Center",
       "2": "Asian Languages and Cultures",
-      "3": "Materials Science Engineering"
+      "3": "Materials Science Engineering",
       "4": "Dentistry"
     }
   }

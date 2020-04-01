@@ -11,7 +11,7 @@ var latino = {
       "0": "Minor in Biomedical Research",
       "1": "Chicana/o Studies ",
       "2": "Spanish Portuguese",
-      "3": "American Indian Studies"
+      "3": "American Indian Studies",
       "4": "African American Studies"
     }
   }, "2011" : {

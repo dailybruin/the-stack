@@ -145,13 +145,10 @@ Ac turpis egestas maecenas pharetra convallis. Fringilla ut morbi tincidunt augu
     <option value='asian'>Asian</option>
     <option value='black'>Black</option>
     <option value='latino'>Latino</option>
-    <option value='twoPlus'>Two or More Ethnicities</option>
-    <option value='unknown'>Unknown</option>
     <option value='white'>White</option>
     </select>
     </div>
 </div>
-
 
 <p>
 Imperdiet dui accumsan sit amet nulla facilisi morbi. Viverra accumsan in nisl nisi scelerisque eu ultrices vitae auctor. Semper risus in hendrerit gravida. Sed enim ut sem viverra aliquet eget. Pellentesque dignissim enim sit amet venenatis urna cursus. Pellentesque dignissim enim sit amet venenatis urna. Id diam vel quam elementum pulvinar etiam non quam. Fermentum leo vel orci porta non pulvinar neque laoreet suspendisse. Tristique senectus et netus et. Euismod nisi porta lorem mollis aliquam ut porttitor leo a.
