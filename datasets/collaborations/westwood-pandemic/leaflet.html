@@ -13,7 +13,20 @@
         <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 
         <style>
-            #mapid { height: 500px; width: 60vw;}
+            #mapid { 
+                height: 80vh; 
+                width: 60vw;
+            }
+
+            @media only screen 
+            and (min-device-width: 768px) 
+            and (max-device-width: 1023px) 
+            and (-webkit-min-device-pixel-ratio: 1) {
+                #mapid {
+                    height: 50vh;
+                    width: 100vw;
+                }
+            }
 
             .labels {
                 font-size: 1.2em;
@@ -29,11 +42,7 @@
 
     <body>
         <div id="mapid"></div>
-	<script type="text/javascript" src="dining.js"></script>
-        <script type="text/javascript" src="ae.js"></script>
-        <script type="text/javascript" src="shopping.js"></script>
-        <script type="text/javascript" src="health_and_beauty.js"></script>
-        <script type="text/javascript" src="services.js"></script>
+        <script type="text/javascript" src="data_json.js"></script>
         <script src="leafletscripts.js"></script>
     </body>
 

@@ -399,7 +399,7 @@
       "status": "updated hours: Sunday-Thursday 12PM-11PM, Friday-Saturday 12PM-12PM",
       "open": true
     },
-    /**/{
+    {
       "address": {
         "addressLocality": "Los Angeles",
         "addressRegion": "CA",
