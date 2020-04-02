@@ -17,7 +17,8 @@
       "url": "https://thewestwoodvillage.com/business-details/?ID=264",
       "type": "shopping",
       "status": "Open 24/7",
-      "open": true
+      "open": true,
+      "link": ""
     },
     {
       "address": {
@@ -37,7 +38,8 @@
       "url": "https://thewestwoodvillage.com/business-details/?ID=288",
       "type": "shopping",
       "status": "Temporarily Closed",
-      "open": false
+      "open": false,
+      "link": ""
     },
     {
       "address": {
@@ -57,7 +59,8 @@
       "url": "https://thewestwoodvillage.com/business-details/?ID=308",
       "type": "shopping",
       "status": "M-F 7AM- PM, 8AM - 9M on weekends. First hour of shopping on Tuesdays and Wednesdays limited to people over 65 or with underlying health conditions and pregnant women. In-person product returns suspended with return window extended",
-      "open": true
+      "open": true,
+      "link": ""
     },
     {
       "address": {
@@ -77,7 +80,8 @@
       "url": "https://thewestwoodvillage.com/business-details/?ID=344",
       "type": "shopping",
       "status": "",
-      "open": false
+      "open": false,
+      "link": ""
     },
     {
       "address": {
@@ -97,7 +101,8 @@
       "url": "https://thewestwoodvillage.com/business-details/?ID=346",
       "type": "shopping",
       "status": "Temporarily closed",
-      "open": false
+      "open": false,
+      "link": ""
     },
     {
       "address": {
@@ -111,13 +116,14 @@
         "latitude": "34.061976",
         "longitude": "-118.445592"
       },
-      "name": "Francesca’s",
+      "name": "Francescaâ€™s",
       "description": "Clothing & Footwear",
       "telephone": "310-208-0409",
       "url": "https://thewestwoodvillage.com/business-details/?ID=348",
       "type": "shopping",
       "status": "Temporarily closed",
-      "open": false
+      "open": false,
+      "link": ""
     },
     {
       "address": {
@@ -137,7 +143,8 @@
       "url": "https://thewestwoodvillage.com/business-details/?ID=403",
       "type": "shopping",
       "status": "Temporarily closed",
-      "open": false
+      "open": false,
+      "link": ""
     },
     {
       "address": {
@@ -157,7 +164,8 @@
       "url": "https://thewestwoodvillage.com/business-details/?ID=408",
       "type": "shopping",
       "status": "Store temporarily closed - offering online appointments and online shopping",
-      "open": true
+      "open": true,
+      "link": ""
     },
     {
       "address": {
@@ -177,7 +185,8 @@
       "url": "https://thewestwoodvillage.com/business-details/?ID=413",
       "type": "shopping",
       "status": "",
-      "open": false
+      "open": false,
+      "link": ""
     },
     {
       "address": {
@@ -197,7 +206,8 @@
       "url": "https://thewestwoodvillage.com/business-details/?ID=423",
       "type": "shopping",
       "status": "Temporarily closed, offering online orders",
-      "open": true
+      "open": true,
+      "link": ""
     },
     {
       "address": {
@@ -217,7 +227,8 @@
       "url": "https://thewestwoodvillage.com/business-details/?ID=437",
       "type": "shopping",
       "status": "Open from 6AM - 11PM, 6 AM - 7:30 AM restricted to seniors 60 and above and other high-risk as defined by the CDC ",
-      "open": true
+      "open": true,
+      "link": ""
     },
     {
       "address": {
@@ -237,7 +248,8 @@
       "url": "https://thewestwoodvillage.com/business-details/?ID=439",
       "type": "shopping",
       "status": "open for seniors and immuno-compromised people from 9-10 am ",
-      "open": true
+      "open": true,
+      "link": ""
     },
     {
       "address": {
@@ -257,7 +269,8 @@
       "url": "https://thewestwoodvillage.com/business-details/?ID=444",
       "type": "shopping",
       "status": "Temporarily closed",
-      "open": false
+      "open": false,
+      "link": ""
     },
     {
       "address": {
@@ -277,7 +290,8 @@
       "url": "https://thewestwoodvillage.com/business-details/?ID=445",
       "type": "shopping",
       "status": "Open for quick pickup",
-      "open": true
+      "open": true,
+      "link": ""
     },
     {
       "address": {
@@ -297,7 +311,8 @@
       "url": "https://thewestwoodvillage.com/business-details/?ID=453",
       "type": "shopping",
       "status": "",
-      "open": true
+      "open": true,
+      "link": "Called store"
     },
     {
       "address": {
@@ -317,7 +332,8 @@
       "url": "https://thewestwoodvillage.com/business-details/?ID=457",
       "type": "shopping",
       "status": "",
-      "open": false
+      "open": false,
+      "link": "Called store"
     },
     {
       "address": {
@@ -337,7 +353,8 @@
       "url": "https://thewestwoodvillage.com/business-details/?ID=464",
       "type": "shopping",
       "status": "Temporarily closed until atleast April 2",
-      "open": true
+      "open": true,
+      "link": "https://www.surlatable.com/a-message-to-our-customers/"
     },
     {
       "address": {
@@ -356,8 +373,9 @@
       "telephone": "310-209-1888",
       "url": "https://thewestwoodvillage.com/business-details/?ID=467",
       "type": "shopping",
-      "status": "offering virtual services and appointments for half the locations",
-      "open": false
+      "status": "Offering some virtual services",
+      "open": false,
+      "link": "https://www.t-mobile.com/store-locator/ca/los-angeles/westwood-blvd-lindbrook"
     },
     {
       "address": {
@@ -377,7 +395,8 @@
       "url": "https://thewestwoodvillage.com/business-details/?ID=476",
       "type": "shopping",
       "status": "",
-      "open": true
+      "open": true,
+      "link": "Called store"
     },
     {
       "address": {
@@ -397,7 +416,8 @@
       "url": "https://thewestwoodvillage.com/business-details/?ID=492",
       "type": "shopping",
       "status": "open 10AM - 7PM (Mon-Sat); 9 - 10AM Open to senior customers (age 60 and over) and customers with disabilities who may need extra assistance",
-      "open": true
+      "open": true,
+      "link": "https://locations.traderjoes.com/ca/los-angeles/234/"
     },
     {
       "address": {
@@ -417,7 +437,8 @@
       "url": "https://thewestwoodvillage.com/business-details/?ID=496",
       "type": "shopping",
       "status": "Store locations are closed, online store is open",
-      "open": true
+      "open": true,
+      "link": "https://shop.uclastore.com/t-asucla_hours.aspx"
     },
     {
       "address": {
@@ -437,7 +458,8 @@
       "url": "https://thewestwoodvillage.com/business-details/?ID=499",
       "type": "shopping",
       "status": "Temporarily closed, online store is open",
-      "open": true
+      "open": true,
+      "link": "https://www.ulta.com/stores/westwood-ma-750"
     },
     {
       "address": {
@@ -457,7 +479,8 @@
       "url": "https://thewestwoodvillage.com/business-details/?ID=502",
       "type": "shopping",
       "status": "Temporarily closed, online store is open",
-      "open": true
+      "open": true,
+      "link": "https://www.urbanoutfitters.com/covid19"
     },
     {
       "address": {
@@ -471,13 +494,14 @@
         "latitude": "34.061731",
         "longitude": "-118.445221"
       },
-      "name": "Victoria’s Secret",
+      "name": "Victoriaâ€™s Secret",
       "description": "Clothing & Footwear",
       "telephone": "310-209-0882",
       "url": "https://thewestwoodvillage.com/business-details/?ID=507",
       "type": "shopping",
       "status": "Temporarily closed, online store is open with expected delivery delays",
-      "open": true
+      "open": true,
+      "link": "https://www.victoriassecret.com/?cm_mmc=SEM-_-GOOGLE-_-VSD_VS_General_Brand_BMM-_-VS_General_Brand_BMM&&gclid=CjwKCAjw95D0BRBFEiwAcO1KDDDJTuvKJ3XJQ9Bp1h9tu0M_vC4DlegAME6e919fjt2QSGAGStJm0xoCSP0QAvD_BwE&gclsrc=aw.ds"
     },
     {
       "address": {
@@ -497,7 +521,8 @@
       "url": "https://thewestwoodvillage.com/business-details/?ID=516",
       "type": "shopping",
       "status": "Temporarily closed",
-      "open": false
+      "open": false,
+      "link": "https://www.instagram.com/p/B9-XtuVAQER/"
     },
     {
       "address": {
@@ -516,7 +541,8 @@
       "telephone": "310-824-0858",
       "url": "https://thewestwoodvillage.com/business-details/?ID=524",
       "type": "shopping",
-      "status": "Guests 60+ can start to shop at 7:00 am. Open: 8:00 am – 9:00 pm",
-      "open": true
+      "status": "Guests 60+ can start to shop at 7:00 am. Open: 8:00 am â€“ 9:00 pm",
+      "open": true,
+      "link": "https://www.wholefoodsmarket.com/stores/westwood"
     }
   ]
