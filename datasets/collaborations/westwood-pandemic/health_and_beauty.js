@@ -83,26 +83,6 @@ let healthbeauty_json = [
       "address": {
         "addressLocality": "Los Angeles",
         "addressRegion": "CA",
-        "streetAddress": "1051 Glendon Ave., # 124",
-        "postalCode": "90024"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": "34.061664",
-        "longitude": "-118.444328"
-      },
-      "name": "Black Stag Barbershop",
-      "description": "Salon & Beauty",
-      "telephone": "323-708-2800",
-      "url": "https://thewestwoodvillage.com/business-details/?ID=285",
-      "type": "health_and_beauty",
-      "status": "Open for one-on-one appointments only",
-      "open": true
-    },
-    {
-      "address": {
-        "addressLocality": "Los Angeles",
-        "addressRegion": "CA",
         "streetAddress": "1001 Gayley Ave.",
         "postalCode": "90024"
       },
@@ -118,26 +98,6 @@ let healthbeauty_json = [
       "type": "health_and_beauty",
       "status": "Closed until April 19",
       "open": false
-    },
-    {
-      "address": {
-        "addressLocality": "Los Angeles",
-        "addressRegion": "CA",
-        "streetAddress": "10861 Weyburn Ave.",
-        "postalCode": "90024"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": "34.063105",
-        "longitude": "-118.443621"
-      },
-      "name": "City Target Westwood",
-      "description": "Clothing & Footwear, Grocery & Homegoods, Flowers & Gifts, Pharmacy & Drug",
-      "telephone": "310-893-2360",
-      "url": "https://thewestwoodvillage.com/business-details/?ID=308",
-      "type": "health_and_beauty",
-      "status": "",
-      "open": true
     },
     {
       "address": {
@@ -236,7 +196,7 @@ let healthbeauty_json = [
       "telephone": "310-208-1384",
       "url": "https://thewestwoodvillage.com/business-details/?ID=334",
       "type": "health_and_beauty",
-      "status": "Open for emergency vists M-F 9am - 1pm",
+      "status": "Open for emergency visits M-F 9am to 1pm",
       "open": true
     },
     {
@@ -297,7 +257,7 @@ let healthbeauty_json = [
       "url": "https://thewestwoodvillage.com/business-details/?ID=356",
       "type": "health_and_beauty",
       "status": "Virtual consultations and online shipping of products availables",
-      "open": true
+      "open": false
     },
     {
       "address": {
@@ -317,46 +277,6 @@ let healthbeauty_json = [
       "url": "https://thewestwoodvillage.com/business-details/?ID=368",
       "type": "health_and_beauty",
       "status": "",
-      "open": false
-    },
-    {
-      "address": {
-        "addressLocality": "Los Angeles",
-        "addressRegion": "CA",
-        "streetAddress": "1045 Westwood Blvd.",
-        "postalCode": "90024"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": "34.061851",
-        "longitude": "-118.445599"
-      },
-      "name": "InStyle Nails & Spa",
-      "description": "Salon & Beauty",
-      "telephone": "310-209-6288",
-      "url": "https://thewestwoodvillage.com/business-details/?ID=375",
-      "type": "health_and_beauty",
-      "status": "",
-      "open": false
-    },
-    {
-      "address": {
-        "addressLocality": "LosAngeles",
-        "addressRegion": "CA",
-        "streetAddress": "1051 Glendon Ave., Suite 114",
-        "postalCode": "90024"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": "34.061664",
-        "longitude": "-118.444328"
-      },
-      "name": "Kut & Style by Mia",
-      "description": "Salon & Beauty",
-      "telephone": "310-980-4507",
-      "url": "https://thewestwoodvillage.com/business-details/?ID=390",
-      "type": "health_and_beauty",
-      "status": "Closed until at least April 2",
       "open": false
     },
     {
@@ -637,7 +557,7 @@ let healthbeauty_json = [
       "url": "https://thewestwoodvillage.com/business-details/?ID=483",
       "type": "health_and_beauty",
       "status": "Temporarily closed, memberships frozen",
-      "open": true
+      "open": false
     },
     {
       "address": {
@@ -723,26 +643,6 @@ let healthbeauty_json = [
       "address": {
         "addressLocality": "Los Angeles",
         "addressRegion": "CA",
-        "streetAddress": "10921 Wilshire Blvd.",
-        "postalCode": "90024"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": "34.058924",
-        "longitude": "-118.444889"
-      },
-      "name": "Westwood Center Pharmacy",
-      "description": "Pharmacy & Drug",
-      "telephone": "310-208-6666",
-      "url": "https://thewestwoodvillage.com/business-details/?ID=514",
-      "type": "health_and_beauty",
-      "status": "",
-      "open": true
-    },
-    {
-      "address": {
-        "addressLocality": "Los Angeles",
-        "addressRegion": "CA",
         "streetAddress": "1033 Gayley Ave Ste. 106",
         "postalCode": "90024"
       },
@@ -800,4 +700,5 @@ let healthbeauty_json = [
       "open": true
     }
   ]
+
 
