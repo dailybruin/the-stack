@@ -9,7 +9,9 @@ featured_image:
     url:
 og_image: 
 stylesheets:
-scripts:
+scripts: 
+    - https://cdnjs.cloudflare.com/ajax/libs/d3/3.4.0/d3.js
+    - /js/posts/covid-model/model.js
 ---
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.4.0/d3.js"></script>
