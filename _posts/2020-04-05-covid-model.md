@@ -14,5 +14,4 @@ scripts:
     - /js/posts/covid-model/model.js
 ---
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.4.0/d3.js"></script>
-<script src="/js/posts/covid-model/model.js"></script> 
+<div id="graph"></div>

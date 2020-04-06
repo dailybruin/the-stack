@@ -75,7 +75,7 @@ for (let i = 0; i < num_transmissions; i++) {
 
 let json = createJSON();
 
-var svg = d3.select("body").append("svg")
+var svg = d3.select("#graph").append("svg")
   .attr("width", width)
   .attr("height", height);
 
