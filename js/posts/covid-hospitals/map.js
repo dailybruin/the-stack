@@ -1,4 +1,5 @@
-var map = L.map('map').setView([34, -118], 9);
+var map = L.map('map').setView([34.05, -118.25], 9);
+
 
 
 L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/256/{z}/{x}/{y}?access_token={accessToken}', {
@@ -9,4 +10,6 @@ L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/256/{z}/{x}/{y}?access_
 }).addTo(map);
 
 
-omnivore.kml('/datasets/covid-hopsitals/la_county_boundary.kml').addTo(map);
+var geojsonLayer = new L.GeoJSON.AJAX("/datasets/covid-hopsitals/neighborhoods.geojson");
+console.log(geojsonLayer);
+geojsonLayer.addTo(map);
