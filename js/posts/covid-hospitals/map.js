@@ -76,3 +76,12 @@ info.update = function (props) {
 };
 
 info.addTo(map);
+
+// run python script
+// $.ajax({
+//     type: "POST",
+//     url: "~/python/corona-hospitals/map-scraping.py",
+//     // data: { param: text}
+//   }).done(function( o ) {
+//      console.log(o);
+//   });

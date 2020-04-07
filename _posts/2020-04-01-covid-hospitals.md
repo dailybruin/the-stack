@@ -13,6 +13,7 @@ stylesheets:
     - //unpkg.com/leaflet@1.6.0/dist/leaflet.css
     - /css/posts/covid-hospitals/styles.css
 scripts:
+    - //ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js
     - //unpkg.com/leaflet@1.6.0/dist/leaflet.js
     - //unpkg.com/leaflet-geosearch@2.7.0/dist/bundle.min.js
     - //cdnjs.cloudflare.com/ajax/libs/leaflet-ajax/2.1.0/leaflet.ajax.js
