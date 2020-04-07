@@ -1,50 +1,52 @@
-//TODO: Eliminate the manual name translation from everywhere? 
-// Or add color code info to json as well and create a resolve candidate method
-function color_code(candidate, opacity) {
-    if (candidate == 'amy-klobuchar')
-        return 'rgba(52, 170, 224, ' + opacity.toString() + ')'; 
-    else if (candidate == 'bernie-sanders')
-        return 'rgba(28, 98, 178, ' + opacity.toString() + ')'; 
-    else if (candidate == 'donald-trump')
-        return 'rgba(255, 0, 0, ' + opacity.toString() + ')';
-    else if (candidate == 'elizabeth-warren')
-        return 'rgba(26, 149, 203, ' + opacity.toString() + ')';  
-    else if (candidate == 'joe-biden')
-        return "rgba(51, 51, 255, " + opacity.toString() + ")"; 
-    else if (candidate == 'michael-bloomberg')
-        return "rgba(52, 214, 235, " + opacity.toString() + ")";
-    else if (candidate == 'pete-buttigieg')
-        return 'rgba(176, 206, 255, ' + opacity.toString() + ')'; 
+// Chart-value Constants
+let candidates = ["Klobuchar", 
+                  "Sanders", 
+                  "Trump", 
+                  "Warren", 
+                  "Biden",
+                  // "Bloomberg",
+                  // "Gabbard"
+                ];
+let bg_color = [color_codes['amy-klobuchar'], 
+                color_codes['bernie-sanders'],
+                color_codes['donald-trump'], 
+                color_codes['elizabeth-warren'],
+                color_codes['joe-biden'], 
+                // color_codes['michael-bloomberg'],
+                // color_codes['tulsi-gabbard'],
+              ];
+let candidate_initials = ["A.K.", "B.S.", "D.T.", "E.W.", "J.B.",
+                          // "M.B.", "T.G",
+                          ];
+let default_scale = 100; // scale percentiles to 100
+let small_radius = 10; // for mobile
+let big_radius = 25;   // for desktop
 
-    console.log("Candidate not in the list, throw error");
+function display_keywords(keyword, name) {
+    output = "";
+    output = output.concat("<strong>", name.toString(), "</strong> <br>");
+    output = output.concat("<i>keywords used to find ", name.toString(), " related mentions:</i><br>");
+    for (var i = 0; i <= (keyword_list[keyword].length - 2); i++)
+      output = output.concat(keyword_list[keyword][i], ", ");
+    output = output.concat(keyword_list[keyword][keyword_list[keyword].length - 1]);
+    document.getElementById("search-terms").innerHTML = output;
+} 
+
+function display_trait_meaning(trait) {
+    output = "";
+    output = output.concat("<strong>", trait.toString(), "</strong>", ": ", trait_meanings[trait]);
+    document.getElementById("trait_meaning").innerHTML = output;
 }
 
-function trait_data(candidate) {
-    traits = [];
+function make_responsive(x) {
+    if (x.matches) {
+      Chart.defaults.global.responsive = false;
+      Chart.defaults.global.maintainAspectRatio = false;
 
-    if (candidate == 'amy-klobuchar')
-        data = amy_klobuchar_traits;
-    else if (candidate == 'bernie-sanders')
-        data = bernie_sanders_traits;
-    else if (candidate == 'donald-trump')
-        data = donald_trump_traits;
-    else if (candidate == 'elizabeth-warren')
-        data = elizabeth_warren_traits;
-    else if (candidate == 'joe-biden')
-        data = joe_biden_traits;
-    else if (candidate == 'michael-bloomberg')
-        data = michael_bloomberg_traits;
-    else if (candidate == 'pete-buttigieg')
-        data = pete_buttigieg_traits;
-    else
-        console.log("Candidate not in the list, throw error");
+      keywordChart.canvas.parentNode.style.width = "340px";
 
-    traits[0] = data['Openness'] * 100;
-    traits[1] = data['Agreeableness'] * 100;
-    traits[2] = data['Conscientiousness'] * 100;
-    traits[3] = data['Extraversion'] * 100;
-    traits[4] = data['Emotional range'] * 100;
-   
-    return traits;
+      update_bubble_chart('Openness', x);
+      bubble_chart.update();
+    }
 }
 

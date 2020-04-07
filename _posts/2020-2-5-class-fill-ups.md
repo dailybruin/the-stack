@@ -23,6 +23,7 @@ scripts:
   - https://unpkg.com/babel-standalone@6/babel.min.js
   - https://unpkg.com/react-vis/dist/dist.min.js
   - https://unpkg.com/react-bootstrap@next/dist/react-bootstrap.min.js
+  - /js/posts/class-fill-ups/graphs/src/testComponent.jsx
 ---
 
 Kaitlin Kearns, a second-year economics student, said that during the week of enrollment she is tense, stressed and anxious. Though UCLA randomly assigns enrollment passes to students within the same unit bracket, Kearns received one of the latest passes in her class bracket. This proved to be an issue when she attempted to register for Economics 101: “Microeconomics Theory,” a class required for her previous pre-major, business economics. The class offers around 400 spots each quarter, but by the date of Kearns’ first pass, the class was full. That enrollment difficulty forced Kearns to take her major prerequisites in a different order than encouraged by the department. Had Kearns stayed in the business economics pre-major, her hypothetical major application would have been pushed back for up to two quarters.
@@ -88,3 +89,5 @@ Valdivieso said academic counselors know that enrollment is not ideal.
 
 <script type="text/babel" src="/js/posts/class-fill-ups/graphs/src/ChartMD.jsx"></script>
 <script type="text/babel" src="/js/posts/class-fill-ups/graphs/src/insightsMD.jsx"></script>
+
+<script type="text/babel" src="/js/posts/class-fill-ups/graphs/src/testComponent.jsx"></script>

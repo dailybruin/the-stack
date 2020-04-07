@@ -17,98 +17,98 @@ def main() :
     #just for testing
     print("hi")
     
-    joe_nouns = (get_words_by_pos('joe-biden', 'noun'))
+    #joe_nouns = (get_words_by_pos('joe-biden', 'noun'))
     #print(joe_nouns)
    
 
-    joe_verbs = (get_words_by_pos('joe-biden', 'verb'))
+    #joe_verbs = (get_words_by_pos('joe-biden', 'verb'))
     
-    joe_adjectives=(get_words_by_pos('joe-biden', 'adjective'))
+    #joe_adjectives=(get_words_by_pos('joe-biden', 'adjective'))
     
-    joe_adverbs=(get_words_by_pos('joe-biden', 'adverb'))
+    #joe_adverbs=(get_words_by_pos('joe-biden', 'adverb'))
 
     #elizabeth_nouns = open("elizabeth-nouns.txt", "w")
-    elizabeth_nouns=(get_words_by_pos('elizabeth-warren', 'noun'))
+    #elizabeth_nouns=(get_words_by_pos('elizabeth-warren', 'noun'))
     #elizabeth_nouns.close()
     
     #lizabeth_verbs = open("elizabeth-verbs.txt", "w")
-    elizabeth_verbs=(get_words_by_pos('elizabeth-warren', 'verb'))
+    #elizabeth_verbs=(get_words_by_pos('elizabeth-warren', 'verb'))
     #elizabeth_verbs.close()
     
     #elizabeth_adjectives = open("elizabeth-adjs.txt", "w")
-    elizabeth_adjectives=(get_words_by_pos('elizabeth-warren', 'adjective'))
+    #elizabeth_adjectives=(get_words_by_pos('elizabeth-warren', 'adjective'))
     #elizabeth_adjectives.close()
     
     #lizabeth_adverbs = open("elizabeth-adverbs.txt", "w")
-    elizabeth_adverbs=(get_words_by_pos('elizabeth-warren', 'adverb'))
+    #elizabeth_adverbs=(get_words_by_pos('elizabeth-warren', 'adverb'))
     #elizabeth_adverbs.close()
     
     #bernie_nouns = open("bernie-nouns.txt", "w")
-    bernie_nouns=(get_words_by_pos('bernie-sanders', 'noun'))
+    #bernie_nouns=(get_words_by_pos('bernie-sanders', 'noun'))
     #bernie_nouns.close()
     
     #bernie_verbs = open("bernie-verbs.txt", "w")
-    bernie_verbs=(get_words_by_pos('bernie-sanders', 'verb'))
+    #bernie_verbs=(get_words_by_pos('bernie-sanders', 'verb'))
     #bernie_verbs.close()
     
     #bernie_adjectives = open("bernie-adjs.txt", "w")
-    bernie_adjectives=(get_words_by_pos('bernie-sanders', 'adjective'))
+    #bernie_adjectives=(get_words_by_pos('bernie-sanders', 'adjective'))
     #bernie_adjectives.close()
     
     #bernie_adverbs = open("bernie-adverbs.txt", "w")
-    bernie_adverbs=(get_words_by_pos('bernie-sanders', 'adverb'))
+    #bernie_adverbs=(get_words_by_pos('bernie-sanders', 'adverb'))
     #bernie_adverbs.close()
     
     #pete_nouns = open("pete-nouns.txt", "w")
-    pete_nouns=(get_words_by_pos('pete-buttigieg', 'noun'))
+    #pete_nouns=(get_words_by_pos('pete-buttigieg', 'noun'))
     #pete_nouns.close()
     
     #pete_verbs = open("pete-verbs.txt", "w")
-    pete_verbs=(get_words_by_pos('pete-buttigieg', 'verb'))
+    #pete_verbs=(get_words_by_pos('pete-buttigieg', 'verb'))
     #pete_verbs.close()
     
     #bernie_adjectives = open("pete-adjs.txt", "w")
-    pete_adjectives=(get_words_by_pos('pete-buttigieg', 'adjective'))
+    #pete_adjectives=(get_words_by_pos('pete-buttigieg', 'adjective'))
     #
     
     #pete_adverbs = open("pete-adverbs.txt", "w")
-    pete_adverbs=(get_words_by_pos('pete-buttigieg', 'adverb'))
+    #pete_adverbs=(get_words_by_pos('pete-buttigieg', 'adverb'))
     #pete_adverbs.close()
     
     #amy_nouns = open("amy-nouns.txt", "w")
-    amy_nouns=(get_words_by_pos('amy-klobuchar', 'noun'))
+    #amy_nouns=(get_words_by_pos('amy-klobuchar', 'noun'))
     #amy_nouns.close()
     
     #amy_verbs = open("amy-verbs.txt", "w")
-    amy_verbs=(get_words_by_pos('amy-klobuchar', 'verb'))
+    #amy_verbs=(get_words_by_pos('amy-klobuchar', 'verb'))
     #amy_verbs.close()
     
     #amy_adjectives = open("amy-adjs.txt", "w")
-    amy_adjectives=(get_words_by_pos('amy-klobuchar', 'adjective'))
+    #amy_adjectives=(get_words_by_pos('amy-klobuchar', 'adjective'))
     #amy_adjectives.close()
     
     #amy_adverbs = open("amy-adverbs.txt", "w")
-    amy_adverbs=(get_words_by_pos('amy-klobuchar', 'adverb'))
+    #amy_adverbs=(get_words_by_pos('amy-klobuchar', 'adverb'))
     #amy_adverbs.close()
     
     #donald_nouns = open("donald-nouns.txt", "w")
-    donald_nouns=(get_words_by_pos('donald-trump', 'noun'))
+    #donald_nouns=(get_words_by_pos('donald-trump', 'noun'))
     #donald_nouns.close()
     
     #onald_verbs = open("donald-verbs.txt", "w")
-    donald_verbs=(get_words_by_pos('donald-trump', 'verb'))
+    #donald_verbs=(get_words_by_pos('donald-trump', 'verb'))
     #donald_verbs.close()
     
     #donald_adjectives = open("donald-adjs.txt", "w")
-    donald_adjectives=(get_words_by_pos('donald-trump', 'adjective'))
+    #donald_adjectives=(get_words_by_pos('donald-trump', 'adjective'))
     #donald_adjectives.close()
     
     #donald_adverbs = open("donald-adverbs.txt", "w")
-    donald_adverbs=(get_words_by_pos('donald-trump', 'adverb'))
+    #donald_adverbs=(get_words_by_pos('donald-trump', 'adverb'))
     #donald_adverbs.close()
     #print(get_most_frequent_words(joe_nouns, 10))
     #print(joe_adjectives)
-    print(get_most_frequent_words(donald_adjectives, 10))
+    #print(get_most_frequent_words(donald_adjectives, 10))
     print('bernie')
     print(map_occurances('bernie-sanders', keywords.get_keywords()))
     print('joe')
@@ -144,6 +144,7 @@ def map_occurances(name, words) :
     weed = ['weed', 'marijuana', 'cannabis', 'drug possession']
     gun_issues = ['gun issue', 'gun control', 'gun violence', 'gun restriction', 'gun law', 'nra', 'shooting', 'background check', 'parkland', 'gun safety', 'open fire', 'armed', 'gunman', 'mass shooting', 'weapon', 'ar-15', 'firearm', 'shot']
     issues.append(college)
+    issues.append(employment)
     issues.append(immigration)
     issues.append(mental_health)
     issues.append(discrimination_and_equality)
