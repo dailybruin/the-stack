@@ -1,0 +1,8 @@
+#timeline {
+  width: 100%;
+  height: 600px;
+}
+
+.demo-theme-dark .demo-background {
+  background: #000;
+}
