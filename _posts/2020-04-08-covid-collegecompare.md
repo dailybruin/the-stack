@@ -1,15 +1,24 @@
 ---
-title: College Compare
-teaser:
+title: School’s Out, Zoom’s In.
+teaser: See how US colleges have responded to COVID-19
 authors:
+  - keri_chen
+  - kelly_chen
+  - bernard_mendez
+  - madeline_blasingame
+  - radhika_ahuja
+  - andrew_kan
 key_takeaways:
+  - All schools included have moved to remote learning for the remainder of the academic year.
+  - While many schools across the country have moved to enforce mandatory P/NP or equivalent grading systems for the remainder of the school year, the majority of the UCs have not followed suit.
+  - Schools tended to shift gears to remote learning within a week of the first university-affiliated infection; however, even schools without a university-affiliated infection moved online by mid-March.
 featured_image:
-    url:
+  url:
 og_image:
 stylesheets:
 scripts:
-    - /js/posts/covid-collegecompare/bar-race.js
-    - https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js
+  - /js/posts/covid-collegecompare/bar-race.js
+  - https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js
 ---
 
 # Timeline
