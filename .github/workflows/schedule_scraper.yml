@@ -27,4 +27,4 @@ jobs:
       - name: Trigger our build webhook on Netlify
         run: curl -X POST "https://api.netlify.com/build_hooks/${TOKEN}"
         env:
-          TOKEN: ${{ secrets.CRON_BUILD_HOOK }}
+          TOKEN: ${{ secrets.CRON_BUILD_HOOK_HOSPITALBRANCH }}
