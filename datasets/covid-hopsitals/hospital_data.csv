@@ -1,0 +1,243 @@
+Facility Name,Address,Type,Total Beds,Emergency Medical Service Level(1),Initial License Year,long,lat
+City of Hope Helford Clinical Research Hospital,"1500 E Duarte Rd
+Duarte 91010",Cancer Medical / Surgical,217,None,1946,-117.96778,34.13198
+"USC Kenneth Norris, Jr. Cancer Hospital","1441 Eastlake Ave
+Los Angeles 90033",Cancer Medical / Surgical,60,None,1983,-118.206313,34.061179
+American Recovery Center,"2180 W Valley Blvd
+Pomona 91768",Chemical Dependency (Alcohol/Drug),50,,1987,-117.790624,34.06067
+Tom Redgate Memorial Recovery Center,"1775 Chestnut St
+Long Beach 90813",Chemical Dependency (Alcohol/Drug),63,,1983,-118.19644,33.78846
+Kindred Hospital - South Bay,"1246 W 155th St
+Gardena 90247",General Acute Long-Term Care,54,None,1957,-118.297401,33.890004
+Adventist Health Glendale Medical Center,"1509 Wilson Terrace
+Glendale 91206",General Medical-Surgical,515,Basic,1946,-118.230007,34.150808
+Adventist Health White Memorial Medical Center,"1720 Cesar E Chavez Ave
+Los Angeles 90033",General Medical-Surgical,353,Basic,1946,-118.21669,34.05052
+Alhambra Hospital Medical Center,"100 S Raymond Ave
+Alhambra 91801",General Medical-Surgical,144,Basic,1946,-118.144098,34.090485
+Antelope Valley Hospital,"1600 W Ave J
+Lancaster 93534",General Medical-Surgical,420,Basic,1955,-118.15701,34.68927
+Barlow Respiratory Hospital,"2000 Stadium Way
+Los Angeles 90026",General Medical-Surgical,105,None,1946,-118.248473,34.07595
+Beverly Hospital,"309 W Beverly Blvd
+Montebello 90640",General Medical-Surgical,202,Basic,1946,-118.100636,34.015016
+California Hospital Medical Center - Los Angeles,"1401 S Grand Ave
+Los Angeles 90015",General Medical-Surgical,318,Basic,1946,-118.26568,34.03723
+Catalina Island Medical Center,"100 Falls Canyon Rd
+Avalon 90704",General Medical-Surgical,12,Standby,1946,-118.33078,33.339241
+Cedars Sinai Medical Center,"8700 Beverly Blvd
+Los Angeles 90048",General Medical-Surgical,886,Basic,1955,-118.380004,34.076545
+Cedars-Sinai Marina Del Rey Hospital,"4650 Lincoln Blvd
+Marina Del Rey 90292",General Medical-Surgical,133,Basic,1970,-118.440031,33.981738
+Centinela Hospital Medical Center,"555 E Hardy St
+Inglewood 90301",General Medical-Surgical,362,Basic,1946,-118.34827,33.95076
+Coast Plaza Hospital,"13100 S Studebaker Rd
+Norwalk 90650",General Medical-Surgical,117,Basic,1958,-118.09845,33.91255
+College Medical Center,"2776 Pacific Ave
+Long Beach 90806",General Medical-Surgical,121,Basic,1956,-118.19305,33.807327
+College Medical Center Hawthorne Campus,"13300 Hawthorne Blvd
+Hawthorne 90250",General Medical-Surgical,64,None,2014,-118.351763,33.911637
+"College Medical Center
+South Campus D/P APH","1725 Pacific Ave
+Long Beach 90813",General Medical-Surgical,36,None,2002,-118.194127,33.788473
+Community Hospital of Huntington Park,"2623 E Slauson Ave
+Huntington Park 90255",General Medical-Surgical,81,Standby,1957,-118.224258,33.989522
+Community Hospital of Long Beach,"1720 Termino Ave
+Long Beach 90804",Acute Care,158,Pending,1957,-118.145010,33.788380
+Docs Surgical Hospital,"6000 San Vicente Blvd
+Los Angeles 90036",General Medical-Surgical,17,None,1954,-118.36217,34.05732
+East Los Angeles Doctors Hospital,"4060 Whittier Blvd
+Los Angeles 90023",General Medical-Surgical,127,Basic,1949,-118.184037,34.023713
+Emanate Health Foothill Presbyterian Hospital,"250 S Grand Ave
+Glendora 91741",General Medical-Surgical,105,Basic,1973,-117.87244,34.13326
+Emanate Health Inter-Community Hospital,"210 W San Bernardino Rd
+Covina 91723",General Medical-Surgical,191,Basic,1946,-117.893412,34.088021
+Emanate Health Queen of the Valley Hospital,"1115 S Sunset Ave
+West Covina 91790",General Medical-Surgical,325,Basic,1962,-117.944464,34.064653
+Encino Hospital Medical Center,"16237 Ventura Blvd
+Encino 91436",General Medical-Surgical,148,Basic,1954,-118.48716,34.15704
+Gardens Regional Hospital & Medical Center (CLOSED 2017),"21530 S Pioneer Blvd
+Hawaiian Gardens 90716",General Medical-Surgical,137,Basic,1972,-118.0794,33.83356
+Garfield Medical Center,"525 N Garfield Ave
+Monterey Park 91754",General Medical-Surgical,210,Basic,1946,-118.123359,34.067649
+Glendale Memorial Hospital and Health Center,"1420 S Central Ave
+Glendale 91204",General Medical-Surgical,334,Basic,1946,-118.257729,34.128101
+Good Samaritan Hospital-Los Angeles,"1225 Wilshire Blvd
+Los Angeles 90017",General Medical-Surgical,408,Basic,1946,-118.26543,34.05343
+Greater El Monte Community Hospital,"1701 Santa Anita Ave
+South El Monte 91733",General Medical-Surgical,117,Basic,1974,-118.043436,34.047766
+Henry Mayo Newhall Hospital,"23845 W McBean Pkwy
+Valencia 91355",General Medical-Surgical,238,Basic,1975,-118.55483,34.39534
+Hollywood Presbyterian Medical Center,"1300 N Vermont Ave
+Los Angeles 90027",General Medical-Surgical,434,Basic,1946,-118.29152,34.09579
+Huntington Memorial Hospital,"100 W California Blvd
+Pasadena 91105",General Medical-Surgical,619,Basic,1946,-118.152697,34.133709
+Kaiser Foundation Hospital - Baldwin Park,"1011 Baldwin Park Blvd
+Baldwin Park 91706",General Medical-Surgical,272,Basic,1998,-117.985884,34.065377
+Kaiser Foundation Hospital - Downey,"9333 Imperial Hwy
+Downey 90242",General Medical-Surgical,352,Basic,2009,-118.12862,33.91714
+Kaiser Foundation Hospital - Los Angeles,"4867 Sunset Blvd
+Los Angeles 90027",General Medical-Surgical,460,Basic,1953,-118.29564,34.09832
+Kaiser Foundation Hospital - Panorama City,"13652 Cantara St
+Panorama City 91402",General Medical-Surgical,218,Basic,1963,-118.43084,34.219734
+Kaiser Foundation Hospital - South Bay,"25825 S Vermont Ave
+Harbor City 90710",General Medical-Surgical,257,Basic,1959,-118.29535,33.78808
+Kaiser Foundation Hospital - West LA,"6041 Cadillac Ave
+Los Angeles 90034",General Medical-Surgical,265,Basic,1974,-118.37594,34.03806
+Kaiser Foundation Hospital - Woodland Hills,"5601 De Soto Ave
+Woodland Hills 91367",General Medical-Surgical,280,Basic,1986,-118.588612,34.171262
+Keck Hospital of USC,"1500 San Pablo St
+Los Angeles 90033",General Medical-Surgical,401,None,1991,-118.203013,34.06199
+Kindred Hospital - Baldwin Park,"14148 Francisquito Ave
+Baldwin Park 91706",General Medical-Surgical,95,None,2003,-117.967618,34.062885
+Kindred Hospital - La Mirada,"14900 E Imperial Hwy
+La Mirada 90637",General Medical-Surgical,118,None,1961,-118.01333,33.916367
+Kindred Hospital - Los Angeles,"5525 W Slauson Ave
+Los Angeles 90056",General Medical-Surgical,81,None,1958,-118.378382,33.989155
+Kindred Hospital - San Gabriel Valley,"845 N Lark Ellen Ave
+West Covina 91791",General Medical-Surgical,76,None,1956,-117.917246,34.087068
+Kindred Hospital Paramount,"16453 S Colorado Ave
+Paramount 90723",General Medical-Surgical,177,None,2005,-118.16214,33.88433
+L.A. Downtown Medical Center,"1711 W Temple St
+Los Angeles 90026",General Medical-Surgical,116,None,1999,-118.26337,34.0689
+L.A. Downtown Medical Center - Ingleside Campus D/P APH,"7500 Hellman Ave
+Rosemead 91770",General Medical-Surgical,118,None,1996,-118.105718,34.069341
+Lakewood Regional Medical Center,"3700 E South St
+Lakewood 90712",General Medical-Surgical,172,Basic,1972,-118.148243,33.859779
+Los Angeles Community Hospital,"4081 E Olympic Blvd
+Los Angeles 90023",General Medical-Surgical,130,Standby,1957,-118.186366,34.019102
+Los Angeles Community Hospital at Bellflower,"9542 Artesia
+Bellflower 90706",General Medical-Surgical,144,Basic,2015,-118.129448,33.874352
+Los Angeles County+USC Medical Center,"1200 N State St
+Los Angeles 90033",General Medical-Surgical,676,Comprehensive,1953,-118.20881,34.0604
+Los Angeles County/Harbor-UCLA Medical Center,"1000 W Carson St
+Torrance 90502",General Medical-Surgical,453,Basic,1953,-118.292397,33.831358
+Los Angeles County Olive View-UCLA Medical Center,"14445 Olive View Dr
+Sylmar 91342",General Medical-Surgical,355,Basic,1959,-118.448374,34.324379
+"Martin Luther King, Jr. Community Hospital","1680 E 120th St
+Los Angeles 90059",General Medical-Surgical,131,Basic,2015,-118.24415,33.924186
+Memorial Hospital of Gardena,"1145 W Redondo Beach Blvd
+Gardena 90247",General Medical-Surgical,172,Basic,1949,-118.29506,33.893071
+MemorialCare Long Beach Medical Center,"2801 Atlantic Ave
+Long Beach 90806",General Medical-Surgical,453,Basic,1960,-118.187199,33.807598
+Methodist Hospital of Southern California,"300 W Huntington Dr
+Arcadia 91007",General Medical-Surgical,348,Basic,1957,-118.042151,34.134022
+Mission Community Hospital - Panorama Campus,"14850 Roscoe Blvd
+Panorama City 91402",General Medical-Surgical,145,Basic,1965,-118.45675,34.22132
+Monrovia Memorial Hospital,"323 S Heliotrope Ave
+Monrovia 91016",General Medical-Surgical,49,None,2008,-117.99226,34.14906
+Monterey Park Hospital,"900 S Atlantic Blvd
+Monterey Park 91754",General Medical-Surgical,101,Basic,1972,-118.13852,34.049568
+Northridge Hospital Medical Center,"18300 Roscoe Blvd
+Northridge 91325",General Medical-Surgical,394,Basic,1955,-118.53203,34.22062
+Norwalk Community Hospital,"13222 Bloomfield Ave
+Norwalk 90650",General Medical-Surgical,50,Basic,1955,-118.063913,33.910732
+Olympia Medical Center,"5900 W Olympic Blvd
+Los Angeles 90036",General Medical-Surgical,204,Basic,1947,-118.36022,34.05727
+Pacifica Hospital of the Valley,"9449 San Fernando Rd
+Sun Valley 91352",General Medical-Surgical,231,Basic,1946,-118.395873,34.241009
+Palmdale Regional Medical Center,"38600 Medical Center Dr
+Palmdale 93551",General Medical-Surgical,184,Basic,2010,-118.14447,34.583449
+PIH Health Hospital,"12401 E Washington Blvd
+Whittier 90602",General Medical-Surgical,523,Basic,1959,-118.04936,33.969794
+PIH Hospital - Downey,"11500 Brookshire Ave
+Downey 90241",General Medical-Surgical,199,Basic,1969,-118.131176,33.934437
+Pomona Valley Hospital Medical Center,"1798 N Garey Ave
+Pomona 91767",General Medical-Surgical,412,Basic,1946,-117.750628,34.077092
+Providence Cedars-Sinai Tarzana Medical Center,"18321 Clark St
+Tarzana 91356",General Medical-Surgical,249,Basic,1973,-118.531234,34.169879
+Providence Holy Cross Medical Center,"15031 Rinaldi St
+Mission Hills 91345",General Medical-Surgical,377,Basic,1961,-118.46029,34.27918
+Providence Little Company of Mary Medical Center - San Pedro,"1300 W Seventh St
+San Pedro 90732",General Medical-Surgical,231,Basic,1946,-118.304108,33.738063
+Providence Little Company of Mary Medical Center - Torrance,"4101 Torrance Blvd
+Torrance 90503",General Medical-Surgical,327,Basic,1959,-118.356809,33.83821
+Providence Little Company of Mary Subacute Care Center,"1322 W 6th St
+San Pedro 90732",General Medical-Surgical,125,None,2010,-118.306195,33.738967
+Providence Saint John's Health Center,"2121 Santa Monica Blvd
+Santa Monica 90404",General Medical-Surgical,266,Basic,1949,-118.47873,34.02983
+Providence Saint Joseph Medical Center,"501 S Buena Vista St
+Burbank 91505",General Medical-Surgical,392,Basic,1946,-118.328397,34.157013
+Ronald Reagan UCLA Medical Center,"757 Westwood Plaza
+Los Angeles 90095",General Medical-Surgical,445,Comprehensive,1955,-118.445937,34.066195
+San Dimas Community Hospital,"1350 W Covina Blvd
+San Dimas 91773",General Medical-Surgical,101,Basic,1972,-117.83476,34.0993
+San Gabriel Valley Medical Center,"438 W Las Tunas Dr
+San Gabriel 91776",General Medical-Surgical,273,Basic,1960,-118.105878,34.100806
+Santa Monica - UCLA Medical Center & Orthopaedic Hospital,"1250 16th St
+Santa Monica 90404",General Medical-Surgical,281,Basic,1946,-118.486092,34.027458
+Sherman Oaks Hospital,"4929 Van Nuys Blvd
+Sherman Oaks 91403",General Medical-Surgical,153,Basic,1958,-118.4489,34.16026
+Southern California Hospital at Culver City,"3828 Delmas Terrace
+Culver City 90231",General Medical-Surgical,453,Basic,2013,-118.396932,34.023222
+Southern California Hospital at Hollywood,"6245 De Longpre Ave
+Hollywood 90028",General Medical-Surgical,100,None,1963,-118.32508,34.09631
+St. Francis Medical Center,"3630 E Imperial Hwy
+Lynwood 90262",General Medical-Surgical,384,Basic,1946,-118.203108,33.929844
+St. Mary Medical Center - Long Beach,"1050 Linden Ave
+Long Beach 90813",General Medical-Surgical,360,Basic,1946,-118.185853,33.779968
+St. Vincent Medical Center,"2131 W 3rd St
+Los Angeles 90057",General Medical-Surgical,366,Standby,1946,-118.27369,34.06336
+Torrance Memorial Medical Center,"3330 W Lomita Blvd
+Torrance 90505",General Medical-Surgical,610,Basic,1971,-118.343703,33.811995
+USC Verdugo Hills Hospital,"1812 Verdugo Blvd
+Glendale 91208",General Medical-Surgical,158,Basic,1972,-118.216799,34.20553
+Valley Presbyterian Hospital,"15107 Vanowen St
+Van Nuys 91405",General Medical-Surgical,350,Basic,1958,-118.4625,34.19408
+West Covina Medical Center,"725 S Orange Ave
+West Covina 91790",General Medical-Surgical,46,None,1958,-117.945589,34.070567
+West Hills Hospital & Medical Center,"7300 Medical Center Dr
+Canoga Park 91307",General Medical-Surgical,260,Basic,1962,-118.62929,34.20279
+Whittier Hospital Medical Center,"9080 Colima Rd
+Whittier 90605",General Medical-Surgical,178,Basic,1957,-118.004619,33.950381
+Providence Little Company of Mary Transitional Care Center,"4320 Maricopa St
+Torrance 90503",General Transitional Care (Skilled Nursing),115,None,1969,-118.359716,33.8394
+Motion Picture & Television Hospital,"23388 Mulholland Dr
+Woodland Hills 91364",Long-Term Care (Skilled Nursing),122,,1946,-118.63489,34.15633
+Children's Hospital of Los Angeles,"4650 Sunset Blvd
+Los Angeles 90027",Pediatric,495,Basic,1946,-118.29063,34.09787
+MemorialCare Miller Children's & Women's Hospital Long Beach,"2801 Atlantic Ave
+Long Beach 90806",Pediatric,357,None,2000,-118.187199,33.807598
+Aurora Charter Oak,"1161 E Covina Blvd
+Covina 91724",Psychiatric,134,,1946,-117.867071,34.100383
+Aurora Las Encinas Hospital,"2900 E Del Mar Blvd
+Pasadena 91107",Psychiatric,118,,1946,-118.092857,34.141108
+BHC Alhambra Hospital,"4619 Rosemead Blvd
+Rosemead 91770",Psychiatric,97,,1946,-118.074359,34.089217
+College Hospital,"10802 College Place
+Cerritos 90701",Psychiatric,187,,1974,-118.102987,33.884322
+Del Amo Hospital,"23700 Camino Del Sol
+Torrance 90505",Psychiatric,166,,1972,-118.344242,33.810339
+Department of State Hospital - Metropolitan,"11401 Bloomfield Ave
+Norwalk 90650",Psychiatric,"1,106",,1916,-118.064034,33.92403
+Exodus Recovery Pychiatric Health Facility,"9808 Venice Blvd
+Culver City 90232",Psychiatric,16,,2013,-118.39802,34.02349
+Gateways Hospital & Mental Health Center,"1891 Effie St
+Los Angeles 90026",Psychiatric,55,,1974,-118.256591,34.084486
+Glendora Oaks Behavioral Health Hospital,"150 W Route 66
+Glendora 91740",Psychiatric,44,,1958,-117.86139,34.1288
+Joyce Eisenberg Keefer Medical Center,"7150 Tampa Ave
+Reseda 91335",Psychiatric,249,,2007,-118.55332,34.20068
+Kaiser Foundation Hospital - Mental Health Center,"765 College St
+Los Angeles 90012",Psychiatric,68,None,1946,-118.24339,34.06621
+Kedren Community Mental Health Center,"4211 S Avalon Blvd
+Los Angeles 90011",Psychiatric,72,,1973,-118.265431,34.007209
+La Casa Psychiatric Health Facility,"6060 Paramount Blvd
+Long Beach 90805",Psychiatric,16,,1997,-118.15771,33.865168
+Ocean View Psychiatric Health Facility,"2600 Redondo Ave
+Long Beach 90806",Psychiatric,36,,2017,-118.150661,33.805799
+Resnick Neuropsychiatric Hospital at UCLA,"150 Medical Plaza
+Los Angeles 90095",Psychiatric,74,,1957,-118.4457,34.06927
+Southern California Hospital at Van Nuys D/P APH,"14433 Emelita St
+Van Nuys 91401",Psychiatric,59,None,1964,-118.44768,34.17682
+Star View Adolescent - Pychiatric Health Facility,"4025 W 226 St
+Torrance 90505",Psychiatric,16,,1996,-118.35625,33.824329
+Tarzana Treatment Center,"18646 Oxnard St
+Tarzana 91356",Psychiatric,60,,1970,-118.54027,34.17985
+California Rehabilitation Institute,"2070 Century Park East
+Los Angeles 90067",Rehabilitation,138,Basic,2016,-118.412271,34.059057
+Casa Colina Hospital,"255 E Bonita Ave
+Pomona 91767",Rehabilitation,99,None,1961,-117.745743,34.096298
+"Los Angeles County/Rancho Los Amigos
+National Rehab Center","7601 E Imperial Hwy
+Downey 90242",Rehabilitation,239,None,1966,-118.157999,33.929099
