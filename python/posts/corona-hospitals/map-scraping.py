@@ -2,14 +2,6 @@ import requests
 import lxml.html as lh
 import pandas as pd
 
-url='http://publichealth.lacounty.gov/media/Coronavirus/locations.htm'
-#Create a handle, page, to handle the contents of the website
-page = requests.get(url)
-#Store the contents of the website under doc
-doc = lh.fromstring(page.content)
-#Parse data that are stored between <tr>..</tr> of HTML
-tr_elements = doc.xpath('//tr')
-
 def dataframe_from_tr(tr_elements, length):
     elements = []
     for el in tr_elements:
@@ -73,5 +65,17 @@ def dataframe_from_tr(tr_elements, length):
 
     return dfs
 
-dfs = dataframe_from_tr(tr_elements, 3)
-dfs += dataframe_from_tr(tr_elements, 1) 
+url='http://publichealth.lacounty.gov/media/Coronavirus/locations.htm'
+#Create a handle, page, to handle the contents of the website
+
+try:
+    page = requests.get(url)
+    #Store the contents of the website under doc
+    doc = lh.fromstring(page.content)
+    #Parse data that are stored between <tr>..</tr> of HTML
+    tr_elements = doc.xpath('//tr')
+
+    dfs = dataframe_from_tr(tr_elements, 3)
+    dfs += dataframe_from_tr(tr_elements, 1) 
+except:
+    print("Scraping didn't work, use existing data")
