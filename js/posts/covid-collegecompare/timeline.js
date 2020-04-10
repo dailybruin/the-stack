@@ -13,6 +13,7 @@ am4core.ready(function() {
   var colorSet = new am4core.ColorSet();
   colorSet.saturation = 0.5;
 
+  // Getting the JSON file  --------------------------------------------------
   var data;
   $.ajaxSetup({
     async: false,
@@ -26,141 +27,64 @@ am4core.ready(function() {
   $.ajaxSetup({
     async: true,
   });
+  // ---------------------------------------------------------------------------
 
+  // Turning the json file into the right format -------------------------
   var schools = [];
   var start_date = [];
   var end_date = [];
+  var start;
+  var end;
   var num_school = 0;
-  for (var i in data) {
-    schools.push(i);
-    start_date.push('2020-03-01');
-    end_date.push('2020-03-31');
-    num_school++;
-  }
 
   var new_data = [];
   var new_json = {};
-  for (var i = 0; i < num_school; i++) {
+
+  var event_data = [];
+  var new_event_json = {};
+  for (var i in data) {
+    schools.push(i);
+    start = 32;
+    end = -1;
+    for (var j in data[i]) {
+      if (Number(data[i][j].date) != 0) {
+        start = Math.min(Number(data[i][j].date), start); //finding the first action the university took
+
+        new_event_json = {
+          //adding a new event
+          school: i,
+          eventDate: `2020-03-${data[i][j].date}`,
+          description: data[i][j].description,
+          color: colorSet.getIndex(num_school),
+        };
+        event_data.push(new_event_json);
+      }
+      end = Math.max(Number(data[i][j].date), end);
+    }
+    start_date.push(start);
+    end_date.push(end);
+
     new_json = {
-      category: schools[i],
-      start: start_date[i],
-      end: end_date[i],
-      color: colorSet.getIndex(i),
-      task: 'School timeline',
+      // timeline of action for each school
+      school: schools[num_school],
+      start: `2020-03-${start_date[num_school]}`,
+      end: `2020-03-${end_date[num_school]}`,
+      color: colorSet.getIndex(num_school),
+      task: `${schools[num_school]}`,
     };
-    console.log(schools[i]);
     new_data.push(new_json);
+    num_school++;
   }
 
   chart.data = new_data;
-  /* chart.data = [
-    {
-      category: 'UCLA',
-      start: '2020-03-10',
-      end: '2020-03-13',
-      color: colorSet.getIndex(0),
-      task: 'Gathering requirements',
-    },
-    {
-      category: 'USC',
-      start: '2020-03-05',
-      end: '2020-04-18',
-      color: colorSet.getIndex(0),
-      task: 'Development',
-    },
-    {
-      category: 'Stanford',
-      start: '2020-03-08',
-      end: '2020-03-10',
-      color: colorSet.getIndex(5),
-      task: 'Gathering requirements',
-    },
-    {
-      category: 'UC Berkeley',
-      start: '2020-03-12',
-      end: '2020-03-15',
-      color: colorSet.getIndex(5),
-      task: 'Producing specifications',
-    },
-    {
-      category: 'Stanford',
-      start: '2020-03-16',
-      end: '2020-03-05',
-      color: colorSet.getIndex(5),
-      task: 'Development',
-    },
-    {
-      category: 'Stanford',
-      start: '2020-03-10',
-      end: '2020-03-18',
-      color: colorSet.getIndex(5),
-      task: 'Testing and QA',
-    },
-    {
-      category: '',
-    },
-    {
-      category: 'UC Berkeley',
-      start: '2020-03-01',
-      end: '2020-03-19',
-      color: colorSet.getIndex(9),
-      task: 'Gathering requirements',
-    },
-    {
-      category: 'UC Berkeley',
-      start: '2020-03-01',
-      end: '2020-03-10',
-      color: colorSet.getIndex(9),
-      task: 'Producing specifications',
-    },
-    {
-      category: 'UC Berkeley',
-      start: '2020-03-10',
-      end: '2020-04-15',
-      color: colorSet.getIndex(9),
-      task: 'Development',
-    },
-    {
-      category: 'UC Berkeley',
-      start: '2020-04-20',
-      end: '2020-04-30',
-      color: colorSet.getIndex(9),
-      task: 'Testing and QA',
-      disabled2: false,
-      image2: '/wp-content/uploads/assets/timeline/rachel.jpg',
-      location: 0,
-    },
-    {
-      category: 'Harvard',
-      start: '2020-03-15',
-      end: '2020-03-12',
-      color: colorSet.getIndex(15),
-      task: 'Gathering requirements',
-      disabled1: false,
-      image1: '/wp-content/uploads/assets/timeline/monica.jpg',
-    },
-    {
-      category: 'Harvard',
-      start: '2020-03-25',
-      end: '2020-03-10',
-      color: colorSet.getIndex(15),
-      task: 'Development',
-    },
-    {
-      category: 'Harvard',
-      start: '2020-03-23',
-      end: '2020-04-29',
-      color: colorSet.getIndex(15),
-      task: 'Testing and QA',
-    },
-  ]; */
+  // ---------------------------------------------------------------------------
 
-  chart.dateFormatter.dateFormat = 'yyyy-MM-dd';
-  chart.dateFormatter.inputDateFormat = 'yyyy-MM-dd';
+  chart.dateFormatter.dateFormat = 'yyyy-MM-d';
+  chart.dateFormatter.inputDateFormat = 'yyyy-MM-d';
   chart.fontSize = 11;
 
   var categoryAxis = chart.yAxes.push(new am4charts.CategoryAxis());
-  categoryAxis.dataFields.category = 'category';
+  categoryAxis.dataFields.category = 'school';
   categoryAxis.renderer.grid.template.disabled = true;
   categoryAxis.renderer.labels.template.paddingRight = 25;
   categoryAxis.renderer.minGridDistance = 10;
@@ -196,11 +120,11 @@ am4core.ready(function() {
   var series = chart.series.push(new am4plugins_timeline.CurveColumnSeries());
   series.columns.template.height = am4core.percent(20);
   series.columns.template.tooltipText =
-    '{task}: [bold]{openDateX}[/] - [bold]{dateX}[/]';
+    "{task}: [bold]{openDateX.formatDate('MMM d')}[/] - [bold]{dateX.formatDate('MMM d')}[/]";
 
   series.dataFields.openDateX = 'start';
   series.dataFields.dateX = 'end';
-  series.dataFields.categoryY = 'category';
+  series.dataFields.categoryY = 'school';
   series.columns.template.propertyFields.fill = 'color'; // get color from data
   series.columns.template.propertyFields.stroke = 'color';
   series.columns.template.strokeOpacity = 0;
@@ -241,59 +165,18 @@ am4core.ready(function() {
     new am4plugins_timeline.CurveLineSeries()
   );
   eventSeries.dataFields.dateX = 'eventDate';
-  eventSeries.dataFields.categoryY = 'category';
-  eventSeries.data = [
-    {
-      category: '',
-      eventDate: '2020-03-15',
-      letter: 'A',
-      description: 'Something happened here',
-    },
-    {
-      category: '',
-      eventDate: '2020-03-23',
-      letter: 'B',
-      description: 'Something happened here',
-    },
-    {
-      category: '',
-      eventDate: '2020-03-10',
-      letter: 'C',
-      description: 'Something happened here',
-    },
-    {
-      category: '',
-      eventDate: '2020-03-29',
-      letter: 'D',
-      description: 'Something happened here',
-    },
-    {
-      category: '',
-      eventDate: '2020-03-06',
-      letter: 'E',
-      description: 'Something happened here',
-    },
-    {
-      category: '',
-      eventDate: '2020-03-12',
-      letter: 'F',
-      description: 'Something happened here',
-    },
-    {
-      category: '',
-      eventDate: '2020-03-22',
-      letter: 'G',
-      description: 'Something happened here',
-    },
-  ];
+  eventSeries.dataFields.categoryY = 'school';
+  eventSeries.data = event_data;
   eventSeries.strokeOpacity = 0;
 
   var flagBullet = eventSeries.bullets.push(
     new am4plugins_bullets.FlagBullet()
   );
-  flagBullet.label.propertyFields.text = 'letter';
-  flagBullet.locationX = 0;
-  flagBullet.tooltipText = '{description}';
+  flagBullet.label.propertyFields.text = 'school';
+  flagBullet.locationX = 1;
+  flagBullet.tooltipText =
+    "{school}, {eventDate.formatDate('MMM d')}:\n {description}";
+  flagBullet.propertyFields.fill = 'color';
 
   chart.scrollbarX = new am4core.Scrollbar();
   chart.scrollbarX.align = 'center';

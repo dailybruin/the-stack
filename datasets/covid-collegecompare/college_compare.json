@@ -53,7 +53,7 @@
       "description": "Dorm closure (requests to move out/cancel housing)"
     }
   },
-  "UCSB": {
+  "UC Santa Barbara": {
     "cancelled_classes": {
       "date": "10",
       "cases": "0",
@@ -80,7 +80,7 @@
       "description": "Dorm closure (requests to move out/cancel housing)"
     }
   },
-  "UCSD": {
+  "UC San Diego": {
     "cancelled_classes": {
       "date": "9",
       "cases": "2",
