@@ -26,7 +26,6 @@ scripts:
   - https://www.amcharts.com/lib/4/plugins/timeline.js
   - https://www.amcharts.com/lib/4/plugins/bullets.js
   - https://www.amcharts.com/lib/4/themes/animated.js
-  - /datasets/covid-collegecompare/college_compare.json
   - /js/posts/covid-collegecompare/timeline.js
 ---
 

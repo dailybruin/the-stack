@@ -13,54 +13,86 @@ am4core.ready(function() {
   var colorSet = new am4core.ColorSet();
   colorSet.saturation = 0.5;
 
-  /* var data = fetch(
-    '../../../../datasets/covid-collegecompare/college_compare.json'
-  ).then(res => {
-    return res.json();
+  var data;
+  $.ajaxSetup({
+    async: false,
+  });
+  $.getJSON(
+    '../../../../datasets/covid-collegecompare/college_compare.json',
+    function(json) {
+      data = json;
+    }
+  );
+  $.ajaxSetup({
+    async: true,
   });
 
-  console.log(data); */
+  var schools = [];
+  var start_date = [];
+  var end_date = [];
+  var num_school = 0;
+  for (var i in data) {
+    schools.push(i);
+    start_date.push('2020-03-01');
+    end_date.push('2020-03-31');
+    num_school++;
+  }
 
-  chart.data = [
+  var new_data = [];
+  var new_json = {};
+  for (var i = 0; i < num_school; i++) {
+    new_json = {
+      category: schools[i],
+      start: start_date[i],
+      end: end_date[i],
+      color: colorSet.getIndex(i),
+      task: 'School timeline',
+    };
+    console.log(schools[i]);
+    new_data.push(new_json);
+  }
+
+  chart.data = new_data;
+  /* chart.data = [
     {
       category: 'UCLA',
-      start: '2019-01-10',
-      end: '2019-01-13',
+      start: '2020-03-10',
+      end: '2020-03-13',
       color: colorSet.getIndex(0),
       task: 'Gathering requirements',
     },
     {
       category: 'USC',
-      start: '2019-02-05',
-      end: '2019-04-18',
+      start: '2020-03-05',
+      end: '2020-04-18',
       color: colorSet.getIndex(0),
       task: 'Development',
     },
     {
       category: 'Stanford',
-      start: '2019-01-08',
-      end: '2019-01-10',
+      start: '2020-03-08',
+      end: '2020-03-10',
       color: colorSet.getIndex(5),
       task: 'Gathering requirements',
     },
     {
       category: 'UC Berkeley',
-      start: '2019-01-12',
-      end: '2019-01-15',
+      start: '2020-03-12',
+      end: '2020-03-15',
       color: colorSet.getIndex(5),
       task: 'Producing specifications',
     },
     {
       category: 'Stanford',
-      start: '2019-01-16',
-      end: '2019-02-05',
+      start: '2020-03-16',
+      end: '2020-03-05',
       color: colorSet.getIndex(5),
       task: 'Development',
     },
     {
       category: 'Stanford',
-      start: '2019-02-10',
-      end: '2019-02-18',
+      start: '2020-03-10',
+      end: '2020-03-18',
       color: colorSet.getIndex(5),
       task: 'Testing and QA',
     },
@@ -69,29 +101,29 @@ am4core.ready(function() {
     },
     {
       category: 'UC Berkeley',
-      start: '2019-01-01',
-      end: '2019-01-19',
+      start: '2020-03-01',
+      end: '2020-03-19',
       color: colorSet.getIndex(9),
       task: 'Gathering requirements',
     },
     {
       category: 'UC Berkeley',
-      start: '2019-02-01',
-      end: '2019-02-10',
+      start: '2020-03-01',
+      end: '2020-03-10',
       color: colorSet.getIndex(9),
       task: 'Producing specifications',
     },
     {
       category: 'UC Berkeley',
-      start: '2019-03-10',
-      end: '2019-04-15',
+      start: '2020-03-10',
+      end: '2020-04-15',
       color: colorSet.getIndex(9),
       task: 'Development',
     },
     {
       category: 'UC Berkeley',
-      start: '2019-04-20',
-      end: '2019-04-30',
+      start: '2020-04-20',
+      end: '2020-04-30',
       color: colorSet.getIndex(9),
       task: 'Testing and QA',
       disabled2: false,
@@ -100,8 +132,8 @@ am4core.ready(function() {
     },
     {
       category: 'Harvard',
-      start: '2019-01-15',
-      end: '2019-02-12',
+      start: '2020-03-15',
+      end: '2020-03-12',
       color: colorSet.getIndex(15),
       task: 'Gathering requirements',
       disabled1: false,
@@ -109,19 +141,19 @@ am4core.ready(function() {
     },
     {
       category: 'Harvard',
-      start: '2019-02-25',
-      end: '2019-03-10',
+      start: '2020-03-25',
+      end: '2020-03-10',
       color: colorSet.getIndex(15),
       task: 'Development',
     },
     {
       category: 'Harvard',
-      start: '2019-03-23',
-      end: '2019-04-29',
+      start: '2020-03-23',
+      end: '2020-04-29',
       color: colorSet.getIndex(15),
       task: 'Testing and QA',
     },
-  ];
+  ]; */
 
   chart.dateFormatter.dateFormat = 'yyyy-MM-dd';
   chart.dateFormatter.inputDateFormat = 'yyyy-MM-dd';
@@ -213,43 +245,43 @@ am4core.ready(function() {
   eventSeries.data = [
     {
       category: '',
-      eventDate: '2019-01-15',
+      eventDate: '2020-03-15',
       letter: 'A',
       description: 'Something happened here',
     },
     {
       category: '',
-      eventDate: '2019-01-23',
+      eventDate: '2020-03-23',
       letter: 'B',
       description: 'Something happened here',
     },
     {
       category: '',
-      eventDate: '2019-02-10',
+      eventDate: '2020-03-10',
       letter: 'C',
       description: 'Something happened here',
     },
     {
       category: '',
-      eventDate: '2019-02-29',
+      eventDate: '2020-03-29',
       letter: 'D',
       description: 'Something happened here',
     },
     {
       category: '',
-      eventDate: '2019-03-06',
+      eventDate: '2020-03-06',
       letter: 'E',
       description: 'Something happened here',
     },
     {
       category: '',
-      eventDate: '2019-03-12',
+      eventDate: '2020-03-12',
       letter: 'F',
       description: 'Something happened here',
     },
     {
       category: '',
-      eventDate: '2019-03-22',
+      eventDate: '2020-03-22',
       letter: 'G',
       description: 'Something happened here',
     },
