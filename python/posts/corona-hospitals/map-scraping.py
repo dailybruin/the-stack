@@ -14,7 +14,7 @@ def dataframe_from_tr(tr_elements, length):
     i=0
     for t in elements[0]:
         i+=1
-        name=t.text_content()
+        name=t.text_content().encode('utf-8')
         col.append((name,[]))
 
     #Since out first row is the header, data is stored on the second row onwards
@@ -34,7 +34,7 @@ def dataframe_from_tr(tr_elements, length):
             #For each row, store each first element (header) and an empty list
             for t in T.iterchildren():
                 if i == 0:
-                    name=t.text_content()
+                    name=t.text_content().encode('utf-8')
                     col[i] = (name,[])
                 else:
                     col[i] = (col[i][0],[])
@@ -47,7 +47,7 @@ def dataframe_from_tr(tr_elements, length):
 
             #Iterate through each element of the row
             for t in T.iterchildren():
-                data=t.text_content() 
+                data=t.text_content().encode('utf-8')
                 #Check if row is empty
                 if i>0:
                 #Convert any numerical value to integers
@@ -76,6 +76,9 @@ try:
     tr_elements = doc.xpath('//tr')
 
     dfs = dataframe_from_tr(tr_elements, 3)
-    dfs += dataframe_from_tr(tr_elements, 1) 
+    dfs += dataframe_from_tr(tr_elements, 4) 
+    dfs[0].to_csv("datasets/covid-hopsitals/long-beach-pasadena-test.csv", index=0)
+    dfs[5].to_csv("datasets/covid-hopsitals/covid-cases-test.csv", index=0)
+
 except:
     print("Scraping didn't work, use existing data")

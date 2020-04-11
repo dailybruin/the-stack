@@ -103,4 +103,5 @@ var conversions = {
   'Bouquet Canyon': 'Santa Clarita',
   'Del Sur': 'Lancaster',
   'White Fence Farms': 'Lancaster',
+  'San Francisquito Canyon/Bouquet Canyon': 'Santa Clarita',
 };
