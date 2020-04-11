@@ -53,7 +53,7 @@ am4core.ready(function() {
         new_event_json = {
           //adding a new event
           school: i,
-          eventDate: `2020-03-${data[i][j].date}`,
+          eventDate: new Date(2020, 03, data[i][j].date),
           description: data[i][j].description,
           color: colorSet.getIndex(num_school),
         };
@@ -67,8 +67,8 @@ am4core.ready(function() {
     new_json = {
       // timeline of action for each school
       school: schools[num_school],
-      start: `2020-03-${start_date[num_school]}`,
-      end: `2020-03-${end_date[num_school]}`,
+      start: new Date(2020, 03, start_date[num_school]),
+      end: new Date(2020, 03, end_date[num_school]),
       color: colorSet.getIndex(num_school),
       task: `${schools[num_school]}`,
     };
@@ -151,16 +151,6 @@ am4core.ready(function() {
   imageBullet1.image = new am4core.Image();
   imageBullet1.image.propertyFields.href = 'image1';
 
-  var imageBullet2 = series.bullets.push(new am4plugins_bullets.PinBullet());
-  imageBullet2.disabled = true;
-  imageBullet2.propertyFields.disabled = 'disabled2';
-  imageBullet2.locationX = 0;
-  imageBullet2.circle.radius = 20;
-  imageBullet2.propertyFields.stroke = 'color';
-  imageBullet2.background.propertyFields.fill = 'color';
-  imageBullet2.image = new am4core.Image();
-  imageBullet2.image.propertyFields.href = 'image2';
-
   var eventSeries = chart.series.push(
     new am4plugins_timeline.CurveLineSeries()
   );
@@ -168,6 +158,7 @@ am4core.ready(function() {
   eventSeries.dataFields.categoryY = 'school';
   eventSeries.data = event_data;
   eventSeries.strokeOpacity = 0;
+  //eventSeries.minBulletDistance = 1; // Bullets have to be at least X pixels away to appeear
 
   var flagBullet = eventSeries.bullets.push(
     new am4plugins_bullets.FlagBullet()
@@ -176,7 +167,15 @@ am4core.ready(function() {
   flagBullet.locationX = 1;
   flagBullet.tooltipText =
     "{school}, {eventDate.formatDate('MMM d')}:\n {description}";
-  flagBullet.propertyFields.fill = 'color';
+  flagBullet.propertyFields.fill = 'color'; // Flags are same color as their school
+
+  var overlap = chart.plugins.push(
+    new am4plugins_overlapBuster.OverlapBuster()
+  );
+  overlap.targets.push(flagBullet);
+  overlap.collapseDelay = 300;
+  overlap.revealRatio = 1;
+  overlap.tolerance = 3;
 
   chart.scrollbarX = new am4core.Scrollbar();
   chart.scrollbarX.align = 'center';
@@ -192,4 +191,37 @@ am4core.ready(function() {
 
   dateAxis.renderer.tooltipLocation2 = 0;
   categoryAxis.cursorTooltipEnabled = false;
+
+  chart.responsive.enabled = true; //ness for mbile users
+  chart.responsive.useDefault = false;
+  chart.responsive.rules.push({
+    relevant: function(target) {
+      if (target.pixelWidth <= 400) {
+        return true;
+      }
+
+      return false;
+    },
+    state: function(target, stateId) {
+      if (target instanceof am4plugins_timeline.SerpentineChart) {
+        var state = target.states.create(stateId);
+        state.properties.paddingTop = 5;
+        state.properties.paddingRight = 15;
+        state.properties.paddingBottom = 5;
+        state.properties.paddingLeft = 0;
+        state.properties.levelCount = 7;
+        state.properties.height = 1200;
+        state.properties.yAxisRadius = am4core.percent(30);
+        state.properties.yAxisInnerRadius = am4core.percent(-30);
+        return state;
+      }
+
+      if (target instanceof am4charts.CategoryAxis()) {
+        var state = target.states.create(stateId);
+        state.properties.renderer.labels.template.paddingRight = 0;
+        return state;
+      }
+      return null;
+    },
+  });
 }); // end am4core.ready()
