@@ -1,3 +1,4 @@
+// initialize info div in upper right displaying case info per neighborhood
 function init_info() {
   info.onAdd = function(map) {
     this._div = L.DomUtil.create('div', 'info'); // create a div with a class "info"
@@ -23,28 +24,30 @@ function init_info() {
   info.addTo(map);
 }
 
+// initialize legend in bottom right showing key for colors
 function init_legend() {
   legend.onAdd = function(map) {
     var div = L.DomUtil.create('div', 'info legend');
     div.id = 'legend';
-    return update_legend(div);
+    return update_legend(div, false);
   };
   legend.addTo(map);
 }
 
-function update_legend(div) {
-  var grades = DISPLAY_RATES
+function update_legend(div, show_rates) {
+  var grades = show_rates
     ? [0, 5, 10, 20, 50, 100, 150, 200]
     : [0, 5, 10, 20, 50, 100, 200, 400];
   // loop through our density intervals and generate a label with a colored square for each interval
-  div.innerHTML = DISPLAY_RATES
-    ? 'Cases per 100K people<br>'
-    : 'Total Cases<br>';
+  div.innerHTML = show_rates ? 'Cases per 100K people<br>' : 'Total Cases<br>';
   div.innerHTML += '<i style="background:#AAAAAA"></i> No data<br>';
   for (var i = 0; i < grades.length; i++) {
+    let color = show_rates
+      ? getRateColor(grades[i] + 1)
+      : getCasesColor(grades[i] + 1);
     div.innerHTML +=
       '<i style="background:' +
-      getColor(grades[i] + 1) +
+      color +
       '"></i> ' +
       grades[i] +
       (grades[i + 1] ? '&ndash;' + (grades[i + 1] - 1) + '<br>' : '+');
@@ -52,52 +55,26 @@ function update_legend(div) {
   return div;
 }
 
-function init_toggle() {
-  case_rate_toggle.onAdd = function(map) {
-    var div = L.DomUtil.create('div', 'btn-div');
-    var b1 = L.DomUtil.create('button', 'btn-group active', div);
-    b1.id = 'case-btn';
-    var b2 = L.DomUtil.create('button', 'btn-group', div);
-    b2.id = 'rate-btn';
-    b1.innerHTML = 'Total cases';
-    b2.innerHTML = 'Cases per capita';
-    return div;
-  };
-  case_rate_toggle.addTo(map);
-
-  // JQuery for buttons
-  $('.btn-group').click(function() {
-    $('.btn-group').removeClass('active');
-    $(this).addClass('active');
-    if ($(this).attr('id') === 'rate-btn') {
-      DISPLAY_RATES = true;
-    } else {
-      DISPLAY_RATES = false;
-    }
-    geojsonLayer.setStyle(style);
-    update_legend(document.getElementById('legend'));
-  });
+// helper functions for geojson layer style  & controls
+function getRateColor(num) {
+  return num >= 200
+    ? '#990000'
+    : num >= 150
+    ? '#d7301f'
+    : num >= 100
+    ? '#ef6548'
+    : num >= 50
+    ? '#fc8d59'
+    : num >= 20
+    ? '#fdbb84'
+    : num >= 10
+    ? '#fdd49e'
+    : num >= 5
+    ? '#fee8c8'
+    : '#fff7ec';
 }
 
-// helper functions for geojson layer style  & controls
-function getColor(num) {
-  if (DISPLAY_RATES) {
-    return num >= 200
-      ? '#990000'
-      : num >= 150
-      ? '#d7301f'
-      : num >= 100
-      ? '#ef6548'
-      : num >= 50
-      ? '#fc8d59'
-      : num >= 20
-      ? '#fdbb84'
-      : num >= 10
-      ? '#fdd49e'
-      : num >= 5
-      ? '#fee8c8'
-      : '#fff7ec';
-  }
+function getCasesColor(num) {
   return num >= 400
     ? '#990000'
     : num >= 200
@@ -115,13 +92,26 @@ function getColor(num) {
     : '#fff7ec';
 }
 
-function style(feature) {
+function totalCasesStyle(feature) {
+  return {
+    fillColor:
+      feature.properties.cases !== null
+        ? getCasesColor(feature.properties.cases)
+        : '#AAAAAA',
+    weight: 2,
+    opacity: 1,
+    color: 'gray',
+    dashArray: '',
+    fillOpacity: 0.7,
+  };
+}
+
+function caseRateStyle(feature) {
   let c = feature.properties.cases;
   let p = feature.properties.population;
   let rate = c === null || c === 0 ? 0 : c / p;
   return {
-    fillColor:
-      c !== null ? (DISPLAY_RATES ? getColor(rate) : getColor(c)) : '#AAAAAA',
+    fillColor: c !== null ? getRateColor(rate) : '#AAAAAA',
     weight: 2,
     opacity: 1,
     color: 'gray',
@@ -156,7 +146,7 @@ function highlightFeature(e) {
 
 // mouseout event
 function resetHighlight(e) {
-  geojsonLayer.resetStyle(e.target);
+  totalCasesLayer.resetStyle(e.target);
   info.update();
 }
 

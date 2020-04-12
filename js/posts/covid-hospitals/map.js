@@ -1,18 +1,27 @@
-var map = L.map('map').setView([34.05, -118.25], 9);
+//  MAP
+var map = L.map('map', {
+  center: [34.05, -118.25],
+  zoom: 9,
+  maxBounds: [
+    [40, -122],
+    [28, -114],
+  ],
+});
 
+var neighborhoodsGeoJSON;
+
+// MAP CONTROLS
 var info = L.control();
 var legend = L.control({ position: 'bottomright' });
-var case_rate_toggle = L.control({ position: 'bottomleft' });
+var layerControl = L.control
+  .layers({}, {}, { position: 'bottomleft', collapsed: false })
+  .addTo(map);
 
-var geojsonLayer;
-
-const LONG_BEACH_POPULATION = 467354;
-const PASADENA_POPULATION = 141371; //sourced from US Census 7/2018 estimates
-
-var DISPLAY_RATES = false;
-
-// base layer of map
-L.tileLayer(
+// MAP LAYERS
+var totalCasesLayer;
+var caseRateLayer;
+var hospitalLayer;
+var baseLayer = L.tileLayer(
   'https://api.mapbox.com/styles/v1/{id}/tiles/256/{z}/{x}/{y}?access_token={accessToken}',
   {
     attribution:
@@ -24,17 +33,22 @@ L.tileLayer(
   }
 ).addTo(map);
 
-init_info();
-init_legend();
-init_toggle();
+// REGISTER HANDLER FOR CHANGING BASE LAYERS
+map.on('baselayerchange', function(e) {
+  let show_rates = e.layer === caseRateLayer;
+  update_legend(document.getElementById('legend'), show_rates);
+});
 
 // SET UP MAP
+init_info();
+init_legend();
 updateCases();
-addMarkers();
+initHospitalLayer();
 
-// add hospital markers
-async function addMarkers() {
+// creates layer with all hospital markers
+async function initHospitalLayer() {
   let hospitals = await loadCSVData('/datasets/covid-hospitals/hospitals.csv');
+  let markerArray = [];
   hospitals.forEach(function(item) {
     let label =
       item['FACNAME'] +
@@ -44,10 +58,30 @@ async function addMarkers() {
       Number(item['ICU_BEDS']).toFixed(0) +
       ' ICU beds)';
     let coords = [Number(item['LATITUDE']), Number(item['LONGITUDE'])];
-    L.marker(coords)
-      .addTo(map)
-      .bindPopup(label);
+    markerArray.push(L.marker(coords).bindPopup(label));
   });
+  hospitalLayer = L.layerGroup(markerArray).addTo(map);
+  layerControl.addOverlay(hospitalLayer, 'Hospitals');
+}
+
+// creates layer w/ colorings for total cases
+function initTotalCasesLayer() {
+  // add boundaries for neighborhoods & cities
+  totalCasesLayer = new L.GeoJSON(neighborhoodsGeoJSON, {
+    onEachFeature: onEachFeature,
+    style: totalCasesStyle,
+  });
+  totalCasesLayer.addTo(map);
+  layerControl.addBaseLayer(totalCasesLayer, 'Total cases');
+}
+
+// creates layer w/ colorings for case rate
+function initCaseRateLayer() {
+  caseRateLayer = new L.GeoJSON(neighborhoodsGeoJSON, {
+    onEachFeature: onEachFeature,
+    style: caseRateStyle,
+  });
+  layerControl.addBaseLayer(caseRateLayer, 'Cases per capita');
 }
 
 // update geojson with cases from LA department of health
@@ -117,15 +151,8 @@ async function updateCases() {
       console.log(name + ': ' + c['Total Cases']);
     }
   });
+  neighborhoodsGeoJSON = neighborhoods;
 
-  addNeighborhoodsLayer(neighborhoods);
-}
-
-function addNeighborhoodsLayer(geojson) {
-  // add boundaries for neighborhoods & cities
-  geojsonLayer = new L.GeoJSON(geojson, {
-    onEachFeature: onEachFeature,
-    style: style,
-  });
-  geojsonLayer.addTo(map);
+  initTotalCasesLayer();
+  initCaseRateLayer();
 }
