@@ -34,12 +34,16 @@ addMarkers();
 
 // add hospital markers
 async function addMarkers() {
-  let hopsitals = await loadCSVData(
-    '/datasets/covid-hopsitals/hospital_data.csv'
-  );
-  hopsitals.forEach(function(item) {
-    let label = item['Facility Name'] + ' (' + item['Total Beds'] + ' beds)';
-    let coords = [Number(item['lat']), Number(item['long'])];
+  let hospitals = await loadCSVData('/datasets/covid-hospitals/hospitals.csv');
+  hospitals.forEach(function(item) {
+    let label =
+      item['FACNAME'] +
+      ' (' +
+      item['GAC_BEDS'] +
+      ' general acute care beds, ' +
+      Number(item['ICU_BEDS']).toFixed(0) +
+      ' ICU beds)';
+    let coords = [Number(item['LATITUDE']), Number(item['LONGITUDE'])];
     L.marker(coords)
       .addTo(map)
       .bindPopup(label);
@@ -49,12 +53,12 @@ async function addMarkers() {
 // update geojson with cases from LA department of health
 async function updateCases() {
   let neighborhoods = await loadJSON(
-    '/datasets/covid-hopsitals/LA-neighborhoods.geojson'
+    '/datasets/covid-hospitals/LA-neighborhoods.geojson'
   );
-  let cases = await loadCSVData('/datasets/covid-hopsitals/covid-cases.csv');
+  let cases = await loadCSVData('/datasets/covid-hospitals/covid-cases.csv');
 
   let lb_pasadena_cases = await loadCSVData(
-    '/datasets/covid-hopsitals/long-beach-pasadena.csv'
+    '/datasets/covid-hospitals/long-beach-pasadena.csv'
   );
   lb_pasadena_cases.forEach(function(c) {
     if (c['Locations'].includes('Long Beach')) {
