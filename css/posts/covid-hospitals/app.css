@@ -27,14 +27,3 @@
     margin-right: 8px;
     opacity: 0.7;
 }
-
-.btn-group {
-    height: 28px;
-    border-radius: 5px;
-    color: white;
-    background-color: grey;
-}
-
-.active {
-    background-color: #4b77c4;
-}

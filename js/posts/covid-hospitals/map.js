@@ -8,8 +8,6 @@ var map = L.map('map', {
   ],
 });
 
-var neighborhoodsGeoJSON;
-
 // MAP CONTROLS
 var info = L.control();
 var legend = L.control({ position: 'bottomright' });
@@ -42,8 +40,8 @@ map.on('baselayerchange', function(e) {
 // SET UP MAP
 init_info();
 init_legend();
-updateCases();
 initHospitalLayer();
+initCasesLayers();
 
 // creates layer with all hospital markers
 async function initHospitalLayer() {
@@ -64,95 +62,22 @@ async function initHospitalLayer() {
   layerControl.addOverlay(hospitalLayer, 'Hospitals');
 }
 
-// creates layer w/ colorings for total cases
-function initTotalCasesLayer() {
-  // add boundaries for neighborhoods & cities
-  totalCasesLayer = new L.GeoJSON(neighborhoodsGeoJSON, {
+// creates layer w/ neighborhood boundaries & coloring
+async function initCasesLayers() {
+  let geojson = await loadJSON(
+    '/datasets/covid-hospitals/neighborhoods.geojson'
+  );
+
+  totalCasesLayer = new L.GeoJSON(geojson, {
     onEachFeature: onEachFeature,
     style: totalCasesStyle,
   });
   totalCasesLayer.addTo(map);
   layerControl.addBaseLayer(totalCasesLayer, 'Total cases');
-}
 
-// creates layer w/ colorings for case rate
-function initCaseRateLayer() {
-  caseRateLayer = new L.GeoJSON(neighborhoodsGeoJSON, {
+  caseRateLayer = new L.GeoJSON(geojson, {
     onEachFeature: onEachFeature,
     style: caseRateStyle,
   });
   layerControl.addBaseLayer(caseRateLayer, 'Cases per capita');
-}
-
-// update geojson with cases from LA department of health
-async function updateCases() {
-  let neighborhoods = await loadJSON(
-    '/datasets/covid-hospitals/LA-neighborhoods.geojson'
-  );
-  let cases = await loadCSVData('/datasets/covid-hospitals/covid-cases.csv');
-
-  let lb_pasadena_cases = await loadCSVData(
-    '/datasets/covid-hospitals/long-beach-pasadena.csv'
-  );
-  lb_pasadena_cases.forEach(function(c) {
-    if (c['Locations'].includes('Long Beach')) {
-      cases.push({
-        'CITY/COMMUNITY**': 'Long Beach',
-        'Total Cases': c['Total Cases'],
-        'Rate**': Number(c['Total Cases']) / (LONG_BEACH_POPULATION / 100000),
-      });
-    }
-    if (c['Locations'].includes('Pasadena')) {
-      cases.push({
-        'CITY/COMMUNITY**': 'Pasadena',
-        'Total Cases': c['Total Cases'],
-        'Rate**': Number(c['Total Cases']) / (PASADENA_POPULATION / 100000),
-      });
-    }
-  });
-
-  // clean data names to match geojson feautures
-  cases.forEach(function(c) {
-    let name = c['CITY/COMMUNITY**'];
-    if (name.includes('City of')) {
-      name = name.substring(8);
-    } else if (name.includes('Los Angeles - ')) {
-      name = name.substring(14);
-    } else if (name.includes('Unincorporated - ')) {
-      name = name.substring(17);
-    }
-    if (conversions.hasOwnProperty(name)) {
-      name = conversions[name];
-    }
-
-    if (isNaN(c['Total Cases'])) {
-      return; //suppressed numbers
-    }
-
-    let match = false;
-    neighborhoods['features'].forEach(function(d) {
-      let name2 = d.properties.name;
-      if (name === name2) {
-        match = true;
-
-        let numcases = Number(c['Total Cases']);
-        let rate = Number(c['Rate**']);
-        let pop = rate !== 0 ? numcases / rate : 0;
-        if (d.properties.cases !== null) {
-          d.properties.cases += numcases;
-          d.properties.population += pop;
-        } else {
-          d.properties.cases = numcases;
-          d.properties.population = pop;
-        }
-      }
-    });
-    if (!match) {
-      console.log(name + ': ' + c['Total Cases']);
-    }
-  });
-  neighborhoodsGeoJSON = neighborhoods;
-
-  initTotalCasesLayer();
-  initCaseRateLayer();
 }
