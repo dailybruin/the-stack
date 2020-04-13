@@ -25,6 +25,7 @@ scripts:
   - https://www.amcharts.com/lib/4/plugins/bullets.js
   - https://www.amcharts.com/lib/4/themes/animated.js
   - https://www.amcharts.com/lib/4/plugins/overlapBuster.js
+  - http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
   - /js/posts/covid-collegecompare/timeline.js
 ---
 
