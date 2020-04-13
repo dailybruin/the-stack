@@ -17,6 +17,7 @@ featured_image:
 og_image:
 stylesheets:
   - /css/posts/covid-collegecompare/app.css
+  - https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.css
 scripts:
   # Below scripts are for the timeline
   - https://www.amcharts.com/lib/4/core.js
@@ -26,13 +27,33 @@ scripts:
   - https://www.amcharts.com/lib/4/themes/animated.js
   - https://www.amcharts.com/lib/4/plugins/overlapBuster.js
   - http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+  - https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.jquery.min.js
   - /js/posts/covid-collegecompare/timeline.js
 ---
 
-# Timeline
-
 <!-- Dropdown for Timeline -->
-<select class="dropdown" onchange="display_bar_race(this.value);">
+
+<select multiple id="timeline_dropdown_school" class="dropdown" data-placeholder="Choose a school..." onchange="changeTimeline();">
+    <option value="UCLA">UCLA</option>
+    <option value="Columbia">Columbia</option>
+    <option value="Harvard">Harvard</option>
+    <option value="UC Berkeley">UC Berkeley</option>
+    <option value="UC Davis">UC Davis</option>
+    <option value="UC Irvine">UC Irvine</option>
+    <option value="UC Merced">UC Merced</option>
+    <option value="UC Riverside">UC Riverside</option>
+    <option value="UC San Diego">UC San Diego</option>
+    <option value="UC Santa Barbara">UC Santa Barbara</option>
+    <option value="UC Santa Cruz">UC Santa Cruz</option>
+    <option value="USC">USC</option>
+    <option value="Stanford">Stanford</option>
+    <option value="UChicago">The University of Chicago</option>
+    <option value="University of Florida">University of Florida</option>
+    <option value="University of Washington">University of Washington</option>
+    <option value="UT Austin">University of Texas, Austin</option>
+</select>
+
+<select multiple id="timeline_dropdown_event" class="dropdown" data-placeholder="Choose an event..." onchange="changeTimeline();">
     <option value="rescheduled">Rescheduling of Classes</option>
     <option value="cancelled_classes">Cancellation of In-Person Classes</option>
     <option value="first_infection">First School Infection</option>
