@@ -146,7 +146,8 @@ function highlightFeature(e) {
 
 // mouseout event
 function resetHighlight(e) {
-  totalCasesLayer.resetStyle(e.target);
+  totalCasesLayer.resetStyle();
+  caseRateLayer.resetStyle();
   info.update();
 }
 
