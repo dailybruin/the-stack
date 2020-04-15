@@ -1,14 +1,4 @@
 // JavaScript Document
-function initial_selected (s, i)
-      {
-        // alert("initial calling");
-        //console.log("starting");
-         s.options[i-1].selected = true;
-         lollipop_graph(s.options[i-1].value);
-         return;
-      }
-initial_selected(document.getElementById("graphs"),1)
-     
 function lollipop_graph(testkey)
 {    
     document.getElementById('lollipop').innerHTML = "";
@@ -22,14 +12,17 @@ function lollipop_graph(testkey)
       var svg = d3.select("#lollipop")
           .append("svg")
               .attr("width", width + margin.left + margin.right)
-              .attr("height", height + margin.top*2 + margin.bottom*2)
+              .attr("height", height + margin.top*3 + margin.bottom*5)
           .append("g")
               .attr("transform",
                   "translate(" + margin.left + "," + margin.top + ")");
 
       d3.json("/datasets/covid-collegecompare/college_compare.json", function(data){
+        console.log(data);
         var cases = [];
-        var schools = d3.keys(data);
+        var allschools = d3.keys(data);
+        console.log(allschools[0]);
+        var schools = [];
         var xvalue ;
         var tooltip = d3.select("body")
 						.append("div")
@@ -39,20 +32,44 @@ function lollipop_graph(testkey)
 						.text("a simple tooltip"); 
         for(var key in data)
         {
-          if(testkey == "rescheduled") 
-		 // {
-            cases.push(parseInt(data[key].rescheduled.cases));
-		//	xvalue = Math.max(parseInt(data[key].rescheduled.cases));
-		 // }
-          else if(testkey == "first_infection")
-            cases.push(parseInt(data[key].first_infection.cases));
-          else if(testkey == "grading_change")
-            cases.push(parseInt(data[key].grading_change.cases));
-          else if(testkey == "housing_change")
-            cases.push(parseInt(data[key].housing_change.cases));
-          else if (testkey == "" || testkey == "cancelled_classes")
-            cases.push(parseInt(data[key].cancelled_classes.cases));
+          if( testkey == "rescheduled" ) {
+            if(data[key].rescheduled.cases != null){
+              cases.push(parseInt(data[key].rescheduled.cases));
+              schools.push(key);
+            }
+          }
+          else if (testkey == "first_infection"){
+            if(data[key].first_infection.cases != null){
+              cases.push(parseInt(data[key].first_infection.cases));
+              schools.push(key);
+            }
+          }
+          else if (testkey == "grading_change"){
+            if(data[key].grading_change.cases != null){
+              cases.push(parseInt(data[key].grading_change.cases));
+              schools.push(key);
+            }
+          }
+          else if (testkey == "housing_change"){
+            if(data[key].housing_change.cases != null){
+              cases.push(parseInt(data[key].housing_change.cases));
+              schools.push(key);
+            }
+          }
+          else if (testkey == "graduation"){
+            if(data[key].graduation.cases != null){
+              cases.push(parseInt(data[key].graduation.cases));
+              schools.push(key);
+            }
+          }
+          else if (testkey == "" || testkey == "cancelled_classes"){
+            if(data[key].cancelled_classes.cases != null){
+              cases.push(parseInt(data[key].cancelled_classes.cases));
+              schools.push(key);
+            }
+          }
         }
+
 		xvalue = Math.max.apply(this, cases);
 		
 		if (xvalue <100)
@@ -61,8 +78,7 @@ function lollipop_graph(testkey)
 		    xvalue = (Math.round(xvalue/100) + 1 )*100;
 		else 
 		    xvalue = (Math.round(xvalue/1000) + 1 )*1000;
-        // xvalue = (Math.round(Math.max.apply(this, cases)/100)+1)*100;
-		  
+
          // Add X axis
         var x = d3.scaleLinear()
             .domain([0, xvalue])
@@ -136,12 +152,27 @@ function lollipop_graph(testkey)
           .style("text-anchor", "middle")
           .text("School"); 
         
+        var title = "";
+        if(testkey == "rescheduled") 
+          title = "Transition to long-term remote classes"
+        else if(testkey == "first_infection")
+          title = "First School Infection"
+        else if(testkey == "grading_change")
+          title = "Change in Grading Basis"  
+        else if(testkey == "housing_change")
+          title = "Change in University Housing Options"
+        else if(testkey == "graduation")
+          title = "Moved Graduation Ceremonies Online"
+        else if (testkey == "" || testkey == "cancelled_classes")
+          title = "First day of remote learning"
+
+
         svg
           .append("text")
           .attr("y", margin.top -40)
           .attr("x", width/2)
           .style("text-anchor","middle")
-          .text("University Actions Compared to Confirmed Cases of COVID-19");
+          .text(title);
 
       })
 }
