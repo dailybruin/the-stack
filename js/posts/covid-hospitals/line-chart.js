@@ -1,5 +1,6 @@
-var time_labels = ['6 months', '12 months', '18 months'];
-var color_codes = {
+// CONSTANTS
+var timeLabels = ['6 months', '12 months', '18 months'];
+var colorCodes = {
   ugrad: '#3e95cd',
   grad: '#8e5ea2',
   tot_hos: '#000000CC',
@@ -7,53 +8,73 @@ var color_codes = {
   pot_hos: '#01162780',
   pot_icu: '#FF2C5580',
 }; //TODO: Or pick better colors?
-
 var borderDash = [5, 20];
+var availableBeds = {
+  "hospital": {
+    "total": 19492,
+    "potential": 13043,
+    "available": 6594
+  },
+  "icu": {
+    "total": 2415,
+    "potential": 1679,
+    "available": 942
+  }
+}
+var UCLA_UGRAD_POP = 31453;
+var UCLA_GRAD_POP = 12828;
+var SIX_MONTH_RATIO = 0.01368653925;
+var TWELVE_MONTH_RATIO = 0.00684326963;
+var EIGHTEEN_MONTH_RATIO = 0.00446333323;
 
+// HELPER FUNCTIONS
+function display_slider_value(value) {
+  document.getElementById('slider-display').innerHTML = value + "% of UCLA infected";
+}
+
+function projected_figures(student_type, value) {
+  var cur_infected;
+  if (student_type == 'ugrad')
+    cur_infected = (UCLA_UGRAD_POP * value)/100;
+  else
+    cur_infected = (UCLA_GRAD_POP * value)/100;
+  return [Math.round(cur_infected*SIX_MONTH_RATIO), 
+          Math.round(cur_infected*TWELVE_MONTH_RATIO), 
+          Math.round(cur_infected*EIGHTEEN_MONTH_RATIO)
+        ];
+}
+
+// CHART
 let lineChart = new Chart(document.getElementById('line-chart'), {
   type: 'line',
   data: {
     datasets: [
       {
-        data: [86, 114, 106], //dummy numbers
-        label: 'Undergraduate Students',
-        borderColor: color_codes['ugrad'],
+        data:  projected_figures('ugrad', 50),
+        label: 'Undergraduate Students Needing Hospital Beds',
+        borderColor: colorCodes['ugrad'],
         pointRadius: 5,
         fill: false,
       },
       {
-        data: [282, 350, 411], //dummy numbers
-        label: 'Graduate Students',
-        borderColor: color_codes['grad'],
+        data: projected_figures('grad', 50),
+        label: 'Graduate Students Needing Hospital Beds',
+        borderColor: colorCodes['grad'],
         pointRadius: 5,
         fill: false,
       },
       {
-        data: Array(time_labels.length).fill(200), //dummy numbers
-        label: 'Total Hospital Beds',
-        borderColor: color_codes['tot_hos'],
-        pointRadius: 0,
-        fill: false,
-      },
-      {
-        data: Array(time_labels.length).fill(50), //dummy numbers
-        label: 'Total ICU Beds',
-        borderColor: color_codes['tot_icu'],
-        pointRadius: 0,
-        fill: false,
-      },
-      {
-        data: Array(time_labels.length).fill(100), //dummy numbers
+        data: Array(timeLabels.length).fill(availableBeds['hospital']['potential']), 
         label: 'Potentially Available Hospital Beds',
-        borderColor: color_codes['pot_hos'],
+        borderColor: colorCodes['pot_hos'],
         borderDash: borderDash,
         pointRadius: 0,
         fill: false,
       },
       {
-        data: Array(time_labels.length).fill(30), //dummy numbers
+        data: Array(timeLabels.length).fill(availableBeds['icu']['potential']), 
         label: 'Potentially Available ICU Beds',
-        borderColor: color_codes['pot_icu'],
+        borderColor: colorCodes['pot_icu'],
         borderDash: borderDash,
         pointRadius: 0,
         fill: false,
@@ -69,7 +90,7 @@ let lineChart = new Chart(document.getElementById('line-chart'), {
       xAxes: [
         {
           type: 'category',
-          labels: time_labels,
+          labels: timeLabels,
           scaleLabel: {
             display: false,
             labelString: 'Time into the future', //TODO: or better naming
@@ -77,7 +98,17 @@ let lineChart = new Chart(document.getElementById('line-chart'), {
           display: true,
         },
       ],
+      yAxes: [{
+        ticks: {
+          min: 0,
+          max: 450
+        }
+      }]
     },
+    legend:{
+      align: 'center',
+      position: 'right',
+    }
   },
 });
 
@@ -86,17 +117,39 @@ Chart.defaults.global.defaultFontSize = 15;
 Chart.defaults.global.defaultFontColor = '#777';
 lineChart.canvas.parentNode.style.width = '900px';
 
-// Total Hospital Beds: 19,492
-// Total ICU Beds: 2415
-// Available Hospital Beds: 6594
-// Potentially Available Hospital Beds: 13043
-// Available ICU Beds: 942
-// Potentially Available ICU Beds: 1679
+function update_line_chart(value) {
+  lineChart.data.datasets =  [
+    {
+      data:  projected_figures('ugrad', value),
+      label: 'Undergraduate Students Needing Hospital Beds',
+      borderColor: colorCodes['ugrad'],
+      pointRadius: 5,
+      fill: false,
+    },
+    {
+      data: projected_figures('grad', value), //dummy numbers
+      label: 'Graduate Students Needing Hospital Beds',
+      borderColor: colorCodes['grad'],
+      pointRadius: 5,
+      fill: false,
+    },];
+    // {
+    //   data: Array(timeLabels.length).fill(availableBeds['hospital']['potential']), 
+    //   label: 'Potentially Available Hospital Beds',
+    //   borderColor: colorCodes['pot_hos'],
+    //   borderDash: borderDash,
+    //   pointRadius: 0,
+    //   fill: false,
+    // },
+    // {
+    //   data: Array(timeLabels.length).fill(availableBeds['icu']['potential']), 
+    //   label: 'Potentially Available ICU Beds',
+    //   borderColor: colorCodes['pot_icu'],
+    //   borderDash: borderDash,
+    //   pointRadius: 0,
+    //   fill: false,
+    // }];
 
-// Adult Population: 45,742 (all UCLA students) (LA: 7,874,162)
-// Projected Infected Individuals: (20, 40, 60 or slider)
-// Projected Hospitalized Total(20.529945891%):
-// Projected Needing ICU Care Total (infer):
-// Projected 6 months (1.368653% of infected):
-// Projected 12 months (0.684327% of infected):
-// Projected 18 months (0.44631206242% of infected):
+    lineChart.update();
+}
+

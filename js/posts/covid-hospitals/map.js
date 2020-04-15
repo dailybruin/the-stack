@@ -49,12 +49,11 @@ async function initHospitalLayer() {
   let markerArray = [];
   hospitals.forEach(function(item) {
     let label =
-      item['FACNAME'] +
-      ' (' +
+      '<strong>' + item['FACNAME'] + '</strong> <br>' +
       item['GAC_BEDS'] +
       ' general acute care beds, ' +
       Number(item['ICU_BEDS']).toFixed(0) +
-      ' ICU beds)';
+      ' ICU beds';
     let coords = [Number(item['LATITUDE']), Number(item['LONGITUDE'])];
     markerArray.push(L.marker(coords).bindPopup(label));
   });

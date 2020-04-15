@@ -2,9 +2,11 @@
 title: Coronavirus Hospitals
 teaser:
 authors:
-  -
+  - laurel_woods
+  - sydney_kovach
+  - andrew_kan
+  - radhika_ahuja
 key_takeaways:
-
 featured_image:
   url:
 og_image:
@@ -25,11 +27,23 @@ scripts:
   - https://cdn.jsdelivr.net/npm/chart.js@2.8.0
   - /js/posts/covid-hospitals/line-chart.js
 ---
+# Introduction
 
+# Map
 <div id="map"></div>
 
 <script type="text/pyscript" src="python/corona-hospitals/map-scraping.py"></script>
 
+# Line Chart 
+
 <div>
-  <canvas id="line-chart"></canvas>
+    <canvas id="line-chart"></canvas>
+  <div id="slider-wrapper">
+    <div>
+      <input type="range" min="1" max="100" value="50" class="slider" oninput="display_slider_value(this.value); update_line_chart(this.value);">
+    </div>
+    <div>
+      <span id="slider-display">50% of UCLA Infected</span>
+    </div>
+  </div>
 </div>
