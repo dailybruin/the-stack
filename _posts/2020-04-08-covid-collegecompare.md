@@ -29,8 +29,7 @@ scripts:
   - http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
   - https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.jquery.min.js
   - /js/posts/covid-collegecompare/timeline.js
-  - https://d3js.org/d3.v5.min.js
-  - //d3js.org/d3.v5.min.js
+  - https://d3js.org/d3.v4.min.js
   - //unpkg.com/d3-array@1
   - //unpkg.com/d3-path@1
   - //unpkg.com/d3-shape@1
@@ -72,16 +71,30 @@ scripts:
 # Lollipop
 
 <!-- Dropdown for Lollipop -->
-<select class="dropdown" onchange="display_bar_race(this.value);">
-    <option value="rescheduled">Rescheduling of Classes</option>
-    <option value="cancelled_classes">Cancellation of In-Person Classes</option>
-    <option value="first_infection">First School Infection</option>
-    <option value="grading_change">Change in Grading Basis</option>
-    <option value="housing_change">Change in University Housing Options</option>
-</select>
-<div id="my_dataviz">
-<p>hi</p></div>
-
+<div align="center">
+  <label for="graphs">Select a Graph:</label>
+    <select id="graphs" onchange='javascript: lollipop_graph(this.options[this.selectedIndex].value)' >
+    <option value="">Select ...... </option>
+    <option value="cancelled_classes">First action to cancel in-person classes</option>
+    <option value="rescheduled">Act to cancel/reschedule spring classes</option>
+    <option value="first_infection">First campus-affiliated infection</option>
+    <option value="grading_change">Change in grading of current quarter/semester</option>
+    <option value="housing_change">Dorm closure (requests to move out/cancel housing)</option>
+   </select>
+  <p>&nbsp; </p>
+</div>
+<div id="lollipop" align='center' >
+  <script>
+      function initial_selected (s, i)
+      {
+        // alert("initial calling");
+         s.options[i-1].selected = true;
+         lollipop_graph(s.options[i-1].value);
+         return;
+      }
+      initial_selected(document.getElementById("graphs"),1);
+  </script>  
+</div>
 
 # Bar Chart Race (potentially remove?)
 
