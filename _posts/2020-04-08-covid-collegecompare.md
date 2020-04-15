@@ -68,8 +68,8 @@ Use the drop-down menus to filter the college action timeline by college and eve
 
 <select multiple id="timeline_dropdown_event" class="timeline_select" data-placeholder="Choose an event..." onchange="changeTimeline();">
     <option value="all">Select All</option>
-    <option value="rescheduled">Rescheduling of Classes</option>
-    <option value="cancelled_classes">Cancellation of In-Person Classes</option>
+    <option value="cancelled_classes">First day of remote learning </option>
+    <option value="rescheduled"> Transition to long-term remote classes</option>
     <option value="first_infection">First School Infection</option>
     <option value="grading_change">Change in Grading Basis</option>
     <option value="housing_change">Change in University Housing Options</option>
@@ -85,9 +85,9 @@ The lollipop chart below shows the changes made by each college in relation to t
 <div align="left">
   <label for="graphs">Select a Graph:</label>
     <select id="graphs" onchange='javascript: lollipop_graph(this.options[this.selectedIndex].value)' >
-    <option value="cancelled_classes" selected hidden>Cancellation of In-Person Classes</option>
-    <option value="cancelled_classes">Cancellation of In-Person Classes</option>
-    <option value="rescheduled">Rescheduling of Classes</option>
+    <option value="cancelled_classes" selected hidden>First day of remote learning</option>
+    <option value="cancelled_classes">First day of remote learning</option>
+    <option value="rescheduled">Transition to long-term remote classes</option>
     <option value="first_infection">First School Infection</option>
     <option value="grading_change">Change in Grading Basis</option>
     <option value="housing_change">Change in University Housing Options</option>
