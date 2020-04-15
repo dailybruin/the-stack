@@ -1,5 +1,14 @@
 $('.lollipop_select').chosen();
 // JavaScript Document
+function initial_selected(s, i) {
+  // alert("initial calling");
+  //console.log("starting");
+  s.options[i - 1].selected = true;
+  lollipop_graph(s.options[i - 1].value);
+  return;
+}
+initial_selected(document.getElementById('graphs'), 1);
+
 function lollipop_graph(testkey) {
   document.getElementById('lollipop').innerHTML = '';
   //alert('The option with value ' + testkey  );
