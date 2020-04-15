@@ -235,9 +235,11 @@ function changeTimeline() {
   var school_data = [];
   var school_event_data = [];
 
-  if (school_names == null) {
+  // if (school_names == null || school_names.includes('all')) { // SELECT ALL: uncomment and delete line below
+    if (school_names == null) {
     school_data = all_schools_data;
-    if (event_names == null) {
+    // if (event_names == null || event_names.includes('all')) { // SELECT ALL: uncomment and delete line below
+      if (event_names == null) {
       school_event_data = all_schools_event_data;
     } else {
       for (var i in all_schools_event_data) {
@@ -258,7 +260,8 @@ function changeTimeline() {
         }
       }
 
-      if (event_names == null) {
+      // if (event_names == null || event_names.includes('all')) { // SELECT ALL: uncomment and delete line below
+      if(event_names == null) {
         for (var i in all_schools_event_data) {
           if (all_schools_event_data[i].school == school_name) {
             school_event_data.push(all_schools_event_data[i]);
