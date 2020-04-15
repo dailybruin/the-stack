@@ -27,34 +27,30 @@
     margin-right: 8px;
     opacity: 0.7;
 }
+  
+.slider {
+  -webkit-appearance: none;
+  width: 68vw;
+  height: 25px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
 
-.slidecontainer {
-    width: 100%;
-  }
-  
-  .slider {
-    -webkit-appearance: none;
-    width: 100%;
-    height: 25px;
-    background: #d3d3d3;
-    outline: none;
-    opacity: 0.7;
-    -webkit-transition: .2s;
-    transition: opacity .2s;
-  }
-  
-  .slider:hover {
-    opacity: 1;
-  }
-  
-  .slider::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    appearance: none;
-    width: 25px;
-    height: 25px;
-    background: black;
-    cursor: pointer;
-  }
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  background: black;
+  cursor: pointer;
+}
 
 .slider::-moz-range-thumb {
     width: 25px;
@@ -65,5 +61,94 @@
 
 #slider-wrapper {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    padding-top: 2vh;
+}
+
+.hover-label, .marker-label, .hover-title, .legend, .selector {
+  font-family: 'Open Sans';
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 25px;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.toggle {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #d3d3d3;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.toggle:before {
+  position: absolute;
+  content: "";
+  height: 25px;
+  width: 25px;
+  left: 4px;
+  /* bottom: 4px; */
+  background-color: black;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .toggle:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+#slider-num {
+  padding-left: 2vw;
+}
+
+#percentage-num {
+  font-size: 2em;
+  line-height: 25px;
+}
+
+.toggle-option {
+  padding-left: 1vw;
+  padding-right: 1vw;
+}
+
+#toggle-wrapper {
+  display: flex; 
+  justify-content: center;
+  padding-top: 5vh; 
+  margin-top: 5vh;
+  font-family: 'Roboto'
+}
+
+/* Phone Level */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+    .wrapper {
+      display: block;
+    }
+
+    #slider-wrapper {
+      display: block;
+    }
+}
+
+.wrapper {
+  display: flex; 
+  justify-content: space-evenly;
 }

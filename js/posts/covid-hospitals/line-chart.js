@@ -1,57 +1,78 @@
 // CONSTANTS
 var timeLabels = ['6 months', '12 months', '18 months'];
 var colorCodes = {
-  ugrad: '#3e95cd',
-  grad: '#8e5ea2',
+  ugrad: '#fc8d59',
+  grad: '#fdd49e',
+  total: '#990000',
   tot_hos: '#3C0919CC',
   tot_icu: '#FF2C5580',
 }; //TODO: Or pick better colors?
-var borderDash = [5, 20];
+var borderDash = [5, 10];
 var availableBeds = {
-  general_acute: {
+  Hospital: {
     total: 234,
   },
-  icu: {
+  ICU: {
     total: 120,
   },
 };
-var UCLA_UGRAD_POP = 31453;
-var UCLA_GRAD_POP = 12828;
-var SIX_MONTH_RATIO = 0.01368653925;
-var TWELVE_MONTH_RATIO = 0.00684326963;
-var EIGHTEEN_MONTH_RATIO = 0.00446333323;
+var bedRatios = {
+  Hospital: {
+    six: 0.01368653925,
+    twelve: 0.00684326963,
+    eighteen: 0.00446333323
+  }, 
+  ICU: {
+    six: 0.00289110203,
+    twelve: 0.00144586851,
+    eighteen: 0.00094295772,
+  }
+};
+var population = {
+  ugrad: 31453,
+  grad: 12828,
+  total: 44281
+};
+var maxScale = {
+  Hospital: 650,
+  ICU: 150,
+}
 
 // HELPER FUNCTIONS
 function display_slider_value(value) {
-  document.getElementById('slider-display').innerHTML =
-    value + '% of UCLA infected';
+  document.getElementById('percentage-num').innerHTML = value + '%';
 }
 
-function projected_figures(student_type, value) {
-  var cur_infected;
-  if (student_type == 'ugrad') cur_infected = (UCLA_UGRAD_POP * value) / 100;
-  else cur_infected = (UCLA_GRAD_POP * value) / 100;
+function projected_figures(student_type, value, bed_type) {
+  var cur_infected = (population[student_type] * value) / 100;
   return [
-    Math.round(cur_infected * SIX_MONTH_RATIO),
-    Math.round(cur_infected * TWELVE_MONTH_RATIO),
-    Math.round(cur_infected * EIGHTEEN_MONTH_RATIO),
+    Math.round(cur_infected * bedRatios[bed_type]['six']),
+    Math.round(cur_infected * bedRatios[bed_type]['twelve']),
+    Math.round(cur_infected * bedRatios[bed_type]['eighteen']),
   ];
 }
 
-// CHART
+// DEFAULT CHART
 let lineChart = new Chart(document.getElementById('line-chart'), {
   type: 'line',
   data: {
     datasets: [
       {
-        data: projected_figures('ugrad', 50),
+        data: projected_figures('total', 50, 'Hospital'),
+        label: 'Total Students Needing Hospital Beds',
+        borderColor: colorCodes['total'],
+        pointRadius: 5,
+        fill: false,
+      },
+      {
+        data: projected_figures('ugrad', 50, 'Hospital'),
         label: 'Undergraduate Students Needing Hospital Beds',
         borderColor: colorCodes['ugrad'],
         pointRadius: 5,
         fill: false,
       },
       {
-        data: projected_figures('grad', 50),
+        data: projected_figures('grad', 50, 'Hospital'),
         label: 'Graduate Students Needing Hospital Beds',
         borderColor: colorCodes['grad'],
         pointRadius: 5,
@@ -59,18 +80,10 @@ let lineChart = new Chart(document.getElementById('line-chart'), {
       },
       {
         data: Array(timeLabels.length).fill(
-          availableBeds['general_acute'].total
+          availableBeds['Hospital'].total
         ),
-        label: 'General Acute Beds',
-        borderColor: colorCodes['pot_hos'],
-        borderDash: borderDash,
-        pointRadius: 0,
-        fill: false,
-      },
-      {
-        data: Array(timeLabels.length).fill(availableBeds['icu'].total),
-        label: 'ICU Beds',
-        borderColor: colorCodes['tot_icu'],
+        label: 'Hospital Beds',
+        borderColor: colorCodes['tot_hos'],
         borderDash: borderDash,
         pointRadius: 0,
         fill: false,
@@ -80,7 +93,7 @@ let lineChart = new Chart(document.getElementById('line-chart'), {
   options: {
     title: {
       display: true,
-      text: 'Hypothetical Hospital and ICU Beds needed by UCLA Students', //TODO: or better naming
+      text: 'Hypothetical Resources needed by UCLA Students', //TODO: or better naming
     },
     scales: {
       xAxes: [
@@ -88,7 +101,7 @@ let lineChart = new Chart(document.getElementById('line-chart'), {
           type: 'category',
           labels: timeLabels,
           scaleLabel: {
-            display: false,
+            display: true,
             labelString: 'Time into the future', //TODO: or better naming
           },
           display: true,
@@ -96,16 +109,19 @@ let lineChart = new Chart(document.getElementById('line-chart'), {
       ],
       yAxes: [
         {
+          scaleLabel: {
+            display: true,
+            labelString: 'Number of Beds'
+          },
           ticks: {
             min: 0,
-            max: 450,
+            max: 650,
           },
         },
       ],
     },
     legend: {
-      align: 'center',
-      position: 'right',
+      position: 'left',
     },
   },
 });
@@ -115,39 +131,76 @@ Chart.defaults.global.defaultFontSize = 15;
 Chart.defaults.global.defaultFontColor = '#777';
 lineChart.canvas.parentNode.style.width = '900px';
 
-function update_line_chart(value) {
+var current_bed_type = 'Hospital';
+var current_percentage = 50;
+
+function update_line_chart(percentage, bed_type) {
+
+  if (bed_type != null) 
+    bed_type ? current_bed_type = 'ICU' : current_bed_type = 'Hospital';
+
+  if (percentage != null)
+    current_percentage = percentage;
+  
   lineChart.data.datasets = [
     {
-      data: projected_figures('ugrad', value),
-      label: 'Undergraduate Students Needing Hospital Beds',
+      data: projected_figures('total', current_percentage, current_bed_type),
+      label: 'Total Students Needing ' + current_bed_type + ' Beds',
+      borderColor: colorCodes['total'],
+      pointRadius: 5,
+      fill: false,
+    },
+    {
+      data: projected_figures('ugrad', current_percentage, current_bed_type),
+      label: 'Undergraduate Students Needing ' + current_bed_type + ' Beds',
       borderColor: colorCodes['ugrad'],
       pointRadius: 5,
       fill: false,
     },
     {
-      data: projected_figures('grad', value), //dummy numbers
-      label: 'Graduate Students Needing Hospital Beds',
+      data: projected_figures('grad', current_percentage, current_bed_type),
+      label: 'Graduate Students Needing ' + current_bed_type + ' Beds',
       borderColor: colorCodes['grad'],
       pointRadius: 5,
       fill: false,
     },
     {
-      data: Array(timeLabels.length).fill(availableBeds['general_acute'].total),
-      label: 'General Acute Beds',
+      data: Array(timeLabels.length).fill(availableBeds[current_bed_type].total),
+      label: current_bed_type + ' Beds',
       borderColor: colorCodes['tot_hos'],
-      borderDash: borderDash,
-      pointRadius: 0,
-      fill: false,
-    },
-    {
-      data: Array(timeLabels.length).fill(availableBeds['icu'].total),
-      label: 'ICU Beds',
-      borderColor: colorCodes['tot_icu'],
       borderDash: borderDash,
       pointRadius: 0,
       fill: false,
     },
   ];
 
+  lineChart.options.scales.yAxes = [
+    {
+      scaleLabel: {
+        display: true,
+        labelString: 'Number of Beds'
+      },
+      ticks: {
+        min: 0,
+        max: maxScale[current_bed_type],
+      }
+    }
+  ];
   lineChart.update();
+}
+
+// Make charts responsive
+let x = window.matchMedia("(max-width: 480px)");
+make_responsive(x);
+
+function make_responsive(x){
+  if (x.matches) {
+    Chart.defaults.global.responsive = false;
+    Chart.defaults.global.maintainAspectRatio = false;
+    lineChart.canvas.parentNode.style.width = "340px";
+    lineChart.options.legend =  {
+      display: false,
+    };
+    lineChart.update();
+  }
 }

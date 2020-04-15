@@ -14,6 +14,7 @@ og_image:
 stylesheets:
   - //unpkg.com/leaflet@1.6.0/dist/leaflet.css
   - /css/posts/covid-hospitals/app.css
+  - https://fonts.googleapis.com/css2?family=Open+Sans&display=swap
 scripts:
   # files for map
   - /js/lib/jquery-3.1.1.min.js
@@ -35,13 +36,29 @@ scripts:
 <script type="text/pyscript" src="python/corona-hospitals/map-scraping.py"></script>
 
 <div>
-    <canvas id="line-chart"></canvas>
-  <div id="slider-wrapper">
-    <div>
-      <input type="range" min="1" max="100" value="50" class="slider" oninput="display_slider_value(this.value); update_line_chart(this.value);">
+  <div class="wrapper">
+    <div id="canvas-wrapper">
+      <canvas id="line-chart"></canvas>
     </div>
-    <div>
-      <span id="slider-display">50% of UCLA Infected</span>
+    <div id="toggle-wrapper">
+      <div class="toggle-option">Hospital</div>
+      <div>
+      <label class="switch">
+        <input type="checkbox" onclick="update_line_chart(null, this.checked);">
+        <span class='toggle'></span>
+      </label>
+      </div>
+      <div class="toggle-option">ICU</div>
     </div>
   </div>
+
+  <div id="slider-wrapper">
+    <div>
+      <input type="range" min="1" max="100" value="50" class="slider" oninput="display_slider_value(this.value, null); update_line_chart(this.value);">
+    </div>
+    <div id="slider-num">
+      <span><span id="percentage-num">50%</span> of UCLA Infected</span>
+    </div>
+  </div>
+
 </div>

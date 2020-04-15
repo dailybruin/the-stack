@@ -49,16 +49,14 @@ async function initHospitalLayer() {
   let markerArray = [];
   hospitals.forEach(function(item) {
     let label =
-      '<strong>' + item['FACNAME'] + '</strong> <br>' +
-      item['GAC_BEDS'] +
-      ' general acute care beds, ' +
-      Number(item['ICU_BEDS']).toFixed(0) +
-      ' ICU beds';
+      '<span class="marker-label"><strong>' + item['FACNAME'] + '</strong> <br>' +
+      ' General Acute Care Beds: ' + item['GAC_BEDS'] + '<br>' +
+      ' ICU Beds: ' + Number(item['ICU_BEDS']).toFixed(0) + '</span>';
     let coords = [Number(item['LATITUDE']), Number(item['LONGITUDE'])];
     markerArray.push(L.marker(coords, {icon: UCLAIcon}).bindPopup(label));
   });
   hospitalLayer = L.layerGroup(markerArray).addTo(map);
-  layerControl.addOverlay(hospitalLayer, 'Hospitals');
+  layerControl.addOverlay(hospitalLayer, '<span class="selector">Hospitals</span>');
 }
 
 // creates layer w/ neighborhood boundaries & coloring
@@ -72,13 +70,13 @@ async function initCasesLayers() {
     style: totalCasesStyle,
   });
   totalCasesLayer.addTo(map);
-  layerControl.addBaseLayer(totalCasesLayer, 'Total cases');
+  layerControl.addBaseLayer(totalCasesLayer, '<span class="selector">Total cases</span>');
 
   caseRateLayer = new L.GeoJSON(geojson, {
     onEachFeature: onEachFeature,
     style: caseRateStyle,
   });
-  layerControl.addBaseLayer(caseRateLayer, 'Cases per capita');
+  layerControl.addBaseLayer(caseRateLayer, '<span class="selector">Cases per capita</span>');
 }
 
 

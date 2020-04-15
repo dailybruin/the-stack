@@ -16,10 +16,10 @@ function init_info() {
           : 'No data available';
     }
     this._div.innerHTML =
-      '<h4>COVID-19 cases</h4>' +
+      '<h4 class="hover-title">COVID-19 cases</h4>' +
       (props
-        ? '<b>' + props.name + '</b><br />' + text
-        : 'Hover over a city or community');
+        ? '<b class="hover-label">' + props.name + '</b><br />' + text
+        : '<span class="hover-label">Hover over a city or community</span>');
   };
   info.addTo(map);
 }
@@ -39,14 +39,15 @@ function update_legend(div, show_rates) {
     ? [0, 5, 10, 20, 50, 100, 150, 200]
     : [0, 5, 10, 20, 50, 100, 200, 400];
   // loop through our density intervals and generate a label with a colored square for each interval
-  div.innerHTML = show_rates ? 'Cases per 100K people<br>' : 'Total Cases<br>';
-  div.innerHTML += '<i style="background:#AAAAAA"></i> No data<br>';
+  div.innerHTML = show_rates ? '<span class="legend"><strong>Cases per 100K people<br></strong></span>' 
+  : '<span class="legend"><strong>Total Cases<br></strong></span>';
+  div.innerHTML += '<i class="legend" style="background:#AAAAAA"></i> No data<br>';
   for (var i = 0; i < grades.length; i++) {
     let color = show_rates
       ? getRateColor(grades[i] + 1)
       : getCasesColor(grades[i] + 1);
     div.innerHTML +=
-      '<i style="background:' +
+      '<i class="legend" style="background:' +
       color +
       '"></i> ' +
       grades[i] +
