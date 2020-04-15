@@ -60,7 +60,7 @@ for (var i in data) {
         //adding a new event
         school: i,
         event: j,
-        eventDate: new Date(2020, 03, data[i][j].date),
+        eventDate: new Date(2020, 02, data[i][j].date),
         description: data[i][j].description,
         color: colorSet.getIndex(num_school),
       };
@@ -74,8 +74,8 @@ for (var i in data) {
   new_json = {
     // timeline of action for each school
     school: schools[num_school],
-    start: new Date(2020, 03, start_date[num_school]),
-    end: new Date(2020, 03, end_date[num_school]),
+    start: new Date(2020, 02, start_date[num_school]),
+    end: new Date(2020, 02, end_date[num_school]),
     color: colorSet.getIndex(num_school),
     task: `${schools[num_school]}`,
   };
