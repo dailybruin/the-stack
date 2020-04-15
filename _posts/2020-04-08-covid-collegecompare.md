@@ -77,16 +77,14 @@ As schools like Harvard, Columbia and Stanford make [headlines] (https://news.ha
 # Lollipop
 
 <!-- Dropdown for Lollipop -->
-<<<<<<< HEAD
 <div align="center">
   <label for="graphs">Select a Graph:</label>
     <select id="graphs" onchange='javascript: lollipop_graph(this.options[this.selectedIndex].value)' >
-    <option value="">Select ...... </option>
-    <option value="cancelled_classes">First action to cancel in-person classes</option>
-    <option value="rescheduled">Act to cancel/reschedule spring classes</option>
-    <option value="first_infection">First campus-affiliated infection</option>
-    <option value="grading_change">Change in grading of current quarter/semester</option>
-    <option value="housing_change">Dorm closure (requests to move out/cancel housing)</option>
+    <option value="cancelled_classes">Cancellation of In-Person Classes</option>
+    <option value="rescheduled">Rescheduling of Classes</option>
+    <option value="first_infection">First School Infection</option>
+    <option value="grading_change">Change in Grading Basis</option>
+    <option value="housing_change">Change in University Housing Options</option>
    </select>
   <p>&nbsp; </p>
 </div>
@@ -102,21 +100,10 @@ As schools like Harvard, Columbia and Stanford make [headlines] (https://news.ha
       initial_selected(document.getElementById("graphs"),1);
   </script>  
 </div>
-=======
-<select class="dropdown" onchange="display_bar_race(this.value);">
-    <option value="rescheduled">Rescheduling of Classes</option>
-    <option value="cancelled_classes">Cancellation of In-Person Classes</option>
-    <option value="first_infection">First School Infection</option>
-    <option value="grading_change">Change in Grading Basis</option>
-    <option value="housing_change">Change in University Housing Options</option>
-</select>
-
-<div id="my_dataviz"></div>
 
 The lollipop chart above shows the changes made by each college in relation to the amount of confirmed cases of coronavirus in the county. Use the drop-down menu to select specific schools.
 
 Located in Seattle, one of the first sites of community spread of COVID-19 in the U.S., the University of Washington was the first school included in our analysis to move to remote education with an official announcement released on [March 6] (https://www.washington.edu/coronavirus/2020/03/06/beginning-march-9-classes-and-finals-will-not-be-held-in-person-message-to-faculty-and-staff/). All schools included in our analysis moved to remote learning by March 19. The majority of schools experienced their first confirmed university-affiliated case of COVID-19 by mid-March as the virus continued to spread.
->>>>>>> dbf620584ee500456604b2e65a88c195e6b8e909
 
 # Bar Chart Race (potentially remove?)
 
