@@ -167,3 +167,19 @@ function loadJSON(path) {
     });
   });
 }
+
+var hospitalIcon = L.icon({
+  //"leaf-green.png needs to be swapped"
+  iconUrl: 'leaf-green.png', 
+
+  iconSize:     [38, 95], // size of the icon
+    shadowSize:   [0, 0], // size of the shadow
+    iconAnchor:   [22, 94], // point of the icon which will correspond to marker's location
+    shadowAnchor: [0, 0],  // the same for the shadow
+    popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
+});
+
+L.marker([51.5, -0.09], {icon: hospitalIcon}).addTo(map); // not sure how to apply this to all of the points on the map 
+
+var UCLAIcon = new hospitalIcon({iconUrl: 'leaf-green.png'}), // need to change these png to the right icon - which ones are we using, and how do i do this 
+    redIcon = new hospitalIcon({iconUrl: 'leaf-red.png'});

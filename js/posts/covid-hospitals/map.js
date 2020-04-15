@@ -81,3 +81,10 @@ async function initCasesLayers() {
   });
   layerControl.addBaseLayer(caseRateLayer, 'Cases per capita');
 }
+
+
+
+
+
+
+
