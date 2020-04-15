@@ -72,6 +72,7 @@ Use the drop-down menus to filter the timeline by college and event, and click o
     <option value="first_infection">First School Infection</option>
     <option value="grading_change">Change in Grading Basis</option>
     <option value="housing_change">Change in University Housing Options</option>
+    <option value="graduation">Change in Commencement Plans</option>
 </select>
 
 <div id="timeline"></div>
@@ -89,6 +90,7 @@ The lollipop chart below shows the changes made by each college in relation to t
     <option value="first_infection">First School Infection</option>
     <option value="grading_change">Change in Grading Basis</option>
     <option value="housing_change">Change in University Housing Options</option>
+    <option value="graduation">Change in Commencement Plans</option>
    </select>
   <p>&nbsp; </p>
 </div>
