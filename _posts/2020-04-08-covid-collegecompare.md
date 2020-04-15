@@ -20,6 +20,7 @@ stylesheets:
   - /css/posts/covid-collegecompare/app.css
   - https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.css
 scripts:
+
   # Below scripts are for the timeline
   - https://www.amcharts.com/lib/4/core.js
   - https://www.amcharts.com/lib/4/charts.js
@@ -29,12 +30,13 @@ scripts:
   - https://www.amcharts.com/lib/4/plugins/overlapBuster.js
   - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
   - https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.jquery.min.js
-  - /js/posts/covid-collegecompare/timeline.js
   - https://d3js.org/d3.v4.min.js
   - //unpkg.com/d3-array@1
   - //unpkg.com/d3-path@1
   - //unpkg.com/d3-shape@1
+  -  /js/posts/covid-collegecompare/timeline.js
   - /js/posts/covid-collegecompare/lollipop.js
+  
 ---
 
 Within the past month, the spread of the novel coronavirus in the U.S. has forced college campuses around the country to shut down regular operations. As many schools implemented guidelines such as social distancing as [recommended by the Centers for Disease Control and Prevention](https://www.whitehouse.gov/wp-content/uploads/2020/03/03.16.20_coronavirus-guidance_8.5x11_315PM.pdf), they were also forced to make decisions regarding student housing and in-person classes. This article compares how different schools have responded to the virus, in accordance with state guidelines and increasing numbers of confirmed cases within or near their campuses.
@@ -78,9 +80,10 @@ Use the drop-down menus to filter the college action timeline by college and eve
 As schools like Harvard, Columbia and Stanford make [headlines](https://news.harvard.edu/gazette/story/2020/03/harvard-college-adopts-temporary-grading-policy-for-spring-term/) for enforcing a pass/no pass or equivalent grading scale for the remainder of the spring term, schools within the UC system have either relaxed their pass/no pass restrictions or not announced any change in grading policies at all. Schools that have decided to enforce pass/no pass grading systems argue that with the unprecedented and rapid shift to online learning, enforced pass/no pass grading helps to maintain equitability in education. Not every student has reliable internet access off-campus, many may be picking up increased responsibilities at home amid [soaring layoffs](https://time.com/5814350/jobless-layoffs-us-coronavirus/) and students living in different time zones are attempting to attend classes at odd hours of the day and night. These factors, among others, may limit many students’ ability to perform well academically during the COVID-19 pandemic.
 
 <!-- Dropdown for Lollipop -->
-<div align="center">
+<div align="left">
   <label for="graphs">Select a Graph:</label>
     <select id="graphs" onchange='javascript: lollipop_graph(this.options[this.selectedIndex].value)' >
+    <option value="cancelled_classes" selected hidden>Cancellation of In-Person Classes</option>
     <option value="cancelled_classes">Cancellation of In-Person Classes</option>
     <option value="rescheduled">Rescheduling of Classes</option>
     <option value="first_infection">First School Infection</option>
@@ -90,16 +93,7 @@ As schools like Harvard, Columbia and Stanford make [headlines](https://news.har
   <p>&nbsp; </p>
 </div>
 <div id="lollipop" align='center' >
-  <script>
-      function initial_selected (s, i)
-      {
-        // alert("initial calling");
-         s.options[i-1].selected = true;
-         lollipop_graph(s.options[i-1].value);
-         return;
-      }
-      initial_selected(document.getElementById("graphs"),1);
-  </script>
+  <script type="text/javascript" src="/js/posts/covid-collegecompare/lollipop.js"> </script>
 </div>
 
 The lollipop chart above shows the changes made by each college in relation to the amount of confirmed cases of coronavirus in the county. Use the drop-down menu to select specific schools.
