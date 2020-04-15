@@ -96,9 +96,9 @@
     },
     "grading_change": {
       "date": "000",
-      "cases": "000",
-      "description": "Change in grading of current quarter/semester",
-      "link": "*"
+      "cases": null,
+      "description": "No change in grading yet",
+      "link": ""
     },
     "housing_change": {
       "date": "2020/03/14",
@@ -146,9 +146,9 @@
     },
     "graduation": {
       "date": "000",
-      "cases": "000",
+      "cases": null,
       "description": "No decision as of this publishing",
-      "link": "*https://commencement.ucsd.edu/"
+      "link": "https://commencement.ucsd.edu/"
     }
   },
   "UC Riverside": {
@@ -165,16 +165,16 @@
       "link": "https://insideucr.ucr.edu/stories/2020/03/11/how-ucr-responding-coronavirus"
     },
     "first_infection": {
-      "date": "000",
-      "cases": "000",
+      "date": "2020/04/07",
+      "cases": "",
       "description": "First campus-affiliated infection",
       "link": "https://ehs.ucr.edu/coronavirus"
     },
     "grading_change": {
       "date": "000",
-      "cases": "000",
-      "description": "Change in grading of current quarter/semester",
-      "link": "*"
+      "cases": null,
+      "description": "No change in grading yet",
+      "link": ""
     },
     "housing_change": {
       "date": "2020/03/11",
@@ -185,8 +185,8 @@
     "graduation": {
       "date": "2020/04/1",
       "cases": "",
-      "description": "Plans yet to be confirmed",
-      "link": "*https://commencement.ucr.edu/"
+      "description": "Commencement plans yet to be confirmed",
+      "link": "https://commencement.ucr.edu/"
     }
   },
   "UC Irvine": {
@@ -210,9 +210,9 @@
     },
     "grading_change": {
       "date": "000",
-      "cases": "000",
-      "description": "Change in grading of current quarter/semester",
-      "link": "*"
+      "cases": null,
+      "description": "No change in grading yet",
+      "link": ""
     },
     "housing_change": {
       "date": "2020/03/13",
@@ -223,7 +223,7 @@
     "graduation": {
       "date": "2020/03/13",
       "cases": "13",
-      "description": "Plans yet to be confirmed",
+      "description": "Commencement plans yet to be confirmed",
       "link": "https://uci.edu/coronavirus/messages/200313-student-life-updates.php"
     }
   },
@@ -248,9 +248,9 @@
     },
     "grading_change": {
       "date": "000",
-      "cases": "000",
-      "description": "Change in grading of current quarter/semester",
-      "link": "*"
+      "cases": null,
+      "description": "No change in grading yet",
+      "link": ""
     },
     "housing_change": {
       "date": "2020/03/13",
@@ -261,7 +261,7 @@
     "graduation": {
       "date": "2020/04/10",
       "cases": "",
-      "description": "Plans yet to be confirmed",
+      "description": "Commencement plans yet to be confirmed",
       "link": "https://news.ucsc.edu/2020/04/commencement-updates.html"
     }
   },
@@ -286,9 +286,9 @@
     },
     "grading_change": {
       "date": "000",
-      "cases": "000",
-      "description": "Change in grading of current quarter/semester",
-      "link": "*"
+      "cases": null,
+      "description": "No change in grading yet",
+      "link": ""
     },
     "housing_change": {
       "date": "2020/03/17",
@@ -299,7 +299,7 @@
     "graduation": {
       "date": "2020/03/18",
       "cases": "0",
-      "description": "Plans yet to be confirmed, students being surveyed",
+      "description": "Commencement plans yet to be confirmed, students being surveyed",
       "link": "https://news.ucmerced.edu/content/covid-19-update-spring-2020-commencement"
     }
   },
@@ -308,31 +308,31 @@
       "date": "2020/03/10",
       "cases": "1",
       "description": "First action to cancel in-person classes",
-      "link": ""
+      "link": "https://www.ucdavis.edu/coronavirus/news/coronavirus-new-campus-directives"
     },
     "rescheduled": {
       "date": "2020/03/18",
       "cases": "5",
       "description": "Act to cancel/reschedule spring classes",
-      "link": ""
+      "link": "https://studentaffairs.ucdavis.edu/news/coronavirus-update"
     },
     "first_infection": {
       "date": "2020/03/27",
       "cases": "16",
       "description": "First campus-affiliated infection",
-      "link": ""
+      "link": "https://www.sacbee.com/news/coronavirus/article241578721.html"
     },
     "grading_change": {
       "date": "2020/03/27",
       "cases": "16",
-      "description": "Change in grading of current quarter/semester",
-      "link": ""
+      "description": "Optional P/NP",
+      "link": "https://www.ucdavis.edu/coronavirus/news/checking-in-with-chancellor-may-we-are-resilient/"
     },
     "housing_change": {
       "date": "2020/03/15",
       "cases": "2",
       "description": "Dorm closure (requests to move out/cancel housing)",
-      "link": ""
+      "link": "https://www.ucdavis.edu/coronavirus/news/campus-directives-spring-quarter"
     },
     "graduation": {
       "date": "2020/04/08",
@@ -358,7 +358,7 @@
       "date": "2020/03/16",
       "cases": "94",
       "description": "First campus-affiliated infection",
-      "link": ""
+      "link": "https://losangeles.cbslocal.com/2020/03/16/usc-student-positive-coronavirus-first-case/"
     },
     "grading_change": {
       "date": "2020/03/20",
@@ -396,7 +396,7 @@
       "date": "2020/03/11",
       "cases": "48",
       "description": "First campus-affiliated infection",
-      "link": ""
+      "link": "https://healthalerts.stanford.edu/2020/03/11/update-on-campus-cases/"
     },
     "grading_change": {
       "date": "2020/03/27",
@@ -434,12 +434,12 @@
       "date": "2020/03/13",
       "cases": "60",
       "description": "First campus-affiliated infection",
-      "link": ""
+      "link": "https://www.harvard.edu/coronavirus/covid-19-confirmed-case"
     },
     "grading_change": {
       "date": "2020/03/27",
       "cases": "685",
-      "description": "Change in grading of current quarter/semester",
+      "description": "Emergency Sat/Unsat for Spring",
       "link": ""
     },
     "housing_change": {
@@ -489,7 +489,7 @@
     "graduation": {
       "date": "2020/03/20",
       "cases": "4408",
-      "description": "Plans yet to be decided",
+      "description": "Commencement plans yet to be decided",
       "link": "https://preparedness.columbia.edu/news/update-course-instruction-and-university-commencement"
     }
   },
@@ -552,8 +552,8 @@
     },
     "grading_change": {
       "date": "000",
-      "cases": "000",
-      "description": "Change in grading of current quarter/semester",
+      "cases": null,
+      "description": "No change in grading yet",
       "link": ""
     },
     "housing_change": {
@@ -603,7 +603,7 @@
     "graduation": {
       "date": "2020/03/17",
       "cases": "6",
-      "description": "No plans confirmed yet",
+      "description": "No commencement plans confirmed yet",
       "link": "http://alligator.org/news/four-uf-students-have-covid-19-uf-spring-graduation-canceled-and-other-important-coronavirus-updates/article_348efc9e-6861-11ea-8935-7fa3a374c0eb.html"
     }
   },
@@ -629,7 +629,7 @@
     "grading_change": {
       "date": "2020/03/6",
       "cases": "59",
-      "description": "Change in grading of current quarter/semester",
+      "description": "*Change in grading of current quarter/semester",
       "link": "https://www.washington.edu/provost/springquarter/"
     },
     "housing_change": {
