@@ -83,8 +83,7 @@ The lollipop chart below shows the changes made by each college in relation to t
 <!-- Dropdown for Lollipop -->
 <div align="left">
   <label for="graphs">Select a Graph:</label>
-    <select id="graphs" onchange='javascript: lollipop_graph(this.options[this.selectedIndex].value)' >
-    <option value="cancelled_classes" selected hidden>First day of remote learning</option>
+    <select  id="graphs" class="lollipop_select" onchange='javascript: lollipop_graph(this.options[this.selectedIndex].value)' >
     <option value="cancelled_classes">First day of remote learning</option>
     <option value="rescheduled">Transition to long-term remote classes</option>
     <option value="first_infection">First School Infection</option>
