@@ -100,11 +100,11 @@ The lollipop chart above shows the changes made by each college in relation to t
 
 Located in Seattle, one of the first sites of community spread of COVID-19 in the U.S., the University of Washington was the first school included in our analysis to move to remote education with an official announcement released on [March 6](https://www.washington.edu/coronavirus/2020/03/06/beginning-march-9-classes-and-finals-will-not-be-held-in-person-message-to-faculty-and-staff/). All schools included in our analysis moved to remote learning by March 19. The majority of schools experienced their first confirmed university-affiliated case of COVID-19 by mid-March as the virus continued to spread.
 
+The bar chart race below shows the progression of cases in the surrounding county for each school through the past month. As time goes by, the number of COVID-19 cases in each university's surrounding county increases. The actions taken by a given school appear as pop-ups on the day they occurred.
+
 <div id="bar-race">
 <div class="flourish-embed" data-src="story/260394" data-url="https://flo.uri.sh/story/260394/embed"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
 </div>
-
-The bar chart race above shows the progression of cases in the surrounding county for each school through the past month. The actions taken by a given school appear as annotations on the day they occurred.
 
 The exponential growth of cases is noticeable as the number of cases grow at a much faster rate starting toward the middle of March. More densely populated counties (such as Los Angeles County) also show a much higher growth in cases, but the first actions for those schools occurred on similar dates as less densely populated counties. This may be because of the fact that though the first case in each school is more dependent on the number of cases in the neighborhood, administrative decisions made by colleges are influenced by the actions of other institutions. Therefore, many of the actions taken by UC schools occurred within a narrow timeframe, despite the disparity in the virus threat severity in each individual county.
 
