@@ -55,7 +55,7 @@ async function initHospitalLayer() {
       Number(item['ICU_BEDS']).toFixed(0) +
       ' ICU beds';
     let coords = [Number(item['LATITUDE']), Number(item['LONGITUDE'])];
-    markerArray.push(L.marker(coords).bindPopup(label));
+    markerArray.push(L.marker(coords, {icon: UCLAIcon}).bindPopup(label));
   });
   hospitalLayer = L.layerGroup(markerArray).addTo(map);
   layerControl.addOverlay(hospitalLayer, 'Hospitals');
