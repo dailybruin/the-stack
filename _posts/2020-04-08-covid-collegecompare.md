@@ -40,7 +40,7 @@ scripts:
 
 Within the past month, the spread of the novel coronavirus in the U.S. has forced college campuses around the country to shut down regular operations. As many schools implemented guidelines such as social distancing as [recommended by the Centers for Disease Control and Prevention](https://www.whitehouse.gov/wp-content/uploads/2020/03/03.16.20_coronavirus-guidance_8.5x11_315PM.pdf), they were also forced to make decisions regarding student housing and in-person classes. This article compares how different schools have responded to the virus, in accordance with state guidelines and increasing numbers of confirmed cases within or near their campuses.
 
-Use the drop-down menus to filter the college action timeline by college and event, and mouse over a college’s line to track its major event history. Hover over a flag to see more details, and click to flag to be sent to the university's official announcement. 
+Use the drop-down menus to filter the timeline by college and event, and click on an event to view it's source.
 
 <!-- Dropdown for Timeline -->
 
@@ -83,23 +83,12 @@ The lollipop chart below shows the changes made by each college in relation to t
 <!-- Dropdown for Lollipop -->
 <div align="left">
   <label for="graphs">Select a Graph:</label>
-<<<<<<< HEAD
-    <select id="graphs" onchange='javascript: lollipop_graph(this.options[this.selectedIndex].value)' >
-      <option value="cancelled_classes" selected hidden>First day of remote learning</option>
-      <option value="cancelled_classes">First day of remote learning</option>
-      <option value="rescheduled">Transition to long-term remote classes</option>
-      <option value="first_infection">First School Infection</option>
-      <option value="grading_change">Change in Grading Basis</option>
-      <option value="housing_change">Change in University Housing Options</option>
-      <option value="graduation">Moved Graduation Ceremonies Online</option>
-=======
     <select  id="graphs" class="lollipop_select" onchange='javascript: lollipop_graph(this.options[this.selectedIndex].value)' >
     <option value="cancelled_classes">First day of remote learning</option>
     <option value="rescheduled">Transition to long-term remote classes</option>
     <option value="first_infection">First School Infection</option>
     <option value="grading_change">Change in Grading Basis</option>
     <option value="housing_change">Change in University Housing Options</option>
->>>>>>> 1d3d14938a567ba83cf1ec0a6a21cd4bf1658a5b
    </select>
   <p>&nbsp; </p>
 </div>

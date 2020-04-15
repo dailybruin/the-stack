@@ -3,6 +3,9 @@
   height: 600px;
 }
 
+.amcharts-FlagBullet {
+  cursor: pointer;
+}
 
 .demo-theme-dark .demo-background {
   background: #000;

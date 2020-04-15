@@ -174,6 +174,7 @@ flagBullet.tooltipText =
   '{school}, {eventDate.formatDate("MMM d")}:\n {description}\n';
 flagBullet.propertyFields.fill = 'color'; // Flags are same color as their school
 flagBullet.clickable = true;
+flagBullet.userClassName = 'flagBullet';
 flagBullet.events.on(
   'hit',
   ev => {
@@ -184,15 +185,6 @@ flagBullet.events.on(
   },
   this
 );
-/* flagBullet.tooltipHTML = '{link}';
-var textLink = flagBullet.createChild(am4core.TextLink);
-textLink.propertyFields.href = 'link';
-textLink.width = 30;
-textLink.height = 30;
-textLink.horizontalCenter = 'middle';
-textLink.verticalCenter = 'middle';
-flagBullet.tooltip.label.interactionsEnabled = true;
-flagBullet.tooltip.keepTargetHover = true; */
 
 var overlap = chart.plugins.push(new am4plugins_overlapBuster.OverlapBuster());
 overlap.targets.push(flagBullet);

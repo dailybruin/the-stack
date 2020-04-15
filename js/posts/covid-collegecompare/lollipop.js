@@ -1,106 +1,5 @@
 $('.lollipop_select').chosen();
 // JavaScript Document
-<<<<<<< HEAD
-function lollipop_graph(testkey)
-{    
-    document.getElementById('lollipop').innerHTML = "";
-	 //alert('The option with value ' + testkey  );
-	 
-	  var margin = {top: 30, right: 30, bottom: 40, left:170},
-           width = 600 - margin.left - margin.right,
-           height = 500 - margin.top - margin.bottom;
-
-      // append the svg object to the body of the page
-      var svg = d3.select("#lollipop")
-          .append("svg")
-              .attr("width", width + margin.left + margin.right)
-              .attr("height", height + margin.top*3 + margin.bottom*5)
-          .append("g")
-              .attr("transform",
-                  "translate(" + margin.left + "," + margin.top + ")");
-
-      d3.json("/datasets/covid-collegecompare/college_compare.json", function(data){
-        console.log(data);
-        var cases = [];
-        var allschools = d3.keys(data);
-        console.log(allschools[0]);
-        var schools = [];
-        var xvalue ;
-        var tooltip = d3.select("body")
-						.append("div")
-						.style("position", "absolute")
-						.style("z-index", "10")
-						.style("visibility", "hidden")
-						.text("a simple tooltip"); 
-        for(var key in data)
-        {
-          if( testkey == "rescheduled" ) {
-            if(data[key].rescheduled.cases != null){
-              cases.push(parseInt(data[key].rescheduled.cases));
-              schools.push(key);
-            }
-          }
-          else if (testkey == "first_infection"){
-            if(data[key].first_infection.cases != null){
-              cases.push(parseInt(data[key].first_infection.cases));
-              schools.push(key);
-            }
-          }
-          else if (testkey == "grading_change"){
-            if(data[key].grading_change.cases != null){
-              cases.push(parseInt(data[key].grading_change.cases));
-              schools.push(key);
-            }
-          }
-          else if (testkey == "housing_change"){
-            if(data[key].housing_change.cases != null){
-              cases.push(parseInt(data[key].housing_change.cases));
-              schools.push(key);
-            }
-          }
-          else if (testkey == "graduation"){
-            if(data[key].graduation.cases != null){
-              cases.push(parseInt(data[key].graduation.cases));
-              schools.push(key);
-            }
-          }
-          else if (testkey == "" || testkey == "cancelled_classes"){
-            if(data[key].cancelled_classes.cases != null){
-              cases.push(parseInt(data[key].cancelled_classes.cases));
-              schools.push(key);
-            }
-          }
-        }
-
-		xvalue = Math.max.apply(this, cases);
-		
-		if (xvalue <100)
-		    xvalue = (Math.round(xvalue/10) + 1 )*10;
-		else if (xvalue >=100 && xvalue <1000) 
-		    xvalue = (Math.round(xvalue/100) + 1 )*100;
-		else 
-		    xvalue = (Math.round(xvalue/1000) + 1 )*1000;
-
-         // Add X axis
-        var x = d3.scaleLinear()
-            .domain([0, xvalue])
-            .range([ 0, width]);
-        svg.append("g")
-            .attr("transform", "translate(0," + height + ")")
-            .call(d3.axisBottom(x))
-            .selectAll("text")
-            .attr("transform", "translate(-10,0)rotate(-45)")
-            .style("text-anchor", "end");
-=======
-function initial_selected(s, i) {
-  // alert("initial calling");
-  //console.log("starting");
-  s.options[i - 1].selected = true;
-  lollipop_graph(s.options[i - 1].value);
-  return;
-}
-initial_selected(document.getElementById('graphs'), 1);
-
 function lollipop_graph(testkey) {
   document.getElementById('lollipop').innerHTML = '';
   //alert('The option with value ' + testkey  );
@@ -114,15 +13,18 @@ function lollipop_graph(testkey) {
     .select('#lollipop')
     .append('svg')
     .attr('width', width + margin.left + margin.right)
-    .attr('height', height + margin.top * 2 + margin.bottom * 2)
+    .attr('height', height + margin.top * 3 + margin.bottom * 5)
     .append('g')
     .attr('transform', 'translate(' + margin.left + ',' + margin.top + ')');
 
   d3.json('/datasets/covid-collegecompare/college_compare.json', function(
     data
   ) {
+    console.log(data);
     var cases = [];
-    var schools = d3.keys(data);
+    var allschools = d3.keys(data);
+    console.log(allschools[0]);
+    var schools = [];
     var xvalue;
     var tooltip = d3
       .select('body')
@@ -132,28 +34,58 @@ function lollipop_graph(testkey) {
       .style('visibility', 'hidden')
       .text('a simple tooltip');
     for (var key in data) {
-      if (testkey == 'rescheduled')
-        // {
-        cases.push(parseInt(data[key].rescheduled.cases));
-      //	xvalue = Math.max(parseInt(data[key].rescheduled.cases));
-      // }
-      else if (testkey == 'first_infection')
-        cases.push(parseInt(data[key].first_infection.cases));
-      else if (testkey == 'grading_change')
-        cases.push(parseInt(data[key].grading_change.cases));
-      else if (testkey == 'housing_change')
-        cases.push(parseInt(data[key].housing_change.cases));
-      else if (testkey == '' || testkey == 'cancelled_classes')
-        cases.push(parseInt(data[key].cancelled_classes.cases));
+      if (testkey == 'rescheduled') {
+        if (data[key].rescheduled.cases != null) {
+          cases.push(parseInt(data[key].rescheduled.cases));
+          schools.push(key);
+        }
+      } else if (testkey == 'first_infection') {
+        if (data[key].first_infection.cases != null) {
+          cases.push(parseInt(data[key].first_infection.cases));
+          schools.push(key);
+        }
+      } else if (testkey == 'grading_change') {
+        if (data[key].grading_change.cases != null) {
+          cases.push(parseInt(data[key].grading_change.cases));
+          schools.push(key);
+        }
+      } else if (testkey == 'housing_change') {
+        if (data[key].housing_change.cases != null) {
+          cases.push(parseInt(data[key].housing_change.cases));
+          schools.push(key);
+        }
+      } else if (testkey == 'graduation') {
+        if (data[key].graduation.cases != null) {
+          cases.push(parseInt(data[key].graduation.cases));
+          schools.push(key);
+        }
+      } else if (testkey == '' || testkey == 'cancelled_classes') {
+        if (data[key].cancelled_classes.cases != null) {
+          cases.push(parseInt(data[key].cancelled_classes.cases));
+          schools.push(key);
+        }
+      }
     }
+
     xvalue = Math.max.apply(this, cases);
 
     if (xvalue < 100) xvalue = (Math.round(xvalue / 10) + 1) * 10;
     else if (xvalue >= 100 && xvalue < 1000)
       xvalue = (Math.round(xvalue / 100) + 1) * 100;
     else xvalue = (Math.round(xvalue / 1000) + 1) * 1000;
-    // xvalue = (Math.round(Math.max.apply(this, cases)/100)+1)*100;
->>>>>>> 1d3d14938a567ba83cf1ec0a6a21cd4bf1658a5b
+
+    // Add X axis
+    var x = d3
+      .scaleLinear()
+      .domain([0, xvalue])
+      .range([0, width]);
+    svg
+      .append('g')
+      .attr('transform', 'translate(0,' + height + ')')
+      .call(d3.axisBottom(x))
+      .selectAll('text')
+      .attr('transform', 'translate(-10,0)rotate(-45)')
+      .style('text-anchor', 'end');
 
     // Add X axis
     var x = d3
@@ -214,51 +146,6 @@ function lollipop_graph(testkey) {
 						.duration(500)
 						.style("opacity", 0);
             })	; */
-<<<<<<< HEAD
-        }
-		
-		    svg
-          .append("text")             
-          .attr("transform",
-                "translate(" + (width/2) + " ," + 
-                              (height + margin.top+20  ) + ")")
-          .style("text-anchor", "middle")
-          .text("Cases in Surrounding County");
-        
-        svg
-          .append("text")             
-          .attr("transform", "rotate(-90)")
-          .attr("y", 0 - margin.left+50)
-          .attr("x", 0 - (height / 2))
-          .attr("dy", "1em")
-          .style("text-anchor", "middle")
-          .text("School"); 
-        
-        var title = "";
-        if(testkey == "rescheduled") 
-          title = "Transition to long-term remote classes"
-        else if(testkey == "first_infection")
-          title = "First School Infection"
-        else if(testkey == "grading_change")
-          title = "Change in Grading Basis"  
-        else if(testkey == "housing_change")
-          title = "Change in University Housing Options"
-        else if(testkey == "graduation")
-          title = "Moved Graduation Ceremonies Online"
-        else if (testkey == "" || testkey == "cancelled_classes")
-          title = "First day of remote learning"
-
-
-        svg
-          .append("text")
-          .attr("y", margin.top -40)
-          .attr("x", width/2)
-          .style("text-anchor","middle")
-          .text(title);
-
-      })
-}
-=======
     }
 
     svg
@@ -279,12 +166,23 @@ function lollipop_graph(testkey) {
       .style('text-anchor', 'middle')
       .text('School');
 
+    var title = '';
+    if (testkey == 'rescheduled')
+      title = 'Transition to long-term remote classes';
+    else if (testkey == 'first_infection') title = 'First School Infection';
+    else if (testkey == 'grading_change') title = 'Change in Grading Basis';
+    else if (testkey == 'housing_change')
+      title = 'Change in University Housing Options';
+    else if (testkey == 'graduation')
+      title = 'Moved Graduation Ceremonies Online';
+    else if (testkey == '' || testkey == 'cancelled_classes')
+      title = 'First day of remote learning';
+
     svg
       .append('text')
       .attr('y', margin.top - 40)
       .attr('x', width / 2)
       .style('text-anchor', 'middle')
-      .text('University Actions Compared to Confirmed Cases of COVID-19');
+      .text(title);
   });
 }
->>>>>>> 1d3d14938a567ba83cf1ec0a6a21cd4bf1658a5b
