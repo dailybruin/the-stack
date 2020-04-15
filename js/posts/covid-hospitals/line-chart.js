@@ -1,43 +1,85 @@
-var time_labels = ['6 months','12 months','18 months'];
+var time_labels = ['6 months', '12 months', '18 months'];
 var color_codes = {
-  'ugrad': '#3e95cd',
-  'grad': '#8e5ea2'
+  ugrad: '#3e95cd',
+  grad: '#8e5ea2',
+  tot_hos: '#000000CC',
+  tot_icu: '#3C0919CC',
+  pot_hos: '#01162780',
+  pot_icu: '#FF2C5580',
 }; //TODO: Or pick better colors?
 
-let lineChart = new Chart(document.getElementById("line-chart"), {
-    type: 'line',
-    data: {
-      datasets: [{ 
-          data: [86,114,106], //dummy numbers
-          label: "Undergraduate Students",
-          borderColor: color_codes['ugrad'],
-          fill: false
-        }, { 
-          data: [282,350,411], //dummy numbers
-          label: "Graduate Students",
-          borderColor: color_codes['grad'],
-          fill: false
-        },
-      ]
-    },
-    options: {
-      title: {
-        display: true,
-        text: 'Level of Expected Hospital Usage by UCLA Student Population' //TODO: or better naming
+var borderDash = [5, 20];
+
+let lineChart = new Chart(document.getElementById('line-chart'), {
+  type: 'line',
+  data: {
+    datasets: [
+      {
+        data: [86, 114, 106], //dummy numbers
+        label: 'Undergraduate Students',
+        borderColor: color_codes['ugrad'],
+        pointRadius: 5,
+        fill: false,
       },
-      scales: {
-        xAxes: [{ 
+      {
+        data: [282, 350, 411], //dummy numbers
+        label: 'Graduate Students',
+        borderColor: color_codes['grad'],
+        pointRadius: 5,
+        fill: false,
+      },
+      {
+        data: Array(time_labels.length).fill(200), //dummy numbers
+        label: 'Total Hospital Beds',
+        borderColor: color_codes['tot_hos'],
+        pointRadius: 0,
+        fill: false,
+      },
+      {
+        data: Array(time_labels.length).fill(50), //dummy numbers
+        label: 'Total ICU Beds',
+        borderColor: color_codes['tot_icu'],
+        pointRadius: 0,
+        fill: false,
+      },
+      {
+        data: Array(time_labels.length).fill(100), //dummy numbers
+        label: 'Potentially Available Hospital Beds',
+        borderColor: color_codes['pot_hos'],
+        borderDash: borderDash,
+        pointRadius: 0,
+        fill: false,
+      },
+      {
+        data: Array(time_labels.length).fill(30), //dummy numbers
+        label: 'Potentially Available ICU Beds',
+        borderColor: color_codes['pot_icu'],
+        borderDash: borderDash,
+        pointRadius: 0,
+        fill: false,
+      },
+    ],
+  },
+  options: {
+    title: {
+      display: true,
+      text: 'Hypothetical Hospital and ICU Beds needed by UCLA Students', //TODO: or better naming
+    },
+    scales: {
+      xAxes: [
+        {
           type: 'category',
           labels: time_labels,
-            scaleLabel: {
+          scaleLabel: {
             display: false,
-            labelString: "Time into the future" //TODO: or better naming
-            },
+            labelString: 'Time into the future', //TODO: or better naming
+          },
           display: true,
-        }]
-      }
-    }
-  });
+        },
+      ],
+    },
+  },
+});
 
 Chart.defaults.global.defaultFontFamily = 'Roboto';
 Chart.defaults.global.defaultFontSize = 15;
