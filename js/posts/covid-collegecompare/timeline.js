@@ -33,10 +33,9 @@ $.ajaxSetup({
 
 // Turning the json file into the right format -------------------------
 var schools = [];
-var start_date = [];
+var start_date = []; //
 var end_date = [];
-var start;
-var end;
+var school_dates = [];
 var num_school = 0;
 
 var new_data = [];
@@ -50,33 +49,33 @@ var all_schools_event_data = [];
 
 for (var i in data) {
   schools.push(i);
-  start = 32;
-  end = -1;
+  school_dates = [];
+  var date;
   for (var j in data[i]) {
-    if (Number(data[i][j].date) != 0) {
-      start = Math.min(Number(data[i][j].date), start); //finding the first action the university took
-
+    date = data[i][j].date;
+    if (date != '000' && date != '') {
+      date = new Date(date);
+      school_dates.push(date);
       new_event_json = {
         //adding a new event
         school: i,
         event: j,
-        eventDate: new Date(2020, 02, data[i][j].date),
+        eventDate: date,
         description: data[i][j].description,
         color: colorSet.getIndex(num_school),
-        link: data[i][j].link
+        link: data[i][j].link,
       };
       event_data.push(new_event_json);
     }
-    end = Math.max(Number(data[i][j].date), end);
   }
-  start_date.push(start);
-  end_date.push(end);
+  start_date.push(new Date(Math.min.apply(null, school_dates)));
+  end_date.push(new Date(Math.max.apply(null, school_dates)));
 
   new_json = {
     // timeline of action for each school
     school: schools[num_school],
-    start: new Date(2020, 02, start_date[num_school]),
-    end: new Date(2020, 02, end_date[num_school]),
+    start: start_date[num_school],
+    end: end_date[num_school],
     color: colorSet.getIndex(num_school),
     task: `${schools[num_school]}`,
   };
@@ -172,8 +171,28 @@ var flagBullet = eventSeries.bullets.push(new am4plugins_bullets.FlagBullet());
 flagBullet.label.propertyFields.text = 'school';
 flagBullet.locationX = 1;
 flagBullet.tooltipText =
-  '{school}, {eventDate.formatDate("MMM d")}:\n {description}\n <a href="{link}">Source</a>';
+  '{school}, {eventDate.formatDate("MMM d")}:\n {description}\n';
 flagBullet.propertyFields.fill = 'color'; // Flags are same color as their school
+flagBullet.clickable = true;
+flagBullet.events.on(
+  'hit',
+  ev => {
+    var data = ev.target.dataItem.dataContext;
+    if (data.link != '000' && data.link != '') {
+      window.open(data.link, '_blank');
+    }
+  },
+  this
+);
+/* flagBullet.tooltipHTML = '{link}';
+var textLink = flagBullet.createChild(am4core.TextLink);
+textLink.propertyFields.href = 'link';
+textLink.width = 30;
+textLink.height = 30;
+textLink.horizontalCenter = 'middle';
+textLink.verticalCenter = 'middle';
+flagBullet.tooltip.label.interactionsEnabled = true;
+flagBullet.tooltip.keepTargetHover = true; */
 
 var overlap = chart.plugins.push(new am4plugins_overlapBuster.OverlapBuster());
 overlap.targets.push(flagBullet);
@@ -237,9 +256,9 @@ function changeTimeline() {
   var school_data = [];
   var school_event_data = [];
 
-  if (school_names == null || school_names.includes('all')) { 
+  if (school_names == null || school_names.includes('all')) {
     school_data = all_schools_data;
-    if (event_names == null || event_names.includes('all')) { 
+    if (event_names == null || event_names.includes('all')) {
       school_event_data = all_schools_event_data;
     } else {
       for (var i in all_schools_event_data) {
@@ -260,7 +279,7 @@ function changeTimeline() {
         }
       }
 
-      if (event_names == null || event_names.includes('all')) { 
+      if (event_names == null || event_names.includes('all')) {
         for (var i in all_schools_event_data) {
           if (all_schools_event_data[i].school == school_name) {
             school_event_data.push(all_schools_event_data[i]);

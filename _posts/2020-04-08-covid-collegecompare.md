@@ -20,7 +20,6 @@ stylesheets:
   - /css/posts/covid-collegecompare/app.css
   - https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.css
 scripts:
-
   # Below scripts are for the timeline
   - https://www.amcharts.com/lib/4/core.js
   - https://www.amcharts.com/lib/4/charts.js
@@ -30,13 +29,13 @@ scripts:
   - https://www.amcharts.com/lib/4/plugins/overlapBuster.js
   - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
   - https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.jquery.min.js
+  - /js/posts/covid-collegecompare/timeline.js
+  # Below scripts are for the lollipop
   - https://d3js.org/d3.v4.min.js
   - //unpkg.com/d3-array@1
   - //unpkg.com/d3-path@1
   - //unpkg.com/d3-shape@1
-  -  /js/posts/covid-collegecompare/timeline.js
   - /js/posts/covid-collegecompare/lollipop.js
-  
 ---
 
 Within the past month, the spread of the novel coronavirus in the U.S. has forced college campuses around the country to shut down regular operations. As many schools implemented guidelines such as social distancing as [recommended by the Centers for Disease Control and Prevention](https://www.whitehouse.gov/wp-content/uploads/2020/03/03.16.20_coronavirus-guidance_8.5x11_315PM.pdf), they were also forced to make decisions regarding student housing and in-person classes. This article compares how different schools have responded to the virus, in accordance with state guidelines and increasing numbers of confirmed cases within or near their campuses.
@@ -46,7 +45,7 @@ Use the drop-down menus to filter the college action timeline by college and eve
 <!-- Dropdown for Timeline -->
 
 <select multiple id="timeline_dropdown_school" class="timeline_select" data-placeholder="Choose a school..." onchange="changeTimeline();">
-    <option value="all">Select All</option> 
+    <option value="all">Select All</option>
     <option value="UCLA">UCLA</option>
     <option value="Columbia">Columbia</option>
     <option value="Harvard">Harvard</option>

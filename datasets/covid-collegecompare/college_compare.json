@@ -629,8 +629,8 @@
     "grading_change": {
       "date": "2020/03/6",
       "cases": "59",
-      "description": "*Change in grading of current quarter/semester",
-      "link": "*https://www.washington.edu/provost/springquarter/"
+      "description": "Change in grading of current quarter/semester",
+      "link": "https://www.washington.edu/provost/springquarter/"
     },
     "housing_change": {
       "date": "2020/03/18",
