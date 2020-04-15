@@ -30,8 +30,6 @@ scripts:
 
 # Introduction
 
-# Map
-
 <div id="map"></div>
 
 <script type="text/pyscript" src="python/corona-hospitals/map-scraping.py"></script>

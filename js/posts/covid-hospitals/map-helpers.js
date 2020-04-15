@@ -170,7 +170,7 @@ function loadJSON(path) {
 
 var hospitalIcon = L.Icon.extend({
   options: {
-      shadowUrl: 'leaf-shadow.png',
+      shadowUrl: '/js/posts/covid-hospitals/leaf-shadow.png',
       iconSize:     [38, 95],
       shadowSize:   [50, 64],
       iconAnchor:   [22, 94],
@@ -183,5 +183,5 @@ L.icon = function (options) {
   return new L.Icon(options);
 };
 
-var UCLAIcon = new hospitalIcon({iconUrl: 'leaf-green.png'}), // need to change these png to the right icon - which ones are we using, and how do i do this 
-    redIcon = new hospitalIcon({iconUrl: 'leaf-red.png'});
+var UCLAIcon = new hospitalIcon({iconUrl: '/js/posts/covid-hospitals/leaf-green.png'}), // need to change these png to the right icon - which ones are we using, and how do i do this 
+    redIcon = new hospitalIcon({iconUrl: '/js/posts/covid-hospitals/leaf-red.png'});
