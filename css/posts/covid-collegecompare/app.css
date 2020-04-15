@@ -1,13 +1,8 @@
 #timeline {
   width: 90%;
-  height: 1200px;
+  height: 600px;
 }
 
-@media screen and (min-width: 400px) {
-  #timeline {
-    height: 600px;
-  }
-}
 
 .demo-theme-dark .demo-background {
   background: #000;

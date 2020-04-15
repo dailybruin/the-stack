@@ -213,7 +213,7 @@ chart.responsive.rules.push({
       state.properties.paddingBottom = 5;
       state.properties.paddingLeft = 0;
       state.properties.levelCount = 7;
-      state.properties.height = 1200;
+      state.properties.height = 600;
       state.properties.yAxisRadius = am4core.percent(30);
       state.properties.yAxisInnerRadius = am4core.percent(-30);
       return state;
@@ -222,6 +222,7 @@ chart.responsive.rules.push({
     if (target instanceof am4charts.CategoryAxis()) {
       var state = target.states.create(stateId);
       state.properties.renderer.labels.template.paddingRight = 0;
+      state.properties.renderer.labels.template.paddingTop = 0;
       return state;
     }
     return null;
