@@ -1,147 +1,151 @@
+$('.lollipop_select').chosen();
 // JavaScript Document
-function initial_selected (s, i)
-      {
-        // alert("initial calling");
-        //console.log("starting");
-         s.options[i-1].selected = true;
-         lollipop_graph(s.options[i-1].value);
-         return;
-      }
-initial_selected(document.getElementById("graphs"),1)
-     
-function lollipop_graph(testkey)
-{    
-    document.getElementById('lollipop').innerHTML = "";
-	 //alert('The option with value ' + testkey  );
-	 
-	  var margin = {top: 30, right: 30, bottom: 40, left:170},
-           width = 600 - margin.left - margin.right,
-           height = 500 - margin.top - margin.bottom;
+function initial_selected(s, i) {
+  // alert("initial calling");
+  //console.log("starting");
+  s.options[i - 1].selected = true;
+  lollipop_graph(s.options[i - 1].value);
+  return;
+}
+initial_selected(document.getElementById('graphs'), 1);
 
-      // append the svg object to the body of the page
-      var svg = d3.select("#lollipop")
-          .append("svg")
-              .attr("width", width + margin.left + margin.right)
-              .attr("height", height + margin.top*2 + margin.bottom*2)
-          .append("g")
-              .attr("transform",
-                  "translate(" + margin.left + "," + margin.top + ")");
+function lollipop_graph(testkey) {
+  document.getElementById('lollipop').innerHTML = '';
+  //alert('The option with value ' + testkey  );
 
-      d3.json("/datasets/covid-collegecompare/college_compare.json", function(data){
-        var cases = [];
-        var schools = d3.keys(data);
-        var xvalue ;
-        var tooltip = d3.select("body")
-						.append("div")
-						.style("position", "absolute")
-						.style("z-index", "10")
-						.style("visibility", "hidden")
-						.text("a simple tooltip"); 
-        for(var key in data)
-        {
-          if(testkey == "rescheduled") 
-		 // {
-            cases.push(parseInt(data[key].rescheduled.cases));
-		//	xvalue = Math.max(parseInt(data[key].rescheduled.cases));
-		 // }
-          else if(testkey == "first_infection")
-            cases.push(parseInt(data[key].first_infection.cases));
-          else if(testkey == "grading_change")
-            cases.push(parseInt(data[key].grading_change.cases));
-          else if(testkey == "housing_change")
-            cases.push(parseInt(data[key].housing_change.cases));
-          else if (testkey == "" || testkey == "cancelled_classes")
-            cases.push(parseInt(data[key].cancelled_classes.cases));
-        }
-		xvalue = Math.max.apply(this, cases);
-		
-		if (xvalue <100)
-		    xvalue = (Math.round(xvalue/10) + 1 )*10;
-		else if (xvalue >=100 && xvalue <1000) 
-		    xvalue = (Math.round(xvalue/100) + 1 )*100;
-		else 
-		    xvalue = (Math.round(xvalue/1000) + 1 )*1000;
-        // xvalue = (Math.round(Math.max.apply(this, cases)/100)+1)*100;
-		  
-         // Add X axis
-        var x = d3.scaleLinear()
-            .domain([0, xvalue])
-            .range([ 0, width]);
-        svg.append("g")
-            .attr("transform", "translate(0," + height + ")")
-            .call(d3.axisBottom(x))
-            .selectAll("text")
-            .attr("transform", "translate(-10,0)rotate(-45)")
-            .style("text-anchor", "end");
+  var margin = { top: 30, right: 30, bottom: 40, left: 170 },
+    width = 600 - margin.left - margin.right,
+    height = 500 - margin.top - margin.bottom;
 
-            // Y axis
-        var y = d3.scaleBand()
-            .range([ 0, height ])
-            .domain(schools.map(function(schools) { return schools; }))
-            .padding(1);
-       svg.append("g")
-            .call(d3.axisLeft(y));
-            
-        for(var key in cases){
+  // append the svg object to the body of the page
+  var svg = d3
+    .select('#lollipop')
+    .append('svg')
+    .attr('width', width + margin.left + margin.right)
+    .attr('height', height + margin.top * 2 + margin.bottom * 2)
+    .append('g')
+    .attr('transform', 'translate(' + margin.left + ',' + margin.top + ')');
 
-          svg
-              .append('line')
-              .attr('x1', x(0))
-              .attr('x2', x(cases[key]))
-              .attr('y1', y(schools[key]))
-              .attr('y2', y(schools[key]))
-              .style('stroke', '#003366');
+  d3.json('/datasets/covid-collegecompare/college_compare.json', function(
+    data
+  ) {
+    var cases = [];
+    var schools = d3.keys(data);
+    var xvalue;
+    var tooltip = d3
+      .select('body')
+      .append('div')
+      .style('position', 'absolute')
+      .style('z-index', '10')
+      .style('visibility', 'hidden')
+      .text('a simple tooltip');
+    for (var key in data) {
+      if (testkey == 'rescheduled')
+        // {
+        cases.push(parseInt(data[key].rescheduled.cases));
+      //	xvalue = Math.max(parseInt(data[key].rescheduled.cases));
+      // }
+      else if (testkey == 'first_infection')
+        cases.push(parseInt(data[key].first_infection.cases));
+      else if (testkey == 'grading_change')
+        cases.push(parseInt(data[key].grading_change.cases));
+      else if (testkey == 'housing_change')
+        cases.push(parseInt(data[key].housing_change.cases));
+      else if (testkey == '' || testkey == 'cancelled_classes')
+        cases.push(parseInt(data[key].cancelled_classes.cases));
+    }
+    xvalue = Math.max.apply(this, cases);
 
-          svg
-            .append('circle')
-            .attr('cx', x(cases[key]))
-            .attr('cy', y(schools[key]))
-            .attr("r","4")
-            .style("fill", "red")
-            .style('stroke', "#000080")
-	/*		.on("mouseover", function(   ) {return tooltip.style("visibility", "visible") 
-			                                            .text(cases[key]);})	
+    if (xvalue < 100) xvalue = (Math.round(xvalue / 10) + 1) * 10;
+    else if (xvalue >= 100 && xvalue < 1000)
+      xvalue = (Math.round(xvalue / 100) + 1) * 100;
+    else xvalue = (Math.round(xvalue / 1000) + 1) * 1000;
+    // xvalue = (Math.round(Math.max.apply(this, cases)/100)+1)*100;
+
+    // Add X axis
+    var x = d3
+      .scaleLinear()
+      .domain([0, xvalue])
+      .range([0, width]);
+    svg
+      .append('g')
+      .attr('transform', 'translate(0,' + height + ')')
+      .call(d3.axisBottom(x))
+      .selectAll('text')
+      .attr('transform', 'translate(-10,0)rotate(-45)')
+      .style('text-anchor', 'end');
+
+    // Y axis
+    var y = d3
+      .scaleBand()
+      .range([0, height])
+      .domain(
+        schools.map(function(schools) {
+          return schools;
+        })
+      )
+      .padding(1);
+    svg.append('g').call(d3.axisLeft(y));
+
+    for (var key in cases) {
+      svg
+        .append('line')
+        .attr('x1', x(0))
+        .attr('x2', x(cases[key]))
+        .attr('y1', y(schools[key]))
+        .attr('y2', y(schools[key]))
+        .style('stroke', '#003366');
+
+      svg
+        .append('circle')
+        .attr('cx', x(cases[key]))
+        .attr('cy', y(schools[key]))
+        .attr('r', '4')
+        .style('fill', 'red')
+        .style('stroke', '#000080');
+      /*		.on("mouseover", function(   ) {return tooltip.style("visibility", "visible")
+			                                            .text(cases[key]);})
 			.on("mousemove", function(){return tooltip.style("top", (event.pageY-10)+"px").style("left",(event.pageX+10)+"px");})
 			.on("mouseout", function(){return tooltip.style("visibility", "hidden"); });*/
 
-/*				div.transition()		
-					.duration(200)		
-					.style("opacity", .9);		
-				div	.html("test"    )	
-					.style("left", (d3.event.pageX) + "px")		
-					.style("top", (d3.event.pageY - 28) + "px"); 
+      /*				div.transition()
+					.duration(200)
+					.style("opacity", .9);
+				div	.html("test"    )
+					.style("left", (d3.event.pageX) + "px")
+					.style("top", (d3.event.pageY - 28) + "px");
 	*/
-		//	})
-	/*		 .on("mouseout", function( ) {		
-					div.transition()		
-						.duration(500)		
-						.style("opacity", 0);		
+      //	})
+      /*		 .on("mouseout", function( ) {
+					div.transition()
+						.duration(500)
+						.style("opacity", 0);
             })	; */
-        }
-		
-		    svg
-          .append("text")             
-          .attr("transform",
-                "translate(" + (width/2) + " ," + 
-                              (height + margin.top+20  ) + ")")
-          .style("text-anchor", "middle")
-          .text("Cases in Surrounding County");
-        
-        svg
-          .append("text")             
-          .attr("transform", "rotate(-90)")
-          .attr("y", 0 - margin.left+50)
-          .attr("x", 0 - (height / 2))
-          .attr("dy", "1em")
-          .style("text-anchor", "middle")
-          .text("School"); 
-        
-        svg
-          .append("text")
-          .attr("y", margin.top -40)
-          .attr("x", width/2)
-          .style("text-anchor","middle")
-          .text("University Actions Compared to Confirmed Cases of COVID-19");
+    }
 
-      })
+    svg
+      .append('text')
+      .attr(
+        'transform',
+        'translate(' + width / 2 + ' ,' + (height + margin.top + 20) + ')'
+      )
+      .style('text-anchor', 'middle')
+      .text('Cases in Surrounding County');
+
+    svg
+      .append('text')
+      .attr('transform', 'rotate(-90)')
+      .attr('y', 0 - margin.left + 50)
+      .attr('x', 0 - height / 2)
+      .attr('dy', '1em')
+      .style('text-anchor', 'middle')
+      .text('School');
+
+    svg
+      .append('text')
+      .attr('y', margin.top - 40)
+      .attr('x', width / 2)
+      .style('text-anchor', 'middle')
+      .text('University Actions Compared to Confirmed Cases of COVID-19');
+  });
 }
