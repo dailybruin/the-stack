@@ -69,9 +69,9 @@
       "link": "https://news.berkeley.edu/2020/03/13/uc-berkeley-extends-remote-instruction-through-end-of-semester/"
     },
     "graduation": {
-      "date": "",
-      "cases": "",
-      "description": "Commencement ceremonies plans",
+      "date": "2020/03/23",
+      "cases": "139",
+      "description": "Postponed commencement",
       "link": "https://news.berkeley.edu/2020/03/23/uc-berkeley-to-postpone-commencement-due-to-coronavirus/"
     }
   },
@@ -108,8 +108,8 @@
     },
     "graduation": {
       "date": "2020/03/26",
-      "cases": "",
-      "description": "Commencement ceremonies plans",
+      "cases": "32",
+      "description": "Postponed Commencement, will Host “Virtual Ceremony” in June",
       "link": "http://dailynexus.com/2020-03-26/breaking-ucsb-postpones-commencement-will-host-virtual-ceremony-in-june/"
     }
   },
@@ -185,7 +185,7 @@
     "graduation": {
       "date": "2020/04/1",
       "cases": "",
-      "description": "Commencement ceremonies plans",
+      "description": "Plans yet to be confirmed",
       "link": "*https://commencement.ucr.edu/"
     }
   },
@@ -221,9 +221,9 @@
       "link": "https://uci.edu/coronavirus/messages/200313-student-life-updates.php"
     },
     "graduation": {
-      "date": "",
-      "cases": "",
-      "description": "Postponed commencement",
+      "date": "2020/03/13",
+      "cases": "13",
+      "description": "Plans yet to be confirmed",
       "link": "https://uci.edu/coronavirus/messages/200313-student-life-updates.php"
     }
   },
@@ -261,8 +261,8 @@
     "graduation": {
       "date": "2020/04/10",
       "cases": "",
-      "description": "Postponed graduation",
-      "link": "*https://news.ucsc.edu/2020/04/commencement-updates.html"
+      "description": "Plans yet to be confirmed",
+      "link": "https://news.ucsc.edu/2020/04/commencement-updates.html"
     }
   },
   "UC Merced": {
@@ -298,8 +298,8 @@
     },
     "graduation": {
       "date": "2020/03/18",
-      "cases": "",
-      "description": "Postponed commencement ceremony",
+      "cases": "0",
+      "description": "Plans yet to be confirmed, students being surveyed",
       "link": "https://news.ucmerced.edu/content/covid-19-update-spring-2020-commencement"
     }
   },
@@ -335,10 +335,10 @@
       "link": ""
     },
     "graduation": {
-      "date": "",
+      "date": "2020/04/08",
       "cases": "",
-      "description": "Commencement ceremonies plans",
-      "link": ""
+      "description": "Virtual ceremony, consideration for in-person ceremony in December",
+      "link": "https://theaggie.org/2020/04/08/spring-commencement-to-be-held-virtually-with-possibility-of-later-in-person-ceremony/"
     }
   },
   "USC": {
@@ -346,13 +346,13 @@
       "date": "2020/03/11",
       "cases": "28",
       "description": "First action to cancel in-person classes",
-      "link": ""
+      "link": "https://coronavirus.usc.edu/2020/03/11/notice-of-extended-period-of-remote-instruction/"
     },
     "rescheduled": {
       "date": "2020/03/16",
       "cases": "94",
       "description": "Act to cancel/reschedule spring classes",
-      "link": ""
+      "link": "https://sites.usc.edu/coronavirus/announcements/3-16-covid-19-new-actions/"
     },
     "first_infection": {
       "date": "2020/03/16",
@@ -364,19 +364,19 @@
       "date": "2020/03/20",
       "cases": "292",
       "description": "Change in grading of current quarter/semester",
-      "link": ""
+      "link": "https://coronavirus.usc.edu/2020/03/30/important-modification-to-undergraduate-grading-policy/"
     },
     "housing_change": {
       "date": "2020/03/16",
       "cases": "94",
       "description": "Dorm closure (requests to move out/cancel housing)",
-      "link": ""
+      "link": "https://sites.usc.edu/coronavirus/announcements/3-16-covid-19-new-actions/"
     },
     "graduation": {
-      "date": "",
-      "cases": "",
+      "date": "2020/03/20",
+      "cases": "292",
       "description": "Commencement ceremonies plans",
-      "link": ""
+      "link": "http://dailytrojan.com/2020/03/20/usc-to-postpone-in-person-commencement-but-to-hold-online-events-in-may/"
     }
   },
   "Stanford": {
@@ -384,13 +384,13 @@
       "date": "2020/03/13",
       "cases": "79",
       "description": "First action to cancel in-person classes",
-      "link": ""
+      "link": "https://healthalerts.stanford.edu/2020/03/03/updates-regarding-covid-19/"
     },
     "rescheduled": {
       "date": "2020/03/19",
       "cases": "189",
       "description": "Act to cancel/reschedule spring classes",
-      "link": ""
+      "link": "https://healthalerts.stanford.edu/2020/03/19/stanford-update-for-thursday-evening-march-19-new-information-on-spring-quarter/"
     },
     "first_infection": {
       "date": "2020/03/11",
@@ -402,19 +402,19 @@
       "date": "2020/03/27",
       "cases": "574",
       "description": "Change in grading of current quarter/semester",
-      "link": ""
+      "link": "https://healthalerts.stanford.edu/2020/03/27/spring-quarter-grading-policy/"
     },
     "housing_change": {
       "date": "2020/03/13",
       "cases": "79",
       "description": "Dorm closure (requests to move out/cancel housing)",
-      "link": ""
+      "link": "https://healthalerts.stanford.edu/2020/03/13/new-covid-19-actions-letter-from-university-president-marc-tessier-lavigne/"
     },
     "graduation": {
-      "date": "",
-      "cases": "",
-      "description": "Commencement ceremonies plans",
-      "link": ""
+      "date": "2020/03/20",
+      "cases": "196",
+      "description": "In-person ceremony cancelled, plans yet to be finalized",
+      "link": "https://www.mercurynews.com/2020/03/20/stanford-cancels-traditional-commencement-will-stay-closed-through-year/"
     }
   },
   "Harvard": {
@@ -422,13 +422,13 @@
       "date": "2020/03/10",
       "cases": "41",
       "description": "First action to cancel in-person classes",
-      "link": ""
+      "link": "https://www.harvard.edu/covid-19-moving-classes-online-other-updates"
     },
     "rescheduled": {
       "date": "2020/03/10",
       "cases": "41",
       "description": "Act to cancel/reschedule spring classes",
-      "link": ""
+      "link": "https://www.harvard.edu/covid-19-moving-classes-online-other-updates"
     },
     "first_infection": {
       "date": "2020/03/13",
@@ -446,13 +446,13 @@
       "date": "2020/03/10",
       "cases": "41",
       "description": "Dorm closure (requests to move out/cancel housing)",
-      "link": ""
+      "link": "https://preparedness.columbia.edu/news/update-covid-19-and-spring-term-plans"
     },
     "graduation": {
-      "date": "",
-      "cases": "",
-      "description": "Commencement ceremonies plans",
-      "link": ""
+      "date": "2020/03/20",
+      "cases": "144",
+      "description": "Virtual ceremony on May 28, in-person ceremony to be held at a later date",
+      "link": "https://news.harvard.edu/gazette/story/2020/03/harvard-postpones-its-commencement/"
     }
   },
   "Columbia": {
@@ -460,37 +460,37 @@
       "date": "2020/03/10",
       "cases": "37",
       "description": "First action to cancel in-person classes",
-      "link": ""
+      "link": "https://preparedness.columbia.edu/news/update-covid-19-and-community-member-status"
     },
     "rescheduled": {
       "date": "2020/03/12",
       "cases": "96",
       "description": "Act to cancel/reschedule spring classes",
-      "link": ""
+      "link": "https://preparedness.columbia.edu/news/update-covid-19-and-community-member-status"
     },
     "first_infection": {
       "date": "2020/03/15",
       "cases": "330",
       "description": "First campus-affiliated infection",
-      "link": ""
+      "link": "https://www.nydailynews.com/coronavirus/ny-coronavirus-columbia-20200315-vmojex53avbrtcwljlrq7gwlty-story.html"
     },
     "grading_change": {
       "date": "2020/03/20",
       "cases": "4408",
       "description": "Change in grading of current quarter/semester",
-      "link": ""
+      "link": "https://www.columbiaspectator.com/news/2020/03/20/columbia-to-grade-spring-classes-on-passfail-scale-extends-spring-break/"
     },
     "housing_change": {
       "date": "2020/03/12",
       "cases": "96",
       "description": "Dorm closure (requests to move out/cancel housing)",
-      "link": ""
+      "link": "https://preparedness.columbia.edu/news/update-covid-19-and-spring-term-plans"
     },
     "graduation": {
-      "date": "",
-      "cases": "",
-      "description": "Commencement ceremonies plans",
-      "link": ""
+      "date": "2020/03/20",
+      "cases": "4408",
+      "description": "Plans yet to be decided",
+      "link": "https://preparedness.columbia.edu/news/update-course-instruction-and-university-commencement"
     }
   },
   "UT Austin": {
@@ -498,37 +498,37 @@
       "date": "2020/03/17",
       "cases": "107",
       "description": "First action to cancel in-person classes",
-      "link": ""
+      "link": "https://president.utexas.edu/messages-speeches-2020/moving-to-online-classes"
     },
     "rescheduled": {
       "date": "2020/03/11",
       "cases": "0",
       "description": "Extending spring break, 3-17 is official cancellation of continued spring semester classes",
-      "link": ""
+      "link": "https://president.utexas.edu/messages-speeches-2020/moving-to-online-classes"
     },
     "first_infection": {
       "date": "2020/03/13",
       "cases": "4",
       "description": "First campus-affiliated infection",
-      "link": ""
+      "link": "https://president.utexas.edu/messages-speeches-2020/covid19-identified-within-ut-community"
     },
     "grading_change": {
       "date": "2020/03/27",
       "cases": "160",
       "description": "Change in grading of current quarter/semester",
-      "link": ""
+      "link": "https://coronavirus.utexas.edu/"
     },
     "housing_change": {
       "date": "2020/03/11",
       "cases": "0",
       "description": "Dorm closure (requests to move out/cancel housing)",
-      "link": ""
+      "link": "https://president.utexas.edu/messages-speeches-2020/changing-spring-break-2020"
     },
     "graduation": {
-      "date": "",
-      "cases": "",
-      "description": "Commencement ceremonies plans",
-      "link": ""
+      "date": "2020/03/17",
+      "cases": "6",
+      "description": "Postponed commencement ceremonies",
+      "link": "https://www.texastribune.org/2020/03/17/ut-system-texas-a-m-remote-classes-commencement-postpone-coronavirus/"
     }
   },
   "UChicago": {
@@ -536,19 +536,19 @@
       "date": "2020/03/12",
       "cases": "22",
       "description": "First action to cancel in-person classes",
-      "link": ""
+      "link": "https://coronavirusupdates.uchicago.edu/mar-12-email-update/"
     },
     "rescheduled": {
       "date": "2020/03/12",
       "cases": "22",
       "description": "Same date as first move to remote class",
-      "link": ""
+      "link": "https://coronavirusupdates.uchicago.edu/mar-12-email-update/"
     },
     "first_infection": {
       "date": "2020/03/17",
       "cases": "107",
       "description": "First campus-affiliated infection",
-      "link": ""
+      "link": "https://coronavirusupdates.uchicago.edu/mar-17-provost-email-update/"
     },
     "grading_change": {
       "date": "000",
@@ -557,16 +557,16 @@
       "link": ""
     },
     "housing_change": {
-      "date": "2020/03/13",
+      "date": "2020/03/12",
       "cases": "40",
       "description": "Dorm closure (requests to move out/cancel housing)",
-      "link": ""
+      "link": "https://housing.uchicago.edu/closure/"
     },
     "graduation": {
-      "date": "",
+      "date": "2020/04/07",
       "cases": "",
-      "description": "Commencement ceremonies plans",
-      "link": ""
+      "description": "Virtual ceremony",
+      "link": "https://convocation.uchicago.edu/ceremonies-and-activities/announcement/"
     }
   },
   "University of Florida": {
@@ -574,13 +574,13 @@
       "date": "2020/03/11",
       "cases": "1",
       "description": "First action to cancel in-person classes",
-      "link": ""
+      "link": "http://www.ufl.edu/health-updates/all-updates/"
     },
     "rescheduled": {
       "date": "2020/03/17",
       "cases": "6",
       "description": "Moving classes online for remainder of term",
-      "link": ""
+      "link": "http://www.ufl.edu/health-updates/all-updates/"
     },
     "first_infection": {
       "date": "2020/03/17",
@@ -602,8 +602,8 @@
     },
     "graduation": {
       "date": "2020/03/17",
-      "cases": "",
-      "description": "Postponed graduation",
+      "cases": "6",
+      "description": "No plans confirmed yet",
       "link": "http://alligator.org/news/four-uf-students-have-covid-19-uf-spring-graduation-canceled-and-other-important-coronavirus-updates/article_348efc9e-6861-11ea-8935-7fa3a374c0eb.html"
     }
   },
