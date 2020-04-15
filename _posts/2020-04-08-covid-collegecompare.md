@@ -40,7 +40,7 @@ scripts:
 
 Within the past month, the spread of the novel coronavirus in the U.S. has forced college campuses around the country to shut down regular operations. As many schools implemented guidelines such as social distancing as [recommended by the Centers for Disease Control and Prevention](https://www.whitehouse.gov/wp-content/uploads/2020/03/03.16.20_coronavirus-guidance_8.5x11_315PM.pdf), they were also forced to make decisions regarding student housing and in-person classes. This article compares how different schools have responded to the virus, in accordance with state guidelines and increasing numbers of confirmed cases within or near their campuses.
 
-Use the drop-down menus to filter the college action timeline by college and event, and mouse over a college’s line to track its major event history.
+Use the drop-down menus to filter the college action timeline by college and event, and mouse over a college’s line to track its major event history. Hover over a flag to see more details, and click to flag to be sent to the university's official announcement. 
 
 <!-- Dropdown for Timeline -->
 
