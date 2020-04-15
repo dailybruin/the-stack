@@ -22,19 +22,19 @@ scripts:
   - //cdnjs.cloudflare.com/ajax/libs/leaflet-ajax/2.1.0/leaflet.ajax.js
   - /js/posts/covid-hospitals/map-helpers.js
   - /js/posts/covid-hospitals/map.js
-  
+
   # files for chart
   - https://cdn.jsdelivr.net/npm/chart.js@2.8.0
   - /js/posts/covid-hospitals/line-chart.js
 ---
+
 # Introduction
 
 # Map
+
 <div id="map"></div>
 
 <script type="text/pyscript" src="python/corona-hospitals/map-scraping.py"></script>
-
-# Line Chart 
 
 <div>
     <canvas id="line-chart"></canvas>
