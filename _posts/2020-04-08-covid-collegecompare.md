@@ -46,7 +46,7 @@ Use the drop-down menus to filter the college action timeline by college and eve
 <!-- Dropdown for Timeline -->
 
 <select multiple id="timeline_dropdown_school" class="timeline_select" data-placeholder="Choose a school..." onchange="changeTimeline();">
-    <!-- <option value="all">Select All</option> --> <!-- SELECT ALL: Uncomment -->
+    <option value="all">Select All</option> 
     <option value="UCLA">UCLA</option>
     <option value="Columbia">Columbia</option>
     <option value="Harvard">Harvard</option>
@@ -67,7 +67,7 @@ Use the drop-down menus to filter the college action timeline by college and eve
 </select>
 
 <select multiple id="timeline_dropdown_event" class="timeline_select" data-placeholder="Choose an event..." onchange="changeTimeline();">
-    <!-- <option value="all">Select All</option> --> <!-- SELECT ALL: Uncomment -->
+    <option value="all">Select All</option>
     <option value="rescheduled">Rescheduling of Classes</option>
     <option value="cancelled_classes">Cancellation of In-Person Classes</option>
     <option value="first_infection">First School Infection</option>
