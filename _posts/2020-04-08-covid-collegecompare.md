@@ -29,8 +29,7 @@ scripts:
   - http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
   - https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.jquery.min.js
   - /js/posts/covid-collegecompare/timeline.js
-  - https://d3js.org/d3.v5.min.js
-  - //d3js.org/d3.v5.min.js
+  - https://d3js.org/d3.v4.min.js
   - //unpkg.com/d3-array@1
   - //unpkg.com/d3-path@1
   - //unpkg.com/d3-shape@1
@@ -79,9 +78,8 @@ scripts:
     <option value="grading_change">Change in Grading Basis</option>
     <option value="housing_change">Change in University Housing Options</option>
 </select>
-<div id="my_dataviz">
-<p>hi</p></div>
 
+<div id="my_dataviz"></div>
 
 # Bar Chart Race (potentially remove?)
 
