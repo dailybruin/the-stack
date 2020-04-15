@@ -36,7 +36,8 @@ scripts:
   - //unpkg.com/d3-shape@1
   - /js/posts/covid-collegecompare/lollipop.js
 ---
-Within the past month, the spread of the novel coronavirus in the U.S. has forced college campuses around the country to shut down regular operations. As many schools implemented guidelines such as social distancing as (recommended by the Centers for Disease Control and Prevention)[https://www.whitehouse.gov/wp-content/uploads/2020/03/03.16.20_coronavirus-guidance_8.5x11_315PM.pdf], they were also forced to make decisions regarding student housing and in-person classes. This article compares how different schools have responded to the virus, in accordance with state guidelines and increasing numbers of confirmed cases within or near their campuses.
+
+Within the past month, the spread of the novel coronavirus in the U.S. has forced college campuses around the country to shut down regular operations. As many schools implemented guidelines such as social distancing as [recommended by the Centers for Disease Control and Prevention](https://www.whitehouse.gov/wp-content/uploads/2020/03/03.16.20_coronavirus-guidance_8.5x11_315PM.pdf), they were also forced to make decisions regarding student housing and in-person classes. This article compares how different schools have responded to the virus, in accordance with state guidelines and increasing numbers of confirmed cases within or near their campuses.
 
 Use the drop-down menus to filter the college action timeline by college and event, and mouse over a college’s line to track its major event history.
 
@@ -103,7 +104,7 @@ As schools like Harvard, Columbia and Stanford make [headlines](https://news.har
 
 The lollipop chart above shows the changes made by each college in relation to the amount of confirmed cases of coronavirus in the county. Use the drop-down menu to select specific schools.
 
-Located in Seattle, one of the first sites of community spread of COVID-19 in the U.S., the University of Washington was the first school included in our analysis to move to remote education with an official announcement released on [March 6] (https://www.washington.edu/coronavirus/2020/03/06/beginning-march-9-classes-and-finals-will-not-be-held-in-person-message-to-faculty-and-staff/). All schools included in our analysis moved to remote learning by March 19. The majority of schools experienced their first confirmed university-affiliated case of COVID-19 by mid-March as the virus continued to spread.
+Located in Seattle, one of the first sites of community spread of COVID-19 in the U.S., the University of Washington was the first school included in our analysis to move to remote education with an official announcement released on [March 6](https://www.washington.edu/coronavirus/2020/03/06/beginning-march-9-classes-and-finals-will-not-be-held-in-person-message-to-faculty-and-staff/). All schools included in our analysis moved to remote learning by March 19. The majority of schools experienced their first confirmed university-affiliated case of COVID-19 by mid-March as the virus continued to spread.
 
 # Bar Chart Race (potentially remove?)
 
