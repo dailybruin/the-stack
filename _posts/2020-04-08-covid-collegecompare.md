@@ -79,6 +79,8 @@ Use the drop-down menus to filter the college action timeline by college and eve
 
 As schools like Harvard, Columbia and Stanford make [headlines](https://news.harvard.edu/gazette/story/2020/03/harvard-college-adopts-temporary-grading-policy-for-spring-term/) for enforcing a pass/no pass or equivalent grading scale for the remainder of the spring term, schools within the UC system have either relaxed their pass/no pass restrictions or not announced any change in grading policies at all. Schools that have decided to enforce pass/no pass grading systems argue that with the unprecedented and rapid shift to online learning, enforced pass/no pass grading helps to maintain equitability in education. Not every student has reliable internet access off-campus, many may be picking up increased responsibilities at home amid [soaring layoffs](https://time.com/5814350/jobless-layoffs-us-coronavirus/) and students living in different time zones are attempting to attend classes at odd hours of the day and night. These factors, among others, may limit many students’ ability to perform well academically during the COVID-19 pandemic.
 
+The lollipop chart below shows the changes made by each college in relation to the amount of confirmed cases of coronavirus in the area. Use the drop-down menu to select specific events, and see how many confirmed cases there were in the surrounding county at the time of the event.
+
 <!-- Dropdown for Lollipop -->
 <div align="left">
   <label for="graphs">Select a Graph:</label>
@@ -95,8 +97,6 @@ As schools like Harvard, Columbia and Stanford make [headlines](https://news.har
 <div id="lollipop" align='center' >
   <script type="text/javascript" src="/js/posts/covid-collegecompare/lollipop.js"> </script>
 </div>
-
-The lollipop chart above shows the changes made by each college in relation to the amount of confirmed cases of coronavirus in the county. Use the drop-down menu to select specific schools.
 
 Located in Seattle, one of the first sites of community spread of COVID-19 in the U.S., the University of Washington was the first school included in our analysis to move to remote education with an official announcement released on [March 6](https://www.washington.edu/coronavirus/2020/03/06/beginning-march-9-classes-and-finals-will-not-be-held-in-person-message-to-faculty-and-staff/). All schools included in our analysis moved to remote learning by March 19. The majority of schools experienced their first confirmed university-affiliated case of COVID-19 by mid-March as the virus continued to spread.
 
