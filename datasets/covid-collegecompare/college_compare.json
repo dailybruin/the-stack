@@ -1,69 +1,69 @@
 {
   "UCLA": {
     "cancelled_classes": {
-      "date": "03/10",
+      "date": "2020/03/10",
       "cases": "20",
       "description": "First action to cancel in-person classes",
       "link": "https://newsroom.ucla.edu/releases/ucla-transitions-to-online-instruction?fbclid=IwAR0_XI9QOJmNxelP1rj3y5hG76dPXjW3cU5h9XsrSiFmX0pvMbcLqDcX_pE"
     },
     "rescheduled": {
-      "date": "03/13",
+      "date": "2020/03/13",
       "cases": "40",
       "description": "Act to cancel/reschedule spring classes",
       "link": "https://dailybruin.com/2020/03/13/ucla-extends-online-instruction-through-end-of-spring-quarter/"
     },
     "first_infection": {
-      "date": "03/16",
+      "date": "2020/03/16",
       "cases": "69",
       "description": "First campus-affiliated infection",
       "link": "https://dailybruin.com/2020/03/16/staff-member-tests-positive-for-covid-19-in-first-confirmed-case-at-ucla/"
     },
     "grading_change": {
-      "date": "03/26",
+      "date": "2020/03/26",
       "cases": "1216",
       "description": "Change in grading of current quarter/semester",
       "link": "https://dailybruin.com/2020/03/26/students-may-take-multiple-pass-no-pass-classes-in-the-spring-in-light-of-covid-19/"
     },
     "housing_change": {
-      "date": "03/13",
+      "date": "2020/03/13",
       "cases": "40",
       "description": "Dorm closure (requests to move out/cancel housing)",
       "link": "https://dailybruin.com/2020/03/13/ucla-extends-online-instruction-through-end-of-spring-quarter/"
     },
     "graduation": {
-      "date": "03/18",
-      "cases": "",
-      "description": "Commencement ceremonies plans",
+      "date": "2020/03/18",
+      "cases": "190",
+      "description": "Moved ceremonies online",
       "link": "https://dailybruin.com/2020/03/18/ucla-moves-spring-graduation-ceremonies-online-to-curb-spread-of-covid-19/"
     }
   },
   "UC Berkeley": {
     "cancelled_classes": {
-      "date": "03/9",
+      "date": "2020/03/9",
       "cases": "24",
       "description": "First action to cancel in-person classes",
       "link": "https://www.dailycal.org/2020/03/09/live-updates-on-the-covid-19-situation-in-berkeley/?utm_source=internal&utm_medium=breakingbanner&utm_campaign=breaking+banner&utm_content=banner"
     },
     "rescheduled": {
-      "date": "03/13",
+      "date": "2020/03/13",
       "cases": "29",
       "description": "Act to cancel/reschedule spring classes",
       "link": "https://www.dailycal.org/2020/03/09/live-updates-on-the-covid-19-situation-in-berkeley/?utm_source=internal&utm_medium=breakingbanner&utm_campaign=breaking+banner&utm_content=banner"
     },
     "first_infection": {
-      "date": "03/14",
+      "date": "2020/03/14",
       "cases": "29",
       "description": "First campus-affiliated infection",
       "link": "https://www.dailycal.org/2020/03/09/live-updates-on-the-covid-19-situation-in-berkeley/?utm_source=internal&utm_medium=breakingbanner&utm_campaign=breaking+banner&utm_content=banner"
     },
     "grading_change": {
-      "date": "03/20",
+      "date": "2020/03/20",
       "cases": "67",
       "description": "Change in grading of current quarter/semester",
       "link": "https://news.berkeley.edu/2020/03/20/coronavirus-response-grading-policies-for-the-spring-semester/"
     },
     "housing_change": {
-      "date": "03/13",
+      "date": "2020/03/13",
       "cases": "29",
       "description": "Dorm closure (requests to move out/cancel housing)",
       "link": "https://news.berkeley.edu/2020/03/13/uc-berkeley-extends-remote-instruction-through-end-of-semester/"
@@ -72,24 +72,24 @@
       "date": "",
       "cases": "",
       "description": "Commencement ceremonies plans",
-      "link": "*"
+      "link": "https://news.berkeley.edu/2020/03/23/uc-berkeley-to-postpone-commencement-due-to-coronavirus/"
     }
   },
   "UC Santa Barbara": {
     "cancelled_classes": {
-      "date": "03/10",
+      "date": "2020/03/10",
       "cases": "0",
       "description": "First action to cancel in-person classes",
       "link": "http://dailynexus.com/2020-03-10/breaking-ucsb-to-transition-to-remote-instruction-beginning-tomorrow-through-end-of-april/"
     },
     "rescheduled": {
-      "date": "03/14",
+      "date": "2020/03/14",
       "cases": "0",
       "description": "Act to cancel/reschedule spring classes",
       "link": "http://dailynexus.com/2020-03-14/breaking-ucsb-to-extend-remote-instruction-through-spring-quarter/"
     },
     "first_infection": {
-      "date": "03/31",
+      "date": "2020/03/31",
       "cases": "99",
       "description": "First campus-affiliated infection",
       "link": "https://chancellor.ucsb.edu/memos/2020-03-31-covid-19-update-confirmed-cases-our-community"
@@ -101,13 +101,13 @@
       "link": "*"
     },
     "housing_change": {
-      "date": "03/14",
+      "date": "2020/03/14",
       "cases": "0",
       "description": "Dorm closure (requests to move out/cancel housing)",
       "link": "http://dailynexus.com/2020-03-14/breaking-ucsb-to-extend-remote-instruction-through-spring-quarter/"
     },
     "graduation": {
-      "date": "03/26",
+      "date": "2020/03/26",
       "cases": "",
       "description": "Commencement ceremonies plans",
       "link": "http://dailynexus.com/2020-03-26/breaking-ucsb-postpones-commencement-will-host-virtual-ceremony-in-june/"
@@ -115,31 +115,31 @@
   },
   "UC San Diego": {
     "cancelled_classes": {
-      "date": "03/9",
+      "date": "2020/03/9",
       "cases": "2",
       "description": "Did not cancel winter classes",
       "link": "https://triton.news/2020/03/live-coronavirus-updates-at-uc-san-diego/"
     },
     "rescheduled": {
-      "date": "03/9",
+      "date": "2020/03/9",
       "cases": "2",
       "description": "Act to cancel/reschedule spring classes",
       "link": "https://triton.news/2020/03/live-coronavirus-updates-at-uc-san-diego/"
     },
     "first_infection": {
-      "date": "03/14",
+      "date": "2020/03/14",
       "cases": "10",
       "description": "First campus-affiliated infection",
       "link": "https://www.10news.com/two-uc-san-diego-health-workers-test-positive-for-coronavirus"
     },
     "grading_change": {
-      "date": "03/23",
+      "date": "2020/03/23",
       "cases": "230",
       "description": "Change in grading of current quarter/semester",
       "link": "https://coronavirus.ucsd.edu/"
     },
     "housing_change": {
-      "date": "03/16",
+      "date": "2020/03/16",
       "cases": "56",
       "description": "Dorm closure (requests to move out/cancel housing)",
       "link": "https://triton.news/2020/03/live-coronavirus-updates-at-uc-san-diego/"
@@ -153,13 +153,13 @@
   },
   "UC Riverside": {
     "cancelled_classes": {
-      "date": "03/10",
+      "date": "2020/03/10",
       "cases": "4",
       "description": "Instructors required to make a winter and spring continuity plan on March 5",
       "link": "https://insideucr.ucr.edu/announcements/2020/03/10/academic-continuity-and-campus-operations-related-covid-19"
     },
     "rescheduled": {
-      "date": "03/11",
+      "date": "2020/03/11",
       "cases": "4",
       "description": "Act to cancel/reschedule spring classes",
       "link": "https://insideucr.ucr.edu/stories/2020/03/11/how-ucr-responding-coronavirus"
@@ -177,13 +177,13 @@
       "link": "*"
     },
     "housing_change": {
-      "date": "03/11",
+      "date": "2020/03/11",
       "cases": "4",
       "description": "Dorm closure (requests to move out/cancel housing)",
       "link": "https://insideucr.ucr.edu/announcements/2020/03/25/message-students-re-spring-quarter"
     },
     "graduation": {
-      "date": "04/1",
+      "date": "2020/04/1",
       "cases": "",
       "description": "Commencement ceremonies plans",
       "link": "*https://commencement.ucr.edu/"
@@ -191,19 +191,19 @@
   },
   "UC Irvine": {
     "cancelled_classes": {
-      "date": "03/10",
+      "date": "2020/03/10",
       "cases": "5",
       "description": "First action to cancel in-person classes",
       "link": "https://www.newuniversity.org/2020/03/10/uci-winter-finals-and-spring-classes-to-be-held-remotely-due-to-covid-19/"
     },
     "rescheduled": {
-      "date": "03/10",
+      "date": "2020/03/10",
       "cases": "5",
       "description": "Act to cancel/reschedule spring classes",
       "link": "https://www.newuniversity.org/2020/03/10/uci-winter-finals-and-spring-classes-to-be-held-remotely-due-to-covid-19/"
     },
     "first_infection": {
-      "date": "03/21",
+      "date": "2020/03/21",
       "cases": "78",
       "description": "First campus-affiliated infection",
       "link": "https://uci.edu/coronavirus/messages/200321-campus-case.php"
@@ -215,7 +215,7 @@
       "link": "*"
     },
     "housing_change": {
-      "date": "03/13",
+      "date": "2020/03/13",
       "cases": "13",
       "description": "Dorm closure (requests to move out/cancel housing)",
       "link": "https://uci.edu/coronavirus/messages/200313-student-life-updates.php"
@@ -229,19 +229,19 @@
   },
   "UC Santa Cruz": {
     "cancelled_classes": {
-      "date": "03/10",
+      "date": "2020/03/10",
       "cases": "2",
       "description": "First action to cancel in-person classes",
       "link": "https://go.ucsc.edu/2TRtbHD"
     },
     "rescheduled": {
-      "date": "03/13",
+      "date": "2020/03/13",
       "cases": "2",
       "description": "Act to cancel/reschedule spring classes",
       "link": "http://ucsc.edu/coronavirus"
     },
     "first_infection": {
-      "date": "03/27",
+      "date": "2020/03/27",
       "cases": "32",
       "description": "First campus-affiliated infection",
       "link": "https://news.ucsc.edu/2020/03/covid-case.html"
@@ -253,13 +253,13 @@
       "link": "*"
     },
     "housing_change": {
-      "date": "03/13",
+      "date": "2020/03/13",
       "cases": "2",
       "description": "Strongly encourage students to move out by March 29",
       "link": "https://news.ucsc.edu/2020/03/spring-2020-intent-to-vacate-express-checkout-process.html"
     },
     "graduation": {
-      "date": "04/10",
+      "date": "2020/04/10",
       "cases": "",
       "description": "Postponed graduation",
       "link": "*https://news.ucsc.edu/2020/04/commencement-updates.html"
@@ -267,19 +267,19 @@
   },
   "UC Merced": {
     "cancelled_classes": {
-      "date": "03/10",
+      "date": "2020/03/10",
       "cases": "0",
       "description": "First action to cancel in-person classes",
       "link": "http://bit.ly/2TIccZt"
     },
     "rescheduled": {
-      "date": "03/17",
+      "date": "2020/03/17",
       "cases": "0",
       "description": "Act to cancel/reschedule spring classes",
       "link": "https://news.ucmerced.edu/content/covid-19-spring-break-guidance-students"
     },
     "first_infection": {
-      "date": "03/27",
+      "date": "2020/03/27",
       "cases": "7",
       "description": "First campus-affiliated infection",
       "link": "https://news.ucmerced.edu/content/covid-19-campus-update-1"
@@ -291,13 +291,13 @@
       "link": "*"
     },
     "housing_change": {
-      "date": "03/17",
+      "date": "2020/03/17",
       "cases": "0",
       "description": "Dorm closure (requests to move out/cancel housing)",
       "link": "https://news.ucmerced.edu/content/covid-19-spring-break-guidance-students"
     },
     "graduation": {
-      "date": "03/18",
+      "date": "2020/03/18",
       "cases": "",
       "description": "Postponed commencement ceremony",
       "link": "https://news.ucmerced.edu/content/covid-19-update-spring-2020-commencement"
@@ -305,31 +305,31 @@
   },
   "UC Davis": {
     "cancelled_classes": {
-      "date": "03/10",
+      "date": "2020/03/10",
       "cases": "1",
       "description": "First action to cancel in-person classes",
       "link": ""
     },
     "rescheduled": {
-      "date": "03/18",
+      "date": "2020/03/18",
       "cases": "5",
       "description": "Act to cancel/reschedule spring classes",
       "link": ""
     },
     "first_infection": {
-      "date": "03/27",
+      "date": "2020/03/27",
       "cases": "16",
       "description": "First campus-affiliated infection",
       "link": ""
     },
     "grading_change": {
-      "date": "03/27",
+      "date": "2020/03/27",
       "cases": "16",
       "description": "Change in grading of current quarter/semester",
       "link": ""
     },
     "housing_change": {
-      "date": "03/15",
+      "date": "2020/03/15",
       "cases": "2",
       "description": "Dorm closure (requests to move out/cancel housing)",
       "link": ""
@@ -343,31 +343,31 @@
   },
   "USC": {
     "cancelled_classes": {
-      "date": "03/11",
+      "date": "2020/03/11",
       "cases": "28",
       "description": "First action to cancel in-person classes",
       "link": ""
     },
     "rescheduled": {
-      "date": "03/16",
+      "date": "2020/03/16",
       "cases": "94",
       "description": "Act to cancel/reschedule spring classes",
       "link": ""
     },
     "first_infection": {
-      "date": "03/16",
+      "date": "2020/03/16",
       "cases": "94",
       "description": "First campus-affiliated infection",
       "link": ""
     },
     "grading_change": {
-      "date": "03/20",
+      "date": "2020/03/20",
       "cases": "292",
       "description": "Change in grading of current quarter/semester",
       "link": ""
     },
     "housing_change": {
-      "date": "03/16",
+      "date": "2020/03/16",
       "cases": "94",
       "description": "Dorm closure (requests to move out/cancel housing)",
       "link": ""
@@ -381,31 +381,31 @@
   },
   "Stanford": {
     "cancelled_classes": {
-      "date": "03/13",
+      "date": "2020/03/13",
       "cases": "79",
       "description": "First action to cancel in-person classes",
       "link": ""
     },
     "rescheduled": {
-      "date": "03/19",
+      "date": "2020/03/19",
       "cases": "189",
       "description": "Act to cancel/reschedule spring classes",
       "link": ""
     },
     "first_infection": {
-      "date": "03/11",
+      "date": "2020/03/11",
       "cases": "48",
       "description": "First campus-affiliated infection",
       "link": ""
     },
     "grading_change": {
-      "date": "03/27",
+      "date": "2020/03/27",
       "cases": "574",
       "description": "Change in grading of current quarter/semester",
       "link": ""
     },
     "housing_change": {
-      "date": "03/13",
+      "date": "2020/03/13",
       "cases": "79",
       "description": "Dorm closure (requests to move out/cancel housing)",
       "link": ""
@@ -419,31 +419,31 @@
   },
   "Harvard": {
     "cancelled_classes": {
-      "date": "03/10",
+      "date": "2020/03/10",
       "cases": "41",
       "description": "First action to cancel in-person classes",
       "link": ""
     },
     "rescheduled": {
-      "date": "03/10",
+      "date": "2020/03/10",
       "cases": "41",
       "description": "Act to cancel/reschedule spring classes",
       "link": ""
     },
     "first_infection": {
-      "date": "03/13",
+      "date": "2020/03/13",
       "cases": "60",
       "description": "First campus-affiliated infection",
       "link": ""
     },
     "grading_change": {
-      "date": "03/27",
+      "date": "2020/03/27",
       "cases": "685",
       "description": "Change in grading of current quarter/semester",
       "link": ""
     },
     "housing_change": {
-      "date": "03/10",
+      "date": "2020/03/10",
       "cases": "41",
       "description": "Dorm closure (requests to move out/cancel housing)",
       "link": ""
@@ -457,31 +457,31 @@
   },
   "Columbia": {
     "cancelled_classes": {
-      "date": "03/10",
+      "date": "2020/03/10",
       "cases": "37",
       "description": "First action to cancel in-person classes",
       "link": ""
     },
     "rescheduled": {
-      "date": "03/12",
+      "date": "2020/03/12",
       "cases": "96",
       "description": "Act to cancel/reschedule spring classes",
       "link": ""
     },
     "first_infection": {
-      "date": "03/15",
+      "date": "2020/03/15",
       "cases": "330",
       "description": "First campus-affiliated infection",
       "link": ""
     },
     "grading_change": {
-      "date": "03/20",
+      "date": "2020/03/20",
       "cases": "4408",
       "description": "Change in grading of current quarter/semester",
       "link": ""
     },
     "housing_change": {
-      "date": "03/12",
+      "date": "2020/03/12",
       "cases": "96",
       "description": "Dorm closure (requests to move out/cancel housing)",
       "link": ""
@@ -495,31 +495,31 @@
   },
   "UT Austin": {
     "cancelled_classes": {
-      "date": "03/17",
+      "date": "2020/03/17",
       "cases": "107",
       "description": "First action to cancel in-person classes",
       "link": ""
     },
     "rescheduled": {
-      "date": "03/11",
+      "date": "2020/03/11",
       "cases": "0",
       "description": "Extending spring break, 3-17 is official cancellation of continued spring semester classes",
       "link": ""
     },
     "first_infection": {
-      "date": "03/13",
+      "date": "2020/03/13",
       "cases": "4",
       "description": "First campus-affiliated infection",
       "link": ""
     },
     "grading_change": {
-      "date": "03/27",
+      "date": "2020/03/27",
       "cases": "160",
       "description": "Change in grading of current quarter/semester",
       "link": ""
     },
     "housing_change": {
-      "date": "03/11",
+      "date": "2020/03/11",
       "cases": "0",
       "description": "Dorm closure (requests to move out/cancel housing)",
       "link": ""
@@ -533,19 +533,19 @@
   },
   "UChicago": {
     "cancelled_classes": {
-      "date": "03/12",
+      "date": "2020/03/12",
       "cases": "22",
       "description": "First action to cancel in-person classes",
       "link": ""
     },
     "rescheduled": {
-      "date": "03/12",
+      "date": "2020/03/12",
       "cases": "22",
       "description": "Same date as first move to remote class",
       "link": ""
     },
     "first_infection": {
-      "date": "03/17",
+      "date": "2020/03/17",
       "cases": "107",
       "description": "First campus-affiliated infection",
       "link": ""
@@ -557,7 +557,7 @@
       "link": ""
     },
     "housing_change": {
-      "date": "03/13",
+      "date": "2020/03/13",
       "cases": "40",
       "description": "Dorm closure (requests to move out/cancel housing)",
       "link": ""
@@ -571,37 +571,37 @@
   },
   "University of Florida": {
     "cancelled_classes": {
-      "date": "03/11",
+      "date": "2020/03/11",
       "cases": "1",
       "description": "First action to cancel in-person classes",
       "link": ""
     },
     "rescheduled": {
-      "date": "03/17",
+      "date": "2020/03/17",
       "cases": "6",
       "description": "Moving classes online for remainder of term",
       "link": ""
     },
     "first_infection": {
-      "date": "03/17",
+      "date": "2020/03/17",
       "cases": "6",
       "description": "First campus-affiliated infection",
       "link": "http://www.ufl.edu/health-updates/all-updates/"
     },
     "grading_change": {
-      "date": "03/25",
+      "date": "2020/03/25",
       "cases": "46",
       "description": "Change in grading of current quarter/semester",
       "link": ""
     },
     "housing_change": {
-      "date": "03/11",
+      "date": "2020/03/11",
       "cases": "1",
       "description": "Students asked to leave if possible, but not forced.",
       "link": "http://www.ufl.edu/health-updates/all-updates/"
     },
     "graduation": {
-      "date": "03/17",
+      "date": "2020/03/17",
       "cases": "",
       "description": "Postponed graduation",
       "link": "http://alligator.org/news/four-uf-students-have-covid-19-uf-spring-graduation-canceled-and-other-important-coronavirus-updates/article_348efc9e-6861-11ea-8935-7fa3a374c0eb.html"
@@ -609,37 +609,37 @@
   },
   "University of Washington": {
     "cancelled_classes": {
-      "date": "03/6",
+      "date": "2020/03/6",
       "cases": "59",
       "description": "First action to cancel in-person classes",
       "link": "https://www.washington.edu/coronavirus/2020/03/06/beginning-march-9-classes-and-finals-will-not-be-held-in-person-message-to-faculty-and-staff/"
     },
     "rescheduled": {
-      "date": "03/18",
+      "date": "2020/03/18",
       "cases": "563",
       "description": "Cancellation of remainder of in-person spring term",
       "link": "https://www.washington.edu/coronavirus/2020/03/18/uw-spring-quarter-classes-will-be-held-remotely-message-to-students/"
     },
     "first_infection": {
-      "date": "03/12",
+      "date": "2020/03/12",
       "cases": "271",
       "description": "First campus-affiliated infection",
       "link": "https://www.washington.edu/coronavirus/2020/03/12/uw-graduate-student-tests-positive-for-covid-19/"
     },
     "grading_change": {
-      "date": "03/6",
+      "date": "2020/03/6",
       "cases": "59",
       "description": "*Change in grading of current quarter/semester",
       "link": "*https://www.washington.edu/provost/springquarter/"
     },
     "housing_change": {
-      "date": "03/18",
+      "date": "2020/03/18",
       "cases": "563",
       "description": "Students home for spring break encouraged to stay home, students in dorms moved to rooms with private baths",
       "link": "https://www.washington.edu/coronavirus/2020/03/18/uw-spring-quarter-classes-will-be-held-remotely-message-to-students/"
     },
     "graduation": {
-      "date": "04/8",
+      "date": "2020/04/8",
       "cases": "",
       "description": "Online graduation scheduled for June 13 2020, in-person ceremony June 12 2021",
       "link": "https://www.washington.edu/news/2020/04/08/uw-announces-commencement-ceremony-via-webcast-invites-class-of-2020-to-return-to-husky-stadium-next-year/"
