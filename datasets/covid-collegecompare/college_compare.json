@@ -69,9 +69,9 @@
       "link": "https://news.berkeley.edu/2020/03/13/uc-berkeley-extends-remote-instruction-through-end-of-semester/"
     },
     "graduation": {
-      "date": "",
-      "cases": "",
-      "description": "Commencement ceremonies plans",
+      "date": "2020/03/23",
+      "cases": "139",
+      "description": "Postponed commencement",
       "link": "https://news.berkeley.edu/2020/03/23/uc-berkeley-to-postpone-commencement-due-to-coronavirus/"
     }
   },
@@ -108,8 +108,8 @@
     },
     "graduation": {
       "date": "2020/03/26",
-      "cases": "",
-      "description": "Commencement ceremonies plans",
+      "cases": "32",
+      "description": "Postponed Commencement, will Host “Virtual Ceremony” in June",
       "link": "http://dailynexus.com/2020-03-26/breaking-ucsb-postpones-commencement-will-host-virtual-ceremony-in-june/"
     }
   },
@@ -185,7 +185,7 @@
     "graduation": {
       "date": "2020/04/1",
       "cases": "",
-      "description": "Commencement ceremonies plans",
+      "description": "Plans yet to be confirmed",
       "link": "*https://commencement.ucr.edu/"
     }
   },
@@ -221,9 +221,9 @@
       "link": "https://uci.edu/coronavirus/messages/200313-student-life-updates.php"
     },
     "graduation": {
-      "date": "",
-      "cases": "",
-      "description": "Postponed commencement",
+      "date": "2020/03/13",
+      "cases": "13",
+      "description": "Plans yet to be confirmed",
       "link": "https://uci.edu/coronavirus/messages/200313-student-life-updates.php"
     }
   },
@@ -261,8 +261,8 @@
     "graduation": {
       "date": "2020/04/10",
       "cases": "",
-      "description": "Postponed graduation",
-      "link": "*https://news.ucsc.edu/2020/04/commencement-updates.html"
+      "description": "Plans yet to be confirmed",
+      "link": "https://news.ucsc.edu/2020/04/commencement-updates.html"
     }
   },
   "UC Merced": {
@@ -298,8 +298,8 @@
     },
     "graduation": {
       "date": "2020/03/18",
-      "cases": "",
-      "description": "Postponed commencement ceremony",
+      "cases": "0",
+      "description": "Plans yet to be confirmed, students being surveyed",
       "link": "https://news.ucmerced.edu/content/covid-19-update-spring-2020-commencement"
     }
   },
@@ -335,10 +335,10 @@
       "link": ""
     },
     "graduation": {
-      "date": "",
+      "date": "2020/04/08",
       "cases": "",
-      "description": "Commencement ceremonies plans",
-      "link": ""
+      "description": "Virtual ceremony, consideration for in-person ceremony in December",
+      "link": "https://theaggie.org/2020/04/08/spring-commencement-to-be-held-virtually-with-possibility-of-later-in-person-ceremony/"
     }
   },
   "USC": {
@@ -373,10 +373,10 @@
       "link": ""
     },
     "graduation": {
-      "date": "",
-      "cases": "",
+      "date": "2020/03/20",
+      "cases": "292",
       "description": "Commencement ceremonies plans",
-      "link": ""
+      "link": "http://dailytrojan.com/2020/03/20/usc-to-postpone-in-person-commencement-but-to-hold-online-events-in-may/"
     }
   },
   "Stanford": {
@@ -411,10 +411,10 @@
       "link": ""
     },
     "graduation": {
-      "date": "",
-      "cases": "",
-      "description": "Commencement ceremonies plans",
-      "link": ""
+      "date": "2020/03/20",
+      "cases": "196",
+      "description": "In-person ceremony cancelled, plans yet to be finalized",
+      "link": "https://www.mercurynews.com/2020/03/20/stanford-cancels-traditional-commencement-will-stay-closed-through-year/"
     }
   },
   "Harvard": {
@@ -449,10 +449,10 @@
       "link": ""
     },
     "graduation": {
-      "date": "",
-      "cases": "",
-      "description": "Commencement ceremonies plans",
-      "link": ""
+      "date": "2020/03/20",
+      "cases": "144",
+      "description": "Virtual ceremony on May 28, in-person ceremony to be held at a later date",
+      "link": "https://news.harvard.edu/gazette/story/2020/03/harvard-postpones-its-commencement/"
     }
   },
   "Columbia": {
@@ -487,10 +487,10 @@
       "link": ""
     },
     "graduation": {
-      "date": "",
-      "cases": "",
-      "description": "Commencement ceremonies plans",
-      "link": ""
+      "date": "2020/03/20",
+      "cases": "4408",
+      "description": "Plans yet to be decided",
+      "link": "https://preparedness.columbia.edu/news/update-course-instruction-and-university-commencement"
     }
   },
   "UT Austin": {
@@ -525,10 +525,10 @@
       "link": ""
     },
     "graduation": {
-      "date": "",
-      "cases": "",
-      "description": "Commencement ceremonies plans",
-      "link": ""
+      "date": "2020/03/17",
+      "cases": "6",
+      "description": "Postponed commencement ceremonies",
+      "link": "https://www.texastribune.org/2020/03/17/ut-system-texas-a-m-remote-classes-commencement-postpone-coronavirus/"
     }
   },
   "UChicago": {
@@ -563,10 +563,10 @@
       "link": ""
     },
     "graduation": {
-      "date": "",
+      "date": "2020/04/07",
       "cases": "",
-      "description": "Commencement ceremonies plans",
-      "link": ""
+      "description": "Virtual ceremony",
+      "link": "https://convocation.uchicago.edu/ceremonies-and-activities/announcement/"
     }
   },
   "University of Florida": {
@@ -602,8 +602,8 @@
     },
     "graduation": {
       "date": "2020/03/17",
-      "cases": "",
-      "description": "Postponed graduation",
+      "cases": "6",
+      "description": "No plans confirmed yet",
       "link": "http://alligator.org/news/four-uf-students-have-covid-19-uf-spring-graduation-canceled-and-other-important-coronavirus-updates/article_348efc9e-6861-11ea-8935-7fa3a374c0eb.html"
     }
   },
