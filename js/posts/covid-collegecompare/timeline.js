@@ -1,4 +1,4 @@
-$('select').chosen({
+$('.timeline_select').chosen({
   width: 0.3 * screen.width,
 });
 // Themes begin
@@ -6,10 +6,10 @@ am4core.useTheme(am4themes_animated);
 // Themes end
 
 var chart = am4core.create('timeline', am4plugins_timeline.SerpentineChart); // Create div called timeline for the chart
-chart.curveContainer.padding(50, 20, 50, 20);
+chart.curveContainer.padding(50, 125, 50, 50);
 chart.levelCount = 4;
-chart.yAxisRadius = am4core.percent(25);
-chart.yAxisInnerRadius = am4core.percent(-25);
+chart.yAxisRadius = am4core.percent(20);
+chart.yAxisInnerRadius = am4core.percent(-20);
 chart.maskBullets = false;
 
 var colorSet = new am4core.ColorSet();
@@ -97,8 +97,8 @@ categoryAxis.dataFields.category = 'school';
 categoryAxis.renderer.grid.template.disabled = true;
 categoryAxis.renderer.labels.template.paddingRight = 25;
 categoryAxis.renderer.minGridDistance = 10;
-categoryAxis.renderer.innerRadius = -60;
-categoryAxis.renderer.radius = 60;
+categoryAxis.renderer.innerRadius = -50;
+categoryAxis.renderer.radius = 50;
 
 var dateAxis = chart.xAxes.push(new am4charts.DateAxis());
 dateAxis.renderer.minGridDistance = 70;
@@ -236,10 +236,10 @@ function changeTimeline() {
   var school_event_data = [];
 
   // if (school_names == null || school_names.includes('all')) { // SELECT ALL: uncomment and delete line below
-    if (school_names == null) {
+  if (school_names == null) {
     school_data = all_schools_data;
     // if (event_names == null || event_names.includes('all')) { // SELECT ALL: uncomment and delete line below
-      if (event_names == null) {
+    if (event_names == null) {
       school_event_data = all_schools_event_data;
     } else {
       for (var i in all_schools_event_data) {
@@ -261,7 +261,7 @@ function changeTimeline() {
       }
 
       // if (event_names == null || event_names.includes('all')) { // SELECT ALL: uncomment and delete line below
-      if(event_names == null) {
+      if (event_names == null) {
         for (var i in all_schools_event_data) {
           if (all_schools_event_data[i].school == school_name) {
             school_event_data.push(all_schools_event_data[i]);
