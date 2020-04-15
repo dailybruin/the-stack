@@ -209,10 +209,10 @@
       "link": "https://uci.edu/coronavirus/messages/200321-campus-case.php"
     },
     "grading_change": {
-      "date": "000",
-      "cases": null,
-      "description": "No change in grading yet",
-      "link": ""
+      "date": "2020/04/14",
+      "cases": "1299",
+      "description": "Optional P/NP",
+      "link": "https://www.reg.uci.edu/addl/faq_covid_pnp.html "
     },
     "housing_change": {
       "date": "2020/03/13",
@@ -496,7 +496,7 @@
   "UT Austin": {
     "cancelled_classes": {
       "date": "2020/03/17",
-      "cases": "107",
+      "cases": "6",
       "description": "First action to cancel in-person classes",
       "link": "https://president.utexas.edu/messages-speeches-2020/moving-to-online-classes"
     },
@@ -551,8 +551,8 @@
       "link": "https://coronavirusupdates.uchicago.edu/mar-17-provost-email-update/"
     },
     "grading_change": {
-      "date": "000",
-      "cases": null,
+      "date": "2020/04/02",
+      "cases": "5575",
       "description": "No change in grading yet",
       "link": ""
     },
