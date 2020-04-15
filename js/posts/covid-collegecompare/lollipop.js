@@ -22,7 +22,7 @@ function lollipop_graph(testkey)
       var svg = d3.select("#lollipop")
           .append("svg")
               .attr("width", width + margin.left + margin.right)
-              .attr("height", height + margin.top*3 + margin.bottom*5)
+              .attr("height", height + margin.top*2 + margin.bottom*2)
           .append("g")
               .attr("transform",
                   "translate(" + margin.left + "," + margin.top + ")");
