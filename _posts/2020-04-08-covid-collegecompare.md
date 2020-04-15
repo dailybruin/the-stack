@@ -20,7 +20,6 @@ stylesheets:
   - /css/posts/covid-collegecompare/app.css
   - https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.css
 scripts:
-
   # Below scripts are for the timeline
   - https://www.amcharts.com/lib/4/core.js
   - https://www.amcharts.com/lib/4/charts.js
@@ -30,23 +29,23 @@ scripts:
   - https://www.amcharts.com/lib/4/plugins/overlapBuster.js
   - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
   - https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.jquery.min.js
+  - /js/posts/covid-collegecompare/timeline.js
+  # Below scripts are for the lollipop
   - https://d3js.org/d3.v4.min.js
   - //unpkg.com/d3-array@1
   - //unpkg.com/d3-path@1
   - //unpkg.com/d3-shape@1
-  -  /js/posts/covid-collegecompare/timeline.js
   - /js/posts/covid-collegecompare/lollipop.js
-  
 ---
 
 Within the past month, the spread of the novel coronavirus in the U.S. has forced college campuses around the country to shut down regular operations. As many schools implemented guidelines such as social distancing as [recommended by the Centers for Disease Control and Prevention](https://www.whitehouse.gov/wp-content/uploads/2020/03/03.16.20_coronavirus-guidance_8.5x11_315PM.pdf), they were also forced to make decisions regarding student housing and in-person classes. This article compares how different schools have responded to the virus, in accordance with state guidelines and increasing numbers of confirmed cases within or near their campuses.
 
-Use the drop-down menus to filter the college action timeline by college and event, and mouse over a college’s line to track its major event history.
+Use the drop-down menus to filter the college action timeline by college and event, and mouse over a college’s line to track its major event history. Hover over a flag to see more details, and click to flag to be sent to the university's official announcement. 
 
 <!-- Dropdown for Timeline -->
 
 <select multiple id="timeline_dropdown_school" class="timeline_select" data-placeholder="Choose a school..." onchange="changeTimeline();">
-    <option value="all">Select All</option> 
+    <option value="all">Select All</option>
     <option value="UCLA">UCLA</option>
     <option value="Columbia">Columbia</option>
     <option value="Harvard">Harvard</option>
@@ -84,6 +83,7 @@ The lollipop chart below shows the changes made by each college in relation to t
 <!-- Dropdown for Lollipop -->
 <div align="left">
   <label for="graphs">Select a Graph:</label>
+<<<<<<< HEAD
     <select id="graphs" onchange='javascript: lollipop_graph(this.options[this.selectedIndex].value)' >
       <option value="cancelled_classes" selected hidden>First day of remote learning</option>
       <option value="cancelled_classes">First day of remote learning</option>
@@ -92,6 +92,14 @@ The lollipop chart below shows the changes made by each college in relation to t
       <option value="grading_change">Change in Grading Basis</option>
       <option value="housing_change">Change in University Housing Options</option>
       <option value="graduation">Moved Graduation Ceremonies Online</option>
+=======
+    <select  id="graphs" class="lollipop_select" onchange='javascript: lollipop_graph(this.options[this.selectedIndex].value)' >
+    <option value="cancelled_classes">First day of remote learning</option>
+    <option value="rescheduled">Transition to long-term remote classes</option>
+    <option value="first_infection">First School Infection</option>
+    <option value="grading_change">Change in Grading Basis</option>
+    <option value="housing_change">Change in University Housing Options</option>
+>>>>>>> 1d3d14938a567ba83cf1ec0a6a21cd4bf1658a5b
    </select>
   <p>&nbsp; </p>
 </div>
