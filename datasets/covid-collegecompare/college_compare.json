@@ -21,7 +21,7 @@
     "grading_change": {
       "date": "2020/03/26",
       "cases": "1216",
-      "description": "Change in grading of current quarter/semester",
+      "description": "Optional P/NP (by department)",
       "link": "https://dailybruin.com/2020/03/26/students-may-take-multiple-pass-no-pass-classes-in-the-spring-in-light-of-covid-19/"
     },
     "housing_change": {
@@ -33,7 +33,7 @@
     "graduation": {
       "date": "2020/03/18",
       "cases": "190",
-      "description": "Moved ceremonies online",
+      "description": "Moved ceremonies online, students being surveyed for further plans",
       "link": "https://dailybruin.com/2020/03/18/ucla-moves-spring-graduation-ceremonies-online-to-curb-spread-of-covid-19/"
     }
   },
@@ -59,7 +59,7 @@
     "grading_change": {
       "date": "2020/03/20",
       "cases": "67",
-      "description": "Change in grading of current quarter/semester",
+      "description": "Optional P/NP (default P/NP)",
       "link": "https://news.berkeley.edu/2020/03/20/coronavirus-response-grading-policies-for-the-spring-semester/"
     },
     "housing_change": {
@@ -136,7 +136,7 @@
       "date": "2020/03/23",
       "cases": "230",
       "description": "Change in grading of current quarter/semester",
-      "link": "https://coronavirus.ucsd.edu/"
+      "link": "http://adminrecords.ucsd.edu/Notices/2020/2020-3-23-1.html"
     },
     "housing_change": {
       "date": "2020/03/16",
@@ -166,7 +166,7 @@
     },
     "first_infection": {
       "date": "2020/04/07",
-      "cases": "",
+      "cases": "1016",
       "description": "First campus-affiliated infection",
       "link": "https://ehs.ucr.edu/coronavirus"
     },
@@ -184,7 +184,7 @@
     },
     "graduation": {
       "date": "2020/04/1",
-      "cases": "371",
+      "cases": "",
       "description": "Commencement plans yet to be confirmed",
       "link": "https://commencement.ucr.edu/"
     }
@@ -212,7 +212,7 @@
       "date": "2020/04/14",
       "cases": "1299",
       "description": "Optional P/NP",
-      "link": "https://www.reg.uci.edu/addl/faq_covid_pnp.html "
+      "link": "https://www.reg.uci.edu/addl/faq_covid_pnp.html"
     },
     "housing_change": {
       "date": "2020/03/13",
@@ -260,7 +260,7 @@
     },
     "graduation": {
       "date": "2020/04/10",
-      "cases": "80",
+      "cases": "",
       "description": "Commencement plans yet to be confirmed",
       "link": "https://news.ucsc.edu/2020/04/commencement-updates.html"
     }
@@ -401,7 +401,7 @@
     "grading_change": {
       "date": "2020/03/27",
       "cases": "574",
-      "description": "Change in grading of current quarter/semester",
+      "description": "All Satisfactory/No Credit",
       "link": "https://healthalerts.stanford.edu/2020/03/27/spring-quarter-grading-policy/"
     },
     "housing_change": {
@@ -439,8 +439,8 @@
     "grading_change": {
       "date": "2020/03/27",
       "cases": "685",
-      "description": "Emergency Sat/Unsat for Spring",
-      "link": ""
+      "description": "Universal Satisfactory/Unsatisfactory",
+      "link": "https://www.thecrimson.com/article/2020/3/28/harvard-coronavirus-universal-satisfactory-unsatisfactory-grading/"
     },
     "housing_change": {
       "date": "2020/03/10",
@@ -477,7 +477,7 @@
     "grading_change": {
       "date": "2020/03/20",
       "cases": "4408",
-      "description": "Change in grading of current quarter/semester",
+      "description": "Enforced P/NP",
       "link": "https://www.columbiaspectator.com/news/2020/03/20/columbia-to-grade-spring-classes-on-passfail-scale-extends-spring-break/"
     },
     "housing_change": {
@@ -515,8 +515,8 @@
     "grading_change": {
       "date": "2020/03/27",
       "cases": "160",
-      "description": "Change in grading of current quarter/semester",
-      "link": "https://coronavirus.utexas.edu/"
+      "description": "Optional P/NP",
+      "link": "https://president.utexas.edu/messages-speeches-2020/continuing-spring-semester-online"
     },
     "housing_change": {
       "date": "2020/03/11",
@@ -553,8 +553,8 @@
     "grading_change": {
       "date": "2020/04/02",
       "cases": "5575",
-      "description": "No change in grading yet",
-      "link": ""
+      "description": "Requested P/NP",
+      "link": "https://college.uchicago.edu/spring-quarter-grading"
     },
     "housing_change": {
       "date": "2020/03/12",
@@ -564,7 +564,7 @@
     },
     "graduation": {
       "date": "2020/04/07",
-      "cases": "9509",
+      "cases": "",
       "description": "Virtual ceremony",
       "link": "https://convocation.uchicago.edu/ceremonies-and-activities/announcement/"
     }
@@ -591,8 +591,8 @@
     "grading_change": {
       "date": "2020/03/25",
       "cases": "46",
-      "description": "Change in grading of current quarter/semester",
-      "link": ""
+      "description": "Optional Satisfactory/Unsatisfactory",
+      "link": "http://undergrad.aa.ufl.edu/for-students/covid-19-and-academic-policies/s-u-grading-and-drop-policy-update/"
     },
     "housing_change": {
       "date": "2020/03/11",
@@ -629,8 +629,8 @@
     "grading_change": {
       "date": "2020/03/6",
       "cases": "59",
-      "description": "Change in grading of current quarter/semester",
-      "link": "https://www.washington.edu/provost/springquarter/"
+      "description": "Credit/No Credit based on instructor",
+      "link": "https://www.washington.edu/coronavirus/2020/03/06/moving-classes-online-and-concluding-the-winter-quarter/"
     },
     "housing_change": {
       "date": "2020/03/18",
@@ -640,7 +640,7 @@
     },
     "graduation": {
       "date": "2020/04/8",
-      "cases": "3690",
+      "cases": "",
       "description": "Online graduation scheduled for June 13 2020, in-person ceremony June 12 2021",
       "link": "https://www.washington.edu/news/2020/04/08/uw-announces-commencement-ceremony-via-webcast-invites-class-of-2020-to-return-to-husky-stadium-next-year/"
     }
