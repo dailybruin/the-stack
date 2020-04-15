@@ -63,6 +63,7 @@ for (var i in data) {
         eventDate: new Date(2020, 02, data[i][j].date),
         description: data[i][j].description,
         color: colorSet.getIndex(num_school),
+        link: data[i][j].link
       };
       event_data.push(new_event_json);
     }
@@ -171,7 +172,7 @@ var flagBullet = eventSeries.bullets.push(new am4plugins_bullets.FlagBullet());
 flagBullet.label.propertyFields.text = 'school';
 flagBullet.locationX = 1;
 flagBullet.tooltipText =
-  "{school}, {eventDate.formatDate('MMM d')}:\n {description}";
+  '{school}, {eventDate.formatDate("MMM d")}:\n {description}\n <a href="{link}">Source</a>';
 flagBullet.propertyFields.fill = 'color'; // Flags are same color as their school
 
 var overlap = chart.plugins.push(new am4plugins_overlapBuster.OverlapBuster());
