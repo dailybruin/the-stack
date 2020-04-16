@@ -64,7 +64,9 @@ function lollipop_graph(testkey) {
           schools.push(key);
         }
       } else if (testkey == 'graduation') {
+          console.log("hi");
         if (data[key].graduation.cases != null) {
+            console.log("hello");
           cases.push(parseInt(data[key].graduation.cases));
           schools.push(key);
         }
