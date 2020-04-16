@@ -1,0 +1,23 @@
+#timeline {
+  width: 90%;
+  height: 600px;
+}
+
+.amcharts-FlagBullet {
+  cursor: pointer;
+}
+
+.demo-theme-dark .demo-background {
+  background: #000;
+}
+
+#bar-race {
+  display: flex;
+  justify-content: center;
+}
+
+@media (min-width: 620px) {
+  .flourish-embed {
+    width: 100vh;
+  }
+}
