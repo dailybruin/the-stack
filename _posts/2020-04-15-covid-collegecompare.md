@@ -1,6 +1,6 @@
 ---
 title: School’s Out, Zoom’s In.
-teaser: University life across the United States has been largely upended because of COVID-19. Find out how the measures schools have taken to stop the spread correlate with local confirmed cases, state actions and more.
+teaser: University life across the United States has been largely upended because of COVID-19. Find out how the measures schools have taken to stop the spread correlate with local confirmed cases, other schools, and more.
 authors:
   - keri_chen
   - kelly_chen
@@ -38,7 +38,7 @@ scripts:
   - /js/posts/covid-collegecompare/lollipop.js
 ---
 
-Within the past month, the spread of the novel coronavirus in the U.S. has forced college campuses around the country to shut down regular operations. As many schools implemented guidelines such as social distancing as [recommended by the Centers for Disease Control and Prevention](https://www.whitehouse.gov/wp-content/uploads/2020/03/03.16.20_coronavirus-guidance_8.5x11_315PM.pdf), they were also forced to make decisions regarding student housing and in-person classes. This article compares how different schools have responded to the virus, in accordance with state guidelines and increasing numbers of confirmed cases within or near their campuses.
+Within the past month, the spread of the novel coronavirus in the U.S. has forced college campuses around the country to shut down regular operations. As many schools implemented guidelines such as social distancing as [recommended by the Centers for Disease Control and Prevention](https://www.whitehouse.gov/wp-content/uploads/2020/03/03.16.20_coronavirus-guidance_8.5x11_315PM.pdf), they were also forced to make decisions regarding student housing and in-person classes. This article compares how different schools have responded to the virus, in accordance with increasing numbers of confirmed cases in their county, other schools, and time.
 
 Use the drop-down menus to filter the timeline by college and event, and click on an event to view it's source.
 
@@ -83,7 +83,7 @@ The lollipop chart below shows the changes made by each college in relation to t
 
 <!-- Dropdown for Lollipop -->
 <div align="left">
-  <label for="graphs">Select a Graph:</label>
+  <label for="graphs">Select an Event:</label>
     <select  id="graphs" class="lollipop_select" onchange='javascript: lollipop_graph(this.options[this.selectedIndex].value)' >
     <option value="cancelled_classes">First day of remote learning</option>
     <option value="rescheduled">Transition to long-term remote classes</option>
