@@ -14,8 +14,8 @@ key_takeaways:
   - Universities tended to shift toward remote learning within a week after their first university-affiliated infection. Schools without a university-affiliated infection moved online by mid-March.
 
 featured_image:
-  url: collegecompare/collage-cover.png
-og_image: collegecompare/collage-cover.png
+  url: collegecompare/collage-cover_1600x.png
+og_image: collegecompare/collage-cover_1600x.png
 stylesheets:
   - /css/posts/covid-collegecompare/app.css
   - https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.css
