@@ -1,6 +1,6 @@
 ---
 title: School’s Out, Zoom’s In.
-teaser: University life across the United States has been largely upended because of COVID-19. Find out how the measures schools have taken to stop the spread correlate with local confirmed cases, other schools, and more.
+teaser: University life across the United States has been largely upended because of COVID-19. Find out how the measures schools have taken to stop the spread correlate with local confirmed cases, other schools and more.
 authors:
   - keri_chen
   - kelly_chen
