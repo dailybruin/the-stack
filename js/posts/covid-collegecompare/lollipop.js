@@ -185,7 +185,7 @@ function lollipop_graph(testkey) {
     else if (testkey == 'housing_change')
       title = 'Change in University Housing Options';
     else if (testkey == 'graduation')
-      title = 'Moved Graduation Ceremonies Online';
+      title = 'Change in Commencement Plans';
     else if (testkey == '' || testkey == 'cancelled_classes')
       title = 'First day of remote learning';
 
