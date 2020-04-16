@@ -174,18 +174,6 @@ function update_line_chart(percentage, bed_type) {
     },
   ];
 
-  lineChart.options.scales.yAxes = [
-    {
-      scaleLabel: {
-        display: true,
-        labelString: 'Number of Beds'
-      },
-      ticks: {
-        min: 0,
-        max: maxScale[current_bed_type],
-      }
-    }
-  ];
   lineChart.update();
 }
 
