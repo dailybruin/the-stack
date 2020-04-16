@@ -172,10 +172,10 @@ function loadJSON(path) {
 var hospitalIcon = L.Icon.extend({
   options: {
       shadowUrl: '/js/posts/covid-hospitals/leaf-shadow.png',
-      iconSize:     [38, 95],
-      shadowSize:   [50, 64],
+      iconSize:     [20, 20],
+      shadowSize:   [0, 0],
       iconAnchor:   [22, 94],
-      shadowAnchor: [4, 62],
+      shadowAnchor: [0, 0],
       popupAnchor:  [-3, -76]
   }
 });
@@ -184,5 +184,5 @@ L.icon = function (options) {
   return new L.Icon(options);
 };
 
-var UCLAIcon = new hospitalIcon({iconUrl: '/js/posts/covid-hospitals/leaf-green.png'}), // need to change these png to the right icon - which ones are we using, and how do i do this 
-    redIcon = new hospitalIcon({iconUrl: '/js/posts/covid-hospitals/leaf-red.png'});
+var UCLAIcon = new hospitalIcon({iconUrl: '/js/posts/covid-hospitals/ucla-icon.png'}), // im not sure how to make this only go to westwood 
+    hospitalIcon = new hospitalIcon({iconUrl: '/js/posts/covid-hospitals/hospital-icon.png'})

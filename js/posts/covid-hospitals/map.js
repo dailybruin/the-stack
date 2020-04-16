@@ -53,7 +53,10 @@ async function initHospitalLayer() {
       ' General Acute Care Beds: ' + item['GAC_BEDS'] + '<br>' +
       ' ICU Beds: ' + Number(item['ICU_BEDS']).toFixed(0) + '</span>';
     let coords = [Number(item['LATITUDE']), Number(item['LONGITUDE'])];
+    // if coordinates in westwood
     markerArray.push(L.marker(coords, {icon: UCLAIcon}).bindPopup(label));
+    // else 
+    // make same call as above but with icon: hospitalIcon instead
   });
   hospitalLayer = L.layerGroup(markerArray).addTo(map);
   layerControl.addOverlay(hospitalLayer, '<span class="selector">Hospitals</span>');
