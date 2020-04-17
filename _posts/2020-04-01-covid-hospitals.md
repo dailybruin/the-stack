@@ -15,6 +15,7 @@ stylesheets:
   - //unpkg.com/leaflet@1.6.0/dist/leaflet.css
   - /css/posts/covid-hospitals/app.css
   - https://fonts.googleapis.com/css2?family=Open+Sans&display=swap
+  - https://cdnjs.cloudflare.com/ajax/libs/rangeslider.js/2.3.3/rangeslider.min.css
 scripts:
   # files for map
   - /js/lib/jquery-3.1.1.min.js
@@ -26,6 +27,7 @@ scripts:
 
   # files for chart
   - https://cdn.jsdelivr.net/npm/chart.js@2.8.0
+  - https://cdnjs.cloudflare.com/ajax/libs/rangeslider.js/2.3.3/rangeslider.min.js
   - /js/posts/covid-hospitals/line-chart.js
 ---
 
@@ -60,5 +62,4 @@ scripts:
       <span><span id="percentage-num">50%</span> of UCLA Infected</span>
     </div>
   </div>
-
 </div>

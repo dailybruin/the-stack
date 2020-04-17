@@ -1,3 +1,5 @@
+$('input[type="range"]').rangeslider();
+
 // CONSTANTS
 var timeLabels = ['6 months', '12 months', '18 months'];
 var colorCodes = {
@@ -20,23 +22,23 @@ var bedRatios = {
   Hospital: {
     six: 0.01368653925,
     twelve: 0.00684326963,
-    eighteen: 0.00446333323
-  }, 
+    eighteen: 0.00446333323,
+  },
   ICU: {
     six: 0.00289110203,
     twelve: 0.00144586851,
     eighteen: 0.00094295772,
-  }
+  },
 };
 var population = {
   ugrad: 31453,
   grad: 12828,
-  total: 44281
+  total: 44281,
 };
 var maxScale = {
   Hospital: 650,
   ICU: 150,
-}
+};
 
 // HELPER FUNCTIONS
 function display_slider_value(value) {
@@ -79,9 +81,7 @@ let lineChart = new Chart(document.getElementById('line-chart'), {
         fill: false,
       },
       {
-        data: Array(timeLabels.length).fill(
-          availableBeds['Hospital'].total
-        ),
+        data: Array(timeLabels.length).fill(availableBeds['Hospital'].total),
         label: 'Hospital Beds',
         borderColor: colorCodes['tot_hos'],
         borderDash: borderDash,
@@ -111,7 +111,7 @@ let lineChart = new Chart(document.getElementById('line-chart'), {
         {
           scaleLabel: {
             display: true,
-            labelString: 'Number of Beds'
+            labelString: 'Number of Beds',
           },
           ticks: {
             min: 0,
@@ -135,13 +135,11 @@ var current_bed_type = 'Hospital';
 var current_percentage = 50;
 
 function update_line_chart(percentage, bed_type) {
+  if (bed_type != null)
+    bed_type ? (current_bed_type = 'ICU') : (current_bed_type = 'Hospital');
 
-  if (bed_type != null) 
-    bed_type ? current_bed_type = 'ICU' : current_bed_type = 'Hospital';
+  if (percentage != null) current_percentage = percentage;
 
-  if (percentage != null)
-    current_percentage = percentage;
-  
   lineChart.data.datasets = [
     {
       data: projected_figures('total', current_percentage, current_bed_type),
@@ -165,7 +163,9 @@ function update_line_chart(percentage, bed_type) {
       fill: false,
     },
     {
-      data: Array(timeLabels.length).fill(availableBeds[current_bed_type].total),
+      data: Array(timeLabels.length).fill(
+        availableBeds[current_bed_type].total
+      ),
       label: current_bed_type + ' Beds',
       borderColor: colorCodes['tot_hos'],
       borderDash: borderDash,
@@ -178,15 +178,15 @@ function update_line_chart(percentage, bed_type) {
 }
 
 // Make charts responsive
-let x = window.matchMedia("(max-width: 480px)");
+let x = window.matchMedia('(max-width: 480px)');
 make_responsive(x);
 
-function make_responsive(x){
+function make_responsive(x) {
   if (x.matches) {
     Chart.defaults.global.responsive = false;
     Chart.defaults.global.maintainAspectRatio = false;
-    lineChart.canvas.parentNode.style.width = "340px";
-    lineChart.options.legend =  {
+    lineChart.canvas.parentNode.style.width = '340px';
+    lineChart.options.legend = {
       display: false,
     };
     lineChart.update();
