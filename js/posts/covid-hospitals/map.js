@@ -42,6 +42,13 @@ init_info();
 init_legend();
 initHospitalLayer();
 initCasesLayers();
+addUCLAMarker();
+
+function addUCLAMarker() {
+  L.marker([34.0729, -118.442114], { icon: UCLAIcon, zIndexOffset: 1000 })
+    .bindTooltip('UCLA')
+    .addTo(map);
+}
 
 // creates layer with all hospital markers
 async function initHospitalLayer() {
@@ -49,17 +56,25 @@ async function initHospitalLayer() {
   let markerArray = [];
   hospitals.forEach(function(item) {
     let label =
-      '<span class="marker-label"><strong>' + item['FACNAME'] + '</strong> <br>' +
-      ' General Acute Care Beds: ' + item['GAC_BEDS'] + '<br>' +
-      ' ICU Beds: ' + Number(item['ICU_BEDS']).toFixed(0) + '</span>';
+      '<span class="marker-label"><strong>' +
+      item['FACNAME'] +
+      '</strong> <br>' +
+      ' General Acute Care Beds: ' +
+      item['GAC_BEDS'] +
+      '<br>' +
+      ' ICU Beds: ' +
+      Number(item['ICU_BEDS']).toFixed(0) +
+      '</span>';
     let coords = [Number(item['LATITUDE']), Number(item['LONGITUDE'])];
-    // if coordinates in westwood
-    markerArray.push(L.marker(coords, {icon: UCLAIcon}).bindPopup(label));
-    // else 
-    // make same call as above but with icon: hospitalIcon instead
+    markerArray.push(
+      L.marker(coords, { icon: hospitalIcon }).bindTooltip(label)
+    );
   });
   hospitalLayer = L.layerGroup(markerArray).addTo(map);
-  layerControl.addOverlay(hospitalLayer, '<span class="selector">Hospitals</span>');
+  layerControl.addOverlay(
+    hospitalLayer,
+    '<span class="selector">Hospitals</span>'
+  );
 }
 
 // creates layer w/ neighborhood boundaries & coloring
@@ -73,18 +88,17 @@ async function initCasesLayers() {
     style: totalCasesStyle,
   });
   totalCasesLayer.addTo(map);
-  layerControl.addBaseLayer(totalCasesLayer, '<span class="selector">Total cases</span>');
+  layerControl.addBaseLayer(
+    totalCasesLayer,
+    '<span class="selector">Total cases</span>'
+  );
 
   caseRateLayer = new L.GeoJSON(geojson, {
     onEachFeature: onEachFeature,
     style: caseRateStyle,
   });
-  layerControl.addBaseLayer(caseRateLayer, '<span class="selector">Cases per capita</span>');
+  layerControl.addBaseLayer(
+    caseRateLayer,
+    '<span class="selector">Cases per capita</span>'
+  );
 }
-
-
-
-
-
-
-

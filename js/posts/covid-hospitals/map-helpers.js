@@ -39,9 +39,11 @@ function update_legend(div, show_rates) {
     ? [0, 5, 10, 20, 50, 100, 150, 200]
     : [0, 5, 10, 20, 50, 100, 200, 400];
   // loop through our density intervals and generate a label with a colored square for each interval
-  div.innerHTML = show_rates ? '<span class="legend"><strong>Cases per 100K people<br></strong></span>' 
-  : '<span class="legend"><strong>Total Cases<br></strong></span>';
-  div.innerHTML += '<i class="legend" style="background:#AAAAAA"></i> No data<br>';
+  div.innerHTML = show_rates
+    ? '<span class="legend"><strong>Cases per 100K people<br></strong></span>'
+    : '<span class="legend"><strong>Total Cases<br></strong></span>';
+  div.innerHTML +=
+    '<i class="legend" style="background:#AAAAAA"></i> No data<br>';
   for (var i = 0; i < grades.length; i++) {
     let color = show_rates
       ? getRateColor(grades[i] + 1)
@@ -171,18 +173,22 @@ function loadJSON(path) {
 
 var hospitalIcon = L.Icon.extend({
   options: {
-      shadowUrl: '/js/posts/covid-hospitals/leaf-shadow.png',
-      iconSize:     [20, 20],
-      shadowSize:   [0, 0],
-      iconAnchor:   [22, 94],
-      shadowAnchor: [0, 0],
-      popupAnchor:  [-3, -76]
-  }
+    // shadowUrl: '/js/posts/covid-hospitals/leaf-shadow.png',
+    iconSize: [20, 20],
+    shadowSize: [0, 0],
+    // iconAnchor:   [22, 94],
+    // shadowAnchor: [0, 0],
+    // popupAnchor:  [-3, -76]
+  },
 });
 
-L.icon = function (options) {
+L.icon = function(options) {
   return new L.Icon(options);
 };
 
-var UCLAIcon = new hospitalIcon({iconUrl: '/js/posts/covid-hospitals/ucla-icon.png'}), // im not sure how to make this only go to westwood 
-    hospitalIcon = new hospitalIcon({iconUrl: '/js/posts/covid-hospitals/hospital-icon.png'})
+var UCLAIcon = new hospitalIcon({
+    iconUrl: '/js/posts/covid-hospitals/ucla-icon.png',
+  }), // im not sure how to make this only go to westwood
+  hospitalIcon = new hospitalIcon({
+    iconUrl: '/js/posts/covid-hospitals/hospital-icon.png',
+  });
