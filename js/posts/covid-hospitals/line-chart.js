@@ -91,6 +91,9 @@ let lineChart = new Chart(document.getElementById('line-chart'), {
     ],
   },
   options: {
+    animation: {
+      duration: 0,
+    },
     title: {
       display: true,
       text: 'Hypothetical Resources needed by UCLA Students', //TODO: or better naming
@@ -188,7 +191,31 @@ function make_responsive(x) {
     lineChart.canvas.parentNode.style.width = '340px';
     lineChart.options.legend = {
       display: false,
+      position: 'top',
     };
+    lineChart.options.scales = {
+      xAxes: [
+        {
+          type: 'category',
+          labels: timeLabels,
+          scaleLabel: {
+            display: false,
+          },
+          display: true,
+        },
+      ],
+      yAxes: [
+        {
+          scaleLabel: {
+            display: false,
+          },
+          ticks: {
+            min: 0,
+            max: 600,
+          },
+        },
+      ],
+    },
     lineChart.update();
   }
 }

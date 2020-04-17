@@ -1,6 +1,7 @@
 #map {
-  height: 700px;
-  width: 700px;
+  height: 75vh;
+  width: 40vw;
+  margin: 0 auto;
 }
 
 .info {
@@ -47,6 +48,7 @@
 .legend,
 .selector {
   font-family: 'Open Sans';
+  /* text-align: left; */
 }
 
 .switch {
@@ -133,5 +135,26 @@ input:checked+.toggle:before {
 
   #slider-wrapper {
     display: block;
+  }
+
+  #map {
+    height: 50vh;
+    width: 90vw;
+    margin: 0 auto;
+  }
+
+  .slider {
+    width: 90vw;
+    height: 25px;
+    margin: 0 auto;
+  }
+
+  #percentage-num {
+    font-size: 1.5em;
+    line-height: 25px;
+  }
+
+  #slider-num {
+    text-align: center;
   }
 }
