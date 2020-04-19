@@ -171,24 +171,13 @@ function loadJSON(path) {
   });
 }
 
-var hospitalIcon = L.Icon.extend({
-  options: {
-    // shadowUrl: '/js/posts/covid-hospitals/leaf-shadow.png',
-    iconSize: [20, 20],
-    shadowSize: [0, 0],
-    // iconAnchor:   [22, 94],
-    // shadowAnchor: [0, 0],
-    // popupAnchor:  [-3, -76]
-  },
+var UCLAIcon = L.icon({
+  iconUrl: '/img/posts/covid-hospitals/ucla.png',
+  iconSize: [55, 40],
+  shadowSize: [0, 0],
 });
 
-L.icon = function(options) {
-  return new L.Icon(options);
-};
-
-var UCLAIcon = new hospitalIcon({
-    iconUrl: '/js/posts/covid-hospitals/ucla-icon.png',
-  }), // im not sure how to make this only go to westwood
-  hospitalIcon = new hospitalIcon({
-    iconUrl: '/js/posts/covid-hospitals/hospital-icon.png',
-  });
+var hospitalIcon = L.icon({
+  iconUrl: '/img/posts/covid-hospitals/hospital.png',
+  iconSize: [20, 20],
+});
