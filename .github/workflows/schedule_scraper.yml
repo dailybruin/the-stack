@@ -17,7 +17,6 @@ jobs:
           python -m pip install requests
           python -m pip install lxml
           python -m pip install pandas
-          python -m pip install json
       - name: Run python
         run: python python/posts/corona-hospitals/map-scraping.py
       - name: Test
