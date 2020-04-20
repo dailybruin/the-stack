@@ -117,14 +117,14 @@ input:checked+.toggle:before {
 }
 
 
-.wrapper {
+.chart-wrapper {
   display: flex;
   justify-content: space-evenly;
 }
 
 /* Phone Level */
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
-  .wrapper {
+  .chart-wrapper {
     display: block;
   }
 
