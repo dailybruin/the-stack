@@ -6,10 +6,10 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repo
-        uses: actions/checkout@v1.0.0
-        with:
-          ref: refs/heads/master
+#       - name: Checkout repo
+#         uses: actions/checkout@v1.0.0
+#         with:
+#           ref: refs/heads/master
       - name: Setup Python
         uses: actions/setup-python@v1.2.0
       - name: Run python
@@ -24,8 +24,8 @@ jobs:
           git config --local user.name "GitHub Action"
           git commit -m "ci: Automated build push" -a | exit 0
       - name: Push changes
-        if: github.ref == 'refs/heads/covid-hospitals'
-        uses: ad-m/github-push-action@covid-hospitals
+        if: github.ref == 'refs/heads/master'
+        uses: ad-m/github-push-action@master
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
       - name: Trigger our build webhook on Netlify
