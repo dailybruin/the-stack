@@ -64,9 +64,9 @@ function lollipop_graph(testkey) {
           schools.push(key);
         }
       } else if (testkey == 'graduation') {
-          console.log("hi");
+        console.log('hi');
         if (data[key].graduation.cases != null) {
-            console.log("hello");
+          console.log('hello');
           cases.push(parseInt(data[key].graduation.cases));
           schools.push(key);
         }
@@ -184,8 +184,7 @@ function lollipop_graph(testkey) {
     else if (testkey == 'grading_change') title = 'Change in Grading Basis';
     else if (testkey == 'housing_change')
       title = 'Change in University Housing Options';
-    else if (testkey == 'graduation')
-      title = 'Change in Commencement Plans';
+    else if (testkey == 'graduation') title = 'Change in Commencement Plans';
     else if (testkey == '' || testkey == 'cancelled_classes')
       title = 'First day of remote learning';
 
