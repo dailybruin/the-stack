@@ -1,7 +1,7 @@
 name: Scheduled python
-on: repository_dispatch
-#   schedule:
-#   - cron: '* * * * *'
+on:
+  schedule:
+  - cron: '* * * * *'
 jobs:
   build:
     runs-on: ubuntu-latest
