@@ -62,7 +62,7 @@ Drag the slider to see how many beds UCLA students would have taken up at Ronald
       <div class="toggle-option">Hospital</div>
       <div>
       <label class="switch">
-        <input type="checkbox" onclick="update_line_chart(null, this.checked);">
+        <input type="checkbox" onclick="update_line_chart(null, this.checked); update_legend(this.checked);">
         <span class='toggle'></span>
       </label>
       </div>
@@ -77,6 +77,13 @@ Drag the slider to see how many beds UCLA students would have taken up at Ronald
     <div id="slider-num">
       <span><span id="percentage-num">50%</span> of UCLA Infected</span>
     </div>
+  </div>
+
+  <div id="custom-legend">
+    <div class="legend-marker" id="m-total"></div><span class="legend-label" id="total"></span> <br>
+    <div class="legend-marker" id="m-ugrad"></div><span class="legend-label" id="ugrad"></span> <br>
+    <div class="legend-marker" id="m-grad"></div><span class="legend-label" id="grad"></span> <br>
+    <div class="legend-marker" id="m-tot"></div><span class="legend-label" id="tot"></span> <br>
   </div>
 </div>
 
