@@ -1,7 +1,7 @@
 name: Scheduled python
-on:
-  schedule:
-  - cron: '* * * * *'
+on: repository_dispatch
+#   schedule:
+#   - cron: '* * * * *'
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -12,6 +12,8 @@ jobs:
         uses: actions/setup-python@v1.2.0
       - name: Run python
         run: python python/posts/corona-hospitals/map-scraping.py
+      - name: Test
+        run: touch test.txt
       - name: Commit files
         run: |
           echo ${{ github.ref }}
@@ -20,8 +22,8 @@ jobs:
           git config --local user.name "GitHub Action"
           git commit -m "ci: Automated build push" -a | exit 0
       - name: Push changes
-        if: github.ref == 'refs/heads/master'
-        uses: ad-m/github-push-action@master
+        if: github.ref == 'refs/heads/covid-hospitals'
+        uses: ad-m/github-push-action@covid-hospitals
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
       - name: Trigger our build webhook on Netlify
