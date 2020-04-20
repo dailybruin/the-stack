@@ -12,10 +12,14 @@ jobs:
           ref: refs/heads/master
       - name: Setup Python
         uses: actions/setup-python@v1.2.0
-      - name: Run python
+      - name: Install Python libraries 
         run: |
           python -m pip install requests
-          python python/posts/corona-hospitals/map-scraping.py
+          python -m pip install lxml
+          python -m pip install pandas
+          python -m pip install json
+      - name: Run python
+        run: python python/posts/corona-hospitals/map-scraping.py
       - name: Test
         run: touch test.txt
       - name: Commit files
