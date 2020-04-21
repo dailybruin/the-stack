@@ -157,4 +157,23 @@ input:checked+.toggle:before {
   #slider-num {
     text-align: center;
   }
+
+  #custom-legend {
+    border: solid #000;
+    border-width: 1px;
+    margin-bottom: 2vh;
+    margin-top: 1vh;
+  }
+
+  .legend-marker {
+    border: solid #000;
+    border-width: 1px;
+    display: inline-block;
+    width: 1em;
+    line-height: 0.6em;
+    margin: 0.5em;
+  }
+  .legend-label {
+    display: inline-block;
+  }
 }
