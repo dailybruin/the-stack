@@ -25,7 +25,7 @@ day = time.localtime().tm_mday
 sec = time.localtime().tm_sec
 
 print("Starting script")
-file = open('data/{}-{}-{}.csv'.format(day, hour, sec), 'w')
+file = open('radhikas_data/{}-{}-{}.csv'.format(day, hour, sec), 'w')
 file_writer = csv.writer(file, delimiter=',')
 """
 chrome_options = Options()
@@ -34,12 +34,13 @@ chrome_options.add_argument('--no-sandbox')
 chrome_options.add_argument('--disable-dev-shm-usage')
 driver = webdriver.Chrome('./chromedriver', chrome_options=chrome_options)
 """
-driver = webdriver.Chrome('./chromedriver')
+driver = webdriver.Chrome('./chromedriver_81')
 wait = WebDriverWait(driver, timeout)
 
 # have selenium get the department website
+quarter = "20S"
 dep_file = open('departments.txt', 'r')
-link1 = "https://sa.ucla.edu/ro/Public/SOC/Results?t=20W&sBy=subject&sName="
+link1 = "https://sa.ucla.edu/ro/Public/SOC/Results?t="+quarter+"&sBy=subject&sName="
 link2 = "%28"
 link3 = "%29&subj="
 link4 = "&crsCatlg=Enter+a+Catalog+Number+or+Class+Title+%28Optional%29&catlg=&cls_no=&btnIsInIndex=btn_inIndex"
@@ -121,16 +122,26 @@ for dep, dep_abbrv in itertools.zip_longest(*[dep_file]*2):
                 for s in status:
                     status_text = s.find('p').text
                     if (status_text != "Status"):
+                        number_text = re.findall("[0-9]+", status_text)
+                        enrolled = 0
+                        classSize = 0
+                        arr_text = []
                         if (status_text.find('Closed') == 0):
-                            file_writer.writerow([0, 0, 0])
+                            for i in number_text:
+                                arr_text.append(i)
+                                enrolled += int(i)
+                            classSize = int(arr_text[0])
+                            file_writer.writerow([enrolled, classSize, 0])
                         if (status_text.find('Open') == 0):
-                            number_text = re.findall("[0-9]+", status_text)
-                            arr_text = []
                             for i in number_text:
                                 arr_text.append(i)
                             file_writer.writerow(arr_text)
                         if (status_text.find('Waitlist') == 0):
-                            file_writer.writerow([-1, -1, -1])
+                            for i in number_text:
+                                arr_text.append(i)
+                                enrolled += int(i)
+                            classSize = int(arr_text[0])
+                            file_writer.writerow([enrolled, classSize, 0])
         except:
             pass
         page_num += 1
