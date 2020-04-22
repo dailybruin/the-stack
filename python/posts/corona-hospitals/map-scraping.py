@@ -93,7 +93,7 @@ def process_data(cases, lb_pas):
 
     # for each region with cases update corresponding neighborhood feature
     for row in cases.iterrows():
-        name = row[1]['CITY/COMMUNITY**']
+        name = str(row[1]['CITY/COMMUNITY**'])
         # process names to match geojson features
         if name.find('City of ') == 0:
             name = name[8:]
