@@ -252,7 +252,7 @@ tr_elements = doc.xpath('//tr')
 dfs = dataframe_from_tr(tr_elements, 3)
 # dfs += dataframe_from_tr(tr_elements, 4) 
 
-cases = dfs[5]
+cases = dfs[7]
 lb_pas= dfs[0]
 
 jsonData = process_data(cases, lb_pas)
