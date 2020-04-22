@@ -21,8 +21,6 @@ jobs:
           python -m pip install pandas
       - name: Run python
         run: python python/posts/corona-hospitals/map-scraping.py
-      - name: Test
-        run: touch test.txt
       - name: Commit files
         run: |
           echo ${{ github.ref }}
