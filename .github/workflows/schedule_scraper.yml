@@ -1,7 +1,7 @@
 name: Scheduled python
 on:
   schedule:
-  - cron: '0 */12 * * *'
+  - cron: '* * * * *'
 jobs:
   build:
     runs-on: ubuntu-latest
