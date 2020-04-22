@@ -243,26 +243,22 @@ conversions = {
 url='http://publichealth.lacounty.gov/media/Coronavirus/locations.htm'
 #Create a handle, page, to handle the contents of the website
 
+page = requests.get(url)
+#Store the contents of the website under doc
+doc = lh.fromstring(page.content)
+#Parse data that are stored between <tr>..</tr> of HTML
+tr_elements = doc.xpath('//tr')
 
-try:
-    page = requests.get(url)
-    #Store the contents of the website under doc
-    doc = lh.fromstring(page.content)
-    #Parse data that are stored between <tr>..</tr> of HTML
-    tr_elements = doc.xpath('//tr')
+dfs = dataframe_from_tr(tr_elements, 3)
+# dfs += dataframe_from_tr(tr_elements, 4) 
 
-    dfs = dataframe_from_tr(tr_elements, 3)
-    # dfs += dataframe_from_tr(tr_elements, 4) 
+cases = dfs[5]
+lb_pas= dfs[0]
 
-    cases = dfs[5]
-    lb_pas= dfs[0]
+jsonData = process_data(cases, lb_pas)
 
-    jsonData = process_data(cases, lb_pas)
-
-    # write geoJSON 
-    with open('datasets/covid-hospitals/neighborhoods.geojson', 'w') as outfile:
-        json.dump(jsonData, outfile)
-
-
-except:
-    print("Scraping didn't work, use existing data")
+# write geoJSON 
+with open('datasets/covid-hospitals/neighborhoods.geojson', 'w') as outfile:
+    json.dump(jsonData, outfile)
+      
+print("Scraping didn't work, use existing data")
