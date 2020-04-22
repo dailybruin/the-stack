@@ -260,5 +260,3 @@ jsonData = process_data(cases, lb_pas)
 # write geoJSON 
 with open('datasets/covid-hospitals/neighborhoods.geojson', 'w') as outfile:
     json.dump(jsonData, outfile)
-      
-print("Scraping didn't work, use existing data")
