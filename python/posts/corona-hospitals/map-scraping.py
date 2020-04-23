@@ -97,7 +97,7 @@ def process_data(cases, lb_pas, date):
 
     # for each region with cases update corresponding neighborhood feature
     for row in cases.iterrows():
-        name = row[1]['CITY/COMMUNITY**']
+        name = str(row[1]['CITY/COMMUNITY**'])
         # process names to match geojson features
         if name.find('City of ') == 0:
             name = name[8:]
@@ -261,7 +261,6 @@ lb_pas= dfs[0]
 
 text = doc.findall('.//caption')[0].text_content()
 dateString = re.search("[0-9]{2}:[0-9]{2}[ap]m [0-9]{1,2}/[0-9]{1,2}", text).group()
-print(dateString)
 
 jsonData = process_data(cases, lb_pas, dateString)
 
