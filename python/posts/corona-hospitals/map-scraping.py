@@ -2,6 +2,7 @@ import requests
 import lxml.html as lh
 import pandas as pd
 import json
+import re
 
 def dataframe_from_tr(tr_elements, length):
     elements = []
@@ -66,7 +67,7 @@ def dataframe_from_tr(tr_elements, length):
 
     return dfs
 
-def process_data(cases, lb_pas):
+def process_data(cases, lb_pas, date):
     # combine LA cases w/ long beach & pasadena
     lb_pas = lb_pas.rename(columns={"Locations" : "CITY/COMMUNITY**"})
     filtered = lb_pas[(lb_pas['CITY/COMMUNITY**'] == "- Long Beach") | (lb_pas['CITY/COMMUNITY**'] == "- Pasadena")]
@@ -83,9 +84,12 @@ def process_data(cases, lb_pas):
     cases = cases.append(filtered, ignore_index=True)
 
     # load geoJSON
-    with open('datasets/covid-hospitals/neighborhoods.geojson') as f:
-        geojson = json.load(f)
+    with open('datasets/covid-hospitals/neighborhoods.geojson') as x:
+        geojson = json.load(x)
     
+    # last updated date
+    geojson['lastUpdated'] = date
+
     # clear case count
     for f in geojson['features']:
         f['properties']['cases'] = None
@@ -252,10 +256,14 @@ tr_elements = doc.xpath('//tr')
 dfs = dataframe_from_tr(tr_elements, 3)
 # dfs += dataframe_from_tr(tr_elements, 4) 
 
-cases = dfs[5]
+cases = dfs[7]
 lb_pas= dfs[0]
 
-jsonData = process_data(cases, lb_pas)
+text = doc.findall('.//caption')[0].text_content()
+dateString = re.search("[0-9]{2}:[0-9]{2}[ap]m [0-9]{1,2}/[0-9]{1,2}", text).group()
+print(dateString)
+
+jsonData = process_data(cases, lb_pas, dateString)
 
 # write geoJSON 
 with open('datasets/covid-hospitals/neighborhoods.geojson', 'w') as outfile:

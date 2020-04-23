@@ -101,4 +101,7 @@ async function initCasesLayers() {
     caseRateLayer,
     '<span class="selector">Cases per capita</span>'
   );
+
+  document.getElementById('updatedate').innerHTML =
+    'Data as of ' + geojson['lastUpdated'];
 }
