@@ -27,42 +27,41 @@ function init_info() {
 // initialize legend in bottom right showing key for colors
 function init_legend() {
   legend.onAdd = function(map) {
-    var div = L.DomUtil.create('div', 'info legend');
-    div.id = 'legend';
-    return update_legend(div, false);
+    this._div = L.DomUtil.create('div', 'info legend');
+    this._div.id = 'legend';
+    this.update(false);
+    return this._div;
+  };
+  legend.update = function(show_rates) {
+    var grades = show_rates
+      ? [0, 5, 10, 20, 50, 100, 200, 300]
+      : [0, 5, 10, 20, 50, 100, 200, 400];
+    // loop through our density intervals and generate a label with a colored square for each interval
+    this._div.innerHTML = show_rates
+      ? '<span class="legend"><strong>Cases per 100K people<br></strong></span>'
+      : '<span class="legend"><strong>Total Cases<br></strong></span>';
+    this._div.innerHTML +=
+      '<i class="legend" style="background:#AAAAAA"></i> No data<br>';
+    for (var i = 0; i < grades.length; i++) {
+      let color = show_rates
+        ? getRateColor(grades[i] + 1)
+        : getCasesColor(grades[i] + 1);
+      this._div.innerHTML +=
+        '<i class="legend" style="background:' +
+        color +
+        '"></i> ' +
+        grades[i] +
+        (grades[i + 1] ? '&ndash;' + (grades[i + 1] - 1) + '<br>' : '+');
+    }
   };
   legend.addTo(map);
 }
 
-function update_legend(div, show_rates) {
-  var grades = show_rates
-    ? [0, 5, 10, 20, 50, 100, 150, 200]
-    : [0, 5, 10, 20, 50, 100, 200, 400];
-  // loop through our density intervals and generate a label with a colored square for each interval
-  div.innerHTML = show_rates
-    ? '<span class="legend"><strong>Cases per 100K people<br></strong></span>'
-    : '<span class="legend"><strong>Total Cases<br></strong></span>';
-  div.innerHTML +=
-    '<i class="legend" style="background:#AAAAAA"></i> No data<br>';
-  for (var i = 0; i < grades.length; i++) {
-    let color = show_rates
-      ? getRateColor(grades[i] + 1)
-      : getCasesColor(grades[i] + 1);
-    div.innerHTML +=
-      '<i class="legend" style="background:' +
-      color +
-      '"></i> ' +
-      grades[i] +
-      (grades[i + 1] ? '&ndash;' + (grades[i + 1] - 1) + '<br>' : '+');
-  }
-  return div;
-}
-
 // helper functions for geojson layer style  & controls
 function getRateColor(num) {
-  return num >= 200
+  return num >= 300
     ? '#990000'
-    : num >= 150
+    : num >= 200
     ? '#d7301f'
     : num >= 100
     ? '#ef6548'

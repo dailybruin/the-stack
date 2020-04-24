@@ -34,7 +34,7 @@ var baseLayer = L.tileLayer(
 // REGISTER HANDLER FOR CHANGING BASE LAYERS
 map.on('baselayerchange', function(e) {
   let show_rates = e.layer === caseRateLayer;
-  update_legend(document.getElementById('legend'), show_rates);
+  legend.update(show_rates);
 });
 
 // SET UP MAP
@@ -101,4 +101,7 @@ async function initCasesLayers() {
     caseRateLayer,
     '<span class="selector">Cases per capita</span>'
   );
+
+  document.getElementById('updatedate').innerHTML =
+    'Data as of ' + geojson['lastUpdated'];
 }

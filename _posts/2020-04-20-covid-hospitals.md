@@ -43,7 +43,10 @@ UCLA students often live in close quarters, whether it be in dorms, apartments o
 
 The map of LA County below displays the number of general acute care and ICU beds that exist in Los Angeles County hospitals, as well as the current number of COVID-19 cases in each neighborhood. Hover over each region for the number of cases and case rate per 100,000 people, and hover over each hospital icon to see the number of beds. The controls in the bottom left will toggle the map shading between total number of cases and cases per capita.
 
-<div id="map"></div>
+<div id="map-container">
+  <div id="map"></div>
+  <p id="updatedate"></p>
+</div>
 
 <br/>
 
