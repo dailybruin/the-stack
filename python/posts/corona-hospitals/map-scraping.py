@@ -260,7 +260,7 @@ cases = dfs[7]
 lb_pas= dfs[0]
 
 text = doc.findall('.//caption')[0].text_content()
-dateString = re.search("[0-9]{2}:[0-9]{2}[ap]m [0-9]{1,2}/[0-9]{1,2}", text).group()
+dateString = re.search("[0-9]+:[0-9]+[ap]m [0-9]{1,2}/[0-9]{1,2}", text).group()
 
 jsonData = process_data(cases, lb_pas, dateString)
 
