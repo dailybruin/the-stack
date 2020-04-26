@@ -23,7 +23,8 @@ print(simulation.create_classrooms(processing.initialize_course_list(data.course
 #   id_as_int: {
 #       "major: "" string/enum
 #       "year": "" int/enum (1, 2, 3, 4)
-#       "college": "" string/enum (L&S, HSEAS, etc.)#   
+#       "college": "" string/enum (L&S, HSEAS, etc.)#
+#       "num_enrolled": "" int (number of courses student is currently enrolled in)   
 #   }
 # }
 # 
@@ -39,7 +40,15 @@ print(simulation.create_classrooms(processing.initialize_course_list(data.course
 #
 # POTENTIAL ISSUES
 # 1. Students double-majoring?
-# 2. Undeclared students#
+# 2. Undeclared students
+# 
+# DATA NEEDED
+# - list of majors (and associated department)
+# - list of departments
+# - mapping from courses to departments (or vice-versa)
+# - which classes are GEs
+# - class restrictions (open to freshman, etc.)
+# - students by year in each major or department
 
 
 
