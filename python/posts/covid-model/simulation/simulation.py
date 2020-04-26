@@ -2,7 +2,7 @@ import random
 import json
 import data
 
-# Create Classrooms assigns students to each course
+# CREATE CLASSROOMS: assigns students to each course
 def create_classrooms(courses, students):
     available_students = students
     for key in courses:
@@ -11,7 +11,11 @@ def create_classrooms(courses, students):
 
     return courses
 
-# CONSTRAINT: No student is enrolled in more than MAX_COURSE_LIST number of courses
+# TODO: (maybe separate functions for nodes and edges)
+def generate_nodes_and_edges(courses):
+    return None
+
+# CONSTRAINT(MAX_COURSE_LIST): No student is enrolled in more than MAX_COURSE_LIST number of courses
 def update_enrollments(new_enrollments, students):
     for i in new_enrollments:
         students[i]['num_of_courses'] += 1
