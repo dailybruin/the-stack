@@ -108,8 +108,8 @@ def process_data(cases, lb_pas, date):
         if name in conversions:
             name = conversions[name]
             
-        # cases is '--' : data is supressed 
-        if not isinstance(row[1]['Total Cases'], int):
+        # no rate data available 
+        if row[1]['Rate**'] == "NA":
             continue
         
         match = False
