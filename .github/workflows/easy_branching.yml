@@ -1,0 +1,62 @@
+name: Easy Branching
+on:
+  create:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v2
+        with:
+          ref: refs/heads/${GITHUB_REF##*/}
+      - name: Extract branch name
+        shell: bash
+        run: |
+          branch_name="##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
+          echo $branch_name
+        id: extract_branch
+      - name: Create required variables
+        run: |
+          now=$(date +%m-%d-%y-)
+          echo $now
+          git branch
+      # - name: Create template file
+      #   run: |
+      #     echo "
+      #     ---
+      #     title: ${branch_name}
+      #     teaser: A cool new Stack post
+      #     authors:
+      #     key_takeaways:
+      #       - Takeaway 1
+      #       - Takeaway 2
+      #     featured_image:
+      #       url: img/nameplate@2x.png
+      #     og_image: img/nameplate@2x.png
+      #     stylesheets:
+      #       css/posts/${branch_name}/app.css
+      #     scripts:
+      #       js/posts/${branch_name}/app.js
+      #     ---" > _posts/${now}${branch_name}.md
+      # - name: Create folders
+      #   run: |
+      #       mkdir css/posts/${branch_name}
+      #       touch css/posts/${branch_name}/app.css
+      #       mkdir js/posts/${branch_name}
+      #       touch js/posts/${branch_name}/app.js
+      #       mkdir datasets/${branch_name}
+      #       mkdir img/posts/${branch_name}
+      #       mkdir docs/project-reports/${branch_name}         
+      # - name: Commit files
+      #   run: |
+      #     echo ${{ github.ref }}
+      #     git add .
+      #     git config --local user.email "action@github.com"
+      #     git config --local user.name "GitHub Action"
+      #     git commit -m "ci: Automated new branch workflow" -a | exit 0
+      # - name: Push changes
+      #   if: github.ref == 'refs/heads/master'
+      #   uses: ad-m/github-push-action@master
+      #   with:
+      #     github_token: ${{ secrets.GITHUB_TOKEN }}
+
