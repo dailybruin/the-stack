@@ -4,6 +4,11 @@
   margin: 0 auto;
 }
 
+#updatedate {
+  text-align: center;
+  font-size: 12px;
+}
+
 .info {
   padding: 6px 8px;
   font: 14px/16px Arial, Helvetica, sans-serif;
@@ -124,6 +129,10 @@ input:checked+.toggle:before {
 
 /* Phone Level */
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
+  .leaflet-control-layers {
+    margin-bottom: 30px!important;
+  }
+  
   .chart-wrapper {
     display: block;
   }
