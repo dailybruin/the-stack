@@ -20,7 +20,8 @@ def initialize_student_list(num_of_students):
             "major": random.choice(data.majors_dummy), # TODO: REPLACE WITH REAL DATA 
             "year": data.Year(random.randint(1, 4)), # TODO: REPLACE WITH REAL DATA (if information of year can be sourced)
             "college": random.choice(data.colleges_dummy),  # TODO: REPLACE WITH REAL DATA (obtain mapping of majors to departments)  
-            "num_of_courses": 0                      
+            "num_of_courses": 0 , 
+            "connections": 0                    
         }
     return student_dict
     #NOTE: This method's format will have to change, we would want to iterate by major instead

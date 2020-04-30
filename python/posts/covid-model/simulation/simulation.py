@@ -12,6 +12,32 @@ def create_classrooms(courses, students):
 
     return courses
 
+def best_case(students, MIN_CONNECTIONS):
+    for key in students:
+        students[key]['connections'] = random.sample(list(students), MIN_CONNECTIONS)
+    return students
+
+def best_case_nodes(students):
+    graph = {
+        "nodes": [],
+        "links": []
+    }
+
+    for key in students:
+        graph["nodes"].append({
+            "id": key
+        })
+
+        for i in range(len(students[key]["connections"])):
+            graph["links"].append({
+                "source": key,
+                "target": students[key]["connections"][i],
+                "weight": 1
+            })
+
+    with open('../../../../datasets/covid-model/nodes_links.json', 'w') as outfile:
+        json.dump(graph, outfile)
+
 # TODO: (maybe separate functions for nodes and edges)
 def generate_nodes_and_edges(courses, MAX_STUDENTS):
     graph = {
@@ -31,31 +57,5 @@ def generate_nodes_and_edges(courses, MAX_STUDENTS):
                     "target": courses[key]["classroom"][j],
                     "weight": 1
                 })
-    with open('datasets/covid-model/nodes_links.json', 'w') as outfile:
+    with open('../../../../datasets/covid-model/nodes_links.json', 'w') as outfile:
         json.dump(graph, outfile)
-
-# Testing
-courses = {
-    "cs31": {
-      "department": "com sci",
-      "class_size": "3",   
-      "classroom": [0, 1, 3]   
-    },
-    "math32a": {
-      "department": "math",
-      "class_size": "3",   
-      "classroom": [3, 4, 5]   
-    },
-    "physics1a": {
-      "department": "physics",
-      "class_size": "2",   
-      "classroom": [2, 4]   
-    },
-    "scand50": {
-      "department": "scand",
-      "class_size": "3",   
-      "classroom": [0, 2, 5]   
-    }
-}  
-
-generate_nodes_and_edges(courses, 6)

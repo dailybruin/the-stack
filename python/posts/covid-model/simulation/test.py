@@ -7,7 +7,42 @@ import processing
 # print(processing.initialize_course_list(data.course_list_dummy))
 
 # TESTING SIMULATION
-print(simulation.create_classrooms(processing.initialize_course_list(data.course_list_dummy), processing.initialize_student_list(30)))
+# courses = simulation.create_classrooms(processing.initialize_course_list(data.course_list), processing.initialize_student_list(3000))
+
+# best case
+# students = simulation.best_case(processing.initialize_student_list(300), 30)
+# print(students)
+# simulation.best_case_nodes(students)
+
+# worst case
+students = simulation.best_case(processing.initialize_student_list(300), 90)
+print(students)
+simulation.best_case_nodes(students)
+
+
+# Testing
+courses = {
+    "cs31": {
+      "department": "com sci",
+      "class_size": "3",   
+      "classroom": [0, 1, 3]   
+    },
+    "math32a": {
+      "department": "math",
+      "class_size": "3",   
+      "classroom": [3, 4, 5]   
+    },
+    "physics1a": {
+      "department": "physics",
+      "class_size": "2",   
+      "classroom": [2, 4]   
+    },
+    "scand50": {
+      "department": "scand",
+      "class_size": "3",   
+      "classroom": [0, 2, 5]   
+    }
+}       
 
 
 # GENERAL OUTLINE
