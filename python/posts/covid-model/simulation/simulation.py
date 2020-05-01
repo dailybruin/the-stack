@@ -38,24 +38,35 @@ def best_case_nodes(students):
     with open('../../../../datasets/covid-model/nodes_links.json', 'w') as outfile:
         json.dump(graph, outfile)
 
-# TODO: (maybe separate functions for nodes and edges)
 def generate_nodes_and_edges(courses, MAX_STUDENTS):
     graph = {
         "nodes": [],
         "links": []
     }
-    # create node for each student (w/ major as group)
     for s in range(MAX_STUDENTS):
         graph["nodes"].append({
-            "id": s
+            "id": s,
+            "status": 0,
+            "length": 0,
+            "connections": {}
         })
     for key in courses:
         for i in range(len(courses[key]["classroom"])):
+            #initialize empty list of classmates for this course
+            sid = courses[key]["classroom"][i]
+            graph["nodes"][sid]["connections"][key] = []
+
+        for i in range(len(courses[key]["classroom"])):
             for j in range(i+1, len(courses[key]["classroom"])):
+                sid1 = courses[key]["classroom"][i]
+                sid2 = courses[key]["classroom"][j]
+
                 graph["links"].append({
-                    "source": courses[key]["classroom"][i],
-                    "target": courses[key]["classroom"][j],
+                    "source": sid1,
+                    "target": sid2,
                     "weight": 1
                 })
-    with open('../../../../datasets/covid-model/nodes_links.json', 'w') as outfile:
+                graph["nodes"][sid1]["connections"][key].append(sid2)
+                graph["nodes"][sid2]["connections"][key].append(sid1)
+    with open('datasets/covid-model/nodes_links.json', 'w') as outfile:
         json.dump(graph, outfile)
