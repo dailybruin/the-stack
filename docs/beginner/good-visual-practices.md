@@ -1,6 +1,6 @@
 ---
 layout: page
-permalink: /docs/good-visual-practices/
+permalink: /docs/beginner/good-visual-practices/
 ---
 
 ## Resources 

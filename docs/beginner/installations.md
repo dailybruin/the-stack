@@ -1,6 +1,6 @@
 ---
 layout: page
-permalink: /docs/installations/
+permalink: /docs/beginner/installations/
 ---
 
 ## Installations
