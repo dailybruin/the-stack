@@ -267,4 +267,3 @@ jsonData = process_data(cases, lb_pas, dateString)
 # write geoJSON 
 with open('datasets/covid-hospitals/neighborhoods.geojson', 'w') as outfile:
     json.dump(jsonData, outfile)
-
