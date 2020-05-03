@@ -1,0 +1,110 @@
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+</head>
+<body>
+    
+    <!-- If you want to change the size of the chart, change #wrapper, don't touch the canvas -->
+    <div id='wrapper'
+        style='width: 120vh; height: 66vh; max-width: 100%; margin-right: auto; margin-left: auto;'>
+        <canvas id='chart' style='height: 100px'></canvas>
+    </div>
+
+    
+    <script>
+    
+        /*
+        
+            Data source: UCLA Registrar's Office
+            Link: https://sa.ucla.edu/RO/Fees/Public/public-fees
+            
+            Year - Undergraduate Students Association Fee, Green Initiative Fee, PLEDGE Fee, Bruin Bash Fee, Arts Restoring Community Fee, Total
+            97 - 54
+            98 - 54
+            99 - 69
+            00 - 72.27
+            01 - 72.27
+            02 - 100.02
+            03 - 100.02
+            04 - 100.02
+            05 - 119.73
+            06 - 119.73
+            07 - 119.73
+            08 - 121.38 + 12.00 = 133.38
+            09 - 121.38 + 12.00 + 38.25 = 171.63
+            10 - 121.38 + 12.00 + 38.92 = 172.3
+            11 - 121.38 + 13.20 + 39.62 = 174.2
+            12 - 122.47 + 13.2 + 40.45 = 176.12
+            13 - 122.47 + 13.2 + 41.25 + 3.99 = 180.91
+            14 - 123.99 + 14.4 + 41.57 + 4.03 + 4.65 = 188.64
+            15 - 123.99 + 14.4 + 41.54 + 4.09 + 4.71 = 188.73
+            16 - 216.96 + 14.4 + 51.84 + 4.12 + 4.76 = 292.08
+            17 - 237.11 + 14.4 + 52.94 + 4.20 + 4.85 = 313.50
+            18 - 257.23 + 14.4 + 54.79 + 4.32 + 4.98 = 335.72
+            19 - 262.28 + 14.4 + 56.52 + 4.48 + 5.17 = 342.85
+            
+            var usac_fee = [54, 54, 69, 72.27, 72.27, 100.02, 100.02, 100.02, 119.73, 119.73, 119.73, 121.38, 121.38, 121.38, 121.38, 122.47, 122.47, 123.99, 123.99, 216.96, 237.11, 257.23, 262.28];
+            
+            var green_fee = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 12, 12, 12, 13.2, 13.2, 13.2, 14.4, 14.4, 14.4,  14.4, 14.4, 14.4];
+            
+            var pledge_fee = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 38.25, 38.92, 39.62, 40.45, 41.25, 41.57, 41.54, 51.84, 52.94, 54.79, 56.52];
+            
+            var bruin_bash_fee = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3.99, 4.03, 4.09, 4.12, 4.2, 4.32, 4.48];
+            
+            var arts_fee = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4.65, 4.71, 4.76, 4.85, 4.98, 5.17];
+
+         */
+         
+                
+        var years = ['1997-98', '1998-99', '1999-00', '2000-01', '2001-02', '2002-03', '2003-04', '2004-05', '2005-06', '2006-07', '2007-08', '2008-09', '2009-10', '2010-11', '2011-12', '2012-13', '2013-14', '2014-15', '2015-16', '2016-17', '2017-18', '2018-19', '2019-20'];
+        
+        var total_fees = [54, 54, 69, 72.27, 72.27, 100.02, 100.02, 100.02, 119.73, 119.73, 119.73, 133.38, 171.63, 172.3, 174.2, 176.12, 180.91, 188.64, 188.73, 292.08, 313.50, 335.72, 342.85]
+        
+        
+
+        var config = {
+            type: 'line',
+            data: {
+                labels: years,
+                datasets: [{
+                    label: 'Total USAC Fees per year',
+                    data: total_fees,
+                    fill: false,
+                    cubicInterpolationMode: 'monotone',
+                    borderColor: '#888888',
+                }],
+            },
+            options: {
+                spanGaps: false,
+                maintainAspectRatio: false,
+                scales: {
+                    xAxes: [{
+                        scaleLabel: {
+                            display: true,
+                            labelString: 'Academic School Year',
+                        },
+                        ticks: {
+                            maxTicksLimit: 23,
+                        },
+                    }],
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: true,
+                        },
+                        scaleLabel: {
+                            display: true,
+                            labelString: 'Dollars Per Year',
+                        },
+                    }],
+                },
+            },
+        }
+        
+        var ctx = document.querySelector('#chart')
+        var chart = new Chart(ctx, config);
+        
+        
+
+    
+    </script>
+    
+</body>
