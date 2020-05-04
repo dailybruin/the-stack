@@ -3,21 +3,44 @@ import json
 import data
 import constraints
 
-# CREATE CLASSROOMS: assigns students to each course
-def create_classrooms(courses, students):
-    available_students = students
+# CREATE CLASSROOMS randomly assings students to courses
+# Constraints applieed: 
+# - every student is enrolled in 3 courses 
+# - students either take courses in their department or GEs
+def general_case(courses, students):
+    available_students = students.copy()
     for key in courses:
+        # available_students = constraints.dept_constraint(available_students, courses[key]['div'])
+        # sample students for each course
         courses[key]['classroom'] = random.sample(list(available_students), courses[key]['class_size'])
-        available_students = constraints.update_enrollments(courses[key]['classroom'], students)
+        # CONSTRAINT 1: no more than 3 courses per student
+        available_students = constraints.update_enrollments(courses[key]['classroom'], available_students)
+        # connect students in the classroom 
+        for i in courses[key]['classroom']:
+            students[i]['connections'].extend(courses[key]['classroom'])
+            # remove self-connection
+            students[i]['connections'].remove(i)
+            # remove duplicates
+            students[i]['connections'] = list(set(students[i]['connections']))
 
-    return courses
-
-def best_case(students, MIN_CONNECTIONS):
-    for key in students:
-        students[key]['connections'] = random.sample(list(students), MIN_CONNECTIONS)
     return students
 
-def best_case_nodes(students):
+# EDGE CASE randomly assigns student connections up to a maximum number
+def edge_case(students, MIN_CONNECTIONS):
+    available_students = students.copy()
+    for key in students:
+        # if key student still has space for more connections
+        if key in available_students:
+            # remove key student from sampling
+            del available_students[key]
+            # select a random sample for each student, add to connections
+            students[key]['connections'] = random.sample(list(available_students), MIN_CONNECTIONS - students[key]['constraint'])
+            # let students add you back, remove students whose connections are going over limit
+            available_students = constraints.update_students(available_students, students[key]['connections'], key, MIN_CONNECTIONS)
+    return students
+
+def generate_nodes_and_edges(students):
+    pairs = list()
     graph = {
         "nodes": [],
         "links": []
@@ -25,48 +48,27 @@ def best_case_nodes(students):
 
     for key in students:
         graph["nodes"].append({
-            "id": key
-        })
-
-        for i in range(len(students[key]["connections"])):
-            graph["links"].append({
-                "source": key,
-                "target": students[key]["connections"][i],
-                "weight": 1
-            })
-
-    with open('../../../../datasets/covid-model/nodes_links.json', 'w') as outfile:
-        json.dump(graph, outfile)
-
-def generate_nodes_and_edges(courses, MAX_STUDENTS):
-    graph = {
-        "nodes": [],
-        "links": []
-    }
-    for s in range(MAX_STUDENTS):
-        graph["nodes"].append({
-            "id": s,
+            "id": key,
             "status": 0,
             "length": 0,
-            "connections": {}
+            "connections": students[key]['connections']
         })
-    for key in courses:
-        for i in range(len(courses[key]["classroom"])):
-            #initialize empty list of classmates for this course
-            sid = courses[key]["classroom"][i]
-            graph["nodes"][sid]["connections"][key] = []
 
-        for i in range(len(courses[key]["classroom"])):
-            for j in range(i+1, len(courses[key]["classroom"])):
-                sid1 = courses[key]["classroom"][i]
-                sid2 = courses[key]["classroom"][j]
+        for i in students[key]['connections']:
+            cur_pair = set([key, i])            
+            if cur_pair in pairs:
+                continue
+            else:
+                # NOTE: If statement is a tester to play with the number of edges in the plot
+                x = random.randint(0, 1)
+                if x == 0:
+                    pairs.append(cur_pair)
+                    graph["links"].append({
+                        "source": key,
+                        "target": i,
+                        "weight": 1
+                    })
 
-                graph["links"].append({
-                    "source": sid1,
-                    "target": sid2,
-                    "weight": 1
-                })
-                graph["nodes"][sid1]["connections"][key].append(sid2)
-                graph["nodes"][sid2]["connections"][key].append(sid1)
     with open('datasets/covid-model/nodes_links.json', 'w') as outfile:
         json.dump(graph, outfile)
+

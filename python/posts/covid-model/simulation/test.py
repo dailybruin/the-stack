@@ -1,48 +1,15 @@
 import data
-import simulation
-import processing
+import simulation as sim
+import processing as pr     
 
-# TESTING PROCESSING 
-# print(processing.initialize_student_list(30))
-# print(processing.initialize_course_list(data.course_list_dummy))
-
-# TESTING SIMULATION
-# courses = simulation.create_classrooms(processing.initialize_course_list(data.course_list), processing.initialize_student_list(3000))
-
-# best case
-# students = simulation.best_case(processing.initialize_student_list(300), 30)
-# print(students)
-# simulation.best_case_nodes(students)
-
-# worst case
-students = simulation.best_case(processing.initialize_student_list(300), 90)
-print(students)
-simulation.best_case_nodes(students)
+# GENERAL CASE
+# students = sim.general_case(pr.init_courses(data.course_list[0:100]), pr.init_students(300, list()))
+# EDGE CASE
+students = sim.edge_case(pr.init_students(300, list()), 5)
+sim.generate_nodes_and_edges(students)
 
 
-# Testing
-courses = {
-    "cs31": {
-      "department": "com sci",
-      "class_size": "3",   
-      "classroom": [0, 1, 3]   
-    },
-    "math32a": {
-      "department": "math",
-      "class_size": "3",   
-      "classroom": [3, 4, 5]   
-    },
-    "physics1a": {
-      "department": "physics",
-      "class_size": "2",   
-      "classroom": [2, 4]   
-    },
-    "scand50": {
-      "department": "scand",
-      "class_size": "3",   
-      "classroom": [0, 2, 5]   
-    }
-}       
+
 
 
 # GENERAL OUTLINE
