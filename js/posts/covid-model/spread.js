@@ -1,11 +1,9 @@
 function runInfections() {
-  console.log('infect!');
-  for (s of infectedStudents) {
+  let arr = infectedStudents.slice();
+  for (s of arr) {
     infectNeighbors(s);
   }
-  d3.select('#healthy').text(healthy_count + ' students never infected');
-  d3.select('#infected').text(infected_count + ' students infected');
-  d3.select('#recovered').text(recovered_count + ' students recovered');
+  updateCountDisplays();
 }
 
 /*
@@ -26,15 +24,10 @@ function infectNeighbors(id) {
       let x = Math.floor(Math.random() * studList.length);
       neighbors.push(studList[x]);
     }
-
     for (id2 of neighbors) {
       let student2 = student_nodes[id2];
       if (Math.random() <= p && student2.status == 0) {
-        student2.status = INFECTED;
-        infected_count++;
-        healthy_count--;
-        infectedStudents.push(id2);
-        changeColor(id2, 'red');
+        infectStudent(id2)
       }
     }
   }
@@ -55,6 +48,48 @@ function infectNeighbors(id) {
   }
 }
 
+function infectStudent(id) {
+  student_nodes[id].status = 1;
+  infectedStudents.push(id);
+  infected_count++;
+  healthy_count--;
+  changeColor(id, 'red');
+}
+
+function initializeCases() {
+  console.log("init");
+  for (let i = 0; i < initialCases; i++) {
+    let x;
+    do {
+      x = Math.floor(Math.random() * student_nodes.length);
+      console.log(x, student_nodes[x].status);
+    } while(student_nodes[x].status === INFECTED);
+    infectStudent(x);
+  }
+  console.log(infectedStudents);
+}
+
+function restart() {
+
+  //clear old stuff
+  for (let i = 0; i < student_nodes.length; i++) {
+    student_nodes[i].status = HEALTHY;
+    changeColor(i, 'green');
+  }
+  healthy_count = student_nodes.length;
+  infected_count = 0;
+  recovered_count = 0;
+  slider.silentValue(0);
+  sliderOldVal = 0;
+  infectedStudents = [];
+
+  // init first cases
+  initializeCases();
+  updateCountDisplays();
+
+  console.log(infectedStudents, infected_count);
+}
+
 /* 
     input: student id
     - updates color of node once status changes
@@ -62,4 +97,10 @@ function infectNeighbors(id) {
 function changeColor(id, color) {
   let s = '#s' + id;
   d3.select(s).style('fill', color);
+}
+
+function updateCountDisplays() {
+  d3.select('#healthy').text(healthy_count + ' students never infected');
+  d3.select('#infected').text(infected_count + ' students infected');
+  d3.select('#recovered').text(recovered_count + ' students recovered');
 }

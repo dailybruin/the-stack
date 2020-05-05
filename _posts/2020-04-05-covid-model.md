@@ -21,3 +21,4 @@ scripts:
 <p id="infected"></p>
 <p id="recovered"></p>
 <div id="slider"></div>
+<button type="button" onclick="restart()">Restart</button>
