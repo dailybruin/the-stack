@@ -1,3 +1,13 @@
+function runInfections() {
+  console.log('infect!');
+  for (s of infectedStudents) {
+    infectNeighbors(s);
+  }
+  d3.select('#healthy').text(healthy_count + ' students never infected');
+  d3.select('#infected').text(infected_count + ' students infected');
+  d3.select('#recovered').text(recovered_count + ' students recovered');
+}
+
 /*
     input: id of infected student
     - iterates through every class student is in
@@ -6,9 +16,8 @@
     - infected students have status changed and are added to list of infected students
     - if original student has been sick for infectionLength period, they recover
 */
-async function infect(id) {
-  await sleep(5000);
-  let student = data['nodes'][id];
+function infectNeighbors(id) {
+  let student = student_nodes[id];
   student.length++;
   for (course in student['connections']) {
     let studList = student['connections'][course];
@@ -19,10 +28,11 @@ async function infect(id) {
     }
 
     for (id2 of neighbors) {
-      console.log(id2);
-      let student2 = data['nodes'][id2];
+      let student2 = student_nodes[id2];
       if (Math.random() <= p && student2.status == 0) {
         student2.status = INFECTED;
+        infected_count++;
+        healthy_count--;
         infectedStudents.push(id2);
         changeColor(id2, 'red');
       }
@@ -31,6 +41,8 @@ async function infect(id) {
 
   if (student.length >= infectionLength) {
     student.status = RECOVERED;
+    infected_count--;
+    recovered_count++;
     changeColor(id, 'purple');
 
     // remove from list of infected students
@@ -41,7 +53,6 @@ async function infect(id) {
       }
     }
   }
-  console.log(infectedStudents);
 }
 
 /* 
@@ -51,8 +62,4 @@ async function infect(id) {
 function changeColor(id, color) {
   let s = '#s' + id;
   d3.select(s).style('fill', color);
-}
-
-function sleep(ms) {
-  return new Promise(resolve => setTimeout(resolve, ms));
 }

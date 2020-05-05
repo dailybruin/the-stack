@@ -10,11 +10,14 @@ featured_image:
 og_image:
 stylesheets:
 scripts:
-  - https://cdnjs.cloudflare.com/ajax/libs/d3/3.4.0/d3.js
+  - //d3js.org/d3.v5.min.js
+  - //unpkg.com/d3-simple-slider
   - /js/posts/covid-model/spread.js
   - /js/posts/covid-model/model.js
-  - /js/posts/covid-model/us-geojson.js
-  - /js/posts/covid-model/map.js
 ---
 
 <div id="graph"></div>
+<p id="healthy"></p>
+<p id="infected"></p>
+<p id="recovered"></p>
+<div id="slider"></div>
