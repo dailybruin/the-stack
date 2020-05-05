@@ -2,33 +2,40 @@
 
 ## Graphs and their tools
 
-### timeline
+### Timeline
 
-- serpentine timeline from amcharts
-- https://www.amcharts.com/demos/serpentine-timeline/
-- ask Andrew Kan!
-- I mostly changed the code that was provided
+- **Authors**: Andrew Kan
 
-  - main changes/hurdles:
+- **Libraries**:
 
-    - added flag bullets, and added an on-click event to direct them to the news source
+  - [serpentine timeline from amcharts](https://www.amcharts.com/demos/serpentine-timeline/)
 
-    - making the json file into the right format (one for the schools and one for their events)
+    - [overlap buster, for making events separate on hover](https://www.amcharts.com/docs/v4/tutorials/plugin-overlap-buster/)
 
-    - making the chart mobile friendly (look at the responsive stuff at the bottom)
+    - [flag bullets, for events](https://www.amcharts.com/docs/v4/reference/flagbullet/)
 
-    - filtering the dropdowns by school/event
+  - [chosen, dropdown css](https://harvesthq.github.io/chosen/)
 
-      - this was done using the changeTimeline function at the very bottom
+- **Main Hurdles**:
 
-        - this would reupdate the variable holding all the json data and call the graph making function again
+  - Adding flag bullets, and added an on-click event to direct them to the news source
 
-    - the cool dropdowns were made using a css package called chosen which was really easy and simple to use
+  - Making the json file into the right format (one for the schools and one for their events)
 
-### lollipop chart
+  - Making the chart mobile friendly (look at the responsive stuff at the bottom)
 
-- ask Kelly Chen!
+  - Filtering the dropdowns by school/event
 
-### racer chart
+    - this was done using the changeTimeline function at the very bottom
 
-- ask Radhika Ahuja!
+      - this would reupdate the variable holding all the json data and call the graph making function again
+
+  - Having overlapping events move (used overlapBuster plugin)
+
+### Lollipop chart
+
+- **Authors**: Kelly Chen
+
+### Racer chart
+
+- **Authors**: Radhika Ahuja
