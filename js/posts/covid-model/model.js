@@ -26,7 +26,6 @@ const INFECTED = 1;
 const RECOVERED = 2;
 
 d3.json('/datasets/covid-model/nodes_links.json').then(function(json) {
-  console.log('loaded json');
   student_nodes = json.nodes;
   svg = d3
     .select('#graph')
@@ -34,9 +33,8 @@ d3.json('/datasets/covid-model/nodes_links.json').then(function(json) {
     .attr('width', width)
     .attr('height', height);
 
-  console.log('assigning coords...');
+  // assign coordinates - generates randomly (sum of 2 uniform distributions) scaled to width/height
   student_nodes.forEach(function(d) {
-    // assign coordinates - generates randomly (sum of 2 uniform distributions) scaled to width/height
     let n = 3;
     let x = 0;
     let y = 0;
@@ -44,13 +42,9 @@ d3.json('/datasets/covid-model/nodes_links.json').then(function(json) {
       x += Math.random();
       y += Math.random();
     }
-    x /= n;
-    y /= n;
-    d.x = x * width;
-    d.y = y * height;
-    d.vx = d.vy = 0;
+    d.x = x/n * width;
+    d.y = y/n * height;
   });
-  console.log('coords assigned');
 
   const node = svg
     .append('g')
@@ -80,8 +74,8 @@ d3.json('/datasets/covid-model/nodes_links.json').then(function(json) {
     .attr('transform', function(d) {
       return 'translate(' + d.x + ',' + d.y + ')';
     });
-  console.log('created node elements');
 
+  // init legend
   let keys = ['Healthy', 'Infected', 'Recovered'];
 
   svg
@@ -123,7 +117,6 @@ d3.json('/datasets/covid-model/nodes_links.json').then(function(json) {
 
   initializeCases();
   updateCountDisplays();
-
   showVis();
 });
 
