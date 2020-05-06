@@ -123,6 +123,8 @@ d3.json('/datasets/covid-model/nodes_links.json').then(function(json) {
 
   initializeCases();
   updateCountDisplays();
+
+  showVis();
 });
 
 const slider = d3
@@ -149,3 +151,9 @@ d3.select('#slider')
   .append('g')
   .attr('transform', 'translate(30,30)')
   .call(slider);
+
+
+function showVis() {
+  document.getElementById("loader-wrapper").style.display = "none";
+  document.getElementById("viz1").style.display = "block";
+}
