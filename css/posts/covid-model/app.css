@@ -1,0 +1,45 @@
+#stats {
+    width: 30%;
+}
+
+#stats p {
+    text-align: center;
+}
+
+.slider-wrapper {
+    width: 60%;
+    text-align: center;
+}
+#slider {
+    display: inline-block;
+    width: 100%;
+}
+#slider-title {
+    color: gray;
+    font-size: small;
+}
+
+.button-div {
+    width: 10%;
+}
+
+button {
+    margin-top: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  
+.column {
+    float: left;
+}
+
+/* Phone Level */
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
+
+}

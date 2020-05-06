@@ -27,7 +27,7 @@ function infectNeighbors(id) {
     for (id2 of neighbors) {
       let student2 = student_nodes[id2];
       if (Math.random() <= p && student2.status == 0) {
-        infectStudent(id2)
+        infectStudent(id2);
       }
     }
   }
@@ -57,20 +57,19 @@ function infectStudent(id) {
 }
 
 function initializeCases() {
-  console.log("init");
+  console.log('init');
   for (let i = 0; i < initialCases; i++) {
     let x;
     do {
       x = Math.floor(Math.random() * student_nodes.length);
       console.log(x, student_nodes[x].status);
-    } while(student_nodes[x].status === INFECTED);
+    } while (student_nodes[x].status === INFECTED);
     infectStudent(x);
   }
   console.log(infectedStudents);
 }
 
 function restart() {
-
   //clear old stuff
   for (let i = 0; i < student_nodes.length; i++) {
     student_nodes[i].status = HEALTHY;
@@ -100,7 +99,7 @@ function changeColor(id, color) {
 }
 
 function updateCountDisplays() {
-  d3.select('#healthy').text(healthy_count + ' students never infected');
-  d3.select('#infected').text(infected_count + ' students infected');
-  d3.select('#recovered').text(recovered_count + ' students recovered');
+  d3.select('#healthy').html("<b style='color:green'>"+healthy_count.toLocaleString('en-us')+"</b> students never infected");
+  d3.select('#infected').html("<b style='color:red'>"+infected_count.toLocaleString('en-us')+"</b> students infected");
+  d3.select('#recovered').html("<b style='color:purple'>"+recovered_count.toLocaleString('en-us') + "</b> students recovered");
 }

@@ -1,5 +1,5 @@
-var width = 1200,
-  height = 700;
+var width = window.innerWidth * .9,
+  height = window.innerHeight * .75;
 
 var svg;
 
@@ -12,16 +12,18 @@ var recovered_count = 0;
 
 var sliderOldVal = 0;
 
-// MODEL PARAMETERS
-const p = 0.5; //probabilty of each exposed student of getting infected
+// MODEL ASSUMPTIONS
+const r0 = 5.7  // FROM CDC
+const numClasses = 1;   //num classes each student is enrolled in
 const infectionLength = 1; //how many weeks a student is contagious for
 const numExposed = 8; //how many others one student exposes per class
+const p = r0 / (infectionLength * numClasses * numExposed); //probabilty of each exposed student of getting infected
 const initialCases = 2;
 
 // statuses
-var HEALTHY = 0;
-var INFECTED = 1;
-var RECOVERED = 2;
+const HEALTHY = 0;
+const INFECTED = 1;
+const RECOVERED = 2;
 
 d3.json('/datasets/covid-model/nodes_links.json').then(function(json) {
   console.log('loaded json');
@@ -32,9 +34,10 @@ d3.json('/datasets/covid-model/nodes_links.json').then(function(json) {
     .attr('width', width)
     .attr('height', height);
 
+  console.log('assigning coords...');
   student_nodes.forEach(function(d) {
     // assign coordinates - generates randomly (sum of 2 uniform distributions) scaled to width/height
-    let n = 3; 
+    let n = 3;
     let x = 0;
     let y = 0;
     for (let i = 0; i < n; i++) {
@@ -43,11 +46,11 @@ d3.json('/datasets/covid-model/nodes_links.json').then(function(json) {
     }
     x /= n;
     y /= n;
-    d.x = (x * width);
-    d.y = (y * height);
+    d.x = x * width;
+    d.y = y * height;
     d.vx = d.vy = 0;
   });
-  console.log('assigned coordinates');
+  console.log('coords assigned');
 
   const node = svg
     .append('g')
@@ -77,9 +80,7 @@ d3.json('/datasets/covid-model/nodes_links.json').then(function(json) {
     .attr('transform', function(d) {
       return 'translate(' + d.x + ',' + d.y + ')';
     });
-  // .call(drag(simulation));
   console.log('created node elements');
-  initializeCases();
 
   let keys = ['Healthy', 'Infected', 'Recovered'];
 
@@ -120,6 +121,7 @@ d3.json('/datasets/covid-model/nodes_links.json').then(function(json) {
     .attr('text-anchor', 'left')
     .style('alignment-baseline', 'middle');
 
+  initializeCases();
   updateCountDisplays();
 });
 
@@ -128,22 +130,22 @@ const slider = d3
   .min(0)
   .max(11)
   .step(1)
-  .width(500)
-  .displayValue(false);
+  .width(width * .55)
+  .displayValue(true);
 
-  slider.on('onchange', val => {
-    if (val < sliderOldVal) {
-      slider.silentValue(sliderOldVal);
-      return;
-    }
-    runInfections();
-    sliderOldVal = val;
-  });
+slider.on('onchange', val => {
+  if (val < sliderOldVal) {
+    slider.silentValue(sliderOldVal);
+    return;
+  }
+  runInfections();
+  sliderOldVal = val;
+});
 
 d3.select('#slider')
   .append('svg')
-  .attr('width', width)
-  .attr('height', 100)
+  .attr('width', width * .6)
+  .attr('height', 80)
   .append('g')
   .attr('transform', 'translate(30,30)')
   .call(slider);
