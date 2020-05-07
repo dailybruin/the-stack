@@ -228,17 +228,20 @@ function initViz(viz) {
     .call(viz.r0slider);
   
   // init buttons
-  d3.select('.restartButton.viz' + viz.id)
+  d3.select('.restart.button.viz' + viz.id)
     .on('click', () => restart(viz));
   
-  d3.select('.playButton.viz' + viz.id)
-    .on('click', d => {
-      // let color;
-      // if (viz.PLAYING) {
-      //   color = ''
-      // }
-      // d3.select('.playButton.viz' + viz.id)
-      //   .style("background-color", "orange");
+  d3.select('.play.button.viz' + viz.id)
+    .on('click', () => {
+      let background_color = '#008CBA';
+      let color = 'white';
+      if (viz.PLAYING) {
+        background_color = 'white';
+        color = 'black';
+      }
+      d3.select('.play.button.viz' + viz.id)
+        .style("background-color", background_color)
+        .style("color", color);
       playSimulation(viz);
     });
 
