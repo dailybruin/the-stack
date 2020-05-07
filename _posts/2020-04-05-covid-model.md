@@ -17,28 +17,53 @@ scripts:
   - /js/posts/covid-model/model.js
 ---
 
-<div id="loader-wrapper">
-  <div id="loader"></div>
+<h3>VIZ 1 - GENERAL CASE</h3>
+<div class="loader-wrapper viz1">
+  <div class="loader"></div>
 </div>
 <div id="viz1">
-  <div id="graph-wrapper">
-    <div id="graph"></div>
-    <!-- <div id="legend"></div> -->
+  <div class="graph-wrapper">
+    <div class="graph viz1"></div>
   </div>
 
   <div class="row">
-    <div class="column" id="stats">
-        <p id="healthy"></p>
-        <p id="infected"></p>
-        <p id="recovered"></p>
+    <div class="column stats">
+        <p class="viz1 healthy"></p>
+        <p class="viz1 infected"></p>
+        <p class="viz1 recovered"></p>
     </div>
     <div class="column slider-wrapper">
-      <div id="slider"></div>
-      <p id="slider-title">week of fall quarter</p>
+      <div class="viz1 slider"></div>
+      <p class="slider-title">week of fall quarter</p>
     </div>
     <div class="column button-div">
-      <button type="button" onclick="restart()">Restart</button>
+      <button class="viz1 button" type="button">Restart</button>
     </div>
   </div>
 </div>
 
+
+<h3>VIZ 2 - EDGE CASE</h3>
+<div class="loader-wrapper viz2">
+  <div class="loader"></div>
+</div>
+<div id="viz2">
+  <div class="graph-wrapper">
+    <div class="graph viz2"></div>
+  </div>
+
+  <div class="row">
+    <div class="column stats">
+        <p class="viz2 healthy"></p>
+        <p class="viz2 infected"></p>
+        <p class="viz2 recovered"></p>
+    </div>
+    <div class="column slider-wrapper">
+      <div class="viz2 slider"></div>
+      <p class="slider-title">week of fall quarter</p>
+    </div>
+    <div class="column button-div">
+      <button class="viz2 button" type="button">Restart</button>
+    </div>
+  </div>
+</div>

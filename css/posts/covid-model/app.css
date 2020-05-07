@@ -2,11 +2,11 @@
     display: none;
 }
 
-#stats {
+.stats {
     width: 30%;
 }
 
-#stats p {
+.stats p {
     text-align: center;
 }
 
@@ -14,11 +14,11 @@
     width: 60%;
     text-align: center;
 }
-#slider {
+.slider {
     display: inline-block;
     width: 100%;
 }
-#slider-title {
+.slider-title {
     color: gray;
     font-size: small;
 }
@@ -43,11 +43,11 @@ button {
     float: left;
 }
 
-#loader-wrapper {
+.loader-wrapper {
     text-align: center;
 }
 
-#loader {
+.loader {
     display: inline-block;
     width: 150px;
     height: 150px;
