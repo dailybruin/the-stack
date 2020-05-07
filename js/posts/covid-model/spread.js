@@ -45,7 +45,7 @@ function infectNeighbors(viz, id, sim = false) {
     viz.infected_count--;
     viz.recovered_count++;
     if (!sim)
-      changeColor(viz, id, 'purple');
+      changeColor(viz, id, recovered_color);
 
     // remove from list of infected students
     for (var i = 0; i < viz.infectedStudents.length; i++) {
@@ -63,7 +63,7 @@ function infectStudent(viz, id, sim = false) {
   viz.infected_count++;
   viz.healthy_count--;
   if (!sim)
-    changeColor(viz, id, 'red');
+    changeColor(viz, id, infected_color);
 }
 
 function initializeCases(viz, sim) {
@@ -83,7 +83,7 @@ function restart(viz, sim) {
   for (let i = 0; i < viz.student_nodes.length; i++) {
     viz.student_nodes[i].status = HEALTHY;
     if (!sim)
-      changeColor(viz, i, 'green');
+      changeColor(viz, i, healthy_color);
   }
   viz.healthy_count = viz.student_nodes.length;
   viz.infected_count = 0;
@@ -114,7 +114,7 @@ function changeColor(viz, id, color) {
 }
 
 function updateCountDisplays(viz) {
-  d3.select('.healthy.viz' + viz.id).html("<b style='color:green'>"+viz.healthy_count.toLocaleString('en-us')+"</b> students never infected");
-  d3.select('.infected.viz' + viz.id).html("<b style='color:red'>"+viz.infected_count.toLocaleString('en-us')+"</b> students infected");
-  d3.select('.recovered.viz' + viz.id).html("<b style='color:purple'>"+viz.recovered_count.toLocaleString('en-us') + "</b> students recovered");
+  d3.select('.healthy.viz' + viz.id).html("<b style='color:"+healthy_color+"'>"+viz.healthy_count.toLocaleString('en-us')+"</b> students never infected");
+  d3.select('.infected.viz' + viz.id).html("<b style='color:"+infected_color+"'>"+viz.infected_count.toLocaleString('en-us')+"</b> students infected");
+  d3.select('.recovered.viz' + viz.id).html("<b style='color:"+recovered_color+"'>"+viz.recovered_count.toLocaleString('en-us') + "</b> students recovered");
 }

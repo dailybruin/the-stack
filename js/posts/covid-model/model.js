@@ -54,6 +54,9 @@ viz2.p = viz2.r0 / (viz2.infectionLength * viz2.numClasses * viz2.numExposed);
 const HEALTHY = 0;
 const INFECTED = 1;
 const RECOVERED = 2;
+const healthy_color = '#7CA5B8';
+const infected_color = '#c32148';
+const recovered_color = '#F2BAC9';
 
 const SIMULATION_WEEKS = 11;
 
@@ -108,7 +111,7 @@ function initViz(viz) {
   const node = viz.svg
     .append('g')
     .attr('stroke', '#fff')
-    .attr('stroke-width', 1.5)
+    .attr('stroke-width', 1)
     .selectAll('circle')
     .data(viz.student_nodes)
     .join('circle')
@@ -119,15 +122,11 @@ function initViz(viz) {
     .attr('fill', d => {
       switch (d.status) {
         case 0: //healthy
-          // viz.healthy_count++;
-          return 'green';
+          return healthy_color;
         case 1: //infected
-          // viz.infected_count++;
-          // viz.infectedStudents.push(d.id);
-          return 'red';
+          return infected_color;
         case 2: //recovered
-          // viz.recovered_count++;
-          return 'purple';
+          return recovered_color;
       }
     })
     .attr('transform', function(d) {
@@ -142,21 +141,21 @@ function initViz(viz) {
     .attr('cx', 10)
     .attr('cy', 10)
     .attr('r', 5)
-    .attr('fill', 'green');
+    .attr('fill', healthy_color);
 
   viz.svg
     .append('circle')
     .attr('cx', 10)
     .attr('cy', 30)
     .attr('r', 5)
-    .attr('fill', 'red');
+    .attr('fill', infected_color);
 
   viz.svg
     .append('circle')
     .attr('cx', 10)
     .attr('cy', 50)
     .attr('r', 5)
-    .attr('fill', 'purple');
+    .attr('fill', recovered_color);
 
   //Add one dot in the legend for each name.
   viz.svg
