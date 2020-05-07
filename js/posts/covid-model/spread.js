@@ -67,7 +67,6 @@ function infectStudent(viz, id, sim = false) {
 }
 
 function initializeCases(viz, sim) {
-  console.log('init');
   for (let i = 0; i < viz.initialCases; i++) {
     let x;
     do {
@@ -78,7 +77,7 @@ function initializeCases(viz, sim) {
 }
 
 function restart(viz, sim) {
-  console.log('restart');
+  viz.PLAYING  = false;
   //clear old stuff
   for (let i = 0; i < viz.student_nodes.length; i++) {
     viz.student_nodes[i].status = HEALTHY;

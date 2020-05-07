@@ -37,8 +37,11 @@ scripts:
       <p class="slider-title">week of fall quarter</p>
     </div>
     <div class="column button-div">
-      <button class="viz1 button" type="button">Restart</button>
+      <button class="viz1 playButton" type="button">Play</button>
+      <button class="viz1 restartButton" type="button">Restart</button>
     </div>
+    <div class="viz1 r0slider"></div>
+    <p class="slider-title">value of R<sub>0</sub></p>
   </div>
 </div>
 
@@ -63,7 +66,10 @@ scripts:
       <p class="slider-title">week of fall quarter</p>
     </div>
     <div class="column button-div">
-      <button class="viz2 button" type="button">Restart</button>
+      <button class="viz2 playButton" type="button">Play</button>
+      <button class="viz2 restartButton" type="button">Restart</button>
     </div>
+    <div class="viz2 r0slider"></div>
+    <p class="slider-title">value of R<sub>0</sub></p>
   </div>
 </div>

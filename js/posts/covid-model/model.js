@@ -6,6 +6,8 @@ var viz1 = {
   'id' : 1,
   'svg' : null,
   'slider' : null,
+  'r0slider' : null,
+  'PLAYING': false, 
 
   'student_nodes' : null,
   'infectedStudents' : [],
@@ -16,7 +18,7 @@ var viz1 = {
   'datasetPath' : '/datasets/covid-model/general_case.json',
 
   // MODEL ASSUMPTIONS
-  'r0' : 3,  // FROM CDC
+  'r0' : 5.7,  // FROM CDC
   'numClasses' : 1,   //num classes each student is enrolled in
   'infectionLength' : 1, //how many weeks a student is contagious for
   'numExposed' : 8, //how many others one student exposes per class
@@ -30,6 +32,8 @@ var viz2 = {
   'id' : 2,
   'svg' : null,
   'slider' : null,
+  'r0slider' : null,
+  'PLAYING': false,
 
   'student_nodes' : null,
   'infectedStudents' : [],
@@ -179,11 +183,12 @@ function initViz(viz) {
     .min(0)
     .max(11)
     .step(1)
+    .fill('blue')
     .width(width * .55)
     .displayValue(true);
   
   viz.slider.on('onchange', val => {
-    if (val < viz.sliderOldVal) {
+    if (val < viz.sliderOldVal || viz.PLAYING) {
       viz.slider.silentValue(viz.sliderOldVal);
       return;
     }
@@ -198,10 +203,44 @@ function initViz(viz) {
     .append('g')
     .attr('transform', 'translate(30,30)')
     .call(viz.slider);
+
+  // init r0 slider
+  viz.r0slider = d3
+    .sliderHorizontal()
+    .min(3.8)
+    .max(8.9)
+    .default(viz.r0)
+    .fill('blue')
+    .width(width * .55)
+    .displayValue(true);
+
+  viz.r0slider.on('onchange', val => {
+    viz.r0 = val;
+    viz.p = viz.r0 / (viz.infectionLength * viz.numClasses * viz.numExposed);
+  });
+
+  d3.select('.r0slider.viz' + viz.id)
+    .append('svg')
+    .attr('width', width * .6)
+    .attr('height', 80)
+    .append('g')
+    .attr('transform', 'translate(30,30)')
+    .call(viz.r0slider);
   
-  // init button
-  d3.select('.button.viz' + viz.id)
+  // init buttons
+  d3.select('.restartButton.viz' + viz.id)
     .on('click', () => restart(viz));
+  
+  d3.select('.playButton.viz' + viz.id)
+    .on('click', d => {
+      // let color;
+      // if (viz.PLAYING) {
+      //   color = ''
+      // }
+      // d3.select('.playButton.viz' + viz.id)
+      //   .style("background-color", "orange");
+      playSimulation(viz);
+    });
 
   // start running
   initializeCases(viz);
@@ -214,6 +253,7 @@ function showVis(viz) {
   d3.select("#viz" + viz.id).style('display', 'block');
 }
 
+// for testing & collecting data purposes - doesn't show viz
 function runSiumulation(viz) {
   let results = []
   results.push(restart(viz, true));
@@ -221,4 +261,26 @@ function runSiumulation(viz) {
     results.push(runInfections(viz, true));
   }
   console.log(viz.id, results);
+}
+
+// to automatically run with the play button 
+async function playSimulation(viz) {
+  if (viz.PLAYING) {
+    viz.PLAYING = false;
+    return;
+  }
+  viz.PLAYING = true;
+  for (let i = viz.sliderOldVal+1; i <= SIMULATION_WEEKS; i++) {
+    if (!viz.PLAYING)
+      return;
+    viz.slider.silentValue(i);
+    viz.sliderOldVal = i;
+    runInfections(viz);
+    await sleep(1400);
+  }
+  viz.PLAYING = false;
+}
+
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
 }
