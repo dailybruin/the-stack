@@ -16,7 +16,7 @@ var viz1 = {
   'datasetPath' : '/datasets/covid-model/general_case.json',
 
   // MODEL ASSUMPTIONS
-  'r0' : 5.7,  // FROM CDC
+  'r0' : 3,  // FROM CDC
   'numClasses' : 1,   //num classes each student is enrolled in
   'infectionLength' : 1, //how many weeks a student is contagious for
   'numExposed' : 8, //how many others one student exposes per class
@@ -55,8 +55,35 @@ const HEALTHY = 0;
 const INFECTED = 1;
 const RECOVERED = 2;
 
-initViz(viz1);
-initViz(viz2);
+const SIMULATION_WEEKS = 11;
+
+
+loadNodes(viz1, initViz);
+loadNodes(viz2, initViz);
+
+// loadNodes(viz1, runSiumulation);
+// loadNodes(viz2, runSiumulation);
+
+function loadNodes(viz, callback) {
+  d3.json(viz.datasetPath).then(function(json) {
+    viz.student_nodes = json.nodes;
+    viz.student_nodes.forEach(function(d) {
+      switch (d.status) {
+        case 0: //healthy
+          viz.healthy_count++;
+          break;
+        case 1: //infected
+          viz.infected_count++;
+          viz.infectedStudents.push(d.id);
+          break;
+        case 2: //recovered
+          viz.recovered_count++;
+          break;
+      }
+    });
+    callback(viz);
+  });  
+}
 
 function initViz(viz) {
   viz.svg = d3
@@ -65,63 +92,50 @@ function initViz(viz) {
       .attr('width', width)
       .attr('height', height);
 
-  d3.json(viz.datasetPath).then(function(json) {
-    viz.student_nodes = json.nodes;
-    
-  
-    // assign coordinates - generates randomly (sum of 2 uniform distributions) scaled to width/height
-    viz.student_nodes.forEach(function(d) {
-      let n = 3;
-      let x = 0;
-      let y = 0;
-      for (let i = 0; i < n; i++) {
-        x += Math.random();
-        y += Math.random();
-      }
-      d.x = x/n * width;
-      d.y = y/n * height;
-    });
-  
-    const node = viz.svg
-      .append('g')
-      .attr('stroke', '#fff')
-      .attr('stroke-width', 1.5)
-      .selectAll('circle')
-      .data(viz.student_nodes)
-      .join('circle')
-      .attr('r', 3)
-      .attr('id', d => {
-        return 'v' + viz.id + 's' + d.id;
-      })
-      .attr('fill', d => {
-        switch (d.status) {
-          case 0: //healthy
-            viz.healthy_count++;
-            return 'green';
-          case 1: //infected
-            viz.infected_count++;
-            viz.infectedStudents.push(d.id);
-            return 'red';
-          case 2: //recovered
-            viz.recovered_count++;
-            return 'purple';
-        }
-      })
-      .attr('transform', function(d) {
-        return 'translate(' + d.x + ',' + d.y + ')';
-      });
-  
-    
-  
-    initializeCases(viz);
-    updateCountDisplays(viz);
-    showVis(viz);
+  // assign coordinates - generates randomly (sum of 2 uniform distributions) scaled to width/height
+  viz.student_nodes.forEach(function(d) {
+    let n = 3;
+    let x = 0;
+    let y = 0;
+    for (let i = 0; i < n; i++) {
+      x += Math.random();
+      y += Math.random();
+    }
+    d.x = x/n * width;
+    d.y = y/n * height;
   });
+
+  const node = viz.svg
+    .append('g')
+    .attr('stroke', '#fff')
+    .attr('stroke-width', 1.5)
+    .selectAll('circle')
+    .data(viz.student_nodes)
+    .join('circle')
+    .attr('r', 3)
+    .attr('id', d => {
+      return 'v' + viz.id + 's' + d.id;
+    })
+    .attr('fill', d => {
+      switch (d.status) {
+        case 0: //healthy
+          // viz.healthy_count++;
+          return 'green';
+        case 1: //infected
+          // viz.infected_count++;
+          // viz.infectedStudents.push(d.id);
+          return 'red';
+        case 2: //recovered
+          // viz.recovered_count++;
+          return 'purple';
+      }
+    })
+    .attr('transform', function(d) {
+      return 'translate(' + d.x + ',' + d.y + ')';
+    });
 
   // init legend
   let keys = ['Healthy', 'Infected', 'Recovered'];
-  
-  console.log(viz.svg);
 
   viz.svg
     .append('circle')
@@ -189,11 +203,23 @@ function initViz(viz) {
   // init button
   d3.select('.button.viz' + viz.id)
     .on('click', () => restart(viz));
+
+  // start running
+  initializeCases(viz);
+  updateCountDisplays(viz);
+  showVis(viz);
 }
-
-
 
 function showVis(viz) {
   d3.select(".loader-wrapper.viz" + viz.id).style('display', 'none');
   d3.select("#viz" + viz.id).style('display', 'block');
+}
+
+function runSiumulation(viz) {
+  let results = []
+  results.push(restart(viz, true));
+  for (let i = 0; i < SIMULATION_WEEKS; i++) {
+    results.push(runInfections(viz, true));
+  }
+  console.log(viz.id, results);
 }

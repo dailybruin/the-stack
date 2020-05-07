@@ -1,9 +1,13 @@
-function runInfections(viz) {
+function runInfections(viz, sim = false) {
   let arr = viz.infectedStudents.slice();
   for (s of arr) {
-    infectNeighbors(viz, s);
+    infectNeighbors(viz, s, sim);
   }
-  updateCountDisplays(viz);
+  if (!sim) { 
+    updateCountDisplays(viz);
+  } else {
+    return [viz.healthy_count, viz.infected_count, viz.recovered_count];
+  }
 }
 
 /*
@@ -14,7 +18,7 @@ function runInfections(viz) {
     - infected students have status changed and are added to list of infected students
     - if original student has been sick for infectionLength period, they recover
 */
-function infectNeighbors(viz, id) {
+function infectNeighbors(viz, id, sim = false) {
   let student = viz.student_nodes[id];
   student.length++;
   // for (course in student['connections']) {
@@ -31,7 +35,7 @@ function infectNeighbors(viz, id) {
     for (id2 of neighbors) {
       let student2 = viz.student_nodes[id2];
       if (Math.random() <= viz.p && student2.status === HEALTHY) {
-        infectStudent(viz, id2);
+        infectStudent(viz, id2, sim);
       }
     }
   // }
@@ -40,7 +44,8 @@ function infectNeighbors(viz, id) {
     student.status = RECOVERED;
     viz.infected_count--;
     viz.recovered_count++;
-    changeColor(viz, id, 'purple');
+    if (!sim)
+      changeColor(viz, id, 'purple');
 
     // remove from list of infected students
     for (var i = 0; i < viz.infectedStudents.length; i++) {
@@ -52,46 +57,51 @@ function infectNeighbors(viz, id) {
   }
 }
 
-function infectStudent(viz, id) {
+function infectStudent(viz, id, sim = false) {
   viz.student_nodes[id].status = 1;
   viz.infectedStudents.push(id);
   viz.infected_count++;
   viz.healthy_count--;
-  changeColor(viz, id, 'red');
+  if (!sim)
+    changeColor(viz, id, 'red');
 }
 
-function initializeCases(viz) {
+function initializeCases(viz, sim) {
   console.log('init');
   for (let i = 0; i < viz.initialCases; i++) {
     let x;
     do {
       x = Math.floor(Math.random() * viz.student_nodes.length);
-      console.log(x, viz.student_nodes[x].status);
     } while (viz.student_nodes[x].status === INFECTED);
-    infectStudent(viz, x);
+    infectStudent(viz, x, sim);
   }
-  console.log(viz.infectedStudents);
 }
 
-function restart(viz) {
+function restart(viz, sim) {
   console.log('restart');
   //clear old stuff
   for (let i = 0; i < viz.student_nodes.length; i++) {
     viz.student_nodes[i].status = HEALTHY;
-    changeColor(viz, i, 'green');
+    if (!sim)
+      changeColor(viz, i, 'green');
   }
   viz.healthy_count = viz.student_nodes.length;
   viz.infected_count = 0;
   viz.recovered_count = 0;
-  viz.slider.silentValue(0);
-  viz.sliderOldVal = 0;
+  if (!sim) {
+    viz.slider.silentValue(0);
+    viz.sliderOldVal = 0;
+  }
   viz.infectedStudents = [];
 
   // init first cases
-  initializeCases(viz);
-  updateCountDisplays(viz);
+  initializeCases(viz, sim);
 
-  console.log(viz.infectedStudents, viz.infected_count);
+  if (!sim) {
+    updateCountDisplays(viz);
+  } else {
+    return [viz.healthy_count, viz.infected_count, viz.recovered_count];
+  }
 }
 
 /* 
