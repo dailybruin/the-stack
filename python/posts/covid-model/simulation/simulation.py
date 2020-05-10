@@ -40,7 +40,7 @@ def edge_case(students, MIN_CONNECTIONS):
                 available_students = constraints.update_students(available_students, students[key]['connections'], key, MIN_CONNECTIONS)
     return students
 
-def generate_nodes_and_edges(students):
+def generate_nodes_and_edges(students, path):
     pairs = list()
     graph = {
         "nodes": [],
@@ -61,7 +61,7 @@ def generate_nodes_and_edges(students):
                 continue
             else:
                 # NOTE: If statement is a tester to play with the number of edges in the plot
-                x = random.randint(0, 1)
+                x = random.randint(0, 0)
                 if x == 0:
                     pairs.append(cur_pair)
                     graph["links"].append({
@@ -70,6 +70,7 @@ def generate_nodes_and_edges(students):
                         "weight": 1
                     })
 
-    with open('/Users/huangyihuan/Desktop/BruinLife/the-stack/datasets/covid-model/nodes_links.json', 'w') as outfile:
-        json.dump(graph, outfile)
+
+with open(path, 'w') as outfile:
+    json.dump(graph, outfile)
 

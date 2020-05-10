@@ -1,0 +1,131 @@
+#viz1 {
+    display: none;
+}
+
+#viz2 {
+    display: none;
+}
+
+.stats {
+    width: 30%;
+}
+
+.stats p {
+    text-align: center;
+}
+
+.slider-wrapper {
+    width: 60%;
+    text-align: center;
+}
+.slider {
+    display: inline-block;
+    width: 100%;
+}
+.slider-title {
+    color: gray;
+    font-size: small;
+}
+
+.r0slider {
+    display: inline;
+}
+
+.r0-title {
+    display: inline;
+}
+
+.r0val {
+    display: inline;
+    font-weight: bold;
+}
+
+.r0-slider-wrapper {
+    text-align: center;
+}
+
+.button-div {
+    width: 10%;
+    text-align: center;
+}
+
+.button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 8px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .restart {
+    background-color: white; 
+    color: black; 
+    border: 2px solid #4CAF50;
+  }
+  
+  .restart:hover {
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+  .play {
+    background-color: white; 
+    color: black; 
+    border: 2px solid #008CBA;
+  }
+  
+  .play:hover {
+    background-color: #008CBA;
+    color: white;
+  }
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  
+.column {
+    float: left;
+}
+
+.loader-wrapper {
+    text-align: center;
+}
+
+.loader {
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid #3498db;
+    width: 120px;
+    height: 120px;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+  }
+  
+  @-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+/* Phone Level */
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
+
+}

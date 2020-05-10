@@ -6,11 +6,16 @@ import processing as pr
 students = sim.general_case(pr.init_courses_bydepart(data.course_list), pr.init_students_bydepart(data.MAX_STUDENTS, data.depars))
 print(students)
 # EDGE CASE
-students = sim.edge_case(students, 5)
-sim.generate_nodes_and_edges(students)
+
+best_case_path = 'datasets/covid-model/best_case.json'
+general_case_path = 'datasets/covid-model/general_case.json'
 
 
+students = sim.edge_case(pr.init_students(3000), 2)
+sim.generate_nodes_and_edges(students, best_case_path)
 
+students = sim.general_case(pr.init_courses(data.course_list), pr.init_students(30000))
+sim.generate_nodes_and_edges(students, general_case_path)
 
 
 # GENERAL OUTLINE
