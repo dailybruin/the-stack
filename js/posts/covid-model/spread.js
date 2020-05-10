@@ -78,6 +78,9 @@ function initializeCases(viz, sim) {
 
 function restart(viz, sim) {
   viz.PLAYING  = false;
+  d3.select('.play.button.viz' + viz.id)
+    .style("background-color", 'white')
+    .style("color", 'black');
   //clear old stuff
   for (let i = 0; i < viz.student_nodes.length; i++) {
     viz.student_nodes[i].status = HEALTHY;

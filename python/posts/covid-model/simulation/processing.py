@@ -1,6 +1,6 @@
 import data
 import random
-from bs4 import BeautifulSoup
+#from bs4 import BeautifulSoup
 import pandas as pd
 
 def dept_codes(csv_file):
@@ -26,17 +26,37 @@ def dept_codes(csv_file):
     return dept_codes
 
 # Initialize course list dictionary
-def init_courses(course_list):
+def init_courses_bydepart(course_list):
     course_dict = dict()
     for i in course_list:
         code = ' '.join(i.split(' ')[:-1])
         # print(code)
         try: 
-            div = data.dept_codes[code]['div']
+            dept = data.dept_codes[code]['dept_name']
         except: 
             for key in data.dept_codes:
                 if code == data.dept_codes[key]['abbrev_maj']:
-                    div = data.dept_codes[key]['div']           
+                    dept = data.dept_codes[key]['dept_name']
+        course_dict[i] = {
+            "code": code,
+            "series": i.split(' ')[-1],
+            "dept": dept,
+            "class_size": random.randint(1, 15),   # TODO: REPLACE WITH REAL DATA (read from scraper)
+            "classroom": list()
+        }
+    return course_dict
+
+def init_courses(course_list):
+    course_dict = dict()
+    for i in course_list:
+        code = ' '.join(i.split(' ')[:-1])
+        # print(code)
+        try:
+            div = data.dept_codes[code]['div']
+        except:
+            for key in data.dept_codes:
+                if code == data.dept_codes[key]['abbrev_maj']:
+                    div = data.dept_codes[key]['div']
         course_dict[i] = {
             "code": code,
             "series": i.split(' ')[-1],
@@ -71,3 +91,31 @@ def init_students(num_of_students, departments=data.divs):
             }
     return student_dict
     #NOTE: This method's format will have to change, we would want to iterate by major instead
+
+# Initialize student dictionary
+def init_students_bydepart(num_of_students, departments=data.depars):
+    student_dict = dict()
+    count = 0
+    # initialize students into departments
+    for key in departments:
+        for i in range(departments[key]['size']):
+            count = count + 1
+            student_dict[count] = {
+                # "major": random.choice(data.majors_dummy), # TODO: REPLACE WITH REAL DATA
+                # "year": data.Year(random.randint(1, 4)), # TODO: REPLACE WITH REAL DATA (if information of year can be sourced)
+                "depar": key,
+                # "college": NOTE: not necessary yet
+                "constraint": 0,
+                "connections": list()
+            }
+
+    # NOTE: DUMMY - initializes student list even without departments for now just pass in an empty list, can remove later
+    if not(departments):
+        for i in range(num_of_students):
+            student_dict[i] = {
+                "div": "",
+                "constraint": 0,
+                "connections": list()
+            }
+    return student_dict
+#NOTE: This method's format will have to change, we would want to iterate by major instead

@@ -34,9 +34,10 @@ def edge_case(students, MIN_CONNECTIONS):
             # remove key student from sampling
             del available_students[key]
             # select a random sample for each student, add to connections
-            students[key]['connections'] = random.sample(list(available_students), MIN_CONNECTIONS - students[key]['constraint'])
+            if (students[key]['constraint'] < MIN_CONNECTIONS):
+                students[key]['connections'] = random.sample(list(available_students), MIN_CONNECTIONS - students[key]['constraint'])
             # let students add you back, remove students whose connections are going over limit
-            available_students = constraints.update_students(available_students, students[key]['connections'], key, MIN_CONNECTIONS)
+                available_students = constraints.update_students(available_students, students[key]['connections'], key, MIN_CONNECTIONS)
     return students
 
 def generate_nodes_and_edges(students, path):
@@ -69,6 +70,7 @@ def generate_nodes_and_edges(students, path):
                         "weight": 1
                     })
 
-    with open(path, 'w') as outfile:
-        json.dump(graph, outfile)
+
+with open(path, 'w') as outfile:
+    json.dump(graph, outfile)
 

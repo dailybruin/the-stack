@@ -204,28 +204,13 @@ function initViz(viz) {
     .attr('transform', 'translate(30,30)')
     .call(viz.slider);
 
-  // init r0 slider
-  viz.r0slider = d3
-    .sliderHorizontal()
-    .min(3.8)
-    .max(8.9)
-    .default(viz.r0)
-    .fill('blue')
-    .width(width * .55)
-    .displayValue(true);
-
-  viz.r0slider.on('onchange', val => {
-    viz.r0 = val;
-    viz.p = viz.r0 / (viz.infectionLength * viz.numClasses * viz.numExposed);
-  });
-
   d3.select('.r0slider.viz' + viz.id)
-    .append('svg')
-    .attr('width', width * .6)
-    .attr('height', 80)
-    .append('g')
-    .attr('transform', 'translate(30,30)')
-    .call(viz.r0slider);
+    .on('input', function() {
+      viz.r0 = this.value;
+      viz.p = viz.r0 / (viz.infectionLength * viz.numClasses * viz.numExposed);
+      d3.select('.r0val.viz' + viz.id)
+        .html("R<sub>0</sub> = " + Number(viz.r0).toFixed(1));
+    });
   
   // init buttons
   d3.select('.restart.button.viz' + viz.id)
@@ -269,10 +254,19 @@ function runSiumulation(viz) {
 // to automatically run with the play button 
 async function playSimulation(viz) {
   if (viz.PLAYING) {
-    viz.PLAYING = false;
+    viz.PLAYING = false;  //stop play
     return;
   }
+  // at end of slider -> restart to week 0 before playing
+  if (viz.sliderOldVal === SIMULATION_WEEKS) {
+    restart(viz);
+    d3.select('.play.button.viz' + viz.id)
+      .style("background-color", '#008CBA')
+      .style("color", 'white');
+    await sleep(1400);
+  }
   viz.PLAYING = true;
+
   for (let i = viz.sliderOldVal+1; i <= SIMULATION_WEEKS; i++) {
     if (!viz.PLAYING)
       return;
@@ -282,6 +276,9 @@ async function playSimulation(viz) {
     await sleep(1400);
   }
   viz.PLAYING = false;
+  d3.select('.play.button.viz' + viz.id)
+    .style("background-color", 'white')
+    .style("color", 'black');
 }
 
 function sleep(ms) {
