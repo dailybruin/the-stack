@@ -3,9 +3,10 @@ import simulation as sim
 import processing as pr     
 
 # GENERAL CASE
-# students = sim.general_case(pr.init_courses(data.course_list[0:100]), pr.init_students(300, list()))
+students = sim.general_case(pr.init_courses_bydepart(data.course_list), pr.init_students_bydepart(data.MAX_STUDENTS, data.depars))
+print(students)
 # EDGE CASE
-students = sim.edge_case(pr.init_students(300, list()), 5)
+students = sim.edge_case(students, 5)
 sim.generate_nodes_and_edges(students)
 
 
