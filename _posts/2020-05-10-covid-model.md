@@ -52,7 +52,7 @@ To explore the visualization, drag the time slider forward through the weeks of 
 <div id="viz1">
   <div class="r0-slider-wrapper viz1">
     <p class="slider-title r0-title">Drag the slider to change the value of R<sub>0</sub></p>
-    <input class="r0slider viz1" type="range" min="3.8" max="8.9" value="5.7" step="0.1">
+    <input class="r0slider viz1" type="range" min="0.5" max="8" value="5.7" step="0.1">
     <p class="r0val viz1">R<sub>0</sub> = 5.7</p>
   </div>
   <div class="graph-wrapper">
@@ -81,7 +81,7 @@ To explore the visualization, drag the time slider forward through the weeks of 
 <div id="viz2">
   <div class="r0-slider-wrapper viz2">
     <p class="slider-title r0-title">Drag the slider to change the value of R<sub>0</sub></p>
-    <input class="r0slider viz2" type="range" min="3.8" max="8.9" value="5.7" step="0.1">
+    <input class="r0slider viz2" type="range" min="0.5" max="8" value="5.7" step="0.1">
     <p class="r0val viz2">R<sub>0</sub> = 5.7</p>
   </div>
   <div class="graph-wrapper">
