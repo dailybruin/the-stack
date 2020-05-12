@@ -19,11 +19,11 @@ var viz1 = {
 
   // MODEL ASSUMPTIONS
   'r0' : 5.7,  // FROM CDC
-  'numClasses' : 1,   //num classes each student is enrolled in
+  'numClasses' : 3,   //num classes each student is enrolled in
   'infectionLength' : 1, //how many weeks a student is contagious for
   'numExposed' : 8, //how many others one student exposes per class
   'p' : null, //probabilty of each exposed student of getting infected
-  'initialCases' : 2
+  'initialCases' : 1
 }
 viz1.p = viz1.r0 / (viz1.infectionLength * viz1.numClasses * viz1.numExposed);
 
@@ -49,7 +49,7 @@ var viz2 = {
   'infectionLength' : 1, //how many weeks a student is contagious for
   'numExposed' : 8, //how many others one student exposes per class
   'p' : null, //probabilty of each exposed student of getting infected
-  'initialCases' : 2
+  'initialCases' : 1
 }
 viz2.p = viz2.r0 / (viz2.infectionLength * viz2.numClasses * viz2.numExposed);
 
@@ -243,12 +243,33 @@ function showVis(viz) {
 
 // for testing & collecting data purposes - doesn't show viz
 function runSiumulation(viz) {
-  let results = []
-  results.push(restart(viz, true));
-  for (let i = 0; i < SIMULATION_WEEKS; i++) {
-    results.push(runInfections(viz, true));
+  let r0_arr = [1, 2.5, 4, 5.7, 7]
+  let results = "r0,week,healthy,infected,recovered,total_cases\n";
+  for (r of r0_arr) {
+    viz.r0 = r;
+    viz.p = viz.r0 / (viz.infectionLength * viz.numClasses * viz.numExposed);
+    // results.push(restart(viz, true));
+    let init = restart(viz, true);
+    let total_cases = init[1] + init[2];
+    results += r + ",0," + init[0] + "," + init[1] + "," + init[2] + "," + total_cases + "\n";
+    for (let i = 0; i < SIMULATION_WEEKS; i++) {
+      let nums = runInfections(viz, true);
+      results += r + "," + (i+1) + ",";
+      for (n of nums) {
+        results += n + ",";
+      }
+      results += (nums[1] + nums[2]) + ","
+      // results.push(runInfections(viz, true));
+      results += "\n";
+    }
+    
   }
   console.log(viz.id, results);
+  let hiddenElement = document.createElement('a');
+    hiddenElement.href = 'data:text/results;charset=utf-8,' + encodeURI(results);
+    hiddenElement.target = '_blank';
+    hiddenElement.download = 'results.csv';
+    hiddenElement.click();
 }
 
 // to automatically run with the play button 

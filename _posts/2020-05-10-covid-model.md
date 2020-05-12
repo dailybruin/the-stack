@@ -1,11 +1,11 @@
 ---
-title: Modelling UCLA's Student Network and Spread of COVID-19 for Fall 2020
-teaser: Explore the potential spread of COVID-19 among students on UCLA’s campus. What would happen if UCLA students returned in the fall to take in-person classes? We investigate the optimistic and pessimistic scenarios.
+title: Modeling the Spread of COVID-19 in UCLA Classrooms
+teaser: Explore the potential spread of COVID-19 among students on UCLA’s campus. What would happen if UCLA students returned in the fall to take in-person classes? We investigate the optimistic and pessimistic scenarios. 
 authors:
-  - laurel_woods
   - radhika_ahuja
   - charlotte_huang
   - sydney_kovach
+  - laurel_woods
 key_takeaways:
   - After running the simulation X times for 11 weeks, an average of Y% of students were infected. 
   - On average, each student had Z connections.
@@ -16,9 +16,11 @@ stylesheets:
   - /css/posts/covid-model/app.css
 scripts:
   - //d3js.org/d3.v5.min.js
+  - //cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js
   - //unpkg.com/d3-simple-slider
   - /js/posts/covid-model/spread.js
   - /js/posts/covid-model/model.js
+  - /js/posts/covid-model/linechart.js
 ---
 
 # Introduction
@@ -52,7 +54,7 @@ To explore the visualization, drag the time slider forward through the weeks of 
 <div id="viz1">
   <div class="r0-slider-wrapper viz1">
     <p class="slider-title r0-title">Drag the slider to change the value of R<sub>0</sub></p>
-    <input class="r0slider viz1" type="range" min="0.5" max="8" value="5.7" step="0.1">
+    <input class="r0slider viz1" type="range" min="0.1" max="18" value="5.7" step="0.1">
     <p class="r0val viz1">R<sub>0</sub> = 5.7</p>
   </div>
   <div class="graph-wrapper">
@@ -75,13 +77,18 @@ To explore the visualization, drag the time slider forward through the weeks of 
   </div>
 </div> -->
 
+<div id="linechart-wrapper">
+  <canvas id="linechart"></canvas>
+</div>
+
+<h3>VIZ 2 - EDGE CASE</h3>
 <div class="loader-wrapper viz2">
   <div class="loader"></div>
 </div>
 <div id="viz2">
   <div class="r0-slider-wrapper viz2">
     <p class="slider-title r0-title">Drag the slider to change the value of R<sub>0</sub></p>
-    <input class="r0slider viz2" type="range" min="0.5" max="8" value="5.7" step="0.1">
+    <input class="r0slider viz2" type="range" min="0.1" max="18" value="5.7" step="0.1">
     <p class="r0val viz2">R<sub>0</sub> = 5.7</p>
   </div>
   <div class="graph-wrapper">
