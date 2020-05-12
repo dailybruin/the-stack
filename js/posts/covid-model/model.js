@@ -243,7 +243,7 @@ function showVis(viz) {
 
 // for testing & collecting data purposes - doesn't show viz
 function runSiumulation(viz) {
-  let r0_arr = [1, 2.5, 4, 5.7, 7]
+  let r0_arr = [1, 2, 3, 4, 5.7]
   let results = "r0,week,healthy,infected,recovered,total_cases\n";
   for (r of r0_arr) {
     viz.r0 = r;

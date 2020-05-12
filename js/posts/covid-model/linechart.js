@@ -1,4 +1,5 @@
 const numWeeks = 12;
+const numUndergrads = 32347;
 
 function loadCSVData(r) {
   return new Promise(resolve => {
@@ -9,7 +10,8 @@ function loadCSVData(r) {
 }
 
 async function initChart() {
-  let r0_vals = [1, 2.5, 4, 5.7, 7];
+  let r0_vals = [1, 2, 3, 4, 5.7];
+  let colors = ['#444e86', '#955196', '#dd5182', '#ff6e54', '#ffa600'];
   let csv = await loadCSVData();
 
   let data = {
@@ -27,9 +29,11 @@ async function initChart() {
     label: 'Total Undergrads',
     data: [],
     fill: false,
+    backgroundColor: 'gray',
+    borderColor: 'gray',
   };
   for (let i = 0; i < numWeeks; i++) {
-    benchmark.data.push(32347);
+    benchmark.data.push(numUndergrads);
   }
 
   data.datasets.push(benchmark);
@@ -43,6 +47,8 @@ async function initChart() {
       label: 'R0 = ' + r0_vals[i],
       data: ds,
       fill: false,
+      backgroundColor: colors[i],
+      borderColor: colors[i],
     });
   }
 
@@ -51,10 +57,32 @@ async function initChart() {
       display: true,
       text: 'Total Projected COVID-19 Cases Over Fall Quarter',
     },
-    // tooltips: {
-    //     mode: 'index',
-    //     intersect: false,
-    // },
+    tooltips: {
+      // mode: 'index',
+      // intersect: false,
+      callbacks: {
+        title: function(tooltipItem) {
+          if (tooltipItem[0].xLabel === 'Finals') {
+            return 'Finals Week';
+          } else {
+            return 'Week ' + tooltipItem[0].xLabel;
+          }
+        },
+        label: function(tooltipItem, data) {
+          let label = data.datasets[tooltipItem.datasetIndex].label;
+          if (label === 'Total Undergrads') {
+            label += ' - ' + tooltipItem.yLabel.toLocaleString('en-US');
+          } else {
+            label +=
+              ' - ' +
+              tooltipItem.yLabel.toLocaleString('en-US') +
+              ' total cases';
+          }
+
+          return label;
+        },
+      },
+    },
     scales: {
       xAxes: [
         {
