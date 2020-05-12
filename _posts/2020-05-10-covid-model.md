@@ -119,11 +119,13 @@ We also ran the simulation several times for different values of R0. The followi
 
 As of May 10, there are over 1.3 million confirmed cases and over 80,000 deaths in the U.S. In LA County, there are over 31,600 confirmed cases and over 1,500 deaths. Up to one in four COVID-19 patients may remain asymptomatic and never quarantine. Asymptomatic carriers may therefore be more likely to spread the virus than those who show symptoms, get tested and quarantine themselves. It is crucial to practice social distancing, wash hands and wear a cloth mask to prevent the virus from spreading, according to the CDC.
 
-For more updates on coronavirus news relevant to UCLA, visit the [Daily Bruin’s coronavirus thread](https://features.dailybruin.com/2020/covid-19/). For more information about how students have been affected by the pandemic, visit the Daily Bruin’s “[Unfinished Stories](https://covidstories.dailybruin.com/)” project. More information about the coronavirus and COVID-19 from [UCLA Health](https://www.uclahealth.org/coronavirus) can be found here.
+UCLA is a large school with a very well-connected student network posing numerous challenges for reopening the university in Fall. 
+
+For more updates on coronavirus news relevant to UCLA, visit the [Daily Bruin’s coronavirus thread](https://features.dailybruin.com/2020/covid-19/). For more information about how students have been affected by the pandemic, visit the Daily Bruin’s “[Unfinished Stories](https://covidstories.dailybruin.com/)” project. More information about the coronavirus and COVID-19 from [UCLA Health](https://www.uclahealth.org/coronavirus) can be found here. 
 
 # More on Stochastic Block Models
 
-A stochastic block model considers a set of student communities, grouped by department, such as mathematics, art history, psychology. So for example, consider a three-department school: Sciences with 200 students, Business with 150 students and Humanities with 170 students. The student communities set is then [200, 150, 170].
+A stochastic block model considers a set of student communities, grouped by department, such as mathematics, art history or psychology. So for example, consider a three-department school:  Sciences with 200 students, Business with 150 students and Humanities with 170 students. The student communities set is then [200, 150, 170].
 
 Then a matrix A defines the probabilities to randomly select students from each community/department to other communities/departments. The ith row represents the probability of a student from the ith community taking courses with people in each of the 3 departments.
 
