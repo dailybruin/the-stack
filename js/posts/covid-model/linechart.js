@@ -22,6 +22,18 @@ async function initChart() {
   }
   data.labels.push('Finals');
 
+  //total ucla undergrads
+  let benchmark = {
+    label: 'Total Undergrads',
+    data: [],
+    fill: false,
+  };
+  for (let i = 0; i < numWeeks; i++) {
+    benchmark.data.push(32347);
+  }
+
+  data.datasets.push(benchmark);
+
   for (let i = 0; i < r0_vals.length; i++) {
     let ds = [];
     for (let j = i * numWeeks; j < numWeeks * (i + 1); j++) {
@@ -33,7 +45,6 @@ async function initChart() {
       fill: false,
     });
   }
-  console.log(data);
 
   let options = {
     title: {
@@ -55,6 +66,13 @@ async function initChart() {
       ],
       yAxes: [
         {
+          ticks: {
+            callback: function(value) {
+              return value.toLocaleString('en-US', {
+                minimumFractionDigits: 0,
+              });
+            },
+          },
           scaleLabel: {
             display: true,
             labelString: 'Total COVID-19 Cases',
