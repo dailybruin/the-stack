@@ -10,8 +10,8 @@ key_takeaways:
   - After running the simulation X times for 11 weeks, an average of Y% of students were infected. 
   - On average, each student had Z connections.
 featured_image:
-  url:
-og_image:
+  url: covid-model/cover_photo.png
+og_image: covid-model/cover_photo.png
 stylesheets:
   - /css/posts/covid-model/app.css
 scripts:
