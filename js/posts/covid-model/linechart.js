@@ -116,6 +116,10 @@ async function initChart() {
         },
       ],
     },
+    legend: {
+      display: true,
+      position: 'left',
+    }
   };
 
   let ctx = document.getElementById('linechart');
@@ -124,6 +128,36 @@ async function initChart() {
     data: data,
     options: options,
   });
+
+  Chart.defaults.global.defaultFontFamily = 'Roboto';
+  Chart.defaults.global.defaultFontSize = 15;
+  Chart.defaults.global.defaultFontColor = '#777';
+
+  let x = window.matchMedia("(max-width: 480px)");
+  if (x.matches) {
+    linechart.canvas.parentNode.style.width = "340px"; 
+    linechart.options.legend = {
+      display: false,
+    };
+    linechart.options.scales.yAxes =  [
+      {
+        scaleLabel: {
+          display: false,
+        },
+      },
+    ];
+    linechart.options.scales.xAxes = [
+      {
+        scaleLabel: {
+          display: false,
+        },
+      },
+    ];
+  }
+  else 
+    linechart.canvas.parentNode.style.width = '1000px';
+  
 }
+
 
 initChart();
