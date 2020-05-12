@@ -8,7 +8,7 @@ authors:
   - laurel_woods
 key_takeaways:
   - After running the simulation X times for 11 weeks, an average of Y% of students were infected.
-  - On average, each student had Z connections.
+  - On average, each UCLA undergraduate shared a class with 228 other students.
 featured_image:
   url: covid-model/cover_photo.png
 og_image: covid-model/cover_photo.png
@@ -76,7 +76,7 @@ To explore the visualization, drag the time slider forward through the weeks of 
 </div>
 
 - After running the simulation X times for 11 weeks, an average of Y% of students were infected.
-- On average, each student had Z connections.
+- On average, each student had 228 connections.
 
 We also ran the simulation several times for different values of R<sub>0</sub>. The following chart shows the number of people infected on average through the 11 weeks, for varying values of R<sub>0</sub>:
 

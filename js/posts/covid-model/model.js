@@ -15,7 +15,7 @@ var viz = {
   'infected_count' : 0,
   'recovered_count' : 0,
   'sliderOldVal' : 0,
-  'datasetPath' : '/datasets/covid-model/best_case.json'
+  'datasetPath' : '/datasets/covid-model/general_case.json'
 }
 
 
@@ -55,6 +55,7 @@ function loadNodes(callback) {
           break;
       }
     });
+    // console.log(averageConnections(viz.student_nodes));
     callback();
   });  
 }
