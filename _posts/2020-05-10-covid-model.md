@@ -75,7 +75,6 @@ To explore the visualization, drag the time slider forward through the weeks of 
   </div>
 </div> -->
 
-<h3>VIZ 2 - EDGE CASE</h3>
 <div class="loader-wrapper viz2">
   <div class="loader"></div>
 </div>
@@ -107,6 +106,10 @@ To explore the visualization, drag the time slider forward through the weeks of 
 
 - After running the simulation X times for 11 weeks, an average of Y% of students were infected. 
 - On average, each student had Z connections.
+
+We also ran the simulation several times for different values of R0. The following chart shows the number of people infected on average through the 11 weeks, for varying values of R0:
+
+<h3>VIZ 2</h3>
 
 # Conclusion
 
