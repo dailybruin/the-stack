@@ -1,7 +1,6 @@
-const numWeeks = 12;
 const numUndergrads = 32347;
 
-function loadCSVData(r) {
+function loadCSVData() {
   return new Promise(resolve => {
     d3.csv('/datasets/covid-model/curve_data.csv').then(function(csv) {
       resolve(csv);
@@ -10,8 +9,15 @@ function loadCSVData(r) {
 }
 
 async function initChart() {
-  let r0_vals = [1, 2, 3, 4, 5.7];
-  let colors = ['#444e86', '#955196', '#dd5182', '#ff6e54', '#ffa600'];
+  let r0_vals = [1, 2, 2.5, 3, 4, 5.7];
+  let colors = [
+    '#374c80',
+    '#7a5195',
+    '#bc5090',
+    '#ef5675',
+    '#ff764a',
+    '#ffa600',
+  ];
   let csv = await loadCSVData();
 
   let data = {
@@ -19,7 +25,7 @@ async function initChart() {
     datasets: [],
   };
 
-  for (let i = 0; i < numWeeks - 1; i++) {
+  for (let i = 0; i < SIMULATION_WEEKS - 1; i++) {
     data.labels.push(i);
   }
   data.labels.push('Finals');
@@ -32,7 +38,7 @@ async function initChart() {
     backgroundColor: 'gray',
     borderColor: 'gray',
   };
-  for (let i = 0; i < numWeeks; i++) {
+  for (let i = 0; i < SIMULATION_WEEKS; i++) {
     benchmark.data.push(numUndergrads);
   }
 
@@ -40,7 +46,7 @@ async function initChart() {
 
   for (let i = 0; i < r0_vals.length; i++) {
     let ds = [];
-    for (let j = i * numWeeks; j < numWeeks * (i + 1); j++) {
+    for (let j = i * SIMULATION_WEEKS; j < SIMULATION_WEEKS * (i + 1); j++) {
       ds.push(csv[j].total_cases);
     }
     data.datasets.push({
@@ -71,11 +77,13 @@ async function initChart() {
         label: function(tooltipItem, data) {
           let label = data.datasets[tooltipItem.datasetIndex].label;
           if (label === 'Total Undergrads') {
-            label += ' - ' + tooltipItem.yLabel.toLocaleString('en-US');
+            label += '   ' + tooltipItem.yLabel.toLocaleString('en-US');
           } else {
             label +=
-              ' - ' +
-              tooltipItem.yLabel.toLocaleString('en-US') +
+              '   ' +
+              tooltipItem.yLabel.toLocaleString('en-US', {
+                maximumFractionDigits: 0,
+              }) +
               ' total cases';
           }
 
@@ -97,7 +105,7 @@ async function initChart() {
           ticks: {
             callback: function(value) {
               return value.toLocaleString('en-US', {
-                minimumFractionDigits: 0,
+                maximumFractionDigits: 0,
               });
             },
           },

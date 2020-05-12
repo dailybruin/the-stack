@@ -1,6 +1,6 @@
 ---
 title: Modeling the Spread of COVID-19 in UCLA Classrooms
-teaser: Explore the potential spread of COVID-19 among students on UCLA’s campus. What would happen if UCLA students returned in the fall to take in-person classes? We investigate the optimistic and pessimistic scenarios.
+teaser: What would happen if UCLA students returned in the fall to take in-person classes? We explore the potential spread of COVID-19 among students on UCLA’s campus.
 authors:
   - radhika_ahuja
   - charlotte_huang
@@ -27,14 +27,13 @@ scripts:
 
 In the middle of a global pandemic, uncertainty has become the new normal. Many states across the country are now beginning to lift restrictions, but colleges must weigh the difficult decision of how to keep students and staff safe while still providing a quality education. While UCLA has already decided to [move summer sessions A and C online](https://dailybruin.com/2020/05/11/ucla-to-hold-summer-session-c-online-considering-selective-in-person-instruction/), the fate of fall quarter is still up in the air. Crowded lecture halls and dorm rooms make it nearly impossible for students to practice social distancing without a disruption to normal college life. As UCLA grapples with whether to welcome students back to campus in the fall, The Stack examines how quickly COVID-19 could spread through the undergraduate student body. Inspired by professor Kim Weeden's [model of course enrollment networks](https://twitter.com/weedenkim/status/1258894522127396866?s=21) at Cornell University, we created our own model of how connected UCLA students are based on the classes they enroll in.
 
-LA County offers free COVID-19 testing to all residents, regardless of whether they are symptomatic. However, one must schedule an appointment, which is subject to availability. Same-day testing and next-day appointments are prioritized for front-line workers and symptomatic patients. LA offers both drive-up and walk-in testing. Within five miles of UCLA, there are three testing sites. LA County is working to test up to 10,000 people every day, with each site capable of running 100 to 500 tests per day.
-
 # Methods and Assumptions
 
 Our model looks solely at the spread of COVID-19 through classes and does not take into account interactions students may have through dorm rooms, dining halls, campus organizations or other social aspects of student life. Additionally, the model only takes undergraduate students into consideration. In particular, a realistic picture of the campus includes many more affected groups, like graduate students, faculty, administrative staff, on-campus and dining workers, many of whom are more likely to be in a higher risk category than undergraduate students. However, to keep the model simple and its implementation feasible given the available data, we only factor in undergraduate students. It should also be noted that, although the studies referenced in this article have not yet been peer-reviewed, this is common for coronavirus-related studies because of their newness.
 
-The incubation period for COVID-19 is typically five to six days, though it can take anywhere between one to 14 days to develop symptoms after exposure, if symptoms do develop. We assume that people on UCLA’s campus will get tested approximately seven days after exposure on average because of the priority of testing given to symptomatic patients.
-Ideally, once someone starts feeling symptoms, they will get tested and self-isolate either the same day or the next day; therefore, we assume that infected students that become symptomatic will be contagious and spread COVID-19 for about a week. However, asymptomatic spread is also significant; according to an [NPR interview with Robert Redfield](https://www.npr.org/sections/health-shots/2020/03/31/824155179/cdc-director-on-models-for-the-months-to-come-this-virus-is-going-to-be-with-us), director of the Centers for Disease Control and Prevention, up to 25% of people with COVID-19 may never show symptoms and are therefore less likely to seek testing and self-isolate. Moreover, [a study](https://www.medrxiv.org/content/10.1101/2020.04.13.20063529v1) stated that 40% to 80% of transmissions could occur from individuals who have not shown symptoms.
+The incubation period for COVID-19 is typically five to six days, though it can take anywhere between one to 14 days to develop symptoms after exposure, if symptoms do develop. LA County offers free COVID-19 testing to all residents, including three testing sites within five miles of UCLA, but same-day and next-day appointments are prioritized for front-line workers and symptomatic patients. We assume that UCLA students will get tested seven days after exposure on average.
+
+Ideally, once someone tests positive, they will self-isolate either the same day or the next day; therefore, we assume that infected students that become symptomatic will be contagious and spread COVID-19 for about a week. However, asymptomatic spread is also significant; according to an [NPR interview with Robert Redfield](https://www.npr.org/sections/health-shots/2020/03/31/824155179/cdc-director-on-models-for-the-months-to-come-this-virus-is-going-to-be-with-us), director of the Centers for Disease Control and Prevention, up to 25% of people with COVID-19 may never show symptoms and are therefore less likely to seek testing and self-isolate. Moreover, [a study](https://www.medrxiv.org/content/10.1101/2020.04.13.20063529v1) stated that 40% to 80% of transmissions could occur from individuals who have not shown symptoms.
 
 R<sub>0</sub>, pronounced “R-naught” and referred to as the “basic reproduction number,” measures how many others an infected individual will infect. An R<sub>0</sub> below one means that the virus will die out over time whereas an R<sub>0</sub> above one means there will be exponential growth, as has been seen in the United States. Social distancing and shelter-at-home orders reduce human contact, which then lowers R<sub>0</sub> in a particular region. For our model, we used 5.7, the median R<sub>0</sub> value [calculated](https://wwwnc.cdc.gov/eid/article/26/7/20-0282_article) by a study posted on the CDC website, as our default. It should be noted that these calculations were based on data from China’s CDC. We started with a single infected student at UCLA. Although research is still being done on immunity to COVID-19, we assumed that once a student has recovered, they will not be infected again.
 
@@ -46,62 +45,32 @@ Interdepartmental connectivity in this model arises primarily from degree/school
 
 To explore the visualization, drag the time slider forward through the weeks of fall 2020 or press play to automate it. Each week, an infected student will infect an average of R<sub>0</sub> students. The value of R<sub>0</sub>, [set to 5.7](https://wwwnc.cdc.gov/eid/article/26/7/20-0282_article) by default, can also be adjusted with the slider above the graph to explore different rates of infection.
 
-<!-- <h3>VIZ 1 - GENERAL CASE</h3>
-<div class="loader-wrapper viz1">
-  <div class="loader"></div>
-</div>
-<div id="viz1">
-  <div class="r0-slider-wrapper viz1">
-    <p class="slider-title r0-title">Drag the slider to change the value of R<sub>0</sub></p>
-    <input class="r0slider viz1" type="range" min="0.1" max="18" value="5.7" step="0.1">
-    <p class="r0val viz1">R<sub>0</sub> = 5.7</p>
-  </div>
-  <div class="graph-wrapper">
-    <div class="graph viz1"></div>
-  </div>
-  <div class="row">
-    <div class="column stats">
-        <p class="viz1 healthy"></p>
-        <p class="viz1 infected"></p>
-        <p class="viz1 recovered"></p>
-    </div>
-    <div class="column slider-wrapper">
-      <div class="viz1 slider"></div>
-      <p class="slider-title">week of fall quarter</p>
-    </div>
-    <div class="column button-div">
-      <button class="viz1 play button" type="button">Play</button>
-      <button class="viz1 restart button" type="button">Restart</button>
-    </div>
-  </div>
-</div> -->
-
 <h3>Student Network Graph</h3>
-<div class="loader-wrapper viz2">
+<div class="loader-wrapper">
   <div class="loader"></div>
 </div>
-<div id="viz2">
-  <div class="r0-slider-wrapper viz2">
+<div id="viz">
+  <div class="r0-slider-wrapper">
     <p class="slider-title r0-title">Drag the slider to change the value of R<sub>0</sub></p>
-    <input class="r0slider viz2" type="range" min="0.1" max="18" value="5.7" step="0.1">
-    <p class="r0val viz2">R<sub>0</sub> = 5.7</p>
+    <input class="r0slider" type="range" min="0.1" max="18" value="5.7" step="0.1">
+    <p class="r0val">R<sub>0</sub> = 5.7</p>
   </div>
   <div class="graph-wrapper">
-    <div class="graph viz2"></div>
+    <div class="graph"></div>
   </div>
   <div class="row">
     <div class="column stats">
-        <p class="viz2 healthy"></p>
-        <p class="viz2 infected"></p>
-        <p class="viz2 recovered"></p>
+        <p class="healthy"></p>
+        <p class="infected"></p>
+        <p class="recovered"></p>
     </div>
     <div class="column slider-wrapper">
-      <div class="viz2 slider"></div>
+      <div class="slider"></div>
       <p class="slider-title">week of fall quarter</p>
     </div>
     <div class="column button-div">
-      <button class="viz2 play button" type="button">Play</button>
-      <button class="viz2 restart button" type="button">Restart</button>
+      <button class="play button" type="button">Play</button>
+      <button class="restart button" type="button">Restart</button>
     </div>
   </div>
 </div>
@@ -117,11 +86,11 @@ We also ran the simulation several times for different values of R<sub>0</sub>. 
 
 # Conclusion
 
-As of May 10, there are over 1.3 million confirmed cases and over 80,000 deaths in the U.S. In LA County, there are over 31,600 confirmed cases and over 1,500 deaths. Up to one in four COVID-19 patients may remain asymptomatic and never quarantine. Asymptomatic carriers may therefore be more likely to spread the virus than those who show symptoms, get tested and quarantine themselves. It is crucial to practice social distancing, wash hands and wear a cloth mask to prevent the virus from spreading, according to the CDC.
+As of May 11, there are over 1.3 million confirmed cases and over 80,000 deaths in the U.S. In LA County, there are over 32,00 confirmed cases and over 1,500 deaths. LA County is offering free coronavirus tests for all residents and working to test up to 10,000 people every day, with each site capable of running 100 to 500 tests per day. Up to one in four COVID-19 patients may remain asymptomatic and never quarantine. Asymptomatic carriers may therefore be more likely to spread the virus than those who show symptoms, get tested and quarantine themselves. It is crucial to practice social distancing, wash hands and wear a cloth mask to prevent the virus from spreading, according to the CDC.
 
 UCLA is a large school with a very well-connected student network posing numerous challenges for reopening the university in Fall.
 
-For more updates on coronavirus news relevant to UCLA, visit the [Daily Bruin’s coronavirus thread](https://features.dailybruin.com/2020/covid-19/). For more information about how students have been affected by the pandemic, visit the Daily Bruin’s “[Unfinished Stories](https://covidstories.dailybruin.com/)” project. More information about the coronavirus and COVID-19 from [UCLA Health](https://www.uclahealth.org/coronavirus) can be found here.
+For more updates on coronavirus news relevant to UCLA, visit the [Daily Bruin’s coronavirus thread](https://features.dailybruin.com/2020/covid-19/). For more information about how students have been affected by the pandemic, visit the Daily Bruin’s “[Unfinished Stories](https://covidstories.dailybruin.com/)” project. To schedule a free COVID-19 test in LA County or learn more about testing, [click here](https://lacovidprod.service-now.com/rrs?id=rrs_apply). More information about the coronavirus and COVID-19 from [UCLA Health](https://www.uclahealth.org/coronavirus) can be found here.
 
 # More on Stochastic Block Models
 

@@ -2,33 +2,7 @@ var width = window.innerWidth * .9,
   height = window.innerHeight * .75;
 
 // GENERAL CASE VIZ
-var viz1 = {
-  'id' : 1,
-  'svg' : null,
-  'slider' : null,
-  'r0slider' : null,
-  'PLAYING': false, 
-
-  'student_nodes' : null,
-  'infectedStudents' : [],
-  'healthy_count' : 0,
-  'infected_count' : 0,
-  'recovered_count' : 0,
-  'sliderOldVal' : 0,
-  'datasetPath' : '/datasets/covid-model/general_case.json',
-
-  // MODEL ASSUMPTIONS
-  'r0' : 5.7,  // FROM CDC
-  'numClasses' : 3,   //num classes each student is enrolled in
-  'infectionLength' : 1, //how many weeks a student is contagious for
-  'numExposed' : 8, //how many others one student exposes per class
-  'p' : null, //probabilty of each exposed student of getting infected
-  'initialCases' : 1
-}
-viz1.p = viz1.r0 / (viz1.infectionLength * viz1.numClasses * viz1.numExposed);
-
-// EDGE CASE VIZ
-var viz2 = {
+var viz = {
   'id' : 2,
   'svg' : null,
   'slider' : null,
@@ -41,17 +15,8 @@ var viz2 = {
   'infected_count' : 0,
   'recovered_count' : 0,
   'sliderOldVal' : 0,
-  'datasetPath' : '/datasets/covid-model/best_case.json',
-
-  // MODEL ASSUMPTIONS
-  'r0' : 5.7,  // FROM CDC
-  'numClasses' : 1,   //num classes each student is enrolled in
-  'infectionLength' : 1, //how many weeks a student is contagious for
-  'numExposed' : 8, //how many others one student exposes per class
-  'p' : null, //probabilty of each exposed student of getting infected
-  'initialCases' : 1
+  'datasetPath' : '/datasets/covid-model/best_case.json'
 }
-viz2.p = viz2.r0 / (viz2.infectionLength * viz2.numClasses * viz2.numExposed);
 
 
 // statuses
@@ -62,16 +27,18 @@ const healthy_color = '#7CA5B8';
 const infected_color = '#c32148';
 const recovered_color = '#F2BAC9';
 
-const SIMULATION_WEEKS = 11;
+// MODEL ASSUMPTIONS
+const SIMULATION_WEEKS = 12;
+var r0 = 5.7;  // FROM CDC
+const infectionLength = 1; //how many weeks a student is contagious for
+const initialCases = 1;
+
+loadNodes(initViz);
+// loadNodes(calcChartData); 
 
 
-loadNodes(viz1, initViz);
-loadNodes(viz2, initViz);
-
-// loadNodes(viz1, runSiumulation);
-// loadNodes(viz2, runSiumulation);
-
-function loadNodes(viz, callback) {
+// load node data from json and init counts
+function loadNodes(callback) {
   d3.json(viz.datasetPath).then(function(json) {
     viz.student_nodes = json.nodes;
     viz.student_nodes.forEach(function(d) {
@@ -88,13 +55,14 @@ function loadNodes(viz, callback) {
           break;
       }
     });
-    callback(viz);
+    callback();
   });  
 }
 
-function initViz(viz) {
+// set up viz elements including sliders & buttons
+function initViz() {
   viz.svg = d3
-      .select('.graph.viz' + viz.id)
+      .select('.graph')
       .append('svg')
       .attr('width', width)
       .attr('height', height);
@@ -121,7 +89,7 @@ function initViz(viz) {
     .join('circle')
     .attr('r', 3)
     .attr('id', d => {
-      return 'v' + viz.id + 's' + d.id;
+      return 's' + d.id;
     })
     .attr('fill', d => {
       switch (d.status) {
@@ -192,11 +160,11 @@ function initViz(viz) {
       viz.slider.silentValue(viz.sliderOldVal);
       return;
     }
-    runInfections(viz);
+    runInfections();
     viz.sliderOldVal = val;
   });
   
-  d3.select('.slider.viz' + viz.id)
+  d3.select('.slider')
     .append('svg')
     .attr('width', width * .6)
     .attr('height', 80)
@@ -204,19 +172,18 @@ function initViz(viz) {
     .attr('transform', 'translate(30,30)')
     .call(viz.slider);
 
-  d3.select('.r0slider.viz' + viz.id)
+  d3.select('.r0slider')
     .on('input', function() {
-      viz.r0 = this.value;
-      viz.p = viz.r0 / (viz.infectionLength * viz.numClasses * viz.numExposed);
-      d3.select('.r0val.viz' + viz.id)
-        .html("R<sub>0</sub> = " + Number(viz.r0).toFixed(1));
+      r0 = this.value;
+      d3.select('.r0val')
+        .html("R<sub>0</sub> = " + Number(r0).toFixed(1));
     });
   
   // init buttons
-  d3.select('.restart.button.viz' + viz.id)
-    .on('click', () => restart(viz));
+  d3.select('.restart.button')
+    .on('click', () => restart());
   
-  d3.select('.play.button.viz' + viz.id)
+  d3.select('.play.button')
     .on('click', () => {
       let background_color = '#008CBA';
       let color = 'white';
@@ -224,84 +191,122 @@ function initViz(viz) {
         background_color = 'white';
         color = 'black';
       }
-      d3.select('.play.button.viz' + viz.id)
+      d3.select('.play.button')
         .style("background-color", background_color)
         .style("color", color);
-      playSimulation(viz);
+      playSimulation();
     });
 
   // start running
-  initializeCases(viz);
-  updateCountDisplays(viz);
-  showVis(viz);
+  initializeCases();
+  updateCountDisplays();
+  showVis();
 }
 
-function showVis(viz) {
-  d3.select(".loader-wrapper.viz" + viz.id).style('display', 'none');
-  d3.select("#viz" + viz.id).style('display', 'block');
+// hide loading graphic and show viz
+function showVis() {
+  d3.select('.loader-wrapper').style('display', 'none');
+  d3.select('#viz').style('display', 'block');
 }
 
-// for testing & collecting data purposes - doesn't show viz
-function runSiumulation(viz) {
-  let r0_arr = [1, 2, 3, 4, 5.7]
-  let results = "r0,week,healthy,infected,recovered,total_cases\n";
+// run X times for each value of r0 and take averages, download to csv
+function calcChartData() {
+  let numRuns = 100;
+
+  let r0_arr = [1, 2, 2.5, 3, 4, 5.7];
+  let res = [];
+
   for (r of r0_arr) {
-    viz.r0 = r;
-    viz.p = viz.r0 / (viz.infectionLength * viz.numClasses * viz.numExposed);
-    // results.push(restart(viz, true));
-    let init = restart(viz, true);
-    let total_cases = init[1] + init[2];
-    results += r + ",0," + init[0] + "," + init[1] + "," + init[2] + "," + total_cases + "\n";
+    r0 = r;
+
+    let totals = []; 
     for (let i = 0; i < SIMULATION_WEEKS; i++) {
-      let nums = runInfections(viz, true);
-      results += r + "," + (i+1) + ",";
-      for (n of nums) {
-        results += n + ",";
-      }
-      results += (nums[1] + nums[2]) + ","
-      // results.push(runInfections(viz, true));
-      results += "\n";
+      totals.push([0, 0, 0]);
     }
+
+    for (let i = 0; i < numRuns; i++) {
+      let single = runSiumulation();  
+      for (let j = 0; j < SIMULATION_WEEKS; j++) {
+        totals[j][0] += single[j][0];
+        totals[j][1] += single[j][1];
+        totals[j][2] += single[j][2];
+      }
+    }
+    //compute averages
+    for (let j = 0; j < SIMULATION_WEEKS; j++) {
+      totals[j][0] /= numRuns;
+      totals[j][1] /= numRuns;
+      totals[j][2] /= numRuns;
+      totals[j].push(totals[j][1] + totals[j][2]);
+    }
+    res.push(totals);
     
   }
-  console.log(viz.id, results);
+  let str = 'r0,week,healthy,infected,recovered,total_cases\n';
+  for (let i = 0; i < r0_arr.length; i++) {
+    for (let j = 0; j < SIMULATION_WEEKS; j++) {
+      str += r0_arr[i] + ',' + j + ',' + res[i][j][0] + ',' + res[i][j][1] + ',' + res[i][j][2] + ',' + res[i][j][3] + '\n'; 
+    }
+  }
+  
+  console.log(str);
   let hiddenElement = document.createElement('a');
-    hiddenElement.href = 'data:text/results;charset=utf-8,' + encodeURI(results);
+    hiddenElement.href = 'data:text/results;charset=utf-8,' + encodeURI(str);
     hiddenElement.target = '_blank';
-    hiddenElement.download = 'results.csv';
+    hiddenElement.download = 'curve_data.csv';
     hiddenElement.click();
 }
 
+// for testing & collecting data purposes - doesn't show viz
+function runSiumulation() {
+  let results = [];
+  results.push(restart(true));
+  for (let i = 1; i < SIMULATION_WEEKS; i++) {
+    results.push(runInfections(true));
+  }
+  return results;
+}
+
 // to automatically run with the play button 
-async function playSimulation(viz) {
+async function playSimulation() {
   if (viz.PLAYING) {
     viz.PLAYING = false;  //stop play
     return;
   }
   // at end of slider -> restart to week 0 before playing
-  if (viz.sliderOldVal === SIMULATION_WEEKS) {
-    restart(viz);
-    d3.select('.play.button.viz' + viz.id)
+  if (viz.sliderOldVal === SIMULATION_WEEKS-1) {
+    restart();
+    d3.select('.play.button')
       .style("background-color", '#008CBA')
       .style("color", 'white');
     await sleep(1400);
   }
   viz.PLAYING = true;
 
-  for (let i = viz.sliderOldVal+1; i <= SIMULATION_WEEKS; i++) {
+  for (let i = viz.sliderOldVal+1; i < SIMULATION_WEEKS; i++) {
     if (!viz.PLAYING)
       return;
     viz.slider.silentValue(i);
     viz.sliderOldVal = i;
-    runInfections(viz);
+    runInfections();
     await sleep(1400);
   }
   viz.PLAYING = false;
-  d3.select('.play.button.viz' + viz.id)
+  d3.select('.play.button')
     .style("background-color", 'white')
     .style("color", 'black');
 }
 
 function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+// calculate average number connections a student has
+function averageConnections(nodes) {
+  let totConnections = 0;
+  let totNodes = nodes.length;
+  for (n of nodes) {
+    totConnections += n.connections.length;
+  }
+  return totConnections / totNodes;
 }
