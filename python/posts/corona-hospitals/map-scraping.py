@@ -2,6 +2,7 @@ import requests
 import lxml.html as lh
 import pandas as pd
 import json
+import re
 
 def dataframe_from_tr(tr_elements, length):
     elements = []
@@ -66,7 +67,7 @@ def dataframe_from_tr(tr_elements, length):
 
     return dfs
 
-def process_data(cases, lb_pas):
+def process_data(cases, lb_pas, date):
     # combine LA cases w/ long beach & pasadena
     lb_pas = lb_pas.rename(columns={"Locations" : "CITY/COMMUNITY**"})
     filtered = lb_pas[(lb_pas['CITY/COMMUNITY**'] == "- Long Beach") | (lb_pas['CITY/COMMUNITY**'] == "- Pasadena")]
@@ -83,9 +84,12 @@ def process_data(cases, lb_pas):
     cases = cases.append(filtered, ignore_index=True)
 
     # load geoJSON
-    with open('datasets/covid-hospitals/neighborhoods.geojson') as f:
-        geojson = json.load(f)
+    with open('datasets/covid-hospitals/neighborhoods.geojson') as x:
+        geojson = json.load(x)
     
+    # last updated date
+    geojson['lastUpdated'] = date
+
     # clear case count
     for f in geojson['features']:
         f['properties']['cases'] = None
@@ -93,7 +97,7 @@ def process_data(cases, lb_pas):
 
     # for each region with cases update corresponding neighborhood feature
     for row in cases.iterrows():
-        name = row[1]['CITY/COMMUNITY**']
+        name = str(row[1]['CITY/COMMUNITY**'])
         # process names to match geojson features
         if name.find('City of ') == 0:
             name = name[8:]
@@ -104,8 +108,8 @@ def process_data(cases, lb_pas):
         if name in conversions:
             name = conversions[name]
             
-        # cases is '--' : data is supressed 
-        if not isinstance(row[1]['Total Cases'], int):
+        # no rate data available 
+        if row[1]['Rate**'] == "NA":
             continue
         
         match = False
@@ -243,26 +247,23 @@ conversions = {
 url='http://publichealth.lacounty.gov/media/Coronavirus/locations.htm'
 #Create a handle, page, to handle the contents of the website
 
+page = requests.get(url)
+#Store the contents of the website under doc
+doc = lh.fromstring(page.content)
+#Parse data that are stored between <tr>..</tr> of HTML
+tr_elements = doc.xpath('//tr')
 
-try:
-    page = requests.get(url)
-    #Store the contents of the website under doc
-    doc = lh.fromstring(page.content)
-    #Parse data that are stored between <tr>..</tr> of HTML
-    tr_elements = doc.xpath('//tr')
+dfs = dataframe_from_tr(tr_elements, 3)
+# dfs += dataframe_from_tr(tr_elements, 4) 
 
-    dfs = dataframe_from_tr(tr_elements, 3)
-    # dfs += dataframe_from_tr(tr_elements, 4) 
+cases = dfs[7]
+lb_pas= dfs[0]
 
-    cases = dfs[5]
-    lb_pas= dfs[0]
+text = doc.findall('.//caption')[0].text_content()
+dateString = re.search("[0-9]+:[0-9]+[ap]m [0-9]{1,2}/[0-9]{1,2}", text).group()
 
-    jsonData = process_data(cases, lb_pas)
+jsonData = process_data(cases, lb_pas, dateString)
 
-    # write geoJSON 
-    with open('datasets/covid-hospitals/neighborhoods.geojson', 'w') as outfile:
-        json.dump(jsonData, outfile)
-
-
-except:
-    print("Scraping didn't work, use existing data")
+# write geoJSON 
+with open('datasets/covid-hospitals/neighborhoods.geojson', 'w') as outfile:
+    json.dump(jsonData, outfile)

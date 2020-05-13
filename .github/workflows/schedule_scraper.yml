@@ -1,7 +1,7 @@
 name: Scheduled python
 on:
   schedule:
-  - cron: '* * * * *'
+  - cron: '0 0 * * *'
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -12,6 +12,8 @@ jobs:
           ref: refs/heads/master
       - name: Setup Python
         uses: actions/setup-python@v1.2.0
+        with: 
+          python-version: '2.x'
       - name: Install Python libraries 
         run: |
           python -m pip install requests
@@ -19,8 +21,6 @@ jobs:
           python -m pip install pandas
       - name: Run python
         run: python python/posts/corona-hospitals/map-scraping.py
-      - name: Test
-        run: touch test.txt
       - name: Commit files
         run: |
           echo ${{ github.ref }}
@@ -28,12 +28,9 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git commit -m "ci: Automated build push" -a | exit 0
+          git pull
       - name: Push changes
         if: github.ref == 'refs/heads/master'
         uses: ad-m/github-push-action@master
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-      - name: Trigger our build webhook on Netlify
-        run: curl -X POST "https://api.netlify.com/build_hooks/${TOKEN}"
-        env:
-          TOKEN: ${{ secrets.CRON_BUILD_HOOK_HOSPITALBRANCH }}
