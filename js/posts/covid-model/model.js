@@ -29,7 +29,7 @@ const recovered_color = '#F2BAC9';
 
 // MODEL ASSUMPTIONS
 const SIMULATION_WEEKS = 12;
-var r0 = 0.0;  // FROM CDC
+var r0 = 0.0; 
 const infectionLength = 1; //how many weeks a student is contagious for
 const initialCases = 1;
 
