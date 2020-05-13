@@ -158,6 +158,7 @@
         border-width: 1px;
         margin-bottom: 2vh;
         margin-top: 1vh;
+        margin: auto;
       }
     
       .legend-marker {
