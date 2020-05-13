@@ -25,7 +25,7 @@ scripts:
 
 # Introduction
 
-In the middle of a global pandemic, uncertainty has become the new normal. Many states across the country are now beginning to lift restrictions, but colleges must weigh the difficult decision of how to keep students and staff safe while still providing a quality education. While UCLA has already decided to [move summer sessions A and C online](https://dailybruin.com/2020/05/11/ucla-to-hold-summer-session-c-online-considering-selective-in-person-instruction/), the fate of fall quarter is still up in the air. Crowded lecture halls and dorm rooms make it nearly impossible for students to practice social distancing without a disruption to normal college life. As UCLA grapples with whether to welcome students back to campus in the fall, The Stack examines how quickly COVID-19 could spread through the undergraduate student body. Inspired by professor Kim Weeden's [model of course enrollment networks](https://twitter.com/weedenkim/status/1258894522127396866?s=21) at Cornell University, we created our own model of how connected UCLA students are based on the classes they enroll in.
+In the middle of a global pandemic, uncertainty has become the new normal. Many states across the country are now beginning to lift restrictions, but colleges must weigh the difficult decision of how to keep students and staff safe while still providing a quality education. While UCLA has already decided to [move summer sessions A and C online](https://dailybruin.com/2020/05/11/ucla-to-hold-summer-session-c-online-considering-selective-in-person-instruction/), the fate of fall quarter is still up in the air. Crowded lecture halls and dorm rooms make it nearly impossible for students to practice social distancing without a disruption to normal college life. As UCLA grapples with whether to welcome students back to campus in the fall, The Stack examines how quickly COVID-19 could spread through the undergraduate student body. Inspired by professor Kim Weeden's [model of course enrollment networks](https://twitter.com/weedenkim/status/1258894522127396866?s=21) at Cornell University, we created our own model of how connected UCLA students are based on the classes they enroll in. We also thank Professor Mason Porter and Professor Stephanie Wang from the UCLA Math department for providing guidance on modeling the student networks and for their constructive comments in the development of this piece.
 
 # Methods and Assumptions
 
@@ -47,7 +47,7 @@ To explore the visualization, drag the time slider forward through the weeks of 
 
 UCLA could decrease the R<sub>0</sub> if the university implements mandatory social distancing in classrooms, requires the wearing of masks or provides ample sanitizing products to all classrooms and lecture halls. Any combination of these measures would decrease the spread of the virus.
 
-<h3>Student Network Graph</h3>
+<h3>Student Network</h3>
 <div class="loader-wrapper">
   <div class="loader"></div>
 </div>
