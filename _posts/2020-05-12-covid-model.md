@@ -8,7 +8,7 @@ authors:
   - laurel_woods
 key_takeaways:
   - According to our model of the undergraduate student network, each UCLA student shares a class with 228 other students on average.
-  - Our simulation shows that with an R<sub>0</sub> value of 5.7, 94% of UCLA undergraduates could be infected by the end of fall quarter, and with an R<sub>0</sub> value of 2.0, 8% of UCLA undergraduates could be infected.
+  - Our simulation shows that with an R<sub>0</sub> value of 5.7, 94% of UCLA undergraduates could be infected by the end of fall quarter, and with an R<sub>0</sub> value of 2.0, 8% of UCLA undergraduates could be infected. 
 featured_image:
   url: covid-model/cover_photo.png
 og_image: covid-model/cover_photo.png
