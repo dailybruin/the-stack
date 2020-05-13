@@ -8,8 +8,7 @@ authors:
   - laurel_woods
 key_takeaways:
   - According to our model of the undergraduate student network, each UCLA student shares a class with 228 other students on average.
-  - Our simulation shows that with an R0 value of 5.7, 94% of UCLA undergraduates could be infected by the end of fall quarter.
-
+  - Our simulation shows that with an R<sub>0</sub> value of 5.7, 94% of UCLA undergraduates could be infected by the end of fall quarter.
 featured_image:
   url: covid-model/cover_photo.png
 og_image: covid-model/cover_photo.png
@@ -38,7 +37,7 @@ Ideally, once someone tests positive, they will self-isolate either the same day
 
 R<sub>0</sub>, pronounced “R-naught” and referred to as the “basic reproduction number,” measures how many others an infected individual will infect. An R<sub>0</sub> below one means that the virus will die out over time whereas an R<sub>0</sub> above one means there will be exponential growth, as has been seen in the United States. The value of R0 can vary across regions as it depends on population density and the amount of human contact, so the more social interactions that take place, the higher R0 will be. In California, social distancing and shelter-at-home orders have helped to reduce R0 below the nation-wide levels and to flatten the curve of new infections. However, if in-person classes take place in the fall, the infection rate at UCLA would be higher than the current R0 in a locked-down Los Angeles. For our model, we used 5.7, the median R<sub>0</sub> value [calculated](https://wwwnc.cdc.gov/eid/article/26/7/20-0282_article) by a study posted on the CDC website, as our default. It should be noted that these calculations were based on data from China’s CDC. We started with a single infected student at UCLA. An infected student will infect an average of 5.7 of their classmates over the period of one week. Each classmate has a certain probability of being infected based on the R0 and the number of classmates the original infected student has. Although research is still being done on immunity to COVID-19, we assumed that once a student has recovered, they will not be infected again.
 
-# Modelling The Student Network
+# Modeling the Student Network
 
 The graph below models a typical quarter at UCLA, with each node representing an undergraduate student. Using fall 2019 data provided by the Office of Academic Planning and Budget of how many students are in each major, each student was placed in one of 76 departments and randomly assigned to three courses that were either within their department or were GEs, using a [stochastic block model](#more-on-stochastic-block-models). Each student is then assumed to be connected to every other student they share a class with, and the virus can be transmitted between connected students.
 
@@ -78,7 +77,7 @@ UCLA could decrease the R<sub>0</sub> if the university implements mandatory soc
   </div>
 </div>
 
-In our model network, students had an average of 228 connections. We ran the simulation 100 times from week 0 to finals week with an R0 value of 5.7, and found that on average, 94% of students were infected by the end of fall quarter. The peak of new cases occurred at week 6 with over 11,000 new cases.
+In our model network, students had an average of 228 connections. We ran the simulation 100 times from week 0 to finals week with an R<sub>0</sub> value of 5.7, and found that on average, 94% of students were infected by the end of fall quarter. The peak of new cases occurred at week 6 with over 11,000 new cases.
 
 We also ran the simulation several times for different values of R<sub>0</sub>. The following chart shows the number of people infected on average through the 11 weeks, for varying values of R<sub>0</sub>:
 
