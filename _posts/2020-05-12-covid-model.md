@@ -120,7 +120,7 @@ A stochastic block model considers a set of student communities, grouped by depa
 
 Then a matrix A defines the probabilities used to randomly assign students from each department to courses in other departments. Cell<sub>i, j</sub> of A represents the probability that a student housed in department i will take a course in department j. For this example, there's a probability of 0.7 that a sciences student will take a sciences class, a 0.1 probability they will take a business class, and a 0.2 probability they will take a humanities class.
 
-$$
+$$A=\begin{pmatrix}
 Sciences&Business&Humanities\\
 0.7&0.1&0.2\\
 0.1&0.8&0.1\\
