@@ -7,8 +7,9 @@ authors:
   - sydney_kovach
   - laurel_woods
 key_takeaways:
-  - After running the simulation 100 times for 11 weeks, an average of 94% of students were infected.
-  - On average, each UCLA undergraduate shared a class with 228 other students.
+  - According to our model of the undergraduate student network, each UCLA student shares a class with 228 other students on average.
+  - Our simulation shows that with an R0 value of 5.7, 94% of UCLA undergraduates could be infected by the end of fall quarter.
+
 featured_image:
   url: covid-model/cover_photo.png
 og_image: covid-model/cover_photo.png
@@ -35,7 +36,7 @@ The incubation period for COVID-19 is typically five to six days, though it can 
 
 Ideally, once someone tests positive, they will self-isolate either the same day or the next day; therefore, we assume that infected students that become symptomatic will be contagious and spread COVID-19 for about a week. However, asymptomatic spread is also significant; according to an [NPR interview with Robert Redfield](https://www.npr.org/sections/health-shots/2020/03/31/824155179/cdc-director-on-models-for-the-months-to-come-this-virus-is-going-to-be-with-us), director of the Centers for Disease Control and Prevention, up to 25% of people with COVID-19 may never show symptoms and are therefore less likely to seek testing and self-isolate. Moreover, [a study](https://www.medrxiv.org/content/10.1101/2020.04.13.20063529v1) stated that 40% to 80% of transmissions could occur from individuals who have not shown symptoms.
 
-R<sub>0</sub>, pronounced “R-naught” and referred to as the “basic reproduction number,” measures how many others an infected individual will infect. An R<sub>0</sub> below one means that the virus will die out over time whereas an R<sub>0</sub> above one means there will be exponential growth, as has been seen in the United States. Social distancing and shelter-at-home orders reduce human contact, which then lowers R<sub>0</sub> in a particular region. For our model, we used 5.7, the median R<sub>0</sub> value [calculated](https://wwwnc.cdc.gov/eid/article/26/7/20-0282_article) by a study posted on the CDC website, as our default. It should be noted that these calculations were based on data from China’s CDC. We started with a single infected student at UCLA. Although research is still being done on immunity to COVID-19, we assumed that once a student has recovered, they will not be infected again.
+R<sub>0</sub>, pronounced “R-naught” and referred to as the “basic reproduction number,” measures how many others an infected individual will infect. An R<sub>0</sub> below one means that the virus will die out over time whereas an R<sub>0</sub> above one means there will be exponential growth, as has been seen in the United States. The value of R0 can vary across regions as it depends on population density and the amount of human contact, so the more social interactions that take place, the higher R0 will be. In California, social distancing and shelter-at-home orders have helped to reduce R0 below the nation-wide levels and to flatten the curve of new infections. However, if in-person classes take place in the fall, the infection rate at UCLA would be higher than the current R0 in a locked-down Los Angeles. For our model, we used 5.7, the median R<sub>0</sub> value [calculated](https://wwwnc.cdc.gov/eid/article/26/7/20-0282_article) by a study posted on the CDC website, as our default. It should be noted that these calculations were based on data from China’s CDC. We started with a single infected student at UCLA. An infected student will infect an average of 5.7 of their classmates over the period of one week. Each classmate has a certain probability of being infected based on the R0 and the number of classmates the original infected student has. Although research is still being done on immunity to COVID-19, we assumed that once a student has recovered, they will not be infected again.
 
 # Modelling The Student Network
 
