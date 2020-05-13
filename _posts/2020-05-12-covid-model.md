@@ -104,14 +104,25 @@ UCLA is a large school with a very well-connected student network posing numerou
 
 For more updates on coronavirus news relevant to UCLA, visit the [Daily Bruin’s coronavirus dashboard](https://features.dailybruin.com/2020/covid-19/). For more information about how students have been affected by the pandemic, visit the Daily Bruin’s “[Unfinished Stories](https://covidstories.dailybruin.com/)” project. To schedule a free COVID-19 test in LA County or learn more about testing, [click here](https://lacovidprod.service-now.com/rrs?id=rrs_apply). More information about the coronavirus and COVID-19 from [UCLA Health](https://www.uclahealth.org/coronavirus) can be found here.
 
+<script src="//yihui.org/js/math-code.js"></script>
+<!-- Just one possible MathJax CDN below. You may use others. -->
+<script async
+  src="//mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
 # More on Stochastic Block Models
 
 A stochastic block model considers a set of student communities, grouped by department, such as mathematics, art history or psychology. So for example, consider a three-department school: Sciences with 200 students, Business with 150 students and Humanities with 170 students. The student communities set is then [200, 150, 170].
 
-Then a matrix A defines the probabilities to randomly select students from each community/department to other communities/departments. The ith row represents the probability of a student from the ith community taking courses with people in each of the 3 departments.
+Then a matrix A defines the probabilities used to randomly assign students from each department to courses in other departments. Cell(i,j) of A represents the probability that a student housed in department i will take a course in department j. For this example, there's a probability of 0.7 that a sciences student will take a sciences class, a 0.1 probability they will take a business class, and a 0.2 probability they will take a humanities class.
 
-So A = [[0.7, 0.1, 0.2] → probability of a sciences students in each department
-[0.1, 0.8, 0.1]→ probability of a business student in each department
-[0.1, 0.2, 0.7]] → probability of a humanities student in each department]
+$$A=\begin{pmatrix}
+Sciences&Business&Humanities\\
+0.7&0.1&0.2\\
+0.1&0.8&0.1\\
+0.1&0.2&0.7
+\end{pmatrix}$$
 
-This example has simulated probabilities, but the real probabilities in our model are based on the number of GE, diversity and language courses in each major. So if a College of Letters and Science student in the mathematics department takes 140 units of major courses and 40 units of GEs, then the probability of the student being enrolled in the mathematics department is 140/180, and, in the other GE-offering departments, is 40/180, which in turn are distributed by department. So if there are three GE courses offered in total, with two of them being offered in department A and one being offered in department B, department A will have probability ⅔ _ 40/180, and department B will have probability ⅓ _ 40/180.
+This example has simulated probabilities, but the real probabilities in our model are based on the number of GE, diversity and language courses in each major. So if a College of Letters and Science student in the mathematics department takes 140 units of major courses and 40 units of GEs, then the probability of the student being enrolled in the mathematics department is $$\frac{140}{180}$$, and, in the other GE-offering departments, is $$\frac{40}{180}$$, which in turn are distributed by department. So if there are three GE courses offered in total, with two of them being offered in department A and one being offered in department B, department A will have probability $$\frac{2}{3} * \frac{40}{180}$$, and department B will have probability $$\frac{1}{3} * \frac{40}{180}$$.
+
+
