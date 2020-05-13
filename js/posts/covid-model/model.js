@@ -147,13 +147,19 @@ function initViz() {
     .style('alignment-baseline', 'middle');
   
   // init slider
+  let w1 = width * .6 * .9;
+  let w2 = width * .6;
+  if (width < 480) {  //phone
+    w1 = width * .9 * .8;
+    w2 = width * .9;
+  }
   viz.slider = d3
     .sliderHorizontal()
     .min(0)
     .max(11)
     .step(1)
     .fill('blue')
-    .width(width * .55)
+    .width(w1)
     .displayValue(true);
   
   viz.slider.on('onchange', val => {
@@ -167,7 +173,7 @@ function initViz() {
   
   d3.select('.slider')
     .append('svg')
-    .attr('width', width * .6)
+    .attr('width', w2)
     .attr('height', 80)
     .append('g')
     .attr('transform', 'translate(30,30)')
