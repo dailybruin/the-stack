@@ -145,13 +145,6 @@ async function initChart() {
         },
       },
     ];
-    linechart.options.scales.xAxes = [
-      {
-        scaleLabel: {
-          display: false,
-        },
-      },
-    ];
 
     color_codes = {
       '1': '#374C80',
