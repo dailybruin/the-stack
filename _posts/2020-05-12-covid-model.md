@@ -54,8 +54,8 @@ UCLA could maintain a small R<sub>0</sub> if the university implements mandatory
 <div id="viz">
   <div class="r0-slider-wrapper">
     <p class="slider-title r0-title">Drag the slider to change the value of R<sub>0</sub></p>
-    <input class="r0slider" type="range" min="0.1" max="18" value="5.7" step="0.1">
-    <p class="r0val">R<sub>0</sub> = 5.7</p>
+    <input class="r0slider" type="range" min="0.1" max="5.7" value="0.0" step="0.1">
+    <p class="r0val">R<sub>0</sub> = 0.0</p>
   </div>
   <div class="graph-wrapper">
     <div class="graph"></div>
