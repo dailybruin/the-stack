@@ -127,5 +127,22 @@
 
 /* Phone Level */
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
+    .button {
+        display: inline-block;
+    }
+    .button-div {
+        width: 100%;
+    }
 
+    .column {
+        float: none;
+    }
+
+    .slider-wrapper {
+        width: 100%;
+        text-align: center;
+    }
+    .stats {
+        width: 90%;
+    }
 }
