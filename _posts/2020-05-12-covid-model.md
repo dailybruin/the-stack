@@ -8,7 +8,7 @@ authors:
   - laurel_woods
 key_takeaways:
   - According to our model of the undergraduate student network, each UCLA student shares a class with 228 other students on average.
-  - Our simulation shows that with an R<sub>0</sub> value of 5.7, 94% of UCLA undergraduates could be infected by the end of fall quarter, and with an R<sub>0</sub> value of 2.0, 34% of UCLA undergraduates could be infected.
+  - Our simulation shows that with an R<sub>0</sub> value of 5.7, 94% of UCLA undergraduates could be infected by the end of fall quarter, and with an R<sub>0</sub> value of 2.0, 8% of UCLA undergraduates could be infected.
 featured_image:
   url: covid-model/cover_photo.png
 og_image: covid-model/cover_photo.png
@@ -79,7 +79,7 @@ UCLA could maintain a small R<sub>0</sub> if the university implements mandatory
   </div>
 </div>
 
-In our model network, students had an average of 228 connections. We ran the simulation 100 times from week 0 to finals week with an R<sub>0</sub> value of 5.7, and found that on average, 94% of students were infected by the end of fall quarter. The peak of new cases occurred at week 6 with over 11,000 new cases. With a smaller R<sub>0</sub> of 2.0, we found that 34% of students were infected by the end of fall quarter. 
+In our model network, students had an average of 228 connections. We ran the simulation 100 times from week 0 to finals week with an R<sub>0</sub> value of 5.7, and found that on average, 94% of students were infected by the end of fall quarter. The peak of new cases occurred at week 6 with over 11,000 new cases. With a smaller R<sub>0</sub> of 2.0, we found that 8% of students were infected by the end of fall quarter. 
 
 We also calculated the average number of infections over 100 runs for several different values of R<sub>0</sub>. The following chart shows the number of people infected on average through the 11 weeks, for varying values of R<sub>0</sub>:
 
