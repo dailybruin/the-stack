@@ -7,8 +7,8 @@ authors:
   - sydney_kovach
   - laurel_woods
 key_takeaways:
-  - After running the simulation 100 times for 11 weeks, an average of 94% of students were infected.
-  - On average, each UCLA undergraduate shared a class with 228 other students.
+  - According to our model of the undergraduate student network, each UCLA student shares a class with 228 other students on average.
+  - Our simulation shows that with an R<sub>0</sub> value of 5.7, 94% of UCLA undergraduates could be infected by the end of fall quarter.
 featured_image:
   url: covid-model/cover_photo.png
 og_image: covid-model/cover_photo.png
@@ -37,7 +37,7 @@ Ideally, once someone tests positive, they will self-isolate either the same day
 
 R<sub>0</sub>, pronounced “R-naught” and referred to as the “basic reproduction number,” measures how many others an infected individual will infect. An R<sub>0</sub> below one means that the virus will die out over time whereas an R<sub>0</sub> above one means there will be exponential growth, as has been seen in the United States. Social distancing and shelter-at-home orders reduce human contact, which then lowers R<sub>0</sub> in a particular region. For our model, we used 5.7, the median R<sub>0</sub> value [calculated](https://wwwnc.cdc.gov/eid/article/26/7/20-0282_article) by a study posted on the CDC website, as our default. It should be noted that these calculations were based on data from China’s CDC. We started with a single infected student at UCLA. Although research is still being done on immunity to COVID-19, we assumed that once a student has recovered, they will not be infected again.
 
-# Modeling The Student Network
+# Modeling the Student Network
 
 The graph below models a typical quarter at UCLA, with each node representing an undergraduate student. Using fall 2019 data provided by the Office of Academic Planning and Budget of how many students are in each major, each student was placed in one of 76 departments and randomly assigned to three courses that were either within their department or were GEs, using a [stochastic block model](#more-on-stochastic-block-models). Each student is then assumed to be connected to every other student they share a class with, and the virus can be transmitted between connected students.
 
@@ -77,7 +77,7 @@ UCLA could decrease the R<sub>0</sub> if the university implements mandatory soc
   </div>
 </div>
 
-In our model network, students had an average of 228 connections. We ran the simulation 100 times from week 0 to finals week with an R0 value of 5.7, and found that on average, 94% of students were infected by the end of fall quarter. The peak of new cases occurred at week 6 with over 11,000 new cases.
+In our model network, students had an average of 228 connections. We ran the simulation 100 times from week 0 to finals week with an R<sub>0</sub> value of 5.7, and found that on average, 94% of students were infected by the end of fall quarter. The peak of new cases occurred at week 6 with over 11,000 new cases.
 
 We also ran the simulation several times for different values of R<sub>0</sub>. The following chart shows the number of people infected on average through the 11 weeks, for varying values of R<sub>0</sub>:
 
@@ -105,4 +105,4 @@ So A = [[0.7, 0.1, 0.2] → probability of a sciences students in each departmen
 [0.1, 0.8, 0.1]→ probability of a business student in each department
 [0.1, 0.2, 0.7]] → probability of a humanities student in each department]
 
-This example has simulated probabilities, but the real probabilities in our model are based on the number of GE, diversity and language courses in each major. So if a College of Letters and Science student in the mathematics department takes 140 units of major courses and 40 units of GEs, then the probability of the student being enrolled in the mathematics department is 140/180, and, in the other GE-offering departments, is 40/180, which in turn are distributed by department. So if there are three GE courses offered in total, with two of them being offered in department A and one being offered in department B, department A will have probability ⅔ * 40/180, and department B will have probability ⅓ * 40/180.
+This example has simulated probabilities, but the real probabilities in our model are based on the number of GE, diversity and language courses in each major. So if a College of Letters and Science student in the mathematics department takes 140 units of major courses and 40 units of GEs, then the probability of the student being enrolled in the mathematics department is 140/180, and, in the other GE-offering departments, is 40/180, which in turn are distributed by department. So if there are three GE courses offered in total, with two of them being offered in department A and one being offered in department B, department A will have probability ⅔ _ 40/180, and department B will have probability ⅓ _ 40/180.
