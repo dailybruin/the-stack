@@ -74,6 +74,7 @@ UCLA could decrease the R<sub>0</sub> if the university implements mandatory soc
       <button class="play button" type="button">Play</button>
       <button class="restart button" type="button">Restart</button>
     </div>
+  </div>
 </div>
 
 In our model network, students had an average of 228 connections. We ran the simulation 100 times from week 0 to finals week with an R<sub>0</sub> value of 5.7, and found that on average, 94% of students were infected by the end of fall quarter. The peak of new cases occurred at week 6 with over 11,000 new cases.
@@ -83,8 +84,7 @@ We also calculated the average number of infections over 100 runs for several di
 <div id="linechart-wrapper">
   <canvas id="linechart"></canvas>
 </div>
-</div>
-  <div id="custom-legend">
+<div id="custom-legend">
   <div class="legend-marker" id="total"></div><span class="legend-label">Total Undergrads</span> <br>
   <div class="legend-marker" id="1"></div><span class="legend-label">R0 = 1</span> <br>
   <div class="legend-marker" id="2"></div><span class="legend-label">R0 = 2</span> <br>
