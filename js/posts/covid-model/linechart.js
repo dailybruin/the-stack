@@ -152,6 +152,30 @@ async function initChart() {
         },
       },
     ];
+
+    color_codes = {
+      '1': '#374C80',
+      '2': '#7A5195',
+      '2.5': '#BC5090',
+      '3': '#EF5675',
+      '4': '#FF764A',
+      '5.7': '#FFA600',
+      'total': 'gray'
+    }
+
+    Object.keys(color_codes).forEach(function(key) {
+      document.getElementById(key).style.borderColor = color_codes[key];
+  });
+  
+
+    // document.getElementById('total').style.borderColor = 'gray';
+    // document.getElementById('1').style.borderColor = '#000000';
+    // document.getElementById('2').style.borderColor = '#000000';
+    // document.getElementById('2.5').style.borderColor = '#000000';
+    // document.getElementById('3').style.borderColor = '#000000';
+    // document.getElementById('4').style.borderColor = '#000000';
+    // document.getElementById('5.7').style.borderColor = '#000000';
+
   } else linechart.canvas.parentNode.style.width = '1000px';
 }
 

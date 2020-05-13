@@ -125,6 +125,13 @@
   margin: 0 auto;
 }
 
+
+#custom-legend, 
+.legend-marker, 
+.legend-label {
+  display: none;
+}
+
 /* Phone Level */
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
     .button {
@@ -145,4 +152,23 @@
     .stats {
         width: 90%;
     }
+
+    #custom-legend {
+        border: solid #000;
+        border-width: 1px;
+        margin-bottom: 2vh;
+        margin-top: 1vh;
+      }
+    
+      .legend-marker {
+        border: solid #000;
+        border-width: 1px;
+        display: inline-block;
+        width: 1em;
+        line-height: 0.6em;
+        margin: 0.5em;
+      }
+      .legend-label {
+        display: inline-block;
+      }
 }
