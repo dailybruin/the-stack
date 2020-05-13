@@ -25,10 +25,9 @@ async function initChart() {
     datasets: [],
   };
 
-  for (let i = 0; i < SIMULATION_WEEKS - 1; i++) {
+  for (let i = 0; i < SIMULATION_WEEKS; i++) {
     data.labels.push(i);
   }
-  data.labels.push('Finals');
 
   //total ucla undergrads
   let benchmark = {
@@ -68,7 +67,7 @@ async function initChart() {
       // intersect: false,
       callbacks: {
         title: function(tooltipItem) {
-          if (tooltipItem[0].xLabel === 'Finals') {
+          if (tooltipItem[0].xLabel === '11') {
             return 'Finals Week';
           } else {
             return 'Week ' + tooltipItem[0].xLabel;
@@ -119,7 +118,7 @@ async function initChart() {
     legend: {
       display: true,
       position: 'left',
-    }
+    },
   };
 
   let ctx = document.getElementById('linechart');
@@ -133,13 +132,13 @@ async function initChart() {
   Chart.defaults.global.defaultFontSize = 15;
   Chart.defaults.global.defaultFontColor = '#777';
 
-  let x = window.matchMedia("(max-width: 480px)");
+  let x = window.matchMedia('(max-width: 480px)');
   if (x.matches) {
-    linechart.canvas.parentNode.style.width = "340px"; 
+    linechart.canvas.parentNode.style.width = '340px';
     linechart.options.legend = {
       display: false,
     };
-    linechart.options.scales.yAxes =  [
+    linechart.options.scales.yAxes = [
       {
         scaleLabel: {
           display: false,
@@ -153,11 +152,7 @@ async function initChart() {
         },
       },
     ];
-  }
-  else 
-    linechart.canvas.parentNode.style.width = '1000px';
-  
+  } else linechart.canvas.parentNode.style.width = '1000px';
 }
-
 
 initChart();
