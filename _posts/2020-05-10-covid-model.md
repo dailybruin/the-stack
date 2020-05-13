@@ -7,7 +7,7 @@ authors:
   - sydney_kovach
   - laurel_woods
 key_takeaways:
-  - After running the simulation X times for 11 weeks, an average of Y% of students were infected.
+  - After running the simulation 100 times for 11 weeks, an average of 94% of students were infected.
   - On average, each UCLA undergraduate shared a class with 228 other students.
 featured_image:
   url: covid-model/cover_photo.png
@@ -29,7 +29,7 @@ In the middle of a global pandemic, uncertainty has become the new normal. Many 
 
 # Methods and Assumptions
 
-Our model looks solely at the spread of COVID-19 through classes and does not take into account interactions students may have through dorm rooms, dining halls, campus organizations or other social aspects of student life. Additionally, the model only takes undergraduate students into consideration. In particular, a realistic picture of the campus includes many more affected groups, like graduate students, faculty, administrative staff, on-campus and dining workers, many of whom are more likely to be in a higher risk category than undergraduate students. However, to keep the model simple and its implementation feasible given the available data, we only factor in undergraduate students. It should also be noted that, although the studies referenced in this article have not yet been peer-reviewed, this is common for coronavirus-related studies because of their newness.
+Our model looks solely at the spread of COVID-19 through classes and does not take into account interactions students may have through dorm rooms, dining halls, campus organizations or other social aspects of student life. We assume that any student who shares a class with an infected student is exposed to the virus and could become infected. Additionally, the model only takes undergraduate students into consideration. In particular, a realistic picture of the campus includes many more affected groups, like graduate students, faculty, administrative staff, on-campus and dining workers, many of whom are more likely to be in a higher risk category than undergraduate students. However, to keep the model simple and its implementation feasible given the available data, we only factor in undergraduate students. It should also be noted that, although the studies referenced in this article have not yet been peer-reviewed, this is common for coronavirus-related studies because of their newness.
 
 The incubation period for COVID-19 is typically five to six days, though it can take anywhere between one to 14 days to develop symptoms after exposure, if symptoms do develop. LA County offers free COVID-19 testing to all residents, including three testing sites within five miles of UCLA, but same-day and next-day appointments are prioritized for front-line workers and symptomatic patients. We assume that UCLA students will get tested seven days after exposure on average.
 
@@ -44,6 +44,8 @@ The graph below models a typical quarter at UCLA, with each node representing an
 Interdepartmental connectivity in this model arises primarily from degree/school-level requirements like general education, diversity and language. Some other cases like interdepartmental requirements and cross-listing for individual majors, minors, and double majors are not taken into account. In general, these factors are likely to make the model more interconnected and as such our version is a more conservative picture. Some other niche cases like students coming in with transfer credit or students who waive out of certain requirements using diagnostic tests are not considered, i.e., it is assumed that every student takes all their required courses at UCLA.
 
 To explore the visualization, drag the time slider forward through the weeks of fall 2020 or press play to automate it. Each week, an infected student will infect an average of R<sub>0</sub> students. The value of R<sub>0</sub>, [set to 5.7](https://wwwnc.cdc.gov/eid/article/26/7/20-0282_article) by default, can also be adjusted with the slider above the graph to explore different rates of infection.
+
+UCLA could decrease the R<sub>0</sub> if the university implements mandatory social distancing in classrooms, requires the wearing of masks or provides ample sanitizing products to all classrooms and lecture halls. Any combination of these measures would decrease the spread of the virus.
 
 <h3>Student Network Graph</h3>
 <div class="loader-wrapper">
@@ -75,8 +77,7 @@ To explore the visualization, drag the time slider forward through the weeks of 
   </div>
 </div>
 
-- After running the simulation X times for 11 weeks, an average of Y% of students were infected.
-- On average, each student had 228 connections.
+In our model network, students had an average of 228 connections. We ran the simulation 100 times from week 0 to finals week with an R0 value of 5.7, and found that on average, 94% of students were infected by the end of fall quarter. The peak of new cases occurred at week 6 with over 11,000 new cases.
 
 We also ran the simulation several times for different values of R<sub>0</sub>. The following chart shows the number of people infected on average through the 11 weeks, for varying values of R<sub>0</sub>:
 
@@ -85,6 +86,8 @@ We also ran the simulation several times for different values of R<sub>0</sub>. 
 </div>
 
 # Conclusion
+
+The potential spread of the virus depicted above does not take into account interactions in shared spaces such as bruinwalk, libraries, dining halls, etc. or the fact that the same lecture hall is used, i.e., the same chairs are reused and such surfaces might be a source of infection. These models also do not show the potential spread through shared living spaces such as dorms and apartments. Consequently, COVID-19 could be much more infectious through the UCLA community than the models above show. In fear of outbreaks, [California State University campuses will remain closed](https://www2.calstate.edu/csu-system/news/Pages/CSU-Chancellor-Timothy-P-Whites-Statement-on-Fall-2020-University-Operational-Plans.aspx) for the Fall 2020 semester, and the 23 universities in this system will proceed with primarily virtual instruction. UCLA has yet to make a decision on whether the Fall 2020 quarter will be held virtually or whether there will be some in-person instruction.
 
 As of May 11, there are over 1.3 million confirmed cases and over 80,000 deaths in the U.S. In LA County, there are over 32,00 confirmed cases and over 1,500 deaths. LA County is offering free coronavirus tests for all residents and working to test up to 10,000 people every day, with each site capable of running 100 to 500 tests per day. Up to one in four COVID-19 patients may remain asymptomatic and never quarantine. Asymptomatic carriers may therefore be more likely to spread the virus than those who show symptoms, get tested and quarantine themselves. It is crucial to practice social distancing, wash hands and wear a cloth mask to prevent the virus from spreading, according to the CDC.
 

@@ -24,7 +24,7 @@ const HEALTHY = 0;
 const INFECTED = 1;
 const RECOVERED = 2;
 const healthy_color = '#7CA5B8';
-const infected_color = '#c32148';
+const infected_color = '#622580';
 const recovered_color = '#F2BAC9';
 
 // MODEL ASSUMPTIONS
