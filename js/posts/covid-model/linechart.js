@@ -166,17 +166,12 @@ async function initChart() {
     Object.keys(color_codes).forEach(function(key) {
       document.getElementById(key).style.borderColor = color_codes[key];
   });
-  
-
-    // document.getElementById('total').style.borderColor = 'gray';
-    // document.getElementById('1').style.borderColor = '#000000';
-    // document.getElementById('2').style.borderColor = '#000000';
-    // document.getElementById('2.5').style.borderColor = '#000000';
-    // document.getElementById('3').style.borderColor = '#000000';
-    // document.getElementById('4').style.borderColor = '#000000';
-    // document.getElementById('5.7').style.borderColor = '#000000';
-
-  } else linechart.canvas.parentNode.style.width = '1000px';
+  } else {
+    linechart.canvas.parentNode.style.width = '1000px';
+    document.getElementById('custom-legend').style.display = 'none';
+    document.getElementsByClassName('legend-marker').style.display = 'none';
+    document.getElementsByClassName('legend-label').style.display = 'none';
+  }
 }
 
 initChart();
