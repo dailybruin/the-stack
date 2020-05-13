@@ -97,7 +97,8 @@ let lineChart = new Chart(document.getElementById('line-chart'), {
     },
     title: {
       display: true,
-      text: 'Hypothetical Resources needed by UCLA Students', //TODO: or better naming
+      text:
+        'Hypothetical Beds needed by UCLA Students at Ronald Reagan Medical Center',
     },
     scales: {
       xAxes: [
@@ -106,7 +107,7 @@ let lineChart = new Chart(document.getElementById('line-chart'), {
           labels: timeLabels,
           scaleLabel: {
             display: true,
-            labelString: 'Time into the future', //TODO: or better naming
+            labelString: 'Time into the future',
           },
           display: true,
         },
@@ -194,7 +195,7 @@ function make_responsive(x) {
       display: false,
       position: 'top',
     };
-    lineChart.options.scales = {
+    (lineChart.options.scales = {
       xAxes: [
         {
           type: 'category',
@@ -216,8 +217,8 @@ function make_responsive(x) {
           },
         },
       ],
-    },
-    lineChart.update();
+    }),
+      lineChart.update();
   }
   
   update_legend(false);
