@@ -30,12 +30,15 @@ function getProps(year, ethnicity) {
 
 let proportionsChart = new Chart(document.getElementById("proportions_chart"), {
     type: 'horizontalBar',
+    //type: 'bar',
     data: {
+      //labels: getProps(years[0], ethnicity[0]),
       labels: getLabels(years[0], ethnicity[0]),
       datasets: [{
         label: "Percent",
         backgroundColor: color_codes[ethnicity[0]],
-        data: getProps(years[0], ethnicity[0])
+        data: getProps(years[0], ethnicity[0]),
+        //data: getLabels(years[0], ethnicity[0]),
       }]
                                  
     }, 

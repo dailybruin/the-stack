@@ -1,11 +1,11 @@
 ---
-title:  "How does professor diversity <i>stack</i> up between UCLA departments?"
+title:  "Evaluating the Decade's Racial Trends Among Faculty at UCLA"
 teaser: 
 authors:
     - bernard_mendez
-    - jeanette_lin
     - annie_zhang
     - charlotte_huang
+    - jeanette_lin
     - jc_rios
 key_takeaways:
     - not a lot of brown people
@@ -15,12 +15,13 @@ featured_image:
 og_image: /professor-demographics/graph.png
 stylesheets:
     - /css/posts/professor-demographics/app.css
+    - /css/posts/professor-demographics/copy.css
 scripts:
     - //d3js.org/d3.v4.min.js
     - //d3js.org/d3-transition.v1.min.js
     - //ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js
     - //cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.js
-    - /js/posts/professor-demographics/app.js
+    - /js/posts/professor-demographics/appDONTFORGETTODELETE.js
     - /js/posts/professor-demographics/data_vars/American_Indian.js
     - /js/posts/professor-demographics/data_vars/Asian.js
     - /js/posts/professor-demographics/data_vars/Black.js
@@ -29,106 +30,124 @@ scripts:
     - /js/posts/professor-demographics/data_vars/Unknown.js
     - /js/posts/professor-demographics/data_vars/White.js
     - /js/posts/professor-demographics/chart.js
+    - /js/posts/professor-demographics/var.js
+    - /js/posts/professor-demographics/copy.js
+    - /js/posts/professor-demographics/char.js
 ---
 
-<h2>About the Data</h2>
-Here are some bullet points to consider including:
+
+<p>
+Brantly Fulton grew up in Pontiac, Michigan, an underprivileged community outside Detroit. 
+</p>
+<p>
+Fulton went on to graduate with a degree in Chemistry from Morehouse College and joined UCLA as a lecturer of Chemistry in 2018.
+</p>
+<p>
+Still, he said his path was difficult — there was nobody for him to look up to.
+</p>
+<p>
+“I didn't have professors that lived in my neighborhood,” he said. “You don't have a symbol of that person who looks like you represent you.”
+</p>
+<p>
+Fulton said African American students have told him they feel more comfortable coming to his lectures, coming to his office hours and paying attention in class because they can identify with him.
+</p>
+<p>
+Fulton said although there is great diversity among undergraduate and graduate students, there is diversity among faculty is very little, adding he thinks institutions should do better seeking out talented individuals from underrepresented backgrounds. Since 2010, there has never been more than two fully employed African American faculty in Fulton’s department.
+</p>
+<p>
+“Because it is so competitive to get into academia, it allows for institutions to sit back and just allow for applicants to apply,” he said. “Institutions need to be more proactive and attend minority based conferences and go out into these communities to kind of seek out the talents.”
+</p>
+<p>
+UCLA founded the Office of Equity, Diversity and Inclusion in 2015 in response to the Moreno Report — an internal investigation which found the university’s response to incidents of bias and discrimination as “inadequate.”
+</p>
+<p>
+The Office of EDI has since implemented measures to improve faculty diversity, including the creation of BruinX, a campus think tank which aims to apply data analytics toward diversity-related issues.
+</p>
+<p>
+The Stack took a look into faculty hiring patterns based on race over the past 10 years, starting from the 2010-2011 through the 2018-2019 academic year, using data provided by the BruinX office.
+</p>
+
+
+<div id='wrap1'>
+<div id='holder'>
+    <div id='school_wrap'>
+        <h2>School</h2>
+        <div class='menu' id='school'></div>
+    </div>
+    <div id='dept_wrap'>
+        <h2>Department</h2>
+        <div class='menu' id='depts'></div>
+    </div>
+    <h4 style='padding-top: 10px'>Sort by</h4>
+    <form action="">
+      <input type="radio" name="gender" value="gender" id='sch' onclick='ichange("school")'>School<br>
+      <input type="radio" name="gender" value="race" onclick='ichange("department")'>Department<br>
+    </form>
+</div>
+
+<div id='graphs'>
+    <div style='width: 100%; mex-width: 100%; height: 75vh; min-height: 60vh;'>
+        <canvas id='modified' style='width: 100%; height: 100%; min-height: 60vh;'></canvas>
+    </div>
+</div>
+</div>
+
+
+<aside id='pie_stand'>
+    <div><h2 style='padding-top: 5%;'>Demographics by School</h2>
+    <h4 style='text-align: center;'>2018-2019</h4></div>
+</aside>
+
+## General Trends
+### About the Data
+<p>
 <ul>
-<li>Only considered departments that taught students (undergrad or grad): ones that didn’t tended to be extremely small (often had 5 or less total faculty).</li>
-<li>Also wanted to focus on the faculty students are most likely to interact with, as the demographics of the faculty can shape perceptions of the field: seeing faculty who look like you is encouraging, while the opposite can be discouraging</li>
+<li>The data was collected from BruinX, an analytics-based think tank housed under the Office of Equity, Diversity and Inclusion at UCLA.</li>
+<li>The number of faculty per school/department is shown as Full-time equivalent — an employee who works full time year round would equal 1 FTE, while an employee who works full time for half the year would equal 0.5 FTE.</li>
+<li>Departments that do not teach undergraduate courses and have less than 5 FTE faculty are not shown, however they are included in broader school counts. </li>
 </ul>
-
-<h2>Just how diverse are professors at UCLA?</h2>
-
+</p>
 <p>
-Tempus quam pellentesque nec nam aliquam. Eu mi bibendum neque egestas congue. Vel orci porta non pulvinar. Et tortor at risus viverra adipiscing at. Nulla aliquet porttitor lacus luctus accumsan tortor posuere ac ut. Tincidunt tortor aliquam nulla facilisi cras. Fermentum iaculis eu non diam. Convallis convallis tellus id interdum. Placerat duis ultricies lacus sed turpis tincidunt. Gravida dictum fusce ut placerat orci nulla pellentesque. Nullam non nisi est sit amet facilisis magna etiam tempor. Eget lorem dolor sed viverra ipsum nunc. Aliquam malesuada bibendum arcu vitae elementum curabitur vitae nunc. At volutpat diam ut venenatis tellus in metus vulputate. Pellentesque elit eget gravida cum sociis natoque penatibus. Bibendum est ultricies integer quis auctor elit sed vulputate. Nulla facilisi nullam vehicula ipsum a arcu cursus.
+In general, women are underrepresented compared to men. Campuswide, 61% of the UCLA faculty are male. Men are most highly represented in the School of Engineering, the School of Management and in the Physical Sciences. Women are most highly represented in the School of Nursing, the Graduate School of Education and Information Studies and the School of Public Health.
 </p>
 
-
-<div id='bernardgraph' style='width: 130vh; max-width: 100%;margin-left: auto; margin-right: auto; margin-bottom: 50px;'>
-
-<div>
-<label for='gender'>Sort by Gender or Race/Ethnicity</label>
-<select id='gender'>
-    <option>Race/Ethnicity</option>
-    <option>Gender</option>
-</select>
-</div>
-
-<div>
-    <label for='school'>Select by School</label>
-    <select id='school'>
-    </select>
-</div>
-
-<div>
-    <label for='departments'>Select by Department</label>
-    <select id='departments'>
-    </select>
-</div>
-
-<div style='width: 130vh; max-width: 100%;'>
-    <canvas id='raceChart' style='height: 70vh'></canvas>
-</div>
-
-<div class='comment'>Professor quantity is measured in Full Time Equivalence (FTE).</div>
-
-<h4 style='margin-top: 30px; text-align: center'>Compared to the California Population</h4>
-    
-<div id='balls' style='display: flex; flex-wrap: wrap; width: 100%; justify-content: space-around'>
-    <div>
-        <h4>California (2017)</h4>
-        <svg id='california' style='width: 250px; height: 270px'></svg>
-        <div class='comment'>* Source: 2017 American Community Survey</div>
-    </div>
-    <div>
-        <h4>Department</h4>
-        <svg id='people' style='width: 250; height: 270px'></svg>
-    </div>
-</div>
-
-
-<div style='width: 100%; padding-bottom: 5px; '>
-    <div style='width: 60vh; max-width: 100%; margin-left: auto; margin-right: auto'>
-        <input style='width: 59.5vh;' id='changeYear'
-            type="range" min="2010" max="2018" value="2018" step='1'>
-        <div id='yrlist' style='width: 61vh; max-width: 100%; margin-left: auto; margin-right: auto; display: flex; justify-content: space-between'>
-            <span>2010</span>
-            <span>2011</span>
-            <span>2012</span>
-            <span>2013</span>
-            <span>2014</span>
-            <span>2015</span>
-            <span>2016</span>
-            <span>2017</span>
-            <span>2018</span>
-        </div>
-    </div>
-    
-
-</div>
-
-<div class='comment'>* Each dot represents 1 person out of a 100 person group</div>
-
-</div>
-
-<h2>Which departments are the most and least diverse?</h2>
-<div class='comment'>contemplating changing this heading to be more specific but idk what to change it to</div>
+## What has UCLA done in the past 10 years?
 
 <p>
-In this chart you can select a year and ethnic group and see the five departments with the highest proportion of faculty belonging to that ethnic group. 
+Efforts to improve diversity within the faculty have largely been spearheaded by UCLA’s Office of Equity, Diversity and Inclusion.
+</p>
+<p>
+Law Professor Jerry Kang was appointed as the first Vice Chancellor in 2015, tasked to build the new department from scratch. 
+</p>
+<p>
+Since then, the office has attempted to ___ including by publicizing resources to encourage ___ and releasing accountability reports which includes statistics of complaints and investigations on campus.. 
+</p>
+<p>
+Nweke Chukwuebuka, a postdoctoral researcher in the Civil and Environmental Engineering said there has been a lot of effort to hire minority faculty — which includes black, latino/a, LGBTQ and female candidates. 
+</p>
+<p>
+Chukwuebuka added that minorities are put in the same pool when it comes to searching for minority candidates, which reduces the efficacy of these initiatives.
+</p>
+<p>
+“It's almost like they compete against each other,” he said. “(It) becomes a crabs in a bucket type situation.”
+</p>
+<p>
+By the end, however, the faculty chooses the best candidate regardless of race, he added. The process brings out the best minority candidates and lets them compete with the otherwise best candidates.
+</p>
+<p>
+Chukwuebuka added he thinks universities should focus on pipelining students from the high school and undergraduate level toward the graduate and professor level, since the pathway is a funnel between each level. Still, UCLA is on the right track he said, adding he hopes people don’t forget the importance of diversity.
+</p>
+<p>
+“My biggest fear is that (diversity is) in fact a buzzword, and that people will forget about it in a couple of years,” Chukwuebuka said. “But from what I'm seeing... I don't think that that's the case”
 </p>
 
-<p>
-Departments whose area of focus was a particular ethnic group--like the Asian American Studies department--consistently had high proportions of faculty who also belonged to that ethnic group. For instance, African American Studies had the highest proportion of African American professors every year except one, while Chicana/o Studies and Spanish and Portuguese were always in the top five for Latino professors. 
-</p>
+## Unequal Departments
 
 <p>
-For some ethnic groups, the departments that had the greatest proportion of their faculty belonging to that group were almost identical from year to year: across all 9 years, only 10 different departments are in the top 5 for Asian professors, while only 13 are in the top 5 for African American professors. On the other hand, 19 are in the top 5 for white professors.
+Unsurprisingly, cultural fields of study often had high proportions of that culture as faculty. The Asian American Studies department, for example, had a nearly homogeneously asian faculty through the 9 years we measured. Similarly, the Chicana/o Studies and Spanish and Portuguese departments had high levels of latina/o faculty and the.
 </p>
-
 <p>
-It’s also worth exploring the departments that have no professors of certain ethnic groups--the data showed that while it was not uncommon that every year there were at least 20 departments that featured no Asian professors, no African American professors, no Latino professors, or no American Indian professors, rarely was there more than 4 departments that featured no white professors. 
+It’s also worth noting that some departments had no professors of some ethnic groups — the data showed that almost every year, there were at least 20 departments that had no Asian professors, African American professors, Latino professors or American Indian professors, while there were rarely more than 4 departments with no white professors.
 </p>
 
 <div class="anniegraph">
@@ -160,23 +179,6 @@ It’s also worth exploring the departments that have no professors of certain e
     </div>
 </div>
 
-<p>
-Imperdiet dui accumsan sit amet nulla facilisi morbi. Viverra accumsan in nisl nisi scelerisque eu ultrices vitae auctor. Semper risus in hendrerit gravida. Sed enim ut sem viverra aliquet eget. Pellentesque dignissim enim sit amet venenatis urna cursus. Pellentesque dignissim enim sit amet venenatis urna. Id diam vel quam elementum pulvinar etiam non quam. Fermentum leo vel orci porta non pulvinar neque laoreet suspendisse. Tristique senectus et netus et. Euismod nisi porta lorem mollis aliquam ut porttitor leo a.
-</p>
-
-<h2>How does UCLA stack up with other UC schools?</h2>
-
-<p>
-Ac turpis egestas maecenas pharetra convallis. Fringilla ut morbi tincidunt augue interdum velit. Placerat in egestas erat imperdiet sed. Iaculis eu non diam phasellus. Quisque non tellus orci ac auctor augue mauris. Morbi tristique senectus et netus. Tincidunt id aliquet risus feugiat in ante. Eu consequat ac felis donec et odio pellentesque diam volutpat. Etiam tempor orci eu lobortis elementum nibh tellus molestie. Dui nunc mattis enim ut tellus. Donec massa sapien faucibus et molestie ac. At risus viverra adipiscing at in tellus integer. Nibh mauris cursus mattis molestie a iaculis. Orci phasellus egestas tellus rutrum tellus.
-</p>
-
-<h1 style='color: grey; text-align: center; width: 100%; font-size: 900%; user-select: none'>[  JC viz  ]</h1>
-
-<p>
-Imperdiet dui accumsan sit amet nulla facilisi morbi. Viverra accumsan in nisl nisi scelerisque eu ultrices vitae auctor. Semper risus in hendrerit gravida. Sed enim ut sem viverra aliquet eget. Pellentesque dignissim enim sit amet venenatis urna cursus. Pellentesque dignissim enim sit amet venenatis urna. Id diam vel quam elementum pulvinar etiam non quam. Fermentum leo vel orci porta non pulvinar neque laoreet suspendisse. Tristique senectus et netus et. Euismod nisi porta lorem mollis aliquam ut porttitor leo a.
-</p>
-
-
 <h2>Has UCLA improved diverse hiring?</h2>
 
 <p>
@@ -199,22 +201,45 @@ Yes, gratefully! UCLA on average has improved diverse hiring and the period from
 
   <div id="table"></div>
 
-<p>
-The top five departments in Female and Asian groups have higher increase in proportion than others. Both of them have higher than or equal to 100 percentage increase in all top five departments, while some of the departments in the rest of the minority groups: American Indian, Black, and Latino have less than 100 percentage increase. Note that here we only examine the increase in one minority group, but not the general increase in all minority groups. Therefore, for the listed departments in one minority group, such as Asian, may decrease in the proportion of the other minority group.
-
-
-<div id="table"></div>
 
 <p>
 The top five departments in Female and Asian groups have higher increase in proportion than others. Both of them have higher than or equal to 100 percentage increase in all top five departments, while some of the departments in the rest of the minority groups: American Indian, Black, and Latino have less than 100 percentage increase. Note that here we only examine the increase in one minority group, but not the general increase in all minority groups. Therefore, for the listed departments in one minority group, such as Asian, may decrease in the proportion of the other minority group.
 </p>
 
-<h2>Does diversity matter?</h2>
+<div style='width: 100%;'>
+<h4 style='margin-top: 30px; text-align: center'>Compared to the California Population</h4>
+<div id='balls' style='display: flex; flex-direction: row; width: 90vh; max-width: 100%; justify-content: space-around'>
+    <div>
+        <h4>California</h4>
+        <svg id='california' style='width: 250px; height: 270px'></svg>
+        <div class='comment'>* Source: 2017 American Community Survey</div>
+    </div>
+    <div>
+        <h4>UCLA Faculty</h4>
+        <svg id='people' style='width: 250; height: 270px'></svg>
+    </div>
+</div>
+<div style='padding-bottom: 5px; '>
+    <div style='width: 60vh; max-width: 100%; margin-left: auto; margin-right: auto'>
+        <input style='width: 59.5vh;' id='changeYear' onchange='updateBalls()'
+            type="range" min="2010" max="2018" value="2018" step='1'>
+        <div id='yrlist' style='width: 61vh; max-width: 100%; margin-left: auto; margin-right: auto; display: flex; justify-content: space-between'>
+            <span>2010</span>
+            <span>2011</span>
+            <span>2012</span>
+            <span>2013</span>
+            <span>2014</span>
+            <span>2015</span>
+            <span>2016</span>
+            <span>2017</span>
+            <span>2018</span>
+        </div>
+    </div>
+</div>
+<div class='comment'>* Each dot represents 1 person out of a 100 person group</div>
+</div>
 
-<p>
-Ac turpis egestas maecenas pharetra convallis. Fringilla ut morbi tincidunt augue interdum velit. Placerat in egestas erat imperdiet sed. Iaculis eu non diam phasellus. Quisque non tellus orci ac auctor augue mauris. Morbi tristique senectus et netus. Tincidunt id aliquet risus feugiat in ante. Eu consequat ac felis donec et odio pellentesque diam volutpat. Etiam tempor orci eu lobortis elementum nibh tellus molestie. Dui nunc mattis enim ut tellus. Donec massa sapien faucibus et molestie ac. At risus viverra adipiscing at in tellus integer. Nibh mauris cursus mattis molestie a iaculis. Orci phasellus egestas tellus rutrum tellus.
-</p>
 
-<p>
-Imperdiet dui accumsan sit amet nulla facilisi morbi. Viverra accumsan in nisl nisi scelerisque eu ultrices vitae auctor. Semper risus in hendrerit gravida. Sed enim ut sem viverra aliquet eget. Pellentesque dignissim enim sit amet venenatis urna cursus. Pellentesque dignissim enim sit amet venenatis urna. Id diam vel quam elementum pulvinar etiam non quam. Fermentum leo vel orci porta non pulvinar neque laoreet suspendisse. Tristique senectus et netus et. Euismod nisi porta lorem mollis aliquam ut porttitor leo a.
-</p>
+<select id='four' onchange='shift_graph()'></select>
+
+<canvas id='change' style='width: 500px; height: 400px;'></canvas>

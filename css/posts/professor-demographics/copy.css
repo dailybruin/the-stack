@@ -1,0 +1,77 @@
+#wrap1 {
+    max-width: 100%;
+    min-height: 80vh;
+    #border: 1px solid;
+    display: flex;
+    -webkit-flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    -webkit-flex-wrap: wrap;
+}
+.menu {
+    #border: 1px solid;
+    min-width: 300px;
+    display: flex;
+    -webkit-flex-direction: column;
+    height: 270px;
+    overflow-y: scroll;
+} .menu button {
+    width: 100%;
+    background: none;
+    border: 1px solid lightgrey;
+    outline: none;
+}
+
+#graphs {
+    width: 120vh;
+    #min-width: 100vh;
+    max-width: 90%;
+}
+
+.pie {
+    width: 50%;
+    #height: 100%;
+    #border: 1px solid;
+    display: flex;
+    justify-content: center;
+}
+
+#pie_stand {
+    min-width: 80vh;
+    width: 80vh;
+    height: 110vh;
+    overflow-y: scroll;
+    display: flex;
+    -webkit-flex-direction: row;
+    -webkit-flex-wrap: wrap;
+    justify-content: center;
+    #margin-left: auto;
+    float: right;
+    #border: 1px solid;
+    top: 0;
+    right: 0;
+    background: #efefef;
+} #pie_stand .title {
+    text-align: center;
+    max-width: 70vh;
+    height: 9vh;
+    margin-top: 4vh;
+    font-weight: bold;
+    vertical-align: bottom;
+}
+
+.pie_wrapper {
+    display: flex;
+    -webkit-flex-direction: row;
+    justify-content: center;
+    width: 70vh;
+    min-width: 70vh;
+    #border: 1px solid;
+}
+
+#strangetext {
+    width: 100%;
+} #pars {
+    width: 100%;
+    border: 1px solid;
+}

@@ -185,7 +185,7 @@ function dept(n, f, m, i, a, b, h, t, u, w, T) {
     this.genders = [f, m];
 }
 
-d3.csv('/datasets/professor-demographics/professor-demographics.csv')
+d3.csv('/datasets/professor-demographics/professor-demographics-updated.csv')
     .get(function(data) {
 
     var all = [];
