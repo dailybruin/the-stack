@@ -37,8 +37,8 @@
 }
 
 #pie_stand {
-    min-width: 80vh;
-    width: 80vh;
+    min-width: 70vh;
+    width: 70vh;
     height: 110vh;
     overflow-y: scroll;
     display: flex;
@@ -51,6 +51,8 @@
     top: 0;
     right: 0;
     #background: #efefef;
+    margin-right: 5vh;
+    margin-bottom: 2vh;
 } #pie_stand .title {
     text-align: center;
     max-width: 70vh;

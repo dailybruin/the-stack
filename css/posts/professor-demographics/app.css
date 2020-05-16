@@ -89,6 +89,7 @@ tr:nth-child(even) {background-color: #f2f2f2;}
     margin-left: auto;
     margin-right: auto;
     margin-bottom: auto;
+    max-width: 100%;
     /* border-left: 10px solid transparent;
     border-right: 10px solid transparent;
     border-top: 10px solid grey;
@@ -97,26 +98,21 @@ tr:nth-child(even) {background-color: #f2f2f2;}
 
 table {
   border-collapse: collapse;
-  float:center;
+  float: center;
   table-layout: auto;
-  width: 50%;
   border: 10px;
-  margin-left: 25%;
-  margin-right: 25%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 TD {
-  width: 400px;
-  height: 40px;
-  padding: 10px;
+  border: 1px solid;
   text-align: center;
   border-bottom: 1px solid #ddd;
 }
 
 TH {
   background-color: #0072B2;
-  height: 50px;
-  padding: 10px;
   border-bottom: 1px solid #ddd;
 }
 

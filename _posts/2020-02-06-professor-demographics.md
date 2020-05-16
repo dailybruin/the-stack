@@ -163,9 +163,7 @@ It’s also worth noting that some departments had no professors of some ethnic 
 
 Yes, gratefully! UCLA on average has improved diverse hiring and the period from year 2010 to 2018 has seen a big increase in the proportion of minority groups, including Female, American Indian, Asian, Black, and Latino. We calculated each year's proportion of the minority groups in every department and the increase in the proportion from 2010 to 2018. For some departments data are not available for the first few years, for which the increase is calculated from the year when the data is available. Same applies for the departments that do not have data in the recent years. Each minority group has different increase in proportion, with Female and Asian on average bigger increases. This can also be validated from the below tables, where we listed the departments that have the biggest increase in the minority group proportion respectively.
 
-<div id='bernardgraph' style='width: 130vh; max-width: 100%;margin-left: auto; margin-right: auto; margin-bottom: 50px;'>
 
-  <div>
   <label for='gender'>Sort by Gender or Race/Ethnicity</label>
   <select id='tableChoice'>
       <option>Female</option>
@@ -174,24 +172,22 @@ Yes, gratefully! UCLA on average has improved diverse hiring and the period from
       <option>Black</option>
       <option>Latino</option>
   </select>
-  </div>
-  </div>
 
-  <div id="table"></div>
+  <div id="table" style='width: 100%;'></div>
 
 The top five departments in Female and Asian groups have higher increase in proportion than others. Both of them have higher than or equal to 100 percentage increase in all top five departments, while some of the departments in the rest of the minority groups: American Indian, Black, and Latino have less than 100 percentage increase. Note that here we only examine the increase in one minority group, but not the general increase in all minority groups. Therefore, for the listed departments in one minority group, such as Asian, may decrease in the proportion of the other minority group.
 
-<div style='width: 80vh; max-width: 100%; margin-left: auto; margin-right: auto;'>
+<div style='width: 110vh; max-width: 100%; margin-left: auto; margin-right: auto;'>
 <h4 style='margin-top: 30px; text-align: center'>Compared to the California Population</h4>
-<div id='balls' style='display: flex; flex-direction: row; flex-wrap: wrap; width: 90vh; max-width: 100%; justify-content: space-around'>
+<div id='balls' style='display: flex; flex-direction: row; flex-wrap: wrap; width: 90vh; max-width: 100%; justify-content: space-around; margin-left: auto; margin-right: auto;'>
     <div>
         <h4>California</h4>
-        <svg id='california' style='width: 250px; height: 270px'></svg>
+        <svg id='california' style='width: 250px; height: 270px;'></svg>
         <div class='comment'>* Source: 2017 American Community Survey</div>
     </div>
     <div>
         <h4>UCLA Faculty</h4>
-        <svg id='people' style='width: 250; height: 270px'></svg>
+        <svg id='people' style='width: 250px; height: 270px'></svg>
     </div>
 </div>
 <div style='padding-bottom: 5px; '>
