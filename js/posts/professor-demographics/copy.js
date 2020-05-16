@@ -174,26 +174,37 @@ for (i=0; i<big_data.length; i++) {
 }
 */
 for (i=0; i<school_list.length; i++) {
-    var temp_button = document.createElement('button')
+    var temp_button = document.createElement('option')
     temp_button.innerHTML = school_list[i];
     temp_button.value = i;
     temp_button.onclick = function() {
-        display_graph(this.innerHTML, mod, dem_by_school);
-        //document.querySelector('#big_name').innerHTML = this.innerHTML;
+        //display_graph(this.innerHTML, mod, dem_by_school);
+        alert('test')
+
     }
     schools.appendChild(temp_button)
 }
-
+schools.addEventListener('change', function() {
+    var string = this.getElementsByTagName('option')[this.selectedIndex].innerHTML
+    display_graph(this.selectedIndex-1, mod, dem_by_school, string)
+})
+    
 for (i=0; i<dept_list.length; i++) {
-    var temp_button = document.createElement('button')
+    var temp_button = document.createElement('option')
     temp_button.innerHTML = dept_list[i];
     temp_button.value = i;
-    temp_button.onclick = function() {
+    /*
+    temp_button.onchange = function() {
         display_graph(this.innerHTML, mod, haha);
-        //document.querySelector('#big_name').innerHTML = this.innerHTML;
+        alert('test')
     }
+    */
     depts.appendChild(temp_button)
 }
+depts.addEventListener('change', function() {
+    var string = this.getElementsByTagName('option')[this.selectedIndex].innerHTML;
+    display_graph(this.selectedIndex-1, mod, haha, string);
+})
 
 
 const config = {
@@ -241,16 +252,11 @@ const config = {
 var ctx = document.querySelector('#modified');
 var mod = new Chart(ctx, config)
 
-function display_graph(string, graph, type) {
+function display_graph(index, graph, type, string) {
 
     var temp = '';
-    for (a=0; a<type.length; a++) {
-        if (type[a].name == string)
-            temp = type[a]
-    }
-    if (temp == '')
-        alert('help')
-
+    temp = type[index]
+    
     var pork = {
         labels: years,
         datasets: [],
@@ -293,21 +299,20 @@ function display_graph(string, graph, type) {
     graph.update();
 
 }
+display_graph(1, mod, dem_by_school, 'CAMPUSWIDE')
 
 function ichange(to) {
     if (to == 'school') {
-        dept_wrap.style.display = 'none'
-        school_wrap.style.display = 'block'
+        dept_wrap.style.display = 'none';
+        school_wrap.style.display = 'block';
     } else if (to == 'department'){
-        school_wrap.style.display = 'none'
-        dept_wrap.style.display = 'block'
+        school_wrap.style.display = 'none';
+        dept_wrap.style.display = 'block';
     }
 }
 
 window.onload = function(){
-  document.getElementById("sch").click();
-  setTimeout(function() {document.getElementsByTagName('button')[0].click()}, 1000)
-  //schools.querySelector('button')[0].click();
+  setTimeout(function() {document.getElementById('sch').click()}, 300)
 };
 
 
@@ -323,7 +328,7 @@ function updateBalls() {
     var california = d3.select('#california').selectAll('circle');
     var people = d3.select('#people').selectAll('circle');
 
-    const radius = 8;
+    const radius = 10;
 
     var config;
     if (2==1/*document.getElementById('gender').selectedIndex == 1*/) {
@@ -382,6 +387,7 @@ function updateBalls() {
     }
 
 }
+updateBalls();
 
 
 var pie_gender = {
@@ -510,7 +516,7 @@ for (a=0; a<dem_by_school.length; a++) {
 //var pies = document.querySelector('.pie');
 //var ctx = document.querySelector('.gen canvas');
 //var pie2 = new Chart(ctx, pie_gender)
-
+/*
 var tot = (2237.80 - 1972.50) / 1972.50
 var whi = (1453.10 - 1454.80) /1454.80
 var ais = (428.2 - 310.7) /310.7
@@ -546,9 +552,6 @@ for (a=0; a<dem_by_school.length; a++) {
     four.appendChild(temp);
 }
 
-for (a=0; a<dem_by_school.length; a++) {
-    
-}
 
 var config2 = {
     type: 'bar',
@@ -590,21 +593,32 @@ var config2 = {
             intersect: true
         },
     },
-
+    data: {
+        datasets: [{
+            label: 'one',
+            data: change_by_school_1[0]
+        }, {
+            label: 'twp',
+            data: change_by_school_2[0]
+        }],
+        labels: race_titles,
+    },
 }
 
-function shift_graph() {
-    var temp = document.getElementById('four').selectedIndex;
-
-    var ctx = document.querySelector('#change');
-    
-    
-    
-    (dem_by_school[a].races[1][5] - dem_by_school[a].races[1][1]) / dem_by_school[a].races[1][1]
-    
-    var CHANGE = new Chart(ctx, config)
-    CHANGE.data
-
+function shift_graph(graph, index) {
+    temp = [{
+        label: 'one',
+        data: change_by_school_1[index]
+    }, {
+        label: 'twp',
+        data: change_by_school_2[index]
+    }];
+    graph.data.datasets = temp;
+    graph.update()
 }
+
+var cts = document.querySelector('#change');
+var asfd = new Chart(cts, config2)
 
 console.log(dem_by_school)
+*/
