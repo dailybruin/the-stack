@@ -8,5 +8,6 @@ Gemfile.lock
 *.env
 auth.yaml
 __pycache__
+.jekyll-cache/
 
 .vscode/settings.json
