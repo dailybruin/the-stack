@@ -220,7 +220,7 @@ function make_responsive(x) {
     }),
       lineChart.update();
   }
-  
+
   update_legend(false);
 }
 
@@ -229,9 +229,12 @@ function update_legend(bed_type) {
     if (bed_type != null)
       bed_type ? (current_bed_type = 'ICU') : (current_bed_type = 'Hospital');
 
-    document.getElementById('total').innerHTML = 'Total Students Needing ' + current_bed_type + ' Beds';
-    document.getElementById('ugrad').innerHTML = 'Undergrad Students Needing ' + current_bed_type + ' Beds'; 
-    document.getElementById('grad').innerHTML = 'Graduate Students Needing ' + current_bed_type + ' Beds'; 
+    document.getElementById('total').innerHTML =
+      'Total Students Needing ' + current_bed_type + ' Beds';
+    document.getElementById('ugrad').innerHTML =
+      'Undergrad Students Needing ' + current_bed_type + ' Beds';
+    document.getElementById('grad').innerHTML =
+      'Graduate Students Needing ' + current_bed_type + ' Beds';
     document.getElementById('tot').innerHTML = current_bed_type + ' Beds';
 
     document.getElementById('m-total').style.borderColor = colorCodes['total'];
@@ -239,5 +242,5 @@ function update_legend(bed_type) {
     document.getElementById('m-grad').style.borderColor = colorCodes['grad'];
     document.getElementById('m-tot').style.borderColor = colorCodes['tot_hos'];
     document.getElementById('m-tot').style.borderStyle = 'dashed';
-  } 
+  }
 }

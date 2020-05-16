@@ -78,10 +78,10 @@ def process_data(cases, lb_pas, date):
 
     filtered.at[2, 'CITY/COMMUNITY**'] = 'Long Beach'
     filtered.at[3, 'CITY/COMMUNITY**'] = 'Pasadena'
-    filtered.at[2, 'Rate**'] = filtered.at[2, 'Total Cases'] / (LONG_BEACH_POPULATION / 100000)
-    filtered.at[3, 'Rate**'] = filtered.at[3, 'Total Cases'] / (PASADENA_POPULATION / 100000)
+    filtered.at[2, 'Rate'] = filtered.at[2, 'Cases'] / (LONG_BEACH_POPULATION / 100000)
+    filtered.at[3, 'Rate'] = filtered.at[3, 'Cases'] / (PASADENA_POPULATION / 100000)
 
-    cases = cases.append(filtered, ignore_index=True)
+    cases = cases.append(filtered, ignore_index=True, sort=False)
 
     # load geoJSON
     with open('datasets/covid-hospitals/neighborhoods.geojson') as x:
@@ -105,11 +105,13 @@ def process_data(cases, lb_pas, date):
             name = name[14:]
         if name.find('Unincorporated - ') == 0:
             name = name[17:]
+        if name.find('*') == len(name)-1:
+            name = name[:len(name)-1]
         if name in conversions:
             name = conversions[name]
             
         # no rate data available 
-        if row[1]['Rate**'] == "NA":
+        if row[1]['Rate'] == "NA":
             continue
         
         match = False
@@ -118,8 +120,8 @@ def process_data(cases, lb_pas, date):
             if (name == n):
                 match = True
                 
-                case_count = float(row[1]['Total Cases'])
-                rate = float(row[1]['Rate**'])
+                case_count = float(row[1]['Cases'])
+                rate = float(row[1]['Rate'])
                 pop = 0 if rate == 0 else case_count / rate
                 
                 if f['properties']['cases'] is None:
@@ -256,8 +258,8 @@ tr_elements = doc.xpath('//tr')
 dfs = dataframe_from_tr(tr_elements, 3)
 # dfs += dataframe_from_tr(tr_elements, 4) 
 
-cases = dfs[7]
-lb_pas= dfs[0]
+cases = dfs[8]
+lb_pas= dfs[1]
 
 text = doc.findall('.//caption')[0].text_content()
 dateString = re.search("[0-9]+:[0-9]+[ap]m [0-9]{1,2}/[0-9]{1,2}", text).group()
@@ -267,3 +269,4 @@ jsonData = process_data(cases, lb_pas, dateString)
 # write geoJSON 
 with open('datasets/covid-hospitals/neighborhoods.geojson', 'w') as outfile:
     json.dump(jsonData, outfile)
+
