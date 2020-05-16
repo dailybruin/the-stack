@@ -1,11 +1,20 @@
 * {
     outline: none !important;
-} #bernard h2, #bernard p {
+}
+/*
+#bernard h2, #bernard p {
     width: 100vh !important;
     max-width: 100%;
     margin-left: auto;
     margin-right: auto;
-} #changeYear {
+}
+
+#bernardgraph {
+    user-select: none !important;
+}
+*/
+
+#changeYear {
     -webkit-appearance: none;
     background-color: lightgrey;
     height: 5px;
@@ -30,7 +39,6 @@
 #changeYear:hover, #yrlist:hover {
     cursor: pointer;
 }
-
 .comment {
     font-style: italic;
     width: 100%;
@@ -39,14 +47,31 @@
     font-align: right;
 }
 
-#bernardgraph {
-    user-select: none !important;
-}
-
 #table{
-  padding: 10px;
+padding: 10px;
 border-color: white;
 border: 10px;
+}
+
+
+#dropdown-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.dropdown-child {
+    padding: 1.5em;
+}
+
+.anniegraph {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: auto;
+    max-width: 100%;
+    /* border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid grey;
+    border-bottom: 10px solid transparent; */
 }
 
 table {
@@ -71,48 +96,6 @@ TH {
   background-color: #0072B2;
   height: 50px;
   padding: 10px;
-  border-bottom: 1px solid #ddd;
-}
-
-tr:nth-child(even) {background-color: #f2f2f2;}
-
-#dropdown-wrapper {
-    display: flex;
-    justify-content: center;
-}
-
-.dropdown-child {
-    padding: 1.5em;
-}
-
-.anniegraph {
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: auto;
-    max-width: 100%;
-    /* border-left: 10px solid transparent;
-    border-right: 10px solid transparent;
-    border-top: 10px solid grey;
-    border-bottom: 10px solid transparent; */
-}
-
-table {
-  border-collapse: collapse;
-  float: center;
-  table-layout: auto;
-  border: 10px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-TD {
-  border: 1px solid;
-  text-align: center;
-  border-bottom: 1px solid #ddd;
-}
-
-TH {
-  background-color: #0072B2;
   border-bottom: 1px solid #ddd;
 }
 

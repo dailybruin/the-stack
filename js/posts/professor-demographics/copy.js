@@ -472,7 +472,7 @@ for (a=0; a<dem_by_school.length; a++) {
             datasets: gen_pie,
         },
         options: {
-            responsive: false,
+            responsive: true,
             legend: {
                 display: false,
             }
@@ -485,7 +485,7 @@ for (a=0; a<dem_by_school.length; a++) {
             datasets: dem_pie,
         },
         options: {
-            responsive: false,
+            responsive: true,
             legend: {
                 display: false,
             }
