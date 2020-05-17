@@ -13,18 +13,11 @@ key_takeaways:
 featured_image:
   url: ticket-data/featured.png
 og_image: ticket-data/featured.png
-
 stylesheets:
   - /css/posts/ticket-data/index.css
-  
 scripts:
   - https://code.jquery.com/jquery-3.4.1.min.js
   - //d3js.org/d3.v3.min.js
-
-
-  
-
-  
 ---
 <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 #### Teaser

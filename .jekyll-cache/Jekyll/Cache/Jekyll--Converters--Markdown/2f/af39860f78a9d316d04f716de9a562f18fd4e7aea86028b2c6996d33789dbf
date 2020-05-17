@@ -1,0 +1,216 @@
+I"1<h1 id="website-code-documentation">Website code documentation</h1>
+
+<h2 id="overview-of-jekyll">Overview of Jekyll</h2>
+
+<p>The Stack is built using <a href="http://jekyllrb.com/">Jekyll</a>. Jekyll is a Ruby
+application which takes files with special markup and organized in a
+<a href="https://en.wikipedia.org/wiki/Don%27t_repeat_yourself">DRY</a> manner and
+transforms or “compiles” them into a static site that can be served by any
+static file web server without any special software.</p>
+
+<p><a href="http://jekyllrb.com/docs/home/">Jekyll’s documentation</a> is extensive. Check
+it out.</p>
+
+<p>Jekyll sites have two types of files and directories – those with and without
+a leading underscore. Directories without a leading underscore remain as they
+are after Jekyll’s compile process, so if you created a top-level directory
+called  <code class="highlighter-rouge">foo</code>, it would be accessible at <code class="highlighter-rouge">http://website.com/foo/</code>. Folders
+with leading underscores are “transformed” in some way – they get moved around,
+made into new files, or their data gets incorporated into existing files.</p>
+
+<p>Any file – whether prefixed with an underscore or a “regular”
+file – can be processed by Jekyll by starting the file with a set of
+triple hyphens, <code class="highlighter-rouge">---</code>, followed by another set of triple hyphens on the next
+line. You can optionally put metadata on lines between these sets of hyphens,
+and Jekyll can use it while processing the file. This data between the
+hyphens is called <a href="http://jekyllrb.com/docs/frontmatter/">“front matter”</a>,
+and it’s a very important concept in Jekyll.</p>
+
+<p>Front matter is written in <a href="http://www.yaml.org/refcard.html">YAML</a>, a very
+readable data serialization standard. (They don’t like to call it a markup
+language, but you can basically think of it that way.)</p>
+
+<h2 id="file-structure">File structure</h2>
+
+<h3 id="top-level-">[top level] (<code class="highlighter-rouge">/</code>)</h3>
+
+<p>All the global configuration options for a Jekyll site are in <code class="highlighter-rouge">/_config.yml</code>.
+Here you can set things like the website name, website description,
+timezone, how articles are parsed,
+<a href="https://jekyllrb.com/docs/configuration/">and more</a>.</p>
+
+<p>Regular website pages, like About and Project Gallery, are also at the top
+level at <code class="highlighter-rouge">about.md</code> and <code class="highlighter-rouge">project-gallery.md</code>.</p>
+
+<p><code class="highlighter-rouge">feed.xml</code> controls the format of the RSS feed that Jekyll automatically
+generates when your site is compiled.</p>
+
+<p><code class="highlighter-rouge">index.html</code> is the front page of the blog at http://stack.dailybruin.com.</p>
+
+<p><code class="highlighter-rouge">README.md</code> contains information about the project for people landing on
+the GitHub repo and new contributors.</p>
+
+<p><code class="highlighter-rouge">setup.sh</code> contains a script for automating initial setup of the project 
+for people on Mac/Linux computers.</p>
+
+<h3 id="_data"><code class="highlighter-rouge">_data</code></h3>
+
+<p>Stores collections of website data used for the site itself, <strong>NOT</strong> data used
+in posts/data visualizations.</p>
+
+<p><code class="highlighter-rouge">authors.yml</code> contains all the information about post authors. Edit this file
+to add a new author. Only <code class="highlighter-rouge">name</code> is required, but all other fields are
+highly recommended. Mugs are stored at <code class="highlighter-rouge">/img/mugs/author_key.jpg</code>.</p>
+
+<p><code class="highlighter-rouge">projects.yml</code> contains a list of projects for the Project Gallery page. Edit
+it to add more projects to the page. Screenshots are stored at
+<code class="highlighter-rouge">/img/projects/project_key.jpg</code>. Screenshots can be taken programmatically
+using a tool in <code class="highlighter-rouge">_utils/take-project-screenshots</code>. Read more on this tool
+further down.</p>
+
+<h3 id="_includes"><code class="highlighter-rouge">_includes</code></h3>
+
+<p>Reusable chunks of HTML that are used on basically every page are stored here.
+This includes the header, footer, and the <code class="highlighter-rouge">&lt;head&gt;</code> section of the HTML document.
+You probably won’t need/want to add or remove files here, but you may need to
+edit the existing files. Remember, any edits made here will affect every page.
+<strong>DO NOT</strong> put any heavy or page-specific JavaScript/CSS here, and think
+twice before editing these files.</p>
+
+<h3 id="_layouts"><code class="highlighter-rouge">_layouts</code></h3>
+
+<p>Posts and pages can have different layouts which can be configured through
+front matter. By default, posts will have the layout type <code class="highlighter-rouge">post</code>. Think of
+these like WordPress templates. Add a new template here for an ongoing series,
+for example, where you want all pages to have a shared header.</p>
+
+<p><code class="highlighter-rouge">projects.html</code> is used for the Project Gallery page.</p>
+
+<h3 id="_posts"><code class="highlighter-rouge">_posts</code></h3>
+
+<p>This is where the text and metadata for all posts is stored. Posts follow
+the format: <code class="highlighter-rouge">YYYY-MM-DD-article-url-slug.md</code>. Posts need to have specific
+front matter that is discussed in the Usage and Style document.</p>
+
+<h3 id="_sass"><code class="highlighter-rouge">_sass</code></h3>
+
+<p>Global styles for the whole site written in <a href="http://sass-lang.com/">Sass</a>.
+Sass is amazing and very easy to learn if you already know CSS. Don’t
+repeat yourself and write Sass exactly like CSS. Learn Sass and you’ll be
+happy and <em>sassy</em>.</p>
+
+<p><code class="highlighter-rouge">_base.scss</code> contains styles for <strong>basic HTML elements</strong> like headers and
+blockquotes. It <strong>is NOT</strong> for layout purposes.</p>
+
+<p><code class="highlighter-rouge">_globals.scss</code> contains global variables. Whenever you want to use a shared
+style like the primary brand color, import this file to use it.</p>
+
+<p><code class="highlighter-rouge">_layout.scss</code> is where you’ll find styles for the site header, footer,
+individual posts, the post list, etc. The bulk of the styles are here.</p>
+
+<p><code class="highlighter-rouge">_syntax-highlighting.scss</code> contains rules for syntax highlighting, which
+Jekyll
+<a href="https://jekyllrb.com/docs/templates/#code-snippet-highlighting">supports out of the box</a>.
+This file is supplied by the Jekyll framework, and you should probably not
+edit it.</p>
+
+<h3 id="_site"><code class="highlighter-rouge">_site</code></h3>
+
+<p>This is the output folder for your static site that is generated by Jekyll.
+If you haven’t generated the site locally by running <code class="highlighter-rouge">jekyll serve</code>, you won’t
+have this folder. <strong>NEVER version control this directory</strong> and <strong>NEVER edit
+any files in this directory</strong>. It will be overwritten when the site is
+recompiled. Basically do not touch.</p>
+
+<h3 id="_utils"><code class="highlighter-rouge">_utils</code></h3>
+
+<p>This folder contains tools for automating administrative tasks related to
+The Stack website.</p>
+
+<p><code class="highlighter-rouge">take-project-screenshots</code> is a node.js application that automatically
+takes screenshots of project pages stored in <code class="highlighter-rouge">/_data/projects.yml</code> and puts
+the screenshots in <code class="highlighter-rouge">/img/projects</code>. Running <code class="highlighter-rouge">npm install</code> this project
+directory will install the dependencies, and <code class="highlighter-rouge">node app.js</code> will run the program.
+<strong>CAUTION:</strong> Executing this program will cause all screenshots currently in the
+<code class="highlighter-rouge">/img/projects</code> directory to be deleted. More information on using this tool
+is available in the Usage and Style document.</p>
+
+<h3 id="css"><code class="highlighter-rouge">css</code></h3>
+
+<p>This folder stores page-specific css styles and the <code class="highlighter-rouge">main.scss</code> file which
+imports all sitewide styles from <code class="highlighter-rouge">/_sass</code>.</p>
+
+<p>CSS libraries that are <strong>NOT</strong>
+available from a CDN (preferred method of loading CSS/JS libraries), you
+can put them in the <code class="highlighter-rouge">lib</code> folder. CSS styles associated with a post should
+be placed in <code class="highlighter-rouge">css/posts/post-slug</code>.</p>
+
+<h3 id="datasets"><code class="highlighter-rouge">datasets</code></h3>
+
+<p>Data used in post visualizations is stored here in <code class="highlighter-rouge">post-slug</code> folders. Data
+is usually in <code class="highlighter-rouge">.json</code>, <code class="highlighter-rouge">.csv</code>, or <code class="highlighter-rouge">.tsv</code> formats, but may be in any format
+appropriate for the visualizations.</p>
+
+<h3 id="docs"><code class="highlighter-rouge">docs</code></h3>
+
+<p>Documentation for The Stack is kept here, including this document. Keep docs
+up to date whenever you change a feature of the site.</p>
+
+<h3 id="img"><code class="highlighter-rouge">img</code></h3>
+
+<p>Stores all the images used on the site, including site banner, logo, favicon,
+and nameplate.</p>
+
+<p><code class="highlighter-rouge">icons</code> holds reusable icons like social media icons.</p>
+
+<p><code class="highlighter-rouge">mugs</code> stores author photos. Photos should be 400x400px and have the name
+<code class="highlighter-rouge">author_key.jpg</code> where “author_key” is the unique identifier of the author in
+<code class="highlighter-rouge">/_data/authors.yml</code>.</p>
+
+<p><code class="highlighter-rouge">posts</code> holds all images used in posts. This includes the post’s featured
+image, Open Graph image (used for Facebook), and any other images used in the
+post. The format for the folder names is <code class="highlighter-rouge">post-slug</code>.</p>
+
+<p><code class="highlighter-rouge">projects</code> contains screenshots or other image for projects on the Project
+Gallery page. The images in this folder can be automatically created/updated
+using the <code class="highlighter-rouge">/_utils/take-project-screenshots</code> utility.</p>
+
+<h3 id="js"><code class="highlighter-rouge">js</code></h3>
+
+<p>Stores all JavaScript files and similar scripts used on the website.</p>
+
+<p><code class="highlighter-rouge">site.js</code> is loaded on every page. Take care that this file contains the least
+amount of code possible for both performance and debugging reasons.</p>
+
+<p>The <code class="highlighter-rouge">lib</code> directory is for any JavaScript libraries that cannot be loaded from
+a CDN (preferred method for loading CSS and JS libraries).</p>
+
+<p><code class="highlighter-rouge">posts</code> contains all JavaScript files for a particular post. These scripts
+are stored within a folder with the name of the <code class="highlighter-rouge">post-slug</code>.</p>
+
+<h3 id="static"><code class="highlighter-rouge">static</code></h3>
+
+<p>This folder stores <strong>HTML-only</strong> files that <strong>cannot</strong> be incorporated into
+a post directly. Wherever possible, this directory should not be used and a
+data visualization/application should reside within the post itself instead.
+Sometimes, however, this is simply not practical if, for example, the
+application uses a custom CSS library that conflicts with styles on the
+regular website. If this is the case, store the required HTML here under a
+<code class="highlighter-rouge">post-slug</code> folder, and use the <code class="highlighter-rouge">img</code>/<code class="highlighter-rouge">js</code>/<code class="highlighter-rouge">css</code>/<code class="highlighter-rouge">datasets</code> folders for
+the other assets the page requires as you would for a normal post.</p>
+
+<h2 id="deployment">Deployment</h2>
+
+<p>The Stack website is hosted on GitHub pages because:</p>
+
+<ul>
+  <li>It’s free.</li>
+  <li>It’s reliable.</li>
+  <li>It makes for an easy deployment process.</li>
+  <li>GitHub Pages has strong native support for Jekyll sites.</li>
+</ul>
+
+<p>The <code class="highlighter-rouge">gh-pages</code> branch is the production branch. <code class="highlighter-rouge">master</code> is used for staging.
+Posts should be developed on their own feature branches. See the Workflow
+document for more details.</p>
+:ET

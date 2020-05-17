@@ -522,32 +522,59 @@ var data = [
 ];
 
 
+<<<<<<< HEAD
+document.getElementById('dropdowns').style.display = 'none';
+document.getElementById('vis').style.display = 'none';
+=======
+>>>>>>> 6c3f2ee3fd74c618b2036adf52bfb7adb7124328
 
 var startbuttons = $('#start').find('button');
 
 for(i=0; i<startbuttons.length; i++) {
 startbuttons[i].addEventListener('click', function() {
+<<<<<<< HEAD
+=======
 if (this.classList == 'selected') {return;}
+>>>>>>> 6c3f2ee3fd74c618b2036adf52bfb7adb7124328
 for(j=0; j<startbuttons.length; j++) {
 startbuttons[j].classList.remove('selected');
 };
 this.classList.add('selected');
+<<<<<<< HEAD
+changeChart('distance(mi)');
+=======
 var sel = document.getElementsByClassName('selected');
 if (sel[1].value == 0) {changeChart('normalcalories'); return}
 if (sel[1].value == 1) {changeChart('distance(mi)'); return}
 if (sel[1].value == 2) {changeChart('distance(m)'); return}
 else {changeChart('normaltime');}
+>>>>>>> 6c3f2ee3fd74c618b2036adf52bfb7adb7124328
 });
 };
 
 var compare = $('#compare').find('button');
+<<<<<<< HEAD
+
+for (i=0; i<compare.length; i++) {
+compare[i].addEventListener('click', function() {
+=======
 for (i=0; i<compare.length; i++) {
 compare[i].addEventListener('click', function() {
 if (this.classList == 'selected') {return;}
+>>>>>>> 6c3f2ee3fd74c618b2036adf52bfb7adb7124328
 for (j=0; j<compare.length; j++) {
 compare[j].classList.remove('selected');
 };
 this.classList.add('selected');
+<<<<<<< HEAD
+changeChart('normaltime');
+})
+}
+
+function findsel() {
+var sel = document.getElementsByClassName('selected');
+return parseInt(sel[0].value);
+=======
 var sel = document.getElementsByClassName('selected');
 if (sel[1].value == 0) {changeChart('normalcalories'); return}
 if (sel[1].value == 1) {changeChart('distance(mi)'); return}
@@ -560,17 +587,26 @@ else {changeChart('normaltime');}
 function findsel(num) {
 var sel = document.getElementsByClassName('selected');
 return parseInt(sel[num].value);
+>>>>>>> 6c3f2ee3fd74c618b2036adf52bfb7adb7124328
 }
 
 
 function gendata(num, opt, type) {
     var dis = [];
     if (opt === false) {
+<<<<<<< HEAD
+        for(i=0; i<5; i++)
+        dis.push(data[num + 2*i][type].toFixed(2));
+    }
+    else if (opt === true) {
+        for(i=0; i<5; i++)
+=======
         for(i=1; i<5; i++)
         dis.push(data[num + 2*i][type].toFixed(2));
     }
     else if (opt === true) {
         for(i=1; i<5; i++)
+>>>>>>> 6c3f2ee3fd74c618b2036adf52bfb7adb7124328
         dis.push(data[num + 2*i+1][type].toFixed(2));
     } else {
     alert('error');
@@ -580,6 +616,18 @@ function gendata(num, opt, type) {
 }
 
 function createData(num, type) {
+<<<<<<< HEAD
+    return {
+        labels: ['Target', 'Court of Sciences', 'Powell Library', 'Anderson School of Buisness', 'Luskin School of Public Affairs'],
+        datasets: [{
+            label: 'Charles E. Young Drive',
+            data: gendata(num, false, type),
+            backgroundColor: 'rgba(255, 0, 0, 1)',
+        }, {
+            label: 'Bruinwalk',
+            data: gendata(num, true, type),
+            backgroundColor: 'rgba(0, 0, 255, 1)',
+=======
     
     return {
         labels: ['Court of Sciences', 'Powell Library', 'Anderson School of Buisness', 'Luskin School of Public Affairs'],
@@ -591,16 +639,29 @@ function createData(num, type) {
             label: 'Bruinwalk',
             data: gendata(num, true, type),
             backgroundColor: 'blue',
+>>>>>>> 6c3f2ee3fd74c618b2036adf52bfb7adb7124328
         }]
     }
 }
 
 function changeChart(type) {
+<<<<<<< HEAD
+myChart0.data = createData(findsel(), type);
+=======
 myChart0.data = createData(findsel(0), type);
+>>>>>>> 6c3f2ee3fd74c618b2036adf52bfb7adb7124328
 myChart0.update();
 }
 
 
+<<<<<<< HEAD
+
+
+var ctx = document.getElementById('chart');
+var myChart0 = new Chart(ctx, {
+    type: 'horizontalBar',
+    data: createData(findsel(), 'distance(mi)'),
+=======
 Chart.plugins.unregister(ChartDataLabels);
 
 
@@ -610,6 +671,7 @@ var myChart0 = new Chart(ctx, {
 
     type: 'horizontalBar',
     data: createData(findsel(0), 'normalcalories'),
+>>>>>>> 6c3f2ee3fd74c618b2036adf52bfb7adb7124328
     options: {
         scales: {
             yAxes: [{
@@ -619,6 +681,9 @@ var myChart0 = new Chart(ctx, {
                     beginAtZero: true,
                 },
             }]
+<<<<<<< HEAD
+        }
+=======
         },
         plugins: {
             // Change options for ALL labels of THIS CHART
@@ -629,6 +694,7 @@ var myChart0 = new Chart(ctx, {
             },
         },
         
+>>>>>>> 6c3f2ee3fd74c618b2036adf52bfb7adb7124328
     },
 });
 
@@ -676,6 +742,14 @@ speedslider.addEventListener('input', function() {
     updatecals();
 });
 
+<<<<<<< HEAD
+speedslider.addEventListener('change', function() {
+updateincline();
+});
+
+
+=======
+>>>>>>> 6c3f2ee3fd74c618b2036adf52bfb7adb7124328
 var inclineslider = document.getElementById('inclineslider');
 var inclinevalue = document.getElementById('inclinevalue');
 
@@ -687,7 +761,11 @@ inclineslider.addEventListener('input', function() {
 })
 
 inclineslider.addEventListener('change', function() {
+<<<<<<< HEAD
+updatespeed();
+=======
 updatespeed()
+>>>>>>> 6c3f2ee3fd74c618b2036adf52bfb7adb7124328
 });
 
 function calories(lbs, speed, gradient) {
@@ -698,6 +776,10 @@ function calories(lbs, speed, gradient) {
 function updatecals() {
 cals.innerHTML = calories(weight.value, speedslider.value, inclineslider.value).toFixed(1);
 cals2.innerHTML = (calories(150, speedslider.value, inclineslider.value)*60).toFixed(1);
+<<<<<<< HEAD
+
+=======
+>>>>>>> 6c3f2ee3fd74c618b2036adf52bfb7adb7124328
 }
 
 var cals = document.getElementById('calories');
@@ -713,6 +795,20 @@ weight.addEventListener('input', function() {
 })
 
 
+<<<<<<< HEAD
+var ctx = document.getElementById('speedchart');
+var myspeed = new Chart(ctx, {
+    type: 'line',
+    data: speedchart(),
+    options: {
+        maintainAspectRatio: true,
+        aspectRatio: 1.5,
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true,
+                    suggestedMax: 200,
+=======
 
 var config0 = {
     type: 'line',
@@ -764,10 +860,35 @@ var config0 = {
                 ticks: {
                     suggestedMax: 200,
                     beginAtZero: true,
+>>>>>>> 6c3f2ee3fd74c618b2036adf52bfb7adb7124328
                 }
             }]
         }
     },
+<<<<<<< HEAD
+});
+
+function speedchart() {
+    return {
+        labels: ['0.8 m/s', '1.0 m/s', '1.2 m/s', '1.4 m/s', '1.6 m/s', '1.8 m/s', '2.0 m/s', '2.2 m/s'],
+        datasets: [{
+            label: 'Incline = ' + inclineslider.value,
+            data: getspeedpoints(inclineslider.value),
+            fill: false,
+            borderColor: 'rgba(123, 239, 178, 1)',
+        }, {
+            label: 'Average Incline of Bruinwalk Hill',
+            data: getspeedpoints(8.2),
+            fill: false,
+            borderColor: 'rgba(191, 85, 236, 1)',
+        }, {
+            label: 'Average Incline of Charles E. Young Drive',
+            data: getspeedpoints(5.5),
+            fill: false,
+            borderColor: 'rgba(191, 85, 236, 1)',
+        }],
+    }
+=======
 }
 var ctx = document.getElementById('speedchart');
 var myspeed = new Chart(ctx, config0);
@@ -782,6 +903,7 @@ function speedchart() {
     };
     config0.data.datasets.push(newDataset0);
     myspeed.update();
+>>>>>>> 6c3f2ee3fd74c618b2036adf52bfb7adb7124328
 }
 
 function getspeedpoints(incline) {
@@ -797,11 +919,18 @@ function getspeedpoints(incline) {
 
 
 function updatespeed() {
+<<<<<<< HEAD
+myspeed.data = speedchart();
+myspeed.update();
+}
+
+=======
 config0.data.datasets.pop();
 speedchart();
 }
 
 /*
+>>>>>>> 6c3f2ee3fd74c618b2036adf52bfb7adb7124328
 
 var ctx = document.getElementById('inclinechart');
 var myincline = new Chart(ctx, {
@@ -863,5 +992,42 @@ myincline.data = inclinechart();
 myincline.update();
 }
 
+<<<<<<< HEAD
+function updatecharts() {
+updatespeed();
+updateincline();
+}
+
+// 8.18
+// .082 average gradient of the bruinwalk hill
+// 6.52
+// .055 average gradient of cheyoung hill
+
+
+
+
+
+
+
+
+
+//calcEnergy();
+
+/*
+function createData(num) {
+    return {
+        labels: ['Target', 'Court of Sciences', 'Powell Library', 'Anderson School of Buisness', 'Luskin School of Public Affairs'],
+        datasets: [{
+            label: 'distance',
+            data: gendata(num, false)
+        }, {
+            label: 'distance2',
+            data: gendata(num, true)
+        }]
+    }
+}
+*/
+=======
 */
 
+>>>>>>> 6c3f2ee3fd74c618b2036adf52bfb7adb7124328

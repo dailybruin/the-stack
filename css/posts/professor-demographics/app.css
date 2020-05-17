@@ -1,0 +1,102 @@
+* {
+    outline: none !important;
+}
+/*
+#bernard h2, #bernard p {
+    width: 100vh !important;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#bernardgraph {
+    user-select: none !important;
+}
+*/
+
+#changeYear {
+    -webkit-appearance: none;
+    background-color: lightgrey;
+    height: 5px;
+    width: 60%;
+} #changeYear::-webkit-slider-thumb {
+    appearance: none;
+    -webkit-appearance: none;
+    height: 0px;
+    width: 0px;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid grey;
+    border-bottom: 10px solid transparent;
+}
+
+#yrlist span {
+    transform: rotate(90deg);
+    color: darkgrey;
+    font-size: 10px;
+}
+
+#changeYear:hover, #yrlist:hover {
+    cursor: pointer;
+}
+.comment {
+    font-style: italic;
+    width: 100%;
+    font-size: 10px;
+    color: grey;
+    font-align: right;
+}
+
+#table{
+padding: 10px;
+border-color: white;
+border: 10px;
+}
+
+
+#dropdown-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.dropdown-child {
+    padding: 1.5em;
+}
+
+.anniegraph {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: auto;
+    max-width: 100%;
+    /* border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid grey;
+    border-bottom: 10px solid transparent; */
+}
+
+table {
+  border-collapse: collapse;
+  float:center;
+  table-layout: auto;
+  width: 50%;
+  border: 10px;
+  margin-left: 25%;
+  margin-right: 25%;
+}
+
+TD {
+  width: 400px;
+  height: 40px;
+  padding: 10px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+TH {
+  background-color: #0072B2;
+  height: 50px;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+tr:nth-child(even) {background-color: #f2f2f2;}

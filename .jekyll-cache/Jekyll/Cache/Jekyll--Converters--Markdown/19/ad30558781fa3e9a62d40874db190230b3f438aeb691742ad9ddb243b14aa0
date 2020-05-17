@@ -1,0 +1,45 @@
+I"O<p>The Stack is <a href="http://dailybruin.com/">Daily Bruin</a>’s data journalism and newsroom tech blog. We investigate public data, experiment with technology and apply quantitative insights to real life.</p>
+
+<h2 id="why-it-exists">Why it exists</h2>
+
+<p>Information is being created faster than anyone can consume it. Most of it is noise, but occasionally it’s important. This data usually never reaches people because it is difficult to find, difficult to collect and difficult to understand.</p>
+
+<p>Most news organizations have not kept pace finding, analyzing and explaining this information to the people who care about it.</p>
+
+<p>The Stack exists to fulfill this need for the UCLA community. We’ll examine data ranging from University of California employee pay and weaknesses in campus computer systems to 800 Degrees Pizza’s “pizza of the day” and where you should go for spring break.</p>
+
+<p>If it’s something you care about, and there’s insight to be gained from the data, we’ll cover it.</p>
+
+<h2 id="whos-behind-it">Who’s behind it</h2>
+
+<p>The Daily Bruin has one of the largest and most accomplished teams of news organization student developers in the world. Our team is excited to take risks, explore new ways to tell meaningful stories and build tools to help journalism succeed.</p>
+
+<p>Occasionally we’ll geek out to others interested in journalism and computer science about a JavaScript library we’re loving or a workflow tool we’ve built, but for the most part, we’ll keep our posts squarely centered on what most UCLA students and Westwood residents find important.</p>
+
+<h2 id="how-were-giving-back">How we’re giving back</h2>
+
+<p>The Daily Bruin is a community newspaper, and we plan on giving back to the community – both to our own Westwood community and to larger communities of news organizations and individuals interested in data for the public good. That’s why we’re making all the code on this blog <a href="https://github.com/dailybruin/">available under open-source licenses on GitHub</a> and all the datasets we collect and parse <a href="https://github.com/dailybruin/the-stack/tree/master/datasets/">available to everyone</a>.</p>
+
+<p>We hope you’ll join us in this exciting data experiment, whether that be as a reader or a collaborator.</p>
+
+<hr />
+
+<p>If you have any feedback or questions, email us at <a href="mailto:online@media.ucla.edu">online@media.ucla.edu</a>.</p>
+
+<p>Follow us <a href="https://twitter.com/dailybruin/">on Twitter</a>.</p>
+
+<p>Apply to the <a href="https://apply.uclastudentmedia.com/applications/daily-bruin/data-journalism-intern/fall-2018/">Stack</a>.</p>
+
+<hr />
+
+<h2 id="data-editors">Data editors</h2>
+
+<p>The data editor is the person overseeing The Stack. A list of editors by year is below.</p>
+
+<ul>
+  <li><a href="https://github.com/hennadialani">Henna Dialani</a> (2018-2019)</li>
+  <li><a href="https://github.com/shampliu">Chang Liu</a> (2016-2017)</li>
+  <li><a href="https://github.com/liddiard">Harrison Liddiard</a> (2015-2016)</li>
+  <li><a href="https://github.com/nbedi">Neil Bedi</a> (creator, 2014-2015)</li>
+</ul>
+:ET

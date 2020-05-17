@@ -1,0 +1,52 @@
+I"t<p>UCLA’s “system” may be a closely-guarded secret, but the shots on cage still have to come from somewhere. Since the Mountain Pacific Invitational in September, the Daily Bruin has been taking note of just who shoots, and from where, for every single game save the Sunday, Oct. 9 game against UC Davis.</p>
+
+<blockquote>
+  <p>Below is the shot spread, broken up by zone and excluding 5-meter penalty shots, for every player and for the team overall. Zones are considered “hot,” and colored red, depending on the strength of the team or players’ shooting percentage there. Similarly, “cold” zones, colored blue, represent areas of the pool where the team or players do not have as good a shot percentage. In the time frame we considered, since the September tournament and excluding the UC Davis game, the data is 85% accurate.</p>
+</blockquote>
+
+<h4 id="offense-stats">Offense Stats</h4>
+<div id="striker-chart-wrapper">
+    <select style="margin: 0 auto; display: flex; width: 200px; height: 3em;" class="ui selection dropdown" id="strikerDropdown">
+      <option value="20">ALL PLAYERS</option>
+      <option value="0">2 - Chancellor Ramirez</option>
+      <option value="1">3 - Alec Zwaneveld</option>
+      <option value="2">4 - Jack Grover</option>
+      <option value="3">5 - Ryder Roberts</option>
+      <option value="4">6 - Joey Fuentes</option>
+      <option value="5">8 - James Robinson</option>
+      <option value="6">9 - Gordon Marshall</option>
+      <option value="7">10 - David Stiling</option>
+      <option value="8">11 - Alex Roelse</option>
+      <option value="9">12 - Matt Farmer</option>
+      <option value="10">14 - Jake Simpson</option>
+      <option value="11">15 - Warren Snyder</option>
+      <option value="12">17 - James Vlachonassios</option>
+      <option value="13">18 - Patrick Woepse</option>
+      <option value="14">19 - Max Irving</option>
+      <option value="15">20 - Austin Rone</option>
+      <option value="16">23 - Patrick Fellner</option>
+      <option value="17">24 - Kent Inoue</option>
+      <option value="18">25 - Eric Goldenberg</option>
+      <option value="19">26 - Raphael Raede</option>
+    </select>
+    <svg style="display: block; margin: 1em auto; height: 240px; width: 600px;" id="striker-chart"></svg>
+</div>
+
+<h4 id="goalkeeper-stats">Goalkeeper Stats</h4>
+<blockquote>
+  <p>Additionally, the goals against UCLA have to seep in somewhere, though redshirt senior goalie Garrett Danner is strong in nearly every zone. “Hot” zones where he and junior goalie Aleksandar Ruzic are blocking well are colored red, and “cold” zones where they aren’t are colored blue. For Danner’s save spread, the data is 83% accurate.</p>
+</blockquote>
+<div id="goalkeeper-chart-wrapper">
+    <select style="margin: 0 auto; display: flex; width: 200px; height: 3em;" class="ui selection dropdown" id="goalkeeperDropdown">
+        <option value="2">ALL GOALIES</option>
+        <option value="0">1 - Garrett Danner</option>
+        <option value="1">1 - Aleksander Ruzic</option>
+    </select>
+    <svg style="display: block; margin: 1em auto; height: 300px; width: 415px;" id="goalkeeper-chart"></svg>
+</div>
+
+<h4 id="notes">Notes:</h4>
+<ul>
+  <li>Statistics were collected from watching every game after the first round of the Mountain Pacific Invitational against Pomona-Pitzer, ending with the Mountain Pacific Sports Federation championship game against USC.</li>
+</ul>
+:ET
