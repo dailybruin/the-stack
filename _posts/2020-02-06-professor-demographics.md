@@ -57,13 +57,13 @@ The Stack took a look into faculty hiring patterns based on race over the past 1
 
 <div id='holder'>
     <div id='school_wrap'>
-        <h2>School</h2>
+        <h2>Race/Ethnicity by School</h2>
         <select class='menu' id='school'>
         <option>--</option>
         </select>
     </div>
     <div id='dept_wrap'>
-        <h2>Department</h2>
+        <h2>Race/Ethnicity by Department</h2>
         <select class='menu' id='depts'>
         <option>--</option>
         </select>
@@ -86,6 +86,7 @@ The Stack took a look into faculty hiring patterns based on race over the past 1
 
 <aside id='pie_stand'>
 <div><h2 style='padding-top: 5%;'>Demographics by School</h2>
+<p style='color: grey; font-size: 10px'>Measured in FTE — where a value of 1 is equal to an employee working full time year-round</p>
 <h4 style='text-align: center;'>2018-2019</h4></div>
 <div style='width: 100%; display: flex; flex-direction: row; justify-content: space-around'>
     <div>By Gender</div>
