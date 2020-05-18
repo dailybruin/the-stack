@@ -72,11 +72,11 @@ console.log(temp_schools)
 // var genders = [female, male];
 var genders = [{
     title: 'Female',
-    color: '#CC79A7',
+    color: '#8A2BE2',
     ca: 50,
 }, {
     title: 'Male',
-    color: '#56B4E9',
+    color: '#BDB76B',
     ca: 50,
 }];
 
@@ -114,6 +114,23 @@ var races = [{
     color: '#E69F00',
     ca: 1,
 }];
+
+function updateKey(bool) {
+    // true == genders
+    // false == race
+    if (bool == true) {
+        document.querySelector('#race_key').style.display = 'none'
+        document.querySelector('#gender_key').style.display = 'flex'
+        document.querySelector('#race_option').style.backgroundColor = 'white'
+        document.querySelector('#gender_option').style.backgroundColor = 'lightgray'
+    } else if (bool == false) {
+        document.querySelector('#race_key').style.display = 'flex'
+        document.querySelector('#gender_key').style.display = 'none'
+        document.querySelector('#race_option').style.backgroundColor = 'lightgray'
+        document.querySelector('#gender_option').style.backgroundColor = 'white'
+    }
+}
+updateKey(false);
 
 var years = ['2010-2011','2011-2012','2012-2013', '2013-2014', '2014-2015', '2015-2016', '2016-2017', '2017-2018', '2018-2019'];
 var schools = document.querySelector('#school');
@@ -316,7 +333,7 @@ window.onload = function(){
 };
 
 
-function updateBalls() {
+function updateBalls(bool) {
     var blank = [];
     var blank2 = [];
 
@@ -331,7 +348,7 @@ function updateBalls() {
     const radius = 10;
 
     var config;
-    if (2==1/*document.getElementById('gender').selectedIndex == 1*/) {
+    if (bool == true/*document.getElementById('gender').selectedIndex == 1*/) {
         data = haha[0].genders;
         config = genders;
         for (i=0; i<genders.length; i++) {
@@ -387,7 +404,7 @@ function updateBalls() {
     }
 
 }
-updateBalls();
+updateBalls(false);
 
 
 var pie_gender = {
@@ -407,10 +424,10 @@ var pie_gender = {
 };
 
 
-var gender_colors = ['#CC79A7', '#56B4E9'];
+var gender_colors = ['#8A2BE2', '#BDB76B'];
 var gender_titles = ['Female', 'Male']
 var race_colors = ['#E69F00', '#D55E00', '#0072B2', '#F0E442', '#009E73', '#6073b1', '#ddcc77']
-var race_titles = ['White', 'Asian/Asian American or Pacific Islander', 'Chicano(a)/Latina(o)/Hispanic', 'Black or African-American', 'American Indian or Alaskan Native', 'Two or More Races', 'Unknown', ]
+var race_titles = ['White', 'Asian/Asian American/Pacific Islander', 'Chicano(a)/Latina(o)/Hispanic', 'Black or African-American', 'American Indian or Alaskan Native', 'Two or More Races', 'Unknown', ]
 
 var pie_stand = document.querySelector('#pie_stand')
 
@@ -444,6 +461,7 @@ for (a=0; a<dem_by_school.length; a++) {
 
     wrap.classList.add('pie');
     wrap2.classList.add('pie');
+
 
     var chart = document.createElement('canvas');
     var chart2 = document.createElement('canvas');
@@ -499,9 +517,9 @@ for (a=0; a<dem_by_school.length; a++) {
     wrap.appendChild(chart)
     wrap2.appendChild(chart2)
     
-    pie_wrapper.appendChild(wrap)
     pie_wrapper.appendChild(wrap2)
-    
+    pie_wrapper.appendChild(wrap)
+
     plate.appendChild(pie_wrapper)
     
     pie_stand.appendChild(plate)

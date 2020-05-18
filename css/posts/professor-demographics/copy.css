@@ -1,3 +1,12 @@
+
+#holder {
+    #border: 1px solid;
+    width: 140vh;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 #wrap1 {
     max-width: 100%;
     min-height: 80vh;
@@ -40,7 +49,7 @@
     #min-width: 70vh;
     width: 70vh;
     max-width: 100%;
-    height: 110vh;
+    height: 100vh;
     overflow-y: scroll;
     display: flex;
     -webkit-flex-direction: row;
@@ -86,5 +95,60 @@
     width: 100%;
 } #pars {
     width: 100%;
-    border: 1px solid;
 }
+
+#race_key, #gender_key {
+    display: flex;
+    -webkit-flex-direction: row;
+    -webkit-flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.type {
+    display: flex;
+    -webkit-flex-direction: row;
+    width: 30vh;
+    max-width: 100%;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 8px;
+    #border: 1px solid;
+} .type:hover .descr {
+    color: black;
+    font-weight: bold;
+} .type:hover .box {
+    border: 3px solid black;
+}
+
+.box {
+    min-width: 25px;
+    min-height: 15px;
+    border: 3px solid gray;
+    margin-right: 10px;
+}
+
+.descr {
+    font-size: 11px;
+    color: grey;
+}
+
+#button_holder {
+    width: 100%;
+    margin-bottom: 14px;
+    margin-top: 16px;
+} #button_holder div {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    -webkit-flex-direction: row;
+    width: 40vh;
+    max-width: 100%;
+} #button_holder button {
+    border: 1px solid lightgray;
+    height: 100%;
+    width: 50%;
+    max-width: 50%;
+    padding: 1%;
+}
+
