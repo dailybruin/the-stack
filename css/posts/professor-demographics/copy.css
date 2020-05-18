@@ -47,7 +47,7 @@
 
 #pie_stand {
     #min-width: 70vh;
-    width: 70vh;
+    width: 76vh;
     max-width: 100%;
     height: 100vh;
     overflow-y: scroll;
@@ -65,7 +65,7 @@
     margin-bottom: 2vh;
 } #pie_stand .title {
     text-align: center;
-    width: 70vh;
+    width: 75vh;
     #min-width: 70vh;
     max-width: 100%;
     height: 9vh;
@@ -73,7 +73,8 @@
     font-weight: bold;
     vertical-align: bottom;
 } .pie_wrapper canvas {
-    min-height: 15vh
+    max-height: 18vh;
+    max-width: 10%;
 } .pie_wrapper {
     max-width: 100%;
 } #pie_stand * {

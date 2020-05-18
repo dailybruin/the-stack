@@ -465,6 +465,7 @@ for (a=0; a<dem_by_school.length; a++) {
 
     var chart = document.createElement('canvas');
     var chart2 = document.createElement('canvas');
+    chart2.classList.add('asdf')
 
     
     var data = dem_by_school[a].genders;
@@ -488,11 +489,15 @@ for (a=0; a<dem_by_school.length; a++) {
         data: {
             labels: gender_titles,
             datasets: gen_pie,
+            fontSize: 5,
         },
         options: {
-            responsive: true,
+            responsive: false,
             legend: {
                 display: false,
+            },
+            tooltips: {
+                tooltipCaretSize: 0,
             }
         }
     };
@@ -503,10 +508,10 @@ for (a=0; a<dem_by_school.length; a++) {
             datasets: dem_pie,
         },
         options: {
-            responsive: true,
+            responsive: false,
             legend: {
                 display: false,
-            }
+            },
         }
     };
 
@@ -517,8 +522,12 @@ for (a=0; a<dem_by_school.length; a++) {
     wrap.appendChild(chart)
     wrap2.appendChild(chart2)
     
-    pie_wrapper.appendChild(wrap2)
-    pie_wrapper.appendChild(wrap)
+    //pie_wrapper.appendChild(wrap2)
+    //pie_wrapper.appendChild(wrap)
+    
+    pie_wrapper.appendChild(chart)
+    pie_wrapper.appendChild(chart2)
+
 
     plate.appendChild(pie_wrapper)
     
