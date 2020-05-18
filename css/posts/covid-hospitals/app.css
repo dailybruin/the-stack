@@ -1,0 +1,188 @@
+#map {
+  height: 75vh;
+  width: 60vw;
+  margin: 0 auto;
+}
+
+#updatedate {
+  text-align: center;
+  font-size: 12px;
+}
+
+.info {
+  padding: 6px 8px;
+  font: 14px/16px Arial, Helvetica, sans-serif;
+  background: white;
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+}
+
+.info h4 {
+  margin: 0 0 5px;
+  color: #777;
+}
+
+.legend {
+  line-height: 18px;
+  color: #555;
+}
+
+.legend i {
+  width: 18px;
+  height: 18px;
+  float: left;
+  margin-right: 8px;
+  opacity: 0.7;
+}
+
+.slider {
+  width: 68vh;
+  height: 25px;
+}
+
+#slider-wrapper {
+  display: flex;
+  justify-content: center;
+  padding-top: 2vh;
+}
+
+.hover-label,
+.marker-label,
+.hover-title,
+.legend,
+.selector {
+  font-family: 'Open Sans';
+  /* text-align: left; */
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 25px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.toggle {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #d3d3d3;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.toggle:before {
+  position: absolute;
+  content: "";
+  height: 25px;
+  width: 25px;
+  left: 4px;
+  /* bottom: 4px; */
+  background-color: black;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked+.toggle:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+#slider-num {
+  padding-left: 2vw;
+}
+
+#percentage-num {
+  font-size: 2em;
+  line-height: 25px;
+}
+
+.toggle-option {
+  padding-left: 1vw;
+  padding-right: 1vw;
+}
+
+#toggle-wrapper {
+  display: flex;
+  justify-content: center;
+  padding-top: 5vh;
+  margin-top: 5vh;
+  font-family: 'Roboto'
+}
+
+
+.chart-wrapper {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+/* Phone Level */
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
+  .leaflet-control-layers {
+    margin-bottom: 30px!important;
+  }
+  
+  .chart-wrapper {
+    display: block;
+  }
+
+  #toggle-wrapper {
+    padding-top: 0;
+    margin-top: 0;
+  }
+
+  #slider-wrapper {
+    display: block;
+  }
+
+  #map {
+    height: 50vh;
+    width: 90vw;
+    margin: 0 auto;
+  }
+
+  .slider {
+    width: 90vw;
+    height: 25px;
+    margin: 0 auto;
+  }
+
+  #percentage-num {
+    font-size: 1.5em;
+    line-height: 25px;
+  }
+
+  #slider-num {
+    text-align: center;
+  }
+
+  #custom-legend {
+    border: solid #000;
+    border-width: 1px;
+    margin-bottom: 2vh;
+    margin-top: 1vh;
+  }
+
+  .legend-marker {
+    border: solid #000;
+    border-width: 1px;
+    display: inline-block;
+    width: 1em;
+    line-height: 0.6em;
+    margin: 0.5em;
+  }
+  .legend-label {
+    display: inline-block;
+  }
+}

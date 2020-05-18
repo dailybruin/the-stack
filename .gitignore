@@ -6,5 +6,8 @@ Gemfile.lock
 .jekyll-metadata
 *.swp
 *.env
+auth.yaml
+__pycache__
+.jekyll-cache/
 
 .vscode/

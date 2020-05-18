@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<meta charset="utf-8" />
+<html>
+
+<head>
+  <script src="http://d3js.org/d3.v3.js" type="text/javascript"></script>
+  <script src="http://timelyportfolio.github.io/rCharts_basketball/js/d3.tip.v0.6.3.js" type="text/javascript"></script>
+
+  <style>
+    .rChart {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 800px;
+      height: 400px;
+    }
+
+  </style>
+</head>
+
+<body>
+  <div id="PopUp"></div>
+
+  <div id="popUp" style="visibility: hidden">
+    <p>
+      hello
+    </p>
+  </div>
+  <div id="chartPlayer1">
+    <svg width="860" height="900" viewBox="0 0 860 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect id="leftThree" x="430" y="96.0589" width="430" height="707.972" />
+      <rect id="rightThree" y="96.0589" width="430" height="707.972" />
+      <path id="leftFG"
+        d="M323.432 804.652C323.432 790.478 326.224 776.443 331.648 763.348C337.072 750.252 345.023 738.354 355.045 728.331C365.068 718.308 376.966 710.358 390.062 704.934C403.157 699.51 417.192 696.718 431.367 696.718C445.541 696.718 459.576 699.51 472.671 704.934C485.767 710.358 497.665 718.308 507.688 728.331C517.711 738.354 525.661 750.252 531.085 763.348C536.509 776.443 539.301 790.478 539.301 804.653L431.367 804.652H323.432Z" />
+      <path id="rightFG"
+        d="M113.276 196.301V96.0589H430.745L429.162 578.971C187.695 578.971 113.276 411.901 113.276 261.538V258.177V196.301Z" />
+      <path id="Key"
+        d="M746.47 196.242V96H429L430.583 578.912C672.05 578.912 746.47 411.842 746.47 261.479V258.118V196.242Z" />
+      <rect id="Layup" x="322" y="96" width="217" height="376" />
+      <path id="G"
+        d="M321.941 471.791C321.941 457.649 324.746 443.646 330.195 430.58C335.644 417.515 343.631 405.644 353.7 395.644C363.769 385.644 375.722 377.712 388.878 372.3C402.033 366.888 416.133 364.102 430.373 364.102C444.612 364.102 458.712 366.888 471.868 372.3C485.023 377.712 496.976 385.644 507.045 395.644C517.114 405.644 525.101 417.515 530.55 430.58C535.999 443.646 538.804 457.649 538.804 471.791L430.373 471.791H321.941Z" />
+      <path id="H"
+        d="M538.863 471.689C538.863 485.831 536.058 499.834 530.609 512.9C525.16 525.965 517.173 537.837 507.104 547.836C497.035 557.836 485.082 565.769 471.926 571.18C458.771 576.592 444.671 579.378 430.432 579.378C416.192 579.378 402.092 576.592 388.937 571.18C375.781 565.768 363.828 557.836 353.759 547.836C343.69 537.837 335.703 525.965 330.254 512.9C324.805 499.834 322 485.831 322 471.689L430.432 471.689H538.863Z" />
+      <path id="I"
+        d="M538.935 95.9347C538.935 110.109 536.128 124.144 530.676 137.24C525.223 150.335 517.232 162.233 507.157 172.256C497.082 182.279 485.121 190.229 471.958 195.653C458.794 201.078 444.686 203.869 430.438 203.869C416.19 203.869 402.081 201.078 388.918 195.653C375.754 190.229 363.794 182.279 353.719 172.256C343.644 162.233 335.652 150.335 330.2 137.24C324.747 124.144 321.941 110.109 321.941 95.9347L430.438 95.9347H538.935Z" />
+    </svg>
+  </div>
+
+  <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+
+  <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+
+  <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+  <script src="./src/popup.jsx"></script>
+</body>
+<script>
+  //PARAMETERS
+  //let load_data = load_data("player1.csv");
+
+  let params = {
+    dom: "chartPlayer1",
+    id: "chartPlayer1",
+    width: 1440,
+    height: 900,
+    data: {
+      region: [
+        "leftThree",
+        "rightThree",
+        "leftFG",
+        "rightFG",
+        "Key",
+        "Layup",
+        "G",
+        "H",
+        "I"
+      ],
+      pct: [
+        0.19361,
+        0.57135,
+        0.30543,
+        0.14648,
+        0.046666,
+        0.71127,
+        0.74101,
+        0.78465,
+        0.062465
+      ]
+    },
+    y: "pct",
+    colors: [
+      "rgba(92, 143, 242, 0.28)",
+      "rgba(92, 143, 242, 0.36)",
+      "rgba(92, 143, 242, 0.44)",
+      "rgba(92, 143, 242, 0.52)",
+      "rgba(92, 143, 242, 0.6)",
+      "rgba(92, 143, 242, 0.68)",
+      "rgba(92, 143, 242, 0.76)",
+      "rgba(92, 143, 242, 0.84)",
+      "rgba(92, 143, 242, 0.92)",
+      "#5C8FF2"
+    ]
+  };
+
+  var svg = d3.select("svg");
+
+  //match the data with the regions
+  svg.selectAll("path, rect, circle")[0].forEach(function (region) {
+    //get the shape with d3
+    var regionShape = d3.select(region);
+    //look for the id of the shape in the data
+    var dataid = d3
+      .values(params.data.region)
+      .indexOf(regionShape.attr("id"));
+    //if id is greater than 0 then we found the id in data
+    //in this example we found a region
+    if (dataid >= 0) {
+      regionShape
+        .datum({
+          key: regionShape.attr("id"),
+          value: params.data[params.y][dataid]
+        })
+        .attr("class", "regionData");
+    }
+  });
+
+  var heatmapColor = d3.scale
+    .linear()
+    .domain(d3.range(0, 1, 1.0 / (params.colors.length - 1)))
+    .range(params.colors);
+
+  //redundant for now
+  //but might need this in the future
+  var colorScale = d3.scale
+    .linear()
+    .domain([0, 1])
+    .range([0, 1]);
+
+  //FUNCTIONS------------------------------------------------------
+
+  function showPopUp() {
+    let popUp = document.getElementById("popUp");
+    if (popUp.style.visibility === "hidden") {
+      popUp.style.visibility = "visible";
+    } else {
+      popUp.style.visibility = "hidden";
+    }
+  }
+
+  //
+  svg
+    .selectAll(".regionData")
+    .style("fill", function (d) {
+      return heatmapColor(colorScale(d.value));
+    })
+    .style("fill-opacity", 0.6)
+    .style("stroke", "black")
+    .on("mouseover", function () {
+      d3.select(this).style("stroke-width", 4);
+      d3.select(this).style("fill-opacity", 1.0);
+    })
+    .on("mouseout", function () {
+      d3.select(this).style("stroke-width", 0);
+      d3.select(this).style("fill-opacity", 0.2);
+    })
+    .on("click", showPopUp);
+
+</script>
+
+</html>
