@@ -12,8 +12,8 @@ key_takeaways:
 - The total proportion of female faculty has also increased by around 5%.
 - Few schools had a significant (>10%) percent change in American Indian faculty.
 featured_image:
-    url: /professor-demographics/graph.png
-og_image: /professor-demographics/graph.png
+    url: /professor-demographics/updatedgraph.JPG
+og_image: /professor-demographics/updatedgraph.JPG
 stylesheets:
     - /css/posts/professor-demographics/app.css
     - /css/posts/professor-demographics/copy.css
