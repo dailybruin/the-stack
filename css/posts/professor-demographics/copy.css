@@ -73,6 +73,7 @@
     font-weight: bold;
     vertical-align: bottom;
 } .pie_wrapper canvas {
+    min-height: 20vh
 } .pie_wrapper {
     max-width: 100%;
 } #pie_stand * {

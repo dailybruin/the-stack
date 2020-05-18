@@ -185,7 +185,7 @@ The proportion of female faculty has also increased by around 5%.
 </div>
 <div style='padding-bottom: 5px; '>
     <div style='width: 60vh; max-width: 100%; margin-left: auto; margin-right: auto'>
-        <input style='width: 59.5vh;' id='changeYear' onchange='updateBalls()'
+        <input style='width: 59.5vh; max-width: 100%' id='changeYear' onchange='updateBalls()'
             type="range" min="2010" max="2018" value="2010" step='1'>
         <div id='yrlist' style='width: 61vh; max-width: 100%; margin-left: auto; margin-right: auto; display: flex; justify-content: space-between'>
             <span>2010</span>
