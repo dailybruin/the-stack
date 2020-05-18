@@ -1,0 +1,156 @@
+
+#holder {
+    #border: 1px solid;
+    width: 140vh;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#wrap1 {
+    max-width: 100%;
+    min-height: 80vh;
+    #border: 1px solid;
+    display: flex;
+    -webkit-flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    -webkit-flex-wrap: wrap;
+}
+.menu {
+    #border: 1px solid;
+    min-width: 300px;
+    display: flex;
+    -webkit-flex-direction: column;
+    #height: 270px;
+    #overflow-y: scroll;
+} .menu button {
+    width: 100%;
+    background: none;
+    border: 1px solid lightgrey;
+    outline: none;
+}
+
+#graphs {
+    width: 120vh;
+    #min-width: 100vh;
+    max-width: 90%;
+}
+
+.pie {
+    width: 50%;
+    #height: 100%;
+    #border: 1px solid;
+    display: flex;
+    justify-content: center;
+}
+
+#pie_stand {
+    #min-width: 70vh;
+    width: 76vh;
+    max-width: 100%;
+    height: 100vh;
+    overflow-y: scroll;
+    display: flex;
+    -webkit-flex-direction: row;
+    -webkit-flex-wrap: wrap;
+    justify-content: center;
+    #margin-left: auto;
+    float: left;
+    #border: 1px solid lightgray;
+    top: 0;
+    right: 0;
+    #background: #efefef;
+    margin-right: 5vh;
+    margin-bottom: 2vh;
+} #pie_stand .title {
+    text-align: center;
+    width: 75vh;
+    #min-width: 70vh;
+    max-width: 100%;
+    height: 9vh;
+    margin-top: 4vh;
+    font-weight: bold;
+    vertical-align: bottom;
+} .pie_wrapper canvas {
+    max-height: 18vh;
+    max-width: 10%;
+} .pie_wrapper {
+    max-width: 100%;
+} #pie_stand * {
+    max-width: 100% !important;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.pie_wrapper {
+    display: flex;
+    -webkit-flex-direction: row;
+    justify-content: center;
+    width: 70vh;
+    #min-width: 70vh;
+    max-width: 100%;
+    #border: 1px solid;
+}
+
+#strangetext {
+    width: 100%;
+} #pars {
+    width: 100%;
+}
+
+#race_key, #gender_key {
+    display: flex;
+    -webkit-flex-direction: row;
+    -webkit-flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.type {
+    display: flex;
+    -webkit-flex-direction: row;
+    width: 30vh;
+    max-width: 100%;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 8px;
+    #border: 1px solid;
+} .type:hover .descr {
+    color: black;
+    font-weight: bold;
+} .type:hover .box {
+    border: 3px solid black;
+}
+
+.box {
+    min-width: 25px;
+    min-height: 15px;
+    border: 3px solid gray;
+    margin-right: 10px;
+}
+
+.descr {
+    font-size: 11px;
+    color: grey;
+}
+
+#button_holder {
+    width: 100%;
+    margin-bottom: 14px;
+    margin-top: 16px;
+} #button_holder div {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    -webkit-flex-direction: row;
+    width: 40vh;
+    max-width: 100%;
+} #button_holder button {
+    border: 1px solid lightgray;
+    height: 100%;
+    width: 50%;
+    max-width: 50%;
+    padding: 1%;
+}
+

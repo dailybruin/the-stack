@@ -1,0 +1,54 @@
+I"[<p>Every year, students pay more than $4 million to support the undergraduate student government.</p>
+
+<p>That money is meant to support student government programming efforts, advocacy and come back to some students through student group allocations.</p>
+
+<p>But what happens once that money enters the coffers of the Undergraduate Students Association Council can be difficult to track.</p>
+
+<p>The money is divvied up into four main categories: officer stipends, USAC office budgets, major funds and administrative costs.</p>
+
+<p>Officer stipends and administrative costs cover the 14 USAC councilmembers’ paychecks and pay for things like rent, utilities and professional support.</p>
+
+<p>The major funds that draw from student fees include The Green Initiative Fund, contingency, capital contingency and smaller funds that lie under offices like the cultural affairs, academic affairs and student wellness commissions.</p>
+
+<p>But USAC also funnels money into another, somewhat untracked, avenue: officially recognized student groups.</p>
+
+<p>Some of these groups get massive checks totaling up to $35,560.19. Other clubs take home as little as $22.50. The allocations will continue to change slightly until the fiscal year ends in mid-July.</p>
+
+<p>It’s important to keep in mind that these groups can still apply for additional funding through the major funds USAC controls: TGIF and the Student Organization Operational Fund are two of the main sources of student funding.</p>
+
+<p>But the allocations USAC makes to student groups carries huge disparities with some groups getting thousands of dollars in the 2014-2015 academic year and others receiving pocket change.</p>
+
+<p>It’s unclear why these gaps between some groups exist. It could be because some groups simply ask for much more money. It could be because the funding application process is lengthy and confusing.</p>
+
+<p>Student groups have complained in the past because of USAC’s complicated funding applications. Several USAC councilmembers have run on platforms of revising the process and building a centralized funding platform – a goal that has yet to come to fruition.</p>
+
+<p>Whatever the reason, it is clear that some student organizations are pocketing huge sums while others accept tiny allocations.</p>
+
+<h2 id="visualizing-the-allocations">Visualizing the allocations</h2>
+
+<p>Different classes of allocations orbit a center dot representing all USAC fees, where the money comes from.</p>
+
+<p>The largest allocations are pulled to the outermost orbit, while smaller dollar amounts hover close to the center.</p>
+
+<p>To see how much money was given to any student group, search for the organization’s name and click submit. The selected group will highlight green. Hover over the group to see how much money it received.</p>
+
+<p><em>Note: The dropdown will not work on Safari but the visualization has been updated so that searching for any word in a student group’s name will cause corresponding dots to highlight.</em></p>
+
+<div id="visualization">
+    <div class="filter">
+        <input type="text" class="search" id="search_text" list="search" placeholder="Search for student groups" /><br />
+        <datalist id="search"><br />
+        </datalist><br />
+        <input class="search_button" type="submit" onclick="search()" />
+    </div>
+    <div class="viz"></div>
+</div>
+
+<hr />
+
+<h2 id="about-the-data">About the data</h2>
+
+<p>All of the allocations are based on the USAC budget reports updated in mid-May after the 2014-15 councilmembers finished their terms in office.</p>
+
+<p>The allocations are subject to change slightly until the fiscal year ends in mid-July.</p>
+:ET

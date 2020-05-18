@@ -12,7 +12,11 @@ var baseLayer = L.tileLayer('https://api.mapbox.com/styles/v1/mapbox/streets-v10
 mymap.addLayer(baseLayer);
 
 var start_locations = {
+<<<<<<< HEAD
+	"Hedrick" : "hedrick",
+=======
 	"Hedrick" : "hedrick", 
+>>>>>>> 6c3f2ee3fd74c618b2036adf52bfb7adb7124328
 	"Rieber" : "rieber",
 	"Sproul" : "sproul",
 	"De Neve" : "deneve"
@@ -20,7 +24,11 @@ var start_locations = {
 
 var end_locations = {
 	"Powell" : "powell",
+<<<<<<< HEAD
+	"Anderson" : "anderson",
+=======
 	"Anderson" : "anderson", 
+>>>>>>> 6c3f2ee3fd74c618b2036adf52bfb7adb7124328
 	"Public Affairs" : "public",
 	"Court of Sciences" : "court",
 	"Young Research Library" : "yrl",
@@ -35,7 +43,11 @@ d3.select('#start_location')
         	let end = $('#end_location option:selected').text();
         	generateRoutes(start, end);
         	loadStats(start, end);
+<<<<<<< HEAD
+					generateRoutesforGraph(start, end);
+=======
         	generateRoutesforGraph(start, end);
+>>>>>>> 6c3f2ee3fd74c618b2036adf52bfb7adb7124328
         })
     	.selectAll('option')
         .data(Object.keys(start_locations))
@@ -50,7 +62,11 @@ d3.select('#end_location')
         	let end = $('#end_location option:selected').text();
         	generateRoutes(start, end);
         	loadStats(start, end);
+<<<<<<< HEAD
+					generateRoutesforGraph(start, end);
+=======
         	generateRoutesforGraph(start, end);
+>>>>>>> 6c3f2ee3fd74c618b2036adf52bfb7adb7124328
         })
     	.selectAll('option')
         .data(Object.keys(end_locations))
@@ -70,13 +86,20 @@ d3.selectAll("input[name='speed']")
 
 generateRoutes("Hedrick", "Powell");
 loadStats("Hedrick", "Powell");
+<<<<<<< HEAD
+=======
 generateRoutesforGraph("Hedrick", "Powell")
 
+>>>>>>> 6c3f2ee3fd74c618b2036adf52bfb7adb7124328
 // calculateStats();
 
 
 function generateRoutes(start, end) {
+<<<<<<< HEAD
+
+=======
 	
+>>>>>>> 6c3f2ee3fd74c618b2036adf52bfb7adb7124328
 	mymap.eachLayer(function(layer){
 		if (layer != baseLayer) {
 			layer.remove();
@@ -84,8 +107,13 @@ function generateRoutes(start, end) {
 	});
 
 	var path = "/datasets/walking-to-class/";
+<<<<<<< HEAD
+	var route_A = path + start_locations[start] + "_" + end_locations[end] + "_A.gpx";
+	var route_B = path + start_locations[start] + "_" + end_locations[end] + "_B.gpx";
+=======
 	var route_A = path + start_locations[start] + "_" + end_locations[end] + "_A.gpx"; 
 	var route_B = path + start_locations[start] + "_" + end_locations[end] + "_B.gpx"; 
+>>>>>>> 6c3f2ee3fd74c618b2036adf52bfb7adb7124328
 
 	var r1 = this.generateLayer(route_A, "green");
 	mymap.addLayer(r1);
@@ -150,8 +178,13 @@ async function calculateStats() {
 			let end = end_locations[e];
 
 			let path = "/datasets/walking-to-class/";
+<<<<<<< HEAD
+			let route_A = path + start + "_" + end + "_A.gpx";
+			let route_B = path + start + "_" + end + "_B.gpx";
+=======
 			let route_A = path + start + "_" + end + "_A.gpx"; 
 			let route_B = path + start + "_" + end + "_B.gpx"; 
+>>>>>>> 6c3f2ee3fd74c618b2036adf52bfb7adb7124328
 
 			let a_stats = await getStats(route_A);
 			let b_stats = await getStats(route_B);
@@ -188,6 +221,67 @@ function getStats(filePath) {
 		});
 	});
 }
+<<<<<<< HEAD
+
+function generateRoutesforGraph(start, end) {
+
+	var path = "/datasets/walking-to-class/";
+	var route_A = path + start_locations[start] + "_" + end_locations[end] + "_A.json";
+	var route_B = path + start_locations[start] + "_" + end_locations[end] + "_B.json";
+
+	var ctxA = document.getElementById('chartA');
+	generateGraph(route_A, ctxA,"green");
+
+	var ctxB = document.getElementById('chartB');
+	generateGraph(route_B, ctxB, "blue");
+}
+
+function generateGraph(path, ctx, col) {
+	$.getJSON(path, function(data) {
+	  data = $.parseJSON(data)
+	  distance = data.distance
+	  elevation = data.elevation
+	  dist = []
+	  for (var key in distance) {
+	      dist.push(distance[key])
+	  }
+	  elev = []
+	  for (var key in elevation) {
+	      elev.push(elevation[key])
+	  }
+
+	  var myLineChart = new Chart(ctx, {
+	      type: "line",
+	      data: {
+	        labels: dist,
+	        datasets: [
+	          {
+	            label: "Elevation",
+	            data: elev,
+	            borderColor: col,
+	            backgroundColor: 'transparent',
+	            pointStyle: "line"
+	          }
+	        ]
+	      },
+	      options: {
+	        cubicInterpolationMode: "monotone",
+	        scales: {
+	          xAxes: [{
+	            display: false,
+	          }]
+	        },
+	        tooltips: {
+	                enabled: true,
+	                mode: 'point',
+	            },
+
+	    }
+	  });
+	});
+
+}
+=======
 function generateRoutesforGraph(start, end) {
 	var path = "/datasets/walking-to-class/";
 	var route_A = path + start_locations[start] + "_" + end_locations[end] + "_A.json";
@@ -262,3 +356,4 @@ function getelevationpoints(path, color) {
 
 
 
+>>>>>>> 6c3f2ee3fd74c618b2036adf52bfb7adb7124328
