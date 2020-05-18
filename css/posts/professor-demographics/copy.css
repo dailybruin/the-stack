@@ -57,7 +57,7 @@
     justify-content: center;
     #margin-left: auto;
     float: left;
-    border: 1px solid lightgray;
+    #border: 1px solid lightgray;
     top: 0;
     right: 0;
     #background: #efefef;
