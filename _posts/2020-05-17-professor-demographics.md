@@ -95,8 +95,8 @@ The Stack took a look into faculty hiring patterns based on race and gender over
 <p style='color: grey; font-size: 10px'>Measured in FTE — where a value of 1 is equal to an employee working full time year-round</p>
 <h4 style='text-align: center;'>2018-2019</h4></div>
 <div style='width: 100%; display: flex; flex-direction: row; justify-content: space-around'>
-    <div>By Race/Ethnicity</div>
     <div>By Gender</div>
+    <div>By Race/Ethnicity</div>
 </div>
 </aside>
 
