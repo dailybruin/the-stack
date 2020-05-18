@@ -164,7 +164,7 @@ It’s also worth noting that some departments had no professors of some ethnic 
 
 ## Upticks in Faculty Diversity
 
-UCLA faculty is less diverse than the California population – however, this has changed over the past 10 years. The proportion of white faculty decreased by nearly 10%, whereas the proportion of minority faculty, including Chicana(o)/Latina(o)/Hispanic and African American faculty, increased by nearly 3%.
+UCLA faculty is less diverse than the California population – however, this has changed from 2010-2018. The proportion of white faculty decreased by nearly 10%, whereas the proportion of minority faculty, including Chicana(o)/Latina(o)/Hispanic and African American faculty, increased by nearly 3%.
 
 Interestingly, the proportion of faculty who declined to note their race or ethnicity increased by nearly 400%.
 
@@ -260,7 +260,7 @@ The proportion of female faculty has also increased by around 5%.
 </div>
 
 
-In the table below, we show the five schools with the largest change in proportion per minority group.
+In the table below, we show the five schools with the largest change in proportion per minority group from 2010-2018.
 
 Few schools had a significant (>10%) percent change in American Indian faculty.
 
