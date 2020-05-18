@@ -1,6 +1,6 @@
 ---
-title:  "Evaluating the Decade's Racial Trends Among Faculty at UCLA"
-teaser: 
+title:  "Evaluating the Decade's Demographic Trends Among Faculty at UCLA"
+teaser: How have the demographics of UCLA faculty changed since 2010?
 authors:
     - bernard_mendez
     - annie_zhang
@@ -8,8 +8,9 @@ authors:
     - jeanette_lin
     - jc_rios
 key_takeaways:
-    - not a lot of brown people
-    - ucla is very white (despite the fact that the undergrads are very not-white)
+    - Campuswide, UCLA has hired a greater proportion of minority faculty in the past 10 years.
+    - The total proportion of female faculty has also increased by around 5%.
+    - Few schools had a significant (>10%) percent change in American Indian faculty. 
 featured_image:
     url: /professor-demographics/graph.png
 og_image: /professor-demographics/graph.png
@@ -37,23 +38,20 @@ scripts:
 
 Brantly Fulton grew up in Pontiac, Michigan, an underprivileged community outside Detroit. 
 
-Fulton went on to graduate with a degree in Chemistry from Morehouse College and joined UCLA as a lecturer of Chemistry in 2018.
+Fulton went on to graduate with a degree in chemistry from Morehouse College and joined UCLA as a lecturer of chemistry in 2019.
 
-Still, he said his path was difficult — there was nobody for him to look up to.
+Still, he said his path was difficult – he didn’t have any role models.
 
 “I didn't have professors that lived in my neighborhood,” he said. “You don't have a symbol of that person who looks like you represent you.”
 
 Fulton said African American students have told him they feel more comfortable coming to his lectures, coming to his office hours and paying attention in class because they can identify with him.
 
-Fulton said although there is great diversity among undergraduate and graduate students, there is diversity among faculty is very little, adding he thinks institutions should do better seeking out talented individuals from underrepresented backgrounds. Since 2010, there has never been more than two fully employed African American faculty in Fulton’s department.
+Fulton said although there is great diversity among undergraduate and graduate students, there is very little among faculty, adding he thinks institutions have to do better jobs seeking out talented individuals from underrepresented backgrounds. Since 2010, there has never been more than two fully employed African American faculty in Fulton’s department.
 
 “Because it is so competitive to get into academia, it allows for institutions to sit back and just allow for applicants to apply,” he said. “Institutions need to be more proactive and attend minority based conferences and go out into these communities to kind of seek out the talents.”
 
-UCLA founded the Office of Equity, Diversity and Inclusion in 2015 in response to the Moreno Report — an internal investigation which found the university’s response to incidents of bias and discrimination as “inadequate.”
+The Stack took a look into faculty hiring patterns based on race and gender over the past 10 years, starting from the 2010-2011 through the 2018-2019 academic year.
 
-The Office of EDI has since implemented measures to improve faculty diversity, including the creation of BruinX, a campus think tank which aims to apply data analytics toward diversity-related issues.
-
-The Stack took a look into faculty hiring patterns based on race over the past 10 years, starting from the 2010-2011 through the 2018-2019 academic year, using data provided by the BruinX office.
 
 <div id='holder'>
     <div id='school_wrap'>
@@ -94,42 +92,41 @@ The Stack took a look into faculty hiring patterns based on race over the past 1
 </div>
 </aside>
 
-## General Trends
 ### About the Data
+* The data was collected from BruinX, an analytics-based think tank housed under the Office of Equity, Diversity and Inclusion at UCLA.
+* The number of faculty per school/department is shown as full-time equivalent – an employee who works full time year round would equal 1 FTE, while an employee who works half time for a full year would equal 0.5 FTE.
+* Departments that do not teach undergraduate courses and have less than 5 FTE faculty are not shown, though they are included in broader school counts. 
 
-<ul>
-<li>The data was collected from BruinX, an analytics-based think tank housed under the Office of Equity, Diversity and Inclusion at UCLA.</li>
-<li>The number of faculty per school/department is shown as Full-time equivalent — an employee who works full time year round would equal 1 FTE, while an employee who works full time for half the year would equal 0.5 FTE.</li>
-<li>Departments that do not teach undergraduate courses and have less than 5 FTE faculty are not shown, however they are included in broader school counts. </li>
-</ul>
+### General Trends
+In general, women are underrepresented compared to men – campuswide, 61% of the UCLA faculty were male in the 2018-2019 school year. Men are most highly represented in the Henry Samueli School of Engineering and Applied Science, the Anderson School of Management and in the physical sciences. Women are most highly represented in the School of Nursing, the Graduate School of Education and Information Studies and the  Fielding School of Public Health.
 
-In general, women are underrepresented compared to men. Campuswide, 61% of the UCLA faculty are male. Men are most highly represented in the School of Engineering, the School of Management and in the Physical Sciences. Women are most highly represented in the School of Nursing, the Graduate School of Education and Information Studies and the School of Public Health.
+### What has UCLA done in the past 10 years?
 
-## What has UCLA done in the past 10 years?
+Efforts to improve diversity within the faculty have largely been spearheaded by the Office of Equity, Diversity and Inclusion.
 
-Efforts to improve diversity within the faculty have largely been spearheaded by UCLA’s Office of Equity, Diversity and Inclusion.
+UCLA founded the Office of EDI in 2015 in response to the [Moreno Report](https://www.ucop.edu/moreno-report/external-review-team-report-10-15-13.pdf) – an internal investigation which found the university’s response to incidents of bias and discrimination “inadequate.”
 
-Law Professor Jerry Kang was appointed as the first Vice Chancellor in 2015, tasked to build the new department from scratch. 
+Since then, the office has attempted to improve UCLA’s response to bias and discrimination, including by publicizing [resources](https://equity.ucla.edu/know/) aimed to encourage sensitivity and releasing [accountability reports](https://equity.ucla.edu/public_accountability/public_accountability_reports/) to publicize statistics of complaints and investigations on campus. 
 
-Since then, the office has attempted to ___ including by publicizing resources to encourage ___ and releasing accountability reports which includes statistics of complaints and investigations on campus.. 
+The Office of EDI also created [BruinX](https://equity.ucla.edu/about-us/our-teams/bruinx/), a campus think tank that aims to apply data analytics toward diversity-related issues.
 
-Nweke Chukwuebuka, a postdoctoral researcher in the Civil and Environmental Engineering said there has been a lot of effort to hire minority faculty — which includes black, latino/a, LGBTQ and female candidates. 
+Chukwuebuka Nweke, a postdoctoral researcher in civil and environmental engineering, said there has been a lot of effort to hire minority faculty – which includes African American, Chicana(o)/Latina(o)/Hispanic, LGBTQ+ and female candidates. 
 
-Chukwuebuka added that minorities are put in the same pool when it comes to searching for minority candidates, which reduces the efficacy of these initiatives.
+Nweke added that minorities are put in the same pool when it comes to searching for minority candidates, which reduces the efficacy of these initiatives.
 
-“It's almost like they compete against each other,” he said. “(It) becomes a crabs in a bucket type situation.”
+“It's almost like they compete against each other,” he said. “(It) becomes a crabs-in-a-bucket type situation.”
 
-By the end, however, the faculty chooses the best candidate regardless of race, he added. The process brings out the best minority candidates and lets them compete with the otherwise best candidates.
+In the end, however, the faculty chooses the best candidate regardless of race, he added. The process brings out the best minority candidates and lets them compete with the otherwise best candidates, he said.
 
-Chukwuebuka added he thinks universities should focus on pipelining students from the high school and undergraduate level toward the graduate and professor level, since the pathway is a funnel between each level. Still, UCLA is on the right track he said, adding he hopes people don’t forget the importance of diversity.
+“A lot of complaints before was that, ‘Oh we can't find these people,’” he said. “So now, what a lot of schools do is, ‘OK, now you have to find them.’”
 
-“My biggest fear is that (diversity is) in fact a buzzword, and that people will forget about it in a couple of years,” Chukwuebuka said. “But from what I'm seeing... I don't think that that's the case”
 
-## Unequal Departments
+### Unequal Departments
 
-Unsurprisingly, cultural fields of study often had high proportions of that culture as faculty. The Asian American Studies department, for example, had a nearly homogeneously asian faculty through the 9 years we measured. Similarly, the Chicana/o Studies and Spanish and Portuguese departments had high levels of latina/o faculty and the.
+Cultural fields of study often had high proportions of that culture as faculty. The Asian Languages & Cultures Department, for example, had a majority of Asian faculty through the nine years we measured. Similarly, the Chicana/o studies and Spanish and Portuguese departments had high levels of Chicana(o)/Latina(o)/Hispanic faculty.
 
-It’s also worth noting that some departments had no professors of some ethnic groups — the data showed that almost every year, there were at least 20 departments that had no Asian professors, African American professors, Latino professors or American Indian professors, while there were rarely more than 4 departments with no white professors.
+It’s also worth noting that some departments had no professors of some ethnic groups – the data showed that almost every year, there were at least 20 departments that had no Asian professors, African American professors, Chicana(o)/Latina(o)/Hispanic professors or American Indian professors, while there were rarely more than four departments with no white professors.
+
 
 <div class="anniegraph">
     <canvas id="proportions_chart"> </canvas>
@@ -160,9 +157,12 @@ It’s also worth noting that some departments had no professors of some ethnic 
     </div>
 </div>
 
-<h2>Has UCLA improved diverse hiring?</h2>
+### Upticks in Faculty Diversity
+In the table below, we show the five schools with the largest change in proportion per minority group.
 
-Yes, gratefully! UCLA on average has improved diverse hiring and the period from year 2010 to 2018 has seen a big increase in the proportion of minority groups, including Female, American Indian, Asian, Black, and Latino. We calculated each year's proportion of the minority groups in every department and the increase in the proportion from 2010 to 2018. For some departments data are not available for the first few years, for which the increase is calculated from the year when the data is available. Same applies for the departments that do not have data in the recent years. Each minority group has different increase in proportion, with Female and Asian on average bigger increases. This can also be validated from the below tables, where we listed the departments that have the biggest increase in the minority group proportion respectively.
+Few schools had a significant (>10%) percent change in American Indian faculty.
+
+The School of Law was within the top five biggest increases in each of the minority faculty present, raising the percentage of Chicana(o)/Latina(o)/Hispanic and African American faculty by approximately 30% and 20%, respectively.
 
 
   <label for='gender'>Sort by Gender or Race/Ethnicity</label>
@@ -176,7 +176,11 @@ Yes, gratefully! UCLA on average has improved diverse hiring and the period from
 
   <div id="table" style='width: 100%;'></div>
 
-The top five departments in Female and Asian groups have higher increase in proportion than others. Both of them have higher than or equal to 100 percentage increase in all top five departments, while some of the departments in the rest of the minority groups: American Indian, Black, and Latino have less than 100 percentage increase. Note that here we only examine the increase in one minority group, but not the general increase in all minority groups. Therefore, for the listed departments in one minority group, such as Asian, may decrease in the proportion of the other minority group.
+UCLA faculty is less diverse than the California population – however, this has changed over the past 10 years. The proportion of white faculty decreased by nearly 10%, whereas the proportion of minority faculty, including Chicana(o)/Latina(o)/Hispanic and African American faculty, increased by nearly 3%.
+
+Interestingly, the proportion of faculty who declined to note their race or ethnicity increased by nearly 400%.
+
+The proportion of female faculty has also increased by around 5%.
 
 <div style='width: 110vh; max-width: 100%; margin-left: auto; margin-right: auto;'>
 <h4 style='margin-top: 30px; text-align: center'>Compared to the California Population</h4>
