@@ -1,13 +1,13 @@
 var latino = {
   '2010': {
-    deptNames: {
-      '0': 'Chicana/o Studies',
-      '1': 'Spanish Portuguese',
-      '2': 'African American Studies',
-      '3': 'Education',
-      '4': 'Health Policy Management',
-    },
     proportions: {
+      '0': 'CHICANA/O STUDIES',
+      '1': 'SPANISH AND PORTUGUESE',
+      '2': 'AFRICAN AMERICAN STUDIES',
+      '3': 'EDUCATION',
+      '4': 'HEALTH POLICY AND MANAGEMENT',
+    },
+    deptNames: {
       '0': 0.894736842105263,
       '1': 0.6334841628959276,
       '2': 0.2,
@@ -16,14 +16,14 @@ var latino = {
     },
   },
   '2011': {
-    deptNames: {
-      '0': 'Chicana/o Studies',
-      '1': 'Spanish Portuguese',
-      '2': 'Naval Science',
-      '3': 'Education',
-      '4': 'Social Welfare',
-    },
     proportions: {
+      '0': 'CHICANA/O STUDIES',
+      '1': 'SPANISH AND PORTUGUESE',
+      '2': 'NAVAL SCIENCE',
+      '3': 'EDUCATION',
+      '4': 'SOCIAL WELFARE',
+    },
+    deptNames: {
       '0': 0.9104477611940298,
       '1': 0.6220095693779905,
       '2': 0.4,
@@ -32,14 +32,14 @@ var latino = {
     },
   },
   '2012': {
-    deptNames: {
-      '0': 'Chicana/o Studies',
-      '1': 'Spanish Portuguese',
-      '2': 'Naval Science',
-      '3': 'Health Policy Management',
-      '4': 'Education',
-    },
     proportions: {
+      '0': 'CHICANA/O STUDIES',
+      '1': 'SPANISH AND PORTUGUESE',
+      '2': 'NAVAL SCIENCE',
+      '3': 'HEALTH POLICY AND MANAGEMENT',
+      '4': 'EDUCATION',
+    },
+    deptNames: {
       '0': 0.9833333333333334,
       '1': 0.6026785714285715,
       '2': 0.4,
@@ -48,14 +48,14 @@ var latino = {
     },
   },
   '2013': {
-    deptNames: {
-      '0': 'Chicana/o Studies',
-      '1': 'Spanish Portuguese',
-      '2': 'Naval Science',
-      '3': 'Education',
-      '4': 'Social Welfare',
-    },
     proportions: {
+      '0': 'CHICANA/O STUDIES',
+      '1': 'SPANISH AND PORTUGUESE',
+      '2': 'NAVAL SCIENCE',
+      '3': 'EDUCATION',
+      '4': 'SOCIAL WELFARE',
+    },
+    deptNames: {
       '0': 0.9606299212598425,
       '1': 0.6536796536796536,
       '2': 0.4,
@@ -64,14 +64,14 @@ var latino = {
     },
   },
   '2014': {
-    deptNames: {
-      '0': 'Chicana/o Studies',
-      '1': 'Spanish Portuguese',
-      '2': 'Social Welfare',
-      '3': 'Theater',
-      '4': 'Education',
-    },
     proportions: {
+      '0': 'CHICANA/O STUDIES',
+      '1': 'SPANISH AND PORTUGUESE',
+      '2': 'SOCIAL WELFARE',
+      '3': 'THEATER',
+      '4': 'EDUCATION',
+    },
+    deptNames: {
       '0': 0.9055118110236221,
       '1': 0.5294117647058824,
       '2': 0.17277486910994763,
@@ -80,14 +80,14 @@ var latino = {
     },
   },
   '2015': {
-    deptNames: {
-      '0': 'Inst for Res on Labor Employment',
-      '1': 'Military Science',
-      '2': 'Chicana/o Studies',
-      '3': 'Spanish Portuguese',
-      '4': 'Education',
-    },
     proportions: {
+      '0': 'MILITARY SCIENCE',
+      '1': 'CHICANA/O STUDIES',
+      '2': 'SPANISH AND PORTUGUESE',
+      '3': 'EDUCATION',
+      '4': 'SOCIAL WELFARE',
+    },
+    deptNames: {
       '0': 1.0,
       '1': 0.9136690647482013,
       '2': 0.6744186046511628,
@@ -96,14 +96,14 @@ var latino = {
     },
   },
   '2016': {
-    deptNames: {
-      '0': 'Inst for Res on Labor Employment',
-      '1': 'Military Science',
-      '2': 'Chicana/o Studies',
-      '3': 'Spanish Portuguese',
-      '4': 'Education',
-    },
     proportions: {
+      '0': 'MILITARY SCIENCE',
+      '1': 'CHICANA/O STUDIES',
+      '2': 'SPANISH AND PORTUGUESE',
+      '3': 'EDUCATION',
+      '4': 'CHEMICAL AND BIOMOLECULAR ENGINEERING',
+    },
+    deptNames: {
       '0': 1.0,
       '1': 0.9178082191780822,
       '2': 0.6071428571428572,
@@ -112,14 +112,14 @@ var latino = {
     },
   },
   '2017': {
-    deptNames: {
-      '0': 'Military Science',
-      '1': 'Chicana/o Studies',
-      '2': 'Inst for Res on Labor Employment',
-      '3': 'Spanish Portuguese',
-      '4': 'Education',
-    },
     proportions: {
+      '0': 'MILITARY SCIENCE',
+      '1': 'CHICANA/O STUDIES',
+      '2': 'SPANISH AND PORTUGUESE',
+      '3': 'EDUCATION',
+      '4': 'ETHNOMUSICOLOGY',
+    },
+    deptNames: {
       '0': 1.0,
       '1': 0.9025974025974026,
       '2': 0.6317829457364341,
@@ -128,14 +128,14 @@ var latino = {
     },
   },
   '2018': {
-    deptNames: {
-      '0': 'Chicana/o Studies',
-      '1': 'Spanish Portuguese',
-      '2': 'Inst for Res on Labor Employment',
-      '3': 'Education',
-      '4': 'Ethnomusicology',
-    },
     proportions: {
+      '0': 'CHICANA/O STUDIES',
+      '1': 'SPANISH AND PORTUGUESE',
+      '2': 'EDUCATION',
+      '3': 'ETHNOMUSICOLOGY',
+      '4': 'ECONOMICS',
+    },
+    deptNames: {
       '0': 0.9192546583850931,
       '1': 0.5316455696202531,
       '2': 0.17496443812233287,
