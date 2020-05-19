@@ -280,6 +280,7 @@ The School of Law was within the top five biggest increases in each of the minor
 
 <div id="table" style='width: 100%;'></div>
 
+
 ## Conclusion
 
 UCLA has, in general, increased the proportion of minority faculty.
