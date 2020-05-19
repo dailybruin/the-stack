@@ -37,6 +37,7 @@ var female = [
   { Department: "Luskin School of Public Affairs (LSPA)", PercentChange: "21.48%"},
   { Department: "Henry Samueli School of Engineering & Applied Science (HSSEAS)" , PercentChange: "20.86%"}
 ];
+
 var femaleHeader = ["School", "Percent Change in Female Proportion"];
 
 function addTable(data, header) {
