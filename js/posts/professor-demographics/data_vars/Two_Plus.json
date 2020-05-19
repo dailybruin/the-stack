@@ -1,0 +1,128 @@
+{
+  "proportions": {
+    "0": 0,
+    "1": 0,
+    "2": 0,
+    "3": 0,
+    "4": 0
+  },
+  "deptNames": {
+    "0": "ALL",
+    "1": "AEROSPACE STUDIES",
+    "2": "AFRICAN AMERICAN STUDIES",
+    "3": "ANDERSON",
+    "4": "ANTHROPOLOGY"
+  },
+  "proportions.1": {
+    "0": 0,
+    "1": 0,
+    "2": 0,
+    "3": 0,
+    "4": 0
+  },
+  "deptNames.1": {
+    "0": "ALL",
+    "1": "AEROSPACE STUDIES",
+    "2": "AFRICAN AMERICAN STUDIES",
+    "3": "ANDERSON",
+    "4": "ANTHROPOLOGY"
+  },
+  "proportions.2": {
+    "0": 0,
+    "1": 0,
+    "2": 0,
+    "3": 0,
+    "4": 0
+  },
+  "deptNames.2": {
+    "0": "ALL",
+    "1": "AEROSPACE STUDIES",
+    "2": "AFRICAN AMERICAN STUDIES",
+    "3": "ANDERSON",
+    "4": "ANTHROPOLOGY"
+  },
+  "proportions.3": {
+    "0": 0,
+    "1": 0,
+    "2": 0,
+    "3": 0,
+    "4": 0
+  },
+  "deptNames.3": {
+    "0": "ALL",
+    "1": "AEROSPACE STUDIES",
+    "2": "AFRICAN AMERICAN STUDIES",
+    "3": "ANDERSON",
+    "4": "ANTHROPOLOGY"
+  },
+  "proportions.4": {
+    "0": 0,
+    "1": 0,
+    "2": 0,
+    "3": 0,
+    "4": 0
+  },
+  "deptNames.4": {
+    "0": "ALL",
+    "1": "AEROSPACE STUDIES",
+    "2": "AFRICAN AMERICAN STUDIES",
+    "3": "ANDERSON",
+    "4": "ANTHROPOLOGY"
+  },
+  "proportions.5": {
+    "0": 0,
+    "1": 0,
+    "2": 0,
+    "3": 0,
+    "4": 0
+  },
+  "deptNames.5": {
+    "0": "ALL",
+    "1": "AEROSPACE STUDIES",
+    "2": "AFRICAN AMERICAN STUDIES",
+    "3": "ANDERSON",
+    "4": "ANTHROPOLOGY"
+  },
+  "proportions.6": {
+    "0": 0.0243902439,
+    "1": 0.0196374622,
+    "2": 0.0007607817,
+    "3": 0.0,
+    "4": 0.0
+  },
+  "deptNames.6": {
+    "0": "Information Studies",
+    "1": "Education",
+    "2": "ALL",
+    "3": "AEROSPACE STUDIES",
+    "4": "AFRICAN AMERICAN STUDIES"
+  },
+  "proportions.7": {
+    "0": 0.0714285714,
+    "1": 0.0335766423,
+    "2": 0.0122399021,
+    "3": 0.0019833034,
+    "4": 0.0
+  },
+  "deptNames.7": {
+    "0": "Design | Media Arts",
+    "1": "Education",
+    "2": "Law",
+    "3": "ALL",
+    "4": "AEROSPACE STUDIES"
+  },
+  "proportions.8": {
+    "0": 0.1,
+    "1": 0.0714285714,
+    "2": 0.0378378378,
+    "3": 0.0327169275,
+    "4": 0.0106157113
+  },
+  "deptNames.8": {
+    "0": "AFRICAN AMERICAN STUDIES",
+    "1": "Design | Media Arts",
+    "2": "ART",
+    "3": "Education",
+    "4": "Law"
+  }
+}

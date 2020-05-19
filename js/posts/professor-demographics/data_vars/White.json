@@ -1,0 +1,128 @@
+{
+  "proportions": {
+    "0": 1.0,
+    "1": 1.0,
+    "2": 1.0,
+    "3": 0.9361702128,
+    "4": 0.935483871
+  },
+  "deptNames": {
+    "0": "AEROSPACE STUDIES",
+    "1": "Classics",
+    "2": "Slavic East European Eurasian Langs",
+    "3": "Nr Eastern Langs Cultures",
+    "4": "Philosophy"
+  },
+  "proportions.1": {
+    "0": 1.0,
+    "1": 1.0,
+    "2": 1.0,
+    "3": 1.0,
+    "4": 0.9711934156
+  },
+  "deptNames.1": {
+    "0": "Classics",
+    "1": "Communication Studies",
+    "2": "Germanic Languages",
+    "3": "Slavic East European Eurasian Langs",
+    "4": "Nr Eastern Langs Cultures"
+  },
+  "proportions.2": {
+    "0": 1,
+    "1": 1,
+    "2": 1,
+    "3": 1,
+    "4": 1
+  },
+  "deptNames.2": {
+    "0": "Classics",
+    "1": "Germanic Languages",
+    "2": "Indo European Studies",
+    "3": "Inst for Res on Labor Employment",
+    "4": "Inst for Society Genetics"
+  },
+  "proportions.3": {
+    "0": 1.0,
+    "1": 1.0,
+    "2": 1.0,
+    "3": 1.0,
+    "4": 0.9611650485
+  },
+  "deptNames.3": {
+    "0": "Classics",
+    "1": "Indo European Studies",
+    "2": "Public Health",
+    "3": "Slavic East European Eurasian Langs",
+    "4": "Germanic Languages"
+  },
+  "proportions.4": {
+    "0": 1.0,
+    "1": 1.0,
+    "2": 1.0,
+    "3": 0.9545454545,
+    "4": 0.9300699301
+  },
+  "deptNames.4": {
+    "0": "Indo European Studies",
+    "1": "Public Health",
+    "2": "Slavic East European Eurasian Langs",
+    "3": "Philosophy",
+    "4": "Classics"
+  },
+  "proportions.5": {
+    "0": 1.0,
+    "1": 1.0,
+    "2": 1.0,
+    "3": 0.9382716049,
+    "4": 0.9300699301
+  },
+  "deptNames.5": {
+    "0": "Indo European Studies",
+    "1": "Public Health",
+    "2": "Slavic East European Eurasian Langs",
+    "3": "French and Francophone Studies",
+    "4": "Communication Studies"
+  },
+  "proportions.6": {
+    "0": 1.0,
+    "1": 0.9430379747,
+    "2": 0.9346405229,
+    "3": 0.9180327869,
+    "4": 0.9107142857
+  },
+  "deptNames.6": {
+    "0": "Indo European Studies",
+    "1": "Communication Studies",
+    "2": "Classics",
+    "3": "Inst for Society Genetics",
+    "4": "Philosophy"
+  },
+  "proportions.7": {
+    "0": 1.0,
+    "1": 1.0,
+    "2": 0.9609375,
+    "3": 0.9236641221,
+    "4": 0.8936170213
+  },
+  "deptNames.7": {
+    "0": "Indo European Studies",
+    "1": "Public Health",
+    "2": "Classics",
+    "3": "French and Francophone Studies",
+    "4": "Philosophy"
+  },
+  "proportions.8": {
+    "0": 1.0,
+    "1": 1.0,
+    "2": 0.9152542373,
+    "3": 0.9019607843,
+    "4": 0.8993710692
+  },
+  "deptNames.8": {
+    "0": "Indo European Studies",
+    "1": "Neuroscience Interdepartmental Prog",
+    "2": "French and Francophone Studies",
+    "3": "Philosophy",
+    "4": "Classics"
+  }
+}

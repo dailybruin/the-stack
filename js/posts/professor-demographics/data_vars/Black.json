@@ -1,0 +1,128 @@
+{
+  "proportions": {
+    "0": 0.6,
+    "1": 0.52,
+    "2": 0.3333333333,
+    "3": 0.2623762376,
+    "4": 0.1265822785
+  },
+  "deptNames": {
+    "0": "AFRICAN AMERICAN STUDIES",
+    "1": "Military Science",
+    "2": "Naval Science",
+    "3": "Ethnomusicology",
+    "4": "Social Welfare"
+  },
+  "proportions.1": {
+    "0": 0.8,
+    "1": 0.7333333333,
+    "2": 0.2576419214,
+    "3": 0.2,
+    "4": 0.1428571429
+  },
+  "deptNames.1": {
+    "0": "AFRICAN AMERICAN STUDIES",
+    "1": "Military Science",
+    "2": "Ethnomusicology",
+    "3": "Naval Science",
+    "4": "Environmental Health Sciences"
+  },
+  "proportions.2": {
+    "0": 1.0,
+    "1": 0.8571428571,
+    "2": 0.2633928571,
+    "3": 0.1704545455,
+    "4": 0.1503546099
+  },
+  "deptNames.2": {
+    "0": "Military Science",
+    "1": "AFRICAN AMERICAN STUDIES",
+    "2": "Ethnomusicology",
+    "3": "Gender Studies",
+    "4": "Education"
+  },
+  "proportions.3": {
+    "0": 0.75,
+    "1": 0.5,
+    "2": 0.2714932127,
+    "3": 0.2150537634,
+    "4": 0.1677419355
+  },
+  "deptNames.3": {
+    "0": "AFRICAN AMERICAN STUDIES",
+    "1": "Military Science",
+    "2": "Ethnomusicology",
+    "3": "Gender Studies",
+    "4": "Social Welfare"
+  },
+  "proportions.4": {
+    "0": 0.8333333333,
+    "1": 0.2450980392,
+    "2": 0.1941747573,
+    "3": 0.1399116348,
+    "4": 0.1351351351
+  },
+  "deptNames.4": {
+    "0": "AFRICAN AMERICAN STUDIES",
+    "1": "Ethnomusicology",
+    "2": "Gender Studies",
+    "3": "Education",
+    "4": "Environmental Health Sciences"
+  },
+  "proportions.5": {
+    "0": 1.0,
+    "1": 0.2227272727,
+    "2": 0.1595744681,
+    "3": 0.1304347826,
+    "4": 0.1256830601
+  },
+  "deptNames.5": {
+    "0": "AFRICAN AMERICAN STUDIES",
+    "1": "Ethnomusicology",
+    "2": "Gender Studies",
+    "3": "Education",
+    "4": "Social Welfare"
+  },
+  "proportions.6": {
+    "0": 0.9125,
+    "1": 0.2116182573,
+    "2": 0.1470588235,
+    "3": 0.1351351351,
+    "4": 0.1299093656
+  },
+  "deptNames.6": {
+    "0": "AFRICAN AMERICAN STUDIES",
+    "1": "Ethnomusicology",
+    "2": "Social Welfare",
+    "3": "Environmental Health Sciences",
+    "4": "Education"
+  },
+  "proportions.7": {
+    "0": 0.8736842105,
+    "1": 0.247706422,
+    "2": 0.1474452555,
+    "3": 0.119047619,
+    "4": 0.1117318436
+  },
+  "deptNames.7": {
+    "0": "AFRICAN AMERICAN STUDIES",
+    "1": "Ethnomusicology",
+    "2": "Education",
+    "3": "Environmental Health Sciences",
+    "4": "Community Health Sciences"
+  },
+  "proportions.8": {
+    "0": 0.68,
+    "1": 0.219123506,
+    "2": 0.165,
+    "3": 0.1450924609,
+    "4": 0.1377245509
+  },
+  "deptNames.8": {
+    "0": "AFRICAN AMERICAN STUDIES",
+    "1": "Ethnomusicology",
+    "2": "Social Welfare",
+    "3": "Education",
+    "4": "Community Health Sciences"
+  }
+}
