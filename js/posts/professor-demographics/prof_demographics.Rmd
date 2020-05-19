@@ -1,0 +1,211 @@
+---
+title: "prof-demographics"
+output: html_document
+---
+getwd()
+
+save.image(file = "prof.RData")
+load("prof.RData")
+fairly certain this is the correct csv file--I remember that once we decided which departments not to keep, there were 88 of them. i'm also fairly certain i added this csv file to github
+```{r}
+data <- read.csv("prof-demographics.csv", na.strings=c("","na","-","N/A","NA"), stringsAsFactors=FALSE)
+## View(data)
+#clean row 613 because inconsistent ("data for both 2010 and 2011 are 0")
+# data <- data[-613, ]
+library(dplyr)
+library(stringr)
+library(stringi)
+library(purrr)
+```
+
+Grabbing the list of department names
+```{r}
+deptList <- data$Year %>% str_extract_all("[a-z|A-Z]+") 
+deptList <- compact(deptList)
+length(deptList)
+deptNames <- rep(NA, length(deptList))
+for (i in 1:length(deptList)){
+  deptNames[i] <- str_c(deptList[[i]][1:length(deptList[[i]])], collapse=' ')
+}
+length(deptNames)
+```
+Removing commas and last column
+```{r}
+data$M <- gsub(",", "", data$M)
+data$W <- gsub(",", "", data$W)
+data$T <- gsub(",", "", data$T)
+data <- data[, -12]
+head(data)
+```
+
+```{r}
+"data[data$Year == "2011", ]
+data[610:620, ]
+data[614, ]
+missingRow <- data.frame("Year" = "2011", "F" = "0", "M" = "1", "AI" = "0", "A" = "0", "B" = "0", "L" = "1", "TW" = "0", "U" = "0", "W" = "0", "T" = "1")
+
+data[1:612, ]
+data <- rbind(data[1:612, ], missingRow, data[613:nrow(data), ])
+data <- data[-614, ]"""
+```
+
+Checking to see that each department has something for each year:
+```{r}
+for (i in 2010:2018) {
+  print(length(which(data$Year == i)))
+} ## they all do yay
+```
+
+```{r}
+ethnicities <- c("americanIndian", "asian", "black", "latino", "twoPlus", "unknown", "white")
+years <- c("2010", "2011", "2012", "2013", "2014", "2015", "2016", "2017", "2018")
+```
+
+American Indian: 
+```{r}
+americanIndian <- character(77)
+for (i in 2010:2018) {
+  proportions <- as.numeric(data[which(data$Year == i), ]$AI) / as.numeric(data[which(data$Year == i), ]$T)
+    for (j in 1:length(proportions)) {
+      if (is.nan(proportions[j]) == TRUE) {
+        proportions[j] <- 0
+      }
+    }
+  propsAndDepts <- as_data_frame(cbind(proportions, deptNames))
+  americanIndian <- cbind(americanIndian, propsAndDepts %>% arrange(desc(proportions))) ## then from here get the top 5 departments and save it somewhere!!!
+}
+americanIndian <- americanIndian[1:5, -1]
+americanIndian
+write.csv(americanIndian, "American_Indian.csv", row.names = FALSE)
+```
+
+Asian
+```{r}
+Asian <- character(77)
+for (i in 2010:2018) {
+  proportions <- as.numeric(data[which(data$Year == i), ]$A) / as.numeric(data[which(data$Year == i), ]$T)
+    for (j in 1:length(proportions)) {
+      if (is.nan(proportions[j]) == TRUE) {
+        proportions[j] <- 0
+      }
+    }
+  propsAndDepts <- as_data_frame(cbind(proportions, deptNames))
+  Asian <- cbind(Asian, propsAndDepts %>% arrange(desc(proportions))) ## then from here get the top 5 departments and save it somewhere!!!
+}
+Asian <- Asian[1:5, -1]
+##Asian <- Asian[, -1]
+tail(Asian, 20)
+Asian
+write.csv(Asian, "Asian.csv", row.names = FALSE)
+
+```
+
+Black
+```{r}
+Black <- character(77)
+for (i in 2010:2018) {
+  proportions <- as.numeric(data[which(data$Year == i), ]$B) / as.numeric(data[which(data$Year == i), ]$T)
+    for (j in 1:length(proportions)) {
+      if (is.nan(proportions[j]) == TRUE) {
+        proportions[j] <- 0
+      }
+    }
+  propsAndDepts <- as_data_frame(cbind(proportions, deptNames))
+  Black <- cbind(Black, propsAndDepts %>% arrange(desc(proportions))) ## then from here get the top 5 departments and save it somewhere!!!
+}
+Black <- Black[1:5, -1]
+#Black <- Black[, -1]
+tail(Black, 20)
+Black
+write.csv(Black, "Black.csv", row.names = FALSE)
+```
+
+Latino
+```{r}
+Latino <- character(77)
+for (i in 2010:2018) {
+  proportions <- as.numeric(data[which(data$Year == i), ]$L) / as.numeric(data[which(data$Year == i), ]$T)
+    for (j in 1:length(proportions)) {
+      if (is.nan(proportions[j]) == TRUE) {
+        proportions[j] <- 0
+      }
+    }
+  propsAndDepts <- as_data_frame(cbind(proportions, deptNames))
+  Latino <- cbind(Latino, propsAndDepts %>% arrange(desc(proportions))) ## then from here get the top 5 departments and save it somewhere!!!
+}
+Latino <- Latino[1:5, -1]
+##Latino <- Latino[, -1]
+tail(Latino, 20)
+Latino
+write.csv(Latino, "Latino.csv", row.names = FALSE)
+```
+
+Two or More
+```{r}
+twoOrMore <- character(77)
+for (i in 2010:2018) {
+  proportions <- as.numeric(data[which(data$Year == i), ]$TW) / as.numeric(data[which(data$Year == i), ]$T)
+    for (j in 1:length(proportions)) {
+      if (is.nan(proportions[j]) == TRUE) {
+        proportions[j] <- 0
+      }
+    }
+  propsAndDepts <- as_data_frame(cbind(proportions, deptNames))
+  twoOrMore <- cbind(twoOrMore, propsAndDepts %>% arrange(desc(proportions))) ## then from here get the top 5 departments and save it somewhere!!!
+}
+twoOrMore <- twoOrMore[1:5, -1]
+twoOrMore
+write.csv(twoOrMore, "Two_Plus.csv", row.names = FALSE)
+```
+
+Unknown ## we ended up omitting this category, if i remember correctly?
+```{r}
+Unknown <- character(111)
+for (i in 2010:2018) {
+  proportions <- as.numeric(data[which(data$Year == i), ]$U) / as.numeric(data[which(data$Year == i), ]$T)
+    for (j in 1:length(proportions)) {
+      if (is.nan(proportions[j]) == TRUE) {
+        proportions[j] <- 0
+      }
+    }
+  propsAndDepts <- as_data_frame(cbind(proportions, deptNames))
+  Unknown <- cbind(Unknown, propsAndDepts %>% arrange(desc(proportions))) ## then from here get the top 5 departments and save it somewhere!!!
+}
+Unknown <- Unknown[1:5, -1]
+Unknown
+write.csv(Unknown, "Unknown.csv", row.names = FALSE)
+```
+
+White
+```{r}
+White <- character(77)
+for (i in 2010:2018) {
+  proportions <- as.numeric(data[which(data$Year == i), ]$W) / as.numeric(data[which(data$Year == i), ]$T)
+    for (j in 1:length(proportions)) {
+      if (is.nan(proportions[j]) == TRUE) {
+        proportions[j] <- 0
+      }
+    }
+  propsAndDepts <- as_data_frame(cbind(proportions, deptNames))
+  White <- cbind(White, propsAndDepts %>% arrange(desc(proportions))) ## then from here get the top 5 departments and save it somewhere!!!
+}
+
+## lastyr <- as.numeric(data[which(data$Year == 2018), ]$W) / as.numeric(data[which(data$Year == 2018), ]$T)
+
+White <- White[1:5, -1]
+##White <- White[, -1]
+tail(White, 20)
+White
+write.csv(White, "White.csv", row.names = FALSE)
+```
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,128 @@
+{
+  "proportions": {
+    "0": 0.8947368421,
+    "1": 0.6334841629,
+    "2": 0.2,
+    "3": 0.1742983752,
+    "4": 0.1542857143
+  },
+  "deptNames": {
+    "0": "CHICANA O STUDIES",
+    "1": "Spanish Portuguese",
+    "2": "AFRICAN AMERICAN STUDIES",
+    "3": "Education",
+    "4": "Health Policy Management"
+  },
+  "proportions.1": {
+    "0": 0.9104477612,
+    "1": 0.6220095694,
+    "2": 0.4,
+    "3": 0.1611982882,
+    "4": 0.1436464088
+  },
+  "deptNames.1": {
+    "0": "CHICANA O STUDIES",
+    "1": "Spanish Portuguese",
+    "2": "Naval Science",
+    "3": "Education",
+    "4": "Social Welfare"
+  },
+  "proportions.2": {
+    "0": 0.9833333333,
+    "1": 0.6026785714,
+    "2": 0.4,
+    "3": 0.2013422819,
+    "4": 0.1687943262
+  },
+  "deptNames.2": {
+    "0": "CHICANA O STUDIES",
+    "1": "Spanish Portuguese",
+    "2": "Naval Science",
+    "3": "Health Policy Management",
+    "4": "Education"
+  },
+  "proportions.3": {
+    "0": 0.9606299213,
+    "1": 0.6536796537,
+    "2": 0.4,
+    "3": 0.1676646707,
+    "4": 0.1612903226
+  },
+  "deptNames.3": {
+    "0": "CHICANA O STUDIES",
+    "1": "Spanish Portuguese",
+    "2": "Naval Science",
+    "3": "Education",
+    "4": "Social Welfare"
+  },
+  "proportions.4": {
+    "0": 0.905511811,
+    "1": 0.5294117647,
+    "2": 0.1727748691,
+    "3": 0.1637010676,
+    "4": 0.1620029455
+  },
+  "deptNames.4": {
+    "0": "CHICANA O STUDIES",
+    "1": "Spanish Portuguese",
+    "2": "Social Welfare",
+    "3": "Theater",
+    "4": "Education"
+  },
+  "proportions.5": {
+    "0": 1.0,
+    "1": 1.0,
+    "2": 0.9136690647,
+    "3": 0.6744186047,
+    "4": 0.1692546584
+  },
+  "deptNames.5": {
+    "0": "Inst for Res on Labor Employment",
+    "1": "Military Science",
+    "2": "CHICANA O STUDIES",
+    "3": "Spanish Portuguese",
+    "4": "Education"
+  },
+  "proportions.6": {
+    "0": 1.0,
+    "1": 1.0,
+    "2": 0.9178082192,
+    "3": 0.6071428571,
+    "4": 0.1812688822
+  },
+  "deptNames.6": {
+    "0": "Inst for Res on Labor Employment",
+    "1": "Military Science",
+    "2": "CHICANA O STUDIES",
+    "3": "Spanish Portuguese",
+    "4": "Education"
+  },
+  "proportions.7": {
+    "0": 1.0,
+    "1": 0.9025974026,
+    "2": 0.6666666667,
+    "3": 0.6317829457,
+    "4": 0.1781021898
+  },
+  "deptNames.7": {
+    "0": "Military Science",
+    "1": "CHICANA O STUDIES",
+    "2": "Inst for Res on Labor Employment",
+    "3": "Spanish Portuguese",
+    "4": "Education"
+  },
+  "proportions.8": {
+    "0": 0.9192546584,
+    "1": 0.5316455696,
+    "2": 0.4,
+    "3": 0.1749644381,
+    "4": 0.1434262948
+  },
+  "deptNames.8": {
+    "0": "CHICANA O STUDIES",
+    "1": "Spanish Portuguese",
+    "2": "Inst for Res on Labor Employment",
+    "3": "Education",
+    "4": "Ethnomusicology"
+  }
+}
