@@ -5,7 +5,7 @@ var female = [
   { Department: "Materials Science & Engr (MSE)", PercentChange: "101.60%"},
   { Department: "Dean, Div of Humanities" , PercentChange: "100%"}
 ];
-var femaleHeader = ["Department", "Percent Change in Female Proportion"]
+var femaleHeader = ["School", "Percent Change in Female Proportion"]
 
 var americanIndian = [
   { Department: "Sociology", PercentChange: "123.89%"},
@@ -14,7 +14,7 @@ var americanIndian = [
   { Department: "Aerospace Studies", PercentChange: "61.01%"},
   { Department: "Nursing" , PercentChange: "51.97%"}
 ];
-var americanHeader = ["Department", "Percent Change in American Indian Proportion"]
+var americanHeader = ["School", "Percent Change in American Indian Proportion"]
 
 var asian = [
   { Department: "Film, TV, & Digital Media", PercentChange: "538.44%"},
@@ -23,7 +23,7 @@ var asian = [
   { Department: "Archaeology", PercentChange: "188.06%"},
   { Department: "Theater" , PercentChange: "185.06%"}
 ];
-var asianHeader = ["Department", "Percent Change in Asian Proportion"]
+var asianHeader = ["School", "Percent Change in Asian Proportion"]
 
 var black = [
   { Department: "Community Health Sciences", PercentChange: "204.37%"},
@@ -32,7 +32,7 @@ var black = [
   { Department: "Chemistry and Biochemistry", PercentChange: "78.16%"},
   { Department: "Theather" , PercentChange: "65.71%"}
 ];
-var blackHeader = ["Department", "Percent Change in Black Proportion"]
+var blackHeader = ["School", "Percent Change in Black Proportion"]
 
 var latino = [
   { Department: "Psychology", PercentChange: "207.64%"},
@@ -41,7 +41,7 @@ var latino = [
   { Department: "English", PercentChange: "84.23%"},
   { Department: "Community Health Sciences" , PercentChange: "72.04%"}
 ];
-var latinoHeader = ["Department", "Percent Change in Latino Proportion"]
+var latinoHeader = ["School", "Percent Change in Latino Proportion"]
 
 
 function addTable(data, header) {
