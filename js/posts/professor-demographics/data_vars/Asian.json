@@ -1,0 +1,128 @@
+{
+  "proportions": {
+    "0": 1.0,
+    "1": 1.0,
+    "2": 0.6194690265,
+    "3": 0.5680190931,
+    "4": 0.4328358209
+  },
+  "deptNames": {
+    "0": "ASIAN AMERICAN STUDIES",
+    "1": "Occupational Envtl Health Cntr CTR O EH",
+    "2": "Materials Science Engr MSE",
+    "3": "ASIAN LANGUAGES AND CULTURES",
+    "4": "Electrical and Computer Engineering"
+  },
+  "proportions.1": {
+    "0": 1.0,
+    "1": 1.0,
+    "2": 0.5815602837,
+    "3": 0.5737704918,
+    "4": 0.4233128834
+  },
+  "deptNames.1": {
+    "0": "ASIAN AMERICAN STUDIES",
+    "1": "Public Health",
+    "2": "ASIAN LANGUAGES AND CULTURES",
+    "3": "Materials Science Engr MSE",
+    "4": "Electrical and Computer Engineering"
+  },
+  "proportions.2": {
+    "0": 1.0,
+    "1": 0.619047619,
+    "2": 0.5673758865,
+    "3": 0.5,
+    "4": 0.4680851064
+  },
+  "deptNames.2": {
+    "0": "ASIAN AMERICAN STUDIES",
+    "1": "ASIAN LANGUAGES AND CULTURES",
+    "2": "Materials Science Engr MSE",
+    "3": "Occupational Envtl Health Cntr CTR O EH",
+    "4": "BIOENGINEERING"
+  },
+  "proportions.3": {
+    "0": 1.0,
+    "1": 0.6391509434,
+    "2": 0.5833333333,
+    "3": 0.5714285714,
+    "4": 0.4444444444
+  },
+  "deptNames.3": {
+    "0": "ASIAN AMERICAN STUDIES",
+    "1": "ASIAN LANGUAGES AND CULTURES",
+    "2": "Materials Science Engr MSE",
+    "3": "Occupational Envtl Health Cntr CTR O EH",
+    "4": "BIOENGINEERING"
+  },
+  "proportions.4": {
+    "0": 1.0,
+    "1": 0.5849514563,
+    "2": 0.4887218045,
+    "3": 0.4568965517,
+    "4": 0.4513618677
+  },
+  "deptNames.4": {
+    "0": "ASIAN AMERICAN STUDIES",
+    "1": "ASIAN LANGUAGES AND CULTURES",
+    "2": "Materials Science Engr MSE",
+    "3": "Mechanical Aerospace Engr MANE",
+    "4": "Dentistry"
+  },
+  "proportions.5": {
+    "0": 0.9583333333,
+    "1": 0.5990338164,
+    "2": 0.5714285714,
+    "3": 0.4863013699,
+    "4": 0.452722063
+  },
+  "deptNames.5": {
+    "0": "ASIAN AMERICAN STUDIES",
+    "1": "ASIAN LANGUAGES AND CULTURES",
+    "2": "Occupational Envtl Health Cntr CTR O EH",
+    "3": "Materials Science Engr MSE",
+    "4": "Mechanical Aerospace Engr MANE"
+  },
+  "proportions.6": {
+    "0": 1.0,
+    "1": 0.5966587112,
+    "2": 0.5714285714,
+    "3": 0.5035971223,
+    "4": 0.4607843137
+  },
+  "deptNames.6": {
+    "0": "ASIAN AMERICAN STUDIES",
+    "1": "ASIAN LANGUAGES AND CULTURES",
+    "2": "Occupational Envtl Health Cntr CTR O EH",
+    "3": "Materials Science Engr MSE",
+    "4": "Dentistry"
+  },
+  "proportions.7": {
+    "0": 0.9615384615,
+    "1": 0.8,
+    "2": 0.5954545455,
+    "3": 0.463619403,
+    "4": 0.4619565217
+  },
+  "deptNames.7": {
+    "0": "ASIAN AMERICAN STUDIES",
+    "1": "Occupational Envtl Health Cntr CTR O EH",
+    "2": "ASIAN LANGUAGES AND CULTURES",
+    "3": "Dentistry",
+    "4": "Mechanical Aerospace Engr MANE"
+  },
+  "proportions.8": {
+    "0": 1.0,
+    "1": 1.0,
+    "2": 0.6460554371,
+    "3": 0.5211267606,
+    "4": 0.4658981748
+  },
+  "deptNames.8": {
+    "0": "ASIAN AMERICAN STUDIES",
+    "1": "Occupational Envtl Health Cntr CTR O EH",
+    "2": "ASIAN LANGUAGES AND CULTURES",
+    "3": "Materials Science Engr MSE",
+    "4": "Dentistry"
+  }
+}
