@@ -34,6 +34,7 @@ scripts:
     - /js/posts/professor-demographics/copy.js
     - /js/posts/professor-demographics/char.js
 ---
+_This post was updated on May 18 at 10:55 p.m._
 
 Brantly Fulton grew up in Pontiac, Michigan, an underprivileged community outside Detroit. 
 
@@ -56,7 +57,7 @@ The Stack took a look into faculty hiring patterns based on race and gender over
 <ul>
 <li>The data was collected from BruinX, an analytics-based think tank housed under the Office of Equity, Diversity and Inclusion at UCLA.</li>
 <li>The number of faculty per school/department is shown as full-time equivalent – an employee who works full time year round would equal 1 FTE, while an employee who works half time for a full year would equal 0.5 FTE.</li>
-<li>Departments that do not teach undergraduate courses and have less than 5 FTE faculty are not shown, though they are included in broader school counts.</li>
+<li>Departments that do not teach undergraduate courses and have less than 5 FTE faculty are not shown, though they are included in broader school counts. Additionally, departments that have limited data on the BruinX website are not included in any of the department-specific graphs. A full list of unincluded departments is provided under the “Conclusion” section. </li>
 </ul>
 
 <div id='holder'>
@@ -286,3 +287,8 @@ Nweke said he thinks universities should focus on pipelining students from the h
 
 “My biggest fear is that (diversity is) in fact a buzzword, and that people will forget about it in a couple of years,” Nweke said. “But from what I'm seeing, ... I don't think that that's the case.”
 
+## Unincluded Departments
+
+The following departments were removed from department-specific graphs due to the fact that they do not teach undergraduate courses and have fewer than 5 FTE faculty, or if they have incomplete data on the BruinX website.
+
+American Indian Studies, Archaeology, CA Cntr for Population Research, Center for Jewish Studies, Chicano Studies Research Cntr, Dean Division of Humanities, Dean GSE&IS, Dean HASOM, Dean STFT, Dental Clinic, Dental Clinic Off Campus, Dental Research Inst, Dechenne Musc Dyst Research Cntr, Educational Initiatives, Film & TV Archive, Fowler Museum, Honors Program, Inst for Planets & Exoplanets, Inst for Pure & Applied Math, Inst for Res on Labor & Employment, Inst for Technology Advancement, Institute for Archaeology, Interdepartmental Degree Programs, Interdepartmental Program - Social Sciences, Lesbian, Gay & Bisexual Studies, Life Sciences Core Crclm Prgm, Luskin Center for Innovation, Minor in Biomedical Research, Nasarian Center for Israel Studies, Neuroscience Interdepartmental Program, Program in Computing, Study of Religion, Writing. 
