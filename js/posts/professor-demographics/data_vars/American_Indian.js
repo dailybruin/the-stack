@@ -1,138 +1,90 @@
-var americanIndian = {
-    "2010" : {
-     "proportions": {
-       "0": 0.1,
-       "1": 0.0495049505,
-       "2": 0.0322580645,
-       "3": 0.0313479624,
-       "4": 0.0248138958
-     },
-     "deptNames": {
-       "0": "Gender Studies",
-       "1": "Ethnomusicology",
-       "2": "Theater",
-       "3": "Anthropology",
-       "4": "Sociology"
-     }
-   }, "2011" : {
-     "proportions": {
-       "0": 0.0598802395,
-       "1": 0.0436681223,
-       "2": 0.0363636364,
-       "3": 0.0279329609,
-       "4": 0.0253164557
-     },
-     "deptNames": {
-       "0": "Statistics",
-       "1": "Ethnomusicology",
-       "2": "Theater",
-       "3": "Anthropology",
-       "4": "Sociology"
-     }
-   }, "2012" : {
-     "proportions": {
-       "0": 0.1136363636,
-       "1": 0.0462962963,
-       "2": 0.0446428571,
-       "3": 0.0309597523,
-       "4": 0.0299401198
-     },
-     "deptNames": {
-       "0": "Gender Studies",
-       "1": "Theater",
-       "2": "Ethnomusicology",
-       "3": "Anthropology",
-       "4": "Urban Planning"
-     }
-   }, "2013" : {
-     "proportions": {
-       "0": 1,
-       "1": 0.218487395,
-       "2": 0.1075268817,
-       "3": 0.0680628272,
-       "4": 0.0452488688
-     },
-     "deptNames": {
-       "0": "American Indian Studies",
-       "1": "Public Policy",
-       "2": "Gender Studies",
-       "3": "Urban Planning",
-       "4": "Ethnomusicology"
-     }
-   }, "2014" : {
-     "proportions": {
-       "0": 0.2222222222,
-       "1": 0.0970873786,
-       "2": 0.0490196078,
-       "3": 0.0355871886,
-       "4": 0.0295857988
-     },
-     "deptNames": {
-       "0": "Public Policy",
-       "1": "Gender Studies",
-       "2": "Ethnomusicology",
-       "3": "Theater",
-       "4": "Anthropology"
-     }
-   }, "2015" : {
-     "proportions": {
-       "0": 0.1769911504,
-       "1": 0.1063829787,
-       "2": 0.0591715976,
-       "3": 0.0454545455,
-       "4": 0.0340136054
-     },
-     "deptNames": {
-       "0": "Public Policy",
-       "1": "Gender Studies",
-       "2": "Anthropology",
-       "3": "Ethnomusicology",
-       "4": "Theater"
-     }
-   }, "2016" : {
-     "proportions": {
-       "0": 1,
-       "1": 0.2222222222,
-       "2": 0.1764705882,
-       "3": 0.0718390805,
-       "4": 0.0414937759,
-     },
-     "deptNames": {
-       "0": "American Indian Studies",
-       "1": "Public Policy",
-       "2": "Gender Studies",
-       "3": "Anthropology",
-       "4": "Ethnomusicology"
-     }
-   }, "2017" : {
-     "proportions": {
-       "0": 0.5,
-       "1": 0.188034188,
-       "2": 0.12,
-       "3": 0.0628140704,
-       "4": 0.0537634409
-     },
-     "deptNames": {
-       "0": "American Indian Studies",
-       "1": "Public Policy",
-       "2": "Gender Studies",
-       "3": "Anthropology",
-       "4": "Sociology"
-     }
-   }, "2018" : {
-     "proportions": {
-       "0": 0.156250000,
-       "1": 0.082278481,
-       "2": 0.0555555556,
-       "3": 0.0529100529,
-       "4": 0.0398406375
-     },
-     "deptNames": {
-       "0": "Public Policy",
-       "1": "Gender Studies",
-       "2": "Sociology",
-       "3": "Anthropology",
-       "4": "Ethnomusicology"
-     }
-   }
-  };
+var americanIndian = {'2010': {'deptNames': {'0': 'GENDER STUDIES',
+  '1': 'ETHNOMUSICOLOGY',
+  '2': 'THEATER',
+  '3': 'ANTHROPOLOGY',
+  '4': 'SOCIOLOGY'},
+ 'proportions': {'0': 0.1,
+  '1': 0.04950495049504951,
+  '2': 0.03225806451612903,
+  '3': 0.031347962382445145,
+  '4': 0.02481389578163772}},
+'2011': {'deptNames': {'0': 'STATISTICS',
+  '1': 'ETHNOMUSICOLOGY',
+  '2': 'THEATER',
+  '3': 'ANTHROPOLOGY',
+  '4': 'SOCIOLOGY'},
+ 'proportions': {'0': 0.059880239520958084,
+  '1': 0.04366812227074236,
+  '2': 0.03636363636363636,
+  '3': 0.02793296089385475,
+  '4': 0.02531645569620253}},
+'2012': {'deptNames': {'0': 'GENDER STUDIES',
+  '1': 'THEATER',
+  '2': 'ETHNOMUSICOLOGY',
+  '3': 'ANTHROPOLOGY',
+  '4': 'URBAN PLANNING'},
+ 'proportions': {'0': 0.11363636363636363,
+  '1': 0.046296296296296294,
+  '2': 0.044642857142857144,
+  '3': 0.030959752321981428,
+  '4': 0.029940119760479042}},
+'2013': {'deptNames': {'0': 'PUBLIC POLICY',
+  '1': 'GENDER STUDIES',
+  '2': 'URBAN PLANNING',
+  '3': 'ETHNOMUSICOLOGY',
+  '4': 'SOCIAL WELFARE'},
+ 'proportions': {'0': 0.2184873949579832,
+  '1': 0.1075268817204301,
+  '2': 0.06806282722513089,
+  '3': 0.04524886877828054,
+  '4': 0.04516129032258064}},
+'2014': {'deptNames': {'0': 'PUBLIC POLICY',
+  '1': 'GENDER STUDIES',
+  '2': 'ETHNOMUSICOLOGY',
+  '3': 'THEATER',
+  '4': 'ANTHROPOLOGY'},
+ 'proportions': {'0': 0.2222222222222222,
+  '1': 0.0970873786407767,
+  '2': 0.04901960784313726,
+  '3': 0.03558718861209964,
+  '4': 0.02958579881656805}},
+'2015': {'deptNames': {'0': 'PUBLIC POLICY',
+  '1': 'GENDER STUDIES',
+  '2': 'ANTHROPOLOGY',
+  '3': 'ETHNOMUSICOLOGY',
+  '4': 'THEATER'},
+ 'proportions': {'0': 0.17699115044247787,
+  '1': 0.10638297872340426,
+  '2': 0.0591715976331361,
+  '3': 0.045454545454545456,
+  '4': 0.034013605442176874}},
+'2016': {'deptNames': {'0': 'PUBLIC POLICY',
+  '1': 'GENDER STUDIES',
+  '2': 'ANTHROPOLOGY',
+  '3': 'ETHNOMUSICOLOGY',
+  '4': 'THEATER'},
+ 'proportions': {'0': 0.2222222222222222,
+  '1': 0.17647058823529413,
+  '2': 0.07183908045977012,
+  '3': 0.04149377593360996,
+  '4': 0.030581039755351678}},
+'2017': {'deptNames': {'0': 'PUBLIC POLICY',
+  '1': 'GENDER STUDIES',
+  '2': 'ANTHROPOLOGY',
+  '3': 'SOCIOLOGY',
+  '4': 'ETHNOMUSICOLOGY'},
+ 'proportions': {'0': 0.18803418803418806,
+  '1': 0.12,
+  '2': 0.0628140703517588,
+  '3': 0.05376344086021505,
+  '4': 0.04587155963302752}},
+'2018': {'deptNames': {'0': 'PUBLIC POLICY',
+  '1': 'GENDER STUDIES',
+  '2': 'SOCIOLOGY',
+  '3': 'ANTHROPOLOGY',
+  '4': 'ETHNOMUSICOLOGY'},
+ 'proportions': {'0': 0.15625,
+  '1': 0.08227848101265822,
+  '2': 0.05555555555555555,
+  '3': 0.052910052910052914,
+  '4': 0.0398406374501992}}};
