@@ -266,14 +266,14 @@ Few schools had a significant (>10%) percent change in American Indian faculty.
 
 The School of Law was within the top five biggest increases in each of the minority faculty present, raising the percentage of Chicana(o)/Latina(o)/Hispanic and African American faculty by approximately 30% and 20%, respectively.
 
-
 <label for='gender'>Sort by Gender or Race/Ethnicity</label>
 <select id='tableChoice'>
-    <option>Female</option>
-    <option>American Indian or Alaskan Native</option>
-    <option>Asian/Asian American/Pacific Islander</option>
-    <option>Black or African-American</option>
-    <option>Chicano(a)/Latina(o)/Hispanic</option>
+
+<option>Female</option>
+<option>American Indian or Alaskan Native</option>
+<option>Asian/Asian American/Pacific Islander</option>
+<option>Black or African-American</option>
+<option>Chicano(a)/Latina(o)/Hispanic</option>
 </select>
 
 <div id="table" style='width: 100%;'></div>
