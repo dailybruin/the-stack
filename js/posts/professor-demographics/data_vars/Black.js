@@ -1,4 +1,4 @@
-var black = {'2010': {'deptNames': {'0': 'AFRICAN AMERICAN STUDIES',
+var black = {'2010': {'deptNames': {'0': 'African American Studies',
   '1': 'Military Science',
   '2': 'Naval Science',
   '3': 'Ethnomusicology',
