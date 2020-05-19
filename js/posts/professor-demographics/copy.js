@@ -85,34 +85,42 @@ var races = [{
     title: 'White',
     color: '#E69F00',
     ca: 38,
+    cat: [40, 40, 39, 39, 38, 38, 38, 37, 37]
 }, {
     title: 'Asian/Asian American or Pacific Islander',
     color: '#D55E00',
     ca: 14,
+    cat: [13, 13, 14, 14, 14, 14, 14, 15, 15]
 }, {
     title: 'Chicano(a)/Latina(o)/Hispanic',
     color: '#0072B2',
     ca: 39,
+    cat: [38, 38, 38, 38, 39, 39, 39, 39, 39]
 }, {
     title: 'Black or African-American',
     color: '#F0E442',
     ca: 6,
+    cat: [6, 6, 6, 6, 6, 6, 6, 6, 6]
 }, {
     title: 'American Indian or Alaskan Native',
     color: '#009E73',
     ca: 0,
+    cat: [0,0,0,0,0,0,0,0,0],
 }, {
     title: 'Two or More Races',
     color: '#6073b1',
     ca: 3,
+    cat: [3,3,3,3,3,3,3,3,3]
 }, {
     title: 'Unknown',
     color: '#ddcc77',
     ca: 0,
+    cat: [0,0,0,0,0,0,0,0,0],
 }, {
     title: 'Total',
     color: '#E69F00',
     ca: 1,
+    cat: [0,0,0,0,0,0,0,0,0]
 }];
 
 function updateKey(bool) {
@@ -332,7 +340,6 @@ window.onload = function(){
   setTimeout(function() {document.getElementById('sch').click()}, 300)
 };
 
-
 function updateBalls(bool) {
     var blank = [];
     var blank2 = [];
@@ -344,9 +351,12 @@ function updateBalls(bool) {
 
     var california = d3.select('#california').selectAll('circle');
     var people = d3.select('#people').selectAll('circle');
-
+    
     const radius = 10;
 
+    var toThis = parseInt(document.getElementById('changeYear').value);
+    toThis -= 2010;
+    
     var config;
     if (bool == true/*document.getElementById('gender').selectedIndex == 1*/) {
         data = dem_by_school[0].genders;
@@ -360,16 +370,15 @@ function updateBalls(bool) {
         data = dem_by_school[0].races;
         config = races;
         for (i=0; i<races.length; i++) {
-            for (j=0; j<races[i].ca; j++) {
+            for (j=0; j<races[i].cat[toThis]; j++) {
                 blank.push(races[i].color)
             }
         }
     }
+    
+    
 
     // configuring balls
-
-    var toThis = parseInt(document.getElementById('changeYear').value);
-    toThis -= 2010;
 
     var tot = 0;
     for (i=0; i<data.length; i++) {
