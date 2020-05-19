@@ -35,7 +35,7 @@ scripts:
   - /js/posts/professor-demographics/char.js
 ---
 
-_This post was updated May 19 at 12:57 p.m. Because the data pulled from BruinX was incomplete, a further reverification is being conducted._
+_This post was updated May 19 at 2:31 p.m. Because the data pulled from BruinX was incomplete, a further reverification is being conducted._
 
 Brantly Fulton grew up in Pontiac, Michigan, an underprivileged community outside Detroit.
 
@@ -61,7 +61,7 @@ The Stack took a look into faculty hiring patterns based on race and gender over
 <li>Departments that do not teach undergraduate courses and have less than 5 FTE faculty are not shown, though they are included in broader school counts. Additionally, departments that have limited data on the BruinX website are not included in any of the department-specific graphs. A full list of unincluded departments is provided under the “Conclusion” section. </li>
 </ul>
 
-Correction: The original version of these graphs displayed FTE data under incorrect department names. The original version also incorrectly displayed data that factored in incomplete information of certain demographic groups within certain departments, which BruinX did not provide. Those demographic groups have been removed.
+_Correction: The original version of these graphs displayed FTE data under incorrect department names. The original version also incorrectly displayed data that factored in incomplete information of certain demographic groups within certain departments, which BruinX did not provide. Those departments have been removed._
 
 <div id='holder'>
     <div style='margin-bottom: 15px;'>
@@ -135,7 +135,7 @@ Cultural fields of study often had high proportions of that culture as faculty. 
 
 It’s also worth noting that some departments had no professors of some ethnic groups – the data showed that almost every year, there were at least 20 departments that had no Asian professors, African American professors, Chicana(o)/Latina(o)/Hispanic professors or American Indian professors, while there were rarely more than four departments with no white professors.
 
-Correction: The original version of these graphs incorrectly displayed data that factored in incomplete information of certain demographic groups within certain departments, which BruinX did not provide. Those demographic groups have been removed.
+_Correction: The original version of these graphs incorrectly displayed data that factored in incomplete information of certain demographic groups within certain departments, which BruinX did not provide. Those departments have been removed._
 
 <div class="anniegraph">
     <canvas id="proportions_chart"> </canvas>
