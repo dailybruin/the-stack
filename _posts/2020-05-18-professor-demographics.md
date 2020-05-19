@@ -1,42 +1,43 @@
 ---
-title:  "Evaluating the Decade's Demographic Trends Among Faculty at UCLA"
+title: "Evaluating the Decade's Demographic Trends Among Faculty at UCLA"
 teaser: "How have the demographics of UCLA faculty changed since 2010?"
 authors:
-    - bernard_mendez
-    - annie_zhang
-    - charlotte_huang
-    - jeanette_lin
-    - jc_rios
+  - bernard_mendez
+  - annie_zhang
+  - charlotte_huang
+  - jeanette_lin
+  - jc_rios
 key_takeaways:
-- Campuswide, UCLA has hired a greater proportion of minority faculty in the past 10 years.
-- The total proportion of female faculty has also increased by around 5%.
-- Few schools had a significant (>10%) percent change in American Indian faculty.
+  - Campuswide, UCLA has hired a greater proportion of minority faculty in the past 10 years.
+  - The total proportion of female faculty has also increased by around 5%.
+  - Few schools had a significant (>10%) percent change in American Indian faculty.
 featured_image:
-    url: /professor-demographics/updatedgraph.JPG
+  url: /professor-demographics/updatedgraph.JPG
 og_image: /professor-demographics/updatedgraph.JPG
 stylesheets:
-    - /css/posts/professor-demographics/app.css
-    - /css/posts/professor-demographics/copy.css
+  - /css/posts/professor-demographics/app.css
+  - /css/posts/professor-demographics/copy.css
 scripts:
-    - //d3js.org/d3.v4.min.js
-    - //d3js.org/d3-transition.v1.min.js
-    - //ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js
-    - //cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.js
-    - /js/posts/professor-demographics/data_vars/American_Indian.js
-    - /js/posts/professor-demographics/data_vars/Asian.js
-    - /js/posts/professor-demographics/data_vars/Black.js
-    - /js/posts/professor-demographics/data_vars/Latino.js
-    - /js/posts/professor-demographics/data_vars/Two_Plus.js
-    - /js/posts/professor-demographics/data_vars/Unknown.js
-    - /js/posts/professor-demographics/data_vars/White.js
-    - /js/posts/professor-demographics/chart.js
-    - /js/posts/professor-demographics/var.js
-    - /js/posts/professor-demographics/copy.js
-    - /js/posts/professor-demographics/char.js
+  - //d3js.org/d3.v4.min.js
+  - //d3js.org/d3-transition.v1.min.js
+  - //ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js
+  - //cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.js
+  - /js/posts/professor-demographics/data_vars/American_Indian.js
+  - /js/posts/professor-demographics/data_vars/Asian.js
+  - /js/posts/professor-demographics/data_vars/Black.js
+  - /js/posts/professor-demographics/data_vars/Latino.js
+  - /js/posts/professor-demographics/data_vars/Two_Plus.js
+  - /js/posts/professor-demographics/data_vars/Unknown.js
+  - /js/posts/professor-demographics/data_vars/White.js
+  - /js/posts/professor-demographics/chart.js
+  - /js/posts/professor-demographics/var.js
+  - /js/posts/professor-demographics/copy.js
+  - /js/posts/professor-demographics/char.js
 ---
-_This post was updated on May 18 at 10:55 p.m._
 
-Brantly Fulton grew up in Pontiac, Michigan, an underprivileged community outside Detroit. 
+_This post was updated May 19 at 12:57 p.m. Because the data pulled from BruinX was incomplete, a further reverification is being conducted._
+
+Brantly Fulton grew up in Pontiac, Michigan, an underprivileged community outside Detroit.
 
 Fulton went on to graduate with a degree in chemistry from Morehouse College and joined UCLA as a lecturer of chemistry in 2019.
 
@@ -59,6 +60,8 @@ The Stack took a look into faculty hiring patterns based on race and gender over
 <li>The number of faculty per school/department is shown as full-time equivalent – an employee who works full time year round would equal 1 FTE, while an employee who works half time for a full year would equal 0.5 FTE.</li>
 <li>Departments that do not teach undergraduate courses and have less than 5 FTE faculty are not shown, though they are included in broader school counts. Additionally, departments that have limited data on the BruinX website are not included in any of the department-specific graphs. A full list of unincluded departments is provided under the “Conclusion” section. </li>
 </ul>
+
+Correction: The original version of these graphs displayed FTE data under incorrect department names. The original version also incorrectly displayed data that factored in incomplete information of certain demographic groups within certain departments, which BruinX did not provide. Those demographic groups have been removed.
 
 <div id='holder'>
     <div style='margin-bottom: 15px;'>
@@ -90,7 +93,6 @@ The Stack took a look into faculty hiring patterns based on race and gender over
 </div>
 </div>
 
-
 <aside id='pie_stand'>
 <div><h2 style='padding-top: 5%;'>Demographics by School</h2>
 <p style='color: grey; font-size: 10px'>Measured in FTE — where a value of 1 is equal to an employee working full time year-round</p>
@@ -103,7 +105,7 @@ The Stack took a look into faculty hiring patterns based on race and gender over
 
 ## General Observations
 
-In general, women are underrepresented compared to men – campuswide, 61% of the UCLA faculty were male in the 2018-2019 school year. Men are most highly represented in the Henry Samueli School of Engineering and Applied Science, the Anderson School of Management and in the physical sciences. Women are most highly represented in the School of Nursing, the Graduate School of Education and Information Studies and the  Fielding School of Public Health.
+In general, women are underrepresented compared to men – campuswide, 61% of the UCLA faculty were male in the 2018-2019 school year. Men are most highly represented in the Henry Samueli School of Engineering and Applied Science, the Anderson School of Management and in the physical sciences. Women are most highly represented in the School of Nursing, the Graduate School of Education and Information Studies and the Fielding School of Public Health.
 
 ## What has UCLA done in the past 10 years?
 
@@ -111,11 +113,11 @@ Efforts to improve diversity within the faculty have largely been spearheaded by
 
 UCLA founded the Office of EDI in 2015 in response to the <a href='https://www.ucop.edu/moreno-report/external-review-team-report-10-15-13.pdf'>Moreno Report</a> – an internal investigation which found the university’s response to incidents of bias and discrimination “inadequate.”
 
-Since then, the office has attempted to improve UCLA’s response to bias and discrimination, including by publicizing <a href='https://equity.ucla.edu/know/'>resources</a> aimed to encourage sensitivity and releasing <a href='https://equity.ucla.edu/public_accountability/public_accountability_reports/'>accountability reports</a> to publicize statistics of complaints and investigations on campus. 
+Since then, the office has attempted to improve UCLA’s response to bias and discrimination, including by publicizing <a href='https://equity.ucla.edu/know/'>resources</a> aimed to encourage sensitivity and releasing <a href='https://equity.ucla.edu/public_accountability/public_accountability_reports/'>accountability reports</a> to publicize statistics of complaints and investigations on campus.
 
 The Office of EDI also created <a href='https://equity.ucla.edu/about-us/our-teams/bruinx/'>BruinX</a>, a campus think tank that aims to apply data analytics toward diversity-related issues.
 
-Chukwuebuka Nweke, a postdoctoral researcher in civil and environmental engineering, said there has been a lot of effort to hire minority faculty – which includes African American, Chicana(o)/Latina(o)/Hispanic, LGBTQ+ and female candidates. 
+Chukwuebuka Nweke, a postdoctoral researcher in civil and environmental engineering, said there has been a lot of effort to hire minority faculty – which includes African American, Chicana(o)/Latina(o)/Hispanic, LGBTQ+ and female candidates.
 
 Nweke added that minorities are put in the same pool when it comes to searching for minority candidates, which reduces the efficacy of these initiatives.
 
@@ -133,13 +135,15 @@ Cultural fields of study often had high proportions of that culture as faculty. 
 
 It’s also worth noting that some departments had no professors of some ethnic groups – the data showed that almost every year, there were at least 20 departments that had no Asian professors, African American professors, Chicana(o)/Latina(o)/Hispanic professors or American Indian professors, while there were rarely more than four departments with no white professors.
 
+Correction: The original version of these graphs incorrectly displayed data that factored in incomplete information of certain demographic groups within certain departments, which BruinX did not provide. Those demographic groups have been removed.
+
 <div class="anniegraph">
     <canvas id="proportions_chart"> </canvas>
 </div>
 
 <div class="anniegraph" id="dropdown-wrapper">
     <div class="dropdown-child">
-    <select class="anniegraph" id="years" name= "years" onchange="YEAR_VAL=this.value; update_chart(YEAR_VAL, ETHNICITY_VAL);"> 
+    <select class="anniegraph" id="years" name= "years" onchange="YEAR_VAL=this.value; update_chart(YEAR_VAL, ETHNICITY_VAL);">
     <option value='2010'>2010</option>
     <option value='2011'>2011</option>
     <option value='2012'>2012</option>
@@ -161,7 +165,6 @@ It’s also worth noting that some departments had no professors of some ethnic 
     </select>
     </div>
 </div>
-
 
 ## Upticks in Faculty Diversity
 
@@ -254,12 +257,10 @@ The proportion of female faculty has also increased by around 5%.
         <div class='type' style='visibility: hidden'>GHOST BLANK</div>
         <div class='type' style='visibility: hidden'>GHOST BLANK</div>
         <div class='type' style='visibility: hidden'>GHOST BLANK</div>
-    </div>    
+    </div>
 </div>
 
-
 </div>
-
 
 In the table below, we show the five schools with the largest change in proportion per minority group from 2010-2018.
 
@@ -267,21 +268,21 @@ Few schools had a significant (>10%) percent change in American Indian faculty.
 
 The School of Law was within the top five biggest increases in each of the minority faculty present, raising the percentage of Chicana(o)/Latina(o)/Hispanic and African American faculty by approximately 30% and 20%, respectively.
 
-
 <label for='gender'>Sort by Gender or Race/Ethnicity</label>
 <select id='tableChoice'>
-    <option>Female</option>
-    <option>American Indian or Alaskan Native</option>
-    <option>Asian/Asian American/Pacific Islander</option>
-    <option>Black or African-American</option>
-    <option>Chicano(a)/Latina(o)/Hispanic</option>
+
+<option>Female</option>
+<option>American Indian or Alaskan Native</option>
+<option>Asian/Asian American/Pacific Islander</option>
+<option>Black or African-American</option>
+<option>Chicano(a)/Latina(o)/Hispanic</option>
 </select>
 
 <div id="table" style='width: 100%;'></div>
 
 ## Conclusion
 
-UCLA has, in general, increased the proportion of minority faculty. 
+UCLA has, in general, increased the proportion of minority faculty.
 
 Nweke said he thinks universities should focus on pipelining students from the high school and undergraduate level toward the graduate and professor level, since the pathway is a funnel between each level. Still, UCLA is on the right track he said, adding he hopes people don’t forget the importance of diversity.
 
@@ -291,4 +292,4 @@ Nweke said he thinks universities should focus on pipelining students from the h
 
 The following departments were removed from department-specific graphs due to the fact that they do not teach undergraduate courses and have fewer than 5 FTE faculty, or if they have incomplete data on the BruinX website.
 
-American Indian Studies, Archaeology, CA Cntr for Population Research, Center for Jewish Studies, Chicano Studies Research Cntr, Dean Division of Humanities, Dean GSE&IS, Dean HASOM, Dean STFT, Dental Clinic, Dental Clinic Off Campus, Dental Research Inst, Dechenne Musc Dyst Research Cntr, Educational Initiatives, Film & TV Archive, Fowler Museum, Honors Program, Inst for Planets & Exoplanets, Inst for Pure & Applied Math, Inst for Res on Labor & Employment, Inst for Technology Advancement, Institute for Archaeology, Interdepartmental Degree Programs, Interdepartmental Program - Social Sciences, Lesbian, Gay & Bisexual Studies, Life Sciences Core Crclm Prgm, Luskin Center for Innovation, Minor in Biomedical Research, Nasarian Center for Israel Studies, Neuroscience Interdepartmental Program, Program in Computing, Study of Religion, Writing. 
+American Indian Studies, Archaeology, CA Cntr for Population Research, Center for Jewish Studies, Chicano Studies Research Cntr, Dean Division of Humanities, Dean GSE&IS, Dean HASOM, Dean STFT, Dental Clinic, Dental Clinic Off Campus, Dental Research Inst, Dechenne Musc Dyst Research Cntr, Educational Initiatives, Film & TV Archive, Fowler Museum, Honors Program, Inst for Planets & Exoplanets, Inst for Pure & Applied Math, Inst for Res on Labor & Employment, Inst for Technology Advancement, Institute for Archaeology, Interdepartmental Degree Programs, Interdepartmental Program - Social Sciences, Lesbian, Gay & Bisexual Studies, Life Sciences Core Crclm Prgm, Luskin Center for Innovation, Minor in Biomedical Research, Nasarian Center for Israel Studies, Neuroscience Interdepartmental Program, Program in Computing, Study of Religion, Writing.
