@@ -186,7 +186,7 @@ Groups that make up less than 0.5% of the California or UCLA population do not a
     <div>
         <h5>California</h5>
         <svg id='california' style='width: 250px; height: 270px;'></svg>
-        <div class='comment'>* Source: 2017 American Community Survey</div>
+        <div class='comment'>* Source: United States Census</div>
     </div>
     <div>
         <h5>UCLA Faculty</h5>
