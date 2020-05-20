@@ -35,7 +35,7 @@ scripts:
   - /js/posts/professor-demographics/char.js
 ---
 
-_This post was updated May 19 at 2:31 p.m. Because the data pulled from BruinX was incomplete, a further reverification is being conducted._
+_This post was updated May 20 at 11:43 a.m. to reflect clarified interpretation of the information considering null values and incomplete data._
 
 
 Brantly Fulton grew up in Pontiac, Michigan, an underprivileged community outside Detroit.
