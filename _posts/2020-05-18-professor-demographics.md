@@ -60,6 +60,7 @@ The Stack took a look into faculty hiring patterns based on race and gender over
 <li>The data was collected from BruinX, an analytics-based think tank housed under the Office of Equity, Diversity and Inclusion at UCLA.</li>
 <li>The number of faculty per school/department is shown as full-time equivalent – an employee who works full time year round would equal 1 FTE, while an employee who works half time for a full year would equal 0.5 FTE.</li>
 <li>Departments that do not teach undergraduate courses and have less than 5 FTE faculty are not shown, though they are included in broader school counts. Additionally, departments that have limited data on the BruinX website are not included in any of the department-specific graphs. A full list of unincluded departments is provided under the “Conclusion” section. </li>
+<li>Some fields in the data provided by BruinX contain null values. These values are treated as 0.0 in our graphs. </li>
 </ul>
 
 _Correction: The original version of these graphs displayed FTE data under incorrect department names. The original version also incorrectly displayed data that factored in incomplete information of certain demographic groups within certain departments, which BruinX did not provide. Those departments have been removed._
@@ -176,6 +177,8 @@ UCLA faculty is less diverse than the California population – however, this ha
 Interestingly, the proportion of faculty who declined to note their race or ethnicity increased by nearly 400%.
 
 The proportion of female faculty has also increased by around 5%.
+
+Groups that make up less than 0.5% of the California or UCLA population do not appear on the chart, as each dot represents a full percent of the population. Any percentages that were not whole were rounded to a full percentage.
 
 <div style='width: 110vh; max-width: 100%; margin-left: auto; margin-right: auto; '>
 <h4 style='margin-top: 30px; text-align: center'>UCLA faculty compared to the Californian population</h4>
