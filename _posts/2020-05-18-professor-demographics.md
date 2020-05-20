@@ -54,7 +54,7 @@ Fulton said although there is great diversity among undergraduate and graduate s
 
 The Stack took a look into faculty hiring patterns based on race and gender over the past 10 years, starting from the 2010-2011 through the 2018-2019 academic year.
 
-### About the Data
+## About the Data
 
 <ul>
 <li>The data was collected from BruinX, an analytics-based think tank housed under the Office of Equity, Diversity and Inclusion at UCLA.</li>
@@ -233,7 +233,7 @@ Groups that make up less than 0.5% of the California or UCLA population do not a
         <div class='descr'>Chicano(a)/Latina(o)/Hispanic</div>
     </div>
     <div class='type'>
-        <div class='box' style="background: #F0E442"></div>
+        <div class='box' style="background: #fc72fc"></div>
         <div class='descr'>Black or African-American</div>
     </div>
     <div class='type'>
