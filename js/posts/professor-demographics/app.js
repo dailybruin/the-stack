@@ -32,7 +32,7 @@ var races = [{
     ca: 39,
 }, {
     title: 'Black or African-American',
-    color: '#F0E442',
+    color: '#f763f7',
     ca: 6,
 }, {
     title: 'American Indian or Alaskan Native',
