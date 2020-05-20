@@ -98,7 +98,7 @@ var races = [{
     cat: [38, 38, 38, 38, 39, 39, 39, 39, 39]
 }, {
     title: 'Black or African-American',
-    color: '#F0E442',
+    color: '#f763f7',
     ca: 6,
     cat: [6, 6, 6, 6, 6, 6, 6, 6, 6]
 }, {
@@ -435,7 +435,7 @@ var pie_gender = {
 
 var gender_colors = ['#8A2BE2', '#BDB76B'];
 var gender_titles = ['Female', 'Male']
-var race_colors = ['#E69F00', '#D55E00', '#0072B2', '#F0E442', '#009E73', '#6073b1', '#ddcc77']
+var race_colors = ['#E69F00', '#D55E00', '#0072B2', '#f763f7', '#009E73', '#6073b1', '#ddcc77']
 var race_titles = ['White', 'Asian/Asian American/Pacific Islander', 'Chicano(a)/Latina(o)/Hispanic', 'Black or African-American', 'American Indian or Alaskan Native', 'Two or More Races', 'Unknown', ]
 
 var pie_stand = document.querySelector('#pie_stand')
