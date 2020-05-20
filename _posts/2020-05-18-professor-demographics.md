@@ -35,7 +35,8 @@ scripts:
   - /js/posts/professor-demographics/char.js
 ---
 
-_This post was updated May 19 at 2:31 p.m. Because the data pulled from BruinX was incomplete, a further reverification is being conducted._
+_This post was updated May 20 at 11:43 a.m. to reflect clarified interpretation of the information considering null values and incomplete data._
+
 
 Brantly Fulton grew up in Pontiac, Michigan, an underprivileged community outside Detroit.
 
@@ -53,15 +54,17 @@ Fulton said although there is great diversity among undergraduate and graduate s
 
 The Stack took a look into faculty hiring patterns based on race and gender over the past 10 years, starting from the 2010-2011 through the 2018-2019 academic year.
 
-### About the Data
+## About the Data
 
 <ul>
 <li>The data was collected from BruinX, an analytics-based think tank housed under the Office of Equity, Diversity and Inclusion at UCLA.</li>
 <li>The number of faculty per school/department is shown as full-time equivalent – an employee who works full time year round would equal 1 FTE, while an employee who works half time for a full year would equal 0.5 FTE.</li>
 <li>Departments that do not teach undergraduate courses and have less than 5 FTE faculty are not shown, though they are included in broader school counts. Additionally, departments that have limited data on the BruinX website are not included in any of the department-specific graphs. A full list of unincluded departments is provided under the “Conclusion” section. </li>
+<li>Some fields in the data provided by BruinX contain null values. These values are treated as 0.0 in our graphs. </li>
 </ul>
 
 _Correction: The original version of these graphs displayed FTE data under incorrect department names. The original version also incorrectly displayed data that factored in incomplete information of certain demographic groups within certain departments, which BruinX did not provide. Those departments have been removed._
+
 
 <div id='holder'>
     <div style='margin-bottom: 15px;'>
@@ -135,6 +138,7 @@ Cultural fields of study often had high proportions of that culture as faculty. 
 
 It’s also worth noting that some departments had no professors of some ethnic groups – the data showed that almost every year, there were at least 20 departments that had no Asian professors, African American professors, Chicana(o)/Latina(o)/Hispanic professors or American Indian professors, while there were rarely more than four departments with no white professors.
 
+
 _Correction: The original version of these graphs incorrectly displayed data that factored in incomplete information of certain demographic groups within certain departments, which BruinX did not provide. Those departments have been removed._
 
 <div class="anniegraph">
@@ -174,13 +178,15 @@ Interestingly, the proportion of faculty who declined to note their race or ethn
 
 The proportion of female faculty has also increased by around 5%.
 
+Groups that make up less than 0.5% of the California or UCLA population do not appear on the chart, as each dot represents a full percent of the population. Any percentages that were not whole were rounded to a full percentage.
+
 <div style='width: 110vh; max-width: 100%; margin-left: auto; margin-right: auto; '>
 <h4 style='margin-top: 30px; text-align: center'>UCLA faculty compared to the Californian population</h4>
 <div id='balls' style='display: flex; flex-direction: row; flex-wrap: wrap; width: 90vh; max-width: 100%; justify-content: space-around; margin-left: auto; margin-right: auto;'>
     <div>
         <h5>California</h5>
         <svg id='california' style='width: 250px; height: 270px;'></svg>
-        <div class='comment'>* Source: 2017 American Community Survey</div>
+        <div class='comment'>* Source: United States Census</div>
     </div>
     <div>
         <h5>UCLA Faculty</h5>
@@ -227,7 +233,7 @@ The proportion of female faculty has also increased by around 5%.
         <div class='descr'>Chicano(a)/Latina(o)/Hispanic</div>
     </div>
     <div class='type'>
-        <div class='box' style="background: #F0E442"></div>
+        <div class='box' style="background: #fc72fc"></div>
         <div class='descr'>Black or African-American</div>
     </div>
     <div class='type'>
