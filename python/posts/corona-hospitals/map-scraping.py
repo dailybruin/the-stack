@@ -28,18 +28,17 @@ def dataframe_from_tr(tr_elements, length):
         if len(T)!=length:
             break
 
-        if 'blue text-white' in T.values():
+        if 'blue text-white' in T.values() or 'blue text-white' in T.getparent().values():
             Dict={title:column for (title,column) in col}
             df=pd.DataFrame(Dict)
             dfs.append(df)
             i=0
             #For each row, store each first element (header) and an empty list
             for t in T.iterchildren():
-                if i == 0:
-                    name=t.text_content().encode('utf-8')
-                    col[i] = (name,[])
-                else:
-                    col[i] = (col[i][0],[])
+                name=t.text_content().encode('utf-8')
+                if not name:
+                    name = col[i][0]
+                col[i] = (name,[])
                 i+=1
 
         else:
@@ -70,18 +69,18 @@ def dataframe_from_tr(tr_elements, length):
 def process_data(cases, lb_pas, date):
     # combine LA cases w/ long beach & pasadena
     lb_pas = lb_pas.rename(columns={"Locations" : "CITY/COMMUNITY**"})
-    filtered = lb_pas[(lb_pas['CITY/COMMUNITY**'] == "- Long Beach") | (lb_pas['CITY/COMMUNITY**'] == "- Pasadena")]
+    lb_pas = lb_pas[(lb_pas['CITY/COMMUNITY**'] == "- Long Beach") | (lb_pas['CITY/COMMUNITY**'] == "- Pasadena")]
 
     # sourced from US Census 7/2018 estimates
     LONG_BEACH_POPULATION = 467354
     PASADENA_POPULATION = 141371
+    lb_pas.loc[2, 'CITY/COMMUNITY**'] = 'Long Beach'
+    lb_pas.loc[3, 'CITY/COMMUNITY**'] = 'Pasadena'
+    lb_pas.loc[2, 'Case Rate'] = lb_pas.loc[2, 'Cases'] / (LONG_BEACH_POPULATION / 100000)
+    lb_pas.loc[3, 'Case Rate'] = lb_pas.loc[3, 'Cases'] / (PASADENA_POPULATION / 100000)
 
-    filtered.at[2, 'CITY/COMMUNITY**'] = 'Long Beach'
-    filtered.at[3, 'CITY/COMMUNITY**'] = 'Pasadena'
-    filtered.at[2, 'Rate'] = filtered.at[2, 'Cases'] / (LONG_BEACH_POPULATION / 100000)
-    filtered.at[3, 'Rate'] = filtered.at[3, 'Cases'] / (PASADENA_POPULATION / 100000)
+    cases = cases.append(lb_pas, ignore_index=True, sort=False)
 
-    cases = cases.append(filtered, ignore_index=True, sort=False)
 
     # load geoJSON
     with open('datasets/covid-hospitals/neighborhoods.geojson') as x:
@@ -111,7 +110,7 @@ def process_data(cases, lb_pas, date):
             name = conversions[name]
             
         # no rate data available 
-        if row[1]['Rate'] == "NA":
+        if row[1]['Case Rate'] == "NA":
             continue
         
         match = False
@@ -121,7 +120,7 @@ def process_data(cases, lb_pas, date):
                 match = True
                 
                 case_count = float(row[1]['Cases'])
-                rate = float(row[1]['Rate'])
+                rate = float(row[1]['Case Rate'])
                 pop = 0 if rate == 0 else case_count / rate
                 
                 if f['properties']['cases'] is None:
@@ -255,8 +254,7 @@ doc = lh.fromstring(page.content)
 #Parse data that are stored between <tr>..</tr> of HTML
 tr_elements = doc.xpath('//tr')
 
-dfs = dataframe_from_tr(tr_elements, 3)
-# dfs += dataframe_from_tr(tr_elements, 4) 
+dfs = dataframe_from_tr(tr_elements, 5)
 
 cases = dfs[8]
 lb_pas= dfs[1]
@@ -269,4 +267,5 @@ jsonData = process_data(cases, lb_pas, dateString)
 # write geoJSON 
 with open('datasets/covid-hospitals/neighborhoods.geojson', 'w') as outfile:
     json.dump(jsonData, outfile)
+
 
