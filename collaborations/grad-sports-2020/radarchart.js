@@ -111,6 +111,47 @@ let realdata = [
   [24, 'N/A', 70],
 ];
 
+let numSeniors = [3, 2, 9, 4, 1, 4, 3, 3, 1, 1, 4, 5];
+let showSeniorsBool = [
+  true,
+  true,
+  false,
+  true,
+  true,
+  false,
+  false,
+  false,
+  false,
+  false,
+  false,
+  false,
+];
+let teams = 12;
+
+var originalOnClick = Chart.defaults.global.legend.onClick;
+
+Chart.defaults.global.legend.onClick = function(e, legendItem) {
+  let index = legendItem.datasetIndex;
+  showSeniorsBool[index] = !showSeniorsBool[index];
+  showSeniors();
+  originalOnClick.call(this, e, legendItem);
+};
+
+var showSeniors = function() {
+  let seniorsImg = document.getElementById('seniors');
+  seniorsImg.innerHTML = '<div id="seniors"></div>';
+  for (let i = 0; i < teams; i++) {
+    if (showSeniorsBool[i]) {
+      for (let j = 0; j < numSeniors[i]; j++) {
+        let img = document.createElement('img');
+        img.src = '../../../../collaborations/grad-sports-2020/person.png';
+        img.style.color = data.datasets[i].pointBackgroundColor;
+        seniorsImg.appendChild(img);
+      }
+    }
+  }
+};
+
 let options = {
   scale: {
     ticks: {
@@ -143,3 +184,5 @@ var barchart = new Chart(ctx, {
   data: data,
   options: options,
 });
+
+showSeniors();
