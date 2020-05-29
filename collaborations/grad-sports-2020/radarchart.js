@@ -7,7 +7,6 @@ let data = {
       borderColor: 'rgb(141,211,199)',
       pointBackgroundColor: 'rgb(141,211,199)',
       data: [0, 275 / 3, 61.3],
-      hidden: true,
     },
     {
       label: "Women's Basketball",
@@ -22,6 +21,7 @@ let data = {
       borderColor: 'rgb(190,186,218)',
       pointBackgroundColor: 'rgb(190,186,218)',
       data: [92, 250 / 3, 76.9],
+      hidden: true,
     },
     {
       label: 'Baseball',
