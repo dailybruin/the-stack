@@ -96,6 +96,21 @@ let data = {
   ],
 };
 
+let realdata = [
+  ['Unranked', 2, 61.3],
+  [10, 2, 83.9],
+  [3, 3, 76.9],
+  [5, 1, 86.7],
+  [1, 1, 96.2],
+  [2, 1, 90.5],
+  [8, 5, 52.6],
+  [2, 'N/A', 86.7],
+  [22, 2, 69.2],
+  [8, 1, 92.3],
+  [20, 'N/A', 100],
+  [24, 'N/A', 70],
+];
+
 let options = {
   scale: {
     ticks: {
@@ -109,6 +124,16 @@ let options = {
   },
   legend: {
     position: 'left',
+  },
+  tooltips: {
+    callbacks: {
+      label: function(tooltipItem, data) {
+        let label = data.datasets[tooltipItem.datasetIndex].label;
+        return (
+          label + ': ' + realdata[tooltipItem.datasetIndex][tooltipItem.index]
+        );
+      },
+    },
   },
 };
 
