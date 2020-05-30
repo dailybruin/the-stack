@@ -36,7 +36,7 @@ def dataframe_from_tr(tr_elements, length):
             #For each row, store each first element (header) and an empty list
             for t in T.iterchildren():
                 name=t.text_content().encode('utf-8')
-                if not name:
+                if not name or name.isdigit():
                     name = col[i][0]
                 col[i] = (name,[])
                 i+=1
@@ -68,16 +68,16 @@ def dataframe_from_tr(tr_elements, length):
 
 def process_data(cases, lb_pas, date):
     # combine LA cases w/ long beach & pasadena
-    lb_pas = lb_pas.rename(columns={"Locations" : "CITY/COMMUNITY**"})
+    lb_pas = lb_pas.rename(columns={"Laboratory Confirmed Cases (LCC)" : "CITY/COMMUNITY**"})
     lb_pas = lb_pas[(lb_pas['CITY/COMMUNITY**'] == "- Long Beach") | (lb_pas['CITY/COMMUNITY**'] == "- Pasadena")]
 
     # sourced from US Census 7/2018 estimates
     LONG_BEACH_POPULATION = 467354
     PASADENA_POPULATION = 141371
-    lb_pas.loc[2, 'CITY/COMMUNITY**'] = 'Long Beach'
-    lb_pas.loc[3, 'CITY/COMMUNITY**'] = 'Pasadena'
-    lb_pas.loc[2, 'Case Rate'] = lb_pas.loc[2, 'Cases'] / (LONG_BEACH_POPULATION / 100000)
-    lb_pas.loc[3, 'Case Rate'] = lb_pas.loc[3, 'Cases'] / (PASADENA_POPULATION / 100000)
+    lb_pas.loc[1, 'CITY/COMMUNITY**'] = 'Long Beach'
+    lb_pas.loc[2, 'CITY/COMMUNITY**'] = 'Pasadena'
+    lb_pas.loc[1, 'Case Rate'] = lb_pas.loc[1, 'Cases'] / (LONG_BEACH_POPULATION / 100000)
+    lb_pas.loc[2, 'Case Rate'] = lb_pas.loc[2, 'Cases'] / (PASADENA_POPULATION / 100000)
 
     cases = cases.append(lb_pas, ignore_index=True, sort=False)
 
