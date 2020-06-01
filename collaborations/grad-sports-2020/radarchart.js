@@ -144,7 +144,7 @@ var showSeniors = function() {
     if (showSeniorsBool[i]) {
       for (let j = 0; j < numSeniors[i]; j++) {
         let img = document.createElement('img');
-        img.src = '../../../../collaborations/grad-sports-2020/person.png';
+        img.src = '../../../../collaborations/grad-sports-2020/person1.png';
         img.style.color = data.datasets[i].pointBackgroundColor;
         seniorsImg.appendChild(img);
       }
