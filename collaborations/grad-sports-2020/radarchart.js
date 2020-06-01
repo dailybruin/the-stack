@@ -144,8 +144,9 @@ var showSeniors = function() {
     if (showSeniorsBool[i]) {
       for (let j = 0; j < numSeniors[i]; j++) {
         let img = document.createElement('img');
-        img.src = '../../../../collaborations/grad-sports-2020/person1.png';
-        img.style.color = data.datasets[i].pointBackgroundColor;
+        img.src = '../../../../collaborations/grad-sports-2020/person1.svg';
+        img.className = 'senior';
+        img.style.backgroundColor = data.datasets[i].pointBackgroundColor;
         seniorsImg.appendChild(img);
       }
     }
@@ -164,7 +165,7 @@ let options = {
     },
   },
   legend: {
-    position: 'left',
+    position: 'bottom',
   },
   tooltips: {
     callbacks: {
@@ -176,6 +177,7 @@ let options = {
       },
     },
   },
+  maintainAspectRatio: false,
 };
 
 let ctx = document.getElementById('radarchart');

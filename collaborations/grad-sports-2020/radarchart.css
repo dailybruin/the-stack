@@ -1,0 +1,18 @@
+.senior {
+  height: 6vh;
+  margin-right: 1vh;
+  margin-bottom: 1vh;
+  opacity: 0.3
+}
+
+.chart-container {
+  position: relative;
+  height: 80vh;
+  width: 180vh;
+  padding-bottom: 2vh;
+}
+
+#radar-chart {
+  height: 70vh;
+  width: 170vh;
+}
