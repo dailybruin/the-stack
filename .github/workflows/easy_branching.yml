@@ -5,18 +5,16 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Current Branch
-        uses: ryolambert/current-branch@v1.0  
+      - name: Checkout repo
+        uses: actions/checkout@v2
+        with:
+          repository: ${{ github.ref }}
       - name: Extract branch name
         shell: bash
         run: |
           branch_name="##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
           echo $branch_name
         id: extract_branch
-      - name: Checkout repo
-        uses: actions/checkout@v2
-        with:
-          ref: $branch_name
       - name: Create required variables
         run: |
           now=$(date +%m-%d-%y-)
