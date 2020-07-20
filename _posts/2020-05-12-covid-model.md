@@ -131,4 +131,4 @@ This example has simulated probabilities, but the real probabilities in our mode
 
 _To learn more about how this article was made, watch the video below:_
 
-<iframe width="921" height="518" src="https://www.youtube.com/embed/Grgu3X1RmJY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="90%" height="518" src="https://www.youtube.com/embed/Grgu3X1RmJY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
