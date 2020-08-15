@@ -1,5 +1,3 @@
-var marker = new mapboxgl.Marker().setLngLat([12.550343, 55.665957]).addTo(map);
-
 var greenIcon = new L.Icon({
   iconUrl:
     'https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-green.png',
