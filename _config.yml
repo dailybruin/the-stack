@@ -27,6 +27,7 @@ defaults:
 # Outputting
 permalink: pretty # don't have `.html` on the end of permalinks
 timezone: America/Los_Angeles
+Timezone: America/Los_Angeles
 paginate: 12 # items per page
 paginate_path: "/page/:num/"
 
@@ -35,3 +36,7 @@ markdown: kramdown
 
 # plugins
 gems: [jekyll-paginate]
+
+exclude: [node_modules, README.md]
+
+keep_files: [images]
