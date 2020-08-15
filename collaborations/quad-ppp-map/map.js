@@ -14,4 +14,11 @@ L.tileLayer(
   }
 ).addTo(mymap);
 
-var marker = L.marker([34.060716, -118.445345]).addTo(mymap);
+L.geoJSON(geojsonFeature).addTo(mymap);
+
+// places deleted bc wack addresses:
+// MYNHD inc
+// lesenfants inc
+// fresher corn grill
+// stealth software technologies
+// medqia llc
