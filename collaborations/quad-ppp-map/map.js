@@ -34,13 +34,25 @@ let group5 = [];
 
 geojsonFeature.features.map(feature => {
   let iconColor;
+  let popup =
+    "<b style='font-size:14px;'>" +
+    feature.properties.BusinessName +
+    '</b> <br>' +
+    "<p style='font-size:14px; margin-top: 0px; margin-bottom: 0px; '>" +
+    'Loan Range: ' +
+    feature.properties.LoanRange +
+    '</p>' +
+    "<p style='font-size:14px; margin-top: 0px;'>" +
+    'Jobs Retained: ' +
+    feature.properties.JobsRetained +
+    '</p>';
   switch (feature.properties.LoanRange) {
     case '$150,000-350,000':
       group1.push(
         L.marker(
           [feature.geometry.coordinates[1], feature.geometry.coordinates[0]],
           { icon: getIconByColor('red') }
-        )
+        ).bindPopup(popup)
       );
       break;
     case '$350,000-1 million':
@@ -48,7 +60,7 @@ geojsonFeature.features.map(feature => {
         L.marker(
           [feature.geometry.coordinates[1], feature.geometry.coordinates[0]],
           { icon: getIconByColor('orange') }
-        )
+        ).bindPopup(popup)
       );
       break;
     case '$1-2 million':
@@ -56,7 +68,7 @@ geojsonFeature.features.map(feature => {
         L.marker(
           [feature.geometry.coordinates[1], feature.geometry.coordinates[0]],
           { icon: getIconByColor('yellow') }
-        )
+        ).bindPopup(popup)
       );
       break;
     case '$2-5 million':
@@ -64,7 +76,7 @@ geojsonFeature.features.map(feature => {
         L.marker(
           [feature.geometry.coordinates[1], feature.geometry.coordinates[0]],
           { icon: getIconByColor('green') }
-        )
+        ).bindPopup(popup)
       );
       break;
     case '$5-10 million':
@@ -72,7 +84,7 @@ geojsonFeature.features.map(feature => {
         L.marker(
           [feature.geometry.coordinates[1], feature.geometry.coordinates[0]],
           { icon: getIconByColor('blue') }
-        )
+        ).bindPopup(popup)
       );
       break;
     default:
