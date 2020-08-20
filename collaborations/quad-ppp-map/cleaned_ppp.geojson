@@ -1956,6 +1956,90 @@
     "BusinessName":"YAGOUBZADEH LAW FIRM LLP",
     "JobsRetained":"26"
     }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -118.430186,34.062883 ]
+    },
+    "properties": {
+    "LoanRange":"$150,000-350,000",
+    "BusinessName":"ELITE SALES AND SERVICES, LLC",
+    "JobsRetained":"19"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -118.42319,34.05844 ]
+    },
+    "properties": {
+    "LoanRange":"$150,000-350,000",
+    "BusinessName":"PAULSETH &AMP; ASSOCIATES PHYSICAL THERAPY,",
+    "JobsRetained":"12"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -118.44468,34.04838 ]
+    },
+    "properties": {
+    "LoanRange":"$1-2 million",
+    "BusinessName":"SHOUT! FACTORY, LLC",
+    "JobsRetained":"77"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -118.443973,34.047989 ]
+    },
+    "properties": {
+    "LoanRange":"$350,000-1 million",
+    "BusinessName":"MOJIX, INC.",
+    "JobsRetained":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -118.43031,34.05353 ]
+    },
+    "properties": {
+    "LoanRange":"$150,000-350,000",
+    "BusinessName":"DATTNER DISPOTO AND ASSOCIATES",
+    "JobsRetained":"0"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -118.43014,34.0538 ]
+    },
+    "properties": {
+    "LoanRange":"$150,000-350,000",
+    "BusinessName":"MPCA ADMINISTRATION LLC",
+    "JobsRetained":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -118.425485,34.056858 ]
+    },
+    "properties": {
+    "LoanRange":"$350,000-1 million",
+    "BusinessName":"LOLA VISUAL EFFECTS, LLC",
+    "JobsRetained":"49"
+    }
   }
 ]
 }

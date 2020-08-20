@@ -34,6 +34,10 @@ let group5 = [];
 
 geojsonFeature.features.map(feature => {
   let iconColor;
+  let JobsRetained = feature.properties.JobsRetained;
+  if (JobsRetained === '') {
+    JobsRetained = 'Unknown';
+  }
   let popup =
     "<b style='font-size:14px;'>" +
     feature.properties.BusinessName +
@@ -44,7 +48,7 @@ geojsonFeature.features.map(feature => {
     '</p>' +
     "<p style='font-size:14px; margin-top: 0px;'>" +
     'Jobs Retained: ' +
-    feature.properties.JobsRetained +
+    JobsRetained +
     '</p>';
   switch (feature.properties.LoanRange) {
     case '$150,000-350,000':
@@ -109,3 +113,12 @@ L.control.layers(null, overlays, { collapsed: false }).addTo(mymap);
 // stealth software technologies
 // medqia llc
 // southern ca tennis association
+
+// places added bc addresses still within s. sepulveda blvd and santa monica blvd
+// elite sales and services llc
+// paulseth & associates physical therapy
+// shout! factory, llc
+// mojix, inc.
+// dattner dispoto and associates
+// mpca administration llc
+// lola visual effects, llc
