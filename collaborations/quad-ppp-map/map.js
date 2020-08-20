@@ -97,11 +97,21 @@ geojsonFeature.features.map(feature => {
 });
 
 var overlays = {
-  '$150,000-350,000 loan': L.layerGroup(group1).addTo(mymap),
-  '$350,000-1 million loan': L.layerGroup(group2).addTo(mymap),
-  '$1-2 million loan': L.layerGroup(group3).addTo(mymap),
-  '$2-5 million loan': L.layerGroup(group4).addTo(mymap),
-  '$5-10 million loan': L.layerGroup(group5).addTo(mymap),
+  '<p style="color: red; margin-top: 0px; margin-bottom: 0px;">$150,000-350,000 loan</p>': L.layerGroup(
+    group1
+  ).addTo(mymap),
+  '<p style="color: darkorange; margin-top: 0px; margin-bottom: 0px;">$350,000-1 million loan</p>': L.layerGroup(
+    group2
+  ).addTo(mymap),
+  '<p style="color: olive; margin-top: 0px; margin-bottom: 0px;">$1-2 million loan</p>': L.layerGroup(
+    group3
+  ).addTo(mymap),
+  '<p style="color: green; margin-top: 0px; margin-bottom: 0px;">$2-5 million loan</p>': L.layerGroup(
+    group4
+  ).addTo(mymap),
+  '<p style="color: dodgerblue; margin-top: 0px; margin-bottom: 0px;">$5-10 million loan</p>': L.layerGroup(
+    group5
+  ).addTo(mymap),
 };
 
 L.control.layers(null, overlays, { collapsed: false }).addTo(mymap);
