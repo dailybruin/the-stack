@@ -14,6 +14,17 @@ L.tileLayer(
   }
 ).addTo(mymap);
 
+var oms = new OverlappingMarkerSpiderfier(mymap, { keepSpiderfied: true });
+let popup = new L.Popup({ offset: new L.Point(0.5, -24) });
+oms.addListener('click', function(marker) {
+  popup.setContent(marker.desc);
+  popup.setLatLng(marker.getLatLng());
+  mymap.openPopup(popup);
+});
+oms.addListener('spiderfy', function(markers) {
+  mymap.closePopup();
+});
+
 const getIconByColor = color => {
   return new L.Icon({
     iconUrl: `https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-${color}.png`,
@@ -33,12 +44,16 @@ let group4 = [];
 let group5 = [];
 
 geojsonFeature.features.map(feature => {
-  let iconColor;
   let JobsRetained = feature.properties.JobsRetained;
   if (JobsRetained === '') {
     JobsRetained = 'Unknown';
   }
-  let popup =
+
+  let marker = new L.marker([
+    feature.geometry.coordinates[1],
+    feature.geometry.coordinates[0],
+  ]);
+  marker.desc =
     "<b style='font-size:14px;'>" +
     feature.properties.BusinessName +
     '</b> <br>' +
@@ -52,48 +67,31 @@ geojsonFeature.features.map(feature => {
     '</p>';
   switch (feature.properties.LoanRange) {
     case '$150,000-350,000':
-      group1.push(
-        L.marker(
-          [feature.geometry.coordinates[1], feature.geometry.coordinates[0]],
-          { icon: getIconByColor('red') }
-        ).bindPopup(popup)
-      );
+      marker.setIcon(getIconByColor('red'));
+      group1.push(marker);
       break;
     case '$350,000-1 million':
-      group2.push(
-        L.marker(
-          [feature.geometry.coordinates[1], feature.geometry.coordinates[0]],
-          { icon: getIconByColor('orange') }
-        ).bindPopup(popup)
-      );
+      marker.setIcon(getIconByColor('orange'));
+      group2.push(marker);
       break;
     case '$1-2 million':
-      group3.push(
-        L.marker(
-          [feature.geometry.coordinates[1], feature.geometry.coordinates[0]],
-          { icon: getIconByColor('yellow') }
-        ).bindPopup(popup)
-      );
+      marker.setIcon(getIconByColor('yellow'));
+      group3.push(marker);
       break;
     case '$2-5 million':
-      group4.push(
-        L.marker(
-          [feature.geometry.coordinates[1], feature.geometry.coordinates[0]],
-          { icon: getIconByColor('green') }
-        ).bindPopup(popup)
-      );
+      marker.setIcon(getIconByColor('green'));
+      group4.push(marker);
       break;
     case '$5-10 million':
-      group5.push(
-        L.marker(
-          [feature.geometry.coordinates[1], feature.geometry.coordinates[0]],
-          { icon: getIconByColor('blue') }
-        ).bindPopup(popup)
-      );
+      marker.setIcon(getIconByColor('blue'));
+      group5.push(marker);
       break;
     default:
       iconColor = 'black';
   }
+
+  mymap.addLayer(marker);
+  oms.addMarker(marker);
 });
 
 var overlays = {
