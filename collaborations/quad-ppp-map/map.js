@@ -121,6 +121,7 @@ L.control.layers(null, overlays, { collapsed: false }).addTo(mymap);
 // lesenfants inc
 // fresher corn grill
 // stealth software technologies
+// corday productions
 
 // places added bc addresses still within s. sepulveda blvd and santa monica blvd
 // elite sales and services llc 10669 Wellworth Ave.
@@ -135,3 +136,8 @@ L.control.layers(null, overlays, { collapsed: false }).addTo(mymap);
 // MYNHD inc 11000 Wilshire Blvd, Suite 1426
 // medqia llc: address should be 10850 Wilshire Blvd, Suite 1170
 // southern ca tennis association 420 Charles E Young Drive West
+// pacrep holdings llc 10880 Wilshire Blvd, Ste 2222
+// drinks holdings, inc. 11175 Santa Monica Blvd Ste 173 (taken out)
+
+// other place edits
+// singer lewak llc is singerlewak llc

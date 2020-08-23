@@ -83,12 +83,12 @@ let geojsonFeature = {
       type: 'Feature',
       geometry: {
         type: 'Point',
-        coordinates: [-118.44254, 34.05934],
+        coordinates: [-118.44283, 34.05885],
       },
       properties: {
         LoanRange: '$2-5 million',
         BusinessName: 'PACREP HOLDINGS LLC',
-        Address: '10877 Wilshire Blvd, Suite 2300',
+        Address: '10880 Wilshire Blvd, Suite 2222',
         JobsRetained: 285,
       },
     },
@@ -109,11 +109,11 @@ let geojsonFeature = {
       type: 'Feature',
       geometry: {
         type: 'Point',
-        coordinates: [-118.445973, 34.057997],
+        coordinates: [-118.44615, 34.05755],
       },
       properties: {
         LoanRange: '$2-5 million',
-        BusinessName: 'SINGER LEWAK LLP',
+        BusinessName: 'SINGERLEWAK LLP',
         Address: '10960 WILSHIRE BLVD, #700',
         JobsRetained: 291,
       },
@@ -155,19 +155,6 @@ let geojsonFeature = {
         BusinessName: 'DMAI, INC.',
         Address: '10940 Wilshire Blvd Ste 1100',
         JobsRetained: 68,
-      },
-    },
-    {
-      type: 'Feature',
-      geometry: {
-        type: 'Point',
-        coordinates: [-118.44419, 34.05848],
-      },
-      properties: {
-        LoanRange: '$1-2 million',
-        BusinessName: 'DRINKS HOLDINGS, INC.',
-        Address: '10900 Wilshire Blvd. Suite 1600',
-        JobsRetained: 62,
       },
     },
     {
@@ -291,7 +278,7 @@ let geojsonFeature = {
       type: 'Feature',
       geometry: {
         type: 'Point',
-        coordinates: [-118.442, 34.05907],
+        coordinates: [-118.42, 34.06],
       },
       properties: {
         LoanRange: '$350,000-1 million',
@@ -317,7 +304,7 @@ let geojsonFeature = {
       type: 'Feature',
       geometry: {
         type: 'Point',
-        coordinates: [-118.4429, 34.05846],
+        coordinates: [-118.44283, 34.05885],
       },
       properties: {
         LoanRange: '$350,000-1 million',
@@ -350,19 +337,6 @@ let geojsonFeature = {
         BusinessName: 'CLEMENTINE FOODS, LLC',
         Address: '1751 Ensley Avenue',
         JobsRetained: 75,
-      },
-    },
-    {
-      type: 'Feature',
-      geometry: {
-        type: 'Point',
-        coordinates: [-118.45, 34.06],
-      },
-      properties: {
-        LoanRange: '$350,000-1 million',
-        BusinessName: 'CORDAY PRODUCTIONS, INC.',
-        Address: 'WILSHIRE BLVD',
-        JobsRetained: 199,
       },
     },
     {
@@ -421,7 +395,7 @@ let geojsonFeature = {
       type: 'Feature',
       geometry: {
         type: 'Point',
-        coordinates: [-118.442921, 34.05758],
+        coordinates: [-118.44313, 34.05781],
       },
       properties: {
         LoanRange: '$350,000-1 million',
@@ -500,7 +474,7 @@ let geojsonFeature = {
       type: 'Feature',
       geometry: {
         type: 'Point',
-        coordinates: [-118.44254, 34.05934],
+        coordinates: [-118.44252, 34.05923],
       },
       properties: {
         LoanRange: '$350,000-1 million',
@@ -539,7 +513,7 @@ let geojsonFeature = {
       type: 'Feature',
       geometry: {
         type: 'Point',
-        coordinates: [-118.4429, 34.05846],
+        coordinates: [-118.44283, 34.05885],
       },
       properties: {
         LoanRange: '$350,000-1 million',
@@ -617,12 +591,12 @@ let geojsonFeature = {
       type: 'Feature',
       geometry: {
         type: 'Point',
-        coordinates: [-118.4366913, 34.0513382],
+        coordinates: [-118.44418, 34.06074],
       },
       properties: {
         LoanRange: '$350,000-1 million',
         BusinessName: 'MYLIFE.COM, INC.',
-        Address: '100 GLENDON AVE STE 720',
+        Address: '1100 GLENDON AVE STE 720',
         JobsRetained: 33,
       },
     },
@@ -682,7 +656,7 @@ let geojsonFeature = {
       type: 'Feature',
       geometry: {
         type: 'Point',
-        coordinates: [-118.4429, 34.05846],
+        coordinates: [-118.44283, 34.05885],
       },
       properties: {
         LoanRange: '$350,000-1 million',
@@ -708,7 +682,7 @@ let geojsonFeature = {
       type: 'Feature',
       geometry: {
         type: 'Point',
-        coordinates: [-118.443084, 34.057119],
+        coordinates: [-118.44317, 34.05704],
       },
       properties: {
         LoanRange: '$350,000-1 million',
@@ -786,7 +760,7 @@ let geojsonFeature = {
       type: 'Feature',
       geometry: {
         type: 'Point',
-        coordinates: [-118.44293, 34.0568],
+        coordinates: [-118.44272, 34.05677],
       },
       properties: {
         LoanRange: '$350,000-1 million',
@@ -812,7 +786,7 @@ let geojsonFeature = {
       type: 'Feature',
       geometry: {
         type: 'Point',
-        coordinates: [-118.443362, 34.057583],
+        coordinates: [-118.44315, 34.05749],
       },
       properties: {
         LoanRange: '$150,000-350,000',
@@ -968,7 +942,7 @@ let geojsonFeature = {
       type: 'Feature',
       geometry: {
         type: 'Point',
-        coordinates: [-118.44477, 34.05881],
+        coordinates: [-118.44488, 34.05892],
       },
       properties: {
         LoanRange: '$150,000-350,000',
@@ -981,7 +955,7 @@ let geojsonFeature = {
       type: 'Feature',
       geometry: {
         type: 'Point',
-        coordinates: [-118.43924, 34.05266],
+        coordinates: [-118.43925, 34.05257],
       },
       properties: {
         LoanRange: '$150,000-350,000',
@@ -994,7 +968,7 @@ let geojsonFeature = {
       type: 'Feature',
       geometry: {
         type: 'Point',
-        coordinates: [-118.45, 34.06],
+        coordinates: [-118.42, 34.06],
       },
       properties: {
         LoanRange: '$150,000-350,000',
@@ -1111,7 +1085,7 @@ let geojsonFeature = {
       type: 'Feature',
       geometry: {
         type: 'Point',
-        coordinates: [-118.43312, 34.0731],
+        coordinates: [-118.42, 34.06],
       },
       properties: {
         LoanRange: '$150,000-350,000',
@@ -1124,7 +1098,7 @@ let geojsonFeature = {
       type: 'Feature',
       geometry: {
         type: 'Point',
-        coordinates: [-118.43924, 34.05266],
+        coordinates: [-118.43925, 34.05257],
       },
       properties: {
         LoanRange: '$150,000-350,000',
@@ -1242,7 +1216,7 @@ let geojsonFeature = {
       type: 'Feature',
       geometry: {
         type: 'Point',
-        coordinates: [-118.44315, 34.05722],
+        coordinates: [-118.44315, 34.05749],
       },
       properties: {
         LoanRange: '$150,000-350,000',
@@ -1868,7 +1842,7 @@ let geojsonFeature = {
       type: 'Feature',
       geometry: {
         type: 'Point',
-        coordinates: [-118.437415, 34.050535],
+        coordinates: [-118.43783, 34.05092],
       },
       properties: {
         LoanRange: '$150,000-350,000',
@@ -1973,7 +1947,7 @@ let geojsonFeature = {
       type: 'Feature',
       geometry: {
         type: 'Point',
-        coordinates: [-118.44565, 34.06335],
+        coordinates: [-118.44528, 34.06336],
       },
       properties: {
         LoanRange: '$150,000-350,000',
