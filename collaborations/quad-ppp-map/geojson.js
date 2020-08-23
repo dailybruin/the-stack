@@ -10,7 +10,8 @@ let geojsonFeature = {
       properties: {
         LoanRange: '$5-10 million',
         BusinessName: 'WOOD, SMITH, HENNING & BERMAN LLP',
-        JobsRetained: 'NA',
+        Address: '10960 WILSHIRE BLVD Fl 18',
+        JobsRetained: null,
       },
     },
     {
@@ -22,7 +23,8 @@ let geojsonFeature = {
       properties: {
         LoanRange: '$2-5 million',
         BusinessName: 'ARMAND HAMMER ART MUSEUM AND CULTURAL CENTER, INC.',
-        JobsRetained: '173',
+        Address: '10899 WILSHIRE BLVD',
+        JobsRetained: 173,
       },
     },
     {
@@ -34,7 +36,8 @@ let geojsonFeature = {
       properties: {
         LoanRange: '$2-5 million',
         BusinessName: 'GREEN HASSON & JANKS LLP',
-        JobsRetained: '146',
+        Address: '10990 WILSHIRE BLVD.',
+        JobsRetained: 146,
       },
     },
     {
@@ -46,7 +49,8 @@ let geojsonFeature = {
       properties: {
         LoanRange: '$2-5 million',
         BusinessName: 'IRONGATE AZREP BW LLC',
-        JobsRetained: '324',
+        Address: '10877 WILSHIRE BLVD Suite 2300',
+        JobsRetained: 324,
       },
     },
     {
@@ -58,7 +62,8 @@ let geojsonFeature = {
       properties: {
         LoanRange: '$2-5 million',
         BusinessName: "LAMONICA'S PIZZA DOUGH INTERNATIONAL, LLC",
-        JobsRetained: '163',
+        Address: '1066 Gayley Ave',
+        JobsRetained: 163,
       },
     },
     {
@@ -70,7 +75,8 @@ let geojsonFeature = {
       properties: {
         LoanRange: '$2-5 million',
         BusinessName: 'MICHELMAN & ROBINSON, LLP',
-        JobsRetained: '116',
+        Address: '10880 WILSHIRE BLVD FL 19',
+        JobsRetained: 116,
       },
     },
     {
@@ -82,7 +88,8 @@ let geojsonFeature = {
       properties: {
         LoanRange: '$2-5 million',
         BusinessName: 'PACREP HOLDINGS LLC',
-        JobsRetained: '285',
+        Address: '10877 Wilshire Blvd, Suite 2300',
+        JobsRetained: 285,
       },
     },
     {
@@ -94,7 +101,8 @@ let geojsonFeature = {
       properties: {
         LoanRange: '$2-5 million',
         BusinessName: 'SINAI TEMPLE',
-        JobsRetained: '487',
+        Address: '10400 Wilshire Blvd',
+        JobsRetained: 487,
       },
     },
     {
@@ -106,7 +114,8 @@ let geojsonFeature = {
       properties: {
         LoanRange: '$2-5 million',
         BusinessName: 'SINGER LEWAK LLP',
-        JobsRetained: '291',
+        Address: '10960 WILSHIRE BLVD, #700',
+        JobsRetained: 291,
       },
     },
     {
@@ -118,7 +127,8 @@ let geojsonFeature = {
       properties: {
         LoanRange: '$2-5 million',
         BusinessName: 'UNITED MEDICAL IMAGING INC',
-        JobsRetained: '445',
+        Address: '1762 WESTWOOD BLVD #230',
+        JobsRetained: 445,
       },
     },
     {
@@ -130,7 +140,8 @@ let geojsonFeature = {
       properties: {
         LoanRange: '$2-5 million',
         BusinessName: 'WAIKIKI INVESTORS LLC',
-        JobsRetained: '324',
+        Address: '10877 Wilshire Blvd Suite 2300',
+        JobsRetained: 324,
       },
     },
     {
@@ -142,7 +153,8 @@ let geojsonFeature = {
       properties: {
         LoanRange: '$1-2 million',
         BusinessName: 'DMAI, INC.',
-        JobsRetained: '68',
+        Address: '10940 Wilshire Blvd Ste 1100',
+        JobsRetained: 68,
       },
     },
     {
@@ -154,7 +166,8 @@ let geojsonFeature = {
       properties: {
         LoanRange: '$1-2 million',
         BusinessName: 'DRINKS HOLDINGS, INC.',
-        JobsRetained: '62',
+        Address: '10900 Wilshire Blvd. Suite 1600',
+        JobsRetained: 62,
       },
     },
     {
@@ -166,7 +179,8 @@ let geojsonFeature = {
       properties: {
         LoanRange: '$1-2 million',
         BusinessName: 'ENTERTAINMENT INDUSTRY FOUNDATION',
-        JobsRetained: '63',
+        Address: '10880 WILSHIRE BLVD STE 1400',
+        JobsRetained: 63,
       },
     },
     {
@@ -178,7 +192,8 @@ let geojsonFeature = {
       properties: {
         LoanRange: '$1-2 million',
         BusinessName: 'JACOBY & MEYERS ATTORNEYS LLP',
-        JobsRetained: '136',
+        Address: '10900 WILSHIRE BLVD 15th Floor',
+        JobsRetained: 136,
       },
     },
     {
@@ -190,7 +205,8 @@ let geojsonFeature = {
       properties: {
         LoanRange: '$1-2 million',
         BusinessName: 'MAC FOODS GROUP, LLC',
-        JobsRetained: '375',
+        Address: '10960 Wilshire Blvd',
+        JobsRetained: 375,
       },
     },
     {
@@ -202,7 +218,8 @@ let geojsonFeature = {
       properties: {
         LoanRange: '$1-2 million',
         BusinessName: 'MAR VISTA ENTERTAINMENT LLC',
-        JobsRetained: '63',
+        Address: '10877 Wilshire Boulevard',
+        JobsRetained: 63,
       },
     },
     {
@@ -214,7 +231,8 @@ let geojsonFeature = {
       properties: {
         LoanRange: '$1-2 million',
         BusinessName: 'ORIGINATE, INC',
-        JobsRetained: '48',
+        Address: '10850 WILSHIRE BLVD STE 600',
+        JobsRetained: 48,
       },
     },
     {
@@ -226,7 +244,8 @@ let geojsonFeature = {
       properties: {
         LoanRange: '$1-2 million',
         BusinessName: 'SUNBIT INC',
-        JobsRetained: 'NA',
+        Address: '10940 WILSHIRE BLVD STE 1850',
+        JobsRetained: null,
       },
     },
     {
@@ -238,7 +257,8 @@ let geojsonFeature = {
       properties: {
         LoanRange: '$350,000-1 million',
         BusinessName: 'A MI JAPANESE RESTAURANT, INC',
-        JobsRetained: '59',
+        Address: '1051 BROXTON AVE',
+        JobsRetained: 59,
       },
     },
     {
@@ -250,7 +270,8 @@ let geojsonFeature = {
       properties: {
         LoanRange: '$350,000-1 million',
         BusinessName: 'AD.NET, INC.',
-        JobsRetained: '27',
+        Address: '1100 GLENDON AVE Suite 1200',
+        JobsRetained: 27,
       },
     },
     {
@@ -262,7 +283,8 @@ let geojsonFeature = {
       properties: {
         LoanRange: '$350,000-1 million',
         BusinessName: 'ARIXA CAPITAL ADVISORS, LLC',
-        JobsRetained: '23',
+        Address: '10960 WILSHIRE BLVD',
+        JobsRetained: 23,
       },
     },
     {
@@ -274,7 +296,8 @@ let geojsonFeature = {
       properties: {
         LoanRange: '$350,000-1 million',
         BusinessName: 'BACKSTAGE EMPLOYMENT & REFERRAL INC.',
-        JobsRetained: '54',
+        Address: 'c/o T&L 10866 Wilshire Blvd. Ste 1100',
+        JobsRetained: 54,
       },
     },
     {
@@ -286,7 +309,8 @@ let geojsonFeature = {
       properties: {
         LoanRange: '$350,000-1 million',
         BusinessName: 'BEMEL, ROSS & AVEDON LLP',
-        JobsRetained: '26',
+        Address: '10880 WILSHIRE BLVD Suite 1000',
+        JobsRetained: 26,
       },
     },
     {
@@ -298,7 +322,8 @@ let geojsonFeature = {
       properties: {
         LoanRange: '$350,000-1 million',
         BusinessName: 'BERGMAN DACEY GOLDSMITH, A PROFESSIONAL LAW CORPORATION',
-        JobsRetained: '20',
+        Address: '10880 WILSHIRE BLVD',
+        JobsRetained: 20,
       },
     },
     {
@@ -310,7 +335,8 @@ let geojsonFeature = {
       properties: {
         LoanRange: '$350,000-1 million',
         BusinessName: 'CAPPELLO GLOBAL LLC',
-        JobsRetained: '60',
+        Address: '10990 Wilshire Blvd., Suite 1200',
+        JobsRetained: 60,
       },
     },
     {
@@ -322,7 +348,8 @@ let geojsonFeature = {
       properties: {
         LoanRange: '$350,000-1 million',
         BusinessName: 'CLEMENTINE FOODS, LLC',
-        JobsRetained: '75',
+        Address: '1751 Ensley Avenue',
+        JobsRetained: 75,
       },
     },
     {
@@ -334,7 +361,8 @@ let geojsonFeature = {
       properties: {
         LoanRange: '$350,000-1 million',
         BusinessName: 'CORDAY PRODUCTIONS, INC.',
-        JobsRetained: '199',
+        Address: 'WILSHIRE BLVD',
+        JobsRetained: 199,
       },
     },
     {
@@ -346,7 +374,8 @@ let geojsonFeature = {
       properties: {
         LoanRange: '$350,000-1 million',
         BusinessName: 'COUNTRY CLUB HOTEL LLC',
-        JobsRetained: '80',
+        Address: '10850 Wilshire Blvd',
+        JobsRetained: 80,
       },
     },
     {
@@ -358,7 +387,8 @@ let geojsonFeature = {
       properties: {
         LoanRange: '$350,000-1 million',
         BusinessName: 'DE CASTRO, WEST, CHODOROW, MENDLER & GLICKFELD, INC.',
-        JobsRetained: '25',
+        Address: '10960 WILSHIRE BLVD STE 1400',
+        JobsRetained: 25,
       },
     },
     {
@@ -370,7 +400,8 @@ let geojsonFeature = {
       properties: {
         LoanRange: '$350,000-1 million',
         BusinessName: 'FORD E C INC',
-        JobsRetained: 'NA',
+        Address: '10850 WILSHIRE BLVD. SUITE 380',
+        JobsRetained: null,
       },
     },
     {
@@ -382,7 +413,8 @@ let geojsonFeature = {
       properties: {
         LoanRange: '$350,000-1 million',
         BusinessName: 'FRANTIC, INC',
-        JobsRetained: '23',
+        Address: '10990 WILSHIRE BLVD FL 8',
+        JobsRetained: 23,
       },
     },
     {
@@ -394,7 +426,8 @@ let geojsonFeature = {
       properties: {
         LoanRange: '$350,000-1 million',
         BusinessName: 'FRESH CORN GRILL, INC.',
-        JobsRetained: '0',
+        Address: '1266 WESTWOOD BLVD',
+        JobsRetained: 0,
       },
     },
     {
@@ -406,7 +439,8 @@ let geojsonFeature = {
       properties: {
         LoanRange: '$350,000-1 million',
         BusinessName: 'FRESHLUNCHES INC',
-        JobsRetained: '85',
+        Address: '1738 kelton ave',
+        JobsRetained: 85,
       },
     },
     {
@@ -418,7 +452,8 @@ let geojsonFeature = {
       properties: {
         LoanRange: '$350,000-1 million',
         BusinessName: 'GAME PLAY NETWORK, INC',
-        JobsRetained: '37',
+        Address: '10866 Wilshire Blvd, Suite 700',
+        JobsRetained: 37,
       },
     },
     {
@@ -430,7 +465,8 @@ let geojsonFeature = {
       properties: {
         LoanRange: '$350,000-1 million',
         BusinessName: 'GEFFEN PLAYHOUSE, INC.',
-        JobsRetained: '69',
+        Address: '10886 LE CONTE AVE',
+        JobsRetained: 69,
       },
     },
     {
@@ -442,7 +478,8 @@ let geojsonFeature = {
       properties: {
         LoanRange: '$350,000-1 million',
         BusinessName: 'HELNGO 8750 LLC',
-        JobsRetained: '84',
+        Address: '10875 Kinross Avenue',
+        JobsRetained: 84,
       },
     },
     {
@@ -455,7 +492,8 @@ let geojsonFeature = {
         LoanRange: '$350,000-1 million',
         BusinessName:
           'HOFFMAN, SABBAN & WATENMAKER, A PROFESSIONAL CORPORATION',
-        JobsRetained: '27',
+        Address: '10880 WILSHIRE BLVD STE. 2200',
+        JobsRetained: 27,
       },
     },
     {
@@ -467,7 +505,8 @@ let geojsonFeature = {
       properties: {
         LoanRange: '$350,000-1 million',
         BusinessName: 'INDIVEST, INCORPORATED',
-        JobsRetained: '24',
+        Address: '10877 WILSHIRE BLVD 300',
+        JobsRetained: 24,
       },
     },
     {
@@ -479,7 +518,8 @@ let geojsonFeature = {
       properties: {
         LoanRange: '$350,000-1 million',
         BusinessName: 'JAMES CAPITAL ADVISORS, INC',
-        JobsRetained: '21',
+        Address: '10960 Wilshire Blvd #805',
+        JobsRetained: 21,
       },
     },
     {
@@ -491,7 +531,8 @@ let geojsonFeature = {
       properties: {
         LoanRange: '$350,000-1 million',
         BusinessName: 'JG MARTELL GROUP INC',
-        JobsRetained: '47',
+        Address: '10877 Wilshire Blvd, Suite 2300',
+        JobsRetained: 47,
       },
     },
     {
@@ -503,7 +544,8 @@ let geojsonFeature = {
       properties: {
         LoanRange: '$350,000-1 million',
         BusinessName: 'LEUEN, INC.',
-        JobsRetained: '82',
+        Address: '10880 WILSHIRE BLVD',
+        JobsRetained: 82,
       },
     },
     {
@@ -515,7 +557,8 @@ let geojsonFeature = {
       properties: {
         LoanRange: '$350,000-1 million',
         BusinessName: 'MALONEY-SHAMIE VISION INSTITUTE',
-        JobsRetained: '24',
+        Address: '10921 Wilshire Blvd Suite 900',
+        JobsRetained: 24,
       },
     },
     {
@@ -527,7 +570,8 @@ let geojsonFeature = {
       properties: {
         LoanRange: '$350,000-1 million',
         BusinessName: 'MCNICHOLAS & MCNICHOLAS, LLP',
-        JobsRetained: 'NA',
+        Address: '10866 WILSHIRE BLVD Suite 1400',
+        JobsRetained: null,
       },
     },
     {
@@ -539,7 +583,21 @@ let geojsonFeature = {
       properties: {
         LoanRange: '$350,000-1 million',
         BusinessName: 'MEDCAFE WESTWOOD, LLC',
-        JobsRetained: '35',
+        Address: '1139 GLENDON AVE',
+        JobsRetained: 35,
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-118.441394, 34.059227],
+      },
+      properties: {
+        LoanRange: '$350,000-1 million',
+        BusinessName: 'MEDQIA, LLC',
+        Address: '10850 WILSHIRE BLVD STE 1170',
+        JobsRetained: 38,
       },
     },
     {
@@ -551,7 +609,8 @@ let geojsonFeature = {
       properties: {
         LoanRange: '$350,000-1 million',
         BusinessName: 'METALLICA CLUB, INC.',
-        JobsRetained: '20',
+        Address: '10990 WILSHIRE BLVD 8TH FLLOOR',
+        JobsRetained: 20,
       },
     },
     {
@@ -563,7 +622,8 @@ let geojsonFeature = {
       properties: {
         LoanRange: '$350,000-1 million',
         BusinessName: 'MYLIFE.COM, INC.',
-        JobsRetained: '33',
+        Address: '100 GLENDON AVE STE 720',
+        JobsRetained: 33,
       },
     },
     {
@@ -575,7 +635,8 @@ let geojsonFeature = {
       properties: {
         LoanRange: '$350,000-1 million',
         BusinessName: 'NELSON HARDIMAN LLP',
-        JobsRetained: '40',
+        Address: '1100 GLENDON AVE Suite 1400',
+        JobsRetained: 40,
       },
     },
     {
@@ -587,7 +648,8 @@ let geojsonFeature = {
       properties: {
         LoanRange: '$350,000-1 million',
         BusinessName: 'PACIFIC HERITAGE COMMUNITIES CORP.',
-        JobsRetained: '23',
+        Address: '1263 WESTWOOD BLVD #210',
+        JobsRetained: 23,
       },
     },
     {
@@ -599,7 +661,8 @@ let geojsonFeature = {
       properties: {
         LoanRange: '$350,000-1 million',
         BusinessName: 'PFC MANAGEMENT LLC',
-        JobsRetained: '55',
+        Address: '10921 WILSHIRE BLVD ste 700',
+        JobsRetained: 55,
       },
     },
     {
@@ -611,7 +674,8 @@ let geojsonFeature = {
       properties: {
         LoanRange: '$350,000-1 million',
         BusinessName: 'RBB ARCHITECTS INC',
-        JobsRetained: '44',
+        Address: '10980 WILSHIRE BOULEVARD',
+        JobsRetained: 44,
       },
     },
     {
@@ -623,7 +687,21 @@ let geojsonFeature = {
       properties: {
         LoanRange: '$350,000-1 million',
         BusinessName: 'SEA VIEW RESTAURANTS, INC.',
-        JobsRetained: '123',
+        Address: '10880 WILSHIRE BLVD',
+        JobsRetained: 123,
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-118.4449414, 34.0734525],
+      },
+      properties: {
+        LoanRange: '$350,000-1 million',
+        BusinessName: 'SOUTHERN CALIFORNIA TENNIS ASSOCIATION',
+        Address: '420 Charles E Young Drive West',
+        JobsRetained: 63,
       },
     },
     {
@@ -635,7 +713,8 @@ let geojsonFeature = {
       properties: {
         LoanRange: '$350,000-1 million',
         BusinessName: 'STRATEGIC DEVELOPMENT SOLUTIONS, LLC',
-        JobsRetained: '16',
+        Address: '1281 Westwood Boulevard',
+        JobsRetained: 16,
       },
     },
     {
@@ -647,7 +726,8 @@ let geojsonFeature = {
       properties: {
         LoanRange: '$350,000-1 million',
         BusinessName: 'TANNER MAINSTAIN GLYNN & JOHNSON, LLP',
-        JobsRetained: '40',
+        Address: '10866 WILSHIRE BLVD FL 10',
+        JobsRetained: 40,
       },
     },
     {
@@ -659,7 +739,8 @@ let geojsonFeature = {
       properties: {
         LoanRange: '$350,000-1 million',
         BusinessName: 'TAYLOR AND LIEBERMAN AAC',
-        JobsRetained: '28',
+        Address: '10866 WILSHIRE BLVD Ste 1100',
+        JobsRetained: 28,
       },
     },
     {
@@ -671,7 +752,8 @@ let geojsonFeature = {
       properties: {
         LoanRange: '$350,000-1 million',
         BusinessName: 'THE ROMAN CATHOLIC ARCHBISHOP OF LOS ANGELES',
-        JobsRetained: '64',
+        Address: '1536 Selby Avenue',
+        JobsRetained: 64,
       },
     },
     {
@@ -683,7 +765,8 @@ let geojsonFeature = {
       properties: {
         LoanRange: '$350,000-1 million',
         BusinessName: 'THOMAS ST JOHN, INC',
-        JobsRetained: '30',
+        Address: '10877 WILSHIRE BLVD STE 1550',
+        JobsRetained: 30,
       },
     },
     {
@@ -695,7 +778,8 @@ let geojsonFeature = {
       properties: {
         LoanRange: '$350,000-1 million',
         BusinessName: 'UNIVERSITY PODIATRY GROUP INC',
-        JobsRetained: '24',
+        Address: '100 UCLA MEDICAL PLZ STE 460',
+        JobsRetained: 24,
       },
     },
     {
@@ -707,7 +791,8 @@ let geojsonFeature = {
       properties: {
         LoanRange: '$350,000-1 million',
         BusinessName: 'WJD RESTAURANT GROUP, LLC',
-        JobsRetained: '40',
+        Address: '1301 WESTWOOD BLVD.',
+        JobsRetained: 40,
       },
     },
     {
@@ -719,7 +804,8 @@ let geojsonFeature = {
       properties: {
         LoanRange: '$150,000-350,000',
         BusinessName: '2301 WB BUILDING LLC.',
-        JobsRetained: '16',
+        Address: '10940 WILSHIRE BLVD SUITE 1225',
+        JobsRetained: 16,
       },
     },
     {
@@ -731,7 +817,8 @@ let geojsonFeature = {
       properties: {
         LoanRange: '$150,000-350,000',
         BusinessName: 'A NEW START TREATMENT & RECOVERY CTR LLC',
-        JobsRetained: '26',
+        Address: '1251 Westwood Boulevard',
+        JobsRetained: 26,
       },
     },
     {
@@ -743,7 +830,8 @@ let geojsonFeature = {
       properties: {
         LoanRange: '$150,000-350,000',
         BusinessName: 'A.G. PROPERTIES, INC.',
-        JobsRetained: '6',
+        Address: '1324 Warnall Avenue',
+        JobsRetained: 6,
       },
     },
     {
@@ -755,7 +843,8 @@ let geojsonFeature = {
       properties: {
         LoanRange: '$150,000-350,000',
         BusinessName: 'ADLER-WEINER RESEARCH L.A, INC.',
-        JobsRetained: '30',
+        Address: '10960 WILSHIRE BLVD #1250',
+        JobsRetained: 30,
       },
     },
     {
@@ -767,7 +856,8 @@ let geojsonFeature = {
       properties: {
         LoanRange: '$150,000-350,000',
         BusinessName: 'AHDOOT &AMP; WOLFSON, A PROFESSIONAL CORPORATION',
-        JobsRetained: '12',
+        Address: '10728 Lindbrook Drive',
+        JobsRetained: 12,
       },
     },
     {
@@ -779,7 +869,8 @@ let geojsonFeature = {
       properties: {
         LoanRange: '$150,000-350,000',
         BusinessName: 'ALL ACCESS MUSIC GROUP, INC.',
-        JobsRetained: '30',
+        Address: '10880 WILSHIRE BLVD Ste 1000',
+        JobsRetained: 30,
       },
     },
     {
@@ -791,7 +882,8 @@ let geojsonFeature = {
       properties: {
         LoanRange: '$150,000-350,000',
         BusinessName: 'AMERICAL MANAGEMENT CO., INC.',
-        JobsRetained: '15',
+        Address: '10940 Wilshire Blvd. 1960',
+        JobsRetained: 15,
       },
     },
     {
@@ -803,7 +895,8 @@ let geojsonFeature = {
       properties: {
         LoanRange: '$150,000-350,000',
         BusinessName: 'AMERICAN COLLEGE EDUCATION INK',
-        JobsRetained: '30',
+        Address: '10880 WILSHIRE BLVD STE 122',
+        JobsRetained: 30,
       },
     },
     {
@@ -815,7 +908,8 @@ let geojsonFeature = {
       properties: {
         LoanRange: '$150,000-350,000',
         BusinessName: 'AMI ASSET MANAGEMENT CORPORATION',
-        JobsRetained: '15',
+        Address: '10866 WILSHIRE BLVD',
+        JobsRetained: 15,
       },
     },
     {
@@ -827,7 +921,8 @@ let geojsonFeature = {
       properties: {
         LoanRange: '$150,000-350,000',
         BusinessName: 'AP ORIGINAL LLC',
-        JobsRetained: '16',
+        Address: '1100 GLENDON AVE SUITE 2000',
+        JobsRetained: 16,
       },
     },
     {
@@ -839,7 +934,8 @@ let geojsonFeature = {
       properties: {
         LoanRange: '$150,000-350,000',
         BusinessName: 'ARMOR GUYS INC.',
-        JobsRetained: '18',
+        Address: '10990 WILSHIRE BLVD STE 1410',
+        JobsRetained: 18,
       },
     },
     {
@@ -851,7 +947,8 @@ let geojsonFeature = {
       properties: {
         LoanRange: '$150,000-350,000',
         BusinessName: 'ASI/SILICA MACHINERY, LLC',
-        JobsRetained: '20',
+        Address: '515 Loring  AVE',
+        JobsRetained: 20,
       },
     },
     {
@@ -863,7 +960,8 @@ let geojsonFeature = {
       properties: {
         LoanRange: '$150,000-350,000',
         BusinessName: 'BARNEYS WESTWOOD, LP',
-        JobsRetained: '33',
+        Address: '1037 S. BROXTON AVE',
+        JobsRetained: 33,
       },
     },
     {
@@ -875,7 +973,8 @@ let geojsonFeature = {
       properties: {
         LoanRange: '$150,000-350,000',
         BusinessName: 'BAUM ORTHODONTIC ASSOCIATES',
-        JobsRetained: '10',
+        Address: '10921 Wilshire Blvd 804',
+        JobsRetained: 10,
       },
     },
     {
@@ -887,7 +986,8 @@ let geojsonFeature = {
       properties: {
         LoanRange: '$150,000-350,000',
         BusinessName: 'BEVERLY HILLS STERLING CLEANERS INC',
-        JobsRetained: '20',
+        Address: '1600 WESTWOOD BLVD',
+        JobsRetained: 20,
       },
     },
     {
@@ -899,7 +999,8 @@ let geojsonFeature = {
       properties: {
         LoanRange: '$150,000-350,000',
         BusinessName: 'BIG MAN MEDIA, INC.',
-        JobsRetained: '18',
+        Address: 'WILSHIRE BLVD',
+        JobsRetained: 18,
       },
     },
     {
@@ -911,7 +1012,8 @@ let geojsonFeature = {
       properties: {
         LoanRange: '$150,000-350,000',
         BusinessName: 'BLENDED STRATEGY GROUP, LLC',
-        JobsRetained: '17',
+        Address: '1100 GLENDON AVE Suite 1220',
+        JobsRetained: 17,
       },
     },
     {
@@ -923,7 +1025,8 @@ let geojsonFeature = {
       properties: {
         LoanRange: '$150,000-350,000',
         BusinessName: 'BLUE ELAN RECORDS, LLC',
-        JobsRetained: '11',
+        Address: '10880 WILSHIRE BLVD 2000',
+        JobsRetained: 11,
       },
     },
     {
@@ -935,7 +1038,8 @@ let geojsonFeature = {
       properties: {
         LoanRange: '$150,000-350,000',
         BusinessName: 'BONDED FILMS, LLC',
-        JobsRetained: '12',
+        Address: '10433 Wilshire Blvd Suite 707',
+        JobsRetained: 12,
       },
     },
     {
@@ -947,7 +1051,8 @@ let geojsonFeature = {
       properties: {
         LoanRange: '$150,000-350,000',
         BusinessName: 'BRUIN BIOMETRICS, LLC.',
-        JobsRetained: '17',
+        Address: '10877 Wilshire Blvd., Suite 1600',
+        JobsRetained: 17,
       },
     },
     {
@@ -959,7 +1064,8 @@ let geojsonFeature = {
       properties: {
         LoanRange: '$150,000-350,000',
         BusinessName: 'C. 2K ENTERTAINMENT INC',
-        JobsRetained: '12',
+        Address: '1067 GAYLEY AVE',
+        JobsRetained: 12,
       },
     },
     {
@@ -971,7 +1077,8 @@ let geojsonFeature = {
       properties: {
         LoanRange: '$150,000-350,000',
         BusinessName: 'CALFUND LLC',
-        JobsRetained: '200',
+        Address: '1633 WESTWOOD BLVD',
+        JobsRetained: 200,
       },
     },
     {
@@ -983,7 +1090,8 @@ let geojsonFeature = {
       properties: {
         LoanRange: '$150,000-350,000',
         BusinessName: 'CAMBRIA/HOTEL INVESTORS, LLC',
-        JobsRetained: '23',
+        Address: '10850 WILSHIRE BLVD STE 1050',
+        JobsRetained: 23,
       },
     },
     {
@@ -995,7 +1103,8 @@ let geojsonFeature = {
       properties: {
         LoanRange: '$150,000-350,000',
         BusinessName: 'CAMINO INDUSTRIES LLC',
-        JobsRetained: '13',
+        Address: '1073 Glendon Avenue',
+        JobsRetained: 13,
       },
     },
     {
@@ -1007,7 +1116,8 @@ let geojsonFeature = {
       properties: {
         LoanRange: '$150,000-350,000',
         BusinessName: 'CAPRI PROPERTIES, A CALIFORNIA CORPORATION',
-        JobsRetained: '12',
+        Address: '1508 wyton drive',
+        JobsRetained: 12,
       },
     },
     {
@@ -1020,7 +1130,8 @@ let geojsonFeature = {
         LoanRange: '$150,000-350,000',
         BusinessName:
           'CENTURY INVESTMENT HOLDINGS LLC DBA CARRIAGE TRADE CLEANERS OR CARRIAGE',
-        JobsRetained: '25',
+        Address: '1600 Westwood Blvd',
+        JobsRetained: 25,
       },
     },
     {
@@ -1032,7 +1143,8 @@ let geojsonFeature = {
       properties: {
         LoanRange: '$150,000-350,000',
         BusinessName: 'CHABAD OF CALIFORNIA',
-        JobsRetained: '45',
+        Address: '741 Gayley Avenue',
+        JobsRetained: 45,
       },
     },
     {
@@ -1044,7 +1156,8 @@ let geojsonFeature = {
       properties: {
         LoanRange: '$150,000-350,000',
         BusinessName: 'CMNTY RCRDS, LLC',
-        JobsRetained: '2',
+        Address: '10877 Wilshire Blvd, Suite 1550',
+        JobsRetained: 2,
       },
     },
     {
@@ -1056,7 +1169,8 @@ let geojsonFeature = {
       properties: {
         LoanRange: '$150,000-350,000',
         BusinessName: 'CRENOVATE INC',
-        JobsRetained: '25',
+        Address: '10940 WILSHIRE BLVD STE 1600',
+        JobsRetained: 25,
       },
     },
     {
@@ -1068,7 +1182,8 @@ let geojsonFeature = {
       properties: {
         LoanRange: '$150,000-350,000',
         BusinessName: 'DBA AMA PROJECT MANAGEMENT',
-        JobsRetained: 'NA',
+        Address: '10940 WILSHIRE BLVD SUITE 1950',
+        JobsRetained: null,
       },
     },
     {
@@ -1080,7 +1195,8 @@ let geojsonFeature = {
       properties: {
         LoanRange: '$150,000-350,000',
         BusinessName: 'DC ARCHITECTS, INC.',
-        JobsRetained: '18',
+        Address: '969 HILGARD AVE Unit 708',
+        JobsRetained: 18,
       },
     },
     {
@@ -1092,7 +1208,8 @@ let geojsonFeature = {
       properties: {
         LoanRange: '$150,000-350,000',
         BusinessName: 'DIDDY RIESE COOKIES, INC.',
-        JobsRetained: 'NA',
+        Address: '926 Broxton Avenue',
+        JobsRetained: null,
       },
     },
     {
@@ -1104,7 +1221,8 @@ let geojsonFeature = {
       properties: {
         LoanRange: '$150,000-350,000',
         BusinessName: 'DREAMVILLE RECORDS, LLC',
-        JobsRetained: '10',
+        Address: '10960 WILSHIRE BLVD',
+        JobsRetained: 10,
       },
     },
     {
@@ -1116,7 +1234,8 @@ let geojsonFeature = {
       properties: {
         LoanRange: '$150,000-350,000',
         BusinessName: 'DYLAN RUGA',
-        JobsRetained: '10',
+        Address: '1100 GLENDON AVE',
+        JobsRetained: 10,
       },
     },
     {
@@ -1128,7 +1247,8 @@ let geojsonFeature = {
       properties: {
         LoanRange: '$150,000-350,000',
         BusinessName: 'EMPORIUM THAI CUISINE, LLC',
-        JobsRetained: '22',
+        Address: '1275 WESTWOOD BLVD',
+        JobsRetained: 22,
       },
     },
     {
@@ -1140,7 +1260,8 @@ let geojsonFeature = {
       properties: {
         LoanRange: '$150,000-350,000',
         BusinessName: 'ENGLISH LANGUAGE CENTER INC',
-        JobsRetained: '130',
+        Address: '10850 Wilshire Blvd Ste 210',
+        JobsRetained: 130,
       },
     },
     {
@@ -1152,7 +1273,8 @@ let geojsonFeature = {
       properties: {
         LoanRange: '$150,000-350,000',
         BusinessName: 'ENTERPRISE CONSULTANTS GROUP LLC',
-        JobsRetained: '15',
+        Address: '10940 WILSHIRE BLVD',
+        JobsRetained: 15,
       },
     },
     {
@@ -1164,7 +1286,8 @@ let geojsonFeature = {
       properties: {
         LoanRange: '$150,000-350,000',
         BusinessName: 'EXQUISITE RUGS LLC',
-        JobsRetained: '16',
+        Address: '10790 WILSHIORE BLVD SUITE 1703',
+        JobsRetained: 16,
       },
     },
     {
@@ -1176,7 +1299,8 @@ let geojsonFeature = {
       properties: {
         LoanRange: '$150,000-350,000',
         BusinessName: 'FAIRMONT MANAGEMENT INC.',
-        JobsRetained: '27',
+        Address: '845 Thayer Ave.,',
+        JobsRetained: 27,
       },
     },
     {
@@ -1188,7 +1312,8 @@ let geojsonFeature = {
       properties: {
         LoanRange: '$150,000-350,000',
         BusinessName: 'FENTON &AMP; ROSS, AN ACCOUNTANCY',
-        JobsRetained: '12',
+        Address: '10866 WILSHIRE BLVD STE 1250',
+        JobsRetained: 12,
       },
     },
     {
@@ -1200,7 +1325,8 @@ let geojsonFeature = {
       properties: {
         LoanRange: '$150,000-350,000',
         BusinessName: 'FRIEDMAN & ASSOCIATES, INC.',
-        JobsRetained: '7',
+        Address: '1100 GLENDON AVE',
+        JobsRetained: 7,
       },
     },
     {
@@ -1212,7 +1338,8 @@ let geojsonFeature = {
       properties: {
         LoanRange: '$150,000-350,000',
         BusinessName: 'GARRY M. GEKHT, A LAW CORPORATION',
-        JobsRetained: '9',
+        Address: '10866 Wilshire Blvd., Suite 660',
+        JobsRetained: 9,
       },
     },
     {
@@ -1224,7 +1351,8 @@ let geojsonFeature = {
       properties: {
         LoanRange: '$150,000-350,000',
         BusinessName: 'GOLF WANG MERCHANDISING, LLC',
-        JobsRetained: '25',
+        Address: '10960 WILSHIRE BLVD 5th floor',
+        JobsRetained: 25,
       },
     },
     {
@@ -1236,7 +1364,8 @@ let geojsonFeature = {
       properties: {
         LoanRange: '$150,000-350,000',
         BusinessName: 'HALSTED, INC.',
-        JobsRetained: '7',
+        Address: '1103 1/2 GLENDON AVE',
+        JobsRetained: 7,
       },
     },
     {
@@ -1248,7 +1377,8 @@ let geojsonFeature = {
       properties: {
         LoanRange: '$150,000-350,000',
         BusinessName: 'HCR WEALTH ADVISORS',
-        JobsRetained: '13',
+        Address: '10866 Wilshire Blvd #1600',
+        JobsRetained: 13,
       },
     },
     {
@@ -1260,7 +1390,8 @@ let geojsonFeature = {
       properties: {
         LoanRange: '$150,000-350,000',
         BusinessName: 'HILLEL AT UCLA',
-        JobsRetained: 'NA',
+        Address: '574 HILGARD AVE',
+        JobsRetained: null,
       },
     },
     {
@@ -1272,7 +1403,8 @@ let geojsonFeature = {
       properties: {
         LoanRange: '$150,000-350,000',
         BusinessName: 'HOSPITALITY RESORTS INC.',
-        JobsRetained: '18',
+        Address: '10655 Wilshire Blvd.',
+        JobsRetained: 18,
       },
     },
     {
@@ -1284,7 +1416,8 @@ let geojsonFeature = {
       properties: {
         LoanRange: '$150,000-350,000',
         BusinessName: 'INTELLI-HEART SERVICES, INC',
-        JobsRetained: '35',
+        Address: '10850 WILSHIRE BLVD STE 740',
+        JobsRetained: 35,
       },
     },
     {
@@ -1296,7 +1429,8 @@ let geojsonFeature = {
       properties: {
         LoanRange: '$150,000-350,000',
         BusinessName: 'J & Y BUSINESS GROUP',
-        JobsRetained: '10',
+        Address: '1100 GLENDON AVEFL17',
+        JobsRetained: 10,
       },
     },
     {
@@ -1308,7 +1442,8 @@ let geojsonFeature = {
       properties: {
         LoanRange: '$150,000-350,000',
         BusinessName: 'J.R. BERRY SEARCH GROUP, INC.',
-        JobsRetained: '10',
+        Address: '1100 Glendon Ave',
+        JobsRetained: 10,
       },
     },
     {
@@ -1320,7 +1455,8 @@ let geojsonFeature = {
       properties: {
         LoanRange: '$150,000-350,000',
         BusinessName: 'JASON SNIBBE, M.D., PROFESSIONAL MEDICAL CORPORATION',
-        JobsRetained: '14',
+        Address: '215 Loring Avenue',
+        JobsRetained: 14,
       },
     },
     {
@@ -1332,7 +1468,8 @@ let geojsonFeature = {
       properties: {
         LoanRange: '$150,000-350,000',
         BusinessName: 'JONES, ACKERMAN & CORMAN LLP',
-        JobsRetained: '7',
+        Address: '10960 WILSHIRE BLVD Suite 1225',
+        JobsRetained: 7,
       },
     },
     {
@@ -1344,7 +1481,8 @@ let geojsonFeature = {
       properties: {
         LoanRange: '$150,000-350,000',
         BusinessName: 'JUST JARED, INC.',
-        JobsRetained: '8',
+        Address: '10800 WILSHIRE BLVD SUITE 1101',
+        JobsRetained: 8,
       },
     },
     {
@@ -1356,7 +1494,8 @@ let geojsonFeature = {
       properties: {
         LoanRange: '$150,000-350,000',
         BusinessName: 'KAIROS CAPITAL GROUP LLC',
-        JobsRetained: '10',
+        Address: '10481 Wyton Dr',
+        JobsRetained: 10,
       },
     },
     {
@@ -1368,7 +1507,8 @@ let geojsonFeature = {
       properties: {
         LoanRange: '$150,000-350,000',
         BusinessName: 'KOPENTECH',
-        JobsRetained: '11',
+        Address: '10880 Wilshire Blvd 1100',
+        JobsRetained: 11,
       },
     },
     {
@@ -1380,7 +1520,8 @@ let geojsonFeature = {
       properties: {
         LoanRange: '$150,000-350,000',
         BusinessName: 'KORA US, LLC',
-        JobsRetained: '27',
+        Address: '10960 WILSHIRE BLVD 5th Floor',
+        JobsRetained: 27,
       },
     },
     {
@@ -1392,7 +1533,8 @@ let geojsonFeature = {
       properties: {
         LoanRange: '$150,000-350,000',
         BusinessName: 'KOSS OAK QUARRY, LLC',
-        JobsRetained: '42',
+        Address: '10580 Wilshire Blvd #92',
+        JobsRetained: 42,
       },
     },
     {
@@ -1404,7 +1546,8 @@ let geojsonFeature = {
       properties: {
         LoanRange: '$150,000-350,000',
         BusinessName: 'LAMONICAS NY PIZZA CO INC',
-        JobsRetained: 'NA',
+        Address: '1066 GAYLEY AVE.',
+        JobsRetained: null,
       },
     },
     {
@@ -1416,7 +1559,8 @@ let geojsonFeature = {
       properties: {
         LoanRange: '$150,000-350,000',
         BusinessName: 'MERELEX CORPORATION',
-        JobsRetained: '22',
+        Address: '10884 Weyburn Ave.',
+        JobsRetained: 22,
       },
     },
     {
@@ -1428,7 +1572,8 @@ let geojsonFeature = {
       properties: {
         LoanRange: '$150,000-350,000',
         BusinessName: 'MICHAEL A KAHN APC',
-        JobsRetained: '9',
+        Address: '10990 Wilshire Blvd',
+        JobsRetained: 9,
       },
     },
     {
@@ -1440,7 +1585,21 @@ let geojsonFeature = {
       properties: {
         LoanRange: '$150,000-350,000',
         BusinessName: 'MR.NOODLE, INC',
-        JobsRetained: '24',
+        Address: '936 BROXTON AVE',
+        JobsRetained: 24,
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-118.44939, 34.05701],
+      },
+      properties: {
+        LoanRange: '$150,000-350,000',
+        BusinessName: 'MYNHD INC',
+        Address: '11000 Wilshire Blvd #241426',
+        JobsRetained: 37,
       },
     },
     {
@@ -1452,7 +1611,8 @@ let geojsonFeature = {
       properties: {
         LoanRange: '$150,000-350,000',
         BusinessName: 'NATIONAL CHILDRENS CHORUS',
-        JobsRetained: '126',
+        Address: '580 HILGARD AVE',
+        JobsRetained: 126,
       },
     },
     {
@@ -1464,7 +1624,8 @@ let geojsonFeature = {
       properties: {
         LoanRange: '$150,000-350,000',
         BusinessName: 'NOMOTA LLC',
-        JobsRetained: '15',
+        Address: '10990 WILSHIRE BLVD 8th Floor',
+        JobsRetained: 15,
       },
     },
     {
@@ -1476,7 +1637,8 @@ let geojsonFeature = {
       properties: {
         LoanRange: '$150,000-350,000',
         BusinessName: 'NUKI SUB INC',
-        JobsRetained: '38',
+        Address: '10511 ASHTON AVE #303',
+        JobsRetained: 38,
       },
     },
     {
@@ -1488,7 +1650,8 @@ let geojsonFeature = {
       properties: {
         LoanRange: '$150,000-350,000',
         BusinessName: 'OUR LADY PRODUCTIONS, INC.',
-        JobsRetained: '0',
+        Address: '10960 Wilshire Blvd., Flr 5',
+        JobsRetained: 0,
       },
     },
     {
@@ -1500,7 +1663,8 @@ let geojsonFeature = {
       properties: {
         LoanRange: '$150,000-350,000',
         BusinessName: 'PAPA BURGER, LLC',
-        JobsRetained: '46',
+        Address: '10955 KINROSS AVE',
+        JobsRetained: 46,
       },
     },
     {
@@ -1512,7 +1676,8 @@ let geojsonFeature = {
       properties: {
         LoanRange: '$150,000-350,000',
         BusinessName: 'PASICH LLP',
-        JobsRetained: '13',
+        Address: '10940 WILSHIRE BLVD STE 800',
+        JobsRetained: 13,
       },
     },
     {
@@ -1524,7 +1689,8 @@ let geojsonFeature = {
       properties: {
         LoanRange: '$150,000-350,000',
         BusinessName: 'PAUL ANKA PRODUCTIONS INC',
-        JobsRetained: '0',
+        Address: '10960 WILSHIRE BLVD, FL 5',
+        JobsRetained: 0,
       },
     },
     {
@@ -1537,7 +1703,8 @@ let geojsonFeature = {
         LoanRange: '$150,000-350,000',
         BusinessName:
           'PHILIP O. MENDELOVITZ D.D.S., A PROFESSIONAL CORPORATION',
-        JobsRetained: '9',
+        Address: '100 UCLA MEDICAL PLZ STE 445',
+        JobsRetained: 9,
       },
     },
     {
@@ -1549,7 +1716,8 @@ let geojsonFeature = {
       properties: {
         LoanRange: '$150,000-350,000',
         BusinessName: 'PICOA, INC.',
-        JobsRetained: '8',
+        Address: '10866 WILSHIRE BLVD',
+        JobsRetained: 8,
       },
     },
     {
@@ -1561,7 +1729,8 @@ let geojsonFeature = {
       properties: {
         LoanRange: '$150,000-350,000',
         BusinessName: 'PULSAR ADVERTISING INC',
-        JobsRetained: '16',
+        Address: '10940 WILSHIRE BLVD STE 1050',
+        JobsRetained: 16,
       },
     },
     {
@@ -1573,7 +1742,8 @@ let geojsonFeature = {
       properties: {
         LoanRange: '$150,000-350,000',
         BusinessName: 'QUINCY JONES PRODUCTIONS INC',
-        JobsRetained: '14',
+        Address: '10850 Wilshire Blvd Ste 1200',
+        JobsRetained: 14,
       },
     },
     {
@@ -1585,7 +1755,8 @@ let geojsonFeature = {
       properties: {
         LoanRange: '$150,000-350,000',
         BusinessName: "REGENCY WILSHIRE HOMEOWNERS' ASSOCIATION",
-        JobsRetained: 'NA',
+        Address: '10551 Wilshire Blvd',
+        JobsRetained: null,
       },
     },
     {
@@ -1597,7 +1768,8 @@ let geojsonFeature = {
       properties: {
         LoanRange: '$150,000-350,000',
         BusinessName: 'REGENT WEST CORPORATION',
-        JobsRetained: '14',
+        Address: '1109 Westwood Blvd',
+        JobsRetained: 14,
       },
     },
     {
@@ -1610,7 +1782,8 @@ let geojsonFeature = {
         LoanRange: '$150,000-350,000',
         BusinessName:
           'SEPHARDIC JEWISH COMMUNITY AND BROTHERHOOD OF LOS ANGELES',
-        JobsRetained: '39',
+        Address: '10500 WILSHIRE BLVD',
+        JobsRetained: 39,
       },
     },
     {
@@ -1622,7 +1795,8 @@ let geojsonFeature = {
       properties: {
         LoanRange: '$150,000-350,000',
         BusinessName: 'SILTON GROUP, LLC',
-        JobsRetained: '21',
+        Address: '10866 Wilshire Blvd Ste 1550',
+        JobsRetained: 21,
       },
     },
     {
@@ -1634,7 +1808,8 @@ let geojsonFeature = {
       properties: {
         LoanRange: '$150,000-350,000',
         BusinessName: 'SO FRESH, L P',
-        JobsRetained: '21',
+        Address: '1124 Manning Ave.',
+        JobsRetained: 21,
       },
     },
     {
@@ -1646,7 +1821,8 @@ let geojsonFeature = {
       properties: {
         LoanRange: '$150,000-350,000',
         BusinessName: 'SOHRAB INC',
-        JobsRetained: '53',
+        Address: '1712 WESTWOOD BLVD',
+        JobsRetained: 53,
       },
     },
     {
@@ -1658,7 +1834,8 @@ let geojsonFeature = {
       properties: {
         LoanRange: '$150,000-350,000',
         BusinessName: "SOULITO'S WAY",
-        JobsRetained: '12',
+        Address: '10960 WILSHIRE BLVD 5th Floor',
+        JobsRetained: 12,
       },
     },
     {
@@ -1670,7 +1847,8 @@ let geojsonFeature = {
       properties: {
         LoanRange: '$150,000-350,000',
         BusinessName: 'STARWIN CORP.',
-        JobsRetained: '19',
+        Address: '1519 Ensley Avenue',
+        JobsRetained: 19,
       },
     },
     {
@@ -1682,7 +1860,8 @@ let geojsonFeature = {
       properties: {
         LoanRange: '$150,000-350,000',
         BusinessName: 'STEVEN B SILBART MD A MEDICAL CORP',
-        JobsRetained: 'NA',
+        Address: '10921 WILSHIRE BLVD SUITE 604',
+        JobsRetained: null,
       },
     },
     {
@@ -1694,7 +1873,8 @@ let geojsonFeature = {
       properties: {
         LoanRange: '$150,000-350,000',
         BusinessName: 'SUNNIN LEBANESE CAFE INC',
-        JobsRetained: '29',
+        Address: '1776 Westwood Blvd',
+        JobsRetained: 29,
       },
     },
     {
@@ -1706,7 +1886,8 @@ let geojsonFeature = {
       properties: {
         LoanRange: '$150,000-350,000',
         BusinessName: 'SWEET AMBER VENTURES, INC.',
-        JobsRetained: '18',
+        Address: '10990 WILSHIRE BLVD 8TH FLOOR',
+        JobsRetained: 18,
       },
     },
     {
@@ -1718,7 +1899,8 @@ let geojsonFeature = {
       properties: {
         LoanRange: '$150,000-350,000',
         BusinessName: 'TEKLEAD CORP.',
-        JobsRetained: '10',
+        Address: '10880 WILSHIRE BLVD 1101',
+        JobsRetained: 10,
       },
     },
     {
@@ -1730,7 +1912,8 @@ let geojsonFeature = {
       properties: {
         LoanRange: '$150,000-350,000',
         BusinessName: 'TESS FINKLE PUBLIC RELATIONS, INC.',
-        JobsRetained: '22',
+        Address: '10960 WILSHIRE BLVD Suite 1900',
+        JobsRetained: 22,
       },
     },
     {
@@ -1743,7 +1926,8 @@ let geojsonFeature = {
         LoanRange: '$150,000-350,000',
         BusinessName:
           'THE APP DEVELOPMENT AND MARKETING DBA AD AM INC. OR RAIN OR RAIN LOCAL',
-        JobsRetained: '6',
+        Address: '10866 Wilshire Blvd., Suite 970',
+        JobsRetained: 6,
       },
     },
     {
@@ -1755,7 +1939,8 @@ let geojsonFeature = {
       properties: {
         LoanRange: '$150,000-350,000',
         BusinessName: 'THE SAUCE LLC DBA VIOLET',
-        JobsRetained: 'NA',
+        Address: '1121 Glendon Ave',
+        JobsRetained: null,
       },
     },
     {
@@ -1767,7 +1952,8 @@ let geojsonFeature = {
       properties: {
         LoanRange: '$150,000-350,000',
         BusinessName: 'THE WHISPER HOUSE LLC',
-        JobsRetained: '42',
+        Address: '10960 Wilshire Boulevard 5th Floor',
+        JobsRetained: 42,
       },
     },
     {
@@ -1779,7 +1965,8 @@ let geojsonFeature = {
       properties: {
         LoanRange: '$150,000-350,000',
         BusinessName: 'TMC ICE PROTECTION SYSTEMS LLC',
-        JobsRetained: '8',
+        Address: '10850 Wilshire Blvd Fl 6',
+        JobsRetained: 8,
       },
     },
     {
@@ -1791,7 +1978,8 @@ let geojsonFeature = {
       properties: {
         LoanRange: '$150,000-350,000',
         BusinessName: 'TRENT MANAGEMENT LLC',
-        JobsRetained: '13',
+        Address: '907 WESTWOOD BLVD',
+        JobsRetained: 13,
       },
     },
     {
@@ -1803,7 +1991,8 @@ let geojsonFeature = {
       properties: {
         LoanRange: '$150,000-350,000',
         BusinessName: 'TRI-WEST ENTERPRISES, LLC',
-        JobsRetained: '35',
+        Address: '1000 GAYLEY AVE',
+        JobsRetained: 35,
       },
     },
     {
@@ -1815,7 +2004,8 @@ let geojsonFeature = {
       properties: {
         LoanRange: '$150,000-350,000',
         BusinessName: 'TRIYAR REALTY GROUP, LLC',
-        JobsRetained: '20',
+        Address: '10850 Wilshire Blvd Ste 1250',
+        JobsRetained: 20,
       },
     },
     {
@@ -1827,7 +2017,8 @@ let geojsonFeature = {
       properties: {
         LoanRange: '$150,000-350,000',
         BusinessName: 'TRIYAR RETAIL GROUP OF TX INC',
-        JobsRetained: '14',
+        Address: '10850 WILSHIRE BLVD STE 1250',
+        JobsRetained: 14,
       },
     },
     {
@@ -1839,7 +2030,8 @@ let geojsonFeature = {
       properties: {
         LoanRange: '$150,000-350,000',
         BusinessName: 'UNIVERSITY VASCULAR ASSOCIATES - WESTWOOD, INC',
-        JobsRetained: '26',
+        Address: '1082 GLENDON AVE',
+        JobsRetained: 26,
       },
     },
     {
@@ -1851,7 +2043,8 @@ let geojsonFeature = {
       properties: {
         LoanRange: '$150,000-350,000',
         BusinessName: 'VASCULAR MANAGEMENT ASSOCIATES, INC',
-        JobsRetained: '25',
+        Address: '1082 GLENDON AVE',
+        JobsRetained: 25,
       },
     },
     {
@@ -1863,7 +2056,8 @@ let geojsonFeature = {
       properties: {
         LoanRange: '$150,000-350,000',
         BusinessName: 'VICKEN SHAKIAN M.D. INC',
-        JobsRetained: '6',
+        Address: '10921 WILSHIRE BLVD',
+        JobsRetained: 6,
       },
     },
     {
@@ -1875,7 +2069,8 @@ let geojsonFeature = {
       properties: {
         LoanRange: '$150,000-350,000',
         BusinessName: 'VIVID HOLDINGS LLC',
-        JobsRetained: '9',
+        Address: '1281 Westwood Blvd Suite 107',
+        JobsRetained: 9,
       },
     },
     {
@@ -1887,7 +2082,8 @@ let geojsonFeature = {
       properties: {
         LoanRange: '$150,000-350,000',
         BusinessName: 'WESTERN DRUG, INC.',
-        JobsRetained: '12',
+        Address: '10921 Wilshire Boulevard - Lobby 0.0',
+        JobsRetained: 12,
       },
     },
     {
@@ -1899,7 +2095,8 @@ let geojsonFeature = {
       properties: {
         LoanRange: '$150,000-350,000',
         BusinessName: 'WIDOM SAVEY & GARFINKEL, LLP',
-        JobsRetained: '11',
+        Address: '10866 WILSHIRE BLVD, SUITE 900',
+        JobsRetained: 11,
       },
     },
     {
@@ -1911,7 +2108,8 @@ let geojsonFeature = {
       properties: {
         LoanRange: '$150,000-350,000',
         BusinessName: 'WILLIAM C. KIM MD., INC.',
-        JobsRetained: '18',
+        Address: '321 CONWAY AVE',
+        JobsRetained: 18,
       },
     },
     {
@@ -1923,7 +2121,8 @@ let geojsonFeature = {
       properties: {
         LoanRange: '$150,000-350,000',
         BusinessName: 'WILSHIRE HOLMBY HOMEOWNERS ASSOC. INC.',
-        JobsRetained: '26',
+        Address: '10433 WILSHIRE BLVD.',
+        JobsRetained: 26,
       },
     },
     {
@@ -1935,7 +2134,8 @@ let geojsonFeature = {
       properties: {
         LoanRange: '$150,000-350,000',
         BusinessName: 'WILSHIRE MANNING HOMEOWNERS ASSOCIATION',
-        JobsRetained: 'NA',
+        Address: '10660 Wilshire Boulevard',
+        JobsRetained: null,
       },
     },
     {
@@ -1947,7 +2147,8 @@ let geojsonFeature = {
       properties: {
         LoanRange: '$150,000-350,000',
         BusinessName: 'WISERCARE INC',
-        JobsRetained: '11',
+        Address: '10880 WILSHIRE BLVD STE 2240',
+        JobsRetained: 11,
       },
     },
     {
@@ -1959,19 +2160,21 @@ let geojsonFeature = {
       properties: {
         LoanRange: '$150,000-350,000',
         BusinessName: 'YAGOUBZADEH LAW FIRM LLP',
-        JobsRetained: '26',
+        Address: '10866 WILSHIRE BLVD STE 600',
+        JobsRetained: 26,
       },
     },
     {
       type: 'Feature',
       geometry: {
         type: 'Point',
-        coordinates: [-118.430186, 34.062883],
+        coordinates: [-118.434782, 34.059118],
       },
       properties: {
         LoanRange: '$150,000-350,000',
         BusinessName: 'ELITE SALES AND SERVICES, LLC',
-        JobsRetained: '19',
+        Address: '10669 WELLWORTH AVE',
+        JobsRetained: 19,
       },
     },
     {
@@ -1983,7 +2186,8 @@ let geojsonFeature = {
       properties: {
         LoanRange: '$150,000-350,000',
         BusinessName: 'PAULSETH &AMP; ASSOCIATES PHYSICAL THERAPY,',
-        JobsRetained: '12',
+        Address: '10351 SANTA MONICA BLVD STE 101',
+        JobsRetained: 12,
       },
     },
     {
@@ -1995,7 +2199,8 @@ let geojsonFeature = {
       properties: {
         LoanRange: '$1-2 million',
         BusinessName: 'SHOUT! FACTORY, LLC',
-        JobsRetained: '77',
+        Address: '1640 SEPULVEDA BLVD SUITE 400',
+        JobsRetained: 77,
       },
     },
     {
@@ -2007,7 +2212,8 @@ let geojsonFeature = {
       properties: {
         LoanRange: '$350,000-1 million',
         BusinessName: 'MOJIX, INC.',
-        JobsRetained: '',
+        Address: '11075 Santa Monica Blvd., Suite 350',
+        JobsRetained: null,
       },
     },
     {
@@ -2019,7 +2225,8 @@ let geojsonFeature = {
       properties: {
         LoanRange: '$150,000-350,000',
         BusinessName: 'DATTNER DISPOTO AND ASSOCIATES',
-        JobsRetained: '0',
+        Address: '10635 SANTA MONICA BLVD',
+        JobsRetained: 0,
       },
     },
     {
@@ -2031,7 +2238,8 @@ let geojsonFeature = {
       properties: {
         LoanRange: '$150,000-350,000',
         BusinessName: 'MPCA ADMINISTRATION LLC',
-        JobsRetained: '',
+        Address: '10635 SANTA MONICA BLVD Suite 180',
+        JobsRetained: null,
       },
     },
     {
@@ -2043,7 +2251,8 @@ let geojsonFeature = {
       properties: {
         LoanRange: '$350,000-1 million',
         BusinessName: 'LOLA VISUAL EFFECTS, LLC',
-        JobsRetained: '49',
+        Address: '10435 SANTA MONICA BLVD',
+        JobsRetained: 49,
       },
     },
   ],

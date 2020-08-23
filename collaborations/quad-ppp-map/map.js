@@ -116,19 +116,24 @@ var overlays = {
 
 L.control.layers(null, overlays, { collapsed: false }).addTo(mymap);
 
+// site used to convert from csv to geojson
+// https://www.convertcsv.com/csv-to-geojson.htm
+
 // places deleted bc wack addresses:
-// MYNHD inc
 // lesenfants inc
 // fresher corn grill
 // stealth software technologies
-// medqia llc
-// southern ca tennis association
 
 // places added bc addresses still within s. sepulveda blvd and santa monica blvd
-// elite sales and services llc
+// elite sales and services llc 10669 Wellworth Ave.
 // paulseth & associates physical therapy
 // shout! factory, llc
 // mojix, inc.
 // dattner dispoto and associates
 // mpca administration llc
 // lola visual effects, llc
+
+// places edited bc of diff addresses online
+// MYNHD inc 11000 Wilshire Blvd, Suite 1426
+// medqia llc: address should be 10850 Wilshire Blvd, Suite 1170
+// southern ca tennis association 420 Charles E Young Drive West
