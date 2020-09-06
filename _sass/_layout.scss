@@ -214,10 +214,22 @@
   font-size: 42px;
   line-height: 1;
   margin-bottom: 0.1em;
+  color: $brand-color;
 
   @include media-query($on-laptop) {
     font-size: 36px;
   }
+}
+
+.about-subheader {
+  color: $brand-color-secondary-blue;
+  font-family: $header-font-family;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.orange-link {
+  color: $brand-color-secondary-warm;
 }
 
 .post-teaser {
@@ -285,7 +297,7 @@
   .fullwidth {
     width: 100vw;
     margin-left: calc(
-       (100vw - (#{$content-width} - (#{$spacing-unit} * 2)))/-2
+      (100vw - (#{$content-width} - (#{$spacing-unit} * 2))) / -2
     );
 
     @include media-query($on-laptop) {
