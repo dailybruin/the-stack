@@ -5,6 +5,7 @@ import json
 FILE_PREFIX = '../../../datasets/training-2020/'
 
 data = pd.read_csv(FILE_PREFIX + 'realdonaldtrump.csv')
+print(data)
 # df_1.to_json('../../../datasets/training-2020/realdonalstrump.json')
 # print(data)
 
