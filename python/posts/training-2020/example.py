@@ -5,14 +5,14 @@ import json
 FILE_PREFIX = '../../../datasets/training-2020/'
 
 data = pd.read_csv(FILE_PREFIX + 'realdonaldtrump.csv')
-# df_1.to_json('../../../datasets/training-2020/realdonalstrump.json')
-# print(data)
+#df_1.to_json('../../../datasets/training-2020/realdonalstrump.json')
+#print(data)
 
 
 # STEP 2: Parse through data
 
 # overview of data
-# data_top = data.head()
+data_top = data.head()
 # print(data_top)
 
 # print column names
@@ -20,20 +20,20 @@ data = pd.read_csv(FILE_PREFIX + 'realdonaldtrump.csv')
 #     print(col)
 
 # print size of data
-# print(len(data.index))
+print(len(data.index))
 
 # print number of favorites
-# for i in range(len(data.index)):
-#     print(data.loc[i,:])
+#for i in range(len(data.index)):
+#    print(data.loc[i,:])
 
-# for i in range(len(data.index)):
-#     print(data.loc[i,'favorites'])
+#for i in range(len(data.index)):
+#    print(data.loc[i,'favorites'])
 
-# for index, row in data.iterrows():
-#     print(row['favorites'])
+#for index, row in data.iterrows():
+#    print(row['favorites'])
 
 # overview of statistics
-# print(data.describe())
+print(data.describe())
 
 
 # STEP 3: Transforming data
