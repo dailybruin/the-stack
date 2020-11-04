@@ -321,9 +321,33 @@ catherine_hu:
   email: chu@media.ucla.edu
   mug: no
   bio: Catherine Hu is a first-year Computer Science student who enjoys writing, hiking and reading.
+<<<<<<< HEAD
 lindsey_parungo:
   name: Lindsey Parungo
   title: Stack Developer
   email: lparungo@media.ucla.edu
   mug: no
   bio: Lindsey Parungo is a second year student who loves running and hippos.
+=======
+cameron_bian:
+  name: Cameron Bian
+  title: Stack Developer
+  email: cbian3@media.ucla.edu
+  mug: no
+  bio: Cameron Bian is a fourth-year Math of Computation student. He enjoys basketball, video games and watching comics.
+  github: Cambn
+eustina_kim:
+  name: Eustina Kim
+  title: Stack Developer
+  email: ekim@media.ucla.edu
+  mug: no
+  bio: Eustina Kim is a fourth-year Statistics major with a minor in Digital Humanities.
+  github: kimjee8955
+samantha_low:
+  name: Samantha Low
+  title: Stack Developer
+  email: slow@media.ucla.edu
+  mug: no
+  bio: Samantha Low is a first year Environmental Science Major. 
+  
+>>>>>>> 9e576f0508c6b80cc40af34712f96f5370c917b2
