@@ -361,11 +361,11 @@ ananya_garg:
   email: agarg@media.ucla.edu
   mug: no
   bio: Ananya is a first-year Statistics major with a love for coding, economics, travelling, and Netflix.
-brittney_le: 
+brittney_le:
   name: Brittney Le
   title: News Staff/Stack Developer
   email: ble@media.ucla.edu
-  mug: no 
+  mug: no
   bio: Brittney is a fourth year Human Biology and Society student. In her free time, she likes to browse Reddit and watch Netflix.
 mansa_krishna:
   name: Mansa Krishna
@@ -373,4 +373,9 @@ mansa_krishna:
   email: mkrishna@media.ucla.edu
   mug: no
   bio: Mansa is a third year Applied Mathematics major and History minor. In her spare time, she enjoys reading classical literature and dancing.
-  
+maria_becerra:
+  name: Maria Becerra
+  title: Stack Developer
+  email: msoto@media.ucla.edu
+  mug: no
+  bio: Maria is a fourth year Cognitive Science major. In her free time she likes to listen to psychology podcasts and bullet journal.
