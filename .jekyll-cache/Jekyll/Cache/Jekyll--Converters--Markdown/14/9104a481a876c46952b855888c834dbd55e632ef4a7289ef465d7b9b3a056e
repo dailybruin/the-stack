@@ -1,4 +1,4 @@
-I"�<p>A UCLA education is a huge investment – each resident undergraduate student pays up to <strong>$1,230</strong> per class in tuition and fees,<sup><a href="#cite-1">[1]</a></sup> and invests about <strong>100 hours</strong> per class.<sup><a href="#cite-2">[2]</a></sup></p>
+I"<<p>A UCLA education is a huge investment – each resident undergraduate student pays up to <strong>$1,230</strong> per class in tuition and fees,<sup><a href="#cite-1">[1]</a></sup> and invests about <strong>100 hours</strong> per class.<sup><a href="#cite-2">[2]</a></sup></p>
 
 <p>Our analysis of Bruinwalk ratings, sourced from thousands of students, can help you make that investment worthwhile. There’s more to a professor than their Bruinwalk rating, just like there’s more to a student than their GPA, but students can use ratings and reviews to select courses that are worth their time and money.</p>
 
@@ -14,11 +14,13 @@
 
   <p>Looking for an all-around great class? Look no further than the top 25 overall.</p>
   <h3 id="visualization">The top 25 classes by overall rating</h3>
-  <ratings-list :ratings="bestOverall" rating-type="overall_rating" id="best-overall"></ratings-list>
+  &lt;ratings-list :ratings="bestOverall" rating-type="overall_rating" 
+                id="best-overall"&gt;&lt;/ratings-list&gt;
 
   <p>Steer clear of these classes to avoid poorly rated professors and potential frustration.</p>
   <h3>The bottom 25 classes by overall rating</h3>
-  <ratings-list :ratings="worstOverall" rating-type="overall_rating" id="worst-overall"></ratings-list>
+  &lt;ratings-list :ratings="worstOverall" rating-type="overall_rating" 
+                id="worst-overall"&gt;&lt;/ratings-list&gt;
 
   <p>The most common overall rating students award is a <strong>4</strong>, which accounts for <strong>33.8 percent</strong> of all ratings. This skews the distribution toward the higher end, away from the expected average of 2.5. </p>
 
@@ -34,11 +36,13 @@
   <p>Need an easy class to balance out a tough quarter? Enroll in one of the following.</p>
 
   <h3>The 25 easiest classes</h3>
-  <ratings-list :ratings="easiest" rating-type="easiness_rating" id="easiest"></ratings-list>
+  &lt;ratings-list :ratings="easiest" rating-type="easiness_rating"
+                id="easiest"&gt;&lt;/ratings-list&gt;
 
   <p>Don’t take one of these classes unless you’re prepared to put in a lot of work.</p>
   <h3>The 25 hardest classes</h3>
-  <ratings-list :ratings="hardest" rating-type="easiness_rating" id="hardest"></ratings-list>
+  &lt;ratings-list :ratings="hardest" rating-type="easiness_rating" 
+                id="hardest"&gt;&lt;/ratings-list&gt;
 
   <p>Students have rated more courses as difficult than easy. Of the courses with 15 or more ratings, eleven have a 1.00 average, the most difficult rating. Only six of these courses have ratings above 4.00.</p>
   
