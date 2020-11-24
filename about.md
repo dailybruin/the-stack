@@ -42,6 +42,8 @@ Apply to the [Stack](https://apply.uclastudentmedia.com/applications/daily-bruin
 
 The data editor is the person overseeing The Stack. A list of editors by year is below.
 
+- [Andrew Kan](https://github.com/kandrewz) (2020-2021)
+- [Mattie Sanseverino](https://github.com/mattiesansev) (2019-2020)
 - [Henna Dialani](https://github.com/hennadialani) (2018-2019)
 - [Chang Liu](https://github.com/shampliu) (2016-2017)
 - [Harrison Liddiard](https://github.com/liddiard) (2015-2016)
