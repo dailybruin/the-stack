@@ -315,6 +315,7 @@ sydney_kovach:
   email: skovach@media.ucla.edu
   mug: yes
   bio: Sydney Kovach is a second year Global Studies and Geography student who loves dancing and taking yoga classes in her free time.
+<<<<<<< HEAD
 catherine_hu:
   name: Catherine Hu
   title: Stack Developer
@@ -351,3 +352,13 @@ samantha_low:
   bio: Samantha Low is a first year Environmental Science Major. 
   
 >>>>>>> 9e576f0508c6b80cc40af34712f96f5370c917b2
+=======
+xuxin_zhang:
+  name: Xuxin Zhang
+  title: Stack Developer and Photo staff
+  bio: Xuxin is a third year Applied Mathematics and Statistics student. He loves collecting vintage film cameras and taking photos for strangers.
+  mug: Yes
+  email: xzhang1@media.ucla.edu
+  github: xux1an
+  website: https://www.xuxinzhang.com/
+>>>>>>> 8ae6c6e4fc3321f36bacd0a76ee7f163a46651ae
