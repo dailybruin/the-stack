@@ -4,6 +4,7 @@ teaser: (pending)
 authors:
   - cameron_bian
   - eustina_kim
+  - ziqing_luo
   - xuxin_zhang
 key_takeaways:
   - Hope you enjoy The Stack!
@@ -20,7 +21,7 @@ scripts:
 ---
 
 <div>
-    <canvas id= "bar-chart" width="800" height="450"></canvas>
+    <canvas id= "bar-chart" width="600" height="250"></canvas>
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
