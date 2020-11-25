@@ -2,6 +2,7 @@
 title: Westwoood Business Turnover (pending)
 teaser: (pending)
 authors:
+  - cameron_bian
   - eustina_kim
   - xuxin_zhang
 key_takeaways:
