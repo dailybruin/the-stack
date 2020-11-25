@@ -19,5 +19,7 @@ scripts:
 ---
 
 <div>
-    <canvas id="line-chart" width="800" height="450"></canvas>
+    <canvas id= "bar-chart" width="800" height="450"></canvas>
 </div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
