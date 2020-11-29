@@ -5,6 +5,7 @@ group :jekyll_plugins do
     gem "jekyll-watch"
     gem "jekyll-paginate"
     gem "kramdown"
+    gem "kramdown-parser-gfm"
     gem "rouge"
     gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw]
 end
