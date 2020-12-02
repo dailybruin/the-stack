@@ -25,11 +25,11 @@ scripts:
   - /js/posts/westwood-business-turnover/bubble.js
 ---
 
-<div>
-    <canvas id= "bar-chart" width="600" height="250"></canvas>
+<div style="position: relative; width:60vw; margin:0 auto" >
+    <canvas id= "bar-chart" ></canvas>
 </div>
 
-<div id="container"></div>
+<div id="container" style="position: relative; width:60vw; margin:0 auto"></div>
 
 
 
