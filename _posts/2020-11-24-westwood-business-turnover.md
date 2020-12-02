@@ -17,11 +17,21 @@ stylesheets:
 scripts:
   - //cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js
   - //cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.js
+  - https://code.highcharts.com/highcharts.js
+  - https://code.highcharts.com/highcharts-more.js
+  - https://code.highcharts.com/modules/exporting.js
+  - https://code.highcharts.com/modules/accessibility.js
   - /js/posts/westwood-business-turnover/barplot.js
+  - /js/posts/westwood-business-turnover/bubble.js
 ---
 
 <div>
     <canvas id= "bar-chart" width="600" height="250"></canvas>
 </div>
 
-<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+<div id="container"></div>
+
+
+
+
+
