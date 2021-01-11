@@ -322,14 +322,12 @@ catherine_hu:
   email: chu@media.ucla.edu
   mug: no
   bio: Catherine Hu is a first-year Computer Science student who enjoys writing, hiking and reading.
-<<<<<<< HEAD
 lindsey_parungo:
   name: Lindsey Parungo
   title: Stack Developer
   email: lparungo@media.ucla.edu
   mug: no
   bio: Lindsey Parungo is a second year student who loves running and hippos.
-=======
 cameron_bian:
   name: Cameron Bian
   title: Stack Developer
@@ -337,6 +335,12 @@ cameron_bian:
   mug: no
   bio: Cameron Bian is a fourth-year Math of Computation student. He enjoys basketball, video games and watching comics.
   github: Cambn
+ziqing_luo:
+  name: Ziqing Luo
+  title: Stack Developer
+  email: zluo@media.ucla.edu
+  mug: no
+  bio: Ziqing Luo is a third-year Applied Math and Statistics studnet who is passinate about dancing and eating desserts.
 eustina_kim:
   name: Eustina Kim
   title: Stack Developer
@@ -349,10 +353,16 @@ samantha_low:
   title: Stack Developer
   email: slow@media.ucla.edu
   mug: no
+<<<<<<< HEAD
   bio: Samantha Low is a first year Environmental Science Major. 
   
 >>>>>>> 9e576f0508c6b80cc40af34712f96f5370c917b2
 =======
+=======
+  bio: Samantha Low is a first year Environmental Science Major who loves hiking and trying new foods.
+=======
+>>>>>>> 8ae6c6e4fc3321f36bacd0a76ee7f163a46651ae
+>>>>>>> d6ec809f8baed9b9003bd337595350ce34a506aa
 xuxin_zhang:
   name: Xuxin Zhang
   title: Stack Developer and Photo staff
@@ -360,5 +370,44 @@ xuxin_zhang:
   mug: Yes
   email: xzhang1@media.ucla.edu
   github: xux1an
+<<<<<<< HEAD
+  website: https://www.xuxinzhang.com/
+ananya_garg:
+  name: Ananya Garg
+  title: Stack Developer
+  email: agarg@media.ucla.edu
+  mug: no
+  bio: Ananya is a first-year Statistics major with a love for coding, economics, travelling, and Netflix.
+brittney_le:
+  name: Brittney Le
+  title: News Staff/Stack Developer
+  email: ble@media.ucla.edu
+  mug: no
+  bio: Brittney is a fourth year Human Biology and Society student. In her free time, she likes to browse Reddit and watch Netflix.
+mansa_krishna:
+  name: Mansa Krishna
+  title: Stack Developer
+  email: mkrishna@media.ucla.edu
+  mug: no
+  bio: Mansa is a third year Applied Mathematics major and History minor. In her spare time, she enjoys reading classical literature and dancing.
+maria_becerra:
+  name: Maria Becerra
+  title: Stack Developer
+  email: msoto@media.ucla.edu
+  mug: no
+  bio: Maria is a fourth year Cognitive Science major. She is originally from San Francisco. In her free time she likes to listen to psychology podcasts, buy candles and bullet journal.
+faye_zou:
+  name: Faye Zou
+  title: Stack Developer
+  email: fzou@media.ucla.edu
+  mug: no
+  bio: Faye is a third year Cognitive Science student. In her free time, she likes playing with her puppies and going to the gym.
+priya-kanneboyina:
+  name: Priya Kanneboyina
+  title: Stack Developer
+  email: pkanneboyina@media.ucla.edu
+  mug: no
+  bio: Priya is a second year Applied Math student, minoring in Public Affairs and Film.
+=======
   website: https://www.xuxinzhang.com/
 >>>>>>> 8ae6c6e4fc3321f36bacd0a76ee7f163a46651ae
