@@ -9,5 +9,6 @@ Gemfile.lock
 auth.yaml
 __pycache__
 .jekyll-cache/
+./jekyll-include-cache/
 
 .vscode/

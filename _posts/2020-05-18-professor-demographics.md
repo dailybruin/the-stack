@@ -37,7 +37,6 @@ scripts:
 
 _This post was updated May 20 at 11:43 a.m. to reflect clarified interpretation of the information considering null values and incomplete data._
 
-
 Brantly Fulton grew up in Pontiac, Michigan, an underprivileged community outside Detroit.
 
 Fulton went on to graduate with a degree in chemistry from Morehouse College and joined UCLA as a lecturer of chemistry in 2019.
@@ -64,7 +63,6 @@ The Stack took a look into faculty hiring patterns based on race and gender over
 </ul>
 
 _Correction: The original version of these graphs displayed FTE data under incorrect department names. The original version also incorrectly displayed data that factored in incomplete information of certain demographic groups within certain departments, which BruinX did not provide. Those departments have been removed._
-
 
 <div id='holder'>
     <div style='margin-bottom: 15px;'>
@@ -137,7 +135,6 @@ The graph below shows the departments with the highest percentages of a particul
 Cultural fields of study often had high proportions of that culture as faculty. The Asian Languages & Cultures Department, for example, had a majority of Asian faculty through the nine years we measured. Similarly, the Chicana/o studies and Spanish and Portuguese departments had high levels of Chicana(o)/Latina(o)/Hispanic faculty.
 
 It’s also worth noting that some departments had no professors of some ethnic groups – the data showed that almost every year, there were at least 20 departments that had no Asian professors, African American professors, Chicana(o)/Latina(o)/Hispanic professors or American Indian professors, while there were rarely more than four departments with no white professors.
-
 
 _Correction: The original version of these graphs incorrectly displayed data that factored in incomplete information of certain demographic groups within certain departments, which BruinX did not provide. Those departments have been removed._
 
