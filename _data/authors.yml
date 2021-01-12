@@ -174,20 +174,20 @@ henna_dialani:
   email: hdialani@media.ucla.edu
   github: hennadialani
 nathan_smith:
-    name: Nathan Smith
-    title: Assistant Online Editor
-    bio: Smith is an assistant online editor at the Daily Bruin and a second-year computer science student. When he's not scrolling through USAC PDFs or staring at lines of code, he enjoys Eggo waffles, visiting museums and writing about electric scooters.
-    mug: Yes
-    email: nsmith@media.ucla.edu
-    github: nathunsmitty
-    twitter: nathunsmitty
-    website: https://nathansmith.io
+  name: Nathan Smith
+  title: Assistant Online Editor
+  bio: Smith is an assistant online editor at the Daily Bruin and a second-year computer science student. When he's not scrolling through USAC PDFs or staring at lines of code, he enjoys Eggo waffles, visiting museums and writing about electric scooters.
+  mug: Yes
+  email: nsmith@media.ucla.edu
+  github: nathunsmitty
+  twitter: nathunsmitty
+  website: https://nathansmith.io
 lik_teng_ung:
-    name: Lik Teng Ung
-    title: Stack Developer
-    bio: Ung is a stack contributor at the Daily Bruin and a third-year statistics and political science student. He's an avid political poll watcher, Pythonistas and boba connoisseur.
-    email: lung@media.ucla.edu
-    mug: Yes
+  name: Lik Teng Ung
+  title: Stack Developer
+  bio: Ung is a stack contributor at the Daily Bruin and a third-year statistics and political science student. He's an avid political poll watcher, Pythonistas and boba connoisseur.
+  email: lung@media.ucla.edu
+  mug: Yes
 kyle_wong:
   name: Kyle Wong
   title: Stack Developer
@@ -244,7 +244,7 @@ michael_huang:
 radhika_ahuja:
   name: Radhika Ahuja
   title: Stack Developer
-  bio: Radhika is a fourth-year math of computation student. Outside of school, she enjoys writing, dance, cooking, and other things creative. 
+  bio: Radhika is a fourth-year math of computation student. Outside of school, she enjoys writing, dance, cooking, and other things creative.
   mug: yes
   email: rahuja@media.ucla.edu
   github: ahujaradhika
@@ -260,7 +260,7 @@ madeline_blasingame:
   name: Madeline Blasingame
   title: Stack Developer
   mug: yes
-  bio: Maddy is a first-year stats major whose only goal is to be TikTok famous. 
+  bio: Maddy is a first-year stats major whose only goal is to be TikTok famous.
   email: mblasingame@media.ucla.edu
   github: meblasingame
 laurel_woods:
@@ -324,9 +324,8 @@ xuxin_zhang:
   github: xux1an
   website: https://www.xuxinzhang.com/
 vivian_luk:
-  name: Vivian Luk
+  name: Vivian Luk Hello
   title: Stack Developer
   bio: Vivian is a second-year statistics student who loves hiking and trivia.
   email: vluk@media.ucla.edu
   mug: no
-  
