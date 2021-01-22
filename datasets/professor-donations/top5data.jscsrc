@@ -1,0 +1,29 @@
+topFiveUSC = 
+{
+    'ActBlue': '359123.28',
+    'Biden For President': '133628.74',
+    'DCCC': '98000.00',
+    'DSCC': '48421.00',
+    'Trump Vicotory': '35000.00',
+}
+
+
+topFiveCal =
+{
+    'ActBlue': '40172.86',
+    'Biden For President': '32108.73',
+    'LCV Victory Fund':'20000.00',
+    'House Majority PAC': '12500.00',
+    'Josh Harder For Congress': '10420.83',
+
+}
+
+topFiveUCLA=
+{
+    'ActBlue': '430911.97',
+    'Biden For President': '186788.08',
+    'DNC Service Corp/Democratic National Committee': '111998.50',
+    'Biden Victory Fund':'83850.00',
+    'DCCC':'73143.00',
+
+}
