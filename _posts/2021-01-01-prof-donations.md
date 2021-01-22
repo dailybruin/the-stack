@@ -13,7 +13,13 @@ featured_image:
   url: nba-players/lonzo_thumbnail_updated.png
 og_image: nba-players/lonzo_thumbnail_updated.png
 scripts:
-  - js/posts/prof-donations-2021/bar-graph.mjs
+  - //ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js
+  - //cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js
+  - //cdnjs.cloudflare.com/ajax/libs/c3/0.4.10/c3.min.js
+  - /js/posts/prof-donations-2021/test.js
+stylesheets:
+  - //cdnjs.cloudflare.com/ajax/libs/c3/0.4.10/c3.min.css
+  - /css/posts/nba-players/app.css
 ---
 
-<div id='vorp-kidd-comparison-chart'></div>
+<div id='ucla-donations-chart'></div>
