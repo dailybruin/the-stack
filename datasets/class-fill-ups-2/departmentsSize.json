@@ -1,0 +1,602 @@
+[
+    {
+        "x": "A&O SCI",
+        "y": 15
+    },
+    {
+        "x": "AERO ST",
+        "y": 7
+    },
+    {
+        "x": "AF AMER",
+        "y": 20
+    },
+    {
+        "x": "AM IND",
+        "y": 7
+    },
+    {
+        "x": "AN N EA",
+        "y": 9
+    },
+    {
+        "x": "ANTHRO",
+        "y": 23
+    },
+    {
+        "x": "ARABIC",
+        "y": 10
+    },
+    {
+        "x": "ARCH&UD",
+        "y": 5
+    },
+    {
+        "x": "ARMENIA",
+        "y": 4
+    },
+    {
+        "x": "ART",
+        "y": 18
+    },
+    {
+        "x": "ART HIS",
+        "y": 12
+    },
+    {
+        "x": "ART&ARC",
+        "y": 1
+    },
+    {
+        "x": "ARTS ED",
+        "y": 3
+    },
+    {
+        "x": "ASIA AM",
+        "y": 20
+    },
+    {
+        "x": "ASIAN",
+        "y": 3
+    },
+    {
+        "x": "ASL",
+        "y": 2
+    },
+    {
+        "x": "ASTR",
+        "y": 6
+    },
+    {
+        "x": "BIOENGR",
+        "y": 12
+    },
+    {
+        "x": "BIOINFR",
+        "y": 1
+    },
+    {
+        "x": "BIOL CH",
+        "y": 2
+    },
+    {
+        "x": "BIOSTAT",
+        "y": 1
+    },
+    {
+        "x": "BMD RES",
+        "y": 7
+    },
+    {
+        "x": "C&EE",
+        "y": 16
+    },
+    {
+        "x": "C&S BIO",
+        "y": 4
+    },
+    {
+        "x": "CCAS",
+        "y": 16
+    },
+    {
+        "x": "CESC",
+        "y": 7
+    },
+    {
+        "x": "CH ENGR",
+        "y": 14
+    },
+    {
+        "x": "CHEM",
+        "y": 28
+    },
+    {
+        "x": "CHEM 14BE - General Chemistry for Life Scientists",
+        "y": 1
+    },
+    {
+        "x": "CHEM 19 - COVID-19: Kindness in",
+        "y": 1
+    },
+    {
+        "x": "CHIN",
+        "y": 15
+    },
+    {
+        "x": "CLASSIC",
+        "y": 8
+    },
+    {
+        "x": "CLUSTER",
+        "y": 9
+    },
+    {
+        "x": "COM HLT",
+        "y": 2
+    },
+    {
+        "x": "COM LIT",
+        "y": 10
+    },
+    {
+        "x": "COM SCI",
+        "y": 30
+    },
+    {
+        "x": "COMM",
+        "y": 28
+    },
+    {
+        "x": "COMPTNG",
+        "y": 14
+    },
+    {
+        "x": "DANCE",
+        "y": 19
+    },
+    {
+        "x": "DESMA",
+        "y": 12
+    },
+    {
+        "x": "DGT HUM",
+        "y": 5
+    },
+    {
+        "x": "DIS STD",
+        "y": 4
+    },
+    {
+        "x": "DUTCH",
+        "y": 1
+    },
+    {
+        "x": "EC ENGR",
+        "y": 44
+    },
+    {
+        "x": "ECON",
+        "y": 23
+    },
+    {
+        "x": "ECON 19 - COVID-19: Missing",
+        "y": 1
+    },
+    {
+        "x": "EDUC",
+        "y": 22
+    },
+    {
+        "x": "EE BIOL",
+        "y": 28
+    },
+    {
+        "x": "ENGCOMP",
+        "y": 61
+    },
+    {
+        "x": "ENGL",
+        "y": 62
+    },
+    {
+        "x": "ENGR",
+        "y": 14
+    },
+    {
+        "x": "ENV HLT",
+        "y": 2
+    },
+    {
+        "x": "ENVIRON",
+        "y": 10
+    },
+    {
+        "x": "EPIDEM",
+        "y": 1
+    },
+    {
+        "x": "EPS SCI",
+        "y": 21
+    },
+    {
+        "x": "ETHNMUS",
+        "y": 31
+    },
+    {
+        "x": "FILIPNO",
+        "y": 3
+    },
+    {
+        "x": "FILM TV",
+        "y": 23
+    },
+    {
+        "x": "FOOD ST",
+        "y": 1
+    },
+    {
+        "x": "FRNCH",
+        "y": 28
+    },
+    {
+        "x": "GENDER",
+        "y": 13
+    },
+    {
+        "x": "GEOG",
+        "y": 13
+    },
+    {
+        "x": "GERMAN",
+        "y": 13
+    },
+    {
+        "x": "GJ STDS",
+        "y": 37
+    },
+    {
+        "x": "GLB HLT",
+        "y": 4
+    },
+    {
+        "x": "GLBL ST",
+        "y": 17
+    },
+    {
+        "x": "GREEK",
+        "y": 5
+    },
+    {
+        "x": "GRNTLGY",
+        "y": 2
+    },
+    {
+        "x": "HEBREW",
+        "y": 3
+    },
+    {
+        "x": "HIN-URD",
+        "y": 2
+    },
+    {
+        "x": "HIST",
+        "y": 37
+    },
+    {
+        "x": "HLT POL",
+        "y": 2
+    },
+    {
+        "x": "HNGAR",
+        "y": 1
+    },
+    {
+        "x": "HNRS",
+        "y": 35
+    },
+    {
+        "x": "HUM GEN",
+        "y": 1
+    },
+    {
+        "x": "I A STD",
+        "y": 9
+    },
+    {
+        "x": "I M STD",
+        "y": 1
+    },
+    {
+        "x": "IL AMER",
+        "y": 4
+    },
+    {
+        "x": "INDO",
+        "y": 3
+    },
+    {
+        "x": "INF STD",
+        "y": 5
+    },
+    {
+        "x": "INTL DV",
+        "y": 6
+    },
+    {
+        "x": "IRANIAN",
+        "y": 10
+    },
+    {
+        "x": "ISLM ST",
+        "y": 1
+    },
+    {
+        "x": "ITALIAN",
+        "y": 18
+    },
+    {
+        "x": "JAPAN",
+        "y": 14
+    },
+    {
+        "x": "JEWISH",
+        "y": 7
+    },
+    {
+        "x": "KOREA",
+        "y": 13
+    },
+    {
+        "x": "LATIN",
+        "y": 7
+    },
+    {
+        "x": "LBR STD",
+        "y": 12
+    },
+    {
+        "x": "LGBTQS",
+        "y": 3
+    },
+    {
+        "x": "LIFESCI",
+        "y": 29
+    },
+    {
+        "x": "LING",
+        "y": 18
+    },
+    {
+        "x": "M E STD",
+        "y": 4
+    },
+    {
+        "x": "M PHARM",
+        "y": 1
+    },
+    {
+        "x": "MAT SCI",
+        "y": 19
+    },
+    {
+        "x": "MATH",
+        "y": 34
+    },
+    {
+        "x": "MCD BIO",
+        "y": 74
+    },
+    {
+        "x": "MECH&AE",
+        "y": 23
+    },
+    {
+        "x": "MED",
+        "y": 2
+    },
+    {
+        "x": "MGMT",
+        "y": 22
+    },
+    {
+        "x": "MIL SCI",
+        "y": 6
+    },
+    {
+        "x": "MIMG",
+        "y": 45
+    },
+    {
+        "x": "MSC IND",
+        "y": 10
+    },
+    {
+        "x": "MUSC",
+        "y": 103
+    },
+    {
+        "x": "MUSCLG",
+        "y": 13
+    },
+    {
+        "x": "MUSCLG 19 - COVID-19: Self-Documenting",
+        "y": 1
+    },
+    {
+        "x": "MUSCLG 19 - R&B, Power Pop, \"Opera\" and",
+        "y": 1
+    },
+    {
+        "x": "NAV SCI",
+        "y": 5
+    },
+    {
+        "x": "NEURBIO",
+        "y": 1
+    },
+    {
+        "x": "NEUROSC",
+        "y": 10
+    },
+    {
+        "x": "NEURSGY",
+        "y": 1
+    },
+    {
+        "x": "NURSING",
+        "y": 6
+    },
+    {
+        "x": "PHILOS",
+        "y": 19
+    },
+    {
+        "x": "PHYSCI",
+        "y": 19
+    },
+    {
+        "x": "PHYSICS",
+        "y": 29
+    },
+    {
+        "x": "PHYSIOL",
+        "y": 1
+    },
+    {
+        "x": "POL SCI",
+        "y": 42
+    },
+    {
+        "x": "POLSH",
+        "y": 1
+    },
+    {
+        "x": "PORTGSE",
+        "y": 8
+    },
+    {
+        "x": "PSYCH",
+        "y": 36
+    },
+    {
+        "x": "PSYCTRY",
+        "y": 3
+    },
+    {
+        "x": "PUB AFF",
+        "y": 20
+    },
+    {
+        "x": "PUB HLT",
+        "y": 3
+    },
+    {
+        "x": "PUB PLC",
+        "y": 2
+    },
+    {
+        "x": "RELIGN",
+        "y": 11
+    },
+    {
+        "x": "ROMANIA",
+        "y": 2
+    },
+    {
+        "x": "RUSSN",
+        "y": 18
+    },
+    {
+        "x": "S ASIAN",
+        "y": 1
+    },
+    {
+        "x": "SCAND",
+        "y": 8
+    },
+    {
+        "x": "SCI EDU",
+        "y": 3
+    },
+    {
+        "x": "SEASIAN",
+        "y": 2
+    },
+    {
+        "x": "SEMITIC",
+        "y": 1
+    },
+    {
+        "x": "SLAVC",
+        "y": 4
+    },
+    {
+        "x": "SOC GEN",
+        "y": 17
+    },
+    {
+        "x": "SOC THT",
+        "y": 2
+    },
+    {
+        "x": "SOC WLF",
+        "y": 2
+    },
+    {
+        "x": "SOCIOL",
+        "y": 25
+    },
+    {
+        "x": "SPAN",
+        "y": 43
+    },
+    {
+        "x": "SRB CRO",
+        "y": 2
+    },
+    {
+        "x": "STATS",
+        "y": 19
+    },
+    {
+        "x": "SWAHILI",
+        "y": 1
+    },
+    {
+        "x": "THAI",
+        "y": 3
+    },
+    {
+        "x": "THEATER",
+        "y": 52
+    },
+    {
+        "x": "TURKIC",
+        "y": 2
+    },
+    {
+        "x": "UG-LAW",
+        "y": 1
+    },
+    {
+        "x": "UNIV ST",
+        "y": 18
+    },
+    {
+        "x": "URBN PL",
+        "y": 1
+    },
+    {
+        "x": "VIETMSE",
+        "y": 5
+    },
+    {
+        "x": "WL ARTS",
+        "y": 14
+    },
+    {
+        "x": "YIDDS",
+        "y": 1
+    }
+]
