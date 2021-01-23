@@ -85,12 +85,12 @@ class Insights extends React.Component {
 
   /* these fetch functions get the data from their json files */
   fetchClass() {
-    fetch("../../../../datasets/class-fill-ups/departmentsClass.json")
+    fetch("../../../../datasets/class-fill-ups-2/DepartmentsClass.json")
       .then(res => {
         return res.json();
       })
       .then(text => {
-        text = JSON.stringify(text, function(key, value) {
+        text = JSON.stringify(text, function (key, value) {
           // limit precision of floats
           if (typeof value === "number") {
             return parseFloat(value.toFixed(2));
@@ -107,12 +107,12 @@ class Insights extends React.Component {
   }
 
   fetchPct() {
-    fetch("../../../../datasets/class-fill-ups/departmentsPct.json")
+    fetch("../../../../datasets/class-fill-ups-2/DepartmentsPct.json")
       .then(res => {
         return res.json();
       })
       .then(text => {
-        text = JSON.stringify(text, function(key, value) {
+        text = JSON.stringify(text, function (key, value) {
           // limit precision of floats
           if (typeof value === "number") {
             return parseFloat(value.toFixed(2));
@@ -129,12 +129,12 @@ class Insights extends React.Component {
   }
 
   fetchSize() {
-    fetch("../../../../datasets/class-fill-ups/departmentsSize.json")
+    fetch("../../../../datasets/class-fill-ups-2/departmentsSize.json")
       .then(res => {
         return res.json();
       })
       .then(text => {
-        text = JSON.stringify(text, function(key, value) {
+        text = JSON.stringify(text, function (key, value) {
           // limit precision of floats
           if (typeof value === "number") {
             return parseFloat(value.toFixed(2));
@@ -147,32 +147,32 @@ class Insights extends React.Component {
       });
   }
 
-  fetchTimeline() {
-    fetch("../../../../datasets/class-fill-ups/timeline.json")
-      .then(res => {
-        return res.json();
-      })
-      .then(text => {
-        text = JSON.stringify(text, function(key, value) {
-          // limit precision of floats
-          if (typeof value === "number") {
-            return parseFloat(value.toFixed(2));
-          }
-          return value;
-        });
-        text = JSON.parse(text);
-        TIMELINE = text;
-        if (TIMEDATA.length != LAST_TIME) {
-          for (let i = 0; i < LAST_TIME; i++) {
-            TIMEDATA.push({ x: i, y: TIMELINE[i] });
-          }
-        }
-        if (this._isMounted) this.dataLoaded();
-      });
-  }
+  // fetchTimeline() {
+  //   fetch("../../../../datasets/class-fill-ups/timeline.json")
+  //     .then(res => {
+  //       return res.json();
+  //     })
+  //     .then(text => {
+  //       text = JSON.stringify(text, function(key, value) {
+  //         // limit precision of floats
+  //         if (typeof value === "number") {
+  //           return parseFloat(value.toFixed(2));
+  //         }
+  //         return value;
+  //       });
+  //       text = JSON.parse(text);
+  //       TIMELINE = text;
+  //       if (TIMEDATA.length != LAST_TIME) {
+  //         for (let i = 0; i < LAST_TIME; i++) {
+  //           TIMEDATA.push({ x: i, y: TIMELINE[i] });
+  //         }
+  //       }
+  //       if (this._isMounted) this.dataLoaded();
+  //     });
+  // }
 
   fetchDates() {
-    fetch("../../../../datasets/class-fill-ups/dates.json")
+    fetch("../../../../datasets/class-fill-ups-2/dates.json")
       .then(res => {
         return res.json();
       })
@@ -335,112 +335,112 @@ class Insights extends React.Component {
     return loading > 0 ? (
       <h1>Graph loading</h1>
     ) : (
-      <div>
-        {/* graph of top departments full by classes */}
-        {isMobile ? (
-          <h4>{classSlice} Most Full Departments by Classes</h4>
-        ) : (
-          <h2 style={{ marginLeft: graphSize / 4 }}>
-            {classSlice} Most Full Departments by Classes
-          </h2>
-        )}
-        <XYPlot
-          xType="ordinal"
-          width={graphSize}
-          height={graphSize / 2}
-          xDistance={100}
-          margin={{ bottom: isMobile ? 70 : 150 }}
-        >
-          <HorizontalGridLines />
-          <XAxis tickLabelAngle={-90} />
-          <YAxis />
-          {isMobile ? null : (
-            <ChartLabel
-              text="Department"
-              className="alt-x-label"
-              includeMargin={false}
-              xPercent={0.018}
-              yPercent={1.21}
-              style={{
-                fontWeight: "bold"
-              }}
+        <div>
+          {/* graph of top departments full by classes */}
+          {isMobile ? (
+            <h4>{classSlice} Most Full Departments by Classes</h4>
+          ) : (
+              <h2 style={{ marginLeft: graphSize / 4 }}>
+                {classSlice} Most Full Departments by Classes
+              </h2>
+            )}
+          <XYPlot
+            xType="ordinal"
+            width={graphSize}
+            height={graphSize / 2}
+            xDistance={100}
+            margin={{ bottom: isMobile ? 70 : 150 }}
+          >
+            <HorizontalGridLines />
+            <XAxis tickLabelAngle={-90} />
+            <YAxis />
+            {isMobile ? null : (
+              <ChartLabel
+                text="Department"
+                className="alt-x-label"
+                includeMargin={false}
+                xPercent={0.018}
+                yPercent={1.21}
+                style={{
+                  fontWeight: "bold"
+                }}
+              />
+            )}
+            <BarSeries
+              className="Insights"
+              data={TOPCLASS}
+              color="#2D898B"
+              onNearestX={this._onNearestXCLASS}
             />
-          )}
-          <BarSeries
-            className="Insights"
-            data={TOPCLASS}
-            color="#2D898B"
-            onNearestX={this._onNearestXCLASS}
-          />
-          <Hint
-            value={classValue}
-            format={point => {
-              let dep =
-                DEPARTMENTSIZE[
+            <Hint
+              value={classValue}
+              format={point => {
+                let dep =
+                  DEPARTMENTSIZE[
                   DEPARTMENTSIZE.findIndex(depart => depart.x == point.x)
+                  ];
+                return [
+                  { title: point.x, value: point.y + " classes" },
+                  { title: "Total Classes", value: dep.y }
                 ];
-              return [
-                { title: point.x, value: point.y + " classes" },
-                { title: "Total Classes", value: dep.y }
-              ];
-            }}
-          ></Hint>
-        </XYPlot>
-
-        {/* graph of top classes full by % */}
-        {isMobile ? (
-          <h4>
-            {classSlice} Most Full Departments by Percentage (>= 5 classes)
-          </h4>
-        ) : (
-          <h2 style={{ marginLeft: graphSize / 8 }}>
-            {classSlice} Most Full Departments (>= 5 classes) by Percentage
-          </h2>
-        )}
-        <XYPlot
-          xType="ordinal"
-          width={graphSize}
-          height={graphSize / 2}
-          xDistance={100}
-          margin={{ bottom: 90 }}
-        >
-          <HorizontalGridLines />
-          <XAxis tickLabelAngle={-90} />
-          <YAxis />
-          {isMobile ? null : (
-            <ChartLabel
-              text="Department"
-              className="alt-x-label"
-              includeMargin={false}
-              xPercent={0.018}
-              yPercent={1.22}
-              style={{
-                fontWeight: "bold"
               }}
-            />
-          )}
-          <BarSeries
-            className="Insights"
-            data={TOPPCT}
-            color="#88CCF1"
-            onNearestX={this._onNearestXPCT}
-          />
-          <Hint
-            value={pctValue}
-            format={point => {
-              let dep =
-                DEPARTMENTSIZE[
-                  DEPARTMENTSIZE.findIndex(depart => depart.x == point.x)
-                ];
-              return [
-                { title: point.x, value: point.y + "%" },
-                { title: "Total Classes", value: dep.y }
-              ];
-            }}
-          ></Hint>
-        </XYPlot>
+            ></Hint>
+          </XYPlot>
 
-        {/* timeline of # of classes full */}
+          {/* graph of top classes full by % */}
+          {isMobile ? (
+            <h4>
+              {classSlice} Most Full Departments by Percentage (>= 5 classes)
+            </h4>
+          ) : (
+              <h2 style={{ marginLeft: graphSize / 8 }}>
+                {classSlice} Most Full Departments (>= 5 classes) by Percentage
+              </h2>
+            )}
+          <XYPlot
+            xType="ordinal"
+            width={graphSize}
+            height={graphSize / 2}
+            xDistance={100}
+            margin={{ bottom: 90 }}
+          >
+            <HorizontalGridLines />
+            <XAxis tickLabelAngle={-90} />
+            <YAxis />
+            {isMobile ? null : (
+              <ChartLabel
+                text="Department"
+                className="alt-x-label"
+                includeMargin={false}
+                xPercent={0.018}
+                yPercent={1.22}
+                style={{
+                  fontWeight: "bold"
+                }}
+              />
+            )}
+            <BarSeries
+              className="Insights"
+              data={TOPPCT}
+              color="#88CCF1"
+              onNearestX={this._onNearestXPCT}
+            />
+            <Hint
+              value={pctValue}
+              format={point => {
+                let dep =
+                  DEPARTMENTSIZE[
+                  DEPARTMENTSIZE.findIndex(depart => depart.x == point.x)
+                  ];
+                return [
+                  { title: point.x, value: point.y + "%" },
+                  { title: "Total Classes", value: dep.y }
+                ];
+              }}
+            ></Hint>
+          </XYPlot>
+
+          {/* timeline of # of classes full
         {isMobile ? (
           <h4>Timeline of Classes Filling Up</h4>
         ) : (
@@ -488,7 +488,7 @@ class Insights extends React.Component {
             }}
           ></Hint>
         </XYPlot>
-      </div>
+      </div> */}
     );
   }
 }
