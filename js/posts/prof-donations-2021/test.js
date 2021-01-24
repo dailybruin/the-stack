@@ -4,14 +4,13 @@ var vorp_bar_chart = c3.generate({
     columns: [
       [
         'x',
-        'maria',
-        'brittney',
-        'andrew',
-        'Kevin Love',
-        'Russell Westbrook',
-        'Kareem Abdul-Jabbar',
+        'ActBlue',
+        'Biden for President',
+        'DNC Services Corp / Democratic National Committee',
+        'Biden Victory Fund',
+        'DCCC',
       ],
-      ['VORP of Best Year', 7, 1, 9, 7.3, 8.3, 10.5],
+      ['Total Donations', 430911.97, 186788.08, 111998.50, 83850.00, 73143.00],
     ],
     type: 'bar',
     color: function(color, d) {
