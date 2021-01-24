@@ -23,3 +23,5 @@ stylesheets:
 ---
 
 <div id='ucla-donations-chart'></div>
+<div id='usc-donations-chart'></div>
+<div id='ucb-donations-chart'></div>
