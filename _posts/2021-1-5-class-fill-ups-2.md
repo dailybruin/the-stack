@@ -2,9 +2,10 @@
 title: How Quickly Do Classes Fill Up?
 teaser: Determine which classes you should enroll during your first or second pass, based on analysis of the recent winter quarter 2020 enrollment.
 authors:
-  - andrew_kan
-  - keith_atienza
-  - sydney_kovach
+  - ananya_garg
+  - charlotte_huang
+  - mansa_krishna
+  - lindsey_parungo
 key_takeaways:
   - Enrollment difficulties can force late graduation and/or gap years, and places administrative burden to certain departments.
   - Given data from more than 1,300 classes, around 42% of classes filled up their allocated seats.
@@ -17,7 +18,8 @@ stylesheets:
   - https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css
 scripts:
   - /js/posts/class-fill-ups-2/graphs/src/ChartMD.jsx
-  #- /js/posts/class-fill-ups/graphs/src/insightsMD.jsx
+  - /js/posts/class-fill-ups-2/graphs/src/ChartMD2.jsx
+  - /js/posts/class-fill-ups-2/graphs/src/ChartMD3.js
   - https://unpkg.com/react@16/umd/react.development.js
   - https://unpkg.com/react-dom@16/umd/react-dom.development.js
   - https://unpkg.com/babel-standalone@6/babel.min.js
@@ -44,9 +46,15 @@ Some classes may not show up from the list because they were not offered for the
 
 To find out the rate at which undergraduate classes fill up, explore the graph below.
 
-<div id="chartMD"></div>
 
-### Insights
+<!-- Chart container -->
+<select id="selectMe">
+    <option value="chartMD_winter">2021 Winter</option>
+    <option value="chartMD_spring">2020 Spring</option>
+</select>
+
+<div id="chartMD_winter" class="group"></div>
+<div id="chartMD_spring" class="group"></div>
 
 
 
@@ -62,5 +70,9 @@ To find out the rate at which undergraduate classes fill up, explore the graph b
 <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
 <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
 <script src="https://unpkg.com/react-bootstrap@next/dist/react-bootstrap.min.js" crossorigin></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 
 <script type="text/babel" src="/js/posts/class-fill-ups-2/graphs/src/ChartMD.jsx"></script>
+<script type="text/babel" src="/js/posts/class-fill-ups-2/graphs/src/ChartMD2.jsx"></script>
+<script type="text/babel" src="/js/posts/class-fill-ups-2/graphs/src/ChartMD3.js"></script>
+<!-- <script type="text/babel" src="/js/posts/class-fill-ups-2/graphs/src/insightsMD2.jsx"></script> -->

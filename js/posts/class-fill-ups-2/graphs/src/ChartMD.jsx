@@ -41,6 +41,7 @@ let DATES = [];
 /* array of total seats for ecah class */
 let TOTAL_SEATS = [];
 /* index of the time of second pass */
+let Crazy_FilledClasses = [];
 const YEARS = ["Junior", "Sophomore", "Freshman"];
 const FIRST_PASS_DATES = [31, 102, 122];
 const SECOND_PASS_DATES = [199, 270, 290];
@@ -122,7 +123,7 @@ class Chart extends React.Component {
       isMobile: graphSize == screenScale * screen.width ? true : false,
       graphSize: graphSize,
       //THIS LOADING IS HARDCODED BY # OF FILES WE Load
-      loading: 5,
+      loading: 6,
       showAcademicYearLines: true,
       classHeader: ""
     };
@@ -205,6 +206,17 @@ class Chart extends React.Component {
       });
   }
 
+  fetchCrazyFilledClasses() {
+    fetch("../../../../datasets/class-fill-ups-2/CrazyFilledClasses.json")
+      .then(res => {
+        return res.json();
+      })
+      .then(text => {
+        Crazy_FilledClasses = text;
+        if (this._isMounted) this.dataLoaded();
+      });
+  }
+
   dataLoaded() {
     let loading = this.state.loading - 1;
     this.setState({ loading: loading });
@@ -220,12 +232,14 @@ class Chart extends React.Component {
     const fetchDates = this.fetchDates();
     const fetchSeats = this.fetchSeats();
     const fetchTotalSeats = this.fetchTotalSeats();
+    const fetchCrazyFilledClasses = this.fetchCrazyFilledClasses();
     Promise.all([
       fetchClasses,
       fetchData,
       fetchDates,
       fetchSeats,
-      fetchTotalSeats
+      fetchTotalSeats,
+      fetchCrazyFilledClasses
     ]);
     window.addEventListener("resize", this.updateDimensions.bind(this));
   }
@@ -306,16 +320,41 @@ class Chart extends React.Component {
         }
 
         let date_filled = DATA[class_num].findIndex(x => x.y == 100);
-        let classHeader =
-          date_filled == -1 ? (
-            <h3 style={{ textAlign: "center", marginTop: "20px" }}>
-              {CLASSES[class_num]} never filled up!
-            </h3>
-          ) : (
-            <h3 style={{ textAlign: "center", marginTop: "20px" }}>
-              {CLASSES[class_num]} filled up after {DATES[date_filled]}
-            </h3>
-          );
+        let waitlisted = TOTAL_SEATS[class_num] == -1;
+        // let classHeader =
+        //   date_filled == -1 ? (
+        //     <h3 style={{ textAlign: "center", marginTop: "20px" }}>
+        //       {CLASSES[class_num]} never filled up!
+        //     </h3>
+        //   ) : (
+        //     <h3 style={{ textAlign: "center", marginTop: "20px" }}>
+        //       {CLASSES[class_num]} filled up after {DATES[date_filled]}
+        //     </h3>
+        //   );
+        let classHeader = <p> undeclared </p>
+        if (date_filled == -1) {
+          classHeader =
+          <h3 style={{ textAlign: "center", marginTop: "20px" }}>
+            {CLASSES[class_num]} never filled up!
+          </h3>
+        } else if (Crazy_FilledClasses.includes(class_num) ){
+          classHeader =
+          <h3 style={{ textAlign: "center", marginTop: "20px" }}>
+            {CLASSES[class_num]} filled up after {DATES[date_filled]} <br />
+            Percent Full increased over 50% in 24 hours
+          </h3>
+        } else if (waitlisted != -1) {
+          classHeader =
+          <h3 style={{ textAlign: "center", marginTop: "20px" }}>
+            {CLASSES[class_num]} was always waitlisted!
+          </h3>
+        } else {
+          classHeader =
+          <h3 style={{ textAlign: "center", marginTop: "20px" }}>
+            {CLASSES[class_num]} filled up after {DATES[date_filled]}
+          </h3>
+        }
+
 
         this.setState({
           showClass: showClass,
@@ -454,6 +493,7 @@ class Chart extends React.Component {
       for (let i = 0; i < CLASSES.length; i++) {
         if (showClass[i]) {
           let date_filled = DATA[i].findIndex(x => x.y == 100);
+          let waitlisted = TOTAL_SEATS[i] == -1;
           let div = (
             <div style={{ paddingLeft: padding }}>
               {isMobile ? (
@@ -477,9 +517,15 @@ class Chart extends React.Component {
               {date_filled == -1 ? (
                 <p>{CLASSES[i]} never filled up!</p>
               ) : (
-                <p>
-                  {CLASSES[i]} filled up after {DATES[date_filled]}
-                </p>
+                waitlisted == -1 ? (
+                  <p>
+                    {CLASSES[i]} filled up after {DATES[date_filled]}
+                  </p>
+                ) : (
+                  <p>
+                    {CLASSES[i]} was always waitlisted
+                  </p>
+                )
               )}
             </div>
           );
@@ -624,7 +670,7 @@ class Chart extends React.Component {
                 text="Time passed"
                 className="alt-x-label"
                 includeMargin={false}
-                xPercent={0.018}
+                xPercent={0.001}
                 yPercent={1.082}
                 style={{
                   fontWeight: "bold"
@@ -735,4 +781,4 @@ class Chart extends React.Component {
 }
 
 //export default Chart;
-ReactDOM.render(<Chart />, document.getElementById("chartMD"));
+ReactDOM.render(<Chart />, document.getElementById("chartMD_winter"));
