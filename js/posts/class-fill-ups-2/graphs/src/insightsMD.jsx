@@ -41,9 +41,9 @@ let DATES = [];
 
 //same as other file, used for creating label lines
 const YEARS = ["Junior", "Sophomore", "Freshman"];
-const FIRST_PASS_DATES = [58, 100, 122];
-const SECOND_PASS_DATES = [226, 268, 290];
-const SECOND_PASS_DATE = 166;
+const FIRST_PASS_DATES = [31, 102, 122];
+const SECOND_PASS_DATES = [199, 270, 290];
+const SECOND_PASS_DATE = 168;
 const PASS_DATES = FIRST_PASS_DATES.concat(SECOND_PASS_DATE, SECOND_PASS_DATES);
 let academicYearLines = [];
 
@@ -62,7 +62,7 @@ class Insights extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      loading: 5,
+      loading: 4,
       isMobile: graphSize == screenScale * screen.width ? true : false,
       graphSize: graphSize,
       classHoveredClass: 10,
@@ -147,30 +147,6 @@ class Insights extends React.Component {
       });
   }
 
-  // fetchTimeline() {
-  //   fetch("../../../../datasets/class-fill-ups/timeline.json")
-  //     .then(res => {
-  //       return res.json();
-  //     })
-  //     .then(text => {
-  //       text = JSON.stringify(text, function(key, value) {
-  //         // limit precision of floats
-  //         if (typeof value === "number") {
-  //           return parseFloat(value.toFixed(2));
-  //         }
-  //         return value;
-  //       });
-  //       text = JSON.parse(text);
-  //       TIMELINE = text;
-  //       if (TIMEDATA.length != LAST_TIME) {
-  //         for (let i = 0; i < LAST_TIME; i++) {
-  //           TIMEDATA.push({ x: i, y: TIMELINE[i] });
-  //         }
-  //       }
-  //       if (this._isMounted) this.dataLoaded();
-  //     });
-  // }
-
   fetchDates() {
     fetch("../../../../datasets/class-fill-ups-2/dates.json")
       .then(res => {
@@ -187,9 +163,8 @@ class Insights extends React.Component {
     const fetchClass = this.fetchClass();
     const fetchPct = this.fetchPct();
     const fetchSize = this.fetchSize();
-    const fetchTimeline = this.fetchTimeline();
     const fetchDates = this.fetchDates();
-    Promise.all([fetchClass, fetchPct, fetchSize, fetchTimeline, fetchDates]);
+    Promise.all([fetchClass, fetchPct, fetchSize, fetchDates]);
     window.addEventListener("resize", this.updateDimensions.bind(this));
   }
 
@@ -314,9 +289,6 @@ class Insights extends React.Component {
   _onNearestXPCT = (value, { index }) => {
     this.setState({ classHoveredPct: index });
   };
-  _onNearestXTime = (value, { index }) => {
-    this.setState({ timeHovered: index });
-  };
 
   render() {
     const {
@@ -330,7 +302,6 @@ class Insights extends React.Component {
     const BarSeries = VerticalBarSeries;
     let classValue = TOPCLASS[classHoveredClass];
     let pctValue = TOPPCT[classHoveredPct];
-    let timeValue = TIMEDATA[timeHovered];
 
     return loading > 0 ? (
       <h1>Graph loading</h1>
@@ -338,10 +309,10 @@ class Insights extends React.Component {
         <div>
           {/* graph of top departments full by classes */}
           {isMobile ? (
-            <h4>{classSlice} Most Full Departments by Classes</h4>
+            <h4>{classSlice} Most Full Departments by Classes before Second Pass</h4>
           ) : (
               <h2 style={{ marginLeft: graphSize / 4 }}>
-                {classSlice} Most Full Departments by Classes
+                {classSlice} Most Full Departments by Classes before Second Pass
               </h2>
             )}
           <XYPlot
@@ -360,7 +331,7 @@ class Insights extends React.Component {
                 className="alt-x-label"
                 includeMargin={false}
                 xPercent={0.018}
-                yPercent={1.21}
+                yPercent={1.25}
                 style={{
                   fontWeight: "bold"
                 }}
@@ -390,11 +361,11 @@ class Insights extends React.Component {
           {/* graph of top classes full by % */}
           {isMobile ? (
             <h4>
-              {classSlice} Most Full Departments by Percentage (>= 5 classes)
+              {classSlice} Most Full Departments by Percentage (>= 5 classes) before Second Pass
             </h4>
           ) : (
               <h2 style={{ marginLeft: graphSize / 8 }}>
-                {classSlice} Most Full Departments (>= 5 classes) by Percentage
+                {classSlice} Most Full Departments (>= 5 classes) by Percentage before Second Pass
               </h2>
             )}
           <XYPlot
@@ -440,55 +411,7 @@ class Insights extends React.Component {
             ></Hint>
           </XYPlot>
 
-          {/* timeline of # of classes full
-        {isMobile ? (
-          <h4>Timeline of Classes Filling Up</h4>
-        ) : (
-          <h2 style={{ marginLeft: graphSize / 3 }}>
-            Timeline of Classes Filling Up
-          </h2>
-        )}
-        <XYPlot
-          xType="ordinal"
-          width={graphSize}
-          height={graphSize / 2}
-          xDistance={100}
-          margin={{ bottom: isMobile ? 60 : 90 }}
-        >
-          <HorizontalGridLines />
-          <VerticalGridLines tickValues={COMPRESSEDTIMES} />
-          <XAxis tickValues={COMPRESSEDTIMES} tickFormat={tickFormatter} />
-          <YAxis />
-          {isMobile ? null : (
-            <ChartLabel
-              text="Time Passed"
-              className="alt-x-label"
-              includeMargin={false}
-              xPercent={0.018}
-              yPercent={1.12}
-              style={{
-                fontWeight: "bold"
-              }}
-            />
-          )}
-          <LineSeries
-            className="Insights"
-            data={TIMEDATA}
-            color="#219CCF"
-            onNearestX={this._onNearestXTime}
-          />
-          {isMobile || loading > 0 ? null : academicYearLines}
-          <Hint
-            value={timeValue}
-            format={point => {
-              return [
-                { title: "Time Passed", value: DATES[point.x] },
-                { title: "Classes Filled", value: point.y + " classes" }
-              ];
-            }}
-          ></Hint>
-        </XYPlot>
-      </div> */}
+      </div>
     );
   }
 }

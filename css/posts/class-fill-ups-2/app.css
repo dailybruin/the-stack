@@ -1,0 +1,17 @@
+select {
+  margin-bottom: 1em;
+  padding: .25em;
+  border: 0;
+  border-bottom: 2px solid currentcolor;
+  font-weight: bold;
+  letter-spacing: .15em;
+  border-radius: 0;
+  &:focus, &:active {
+    outline: 0;
+    border-bottom-color: red;
+  }
+}
+
+.selectgroup {
+  font-size: large;
+}

@@ -16,10 +16,13 @@ og_image: class-fill-ups/placeholder.png
 stylesheets:
   - https://unpkg.com/react-vis/dist/style.css
   - https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css
+  - /css/posts/class-fill-ups-2/app.css
 scripts:
   - /js/posts/class-fill-ups-2/graphs/src/ChartMD.jsx
   - /js/posts/class-fill-ups-2/graphs/src/ChartMD2.jsx
-  - /js/posts/class-fill-ups-2/graphs/src/ChartMD3.js
+  - /js/posts/class-fill-ups-2/graphs/src/ChartMD3.jsx
+  - /js/posts/class-fill-ups-2/graphs/src/DropDownChart.js
+  - /js/posts/class-fill-ups-2/graphs/src/insightsMD.jsx
   - https://unpkg.com/react@16/umd/react.development.js
   - https://unpkg.com/react-dom@16/umd/react-dom.development.js
   - https://unpkg.com/babel-standalone@6/babel.min.js
@@ -48,14 +51,20 @@ To find out the rate at which undergraduate classes fill up, explore the graph b
 
 
 <!-- Chart container -->
-<select id="selectMe">
+<select id="selectMe" class = "selectgroup" disabled>
     <option value="chartMD_winter">2021 Winter</option>
+    <option value="chartMD_fall">2020 FALL</option>
     <option value="chartMD_spring">2020 Spring</option>
 </select>
 
-<div id="chartMD_winter" class="group"></div>
-<div id="chartMD_spring" class="group"></div>
+<div id="chartMD_winter" class="group" ></div>
+<div id="chartMD_fall" class="group" ></div>
+<div id="chartMD_spring" class="group" ></div>
 
+
+### Insights
+
+<div id="insightsMD"></div>
 
 
 <link rel="stylesheet" href="https://unpkg.com/react-vis/dist/style.css">
@@ -74,5 +83,6 @@ To find out the rate at which undergraduate classes fill up, explore the graph b
 
 <script type="text/babel" src="/js/posts/class-fill-ups-2/graphs/src/ChartMD.jsx"></script>
 <script type="text/babel" src="/js/posts/class-fill-ups-2/graphs/src/ChartMD2.jsx"></script>
-<script type="text/babel" src="/js/posts/class-fill-ups-2/graphs/src/ChartMD3.js"></script>
-<!-- <script type="text/babel" src="/js/posts/class-fill-ups-2/graphs/src/insightsMD2.jsx"></script> -->
+<script type="text/babel" src="/js/posts/class-fill-ups-2/graphs/src/ChartMD3.jsx"></script>
+<script type="text/babel" src="/js/posts/class-fill-ups-2/graphs/src/DropDownChart.js"></script>
+<script type="text/babel" src="/js/posts/class-fill-ups-2/graphs/src/insightsMD.jsx"></script>

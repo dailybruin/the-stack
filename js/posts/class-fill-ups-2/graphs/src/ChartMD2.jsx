@@ -42,6 +42,7 @@ let DATES_SPRING = [];
 let TOTAL_SEATS_SPRING = [];
 /* index of the time of second pass */
 const YEARS_SPRING = ["Junior", "Sophomore", "Freshman"];
+const MISSING_DATES_SPRING = [166, 209];
 const FIRST_PASS_DATES_SPRING = [74, 100, 120];
 const SECOND_PASS_DATES_SPRING = [180, 258, 280];
 const SECOND_PASS_DATE_SPRING = 164;
@@ -124,6 +125,7 @@ class Chart2 extends React.Component {
       //THIS LOADING IS HARDCODED BY # OF FILES WE Load
       loading_spring: 5,
       showAcademicYearLines: true,
+      showMissingDataLines:true,
       classHeader: ""
     };
     this._showAcademicYearLines = this._showAcademicYearLines.bind(this);
@@ -184,7 +186,7 @@ class Chart2 extends React.Component {
   }
 
   fetchDates() {
-    fetch("../../../../datasets/class-fill-ups-2/dates.json")
+    fetch("../../../../datasets/class-fill-ups-2/dates_spring.json")
       .then(res => {
         return res.json();
       })
@@ -405,12 +407,14 @@ class Chart2 extends React.Component {
       graphSize,
       loading_spring,
       showAcademicYearLines,
+      showMissingDataLines,
       classHeader
     } = this.state;
 
     let classInfoBox = [];
     let lines = [];
     let academicYearLines = [];
+    let missingDataLines = [];
     let classShown = false;
     let colorNum = 0;
 
@@ -581,6 +585,40 @@ class Chart2 extends React.Component {
       );
     }
 
+    if (showMissingDataLines) {
+      for (let i = 0; i < MISSING_DATES_SPRING.length; i++) {
+        missingDataLines.push(
+          <Line
+            key={"firstPass" + MISSING_DATES_SPRING[i]}
+            className={"firstPass" + MISSING_DATES_SPRING[i]}
+            color="black"
+            style={{
+
+            }}
+            data={[
+              { x: MISSING_DATES_SPRING[i], y: 0 },
+              { x: MISSING_DATES_SPRING[i], y: 100 }
+            ]}
+          />
+        );
+      }
+      missingDataLines.push(
+        <LabelSeries
+          key="missingDataLabel"
+          className="secondPassLabel"
+          labelAnchorX="middle"
+          // style={{ opacity: 0.8 }}
+          data={[
+            {
+              x: (MISSING_DATES_SPRING[0] + MISSING_DATES_SPRING[1]) / 2,
+              y: 98,
+              label: "Data Not Collected"
+            }
+          ]}
+        />
+      );
+    }
+
     /* if all 5 data files haven't been loaded yet, it shows some LOADING text */
     return loading_spring > 0 ? (
       <h1>Graph loading</h1>
@@ -601,7 +639,7 @@ class Chart2 extends React.Component {
         {/* Class Header*/}
         {classHeader}
         {/* The Chart*/}
-        <div
+        <div id = "gra"
           style={{
             paddingTop: "30px",
             paddingLeft: "30px",
@@ -658,6 +696,8 @@ class Chart2 extends React.Component {
             />
             {/* Display the academic year lines*/}
             {isMobile ? null : academicYearLines}
+            {/* Display the missing data lines*/}
+            {isMobile ? null : missingDataLines}
             {/* xAxis Line to make sure base line is always 0 */}
             <Line
               key="xAxis"
