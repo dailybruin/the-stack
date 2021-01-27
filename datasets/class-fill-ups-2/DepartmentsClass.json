@@ -1,5 +1,13 @@
 [
     {
+        "x": "A&O SCI",
+        "y": 0
+    },
+    {
+        "x": "AERO ST",
+        "y": 0
+    },
+    {
         "x": "AF AMER",
         "y": 7
     },
@@ -10,6 +18,18 @@
     {
         "x": "AN N EA",
         "y": 2
+    },
+    {
+        "x": "ANTHRO",
+        "y": 0
+    },
+    {
+        "x": "ARABIC",
+        "y": 0
+    },
+    {
+        "x": "ARCH&UD",
+        "y": 0
     },
     {
         "x": "ART",
@@ -30,10 +50,6 @@
     {
         "x": "BIOENGR",
         "y": 2
-    },
-    {
-        "x": "BIOL CH",
-        "y": 1
     },
     {
         "x": "BMD RES",
@@ -64,6 +80,14 @@
         "y": 1
     },
     {
+        "x": "CLASSIC",
+        "y": 0
+    },
+    {
+        "x": "CLUSTER",
+        "y": 0
+    },
+    {
         "x": "COM LIT",
         "y": 1
     },
@@ -80,15 +104,15 @@
         "y": 8
     },
     {
+        "x": "DANCE",
+        "y": 0
+    },
+    {
         "x": "DESMA",
         "y": 4
     },
     {
         "x": "DGT HUM",
-        "y": 2
-    },
-    {
-        "x": "DIS STD",
         "y": 2
     },
     {
@@ -120,64 +144,72 @@
         "y": 4
     },
     {
-        "x": "ENV HLT",
-        "y": 1
-    },
-    {
         "x": "ENVIRON",
         "y": 5
     },
     {
-        "x": "EPIDEM",
-        "y": 1
+        "x": "EPS SCI",
+        "y": 0
+    },
+    {
+        "x": "ETHNMUS",
+        "y": 0
     },
     {
         "x": "FILM TV",
         "y": 4
     },
     {
-        "x": "FOOD ST",
-        "y": 1
+        "x": "FRNCH",
+        "y": 0
     },
     {
         "x": "GENDER",
         "y": 5
     },
     {
-        "x": "GLB HLT",
-        "y": 1
+        "x": "GEOG",
+        "y": 0
+    },
+    {
+        "x": "GERMAN",
+        "y": 0
+    },
+    {
+        "x": "GJ STDS",
+        "y": 0
     },
     {
         "x": "GLBL ST",
         "y": 14
     },
     {
-        "x": "GRNTLGY",
-        "y": 1
+        "x": "GREEK",
+        "y": 0
     },
     {
         "x": "HIST",
         "y": 16
     },
     {
-        "x": "HLT POL",
-        "y": 1
-    },
-    {
         "x": "HNRS",
         "y": 8
     },
     {
-        "x": "HUM GEN",
-        "y": 1
+        "x": "I A STD",
+        "y": 0
     },
     {
-        "x": "IL AMER",
-        "y": 1
+        "x": "INF STD",
+        "y": 0
     },
     {
         "x": "INTL DV",
         "y": 3
+    },
+    {
+        "x": "IRANIAN",
+        "y": 0
     },
     {
         "x": "ITALIAN",
@@ -188,12 +220,20 @@
         "y": 2
     },
     {
-        "x": "LBR STD",
-        "y": 1
+        "x": "JEWISH",
+        "y": 0
     },
     {
-        "x": "LGBTQS",
-        "y": 2
+        "x": "KOREA",
+        "y": 0
+    },
+    {
+        "x": "LATIN",
+        "y": 0
+    },
+    {
+        "x": "LBR STD",
+        "y": 1
     },
     {
         "x": "LIFESCI",
@@ -202,10 +242,6 @@
     {
         "x": "LING",
         "y": 4
-    },
-    {
-        "x": "M PHARM",
-        "y": 1
     },
     {
         "x": "MAT SCI",
@@ -224,6 +260,14 @@
         "y": 8
     },
     {
+        "x": "MGMT",
+        "y": 0
+    },
+    {
+        "x": "MIL SCI",
+        "y": 0
+    },
+    {
         "x": "MIMG",
         "y": 3
     },
@@ -232,8 +276,16 @@
         "y": 2
     },
     {
-        "x": "MUSCLG 19 - R&B, Power Pop, \"Opera\" and",
-        "y": 1
+        "x": "MUSC",
+        "y": 0
+    },
+    {
+        "x": "MUSCLG",
+        "y": 0
+    },
+    {
+        "x": "NAV SCI",
+        "y": 0
     },
     {
         "x": "NEUROSC",
@@ -260,23 +312,15 @@
         "y": 18
     },
     {
+        "x": "PORTGSE",
+        "y": 0
+    },
+    {
         "x": "PSYCH",
         "y": 12
     },
     {
-        "x": "PSYCTRY",
-        "y": 1
-    },
-    {
         "x": "PUB AFF",
-        "y": 1
-    },
-    {
-        "x": "PUB HLT",
-        "y": 2
-    },
-    {
-        "x": "PUB PLC",
         "y": 1
     },
     {
@@ -284,20 +328,16 @@
         "y": 2
     },
     {
+        "x": "RUSSN",
+        "y": 0
+    },
+    {
         "x": "SCAND",
         "y": 3
     },
     {
-        "x": "SLAVC",
-        "y": 1
-    },
-    {
         "x": "SOC GEN",
         "y": 5
-    },
-    {
-        "x": "SOC WLF",
-        "y": 1
     },
     {
         "x": "SOCIOL",
@@ -316,8 +356,12 @@
         "y": 1
     },
     {
-        "x": "UG-LAW",
-        "y": 1
+        "x": "UNIV ST",
+        "y": 0
+    },
+    {
+        "x": "VIETMSE",
+        "y": 0
     },
     {
         "x": "WL ARTS",

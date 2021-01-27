@@ -32,10 +32,6 @@
         "y": 5
     },
     {
-        "x": "ARMENIA",
-        "y": 4
-    },
-    {
         "x": "ART",
         "y": 18
     },
@@ -44,24 +40,8 @@
         "y": 12
     },
     {
-        "x": "ART&ARC",
-        "y": 1
-    },
-    {
-        "x": "ARTS ED",
-        "y": 3
-    },
-    {
         "x": "ASIA AM",
         "y": 20
-    },
-    {
-        "x": "ASIAN",
-        "y": 3
-    },
-    {
-        "x": "ASL",
-        "y": 2
     },
     {
         "x": "ASTR",
@@ -72,28 +52,12 @@
         "y": 12
     },
     {
-        "x": "BIOINFR",
-        "y": 1
-    },
-    {
-        "x": "BIOL CH",
-        "y": 2
-    },
-    {
-        "x": "BIOSTAT",
-        "y": 1
-    },
-    {
         "x": "BMD RES",
         "y": 7
     },
     {
         "x": "C&EE",
         "y": 16
-    },
-    {
-        "x": "C&S BIO",
-        "y": 4
     },
     {
         "x": "CCAS",
@@ -112,14 +76,6 @@
         "y": 28
     },
     {
-        "x": "CHEM 14BE - General Chemistry for Life Scientists",
-        "y": 1
-    },
-    {
-        "x": "CHEM 19 - COVID-19: Kindness in",
-        "y": 1
-    },
-    {
         "x": "CHIN",
         "y": 15
     },
@@ -130,10 +86,6 @@
     {
         "x": "CLUSTER",
         "y": 9
-    },
-    {
-        "x": "COM HLT",
-        "y": 2
     },
     {
         "x": "COM LIT",
@@ -164,24 +116,12 @@
         "y": 5
     },
     {
-        "x": "DIS STD",
-        "y": 4
-    },
-    {
-        "x": "DUTCH",
-        "y": 1
-    },
-    {
         "x": "EC ENGR",
         "y": 44
     },
     {
         "x": "ECON",
         "y": 23
-    },
-    {
-        "x": "ECON 19 - COVID-19: Missing",
-        "y": 1
     },
     {
         "x": "EDUC",
@@ -204,16 +144,8 @@
         "y": 14
     },
     {
-        "x": "ENV HLT",
-        "y": 2
-    },
-    {
         "x": "ENVIRON",
         "y": 10
-    },
-    {
-        "x": "EPIDEM",
-        "y": 1
     },
     {
         "x": "EPS SCI",
@@ -224,16 +156,8 @@
         "y": 31
     },
     {
-        "x": "FILIPNO",
-        "y": 3
-    },
-    {
         "x": "FILM TV",
         "y": 23
-    },
-    {
-        "x": "FOOD ST",
-        "y": 1
     },
     {
         "x": "FRNCH",
@@ -256,10 +180,6 @@
         "y": 37
     },
     {
-        "x": "GLB HLT",
-        "y": 4
-    },
-    {
         "x": "GLBL ST",
         "y": 17
     },
@@ -268,52 +188,16 @@
         "y": 5
     },
     {
-        "x": "GRNTLGY",
-        "y": 2
-    },
-    {
-        "x": "HEBREW",
-        "y": 3
-    },
-    {
-        "x": "HIN-URD",
-        "y": 2
-    },
-    {
         "x": "HIST",
         "y": 37
-    },
-    {
-        "x": "HLT POL",
-        "y": 2
-    },
-    {
-        "x": "HNGAR",
-        "y": 1
     },
     {
         "x": "HNRS",
         "y": 35
     },
     {
-        "x": "HUM GEN",
-        "y": 1
-    },
-    {
         "x": "I A STD",
         "y": 9
-    },
-    {
-        "x": "I M STD",
-        "y": 1
-    },
-    {
-        "x": "IL AMER",
-        "y": 4
-    },
-    {
-        "x": "INDO",
-        "y": 3
     },
     {
         "x": "INF STD",
@@ -326,10 +210,6 @@
     {
         "x": "IRANIAN",
         "y": 10
-    },
-    {
-        "x": "ISLM ST",
-        "y": 1
     },
     {
         "x": "ITALIAN",
@@ -356,24 +236,12 @@
         "y": 12
     },
     {
-        "x": "LGBTQS",
-        "y": 3
-    },
-    {
         "x": "LIFESCI",
         "y": 29
     },
     {
         "x": "LING",
         "y": 18
-    },
-    {
-        "x": "M E STD",
-        "y": 4
-    },
-    {
-        "x": "M PHARM",
-        "y": 1
     },
     {
         "x": "MAT SCI",
@@ -390,10 +258,6 @@
     {
         "x": "MECH&AE",
         "y": 23
-    },
-    {
-        "x": "MED",
-        "y": 2
     },
     {
         "x": "MGMT",
@@ -420,28 +284,12 @@
         "y": 13
     },
     {
-        "x": "MUSCLG 19 - COVID-19: Self-Documenting",
-        "y": 1
-    },
-    {
-        "x": "MUSCLG 19 - R&B, Power Pop, \"Opera\" and",
-        "y": 1
-    },
-    {
         "x": "NAV SCI",
         "y": 5
     },
     {
-        "x": "NEURBIO",
-        "y": 1
-    },
-    {
         "x": "NEUROSC",
         "y": 10
-    },
-    {
-        "x": "NEURSGY",
-        "y": 1
     },
     {
         "x": "NURSING",
@@ -460,16 +308,8 @@
         "y": 29
     },
     {
-        "x": "PHYSIOL",
-        "y": 1
-    },
-    {
         "x": "POL SCI",
         "y": 42
-    },
-    {
-        "x": "POLSH",
-        "y": 1
     },
     {
         "x": "PORTGSE",
@@ -480,68 +320,24 @@
         "y": 36
     },
     {
-        "x": "PSYCTRY",
-        "y": 3
-    },
-    {
         "x": "PUB AFF",
         "y": 20
-    },
-    {
-        "x": "PUB HLT",
-        "y": 3
-    },
-    {
-        "x": "PUB PLC",
-        "y": 2
     },
     {
         "x": "RELIGN",
         "y": 11
     },
     {
-        "x": "ROMANIA",
-        "y": 2
-    },
-    {
         "x": "RUSSN",
         "y": 18
-    },
-    {
-        "x": "S ASIAN",
-        "y": 1
     },
     {
         "x": "SCAND",
         "y": 8
     },
     {
-        "x": "SCI EDU",
-        "y": 3
-    },
-    {
-        "x": "SEASIAN",
-        "y": 2
-    },
-    {
-        "x": "SEMITIC",
-        "y": 1
-    },
-    {
-        "x": "SLAVC",
-        "y": 4
-    },
-    {
         "x": "SOC GEN",
         "y": 17
-    },
-    {
-        "x": "SOC THT",
-        "y": 2
-    },
-    {
-        "x": "SOC WLF",
-        "y": 2
     },
     {
         "x": "SOCIOL",
@@ -552,40 +348,16 @@
         "y": 43
     },
     {
-        "x": "SRB CRO",
-        "y": 2
-    },
-    {
         "x": "STATS",
         "y": 19
-    },
-    {
-        "x": "SWAHILI",
-        "y": 1
-    },
-    {
-        "x": "THAI",
-        "y": 3
     },
     {
         "x": "THEATER",
         "y": 52
     },
     {
-        "x": "TURKIC",
-        "y": 2
-    },
-    {
-        "x": "UG-LAW",
-        "y": 1
-    },
-    {
         "x": "UNIV ST",
         "y": 18
-    },
-    {
-        "x": "URBN PL",
-        "y": 1
     },
     {
         "x": "VIETMSE",
@@ -594,9 +366,5 @@
     {
         "x": "WL ARTS",
         "y": 14
-    },
-    {
-        "x": "YIDDS",
-        "y": 1
     }
 ]
