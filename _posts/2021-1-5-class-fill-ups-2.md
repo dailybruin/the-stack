@@ -11,8 +11,8 @@ key_takeaways:
   - Given data from more than 1,300 classes, around 42% of classes filled up their allocated seats.
   - Out of the 42% of classes that became full, around half were filled during the first pass - the initial enrollment period reserved for 10 units.
 featured_image:
-  url: class-fill-ups/placeholder.png
-og_image: class-fill-ups/placeholder.png
+  url: class-fill-ups-2/placeholder.png
+og_image: class-fill-ups-2/placeholder.png
 stylesheets:
   - https://unpkg.com/react-vis/dist/style.css
   - https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css
@@ -66,6 +66,66 @@ To find out the rate at which undergraduate classes fill up, explore the graph b
 
 <div id="insightsMD"></div>
 
+<div class="float-container">
+  <div class="float-child">
+
+    <table>
+      <tr>
+        <th>Mathematics Classes</th>
+        <th>Percent Increase in Enrollment</th>
+      </tr>
+      <tr>
+        <td>MATH 3B</td>
+        <td>49.29%</td>
+      </tr>
+      <tr>
+        <td>MATH 31A</td>
+        <td>44.05%</td>
+      </tr>
+      <tr>
+        <td>MATH 115AH</td>
+        <td>42.50%</td>
+      </tr>
+      <tr>
+        <td>MATH 31AL</td>
+        <td>36.43%</td>
+      </tr>
+      <tr>
+        <td>MATH 131BH</td>
+        <td>32.50%</td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="float-child">
+    <table>
+      <tr>
+        <th>Computer Science Classes</th>
+        <th>Percent Increase in Enrollment</th>
+      </tr>
+      <tr>
+        <td>COM SCI 31</td>
+        <td>40.50%</td>
+      </tr>
+      <tr>
+        <td>COM SCI 32</td>
+        <td>27.65%</td>
+      </tr>
+      <tr>
+        <td>COM SCI 118</td>
+        <td>20.00%</td>
+      </tr>
+      <tr>
+        <td>COM SCI 180</td>
+        <td>11.12%</td>
+      </tr>
+      <tr>
+        <td>COM SCI M146</td>
+        <td>4.38%</td>
+      </tr>
+    </table>
+  </div>
+</div>
 
 <link rel="stylesheet" href="https://unpkg.com/react-vis/dist/style.css">
 <link
@@ -86,3 +146,4 @@ To find out the rate at which undergraduate classes fill up, explore the graph b
 <script type="text/babel" src="/js/posts/class-fill-ups-2/graphs/src/ChartMD3.jsx"></script>
 <script type="text/babel" src="/js/posts/class-fill-ups-2/graphs/src/DropDownChart.js"></script>
 <script type="text/babel" src="/js/posts/class-fill-ups-2/graphs/src/insightsMD.jsx"></script>
+<!-- <script type="text/babel" src="/js/posts/class-fill-ups-2/graphs/mathcstable.js"></script> -->

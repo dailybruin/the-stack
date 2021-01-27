@@ -15,3 +15,45 @@ select {
 .selectgroup {
   font-size: large;
 }
+
+.float-container {
+    display: flex;
+}
+
+.float-child {
+  width: auto
+  float: left;
+  padding: 10px;
+}
+
+table {
+  padding: 10px;
+  border-color: white;
+  border: 10px;
+  border-collapse: collapse;
+/*   float:left; */
+  table-layout: auto;
+  width: 100%;
+  display: inline-block;
+}
+
+td {
+  width: 250px;
+  height: 40px;
+  padding: 10px;
+  text-align: center;
+  vertical-align: middle;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  color: #ddd;
+  background-color: #007Adf;
+  height: 50px;
+  padding: 6px;
+  text-align: center;
+  vertical-align: middle;
+  border-bottom: 1px solid #ddd;
+}
+
+tr:nth-child(even) {background-color: #f2f2f2;}

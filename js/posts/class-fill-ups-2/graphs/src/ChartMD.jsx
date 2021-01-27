@@ -320,7 +320,7 @@ class Chart extends React.Component {
         }
 
         let date_filled = DATA[class_num].findIndex(x => x.y == 100);
-        let waitlisted = TOTAL_SEATS[class_num] == -1;
+        let waitlisted = (TOTAL_SEATS[class_num] == -1);
         // let classHeader =
         //   date_filled == -1 ? (
         //     <h3 style={{ textAlign: "center", marginTop: "20px" }}>
@@ -343,7 +343,7 @@ class Chart extends React.Component {
             {CLASSES[class_num]} filled up after {DATES[date_filled]} <br />
             Percent Full increased over 50% in 24 hours
           </h3>
-        } else if (waitlisted != -1) {
+        } else if (waitlisted == -1) {
           classHeader =
           <h3 style={{ textAlign: "center", marginTop: "20px" }}>
             {CLASSES[class_num]} was always waitlisted!
@@ -493,7 +493,7 @@ class Chart extends React.Component {
       for (let i = 0; i < CLASSES.length; i++) {
         if (showClass[i]) {
           let date_filled = DATA[i].findIndex(x => x.y == 100);
-          let waitlisted = TOTAL_SEATS[i] == -1;
+          let waitlisted = (TOTAL_SEATS[i] == -1);
           let div = (
             <div style={{ paddingLeft: padding }}>
               {isMobile ? (
@@ -517,7 +517,7 @@ class Chart extends React.Component {
               {date_filled == -1 ? (
                 <p>{CLASSES[i]} never filled up!</p>
               ) : (
-                waitlisted == -1 ? (
+                (waitlisted != -1) ? (
                   <p>
                     {CLASSES[i]} filled up after {DATES[date_filled]}
                   </p>
