@@ -1,15 +1,15 @@
 ---
 title: How Quickly Do Classes Fill Up?
-teaser: Determine which classes you should enroll during your first or second pass, based on analysis of the recent winter quarter 2020 enrollment.
+teaser: Determine which classes you should enroll during your first or second pass, based on analysis of Spring 2020, Fall 2020, and Winter 2021 Quarter Data
 authors:
   - ananya_garg
   - charlotte_huang
   - mansa_krishna
   - lindsey_parungo
 key_takeaways:
-  - Enrollment difficulties can force late graduation and/or gap years, and places administrative burden to certain departments.
-  - Given data from more than 1,300 classes, around 42% of classes filled up their allocated seats.
-  - Out of the 42% of classes that became full, around half were filled during the first pass - the initial enrollment period reserved for 10 units.
+  - Enrollment is a stressful process. Even if students eventually get the classes that they need, many classes fill up before freshman and sophomores have a chance to enroll.
+  - Just over 19% of classes were full after 1st pass. They ranged across departments, with the three fullest by percentage being Global Studies, English Composition, and Physiological Science.
+  - Compared to in-person courses last winter quarter, online courses this quarter showed an up to 50% increased enrollment in Math and Computer Science classes, especially lower division courses.
 featured_image:
   url: class-fill-ups-2/placeholder.png
 og_image: class-fill-ups-2/placeholder.png
@@ -31,24 +31,23 @@ scripts:
   #- /js/posts/class-fill-ups/graphs/src/testComponent.jsx
 ---
 
-Kaitlin Kearns, a second-year economics student, said that during the week of enrollment she is tense, stressed and anxious. Though UCLA randomly assigns enrollment passes to students within the same unit bracket, Kearns received one of the latest passes in her class bracket. This proved to be an issue when she attempted to register for Economics 101: “Microeconomics Theory,” a class required for her previous pre-major, business economics. The class offers around 400 spots each quarter, but by the date of Kearns’ first pass, the class was full. That enrollment difficulty forced Kearns to take her major prerequisites in a different order than encouraged by the department. Had Kearns stayed in the business economics pre-major, her hypothetical major application would have been pushed back for up to two quarters.
+Class enrollment is nothing short of chaos. All the spots in classes that students need or want to enroll in seem to already be filled up or are getting filled up at a rapid pace. Indeed, Dr. John Langdon, Continuing Lecturer in the History Department at UCLA, seems to have hit the nail on the head - “It comes time to enroll and it’s a real scramble to get the classes you want… Can I talk about a historical parallel? It’s called enrolling for the Pfizer vaccine”...“It’s a real treasure hunt! I said ‘I want to go to Northridge,’ and it’s all filled up. And then you go to the next site, it’s all filled up. Well, I ended up at Magic Mountain on Sunday afternoon. I got my first inoculation but there is no telling when I’ll get my second one”... “and there are no slots because the reservations are only for five days -- that’s what [students are] going through when they enroll in these classes!” ~ Dr. John Langdon, Continuing Lecturer, History Department, UCLA
 
-Kearns’ experience is not unique. Around 30,000 undergraduate students enroll in UCLA courses each quarter. Competing for a limited number of spots in each lecture, discussion section or lab, students may find that the enrollment period is one of the most stressful times for UCLA undergraduates. Failing to find a seat in the classes a major requires may jeopardize study abroad aspirations, on-time graduation and much more.
+There can be no doubt that class enrollment seems like a grand, tedious adventure. But before we can analyze class enrollment data, we must first try to understand the enrollment process!
 
 ### How does enrollment work?
 
-UCLA divides students based on credit hours and priority status into four main groups: 0-44.9, 45-89.9, 90-134.9, and 135+ units, with students enrolling in that order. Once students’ specific standings are determined, the Registrar’s office randomly assigns students in each group an enrollment time. During first pass enrollment, students may enroll in up to 10 units. The cycle resets for the second pass enrollment, where students can enroll in up to nine, 10 or 11 units, depending on the college or school they are in.
+Enrollment at UCLA is separated into three passes, priority, first and second pass. Students are assigned specific enrollment appointments based on priority status and number of credits. For first and second pass, which most students participate in, credit designations are broken up into four categories: 0-44.9, 45-89.9, 90-134.9, and 135+. The earliest appointments go to students in the category with the most credits. Within each category, students are assigned enrollment times at each half hour time slot randomly.
 
-Typically, students enroll in two classes during their first pass for a higher chance of getting in, saving less urgent classes for the next enrollment period.
+During first pass, students are limited to 10 units, or approximately 2 classes. During the second pass, they can enroll in classes up to their school’s unit cap. Most students enroll in high priority classes in the first pass, and save others for the second pass.
 
 ### About the Data
 
-The data was collected from the schedule of classes provided by UCLA’s Registrar’s Office during Winter quarter 2020’s enrollment period, excluding the priority period for a select number of students. The numbers may reflect differently from its current standings; data was not collected beyond the last scheduled day of enrollment, and departments may change the number of seats or classes offered after the enrollment period.
+Three quarters’ enrollment data were collected, including Winter 2021, Fall 2020, and Spring 2020. The data were collected from the schedule of classes provided by UCLA’s Registrar’s Office during each corresponding enrollment period, excluding the priority period for a selected number of students. Data include class name, professor name, number of seats filled, number of seats left, and total number of seats. Below are some notes, probably limitations, for the data.  
 
-Some classes may not show up from the list because they were not offered for the quarter or have some significant inconsistencies in the data. The graph serves primarily as a general guideline of how fast class enrollments were during this period.
+Firstly, the data of lecture number has not been scraped, so the lecture number was assigned randomly if the same professor teaches multiple lectures for the same class. With that being said, the lecture number listed below might not be aligned with that listed on MyUCLA enrollment website. Moreover, the numbers may reflect differently from its current standings as data was not collected beyond the last scheduled day of enrollment and departments may change the number of seats or classes offered after the enrollment period. For those classes whose total number of seats are changed during the enrollment period, the maximum is chosen as the total_seats reflected below. Some classes may not show up from the list because they were not offered in that quarter or did not show up on the enrollment page at the beginning of the enrollment period. The graph serves primarily as a general guideline of how fast class enrollments were during this period.
 
-To find out the rate at which undergraduate classes fill up, explore the graph below.
-
+To find out the rate at which undergraduate classes fill up, explore the graph below and choose the academic term that you want to look into. Please be aware that a small period of data was not collected for both Fall 2020 and Winter 2020 quarter, and those periods were imputed by previous day’s enrollment data.   
 
 <!-- Chart container -->
 <select id="selectMe" class = "selectgroup" disabled>
@@ -61,10 +60,13 @@ To find out the rate at which undergraduate classes fill up, explore the graph b
 <div id="chartMD_fall" class="group" ></div>
 <div id="chartMD_spring" class="group" ></div>
 
-
 ### Insights
 
+At the end of the first pass, just over 19% of all classes covering a wide variety of departments were full. Some departments were more filled up than others after first pass, including those departments with classes that students tend to prioritize. While there are still plenty of classes available at the end of first pass, it can be frustrating for students to find the classes that they need already full. Dr. John Langdon, Continuing Lecturer in UCLA’s History Department, offered his opinion on the topic, “The basic issue here is: getting the right courses for a quality education has become a real scramble for our students because frankly, we keep admitting more and more students to UCLA, and it’s harder and harder, I think I’m understanding, to get the courses you need for whatever program you’re preparing.”
+
 <div id="insightsMD"></div>
+
+Though the enrollment process has not changed with the shift to online learning, there have been unexpected changes in the data in comparison to last year’s data, which could be attributed to online classes - i.e., there have been adjustments in students’ ability to take classes as they have been shifted online. The percentage of full classes at the end of enrollment was slightly lower this year at only 34% compared to last year’s 44%. Possible reasons for this decline could include the changing exam policies, inconvenient time zones for international students, and students taking advantage of the asynchronous nature of certain classes to enroll in classes with conflicting time slots. Another (possibly welcome) change were exam policies allowing for 24-hour and open note exams. These adjustments are especially popular in the Mathematics and Computer Science departments. It stands to reason that with the newly-introduced popular examination policies, people would be more likely to enroll in more of these classes. In fact, Jayde Meng, a sophomore student majoring in the Atmospheric and Oceanic Sciences claimed, “When I was signing up for Math 131A last quarter, it filled up before my enrollment even started.” While the data does not depict a clear causal relationship, this could be a factor contributing to the increased enrollment in these departments since last year. Below tables show Top 5 math and computer science classes that have the largest percentage increase in enrollment, respectively.
 
 <div class="float-container">
   <div class="float-child">
@@ -126,6 +128,11 @@ To find out the rate at which undergraduate classes fill up, explore the graph b
     </table>
   </div>
 </div>
+
+Enrollment is, no doubt, a stressful experience for most undergraduate students and their frustration is amplified when their desired classes are full, but this data does not capture every aspect of enrollment needed to create the whole picture. Students are allowed to add and drop classes until the end of Week Two. Varun Sivashankar, a junior student at UCLA majoring Mathematics claims, “In upper division classes, I felt that, in general, at least in Math, I always got into the classes that I wanted to, either because they were open anyway or you’re placed on the unofficial waitlist. You tend to get in, pretty much every time … If I didn’t get in during my enrollment passes, I would always get in by the first or second week.” While it is certainly stressful to join a class late, it affords students the opportunity to enroll in classes that may have filled up during the enrollment period.
+
+And yet, the data above begs the question - can the enrollment process at UCLA be improved?
+“Can I rephrase the question? Do you think the inoculation process for COVID could be improved? If so, how? That’s one hell of a question you’re asking me.” ~ Dr. John Langdon, Continuing Lecturer, History Department, UCLA
 
 <link rel="stylesheet" href="https://unpkg.com/react-vis/dist/style.css">
 <link
