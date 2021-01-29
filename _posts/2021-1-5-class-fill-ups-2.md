@@ -1,6 +1,6 @@
 ---
 title: How Quickly Do Classes Fill Up?
-teaser: Determine which classes you should enroll during your first or second pass, based on analysis of Spring 2020, Fall 2020, and Winter 2021 Quarter Data
+teaser: Determine which classes you should enroll during your first or second pass, based on analysis of Spring 2020, Fall 2020, and Winter 2021 Quarter Enrollment Data
 authors:
   - ananya_garg
   - charlotte_huang
