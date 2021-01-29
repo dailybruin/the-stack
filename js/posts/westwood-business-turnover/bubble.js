@@ -1,10 +1,10 @@
 Highcharts.chart('container', {
     chart: {
         type: 'packedbubble',
-        height: '50%'
+        height: '70%'
     },
     title: {
-        text: 'Operating Busineses in Westwood'
+        text: 'The number of Westwood businesses that still operates in 2020 by category'
     },
     tooltip: {
         useHTML: true,
@@ -12,8 +12,8 @@ Highcharts.chart('container', {
     },
     plotOptions: {
         packedbubble: {
-            minSize: '20%',
-            maxSize: '100%',
+            minSize: '10%',
+            maxSize: '500%',
             zMin: 0,
             zMax: 1000,
             layoutAlgorithm: {
@@ -29,7 +29,7 @@ Highcharts.chart('container', {
                 filter: {
                     property: 'y',
                     operator: '>',
-                    value: 3
+                    value: 5
                 },
                 style: {
                     color: 'black',
@@ -86,12 +86,7 @@ Highcharts.chart('container', {
  },{
    name: "Other Services, Tailoring, Alterations",
    value: 1
- },
- 
-
-
-
-          
+ },          
           ]
     },
     {
