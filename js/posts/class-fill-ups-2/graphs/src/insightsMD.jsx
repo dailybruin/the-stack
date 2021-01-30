@@ -311,7 +311,7 @@ class Insights extends React.Component {
           {isMobile ? (
             <h4>{classSlice} Most Full Departments by Classes before Second Pass</h4>
           ) : (
-              <h3 style={{ marginLeft: graphSize / 6 }}>
+              <h3 style={{ marginLeft: graphSize / 4 }}>
                 {classSlice} Most Full Departments by Classes before Second Pass
               </h3>
             )}
@@ -351,7 +351,7 @@ class Insights extends React.Component {
                   DEPARTMENTSIZE.findIndex(depart => depart.x == point.x)
                   ];
                 return [
-                  { title: point.x, value: point.y + " classes" },
+                  { title: point.x, value: point.y + " classes filled" },
                   { title: "Total Classes", value: dep.y }
                 ];
               }}
@@ -364,7 +364,7 @@ class Insights extends React.Component {
               {classSlice} Most Full Departments by Percentage (>= 5 classes) before Second Pass
             </h4>
           ) : (
-              <h3 style={{ marginLeft: graphSize / 12 }}>
+              <h3 style={{ marginLeft: graphSize / 8 }}>
                 {classSlice} Most Full Departments (>= 5 classes) by Percentage before Second Pass
               </h3>
             )}
@@ -404,7 +404,7 @@ class Insights extends React.Component {
                   DEPARTMENTSIZE.findIndex(depart => depart.x == point.x)
                   ];
                 return [
-                  { title: point.x, value: point.y + "%" },
+                  { title: point.x, value: point.y + "% full" },
                   { title: "Total Classes", value: dep.y }
                 ];
               }}

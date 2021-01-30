@@ -15,7 +15,7 @@ featured_image:
 og_image: class-fill-ups-2/placeholder.png
 stylesheets:
   - https://unpkg.com/react-vis/dist/style.css
-  - https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css
+
   - /css/posts/class-fill-ups-2/app.css
 scripts:
   - /js/posts/class-fill-ups-2/graphs/src/ChartMD.jsx
@@ -28,20 +28,19 @@ scripts:
   - https://unpkg.com/babel-standalone@6/babel.min.js
   - https://unpkg.com/react-vis/dist/dist.min.js
   - https://unpkg.com/react-bootstrap@next/dist/react-bootstrap.min.js
-  #- /js/posts/class-fill-ups/graphs/src/testComponent.jsx
 ---
 
 Class enrollment is nothing short of chaos. All the spots in classes that students need or want to enroll in seem to already be filled up or are getting filled up at a rapid pace. Indeed, Dr. John Langdon, Continuing Lecturer in the History Department at UCLA, seems to have hit the nail on the head - “It comes time to enroll and it’s a real scramble to get the classes you want… Can I talk about a historical parallel? It’s called enrolling for the Pfizer vaccine”...“It’s a real treasure hunt! I said ‘I want to go to Northridge,’ and it’s all filled up. And then you go to the next site, it’s all filled up. Well, I ended up at Magic Mountain on Sunday afternoon. I got my first inoculation but there is no telling when I’ll get my second one”... “and there are no slots because the reservations are only for five days -- that’s what [students are] going through when they enroll in these classes!” ~ Dr. John Langdon, Continuing Lecturer, History Department, UCLA
 
 There can be no doubt that class enrollment seems like a grand, tedious adventure. But before we can analyze class enrollment data, we must first try to understand the enrollment process!
 
-### How does enrollment work?
+## How does enrollment work?
 
 Enrollment at UCLA is separated into three passes, priority, first and second pass. Students are assigned specific enrollment appointments based on priority status and number of credits. For first and second pass, which most students participate in, credit designations are broken up into four categories: 0-44.9, 45-89.9, 90-134.9, and 135+. The earliest appointments go to students in the category with the most credits. Within each category, students are assigned enrollment times at each half hour time slot randomly.
 
 During first pass, students are limited to 10 units, or approximately 2 classes. During the second pass, they can enroll in classes up to their school’s unit cap. Most students enroll in high priority classes in the first pass, and save others for the second pass.
 
-### About the Data
+## About the Data
 
 Three quarters’ enrollment data were collected, including Winter 2021, Fall 2020, and Spring 2020. The data were collected from the schedule of classes provided by UCLA’s Registrar’s Office during each corresponding enrollment period, excluding the priority period for a selected number of students. Data include class name, professor name, number of seats filled, number of seats left, and total number of seats. Below are some notes, probably limitations, for the data.  
 
@@ -60,7 +59,7 @@ To find out the rate at which undergraduate classes fill up, explore the graph b
 <div id="chartMD_fall" class="group" ></div>
 <div id="chartMD_spring" class="group" ></div>
 
-### Insights
+## Insights
 
 At the end of the first pass, just over 19% of all classes covering a wide variety of departments were full. Some departments were more filled up than others after first pass, including those departments with classes that students tend to prioritize. While there are still plenty of classes available at the end of first pass, it can be frustrating for students to find the classes that they need already full. Dr. John Langdon, Continuing Lecturer in UCLA’s History Department, offered his opinion on the topic, “The basic issue here is: getting the right courses for a quality education has become a real scramble for our students because frankly, we keep admitting more and more students to UCLA, and it’s harder and harder, I think I’m understanding, to get the courses you need for whatever program you’re preparing.”
 
@@ -134,13 +133,6 @@ Enrollment is, no doubt, a stressful experience for most undergraduate students 
 And yet, the data above begs the question - can the enrollment process at UCLA be improved?
 “Can I rephrase the question? Do you think the inoculation process for COVID could be improved? If so, how? That’s one hell of a question you’re asking me.” ~ Dr. John Langdon, Continuing Lecturer, History Department, UCLA
 
-<link rel="stylesheet" href="https://unpkg.com/react-vis/dist/style.css">
-<link
-  rel="stylesheet"
-  href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-  integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-  crossorigin="anonymous"
-/>
 <script src="https://unpkg.com/react-vis/dist/dist.min.js"></script>
 <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
 <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
@@ -153,4 +145,3 @@ And yet, the data above begs the question - can the enrollment process at UCLA b
 <script type="text/babel" src="/js/posts/class-fill-ups-2/graphs/src/ChartMD3.jsx"></script>
 <script type="text/babel" src="/js/posts/class-fill-ups-2/graphs/src/DropDownChart.js"></script>
 <script type="text/babel" src="/js/posts/class-fill-ups-2/graphs/src/insightsMD.jsx"></script>
-<!-- <script type="text/babel" src="/js/posts/class-fill-ups-2/graphs/mathcstable.js"></script> -->
