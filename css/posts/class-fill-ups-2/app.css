@@ -28,6 +28,14 @@ select {
   align-items: center;
 }
 
+@media (max-width: 479px) {
+  .float-container {
+    display: block;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
 .float-child {
   width: auto
   float: left;
