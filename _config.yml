@@ -12,12 +12,11 @@ baseurl: "" # the subpath of your site, e.g. /blog/
 url: "https://stack.dailybruin.com" # the base hostname & protocol for your site
 image_url: /img/posts # corresponds to directory for post images (cf. https://github.com/opattison/jekyll-figure-image-tag#why-yaml-is-useful-for-storing-images)
 twitter_username: _thestack
-github_username:  dailybruin
+github_username: dailybruin
 
 # Defaults
 defaults:
-  -
-    scope:
+  - scope:
       path: "" # an empty string here means all files in the project
       type: posts
     values:
@@ -34,4 +33,4 @@ paginate_path: "/page/:num/"
 markdown: kramdown
 
 # plugins
-gems: [jekyll-paginate]
+plugins: [jekyll-paginate]
