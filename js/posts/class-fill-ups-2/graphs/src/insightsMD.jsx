@@ -309,10 +309,10 @@ class Insights extends React.Component {
         <div>
           {/* graph of top departments full by classes */}
           {isMobile ? (
-            <h4>{classSlice} Most Full Departments by Classes before Second Pass</h4>
+            <h4>{classSlice} Most Full Subject Areas by Classes before Second Pass</h4>
           ) : (
               <h3 style={{ marginLeft: graphSize / 4 }}>
-                {classSlice} Most Full Departments by Classes before Second Pass
+                {classSlice} Most Full Subject Areas by Classes before Second Pass
               </h3>
             )}
           <XYPlot
@@ -361,11 +361,11 @@ class Insights extends React.Component {
           {/* graph of top classes full by % */}
           {isMobile ? (
             <h4>
-              {classSlice} Most Full Departments by Percentage (>= 5 classes) before Second Pass
+              {classSlice} Most Full Subject Areas by Percentage (>= 5 classes) before Second Pass
             </h4>
           ) : (
               <h3 style={{ marginLeft: graphSize / 8 }}>
-                {classSlice} Most Full Departments (>= 5 classes) by Percentage before Second Pass
+                {classSlice} Most Full Subject Areas (>= 5 classes) by Percentage before Second Pass
               </h3>
             )}
           <XYPlot
