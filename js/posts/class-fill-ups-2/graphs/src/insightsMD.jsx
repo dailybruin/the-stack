@@ -327,7 +327,7 @@ class Insights extends React.Component {
             <YAxis />
             {isMobile ? null : (
               <ChartLabel
-                text="Department"
+                text="Subject Area"
                 className="alt-x-label"
                 includeMargin={false}
                 xPercent={0.018}
@@ -380,7 +380,7 @@ class Insights extends React.Component {
             <YAxis />
             {isMobile ? null : (
               <ChartLabel
-                text="Department"
+                text="Subject Area"
                 className="alt-x-label"
                 includeMargin={false}
                 xPercent={0.018}
