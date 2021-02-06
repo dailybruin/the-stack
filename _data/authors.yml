@@ -272,8 +272,8 @@ laurel_woods:
   github: laurelrwoods
 bernard_mendez:
   name: Bernard Mendez
-  title: Stack Developer/News Reporter
-  bio: Bernard is a second-year math student. Bernard also <a href='https://dailybruin.com/author/bernard-mendez/'>writes for the Daily Bruin's science and health section</a>. In his free time, Bernard enjoys wearing sweaters.
+  title: News Editor
+  bio: Bernard is the Bruin's News Editor. In his free time, Bernard spends time as a second-year math student at UCLA.
   mug: Yes
   email: bmendez@media.ucla.edu
   github: bernardmendez
@@ -336,3 +336,18 @@ lindsey_parungo:
   mug: Yes
   email: lparungo@media.ucla.edu
   github: Lindseyp314
+xuxin_zhang:
+  name: Xuxin Zhang
+  title: Stack Developer and Photo staff
+  bio: Xuxin is a third year Applied Mathematics and Statistics student. He loves collecting vintage film cameras and taking photos for strangers.
+  mug: Yes
+  email: xzhang1@media.ucla.edu
+  github: xux1an
+  website: https://www.xuxinzhang.com/
+ cameron_bian:
+  name: Cameron Bian
+  title: Stack Developer
+  bio: Cameron is a fourth year Math of Computation student. He loves playing basketball and watching films in his free time. 
+  mug: Yes
+  email: cbian3@media.ucla.edu
+  github: Cambn
