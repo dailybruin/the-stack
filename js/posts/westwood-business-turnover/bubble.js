@@ -4,7 +4,7 @@ Highcharts.chart('container', {
         height: '70%'
     },
     title: {
-        text: 'The number of Westwood businesses that still operates in 2020 by category'
+        text: 'Open Westwood Businesses in 2020 by Category'
     },
     tooltip: {
         useHTML: true,
