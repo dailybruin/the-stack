@@ -5,6 +5,7 @@ authors:
   - cameron_bian
   - eustina_kim
   - ziqing_luo
+  - faye_zhou
   - xuxin_zhang
 key_takeaways:
   - Compared with 2018 and 2019, the numbers of Westwood businesses that opened and closed in 2020 both decrease by 57.4% and 80.0% respectively under the effect of COVID-19 pandemic.
