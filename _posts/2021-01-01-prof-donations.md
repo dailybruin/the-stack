@@ -22,6 +22,7 @@ stylesheets:
   - /css/posts/nba-players/app.css
 ---
 
-<div id='test'></div>
+<canvas id='test'> </canvas>
+
 <div id='usc-donations-chart'></div>
 <div id='ucb-donations-chart'></div>

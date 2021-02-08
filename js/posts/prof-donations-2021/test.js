@@ -1,5 +1,7 @@
 
-var myBarChart = new Chart(ctx, {
+let ctx = document.getElementById('test');
+
+var uclaBarChart = new Chart(ctx, {
   type: 'bar',
   data: {
     datasets: [{
@@ -9,15 +11,13 @@ var myBarChart = new Chart(ctx, {
         minBarLength: 2,
         data: [{x:'ActBlue', y:441971.4}, {x:'Biden Victory Fund', y:201469.93}, {x:'Biden for President', y:199178.67}, {x:'DNC Services Corp / Democratic National Committe', y:113315.32}, {x:'DCCC', y:52796.00}]
     }]
-    };
+    },
   options: options
 });
-  bindto: '#test',
-
-});
 
 
-var ucla_top5_chart = new Chart(ctx, {
+let ctx = document.getElementById('uc-berkeley-chart');
+var uclatop5chart = new Chart(ctx, {
   data: {
     x: 'x',
     columns: [
