@@ -8,20 +8,13 @@ var myBarChart = new Chart(ctx, {
         maxBarThickness: 8,
         minBarLength: 2,
         data: [{x:'ActBlue', y:441971.4}, {x:'Biden Victory Fund', y:201469.93}, {x:'Biden for President', y:199178.67}, {x:'DNC Services Corp / Democratic National Committe', y:113315.32}, {x:'DCCC', y:52796.00}]
-
     }]
-};
-};
-
+    };
   options: options
 });
   bindto: '#test',
 
 });
-
-
-
-
 
 
 var ucla_top5_chart = new Chart(ctx, {
