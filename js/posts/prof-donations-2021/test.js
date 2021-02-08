@@ -7,7 +7,8 @@ var myBarChart = new Chart(ctx, {
         barThickness: 6,
         maxBarThickness: 8,
         minBarLength: 2,
-        data: [441971.4, 201469.93, 199178.67, 113315.32, 52796.00]
+        data: [{x:'ActBlue', y:441971.4}, {x:'Biden Victory Fund', y:201469.93}, {x:'Biden for President', y:199178.67}, {x:'DNC Services Corp / Democratic National Committe', y:113315.32}, {x:'DCCC', y:52796.00}]
+
     }]
 };
 };
