@@ -1,4 +1,29 @@
-var ucla_top5_chart = c3.generate({
+
+var myBarChart = new Chart(ctx, {
+  type: 'bar',
+  data: {
+    datasets: [{
+        barPercentage: 0.5,
+        barThickness: 6,
+        maxBarThickness: 8,
+        minBarLength: 2,
+        data: [441971.4, 201469.93, 199178.67, 113315.32, 52796.00]
+    }]
+};
+};
+
+  options: options
+});
+  bindto: '#test',
+
+});
+
+
+
+
+
+
+var ucla_top5_chart = new Chart(ctx, {
   data: {
     x: 'x',
     columns: [

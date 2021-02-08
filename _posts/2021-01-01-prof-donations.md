@@ -5,7 +5,7 @@ teaser: In light of UCLA men’s basketball’s recent resurgence, explore some 
 authors:
   - mahir_eusufzai
 key_takeaways:
-  - UCLA men's basketball has consistently produced NBA players through the years.
+  - ActBlue, Biden for President and Biden Victory Fund are in the top five campaigns
   - Top players include Kareem Abdul-Jabbar, Russell Westbrook and Kevin Love.
   - Lonzo Ball could end up as one of the top five NBA players from UCLA.
 
@@ -22,6 +22,6 @@ stylesheets:
   - /css/posts/nba-players/app.css
 ---
 
-<div id='ucla-donations-chart'></div>
+<div id='test'></div>
 <div id='usc-donations-chart'></div>
 <div id='ucb-donations-chart'></div>
