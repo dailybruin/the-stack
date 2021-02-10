@@ -28,6 +28,7 @@ scripts:
   - https://code.highcharts.com/modules/accessibility.js
   - /js/posts/westwood-business-turnover/barplot.js
   - /js/posts/westwood-business-turnover/bubble.js
+  - 
 ---
 ## Introduction
 
@@ -37,8 +38,8 @@ The spread of COVID-19 has devastated many businesses across the U.S. According 
 The data was collected and provided by the Los Angeles Office of Finance. The data columns used include business name, zip code, primary naics description, location start date, location end date and location. Below are notes and limitations of the data.
 
 The following graphs may not reflect the actual number of closed businesses and close-to-open ratio in December 2020 because of the following limitations: 
-1. **the datasets we used were last updated on December 23rd, 2020, so any changes after that date are not accounted in this analysis**
-2. **some of the businesses only closed temporarily for the time being; the others may close forever but didn't report to the Los Angeles Office of Finance. Thus, these two types of businesses would be treated as active businesses in our datasets. This issue with our datasets could lead to serious inaccuracy of our analysis, but we haven't figured out a way to solve it.**
+1. the datasets we used were last updated on December 23rd, 2020, so any changes after that date are not accounted in this analysis
+2. some of the businesses only closed temporarily for the time being; the others may close forever but didn't report to the Los Angeles Office of Finance. Thus, these two types of businesses would be treated as active businesses in our datasets. This issue with our datasets could lead to serious inaccuracy of our analysis, but we haven't figured out a way to solve it.
 
 The data also involves independent home-based businesses. With that being said, a business’ location may appear as a household address on the interaction map. In addition, these independent home-based businesses registered to the government with their own name, that's why we see people's name on the y-axis of the timeline plot. 
 
@@ -59,9 +60,7 @@ Before studying the impact of COVID-19 on Westwood businesses, it is important t
 
 The map below shows an overview of businesses closures and openings from year 2018 to 2020 by clustering locations by proximity. Click the clusters to zoom in. You can also click the boxes on the right corner to observe opened and closed businesses for different years. *Write the percentages of businesses that opened and closed here .
 
-
-<img src="/img/posts/westwood-business/interactive_map.png" style="width:60vw" class = "center"/>
-
+<iframe width="100%" height="500" src="../../../../westwood-business-map.html" frameboarder="0" allowfullscreen></iframe>
 
 
 ## Analysis
