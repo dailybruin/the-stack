@@ -3,7 +3,6 @@ let ctx = document.getElementById('test');
 var uclaBarChart = new Chart(ctx, {
   type: 'bar',
   data: {
-    label: 'Campaign',
     labels: [
       'ActBlue',
       'Biden Victory Fund',
@@ -46,6 +45,7 @@ var uclaBarChart = new Chart(ctx, {
         scaleLabel: {
           display: true,
           fontStyle: "bold",
+          fontSize: 12,
           labelString: 'Campaigns',
         },
       }
@@ -54,13 +54,14 @@ var uclaBarChart = new Chart(ctx, {
       {
         ticks: {
           min: 0,
-          max: this.max,// Your absolute max value
+          max: 600000,// Your absolute max value
           callback: function (value) {
             return (value / 1742794.86 * 100).toFixed(0) + '%'; // convert it to percentage
           },
         },
         scaleLabel: {
           display: true,
+          fontStyle: "bold",
           labelString: 'Percentage of Total Donations',
         },
       },
@@ -77,9 +78,10 @@ tooltips: {
       return tooltipItem.yLabel.toLocaleString('en-US', {
         style: 'currency',
         currency: 'USD',
-        maximumFractionDigits: 2,
+        maximumFractionDigits: 2,  
       });
     },
+    
   },
 },
   }
@@ -88,12 +90,11 @@ tooltips: {
 
 
 
-/*let ctxOne = document.getElementById('ucb-top-5');
+let ctxOne = document.getElementById('ucb-top-5');
 
 var ucbBarChart = new Chart(ctxOne, {
   type: 'bar',
   data: {
-    label: 'Campaign',
     labels: [
       'ActBlue',
       'Biden for President',
@@ -136,6 +137,7 @@ var ucbBarChart = new Chart(ctxOne, {
         scaleLabel: {
           display: true,
           fontStyle: "bold",
+          fontSize: 12,
           labelString: 'Campaigns',
         },
       }
@@ -144,13 +146,14 @@ var ucbBarChart = new Chart(ctxOne, {
       {
         ticks: {
           min: 0,
-          max: this.max,// Your absolute max value
+          max: 395503.15,// Your absolute max value
           callback: function (value) {
             return (value / 1130009.57 * 100).toFixed(0) + '%'; // convert it to percentage
           },
         },
         scaleLabel: {
           display: true,
+          fontStyle: "bold",
           labelString: 'Percentage of Total Donations',
         },
       },
@@ -174,35 +177,15 @@ tooltips: {
 },
   }
 });
- */
 
 
-/* yAxes: [
-  {
-    scaleLabel: {
-      display: true,
-      labelString: 'Donation Amount',
-    },
-    ticks: {
-      beginAtZero:true,
-      callback: function(value) {
-        return value.toLocaleString('en-US', {
-          style: 'currency',
-          currency: 'USD',
-          minimumFractionDigits: 0,
-        });
-      },
-    },
-  },
-], */
 
 
-let ctxTwo = document.getElementById('ucb-top-5');
+/* let ctxTwo = document.getElementById('ucb-top-5');
 
 var uscBarChart = new Chart(ctxTwo, {
   type: 'bar',
   data: {
-    label: 'Campaign',
     labels: [
       'ActBlue',
       'Biden for President',
@@ -246,6 +229,7 @@ var uscBarChart = new Chart(ctxTwo, {
         scaleLabel: {
           display: true,
           fontStyle: "bold",
+          fontSize: 12,
           labelString: 'Campaigns',
         },
       }
@@ -261,6 +245,7 @@ var uscBarChart = new Chart(ctxTwo, {
         },
         scaleLabel: {
           display: true,
+          fontStyle: "bold",
           labelString: 'Percentage of Total Donations',
         },
       },
@@ -284,4 +269,4 @@ tooltips: {
 },
   }
 }); 
-
+ */
