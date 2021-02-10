@@ -58,7 +58,7 @@ Before studying the impact of COVID-19 on Westwood businesses, it is important t
 
 
 
-The map below shows an overview of businesses closures and openings from year 2018 to 2020 by clustering locations by proximity. Click the clusters to zoom in. You can also click the boxes on the right corner to observe opened and closed businesses for different years. *Write the percentages of businesses that opened and closed here .
+The map below shows an overview of businesses closures and openings from year 2018 to 2020 by clustering locations by proximity. Click the clusters to zoom in. You can also click the boxes on the right corner to observe opened and closed businesses for different years. *Write the percentages of businesses that opened and closed here.
 
 <iframe width="100%" height="500" src="../../../../westwood-business-map.html" frameboarder="0" allowfullscreen></iframe>
 
