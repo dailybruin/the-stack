@@ -10,7 +10,7 @@ var uclaBarChart = new Chart(ctx, {
       'Biden Victory Fund',
       'Biden for President',
       'DNC Services Corp / Democratic National Committee',
-      'DCCC',
+      'Democratic Congressional Campaign Committee',
     ],
     datasets: [
       {

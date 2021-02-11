@@ -8,9 +8,9 @@ var uscBarChart = new Chart(ctxTwo, {
     labels: [
       'ActBlue',
       'Biden for President',
-      'DCCC',
+      'Democratic Congressional Campaign Committee',
       'Biden Victory Fund',
-      'DSCC',
+      'Democratic Senatorial Campaign Committee',
     ],
     datasets: [
       {
@@ -21,7 +21,7 @@ var uscBarChart = new Chart(ctxTwo, {
           'rgba(255, 206, 86, 0.2)',
           'rgba(153, 102, 255, 0.2)',
           'rgba(250, 84, 255, 0.2)',
-          'rgba(0, 48, 143, 0.2)',
+          'rgba(67.0, 251.0, 4.0, 0.2)'
           
       ],
       borderColor: [
@@ -29,7 +29,7 @@ var uscBarChart = new Chart(ctxTwo, {
         'rgba(255, 206, 86, 1)',
         'rgba(153, 102, 255, 1)',
         'rgba(250, 84, 255, 1)',
-        'rgba(0, 48, 143, 1)',
+        'rgba(67.0, 251.0, 4.0, 1.0)'
       ],
             borderWidth: 0.5
       },
