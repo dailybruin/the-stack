@@ -1,33 +1,32 @@
-let ctxTwo = document.getElementById('usc-top-5');
+let ctx = document.getElementById('test');
 
-var uscBarChart = new Chart(ctxTwo, {
+var uclaBarChart = new Chart(ctx, {
   type: 'bar',
   data: {
     labels: [
       'ActBlue',
-      'Biden for President',
-      'DCCC',
       'Biden Victory Fund',
-      'DSCC',
+      'Biden for President',
+      'DNC Services Corp / Democratic National Committee',
+      'DCCC',
     ],
     datasets: [
       {
         label: 'Donation Amount',
-        data: [416044.09, 143908.88, 127033, 58636.77, 47079.17],
+        data: [441971.4, 201469.93, 199178.67, 113315.32, 52796.0],
         backgroundColor: [
           'rgba(255, 99, 132, 0.2)',
-          'rgba(255, 206, 86, 0.2)',
-          'rgba(153, 102, 255, 0.2)',
           'rgba(54, 162, 235, 0.2)',
-          'rgba(0, 48, 143, 0.2)',
-          
+          'rgba(255, 206, 86, 0.2)',
+          'rgba(75, 192, 192, 0.2)',
+          'rgba(153, 102, 255, 0.2)'
       ],
       borderColor: [
-        'rgba(255, 99, 132, 1)',
-        'rgba(255, 206, 86, 1)',
-        'rgba(153, 102, 255, 1)',
-        'rgba(54, 162, 235, 1)',
-        'rgba(0, 48, 143, 1)',
+                'rgba(255,99,132,1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)'
       ],
             borderWidth: 0.5
       },
@@ -55,9 +54,9 @@ var uscBarChart = new Chart(ctxTwo, {
       {
         ticks: {
           min: 0,
-          max: this.max,// Your absolute max value
+          max: 609978.20,// Your absolute max value
           callback: function (value) {
-            return (value / 1302976.44 * 100).toFixed(0) + '%'; // convert it to percentage
+            return (value / 1742794.86 * 100).toFixed(0) + '%'; // convert it to percentage
           },
         },
         scaleLabel: {
@@ -70,7 +69,7 @@ var uscBarChart = new Chart(ctxTwo, {
 },
 title: {
   display: true,
-  text: 'Top 5 Campaigns Donated to by USC Professors',
+  text: 'Top 5 Campaigns Donated to by UCLA Professors',
   fontSize: 16,
 },
 tooltips: {
@@ -79,10 +78,12 @@ tooltips: {
       return tooltipItem.yLabel.toLocaleString('en-US', {
         style: 'currency',
         currency: 'USD',
-        maximumFractionDigits: 2,
+        maximumFractionDigits: 2,  
       });
     },
+    
   },
 },
   }
-}); 
+});
+

@@ -1,9 +1,8 @@
-let ctxOne = document.getElementById('ucb-top-5');
+let ctx = document.getElementById('ucb-top-5');
 
-var ucbBarChart = new Chart(ctxOne, {
+var ucbBarChart = new Chart(ctx, {
   type: 'bar',
   data: {
-    label: 'Campaign',
     labels: [
       'ActBlue',
       'Biden for President',
@@ -46,6 +45,7 @@ var ucbBarChart = new Chart(ctxOne, {
         scaleLabel: {
           display: true,
           fontStyle: "bold",
+          fontSize: 12,
           labelString: 'Campaigns',
         },
       }
@@ -54,13 +54,14 @@ var ucbBarChart = new Chart(ctxOne, {
       {
         ticks: {
           min: 0,
-          max: 35,// Your absolute max value
+          max: 395503.15,// Your absolute max value
           callback: function (value) {
             return (value / 1130009.57 * 100).toFixed(0) + '%'; // convert it to percentage
           },
         },
         scaleLabel: {
           display: true,
+          fontStyle: "bold",
           labelString: 'Percentage of Total Donations',
         },
       },
@@ -68,7 +69,7 @@ var ucbBarChart = new Chart(ctxOne, {
 },
 title: {
   display: true,
-  text: 'Top 5 Campaigns donated to by UC Berkeley professors',
+  text: 'Top 5 Campaigns Donated to by UC Berkeley Professors',
   fontSize: 16,
 },
 tooltips: {
