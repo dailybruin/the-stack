@@ -49,7 +49,7 @@ var ucbBarChart = new Chart(ctxOne, {
           display: true,
           fontStyle: "bold",
           fontSize: 12,
-          labelString: 'Campaigns',
+          labelString: 'Campaigns / Committees',
         },
       }
     ],

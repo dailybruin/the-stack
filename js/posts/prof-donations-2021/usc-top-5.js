@@ -50,7 +50,7 @@ var uscBarChart = new Chart(ctxTwo, {
           display: true,
           fontStyle: "bold",
           fontSize: 12,
-          labelString: 'Campaigns',
+          labelString: 'Campaigns / Committees',
         },
       }
     ],
