@@ -1,35 +1,36 @@
 let ctxTwo = document.getElementById('usc-top-5');
 
 let uscTotal = 1302976.44;
+let bidenTotal = 143908.88 + 58636.77;
 
 var uscBarChart = new Chart(ctxTwo, {
   type: 'bar',
   data: {
     labels: [
       'ActBlue',
-      'Biden for President',
+      'Biden for President / Biden Victory Fund',
       'Democratic Congressional Campaign Committee',
-      'Biden Victory Fund',
       'Democratic Senatorial Campaign Committee',
+      'Jon Ossoff for Senate'
     ],
     datasets: [
       {
         label: 'Donation Amount',
-        data: [416044.09, 143908.88, 127033, 58636.77, 47079.17],
+        data: [416044.09, bidenTotal, 127033, 47079.17, 26560.54],
         backgroundColor: [
           'rgba(255, 127, 80, 0.2)',
           'rgba(255, 206, 86, 0.2)',
+          'rgba(75, 192, 192, 0.2)',
           'rgba(153, 102, 255, 0.2)',
-          'rgba(250, 84, 255, 0.2)',
-          'rgba(67.0, 251.0, 4.0, 0.2)'
+          'rgba(161, 75, 158, 0.2)'
           
       ],
       borderColor: [
         'rgba(255, 127, 80, 1)',
         'rgba(255, 206, 86, 1)',
+        'rgba(75, 192, 192, 1)',
         'rgba(153, 102, 255, 1)',
-        'rgba(250, 84, 255, 1)',
-        'rgba(67.0, 251.0, 4.0, 1.0)'
+        'rgba(161, 75, 158, 1)'
       ],
             borderWidth: 0.5
       },
@@ -58,7 +59,7 @@ var uscBarChart = new Chart(ctxTwo, {
         ticks: {
           min: 0,
           max: this.max,// Your absolute max value
-          stepSize: uscTotal * 0.35,
+          stepSize: uscTotal * 0.05,
           callback: function (value) {
             return (value / uscTotal * 100).toFixed(0) + '%'; // convert it to percentage
           },
