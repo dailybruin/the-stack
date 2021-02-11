@@ -13,20 +13,17 @@ featured_image:
   url:
 og_image:
 scripts:
-  - //ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js
-  - //cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js
-  - //cdnjs.cloudflare.com/ajax/libs/c3/0.4.10/c3.min.js
-  - //cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.js
-  - /js/posts/prof-donations-2021/test.js
-  - /js/posts/prof-donations-2021/monthly-donations-line-chart.js
+  - https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.js
+  - https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js
+  - js/posts/prof-donations-2021/ucla-top-5.js
+  - js/posts/prof-donations-2021/ucb-top-5.js
+  - js/posts/prof-donations-2021/usc-top-5.js
+
 stylesheets:
   - //cdnjs.cloudflare.com/ajax/libs/c3/0.4.10/c3.min.css
   - /css/posts/nba-players/app.css
 ---
 
-<canvas id='test'> </canvas>
-
-<canvas id='timeline-chart'></canvas>
-
-<div id='usc-donations-chart'></div>
-<div id='ucb-donations-chart'></div>
+<canvas id='ucla-top-5'> </canvas>
+<canvas id='ucb-top-5'> </canvas>
+<canvas id='usc-top-5'> </canvas>

@@ -1,4 +1,6 @@
-let ctx = document.getElementById('test');
+let ctx = document.getElementById('ucla-top-5');
+
+let uclaTotal = 1742794.86;
 
 var uclaBarChart = new Chart(ctx, {
   type: 'bar',
@@ -15,15 +17,15 @@ var uclaBarChart = new Chart(ctx, {
         label: 'Donation Amount',
         data: [441971.4, 201469.93, 199178.67, 113315.32, 52796.0],
         backgroundColor: [
-          'rgba(255, 99, 132, 0.2)',
-          'rgba(54, 162, 235, 0.2)',
+          'rgba(255, 127, 80, 0.2)',
+          'rgba(250, 84, 255, 0.2)',
           'rgba(255, 206, 86, 0.2)',
           'rgba(75, 192, 192, 0.2)',
           'rgba(153, 102, 255, 0.2)'
       ],
       borderColor: [
-                'rgba(255,99,132,1)',
-                'rgba(54, 162, 235, 1)',
+                'rgba(255, 127, 80, 1)',
+                'rgba(250, 84, 255, 1)',
                 'rgba(255, 206, 86, 1)',
                 'rgba(75, 192, 192, 1)',
                 'rgba(153, 102, 255, 1)'
@@ -54,9 +56,10 @@ var uclaBarChart = new Chart(ctx, {
       {
         ticks: {
           min: 0,
-          max: 609978.20,// Your absolute max value
+          max: uclaTotal * 0.35,// Your absolute max value
+          stepSize: uclaTotal * 0.05,
           callback: function (value) {
-            return (value / 1742794.86 * 100).toFixed(0) + '%'; // convert it to percentage
+            return (value / uclaTotal * 100).toFixed(0) + '%'; // convert it to percentage
           },
         },
         scaleLabel: {

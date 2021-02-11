@@ -1,6 +1,8 @@
-let ctx = document.getElementById('ucb-top-5');
+let ctxOne = document.getElementById('ucb-top-5');
 
-var ucbBarChart = new Chart(ctx, {
+let ucbTotal = 1130009.57;
+
+var ucbBarChart = new Chart(ctxOne, {
   type: 'bar',
   data: {
     labels: [
@@ -15,18 +17,18 @@ var ucbBarChart = new Chart(ctx, {
         label: 'Donation Amount',
         data: [253892.06, 169078.98, 102776.16, 66496.79, 50000],
         backgroundColor: [
-          'rgba(255, 99, 132, 0.2)',
+          'rgba(255, 127, 80, 0.2)',
           'rgba(255, 206, 86, 0.2)',
-          'rgba(54, 162, 235, 0.2)',
+          'rgba(250, 84, 255, 0.2)',
           'rgba(75, 192, 192, 0.2)',
-          'rgba(255, 127, 80, 0.2)'
+          'rgba(161, 75, 158, 0.2)'
       ],
       borderColor: [
-                'rgba(255,99,132,1)',
+                'rgba(255, 127, 80, 1)',
                 'rgba(255, 206, 86, 1)',
-                'rgba(54, 162, 235, 1)',
+                'rgba(250, 84, 255, 1)',
                 'rgba(75, 192, 192, 1)',
-                'rgba(255, 127, 80, 1)'
+                'rgba(161, 75, 158, 1)'
       ],
             borderWidth: 0.5
       },
@@ -54,9 +56,10 @@ var ucbBarChart = new Chart(ctx, {
       {
         ticks: {
           min: 0,
-          max: 395503.15,// Your absolute max value
+          max: ucbTotal * 0.35,// Your absolute max value
+          stepSize: ucbTotal * 0.05 ,
           callback: function (value) {
-            return (value / 1130009.57 * 100).toFixed(0) + '%'; // convert it to percentage
+            return (value / ucbTotal * 100).toFixed(0) + '%'; // convert it to percentage
           },
         },
         scaleLabel: {
