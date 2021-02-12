@@ -37,8 +37,8 @@ The spread of COVID-19 has devastated many businesses across the U.S. According 
 ## About the Data
 The data was collected and provided by the Los Angeles Office of Finance.
 Some of the graphs may not reflect the actual number of closed and opened businesses because of the following limitations:
-The dataset was updated on December 23rd, 2020, so any changes after that are not accounted in this analysis
-Some of the businesses only closed temporarily while the others may close forever but haven’t reported to the Los Angeles Office of Finance yet. Thus, these two types of businesses would still be treated as active businesses in our datasets. 
+1. The dataset was updated on December 23rd, 2020, so any changes after that are not accounted in this analysis
+2. Some of the businesses only closed temporarily while the others may close forever but haven’t reported to the Los Angeles Office of Finance yet. Thus, these two types of businesses would still be treated as active businesses in our datasets. 
 
 The data also includes independent home-based businesses, so a business’s location may appear as a household address on the interaction map. In addition, since some of the business owners registered with their own names, we will see people's names on the y-axis of the timeline plot below.
 To find out the number of opened and closed businesses in the Westwood neighborhood in 2018, 2019 and 2020, explore the interactive map below and select the corresponding options that you wish to see at the top right corner. 
