@@ -337,7 +337,7 @@ cameron_bian:
 eustina_kim:
   name: Eustina Kim
   title: Stack Developer
-  email: ekim@media.ucla.edu
+  email: ekim5@media.ucla.edu
   mug: yes
   bio: Eustina Kim is a fourth-year Statistics major with a minor in Digital Humanities.
   github: kimjee8955
@@ -347,6 +347,7 @@ ziqing_luo:
   email: zluo@media.ucla.edu
   mug: yes
   bio: Ziqing Luo is a third-year Applied Math and Statistics student who is passionate about dancing and enjoys eating desserts.
+  github: luoziqing99
 samantha_low:
   name: Samantha Low
   title: Stack Developer
