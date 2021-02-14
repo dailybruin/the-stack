@@ -1,3 +1,5 @@
+var linechart;
+
 d3
   .csv('/datasets/professor-donations/monthly_donations.csv')
   .then(function(donations) {
@@ -5,16 +7,14 @@ d3
   });
 
 function makeChart(donations) {
-  console.log(donations);
-
   const verticalLinePlugin = {
-    getLinePosition: function(chart, pointIndex) {
+    getLinePosition: function(chart, line) {
       const meta = chart.getDatasetMeta(0); // first dataset is used to discover X coordinate of a point
       const data = meta.data;
-      return data[pointIndex]._model.x;
+      return data[line.index]._model.x;
     },
-    renderVerticalLine: function(chartInstance, pointIndex) {
-      const lineLeftOffset = this.getLinePosition(chartInstance, pointIndex);
+    renderVerticalLine: function(chartInstance, line) {
+      const lineLeftOffset = this.getLinePosition(chartInstance, line);
       const scale = chartInstance.scales['y-axis-0'];
       const context = chartInstance.chart.ctx;
 
@@ -29,17 +29,21 @@ function makeChart(donations) {
       // write label
       context.fillStyle = '#888888';
       context.textAlign = 'center';
-      context.fillText(
-        'Presidential Election',
-        lineLeftOffset,
-        (scale.bottom - scale.top) / 2
-      );
+      context.font = 'bold 11px sans-serif';
+      let y = scale.top + 30;
+      let increment = 20;
+      if (window.matchMedia('(max-width: 480px)').matches) {
+        y -= 10;
+        increment = 15;
+      }
+      context.fillText(line.text[0], lineLeftOffset, y);
+      context.fillText(line.text[1], lineLeftOffset, y + increment);
     },
 
     afterDatasetsDraw: function(chart, easing) {
       if (chart.config.lineAtIndex) {
-        chart.config.lineAtIndex.forEach(pointIndex =>
-          this.renderVerticalLine(chart, pointIndex)
+        chart.config.lineAtIndex.forEach(line =>
+          this.renderVerticalLine(chart, line)
         );
       }
     },
@@ -72,7 +76,7 @@ function makeChart(donations) {
         {
           scaleLabel: {
             display: true,
-            labelString: 'Total Donations',
+            labelString: 'Monthly Political Donations',
           },
           ticks: {
             callback: function(value) {
@@ -85,13 +89,22 @@ function makeChart(donations) {
           },
         },
       ],
+      xAxes: [
+        {
+          ticks: {
+            maxRotation: 0,
+          },
+        },
+      ],
     },
     title: {
       display: true,
-      text: 'Total donations by UCLA professors per month',
+      text: 'Monthly political donations from UCLA professors',
       fontSize: 16,
     },
     tooltips: {
+      intersect: false,
+      displayColors: false,
       callbacks: {
         label: function(tooltipItem, data) {
           return tooltipItem.yLabel.toLocaleString('en-US', {
@@ -123,10 +136,22 @@ function makeChart(donations) {
   };
 
   let ctx = document.getElementById('timeline-chart');
-  var linechart = new Chart(ctx, {
+  linechart = new Chart(ctx, {
     type: 'line',
     data: data,
     options: options,
-    lineAtIndex: [10, 58],
+    lineAtIndex: [
+      { index: 10, text: ['Presidential', 'Election'] },
+      { index: 58, text: ['Presidential', 'Election'] },
+      { index: 34, text: ['Midterm', 'Elections'] },
+    ],
   });
+
+  if (window.matchMedia('(max-width: 480px)').matches) {
+    linechart.canvas.style = 'max-height:400px';
+    linechart.options.maintainAspectRatio = false;
+    console.log(linechart);
+
+    linechart.update();
+  }
 }
