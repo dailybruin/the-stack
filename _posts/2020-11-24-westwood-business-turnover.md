@@ -60,7 +60,7 @@ The map below shows an overview of business closures and openings from 2018 to 2
 
 
 ## Analysis
-In the time plot below, we found that 42 businesses closed in 2020 by the beginning of December. More than half of those businesses first opened after 2015. Are newer businesses more vulnerable to the negative impacts of the COVID-19 pandemic?
+In the time plot below, we found that 41 businesses closed in 2020 by the beginning of December. More than half of those businesses first opened after 2015. Are newer businesses more vulnerable to the negative impacts of the COVID-19 pandemic?
 
 <img src="/img/posts/westwood-business/timeline.png" style="width:53vw" class = "center"/>
 
