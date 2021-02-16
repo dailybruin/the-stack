@@ -281,7 +281,7 @@ bernard_mendez:
 charlotte_huang:
   name: Charlotte Huang
   title: Stack Developer
-  bio: Charlotte is a fourth-year, majoring in Applied Math and Cognitive Science. Outside of math and data, she enjoys reading, watching K-Drama, and listening to K-Pop.
+  bio: Charlotte is a junior, majoring in Applied Math and Cognitive Science. She always wants to spend a day eating nothing but dark chocolate and drinking lattes with oat milk.
   mug: Yes
   email: chuang@media.ucla.edu
   github: charlotte0408
@@ -354,31 +354,10 @@ samantha_low:
   email: slow@media.ucla.edu
   mug: no
   bio: Samantha Low is a first year Environmental Science Major.
-ananya_garg:
-  name: Ananya Garg
-  title: Stack Developer
-  bio: Ananya is a first-year statistics student who enjoys travelling, cooking, and rewatching Friends in her free time.
-  mug: Yes
-  email: agarg@media.ucla.edu
-  github: ananyagarg81
-mansa_krishna:
-  name: Mansa Krishna
-  title: Stack Developer
-  bio: Mansa is a third-year, majoring in Applied Mathematics with a Specialization in Computing, and minoring in History. She is a coffee-for-breakfast advocate with a deep, abiding love for historical fiction.
-  mug: Yes
-  email: mkrishna@media.ucla.edu
-  github: mansakrishna23
-lindsey_parungo:
-  name: Lindsey Parungo
-  title: Stack Developer
-  bio: Lindsey is a second-year Financial and Actuarial Mathematics major. She enjoys running, spending time with her dog, and looking to expand her hippo memorabilia collection.
-  mug: Yes
-  email: lparungo@media.ucla.edu
-  github: Lindseyp314
 xuxin_zhang:
   name: Xuxin Zhang
   title: Stack Developer and Photo staff
-  bio: Xuxin is a third-year Applied Mathematics and Statistics student. He loves collecting vintage film cameras and taking photos for strangers.
+  bio: Xuxin is a third year Applied Mathematics and Statistics student. He loves collecting vintage film cameras and taking photos for strangers.
   mug: Yes
   email: xzhang1@media.ucla.edu
   github: xux1an
@@ -389,3 +368,7 @@ faye_zou:
   bio: Faye is a third-year Cognitive Science major. During her spare time, she likes going to the gym and playing with her puppies. 
   mug: Yes
   email: fzou@media.ucla.edu
+
+  
+
+
