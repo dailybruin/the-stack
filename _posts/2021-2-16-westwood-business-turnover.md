@@ -1,5 +1,5 @@
 ---
-title: Westwoood Business Turnover
+title: Westwood Business Turnover
 teaser: An analysis of the impact of the COVID-19 pandemic on Westwood businesses
 authors:
   - cameron_bian
