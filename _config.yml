@@ -34,3 +34,6 @@ markdown: kramdown
 
 # plugins
 plugins: [jekyll-paginate]
+
+exclude:
+  - .jekyll-cache
