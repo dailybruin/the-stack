@@ -43,7 +43,7 @@ Some of the graphs may not reflect the actual number of closed and opened busine
 1. The dataset was updated Dec. 23, so any changes after that are not accounted for in this analysis.
    Some businesses may have closed forever but haven’t reported their closures to the Los Angeles Office of Finance yet. Thus, these businesses are still treated as active businesses in our datasets and analysis.
 
-2. The data also includes independent home-based businesses, so a business’s location may appear as a household address on the interactive map. In addition, since some of the business owners registered with their own names, people's names may be visible on the y-axis of the timeline plot below.
+2. The data also includes independent home-based businesses which are registered with the owners’ names and located in some household addresses on the interactive map. We replaced those businesses’ names with “Home Business” for privacy reasons.
 
 To find out the number of opened and closed businesses in Westwood in 2018, 2019 and 2020, explore the interactive map below and select the corresponding options that you wish to see in the top right corner.
 
