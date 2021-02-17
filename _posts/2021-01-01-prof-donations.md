@@ -17,6 +17,8 @@ scripts:
   - //cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.js
   - //ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js
   - //d3js.org/d3.v6.min.js
+  - //cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@0.7.0
+  - /js/posts/prof-donations-2021/bubble-chart.js
   - /js/posts/prof-donations-2021/ucla-top-5.js
   - /js/posts/prof-donations-2021/ucb-top-5.js
   - /js/posts/prof-donations-2021/usc-top-5.js
@@ -26,6 +28,10 @@ stylesheets:
   - //cdnjs.cloudflare.com/ajax/libs/c3/0.4.10/c3.min.css
   - /css/posts/nba-players/app.css
 ---
+
+<canvas id='bubble-chart'></canvas>
+
+<p style="font-size:smaller;color:gray;text-align:center">The area of each circle is proportional to the dollar amount of political donations by UCLA professors in that year.</p>
 
 “Professors, partly because of their almost universally high levels of education, are likely to be [politically] engaged,” says Martin Gilens, Chair of the Department of Public Policy and Professor of Public Policy, Political Science, and Social Welfare at UCLA.
 
