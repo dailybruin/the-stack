@@ -18,10 +18,10 @@ let data = {
       label: ['2016'],
       data: [
         {
-          x: -0.75,
+          x: -0.75, // ugly hard coding sorry
           y: -2,
           amount: amounts[0],
-          r: Math.sqrt(amounts[0] * scalingFactor / Math.PI),
+          r: Math.sqrt(amounts[0] * scalingFactor / Math.PI), // make area proportional to amount
         },
       ],
       backgroundColor: '#FAE96B',
@@ -31,8 +31,8 @@ let data = {
       label: ['2017'],
       data: [
         {
-          x: 0.1,
-          y: 2.4,
+          x: -0.8,
+          y: 0.3,
           amount: amounts[1],
           r: Math.sqrt(amounts[1] * scalingFactor / Math.PI),
         },
@@ -44,8 +44,8 @@ let data = {
       label: ['2018'],
       data: [
         {
-          x: -0.9,
-          y: 1,
+          x: -0.3,
+          y: 2.2,
           amount: amounts[2],
           r: Math.sqrt(amounts[2] * scalingFactor / Math.PI),
         },
@@ -58,7 +58,7 @@ let data = {
       data: [
         {
           x: 1,
-          y: 3,
+          y: 2.7,
           amount: amounts[3],
           r: Math.sqrt(amounts[3] * scalingFactor / Math.PI),
         },
@@ -144,8 +144,12 @@ let yearTotals = new Chart(ctxBubble, {
   plugins: [ChartDataLabels],
 });
 
-if (window.matchMedia('(max-width: 580px)').matches) {
+if (window.matchMedia('(max-width: 480px)').matches) {
   yearTotals.canvas.style = 'max-height:200px';
+  yearTotals.options.maintainAspectRatio = false;
+  yearTotals.update();
+} else if (window.matchMedia('(max-width: 580px)').matches) {
+  yearTotals.canvas.style = 'max-height:300px';
   yearTotals.options.maintainAspectRatio = false;
   yearTotals.update();
 }
