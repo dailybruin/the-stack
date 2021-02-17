@@ -1,11 +1,12 @@
 let ctx = document.getElementById('ucla-top-5');
 
 let uclaTotal = 1742794.86;
-let bidenTotalUCLA = 201469.93 + 199178.67;
+let bidenForPresidentUCLA = 199178.67;
+let bidenVictoryFundUCLA = 201469.93;
 
 let UCLAFullCommitteeNames = [
   'ActBlue',
-  'Biden for President / Biden Victory Fund',
+  'Biden for President & Biden Victory Fund',
   'Democratic National Committee',
   'Democratic Congressional Campaign Committee',
   'Democratic Senatorial Campaign Committee',
@@ -18,7 +19,13 @@ var uclaBarChart = new Chart(ctx, {
     datasets: [
       {
         label: 'Donation Amount',
-        data: [441971.4, bidenTotalUCLA, 113315.32, 52796.0, 39087],
+        data: [
+          441971.4,
+          bidenForPresidentUCLA + bidenVictoryFundUCLA,
+          113315.32,
+          52796.0,
+          39087,
+        ],
         backgroundColor: [
           'rgba(255, 127, 80, 0.2)',
           'rgba(255, 206, 86, 0.2)',
@@ -81,14 +88,33 @@ var uclaBarChart = new Chart(ctx, {
     tooltips: {
       callbacks: {
         label: function(tooltipItem, chart) {
-          return tooltipItem.yLabel.toLocaleString('en-US', {
+          let dollars = tooltipItem.yLabel.toLocaleString('en-US', {
             style: 'currency',
             currency: 'USD',
-            maximumFractionDigits: 2,
+            maximumFractionDigits: 0,
           });
+          let percentage = Math.round(tooltipItem.yLabel / uclaTotal * 100);
+
+          return dollars + ` | ${percentage}% of total`;
         },
         title: function(tooltipItem, chart) {
           return UCLAFullCommitteeNames[tooltipItem[0].index];
+        },
+        afterLabel: function(tooltipItem, chart) {
+          if (tooltipItem.index == 1) {
+            let bidenPresStr = bidenForPresidentUCLA.toLocaleString('en-US', {
+              style: 'currency',
+              currency: 'USD',
+              maximumFractionDigits: 0,
+            });
+            let bidenVictSt = bidenVictoryFundUCLA.toLocaleString('en-US', {
+              style: 'currency',
+              currency: 'USD',
+              maximumFractionDigits: 0,
+            });
+            return `\nBiden for President: ${bidenPresStr}\nBiden Victory Fund: ${bidenVictSt}`;
+          }
+          return '';
         },
       },
     },
@@ -98,6 +124,15 @@ var uclaBarChart = new Chart(ctx, {
 if (window.matchMedia('(max-width: 480px)').matches) {
   uclaBarChart.canvas.style = 'max-height:300px';
   uclaBarChart.options.maintainAspectRatio = false;
+  uclaBarChart.options.scales.xAxes[0].labels = [
+    'ActBlue',
+    'Biden',
+    'DNC',
+    'DCCC',
+    'DSCC',
+  ];
+  uclaBarChart.update();
+} else if (window.matchMedia('(max-width: 1400px)').matches) {
   uclaBarChart.options.scales.xAxes[0].labels = [
     'ActBlue',
     'Biden',

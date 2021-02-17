@@ -1,7 +1,8 @@
 let ctxTwo = document.getElementById('usc-top-5');
 
 let uscTotal = 1302976.44;
-let bidenTotal = 143908.88 + 58636.77;
+let bidenForPresidentUSC = 143908.88;
+let bidenVictoryFundUSC = 58636.77;
 
 let USCFullCommitteeNames = [
   'ActBlue',
@@ -18,7 +19,13 @@ var uscBarChart = new Chart(ctxTwo, {
     datasets: [
       {
         label: 'Donation Amount',
-        data: [416044.09, bidenTotal, 127033, 47079.17, 26560.54],
+        data: [
+          416044.09,
+          bidenForPresidentUSC + bidenVictoryFundUSC,
+          127033,
+          47079.17,
+          26560.54,
+        ],
         backgroundColor: [
           'rgba(255, 127, 80, 0.2)',
           'rgba(255, 206, 86, 0.2)',
@@ -81,14 +88,33 @@ var uscBarChart = new Chart(ctxTwo, {
     tooltips: {
       callbacks: {
         label: function(tooltipItem, chart) {
-          return tooltipItem.yLabel.toLocaleString('en-US', {
+          let dollars = tooltipItem.yLabel.toLocaleString('en-US', {
             style: 'currency',
             currency: 'USD',
-            maximumFractionDigits: 2,
+            maximumFractionDigits: 0,
           });
+          let percentage = Math.round(tooltipItem.yLabel / uscTotal * 100);
+
+          return dollars + ` | ${percentage}% of total`;
         },
         title: function(tooltipItem, chart) {
           return USCFullCommitteeNames[tooltipItem[0].index];
+        },
+        afterLabel: function(tooltipItem, chart) {
+          if (tooltipItem.index == 1) {
+            let bidenPresStr = bidenForPresidentUSC.toLocaleString('en-US', {
+              style: 'currency',
+              currency: 'USD',
+              maximumFractionDigits: 0,
+            });
+            let bidenVictSt = bidenVictoryFundUSC.toLocaleString('en-US', {
+              style: 'currency',
+              currency: 'USD',
+              maximumFractionDigits: 0,
+            });
+            return `\nBiden for President: ${bidenPresStr}\nBiden Victory Fund: ${bidenVictSt}`;
+          }
+          return '';
         },
       },
     },
@@ -98,6 +124,15 @@ var uscBarChart = new Chart(ctxTwo, {
 if (window.matchMedia('(max-width: 480px)').matches) {
   uscBarChart.canvas.style = 'max-height:300px';
   uscBarChart.options.maintainAspectRatio = false;
+  uscBarChart.options.scales.xAxes[0].labels = [
+    'ActBlue',
+    'Biden',
+    'DCCC',
+    'DSCC',
+    'Jon Ossoff',
+  ];
+  uscBarChart.update();
+} else if (window.matchMedia('(max-width: 1400px)').matches) {
   uscBarChart.options.scales.xAxes[0].labels = [
     'ActBlue',
     'Biden',
