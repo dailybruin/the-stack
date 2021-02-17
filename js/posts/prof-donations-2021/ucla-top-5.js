@@ -12,6 +12,8 @@ let UCLAFullCommitteeNames = [
   'Democratic Senatorial Campaign Committee',
 ];
 
+let UCLAShortCommitteeNames = ['ActBlue', 'Biden', 'DNC', 'DCCC', 'DSCC'];
+
 var uclaBarChart = new Chart(ctx, {
   type: 'bar',
   data: {
@@ -124,21 +126,9 @@ var uclaBarChart = new Chart(ctx, {
 if (window.matchMedia('(max-width: 480px)').matches) {
   uclaBarChart.canvas.style = 'max-height:300px';
   uclaBarChart.options.maintainAspectRatio = false;
-  uclaBarChart.options.scales.xAxes[0].labels = [
-    'ActBlue',
-    'Biden',
-    'DNC',
-    'DCCC',
-    'DSCC',
-  ];
+  uclaBarChart.options.scales.xAxes[0].labels = UCLAShortCommitteeNames;
   uclaBarChart.update();
 } else if (window.matchMedia('(max-width: 1400px)').matches) {
-  uclaBarChart.options.scales.xAxes[0].labels = [
-    'ActBlue',
-    'Biden',
-    'DNC',
-    'DCCC',
-    'DSCC',
-  ];
+  uclaBarChart.options.scales.xAxes[0].labels = UCLAShortCommitteeNames;
   uclaBarChart.update();
 }

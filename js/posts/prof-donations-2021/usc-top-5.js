@@ -12,6 +12,8 @@ let USCFullCommitteeNames = [
   'Jon Ossoff for Senate',
 ];
 
+let USCShortCommitteeNames = ['ActBlue', 'Biden', 'DCCC', 'DSCC', 'Jon Ossoff'];
+
 var uscBarChart = new Chart(ctxTwo, {
   type: 'bar',
   data: {
@@ -124,21 +126,9 @@ var uscBarChart = new Chart(ctxTwo, {
 if (window.matchMedia('(max-width: 480px)').matches) {
   uscBarChart.canvas.style = 'max-height:300px';
   uscBarChart.options.maintainAspectRatio = false;
-  uscBarChart.options.scales.xAxes[0].labels = [
-    'ActBlue',
-    'Biden',
-    'DCCC',
-    'DSCC',
-    'Jon Ossoff',
-  ];
+  uscBarChart.options.scales.xAxes[0].labels = USCShortCommitteeNames;
   uscBarChart.update();
 } else if (window.matchMedia('(max-width: 1400px)').matches) {
-  uscBarChart.options.scales.xAxes[0].labels = [
-    'ActBlue',
-    'Biden',
-    'DCCC',
-    'DSCC',
-    'Jon Ossoff',
-  ];
+  uscBarChart.options.scales.xAxes[0].labels = USCShortCommitteeNames;
   uscBarChart.update();
 }
