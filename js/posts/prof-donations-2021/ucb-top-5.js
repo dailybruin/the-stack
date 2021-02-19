@@ -23,7 +23,7 @@ let UCBShortCommitteeNames = [
 var ucbBarChart = new Chart(ctxOne, {
   type: 'bar',
   data: {
-    labels: UCBFullCommitteeNames,
+    labels: UCBShortCommitteeNames,
     datasets: [
       {
         label: 'Donation Amount',
@@ -35,11 +35,11 @@ var ucbBarChart = new Chart(ctxOne, {
           25048.7,
         ],
         backgroundColor: [
-          'rgba(255, 206, 86, 0.2)',
-          'rgba(255, 127, 80, 0.2)',
-          'rgba(250, 84, 255, 0.2)',
-          'rgba(174, 189, 66, 0.2)',
-          'rgba(161, 75, 158, 0.2)',
+          'rgba(255, 206, 86, 0.5)',
+          'rgba(255, 127, 80, 0.5)',
+          'rgba(250, 84, 255, 0.5)',
+          'rgba(174, 189, 66, 0.5)',
+          'rgba(161, 75, 158, 0.5)',
         ],
         borderColor: [
           'rgba(255, 206, 86, 1)',

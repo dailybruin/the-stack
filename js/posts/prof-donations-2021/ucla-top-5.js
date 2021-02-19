@@ -17,7 +17,7 @@ let UCLAShortCommitteeNames = ['ActBlue', 'Biden', 'DNC', 'DCCC', 'DSCC'];
 var uclaBarChart = new Chart(ctx, {
   type: 'bar',
   data: {
-    labels: UCLAFullCommitteeNames,
+    labels: UCLAShortCommitteeNames,
     datasets: [
       {
         label: 'Donation Amount',
@@ -29,11 +29,11 @@ var uclaBarChart = new Chart(ctx, {
           39087,
         ],
         backgroundColor: [
-          'rgba(255, 127, 80, 0.2)',
-          'rgba(255, 206, 86, 0.2)',
-          'rgba(250, 84, 255, 0.2)',
-          'rgba(75, 192, 192, 0.2)',
-          'rgba(153, 102, 255, 0.2)',
+          'rgba(255, 127, 80, 0.5)',
+          'rgba(255, 206, 86, 0.5)',
+          'rgba(250, 84, 255, 0.5)',
+          'rgba(75, 192, 192, 0.5)',
+          'rgba(153, 102, 255, 0.5)',
         ],
         borderColor: [
           'rgba(255, 127, 80, 1)',

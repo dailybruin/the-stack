@@ -17,7 +17,7 @@ let USCShortCommitteeNames = ['ActBlue', 'Biden', 'DCCC', 'DSCC', 'Jon Ossoff'];
 var uscBarChart = new Chart(ctxTwo, {
   type: 'bar',
   data: {
-    labels: USCFullCommitteeNames,
+    labels: USCShortCommitteeNames,
     datasets: [
       {
         label: 'Donation Amount',
@@ -29,11 +29,11 @@ var uscBarChart = new Chart(ctxTwo, {
           26560.54,
         ],
         backgroundColor: [
-          'rgba(255, 127, 80, 0.2)',
-          'rgba(255, 206, 86, 0.2)',
-          'rgba(75, 192, 192, 0.2)',
-          'rgba(153, 102, 255, 0.2)',
-          'rgba(161, 75, 158, 0.2)',
+          'rgba(255, 127, 80, 0.5)',
+          'rgba(255, 206, 86, 0.5)',
+          'rgba(75, 192, 192, 0.5)',
+          'rgba(153, 102, 255, 0.5)',
+          'rgba(161, 75, 158, 0.5)',
         ],
         borderColor: [
           'rgba(255, 127, 80, 1)',
