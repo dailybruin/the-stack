@@ -30,14 +30,14 @@ function makeChart(donations) {
       context.fillStyle = '#888888';
       context.textAlign = 'center';
       context.font = 'bold 11px sans-serif';
-      let y = scale.top + 30;
-      let increment = 20;
+      let y = scale.top + 20;
+      let increment = 15;
       if (window.matchMedia('(max-width: 480px)').matches) {
         y -= 10;
-        increment = 15;
       }
       context.fillText(line.text[0], lineLeftOffset, y);
       context.fillText(line.text[1], lineLeftOffset, y + increment);
+      context.fillText(line.text[2], lineLeftOffset, y + 2 * increment);
     },
 
     afterDatasetsDraw: function(chart, easing) {
@@ -141,9 +141,9 @@ function makeChart(donations) {
     data: data,
     options: options,
     lineAtIndex: [
-      { index: 10, text: ['Presidential', 'Election'] },
-      { index: 58, text: ['Presidential', 'Election'] },
-      { index: 34, text: ['Midterm', 'Elections'] },
+      { index: 10, text: ['2016', 'Presidential', 'Election'] },
+      { index: 58, text: ['2020', 'Presidential', 'Election'] },
+      { index: 34, text: ['2018', 'Midterm', 'Elections'] },
     ],
   });
 
