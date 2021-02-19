@@ -335,3 +335,10 @@ brittney_le:
   bio: Brittney is a fourth year Human Biology and Society student. She likes to browse too much on Reddit, meditate, and listen to podcasts. 
   mug: yes
   email: ble@media.ucla.edu
+vivian_luk:
+  name: Vivian Luk
+  title: Stack Developer
+  bio: Vivian is a second-year Applied Mathematics and Statistics student. Contrary to what her photo might suggest, she does not watch anime. Instead, she enjoys hikes, Jeopardy! marathons, and NPR podcasts. 
+  mug: no
+  email: vluk@media.ucla.edu
+  github: vivianpluk
