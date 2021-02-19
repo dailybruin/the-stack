@@ -329,3 +329,16 @@ maria_becerra:
   bio: Maria is a fourth-year cognitive science major with a specialization in computing. She loves coffee, flowers and collecting stationary.
   mug: no
   email: msoto@media.ucla.edu
+brittney_le:
+  name: Brittney Le
+  title: Stack Developer
+  bio: Brittney is a fourth year Human Biology and Society student. She likes to browse too much on Reddit, meditate, and listen to podcasts. 
+  mug: yes
+  email: ble@media.ucla.edu
+vivian_luk:
+  name: Vivian Luk
+  title: Stack Developer
+  bio: Vivian is a second-year applied mathematics and statistics student. Contrary to what her photo might suggest, she does not watch anime. Instead, she enjoys hikes, Jeopardy! marathons, and NPR podcasts. 
+  mug: no
+  email: vluk@media.ucla.edu
+  github: vivianpluk
