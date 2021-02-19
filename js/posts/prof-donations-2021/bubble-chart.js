@@ -12,7 +12,7 @@ if (window.matchMedia('(max-width: 580px)').matches) {
   fontSize = 12;
 }
 if (window.matchMedia('(min-width: 1000px)').matches) {
-  scalingFactor *= 0.5;
+  scalingFactor *= 0.3;
 }
 
 let data = {
@@ -105,7 +105,7 @@ let options = {
       {
         display: false,
         ticks: {
-          min: -3.5,
+          min: -3.8,
           max: 4.5,
         },
       },

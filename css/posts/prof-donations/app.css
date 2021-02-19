@@ -1,3 +1,8 @@
+.chart-descrip {
+    font-size:smaller;
+    color:gray;
+}
+
 @media only screen and (min-width: 1000px) {
 
     .usc-chart {
@@ -21,11 +26,31 @@
     .chart-container {
         width: 70%;
         margin: auto;
+        margin-bottom: 40px;
+    }
+
+    .bubble-container {
+        width: 50%;
+        float: right;
+        margin-bottom: 40px;
+        margin-top: 40px;
     }
 
     .graphic {
         width: 50%;
         margin-top: 40px;
         float: right;
+    }
+
+    .chart-descrip {
+        margin-left: 100px;
+    }
+
+    .line-break {
+        height: 90px;
+    }
+
+    .small-line-break {
+        height: 50px;
     }
 }
