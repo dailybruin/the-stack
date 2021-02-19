@@ -327,7 +327,7 @@ maria_becerra:
   name: Maria Becerra
   title: Stack Developer
   bio: Maria is a fourth-year cognitive science major with a specialization in computing. She loves coffee, flowers and collecting stationary.
-  mug: no
+  mug: yes
   email: msoto@media.ucla.edu
 brittney_le:
   name: Brittney Le
@@ -339,12 +339,12 @@ vivian_luk:
   name: Vivian Luk
   title: Stack Developer
   bio: Vivian is a second-year applied mathematics and statistics student. Contrary to what her photo might suggest, she does not watch anime. Instead, she enjoys hikes, Jeopardy! marathons, and NPR podcasts.
-  mug: no
+  mug: yes
   email: vluk@media.ucla.edu
   github: vivianpluk
 derrick_chau:
   name: Derrick Chau
   title: Stack Developer
   bio: Derrick is a second-year mathematics and economics major with a specialization in computing who loves having a new Zoom background every week.
-  mug: no
+  mug: yes
   email: dchau2@media.ucla.edu
