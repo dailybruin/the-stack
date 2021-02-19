@@ -11,8 +11,9 @@ key_takeaways:
 
 
 featured_image:
-  url:
-og_image:
+  url: prof-donations/cover_photo.png
+og_image: prof-donations/cover_photo.png
+
 scripts:
   - //cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.js
   - //ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js
@@ -57,15 +58,13 @@ The 2016 general election results might have spurred more UCLA professors to don
 
 ### Breaking Down the Campaigns
 
-<div>
-  <div class="ucla-chart"> <canvas id='ucla-top-5'> </canvas> </div>
-  <div class="ucb-chart"> <canvas id='ucb-top-5'> </canvas> </div>
-  <div class="usc-chart"> <canvas id='usc-top-5'> </canvas> </div>
-</div>
+<div class="ucla-chart"> <canvas id='ucla-top-5'> </canvas> </div>
+<div class="ucb-chart"> <canvas id='ucb-top-5'> </canvas> </div>
+<div class="usc-chart"> <canvas id='usc-top-5'> </canvas> </div>
+
+<img class="graphic" src="/img/posts/prof-donations/stack.professordonations-01.png">
 
 Across all three universities, just five campaigns raked in more than half of all donations made by professors to political organizations: ActBlue, Biden for President, Biden Victory Fund, Democratic Congressional Campaign Committee, and Democratic National Committee.
-
-## <graphic of committee explanations>
 
 Additionally, President Joe Biden’s presidential campaign in 2020 was among the top three campaigns supported by professors from all three universities, as measured by donations to Biden for President and Biden Victory Fund.
 

@@ -1,15 +1,17 @@
 @media only screen and (min-width: 1000px) {
 
-    .ucla-chart {
+    .usc-chart {
         float: left;
         width: 50%;
+        margin-bottom: 40px;
     }
     .ucb-chart {
         float: right;
         width: 50%;
     }
-    .usc-chart {
+    .ucla-chart {
         width: 50%;
+        margin: auto;
     }
 
     #timeline-chart {
@@ -19,5 +21,11 @@
     .chart-container {
         width: 70%;
         margin: auto;
+    }
+
+    .graphic {
+        width: 50%;
+        margin-top: 40px;
+        float: right;
     }
 }
