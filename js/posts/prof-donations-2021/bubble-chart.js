@@ -37,7 +37,7 @@ let data = {
           r: Math.sqrt(amounts[1] * scalingFactor / Math.PI),
         },
       ],
-      backgroundColor: '#C977F5',
+      backgroundColor: '#0C7C59',
       borderColor: '#5c5c5c',
     },
     {
@@ -50,7 +50,7 @@ let data = {
           r: Math.sqrt(amounts[2] * scalingFactor / Math.PI),
         },
       ],
-      backgroundColor: '#42D0F5',
+      backgroundColor: '#C977F5',
       borderColor: '#5c5c5c',
     },
     {
@@ -76,7 +76,7 @@ let data = {
           r: Math.sqrt(amounts[4] * scalingFactor / Math.PI),
         },
       ],
-      backgroundColor: '#E6564A',
+      backgroundColor: '#F98948',
       borderColor: '#5c5c5c',
     },
   ],
@@ -126,12 +126,32 @@ let options = {
   },
   plugins: {
     datalabels: {
-      font: {
-        weight: 'bold',
-        size: fontSize,
-      },
-      formatter: function(value, context) {
-        return years[context.datasetIndex];
+      color: '#333333',
+      labels: {
+        title: {
+          font: {
+            weight: 'bold',
+            size: fontSize,
+          },
+          formatter: function(value, context) {
+            return years[context.datasetIndex];
+          },
+        },
+        value: {
+          formatter: function(value, context) {
+            if (window.matchMedia('(max-width: 580px)').matches) {
+              return '';
+            }
+            return (
+              '\n\n' +
+              amounts[context.datasetIndex].toLocaleString('en-US', {
+                style: 'currency',
+                currency: 'USD',
+                maximumFractionDigits: 0,
+              })
+            );
+          },
+        },
       },
     },
   },
