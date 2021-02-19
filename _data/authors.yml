@@ -332,18 +332,19 @@ maria_becerra:
 brittney_le:
   name: Brittney Le
   title: Stack Developer
-  bio: Brittney is a fourth year Human Biology and Society student. She likes to browse too much on Reddit, meditate, and listen to podcasts. 
+  bio: Brittney is a fourth year Human Biology and Society student. She likes to browse too much on Reddit, meditate, and listen to podcasts.
   mug: yes
   email: ble@media.ucla.edu
 vivian_luk:
   name: Vivian Luk
   title: Stack Developer
-  bio: Vivian is a second-year applied mathematics and statistics student. Contrary to what her photo might suggest, she does not watch anime. Instead, she enjoys hikes, Jeopardy! marathons, and NPR podcasts. 
+  bio: Vivian is a second-year applied mathematics and statistics student. Contrary to what her photo might suggest, she does not watch anime. Instead, she enjoys hikes, Jeopardy! marathons, and NPR podcasts.
   mug: no
   email: vluk@media.ucla.edu
   github: vivianpluk
 derrick_chau:
   name: Derrick Chau
+  title: Stack Developer
   bio: Derrick is a second-year mathematics and economics major with a specialization in computing who loves having a new Zoom background every week.
   mug: no
   email: dchau2@media.ucla.edu
