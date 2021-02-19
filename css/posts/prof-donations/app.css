@@ -11,4 +11,13 @@
     .usc-chart {
         width: 50%;
     }
+
+    #timeline-chart {
+        width: 70%;
+    }
+
+    .chart-container {
+        width: 70%;
+        margin: auto;
+    }
 }

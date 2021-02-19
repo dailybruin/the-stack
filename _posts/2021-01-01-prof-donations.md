@@ -29,17 +29,15 @@ stylesheets:
   - /css/posts/prof-donations/app.css
 ---
 
-<canvas id='bubble-chart'></canvas>
-
-<p style="font-size:smaller;color:gray;text-align:center">The area of each circle is proportional to the dollar amount of political donations by UCLA professors in that year.</p>
-
 “Professors, partly because of their almost universally high levels of education, are likely to be [politically] engaged,” says Martin Gilens, Chair of the Department of Public Policy and Professor of Public Policy, Political Science, and Social Welfare at UCLA.
 
 Using political campaign donations as a metric of political engagement, we compared the donations of professors from UCLA, USC, and UC Berkeley from January 2016 to December 2020 using data from the Federal Election Commission. We tracked the cumulative donation amounts of professors at all three universities over time, and looked at the top political campaigns that professors from each of the universities supported.
 
 ### UCLA Professors’ Donations over Time
 
-<canvas id='timeline-chart'></canvas>
+<div class="chart-container">
+  <canvas id='timeline-chart'></canvas>
+</div>
 
 The above graph shows the cumulative donation amounts from UCLA professors towards political campaigns from January 1, 2016 to December 31, 2020. This encompasses the months leading up to the 2016 general election through the months following the 2020 general election, including the 2018 midterm elections.
 
@@ -50,6 +48,12 @@ Donations tended to spike right before national elections, both general and midt
 Donald Trump’s victory in the 2016 presidential election may have affected the higher donation amounts for both the 2018 and 2020 general elections. “Trump was a very unconventional candidate. And he ran a very unconventional campaign,” says Gilens.
 
 The 2016 general election results might have spurred more UCLA professors to donate to political organizations. Some UCLA professors may have also donated more money than usual to political organizations.
+
+<div class="chart-container">
+  <canvas id='bubble-chart'></canvas>
+</div>
+
+<p style="font-size:smaller;color:gray;text-align:center">The area of each circle is proportional to the dollar amount of political donations by UCLA professors in that year.</p>
 
 ### Breaking Down the Campaigns
 

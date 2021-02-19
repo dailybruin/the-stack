@@ -11,6 +11,9 @@ let fontSize = 24;
 if (window.matchMedia('(max-width: 580px)').matches) {
   fontSize = 12;
 }
+if (window.matchMedia('(min-width: 1000px)').matches) {
+  scalingFactor *= 0.5;
+}
 
 let data = {
   datasets: [
