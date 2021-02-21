@@ -1,9 +1,14 @@
 ---
 title: Put Your Money Where Your Politics Are— Professors’ Political Donations
-teaser:  How do UCLA professors' political donations stack up against USC and UC Berkeley?
+teaser: How do UCLA professors' political donations stack up against USC and UC Berkeley?
 
 authors:
-  -
+  - brittney_le
+  - derrick_chau
+  - keri_chen
+  - laurel_woods
+  - maria_becerra
+  - vivian_luk
 key_takeaways:
   - Aggregating across UCLA, USC, and UC Berkeley, over 50% of professors’ donations went to just 5 political organizations.
   - The donation amounts of UCLA professors during the months leading up to a national election nearly doubled from 2016 to 2020.
