@@ -205,7 +205,7 @@ alexander_chan:
 andrew_kan:
   name: Andrew Kan
   title: Stack Developer
-  bio: Kan is a second-year computer science and engineering student who enjoys longforms and any type of puzzle.
+  bio: Kan is the 2019-2020 Stack editor and a third-year computer science and statistics student. He enjoys longforms and any type of puzzle.
   mug: Yes
   email: akan@media.ucla.edu
   github: kandrewz
@@ -281,7 +281,7 @@ bernard_mendez:
 charlotte_huang:
   name: Charlotte Huang
   title: Stack Developer
-  bio: Charlotte is a junior, majoring in Applied Math and Cognitive Science. She always wants to spend a day eating nothing but dark chocolate and drinking lattes with oat milk.
+  bio: Charlotte is a fourth-year, majoring in Applied Math and Cognitive Science. Outside of math and data, she enjoys reading, watching K-Drama, and listening to K-Pop.
   mug: Yes
   email: chuang@media.ucla.edu
   github: charlotte0408
@@ -315,10 +315,70 @@ sydney_kovach:
   email: skovach@media.ucla.edu
   mug: yes
   bio: Sydney Kovach is a second year Global Studies and Geography student who loves dancing and taking yoga classes in her free time.
+catherine_hu:
+  name: Catherine Hu
+  title: Stack Developer
+  email: chu@media.ucla.edu
+  mug: no
+  bio: Catherine Hu is a first-year Computer Science student who enjoys writing, hiking and reading.
+lindsey_parungo:
+  name: Lindsey Parungo
+  title: Stack Developer
+  email: lparungo@media.ucla.edu
+  mug: no
+  bio: Lindsey Parungo is a second year student who loves running and hippos.
+cameron_bian:
+  name: Cameron Bian
+  title: Stack Developer
+  email: cbian3@media.ucla.edu
+  mug: yes
+  bio: Cameron Bian is a fourth-year Math of Computation student. He enjoys basketball, video games and watching comics.
+  github: Cambn
+eustina_kim:
+  name: Eustina Kim
+  title: Stack Developer
+  email: ekim5@media.ucla.edu
+  mug: yes
+  bio: Eustina Kim is a fourth-year Statistics major with a minor in Digital Humanities.
+  github: kimjee8955
+ziqing_luo:
+  name: Ziqing Luo
+  title: Stack Developer
+  email: zluo@media.ucla.edu
+  mug: yes
+  bio: Ziqing Luo is a third-year Applied Math and Statistics student who is passionate about dancing and enjoys eating desserts.
+  github: luoziqing99
+samantha_low:
+  name: Samantha Low
+  title: Stack Developer
+  email: slow@media.ucla.edu
+  mug: no
+  bio: Samantha Low is a first year Environmental Science Major.
+ananya_garg:
+  name: Ananya Garg
+  title: Stack Developer
+  bio: Ananya is a first-year statistics student who enjoys travelling, cooking, and rewatching Friends in her free time.
+  mug: Yes
+  email: agarg@media.ucla.edu
+  github: ananyagarg81
+mansa_krishna:
+  name: Mansa Krishna
+  title: Stack Developer
+  bio: Mansa is a third-year, majoring in Applied Mathematics with a Specialization in Computing, and minoring in History. She is a coffee-for-breakfast advocate with a deep, abiding love for historical fiction.
+  mug: Yes
+  email: mkrishna@media.ucla.edu
+  github: mansakrishna23
+lindsey_parungo:
+  name: Lindsey Parungo
+  title: Stack Developer
+  bio: Lindsey is a second-year Financial and Actuarial Mathematics major. She enjoys running, spending time with her dog, and looking to expand her hippo memorabilia collection.
+  mug: Yes
+  email: lparungo@media.ucla.edu
+  github: Lindseyp314
 xuxin_zhang:
   name: Xuxin Zhang
   title: Stack Developer and Photo staff
-  bio: Xuxin is a third year Applied Mathematics and Statistics student. He loves collecting vintage film cameras and taking photos for strangers.
+  bio: Xuxin is a third-year Applied Mathematics and Statistics student. He loves collecting vintage film cameras and taking photos for strangers.
   mug: Yes
   email: xzhang1@media.ucla.edu
   github: xux1an
@@ -347,3 +407,9 @@ derrick_chau:
   bio: Derrick is a second-year mathematics and economics student with a specialization in computing who loves having a new Zoom background every week.
   mug: yes
   email: dchau2@media.ucla.edu
+faye_zou:
+  name: Faye Zou
+  title: Stack Developer
+  bio: Faye is a third-year Cognitive Science major. During her spare time, she likes going to the gym and playing with her puppies. 
+  mug: Yes
+  email: fzou@media.ucla.edu
