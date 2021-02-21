@@ -5,19 +5,20 @@
   window.HTMLWidgets = window.HTMLWidgets || {};
 
   // See if we're running in a viewer pane. If not, we're in a web browser.
-  var viewerMode = window.HTMLWidgets.viewerMode =
-      /\bviewer_pane=1\b/.test(window.location);
+  var viewerMode = (window.HTMLWidgets.viewerMode = /\bviewer_pane=1\b/.test(
+    window.location
+  ));
 
   // See if we're running in Shiny mode. If not, it's a static document.
   // Note that static widgets can appear in both Shiny and static modes, but
   // obviously, Shiny widgets can only appear in Shiny apps/documents.
-  var shinyMode = window.HTMLWidgets.shinyMode =
-      typeof(window.Shiny) !== "undefined" && !!window.Shiny.outputBindings;
+  var shinyMode = (window.HTMLWidgets.shinyMode =
+    typeof window.Shiny !== 'undefined' && !!window.Shiny.outputBindings);
 
   // We can't count on jQuery being available, so we implement our own
   // version if necessary.
   function querySelectorAll(scope, selector) {
-    if (typeof(jQuery) !== "undefined" && scope instanceof jQuery) {
+    if (typeof jQuery !== 'undefined' && scope instanceof jQuery) {
       return scope.find(selector);
     }
     if (scope.querySelectorAll) {
@@ -26,10 +27,8 @@
   }
 
   function asArray(value) {
-    if (value === null)
-      return [];
-    if ($.isArray(value))
-      return value;
+    if (value === null) return [];
+    if ($.isArray(value)) return value;
     return [value];
   }
 
@@ -117,23 +116,24 @@
   // Implement a vague facsimilie of jQuery's data method
   function elementData(el, name, value) {
     if (arguments.length == 2) {
-      return el["htmlwidget_data_" + name];
+      return el['htmlwidget_data_' + name];
     } else if (arguments.length == 3) {
-      el["htmlwidget_data_" + name] = value;
+      el['htmlwidget_data_' + name] = value;
       return el;
     } else {
-      throw new Error("Wrong number of arguments for elementData: " +
-        arguments.length);
+      throw new Error(
+        'Wrong number of arguments for elementData: ' + arguments.length
+      );
     }
   }
 
   // http://stackoverflow.com/questions/3446170/escape-string-for-use-in-javascript-regex
   function escapeRegExp(str) {
-    return str.replace(/[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g, "\\$&");
+    return str.replace(/[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g, '\\$&');
   }
 
   function hasClass(el, className) {
-    var re = new RegExp("\\b" + escapeRegExp(className) + "\\b");
+    var re = new RegExp('\\b' + escapeRegExp(className) + '\\b');
     return re.test(el.className);
   }
 
@@ -170,43 +170,70 @@
   // the "padding" CSS property
   // https://developer.mozilla.org/en-US/docs/Web/CSS/padding
   function unpackPadding(value) {
-    if (typeof(value) === "number")
-      value = [value];
+    if (typeof value === 'number') value = [value];
     if (value.length === 1) {
-      return {top: value[0], right: value[0], bottom: value[0], left: value[0]};
+      return {
+        top: value[0],
+        right: value[0],
+        bottom: value[0],
+        left: value[0],
+      };
     }
     if (value.length === 2) {
-      return {top: value[0], right: value[1], bottom: value[0], left: value[1]};
+      return {
+        top: value[0],
+        right: value[1],
+        bottom: value[0],
+        left: value[1],
+      };
     }
     if (value.length === 3) {
-      return {top: value[0], right: value[1], bottom: value[2], left: value[1]};
+      return {
+        top: value[0],
+        right: value[1],
+        bottom: value[2],
+        left: value[1],
+      };
     }
     if (value.length === 4) {
-      return {top: value[0], right: value[1], bottom: value[2], left: value[3]};
+      return {
+        top: value[0],
+        right: value[1],
+        bottom: value[2],
+        left: value[3],
+      };
     }
   }
 
   // Convert an unpacked padding object to a CSS value
   function paddingToCss(paddingObj) {
-    return paddingObj.top + "px " + paddingObj.right + "px " + paddingObj.bottom + "px " + paddingObj.left + "px";
+    return (
+      paddingObj.top +
+      'px ' +
+      paddingObj.right +
+      'px ' +
+      paddingObj.bottom +
+      'px ' +
+      paddingObj.left +
+      'px'
+    );
   }
 
   // Makes a number suitable for CSS
   function px(x) {
-    if (typeof(x) === "number")
-      return x + "px";
-    else
-      return x;
+    if (typeof x === 'number') return x + 'px';
+    else return x;
   }
 
   // Retrieves runtime widget sizing information for an element.
   // The return value is either null, or an object with fill, padding,
   // defaultWidth, defaultHeight fields.
   function sizingPolicy(el) {
-    var sizingEl = document.querySelector("script[data-for='" + el.id + "'][type='application/htmlwidget-sizing']");
-    if (!sizingEl)
-      return null;
-    var sp = JSON.parse(sizingEl.textContent || sizingEl.text || "{}");
+    var sizingEl = document.querySelector(
+      "script[data-for='" + el.id + "'][type='application/htmlwidget-sizing']"
+    );
+    if (!sizingEl) return null;
+    var sp = JSON.parse(sizingEl.textContent || sizingEl.text || '{}');
     if (viewerMode) {
       return sp.viewer;
     } else {
@@ -229,13 +256,13 @@
     if (tasks) {
       forEach(tasks, function(task) {
         var theseArgs = args;
-        if (typeof(task) === "object") {
+        if (typeof task === 'object') {
           theseArgs = theseArgs.concat([task.data]);
           task = task.code;
         }
         var taskFunc = tryEval(task);
-        if (typeof(taskFunc) !== "function") {
-          throw new Error("Task must be a function! Source:\n" + task);
+        if (typeof taskFunc !== 'function') {
+          throw new Error('Task must be a function! Source:\n' + task);
         }
         taskFunc.apply(target, theseArgs);
       });
@@ -250,13 +277,13 @@
     var result = null;
     try {
       result = eval(code);
-    } catch(error) {
+    } catch (error) {
       if (!error instanceof SyntaxError) {
         throw error;
       }
       try {
-        result = eval("(" + code + ")");
-      } catch(e) {
+        result = eval('(' + code + ')');
+      } catch (e) {
         if (e instanceof SyntaxError) {
           throw error;
         } else {
@@ -269,47 +296,52 @@
 
   function initSizing(el) {
     var sizing = sizingPolicy(el);
-    if (!sizing)
-      return;
+    if (!sizing) return;
 
-    var cel = document.getElementById("htmlwidget_container");
-    if (!cel)
-      return;
+    var cel = document.getElementById('htmlwidget_container');
+    if (!cel) return;
 
-    if (typeof(sizing.padding) !== "undefined") {
-      document.body.style.margin = "0";
+    if (typeof sizing.padding !== 'undefined') {
+      document.body.style.margin = '0';
       document.body.style.padding = paddingToCss(unpackPadding(sizing.padding));
     }
 
     if (sizing.fill) {
-      document.body.style.overflow = "hidden";
-      document.body.style.width = "100%";
-      document.body.style.height = "100%";
-      document.documentElement.style.width = "100%";
-      document.documentElement.style.height = "100%";
+      document.body.style.overflow = 'hidden';
+      document.body.style.width = '100%';
+      document.body.style.height = '100%';
+      document.documentElement.style.width = '100%';
+      document.documentElement.style.height = '100%';
       if (cel) {
-        cel.style.position = "absolute";
+        cel.style.position = 'absolute';
         var pad = unpackPadding(sizing.padding);
-        cel.style.top = pad.top + "px";
-        cel.style.right = pad.right + "px";
-        cel.style.bottom = pad.bottom + "px";
-        cel.style.left = pad.left + "px";
-        el.style.width = "100%";
-        el.style.height = "100%";
+        cel.style.top = pad.top + 'px';
+        cel.style.right = pad.right + 'px';
+        cel.style.bottom = pad.bottom + 'px';
+        cel.style.left = pad.left + 'px';
+        el.style.width = '100%';
+        el.style.height = '100%';
       }
 
       return {
-        getWidth: function() { return cel.offsetWidth; },
-        getHeight: function() { return cel.offsetHeight; }
+        getWidth: function() {
+          return cel.offsetWidth;
+        },
+        getHeight: function() {
+          return cel.offsetHeight;
+        },
       };
-
     } else {
       el.style.width = px(sizing.width);
       el.style.height = px(sizing.height);
 
       return {
-        getWidth: function() { return el.offsetWidth; },
-        getHeight: function() { return el.offsetHeight; }
+        getWidth: function() {
+          return el.offsetWidth;
+        },
+        getHeight: function() {
+          return el.offsetHeight;
+        },
       };
     }
   }
@@ -317,7 +349,7 @@
   // Default implementations for methods
   var defaults = {
     find: function(scope) {
-      return querySelectorAll(scope, "." + this.name);
+      return querySelectorAll(scope, '.' + this.name);
     },
     renderError: function(el, err) {
       var $el = $(el);
@@ -325,41 +357,46 @@
       this.clearError(el);
 
       // Add all these error classes, as Shiny does
-      var errClass = "shiny-output-error";
+      var errClass = 'shiny-output-error';
       if (err.type !== null) {
         // use the classes of the error condition as CSS class names
-        errClass = errClass + " " + $.map(asArray(err.type), function(type) {
-          return errClass + "-" + type;
-        }).join(" ");
+        errClass =
+          errClass +
+          ' ' +
+          $.map(asArray(err.type), function(type) {
+            return errClass + '-' + type;
+          }).join(' ');
       }
-      errClass = errClass + " htmlwidgets-error";
+      errClass = errClass + ' htmlwidgets-error';
 
       // Is el inline or block? If inline or inline-block, just display:none it
       // and add an inline error.
-      var display = $el.css("display");
-      $el.data("restore-display-mode", display);
+      var display = $el.css('display');
+      $el.data('restore-display-mode', display);
 
-      if (display === "inline" || display === "inline-block") {
+      if (display === 'inline' || display === 'inline-block') {
         $el.hide();
-        if (err.message !== "") {
-          var errorSpan = $("<span>").addClass(errClass);
+        if (err.message !== '') {
+          var errorSpan = $('<span>').addClass(errClass);
           errorSpan.text(err.message);
           $el.after(errorSpan);
         }
-      } else if (display === "block") {
+      } else if (display === 'block') {
         // If block, add an error just after the el, set visibility:none on the
         // el, and position the error to be on top of the el.
         // Mark it with a unique ID and CSS class so we can remove it later.
-        $el.css("visibility", "hidden");
-        if (err.message !== "") {
-          var errorDiv = $("<div>").addClass(errClass).css("position", "absolute")
-            .css("top", el.offsetTop)
-            .css("left", el.offsetLeft)
+        $el.css('visibility', 'hidden');
+        if (err.message !== '') {
+          var errorDiv = $('<div>')
+            .addClass(errClass)
+            .css('position', 'absolute')
+            .css('top', el.offsetTop)
+            .css('left', el.offsetLeft)
             // setting width can push out the page size, forcing otherwise
             // unnecessary scrollbars to appear and making it impossible for
             // the element to shrink; so use max-width instead
-            .css("maxWidth", el.offsetWidth)
-            .css("height", el.offsetHeight);
+            .css('maxWidth', el.offsetWidth)
+            .css('height', el.offsetHeight);
           errorDiv.text(err.message);
           $el.after(errorDiv);
 
@@ -371,29 +408,32 @@
               return;
             }
             errorDiv
-              .css("top", el.offsetTop)
-              .css("left", el.offsetLeft)
-              .css("maxWidth", el.offsetWidth)
-              .css("height", el.offsetHeight);
+              .css('top', el.offsetTop)
+              .css('left', el.offsetLeft)
+              .css('maxWidth', el.offsetWidth)
+              .css('height', el.offsetHeight);
           }, 500);
         }
       }
     },
     clearError: function(el) {
       var $el = $(el);
-      var display = $el.data("restore-display-mode");
-      $el.data("restore-display-mode", null);
+      var display = $el.data('restore-display-mode');
+      $el.data('restore-display-mode', null);
 
-      if (display === "inline" || display === "inline-block") {
-        if (display)
-          $el.css("display", display);
-        $(el.nextSibling).filter(".htmlwidgets-error").remove();
-      } else if (display === "block"){
-        $el.css("visibility", "inherit");
-        $(el.nextSibling).filter(".htmlwidgets-error").remove();
+      if (display === 'inline' || display === 'inline-block') {
+        if (display) $el.css('display', display);
+        $(el.nextSibling)
+          .filter('.htmlwidgets-error')
+          .remove();
+      } else if (display === 'block') {
+        $el.css('visibility', 'inherit');
+        $(el.nextSibling)
+          .filter('.htmlwidgets-error')
+          .remove();
       }
     },
-    sizing: {}
+    sizing: {},
   };
 
   // Called by widget bindings to register a new type of widget. The definition
@@ -409,13 +449,13 @@
   //   element, as the data changes.
   window.HTMLWidgets.widget = function(definition) {
     if (!definition.name) {
-      throw new Error("Widget must have a name");
+      throw new Error('Widget must have a name');
     }
     if (!definition.type) {
-      throw new Error("Widget must have a type");
+      throw new Error('Widget must have a type');
     }
     // Currently we only support output widgets
-    if (definition.type !== "output") {
+    if (definition.type !== 'output') {
       throw new Error("Unrecognized widget type '" + definition.type + "'");
     }
     // TODO: Verify that .name is a valid CSS classname
@@ -439,7 +479,7 @@
     }
 
     if (!definition.renderValue) {
-      throw new Error("Widget must have a renderValue function");
+      throw new Error('Widget must have a renderValue function');
     }
 
     // For static rendering (non-Shiny), use a simple widget registration
@@ -448,11 +488,11 @@
     window.HTMLWidgets.widgets = window.HTMLWidgets.widgets || [];
     // Merge defaults into the definition; don't mutate the original definition.
     var staticBinding = extend({}, defaults, definition);
-    overrideMethod(staticBinding, "find", function(superfunc) {
+    overrideMethod(staticBinding, 'find', function(superfunc) {
       return function(scope) {
         var results = superfunc(scope);
         // Filter out Shiny outputs, we only want the static kind
-        return filterByClass(results, "html-widget-output", false);
+        return filterByClass(results, 'html-widget-output', false);
       };
     });
     window.HTMLWidgets.widgets.push(staticBinding);
@@ -483,12 +523,12 @@
       // methods in the future, and we want them to be overrideable by
       // HTMLWidget binding definitions, then we'll need to add them to this
       // list.
-      delegateMethod(shinyBinding, bindingDef, "getId");
-      delegateMethod(shinyBinding, bindingDef, "onValueChange");
-      delegateMethod(shinyBinding, bindingDef, "onValueError");
-      delegateMethod(shinyBinding, bindingDef, "renderError");
-      delegateMethod(shinyBinding, bindingDef, "clearError");
-      delegateMethod(shinyBinding, bindingDef, "showProgress");
+      delegateMethod(shinyBinding, bindingDef, 'getId');
+      delegateMethod(shinyBinding, bindingDef, 'onValueChange');
+      delegateMethod(shinyBinding, bindingDef, 'onValueError');
+      delegateMethod(shinyBinding, bindingDef, 'renderError');
+      delegateMethod(shinyBinding, bindingDef, 'clearError');
+      delegateMethod(shinyBinding, bindingDef, 'showProgress');
 
       // The find, renderValue, and resize are handled differently, because we
       // want to actually decorate the behavior of the bindingDef methods.
@@ -497,15 +537,14 @@
         var results = bindingDef.find(scope);
 
         // Only return elements that are Shiny outputs, not static ones
-        var dynamicResults = results.filter(".html-widget-output");
+        var dynamicResults = results.filter('.html-widget-output');
 
         // It's possible that whatever caused Shiny to think there might be
         // new dynamic outputs, also caused there to be new static outputs.
         // Since there might be lots of different htmlwidgets bindings, we
         // schedule execution for later--no need to staticRender multiple
         // times.
-        if (results.length !== dynamicResults.length)
-          scheduleStaticRender();
+        if (results.length !== dynamicResults.length) scheduleStaticRender();
 
         return dynamicResults;
       };
@@ -522,24 +561,30 @@
         }
         if (!bindingDef.renderOnNullValue) {
           if (data.x === null) {
-            el.style.visibility = "hidden";
+            el.style.visibility = 'hidden';
             return;
           } else {
-            el.style.visibility = "inherit";
+            el.style.visibility = 'inherit';
           }
         }
-        if (!elementData(el, "initialized")) {
+        if (!elementData(el, 'initialized')) {
           initSizing(el);
 
-          elementData(el, "initialized", true);
+          elementData(el, 'initialized', true);
           if (bindingDef.initialize) {
-            var result = bindingDef.initialize(el, el.offsetWidth,
-              el.offsetHeight);
-            elementData(el, "init_result", result);
+            var result = bindingDef.initialize(
+              el,
+              el.offsetWidth,
+              el.offsetHeight
+            );
+            elementData(el, 'init_result', result);
           }
         }
-        bindingDef.renderValue(el, data.x, elementData(el, "init_result"));
-        evalAndRun(data.jsHooks.render, elementData(el, "init_result"), [el, data.x]);
+        bindingDef.renderValue(el, data.x, elementData(el, 'init_result'));
+        evalAndRun(data.jsHooks.render, elementData(el, 'init_result'), [
+          el,
+          data.x,
+        ]);
       };
 
       // Only override resize if bindingDef implements it
@@ -547,8 +592,13 @@
         shinyBinding.resize = function(el, width, height) {
           // Shiny can call resize before initialize/renderValue have been
           // called, which doesn't make sense for widgets.
-          if (elementData(el, "initialized")) {
-            bindingDef.resize(el, width, height, elementData(el, "init_result"));
+          if (elementData(el, 'initialized')) {
+            bindingDef.resize(
+              el,
+              width,
+              height,
+              elementData(el, 'init_result')
+            );
           }
         };
       }
@@ -576,38 +626,36 @@
       forEach(matches, function(el) {
         var sizeObj = initSizing(el, binding);
 
-        if (hasClass(el, "html-widget-static-bound"))
-          return;
-        el.className = el.className + " html-widget-static-bound";
+        if (hasClass(el, 'html-widget-static-bound')) return;
+        el.className = el.className + ' html-widget-static-bound';
 
         var initResult;
         if (binding.initialize) {
-          initResult = binding.initialize(el,
+          initResult = binding.initialize(
+            el,
             sizeObj ? sizeObj.getWidth() : el.offsetWidth,
             sizeObj ? sizeObj.getHeight() : el.offsetHeight
           );
-          elementData(el, "init_result", initResult);
+          elementData(el, 'init_result', initResult);
         }
 
         if (binding.resize) {
           var lastSize = {
             w: sizeObj ? sizeObj.getWidth() : el.offsetWidth,
-            h: sizeObj ? sizeObj.getHeight() : el.offsetHeight
+            h: sizeObj ? sizeObj.getHeight() : el.offsetHeight,
           };
           var resizeHandler = function(e) {
             var size = {
               w: sizeObj ? sizeObj.getWidth() : el.offsetWidth,
-              h: sizeObj ? sizeObj.getHeight() : el.offsetHeight
+              h: sizeObj ? sizeObj.getHeight() : el.offsetHeight,
             };
-            if (size.w === 0 && size.h === 0)
-              return;
-            if (size.w === lastSize.w && size.h === lastSize.h)
-              return;
+            if (size.w === 0 && size.h === 0) return;
+            if (size.w === lastSize.w && size.h === lastSize.h) return;
             lastSize = size;
             binding.resize(el, size.w, size.h, initResult);
           };
 
-          on(window, "resize", resizeHandler);
+          on(window, 'resize', resizeHandler);
 
           // This is needed for cases where we're running in a Shiny
           // app, but the widget itself is not a Shiny output, but
@@ -617,14 +665,18 @@
           // call resize handlers for Shiny outputs, not for static
           // widgets, so we do it ourselves.
           if (window.jQuery) {
-            window.jQuery(document).on(
-              "shown.htmlwidgets shown.bs.tab.htmlwidgets shown.bs.collapse.htmlwidgets",
-              resizeHandler
-            );
-            window.jQuery(document).on(
-              "hidden.htmlwidgets hidden.bs.tab.htmlwidgets hidden.bs.collapse.htmlwidgets",
-              resizeHandler
-            );
+            window
+              .jQuery(document)
+              .on(
+                'shown.htmlwidgets shown.bs.tab.htmlwidgets shown.bs.collapse.htmlwidgets',
+                resizeHandler
+              );
+            window
+              .jQuery(document)
+              .on(
+                'hidden.htmlwidgets hidden.bs.tab.htmlwidgets hidden.bs.collapse.htmlwidgets',
+                resizeHandler
+              );
           }
 
           // This is needed for the specific case of ioslides, which
@@ -637,12 +689,14 @@
             // It's OK to limit this to window.addEventListener
             // browsers because ioslides itself only supports
             // such browsers.
-            on(document, "slideenter", resizeHandler);
-            on(document, "slideleave", resizeHandler);
+            on(document, 'slideenter', resizeHandler);
+            on(document, 'slideleave', resizeHandler);
           }
         }
 
-        var scriptData = document.querySelector("script[data-for='" + el.id + "'][type='application/json']");
+        var scriptData = document.querySelector(
+          "script[data-for='" + el.id + "'][type='application/json']"
+        );
         if (scriptData) {
           var data = JSON.parse(scriptData.textContent || scriptData.text);
           // Resolve strings marked as javascript literals to objects
@@ -657,15 +711,14 @@
     });
 
     invokePostRenderHandlers();
-  }
-
+  };
 
   function has_jQuery3() {
     if (!window.jQuery) {
       return false;
     }
     var $version = window.jQuery.fn.jquery;
-    var $major_version = parseInt($version.split(".")[0]);
+    var $major_version = parseInt($version.split('.')[0]);
     return $major_version >= 3;
   }
 
@@ -700,65 +753,75 @@
   }
 
   if (document.addEventListener) {
-    document.addEventListener("DOMContentLoaded", function() {
-      document.removeEventListener("DOMContentLoaded", arguments.callee, false);
-      maybeStaticRenderLater();
-    }, false);
+    document.addEventListener(
+      'DOMContentLoaded',
+      function() {
+        document.removeEventListener(
+          'DOMContentLoaded',
+          arguments.callee,
+          false
+        );
+        maybeStaticRenderLater();
+      },
+      false
+    );
   } else if (document.attachEvent) {
-    document.attachEvent("onreadystatechange", function() {
-      if (document.readyState === "complete") {
-        document.detachEvent("onreadystatechange", arguments.callee);
+    document.attachEvent('onreadystatechange', function() {
+      if (document.readyState === 'complete') {
+        document.detachEvent('onreadystatechange', arguments.callee);
         maybeStaticRenderLater();
       }
     });
   }
 
-
   window.HTMLWidgets.getAttachmentUrl = function(depname, key) {
     // If no key, default to the first item
-    if (typeof(key) === "undefined")
-      key = 1;
+    if (typeof key === 'undefined') key = 1;
 
-    var link = document.getElementById(depname + "-" + key + "-attachment");
+    var link = document.getElementById(depname + '-' + key + '-attachment');
     if (!link) {
-      throw new Error("Attachment " + depname + "/" + key + " not found in document");
+      throw new Error(
+        'Attachment ' + depname + '/' + key + ' not found in document'
+      );
     }
-    return link.getAttribute("href");
+    return link.getAttribute('href');
   };
 
   window.HTMLWidgets.dataframeToD3 = function(df) {
     var names = [];
     var length;
     for (var name in df) {
-        if (df.hasOwnProperty(name))
-            names.push(name);
-        if (typeof(df[name]) !== "object" || typeof(df[name].length) === "undefined") {
-            throw new Error("All fields must be arrays");
-        } else if (typeof(length) !== "undefined" && length !== df[name].length) {
-            throw new Error("All fields must be arrays of the same length");
-        }
-        length = df[name].length;
+      if (df.hasOwnProperty(name)) names.push(name);
+      if (
+        typeof df[name] !== 'object' ||
+        typeof df[name].length === 'undefined'
+      ) {
+        throw new Error('All fields must be arrays');
+      } else if (typeof length !== 'undefined' && length !== df[name].length) {
+        throw new Error('All fields must be arrays of the same length');
+      }
+      length = df[name].length;
     }
     var results = [];
     var item;
     for (var row = 0; row < length; row++) {
-        item = {};
-        for (var col = 0; col < names.length; col++) {
-            item[names[col]] = df[names[col]][row];
-        }
-        results.push(item);
+      item = {};
+      for (var col = 0; col < names.length; col++) {
+        item[names[col]] = df[names[col]][row];
+      }
+      results.push(item);
     }
     return results;
   };
 
   window.HTMLWidgets.transposeArray2D = function(array) {
-      if (array.length === 0) return array;
-      var newArray = array[0].map(function(col, i) {
-          return array.map(function(row) {
-              return row[i]
-          })
+    if (array.length === 0) return array;
+    var newArray = array[0].map(function(col, i) {
+      return array.map(function(row) {
+        return row[i];
       });
-      return newArray;
+    });
+    return newArray;
   };
   // Split value at splitChar, but allow splitChar to be escaped
   // using escapeChar. Any other characters escaped by escapeChar
@@ -766,12 +829,12 @@
   function splitWithEscape(value, splitChar, escapeChar) {
     var results = [];
     var escapeMode = false;
-    var currentResult = "";
+    var currentResult = '';
     for (var pos = 0; pos < value.length; pos++) {
       if (!escapeMode) {
         if (value[pos] === splitChar) {
           results.push(currentResult);
-          currentResult = "";
+          currentResult = '';
         } else if (value[pos] === escapeChar) {
           escapeMode = true;
         } else {
@@ -782,7 +845,7 @@
         escapeMode = false;
       }
     }
-    if (currentResult !== "") {
+    if (currentResult !== '') {
       results.push(currentResult);
     }
     return results;
@@ -793,11 +856,12 @@
     for (var i = 0, l = parts.length; i < l; i++) {
       var part = parts[i];
       // part may be a character or 'numeric' member name
-      if (o !== null && typeof o === "object" && part in o) {
-        if (i == (l - 1)) { // if we are at the end of the line then evalulate
-          if (typeof o[part] === "string")
-            o[part] = tryEval(o[part]);
-        } else { // otherwise continue to next embedded object
+      if (o !== null && typeof o === 'object' && part in o) {
+        if (i == l - 1) {
+          // if we are at the end of the line then evalulate
+          if (typeof o[part] === 'string') o[part] = tryEval(o[part]);
+        } else {
+          // otherwise continue to next embedded object
           o = o[part];
         }
       }
@@ -808,7 +872,7 @@
   // HTMLWidget binding's initialize() or factory() function)
   // associated with an element, or null if none.
   window.HTMLWidgets.getInstance = function(el) {
-    return elementData(el, "init_result");
+    return elementData(el, 'init_result');
   };
 
   // Finds the first element in the scope that matches the selector,
@@ -887,17 +951,13 @@
       },
       resize: function(el, width, height, instance) {
         return instance.resize(width, height);
-      }
+      },
     };
 
-    if (defn.find)
-      result.find = defn.find;
-    if (defn.renderError)
-      result.renderError = defn.renderError;
-    if (defn.clearError)
-      result.clearError = defn.clearError;
+    if (defn.find) result.find = defn.find;
+    if (defn.renderError) result.renderError = defn.renderError;
+    if (defn.clearError) result.clearError = defn.clearError;
 
     return result;
   }
 })();
-
