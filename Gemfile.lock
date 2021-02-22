@@ -3,8 +3,6 @@ GEM
   specs:
     addressable (2.7.0)
       public_suffix (>= 2.0.2, < 5.0)
-    bundle (2.2.11)
-    bundler (2.2.11)
     colorator (1.1.0)
     concurrent-ruby (1.1.8)
     em-websocket (0.5.2)
@@ -78,6 +76,7 @@ PLATFORMS
   x86_64-darwin-20
 
 DEPENDENCIES
+  bundler (>= 2.2.2)
   jekyll
   jekyll-include-cache
   jekyll-paginate
