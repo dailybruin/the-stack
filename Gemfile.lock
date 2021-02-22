@@ -76,7 +76,6 @@ PLATFORMS
   x86_64-darwin-20
 
 DEPENDENCIES
-  bundler (>= 2.2.2)
   jekyll
   jekyll-include-cache
   jekyll-paginate
@@ -89,4 +88,4 @@ DEPENDENCIES
   wdm
 
 BUNDLED WITH
-   2.2.11
+   2.0.1
