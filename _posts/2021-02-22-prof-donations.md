@@ -7,6 +7,7 @@ authors:
   - derrick_chau
   - keri_chen
   - brittney_le
+  - vivian_luk
   - laurel_woods
 
 key_takeaways:
@@ -40,6 +41,8 @@ Analyzing political engagement through the metric of political campaign donation
 
 We also compared the donations of professors from UCLA, USC and UC Berkeley from January 2019 to December 2020 and looked at the top political campaigns that professors from each of the universities supported. For all three universities, our data includes only contributors who self-reported their profession as “professor” and their state as California. For UCLA, our data consists of donors who self-reported their employer as “UCLA” or “University of California, Los Angeles.” For USC, our data includes donors who self-reported their employer as “USC” or “University of Southern California.” For UC Berkeley, our data includes donors who self-reported their employer as “UCB,” “UC Berkeley” or “University of California, Berkeley.” We would like to note that UC Berkeley had roughly half the number of entries of both UCLA and USC.
 
+<div class="small-line-break"></div>
+
 ### UCLA Professors’ Donations over Time
 
 <div class="chart-container">
@@ -63,7 +66,7 @@ Former President Donald Trump’s victory in the 2016 presidential election may 
 
 Interestingly, donations to House of Representatives campaigns in particular jumped from $35,805.40 in the 2016 national elections to $184,492.34 during the 2018 midterm elections, an increase of more than 500%. For comparison, donations to Senate campaigns in particular only increased from $69,852.72 in 2016 to $70,877.44 in 2018.
 
-<div class="line-break"></div>
+<div class="small-line-break"></div>
 
 ### Breaking Down the Campaigns
 
