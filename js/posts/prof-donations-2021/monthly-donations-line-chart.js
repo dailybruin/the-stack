@@ -1,10 +1,10 @@
 var linechart;
 
-d3
-  .csv('/datasets/professor-donations/monthly_donations.csv')
-  .then(function(donations) {
-    makeChart(donations);
-  });
+d3.csv('/datasets/professor-donations/monthly_donations.csv').then(function(
+  donations
+) {
+  makeChart(donations);
+});
 
 function makeChart(donations) {
   const verticalLinePlugin = {
@@ -150,7 +150,7 @@ function makeChart(donations) {
   if (window.matchMedia('(max-width: 480px)').matches) {
     linechart.canvas.style = 'max-height:400px';
     linechart.options.maintainAspectRatio = false;
-    console.log(linechart);
+    //console.log(linechart);
 
     linechart.update();
   }

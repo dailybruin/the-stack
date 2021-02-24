@@ -1,6 +1,6 @@
 ---
 title: "Put Your Money Where Your Politics Are: Professors’ Political Donations"
-teaser:  How do UCLA professors' political donations stack up against USC and UC Berkeley?
+teaser: How do UCLA professors' political donations stack up against USC and UC Berkeley?
 
 authors:
   - maria_becerra
@@ -11,9 +11,9 @@ authors:
   - laurel_woods
 
 key_takeaways:
-- Aggregating data across UCLA, USC and UC Berkeley, more than 50% of professors’ donations went to just five political organizations.
-- In 2020, UCLA professors donated nearly three times as much to political campaigns as they did in 2016.
-- UCLA professors’ donations tend to spike in the months ahead of a national election.
+  - Aggregating data across UCLA, USC and UC Berkeley, more than 50% of professors’ donations went to just five political organizations.
+  - In 2020, UCLA professors donated nearly three times as much to political campaigns as they did in 2016.
+  - UCLA professors’ donations tend to spike in the months ahead of a national election.
 
 featured_image:
   url: prof-donations/cover_photo.png
@@ -37,9 +37,9 @@ stylesheets:
 
 “Professors, partly because of their almost universally high levels of education, are likely to be (politically) engaged,” said Martin Gilens, chair of the department of public policy and professor of public policy, political science and social welfare at UCLA.
 
-Analyzing political engagement through the metric of political campaign donations, we tracked the donations from UCLA professors over the past two presidential election cycles, using publicly available data from the Federal Election Commission. Though the FEC does not require employment or occupation information from donors, campaigns and candidates are required to report the employment and occupation information of donors who contribute more than $200 in a single calendar year to the FEC. Many campaigns and candidates choose to collect and report such information from all donors to the FEC.
+Analyzing political engagement through the metric of political campaign donations, we tracked the donations from UCLA professors over the past two presidential election cycles, using publicly available data from the Federal Election Commission. Though the FEC does not require employment or occupation information from donors, campaigns and candidates are required to report the employment and occupation information of donors who contribute more than \$200 in a single calendar year to the FEC. Many campaigns and candidates choose to collect and report such information from all donors to the FEC.
 
-We also compared the donations of professors from UCLA, USC and UC Berkeley from January 2019 to December 2020 and looked at the top political campaigns that professors from each of the universities supported. For all three universities, our data includes only contributors who self-reported their profession as “professor” and their state as California. For UCLA, our data consists of donors who self-reported their employer as “UCLA” or “University of California, Los Angeles.” For USC, our data includes donors who self-reported their employer as “USC” or “University of Southern California.” For UC Berkeley, our data includes donors who self-reported their employer as “UCB,” “UC Berkeley” or “University of California, Berkeley.” We would like to note that UC Berkeley had roughly half the number of entries of both UCLA and USC.
+We also compared the donations of professors from UCLA, USC and UC Berkeley from Jan. 1, 2019 to Dec. 31, 2020 and looked at the top political campaigns that professors from each of the universities supported. For all three universities, our data includes only contributors who self-reported their profession as “professor” and their state as California. For UCLA, our data consists of donors who self-reported their employer as “UCLA” or “University of California, Los Angeles.” For USC, our data includes donors who self-reported their employer as “USC” or “University of Southern California.” For UC Berkeley, our data includes donors who self-reported their employer as “UCB,” “UC Berkeley” or “University of California, Berkeley.” We would like to note that UC Berkeley had roughly half the number of entries of both UCLA and USC.
 
 <div class="small-line-break"></div>
 
@@ -49,7 +49,7 @@ We also compared the donations of professors from UCLA, USC and UC Berkeley from
   <canvas id='timeline-chart'></canvas>
 </div>
 
-The above graph shows the monthly cumulative donation amounts from UCLA professors towards political campaigns from Jan. 1, 2016 to Dec. 31, 2020. This encompasses the months leading up to the 2016 general elections through the months following the 2020 general elections, including the 2018 midterm elections.
+<p class="chart-descrip">The above graph shows the monthly cumulative donation amounts from UCLA professors towards political campaigns from Jan. 1, 2016 to Dec. 31, 2020. This encompasses the months leading up to the 2016 general elections through the months following the 2020 general elections, including the 2018 midterm elections.</p>
 
 <div class="bubble-container">
   <canvas id='bubble-chart'></canvas>
