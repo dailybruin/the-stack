@@ -266,7 +266,7 @@ madeline_blasingame:
 laurel_woods:
   name: Laurel Woods
   title: Stack Developer
-  bio: Laurel is a second-year student who's somewhere in between computer science and cognitive science. She loves anything outdoorsy, especially if her dog is there.
+  bio: Laurel is a third-year cognitive science and digital humanities student. She loves anything outdoorsy, especially if her dog is there.
   mug: Yes
   email: lwoods@media.ucla.edu
   github: laurelrwoods
@@ -307,7 +307,7 @@ keri_chen:
   name: Keri Chen
   title: Stack Developer
   email: kchen1@media.ucla.edu
-  bio: Chen is a first-year sociology student. When not writing essays and articles, she enjoys watching Vox videos and takes pride in being able to pack for two weeks in a single carry-on.
+  bio: Chen is a second-year communications student. When not writing articles and designing for Daily Bruin, she enjoys discovering new music and takes pride in being able to pack for two weeks in a single carry-on.
   mug: yes
 sydney_kovach:
   name: Sydney Kovach
@@ -389,3 +389,27 @@ faye_zou:
   bio: Faye is a third-year Cognitive Science major. During her spare time, she likes going to the gym and playing with her puppies. 
   mug: Yes
   email: fzou@media.ucla.edu
+maria_becerra:
+  name: Maria Becerra
+  title: Stack Developer
+  bio: Maria is a fourth-year cognitive science student with a specialization in computing. She loves coffee, flowers and collecting stationary.
+  mug: yes
+  email: msoto@media.ucla.edu
+brittney_le:
+  name: Brittney Le
+  title: Stack Developer
+  bio: Brittney is a fourth-year human biology and society student. She likes to browse too much on Reddit, meditate and listen to podcasts.
+  mug: yes
+  email: ble@media.ucla.edu
+vivian_luk:
+  name: Vivian Luk
+  title: Stack Developer
+  bio: Vivian is a second-year applied mathematics and statistics student. Contrary to what her photo might suggest, she does not watch anime. Instead, she enjoys hikes, Jeopardy! marathons and NPR podcasts.
+  mug: yes
+  email: vluk@media.ucla.edu
+derrick_chau:
+  name: Derrick Chau
+  title: Stack Developer
+  bio: Derrick is a second-year mathematics and economics student with a specialization in computing who loves having a new Zoom background every week.
+  mug: yes
+  email: dchau2@media.ucla.edu
