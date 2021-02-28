@@ -77,7 +77,7 @@ var ucbBarChart = new Chart(ctxOne, {
             max: ucbTotal * 0.35, // Your absolute max value
             stepSize: ucbTotal * 0.05,
             callback: function(value) {
-              return (value / ucbTotal * 100).toFixed(0) + '%'; // convert it to percentage
+              return ((value / ucbTotal) * 100).toFixed(0) + '%'; // convert it to percentage
             },
           },
           scaleLabel: {
@@ -90,7 +90,7 @@ var ucbBarChart = new Chart(ctxOne, {
     },
     title: {
       display: true,
-      text: 'Top 5 Campaigns Donated to by UC Berkeley Professors',
+      text: 'Top 5 Campaigns Donated to by UC Berkeley Professors, 2019-2020',
       fontSize: 16,
     },
     tooltips: {
@@ -101,7 +101,7 @@ var ucbBarChart = new Chart(ctxOne, {
             currency: 'USD',
             maximumFractionDigits: 0,
           });
-          let percentage = Math.round(tooltipItem.yLabel / ucbTotal * 100);
+          let percentage = Math.round((tooltipItem.yLabel / ucbTotal) * 100);
 
           return dollars + ` | ${percentage}% of total`;
         },

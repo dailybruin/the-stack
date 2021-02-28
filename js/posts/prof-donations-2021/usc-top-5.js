@@ -71,7 +71,7 @@ var uscBarChart = new Chart(ctxTwo, {
             max: this.max, // Your absolute max value
             stepSize: uscTotal * 0.05,
             callback: function(value) {
-              return (value / uscTotal * 100).toFixed(0) + '%'; // convert it to percentage
+              return ((value / uscTotal) * 100).toFixed(0) + '%'; // convert it to percentage
             },
           },
           scaleLabel: {
@@ -84,7 +84,7 @@ var uscBarChart = new Chart(ctxTwo, {
     },
     title: {
       display: true,
-      text: 'Top 5 Campaigns Donated to by USC Professors',
+      text: 'Top 5 Campaigns Donated to by USC Professors, 2019-2020',
       fontSize: 16,
     },
     tooltips: {
@@ -95,7 +95,7 @@ var uscBarChart = new Chart(ctxTwo, {
             currency: 'USD',
             maximumFractionDigits: 0,
           });
-          let percentage = Math.round(tooltipItem.yLabel / uscTotal * 100);
+          let percentage = Math.round((tooltipItem.yLabel / uscTotal) * 100);
 
           return dollars + ` | ${percentage}% of total`;
         },

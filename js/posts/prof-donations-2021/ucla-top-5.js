@@ -71,7 +71,7 @@ var uclaBarChart = new Chart(ctx, {
             max: uclaTotal * 0.35, // Your absolute max value
             stepSize: uclaTotal * 0.05,
             callback: function(value) {
-              return (value / uclaTotal * 100).toFixed(0) + '%'; // convert it to percentage
+              return ((value / uclaTotal) * 100).toFixed(0) + '%'; // convert it to percentage
             },
           },
           scaleLabel: {
@@ -84,7 +84,7 @@ var uclaBarChart = new Chart(ctx, {
     },
     title: {
       display: true,
-      text: 'Top 5 Campaigns Donated to by UCLA Professors',
+      text: 'Top 5 Campaigns Donated to by UCLA Professors, 2019-2020',
       fontSize: 16,
     },
     tooltips: {
@@ -95,7 +95,7 @@ var uclaBarChart = new Chart(ctx, {
             currency: 'USD',
             maximumFractionDigits: 0,
           });
-          let percentage = Math.round(tooltipItem.yLabel / uclaTotal * 100);
+          let percentage = Math.round((tooltipItem.yLabel / uclaTotal) * 100);
 
           return dollars + ` | ${percentage}% of total`;
         },
