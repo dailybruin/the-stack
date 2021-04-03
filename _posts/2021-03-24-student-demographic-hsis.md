@@ -1,8 +1,11 @@
 ---
 title: Student Demographics HSIs article
 teaser: 
-authors:
-  - 
+authors: 
+  - priya_kanneboyina
+  - mansa_krishna
+  - samantha_low
+  - lindsey_parungo
 key_takeaways:
   - 
 featured_image:
