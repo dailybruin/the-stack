@@ -1,3 +1,5 @@
+Don't know markdown? Check out this link (markdown guide)[https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet]
+
 # Title of Article
 
 **Authors**: List of authors
