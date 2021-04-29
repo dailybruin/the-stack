@@ -1,13 +1,20 @@
+<<<<<<< HEAD
 
 let ctx1 = document.getElementById('grad-rate-line').getContext("2d");
     //let ctx = document.getElementById('myChart').getContext('2d');
     let chart = new Chart(ctx1, {
+=======
+let ctx = document.getElementById('grad-rate-line');
+//var ctx = document.getElementById('myChart').getContext('2d');
+var chart = new Chart(ctx, {
+>>>>>>> 1327cd894b19621f34a16d89822d3f96262ced2c
     // The type of chart we want to create
     type: 'line',
     // The data for our dataset
     data: {
         labels: ['2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019'],
         datasets: [{
+<<<<<<< HEAD
             label: 'UCLA',
             fill: false,
             borderColor: '#3284BF',
@@ -101,6 +108,12 @@ let ctx1 = document.getElementById('grad-rate-line').getContext("2d");
            
 
 
+=======
+            label: 'My First dataset',
+            backgroundColor: 'rgb(100, 25, 142)',
+            borderColor: 'rgb(255, 100, 132)',
+            data: [0, 10, 5, 2, 20, 30, 45]
+>>>>>>> 1327cd894b19621f34a16d89822d3f96262ced2c
         }]
     },
     // Configuration options go here
