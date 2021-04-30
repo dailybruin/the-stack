@@ -46,6 +46,7 @@ var myChart = new Chart(ctxTotal, {
             yAxes: {
                 min: 0,
                 max: 600,
+                display: true,
                 labelString: "Total Grant Money per Student"
             },
             xAxes: {
@@ -53,28 +54,13 @@ var myChart = new Chart(ctxTotal, {
                 labelString: "Year"
             }
         },
-        plugins: {
-            annotation: {
-                annotations: [
-                    {
-                        type: "line",
-                        mode: "vertical",
-                        scaleID: "x-axis-0",
-                        value: "2015-16",
-                        borderColor: "red",
-                        label: {
-                            content: "TODAY",
-                            enabled: true,
-                            position: "top"
-                        }
-                    }]
-            }
-        }
     },
     lineAtIndex: [
-        { index: 5.5, text: ['2012', 'UCSC becomes', 'a HSI'] },
-        { index: 8.5, text: ['2015', 'UCSB becomes', 'a HSI'] },
-        { index: 10.5, text: ['2017', 'UCI becomes', 'a HSI'] },
+        { index: 7, text: ['2012', 'UCSC becomes', 'a HSI'] },
+        { index: 10, text: ['2015', 'UCSB becomes', 'a HSI'] },
+        { index: 12, text: ['2017', 'UCI becomes', 'a HSI'] },
+        { index: 5, text: ['2010', 'UCMerced becomes', 'a HSI'] },
+        { index: 3, text: ['2008', 'UCR becomes', 'a HSI'] }
     ],
 })
 
