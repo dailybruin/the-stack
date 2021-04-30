@@ -55,6 +55,7 @@ function makeChart(gap) {
     labels: [],
     datasets: [{
         data: [],
+        label: ['UCLA', 'UCI'],
         fill: false,
         lineTension:0,
         borderColor: '#3284BF',
