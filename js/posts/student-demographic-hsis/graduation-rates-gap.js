@@ -1,19 +1,19 @@
 var linechart;
 
-d3.csv('/datasets/student-demographics-hsis/graduationrates2.csv').then(function(
+d3.csv('/datasets/student-demographics-hsis/graduationrates2.csv').then(function (
   gap
 ) {
   makeChart(gap);
 });
-
+//KEEP 
 function makeChart(gap) {
   const verticalLinePlugin = {
-    getLinePosition: function(chart, line) {
+    getLinePosition: function (chart, line) {
       const meta = chart.getDatasetMeta(0); // first dataset is used to discover X coordinate of a point
       const data = meta.data;
       return data[line.index]._model.x;
     },
-    renderVerticalLine: function(chartInstance, line) {
+    renderVerticalLine: function (chartInstance, line) {
       const lineLeftOffset = this.getLinePosition(chartInstance, line);
       const scale = chartInstance.scales['y-axis-0'];
       const context = chartInstance.chart.ctx;
@@ -40,7 +40,7 @@ function makeChart(gap) {
       context.fillText(line.text[2], lineLeftOffset, y + 2 * increment);
     },
 
-    afterDatasetsDraw: function(chart, easing) {
+    afterDatasetsDraw: function (chart, easing) {
       if (chart.config.lineAtIndex) {
         chart.config.lineAtIndex.forEach(line =>
           this.renderVerticalLine(chart, line)
@@ -50,16 +50,16 @@ function makeChart(gap) {
   };
 
   Chart.plugins.register(verticalLinePlugin);
-
+  //TO HERE 
   let data = {
     labels: [],
     datasets: [{
-        data: [],
-        fill: false,
-        lineTension:0,
-        borderColor: '#3284BF',
-        backgroundColor: '#3284BF',
-      },
+      data: [],
+      fill: false,
+      lineTension: 0,
+      borderColor: '#3284BF',
+      backgroundColor: '#3284BF',
+    },
     ],
   };
   gap.forEach(month => {
@@ -79,9 +79,9 @@ function makeChart(gap) {
             labelString: 'Difference between White and Hispanic Graduation Rate',
           },
           ticks: {
-            callback: function(value) {
-                return (value ) + '%'; // convert it to percentage
-              }
+            callback: function (value) {
+              return (value) + '%'; // convert it to percentage
+            }
           },
         },
       ],
@@ -102,7 +102,7 @@ function makeChart(gap) {
       intersect: true,
       displayColors: false,
       callbacks: {
-        label: function(tooltipItem, data) {
+        label: function (tooltipItem, data) {
           return tooltipItem.yLabel.toLocaleString('en-US', {
             style: 'currency',
             currency: 'USD',
