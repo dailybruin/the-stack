@@ -18,26 +18,23 @@ scripts:
   - //ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js
   - //d3js.org/d3.v6.min.js
   - //cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@0.7.0
-<<<<<<< HEAD
   - //cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js
+  - //cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-annotation/0.5.5/chartjs-plugin-annotation.min.js
   - /js/posts/student-demographic-hsis/graduation-rates.js 
   - /js/posts/student-demographic-hsis/graduation-rates-change.js
   - /js/posts/student-demographic-hsis/graduation-rates-gap.js
-=======
   - https://unpkg.com/react@16/umd/react.development.js
   - https://unpkg.com/react-dom@16/umd/react-dom.development.js
   - https://unpkg.com/babel-standalone@6/babel.min.js
   - https://unpkg.com/react-vis/dist/dist.min.js
   - https://unpkg.com/react-bootstrap@next/dist/react-bootstrap.min.js
   - /js/posts/student-demographic-hsis/graduation-rates.js
-  - /js/posts/student-demographic-hsis/Grant_Chart.js
->>>>>>> 1327cd894b19621f34a16d89822d3f96262ced2c
+  - /js/posts/student-demographic-hsis/DOEviz.js
+  - /js/posts/student-demographic-hsis/TotalViz.js
 ---
 hi this is a test. Test 2.
 
 plug in script in case anyone wants it:  - //cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@0.7.0
-
- -//cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-annotation/0.5.5/chartjs-plugin-annotation.min.js
 
 ### The Story in Graduation Rates
 <div id="chartContainer1">
@@ -54,10 +51,19 @@ plug in script in case anyone wants it:  - //cdn.jsdelivr.net/npm/chartjs-plugin
 </div>
 
 
-sodfisdfisd;fsdl;fs
-
-
-<div id="Grant-Chart"></div>
+### Changes in Grant Funding
 
 More Text
 
+<div>
+        <canvas id="DOEChart"></canvas>
+</div>
+
+<div>
+<canvas id = "TotalChart"></canvas>
+</div>
+
+<script src = "C:/Users/Lindsey/Desktop/Daily-Bruin/the-stack/js/posts/student-demographic-hsis/TotalViz.js">
+<script src = "C:/Users/Lindsey/Desktop/Daily-Bruin/the-stack/js/posts/student-demographic-hsis/DOEviz.js"></script>
+
+More Text
