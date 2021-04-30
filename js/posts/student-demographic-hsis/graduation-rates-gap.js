@@ -51,20 +51,31 @@ function makeChart(gap) {
 
   Chart.plugins.register(verticalLinePlugin);
   //TO HERE 
-  let data = {
+  
+
+let data = {
     labels: [],
     datasets: [{
-      data: [],
-      fill: false,
-      lineTension: 0,
-      borderColor: '#3284BF',
-      backgroundColor: '#3284BF',
-    },
+        data: [],
+        label: 'UCLA',
+        fill: false,
+        lineTension:0,
+        borderColor: '#3284BF',
+        backgroundColor: '#3284BF',
+    }
     ],
   };
+    for (let i = 0; i < 3; i++) {
+    data.datasets.push({
+        label: gap[i].Category,
+        data: Object.values(gap[i]),
+        backgroundColor: colors [i+3],
+        borderColor: colors [i+3],
+     });
+}
   gap.forEach(month => {
-    data.labels.push(month.year);
-    data.datasets[0].data.push(Number(month.ucla));
+    data.labels.push(month.ucla);
+    data.datasets[3].data.push(Number(month.ucla));
   });
 
   let options = {
@@ -131,7 +142,7 @@ function makeChart(gap) {
     },
   };
 
-  let ctx = document.getElementById('grad-rate-gap');
+  let ctx = document.getElementById('nno');
   linechart = new Chart(ctx, {
     type: 'line',
     data: data,
