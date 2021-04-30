@@ -7,7 +7,7 @@ authors:
   - samantha_low
   - lindsey_parungo
 key_takeaways:
-  - Grant Money Test
+  - Although the data does not show a significant increase in grant funding after a UC reaches HSI designation, there is the potential for millions in grant funding dedicated to student success.
 featured_image:
   url: 
 og_image: 
