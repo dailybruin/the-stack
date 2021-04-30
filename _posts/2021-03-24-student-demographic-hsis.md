@@ -63,7 +63,7 @@ More Text
 <canvas id = "TotalChart"></canvas>
 </div>
 
-<script src = "C:/Users/Lindsey/Desktop/Daily-Bruin/the-stack/js/posts/student-demographic-hsis/TotalViz.js">
+<script src = "C:/Users/Lindsey/Desktop/Daily-Bruin/the-stack/js/posts/student-demographic-hsis/TotalViz.js"></script>
 <script src = "C:/Users/Lindsey/Desktop/Daily-Bruin/the-stack/js/posts/student-demographic-hsis/DOEviz.js"></script>
 
 More Text
