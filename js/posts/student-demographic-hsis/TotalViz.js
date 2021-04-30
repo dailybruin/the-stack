@@ -40,7 +40,7 @@ var myChart = new Chart(ctxTotal, {
     options: {
         title: {
             display: true,
-            test: "Total Grant Money by Campus per Student"
+            text: "Total Grant Money by Campus per Student"
         },
         scales: {
             yAxes: {

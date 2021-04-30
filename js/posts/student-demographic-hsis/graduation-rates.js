@@ -1,6 +1,6 @@
 
 let ctx1 = document.getElementById('grad-rate-line').getContext("2d");
-//let ctx = document.getElementById('myChart').getContext('2d');
+    //let ctx = document.getElementById('myChart').getContext('2d');
 let chart = new Chart(ctx1, {
     // The type of chart we want to create
     type: 'line',
@@ -98,6 +98,7 @@ let chart = new Chart(ctx1, {
 
             data: [81.20, 80.80, 84.30, 84.70, 84.80, 88.70, 87.30, 85.30, 84.00],
             hidden: true,
+           
 
 
 
@@ -152,29 +153,6 @@ let chart = new Chart(ctx1, {
 
 
 
-var originalLineDraw = Chart.controllers.line.prototype.draw;
-Chart.helpers.extend(Chart.controllers.line.prototype, {
-    draw: function () {
-        originalLineDraw.apply(this, arguments);
-
-        var chart = this.chart;
-        var ctx = chart.chart.ctx;
-
-        var index = chart.config.data.lineAtIndex;
-        if (index) {
-            var xaxis = chart.scales['x-axis-0'];
-            var yaxis = chart.scales['y-axis-0'];
-
-            ctx.save();
-            ctx.beginPath();
-            ctx.moveTo(xaxis.getPixelForValue(undefined, index), yaxis.top);
-            ctx.strokeStyle = '#ff0000';
-            ctx.lineTo(xaxis.getPixelForValue(undefined, index), yaxis.bottom);
-            ctx.stroke();
-            ctx.restore();
-        }
-    }
-});
 
 
 

@@ -31,6 +31,7 @@ scripts:
   - /js/posts/student-demographic-hsis/graduation-rates.js
   - /js/posts/student-demographic-hsis/DOEviz.js
   - /js/posts/student-demographic-hsis/TotalViz.js
+  - /js/posts/student-demographic-hsis/grad-rate-gaps.js
 ---
 ### Introduction
 
@@ -58,7 +59,6 @@ plug in script in case anyone wants it:  - //cdn.jsdelivr.net/npm/chartjs-plugin
 
 <div id="chartContainer2">
   <canvas id="grad-rate-change"></canvas>
-  <canvas id="LineWithLine1" width="600" height="400"></canvas>
 </div>
 
 <div id="chartContainer3">
