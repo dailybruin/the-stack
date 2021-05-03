@@ -81,8 +81,11 @@ let ctx2 = document.getElementById('grad-rate-change').getContext("2d");
                     ticks: {
                         callback: function(value) {
                           return (value ) + '%'; // convert it to percentage
-                        }
                         },
+                        min: -15,
+                    max: 15,
+                    stepSize: 3,
+                },
     
                     scaleLabel: {
                         display: true, 

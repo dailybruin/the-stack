@@ -1,4 +1,6 @@
-let YearLabels2 = ['2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '  '];
+
+
+let YearLabels5 = ['2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '  '];
 let Berkeleygap = [10.80,   11.30,  5.70,   6.60,   6.60,   2.50,   3.00,   5.90,   8.10];
 let Davisgap = [13.10,  11.80,  13.10,  7.90,   9.90,   10.70,  9.50,   6.70,   8.50 ];
 let Irvinegap = [2.50,  5.10,   4.20,   3.50,   0.90,   5.70,   8.30,   4.70,   7.60 ];
@@ -9,6 +11,7 @@ let SanDiegogap = [10.20,   5.30,   11.00,  8.50,   10.50,  5.70,   8.90,   8.50
 let SantaCruzgap = [3.60,   4.90,   5.60,   7.20,   2.90,   6.00,   5.70,   6.70,   4.30 ];
 let SantaBarbaragap = [9.50,    10.40,  6.80,   5.20,   5.40,   5.20,   7.40,   5.90,   4.00 ];
 let DataNamesgap = [Berkeleygap, Davisgap, Irvinegap, LosAngelesgap, Mercedgap, Riversidegap, SanDiegogap, SantaCruzgap, SantaBarbaragap]
+
 
 let datagap = []
 for (let i = 0; i < schools.length; ++i) {
@@ -35,7 +38,7 @@ var ctx5 = document.getElementById('grad-rate-gap');
 var myChart = new Chart(ctx5, {
     type: 'line',
     data: {
-        labels: YearLabels2,
+        labels: YearLabels5,
         datasets: datagap,
     },
     options: {
@@ -50,14 +53,16 @@ var myChart = new Chart(ctx5, {
                       return (value ) + '%'; // convert it to percentage
                     },
                     
-                    min: -15,
+                    min: -12,
                     max: 15,
                     stepSize: 3,
                 },
 
                 scaleLabel: {
                     display: true, 
-                    labelString: 'Difference between White Graduation Rate and Hispanic Graduation Rate'
+                    labelString: 'Difference between White Graduation Rate and Hispanic Graduation Rate',
+                    fontSize: 13,
+                    
                 }
             }], 
             xAxes: {

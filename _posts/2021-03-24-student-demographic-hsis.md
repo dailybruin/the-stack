@@ -13,6 +13,7 @@ featured_image:
 og_image: 
 stylesheets:
   - //cdnjs.cloudflare.com/ajax/libs/c3/0.4.10/c3.min.css
+  - /css/posts/student-demographics-hsis/app.css
 scripts:
   - //cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.js
   - //ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js
@@ -32,6 +33,7 @@ scripts:
   - /js/posts/student-demographic-hsis/DOEviz.js
   - /js/posts/student-demographic-hsis/TotalViz.js
   - /js/posts/student-demographic-hsis/grad-rate-gaps.js
+  
 ---
 ### Introduction
 

@@ -1,0 +1,27 @@
+.chart-descrip {
+    font-size:smaller;
+    color:gray;
+}
+
+@media only screen and (min-width: 1000px) {
+
+    .grad-rate-gap {
+        float: left;
+        width: 50%;
+        margin-bottom: 40px;
+    }
+    .grad-rate-change {
+        float: right;
+        width: 50%;
+    }
+    .grad-rate-gap {
+        width: 50%;
+        margin: auto;
+    }
+
+    #timeline-chart {
+        width: 70%;
+    }
+
+   
+}
