@@ -1,0 +1,53 @@
+.chart-descrip {
+    font-size:smaller;
+    color:gray;
+}
+
+@media only screen and (min-width: 1000px) {
+
+    .grad-rate-line {
+        float: left;
+        width: 50%;
+        margin-bottom: 40px;
+    }
+    .grad-rate-change {
+        float: right;
+        width: 50%;
+    }
+    .grad-rate-gap {
+        width: 50%;
+        margin: auto;
+    }
+
+    .DOEChart {
+        width: 70%;
+    }
+
+    .TotalChart {
+        width: 70%;
+    }
+
+    .chart-container {
+        width: 70%;
+        margin: auto;
+        margin-bottom: 40px;
+    }
+
+    .graphic {
+        width: 50%;
+        margin-top: 40px;
+        float: right;
+    }
+
+    .chart-descrip {
+        margin-left: 100px;
+    }
+
+    .line-break {
+        height: 90px;
+    }
+
+    .small-line-break {
+        height: 50px;
+    }
+}

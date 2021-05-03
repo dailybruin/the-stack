@@ -21,7 +21,7 @@ function makeChart(gap) {
       // render vertical line
       context.beginPath();
       context.setLineDash([5, 5]);
-      context.strokeStyle = '#888888';
+      //context.strokeStyle;
       context.moveTo(lineLeftOffset, scale.top);
       context.lineTo(lineLeftOffset, scale.bottom);
       context.stroke();
@@ -51,28 +51,28 @@ function makeChart(gap) {
 
   Chart.plugins.register(verticalLinePlugin);
   //TO HERE 
-  
 
-let data = {
+
+  let data = {
     labels: [],
     datasets: [{
-        data: [],
-        label: 'UCLA',
-        fill: false,
-        lineTension:0,
-        borderColor: '#3284BF',
-        backgroundColor: '#3284BF',
+      data: [],
+      label: 'UCLA',
+      fill: false,
+      lineTension: 0,
+      borderColor: '#3284BF',
+      backgroundColor: '#3284BF',
     }
     ],
   };
-    for (let i = 0; i < 3; i++) {
+  for (let i = 0; i < 3; i++) {
     data.datasets.push({
-        label: gap[i].Category,
-        data: Object.values(gap[i]),
-        backgroundColor: colors [i+3],
-        borderColor: colors [i+3],
-     });
-}
+      label: gap[i].Category,
+      data: Object.values(gap[i]),
+      backgroundColor: colors[i + 3],
+      borderColor: colors[i + 3],
+    });
+  }
   gap.forEach(month => {
     data.labels.push(month.ucla);
     data.datasets[3].data.push(Number(month.ucla));

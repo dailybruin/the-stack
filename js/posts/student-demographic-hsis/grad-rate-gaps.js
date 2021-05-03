@@ -1,13 +1,13 @@
 let YearLabels2 = ['2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '  '];
-let Berkeleygap = [10.80,   11.30,  5.70,   6.60,   6.60,   2.50,   3.00,   5.90,   8.10];
-let Davisgap = [13.10,  11.80,  13.10,  7.90,   9.90,   10.70,  9.50,   6.70,   8.50 ];
-let Irvinegap = [2.50,  5.10,   4.20,   3.50,   0.90,   5.70,   8.30,   4.70,   7.60 ];
-let LosAngelesgap = [5.10,  3.40,   7.10,   6.40,   3.80,   4.60,   6.50,   4.90,   6.80];
-let Mercedgap = [0.70,  -8.00,  -7.60,  -1.80,  -2.70,  0.30,   14.70,  7.40,   2.70 ];
-let Riversidegap = [-3.90,  9.50,   5.00,   2.30,   1.70,   3.20,   -0.50,  -5.40,  -0.50 ];
-let SanDiegogap = [10.20,   5.30,   11.00,  8.50,   10.50,  5.70,   8.90,   8.50,   3.60];
-let SantaCruzgap = [3.60,   4.90,   5.60,   7.20,   2.90,   6.00,   5.70,   6.70,   4.30 ];
-let SantaBarbaragap = [9.50,    10.40,  6.80,   5.20,   5.40,   5.20,   7.40,   5.90,   4.00 ];
+let Berkeleygap = [10.80, 11.30, 5.70, 6.60, 6.60, 2.50, 3.00, 5.90, 8.10];
+let Davisgap = [13.10, 11.80, 13.10, 7.90, 9.90, 10.70, 9.50, 6.70, 8.50];
+let Irvinegap = [2.50, 5.10, 4.20, 3.50, 0.90, 5.70, 8.30, 4.70, 7.60];
+let LosAngelesgap = [5.10, 3.40, 7.10, 6.40, 3.80, 4.60, 6.50, 4.90, 6.80];
+let Mercedgap = [0.70, -8.00, -7.60, -1.80, -2.70, 0.30, 14.70, 7.40, 2.70];
+let Riversidegap = [-3.90, 9.50, 5.00, 2.30, 1.70, 3.20, -0.50, -5.40, -0.50];
+let SanDiegogap = [10.20, 5.30, 11.00, 8.50, 10.50, 5.70, 8.90, 8.50, 3.60];
+let SantaCruzgap = [3.60, 4.90, 5.60, 7.20, 2.90, 6.00, 5.70, 6.70, 4.30];
+let SantaBarbaragap = [9.50, 10.40, 6.80, 5.20, 5.40, 5.20, 7.40, 5.90, 4.00];
 let DataNamesgap = [Berkeleygap, Davisgap, Irvinegap, LosAngelesgap, Mercedgap, Riversidegap, SanDiegogap, SantaCruzgap, SantaBarbaragap]
 
 let datagap = []
@@ -29,41 +29,56 @@ for (let i = 0; i < schools.length; ++i) {
     datagap.push(chartdata);
 };
 
+if (isMobile) {
+    title = "% Gap between White and Hispanic Grad. Rates";
+}
+else {
+    title = "Percentage Gap between White and Hispanic Graduation Rates";
+}
+
+if (isMobile) {
+    yLabel = "Difference btw. White and Hispanic Grad. Rates";
+}
+else {
+    yLabel = "Difference between White and Hispanic Graduation Rates";
+}
 
 var ctx5 = document.getElementById('grad-rate-gap');
 
 var myChart = new Chart(ctx5, {
     type: 'line',
     data: {
-        labels: YearLabels2,
+        labels: labelList,
         datasets: datagap,
     },
     options: {
         title: {
             display: true,
-            text: "PercentageGap between White and Hispanic Graduation Rates "
+            text: title,
         },
         scales: {
             yAxes: [{
                 ticks: {
-                    callback: function(value) {
-                      return (value ) + '%'; // convert it to percentage
+                    callback: function (value) {
+                        return (value) + '%'; // convert it to percentage
                     },
-                    
+
                     min: -15,
                     max: 15,
                     stepSize: 3,
                 },
 
                 scaleLabel: {
-                    display: true, 
-                    labelString: 'Difference between White Graduation Rate and Hispanic Graduation Rate'
+                    display: true,
+                    labelString: yLabel,
                 }
-            }], 
-            xAxes: {
-                display: true,
-                labelString: "Year"
-            }
+            }],
+            xAxes: [{
+                scaleLabel: {
+                    display: true,
+                    labelString: "Years"
+                }
+            }]
         },
     },
     lineAtIndex: [

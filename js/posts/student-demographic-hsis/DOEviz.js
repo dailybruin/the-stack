@@ -1,5 +1,8 @@
+
+
 let YearLabels = ['2005-06', '2006-07', '2007-08', '2008-09', '2009-10', '2010-11', '2011-12', '2012-13', '2013-14', '2014-15', '2015-16', '2016-17', '2017-18', '2018-19', '2019-20'];
 let schools = ['Berkeley', 'Davis', 'Irvine', 'Los Angeles', 'Merced', 'Riverside', 'San Diego', 'Santa Cruz', 'Santa Barbara']
+let schoolsMobile = ['UCB', 'UCD', 'UCI', 'UCLA', 'UCM', 'UCR', 'UCSD', 'UCSC', 'UCSB']
 let Berkeley = [6288.44258, 6869.2864, 6989.31411, 7089.47547, 10725.06127, 10361.08214, 9024.1473, 7619.82114, 10632.86312, 8895.27475, 8449.03348, 9662.62255, 9114.92078, 8588.92032, 9360.53049];
 let Davis = [7774.81294, 6756.11653, 7570.52679, 8511.40257, 11344.56569, 9639.29241, 10227.89986, 9044.8178, 9706.15248, 11197.63398, 10255.21541, 9987.62634, 11925.86362, 12553.09914, 14164.34894];
 let Irvine = [5376.90969, 5377.11569, 5541.10597, 5801.94026, 6669.60125, 6399.95378, 5862.31982, 4814.28138, 5340.55394, 5358.9111, 6172.85185, 5446.56676, 6271.75826, 7288.83584, 8640.36296];
@@ -12,10 +15,24 @@ let SantaBarbara = [5779.47692, 6006.67754, 5868.87273, 6471.33441, 8415.22253, 
 let DataNames = [Berkeley, Davis, Irvine, LosAngeles, Merced, Riverside, SanDiego, SantaCruz, SantaBarbara]
 let colors = ['#041E42', '#B3A369', '#FFD200', '#3284BF', '#0091B3', '#add8e6', '#C69214', '#f29813', '#004D9F']
 
+isMobile = true;
+console.log(screen.width)
+if (screen.width > 1000) {
+    isMobile = false;
+};
+
+if (isMobile) {
+    labelList = schoolsMobile;
+}
+else {
+    labelList = schools
+}
+
+
 let Federaldata = [];
 for (let i = 0; i < schools.length; ++i) {
     chartdata = {
-        label: schools[i],
+        label: labelList[i],
         fill: false,
         data: DataNames[i],
         backgroundColor: [
@@ -47,7 +64,11 @@ var myChart = new Chart(ctxDOE, {
             yAxes: [{
                 ticks: {
                     callback: function (value) {
-                        return (value); // convert it to percentage
+                        return value.toLocaleString('en-US', {
+                            style: 'currency',
+                            currency: 'USD',
+                            minimumFractionDigits: 0,
+                        }); // convert value to dollar format
                     },
                     min: 0,
                     max: 25000,
@@ -81,12 +102,34 @@ var myChart = new Chart(ctxDOE, {
         },
     },
     lineAtIndex: [
-        { index: 7, text: ['2012', 'UCSC becomes', 'a HSI'] },
-        { index: 10, text: ['2015', 'UCSB becomes', 'a HSI'] },
+        { index: 7, text: ['2012', 'UCSC becomes', 'a HSI'], strokeStyle: 'blue' },
+        { index: 10, text: ['2015', 'UCSB becomes', 'a HSI'], strokeStyle: 'green' },
         { index: 12, text: ['2017', 'UCI becomes', 'a HSI'] },
-        { index: 5, text: ['2010', 'UCMerced becomes', 'a HSI'] },
+        { index: 5, text: ['2010', 'UCM becomes', 'a HSI'] },
         { index: 3, text: ['2008', 'UCR becomes', 'a HSI'] }
     ],
 })
 
+// if (window.matchMedia('(max-width: 480px)').matches) {
+//     ctxDOE.canvas.style = 'max-height:300px';
+//     ctxDOE.options.maintainAspectRatio = false;
+//     ctxDOE.options.scales.xAxes[0].labels = YearLabels;
+//     ctxDOE.update();
+// } else if (window.matchMedia('(max-width: 1000px)').matches) {
+//     ctxDOE.options.scales.xAxes[0].labels = YearLabels;
+//     ctxDOE.update();
+// }
 
+// let x = window.matchMedia("(max-width: 480px)");
+// make_responsive(x);
+
+// function make_responsive(x) {
+//     if (x.matches) {
+//         Chart.defaults.global.responsive = false;
+//         Chart.defaults.global.maintainAspectRatio = false;
+//         ctxDOE.canvas.parentNode.style.width = "340px";
+//         Chart.defaults.global.defaultFontSize = 12;
+//         update_chart(YearLabels[0], yAxes[0]);
+//         //proportionsChart.update();
+//     }
+// }
