@@ -1,6 +1,6 @@
 
 let ctx1 = document.getElementById('grad-rate-line').getContext("2d");
-    //let ctx = document.getElementById('myChart').getContext('2d');
+//let ctx = document.getElementById('myChart').getContext('2d');
 let chart = new Chart(ctx1, {
     // The type of chart we want to create
     type: 'line',
@@ -8,7 +8,7 @@ let chart = new Chart(ctx1, {
     data: {
         labels: ['2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019'],
         datasets: [{
-            label: 'UCLA',
+            label: 'Los Angeles',
             fill: false,
             borderColor: '#3284BF',
             backgroundColor: '#3284BF',
@@ -17,7 +17,7 @@ let chart = new Chart(ctx1, {
 
         }, {
 
-            label: 'UCI',
+            label: 'Irvine',
             fill: false,
             borderColor: '#FFD200',
             backgroundColor: '#FFD200',
@@ -28,7 +28,7 @@ let chart = new Chart(ctx1, {
 
         }, {
 
-            label: 'UCSB',
+            label: 'Santa Barbara',
             fill: false,
             borderColor: '#004D9F',
             backgroundColor: '#004D9F',
@@ -38,7 +38,7 @@ let chart = new Chart(ctx1, {
 
         }, {
 
-            label: 'UC Merced',
+            label: 'Merced',
             fill: false,
             borderColor: '#0091B3',
             backgroundColor: '#0091B3',
@@ -49,7 +49,7 @@ let chart = new Chart(ctx1, {
 
         }, {
 
-            label: 'UC Davis',
+            label: 'Davis',
             fill: false,
             borderColor: '#B3A369',
             backgroundColor: '#B3A369',
@@ -60,7 +60,7 @@ let chart = new Chart(ctx1, {
 
         }, {
 
-            label: 'UCR',
+            label: 'Riverside',
             fill: false,
             borderColor: '#add8e6',
             backgroundColor: '#add8e6',
@@ -69,7 +69,7 @@ let chart = new Chart(ctx1, {
 
         }, {
 
-            label: 'UCSD',
+            label: 'San Diego',
             fill: false,
             borderColor: '#C69214',
             backgroundColor: '#C69214',
@@ -79,7 +79,7 @@ let chart = new Chart(ctx1, {
 
         }, {
 
-            label: 'UCSC',
+            label: 'Santa Cruz',
             fill: false,
             borderColor: '#f29813',
             backgroundColor: '#f29813',
@@ -90,7 +90,7 @@ let chart = new Chart(ctx1, {
 
         }, {
 
-            label: 'UC Berkeley',
+            label: 'Berkeley',
             fill: false,
             borderColor: '#041E42',
             backgroundColor: '#041E42',
@@ -98,7 +98,7 @@ let chart = new Chart(ctx1, {
 
             data: [81.20, 80.80, 84.30, 84.70, 84.80, 88.70, 87.30, 85.30, 84.00],
             hidden: true,
-           
+
 
 
 
