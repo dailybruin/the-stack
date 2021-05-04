@@ -139,17 +139,23 @@ let chart = new Chart(ctx1, {
         },
 
         tooltips: {
-            callback: function (value) {
-                label: return (value) + '%'
-            }
-
-
-        }
+            intersect: true,
+            displayColors: true,
+            callbacks: {
+                label: function (tooltipItem, chart) {
+                    return (tooltipItem.yLabel) + '%'; // convert it to percentage
+                },
+            },
+        },
 
     }
-
 },
 );
+if (window.matchMedia('(max-width: 480px)').matches) {
+    DOEChart.canvas.style = 'max-height:300px';
+    DOEChart.options.maintainAspectRatio = false;
+    DOEChart.update();
+}
 
 
 

@@ -5,27 +5,29 @@
 
 @media only screen and (min-width: 1000px) {
 
-    .grad-rate-line {
+    .rate-line {
         float: left;
         width: 50%;
         margin-bottom: 40px;
     }
-    .grad-rate-change {
+    .rate-change {
         float: right;
         width: 50%;
     }
     .grad-rate-gap {
         width: 50%;
         margin: auto;
+        height: auto;
     }
 
-    .DOEChart {
+    .DOEViz {
         width: 70%;
-        height: .5 * width
+        height: auto;
     }
 
-    .TotalChart {
+    .TotalViz {
         width: 70%;
+        height: auto;
     }
 
     .chart-container {

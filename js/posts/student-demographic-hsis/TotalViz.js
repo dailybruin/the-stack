@@ -95,4 +95,10 @@ var myChart = new Chart(ctxTotal, {
     ],
 })
 
+if (window.matchMedia('(max-width: 480px)').matches) {
+    DOEChart.canvas.style = 'max-height:300px';
+    DOEChart.options.maintainAspectRatio = false;
+    DOEChart.update();
+}
+
 
