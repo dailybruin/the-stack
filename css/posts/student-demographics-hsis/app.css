@@ -21,6 +21,7 @@
 
     .DOEChart {
         width: 70%;
+        height: .5 * width
     }
 
     .TotalChart {

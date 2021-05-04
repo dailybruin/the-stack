@@ -51,11 +51,11 @@ In this article, The Stack will be looking into how much UCLA will have to incre
 With this new designation many are hoping that UCLA will not just admit students, but help them thrive. After hearing about UCLA’s goals to become a Hispanic Serving Insitution by 2025, Mazariegos hopes the school might be able to have more cultural competency, accesibility, and more resources to help Latinx students succeed at UCLA. She says, “It’s a good step forward but I just hope that they actually follow through with it and start giving resources to the Latinos on campus to get to graduation and to be successful”. Graduation rates are one marker of how well a school supports students beyond admissions. Looking at other HSIs, we see *insert*
 
 <div id="chartContainer">
-  <canvas id="grad-rate-line" style='width: 250px; height: 270px;'></canvas>
+  <canvas id="grad-rate-line" style='height: 270px;'></canvas>
 </div>
 
 <div id="chartContainer">
-  <canvas id="grad-rate-change" style='width: 250px; height: 270px;'></canvas>
+  <canvas id="grad-rate-change" style='height: 270px;'></canvas>
 </div>
 
 <div id="chartContainer">
@@ -68,7 +68,7 @@ With this new designation many are hoping that UCLA will not just admit students
 One major aspect of HSI designation is being qualified for a large range of grants which are to be used to help Latinx communities and resources at the institution.  The graphs below show the amount of grant money that each campus in the UC system received per student each year. There does not appear to be a large immediate correlation between reaching HSI designation and receiving a large increase in funding. Most grants reliant on HSI designation are from federal agencies. Even when only federal grants are considered there is not a significant increase in annual funding after the HSI designation is reached.   
 
 <div id = "chartContainer">
-        <canvas id="DOEChart" style='width: 250px; height: 270px;'></canvas>
+        <canvas id="DOEChart" ></canvas>
 </div>
 
 <div id = "chartContainer">
