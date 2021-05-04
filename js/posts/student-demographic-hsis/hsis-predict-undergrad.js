@@ -1,22 +1,22 @@
 const { ChartLabel } = require("react-viz");
 
-let ctx = document.getElementById('HSIS_Projection');
+let ctx1 = document.getElementById('HSIS_Projection_Undergrad');
 
-var HSIS_Projection = new Chart(ctx, {
+var HSIS_Projection_Undergrad = new Chart(ctx1, {
     data: {
         labels: ['2000', '2001', '2002', '2003', '2004', '2005', '2006', '2007', '2008', '2009', '2010', '2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023', '2024', '2025', '2026', '2027', '2028', '2029', '2030', '2031', '2032', '2033', '2034', '2035', '2036', '2037', '2038', '2039', '2040', '2041'],
         datasets: [{
-            label: 'Current Yearly Growth in % UCLA Hispanic Students',
-            data: [12., 12., 13., 13., 13., 13., 13., 13., 13., 13., 13., 14., 15.,15., 16., 17., 18., 18., 18., 18., 18.],
+            label: 'Current Yearly Growth in % Undergraduate UCLA Hispanic Students',
+            data: [14., 14., 15., 15., 15., 15., 15., 15., 15., 15., 16., 17., 17.,18., 19., 20., 21., 21., 21., 21., 21.],
             backgroundColor: '#0066CC',
         }, {
-            label: 'Linear Least Squares Regression Line of Growth in % UCLA Hispanic Students',
-            data: [11.26406926, 11.604329  , 11.94458874, 12.28484848, 12.62510823, 12.96536797, 13.30562771, 13.64588745, 13.98614719, 14.32640693, 14.66666667, 15.00692641, 15.34718615, 15.68744589, 16.02770563, 16.36796537, 16.70822511, 17.04848485, 17.38874459, 17.72900433, 18.06926407],
+            label: 'Linear Least Squares Regression Line of Growth in % Undergraduate UCLA Hispanic Students',
+            data: [13.05194805, 13.46103896, 13.87012987, 14.27922078, 14.68831169, 15.0974026 , 15.50649351, 15.91558442, 16.32467532, 16.73376623, 17.14285714, 17.55194805, 17.96103896, 18.37012987, 18.77922078, 19.18831169, 19.5974026 , 20.00649351, 20.41558442, 20.82467532, 21.23376623],
             lineTension: 0.1,
             borderColor: '#0000CC',
         }, {
-            label: 'Predicted Growth in % Hispanic Students at UCLA',
-            data: [NaN, NaN, NaN, NaN, NaN, NaN, NaN, NaN, NaN, NaN, NaN, NaN, NaN, NaN, NaN, NaN, NaN, NaN, NaN, NaN, NaN, 18.06926407, 18.40952381, 18.74978355, 19.09004329, 19.43030303, 19.77056277, 20.11082251, 20.45108225, 20.79134199, 21.13160173, 21.47186147, 21.81212121, 22.15238095, 22.49264069, 22.83290043, 23.17316017, 23.51341991, 23.85367965, 24.19393939, 24.53419913, 24.87445887, 25.21471861],
+            label: 'Predicted Growth in % Undergraduate Hispanic Students at UCLA',
+            data: [NaN, NaN, NaN, NaN, NaN, NaN, NaN, NaN, NaN, NaN, NaN, NaN, NaN, NaN, NaN, NaN, NaN, NaN, NaN, NaN, NaN, 21.23376623, 21.64285714, 22.05194805, 22.46103896, 22.87012987, 23.27922078, 23.68831169, 24.0974026 , 24.50649351, 24.91558442, 25.32467532, 25.73376623, 26.14285714, 26.55194805, 26.96103896, 27.37012987, 27.77922078, 28.18831169, 28.5974026 , 29.00649351, 29.41558442, 29.82467532],
             borderColor: '#6600CC',
             lineTension: 0.1,
             borderDash: [5,5],
@@ -38,12 +38,12 @@ var HSIS_Projection = new Chart(ctx, {
                 },
                 title: {
                     display: true,
-                    text: 'Yearly Percentage of Hispanic Students at UCLA'
+                    text: 'Yearly Percentage of Undergraduate Hispanic Students at UCLA'
                 },
                 scales: {
                     y: {
                         display: true,
-                        text: "Percentage of Hispanic Students (%)"
+                        text: "Percentage of Undergraduate Hispanic Students (%)"
                     },
                     x: {
                         display: true,
@@ -53,7 +53,7 @@ var HSIS_Projection = new Chart(ctx, {
             }
         },
         lineAtIndex: [
-            { index: 41, text: ['2040', 'UCLA becomes', 'a HSI'] },
+            { index: 30, text: ['2029', 'UCLA becomes', 'a HSI'] },
         ],
     }
 });
