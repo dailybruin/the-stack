@@ -106,6 +106,8 @@ After analyzing the growth trends of Hispanic students at UCLA from 2000-2020, t
   <canvas id = 'HSIS_Projection'></canvas> 
 </div>
 
+<div class='small-line-break'></div>
+
 ### Conclusion
 
 Flores, who attended a predominantly Latinx high school said, “The only colleges I ever saw reaching out to my high school were community colleges. I think UCs are always scary, especially if you come from a high school where you’re like ‘Oh only 3 people got admitted last year’, it’s really discouraging. So I think that in that sense they haven’t done a good job at presenting themselves as an option for those students”.  

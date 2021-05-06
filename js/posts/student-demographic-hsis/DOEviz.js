@@ -99,7 +99,7 @@ var DOEChart = new Chart(ctxDOE, {
                         maximumFractionDigits: 2,
                     });
                     var label = data.datasets[tooltipItem.datasetIndex].label;
-                    return label + ' ' + value + '%';
+                    return label + ' ' + value;
                 }
             }
         },

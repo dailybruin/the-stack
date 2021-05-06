@@ -73,14 +73,15 @@ var myChart = new Chart(ctxTotal, {
             intersect: true,
             displayColors: true,
             callbacks: {
-                label: function (tooltipItem, datasets) {
-                    label = tooltipItem.yLabel.toLocaleString('en-US', {
+                label: function (tooltipItem, data) {
+                    var value = data.datasets[tooltipItem.datasetIndex].data[0].toLocaleString('en-US', {
                         style: 'currency',
                         currency: 'USD',
                         maximumFractionDigits: 2,
                     });
-                    return label;
-                },
+                    var label = data.datasets[tooltipItem.datasetIndex].label;
+                    return label + ' ' + value;
+                }
             },
         },
         aspectRatio: ratio,

@@ -1,5 +1,3 @@
-//const { ChartLabel } = require("react-viz");
-
 let ctx7 = document.getElementById('HSIS_Projection');
 
 var HSIS_Projection = new Chart(ctx7, {
