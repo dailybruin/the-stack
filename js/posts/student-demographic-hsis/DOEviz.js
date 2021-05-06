@@ -23,9 +23,11 @@ if (screen.width > 1000) {
 
 if (isMobile) {
     labelList = schoolsMobile;
+    ratio = 2;
 }
 else {
     labelList = schools
+    ratio = 4;
 }
 
 
@@ -100,6 +102,8 @@ var myChart = new Chart(ctxDOE, {
                 },
             },
         },
+        aspectRatio: ratio,
+        maintainAspectRatio: true
     },
     lineAtIndex: [
         { index: 7, text: ['2012', 'UCSC becomes', 'a HSI'], strokeStyle: 'blue' },

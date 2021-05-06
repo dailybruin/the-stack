@@ -99,6 +99,19 @@ let chart = new Chart(ctx1, {
             data: [81.20, 80.80, 84.30, 84.70, 84.80, 88.70, 87.30, 85.30, 84.00],
             hidden: true,
 
+        }, {
+            label: 'Los Angeles Norm',
+            fill: false,
+            borderColor: '#3284BF',
+            backgroundColor: '#3284BF',
+            lineTension: 0,
+            data: [86.08,86.08, 86.08, 86.08, 86.08, 86.08, 86.08, 86.08, 86.08 ],
+            borderDash: [10,5], 
+            borderWidth: 0.5,
+            pointRadius: 0,
+            
+        }, {
+
 
 
 
@@ -139,11 +152,15 @@ let chart = new Chart(ctx1, {
         },
 
         tooltips: {
-            callback: function (value) {
-                label: return (value) + '%'
+            callbacks: {
+                label: function(tooltipItem, data) {
+
+                    let label = data.labels[tooltipItem.index];
+                    let value = data.datasets[tooltipItem.datasetIndex].data[tooltipItem.index];
+                    return ' ' + label + ': ' + value + ' %';
+
+                }
             }
-
-
         }
 
     }

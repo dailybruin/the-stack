@@ -83,6 +83,8 @@ var myChart = new Chart(ctxTotal, {
                 },
             },
         },
+        aspectRatio: ratio,
+        maintainAspectRatio: true
     },
     lineAtIndex: [
         { index: 7, text: ['2012', 'UCSC becomes', 'a HSI'] },
