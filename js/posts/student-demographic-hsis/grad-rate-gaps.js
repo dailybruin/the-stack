@@ -85,10 +85,12 @@ var myChart = new Chart(ctx5, {
             intersect: true,
             displayColors: true,
             callbacks: {
-                label: function (tooltipItem, chart) {
-                    return (tooltipItem.yLabel) + '%'; // convert it to percentage
-                },
-            },
+                label: function(tooltipItem, data) {
+                    var value = data.datasets[tooltipItem.datasetIndex].data[0];
+                    var label = data.datasets[tooltipItem.datasetIndex].label;
+                    return label + ' ' + value + '%';
+              }
+            }
         },
         //aspectRatio = ratio,
         //maintainAspectRatio: true

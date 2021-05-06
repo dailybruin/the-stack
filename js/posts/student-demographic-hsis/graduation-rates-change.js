@@ -98,16 +98,18 @@ window.onload = function () {
                         labelString: 'Year'
                     }
                 }],
-                tooltips: {
-                    intersect: true,
-                    displayColors: true,
+                    plugins: false
+                }, 
+               
+            tooltips: {
                     callbacks: {
-                        label: function (tooltipItem, chart) {
-                            return (tooltipItem.yLabel) + '%'; // convert it to percentage
-                        },
-                    },
+                        label: function(tooltipItem, data) {
+                            var value = data.datasets[tooltipItem.datasetIndex].data[0];
+                            var label = data.datasets[tooltipItem.datasetIndex].label;
+                            return label + ' ' + value + '%';
+                      }
+                    }
                 },
-            }
 
         }
     },

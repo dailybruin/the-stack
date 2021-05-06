@@ -275,12 +275,10 @@ let chart = new Chart(ctx1, {
         tooltips: {
             callbacks: {
                 label: function(tooltipItem, data) {
-
-                    let label = data.labels[tooltipItem.index];
-                    let value = data.datasets[tooltipItem.datasetIndex].data[tooltipItem.index];
-                    return ' ' + label + ': ' + value + ' %';
-
-                }
+                    var value = data.datasets[tooltipItem.datasetIndex].data[0];
+                    var label = data.datasets[tooltipItem.datasetIndex].label;
+                    return label + ' ' + value + '%';
+              }
             }
         }
 
@@ -290,16 +288,13 @@ let chart = new Chart(ctx1, {
 if (window.matchMedia('(max-width: 480px)').matches) {
     linechart.canvas.style = 'max-height:300px';
     linechart.options.maintainAspectRatio = false;
+    linechart.options.scales.xAxes[0].labels = USCShortCommitteeNames;
     linechart.update();
-}
-
-isMobile = true;
-console.log(screen.width)
-if (screen.width > 1000) {
-    isMobile = false;
-};
-
-console.log(ratio);
+  } else if (window.matchMedia('(max-width: 1400px)').matches) {
+   linechart.options.scales.xAxes[0].labels = USCShortCommitteeNames;
+    linechart.update();
+  }
+  
 
 
 
