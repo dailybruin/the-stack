@@ -98,31 +98,25 @@ window.onload = function () {
                         labelString: 'Year'
                     }
                 }],
-                annotation: {
-                    annotations: [
-                        {
-                            type: "line",
-                            mode: "vertical",
-                            scaleID: "x-axis-0",
-                            value: "2013",
-                            borderColor: "red",
-                            label: {
-                                content: "TODAY",
-                                enabled: true,
-                                position: "top"
-                            }
-                        }
-                    ]
-                }
-
-
+                tooltips: {
+                    intersect: true,
+                    displayColors: true,
+                    callbacks: {
+                        label: function (tooltipItem, chart) {
+                            return (tooltipItem.yLabel) + '%'; // convert it to percentage
+                        },
+                    },
+                },
             }
 
         }
-
     },
-
     );
+}
+if (window.matchMedia('(max-width: 480px)').matches) {
+    linechart.canvas.style = 'max-height:300px';
+    linechart.options.maintainAspectRatio = false;
+    linechart.update();
 }
 
 

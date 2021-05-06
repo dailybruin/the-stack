@@ -23,13 +23,13 @@ if (screen.width > 1000) {
 
 if (isMobile) {
     labelList = schoolsMobile;
-    ratio = 2;
+    ratio = 1;
 }
 else {
     labelList = schools
-    ratio = 4;
+    ratio = 2;
 }
-
+console.log(ratio);
 
 let Federaldata = [];
 for (let i = 0; i < schools.length; ++i) {
@@ -51,7 +51,7 @@ for (let i = 0; i < schools.length; ++i) {
 }
 
 var ctxDOE = document.getElementById('DOEChart');
-var myChart = new Chart(ctxDOE, {
+var DOEChart = new Chart(ctxDOE, {
     type: 'line',
     data: {
         labels: YearLabels,
@@ -102,8 +102,6 @@ var myChart = new Chart(ctxDOE, {
                 },
             },
         },
-        aspectRatio: ratio,
-        maintainAspectRatio: true
     },
     lineAtIndex: [
         { index: 7, text: ['2012', 'UCSC becomes', 'a HSI'], strokeStyle: 'blue' },
@@ -114,26 +112,8 @@ var myChart = new Chart(ctxDOE, {
     ],
 })
 
-// if (window.matchMedia('(max-width: 480px)').matches) {
-//     ctxDOE.canvas.style = 'max-height:300px';
-//     ctxDOE.options.maintainAspectRatio = false;
-//     ctxDOE.options.scales.xAxes[0].labels = YearLabels;
-//     ctxDOE.update();
-// } else if (window.matchMedia('(max-width: 1000px)').matches) {
-//     ctxDOE.options.scales.xAxes[0].labels = YearLabels;
-//     ctxDOE.update();
-// }
-
-// let x = window.matchMedia("(max-width: 480px)");
-// make_responsive(x);
-
-// function make_responsive(x) {
-//     if (x.matches) {
-//         Chart.defaults.global.responsive = false;
-//         Chart.defaults.global.maintainAspectRatio = false;
-//         ctxDOE.canvas.parentNode.style.width = "340px";
-//         Chart.defaults.global.defaultFontSize = 12;
-//         update_chart(YearLabels[0], yAxes[0]);
-//         //proportionsChart.update();
-//     }
-// }
+if (window.matchMedia('(max-width: 480px)').matches) {
+    DOEChart.canvas.style = 'max-height:300px';
+    DOEChart.options.maintainAspectRatio = false;
+    DOEChart.update();
+}

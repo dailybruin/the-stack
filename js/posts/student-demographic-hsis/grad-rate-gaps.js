@@ -14,7 +14,7 @@ let DataNamesgap = [Berkeleygap, Davisgap, Irvinegap, LosAngelesgap, Mercedgap, 
 let datagap = []
 for (let i = 0; i < schools.length; ++i) {
     chartdata = {
-        label: schools[i],
+        label: labelList[i],
         fill: false,
         data: DataNamesgap[i],
         backgroundColor: [
@@ -49,7 +49,7 @@ var ctx5 = document.getElementById('grad-rate-gap');
 var myChart = new Chart(ctx5, {
     type: 'line',
     data: {
-        labels: labelList,
+        labels: YearLabels2,
         datasets: datagap,
     },
     options: {
@@ -81,8 +81,17 @@ var myChart = new Chart(ctx5, {
                 }
             }]
         },
-        aspectRatio: ratio,
-        maintainaAspectRatio: true
+        tooltips: {
+            intersect: true,
+            displayColors: true,
+            callbacks: {
+                label: function (tooltipItem, chart) {
+                    return (tooltipItem.yLabel) + '%'; // convert it to percentage
+                },
+            },
+        },
+        //aspectRatio = ratio,
+        //maintainAspectRatio: true
     },
     lineAtIndex: [
         { index: 1, text: ['2012', 'UCSC becomes', 'a HSI'] },
@@ -90,5 +99,11 @@ var myChart = new Chart(ctx5, {
         { index: 6, text: ['2017', 'UCI becomes', 'a HSI'] },
     ],
 })
+
+if (window.matchMedia('(max-width: 480px)').matches) {
+    DOEChart.canvas.style = 'max-height:300px';
+    DOEChart.options.maintainAspectRatio = false;
+    DOEChart.update();
+}
 
 
