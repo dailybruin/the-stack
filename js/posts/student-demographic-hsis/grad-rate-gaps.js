@@ -10,6 +10,7 @@ let SantaCruzgap = [3.60, 4.90, 5.60, 7.20, 2.90, 6.00, 5.70, 6.70, 4.30];
 let SantaBarbaragap = [9.50, 10.40, 6.80, 5.20, 5.40, 5.20, 7.40, 5.90, 4.00];
 let DataNamesgap = [Berkeleygap, Davisgap, Irvinegap, LosAngelesgap, Mercedgap, Riversidegap, SanDiegogap, SantaCruzgap, SantaBarbaragap]
 
+
 let datagap = []
 for (let i = 0; i < schools.length; ++i) {
     chartdata = {
@@ -84,10 +85,12 @@ var GapChart = new Chart(ctx5, {
             intersect: true,
             displayColors: true,
             callbacks: {
-                label: function (tooltipItem, chart) {
-                    return (tooltipItem.yLabel) + '%'; // convert it to percentage
-                },
-            },
+                label: function(tooltipItem, data) {
+                    var value = data.datasets[tooltipItem.datasetIndex].data[0];
+                    var label = data.datasets[tooltipItem.datasetIndex].label;
+                    return label + ' ' + value + '%';
+              }
+            }
         },
         //aspectRatio = ratio,
         //maintainAspectRatio: true

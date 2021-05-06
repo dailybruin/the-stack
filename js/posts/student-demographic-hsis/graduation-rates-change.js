@@ -82,10 +82,7 @@ let ChangeChart = new Chart(ctx2, {
             hidden: true,
 
         }],
-
-
     },
-
     options: {
         title: {
             display: true,
@@ -96,7 +93,10 @@ let ChangeChart = new Chart(ctx2, {
                 ticks: {
                     callback: function (value) {
                         return (value) + '%'; // convert it to percentage
-                    }
+                    },
+                    min: -15,
+                    max: 15,
+                    stepSize: 3,
                 },
 
                 scaleLabel: {
@@ -110,17 +110,17 @@ let ChangeChart = new Chart(ctx2, {
                     labelString: 'Year'
                 }
             }],
-            tooltips: {
-                intersect: true,
-                displayColors: true,
-                callbacks: {
-                    label: function (tooltipItem, chart) {
-                        return (tooltipItem.yLabel) + '%'; // convert it to percentage
-                    },
-                },
-            },
-        }
-
+            plugins: false
+        },
+        tooltips: {
+            callbacks: {
+                label: function (tooltipItem, data) {
+                    var value = data.datasets[tooltipItem.datasetIndex].data[0];
+                    var label = data.datasets[tooltipItem.datasetIndex].label;
+                    return label + ' ' + value + '%';
+                }
+            }
+        },
     }
 },
 );

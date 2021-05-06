@@ -8,6 +8,7 @@
     .rate-line {
         float: left;
         width: 50%;
+        height: 100%;
         margin-bottom: 40px;
     }
     .rate-change {
@@ -52,3 +53,4 @@
         height: 50px;
     }
 }
+
