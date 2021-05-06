@@ -45,7 +45,7 @@ else {
 
 var ctx5 = document.getElementById('grad-rate-gap');
 
-var myChart = new Chart(ctx5, {
+var GapChart = new Chart(ctx5, {
     type: 'line',
     data: {
         labels: YearLabels2,
@@ -100,9 +100,9 @@ var myChart = new Chart(ctx5, {
 })
 
 if (window.matchMedia('(max-width: 480px)').matches) {
-    DOEChart.canvas.style = 'max-height:300px';
-    DOEChart.options.maintainAspectRatio = false;
-    DOEChart.update();
+    GapChart.canvas.style = 'max-height:300px';
+    GapChart.options.maintainAspectRatio = false;
+    GapChart.update();
 }
 
 

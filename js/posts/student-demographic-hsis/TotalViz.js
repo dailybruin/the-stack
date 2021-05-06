@@ -51,7 +51,7 @@ var myChart = new Chart(ctxTotal, {
                             style: 'currency',
                             currency: 'USD',
                             minimumFractionDigits: 0,
-                        }); // convert value to dollar format // convert it to percentage
+                        }); // convert value to dollar format
                     },
                     min: 0,
                     max: 35000,

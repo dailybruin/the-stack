@@ -1,7 +1,26 @@
 
 let ctx1 = document.getElementById('grad-rate-line').getContext("2d");
 //let ctx = document.getElementById('myChart').getContext('2d');
-let chart = new Chart(ctx1, {
+isMobile = true;
+console.log(screen.width)
+if (screen.width > 1000) {
+    isMobile = false;
+};
+
+if (isMobile) {
+    title = "Hispanic Grad Rates by Institution";
+}
+else {
+    title = 'UC Hispanic Graduation Rates From 2011-2019 by Institution ';
+}
+
+if (isMobile) {
+    yLabel = "Hispanic Grad. Rate";
+}
+else {
+    yLabel = 'Hispanic Graduation Rate';
+}
+let RatesChart = new Chart(ctx1, {
     // The type of chart we want to create
     type: 'line',
     // The data for our dataset
@@ -109,7 +128,7 @@ let chart = new Chart(ctx1, {
     options: {
         title: {
             display: true,
-            text: 'UC Hispanic Graduation Rates From 2011-2019 by Institution '
+            text: title
         },
         scales: {
             yAxes: [{
@@ -125,7 +144,7 @@ let chart = new Chart(ctx1, {
 
                 scaleLabel: {
                     display: true,
-                    labelString: 'Hispanic Graduation Rate',
+                    labelString: yLabel,
 
                 }
             }],
@@ -152,9 +171,9 @@ let chart = new Chart(ctx1, {
 },
 );
 if (window.matchMedia('(max-width: 480px)').matches) {
-    DOEChart.canvas.style = 'max-height:300px';
-    DOEChart.options.maintainAspectRatio = false;
-    DOEChart.update();
+    RatesChart.canvas.style = 'max-height:300px';
+    RatesChart.options.maintainAspectRatio = false;
+    RatesChart.update();
 }
 
 
