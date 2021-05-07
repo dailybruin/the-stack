@@ -1,4 +1,4 @@
-.chart-descrip {
+.caption {
     font-size:smaller;
     color:gray;
 }
@@ -11,11 +11,15 @@
         height: 100%;
         margin-bottom: 40px;
     }
+    .caption {
+        margin: auto;
+        width: 50%;
+    }
     .rate-change {
         float: right;
         width: 50%;
     }
-    .grad-rate-gap {
+    .rate-gap {
         width: 50%;
         margin: auto;
         height: auto;
@@ -24,27 +28,25 @@
     .DOEViz {
         width: 70%;
         height: auto;
+        margin: auto;
     }
 
     .TotalViz {
         width: 70%;
         height: auto;
-    }
-
-    .chart-container {
-        width: 70%;
         margin: auto;
-        margin-bottom: 40px;
     }
 
-    .graphic {
+    .undergrad-predict {
         width: 50%;
-        margin-top: 40px;
-        float: right;
+        float: left;
+        margin: auto;
     }
 
-    .chart-descrip {
-        margin-left: 100px;
+    .total-predict {
+        width: 50%;
+        float: right;
+        height: auto;
     }
 
     .line-break {

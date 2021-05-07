@@ -8,7 +8,7 @@ let Riversidegap = [-3.90, 9.50, 5.00, 2.30, 1.70, 3.20, -0.50, -5.40, -0.50];
 let SanDiegogap = [10.20, 5.30, 11.00, 8.50, 10.50, 5.70, 8.90, 8.50, 3.60];
 let SantaCruzgap = [3.60, 4.90, 5.60, 7.20, 2.90, 6.00, 5.70, 6.70, 4.30];
 let SantaBarbaragap = [9.50, 10.40, 6.80, 5.20, 5.40, 5.20, 7.40, 5.90, 4.00];
-let DataNamesgap = [Berkeleygap, Davisgap, Irvinegap, LosAngelesgap, Mercedgap, Riversidegap, SanDiegogap, SantaCruzgap, SantaBarbaragap]
+let DataNamesgap = [LosAngelesgap, Berkeleygap, Davisgap, Irvinegap, Mercedgap, Riversidegap, SanDiegogap, SantaCruzgap, SantaBarbaragap]
 
 
 let datagap = []
@@ -17,12 +17,8 @@ for (let i = 0; i < schools.length; ++i) {
         label: labelList[i],
         fill: false,
         data: DataNamesgap[i],
-        backgroundColor: [
-            colors[i],
-        ],
-        borderColor: [
-            colors[i],
-        ],
+        backgroundColor: colors[i],
+        borderColor: colors[i],
         borderWidth: 1,
         hidden: DataNamesgap[i] != LosAngelesgap,
         lineTension: 0
@@ -38,15 +34,15 @@ else {
 }
 
 if (isMobile) {
-    yLabel = "Difference btw. White and Hispanic Grad. Rates";
+    yLabel = "Difference (%)";
 }
 else {
-    yLabel = "Difference between White and Hispanic Graduation Rates";
+    yLabel = "Difference (%)";
 }
 
 var ctx5 = document.getElementById('grad-rate-gap');
 
-var myChart = new Chart(ctx5, {
+var GapChart = new Chart(ctx5, {
     type: 'line',
     data: {
         labels: YearLabels2,
@@ -82,30 +78,27 @@ var myChart = new Chart(ctx5, {
             }]
         },
         tooltips: {
-            intersect: true,
-            displayColors: true,
             callbacks: {
-                label: function(tooltipItem, data) {
+                label: function (tooltipItem, data) {
                     var value = data.datasets[tooltipItem.datasetIndex].data[0];
                     var label = data.datasets[tooltipItem.datasetIndex].label;
                     return label + ' ' + value + '%';
-              }
+                }
             }
         },
-        //aspectRatio = ratio,
-        //maintainAspectRatio: true
+        animation: false
     },
     lineAtIndex: [
-        { index: 1, text: ['2012', 'UCSC becomes', 'a HSI'] },
-        { index: 4, text: ['2015', 'UCSB becomes', 'a HSI'] },
-        { index: 6, text: ['2017', 'UCI becomes', 'a HSI'] },
+        { index: 1, text: ['2012', 'Santa Cruz became', 'an HSI'] },
+        { index: 4, text: ['2015', 'Santa Barbara became', 'an HSI'] },
+        { index: 6, text: ['2017', 'Irvine became', 'an HSI'] },
     ],
 })
 
 if (window.matchMedia('(max-width: 480px)').matches) {
-    DOEChart.canvas.style = 'max-height:300px';
-    DOEChart.options.maintainAspectRatio = false;
-    DOEChart.update();
+    GapChart.canvas.style = 'max-height:300px';
+    GapChart.options.maintainAspectRatio = false;
+    GapChart.update();
 }
 
 
