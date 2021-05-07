@@ -49,7 +49,7 @@ var HSIS_Projection = new Chart(ctx7, {
     ],
     datasets: [
       {
-        label: 'Current Yearly Growth in % UCLA Hispanic Students',
+        label: 'Actual % UCLA Hispanic Students',
         data: [
           0.12,
           0.12,
@@ -78,7 +78,7 @@ var HSIS_Projection = new Chart(ctx7, {
       },
       {
         label:
-          'Linear Least Squares Regression Line of Growth in % UCLA Hispanic Students',
+          'Trend Line of % Hispanic Students',
         data: [
           0.1126406926,
           0.11604329,
@@ -107,7 +107,7 @@ var HSIS_Projection = new Chart(ctx7, {
         fill: false,
       },
       {
-        label: 'Predicted Growth in % Hispanic Students at UCLA',
+        label: 'Projected % Hispanic Students',
         data: [
           NaN,
           NaN,
@@ -158,7 +158,7 @@ var HSIS_Projection = new Chart(ctx7, {
         fill: false,
       },
       {
-        label: 'Minimum % Threshold of Hispanic Students Needed for HSI = 25%',
+        label: 'HSI Threshold (25%)',
         borderColor: '#FF0000',
         lineTension: 0.1,
         data: [
@@ -224,7 +224,7 @@ var HSIS_Projection = new Chart(ctx7, {
       yAxes: [
         {
           ticks: {
-            callback: function(value) {
+            callback: function (value) {
               return value.toLocaleString('en-US', {
                 style: 'percent',
                 minimumFractionDigits: 0,
@@ -236,7 +236,7 @@ var HSIS_Projection = new Chart(ctx7, {
           },
           scaleLabel: {
             display: true,
-            labelString: 'Percentage of Hispanic Students',
+            labelString: 'Hispanic Students (%)',
           },
         },
       ],
@@ -253,7 +253,7 @@ var HSIS_Projection = new Chart(ctx7, {
       intersect: true,
       displayColors: true,
       callbacks: {
-        label: function(tooltipItem, datasets) {
+        label: function (tooltipItem, datasets) {
           label = tooltipItem.yLabel.toLocaleString('en-US', {
             style: 'percent',
             maximumFractionDigits: 2,
@@ -262,6 +262,7 @@ var HSIS_Projection = new Chart(ctx7, {
         },
       },
     },
+    animation: false
   },
   lineAtIndex: [
     // { index: 41, text: ['2040', 'UCLA becomes', 'a HSI'] },

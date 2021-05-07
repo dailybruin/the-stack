@@ -2,7 +2,7 @@
 let ctx1 = document.getElementById('grad-rate-line').getContext("2d");
 //let ctx = document.getElementById('myChart').getContext('2d');
 isMobile = true;
-console.log(screen.width)
+//console.log(screen.width)
 if (screen.width > 1000) {
     isMobile = false;
 };
@@ -15,10 +15,10 @@ else {
 }
 
 if (isMobile) {
-    yLabel = "Hispanic Grad. Rate";
+    yLabel = "Hispanic Grad. Rate (%)";
 }
 else {
-    yLabel = 'Hispanic Graduation Rate';
+    yLabel = 'Hispanic Graduation Rate (%)';
 }
 let RatesChart = new Chart(ctx1, {
     // The type of chart we want to create
@@ -46,9 +46,63 @@ let RatesChart = new Chart(ctx1, {
             borderWidth: 2.5,
             pointRadius: 1,
 
+        },
+        {
+
+            label: 'Berkeley',
+            fill: false,
+            borderColor: '#041E42',
+            backgroundColor: '#041E42',
+            lineTension: 0,
+
+            data: [81.20, 80.80, 84.30, 84.70, 84.80, 88.70, 87.30, 85.30, 84.00],
+            hidden: true,
+
+        }, {
+
+            label: 'Berkeley Avg.',
+            fill: false,
+            borderColor: '#041E42',
+            backgroundColor: 'white',
+            lineTension: 0,
+            data: [84.57, 84.57, 84.57, 84.57, 84.57, 84.57, 84.57, 84.57, 84.57],
+            borderDash: [10, 5],
+            borderWidth: 2.5,
+            pointRadius: 1,
+            hidden: true,
+
+
+
+        },
+        {
+
+            label: 'Davis',
+            fill: false,
+            borderColor: '#B3A369',
+            backgroundColor: '#B3A369',
+            lineTension: 0,
+            data: [70.90, 71.60, 71.70, 77.90, 76.90, 76.20, 77.00, 80.20, 80.30],
+            hidden: true,
+
+
         }, {
 
 
+            label: 'Davis Avg.',
+            fill: false,
+            borderColor: '#B3A369',
+            backgroundColor: 'white',
+            lineTension: 0,
+            data: [75.86, 75.86, 75.86, 75.86, 75.86, 75.86, 75.86, 75.86, 75.86],
+            borderDash: [10, 5],
+            borderWidth: 2.5,
+            pointRadius: 1,
+            hidden: true,
+
+
+
+        },
+        {
             label: 'Irvine',
             fill: false,
             borderColor: '#FFD200',
@@ -71,35 +125,8 @@ let RatesChart = new Chart(ctx1, {
             pointRadius: 1,
             hidden: true,
 
-
-
-        }, {
-
-            label: 'Santa Barbara',
-            fill: false,
-            borderColor: '#004D9F',
-            backgroundColor: '#004D9F',
-            lineTension: 0,
-            data: [73.30, 73.50, 75.70, 78.30, 77.80, 79.60, 76.80, 78.40, 80.90],
-
-
-        }, {
-
-
-            label: 'Santa Barbara Avg.',
-            fill: false,
-            borderColor: '#004D9F',
-            backgroundColor: 'white',
-            lineTension: 0,
-            data: [77.14, 77.14, 77.14, 77.14, 77.14, 77.14, 77.14, 77.14, 77.14],
-            borderDash: [10, 5],
-            borderWidth: 2.5,
-            pointRadius: 1,
-            hidden: true,
-
-
-
-        }, {
+        },
+        {
             label: 'Merced',
             fill: false,
             borderColor: '#0091B3',
@@ -127,39 +154,13 @@ let RatesChart = new Chart(ctx1, {
 
         }, {
 
-            label: 'Davis',
-            fill: false,
-            borderColor: '#B3A369',
-            backgroundColor: '#B3A369',
-            lineTension: 0,
-            data: [70.90, 71.60, 71.70, 77.90, 76.90, 76.20, 77.00, 80.20, 80.30],
-            hidden: true,
-
-
-        }, {
-
-
-            label: 'Davis Avg.',
-            fill: false,
-            borderColor: '#B3A369',
-            backgroundColor: 'white',
-            lineTension: 0,
-            data: [75.86, 75.86, 75.86, 75.86, 75.86, 75.86, 75.86, 75.86, 75.86],
-            borderDash: [10, 5],
-            borderWidth: 2.5,
-            pointRadius: 1,
-            hidden: true,
-
-
-
-        }, {
-
             label: 'Riverside',
             fill: false,
             borderColor: '#add8e6',
             backgroundColor: '#add8e6',
             lineTension: 0,
             data: [65.10, 57.90, 62.40, 66.20, 69.50, 70.10, 72.80, 74.80, 74.60],
+            hidden: true,
 
         }, {
 
@@ -231,23 +232,22 @@ let RatesChart = new Chart(ctx1, {
 
         }, {
 
-            label: 'Berkeley',
+            label: 'Santa Barbara',
             fill: false,
-            borderColor: '#041E42',
-            backgroundColor: '#041E42',
+            borderColor: '#004D9F',
+            backgroundColor: '#004D9F',
             lineTension: 0,
-
-            data: [81.20, 80.80, 84.30, 84.70, 84.80, 88.70, 87.30, 85.30, 84.00],
-            hidden: true,
-
+            data: [73.30, 73.50, 75.70, 78.30, 77.80, 79.60, 76.80, 78.40, 80.90],
+            hidden: true
         }, {
 
-            label: 'Berkeley Avg.',
+
+            label: 'Santa Barbara Avg.',
             fill: false,
-            borderColor: '#041E42',
+            borderColor: '#004D9F',
             backgroundColor: 'white',
             lineTension: 0,
-            data: [84.57, 84.57, 84.57, 84.57, 84.57, 84.57, 84.57, 84.57, 84.57],
+            data: [77.14, 77.14, 77.14, 77.14, 77.14, 77.14, 77.14, 77.14, 77.14],
             borderDash: [10, 5],
             borderWidth: 2.5,
             pointRadius: 1,
@@ -255,7 +255,7 @@ let RatesChart = new Chart(ctx1, {
 
 
 
-        }]
+        },]
     },
     // Configuration options go here
 
@@ -290,7 +290,6 @@ let RatesChart = new Chart(ctx1, {
             }],
             plugins: false
         },
-
         tooltips: {
             callbacks: {
                 label: function (tooltipItem, data) {
@@ -299,8 +298,8 @@ let RatesChart = new Chart(ctx1, {
                     return label + ' ' + value + '%';
                 }
             }
-        }
-
+        },
+        animation: false
     }
 },
 );

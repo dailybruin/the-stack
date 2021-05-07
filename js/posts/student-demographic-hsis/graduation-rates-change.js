@@ -8,14 +8,14 @@ if (isMobile) {
     title2 = "UCLA vs. HSIs Change in Hispanic Grad Rates";
 }
 else {
-    title2 = 'Comparing UCLA and Designated UC HSIs Change in Hispanic Graduation Rates Since 2011';
+    title2 = 'UCLA and Designated UC HSIs Change in Hispanic Graduation Rates Since 2011';
 }
 
 if (isMobile) {
-    yLabel2 = "Change in Hispanic Grad. Rate";
+    yLabel2 = "Change since 2011 (%)";
 }
 else {
-    yLabel2 = 'Change in Hispanic Graduation Rate since 2011';
+    yLabel2 = 'Change since 2011(%)';
 }
 let ChangeChart = new Chart(ctx2, {
     // The type of chart we want to create
@@ -38,16 +38,6 @@ let ChangeChart = new Chart(ctx2, {
             backgroundColor: '#FFD200',
             lineTension: 0,
             data: [0.00, -0.30, -0.90, 2.70, 4.50, 0.70, -1.80, -3.40, -0.70],
-            hidden: true,
-
-        }, {
-
-            label: 'Santa Barbara',
-            fill: false,
-            borderColor: '#004D9F',
-            backgroundColor: '#004D9F',
-            lineTension: 0,
-            data: [0.00, 0.20, 2.40, 5.00, 4.50, 6.30, 3.50, 5.10, 7.60],
             hidden: true,
 
         }, {
@@ -79,6 +69,16 @@ let ChangeChart = new Chart(ctx2, {
             backgroundColor: '#f29813',
             lineTension: 0,
             data: [0.00, -2.00, -4.10, -0.30, 3.20, 1.60, 1.70, -1.70, 0.60],
+            hidden: true,
+
+        }, {
+
+            label: 'Santa Barbara',
+            fill: false,
+            borderColor: '#004D9F',
+            backgroundColor: '#004D9F',
+            lineTension: 0,
+            data: [0.00, 0.20, 2.40, 5.00, 4.50, 6.30, 3.50, 5.10, 7.60],
             hidden: true,
 
         }],
@@ -115,12 +115,13 @@ let ChangeChart = new Chart(ctx2, {
         tooltips: {
             callbacks: {
                 label: function (tooltipItem, data) {
-                    var value = data.datasets[tooltipItem.datasetIndex].data[0];
+                    var value = tooltipItem.yLabel;
                     var label = data.datasets[tooltipItem.datasetIndex].label;
                     return label + ' ' + value + '%';
                 }
             }
         },
+        animation: false
     }
 },
 );

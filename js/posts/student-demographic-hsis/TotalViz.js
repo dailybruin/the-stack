@@ -5,9 +5,9 @@ let TotalLosAngeles = [13790.54815, 20694.16299, 20107.84641, 21775.13723, 23149
 let TotalMerced = [559.42681, 1330.58246, 1776.18831, 2507.71527, 2190.75653, 1537.026, 1906.92811, 1915.98237, 3441.94054, 2891.35594, 2667.70939, 3864.75901, 2812.39505, 5774.05493, 5026.20934];
 let TotalRiverside = [2232.3638, 3838.88222, 4076.53701, 3487.64078, 4505.87701, 3646.17736, 4423.85638, 3665.20715, 4378.71249, 4879.50816, 5420.11688, 5755.42424, 6292.18276, 6943.3402, 9243.14381];
 let TotalSanDiego = [12880.04159, 18591.28748, 21534.34312, 22973.26776, 27567.62781, 25300.68918, 26347.7452, 25968.11666, 28226.96303, 26397.0134, 28033.0119, 28480.28999, 29316.33976, 33900.67144, 31934.78947];
-let TotalSantaCruz = [4089.69959, 4283.62062, 5146.20989, 4734.38497, 5618.29159, 4834.25257, 5518.98491, 5456.78464, 5264.39424, 5253.61473, 4699.46382, 3940.52808, 5754.08851, 6302.77772, 6012.85373];
-let TotalSantaBarbara = [6394.93157, 8828.87422, 9980.21227, 8959.19216, 11507.49236, 9459.98199, 11180.31466, 8491.73192, 10660.74279, 9556.21791, 9443.97989, 9429.65169, 10750.52119, 11058.03647, 12051.52026];
-let TotalDataNames = [TotalBerkeley, TotalDavis, TotalIrvine, TotalLosAngeles, TotalMerced, TotalRiverside, TotalSanDiego, TotalSantaCruz, TotalSantaBarbara];
+let TotalSantaCruz = [5520.48605, 5782.25059, 6946.61778, 6390.7154, 7583.85785, 6525.5218, 7449.80861, 7365.84749, 7106.14907, 7091.59834, 6343.57705, 5319.12671, 7767.16349, 8507.8123, 8116.45804];
+let TotalSantaBarbara = [4737.5084, 6540.62757, 7393.56457, 6637.17002, 8525.00783, 7008.16634, 8282.62727, 6290.86501, 7897.7168, 7079.46006, 6996.31162, 6985.69697, 7964.22665, 8192.04085, 8928.03587];
+let TotalDataNames = [TotalLosAngeles, TotalBerkeley, TotalDavis, TotalIrvine, TotalMerced, TotalRiverside, TotalSanDiego, TotalSantaCruz, TotalSantaBarbara];
 let Totaldata = []
 
 
@@ -16,20 +16,16 @@ for (let i = 0; i < schools.length; ++i) {
     chartdata2 = {
         label: labelList[i],
         fill: false,
-        data: TotalDataNames[i],
-        backgroundColor: [
-            colors[i],
-        ],
-        borderColor: [
-            colors[i],
-        ],
+        backgroundColor: colors[i],
+        borderColor: colors[i],
         borderWidth: 1,
         hidden: TotalDataNames[i] != TotalLosAngeles,
-        lineTension: 0
+        lineTension: 0,
+        data: TotalDataNames[i],
     }
     Totaldata.push(chartdata2);
 };
-console.log(Totaldata);
+//console.log(Totaldata);
 
 var ctxTotal = document.getElementById('TotalChart');
 var myChart = new Chart(ctxTotal, {
@@ -59,13 +55,13 @@ var myChart = new Chart(ctxTotal, {
                 },
                 scaleLabel: {
                     display: true,
-                    labelString: "Grant Money per Student"
+                    labelString: "Grant Money per Student (USD)"
                 }
             }],
             xAxes: [{
                 scaleLabel: {
                     display: true,
-                    labelString: "Years"
+                    labelString: "UC Fiscal Years (From July - next July)"
                 }
             }]
         },
@@ -74,7 +70,7 @@ var myChart = new Chart(ctxTotal, {
             displayColors: true,
             callbacks: {
                 label: function (tooltipItem, data) {
-                    var value = data.datasets[tooltipItem.datasetIndex].data[0].toLocaleString('en-US', {
+                    var value = tooltipItem.yLabel.toLocaleString('en-US', {
                         style: 'currency',
                         currency: 'USD',
                         maximumFractionDigits: 2,
@@ -84,15 +80,14 @@ var myChart = new Chart(ctxTotal, {
                 }
             },
         },
-        aspectRatio: ratio,
-        maintainAspectRatio: true
+        animation: false,
     },
     lineAtIndex: [
-        { index: 7, text: ['2012', 'UCSC becomes', 'a HSI'] },
-        { index: 10, text: ['2015', 'UCSB becomes', 'a HSI'] },
-        { index: 12, text: ['2017', 'UCI becomes', 'a HSI'] },
-        { index: 5, text: ['2010', 'UCM becomes', 'a HSI'] },
-        { index: 3, text: ['2008', 'UCR becomes', 'a HSI'] }
+        { index: 7, text: ['2012', 'Santa Cruz became', 'an HSI'] },
+        { index: 10, text: ['2015', 'Santa Barbara became', 'an HSI'] },
+        { index: 12, text: ['2017', 'Irvine became', 'an HSI'] },
+        { index: 5, text: ['2010', 'Merced became', 'an HSI'] },
+        { index: 3, text: ['2008', 'Riverside became', 'an HSI'] }
     ],
 })
 

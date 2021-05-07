@@ -1,4 +1,4 @@
-.chart-descrip {
+.caption {
     font-size:smaller;
     color:gray;
 }
@@ -10,6 +10,10 @@
         width: 50%;
         height: 100%;
         margin-bottom: 40px;
+    }
+    .caption {
+        margin: auto;
+        width: 50%;
     }
     .rate-change {
         float: right;

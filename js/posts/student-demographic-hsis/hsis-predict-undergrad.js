@@ -52,7 +52,7 @@ var HSIS_Projection_Undergrad = new Chart(ctx6, {
     datasets: [
       {
         label:
-          'Current Yearly Growth in % Undergraduate UCLA Hispanic Students',
+          'Current % Undergraduate Hispanic Students',
         data: [
           0.14,
           0.14,
@@ -81,7 +81,7 @@ var HSIS_Projection_Undergrad = new Chart(ctx6, {
       },
       {
         label:
-          'Linear Least Squares Regression Line of Growth in % Undergraduate UCLA Hispanic Students',
+          'Trendline of % Undergraduate Hispanic Students',
         data: [
           0.1305194805,
           0.1346103896,
@@ -110,7 +110,7 @@ var HSIS_Projection_Undergrad = new Chart(ctx6, {
         fill: false,
       },
       {
-        label: 'Predicted Growth in % Undergraduate Hispanic Students at UCLA',
+        label: 'Predicted % Undergraduate Hispanic Students',
         data: [
           NaN,
           NaN,
@@ -161,7 +161,7 @@ var HSIS_Projection_Undergrad = new Chart(ctx6, {
         fill: false,
       },
       {
-        label: 'Minimum % Threshold of Hispanic Students Needed for HSI = 25%',
+        label: 'HSI Threshold (25%)',
         borderColor: '#FF0000',
         lineTension: 0.1,
         data: [
@@ -227,7 +227,7 @@ var HSIS_Projection_Undergrad = new Chart(ctx6, {
       yAxes: [
         {
           ticks: {
-            callback: function(value) {
+            callback: function (value) {
               return value.toLocaleString('en-US', {
                 style: 'percent',
                 minimumFractionDigits: 0,
@@ -239,7 +239,7 @@ var HSIS_Projection_Undergrad = new Chart(ctx6, {
           },
           scaleLabel: {
             display: true,
-            labelString: 'Percentage of Undergraduate Hispanic Students',
+            labelString: 'Undergraduate Hispanic Students (%)',
           },
         },
       ],
@@ -256,7 +256,7 @@ var HSIS_Projection_Undergrad = new Chart(ctx6, {
       intersect: true,
       displayColors: true,
       callbacks: {
-        label: function(tooltipItem, datasets) {
+        label: function (tooltipItem, datasets) {
           label = tooltipItem.yLabel.toLocaleString('en-US', {
             style: 'percent',
             maximumFractionDigits: 2,
@@ -265,6 +265,7 @@ var HSIS_Projection_Undergrad = new Chart(ctx6, {
         },
       },
     },
+    animation: false
   },
   lineAtIndex: [
     // { index: 29, text: ['2029', 'UCLA becomes', 'a HSI'] },
