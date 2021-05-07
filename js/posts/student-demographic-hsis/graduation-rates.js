@@ -304,7 +304,7 @@ let RatesChart = new Chart(ctx1, {
 },
 );
 if (window.matchMedia('(max-width: 480px)').matches) {
-    RatesChart.canvas.style = 'max-height:800px';
+    RatesChart.canvas.style = 'min-height: 500px';
     RatesChart.options.maintainAspectRatio = false;
     RatesChart.update();
 }

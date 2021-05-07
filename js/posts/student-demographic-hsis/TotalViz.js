@@ -28,7 +28,7 @@ for (let i = 0; i < schools.length; ++i) {
 //console.log(Totaldata);
 
 var ctxTotal = document.getElementById('TotalChart');
-var myChart = new Chart(ctxTotal, {
+var TotalChart = new Chart(ctxTotal, {
     type: 'line',
     data: {
         labels: YearLabels,
@@ -92,9 +92,9 @@ var myChart = new Chart(ctxTotal, {
 })
 
 if (window.matchMedia('(max-width: 480px)').matches) {
-    DOEChart.canvas.style = 'max-height:300px';
-    DOEChart.options.maintainAspectRatio = false;
-    DOEChart.update();
+    TotalChart.canvas.style = 'min-height: 200px, max-height:400px,';
+    TotalChart.options.maintainAspectRatio = false;
+    TotalChart.update();
 }
 
 
