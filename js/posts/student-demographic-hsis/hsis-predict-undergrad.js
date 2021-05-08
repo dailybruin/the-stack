@@ -76,7 +76,7 @@ var HSIS_Projection_Undergrad = new Chart(ctx6, {
           0.21,
           0.21,
         ],
-        borderColor: '#0066CC',
+        borderColor: '#3284BF',
         fill: false,
       },
       {
@@ -267,9 +267,6 @@ var HSIS_Projection_Undergrad = new Chart(ctx6, {
     },
     animation: false
   },
-  lineAtIndex: [
-    // { index: 29, text: ['2029', 'UCLA becomes', 'a HSI'] },
-  ],
 });
 
 if (window.matchMedia('(max-width: 480px)').matches) {

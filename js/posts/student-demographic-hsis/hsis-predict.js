@@ -73,7 +73,7 @@ var HSIS_Projection = new Chart(ctx7, {
           0.18,
           0.18,
         ],
-        borderColor: '#0066CC',
+        borderColor: '#3284BF',
         fill: false,
       },
       {

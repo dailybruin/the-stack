@@ -12,8 +12,8 @@ key_takeaways:
   - At the current pace, UCLA would not reach the requisite 25% Hispanic Undergraduate population until 2029, but with targeted outreach could achieve their goal of being an HSI by 2025. 
 
 featured_image:
-  url: 
-og_image: 
+  url: student-demographics-hsis/cover_image.png 
+og_image: student-demographics-hsis/cover_image.png
 stylesheets:
   - //cdnjs.cloudflare.com/ajax/libs/c3/0.4.10/c3.min.css
   - /css/posts/student-demographics-hsis/app.css
