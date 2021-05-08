@@ -41,17 +41,17 @@ scripts:
 ---
 ### Introduction
 
-Even though Los Angeles is 48.5% Hispanic, UCLA fails to reflect this and is only 21% Hispanic. However, recent efforts by UCLA to become a Hispanic Serving Institution(HSI) may change that.
+Even though Los Angeles is 48.5% Hispanic, UCLA fails to reflect this and is only 21% Hispanic. However, recent efforts by UCLA to become a Hispanic Serving Institution(HSI) may change that. Having a greater Hispanic population would make it so that UCLA better reflects the demographics of the surrounding Los Angeles community. 
 
-"UCLA is in the middle of Los Angeles. So it makes sense for it to reflect the actual demographics of LA, which it doesn't right now,” said Sam Mazariegos, a third-year human biology and society student.
-
-“I always felt kind of out of place in the student body because I didn’t see a lot of Latinx students in my classes and in my own major,” said Yesenia Flores, a second-year Hispanic arts student.  
+"UCLA is in the middle of Los Angeles. So it makes sense for it to reflect the actual demographics of LA, which it doesn't right now,” said Sam Mazariegos, a third-year human biology and society student.  
 
 On Dec. 20, 2020, Chancellor Gene Block announced that UCLA planned to become an HSI by 2025. This designation would be given by the U.S. Department of Education if UCLA’s student population was at least 25% Hispanic students and would be accompanied by a range of new grants from the federal government that UCLA could qualify for. In his announcement, Block noted that these new grant qualifications could assist in strengthening education programs and benefitting Hispanic students at UCLA. 
 
 Block’s Dec. 7, 2020 letter to the community said, “research has shown that HSI designation strengthens interracial relations among all students, improves academic performance and attendance of students of color, and increases their likelihood of graduation”. Currently, the graduation rate of Hispanic students at UCLA is 86.78% and the average for all students is 91.5%. 
 
-In this article, The Stack will be looking into how much UCLA will have to increase admissions to become an HSI, how we stack up to other UCs with HSI designations, and if graduation rates for Hispanic students improve with HSI standing. We’ll also take a look at the grant allocations for HSIs and how much grant funding UCLA may receive from an HSI status.  
+“I always felt kind of out of place in the student body because I didn’t see a lot of Latinx students in my classes and in my own major,” said Yesenia Flores, a second-year Hispanic arts student.
+
+In this article, The Stack looks into how much UCLA will have to increase admissions to become an HSI, how we stack up to other UCs with HSI designations and if graduation rates for Hispanic students improve with HSI standing. We also take a look at the grant allocations for HSIs and how much grant funding UCLA may receive from an HSI status.  
 
 ### The Story in Graduation Rates
 
@@ -145,7 +145,7 @@ Hurtado and Herrara both said that the HSI goal is student-focused.
 
  “All students do well at HSIs, it’s not just Latino students.” said Herrara. 
 
-Students are optimistic and excited for the increase in diversity, but are uncertain about UCLA's commitment to providing all the resources to truly assist the Hispanic student community. They hope the status of HSI serves as more than just a title. 
+There is optimism and excitement in regards to increased diversity, but also uncertainty about UCLA's commitment to providing all the resources to truly assist the Hispanic student community.  
 
 “What exactly are they going to implement to follow through with the goals that they have?" said Flores. 
 
