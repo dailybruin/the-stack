@@ -13,7 +13,8 @@
     }
     .caption {
         margin: auto;
-        width: 50%;
+        width: 55%;
+        text-align: center;
     }
     .rate-change {
         float: right;

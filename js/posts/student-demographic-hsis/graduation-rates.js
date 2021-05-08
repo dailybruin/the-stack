@@ -58,6 +58,79 @@ let RatesChart = new Chart(ctx1, {
             data: [81.20, 80.80, 84.30, 84.70, 84.80, 88.70, 87.30, 85.30, 84.00],
             hidden: true,
 
+        },
+        {
+
+            label: 'Davis',
+            fill: false,
+            borderColor: '#B3A369',
+            backgroundColor: '#B3A369',
+            lineTension: 0,
+            data: [70.90, 71.60, 71.70, 77.90, 76.90, 76.20, 77.00, 80.20, 80.30],
+            hidden: true,
+
+
+        }, {
+            label: 'Irvine',
+            fill: false,
+            borderColor: '#FFD200',
+            backgroundColor: '#FFD200',
+            lineTension: 0,
+            data: [79.20, 78.90, 78.30, 81.90, 83.70, 79.90, 77.40, 75.80, 78.50],
+            hidden: true,
+
+
+        }, {
+            label: 'Merced',
+            fill: false,
+            borderColor: '#0091B3',
+            backgroundColor: '#0091B3',
+            lineTension: 0,
+            data: [54.40, 58.60, 61.00, 62.20, 66.90, 63.50, 57.40, 63.40, 67.70],
+            hidden: true,
+
+
+        }, {
+
+            label: 'Riverside',
+            fill: false,
+            borderColor: '#add8e6',
+            backgroundColor: '#add8e6',
+            lineTension: 0,
+            data: [65.10, 57.90, 62.40, 66.20, 69.50, 70.10, 72.80, 74.80, 74.60],
+            hidden: true,
+
+        }, {
+
+            label: 'San Diego',
+            fill: false,
+            borderColor: '#C69214',
+            backgroundColor: '#C69214',
+            lineTension: 0,
+            data: [75.90, 78.90, 74.10, 76.80, 77.90, 81.50, 76.40, 76.40, 82.20],
+            hidden: true,
+
+
+        }, {
+
+            label: 'Santa Cruz',
+            fill: false,
+            borderColor: '#f29813',
+            backgroundColor: '#f29813',
+            lineTension: 0,
+            data: [71.80, 69.80, 67.70, 71.50, 75.00, 73.40, 73.50, 70.10, 72.40],
+            hidden: true,
+
+
+        }, {
+
+            label: 'Santa Barbara',
+            fill: false,
+            borderColor: '#004D9F',
+            backgroundColor: '#004D9F',
+            lineTension: 0,
+            data: [73.30, 73.50, 75.70, 78.30, 77.80, 79.60, 76.80, 78.40, 80.90],
+            hidden: true
         }, {
 
             label: 'Berkeley Avg.',
@@ -70,20 +143,6 @@ let RatesChart = new Chart(ctx1, {
             borderWidth: 2.5,
             pointRadius: 1,
             hidden: true,
-
-
-
-        },
-        {
-
-            label: 'Davis',
-            fill: false,
-            borderColor: '#B3A369',
-            backgroundColor: '#B3A369',
-            lineTension: 0,
-            data: [70.90, 71.60, 71.70, 77.90, 76.90, 76.20, 77.00, 80.20, 80.30],
-            hidden: true,
-
 
         }, {
 
@@ -101,17 +160,6 @@ let RatesChart = new Chart(ctx1, {
 
 
 
-        },
-        {
-            label: 'Irvine',
-            fill: false,
-            borderColor: '#FFD200',
-            backgroundColor: '#FFD200',
-            lineTension: 0,
-            data: [79.20, 78.90, 78.30, 81.90, 83.70, 79.90, 77.40, 75.80, 78.50],
-            hidden: true,
-
-
         }, {
 
             label: 'Irvine Avg.',
@@ -124,17 +172,6 @@ let RatesChart = new Chart(ctx1, {
             borderWidth: 2.5,
             pointRadius: 1,
             hidden: true,
-
-        },
-        {
-            label: 'Merced',
-            fill: false,
-            borderColor: '#0091B3',
-            backgroundColor: '#0091B3',
-            lineTension: 0,
-            data: [54.40, 58.60, 61.00, 62.20, 66.90, 63.50, 57.40, 63.40, 67.70],
-            hidden: true,
-
 
         }, {
 
@@ -154,16 +191,6 @@ let RatesChart = new Chart(ctx1, {
 
         }, {
 
-            label: 'Riverside',
-            fill: false,
-            borderColor: '#add8e6',
-            backgroundColor: '#add8e6',
-            lineTension: 0,
-            data: [65.10, 57.90, 62.40, 66.20, 69.50, 70.10, 72.80, 74.80, 74.60],
-            hidden: true,
-
-        }, {
-
 
             label: 'Riverside Avg.',
             fill: false,
@@ -176,17 +203,6 @@ let RatesChart = new Chart(ctx1, {
             pointRadius: 1,
             hidden: true,
 
-
-
-        }, {
-
-            label: 'San Diego',
-            fill: false,
-            borderColor: '#C69214',
-            backgroundColor: '#C69214',
-            lineTension: 0,
-            data: [75.90, 78.90, 74.10, 76.80, 77.90, 81.50, 76.40, 76.40, 82.20],
-            hidden: true,
 
 
         }, {
@@ -206,17 +222,6 @@ let RatesChart = new Chart(ctx1, {
 
         }, {
 
-            label: 'Santa Cruz',
-            fill: false,
-            borderColor: '#f29813',
-            backgroundColor: '#f29813',
-            lineTension: 0,
-            data: [71.80, 69.80, 67.70, 71.50, 75.00, 73.40, 73.50, 70.10, 72.40],
-            hidden: true,
-
-
-        }, {
-
             label: 'Santa Cruz Avg.',
             fill: false,
             borderColor: '#f29813',
@@ -228,17 +233,6 @@ let RatesChart = new Chart(ctx1, {
             pointRadius: 1,
             hidden: true,
 
-
-
-        }, {
-
-            label: 'Santa Barbara',
-            fill: false,
-            borderColor: '#004D9F',
-            backgroundColor: '#004D9F',
-            lineTension: 0,
-            data: [73.30, 73.50, 75.70, 78.30, 77.80, 79.60, 76.80, 78.40, 80.90],
-            hidden: true
         }, {
 
 
