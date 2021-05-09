@@ -56,7 +56,7 @@ var DOEChart = new Chart(ctxDOE, {
     options: {
         title: {
             display: true,
-            text: 'Federal Grant Money per Student by Campus'
+            text: 'Federal Grant Money per Student by UC Campus'
         },
         scales: {
             yAxes: [{
@@ -80,7 +80,7 @@ var DOEChart = new Chart(ctxDOE, {
             xAxes: [{
                 scaleLabel: {
                     display: true,
-                    labelString: "UC Fiscal Years (From July - next July)"
+                    labelString: "UC Fiscal Years (UC Fiscal Years start July 1st)"
                 }
             }]
         },
@@ -100,11 +100,11 @@ var DOEChart = new Chart(ctxDOE, {
         animation: false,
     },
     lineAtIndex: [
-        { index: 7, text: ['2012', 'Santa Cruz became', 'a HSI'], strokeStyle: 'blue' },
-        { index: 10, text: ['2015', 'Santa Barbara became', 'a HSI'], strokeStyle: 'green' },
-        { index: 12, text: ['2017', 'Irvine became', 'a HSI'] },
-        { index: 5, text: ['2010', 'Merced became', 'a HSI'] },
-        { index: 3, text: ['2008', 'Riverside became', 'a HSI'] }
+        { index: 7, text: ['2012', 'Santa Cruz became', 'an HSI'], strokeStyle: 'blue' },
+        { index: 10, text: ['2015', 'Santa Barbara became', 'an HSI'], strokeStyle: 'green' },
+        { index: 12, text: ['2017', 'Irvine became', 'an HSI'] },
+        { index: 5, text: ['2010', 'Merced became', 'an HSI'] },
+        { index: 3, text: ['2008', 'Riverside became', 'an HSI'] }
     ],
 })
 

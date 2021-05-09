@@ -37,7 +37,7 @@ var TotalChart = new Chart(ctxTotal, {
     options: {
         title: {
             display: true,
-            text: 'Total Grant Money per Student by Campus'
+            text: 'Total Grant Money per Student by UC Campus'
         },
         scales: {
             yAxes: [{
@@ -61,7 +61,7 @@ var TotalChart = new Chart(ctxTotal, {
             xAxes: [{
                 scaleLabel: {
                     display: true,
-                    labelString: "UC Fiscal Years (From July - next July)"
+                    labelString: "UC Fiscal Years (UC Fiscal Years start July 1st)"
                 }
             }]
         },

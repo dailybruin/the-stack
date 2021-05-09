@@ -5,10 +5,10 @@ let ctx2 = document.getElementById('grad-rate-change').getContext("2d");
 // };
 
 if (isMobile) {
-    title2 = "UCLA vs. HSIs Change in Hispanic Grad Rates";
+    title2 = "UCLA vs. HSIs Change in Hispanic or Latino Grad Rates";
 }
 else {
-    title2 = 'UCLA and Designated UC HSIs Change in Hispanic Graduation Rates Since 2011';
+    title2 = 'UCLA\'s and UC HSIs\' Change in Hispanic or Latino Graduation Rates Since 2011';
 }
 
 if (isMobile) {

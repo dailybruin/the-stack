@@ -8,17 +8,17 @@ if (screen.width > 1000) {
 };
 
 if (isMobile) {
-    title = "Hispanic Grad Rates by Institution";
+    title = "Hispanic or Latino Grad Rates by Institution";
 }
 else {
-    title = 'UC Hispanic Graduation Rates From 2011-2019 by Institution ';
+    title = 'UC Hispanic or Latino Graduation Rates From 2011-2019 by Institution ';
 }
 
 if (isMobile) {
-    yLabel = "Hispanic Grad. Rate (%)";
+    yLabel = "Hispanic or Latino Grad. Rate (%)";
 }
 else {
-    yLabel = 'Hispanic Graduation Rate (%)';
+    yLabel = 'Hispanic or Latino Graduation Rate (%)';
 }
 let RatesChart = new Chart(ctx1, {
     // The type of chart we want to create
