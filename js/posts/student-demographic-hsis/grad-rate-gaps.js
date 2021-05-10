@@ -73,7 +73,7 @@ var GapChart = new Chart(ctx5, {
             xAxes: [{
                 scaleLabel: {
                     display: true,
-                    labelString: "Years"
+                    labelString: "Year"
                 }
             }]
         },

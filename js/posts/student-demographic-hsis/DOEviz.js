@@ -80,7 +80,7 @@ var DOEChart = new Chart(ctxDOE, {
             xAxes: [{
                 scaleLabel: {
                     display: true,
-                    labelString: "UC Fiscal Years (UC Fiscal Years start July 1st)"
+                    labelString: "UC Fiscal Year (UC Fiscal Years start July 1)"
                 }
             }]
         },
