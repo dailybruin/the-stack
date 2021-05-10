@@ -18,6 +18,7 @@ scripts:
   - //d3js.org/d3.v6.min.js
   - //cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@0.7.0
   - /js/posts/covid-grade-inflation/A_Count_Viz.js
+  - /js/posts/covid-grade-inflation/Main_Graph.js
 
 stylesheets:
   - //cdnjs.cloudflare.com/ajax/libs/c3/0.4.10/c3.min.css
@@ -27,9 +28,12 @@ stylesheets:
 Test text
 
 
-<div class = "bubble-chart">
-  <canvas id="A_Count_Viz" width="400" height="400"></canvas>
+<div class = "bubbleChart">
+  <canvas id="bubble-chart" width="400" height="400"></canvas>
 </div>
 
+<div class = "main graph">
+  <canvas id = "main-chart"></canvas>
+</div>
 
-<script src="/js/posts/covid-grade-inflation/A_Count_Viz.js"></script>
+<script src="C:/Users/Lindsey/Desktop/Daily-Bruin/the-stack/js/posts/covid-grade-inflation/A_Count_Viz.js"></script>
