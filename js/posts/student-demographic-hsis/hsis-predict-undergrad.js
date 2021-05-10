@@ -81,7 +81,7 @@ var HSIS_Projection_Undergrad = new Chart(ctx6, {
       },
       {
         label:
-          'Trendline of % Undergraduate Hispanic or Latino Students',
+          'Trend Line of % Undergraduate Hispanic or Latino Students',
         data: [
           0.1305194805,
           0.1346103896,
