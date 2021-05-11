@@ -42,11 +42,11 @@ scripts:
 ---
 ### Introduction
 
-Even though Los Angeles’ population is 48.5% Hispanic or Latino, UCLA fails to reflect this and is 18% Hispanic/Latino(a). However, recent efforts by UCLA to become a Hispanic-Serving Institution may change that. Having a greater Latino population would make it so that UCLA better reflects the demographics of the surrounding Los Angeles community.
+Even though Los Angeles’ population is 48.5% Hispanic or Latino, UCLA fails to reflect this and is 18% Hispanic/Latino. However, recent efforts by UCLA to become a Hispanic-Serving Institution may change that. Having a greater Latino population would make it so that UCLA better reflects the demographics of the surrounding Los Angeles community.
 
 "UCLA is in the middle of Los Angeles, so it makes sense for it to reflect the actual demographics of LA, which it doesn't right now,” said Sam Mazariegos, a third-year human biology and society student.
 
-On Dec. 20, Chancellor Gene Block announced that UCLA planned to become an HSI by 2025. This designation would be given by the U.S. Department of Education if UCLA’s student population comprised at least 25% Latino students and would be accompanied by a range of new grants from the federal government that UCLA could qualify for. In his announcement, Block noted that these new grant qualifications could assist in strengthening education programs and benefitting Latino students at UCLA. 
+On Dec. 20, Chancellor Gene Block announced that UCLA planned to become an HSI by 2025. This designation would be given by the U.S. Department of Education if UCLA’s student population comprised at least 25% Latino students and would be accompanied by a range of new grants from the federal government that UCLA could qualify for. In his announcement, Block noted that these new grant qualifications could assist in strengthening education programs and benefiting Latino students at UCLA. 
 
 Block’s letter to the community on Dec. 7 said, “research has shown that HSI designation strengthens interracial relations among all students, improves academic performance and attendance of students of color, and increases their likelihood of graduation.” Currently, the graduation rate of Latino students at UCLA is 86.78% and the average for all students is 91.5%.
 
@@ -70,7 +70,7 @@ Sylvia Hurtado, a professor of education, said UCLA must have programming to add
 <div class ="rate-line">
   <canvas id="grad-rate-line"></canvas>
   <div class= "caption">
-The dotted lines show the average graduation rate for all students for each school.
+The dotted lines show the average graduation rate for Latino students for each school from 2011-2019.
 </div>
 </div>
 
@@ -154,4 +154,4 @@ There is optimism and excitement in regards to increased diversity but also unce
 
 ### About the Data
 
-The data for the grant money is from the [University of California Sponsors](https://www.universityofcalifornia.edu/infocenter/sponsors) website, and were downloaded directly from the webpage. All grant data is in UC fiscal years. All numbers were divided by the number of total students at each campus as found from the [fall enrollment data on the University of California website](https://www.universityofcalifornia.edu/infocenter/fall-enrollment-glance).All data for graduation rates is from the [National Center for Education Statistics’s Integrated Postsecondary Education](https://nces.ed.gov/ipeds/SummaryTables/report/812?templateId=8120&year=2019&expand_by=0&number_or_percent=0&tt=aggregate&instType=1) Data System.
+The data for the grant money is from the [University of California Sponsors](https://www.universityofcalifornia.edu/infocenter/sponsors) website, and were downloaded directly from the webpage. All grant data is in UC fiscal years. All numbers were divided by the number of total students at each campus as found from the [fall enrollment data on the University of California website](https://www.universityofcalifornia.edu/infocenter/fall-enrollment-glance). All data for graduation rates is from the [National Center for Education Statistics’s Integrated Postsecondary Education](https://nces.ed.gov/ipeds/SummaryTables/report/812?templateId=8120&year=2019&expand_by=0&number_or_percent=0&tt=aggregate&instType=1) Data System.
