@@ -13,8 +13,8 @@ key_takeaways:
 
 
 featured_image:
-  url: 
-og_image: 
+  url: student-demographics-hsis/cover_image.png 
+og_image: student-demographics-hsis/cover_image.png
 stylesheets:
   - //cdnjs.cloudflare.com/ajax/libs/c3/0.4.10/c3.min.css
   - /css/posts/student-demographics-hsis/app.css
@@ -70,7 +70,7 @@ Sylvia Hurtado, a professor of education, said UCLA must have programming to add
 <div class ="rate-line">
   <canvas id="grad-rate-line"></canvas>
   <div class= "caption">
-Average is the average for all students.
+The dotted lines show the average graduation rate for all students for each school.
 </div>
 </div>
 
@@ -154,4 +154,4 @@ There is optimism and excitement in regards to increased diversity but also unce
 
 ### About the Data
 
-The data for the grant money is from the [University of California Sponsors](https://www.universityofcalifornia.edu/infocenter/sponsors) website, and were downloaded directly from the webpage. All grant data is in UC fiscal years. All numbers were divided by the number of total students at each campus as found from the [fall enrollment data on the University of California website](https://www.universityofcalifornia.edu/infocenter/fall-enrollment-glance).
+The data for the grant money is from the [University of California Sponsors](https://www.universityofcalifornia.edu/infocenter/sponsors) website, and were downloaded directly from the webpage. All grant data is in UC fiscal years. All numbers were divided by the number of total students at each campus as found from the [fall enrollment data on the University of California website](https://www.universityofcalifornia.edu/infocenter/fall-enrollment-glance).All data for graduation rates is from the [National Center for Education Statistics’s Integrated Postsecondary Education](https://nces.ed.gov/ipeds/SummaryTables/report/812?templateId=8120&year=2019&expand_by=0&number_or_percent=0&tt=aggregate&instType=1) Data System.

@@ -28,7 +28,7 @@ for (let i = 0; i < schools.length; ++i) {
 //console.log(Totaldata);
 
 var ctxTotal = document.getElementById('TotalChart');
-var myChart = new Chart(ctxTotal, {
+var TotalChart = new Chart(ctxTotal, {
     type: 'line',
     data: {
         labels: YearLabels,
@@ -37,7 +37,7 @@ var myChart = new Chart(ctxTotal, {
     options: {
         title: {
             display: true,
-            text: 'Total Grant Money per Student by Campus'
+            text: 'Total Grant Money per Student by UC Campus'
         },
         scales: {
             yAxes: [{
@@ -61,7 +61,7 @@ var myChart = new Chart(ctxTotal, {
             xAxes: [{
                 scaleLabel: {
                     display: true,
-                    labelString: "UC Fiscal Years (From July - next July)"
+                    labelString: "UC Fiscal Year (UC Fiscal Years start July 1)"
                 }
             }]
         },
@@ -92,9 +92,9 @@ var myChart = new Chart(ctxTotal, {
 })
 
 if (window.matchMedia('(max-width: 480px)').matches) {
-    DOEChart.canvas.style = 'max-height:300px';
-    DOEChart.options.maintainAspectRatio = false;
-    DOEChart.update();
+    TotalChart.canvas.style = 'min-height: 200px, max-height:400px,';
+    TotalChart.options.maintainAspectRatio = false;
+    TotalChart.update();
 }
 
 

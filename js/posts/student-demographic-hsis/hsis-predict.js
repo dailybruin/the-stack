@@ -49,7 +49,7 @@ var HSIS_Projection = new Chart(ctx7, {
     ],
     datasets: [
       {
-        label: 'Actual % UCLA Hispanic Students',
+        label: 'Actual % UCLA Hispanic or Latino Students',
         data: [
           0.12,
           0.12,
@@ -73,12 +73,12 @@ var HSIS_Projection = new Chart(ctx7, {
           0.18,
           0.18,
         ],
-        borderColor: '#0066CC',
+        borderColor: '#3284BF',
         fill: false,
       },
       {
         label:
-          'Trend Line of % Hispanic Students',
+          'Trend Line of % Hispanic or Latino Students',
         data: [
           0.1126406926,
           0.11604329,
@@ -107,7 +107,7 @@ var HSIS_Projection = new Chart(ctx7, {
         fill: false,
       },
       {
-        label: 'Projected % Hispanic Students',
+        label: 'Projected % Hispanic or Latino Students',
         data: [
           NaN,
           NaN,
@@ -218,7 +218,7 @@ var HSIS_Projection = new Chart(ctx7, {
     },
     title: {
       display: true,
-      text: 'Yearly Percentage of Hispanic Students at UCLA',
+      text: 'Yearly Percentage of Hispanic or Latino Students at UCLA',
     },
     scales: {
       yAxes: [
@@ -236,7 +236,7 @@ var HSIS_Projection = new Chart(ctx7, {
           },
           scaleLabel: {
             display: true,
-            labelString: 'Hispanic Students (%)',
+            labelString: 'Hispanic or Latino Students (%)',
           },
         },
       ],

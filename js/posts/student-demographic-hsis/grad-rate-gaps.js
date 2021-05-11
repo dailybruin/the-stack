@@ -27,10 +27,10 @@ for (let i = 0; i < schools.length; ++i) {
 };
 
 if (isMobile) {
-    title = "% Gap between White and Hispanic Grad. Rates";
+    title = "% Gap between White and Hispanic or Latino Grad. Rates";
 }
 else {
-    title = "Percentage Gap between White and Hispanic Graduation Rates";
+    title = "Percentage Gap between White and Hispanic or Latino Graduation Rates";
 }
 
 if (isMobile) {
@@ -73,7 +73,7 @@ var GapChart = new Chart(ctx5, {
             xAxes: [{
                 scaleLabel: {
                     display: true,
-                    labelString: "Years"
+                    labelString: "Year"
                 }
             }]
         },
