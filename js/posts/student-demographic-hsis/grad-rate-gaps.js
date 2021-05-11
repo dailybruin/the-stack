@@ -80,7 +80,7 @@ var GapChart = new Chart(ctx5, {
         tooltips: {
             callbacks: {
                 label: function (tooltipItem, data) {
-                    var value = data.datasets[tooltipItem.datasetIndex].data[0];
+                    var value = tooltipItem.yLabel;
                     var label = data.datasets[tooltipItem.datasetIndex].label;
                     return label + ' ' + value + '%';
                 }
