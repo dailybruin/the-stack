@@ -1,5 +1,5 @@
 ---
-title: Exploring UCLA’s Journey to Becoming a Hispanic-Serving Institution
+title: Exploring UCLA’s journey to becoming a Hispanic-Serving Institution
 teaser: UCLA has set a goal to be an HSI by 2025. What does that mean for the university?
 authors:
   - priya_kanneboyina
