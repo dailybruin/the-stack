@@ -10,22 +10,46 @@ const data = {
         label: 'Grades During Online Learning',
         data: [65, 59, 12, 150, 98, 14, 18, 23, 10, 8, 5, 13, 8],
         backgroundColor: [
-            'rgba(255, 99, 132, 0.2)',
+            'purple',
+            'purple',
+            'purple',
+            'purple',
+            'purple',
+            'purple',
+            'purple',
+            'purple',
+            'purple',
+            'purple',
+            'purple',
+            'purple',
+            'purple',
         ],
-        borderColor: [
-            'rgb(255, 99, 132)',
-        ],
+        // borderColor: [
+        //     'purple',
+        // ],
         borderWidth: 1,
         index: 1
     }, {
         label: 'Grades During On-Campus Learning',
         data: [80, 56, 43, 100, 25, 12, 25, 100, 10, 8, 5, 12, 32],
         backgroundColor: [
-            'red',
+            'teal',
+            'teal',
+            'teal',
+            'teal',
+            'teal',
+            'teal',
+            'teal',
+            'teal',
+            'teal',
+            'teal',
+            'teal',
+            'teal',
+            'teal',
         ],
-        borderColor: [
-            'pink',
-        ],
+        // borderColor: [
+        //     'teal',
+        // ],
         index: 2,
     }]
 };
