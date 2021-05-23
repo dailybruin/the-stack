@@ -1,0 +1,49 @@
+@media only screen and (min-width: 1000px) {
+
+    .usc-chart {
+        float: left;
+        width: 50%;
+        margin-bottom: 40px;
+    }
+    .ucb-chart {
+        float: right;
+        width: 50%;
+    }
+    .ucla-chart {
+        width: 50%;
+        margin: auto;
+    }
+
+    #timeline-chart {
+        width: 70%;
+    }
+
+    .chart-container {
+        width: 70%;
+        margin: auto;
+        margin-bottom: 40px;
+    }
+
+    .bubbleChart {
+        width: 50%;
+        float: right;
+    }
+
+    .graphic {
+        width: 50%;
+        margin-top: 40px;
+        float: right;
+    }
+
+    .chart-descrip {
+        margin-left: 100px;
+    }
+
+    .line-break {
+        height: 90px;
+    }
+
+    .small-line-break {
+        height: 50px;
+    }
+}

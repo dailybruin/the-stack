@@ -1,5 +1,5 @@
 ---
-title: Title will go here
+title: COVID Grade Inflation
 teaser: Text
 
 authors:
@@ -29,8 +29,10 @@ Test text
 
 
 <div class = "bubbleChart">
-  <canvas id="bubble-chart" width="400" height="400"></canvas>
+  <canvas id="bubble-chart"></canvas>
 </div>
+
+test test
 
 <div class = "main graph">
   <canvas id = "main-chart"></canvas>

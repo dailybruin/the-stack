@@ -35,58 +35,6 @@ for (let i = 0; i < ACount.length; ++i) {
     }
     datasets.push(data);
 }
-// const dataAs = {
-//     datasets:
-//         [{
-//             label: 'Fall',
-//             data: [{
-//                 x: 1,
-//                 y: 3,
-//                 r: scale * ACount[0]
-//             }, {
-//                 x: 1,
-//                 y: 3,
-//                 r: scale * Classes[0]
-//             }],
-//             backgroundColor: [
-//                 'rgba(255, 99, 132, 1)',
-//                 'rgba(255, 99, 132, 0.5)'
-//             ],
-//             borderWidth: 1
-//         }, {
-//             label: 'Winter',
-//             data: [{
-//                 x: 3,
-//                 y: 4,
-//                 r: scale * ACount[1]
-//             }, {
-//                 x: 3,
-//                 y: 4,
-//                 r: scale * Classes[1]
-//             }],
-//             backgroundColor: [
-//                 'rgba(25, 145, 156, 1)',
-//                 'rgba(25, 145, 156, .5)'
-//             ],
-//             borderWidth: 1
-//         }, {
-//             label: 'Spring',
-//             data: [{
-//                 x: 5,
-//                 y: 6,
-//                 r: scale * ACount[2]
-//             }, {
-//                 x: 5,
-//                 y: 6,
-//                 r: scale * Classes[2]
-//             }],
-//             backgroundColor: [
-//                 'rgba(122,43,132,1)',
-//                 'rgba(122,43,132,.5)'
-//             ],
-//         }
-//         ]
-// }
 
 var ctxBubble = document.getElementById('bubble-chart').getContext('2d');
 var BubbleChart = new Chart(ctxBubble, {
@@ -116,35 +64,48 @@ var BubbleChart = new Chart(ctxBubble, {
         display: false,
         drawBorder: false,
         drawTicks: false,
-        // plugins: {
-        //     datalabels: {
-        //         color: '#333333',
-        //         labels: {
-        //             title: {
-        //                 font: {
-        //                     weight: 'bold',
-        //                     // size: 12,
-        //                 },
-        //                 formatter: function (value, context) {
-        //                     return years[context.datasetIndex];
-        //                 },
-        //             },
-        //             value: {
-        //                 formatter: function (value, context) {
-        //                     if (window.matchMedia('(max-width: 580px)').matches) {
-        //                         return '';
-        //                     }
-        //                     return (
-        //                         '\n\n' +
-        //                         amounts[context.datasetIndex].toLocaleString('en-US', {
-        //                             style: 'percentage',
-        //                             maximumFractionDigits: 0,
-        //                         })
-        //                     );
-        //                 },
-        //             },
-        //         },
-        //     },
-        // },
-    }
+        pointStyle: 'star',
+        plugins: {
+            datalabels: {
+                color: '#333333',
+                labels: {
+                    title: {
+                        font: {
+                            weight: 'bold',
+                            // size: 12,
+                        },
+                        formatter: function (value, context) {
+                            return Quarters[context.datasetIndex];
+                        },
+                    },
+                    value: {
+                        formatter: function (value, context) {
+                            if (window.matchMedia('(max-width: 580px)').matches) {
+                                return '';
+                            }
+                            return (
+                                '\n\n' +
+                                ACount[context.datasetIndex].toLocaleString('en-US', {
+                                    style: 'percent',
+                                    maximumFractionDigits: 3,
+                                })
+                            );
+                        },
+                    },
+                },
+            },
+        },
+        maintainAspectRatio: false,
+    },
+    plugins: [ChartDataLabels],
 });
+
+if (window.matchMedia('(max-width: 480px)').matches) {
+    yearTotals.canvas.style = 'max-height:200px';
+    yearTotals.options.maintainAspectRatio = false;
+    yearTotals.update();
+} else if (window.matchMedia('(max-width: 580px)').matches) {
+    yearTotals.canvas.style = 'max-height:300px';
+    yearTotals.options.maintainAspectRatio = false;
+    yearTotals.update();
+}
