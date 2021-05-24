@@ -19,6 +19,8 @@ scripts:
   - //cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@0.7.0
   - /js/posts/covid-grade-inflation/A_Count_Viz.js
   - /js/posts/covid-grade-inflation/Main_Graph.js
+  - /js/posts/covid-grade-inflation/MainChart.js
+  - /js/posts/covid-grade-inflation/pie_chart.js
 
 stylesheets:
   - //cdnjs.cloudflare.com/ajax/libs/c3/0.4.10/c3.min.css
