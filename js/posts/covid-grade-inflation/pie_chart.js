@@ -22,19 +22,16 @@ Highcharts.chart('container', {
             cursor: 'pointer',
             dataLabels: {
                 enabled: true,
-                format: '<b>{point.name}'
+                format: '<b>{point.name}</b>: {point.percentage:.1f} %'
             }
         }
     },
-    credit: {
-        enabled:false
-    }
     series: [{
         name: 'Percentage',
         colorByPoint: true,
         data: [{
             name: 'Letter Grade',
-            y: 128561,
+            y: 128521,
             sliced: true,
             selected: true
         }, {
