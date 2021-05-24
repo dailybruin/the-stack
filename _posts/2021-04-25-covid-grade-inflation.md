@@ -18,6 +18,8 @@ scripts:
   - //d3js.org/d3.v6.min.js
   - //cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@0.7.0
   - /js/posts/covid-grade-inflation/A_Count_Viz.js
+  - //cdn.anychart.com/releases/8.0.1/js/anychart-core.min.js
+  - //cdn.anychart.com/releases/8.0.1/js/anychart-pie.min.js
   - /js/posts/covid-grade-inflation/Main_Graph.js
   - /js/posts/covid-grade-inflation/MainChart.js
   - /js/posts/covid-grade-inflation/pie_chart.js
