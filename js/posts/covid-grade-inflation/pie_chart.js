@@ -1,6 +1,6 @@
 Highcharts.chart('container', {
     chart: {
-        plotBackgroundColor: 'transparent',
+        plotBackgroundColor: null,
         plotBorderWidth: null,
         plotShadow: false,
         type: 'pie'
