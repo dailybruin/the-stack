@@ -34,12 +34,29 @@ Highcharts.chart('container', {
         colorByPoint: true,
         data: [{
             name: 'Letter Grade',
-            y: 128521,
+            y: 113849,
             sliced: true,
             selected: true
         }, {
             name: 'Pass/No Pass',
             y: 5527
-        }]
+        }],
+        center: [100, 80],
+        size: 100,
+    }],
+    series: [{
+        name: 'Percentage',
+        colorByPoint: true,
+        data: [{
+            name: 'Letter Grade',
+            y: 118521,
+            sliced: true,
+            selected: true
+        }, {
+            name: 'Pass/No Pass',
+            y: 10093
+        }],
+        center: [400, 80],
+        size: 100,
     }]
 });
