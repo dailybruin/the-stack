@@ -50,8 +50,6 @@ test test
 <script src="https://code.highcharts.com/modules/export-data.js"></script>
 <script src="https://code.highcharts.com/modules/accessibility.js"></script>
 
-
-
 <figure class="highcharts-figure">
     <div id="container"></div>
     <p class="highcharts-description">
@@ -63,9 +61,7 @@ test test
 
 
 
-<div id="title">
-    <p style="font-size: 36px; text-align: center">Grade Distribution Comparison between Pre-COVID and Post-COVID</p>
-  </div>
+
 <div id="dropdown-menu"></div>
 <div class="graph-container">
     <div id="precovidGraph"></div>
