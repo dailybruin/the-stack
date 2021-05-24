@@ -16,7 +16,7 @@ anychart.onDocumentReady(function() {
     chart.data(data);
   
     // display the chart in the container
-    chart.container('container');
+    chart.container('pie-chart');
     chart.draw();
   
   });
