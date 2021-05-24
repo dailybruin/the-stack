@@ -19,8 +19,9 @@ scripts:
   - //cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@0.7.0
   - /js/posts/covid-grade-inflation/A_Count_Viz.js
   - /js/posts/covid-grade-inflation/Main_Graph.js
+  - //cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/components/dropdown.min.js
+  - //cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/components/form.min.js
   - /js/posts/covid-grade-inflation/MainChart.js
-  - /js/posts/covid-grade-inflation/pie_chart.js
 
 stylesheets:
   - //cdnjs.cloudflare.com/ajax/libs/c3/0.4.10/c3.min.css
@@ -43,6 +44,8 @@ test test
 <script src="C:/Users/Lindsey/Desktop/Daily-Bruin/the-stack/js/posts/covid-grade-inflation/A_Count_Viz.js"></script>
 
 
+
+
 <script src="https://code.highcharts.com/highcharts.js"></script>
 <script src="https://code.highcharts.com/modules/export-data.js"></script>
 <script src="https://code.highcharts.com/modules/accessibility.js"></script>
@@ -58,12 +61,17 @@ test test
 <script src="/js/posts/covid-grade-inflation/pie_chart.js"></script>
 
 
+
+
+<div id="title">
+    <p style="font-size: 36px; text-align: center">Grade Distribution Comparison between Pre-COVID and Post-COVID</p>
+  </div>
+<div id="dropdown-menu"></div>
+<div class="graph-container">
+    <div id="precovidGraph"></div>
+    <div id="postcovidGraph"></div>
+  </div>
+
 <script src="/js/posts/covid-grade-inflation/MainChart.js"></script>
-
-<div class = "main chart">
-  <canvas id = "main-chart"></canvas>
-</div>
-
-
 
 

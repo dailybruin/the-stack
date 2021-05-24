@@ -41,7 +41,7 @@ Highcharts.chart('container', {
             name: 'Pass/No Pass',
             y: 5527
         }],
-        center: [200, 80],
+        center: [200, 40],
         size: 250,
     },
     {
@@ -56,7 +56,7 @@ Highcharts.chart('container', {
             name: 'Pass/No Pass',
             y: 10093
         }],
-        center: [600, 80],
+        center: [600, 40],
         size: 250,
     }]
 });
