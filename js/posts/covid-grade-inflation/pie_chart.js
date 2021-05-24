@@ -25,6 +25,9 @@ Highcharts.chart('container', {
                 format: '<b>{point.name}</b>'
             }
         }
+    }, 
+    credits: {
+        enabled: false
     },
     series: [{
         name: 'Percentage',
