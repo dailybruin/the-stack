@@ -18,8 +18,6 @@ scripts:
   - //d3js.org/d3.v6.min.js
   - //cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@0.7.0
   - /js/posts/covid-grade-inflation/A_Count_Viz.js
-  - //cdn.anychart.com/releases/8.0.1/js/anychart-core.min.js
-  - //cdn.anychart.com/releases/8.0.1/js/anychart-pie.min.js
   - /js/posts/covid-grade-inflation/Main_Graph.js
   - /js/posts/covid-grade-inflation/MainChart.js
   - /js/posts/covid-grade-inflation/pie_chart.js
@@ -45,7 +43,18 @@ test test
 <script src="C:/Users/Lindsey/Desktop/Daily-Bruin/the-stack/js/posts/covid-grade-inflation/A_Count_Viz.js"></script>
 
 
-<div id = "pie-chart" style="width: 100%; height: 100%"> </div>
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/modules/export-data.js"></script>
+<script src="https://code.highcharts.com/modules/accessibility.js"></script>
+
+
+
+<figure class="highcharts-figure">
+    <div id="container"></div>
+    <p class="highcharts-description">
+    </p>
+</figure>
 
 <script src="/js/posts/covid-grade-inflation/pie_chart.js"></script>
 
