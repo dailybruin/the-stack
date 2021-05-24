@@ -17,10 +17,10 @@ scripts:
   - //ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js
   - //d3js.org/d3.v6.min.js
   - //cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@0.7.0
-  - /js/posts/covid-grade-inflation/A_Count_Viz.js
-  - /js/posts/covid-grade-inflation/Main_Graph.js
   - //cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/components/dropdown.min.js
   - //cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/components/form.min.js
+  - /js/posts/covid-grade-inflation/A_Count_Viz.js
+  - /js/posts/covid-grade-inflation/Main_Graph.js
   - /js/posts/covid-grade-inflation/MainChart.js
 
 stylesheets:
@@ -38,7 +38,7 @@ Test text
 test test
 
 <div class = "main graph">
-  <canvas id = "main-graph"></canvas>
+  <canvas id = "main-chart"></canvas>
 </div>
 
 <script src="C:/Users/Lindsey/Desktop/Daily-Bruin/the-stack/js/posts/covid-grade-inflation/A_Count_Viz.js"></script>
