@@ -1,6 +1,6 @@
 Highcharts.chart('container', {
     chart: {
-        plotBackgroundColor: null,
+        plotBackgroundColor: 'transparent',
         plotBorderWidth: null,
         plotShadow: false,
         type: 'pie'
@@ -9,7 +9,7 @@ Highcharts.chart('container', {
         text: 'Percentage of Letter Grade and Pass/No Pass Before and After COVID'
     },
     tooltip: {
-        pointFormat: '{series.name}</b>'
+        pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
     },
     accessibility: {
         point: {
@@ -22,10 +22,13 @@ Highcharts.chart('container', {
             cursor: 'pointer',
             dataLabels: {
                 enabled: true,
-                format: '<b>{point.name}</b>: {point.percentage:.1f} %'
+                format: '<b>{point.name}'
             }
         }
     },
+    credit: {
+        enabled:false
+    }
     series: [{
         name: 'Percentage',
         colorByPoint: true,
