@@ -49,8 +49,8 @@ test test
 <script src="C:/Users/luoziqing/Desktop/Daily-Bruin/the-stack/js/posts/covid-grade-inflation/MainChart.js"></script>
 
 
-<div class = "main chart">
-  <canvas id = "main-chart"></canvas>
+<div class = "pie chart">
+  <canvas id = "pie-chart"></canvas>
 </div>
 
 <script src="C:/Users/luoziqing/Desktop/Daily-Bruin/the-stack/js/posts/covid-grade-inflation/pie_chart.js"></script>
