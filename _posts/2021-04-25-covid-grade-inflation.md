@@ -45,6 +45,11 @@ test test
 <script src="C:/Users/Lindsey/Desktop/Daily-Bruin/the-stack/js/posts/covid-grade-inflation/A_Count_Viz.js"></script>
 
 
+<div id = "pie-chart" style="width: 100%; height: 100%"> </div>
+
+<script src="/js/posts/covid-grade-inflation/pie_chart.js"></script>
+
+
 <script src="/js/posts/covid-grade-inflation/MainChart.js"></script>
 
 <div class = "main chart">
@@ -52,9 +57,5 @@ test test
 </div>
 
 
-<script src="/js/posts/covid-grade-inflation/pie_chart.js"></script>
 
-<div class = "pie chart">
-  <canvas id = "pie-chart"></canvas>
-</div>
 
