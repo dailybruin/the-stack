@@ -37,7 +37,7 @@ Test text
 test test
 
 <div class = "main graph">
-  <canvas id = "main-chart"></canvas>
+  <canvas id = "main-graph"></canvas>
 </div>
 
 <script src="C:/Users/Lindsey/Desktop/Daily-Bruin/the-stack/js/posts/covid-grade-inflation/A_Count_Viz.js"></script>
@@ -46,11 +46,11 @@ test test
   <canvas id = "main-chart"></canvas>
 </div>
 
-<script src="C:/Users/luoziqing/Desktop/Daily-Bruin/the-stack/js/posts/covid-grade-inflation/MainChart.js"></script>
+<script src="C:/Users/luoziqing/the-stack/js/posts/covid-grade-inflation/MainChart.js"></script>
 
 
 <div class = "pie chart">
   <canvas id = "pie-chart"></canvas>
 </div>
 
-<script src="C:/Users/luoziqing/Desktop/Daily-Bruin/the-stack/js/posts/covid-grade-inflation/pie_chart.js"></script>
+<script src="C:/Users/luoziqing/the-stack/js/posts/covid-grade-inflation/pie_chart.js"></script>
