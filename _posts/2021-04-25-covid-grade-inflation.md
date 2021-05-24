@@ -39,3 +39,16 @@ test test
 </div>
 
 <script src="C:/Users/Lindsey/Desktop/Daily-Bruin/the-stack/js/posts/covid-grade-inflation/A_Count_Viz.js"></script>
+
+<div class = "main chart">
+  <canvas id = "main-chart"></canvas>
+</div>
+
+<script src="C:/Users/luoziqing/Desktop/Daily-Bruin/the-stack/js/posts/covid-grade-inflation/MainChart.js"></script>
+
+
+<div class = "main chart">
+  <canvas id = "main-chart"></canvas>
+</div>
+
+<script src="C:/Users/luoziqing/Desktop/Daily-Bruin/the-stack/js/posts/covid-grade-inflation/pie_chart.js"></script>
