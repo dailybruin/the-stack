@@ -42,9 +42,9 @@ Highcharts.chart('container', {
             y: 5527
         }],
         center: [100, 80],
-        size: 100,
-    }],
-    series: [{
+        size: 300,
+    },
+    {
         name: 'Percentage',
         colorByPoint: true,
         data: [{
@@ -57,6 +57,6 @@ Highcharts.chart('container', {
             y: 10093
         }],
         center: [400, 80],
-        size: 100,
+        size: 300,
     }]
 });
