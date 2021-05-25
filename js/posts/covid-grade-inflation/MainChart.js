@@ -10,7 +10,7 @@ let dropdown = d3.select('#dropdown-menu').insert('select', 'svg');
 let precovidMap = {};
 let postcovidMap = {};
 
-let places;
+let CLASSES;
 let dropdownValue = 'Choose a Class';
 let precovidCanvas;
 let precovidxScale;
@@ -36,19 +36,19 @@ dropdown.on('change', DropdownChange);
 d3.csv(precovidFileName, function(error, data) {
   //precovid csv input
   data.forEach(function(d) {
-    let place = d.place;
-    precovidMap[place] = [];
+    let CLASS = d.CLASS;
+    precovidMap[CLASS] = [];
 
     // { cerealName: [ bar1Val, bar2Val, ... ] }
     precovidFields.forEach(function(field) {
-      precovidMap[place].push(+d[field]);
+      precovidMap[CLASS].push(+d[field]);
     });
   });
-  // Get names of places, for dropdown
-  places = Object.keys(precovidMap);
+  // Get names of CLASSES, for dropdown
+  CLASSES = Object.keys(precovidMap);
   dropdown
     .selectAll('option')
-    .data(places)
+    .data(CLASSES)
     .enter()
     .append('option')
     .attr('value', function(d) {
@@ -57,19 +57,19 @@ d3.csv(precovidFileName, function(error, data) {
     .text(function(d) {
       return d[0].toUpperCase() + d.slice(1, d.length); // capitalize 1st letter
     });
-  dropdownValue = places[0];
+  dropdownValue = CLASSES[0];
   makePrecovidVis(precovidMap);
 });
 
 d3.csv(postcovidFileName, function(error, data) {
   //postcovid csv input
   data.forEach(function(d) {
-    let place = d.place;
-    postcovidMap[place] = [];
+    let CLASS = d.CLASS;
+    postcovidMap[CLASS] = [];
 
     // { cerealName: [ bar1Val, bar2Val, ... ] }
     postcovidFields.forEach(function(field) {
-      postcovidMap[place].push(+d[field]);
+      postcovidMap[CLASS].push(+d[field]);
     });
   });
   makePrecovidVis(postcovidMap);
