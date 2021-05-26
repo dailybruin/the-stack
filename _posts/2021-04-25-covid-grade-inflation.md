@@ -74,3 +74,12 @@ test test
 <script src="/js/posts/covid-grade-inflation/MainChart.js"></script>
 
 
+<div id="title">
+    <p style="font-size: 36px; text-align: center">UCLA Waste Bin Breakdown (% by weight)</p>
+  </div>
+  <div id="dropdown-menu"></div>
+  <div class="graph-container">
+    <div id="landfillGraph"></div>
+    <div id="recyclingGraph"></div>
+    <div id="compostGraph"></div>
+  </div>
