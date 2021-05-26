@@ -1,6 +1,6 @@
 // Load and munge data, then make the visualization.
 let precovidFileName = '/datasets/covid-grade-inflation/LG_19sum.csv';
-let gradeFields = ['A+', 'A', 'A-', 'B+', 'B', 'B-', 'C+', 'C', 'C-', 'D+', 'D', 'D-', 'F'];
+let precovidFields = ['A+', 'A', 'A-', 'B+', 'B', 'B-', 'C+', 'C', 'C-', 'D+', 'D', 'D-', 'F'];
 let postcovidFileName = '/datasets/covid-grade-inflation/LG_20sum.csv';
 let postcovidFields = ['A+', 'A', 'A-', 'B+', 'B', 'B-', 'C+', 'C', 'C-', 'D+', 'D', 'D-', 'F'];
 
@@ -25,7 +25,7 @@ let changeDuration = 300;
 let delayDuration = 100;
 
 // Handler for dropdown value change
-let DropdownChange = function() {
+let DropdownChange = function () {
   dropdownValue = d3.select(this).property('value');
   updateprecovidBars(precovidMap[dropdownValue]);
   updatepostcovidBars(postcovidMap[dropdownValue]);
@@ -33,14 +33,13 @@ let DropdownChange = function() {
 
 dropdown.on('change', DropdownChange);
 
-d3.csv(precovidFileName, function(error, data) {
+d3.csv(precovidFileName, function (error, data) {
   //precovid csv input
-  data.forEach(function(d) {
+  data.forEach(function (d) {
     let CLASS = d.CLASS;
     precovidMap[CLASS] = [];
-
     // { cerealName: [ bar1Val, bar2Val, ... ] }
-    precovidFields.forEach(function(field) {
+    precovidFields.forEach(function (field) {
       precovidMap[CLASS].push(+d[field]);
     });
   });
@@ -51,24 +50,24 @@ d3.csv(precovidFileName, function(error, data) {
     .data(CLASSES)
     .enter()
     .append('option')
-    .attr('value', function(d) {
+    .attr('value', function (d) {
       return d;
     })
-    .text(function(d) {
+    .text(function (d) {
       return d[0].toUpperCase() + d.slice(1, d.length); // capitalize 1st letter
     });
   dropdownValue = CLASSES[0];
   makePrecovidVis(precovidMap);
 });
 
-d3.csv(postcovidFileName, function(error, data) {
+d3.csv(postcovidFileName, function (error, data) {
   //postcovid csv input
-  data.forEach(function(d) {
+  data.forEach(function (d) {
     let CLASS = d.CLASS;
     postcovidMap[CLASS] = [];
 
     // { cerealName: [ bar1Val, bar2Val, ... ] }
-    postcovidFields.forEach(function(field) {
+    postcovidFields.forEach(function (field) {
       postcovidMap[CLASS].push(+d[field]);
     });
   });
@@ -76,7 +75,7 @@ d3.csv(postcovidFileName, function(error, data) {
 });
 
 
-let updatePrecovidBars = function(data) {
+let updatePrecovidBars = function (data) {
   let bars = precovidCanvas.selectAll('.bar').data(data);
   // Add bars for new data
   precovidCanvas
@@ -92,17 +91,17 @@ let updatePrecovidBars = function(data) {
     .transition()
     .duration(changeDuration)
     .ease('linear')
-    .attr('x', function(d, i) {
+    .attr('x', function (d, i) {
       return precovidxScale(precovidFields[i]);
     })
     .attr('width', precovidxScale.rangeBand())
-    .attr('y', function(d, i) {
+    .attr('y', function (d, i) {
       return precovidyScale(d);
     })
-    .attr('height', function(d, i) {
+    .attr('height', function (d, i) {
       return precovidheight - precovidyScale(d);
     })
-    .text(function(d) {
+    .text(function (d) {
       return d;
     });
 
@@ -116,25 +115,25 @@ let updatePrecovidBars = function(data) {
     .delay(changeDuration)
     .style('fill', 'black')
     .attr('text-anchor', 'middle')
-    .attr('x', function(d, i) {
+    .attr('x', function (d, i) {
       return precovidxScale(precovidFields[i]);
     })
     .attr('dx', 42)
-    .attr('y', function(d, i) {
+    .attr('y', function (d, i) {
       return precovidyScale(d);
     })
     .attr('dy', -3)
     .attr('font-weight', 'bold')
-    .text(function(d) {
+    .text(function (d) {
       return d;
     });
 };
 
-let makePrecovidVis = function(precovidMap) {
+let makePrecovidVis = function (precovidMap) {
   // Define dimensions of vis
   let margin = { top: 50, right: 30, bottom: 70, left: 40 },
     width = 360 - margin.left - margin.right;
-    precovidheight = 500 - margin.top - margin.bottom;
+  precovidheight = 500 - margin.top - margin.bottom;
 
   // Make x scale
   precovidxScale = d3.scale
@@ -148,7 +147,7 @@ let makePrecovidVis = function(precovidMap) {
     .range([precovidheight, 0])
     .domain(d3.extent([0, 100]));
 
-    precovidCanvas = d3
+  precovidCanvas = d3
     .select('#precovidGraph')
     .append('svg')
     .attr('width', width + margin.left + margin.right)
@@ -162,7 +161,7 @@ let makePrecovidVis = function(precovidMap) {
     .scale(precovidxScale)
     .orient('bottom');
 
-    precovidCanvas
+  precovidCanvas
     .append('g')
     .attr('class', 'x axis')
     .attr('transform', 'translate(0,' + precovidheight + ')')
@@ -200,7 +199,7 @@ let makePrecovidVis = function(precovidMap) {
 
 //---------------------------------------------------------------------------------------------------------
 // Load and munge data, then make the visualization.
-let updatePostcovidBars = function(data) {
+let updatePostcovidBars = function (data) {
   let bars = postcovidCanvas.selectAll('.bar').data(data);
   // Add bars for new data
   postcovidCanvas
@@ -216,17 +215,17 @@ let updatePostcovidBars = function(data) {
     .transition()
     .duration(changeDuration)
     .ease('linear')
-    .attr('x', function(d, i) {
+    .attr('x', function (d, i) {
       return postcovidxScale(postcovidFields[i]);
     })
     .attr('width', postcovidxScale.rangeBand())
-    .attr('y', function(d, i) {
+    .attr('y', function (d, i) {
       return postcovidyScale(d);
     })
-    .attr('height', function(d, i) {
+    .attr('height', function (d, i) {
       return postcovidheight - postcovidyScale(d);
     })
-    .text(function(d) {
+    .text(function (d) {
       return d;
     });
 
@@ -240,25 +239,25 @@ let updatePostcovidBars = function(data) {
     .delay(changeDuration)
     .style('fill', 'black')
     .attr('text-anchor', 'middle')
-    .attr('x', function(d, i) {
+    .attr('x', function (d, i) {
       return postcovidxScale(postcovidFields[i]);
     })
     .attr('dx', 31)
-    .attr('y', function(d, i) {
+    .attr('y', function (d, i) {
       return postcovidyScale(d);
     })
     .attr('dy', -3)
     .attr('font-weight', 'bold')
-    .text(function(d) {
+    .text(function (d) {
       return d;
     });
 };
 
-let makePostcovidVis = function(postcovidMap) {
+let makePostcovidVis = function (postcovidMap) {
   // Define dimensions of vis
   let margin = { top: 50, right: 30, bottom: 70, left: 40 },
     width = 450 - margin.left - margin.right;
-    postcovidheight = 500 - margin.top - margin.bottom;
+  postcovidheight = 500 - margin.top - margin.bottom;
 
   // Make x scale
   postcovidxScale = d3.scale
@@ -272,7 +271,7 @@ let makePostcovidVis = function(postcovidMap) {
     .range([postcovidheight, 0])
     .domain(d3.extent([0, 100]));
 
-    postcovidCanvas = d3
+  postcovidCanvas = d3
     .select('#postcovidGraph')
     .append('svg')
     .attr('width', width + margin.left + margin.right)
@@ -286,7 +285,7 @@ let makePostcovidVis = function(postcovidMap) {
     .scale(postcovidxScale)
     .orient('bottom');
 
-    postcovidCanvas
+  postcovidCanvas
     .append('g')
     .attr('class', 'x axis')
     .attr('transform', 'translate(0,' + postcovidheight + ')')
