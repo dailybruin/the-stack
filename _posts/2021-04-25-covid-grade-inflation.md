@@ -34,6 +34,15 @@ stylesheets:
 Test text
 
 
+<div id="dropdown-menu"></div>
+<div class="graph-container">
+    <div id="precovidGraph"></div>
+    <div id="postcovidGraph"></div>
+  </div>
+
+<script src="/js/posts/covid-grade-inflation/MainChart.js"></script>
+
+
 <div class = "bubbleChart">
   <canvas id="bubble-chart"></canvas>
 </div>
@@ -64,14 +73,6 @@ test test
 
 
 
-
-<div id="dropdown-menu"></div>
-<div class="graph-container">
-    <div id="precovidGraph"></div>
-    <div id="postcovidGraph"></div>
-  </div>
-
-<script src="/js/posts/covid-grade-inflation/MainChart.js"></script>
 
 
 <div id="title">
