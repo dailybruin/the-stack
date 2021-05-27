@@ -47,5 +47,6 @@ lorem ipsum
 <script src="https://cdn.amcharts.com/lib/4/themes/animated.js"></script>
 
 
+<div id = 'GenreChart' style='height: 100vh'></div>
 
 <div id="chartdiv"></div>
