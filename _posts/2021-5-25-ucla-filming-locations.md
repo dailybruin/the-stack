@@ -26,6 +26,7 @@ scripts:
   - //cdn.amcharts.com/lib/4/plugins/bullets.js
   - //cdn.amcharts.com/lib/4/themes/animated.js
   - /js/posts/imdb-ucla-movies/test_timeline.js
+  - /js/posts/imdb-ucla-movies/imdb_genres.js
 
 
 stylesheets:
