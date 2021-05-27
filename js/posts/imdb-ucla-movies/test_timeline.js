@@ -112,7 +112,6 @@ am4core.ready(function () {
         "start": "1979-12-01 12:00",
         "end": "1979-12-01 12:15",
         "color": colorSet.getIndex(12),
-        "disabled1": false,
         "text": "Penitentiary\nIMDB Rating = 5.7/10.0"
     }, {
         //American Gigolo
@@ -256,8 +255,6 @@ am4core.ready(function () {
     series.columns.template.fillOpacity = 0.6;
 
     var imageBullet1 = series.bullets.push(new am4plugins_bullets.PinBullet());
-    imageBullet1.disabled = true;
-    imageBullet1.propertyFields.disabled = "disabled1";
     imageBullet1.background.radius = 18;
     imageBullet1.locationX = 1;
     imageBullet1.propertyFields.stroke = "color";
