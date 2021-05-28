@@ -15,7 +15,7 @@ am4core.ready(function () {
 
     chart.dateFormatter.inputDateFormat = "yyyy-MM-dd HH:mm";
     chart.dateFormatter.dateFormat = "yyyy";
-
+    /*THE IMAGE PATH IS ../../../img/imdb-ucla-movies/IMAGE NAME*/
     chart.data = [{
         //Emergency! (EP: Nurse's Wild)
         "category": "",
@@ -23,7 +23,7 @@ am4core.ready(function () {
         "end": "1972-03-04 12:15",
         "color": colorSet.getIndex(0),
         "text": "Emergency! (Ep: Nurse's Wild)\nIMDB Rating = 8.0/10.0",
-        "icon": "img/imdb-ucla-movies/emergency.jpg"
+        "icon": "../../../img/imdb-ucla-movies/emergency.jpg"
     }, {
         //The Godfather
         "category": "",
@@ -31,7 +31,7 @@ am4core.ready(function () {
         "end": "1972-08-24 12:15",
         "color": colorSet.getIndex(1),
         "text": "The Godfather (1972)\nIMDB Rating = 9.2/10.0",
-        "icon": "/img/imdb-ucla-movies/godfather.jpeg"
+        "icon": "../../../img/imdb-ucla-movies/godfather.jpeg"
     }, {
         //Barnaby Jones (EP: Sunday: Doomsday)
         "category": "",
@@ -39,7 +39,7 @@ am4core.ready(function () {
         "end": "1973-02-25 12:15",
         "color": colorSet.getIndex(2),
         "text": "Barnaby Jones (EP: Sunday: Doomsday)\nIMDB Rating = 7.6/10.0",
-        "icon": "/img/imdb-ucla-movies/barnaby_jones.jpg"
+        "icon": "../../../img/imdb-ucla-movies/barnaby_jones.jpg"
     }, {
         //In Concert (EP #1.15)
         "category": "",
@@ -47,7 +47,7 @@ am4core.ready(function () {
         "end": "1973-08-17 12:15",
         "color": colorSet.getIndex(3),
         "text": "In Concert (EP: #1.15)\nIMDB Rating = N/A",
-        "icon": "/img/imdb-ucla-movies/in-concert.jpg"
+        "icon": "../../../img/imdb-ucla-movies/in-concert.jpg"
     }, {
         //The Emergency! (EP: The Promise)
         "category": "",
@@ -55,7 +55,7 @@ am4core.ready(function () {
         "end": "1973-12-01 12:15",
         "color": colorSet.getIndex(4),
         "text": "The Emergency! (EP: The Promise)\nIMDB Rating = 8.1/10.0",
-        "icon": "/img/imdb-ucla-movies/emergency.jpg"
+        "icon": "../../../img/imdb-ucla-movies/emergency.jpg"
     }, {
         //The Reincarnation of Peter Proud
         "category": "",
@@ -63,7 +63,7 @@ am4core.ready(function () {
         "end": "1975-04-25 12:15",
         "color": colorSet.getIndex(5),
         "text": "The Reincarnation of Peter Proud\nIMDB Rating = 6.5/10.0",
-        "icon": "/img/imdb-ucla-movies/peter-proud.jpg"
+        "icon": "../../../img/imdb-ucla-movies/peter-proud.jpg"
     }, {
         //Washington: Behind Closed Doors
         "category": "",
@@ -93,12 +93,12 @@ am4core.ready(function () {
         "color": colorSet.getIndex(9),
         "text": "America Alive! (EP: Lucille Ball at UCLA)\nIMDB Rating = N/A"
     }, {
-       //North Dallas Forty
-       "category": "",
-       "start": "1979-08-03 12:00",
-       "end": "1979-08-03 12:15",
-       "color": colorSet.getIndex(10),
-       "text": "North Dallas Forty\nIMDB Rating = 7.0/10.0" 
+        //North Dallas Forty
+        "category": "",
+        "start": "1979-08-03 12:00",
+        "end": "1979-08-03 12:15",
+        "color": colorSet.getIndex(10),
+        "text": "North Dallas Forty\nIMDB Rating = 7.0/10.0"
     }, {
         //CHiPs EP: Hot Wheels
         "category": "",
@@ -228,7 +228,7 @@ am4core.ready(function () {
         "text": "Dynasty (EP: The Hearing)\nIMDB Rating = 7.3/10.0"
     }
 
-];
+    ];
 
     chart.fontSize = 10;
     chart.tooltipContainer.fontSize = 10;
@@ -337,8 +337,8 @@ am4core.ready(function () {
 
     var previousBullet;
 
-    chart.events.on("inited", function() {
-        setTimeout(function() {
+    chart.events.on("inited", function () {
+        setTimeout(function () {
             hoverItem(series.dataItems.getIndex(0));
         }, 2000)
     })
@@ -362,11 +362,11 @@ am4core.ready(function () {
             previousBullet = bullet;
         }
         setTimeout(
-            function() {
+            function () {
                 hoverItem(series.dataItems.getIndex(index + 1))
             }, 1000);
     }
-    
+
     var label = chart.createChild(am4core.Label);
     label.text = "Fifty Years of Hollywood at UCLA"
     label.isMeasured = false;
