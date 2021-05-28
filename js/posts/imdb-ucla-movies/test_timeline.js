@@ -218,7 +218,17 @@ am4core.ready(function () {
         "end": "1982-12-17 12:15",
         "color": colorSet.getIndex(27),
         "text": "Six Weeks\nIMDB Rating = 5.7/10.0"
-    }];
+    },
+    {
+        //Dynasty EP: The Hearing
+        "category": "",
+        "start": "1983-03-26 12:00",
+        "end": "1983-03-26 12:15",
+        "color": colorSet.getIndex(28),
+        "text": "Dynasty (EP: The Hearing)\nIMDB Rating = 7.3/10.0"
+    }
+
+];
 
     chart.fontSize = 10;
     chart.tooltipContainer.fontSize = 10;
