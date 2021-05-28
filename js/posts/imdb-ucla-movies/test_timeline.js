@@ -38,7 +38,7 @@ am4core.ready(function () {
         "start": "1973-02-25 12:00",
         "end": "1973-02-25 12:15",
         "color": colorSet.getIndex(2),
-        "text": "Barnaby Jones (Ep: Sunday: Doomsday)\nIMDB Rating = 7.6/10.0",
+        "text": "Barnaby Jones (EP: Sunday: Doomsday)\nIMDB Rating = 7.6/10.0",
         "icon": "/img/imdb-ucla-movies/barnaby_jones.jpg"
     }, {
         //In Concert (EP #1.15)
@@ -46,7 +46,7 @@ am4core.ready(function () {
         "start": "1973-08-17 12:00",
         "end": "1973-08-17 12:15",
         "color": colorSet.getIndex(3),
-        "text": "In Concert (Ep: #1.15)\nIMDB Rating = N/A",
+        "text": "In Concert (EP: #1.15)\nIMDB Rating = N/A",
         "icon": "/img/imdb-ucla-movies/in-concert.jpg"
     }, {
         //The Emergency! (EP: The Promise)
@@ -54,7 +54,7 @@ am4core.ready(function () {
         "start": "1973-12-01 12:00",
         "end": "1973-12-01 12:15",
         "color": colorSet.getIndex(4),
-        "text": "The Emergency! (Ep: The Promise)\nIMDB Rating = 8.1/10.0",
+        "text": "The Emergency! (EP: The Promise)\nIMDB Rating = 8.1/10.0",
         "icon": "/img/imdb-ucla-movies/emergency.jpg"
     }, {
         //The Reincarnation of Peter Proud
@@ -177,32 +177,46 @@ am4core.ready(function () {
         "color": colorSet.getIndex(21),
         "text": "Personal Best\nIMDB Rating = 6.3/10.0"
     }, {
+        //CHiPs EP: Silent Partner
+        "category": "",
+        "start": "1982-02-28 12:00",
+        "end": "1982-02-28 12:15",
+        "color": colorSet.getIndex(22),
+        "text": "CHiPs (EP: Silent Partner)\nIMDB Rating = 6.9/10.0"
+    }, {
         //CHiPs: A Threat of War
         "category": "",
         "start": "1982-03-21 12:00",
         "end": "1982-03-21 12:15",
-        "color": colorSet.getIndex(22),
+        "color": colorSet.getIndex(23),
         "text": "CHiPs (EP: A Threat of War)\nIMDB Rating = 7.5/10.0"
+    }, {
+        //CHiPs EP: Trained for Trouble
+        "category": "",
+        "start": "1982-04-04 12:00",
+        "end": "1982-04-04 12:15",
+        "color": colorSet.getIndex(24),
+        "text": "CHiPs (EP: Trained for Trouble)\nIMDB Rating = 6.5/10.0"
     }, {
         //Tag: The Assassinatin Game
         "category": "",
         "start": "1982-04-20 12:00",
         "end": "1982-04-20 12:15",
-        "color": colorSet.getIndex(23),
+        "color": colorSet.getIndex(25),
         "text": "Tag: The Assassination Game\nIMDB Rating = 5.9/10.0"
     }, {
         //CHiPs EP: K-9-1
         "category": "",
         "start": "1982-05-09 12:00",
         "end": "1982-05-09 12:15",
-        "color": colorSet.getIndex(24),
+        "color": colorSet.getIndex(26),
         "text": "CHiPs (EP: K-9-1)\nIMDB Rating = 7.9/10.0"
     }, {
         //Six Weeks
         "category": "",
         "start": "1982-12-17 12:00",
         "end": "1982-12-17 12:15",
-        "color": colorSet.getIndex(24),
+        "color": colorSet.getIndex(27),
         "text": "Six Weeks\nIMDB Rating = 5.7/10.0"
     }];
 
