@@ -220,12 +220,444 @@ am4core.ready(function () {
         "text": "Six Weeks\nIMDB Rating = 5.7/10.0"
     },
     {
+        //Quincy M.E. EP: Cry For Help
+        "category": "",
+        "start": "1983-01-19 12:00",
+        "end": "1983-01-19 12:15",
+        "color": colorSet.getIndex(30),
+        "text": "Breathless\nIMDB Rating = 7.1/10.0"
+    },
+    {
         //Dynasty EP: The Hearing
         "category": "",
         "start": "1983-03-26 12:00",
         "end": "1983-03-26 12:15",
         "color": colorSet.getIndex(28),
         "text": "Dynasty (EP: The Hearing)\nIMDB Rating = 7.3/10.0"
+    },
+    {
+        //Breathless
+        "category": "",
+        "start": "1983-05-13 12:00",
+        "end": "1983-05-13 12:15",
+        "color": colorSet.getIndex(29),
+        "text": "Breathless\nIMDB Rating = 5.9/10.0"
+    },
+    {
+        //Dallas EP: Peter's Principle
+        "category": "",
+        "start": "1984-01-06 12:00",
+        "end": "1984-01-06 12:15",
+        "color": colorSet.getIndex(31),
+        "text": "Dallas (EP: Peter's Principle)\nIMDB Rating = 7.1/10.0"
+    },
+    {
+        //Dallas EP: Eye of the Beholder
+        "category": "",
+        "start": "1984-01-27 12:00",
+        "end": "1984-01-27 12:15",
+        "color": colorSet.getIndex(31),
+        "text": "Dallas (EP: Eye of the Beholder)\nIMDB Rating = 7.5/10.0"
+    },
+    {
+        //Dallas EP: Fools Rush In
+        "category": "",
+        "start": "1984-03-09 12:00",
+        "end": "1984-03-09 12:15",
+        "color": colorSet.getIndex(31),
+        "text": "Dallas (EP: Fools Rush In)\nIMDB Rating = 7.4/10.0"
+    },
+    {
+        //The Adventures of Buckaroo Banzai Across the 8th Dimension
+        "category": "",
+        "start": "1984-08-15 12:00",
+        "end": "1984-08-15 12:15",
+        "color": colorSet.getIndex(31),
+        "text": "The Adventures of Buckaroo Banzai Across the 8th Dimension\nIMDB Rating = 6.4/10.0"
+    },
+    {
+        //Paper Dolls EP: 1.1
+        "category": "",
+        "start": "1984-09-23 12:00",
+        "end": "1984-09-23 12:15",
+        "color": colorSet.getIndex(31),
+        "text": "Paper Dolls (EP: 1.1)\nIMDB Rating = 7.8/10.0"
+    },
+    {
+        //The Sure Thing
+        "category": "",
+        "start": "1985-03-01 12:00",
+        "end": "1985-03-01 12:15",
+        "color": colorSet.getIndex(31),
+        "text": "The Sure Thing\nIMDB Rating = 7.0/10.0"
+    },
+    {
+        //Gotcha!
+        "category": "",
+        "start": "1985-05-03 12:00",
+        "end": "1985-05-03 12:15",
+        "color": colorSet.getIndex(31),
+        "text": "Gotcha!\nIMDB Rating = 6.2/10.0"
+    },
+    {
+        //Fright Night
+        "category": "",
+        "start": "1985-08-02 12:00",
+        "end": "1985-08-02 12:15",
+        "color": colorSet.getIndex(31),
+        "text": "Fright Night\nIMDB Rating = 7.1/10.0"
+    },
+    {
+        //Back to School
+        "category": "",
+        "start": "1986-06-13 12:00",
+        "end": "1986-06-13 12:15",
+        "color": colorSet.getIndex(31),
+        "text": "Back to School\nIMDB Rating = 6.6/10.0"
+    },
+    {
+        //A Little Off Mark
+        "category": "",
+        "start": "1986-08-05 12:00",
+        "end": "1986-08-05 12:15",
+        "color": colorSet.getIndex(31),
+        "text": "A Little Off Mark\nIMDB Rating = 5.9/10.0"
+    },
+    {
+        //Night of the Creeps
+        "category": "",
+        "start": "1986-08-22 12:00",
+        "end": "1986-08-22 12:15",
+        "color": colorSet.getIndex(31),
+        "text": "Night of the Creeps\nIMDB Rating = 6.8/10.0"
+    },
+    {
+        //Highway to Heaven EP: A Special Love: Part 2
+        "category": "",
+        "start": "1986-10-01 12:00",
+        "end": "1986-10-01 12:15",
+        "color": colorSet.getIndex(31),
+        "text": "Highway to Heaven (EP: A Special Love: Part 2)\nIMDB Rating = 8.7/10.0"
+    },
+    {
+        //The A-Team EP: The Say U.N.C.L.E. Affair
+        "category": "",
+        "start": "1986-10-31 12:00",
+        "end": "1986-10-31 12:15",
+        "color": colorSet.getIndex(31),
+        "text": "The A-Team (EP: The Say U.N.C.L.E. Affair)\nIMDB Rating = 6.9/10"
+    },
+    {
+        //Jocks
+        "category": "",
+        "start": "1986-11-14 12:00",
+        "end": "1986-11-14 12:15",
+        "color": colorSet.getIndex(31),
+        "text": "Jocks\nIMDB Rating = 3.7/10.0"
+    },
+    {
+        //The Colbys EP: Reaching Out
+        "category": "",
+        "start": "1986-12-18 12:00",
+        "end": "1986-12-18 12:15",
+        "color": colorSet.getIndex(31),
+        "text": "The Colbys (EP: Reaching Out)\nIMDB Rating = 8.6/10.0"
+    },
+    {
+        //A Nightmare of Elm Street 3: Dream Warriors
+        "category": "",
+        "start": "1987-02-27 12:00",
+        "end": "1987-02-27 12:15",
+        "color": colorSet.getIndex(31),
+        "text": "A Nightmare on Elm Street 3: Dream Warriors\nIMDB Rating = 6.6/10.0"
+    },
+    {
+        //Timestalkers
+        "category": "",
+        "start": "1987-03-10 12:00",
+        "end": "1987-03-10 12:15",
+        "color": colorSet.getIndex(31),
+        "text": "Timestalkers\nIMDB Rating = 5.7/10.0"
+    },
+    {
+        //Making OFFON
+        "category": "",
+        "start": "1987-10-15 12:00",
+        "end": "1987-10-15 12:15",
+        "color": colorSet.getIndex(31),
+        "text": "Making OFFON\nIMDB Rating = N/A"
+    },
+    {
+        //Fright Night Part 2
+        "category": "",
+        "start": "1988-05-19 12:00",
+        "end": "1988-05-19 12:15",
+        "color": colorSet.getIndex(31),
+        "text": "Fright Night Part 2\nIMDB Rating = 5.9/10.0"
+    },
+    {
+        //The Unnamable
+        "category": "",
+        "start": "1988-09-02 12:00",
+        "end": "1988-09-02 12:15",
+        "color": colorSet.getIndex(31),
+        "text": "The Unnamable\nIMDB Rating = 4.9/10.0"
+    },
+    {
+        //1988 Presidential Debates EP: 1.2
+        "category": "",
+        "start": "1988-09-25 12:00",
+        "end": "1988-09-25 12:15",
+        "color": colorSet.getIndex(31),
+        "text": "1988 Presidential Debates (EP: 1.2)\nIMDB Rating = 5.4/10.0"
+    },
+    {
+        //Twice Dead
+        "category": "",
+        "start": "1988-10-31 12:00",
+        "end": "1988-10-31 12:15",
+        "color": colorSet.getIndex(31),
+        "text": "Twice Dead\nIMDB Rating = 5.3/10.0"
+    },
+    {
+        //Happy Together
+        "category": "",
+        "start": "1989-05-04 12:00",
+        "end": "1989-05-04 12:15",
+        "color": colorSet.getIndex(31),
+        "text": "Happy Together\nIMDB Rating = 6.0/10.0"
+    },
+    {
+        //Beverly Hills, 90210 EP: The 17 Year Itch
+        "category": "",
+        "start": "1990-11-29 12:00",
+        "end": "1990-11-29 12:15",
+        "color": colorSet.getIndex(31),
+        "text": "Beverly Hills, 90210 (EP: The 17 Year Itch)\nIMDB Rating = 6.2/10.0"
+    },
+    {
+        //California's Gold EP: L.A. Adventures
+        "category": "",
+        "start": "1991-06-02 12:00",
+        "end": "1991-06-02 12:15",
+        "color": colorSet.getIndex(31),
+        "text": "California's Gold (EP: L.A. Adventures)\nIMDB Rating = N/A"
+    },
+    {
+        //Final Analysis
+        "category": "",
+        "start": "1992-02-07 12:00",
+        "end": "1992-02-07 12:15",
+        "color": colorSet.getIndex(31),
+        "text": "Final Analysis\nIMDB Rating = 5.9/10.0"
+    },
+    {
+        //Class of '96 EP: Pilot
+        "category": "",
+        "start": "1993-01-19 12:00",
+        "end": "1993-01-19 12:15",
+        "color": colorSet.getIndex(31),
+        "text": "Class of '96 (EP: Pilot)\nIMDB Rating = N/A"
+    },
+    {
+        //Melrose Place EP: Bye Bye Billy
+        "category": "",
+        "start": "1993-02-17 12:00",
+        "end": "1993-02-17 12:15",
+        "color": colorSet.getIndex(31),
+        "text": "Melrose Place (EP: Bye Bye Billy)\nIMDB Rating = 7.5/10.0"
+    },
+    {
+        //Party of Five
+        "category": "",
+        "start": "1994-09-12 12:00",
+        "end": "1994-09-12 12:15",
+        "color": colorSet.getIndex(31),
+        "text": "Party of Five\nIMDB Rating = 6.8/10.0"
+    },
+    {
+        //Threesome
+        "category": "",
+        "start": "1994-04-08 12:00",
+        "end": "1994-04-08 12:15",
+        "color": colorSet.getIndex(31),
+        "text": "Threesome\nIMDB Rating = 6.3/10.0"
+    },
+    {
+        //Higher Learning
+        "category": "",
+        "start": "1995-01-11 12:00",
+        "end": "1995-01-11 12:15",
+        "color": colorSet.getIndex(31),
+        "text": "Higher Learning\nIMDB Rating = 6.5/10.0"
+    },
+    {
+        //Congo
+        "category": "",
+        "start": "1995-06-09 12:00",
+        "end": "1995-06-09 12:15",
+        "color": colorSet.getIndex(31),
+        "text": "Congo\nIMDB Rating = 5.2/10.0"
+    },
+    {
+        //The Rockford Files: Friends and Foul Play
+        "category": "",
+        "start": "1996-04-25 12:00",
+        "end": "1996-04-25 12:15",
+        "color": colorSet.getIndex(31),
+        "text": "The Rockford Files: Friends and Foul Play\nIMDB Rating = 7.6/10.0"
+    },
+    {
+        //The Nutty Professor
+        "category": "",
+        "start": "1996-06-28 12:00",
+        "end": "1996-06-28 12:15",
+        "color": colorSet.getIndex(31),
+        "text": "The Nutty Professor\nIMDB Rating = 5.6/10.0"
+    },
+    {
+        //7th Heaven
+        "category": "",
+        "start": "1996-08-26 12:00",
+        "end": "1996-08-26 12:15",
+        "color": colorSet.getIndex(31),
+        "text": "7th Heaven\nIMDB Rating = 5.2/10.0"
+    },
+    {
+        //Full Circle
+        "category": "",
+        "start": "1996-09-09 12:00",
+        "end": "1996-09-09 12:15",
+        "color": colorSet.getIndex(31),
+        "text": "Full Circle\nIMDB Rating = 5.5/10.0"
+    },
+    {
+        //Nightwatch
+        "category": "",
+        "start": "1997-04-17 12:00",
+        "end": "1997-04-17 12:15",
+        "color": colorSet.getIndex(31),
+        "text": "Nightwatch\nIMDB Rating = 6.2/10.0"
+    },
+    {
+        //Buffy the Vampire Slayer
+        "category": "",
+        "start": "1997-06-01 12:00",
+        "end": "1997-06-01 12:15",
+        "color": colorSet.getIndex(31),
+        "text": "Buffy the Vampire Slayer\nIMDB Rating = 8.2/10.0"
+    },
+    {
+        //L.A. Johns
+        "category": "",
+        "start": "1997-06-10 12:00",
+        "end": "1997-06-10 12:15",
+        "color": colorSet.getIndex(31),
+        "text": "L.A. Johns\nIMDB Rating = 4.8/10.0"
+    },
+    {
+        //Scream 2
+        "category": "",
+        "start": "1997-12-12 12:00",
+        "end": "1997-12-12 12:15",
+        "color": colorSet.getIndex(31),
+        "text": "Scream 2\nIMDB Rating = 6.2/10.0"
+    },
+    {
+        //Prey
+        "category": "",
+        "start": "1998-01-15 12:00",
+        "end": "1998-01-15 12:15",
+        "color": colorSet.getIndex(31),
+        "text": "Prey\nIMDB Rating = 7.6/10.0"
+    },
+    {
+        //Senseless
+        "category": "",
+        "start": "1998-02-20 12:00",
+        "end": "1998-02-20 12:15",
+        "color": colorSet.getIndex(31),
+        "text": "Senseless\nIMDB Rating = 6.1/10.0"
+    },
+    {
+        //Krippendorf's Tribe
+        "category": "",
+        "start": "1998-02-27 12:00",
+        "end": "1998-02-27 12:15",
+        "color": colorSet.getIndex(31),
+        "text": "Krippendorf's Tribe\nIMDB Rating = 5.0/10.0"
+    },
+    {
+        //The Players Club
+        "category": "",
+        "start": "1998-04-08 12:00",
+        "end": "1998-04-08 12:15",
+        "color": colorSet.getIndex(31),
+        "text": "The Players Club\nIMDB Rating = 5.8/10.0"
+    },
+    {
+        //Mafia!
+        "category": "",
+        "start": "1998-07-24 12:00",
+        "end": "1998-07-24 12:15",
+        "color": colorSet.getIndex(31),
+        "text": "Mafia!\nIMDB Rating = 5.6/10.0"
+    },
+    {
+        //Mighty Joe Young
+        "category": "",
+        "start": "1998-12-25 12:00",
+        "end": "1998-12-25 12:15",
+        "color": colorSet.getIndex(31),
+        "text": "Mighty Joe Young\nIMDB Rating = 5.7/10.0"
+    },
+    {
+        //Frat Ratz
+        "category": "",
+        "start": "1999-01-01 12:00",
+        "end": "1999-01-01 12:15",
+        "color": colorSet.getIndex(31),
+        "text": "Frat Ratz\nIMDB Rating = N/A"
+    },
+    {
+        //Never Been Kissed
+        "category": "",
+        "start": "1999-04-09 12:00",
+        "end": "1999-04-09 12:15",
+        "color": colorSet.getIndex(31),
+        "text": "Never Been Kissed\nIMDB Rating = 6.1/10.0"
+    },
+    {
+        //Pirates of Silicon Valley
+        "category": "",
+        "start": "1999-06-20 12:00",
+        "end": "1999-06-20 12:15",
+        "color": colorSet.getIndex(31),
+        "text": "Pirates of Silicon Valley\nIMDB Rating = 7.2/10.0"
+    },
+    {
+        //The Mike & Ben Show
+        "category": "",
+        "start": "1999-06-22 12:00",
+        "end": "1999-06-22 12:15",
+        "color": colorSet.getIndex(31),
+        "text": "The Mike & Ben Show\nIMDB Rating = N/A"
+    },
+    {
+        //Gilmore Girls
+        "category": "",
+        "start": "2000-10-05 12:00",
+        "end": "2000-10-05 12:15",
+        "color": colorSet.getIndex(31),
+        "text": "Gilmore Girls\nIMDB Rating = 8.1/10.0"
+    },
+    {
+        //Gilmore Girls
+        "category": "",
+        "start": "2000-10-05 12:00",
+        "end": "2000-10-05 12:15",
+        "color": colorSet.getIndex(31),
+        "text": "Gilmore Girls\nIMDB Rating = 8.1/10.0"
     }
 
     ];
