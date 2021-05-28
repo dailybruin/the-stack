@@ -279,13 +279,13 @@ am4core.ready(function () {
     series.columns.template.fillOpacity = 0.6;
 
     var imageBullet1 = series.bullets.push(new am4plugins_bullets.PinBullet());
-    imageBullet1.background.radius = 18;
+    imageBullet1.background.radius = 20;
     imageBullet1.locationX = 1;
     imageBullet1.propertyFields.stroke = "color";
     imageBullet1.background.propertyFields.fill = "color";
     imageBullet1.image = new am4core.Image();
     imageBullet1.image.propertyFields.href = "icon";
-    imageBullet1.image.scale = 0.5;
+    imageBullet1.image.scale = 1;
     imageBullet1.circle.radius = am4core.percent(100);
     imageBullet1.dy = -5;
     imageBullet1.background.pointerBaseWidth = 10;
@@ -303,7 +303,7 @@ am4core.ready(function () {
     });
 
     var hs = imageBullet1.states.create("hover")
-    hs.properties.scale = 1.3;
+    hs.properties.scale = 5;
     hs.properties.opacity = 1;
 
     var textBullet = series.bullets.push(new am4charts.LabelBullet());
@@ -337,11 +337,11 @@ am4core.ready(function () {
 
     var previousBullet;
 
-    chart.events.on("inited", function () {
-        setTimeout(function () {
-            hoverItem(series.dataItems.getIndex(0));
-        }, 2000)
-    })
+    // chart.events.on("inited", function () {
+    //     setTimeout(function () {
+    //         hoverItem(series.dataItems.getIndex(0));
+    //     }, 2000)
+    // })
 
     function hoverItem(dataItem) {
         var bullet = dataItem.bullets.getKey(imageBullet1.uid);
