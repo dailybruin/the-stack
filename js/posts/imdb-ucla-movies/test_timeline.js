@@ -25,8 +25,9 @@ am4core.ready(function () {
         "start": "1972-03-04 12:00",
         "end": "1972-03-04 12:15",
         "color": colorSet.getIndex(0),
-        "text": "Emergency! (Ep: Nurse's Wild)",
+        "text": "Emergency!",
         "extra": "TV Series • 1972 - 1979",
+        "episode": "Episode: Nurse's Wild",
         "rating": "IMDB Rating = 8.0 / 10.0"
     }, {
         //The Godfather
@@ -36,6 +37,7 @@ am4core.ready(function () {
         "color": colorSet.getIndex(1),
         "text": "The Godfather",
         "extra": "Film • 1972 • 2h 55 min",
+        "episode": "",
         "rating": "IMDB Rating = 9.2 / 10.0"
     }, {
         //Barnaby Jones
@@ -43,8 +45,9 @@ am4core.ready(function () {
         "start": "1973-02-25 12:00",
         "end": "1973-02-25 12:15",
         "color": colorSet.getIndex(2),
-        "text": "Barnaby Jones (Ep: Sunday: Doomsday)",
+        "text": "Barnaby Jones",
         "extra": "TV Series • 1973 - 1980",
+        "episode": "Episode: Sunday: Doomsday",
         "rating": "IMDB Rating = 7.6 / 10.0"
     }, {
         //The Bolero
@@ -213,24 +216,24 @@ am4core.ready(function () {
     series.columns.template.strokeOpacity = 0;
     series.columns.template.fillOpacity = 0.6;
 
-    var imageBullet1 = series.bullets.push(new am4plugins_bullets.PinBullet());
-    imageBullet1.background.radius = 20;
-    imageBullet1.locationX = 1;
-    imageBullet1.propertyFields.stroke = "color";
-    imageBullet1.background.propertyFields.fill = "color";
-    imageBullet1.image = new am4core.Image();
-    imageBullet1.image.propertyFields.href = "icon";
-    imageBullet1.image.scale = 1;
-    imageBullet1.circle.radius = am4core.percent(100);
-    imageBullet1.dy = -2;
-    imageBullet1.background.pointerBaseWidth = 10;
-    imageBullet1.background.pointerLength = 10
-    imageBullet1.tooltipText = "[bold]{text}\n[normal]{extra}\n{rating}";
-    imageBullet1.tooltipText.background = "color";
+    var imageBullet = series.bullets.push(new am4plugins_bullets.PinBullet());
+    imageBullet.background.radius = 5;
+    imageBullet.locationX = 1;
+    imageBullet.propertyFields.stroke = "color";
+    imageBullet.background.propertyFields.fill = "color";
+    imageBullet.image = new am4core.Image();
+    imageBullet.image.propertyFields.href = "icon";
+    imageBullet.image.scale = 1;
+    imageBullet.circle.radius = am4core.percent(100);
+    imageBullet.dy = -2;
+    imageBullet.background.pointerBaseWidth = 10;
+    imageBullet.background.pointerLength = 10
+    imageBullet.tooltipText = "[bold]{text} [normal]{extra}\n{episode}\n{rating}";
+    imageBullet.tooltipText.background = "color";
 
     series.tooltip.pointerOrientation = "up";
 
-    imageBullet1.background.adapter.add("pointerAngle", (value, target) => {
+    imageBullet.background.adapter.add("pointerAngle", (value, target) => {
         if (target.dataItem) {
             var position = dateAxis.valueToPosition(target.dataItem.openDateX.getTime());
             return dateAxis.renderer.positionToAngle(position);
@@ -238,8 +241,8 @@ am4core.ready(function () {
         return value;
     });
 
-    var hs = imageBullet1.states.create("hover")
-    hs.properties.scale = 5;
+    var hs = imageBullet.states.create("hover")
+    hs.properties.scale = 2;
     hs.properties.opacity = 1;
 
     var textBullet = series.bullets.push(new am4charts.LabelBullet());
@@ -280,7 +283,7 @@ am4core.ready(function () {
     // })
 
     function hoverItem(dataItem) {
-        var bullet = dataItem.bullets.getKey(imageBullet1.uid);
+        var bullet = dataItem.bullets.getKey(imageBullet.uid);
         var index = dataItem.index;
 
         if (index >= series.dataItems.length - 1) {
