@@ -4,9 +4,10 @@ am4core.ready(function () {
     am4core.useTheme(am4themes_animated);
     // Themes end
 
-    var chart = am4core.create("chartdiv", am4plugins_timeline.CurveChart);
-    chart.curveContainer.padding(100, 20, 50, 20);
-    //chart.levelCount = 3;
+    var chart = am4core.create("chartdiv", am4plugins_timeline.SerpentineChart);
+    chart.curveContainer.padding(20, 20, 20, 20);
+    chart.levelCount = 8;
+    chart.orientation = "horizontal";
     //chart.yAxisRadius = am4core.percent(20);
     //chart.yAxisInnerRadius = am4core.percent(2);
     chart.maskBullets = false;
