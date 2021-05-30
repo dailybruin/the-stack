@@ -526,6 +526,7 @@ am4core.ready(function () {
     series.columns.template.propertyFields.stroke = "color";
     series.columns.template.strokeOpacity = 0;
     series.columns.template.fillOpacity = 0.6;
+   //series.legendSettings.itemValueText = "{color}";
 
     var imageBullet = series.bullets.push(new am4plugins_bullets.PinBullet());
     imageBullet.background.radius = 5;
@@ -627,6 +628,11 @@ am4core.ready(function () {
 
     //Create custom legend
     var legend = new am4charts.Legend();
+
+    var legendTitle = legend.createChild(am4core.Label);
+    legendTitle.text = "[bold]IMDB Ratings:";
+    legendTitle.fontSize = 14;
+
     legend.parent = chart.chartContainer;
     legend.background.fill = am4core.color("white");
     legend.background.fillOpacity = 0.05;
@@ -701,12 +707,19 @@ am4core.ready(function () {
         "name": ">= 9.5",
         "fill": colorSet.getIndex(20)
     }];
-    legend.itemContainers.template.clickable = false;
-    legend.itemContainers.template.focusable = false;
 
-    var legendTitle = legend.createChild(am4core.Label);
-    legendTitle.text = "[bold]IMDB Ratings:";
-    legendTitle.fontSize = 14;
+    // chart.legend.itemContainers.template.events.off("hit", function(ev) {
+    //     alert("Clicked on " + ev.target.dataItem.dataContext.color);
+    // });
+
+    legend.itemContainers.template.clickable = true;
+    legend.itemContainers.template.focusable = true;
+    //chart.legend.itemContainers.template.togglable = true;
+    
+    chart.legend.itemContainers.template.events.on("hit", function(ev) {
+        var seriesColumn = ev.target.dataItem.color;
+        seriesColumn.isActive = !seriesColumn.isActive;
+      });
 
 }); // end am4core.ready()
 
