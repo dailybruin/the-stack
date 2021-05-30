@@ -25,148 +25,458 @@ am4core.ready(function () {
         "category": "",
         "start": "1972-03-04 12:00",
         "end": "1972-03-04 12:15",
-        "color": colorSet.getIndex(0),
-        "text": "Emergency!",
+        "color": colorSet.getIndex(4),
+        "text": "[bold]Emergency! [normal]Episode: Nurse's Wild",
         "extra": "TV Series • 1972 - 1979",
-        "episode": "Episode: Nurse's Wild",
-        "rating": "IMDB Rating = 8.0 / 10.0"
+        "rating": "IMDB Rating = 7.9 / 10"
     }, {
         //The Godfather
         "category": "",
-        "start": "1972-03-14 12:00",
-        "end": "1972-03-14 12:15",
-        "color": colorSet.getIndex(1),
-        "text": "The Godfather",
-        "extra": "Film • 1972 • 2h 55 min",
-        "episode": "",
-        "rating": "IMDB Rating = 9.2 / 10.0"
+        "start": "1972-03-24 12:00",
+        "end": "1972-03-24 12:15",
+        "color": colorSet.getIndex(17),
+        "text": "[bold]The Godfather",
+        "extra": "[normal]Film • 2h 55 min",
+        "rating": "IMDB Rating = 9.2 / 10"
     }, {
         //Barnaby Jones
         "category": "",
         "start": "1973-02-25 12:00",
         "end": "1973-02-25 12:15",
-        "color": colorSet.getIndex(2),
-        "text": "Barnaby Jones",
+        "color": colorSet.getIndex(1),
+        //"text": "[bold]Barnaby Jones [normal](TV Series • 1973 - 1980)\nEpisode: Sunday: Doomsday\nIMDB Rating = 7.6 / 10",
+        "text": "[bold]Barnaby Jones [normal]Episode: Sunday: Doomsday",
         "extra": "TV Series • 1973 - 1980",
-        "episode": "Episode: Sunday: Doomsday",
-        "rating": "IMDB Rating = 7.6 / 10.0"
+        "rating": "IMDB Rating = 7.6 / 10"
     }, {
         //The Bolero
         "category": "",
         "start": "1973-10-15 12:00",
         "end": "1973-10-15 12:15",
-        "color": colorSet.getIndex(3),
-        "text": "The Bolero",
-        "extra": "Short • Music • Documentary • 1973 • 26 min",
-        "rating": "IMDB Rating = 7.6 / 10.0"
+        "color": colorSet.getIndex(2),
+        //"text": "[bold]The Bolero\n[normal]Short • Music • Documentary • 1973 • 26 min\nIMDB Rating = 7.6 / 10",
+        "text": "[bold]The Bolero",
+        "extra": "[normal]Short • Music • Documentary • 26 min",
+        "rating": "IMDB Rating = 7.7 / 10"
     }, {
         //Emergency! Ep; The Promise
         "category": "",
         "start": "1973-12-01 12:00",
         "end": "1973-12-01 12:15",
-        "color": colorSet.getIndex(4),
-        "text": "Emergency! (Ep: The Promise)",
+        "color": colorSet.getIndex(5),
+        //"text": "[bold]Emergency! [normal](TV Series • 1972 - 1979)\nEpisode: The Promise\nIMDB Rating = 8.1 / 10",
+        "text": "[bold]Emergency! [normal]Episode: The Promise",
         "extra": "TV Series • 1972 - 1979",
-        "rating": "IMDB Rating = 8.1 / 10.0"
+        "rating": "IMDB Rating = 8.0 / 10"
     }, {
         //Washington: Behind Closed Doors
         "category": "",
         "start": "1977-09-07 12:00",
         "end": "1977-09-07 12:15",
-        "color": colorSet.getIndex(5),
-        "text": "Washington: Behind Closed Doors (Part 2)",
+        "color": colorSet.getIndex(17),
+        //"text": "[bold]Washington: Behind Closed Doors [normal](TV Mini Series • 1977)\nEpisode: Part 2\nIMDB Rating = 9.2 / 10"
+        "text": "[bold]Washington: Behind Closed Doors [normal]Episode: Part 2",
         "extra": "TV Mini Series • 1977",
-        "rating": "IMDB Rating = 9.2 / 10.0"
+        "rating": "IMDB Rating = 9.2 / 10"
     }, {
         //The Rockford Files
         "category": "",
         "start": "1978-02-17 12:00",
         "end": "1978-02-17 12:15",
-        "color": colorSet.getIndex(6),
-        "text": "The Rockford Files (Ep: The Prisoner of Rosemont Hall)",
+        "color": colorSet.getIndex(2),
+        //"text": "[bold]The Rockford Files [normal](TV Series • 1974 - 1980)\nEpisode: The Prisoner of Rosemont Hall\nIMDB Rating = 7.6 / 10"
+        "text": "[bold]The Rockford Files [normal]Episode: The Prisoner of Rosemont Hall",
         "extra": "TV Series • 1974 - 1980",
-        "rating": "IMDB Rating = 7.7 / 10.0"
+        "rating": "IMDB Rating = 7.7 / 10"
     }, {
-        //CHiPs Ep; Hot Wheels
-        "category": "",
-        "start": "1979-11-03 12:00",
-        "end": "1979-11-03 12:15",
-        "color": colorSet.getIndex(7),
-        "text": "CHiPs (Ep: Hot Wheels)",
-        "extra": "TV Series • 1977 - 1983",
-        "rating": "IMDB Rating = 7.6 / 10.0"
-    }, {
-        //Charlie's Angels
-        "category": "",
-        "start": "1980-04-08 12:00",
-        "end": "1980-04-08 12:15",
-        "color": colorSet.getIndex(8),
-        "text": "Charlie's Angels (Ep: Angels on Campus)",
-        "extra": "TV Series • 1976 - 1981",
-        "rating": "IMDB Rating = 7.5 / 10.0"
-    }, {
-        //CHiPs EP: E.M.T.
-        "category": "",
-        "start": "1980-10-19 12:00",
-        "end": "1980-10-19 12:15",
-        "color": colorSet.getIndex(9),
-        "text": "CHiPs (Ep: E.M.T.)",
-        "extra": "TV Series • 1977 - 1983",
-        "rating": "IMDB Rating = 7.6 / 10.0"
-    }, {
-        //Simon & Simon - Love, Christy
+        //Simon & Simon EP: Love, Christy
         "category": "",
         "start": "1981-12-01 12:00",
         "end": "1981-12-01 12:15",
-        "color": colorSet.getIndex(10),
-        "text": "Simon & Simon (Ep: Love, Christy)",
+        "color": colorSet.getIndex(0),
+        "text": "[bold]Simon & Simon [normal]Episode: Love, Christy",
         "extra": "TV Series • 1981 - 1989",
-        "rating": "IMDB Rating = 7.5 / 10.0"
-    }, {
-        //CHiPs EP: A Threat of War
-        "category": "",
-        "start": "1982-03-21 12:00",
-        "end": "1982-03-21 12:15",
-        "color": colorSet.getIndex(11),
-        "text": "CHiPs (Ep: A Threat of War)",
-        "extra": "TV Series • 1977 - 1983",
-        "rating": "IMDB Rating = 7.5 / 10.0"
+        //"episode": "",
+        "rating": "IMDB Rating = 7.5 / 10"
     }, {
         //CHiPs EP: K-9-1
         "category": "",
         "start": "1982-05-09 12:00",
         "end": "1982-05-09 12:15",
-        "color": colorSet.getIndex(12),
-        "text": "CHiPs (Ep: K-9-1)",
+        "color": colorSet.getIndex(2),
+        "text": "[bold]CHiPs [normal]Episode: K-9-1",
         "extra": "TV Series • 1977 - 1983",
-        "rating": "IMDB Rating = 7.9 / 10.0"
+        //"episode": "Episode: K-9-1",
+        "rating": "IMDB Rating = 7.7 / 10"
     }, {
         //Dallas EP: Eye of the Beholder
         "category": "",
         "start": "1984-02-14 12:00",
         "end": "1984-02-14 12:15",
-        "color": colorSet.getIndex(13),
-        "text": "Dallas (Ep: Eye of the Beholder)",
+        "color": colorSet.getIndex(0),
+        "text": "[bold]Dallas [normal]Episode: Eye of the Beholder",
         "extra": "TV Series • 1978-1991",
-        "rating": "IMDB Rating = 7.5 / 10.0"
+        //"episode": "Episode: Eye of the Beholder",
+        "rating": "IMDB Rating = 7.5 / 10"
     }, {
-        //Paper Dolls 
+        //Paper Dolls EP 1.1
         "category": "",
         "start": "1984-09-23 12:00",
         "end": "1984-09-23 12:15",
-        "color": colorSet.getIndex(14),
-        "text": "Paper Dolls (Ep: #1.1)",
+        "color": colorSet.getIndex(3),
+        "text": "[bold]Paper Dolls [normal]Episode: #1.1",
         "extra": "TV Series • 1984",
-        "rating": "IMDB Rating = 7.8 / 10.0"
+        //"episode": "Episode: #1.1",
+        "rating": "IMDB Rating = 7.8 / 10"
     }, {
-        //Highway to Heaven 
+        //Highway to Heaven EP: A Special Love: Part Two
         "category": "",
         "start": "1986-10-01 12:00",
         "end": "1986-10-01 12:15",
-        "color": colorSet.getIndex(15),
-        "text": "Highway to Heaven (Ep: A Special Love: Part Two)",
+        "color": colorSet.getIndex(12),
+        "text": "[bold]Highway to Heaven [normal]Episode: A Special Love: Part 2",
         "extra": "TV Series • 1984 - 1989",
-        "rating": "IMDB Rating = 8.7 / 10.0"
+        "rating": "IMDB Rating = 8.7 / 10"
+    }, {
+        //The Colbys
+        "category": "",
+        "start": "1987-05-22 12:00",
+        "end": "1987-05-22 12:15",
+        "color": colorSet.getIndex(11),
+        "text": "[bold]The Colbys [normal]Episode: Reaching Out",
+        "extra": "TV Series • 1985 - 1987",
+        //"episode": "Episode: Reaching Out",
+        "rating": "IMDB Rating = 8.6 / 10"
+    }, {
+        //Melrose Place EP Bye Bye Billy
+        "category": "",
+        "start": "1993-02-17 12:00",
+        "end": "1993-02-17 12:15",
+        "color": colorSet.getIndex(1),
+        "text": "[bold]Melrose Place [normal]Episode: Bye Bye Billy",
+        "extra": "TV Series • 1992 - 1999",
+        //"episode": "Episode: Bye Bye Billy",
+        "rating": "IMDB Rating = 7.6 / 10"
+    }, {
+        //The Rockford Files: Friends and Foul play
+        "category": "",
+        "start": "1996-04-25 12:00",
+        "end": "1996-04-25 12:15",
+        "color": colorSet.getIndex(1),
+        "text": "[bold]The Rockford Files: Friends and Foul Play",
+        "extra": "[normal]TV Movie • 2h",
+        //"episode": "",
+        "rating": "IMDB Rating = 7.6 / 10"
+    }, {
+        //Buffy the Vampire Slayer
+        "category": "",
+        "start": "1997-03-10 12:00",
+        "end": "1997-03-10 12:15",
+        "color": colorSet.getIndex(7),
+        "text": "[bold]Buffy the Vampire Slayer",
+        "extra": "[normal]TV Series • 1997 - 2003",
+        //"episode": "",
+        "rating": "IMDB Rating = 8.2 / 10"
+    }, {
+        //Prey
+        "category": "",
+        "start": "1998-01-15 12:00",
+        "end": "1998-01-15 12:15",
+        "color": colorSet.getIndex(1),
+        "text": "[bold]Prey",
+        "extra": "[normal]TV Series • 1998",
+        //"episode": "",
+        "rating": "IMDB Rating = 7.6 / 10"
+    }, {
+        //Gilmore Girls
+        "category": "",
+        "start": "2000-10-05 12:00",
+        "end": "2000-10-05 12:15",
+        "color": colorSet.getIndex(6),
+        "text": "[bold]Gilmore Girls",
+        "extra": "[normal]TV Series • 2000 - 2007",
+        //"episode": "",
+        "rating": "IMDB Rating = 8.1 / 10.0"
+    }, {
+        //CSI: Crime Scene Investigation
+        "category": "",
+        "start": "2000-10-26 12:00",
+        "end": "2000-10-26 12:15",
+        "color": colorSet.getIndex(1),
+        "text": "[bold]CSI: Crime Scene Investigation",
+        "extra": "[normal]TV Series • 2000 - 2015",
+        //"episode": "",
+        "rating": "IMDB Rating = 7.6 / 10"
+    }, {
+        //Undeclared
+        "category": "",
+        "start": "2001-09-25 12:00",
+        "end": "2001-09-25 12:15",
+        "color": colorSet.getIndex(4),
+        "text": "[bold]Undeclared",
+        "extra": "[normal]TV Series • 2001 - 2003",
+        //"episode": "",
+        "rating": "IMDB Rating = 7.9 / 10"
+    }, {
+        //Alias EP: Reckoning
+        "category": "",
+        "start": "2001-11-18 12:00",
+        "end": "2001-11-18 12:15",
+        "color": colorSet.getIndex(2),
+        "text": "[bold]Alias [normal]Episode: Reckoning",
+        "extra": "TV Series • 2001 - 2006",
+        //"episode": "",
+        "rating": "IMDB Rating = 7.7 / 10"
+    }, {
+        //Alias EP: Truth Be Told
+        "category": "",
+        "start": "2002-01-23 12:00",
+        "end": "2002-01-23 12:15",
+        "color": colorSet.getIndex(9),
+        "text": "[bold]Alias [normal]Truth Be Told",
+        "extra": "TV Series • 2001 - 2006",
+        //"episode": "",
+        "rating": "IMDB Rating = 8.4 / 10"
+    }, {
+        //Rock n' Roll Cops
+        "category": "",
+        "start": "2002-04-22 12:00",
+        "end": "2002-04-22 12:15",
+        "color": colorSet.getIndex(4),
+        "text": "[bold]Rock n' Roll Cops",
+        "extra": "[normal]Video",
+        //"episode": "",
+        "rating": "IMDB Rating = 7.9 / 10"
+    }, {
+        //Christopher Titus: Norman Rockwell Is Bleeding
+        "category": "",
+        "start": "2004-06-06 12:00",
+        "end": "2004-06-06 12:15",
+        "color": colorSet.getIndex(14),
+        "text": "[bold]Christopher Titus: Norman Rockwell Is Bleeding",
+        "extra": "[normal]TV Special • 1h 30 min",
+        //"episode": "",
+        "rating": "IMDB Rating = 8.9 / 10"
+    }, {
+        //He Set the Trend
+        "category": "",
+        "start": "2005-05-26 12:00",
+        "end": "2005-05-26 12:15",
+        "color": colorSet.getIndex(8),
+        "text": "[bold]He Set the Trend",
+        "extra": "[normal]Short • 6 min",
+        //"episode": "",
+        "rating": "IMDB Rating = 8.3 / 10"
+    }, {
+        //The Recorder
+        "category": "",
+        "start": "2005-07-11 12:00",
+        "end": "2005-07-11 12:15",
+        "color": colorSet.getIndex(13),
+        "text": "[bold]The Recorder",
+        "extra": "[normal]Short • 7 min",
+        //"episode": "",
+        "rating": "IMDB Rating = 8.8 / 10"
+    }, {
+        //The West Wing EP: The Ticket
+        "category": "",
+        "start": "2005-09-15 12:00",
+        "end": "2005-09-15 12:15",
+        "color": colorSet.getIndex(5),
+        "text": "[bold]The West Wing [normal]Episode: The Ticket",
+        "extra": "TV Series • 1999 - 2006",
+        //"episode": "",
+        "rating": "IMDB Rating = 8.0 / 10"
+    }, {
+        //The West Wing EP: The Mommy Problem
+        "category": "",
+        "start": "2005-10-02 12:00",
+        "end": "2005-10-02 12:15",
+        "color": colorSet.getIndex(3),
+        "text": "[bold]The West Wing [normal]Episode: The Mommy Problem",
+        "extra": "TV Series • 1999 - 2006",
+        //"episode": "",
+        "rating": "IMDB Rating = 7.8 / 10"
+    }, {
+        //The West Wing EP: Mr. Frost
+        "category": "",
+        "start": "2005-11-01 12:00",
+        "end": "2005-11-01 12:15",
+        "color": colorSet.getIndex(4),
+        "text": "[bold]The West Wing [normal]Episode: Mr. Frost",
+        "extra": "TV Series • 1999 - 2006",
+        //"episode": "",
+        "rating": "IMDB Rating = 7.9 / 10"
+    }, {
+        //House M.D. EP: Meaning
+        "category": "",
+        "start": "2007-03-22 12:00",
+        "end": "2007-03-22 12:15",
+        "color": colorSet.getIndex(14),
+        "text": "[bold]House M.D. [normal]Episode: Meaning",
+        "extra": "TV Series • 2004 - 2012",
+        //"episode": "",
+        "rating": "IMDB Rating = 8.9 / 10"
+    }, {
+        //Greek
+        "category": "",
+        "start": "2007-07-09 12:00",
+        "end": "2007-07-09 12:15",
+        "color": colorSet.getIndex(1),
+        "text": "[bold]Greek [normal]Episode: Pilot",
+        "extra": "TV Series • 2007 - 2011",
+        //"episode": "",
+        "rating": "IMDB Rating = 7.6 / 10"
+    }, {
+        //Broken English
+        "category": "",
+        "start": "2008-01-21 12:00",
+        "end": "2008-01-21 12:15",
+        "color": colorSet.getIndex(1),
+        "text": "[bold]Broken English",
+        "extra": "[normal]Short • 10 min",
+        //"episode": "",
+        "rating": "IMDB Rating = 7.6 / 10"
+    }, {
+        //Moonlight EP: No Such Thing as Vampires
+        "category": "",
+        "start": "2008-02-19 12:00",
+        "end": "2008-02-19 12:15",
+        "color": colorSet.getIndex(2),
+        "text": "[bold]Moonlight [normal]Episode: No Such Thing as Vampires",
+        "extra": "TV Series • 2007 - 2008",
+        //"episode": "",
+        "rating": "IMDB Rating = 7.7 / 10"
+    }, {
+        //VH1 Rock Honors: The Who
+        "category": "",
+        "start": "2008-07-17 12:00",
+        "end": "2008-07-17 12:15",
+        "color": colorSet.getIndex(7),
+        "text": "[bold]VH1 Rock Honors: The Who",
+        "extra": "[normal]TV Special • Music • 2h",
+        //"episode": "",
+        "rating": "IMDB Rating = 8.2 / 10"
+    }, {
+        //Dear Jack
+        "category": "",
+        "start": "2009-10-08 12:00",
+        "end": "2009-10-08 12:15",
+        "color": colorSet.getIndex(11),
+        "text": "[bold]Dear Jack",
+        "extra": "[normal]Documentary • 1h 7 min",
+        //"episode": "",
+        "rating": "IMDB Rating = 8.6 / 10"
+    }, {
+        //Grapple!
+        "category": "",
+        "start": "2010-06-30 12:00",
+        "end": "2010-06-30 12:15",
+        "color": colorSet.getIndex(10),
+        "text": "[bold]Grapple!",
+        "extra": "[normal]Short • 13 min",
+        //"episode": "",
+        "rating": "IMDB Rating = 8.5 / 10"
+    }, {
+        //Destroy the Alpha Gammas
+        "category": "",
+        "start": "2013-08-21 12:00",
+        "end": "2013-08-21 12:15",
+        "color": colorSet.getIndex(4),
+        "text": "[bold]Destroy the Alpha Gammas",
+        "extra": "[normal]TV Series • Musical • 2013 - ",
+        //"episode": "",
+        "rating": "IMDB Rating = 7.9 / 10"
+    }, {
+        //UCLA Pranks
+        "category": "",
+        "start": "2014-06-30 12:00",
+        "end": "2014-06-30 12:15",
+        "color": colorSet.getIndex(10),
+        "text": "[bold]UCLA Pranks",
+        "extra": "[normal]Short",
+        //"episode": "",
+        "rating": "IMDB Rating = 8.5 / 10"
+    }, {
+        //Blue and Gold
+        "category": "",
+        "start": "2015-06-30 12:00",
+        "end": "2015-09-30 12:15",
+        "color": colorSet.getIndex(20),
+        "text": "[bold]Blue and Gold",
+        "extra": "[normal]Short",
+        //"episode": "",
+        "rating": "IMDB Rating = 9.6 / 10"
+    }, {
+        //Wet Hot American Summer: First Day of Camp
+        "category": "",
+        "start": "2015-07-31 12:00",
+        "end": "2015-07-31 12:15",
+        "color": colorSet.getIndex(2),
+        "text": "[bold]Wet Hot American Summer: First Day of Camp [normal]Episode: Auditions",
+        "extra": "TV Series • 2015",
+        //"episode": "",
+        "rating": "IMDB Rating = 7.7 / 10"
+    }, {
+        //Heja Sverige!
+        "category": "",
+        "start": "2015-10-05 12:00",
+        "end": "2015-10-05 12:15",
+        "color": colorSet.getIndex(20),
+        "text": "[bold]Heja Sverige!",
+        "extra": "[normal]TV Mini Series • Documentary • 2015 -",
+        //"episode": "",
+        "rating": "IMDB Rating = 9.6 / 10"
+    }, {
+        //Jackie Robinson
+        "category": "",
+        "start": "2016-04-11 12:00",
+        "end": "2016-04-11 12:15",
+        "color": colorSet.getIndex(7),
+        "text": "[bold]Jackie Robinson",
+        "extra": "[normal]TV Mini Series • Documentary • 2016",
+        //"episode": "",
+        "rating": "IMDB Rating = 8.2 / 10"
+    }, {
+        //A Financial Engagement
+        "category": "",
+        "start": "2016-05-10 12:00",
+        "end": "2016-05-10 12:15",
+        "color": colorSet.getIndex(7),
+        "text": "[bold]A Financial Engagement",
+        "extra": "[normal]Short • 8 min",
+        //"episode": "",
+        "rating": "IMDB Rating = 8.2 / 10"
+    }, {
+        //UCLA Baseball Intro
+        "category": "",
+        "start": "2017-02-18 12:00",
+        "end": "2017-02-18 12:15",
+        "color": colorSet.getIndex(20),
+        "text": "[bold]UCLA Baseball Intro",
+        "extra": "[normal]Video • Short • 1 min",
+        //"episode": "",
+        "rating": "IMDB Rating = 9.6 / 10"
+    }, {
+        //Be Natural: The Untold Story of Alice Guy-Blaché
+        "category": "",
+        "start": "2018-08-31 12:00",
+        "end": "2018-08-31 12:15",
+        "color": colorSet.getIndex(2),
+        "text": "[bold]Be Natural: The Untold Story of Alice Guy-Blaché",
+        "extra": "[normal]Documentary • 1h 43 min",
+        //"episode": "",
+        "rating": "IMDB Rating = 7.7 / 10"
+    }, {
+        //Brené Brown: The Call to Courage
+        "category": "",
+        "start": "2019-04-19 12:00",
+        "end": "2019-04-19 12:15",
+        "color": colorSet.getIndex(2),
+        "text": "[bold]Brené Brown: The Call to Courage",
+        "extra": "[normal]Documentary • 1h 16 min",
+        //"episode": "",
+        "rating": "IMDB Rating = 7.7 / 10"
     }];
 
     chart.fontSize = 10;
@@ -229,7 +539,7 @@ am4core.ready(function () {
     imageBullet.dy = -2;
     imageBullet.background.pointerBaseWidth = 10;
     imageBullet.background.pointerLength = 10
-    imageBullet.tooltipText = "[bold]{text} [normal]{extra}\n{episode}\n{rating}";
+    imageBullet.tooltipText = "{text}\n{extra}\n{rating}";
     imageBullet.tooltipText.background = "color";
 
     series.tooltip.pointerOrientation = "up";
