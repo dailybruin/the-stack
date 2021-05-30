@@ -28,7 +28,7 @@ am4core.ready(function () {
         "color": colorSet.getIndex(4),
         "text": "[bold]Emergency! [normal]Episode: Nurse's Wild",
         "extra": "TV Series • 1972 - 1979",
-        "rating": "IMDB Rating = 7.9 / 10"
+        "rating": "7.9"
     }, {
         //The Godfather
         "category": "",
@@ -37,7 +37,7 @@ am4core.ready(function () {
         "color": colorSet.getIndex(17),
         "text": "[bold]The Godfather",
         "extra": "[normal]Film • 2h 55 min",
-        "rating": "IMDB Rating = 9.2 / 10"
+        "rating": "9.2"
     }, {
         //Barnaby Jones
         "category": "",
@@ -47,7 +47,7 @@ am4core.ready(function () {
         //"text": "[bold]Barnaby Jones [normal](TV Series • 1973 - 1980)\nEpisode: Sunday: Doomsday\nIMDB Rating = 7.6 / 10",
         "text": "[bold]Barnaby Jones [normal]Episode: Sunday: Doomsday",
         "extra": "TV Series • 1973 - 1980",
-        "rating": "IMDB Rating = 7.6 / 10"
+        "rating": "7.6"
     }, {
         //The Bolero
         "category": "",
@@ -57,7 +57,7 @@ am4core.ready(function () {
         //"text": "[bold]The Bolero\n[normal]Short • Music • Documentary • 1973 • 26 min\nIMDB Rating = 7.6 / 10",
         "text": "[bold]The Bolero",
         "extra": "[normal]Short • Music • Documentary • 26 min",
-        "rating": "IMDB Rating = 7.7 / 10"
+        "rating": "7.7"
     }, {
         //Emergency! Ep; The Promise
         "category": "",
@@ -67,7 +67,7 @@ am4core.ready(function () {
         //"text": "[bold]Emergency! [normal](TV Series • 1972 - 1979)\nEpisode: The Promise\nIMDB Rating = 8.1 / 10",
         "text": "[bold]Emergency! [normal]Episode: The Promise",
         "extra": "TV Series • 1972 - 1979",
-        "rating": "IMDB Rating = 8.0 / 10"
+        "rating": "8.0"
     }, {
         //Washington: Behind Closed Doors
         "category": "",
@@ -77,7 +77,7 @@ am4core.ready(function () {
         //"text": "[bold]Washington: Behind Closed Doors [normal](TV Mini Series • 1977)\nEpisode: Part 2\nIMDB Rating = 9.2 / 10"
         "text": "[bold]Washington: Behind Closed Doors [normal]Episode: Part 2",
         "extra": "TV Mini Series • 1977",
-        "rating": "IMDB Rating = 9.2 / 10"
+        "rating": "9.2"
     }, {
         //The Rockford Files
         "category": "",
@@ -87,7 +87,7 @@ am4core.ready(function () {
         //"text": "[bold]The Rockford Files [normal](TV Series • 1974 - 1980)\nEpisode: The Prisoner of Rosemont Hall\nIMDB Rating = 7.6 / 10"
         "text": "[bold]The Rockford Files [normal]Episode: The Prisoner of Rosemont Hall",
         "extra": "TV Series • 1974 - 1980",
-        "rating": "IMDB Rating = 7.7 / 10"
+        "rating": "7.7"
     }, {
         //Simon & Simon EP: Love, Christy
         "category": "",
@@ -97,7 +97,7 @@ am4core.ready(function () {
         "text": "[bold]Simon & Simon [normal]Episode: Love, Christy",
         "extra": "TV Series • 1981 - 1989",
         //"episode": "",
-        "rating": "IMDB Rating = 7.5 / 10"
+        "rating": "7.5"
     }, {
         //CHiPs EP: K-9-1
         "category": "",
@@ -107,7 +107,7 @@ am4core.ready(function () {
         "text": "[bold]CHiPs [normal]Episode: K-9-1",
         "extra": "TV Series • 1977 - 1983",
         //"episode": "Episode: K-9-1",
-        "rating": "IMDB Rating = 7.7 / 10"
+        "rating": "7.7"
     }, {
         //Dallas EP: Eye of the Beholder
         "category": "",
@@ -117,7 +117,7 @@ am4core.ready(function () {
         "text": "[bold]Dallas [normal]Episode: Eye of the Beholder",
         "extra": "TV Series • 1978-1991",
         //"episode": "Episode: Eye of the Beholder",
-        "rating": "IMDB Rating = 7.5 / 10"
+        "rating": "7.5"
     }, {
         //Paper Dolls EP 1.1
         "category": "",
@@ -127,7 +127,7 @@ am4core.ready(function () {
         "text": "[bold]Paper Dolls [normal]Episode: #1.1",
         "extra": "TV Series • 1984",
         //"episode": "Episode: #1.1",
-        "rating": "IMDB Rating = 7.8 / 10"
+        "rating": "7.8"
     }, {
         //Highway to Heaven EP: A Special Love: Part Two
         "category": "",
@@ -136,7 +136,7 @@ am4core.ready(function () {
         "color": colorSet.getIndex(12),
         "text": "[bold]Highway to Heaven [normal]Episode: A Special Love: Part 2",
         "extra": "TV Series • 1984 - 1989",
-        "rating": "IMDB Rating = 8.7 / 10"
+        "rating": "8.7"
     }, {
         //The Colbys
         "category": "",
@@ -146,7 +146,7 @@ am4core.ready(function () {
         "text": "[bold]The Colbys [normal]Episode: Reaching Out",
         "extra": "TV Series • 1985 - 1987",
         //"episode": "Episode: Reaching Out",
-        "rating": "IMDB Rating = 8.6 / 10"
+        "rating": "8.6"
     }, {
         //Melrose Place EP Bye Bye Billy
         "category": "",
@@ -156,7 +156,7 @@ am4core.ready(function () {
         "text": "[bold]Melrose Place [normal]Episode: Bye Bye Billy",
         "extra": "TV Series • 1992 - 1999",
         //"episode": "Episode: Bye Bye Billy",
-        "rating": "IMDB Rating = 7.6 / 10"
+        "rating": "7.6"
     }, {
         //The Rockford Files: Friends and Foul play
         "category": "",
@@ -166,7 +166,7 @@ am4core.ready(function () {
         "text": "[bold]The Rockford Files: Friends and Foul Play",
         "extra": "[normal]TV Movie • 2h",
         //"episode": "",
-        "rating": "IMDB Rating = 7.6 / 10"
+        "rating": "7.6"
     }, {
         //Buffy the Vampire Slayer
         "category": "",
@@ -176,7 +176,7 @@ am4core.ready(function () {
         "text": "[bold]Buffy the Vampire Slayer",
         "extra": "[normal]TV Series • 1997 - 2003",
         //"episode": "",
-        "rating": "IMDB Rating = 8.2 / 10"
+        "rating": "8.2"
     }, {
         //Prey
         "category": "",
@@ -186,7 +186,7 @@ am4core.ready(function () {
         "text": "[bold]Prey",
         "extra": "[normal]TV Series • 1998",
         //"episode": "",
-        "rating": "IMDB Rating = 7.6 / 10"
+        "rating": "7.6"
     }, {
         //Gilmore Girls
         "category": "",
@@ -196,7 +196,7 @@ am4core.ready(function () {
         "text": "[bold]Gilmore Girls",
         "extra": "[normal]TV Series • 2000 - 2007",
         //"episode": "",
-        "rating": "IMDB Rating = 8.1 / 10.0"
+        "rating": "8.1"
     }, {
         //CSI: Crime Scene Investigation
         "category": "",
@@ -206,7 +206,7 @@ am4core.ready(function () {
         "text": "[bold]CSI: Crime Scene Investigation",
         "extra": "[normal]TV Series • 2000 - 2015",
         //"episode": "",
-        "rating": "IMDB Rating = 7.6 / 10"
+        "rating": "7.6"
     }, {
         //Undeclared
         "category": "",
@@ -216,7 +216,7 @@ am4core.ready(function () {
         "text": "[bold]Undeclared",
         "extra": "[normal]TV Series • 2001 - 2003",
         //"episode": "",
-        "rating": "IMDB Rating = 7.9 / 10"
+        "rating": "7.9"
     }, {
         //Alias EP: Reckoning
         "category": "",
@@ -226,7 +226,7 @@ am4core.ready(function () {
         "text": "[bold]Alias [normal]Episode: Reckoning",
         "extra": "TV Series • 2001 - 2006",
         //"episode": "",
-        "rating": "IMDB Rating = 7.7 / 10"
+        "rating": "7.7"
     }, {
         //Alias EP: Truth Be Told
         "category": "",
@@ -236,7 +236,7 @@ am4core.ready(function () {
         "text": "[bold]Alias [normal]Truth Be Told",
         "extra": "TV Series • 2001 - 2006",
         //"episode": "",
-        "rating": "IMDB Rating = 8.4 / 10"
+        "rating": "8.4"
     }, {
         //Rock n' Roll Cops
         "category": "",
@@ -246,7 +246,7 @@ am4core.ready(function () {
         "text": "[bold]Rock n' Roll Cops",
         "extra": "[normal]Video",
         //"episode": "",
-        "rating": "IMDB Rating = 7.9 / 10"
+        "rating": "7.9"
     }, {
         //Christopher Titus: Norman Rockwell Is Bleeding
         "category": "",
@@ -256,7 +256,7 @@ am4core.ready(function () {
         "text": "[bold]Christopher Titus: Norman Rockwell Is Bleeding",
         "extra": "[normal]TV Special • 1h 30 min",
         //"episode": "",
-        "rating": "IMDB Rating = 8.9 / 10"
+        "rating": "8.9"
     }, {
         //He Set the Trend
         "category": "",
@@ -266,7 +266,7 @@ am4core.ready(function () {
         "text": "[bold]He Set the Trend",
         "extra": "[normal]Short • 6 min",
         //"episode": "",
-        "rating": "IMDB Rating = 8.3 / 10"
+        "rating": "8.3"
     }, {
         //The Recorder
         "category": "",
@@ -276,7 +276,7 @@ am4core.ready(function () {
         "text": "[bold]The Recorder",
         "extra": "[normal]Short • 7 min",
         //"episode": "",
-        "rating": "IMDB Rating = 8.8 / 10"
+        "rating": "8.8"
     }, {
         //The West Wing EP: The Ticket
         "category": "",
@@ -286,7 +286,7 @@ am4core.ready(function () {
         "text": "[bold]The West Wing [normal]Episode: The Ticket",
         "extra": "TV Series • 1999 - 2006",
         //"episode": "",
-        "rating": "IMDB Rating = 8.0 / 10"
+        "rating": "8.0"
     }, {
         //The West Wing EP: The Mommy Problem
         "category": "",
@@ -296,7 +296,7 @@ am4core.ready(function () {
         "text": "[bold]The West Wing [normal]Episode: The Mommy Problem",
         "extra": "TV Series • 1999 - 2006",
         //"episode": "",
-        "rating": "IMDB Rating = 7.8 / 10"
+        "rating": "7.8"
     }, {
         //The West Wing EP: Mr. Frost
         "category": "",
@@ -306,7 +306,7 @@ am4core.ready(function () {
         "text": "[bold]The West Wing [normal]Episode: Mr. Frost",
         "extra": "TV Series • 1999 - 2006",
         //"episode": "",
-        "rating": "IMDB Rating = 7.9 / 10"
+        "rating": "7.9"
     }, {
         //House M.D. EP: Meaning
         "category": "",
@@ -316,7 +316,7 @@ am4core.ready(function () {
         "text": "[bold]House M.D. [normal]Episode: Meaning",
         "extra": "TV Series • 2004 - 2012",
         //"episode": "",
-        "rating": "IMDB Rating = 8.9 / 10"
+        "rating": "8.9"
     }, {
         //Greek
         "category": "",
@@ -326,7 +326,7 @@ am4core.ready(function () {
         "text": "[bold]Greek [normal]Episode: Pilot",
         "extra": "TV Series • 2007 - 2011",
         //"episode": "",
-        "rating": "IMDB Rating = 7.6 / 10"
+        "rating": "7.6"
     }, {
         //Broken English
         "category": "",
@@ -336,7 +336,7 @@ am4core.ready(function () {
         "text": "[bold]Broken English",
         "extra": "[normal]Short • 10 min",
         //"episode": "",
-        "rating": "IMDB Rating = 7.6 / 10"
+        "rating": "7.6"
     }, {
         //Moonlight EP: No Such Thing as Vampires
         "category": "",
@@ -346,7 +346,7 @@ am4core.ready(function () {
         "text": "[bold]Moonlight [normal]Episode: No Such Thing as Vampires",
         "extra": "TV Series • 2007 - 2008",
         //"episode": "",
-        "rating": "IMDB Rating = 7.7 / 10"
+        "rating": "7.7"
     }, {
         //VH1 Rock Honors: The Who
         "category": "",
@@ -356,7 +356,7 @@ am4core.ready(function () {
         "text": "[bold]VH1 Rock Honors: The Who",
         "extra": "[normal]TV Special • Music • 2h",
         //"episode": "",
-        "rating": "IMDB Rating = 8.2 / 10"
+        "rating": "8.2"
     }, {
         //Dear Jack
         "category": "",
@@ -366,7 +366,7 @@ am4core.ready(function () {
         "text": "[bold]Dear Jack",
         "extra": "[normal]Documentary • 1h 7 min",
         //"episode": "",
-        "rating": "IMDB Rating = 8.6 / 10"
+        "rating": "8.6"
     }, {
         //Grapple!
         "category": "",
@@ -376,7 +376,7 @@ am4core.ready(function () {
         "text": "[bold]Grapple!",
         "extra": "[normal]Short • 13 min",
         //"episode": "",
-        "rating": "IMDB Rating = 8.5 / 10"
+        "rating": "8.5"
     }, {
         //Destroy the Alpha Gammas
         "category": "",
@@ -386,7 +386,7 @@ am4core.ready(function () {
         "text": "[bold]Destroy the Alpha Gammas",
         "extra": "[normal]TV Series • Musical • 2013 - ",
         //"episode": "",
-        "rating": "IMDB Rating = 7.9 / 10"
+        "rating": "7.9"
     }, {
         //UCLA Pranks
         "category": "",
@@ -396,7 +396,7 @@ am4core.ready(function () {
         "text": "[bold]UCLA Pranks",
         "extra": "[normal]Short",
         //"episode": "",
-        "rating": "IMDB Rating = 8.5 / 10"
+        "rating": "8.5"
     }, {
         //Blue and Gold
         "category": "",
@@ -406,7 +406,7 @@ am4core.ready(function () {
         "text": "[bold]Blue and Gold",
         "extra": "[normal]Short",
         //"episode": "",
-        "rating": "IMDB Rating = 9.6 / 10"
+        "rating": "9.6"
     }, {
         //Wet Hot American Summer: First Day of Camp
         "category": "",
@@ -416,7 +416,7 @@ am4core.ready(function () {
         "text": "[bold]Wet Hot American Summer: First Day of Camp [normal]Episode: Auditions",
         "extra": "TV Series • 2015",
         //"episode": "",
-        "rating": "IMDB Rating = 7.7 / 10"
+        "rating": "7.7"
     }, {
         //Heja Sverige!
         "category": "",
@@ -426,7 +426,7 @@ am4core.ready(function () {
         "text": "[bold]Heja Sverige!",
         "extra": "[normal]TV Mini Series • Documentary • 2015 -",
         //"episode": "",
-        "rating": "IMDB Rating = 9.6 / 10"
+        "rating": "9.6"
     }, {
         //Jackie Robinson
         "category": "",
@@ -436,7 +436,7 @@ am4core.ready(function () {
         "text": "[bold]Jackie Robinson",
         "extra": "[normal]TV Mini Series • Documentary • 2016",
         //"episode": "",
-        "rating": "IMDB Rating = 8.2 / 10"
+        "rating": "8.2"
     }, {
         //A Financial Engagement
         "category": "",
@@ -446,7 +446,7 @@ am4core.ready(function () {
         "text": "[bold]A Financial Engagement",
         "extra": "[normal]Short • 8 min",
         //"episode": "",
-        "rating": "IMDB Rating = 8.2 / 10"
+        "rating": "8.2"
     }, {
         //UCLA Baseball Intro
         "category": "",
@@ -456,7 +456,7 @@ am4core.ready(function () {
         "text": "[bold]UCLA Baseball Intro",
         "extra": "[normal]Video • Short • 1 min",
         //"episode": "",
-        "rating": "IMDB Rating = 9.6 / 10"
+        "rating": "9.6"
     }, {
         //Be Natural: The Untold Story of Alice Guy-Blaché
         "category": "",
@@ -466,7 +466,7 @@ am4core.ready(function () {
         "text": "[bold]Be Natural: The Untold Story of Alice Guy-Blaché",
         "extra": "[normal]Documentary • 1h 43 min",
         //"episode": "",
-        "rating": "IMDB Rating = 7.7 / 10"
+        "rating": "7.7"
     }, {
         //Brené Brown: The Call to Courage
         "category": "",
@@ -476,7 +476,7 @@ am4core.ready(function () {
         "text": "[bold]Brené Brown: The Call to Courage",
         "extra": "[normal]Documentary • 1h 16 min",
         //"episode": "",
-        "rating": "IMDB Rating = 7.7 / 10"
+        "rating": "7.7"
     }];
 
     chart.fontSize = 10;
@@ -505,7 +505,7 @@ am4core.ready(function () {
     dateAxis.startLocation = -0.5;
     //dateAxis.min = new Date(2021, 0, 1, 12, 10).getTime();
     dateAxis.min = new Date(1971, 0, 1, 12, 10).getTime();
-    dateAxis.max = new Date(2021, 0, 1, 12, 10).getTime();
+    dateAxis.max = new Date(2022, 0, 1, 12, 10).getTime();
 
     var labelTemplate = dateAxis.renderer.labels.template;
     labelTemplate.verticalCenter = "middle";
@@ -539,7 +539,7 @@ am4core.ready(function () {
     imageBullet.dy = -2;
     imageBullet.background.pointerBaseWidth = 10;
     imageBullet.background.pointerLength = 10
-    imageBullet.tooltipText = "{text}\n{extra}\n{rating}";
+    imageBullet.tooltipText = "{text}\n{extra}\nIMDB Rating = {rating} / 10";
     imageBullet.tooltipText.background = "color";
 
     series.tooltip.pointerOrientation = "up";
@@ -618,12 +618,95 @@ am4core.ready(function () {
     }
 
     var label = chart.createChild(am4core.Label);
-    label.text = "Fifty Years of Movies & Television at UCLA"
+    label.text = "50 Years of the Highest-Rated Movies and TV Filmed at UCLA"
     label.isMeasured = false;
     label.y = am4core.percent(5);
     label.x = am4core.percent(50);
     label.horizontalCenter = "middle";
     label.fontSize = 25;
+
+    //Create custom legend
+    var legend = new am4charts.Legend();
+    legend.parent = chart.chartContainer;
+    legend.background.fill = am4core.color("white");
+    legend.background.fillOpacity = 0.05;
+    legend.width = 100;
+    legend.align = "bottom";
+    legend.position = "absolute";
+    legend.padding(15, 15, 15, 15);
+    legend.data = [{
+        "name": "7.5",
+        "fill": colorSet.getIndex(0)
+    }, {
+        "name": "7.6",
+        "fill": colorSet.getIndex(1)
+    }, {
+        "name": "7.7",
+        "fill": colorSet.getIndex(2)
+    }, {
+        "name": "7.8",
+        "fill": colorSet.getIndex(3)
+    }, {
+        "name": "7.9",
+        "fill": colorSet.getIndex(4)
+    }, {
+        "name": "8.0",
+        "fill": colorSet.getIndex(5)
+    }, {
+        "name": "8.1",
+        "fill": colorSet.getIndex(6)
+    }, {
+        "name": "8.2",
+        "fill": colorSet.getIndex(7)
+    }, {
+        "name": "8.3",
+        "fill": colorSet.getIndex(8)
+    }, {
+        "name": "8.4",
+        "fill": colorSet.getIndex(9)
+    }, {
+        "name": "8.5",
+        "fill": colorSet.getIndex(10)
+    }, {
+        "name": "8.6",
+        "fill": colorSet.getIndex(11)
+    }, {
+        "name": "8.7",
+        "fill": colorSet.getIndex(12)
+    }, {
+        "name": "8.8",
+        "fill": colorSet.getIndex(13)
+    }, {
+        "name": "8.9",
+        "fill": colorSet.getIndex(14)
+    }, {
+        "name": "9.0",
+        "fill": colorSet.getIndex(15)
+    }, {
+        "name": "9.1",
+        "fill": colorSet.getIndex(16)
+    }, {
+        "name": "9.2",
+        "fill": colorSet.getIndex(17)
+    }, {
+        "name": "9.3",
+        "fill": colorSet.getIndex(18)
+    }, {
+        "name": "",
+        "fill": am4core.color("white")
+    }, {
+        "name": "9.4",
+        "fill": colorSet.getIndex(19)
+    }, {
+        "name": ">= 9.5",
+        "fill": colorSet.getIndex(20)
+    }];
+    legend.itemContainers.template.clickable = false;
+    legend.itemContainers.template.focusable = false;
+
+    var legendTitle = legend.createChild(am4core.Label);
+    legendTitle.text = "[bold]IMDB Ratings:";
+    legendTitle.fontSize = 14;
 
 }); // end am4core.ready()
 
