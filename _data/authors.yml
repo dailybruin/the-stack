@@ -319,8 +319,10 @@ catherine_hu:
   name: Catherine Hu
   title: Stack Developer
   email: chu@media.ucla.edu
-  mug: no
-  bio: Catherine Hu is a first-year Computer Science student who enjoys writing, hiking and reading.
+  mug: yes
+  bio: Catherine Hu is a first-year computer science & geography student who loves hiking, 
+  github: catherinehhu
+  website: https://catherinehhu.com
 lindsey_parungo:
   name: Lindsey Parungo
   title: Stack Developer
@@ -413,3 +415,9 @@ derrick_chau:
   bio: Derrick is a second-year mathematics and economics student with a specialization in computing who loves having a new Zoom background every week.
   mug: yes
   email: dchau2@media.ucla.edu
+diego_ramirez_romero:
+  name: Diego Ramirez Romero 
+  title: Stack Developer
+  email: dromero@media.ucla.edu
+  mug: no 
+  bio: ADD SOMETHING HERE 
