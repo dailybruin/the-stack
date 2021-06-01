@@ -14,9 +14,9 @@ key_takeaways:
   - The total number of short films increased from 11 prior to 2003 to 89 after 2003, marking an uptick of more than 700% in the last two decades.
 
 featured_image:
-  url: imdb-ucla-movies/cover_photo.png
+  url: imdb-ucla-movies/cover_photo.jpg
   caption: Noah Danesh/Daily Bruin
-og_image: imdb-ucla-movies/cover_photo.png
+og_image: imdb-ucla-movies/cover_photo.jpg
 
 scripts:
   - //cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.js
