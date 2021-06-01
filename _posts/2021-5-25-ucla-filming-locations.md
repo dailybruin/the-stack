@@ -60,7 +60,7 @@ Additionally, Secondly, UCLA stands out because of its quintessential college lo
 
 ### Exploring Campus Filming Locations 
 <div>
- <iframe src="https://www.google.com/maps/d/u/3/embed?mid=1jOWiFxvcQvj2MeS1uzfX8sps4B0eNIUL" style = "height:100vh; width:75vw"></iframe> 
+ <iframe src="https://www.google.com/maps/d/u/3/embed?mid=1jOWiFxvcQvj2MeS1uzfX8sps4B0eNIUL" style = "height:100vh; width:100%"></iframe> 
 </div>
 
 Dickinson Court, which includes Royce Hall and Powell Library, has beenwas the most common filming location on campus. Oof the 50 works filmed at UCLA with the highest ratings on IMDb, most popular UCLA films. There were x included scenes at Dickson Court. instances of filmography there. 
