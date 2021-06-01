@@ -35,6 +35,7 @@ dropdown.on('change', DropdownChange);
 
 d3.csv(precovidFileName, function(error, data) {
   //precovid csv input
+  console.log(data)
   data.forEach(function(d) {
     let CLASS = d.CLASS;
     precovidMap[CLASS] = [];

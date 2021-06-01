@@ -73,8 +73,6 @@ test test
 
 
 
-
-
 <div id="title">
     <p style="font-size: 36px; text-align: center">UCLA Waste Bin Breakdown (% by weight)</p>
   </div>
