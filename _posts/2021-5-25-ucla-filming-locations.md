@@ -15,6 +15,7 @@ key_takeaways:
 
 featured_image:
   url:
+  caption: Noah Danesh/Daily Bruin
 og_image:
 
 scripts:
