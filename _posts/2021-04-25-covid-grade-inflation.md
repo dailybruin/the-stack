@@ -17,7 +17,6 @@ scripts:
   - //ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js
   - //d3js.org/d3.v6.min.js
   - //cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@0.7.0
-
   - //code.jquery.com/jquery-1.11.2.js
   - //cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/semantic.min.js
   - //cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/components/dropdown.min.js
@@ -53,7 +52,6 @@ test test
   <canvas id = "main-chart"></canvas>
 </div>
 
-<script src="C:/Users/Lindsey/Desktop/Daily-Bruin/the-stack/js/posts/covid-grade-inflation/A_Count_Viz.js"></script>
 
 
 
@@ -72,6 +70,7 @@ test test
 
 
 
+<<<<<<< HEAD
 
 <div id="title">
     <p style="font-size: 36px; text-align: center">UCLA Waste Bin Breakdown (% by weight)</p>
@@ -81,4 +80,12 @@ test test
     <div id="landfillGraph"></div>
     <div id="recyclingGraph"></div>
     <div id="compostGraph"></div>
+=======
+<script src="https://d3js.org/d3.v3.min.js"></script>
+
+<div id="dropdown-menu"></div>
+<div class="graph-container">
+    <div id="precovidGraph"></div>
+    <div id="postcovidGraph"></div>
+>>>>>>> d5114df5582a2f1919ef660ea097177e0a6cbf45
   </div>
