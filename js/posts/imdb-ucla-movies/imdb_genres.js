@@ -83,14 +83,6 @@ am4core.ready(function() {
       MAU: 11,
     },
     {
-      network: 'Film Noir',
-      MAU: 0,
-    },
-    {
-      network: 'Game Show',
-      MAU: 0,
-    },
-    {
       network: 'History',
       MAU: 2,
     },
@@ -131,10 +123,6 @@ am4core.ready(function() {
       MAU: 89,
     },
     {
-      network: 'Superhero',
-      MAU: 0,
-    },
-    {
       network: 'Talk-Show',
       MAU: 4,
     },
@@ -145,10 +133,6 @@ am4core.ready(function() {
     {
       network: 'War',
       MAU: 1,
-    },
-    {
-      network: 'Western',
-      MAU: 0,
     },
   ];
 });
