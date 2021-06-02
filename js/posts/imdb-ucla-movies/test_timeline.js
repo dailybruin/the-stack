@@ -531,12 +531,12 @@ am4core.ready(function() {
   
     var dateAxis = chart.xAxes.push(new am4charts.DateAxis());
     dateAxis.renderer.points = getPoints();
-    dateAxis.renderer.minGridDistance = 70;
+    dateAxis.renderer.minGridDistance = 60;
     dateAxis.baseInterval = { count: 1, timeUnit: 'year' };
     dateAxis.renderer.tooltipLocation = 0;
     dateAxis.renderer.line.strokeDasharray = '1,4';
-    dateAxis.renderer.line.strokeOpacity = 0.5;
-    dateAxis.tooltip.background.fillOpacity = 0.2;
+    dateAxis.renderer.line.strokeOpacity = 0.6;
+    dateAxis.tooltip.background.fillOpacity = 0.4;
     dateAxis.tooltip.background.cornerRadius = 5;
     dateAxis.tooltip.label.fill = new am4core.InterfaceColorSet().getFor(
       'alternativeBackground'
@@ -550,7 +550,7 @@ am4core.ready(function() {
   
     var labelTemplate = dateAxis.renderer.labels.template;
     labelTemplate.verticalCenter = 'middle';
-    labelTemplate.fillOpacity = 0.7;
+    labelTemplate.fillOpacity = 0.95;
     labelTemplate.background.fill = new am4core.InterfaceColorSet().getFor(
       'background'
     );
@@ -568,7 +568,7 @@ am4core.ready(function() {
     series.columns.template.propertyFields.fill = 'color'; // get color from data
     series.columns.template.propertyFields.stroke = 'color';
     series.columns.template.strokeOpacity = 0;
-    series.columns.template.fillOpacity = 0.6;
+    series.columns.template.fillOpacity = 0.8;
     //series.legendSettings.itemValueText = "{color}";
   
     var imageBullet = series.bullets.push(new am4plugins_bullets.PinBullet());
@@ -610,6 +610,20 @@ am4core.ready(function() {
     textBullet.locationX = 1;
     textBullet.dy = -100;
     textBullet.label.textAlign = 'middle';
+
+    //Inserting flags to show start and finish of timeline
+    var eventSeries = chart.series.push(new am4plugins_timeline.CurveLineSeries());
+    eventSeries.dataFields.dateX = "eventDate";
+    eventSeries.dataFields.categoryY = "cat";
+    eventSeries.data = [
+        { cat: "", eventDate: "1970-01-01", letter: "Start", description: "Start of Timeline!" },
+        { cat: "", eventDate: "2021-06-14", letter: "End", description: "End of Timeline!" }];
+    eventSeries.strokeOpacity = 0;
+
+    var flagBullet = eventSeries.bullets.push(new am4plugins_bullets.FlagBullet())
+    flagBullet.label.propertyFields.text = "letter";
+    flagBullet.locationX = 0;
+    flagBullet.tooltipText = "{description}";
   
     // chart.scrollbarX = new am4core.Scrollbar();
     // chart.scrollbarX.align = 'center';
@@ -710,14 +724,15 @@ am4core.ready(function() {
     //     alert("Clicked on " + ev.target.dataItem.dataContext.color);
     // });
   
-    legend.itemContainers.template.clickable = true;
-    legend.itemContainers.template.focusable = true;
+    legend.itemContainers.template.clickable = false;
+    legend.itemContainers.template.focusable = false;
     //chart.legend.itemContainers.template.togglable = true;
   
     chart.legend.itemContainers.template.events.on('hit', function(ev) {
       var seriesColumn = ev.target.dataItem.color;
       seriesColumn.isActive = !seriesColumn.isActive;
     });
+
   }); // end am4core.ready()
   
   function getPoints() {
