@@ -1,25 +1,24 @@
-am4core.ready(function () {
-
+am4core.ready(function() {
     // Themes begin
     am4core.useTheme(am4themes_animated);
     // Themes end
-
-    var chart = am4core.create("chartdiv", am4plugins_timeline.SerpentineChart);
+  
+    var chart = am4core.create('chartdiv', am4plugins_timeline.SerpentineChart);
     chart.curveContainer.padding(20, 20, 20, 20);
     chart.levelCount = 8;
-    chart.orientation = "horizontal";
+    chart.orientation = 'horizontal';
     //chart.yAxisRadius = am4core.percent(20);
     //chart.yAxisInnerRadius = am4core.percent(2);
     chart.maskBullets = false;
-
+  
     var colorSet = new am4core.ColorSet();
-
-    chart.dateFormatter.inputDateFormat = "yyyy-MM-dd HH:mm";
-    chart.dateFormatter.dateFormat = "yyyy";
-    
-    //Path for images: 
-    let imagePath = "../../../img/imdb-ucla-movies/"
-
+  
+    chart.dateFormatter.inputDateFormat = 'yyyy-MM-dd HH:mm';
+    chart.dateFormatter.dateFormat = 'yyyy';
+  
+    //Path for images:
+    let imagePath = '../../../img/imdb-ucla-movies/';
+  
     chart.data = [{
         //Emergency! EP: Nurse's Wild - done
         "category": "",
@@ -517,252 +516,298 @@ am4core.ready(function () {
         "extra": "[normal]Documentary • 1h 16 min",
         //"episode": "",
         "rating": "7.7"
-    }];
-
+    },];
+  
     chart.fontSize = 10;
     chart.tooltipContainer.fontSize = 13;
-
+  
     var categoryAxis = chart.yAxes.push(new am4charts.CategoryAxis());
-    categoryAxis.dataFields.category = "category";
+    categoryAxis.dataFields.category = 'category';
     categoryAxis.renderer.grid.template.disabled = true;
     categoryAxis.renderer.labels.template.paddingRight = 25;
     categoryAxis.renderer.minGridDistance = 10;
     categoryAxis.renderer.innerRadius = 10;
     categoryAxis.renderer.radius = 30;
-
+  
     var dateAxis = chart.xAxes.push(new am4charts.DateAxis());
     dateAxis.renderer.points = getPoints();
     dateAxis.renderer.minGridDistance = 70;
-    dateAxis.baseInterval = { count: 1, timeUnit: "year" };
+    dateAxis.baseInterval = { count: 1, timeUnit: 'year' };
     dateAxis.renderer.tooltipLocation = 0;
-    dateAxis.renderer.line.strokeDasharray = "1,4";
+    dateAxis.renderer.line.strokeDasharray = '1,4';
     dateAxis.renderer.line.strokeOpacity = 0.5;
     dateAxis.tooltip.background.fillOpacity = 0.2;
     dateAxis.tooltip.background.cornerRadius = 5;
-    dateAxis.tooltip.label.fill = new am4core.InterfaceColorSet().getFor("alternativeBackground");
+    dateAxis.tooltip.label.fill = new am4core.InterfaceColorSet().getFor(
+      'alternativeBackground'
+    );
     dateAxis.tooltip.label.paddingTop = 7;
     dateAxis.endLocation = 0;
     dateAxis.startLocation = -0.5;
     //dateAxis.min = new Date(2021, 0, 1, 12, 10).getTime();
     dateAxis.min = new Date(1971, 0, 1, 12, 10).getTime();
     dateAxis.max = new Date(2022, 0, 1, 12, 10).getTime();
-
+  
     var labelTemplate = dateAxis.renderer.labels.template;
-    labelTemplate.verticalCenter = "middle";
+    labelTemplate.verticalCenter = 'middle';
     labelTemplate.fillOpacity = 0.7;
-    labelTemplate.background.fill = new am4core.InterfaceColorSet().getFor("background");
-    labelTemplate.fill = new am4core.InterfaceColorSet().getFor("text");
-    labelTemplate.background.fillOpacity = 0.90;
+    labelTemplate.background.fill = new am4core.InterfaceColorSet().getFor(
+      'background'
+    );
+    labelTemplate.fill = new am4core.InterfaceColorSet().getFor('text');
+    labelTemplate.background.fillOpacity = 0.9;
     labelTemplate.padding(10, 10, 10, 10);
-
+  
     var series = chart.series.push(new am4plugins_timeline.CurveColumnSeries());
     series.columns.template.height = am4core.percent(30);
-
-    series.dataFields.openDateX = "start";
-    series.dataFields.dateX = "end";
-    series.dataFields.categoryY = "category";
+  
+    series.dataFields.openDateX = 'start';
+    series.dataFields.dateX = 'end';
+    series.dataFields.categoryY = 'category';
     series.baseAxis = categoryAxis;
-    series.columns.template.propertyFields.fill = "color"; // get color from data
-    series.columns.template.propertyFields.stroke = "color";
+    series.columns.template.propertyFields.fill = 'color'; // get color from data
+    series.columns.template.propertyFields.stroke = 'color';
     series.columns.template.strokeOpacity = 0;
     series.columns.template.fillOpacity = 0.6;
-   //series.legendSettings.itemValueText = "{color}";
-
+    //series.legendSettings.itemValueText = "{color}";
+  
     var imageBullet = series.bullets.push(new am4plugins_bullets.PinBullet());
     imageBullet.background.radius = 8;
     imageBullet.locationX = 1;
-    imageBullet.propertyFields.stroke = "color";
-    imageBullet.background.propertyFields.fill = "color";
+    imageBullet.propertyFields.stroke = 'color';
+    imageBullet.background.propertyFields.fill = 'color';
     imageBullet.image = new am4core.Image();
-    imageBullet.image.propertyFields.href = "icon";
+    imageBullet.image.propertyFields.href = 'icon';
     imageBullet.image.scale = 1;
     imageBullet.circle.radius = am4core.percent(100);
     imageBullet.dy = -2;
     imageBullet.background.pointerBaseWidth = 10;
-    imageBullet.background.pointerLength = 10
-    imageBullet.tooltipText = "{text}\n{extra}\nIMDB Rating = {rating} / 10";
-    imageBullet.tooltipText.background = "color";
-
-    series.tooltip.pointerOrientation = "up";
-
-    imageBullet.background.adapter.add("pointerAngle", (value, target) => {
-        if (target.dataItem) {
-            var position = dateAxis.valueToPosition(target.dataItem.openDateX.getTime());
-            return dateAxis.renderer.positionToAngle(position);
-        }
-        return value;
+    imageBullet.background.pointerLength = 10;
+    imageBullet.tooltipText = '{text}\n{extra}\nIMDb Rating = {rating} / 10';
+    imageBullet.tooltipText.background = 'color';
+  
+    series.tooltip.pointerOrientation = 'up';
+  
+    imageBullet.background.adapter.add('pointerAngle', (value, target) => {
+      if (target.dataItem) {
+        var position = dateAxis.valueToPosition(
+          target.dataItem.openDateX.getTime()
+        );
+        return dateAxis.renderer.positionToAngle(position);
+      }
+      return value;
     });
-
-    var hs = imageBullet.states.create("hover")
+  
+    var hs = imageBullet.states.create('hover');
     hs.properties.scale = 2;
     hs.properties.opacity = 1;
-
+  
     var textBullet = series.bullets.push(new am4charts.LabelBullet());
-    textBullet.label.propertyFields.text = "text";
+    textBullet.label.propertyFields.text = 'text';
     textBullet.disabled = true;
-    textBullet.propertyFields.disabled = "textDisabled";
+    textBullet.propertyFields.disabled = 'textDisabled';
     textBullet.label.strokeOpacity = 0;
     textBullet.locationX = 1;
-    textBullet.dy = - 100;
-    textBullet.label.textAlign = "middle";
-
+    textBullet.dy = -100;
+    textBullet.label.textAlign = 'middle';
+  
     // chart.scrollbarX = new am4core.Scrollbar();
-    // chart.scrollbarX.align = "center"
+    // chart.scrollbarX.align = 'center';
     // chart.scrollbarX.width = am4core.percent(75);
     // //chart.scrollbarX.parent = chart.curveContainer;
     // //chart.scrollbarX.height = 300;
     // //chart.scrollbarX.orientation = "vertical";
     // chart.scrollbarX.opacity = 0.7;
-
+  
     var cursor = new am4plugins_timeline.CurveCursor();
     chart.cursor = cursor;
     cursor.xAxis = dateAxis;
     cursor.yAxis = categoryAxis;
     cursor.lineY.disabled = true;
     cursor.lineX.disables = true;
-    cursor.lineX.strokeDasharray = "1,4";
+    cursor.lineX.strokeDasharray = '1,4';
     cursor.lineX.strokeOpacity = 1;
-
+  
     dateAxis.renderer.tooltipLocation2 = 0;
     categoryAxis.cursorTooltipEnabled = false;
-
+  
     var previousBullet;
-
+  
     // chart.events.on("inited", function () {
     //     setTimeout(function () {
     //         hoverItem(series.dataItems.getIndex(0));
     //     }, 2000)
     // })
-
+  
     function hoverItem(dataItem) {
-        var bullet = dataItem.bullets.getKey(imageBullet.uid);
-        var index = dataItem.index;
-
-        if (index >= series.dataItems.length - 1) {
-            index = -1;
+      var bullet = dataItem.bullets.getKey(imageBullet.uid);
+      var index = dataItem.index;
+  
+      if (index >= series.dataItems.length - 1) {
+        index = -1;
+      }
+  
+      if (bullet) {
+        if (previousBullet) {
+          previousBullet.isHover = false;
         }
-
-        if (bullet) {
-
-            if (previousBullet) {
-                previousBullet.isHover = false;
-            }
-
-            bullet.isHover = true;
-
-            previousBullet = bullet;
-        }
-        setTimeout(
-            function () {
-                hoverItem(series.dataItems.getIndex(index + 1))
-            }, 1000);
+  
+        bullet.isHover = true;
+  
+        previousBullet = bullet;
+      }
+      setTimeout(function() {
+        hoverItem(series.dataItems.getIndex(index + 1));
+      }, 1000);
     }
-
+  
     var label = chart.createChild(am4core.Label);
-    label.text = "50 Years of the Highest-Rated Hollywood Productions Filmed at UCLA"
+    label.text = '50 Years of the Highest-Rated Hollywood Production Filmed at UCLA';
     label.isMeasured = false;
     label.y = am4core.percent(0);
     label.x = am4core.percent(50);
-    label.horizontalCenter = "middle";
+    label.horizontalCenter = 'middle';
     label.fontSize = 20;
-
+  
     //Create custom legend
     var legend = new am4charts.Legend();
-
+  
     var legendTitle = legend.createChild(am4core.Label);
-    legendTitle.text = "[bold]IMDb Ratings:";
+    legendTitle.text = '[bold]IMDb Ratings:';
     legendTitle.fontSize = 14;
-
+  
     legend.parent = chart.chartContainer;
-    legend.background.fill = am4core.color("white");
+    legend.background.fill = am4core.color('white');
     legend.background.fillOpacity = 0.05;
     legend.width = 100;
-    legend.align = "bottom";
-    legend.position = "absolute";
+    legend.align = 'bottom';
+    legend.position = 'absolute';
     legend.padding(15, 15, 15, 15);
-    legend.data = [{
-        "name": "7.5 <= rating < 8.0",
-        "fill": colorSet.getIndex(0)
-    }, {
-        "name": "8.0 <= rating < 8.5",
-        "fill": colorSet.getIndex(2)
-    }, {
-        "name": "8.5 <= rating < 9.0",
-        "fill": colorSet.getIndex(6)
-    }, {
-        "name": "9.0 <= rating < 9.5",
-        "fill": colorSet.getIndex(11)
-    }, {
-        "name": "9.5 <= rating <= 10",
-        "fill": colorSet.getIndex(14)
-    }];
-
+    legend.data = [
+      {
+        name: '7.5 <= rating < 8.0',
+        fill: colorSet.getIndex(0),
+      },
+      {
+        name: '8.0 <= rating < 8.5',
+        fill: colorSet.getIndex(2),
+      },
+      {
+        name: '8.5 <= rating < 9.0',
+        fill: colorSet.getIndex(6),
+      },
+      {
+        name: '9.0 <= rating < 9.5',
+        fill: colorSet.getIndex(11),
+      },
+      {
+        name: '9.5 <= rating <= 10.0',
+        fill: colorSet.getIndex(14),
+      },
+    ];
+  
     // chart.legend.itemContainers.template.events.off("hit", function(ev) {
     //     alert("Clicked on " + ev.target.dataItem.dataContext.color);
     // });
-
-    legend.itemContainers.template.clickable = false;
-    legend.itemContainers.template.focusable = false;
+  
+    legend.itemContainers.template.clickable = true;
+    legend.itemContainers.template.focusable = true;
     //chart.legend.itemContainers.template.togglable = true;
-    
-
-}); // end am4core.ready()
-
-function getPoints() {
-
-    var points = [{ x: -1000, y: 200 }, { x: 0, y: 200 }];
-
+  
+    chart.legend.itemContainers.template.events.on('hit', function(ev) {
+      var seriesColumn = ev.target.dataItem.color;
+      seriesColumn.isActive = !seriesColumn.isActive;
+    });
+  }); // end am4core.ready()
+  
+  function getPoints() {
+    var points = [
+      { x: -1000, y: 200 },
+      { x: 0, y: 200 },
+    ];
+  
     var w = 650;
     var h = 400;
     var levelCount = 4;
-
+  
     var radius = am4core.math.min(w / (levelCount - 1) / 2, h / 2);
     var startX = radius;
-
+  
     for (var i = 0; i < 25; i++) {
-        var angle = 0 + i / 25 * 90;
-        var centerPoint = { y: 200 - radius, x: 0 }
-        points.push({ y: centerPoint.y + radius * am4core.math.cos(angle), x: centerPoint.x + radius * am4core.math.sin(angle) });
+      var angle = 0 + (i / 25) * 90;
+      var centerPoint = { y: 200 - radius, x: 0 };
+      points.push({
+        y: centerPoint.y + radius * am4core.math.cos(angle),
+        x: centerPoint.x + radius * am4core.math.sin(angle),
+      });
     }
-
+  
     for (var i = 0; i < levelCount; i++) {
-
-        if (i % 2 != 0) {
-            points.push({ y: -h / 2 + radius, x: startX + w / (levelCount - 1) * i })
-            points.push({ y: h / 2 - radius, x: startX + w / (levelCount - 1) * i })
-
-            var centerPoint = { y: h / 2 - radius, x: startX + w / (levelCount - 1) * (i + 0.5) }
-            if (i < levelCount - 1) {
-                for (var k = 0; k < 50; k++) {
-                    var angle = -90 + k / 50 * 180;
-                    points.push({ y: centerPoint.y + radius * am4core.math.cos(angle), x: centerPoint.x + radius * am4core.math.sin(angle) });
-                }
-            }
-
-            if (i == levelCount - 1) {
-                points.pop();
-                points.push({ y: -radius, x: startX + w / (levelCount - 1) * i })
-                var centerPoint = { y: -radius, x: startX + w / (levelCount - 1) * (i + 0.5) }
-                for (var k = 0; k < 25; k++) {
-                    var angle = -90 + k / 25 * 90;
-                    points.push({ y: centerPoint.y + radius * am4core.math.cos(angle), x: centerPoint.x + radius * am4core.math.sin(angle) });
-                }
-                points.push({ y: 0, x: 1300 });
-            }
-
+      if (i % 2 != 0) {
+        points.push({
+          y: -h / 2 + radius,
+          x: startX + (w / (levelCount - 1)) * i,
+        });
+        points.push({
+          y: h / 2 - radius,
+          x: startX + (w / (levelCount - 1)) * i,
+        });
+  
+        var centerPoint = {
+          y: h / 2 - radius,
+          x: startX + (w / (levelCount - 1)) * (i + 0.5),
+        };
+        if (i < levelCount - 1) {
+          for (var k = 0; k < 50; k++) {
+            var angle = -90 + (k / 50) * 180;
+            points.push({
+              y: centerPoint.y + radius * am4core.math.cos(angle),
+              x: centerPoint.x + radius * am4core.math.sin(angle),
+            });
+          }
         }
-        else {
-            points.push({ y: h / 2 - radius, x: startX + w / (levelCount - 1) * i })
-            points.push({ y: -h / 2 + radius, x: startX + w / (levelCount - 1) * i })
-            var centerPoint = { y: -h / 2 + radius, x: startX + w / (levelCount - 1) * (i + 0.5) }
-            if (i < levelCount - 1) {
-                for (var k = 0; k < 50; k++) {
-                    var angle = -90 - k / 50 * 180;
-                    points.push({ y: centerPoint.y + radius * am4core.math.cos(angle), x: centerPoint.x + radius * am4core.math.sin(angle) });
-                }
-            }
+  
+        if (i == levelCount - 1) {
+          points.pop();
+          points.push({ y: -radius, x: startX + (w / (levelCount - 1)) * i });
+          var centerPoint = {
+            y: -radius,
+            x: startX + (w / (levelCount - 1)) * (i + 0.5),
+          };
+          for (var k = 0; k < 25; k++) {
+            var angle = -90 + (k / 25) * 90;
+            points.push({
+              y: centerPoint.y + radius * am4core.math.cos(angle),
+              x: centerPoint.x + radius * am4core.math.sin(angle),
+            });
+          }
+          points.push({ y: 0, x: 1300 });
         }
+      } else {
+        points.push({
+          y: h / 2 - radius,
+          x: startX + (w / (levelCount - 1)) * i,
+        });
+        points.push({
+          y: -h / 2 + radius,
+          x: startX + (w / (levelCount - 1)) * i,
+        });
+        var centerPoint = {
+          y: -h / 2 + radius,
+          x: startX + (w / (levelCount - 1)) * (i + 0.5),
+        };
+        if (i < levelCount - 1) {
+          for (var k = 0; k < 50; k++) {
+            var angle = -90 - (k / 50) * 180;
+            points.push({
+              y: centerPoint.y + radius * am4core.math.cos(angle),
+              x: centerPoint.x + radius * am4core.math.sin(angle),
+            });
+          }
+        }
+      }
     }
-
+  
     return points;
-}
+  }
+  
