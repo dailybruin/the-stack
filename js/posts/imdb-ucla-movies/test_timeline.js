@@ -4,9 +4,9 @@ am4core.ready(function() {
     // Themes end
   
     var chart = am4core.create('chartdiv', am4plugins_timeline.SerpentineChart);
-    chart.curveContainer.padding(20, 20, 20, 20);
-    chart.levelCount = 8;
-    chart.orientation = 'horizontal';
+    chart.curveContainer.padding(25, 25, 25, 25);
+    chart.levelCount = 6;
+    chart.orientation = 'vertical';
     //chart.yAxisRadius = am4core.percent(20);
     //chart.yAxisInnerRadius = am4core.percent(2);
     chart.maskBullets = false;
@@ -339,8 +339,8 @@ am4core.ready(function() {
     }, {
         //The West Wing EP: Mr. Frost - done
         "category": "",
-        "start": "2005-10-16 12:00",
-        "end": "2005-10-16 12:15",
+        "start": "2005-10-26 12:00",
+        "end": "2005-10-26 12:15",
         "color": colorSet.getIndex(0),
         "text": "[bold]The West Wing [normal]Episode: Mr. Frost",
         "extra": "TV Series • 1999 - 2006",
@@ -676,46 +676,47 @@ am4core.ready(function() {
     }
   
     var label = chart.createChild(am4core.Label);
-    label.text = '50 Years of the Highest-Rated Hollywood Production Filmed at UCLA';
+    label.text = '[bold]50 Years of the Highest-Rated Hollywood Productions Filmed at UCLA';
     label.isMeasured = false;
     label.y = am4core.percent(0);
     label.x = am4core.percent(50);
     label.horizontalCenter = 'middle';
-    label.fontSize = 20;
+    label.fontSize = 18;
   
     //Create custom legend
     var legend = new am4charts.Legend();
   
     var legendTitle = legend.createChild(am4core.Label);
     legendTitle.text = '[bold]IMDb Ratings:';
+    legendTitle.verticalCenter = 'middle';
     legendTitle.fontSize = 14;
   
     legend.parent = chart.chartContainer;
     legend.background.fill = am4core.color('white');
-    legend.background.fillOpacity = 0.05;
-    legend.width = 100;
-    legend.align = 'bottom';
+    legend.background.fillOpacity = 0.1;
+    legend.width = 50;
+    //legend.align = 'top';
     legend.position = 'absolute';
-    legend.padding(15, 15, 15, 15);
+    legend.padding(0, 0, 0, 0);
     legend.data = [
       {
-        name: '7.5 <= rating < 8.0',
+        name: '7.5 - 7.9',
         fill: colorSet.getIndex(0),
       },
       {
-        name: '8.0 <= rating < 8.5',
+        name: '8.0 - 8.4',
         fill: colorSet.getIndex(2),
       },
       {
-        name: '8.5 <= rating < 9.0',
+        name: '8.5 - 8.9',
         fill: colorSet.getIndex(6),
       },
       {
-        name: '9.0 <= rating < 9.5',
+        name: '9.0 - 9.4',
         fill: colorSet.getIndex(11),
       },
       {
-        name: '9.5 <= rating <= 10.0',
+        name: '9.5 - 10.0',
         fill: colorSet.getIndex(14),
       },
     ];
@@ -741,8 +742,8 @@ am4core.ready(function() {
       { x: 0, y: 200 },
     ];
   
-    var w = 650;
-    var h = 400;
+    var w = 500;
+    var h = 100;
     var levelCount = 4;
   
     var radius = am4core.math.min(w / (levelCount - 1) / 2, h / 2);
