@@ -20,6 +20,7 @@ am4core.ready(function() {
 
   var valueAxis = chart.xAxes.push(new am4charts.ValueAxis());
   valueAxis.min = 0;
+  valueAxis.max = 120;
 
   var series = chart.series.push(new am4charts.ColumnSeries());
   series.dataFields.categoryY = 'network';
