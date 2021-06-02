@@ -85,7 +85,11 @@ For those looking to film outside the hustle and bustle of Royce Hall and Powell
 
 ### Breaking Down the Most Popular Genres
 
-<div id = 'GenreChart' style='height: 100vh'></div>
+<div class="genre-container">
+  <div id = 'GenreChart' style='height: 100vh'></div>
+</div>
+
+<div class="small-line-break"></div>
 
 Drama, short film and comedy are the most popular genres of filmography at UCLA. This is not particularly surprising given the backdrop that the campus provides. A film shot at UCLA probably involves college students, so it's going to be something related to college students and comedies and romances make more sense than action or adventure films, said Kuntz.
 
