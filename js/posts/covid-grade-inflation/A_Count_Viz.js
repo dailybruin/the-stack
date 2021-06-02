@@ -1,5 +1,5 @@
 let scale = 100;
-let ACount = [.41, .503, .43];
+let ACount = [.41, .503, .43, .8];
 /*Thoughts: 
     Plot at x = Total Classes Covid
     Plot at y = Total Classes Non-Covid
@@ -7,9 +7,9 @@ let ACount = [.41, .503, .43];
                 Outer circel radius = ACount Covid by %
 */
 //let Classes = [134048, 122793, 126290];
-let COVIDACount = [.6, .7, .605];
-let xLocation = [10, 20, 30]
-let yLocation = 5
+let COVIDACount = [.6, .7, .605, .9];
+let xLocation = [-.75, -.8, -.3, 1]
+let yLocation = [-2, .3, 2.2, 2.7]
 let Colors = ['rgba(255, 99, 132, 1)', 'rgba(25, 145, 156, 1)', 'rgba(122,43,132,1)'];
 let COVIDColors = ['rgba(255, 99, 132, .5)', 'rgba(25, 145, 156, .5)', 'rgba(122,43,132,.5)']
 let Quarters = ['Fall', 'Winter', 'Spring'];
@@ -20,11 +20,11 @@ for (let i = 0; i < ACount.length; ++i) {
         label: Quarters[i],
         data: [{
             x: xLocation[i],
-            y: yLocation,
+            y: yLocation[i],
             r: scale * ACount[i]
         }, {
             x: xLocation[i],
-            y: yLocation,
+            y: yLocation[i],
             r: scale * COVIDACount[i]
         }],
         backgroundColor: [
@@ -46,8 +46,8 @@ var BubbleChart = new Chart(ctxBubble, {
                 {
                     display: false,
                     ticks: {
-                        min: 0,
-                        max: 40,
+                        min: -5,
+                        max: 5,
                     },
                 },
             ],
@@ -55,8 +55,8 @@ var BubbleChart = new Chart(ctxBubble, {
                 {
                     display: false,
                     ticks: {
-                        min: 0,
-                        max: 10,
+                        min: -3.8,
+                        max: 4.5,
                     },
                 },
             ],
