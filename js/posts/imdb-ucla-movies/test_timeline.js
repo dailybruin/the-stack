@@ -676,7 +676,7 @@ am4core.ready(function() {
     }
   
     var label = chart.createChild(am4core.Label);
-    label.text = '[bold]50 Years of the Highest-Rated Hollywood Productions Filmed at UCLA';
+    label.text = '[bold]50 Years of the Highest-Rated Productions Filmed at UCLA';
     label.isMeasured = false;
     label.y = am4core.percent(0);
     label.x = am4core.percent(50);
