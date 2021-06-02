@@ -8,8 +8,9 @@ am4core.ready(function() {
 
   var title = chart.titles.create();
   title.text = 'Filmography at UCLA by Genre';
-  title.fontSize = 25;
+  title.fontSize = 20;
   title.marginBottom = 30;
+  title.align = 'center';
 
   var categoryAxis = chart.yAxes.push(new am4charts.CategoryAxis());
   categoryAxis.renderer.grid.template.location = 0;
@@ -22,8 +23,9 @@ am4core.ready(function() {
   valueAxis.min = 0;
   valueAxis.max = 120;
   valueAxis.paddingTop = 15;
-  valueAxis.title.text = 'Number of Filmography Titles';
+  valueAxis.title.text = 'Number of Titles';
   valueAxis.title.align = 'center';
+  valueAxis.renderer.minGridDistance = 25;
 
   var series = chart.series.push(new am4charts.ColumnSeries());
   series.dataFields.categoryY = 'network';
@@ -38,6 +40,7 @@ am4core.ready(function() {
   labelBullet.label.dx = 10;
   labelBullet.label.text = "{values.valueX.workingValue.formatNumber('#')}";
   labelBullet.locationX = 1;
+  labelBullet.fontSize = 12;
 
   // as by default columns of the same series are of the same color, we add adapter which takes colors from chart.colors color set
   series.columns.template.adapter.add('fill', function(fill, target) {
