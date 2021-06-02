@@ -21,6 +21,8 @@ am4core.ready(function() {
   var valueAxis = chart.xAxes.push(new am4charts.ValueAxis());
   valueAxis.min = 0;
   valueAxis.max = 120;
+  valueAxis.title.text = 'Number of Filmography Titles';
+  valueAxis.title.align = 'center';
 
   var series = chart.series.push(new am4charts.ColumnSeries());
   series.dataFields.categoryY = 'network';
