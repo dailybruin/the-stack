@@ -681,7 +681,7 @@ am4core.ready(function() {
   label.y = am4core.percent(0);
   label.x = am4core.percent(50);
   label.horizontalCenter = 'middle';
-  label.fontSize = 15;
+  label.fontSize = 14;
 
   //Create custom legend
   var legend = new am4charts.Legend();
