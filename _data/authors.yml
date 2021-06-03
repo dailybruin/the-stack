@@ -354,8 +354,8 @@ samantha_low:
   name: Samantha Low
   title: Stack Developer
   email: slow@media.ucla.edu
-  mug: no
-  bio: Samantha Low is a first year Environmental Science Major.
+  mug: Yes
+  bio: Samantha Low is a first-year environmental science major who enjoys hiking, exploring new places, and taking pictures of food in her free time. 
 ananya_garg:
   name: Ananya Garg
   title: Stack Developer
@@ -415,9 +415,18 @@ derrick_chau:
   bio: Derrick is a second-year mathematics and economics student with a specialization in computing who loves having a new Zoom background every week.
   mug: yes
   email: dchau2@media.ucla.edu
+<<<<<<< HEAD
 diego_ramirez_romero:
   name: Diego Ramirez Romero 
   title: Stack Developer
   email: dromero@media.ucla.edu
   mug: no 
   bio: Diego is a first-year computational & systems biology major 
+=======
+priya_kanneboyina:
+  name: Priya Kanneboyina
+  title: Stack Developer
+  bio: Priya is a second-year applied mathematics students with a minor in public affairs and film. 
+  mug: yes
+  email: pkanneboyina@media.ucla.edu
+>>>>>>> master

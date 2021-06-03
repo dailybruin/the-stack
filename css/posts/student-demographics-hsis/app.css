@@ -1,0 +1,61 @@
+.caption {
+    font-size:smaller;
+    color:gray;
+}
+
+@media only screen and (min-width: 1000px) {
+
+    .rate-line {
+        float: left;
+        width: 50%;
+        height: 100%;
+        margin-bottom: 40px;
+    }
+    .caption {
+        margin: auto;
+        width: 55%;
+        text-align: center;
+    }
+    .rate-change {
+        float: right;
+        width: 50%;
+    }
+    .rate-gap {
+        width: 50%;
+        margin: auto;
+        height: auto;
+    }
+
+    .DOEViz {
+        width: 70%;
+        height: auto;
+        margin: auto;
+    }
+
+    .TotalViz {
+        width: 70%;
+        height: auto;
+        margin: auto;
+    }
+
+    .undergrad-predict {
+        width: 50%;
+        float: left;
+        margin: auto;
+    }
+
+    .total-predict {
+        width: 50%;
+        float: right;
+        height: auto;
+    }
+
+    .line-break {
+        height: 90px;
+    }
+
+    .small-line-break {
+        height: 50px;
+    }
+}
+
