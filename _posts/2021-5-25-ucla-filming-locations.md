@@ -37,6 +37,8 @@ stylesheets:
 
 UCLA’s campus has cemented itself as a hotspot for Hollywood filming over the years. Throughout the school year, students will often see cameras and film crews as they walk to class. On campus tours, Kerckhoff Hall is singled out as the backdrop of the iconic film “Legally Blonde.” Like the scene depicted in “Buffy the Vampire Slayer,” many students can relate to the hectic experience of walking down a crowded Bruinwalk while being handed flyers. In this article, we analyze trends regarding filmography at UCLA using the list on IMDbB in which UCLA is tagged as a filming location.
 
+<div class="small-line-break"></div>
+
 ### The Ideal Filming Location
 
 To film at UCLA, crews must contact the UCLA Events Office and follow a list of guidelines. The cost of filming is a combination of the UCLA film permit fee, event manager staffing costs, location venue rental fees, parking, police and any other facilities or other miscellaneous services. For a full day, between six to 12 hours, the permit fee for movie and television filming by itself is \$4,510.
@@ -61,8 +63,8 @@ Additionally, Secondly, UCLA stands out because of its quintessential college lo
 
 ### Exploring Campus Filming Locations
 
-<div>
- <iframe src="https://www.google.com/maps/d/u/3/embed?mid=1jOWiFxvcQvj2MeS1uzfX8sps4B0eNIUL" style = "height:100vh; width:100%"></iframe> 
+<div style = "display: flex; justify-content: center">
+ <iframe src="https://www.google.com/maps/d/u/3/embed?mid=1jOWiFxvcQvj2MeS1uzfX8sps4B0eNIUL" style = "height:80vh; width:80%;"></iframe> 
 </div>
 
 Dickinson Court, which includes Royce Hall and Powell Library, has beenwas the most common filming location on campus. Oof the 50 works filmed at UCLA with the highest ratings on IMDb, most popular UCLA films. There were x included scenes at Dickson Court. instances of filmography there.
