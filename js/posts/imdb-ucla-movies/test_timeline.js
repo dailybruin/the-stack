@@ -4,7 +4,7 @@ am4core.ready(function() {
   // Themes end
 
   var chart = am4core.create('chartdiv', am4plugins_timeline.SerpentineChart);
-  chart.curveContainer.padding(25, 25, 25, 25);
+  chart.curveContainer.padding(90, 25, 25, 25);
   chart.levelCount = 6;
   chart.orientation = 'vertical';
   //chart.yAxisRadius = am4core.percent(20);
@@ -677,11 +677,12 @@ am4core.ready(function() {
 
   var label = chart.createChild(am4core.Label);
   label.text = '[bold]50 Years of the Highest-Rated Productions Filmed at UCLA';
+  label.wrap = true;
   label.isMeasured = false;
   label.y = am4core.percent(0);
   label.x = am4core.percent(50);
   label.horizontalCenter = 'middle';
-  label.fontSize = 14;
+  label.fontSize = 20;
 
   //Create custom legend
   var legend = new am4charts.Legend();
