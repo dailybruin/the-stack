@@ -67,6 +67,9 @@ Additionally, Secondly, UCLA stands out because of its quintessential college lo
  <iframe src="https://www.google.com/maps/d/u/3/embed?mid=1jOWiFxvcQvj2MeS1uzfX8sps4B0eNIUL" style = "height:80vh; width:80%;"></iframe> 
 </div>
 
+<p style = "text-align: center; color: gray; font-size: smaller">The 40 films and TV shows on this map come from the most popular titles listed on IMDb and are supplemented with titles from the UCLA Alumni Youtube series “Filmed at UCLA”. Yellow markers represent TV shows and blue markers represent movies. Some productions have multiple UCLA locations marked.  
+</p>
+
 Dickinson Court, which includes Royce Hall and Powell Library, has beenwas the most common filming location on campus. Oof the 50 works filmed at UCLA with the highest ratings on IMDb, most popular UCLA films. There were x included scenes at Dickson Court. instances of filmography there.
 
 “UCLA’s got certain parts of it that are very, you might say, old school. Obviously Royce Hall, and I'd also say Powell Library. You can't look much more like a university than those buildings,” said Kuntz. “UCLA grabs you right away perfectly in the middle of campus there.”
@@ -91,6 +94,9 @@ For those looking to film outside the hustle and bustle of Royce Hall and Powell
   <div id = 'GenreChart' style='height: 100vh'></div>
 </div>
 
+<p style = "text-align: center; color: gray; font-size: smaller">The analysis in this graph includes 288 titles from IMDb of which UCLA was tagged as a filming location. Some titles have more than one genre listed. 
+</p>
+
 <div class="small-line-break"></div>
 
 Drama, short film and comedy are the most popular genres of filmography at UCLA. This is not particularly surprising given the backdrop that the campus provides. A film shot at UCLA probably involves college students, so it's going to be something related to college students and comedies and romances make more sense than action or adventure films, said Kuntz.
@@ -110,6 +116,9 @@ For students, this accessibility is particularly valuable. Figueroa often shoots
 ### History of Filmography at UCLA
 
 <div id= 'chartdiv' style='height: 100vh'></div>
+
+<p style = "text-align: center; color: gray; font-size: smaller">This timeline includes the highest-rated (i.e., ratings greater than or equal to 7.5/10) productions filmed at UCLA. These IMDb ratings are accurate as of June 1, 2021. 
+</p>
 
 The first instance of filmography at UCLA in our data dates back to the 1932 film “Shopworn.” However, before UCLA was even built, a silent film “The Big Parade” was filmed on the campus location. The final sequences of the film, which take place in the fields of France, were shot in Westwood on what would soon become the UCLA campus.
 
