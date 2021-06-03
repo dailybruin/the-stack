@@ -43,8 +43,6 @@ am4core.ready(function() {
   labelBullet.fontSize = 12;
 
   var label = chart.chartContainer.createChild(am4core.Label);
-  label.text =
-    'The analysis in this graph includes 288 titles from IMDb of which UCLA was tagged as a filming location. Some titles have more than one genre listed.';
   label.paddingTop = 25;
   label.fontSize = 15;
 
