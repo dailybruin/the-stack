@@ -5,8 +5,11 @@ am4core.ready(function() {
 
   var chart = am4core.create('chartdiv', am4plugins_timeline.SerpentineChart);
   chart.curveContainer.padding(90, 25, 25, 25);
-  chart.levelCount = 6;
+  //chart.curveContainer.padding(100, 20, 100, 20);
+  chart.levelCount = 5;
   chart.orientation = 'vertical';
+  chart.width = am4core.percent(95);
+  chart.height = am4core.percent(85);
   //chart.yAxisRadius = am4core.percent(20);
   //chart.yAxisInnerRadius = am4core.percent(2);
   chart.maskBullets = false;
@@ -679,8 +682,9 @@ am4core.ready(function() {
   label.text = '[bold]50 Years of the Highest-Rated Productions Filmed at UCLA';
   label.wrap = true;
   label.isMeasured = false;
+  //label.position = "absolute"
   label.y = am4core.percent(0);
-  label.x = am4core.percent(50);
+  label.x = am4core.percent(51);
   label.horizontalCenter = 'middle';
   label.fontSize = 20;
 
@@ -689,16 +693,21 @@ am4core.ready(function() {
 
   var legendTitle = legend.createChild(am4core.Label);
   legendTitle.text = '[bold]IMDb Ratings:';
-  legendTitle.verticalCenter = 'middle';
+  //legendTitle.verticalCenter = 'middle';
   legendTitle.fontSize = 14;
 
   legend.parent = chart.chartContainer;
+  //legend.background.fill = am4core.color("#000");
+  legend.background.fillOpacity = 0.05;
   legend.background.fill = am4core.color('white');
-  legend.background.fillOpacity = 0.1;
+  //legend.background.fillOpacity = 0.1;
+  //legend.width = 120;
   legend.width = 50;
-  //legend.align = 'top';
-  legend.position = 'absolute';
-  legend.padding(0, 0, 0, 0);
+  //legend.align = 'horizontal';
+  legend.position = 'top';
+  legend.padding(10, 15, 10, 15);
+  //legend.align = "horizontal";
+  //legend.padding(0, 0, 0, 0);
   legend.data = [
     {
       name: '7.5 - 7.9',
@@ -729,11 +738,6 @@ am4core.ready(function() {
   legend.itemContainers.template.clickable = false;
   legend.itemContainers.template.focusable = false;
   //chart.legend.itemContainers.template.togglable = true;
-
-  chart.legend.itemContainers.template.events.on('hit', function(ev) {
-    var seriesColumn = ev.target.dataItem.color;
-    seriesColumn.isActive = !seriesColumn.isActive;
-  });
 
 }); // end am4core.ready()
 
