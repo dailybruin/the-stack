@@ -7,7 +7,7 @@ am4core.ready(function() {
   chart.padding(40, 40, 40, 40);
 
   var title = chart.titles.create();
-  title.text = 'Filmography at UCLA by Genre';
+  title.text = '[bold] Filmography at UCLA by Genre';
   title.fontSize = 20;
   title.marginBottom = 30;
   title.align = 'center';

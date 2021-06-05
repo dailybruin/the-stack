@@ -9,10 +9,9 @@ authors:
   - diego_ramirez_romero
 
 key_takeaways:
-  - Dickson Court, which includes two of UCLA’s most iconic buildings, Royce Hall and Powell Library, is the most popular filming location. 
-  - Drama, short film and comedy are the most common genres filmed on UCLA’s campus. 
+  - Dickson Court, which includes two of UCLA’s most iconic buildings, Royce Hall and Powell Library, is the most popular filming location.
+  - Drama, short film and comedy are the most common genres filmed on UCLA’s campus.
   - The total number of short films at UCLA increased from 11 prior to 2003 to 89 after 2003, marking an uptick of more than 700% in the last two decades.
-
 
 featured_image:
   url: imdb-ucla-movies/cover_photo.jpg
@@ -44,7 +43,7 @@ Throughout the school year, students often see cameras and film crews as they wa
 
 ### The Ideal Filming Location
 
-To film at UCLA, crews must contact the UCLA Events Office and follow a list of guidelines. The cost of filming is a combination of the UCLA film permit fee, event manager staffing costs, location venue rental fees, parking, police and any other facilities or other miscellaneous services. For a full day, between six to 12 hours, the permit fee for movie and television filming by itself is $4,510.
+To film at UCLA, crews must contact the UCLA Events Office and follow a list of guidelines. The cost of filming is a combination of the UCLA film permit fee, event manager staffing costs, location venue rental fees, parking, police and any other facilities or other miscellaneous services. For a full day, between six to 12 hours, the permit fee for movie and television filming by itself is \$4,510.
 
 While most of campus is available for filming, some areas are not allowed to be captured by commercial shooting. These locations include: the full South facade of Royce Hall with roofline and towers, full North facade of Powell Library with roofline, full North facade of Kerckhoff Hall with roofline & spires, Bruin Bear, Health Sciences/Medical Center buildings, Murphy Hall, Chancellor’s Residence, residential halls, dining halls and other housing facilities.
 
@@ -95,9 +94,7 @@ For those looking to film outside the hustle and bustle of Royce Hall and Powell
 
 ### Breaking Down the Most Popular Genres
 
-<div class="genre-container">
-  <div id = 'GenreChart' style='height: 100vh'></div>
-</div>
+<div id = 'GenreChart' style='height: 100vh'></div>
 
 <p style = "text-align: center; color: gray; font-size: smaller">The analysis in this graph includes 288 titles from IMDb of which UCLA was tagged as a filming location. Some titles have more than one genre listed. 
 </p>
