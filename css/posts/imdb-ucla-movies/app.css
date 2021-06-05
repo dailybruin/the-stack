@@ -3,7 +3,7 @@
     height: 600px;
 }
 
-#captions{
+.captions{
     text-align: center; 
     color: gray; 
     font-size: smaller;
@@ -22,20 +22,19 @@
 .legend span 
     { border: 1px solid gray; float: left; width: 12px; height: 12px; margin: 2px;} */
 
-
-    ul{
-        display: flex;
-  justify-content: center;
-  align-items: center; 
-    }
-    ul li { 
-        float: left; 
-        margin-right: 25px; 
-        list-style-type: none;
-    }
-    span {
-        float: left; 
-        width: 13px; 
-        height: 13px; 
-        margin: 2px;
-    }
+.map-legend {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+.map-legend li{ 
+    float: left; 
+    margin-right: 25px; 
+    list-style-type: none;
+}
+.color-box {
+    float: left; 
+    width: 13px; 
+    height: 13px; 
+    margin: 2px; 
+}
