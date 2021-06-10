@@ -72,13 +72,13 @@ Additionally, UCLA stands out because of its quintessential college look. Kuntz 
  <iframe src="https://www.google.com/maps/d/u/3/embed?mid=1jOWiFxvcQvj2MeS1uzfX8sps4B0eNIUL" style = "height:80vh; width:80%;"></iframe> 
 </div>
 
-<p class = "captions">The 40 films and TV shows on this map come from the most popular titles listed on IMDb and are supplemented with titles from the UCLA Alumni Youtube series “Filmed at UCLA.” Some productions have multiple UCLA locations marked.  
-</p>
-
 <ul class = "captions map-legend">
     <li><span class='color-box' style = "background-color: #0288d1"></span>Films</li>
     <li><span class='color-box' style = "background-color: #ffd600"></span>TV Shows</li>
 </ul>
+
+<p class = "captions">The 40 films and TV shows on this map come from the most popular titles listed on IMDb and are supplemented with titles from the UCLA Alumni Youtube series “Filmed at UCLA.” Some productions have multiple UCLA locations marked.  
+</p>
 
 Dickson Court, which includes Royce Hall and Powell Library, has been the most common filming location on campus. Of the 40 titles shown on the map, 14 of them included scenes at Royce Hall and seven of them included scenes at Powell Library.  
 
