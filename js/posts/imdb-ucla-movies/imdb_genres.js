@@ -8,6 +8,7 @@ am4core.ready(function() {
 
   var title = chart.titles.create();
   title.text = '[bold] Filmography at UCLA by Genre';
+  title.wrap = true;
   title.fontSize = 20;
   title.marginBottom = 30;
   title.align = 'center';
@@ -25,7 +26,7 @@ am4core.ready(function() {
   valueAxis.paddingTop = 15;
   valueAxis.title.text = 'Number of Titles';
   valueAxis.title.align = 'center';
-  valueAxis.renderer.minGridDistance = 25;
+  valueAxis.renderer.minGridDistance = 30;
 
   var series = chart.series.push(new am4charts.ColumnSeries());
   series.dataFields.categoryY = 'network';
