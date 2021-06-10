@@ -51,8 +51,7 @@ var HSIS_Projection_Undergrad = new Chart(ctx6, {
     ],
     datasets: [
       {
-        label:
-          'Current % Undergraduate Hispanic or Latino Students',
+        label: 'Current % Undergraduate Hispanic or Latino Students',
         data: [
           0.14,
           0.14,
@@ -80,8 +79,7 @@ var HSIS_Projection_Undergrad = new Chart(ctx6, {
         fill: false,
       },
       {
-        label:
-          'Trend Line of % Undergraduate Hispanic or Latino Students',
+        label: 'Trend Line of % Undergraduate Hispanic or Latino Students',
         data: [
           0.1305194805,
           0.1346103896,
@@ -221,13 +219,14 @@ var HSIS_Projection_Undergrad = new Chart(ctx6, {
     },
     title: {
       display: true,
-      text: 'Yearly Percentage of Undergraduate Hispanic or Latino Students at UCLA',
+      text:
+        'Yearly Percentage of Undergraduate Hispanic or Latino Students at UCLA',
     },
     scales: {
       yAxes: [
         {
           ticks: {
-            callback: function (value) {
+            callback: function(value) {
               return value.toLocaleString('en-US', {
                 style: 'percent',
                 minimumFractionDigits: 0,
@@ -256,7 +255,7 @@ var HSIS_Projection_Undergrad = new Chart(ctx6, {
       intersect: true,
       displayColors: true,
       callbacks: {
-        label: function (tooltipItem, datasets) {
+        label: function(tooltipItem, datasets) {
           label = tooltipItem.yLabel.toLocaleString('en-US', {
             style: 'percent',
             maximumFractionDigits: 2,
@@ -265,7 +264,7 @@ var HSIS_Projection_Undergrad = new Chart(ctx6, {
         },
       },
     },
-    animation: false
+    animation: false,
   },
 });
 

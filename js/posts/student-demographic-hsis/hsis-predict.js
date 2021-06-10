@@ -77,8 +77,7 @@ var HSIS_Projection = new Chart(ctx7, {
         fill: false,
       },
       {
-        label:
-          'Trend Line of % Hispanic or Latino Students',
+        label: 'Trend Line of % Hispanic or Latino Students',
         data: [
           0.1126406926,
           0.11604329,
@@ -224,7 +223,7 @@ var HSIS_Projection = new Chart(ctx7, {
       yAxes: [
         {
           ticks: {
-            callback: function (value) {
+            callback: function(value) {
               return value.toLocaleString('en-US', {
                 style: 'percent',
                 minimumFractionDigits: 0,
@@ -253,7 +252,7 @@ var HSIS_Projection = new Chart(ctx7, {
       intersect: true,
       displayColors: true,
       callbacks: {
-        label: function (tooltipItem, datasets) {
+        label: function(tooltipItem, datasets) {
           label = tooltipItem.yLabel.toLocaleString('en-US', {
             style: 'percent',
             maximumFractionDigits: 2,
@@ -262,7 +261,7 @@ var HSIS_Projection = new Chart(ctx7, {
         },
       },
     },
-    animation: false
+    animation: false,
   },
   lineAtIndex: [
     // { index: 41, text: ['2040', 'UCLA becomes', 'a HSI'] },

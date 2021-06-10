@@ -96,6 +96,7 @@ The graphs below show the amount of grant money that each campus in the UC syste
 </div>
 
 <script src = "C:/Users/Lindsey/Desktop/Daily-Bruin/the-stack/js/posts/student-demographic-hsis/TotalViz.js"></script>
+
 <script src = "C:/Users/Lindsey/Desktop/Daily-Bruin/the-stack/js/posts/student-demographic-hsis/DOEviz.js"></script>
 
 Looking at the graphs above, it first seems as though being an HSI does not have a significant impact on the amount of federal grants that each university receives. However, Hurtado said grants awarded to schools with HSI designation can have a significant impact.
