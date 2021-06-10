@@ -78,7 +78,6 @@ Additionally, UCLA stands out because of its quintessential college look. Kuntz 
 <p class = "captions">The 40 films and TV shows on this map come from the most popular titles listed on IMDb and are supplemented with titles from the UCLA Alumni YouTube series “Filmed at UCLA.”  Some productions have multiple UCLA locations marked. 
 </p>
 
-
 Dickson Court, which includes Royce Hall and Powell Library, has been the most common filming location on campus. Of the 40 titles shown on the map, 17 of them included scenes at Royce Hall and seven of them included scenes at Powell Library.
 
 “(UCLA’s) got certain parts of it that are very, you might say, old school. Obviously Royce Hall, and I'd also say Powell Library. You can't look much more like a university than those buildings,” said Kuntz.
@@ -126,7 +125,7 @@ Figueroa explains that shorts are more economically savvy for student filmmakers
 
 <div id= 'chartdiv' style='height: 100vh'></div>
 
-<p id = "captions">This timeline includes the highest-rated productions filmed at UCLA. These IMDb ratings are accurate as of June 1. The highest-rated films have ratings greater than or equal to 7.5/10.
+<p class = "captions">This timeline includes the highest-rated productions filmed at UCLA. These IMDb ratings are accurate as of June 1. The highest-rated films have ratings greater than or equal to 7.5/10.
 </p>
 
 The first instance of filmography at UCLA on IMDb dates back to the 1932 film “Shopworn,” a romantic drama about a forbidden love between a poor woman and an upper-class man.
