@@ -20,15 +20,15 @@ scripts:
   - /js/posts/bruinwalk-class-ratings/app.js
 ---
 
-A UCLA education is a huge investment – each resident undergraduate student pays up to **$1,230** per class in tuition and fees,<sup><a href="#cite-1">[1]</a></sup> and invests about **100 hours** per class.<sup><a href="#cite-2">[2]</a></sup> 
+A UCLA education is a huge investment – each resident undergraduate student pays up to **$1,230** per class in tuition and fees,<sup><a href="#cite-1">[1]</a></sup> and invests about **100 hours** per class.<sup><a href="#cite-2">[2]</a></sup>
 
 Our analysis of Bruinwalk ratings, sourced from thousands of students, can help you make that investment worthwhile. There’s more to a professor than their Bruinwalk rating, just like there’s more to a student than their GPA, but students can use ratings and reviews to select courses that are worth their time and money.
 
 ## The data
 
-The data visualized below is sourced from **41,515 ratings** on [bruinwalk.com]((http://bruinwalk.com)) as of February 2017. Students rate each course and professor pairing on five criteria: overall rating, class easiness, workload, professor helpfulness and professor clarity.
+The data visualized below is sourced from **41,515 ratings** on [bruinwalk.com](<(http://bruinwalk.com)>) as of February 2017. Students rate each course and professor pairing on five criteria: overall rating, class easiness, workload, professor helpfulness and professor clarity.
 
-Only course and professor pairings with **15 or more** ratings were included when analyzing their *average* ratings. These comprise the **577 most-reviewed courses** on Bruinwalk, with a combined total of 14,534 ratings.
+Only course and professor pairings with **15 or more** ratings were included when analyzing their _average_ ratings. These comprise the **577 most-reviewed courses** on Bruinwalk, with a combined total of 14,534 ratings.
 
 <div id="app">
 
@@ -36,12 +36,12 @@ Only course and professor pairings with **15 or more** ratings were included whe
 
   <p>Looking for an all-around great class? Look no further than the top 25 overall.</p>
   <h3 id="visualization">The top 25 classes by overall rating</h3>
-  <ratings-list :ratings="bestOverall" rating-type="overall_rating" 
+  <ratings-list v-bind:ratings="bestOverall" rating-type="overall_rating" 
                 id="best-overall"></ratings-list>
 
   <p>Steer clear of these classes to avoid poorly rated professors and potential frustration.</p>
   <h3>The bottom 25 classes by overall rating</h3>
-  <ratings-list :ratings="worstOverall" rating-type="overall_rating" 
+  <ratings-list v-bind:ratings="worstOverall" rating-type="overall_rating" 
                 id="worst-overall"></ratings-list>
 
   <p>The most common overall rating students award is a <strong>4</strong>, which accounts for <strong>33.8 percent</strong> of all ratings. This skews the distribution toward the higher end, away from the expected average of 2.5. </p>
@@ -58,12 +58,12 @@ Only course and professor pairings with **15 or more** ratings were included whe
   <p>Need an easy class to balance out a tough quarter? Enroll in one of the following.</p>
 
   <h3>The 25 easiest classes</h3>
-  <ratings-list :ratings="easiest" rating-type="easiness_rating"
+  <ratings-list v-bind:ratings="easiest" rating-type="easiness_rating"
                 id="easiest"></ratings-list>
 
   <p>Don’t take one of these classes unless you’re prepared to put in a lot of work.</p>
   <h3>The 25 hardest classes</h3>
-  <ratings-list :ratings="hardest" rating-type="easiness_rating" 
+  <ratings-list v-bind:ratings="hardest" rating-type="easiness_rating" 
                 id="hardest"></ratings-list>
 
   <p>Students have rated more courses as difficult than easy. Of the courses with 15 or more ratings, eleven have a 1.00 average, the most difficult rating. Only six of these courses have ratings above 4.00.</p>
@@ -83,14 +83,14 @@ Only course and professor pairings with **15 or more** ratings were included whe
   <p>But students have also given high overall ratings to a substantial number of difficult courses. Difficult courses with high overall ratings occupy the upper left corner of the following scatter plot.</p>
 
   <h3>Students rarely award a low overall rating to an easy course, but they also rate many difficult courses favorably.</h3>
-  <figure class="ratings-chart fullwidth" id="easiness-vs-overall"></figure>
+  <figure class="ratings-chart" id="easiness-vs-overall"></figure>
 
   <p>Students seem to prefer clear professors over easy courses. Courses with higher professor clarity ratings, or those with <strong>professors who are easier to understand</strong>, are more highly rated overall than courses with low clarity ratings. The clarity rating is the best predictor for students’ overall course satisfaction – its line of best fit has an R<sup>2</sup> value of 0.797.</p>
   
   <p>Professor clarity only narrowly beats out <strong>professor helpfulness</strong> in predicting a student’s overall course rating (R<sup>2</sup> = 0.703), but it signifcantly beats out both class easiness (R<sup>2</sup> = 0.185) and workload (R<sup>2</sup> = 0.182) ratings.</p>
 
   <h3>A professor’s clarity rating is the best predictor of a class’s overall rating.</h3>
-  <figure class="ratings-chart fullwidth" id="clarity-vs-overall"></figure>
+  <figure class="ratings-chart" id="clarity-vs-overall"></figure>
 
 </div>
 
@@ -100,9 +100,9 @@ Choosing the right courses and professors can make your investment in a UCLA edu
 
 ## Get the data
 
-The data used in this post is available on [The Stack’s GitHub repo in CSV format](https://github.com/dailybruin/the-stack/blob/master/datasets/bruinwalk-class-ratings/ratings.csv). It’s ready to import into Excel or Numbers for quick browsing, or you can parse it using a CSV library in your programming language of choice. 
+The data used in this post is available on [The Stack’s GitHub repo in CSV format](https://github.com/dailybruin/the-stack/blob/master/datasets/bruinwalk-class-ratings/ratings.csv). It’s ready to import into Excel or Numbers for quick browsing, or you can parse it using a CSV library in your programming language of choice.
 
-Find anything interesting we missed? Tweet us [@_thestack](https://twitter.com/_thestack).
+Find anything interesting we missed? Tweet us [@\_thestack](https://twitter.com/_thestack).
 
 <div class="footnotes">
   <p>
