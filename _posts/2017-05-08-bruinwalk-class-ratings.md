@@ -26,7 +26,7 @@ Our analysis of Bruinwalk ratings, sourced from thousands of students, can help 
 
 ## The data
 
-The data visualized below is sourced from **41,515 ratings** on [bruinwalk.com](<(http://bruinwalk.com)>) as of February 2017. Students rate each course and professor pairing on five criteria: overall rating, class easiness, workload, professor helpfulness and professor clarity.
+The data visualized below is sourced from **41,515 ratings** on [bruinwalk.com](http://bruinwalk.com) as of February 2017. Students rate each course and professor pairing on five criteria: overall rating, class easiness, workload, professor helpfulness and professor clarity.
 
 Only course and professor pairings with **15 or more** ratings were included when analyzing their _average_ ratings. These comprise the **577 most-reviewed courses** on Bruinwalk, with a combined total of 14,534 ratings.
 
