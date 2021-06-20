@@ -35,12 +35,7 @@ dropdown.on('change', DropdownChange);
 
 d3.csv(precovidFileName, function (error, data) {
   //precovid csv input
-<<<<<<< HEAD
-  console.log(data)
-  data.forEach(function(d) {
-=======
   data.forEach(function (d) {
->>>>>>> d5114df5582a2f1919ef660ea097177e0a6cbf45
     let CLASS = d.CLASS;
     precovidMap[CLASS] = [];
     // { cerealName: [ bar1Val, bar2Val, ... ] }

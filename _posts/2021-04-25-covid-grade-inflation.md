@@ -13,6 +13,7 @@ featured_image:
 og_image: 
 
 scripts:
+  - /cdnjs.cloudflare.com/ajax/libs/d3/5.7.0/d3.min.js 
   - //cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.js
   - //ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js
   - //d3js.org/d3.v6.min.js
@@ -24,6 +25,7 @@ scripts:
   - /js/posts/covid-grade-inflation/A_Count_Viz.js
   - /js/posts/covid-grade-inflation/Main_Graph.js
   - /js/posts/covid-grade-inflation/MainChart.js
+  - /js/posts/covid-grade-inflation/top20_inflat.js
 
 stylesheets:
   - //cdnjs.cloudflare.com/ajax/libs/c3/0.4.10/c3.min.css
@@ -79,3 +81,7 @@ test test
   </div>
 
 
+# Top 20 Most Inflated and Deflated Classes
+<div class = "top20-inflation">
+  <canvas id="top20-inflation"></canvas>
+</div>
