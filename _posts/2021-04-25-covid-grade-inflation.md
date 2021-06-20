@@ -69,23 +69,13 @@ test test
 <script src="/js/posts/covid-grade-inflation/pie_chart.js"></script>
 
 
-
-<<<<<<< HEAD
-
-<div id="title">
-    <p style="font-size: 36px; text-align: center">UCLA Waste Bin Breakdown (% by weight)</p>
-  </div>
-  <div id="dropdown-menu"></div>
-  <div class="graph-container">
-    <div id="landfillGraph"></div>
-    <div id="recyclingGraph"></div>
-    <div id="compostGraph"></div>
-=======
-<script src="https://d3js.org/d3.v3.min.js"></script>
+# Main Graph Text
+<script src="https://d3js.org/d3.v6.min.js"></script>
 
 <div id="dropdown-menu"></div>
 <div class="graph-container">
     <div id="precovidGraph"></div>
     <div id="postcovidGraph"></div>
->>>>>>> d5114df5582a2f1919ef660ea097177e0a6cbf45
   </div>
+
+
