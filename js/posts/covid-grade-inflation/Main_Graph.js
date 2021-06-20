@@ -63,6 +63,7 @@ var MainChart = new Chart(ctxMain, {
             y: {
                 beginAtZero: true
             }
-        }
+        },
+        animation: false
     },
 });

@@ -1,8 +1,7 @@
 @media only screen and (min-width: 1000px) {
 
-    .usc-chart {
-        float: left;
-        width: 50%;
+    .dropdown-menu {
+        height: 50px;
         margin-bottom: 40px;
     }
     .ucb-chart {
@@ -26,7 +25,7 @@
 
     .bubbleChart {
         width: 50%;
-        float: right;
+        height: 75%;
     }
 
     .graphic {
