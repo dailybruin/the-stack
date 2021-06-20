@@ -27,11 +27,16 @@ scripts:
 
 stylesheets:
   - //cdnjs.cloudflare.com/ajax/libs/c3/0.4.10/c3.min.css
-  - 
+  - /css/posts/covid-grade-inflation/app.css
 ---
 
 Test text
 
+
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/export-data.js"></script>
+<script src="https://code.highcharts.com/modules/accessibility.js"></script>
+<script src="https://d3js.org/d3.v3.min.js"></script>
 
 <div id="dropdown-menu"></div>
 <div class="graph-container">
@@ -40,7 +45,6 @@ Test text
   </div>
 
 <script src="/js/posts/covid-grade-inflation/MainChart.js"></script>
-
 
 <div class = "bubbleChart">
   <canvas id="bubble-chart"></canvas>
@@ -56,9 +60,6 @@ test test
 
 
 
-<script src="https://code.highcharts.com/highcharts.js"></script>
-<script src="https://code.highcharts.com/modules/export-data.js"></script>
-<script src="https://code.highcharts.com/modules/accessibility.js"></script>
 
 <figure class="highcharts-figure">
     <div id="container"></div>
@@ -68,24 +69,31 @@ test test
 
 <script src="/js/posts/covid-grade-inflation/pie_chart.js"></script>
 
-
-
-<<<<<<< HEAD
-
-<div id="title">
-    <p style="font-size: 36px; text-align: center">UCLA Waste Bin Breakdown (% by weight)</p>
+  <div class="dropdown-menu"></div>
+<div class="my_dataviz">
+    <div id="my_dataviz"></div>
   </div>
-  <div id="dropdown-menu"></div>
-  <div class="graph-container">
-    <div id="landfillGraph"></div>
-    <div id="recyclingGraph"></div>
-    <div id="compostGraph"></div>
-=======
-<script src="https://d3js.org/d3.v3.min.js"></script>
 
-<div id="dropdown-menu"></div>
+
+
+<!-- Load d3.js
+<script src="https://d3js.org/d3.v6.js"></script>
+
+<!-- Add 2 buttons -->
+<!-- <button onclick="update('var1')">Variable 1</button>
+<button onclick="update('var2')">Variable 2</button>
+          
+<!-- Create a div where the graph will take place -->
+<!-- <div id="my_dataviz"></div> --> 
+
+<!-- <div class="dropdown-menu"></div>
 <div class="graph-container">
     <div id="precovidGraph"></div>
     <div id="postcovidGraph"></div>
->>>>>>> d5114df5582a2f1919ef660ea097177e0a6cbf45
+  </div>  -->
+
+  <div class="dropdown-menu"></div>
+<div class="graph-container">
+    <div id="precovidGraph"></div>
+    <div id="postcovidGraph"></div>
   </div>

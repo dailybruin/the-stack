@@ -1,31 +1,30 @@
 let scale = 100;
-let ACount = [.41, .503, .43, .8];
+let Count = [[0.41, 0.09], [0.5, 0.13], [0.61, 0.18], [0.44, 0.11]]
 /*Thoughts: 
     Plot at x = Total Classes Covid
     Plot at y = Total Classes Non-Covid
     Two circles: Center circle radius = ACount Non-Covid by %
                 Outer circel radius = ACount Covid by %
 */
-//let Classes = [134048, 122793, 126290];
-let COVIDACount = [.6, .7, .605, .9];
+
 let xLocation = [-.75, -.8, -.3, 1]
 let yLocation = [-2, .3, 2.2, 2.7]
 let Colors = ['rgba(255, 99, 132, 1)', 'rgba(25, 145, 156, 1)', 'rgba(122,43,132,1)'];
 let COVIDColors = ['rgba(255, 99, 132, .5)', 'rgba(25, 145, 156, .5)', 'rgba(122,43,132,.5)']
-let Quarters = ['Fall', 'Winter', 'Spring'];
+let Quarters = ['2019 Fall', '2020 Winter', '2020 Spring', '2019 Summer'];
 let datasets = [];
 
-for (let i = 0; i < ACount.length; ++i) {
+for (let i = 0; i < Count.length; ++i) {
     let data = {
         label: Quarters[i],
         data: [{
             x: xLocation[i],
             y: yLocation[i],
-            r: scale * ACount[i]
+            r: scale * Count[i][1]
         }, {
             x: xLocation[i],
             y: yLocation[i],
-            r: scale * COVIDACount[i]
+            r: scale * Count[i][0]
         }],
         backgroundColor: [
             Colors[i],
@@ -85,7 +84,7 @@ var BubbleChart = new Chart(ctxBubble, {
                             }
                             return (
                                 '\n\n' +
-                                ACount[context.datasetIndex].toLocaleString('en-US', {
+                                Count[context.datasetIndex].toLocaleString('en-US', {
                                     style: 'percent',
                                     maximumFractionDigits: 3,
                                 })
@@ -96,16 +95,17 @@ var BubbleChart = new Chart(ctxBubble, {
             },
         },
         maintainAspectRatio: false,
+        animation: false,
     },
     plugins: [ChartDataLabels],
 });
 
 if (window.matchMedia('(max-width: 480px)').matches) {
-    yearTotals.canvas.style = 'max-height:200px';
-    yearTotals.options.maintainAspectRatio = false;
-    yearTotals.update();
+    BubbleChart.canvas.style = 'max-height:200px';
+    BubbleChart.options.maintainAspectRatio = false;
+    BubbleChart.update();
 } else if (window.matchMedia('(max-width: 580px)').matches) {
-    yearTotals.canvas.style = 'max-height:300px';
-    yearTotals.options.maintainAspectRatio = false;
-    yearTotals.update();
+    BubbleChart.canvas.style = 'max-height:300px';
+    BubbleChart.options.maintainAspectRatio = false;
+    BubbleChart.update();
 }
