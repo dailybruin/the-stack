@@ -33,13 +33,16 @@ stylesheets:
 
 Test text
 
-
 <script src="https://code.highcharts.com/highcharts.js"></script>
+
 <script src="https://code.highcharts.com/modules/export-data.js"></script>
+
 <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+
 <script src="https://d3js.org/d3.v3.min.js"></script>
 
-<div id="dropdown-menu"></div>
+<select id="dropdown-menu"></select>
+
 <div class = "main_graph">
   <canvas id = "main-chart"></canvas>
 </div>
@@ -54,11 +57,6 @@ test test
   <canvas id = "main-chart"></canvas>
 </div>
 
-
-
-
-
-
 <figure class="highcharts-figure">
     <div id="container"></div>
     <p class="highcharts-description">
@@ -72,17 +70,17 @@ test test
     <div id="my_dataviz"></div>
   </div>
 
-
-
 <!-- Load d3.js
 <script src="https://d3js.org/d3.v6.js"></script>
 
 <!-- Add 2 buttons -->
+
 <!-- <button onclick="update('var1')">Variable 1</button>
 <button onclick="update('var2')">Variable 2</button>
           
 <!-- Create a div where the graph will take place -->
-<!-- <div id="my_dataviz"></div> --> 
+
+<!-- <div id="my_dataviz"></div> -->
 
 <!-- <div class="dropdown-menu"></div>
 <div class="graph-container">
@@ -96,8 +94,8 @@ test test
     <div id="postcovidGraph"></div>
   </div>
 
-
 # Top 20 Most Inflated and Deflated Classes
+
 <div class = "top20-inflation">
   <canvas id="top20-inflation"></canvas>
 </div>

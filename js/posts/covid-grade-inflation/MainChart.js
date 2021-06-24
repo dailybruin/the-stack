@@ -1,47 +1,41 @@
 // Load and munge data, then make the visualization.
-let precovidFileName = '../../../../datasets/covid-grade-inflation/LG_19Sum.csv';
+let precovidFileName =
+  '../../../../datasets/covid-grade-inflation/LG_19Sum.csv';
 let postcovidFileName = '/datasets/covid-grade-inflation/LG_20sum.csv';
 
-
-let dropdown = d3.select('#dropdown-menu').insert('select', 'svg');
 precovidMap = {};
 
-// let CLASSES;
 let dropdownValue = 'All Classes';
 
 // let changeDuration = 300;
 // let delayDuration = 100;
 
-// Handler for dropdown value change
-let DropdownChange = function () {
-  dropdownValue = d3.select(this).property('value');
-  MainChart.update();
-};
-
-dropdown.on('change', DropdownChange);
-var CLASSES = []
-var CLASSES = d3.csv('../../../../datasets/covid-grade-inflation/LG_19Sum.csv', function (d) {
-  return { CLASS: d.CLASS };
-},
-  function (error, rows) {
-    console.log('errors')
-    console.log(rows);
-  });
-
-console.log('Class')
-console.log(CLASSES);
-
-dropdown
-  .selectAll('option')
-  .data(CLASSES)
-  .enter()
-  .append('option')
-  .attr('value', function (d) {
-    return d;
+d3
+  .csv('/datasets/covid-grade-inflation/LG_19Sum.csv', function(d) {
+    return { CLASS: d.CLASS };
   })
-  .text(function (d) {
-    return d[0].toUpperCase() + d.slice(1, d.length); // capitalize 1st letter
+  .then(function(data) {
+    initDropdown(data);
   });
+
+function initDropdown(classNames) {
+  d3
+    .select('#dropdown-menu')
+    .on('change', function() {
+      dropdownValue = d3.select(this).property('value');
+      MainChart.update();
+    })
+    .selectAll('option')
+    .data(classNames)
+    .enter()
+    .append('option')
+    .attr('value', function(d) {
+      return d.CLASS;
+    })
+    .text(function(d) {
+      return d.CLASS[0].toUpperCase() + d.CLASS.slice(1, d.length); // capitalize 1st letter
+    });
+}
 
 // d3.csv(precovidFileName, function (error, data) {
 //   //precovid csv input
@@ -80,55 +74,72 @@ dropdown
 //   });
 // }
 
-const labels = ['A+', 'A', 'A-', 'B+', 'B', 'B-', 'C+', 'C', 'C-', 'D+', 'D', 'D-', 'F'];
+const labels = [
+  'A+',
+  'A',
+  'A-',
+  'B+',
+  'B',
+  'B-',
+  'C+',
+  'C',
+  'C-',
+  'D+',
+  'D',
+  'D-',
+  'F',
+];
 const data = {
   labels: labels,
-  datasets: [{
-    label: 'Grades During Online Learning',
-    data: [65, 59, 12, 150, 98, 14, 18, 23, 10, 8, 5, 13, 8],
-    backgroundColor: [
-      'purple',
-      'purple',
-      'purple',
-      'purple',
-      'purple',
-      'purple',
-      'purple',
-      'purple',
-      'purple',
-      'purple',
-      'purple',
-      'purple',
-      'purple',
-    ],
-    // borderColor: [
-    //     'purple',
-    // ],
-    borderWidth: 1,
-    index: 1
-  }, {
-    label: 'Grades During On-Campus Learning',
-    data: [80, 56, 43, 100, 25, 12, 25, 100, 10, 8, 5, 12, 32],
-    backgroundColor: [
-      'teal',
-      'teal',
-      'teal',
-      'teal',
-      'teal',
-      'teal',
-      'teal',
-      'teal',
-      'teal',
-      'teal',
-      'teal',
-      'teal',
-      'teal',
-    ],
-    // borderColor: [
-    //     'teal',
-    // ],
-    index: 2,
-  }]
+  datasets: [
+    {
+      label: 'Grades During Online Learning',
+      data: [65, 59, 12, 150, 98, 14, 18, 23, 10, 8, 5, 13, 8],
+      backgroundColor: [
+        'purple',
+        'purple',
+        'purple',
+        'purple',
+        'purple',
+        'purple',
+        'purple',
+        'purple',
+        'purple',
+        'purple',
+        'purple',
+        'purple',
+        'purple',
+      ],
+      // borderColor: [
+      //     'purple',
+      // ],
+      borderWidth: 1,
+      index: 1,
+    },
+    {
+      label: 'Grades During On-Campus Learning',
+      data: [80, 56, 43, 100, 25, 12, 25, 100, 10, 8, 5, 12, 32],
+      backgroundColor: [
+        'teal',
+        'teal',
+        'teal',
+        'teal',
+        'teal',
+        'teal',
+        'teal',
+        'teal',
+        'teal',
+        'teal',
+        'teal',
+        'teal',
+        'teal',
+      ],
+      // borderColor: [
+      //     'teal',
+      // ],
+      index: 2,
+    },
+  ],
 };
 
 var ctxMain = document.getElementById('main-chart').getContext('2d');
@@ -138,10 +149,10 @@ var MainChart = new Chart(ctxMain, {
   options: {
     scales: {
       y: {
-        beginAtZero: true
-      }
+        beginAtZero: true,
+      },
     },
-    animation: false
+    animation: false,
   },
 });
 
@@ -390,5 +401,3 @@ var MainChart = new Chart(ctxMain, {
 
 //   updatePostcovidBars(postcovidMap[dropdownValue]);
 // };
-
-
