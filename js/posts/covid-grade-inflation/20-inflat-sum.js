@@ -13,11 +13,11 @@ function makeChart(classes) {
   var inflationData = classes.map(function(d) {return +d.difference}).slice (1, 21);
  
 
-  const departmentColors = classes.map(function(d) {return d.department === 'physical' ? 'purple': 'social' ? 'coral':'life science'?'green': 'engineering'?'blue': 'humanities'? 'red': 'orange';});
+  var departmentColors = classes.map(function(d) {return d.department === 'physical' ? 'purple': 'social' ? 'coral':'life science'?'green': 'engineering'?'blue': 'humanities'? 'red': 'orange';});
 
   //var departmentLabels = classes.map(function(d) {return d.department});
   //['#002437', '#003E60', '#00A6FF', '#4AC0FF', '#7BD1FF']
-  var chart = new Chart('top20-inflation', {
+  var chart = new Chart('20-inflat-sum', {
     type: 'horizontalBar',
     options: {
       maintainAspectRatio: true,

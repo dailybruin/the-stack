@@ -26,7 +26,7 @@ scripts:
   - /js/posts/covid-grade-inflation/A_Count_Viz.js
   - /js/posts/covid-grade-inflation/Main_Graph.js
   - /js/posts/covid-grade-inflation/MainChart.js
-  - /js/posts/covid-grade-inflation/top20_inflat.js
+  - /js/posts/covid-grade-inflation/20-inflat-sum.js
 
 stylesheets:
   - //cdnjs.cloudflare.com/ajax/libs/c3/0.4.10/c3.min.css
@@ -103,6 +103,24 @@ test test
 
 
 # Top 20 Most Inflated and Deflated Classes
+
+<!-- Chart container -->
+<div id="inflation">
+  
+  <!-- Drop-down -->
+<select id="chart-selector" name="chart-selector">
+    <option value="">Please Select An Option</option>
+    <option value ="20-inflat-sum">summer difference 2019/2020</option>
+    <option value ="fall diffference 2019/2020">1</option>
+    
+    
+  </select>
+  
+
+
+    
+</div>
+
 <div class = "top20-inflation">
-  <canvas id="top20-inflation"></canvas>
+  <canvas id="20-inflat-sum"></canvas>
 </div>
