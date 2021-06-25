@@ -1,7 +1,7 @@
 // Load and munge data, then make the visualization.
 let precovidFileName =
-  '../../../../datasets/covid-grade-inflation/LG_19Sum.csv';
-let postcovidFileName = '/datasets/covid-grade-inflation/LG_20sum.csv';
+  '../../../../datasets/covid-grade-inflation/LGFALL19ZERO.csv';
+let postcovidFileName = '../../../../datasets/covid-grade-inflation/LGFALL20ZERO.csv';
 
 precovidMap = {};
 
@@ -9,70 +9,40 @@ let dropdownValue = 'All Classes';
 
 // let changeDuration = 300;
 // let delayDuration = 100;
+let choice = 'A&O SCI 1 - BIANCHI, D.'
 
 d3
-  .csv('/datasets/covid-grade-inflation/LG_19Sum.csv', function(d) {
+  .csv('/datasets/covid-grade-inflation/LGFALL19ZERO.csv', function (d) {
     return { CLASS: d.CLASS };
   })
-  .then(function(data) {
+  .then(function (data) {
     initDropdown(data);
   });
 
 function initDropdown(classNames) {
   d3
     .select('#dropdown-menu')
-    .on('change', function() {
+    .on('change', function () {
       dropdownValue = d3.select(this).property('value');
-      MainChart.update();
+      //MainChart.update();
+      let choice = $('#dropdown-menu option:selected').text();
+      loadCSVData(choice)
     })
     .selectAll('option')
     .data(classNames)
     .enter()
     .append('option')
-    .attr('value', function(d) {
+    .attr('value', function (d) {
       return d.CLASS;
     })
-    .text(function(d) {
-      return d.CLASS[0].toUpperCase() + d.CLASS.slice(1, d.length); // capitalize 1st letter
+    .text(function (d) {
+      return d.CLASS;
+      //[0].toUpperCase() + d.CLASS.slice(1, d.length); // capitalize 1st letter
     });
 }
 
-// d3.csv(precovidFileName, function (error, data) {
-//   //precovid csv input
-//   data.forEach(function (d) {
-//     let CLASS = d.CLASS;
-//     precovidMap[CLASS] = [];
-//     // { cerealName: [ bar1Val, bar2Val, ... ] }
-//     precovidFields.forEach(function (field) {
-//       precovidMap[CLASS].push(+d[field]);
-//     });
-//   });
-//   // Get names of CLASSES, for dropdown
-//   CLASSES = Object.keys(precovidMap);
-//   dropdown
-//     .selectAll('option')
-//     .data(CLASSES)
-//     .enter()
-//     .append('option')
-//     .attr('value', function (d) {
-//       return d;
-//     })
-//     .text(function (d) {
-//       return d[0].toUpperCase() + d.slice(1, d.length); // capitalize 1st letter
-//     });
-//   dropdownValue = CLASSES[0];
-// });
-
-// function loadCSVData(start, end) {
-//   return new Promise(resolve => {
-//     d3.csv('/datasets/walking-to-class/route_stats.csv', function (csv) {
-//       csv = csv.filter(function (row) {
-//         return row['start'] == start && row['stop'] == end;
-//       });
-//       resolve(csv);
-//     });
-//   });
-// }
+//let choice = $('#dropdown-menu option: selected').text();
+console.log(choice);
 
 const labels = [
   'A+',
@@ -89,6 +59,24 @@ const labels = [
   'D-',
   'F',
 ];
+
+function loadCSVData(choice) {
+  return new Promise(resolve => {
+    d3.csv(precovidFileName).then(function (csv) {
+      csv = csv.filter(function (row) {
+        return row['CLASS'] == choice;
+      });
+      console.log(csv)
+      resolve(csv);
+    });
+  });
+}
+
+
+
+let precovidData = [csv['A+'], csv['A']];
+console.log(precovidData)
+
 const data = {
   labels: labels,
   datasets: [
