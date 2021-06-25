@@ -13,7 +13,8 @@ featured_image:
 og_image: 
 
 scripts:
-  - /cdnjs.cloudflare.com/ajax/libs/d3/5.7.0/d3.min.js 
+  - //cdnjs.cloudflare.com/ajax/libs/d3/5.7.0/d3.min.js 
+  - //cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js
   - //cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.js
   - //ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js
   - //d3js.org/d3.v6.min.js

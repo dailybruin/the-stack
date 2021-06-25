@@ -1,56 +1,69 @@
-d3.csv('/datasets/covid-grade-inflation/inflat_rank_sum.csv')
-  .then(makeChart);
+Chart.defaults.global.defaultFontFamily = 'Roboto';
+Chart.defaults.global.defaultFontColor = '#333';
 
 function makeChart(classes) {
-  // classes is an array of objects where each object represents a class
-  var classesLabels = classes.map(function(d) {return d.CLASS}).slice (361, 381);
-  var inflationData = classes.map(function(d) {return d.difference}).slice (361,381);
-  var departmentColors = classes.map(function(d) {return d.department === 'physical' ? '#19A0AA':'#F15F36' ;});
+  // players is an array of objects where each object is something like:
+  // {
+  //   "Name": "Steffi Graf",
+  //   "Weeks": "377",
+  //   "Gender": "Female"
+  // }
 
+  var classesLabels = classes.map(function(d) {return d.class}).slice (1, 21);
+  var inflationData = classes.map(function(d) {return +d.difference}).slice (1, 21);
+ 
 
+  const departmentColors = classes.map(function(d) {return d.department === 'physical' ? 'purple': 'social' ? 'coral':'life science'?'green': 'engineering'?'blue': 'humanities'? 'red': 'orange';});
 
-
-
-var chart = new Chart('top20-inflation', {
+  //var departmentLabels = classes.map(function(d) {return d.department});
+  //['#002437', '#003E60', '#00A6FF', '#4AC0FF', '#7BD1FF']
+  var chart = new Chart('top20-inflation', {
     type: 'horizontalBar',
-    data: {
-      labels: classesLabels,
-      datasets: [
-        {
-            data: inflationData,
-            backgroundColor: departmentColors
-        }
-      ],
     options: {
-        scales: {
-             xAxes: [
-                {
-                    ticks:{
-                        max: 5,
-                        min:-3
-                    },
+      maintainAspectRatio: true,
+      legend: {
+        display: true,
+      },
+      plugins: {
+        datalabels: {
+          display: false
+        }
+      },
+      scales: {
+        xAxes: [
+          {ticks: {
+            min: -3,
+            max: 4, // Your absolute max value
+            stepSize: 1
+            
+          },
             scaleLabel: {
-              
-              
-              labelString: 'Weeks at No.1',
-              fontSize: 16
+              display: true,
+              labelString: 'Class Average Increment Difference (where 1 incremement= B+ to A-, A- to A, etc)',
+              fontSize: 16, 
             }
           }
         ]
       }
     },
-} 
-   
-  }
-  
-  );
-
-
+    data: {
+      labels: classesLabels,
+      datasets: [
+        { 
+          data: inflationData,
+          backgroundColor: departmentColors
+        }
+      ]
+    }
+  })
 }
 
+// Request data using D3
+d3.csv('/datasets/covid-grade-inflation/inflat_rank_sum.csv')
+  .then(makeChart);
 
 
-//colors by department**
-//set scales**
-//multiple graphs
-//drop down-- two graphs per drop down 
+
+
+
+
