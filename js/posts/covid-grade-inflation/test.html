@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>My test page</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+
+<script src="https://d3js.org/d3.v3.min.js"></script>
+<!-- <script src="./MainChart.js"></script> -->
+<script src='./testchart.js'></script>
+<!-- <script src='../class-fill-ups-2/graphs/src/DropDownChart.js'></script> -->
+<script src='https://unpkg.com/react@16/umd/react.development.js'></script>
+<script src='https://unpkg.com/react-dom@16/umd/react-dom.development.js'></script>
+<script src='https://unpkg.com/babel-standalone@6/babel.min.js'></script>
+<script src='https://unpkg.com/react-vis/dist/dist.min.js'></script>
+<script src='https://unpkg.com/react-bootstrap@next/dist/react-bootstrap.min.js'></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+
+
+<body>
+    Test text
+    <div id="dropdown-menu"></div>
+    <div class="graph-container">
+        <div id="precovidGraph"></div>
+        <div id="postcovidGraph"></div>
+    </div>
+    Try 2:
+    <!-- <select id="selectMe" class="selectgroup" disabled>
+        <option value="test">2021 Winter</option>
+        <option value="chartMD_fall">2020 Fall</option>
+        <option value="chartMD_spring">2020 Spring</option>
+    </select>
+
+    <div id="test" class="group"></div>
+    <div id="chartMD_fall" class="group"></div>
+    <div id="chartMD_spring" class="group"></div> -->
+
+
+    <div class="dropdown show">
+        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Dropdown link
+        </a>
+
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+
+
+        <div id="testComponent">
+            <Chart />
+            <h1>Hello</h1>
+        </div>
+        Further tests
+        <div id="dropdowns">
+            <h1>I'm walking from </h1>
+            <select class="ui search selection dropdown" id="start_location"></select>
+            <span> to </span>
+            <select class="ui search selection dropdown" id="end_location"></select>
+        </div>
+        More
+        <script>
+            {
+                const CustomMenu = React.forwardRef(
+                    ({ children, style, className, "aria-labelledby": labeledBy }, ref) => {
+                        const [value, setValue] = useState("");
+
+                        return (
+                            <div ref={ref} style={style} className={className} aria-labelledby={labeledBy}>
+                                <FormControl autoFocus className="mx-3 my-2 w-auto" placeholder="Type to filter..." onChange={e =>
+                                    setValue(e.target.value)}
+                                    value={value}
+                                />
+                                <div style={{ overflowY: "scroll", height: "200px" }}>
+                                    <ul className="list-unstyled">
+                                        {React.Children.toArray(children).filter(
+                                            child =>
+                                                !value ||
+                                                child.props.children.toLowerCase().includes(value.toLowerCase())
+                                        )}
+                                    </ul>
+                                </div>
+                            </div>
+                        );
+                    }
+                );
+            }</script>
+
+
+
+    </div>
+</body>
+
+</html>

@@ -1,187 +1,282 @@
 // Load and munge data, then make the visualization.
-let precovidFileName = '/datasets/covid-grade-inflation/LG_19sum.csv';
-let precovidFields = ['A+', 'A', 'A-', 'B+', 'B', 'B-', 'C+', 'C', 'C-', 'D+', 'D', 'D-', 'F'];
+let precovidFileName =
+  '../../../../datasets/covid-grade-inflation/LG_19Sum.csv';
 let postcovidFileName = '/datasets/covid-grade-inflation/LG_20sum.csv';
-let postcovidFields = ['A+', 'A', 'A-', 'B+', 'B', 'B-', 'C+', 'C', 'C-', 'D+', 'D', 'D-', 'F'];
 
+precovidMap = {};
 
+let dropdownValue = 'All Classes';
 
-let dropdown = d3.select('#dropdown-menu').insert('select', 'svg');
-let precovidMap = {};
-let postcovidMap = {};
+// let changeDuration = 300;
+// let delayDuration = 100;
 
-let CLASSES;
-let dropdownValue = 'Choose a Class';
-let precovidCanvas;
-let precovidxScale;
-let precovidheight;
-let precovidyScale;
-let postcovidCanvas;
-let postcovidxScale;
-let postcovidheight;
-let postcovidyScale;
-
-let changeDuration = 300;
-let delayDuration = 100;
-
-// Handler for dropdown value change
-let DropdownChange = function () {
-  dropdownValue = d3.select(this).property('value');
-  updateprecovidBars(precovidMap[dropdownValue]);
-  updatepostcovidBars(postcovidMap[dropdownValue]);
-};
-
-dropdown.on('change', DropdownChange);
-
-d3.csv(precovidFileName, function (error, data) {
-  //precovid csv input
-  data.forEach(function (d) {
-    let CLASS = d.CLASS;
-    precovidMap[CLASS] = [];
-    // { cerealName: [ bar1Val, bar2Val, ... ] }
-    precovidFields.forEach(function (field) {
-      precovidMap[CLASS].push(+d[field]);
-    });
+d3
+  .csv('/datasets/covid-grade-inflation/LG_19Sum.csv', function(d) {
+    return { CLASS: d.CLASS };
+  })
+  .then(function(data) {
+    initDropdown(data);
   });
-  // Get names of CLASSES, for dropdown
-  CLASSES = Object.keys(precovidMap);
-  dropdown
+
+function initDropdown(classNames) {
+  d3
+    .select('#dropdown-menu')
+    .on('change', function() {
+      dropdownValue = d3.select(this).property('value');
+      MainChart.update();
+    })
     .selectAll('option')
-    .data(CLASSES)
+    .data(classNames)
     .enter()
     .append('option')
-    .attr('value', function (d) {
-      return d;
+    .attr('value', function(d) {
+      return d.CLASS;
     })
-    .text(function (d) {
-      return d[0].toUpperCase() + d.slice(1, d.length); // capitalize 1st letter
+    .text(function(d) {
+      return d.CLASS[0].toUpperCase() + d.CLASS.slice(1, d.length); // capitalize 1st letter
     });
-  dropdownValue = CLASSES[0];
-  makePrecovidVis(precovidMap);
+}
+
+// d3.csv(precovidFileName, function (error, data) {
+//   //precovid csv input
+//   data.forEach(function (d) {
+//     let CLASS = d.CLASS;
+//     precovidMap[CLASS] = [];
+//     // { cerealName: [ bar1Val, bar2Val, ... ] }
+//     precovidFields.forEach(function (field) {
+//       precovidMap[CLASS].push(+d[field]);
+//     });
+//   });
+//   // Get names of CLASSES, for dropdown
+//   CLASSES = Object.keys(precovidMap);
+//   dropdown
+//     .selectAll('option')
+//     .data(CLASSES)
+//     .enter()
+//     .append('option')
+//     .attr('value', function (d) {
+//       return d;
+//     })
+//     .text(function (d) {
+//       return d[0].toUpperCase() + d.slice(1, d.length); // capitalize 1st letter
+//     });
+//   dropdownValue = CLASSES[0];
+// });
+
+// function loadCSVData(start, end) {
+//   return new Promise(resolve => {
+//     d3.csv('/datasets/walking-to-class/route_stats.csv', function (csv) {
+//       csv = csv.filter(function (row) {
+//         return row['start'] == start && row['stop'] == end;
+//       });
+//       resolve(csv);
+//     });
+//   });
+// }
+
+const labels = [
+  'A+',
+  'A',
+  'A-',
+  'B+',
+  'B',
+  'B-',
+  'C+',
+  'C',
+  'C-',
+  'D+',
+  'D',
+  'D-',
+  'F',
+];
+const data = {
+  labels: labels,
+  datasets: [
+    {
+      label: 'Grades During Online Learning',
+      data: [65, 59, 12, 150, 98, 14, 18, 23, 10, 8, 5, 13, 8],
+      backgroundColor: [
+        'purple',
+        'purple',
+        'purple',
+        'purple',
+        'purple',
+        'purple',
+        'purple',
+        'purple',
+        'purple',
+        'purple',
+        'purple',
+        'purple',
+        'purple',
+      ],
+      // borderColor: [
+      //     'purple',
+      // ],
+      borderWidth: 1,
+      index: 1,
+    },
+    {
+      label: 'Grades During On-Campus Learning',
+      data: [80, 56, 43, 100, 25, 12, 25, 100, 10, 8, 5, 12, 32],
+      backgroundColor: [
+        'teal',
+        'teal',
+        'teal',
+        'teal',
+        'teal',
+        'teal',
+        'teal',
+        'teal',
+        'teal',
+        'teal',
+        'teal',
+        'teal',
+        'teal',
+      ],
+      // borderColor: [
+      //     'teal',
+      // ],
+      index: 2,
+    },
+  ],
+};
+
+var ctxMain = document.getElementById('main-chart').getContext('2d');
+var MainChart = new Chart(ctxMain, {
+  type: 'bar',
+  data: data,
+  options: {
+    scales: {
+      y: {
+        beginAtZero: true,
+      },
+    },
+    animation: false,
+  },
 });
 
+// let updatePrecovidBars = function (data) {
+//   let bars = precovidCanvas.selectAll('.bar').data(data);
+//   // Add bars for new data
+//   precovidCanvas
+//     .selectAll('.bar')
+//     .select('*')
+//     .remove();
 
-let updatePrecovidBars = function (data) {
-  let bars = precovidCanvas.selectAll('.bar').data(data);
-  // Add bars for new data
-  precovidCanvas
-    .selectAll('.bar')
-    .select('*')
-    .remove();
+//   bars
+//     .enter()
+//     .append('rect')
+//     .attr('class', 'bar');
+//   bars
+//     .transition()
+//     .duration(changeDuration)
+//     .ease('linear')
+//     .attr('x', function (d, i) {
+//       return precovidxScale(precovidFields[i]);
+//     })
+//     .attr('width', precovidxScale.rangeBand())
+//     .attr('y', function (d, i) {
+//       return precovidyScale(d);
+//     })
+//     .attr('height', function (d, i) {
+//       return precovidheight - precovidyScale(d);
+//     })
+//     .text(function (d) {
+//       return d;
+//     });
 
-  bars
-    .enter()
-    .append('rect')
-    .attr('class', 'bar');
-  bars
-    .transition()
-    .duration(changeDuration)
-    .ease('linear')
-    .attr('x', function (d, i) {
-      return precovidxScale(precovidFields[i]);
-    })
-    .attr('width', precovidxScale.rangeBand())
-    .attr('y', function (d, i) {
-      return precovidyScale(d);
-    })
-    .attr('height', function (d, i) {
-      return precovidheight - precovidyScale(d);
-    })
-    .text(function (d) {
-      return d;
-    });
+//   let values = precovidCanvas.selectAll('.text').data(data);
+//   precovidCanvas.selectAll('.label').remove();
+//   values
+//     .enter()
+//     .append('text')
+//     .attr('class', 'label')
+//     .transition()
+//     .delay(changeDuration)
+//     .style('fill', 'black')
+//     .attr('text-anchor', 'middle')
+//     .attr('x', function (d, i) {
+//       return precovidxScale(precovidFields[i]);
+//     })
+//     .attr('dx', 42)
+//     .attr('y', function (d, i) {
+//       return precovidyScale(d);
+//     })
+//     .attr('dy', -3)
+//     .attr('font-weight', 'bold')
+//     .text(function (d) {
+//       return d;
+//     });
+// };
 
-  let values = precovidCanvas.selectAll('.text').data(data);
-  precovidCanvas.selectAll('.label').remove();
-  values
-    .enter()
-    .append('text')
-    .attr('class', 'label')
-    .transition()
-    .delay(changeDuration)
-    .style('fill', 'black')
-    .attr('text-anchor', 'middle')
-    .attr('x', function (d, i) {
-      return precovidxScale(precovidFields[i]);
-    })
-    .attr('dx', 42)
-    .attr('y', function (d, i) {
-      return precovidyScale(d);
-    })
-    .attr('dy', -3)
-    .attr('font-weight', 'bold')
-    .text(function (d) {
-      return d;
-    });
-};
+// let makePrecovidVis = function (precovidMap) {
+//   // Define dimensions of vis
+//   let margin = { top: 50, right: 30, bottom: 70, left: 40 },
+//     width = 360 - margin.left - margin.right;
+//   precovidheight = 500 - margin.top - margin.bottom;
 
-let makePrecovidVis = function (precovidMap) {
-  // Define dimensions of vis
-  let margin = { top: 50, right: 30, bottom: 70, left: 40 },
-    width = 360 - margin.left - margin.right;
-  precovidheight = 500 - margin.top - margin.bottom;
+//   // Make x scale
+//   precovidxScale = d3.scale
+//     .ordinal()
+//     .domain(precovidFields)
+//     .rangeRoundBands([0, width], 0.1);
 
-  // Make x scale
-  precovidxScale = d3.scale
-    .ordinal()
-    .domain(precovidFields)
-    .rangeRoundBands([0, width], 0.1);
+//   // Make y scale, the domain will be defined on bar update
+//   precovidyScale = d3.scale
+//     .linear()
+//     .range([precovidheight, 0])
+//     .domain(d3.extent([0, 100]));
 
-  // Make y scale, the domain will be defined on bar update
-  precovidyScale = d3.scale
-    .linear()
-    .range([precovidheight, 0])
-    .domain(d3.extent([0, 100]));
+//   precovidCanvas = d3
+//     .select('#precovidGraph')
+//     .append('svg')
+//     .attr('width', width + margin.left + margin.right)
+//     .attr('height', precovidheight + margin.top + margin.bottom)
+//     .append('g')
+//     .attr('transform', 'translate(' + margin.left + ',' + margin.top + ')');
 
-  precovidCanvas = d3
-    .select('#precovidGraph')
-    .append('svg')
-    .attr('width', width + margin.left + margin.right)
-    .attr('height', precovidheight + margin.top + margin.bottom)
-    .append('g')
-    .attr('transform', 'translate(' + margin.left + ',' + margin.top + ')');
+//   //Make x - axis and add to canvas
+//   let xAxis = d3.svg
+//     .axis()
+//     .scale(precovidxScale)
+//     .orient('bottom');
 
-  //Make x - axis and add to canvas
-  let xAxis = d3.svg
-    .axis()
-    .scale(precovidxScale)
-    .orient('bottom');
+//   precovidCanvas
+//     .append('g')
+//     .attr('class', 'x axis')
+//     .attr('transform', 'translate(0,' + precovidheight + ')')
+//     .call(xAxis)
+//     .append('text')
+//     .attr('x', 111)
+//     .attr('y', 50)
+//     .text('pre-COVID')
+//     .attr('font-size', '24px')
+//     .attr('font-weight', 'bold');
 
-  precovidCanvas
-    .append('g')
-    .attr('class', 'x axis')
-    .attr('transform', 'translate(0,' + precovidheight + ')')
-    .call(xAxis)
-    .append('text')
-    .attr('x', 111)
-    .attr('y', 50)
-    .text('pre-COVID')
-    .attr('font-size', '24px')
-    .attr('font-weight', 'bold');
+//   // Make y-axis and add to canvas
+//   let yAxis = d3.svg
+//     .axis()
+//     .scale(precovidyScale)
+//     .orient('left');
 
-  // Make y-axis and add to canvas
-  let yAxis = d3.svg
-    .axis()
-    .scale(precovidyScale)
-    .orient('left');
+//   let yAxisHandleForUpdate = precovidCanvas
+//     .append('g')
+//     .attr('class', 'y axis')
+//     .call(yAxis);
 
-  let yAxisHandleForUpdate = precovidCanvas
-    .append('g')
-    .attr('class', 'y axis')
-    .call(yAxis);
+//   yAxisHandleForUpdate
+//     .append('text')
+//     .attr('y', -35)
+//     .attr('x', 88)
+//     .attr('dy', '.71em')
+//     .style('text-anchor', 'end')
+//     .text('Percentage')
+//     .attr('font-weight', 'bold')
+//     .attr('font-size', '22px');
 
-  yAxisHandleForUpdate
-    .append('text')
-    .attr('y', -35)
-    .attr('x', 88)
-    .attr('dy', '.71em')
-    .style('text-anchor', 'end')
-    .text('Percentage')
-    .attr('font-weight', 'bold')
-    .attr('font-size', '22px');
-
-  updatePrecovidBars(precovidMap[dropdownValue]);
-};
+//   updatePrecovidBars(precovidMap[dropdownValue]);
+// };
 
 //---------------------------------------------------------------------------------------------------------
 // Load and munge data, then make the visualization.
@@ -306,5 +401,3 @@ let makePrecovidVis = function (precovidMap) {
 
 //   updatePostcovidBars(postcovidMap[dropdownValue]);
 // };
-
-
