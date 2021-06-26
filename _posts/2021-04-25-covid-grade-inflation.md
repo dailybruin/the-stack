@@ -2,7 +2,10 @@
 title: COVID Grade Inflation
 teaser: Text
 authors:
-  - 
+  - lindsey_parungo
+  - priya_kanneboyina
+  - samantha_low
+  - ziqing_luo
 
 key_takeaways:
   - Take aways here
