@@ -9,7 +9,8 @@ let dropdownValue = 'All Classes';
 
 // let changeDuration = 300;
 // let delayDuration = 100;
-let choice = 'A&O SCI 1 - BIANCHI, D.'
+let choice = 'A&O SCI 1 - BIANCHI, D.';
+loadCSVData(choice);
 
 d3
   .csv('/datasets/covid-grade-inflation/LGFALL19ZERO.csv', function (d) {
@@ -66,7 +67,12 @@ function loadCSVData(choice) {
       csv = csv.filter(function (row) {
         return row['CLASS'] == choice;
       });
-      console.log(csv)
+      csv_conv = Array(csv)
+      console.log(csv_conv)
+      console.log(Object.keys(csv_conv));
+      let precovidData = [csv_conv['A+'], csv['A']];
+      console.log(precovidData)
+      console.log('Inside csv function')
       resolve(csv);
     });
   });
@@ -76,6 +82,7 @@ function loadCSVData(choice) {
 
 let precovidData = [csv['A+'], csv['A']];
 console.log(precovidData)
+console.log('Made it to line 82')
 
 const data = {
   labels: labels,
