@@ -1,7 +1,6 @@
 ---
 title: COVID Grade Inflation
 teaser: Text
-git
 authors:
   - 
 
@@ -27,6 +26,7 @@ scripts:
   # - /js/posts/covid-grade-inflation/Main_Graph.js
   - /js/posts/covid-grade-inflation/MainChart.js
   - /js/posts/covid-grade-inflation/20-inflat-sum.js
+  - /js/posts/covid-grade-inflation/fall-inflat-deflat.js
 
 stylesheets:
   - //cdnjs.cloudflare.com/ajax/libs/c3/0.4.10/c3.min.css
@@ -99,22 +99,41 @@ test test
 # Top 20 Most Inflated and Deflated Classes
 
 <!-- Chart container -->
-<div id="inflation">
-  
+<div id="inflation"> 
   <!-- Drop-down -->
-<select id="chart-selector" name="chart-selector">
-    <option value="">Please Select An Option</option>
-    <option value ="20-inflat-sum">summer difference 2019/2020</option>
-    <option value ="fall diffference 2019/2020">1</option>
-    
-    
-  </select>
-  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
 
-
-    
+<select class>
+  <option value="summer">summer difference 2019/2020</option>
+  <option value="fall">fall difference 2019/2020 </option>
+</select>
+<div>
+    <div class= "summer GFG">
+      <div id="legend">
+        <div class="item physical">physical</div>
+        <div class="item life_science">life science</div>
+        <div class="item social">social</div>
+        <div class="item humanties">humanities</div>
+        <div class="item engineering">engineering</div>
+        <div class="item other">other</div>
+      </div>
+      <canvas id="inflationChart"></canvas>
+      <canvas id="deflationChart"></canvas>
+    </div>
+    <div class="fall GFG">
+      <canvas id = "fallinflatChart"></canvas>
+      <canvas id = "falldeflatChart"></canvas>
+    </div>           
 </div>
 
-<div class = "top20-inflation">
-  <canvas id="20-inflat-sum"></canvas>
 </div>
+
+
+
+
+
+
+
+
+
