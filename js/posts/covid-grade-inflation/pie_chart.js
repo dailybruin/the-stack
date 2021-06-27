@@ -1,12 +1,12 @@
 Highcharts.chart('container', {
     chart: {
-        plotBackgroundColor: 'transparent',
+        backgroundColor: 'rgba(255,255,255, 0.0)',
         plotBorderWidth: null,
         plotShadow: false,
         type: 'pie'
     },
     title: {
-        text: 'Percentage of Letter Grade and Pass/No Pass Before and After COVID'
+        text: 'Percentage of Letter Grade and Pass/No Pass Before and After Spring 2020'
     },
     tooltip: {
         pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
@@ -34,14 +34,14 @@ Highcharts.chart('container', {
         colorByPoint: true,
         data: [{
             name: 'Letter Grade',
-            y: 113849,
+            y: 153028,
             sliced: true,
-            selected: true
+            selected: false
         }, {
             name: 'Pass/No Pass',
-            y: 5527
+            y: 7781
         }],
-        center: [200, 120],
+        center: [400, 120],
         size: 250,
     },
     {
@@ -49,14 +49,14 @@ Highcharts.chart('container', {
         colorByPoint: true,
         data: [{
             name: 'Letter Grade',
-            y: 118521,
+            y: 156343,
             sliced: true,
-            selected: true
+            selected: false
         }, {
             name: 'Pass/No Pass',
-            y: 10093
+            y: 12780
         }],
-        center: [600, 120],
+        center: [900, 120],
         size: 250,
     }]
 });

@@ -75,9 +75,6 @@ test test
     <div id="my_dataviz"></div>
   </div>
 
-<script src="http://code.highcharts.com/highcharts.js"></script>
-
-<div id="container" style="height: 400px; width: 500"></div>
 
 
 <!-- Load d3.js
