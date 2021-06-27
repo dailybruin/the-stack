@@ -18,7 +18,7 @@ Highcharts.chart('container', {
     },
     plotOptions: {
         pie: {
-            allowPointSelect: false,
+            allowPointSelect: true,
             cursor: 'pointer',
             dataLabels: {
                 enabled: true,
