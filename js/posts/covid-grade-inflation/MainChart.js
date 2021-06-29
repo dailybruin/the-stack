@@ -3,6 +3,20 @@ let precovidFileName =
   '../../../../datasets/covid-grade-inflation/LGFALL19ZERO.csv';
 let postcovidFileName = '../../../../datasets/covid-grade-inflation/LGFALL20ZERO.csv';
 
+<<<<<<< HEAD
+dropdown.on('change', DropdownChange);
+
+d3.csv(precovidFileName, function (error, data) {
+  //precovid csv input
+  
+  data.forEach(function (d) {
+    let CLASS = d.CLASS;
+    precovidMap[CLASS] = [];
+    // { cerealName: [ bar1Val, bar2Val, ... ] }
+    precovidFields.forEach(function (field) {
+      precovidMap[CLASS].push(+d[field]);
+    });
+=======
 precovidMap = {};
 
 let dropdownValue = 'All Classes';
@@ -18,6 +32,7 @@ d3
   })
   .then(function (data) {
     initDropdown(data);
+>>>>>>> ecbae881d53664e5e8a7a77a111ad764e2dc3bd7
   });
 
 function initDropdown(classNames) {
@@ -289,6 +304,129 @@ var MainChart = new Chart(ctxMain, {
 
 //---------------------------------------------------------------------------------------------------------
 // Load and munge data, then make the visualization.
+<<<<<<< HEAD
+let updatePostcovidBars = function (data) {
+  let bars = postcovidCanvas.selectAll('.bar').data(data);
+  // Add bars for new data
+  postcovidCanvas
+    .selectAll('.bar')
+    .select('*')
+    .remove();
+
+  bars
+    .enter()
+    .append('rect')
+    .attr('class', 'bar');
+  bars
+    .transition()
+    .duration(changeDuration)
+    .ease('linear')
+    .attr('x', function (d, i) {
+      return postcovidxScale(postcovidFields[i]);
+    })
+    .attr('width', postcovidxScale.rangeBand())
+    .attr('y', function (d, i) {
+      return postcovidyScale(d);
+    })
+    .attr('height', function (d, i) {
+      return postcovidheight - postcovidyScale(d);
+    })
+    .text(function (d) {
+      return d;
+    });
+
+  let values = postcovidCanvas.selectAll('.text').data(data);
+  postcovidCanvas.selectAll('.label').remove();
+  values
+    .enter()
+    .append('text')
+    .attr('class', 'label')
+    .transition()
+    .delay(changeDuration)
+    .style('fill', 'black')
+    .attr('text-anchor', 'middle')
+    .attr('x', function (d, i) {
+      return postcovidxScale(postcovidFields[i]);
+    })
+    .attr('dx', 31)
+    .attr('y', function (d, i) {
+      return postcovidyScale(d);
+    })
+    .attr('dy', -3)
+    .attr('font-weight', 'bold')
+    .text(function (d) {
+      return d;
+    });
+};
+
+let makePostcovidVis = function (postcovidMap) {
+  // Define dimensions of vis
+  let margin = { top: 50, right: 30, bottom: 70, left: 40 },
+    width = 450 - margin.left - margin.right;
+  postcovidheight = 500 - margin.top - margin.bottom;
+
+  // Make x scale
+  postcovidxScale = d3.scale
+    .ordinal()
+    .domain(postcovidFields)
+    .rangeRoundBands([0, width], 0.1);
+
+  // Make y scale, the domain will be defined on bar update
+  postcovidyScale = d3.scale
+    .linear()
+    .range([postcovidheight, 0])
+    .domain(d3.extent([0, 100]));
+
+  postcovidCanvas = d3
+    .select('#postcovidGraph')
+    .append('svg')
+    .attr('width', width + margin.left + margin.right)
+    .attr('height', postcovidheight + margin.top + margin.bottom)
+    .append('g')
+    .attr('transform', 'translate(' + margin.left + ',' + margin.top + ')');
+
+  // Make x-axis and add to canvas
+  let xAxis = d3.svg
+    .axis()
+    .scale(postcovidxScale)
+    .orient('bottom');
+
+  postcovidCanvas
+    .append('g')
+    .attr('class', 'x axis')
+    .attr('transform', 'translate(0,' + postcovidheight + ')')
+    .call(xAxis)
+    .append('text')
+    .attr('x', 167)
+    .attr('y', 50)
+    .text('Post-COVID')
+    .attr('font-size', '24px')
+    .attr('font-weight', 'bold');
+
+  // Make y-axis and add to canvas
+  let yAxis = d3.svg
+    .axis()
+    .scale(postcovidScale)
+    .orient('left');
+
+  let yAxisHandleForUpdate = postcovidCanvas
+    .append('g')
+    .attr('class', 'y axis')
+    .call(yAxis);
+
+  /*yAxisHandleForUpdate
+    .append('text')
+    .attr('y', -25)
+    .attr('x', 60)
+    .attr('dy', '.71em')
+    .style('text-anchor', 'end')
+    .text('Percentage')
+    .attr('font-weight', 'bold')
+    .attr('font-size', '18px');*/
+
+  updatePostcovidBars(postcovidMap[dropdownValue]);
+};
+=======
 // let updatePostcovidBars = function (data) {
 //   let bars = postcovidCanvas.selectAll('.bar').data(data);
 //   // Add bars for new data
@@ -410,3 +548,4 @@ var MainChart = new Chart(ctxMain, {
 
 //   updatePostcovidBars(postcovidMap[dropdownValue]);
 // };
+>>>>>>> ecbae881d53664e5e8a7a77a111ad764e2dc3bd7
