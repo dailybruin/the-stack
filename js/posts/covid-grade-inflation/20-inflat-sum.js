@@ -29,47 +29,47 @@ function showHide() {
 });
 */
 
-$(document).ready(function() {
-  $("select").on('change', function() {
-      $(this).find("option:selected").each(function() {
-          var quarter = $(this).attr("value");
-          if (quarter) {
-              $(".GFG").not("." + quarter).hide();
-              $("." + quarter).show();
-             
-          } else {
-              $(".GFG").hide();
-              
-          }
+$(document).ready(function () {
+  $("select").on('change', function () {
+    $(this).find("option:selected").each(function () {
+      var quarter = $(this).attr("value");
+      if (quarter) {
+        $(".GFG").not("." + quarter).hide();
+        $("." + quarter).show();
 
-      });
+      } else {
+        $(".GFG").hide();
+
+      }
+
+    });
   }).change();
 });
 
 function makeCharts(classes) {
- 
-  var classesLabels = classes.map(function(d) {return d.class}).slice (0, 20);
-  var inflationData = classes.map(function(d) {return d.difference}).slice (0, 20);
+
+  var classesLabels = classes.map(function (d) { return d.class }).slice(0, 20);
+  var inflationData = classes.map(function (d) { return d.difference }).slice(0, 20);
 
 
-  var departmentColors = classes.map(function(d) {
-    console.log(d);
-    if (d.department === 'physical'){
+  var departmentColors = classes.map(function (d) {
+    //console.log(d);
+    if (d.department === 'physical') {
       return '#77b1d2';
-    } else if (d.department === 'life_science'){
+    } else if (d.department === 'life_science') {
       return '#A2F2A3';
-    } else if (d.department === 'social'){
+    } else if (d.department === 'social') {
       return '#FFE589';
-    } else if (d.department === 'humanities'){
+    } else if (d.department === 'humanities') {
       return '#B5BAF2';
-    } else if (d.department === 'engineering'){
+    } else if (d.department === 'engineering') {
       return '#E26C5D';
-    } else { 
+    } else {
       return '#CFCFC4';
     }
-  }).slice (0, 20);
+  }).slice(0, 20);
 
-  
+
   var ctx = document.getElementById("inflationChart");
   var inflationChart = new Chart(ctx, {
     type: 'horizontalBar',
@@ -89,15 +89,16 @@ function makeCharts(classes) {
       },
       scales: {
         xAxes: [
-          {ticks: {
-            min: -1,
-            max: 1.5, // Your absolute max value
-            
-          },
+          {
+            ticks: {
+              min: -1,
+              max: 1.5, // Your absolute max value
+
+            },
             scaleLabel: {
               display: true,
               labelString: 'Average GPA Point Difference',
-              fontSize: 16, 
+              fontSize: 16,
             }
           }
         ]
@@ -106,7 +107,7 @@ function makeCharts(classes) {
     data: {
       labels: classesLabels,
       datasets: [
-        { 
+        {
           data: inflationData,
           backgroundColor: departmentColors
         }
@@ -114,81 +115,81 @@ function makeCharts(classes) {
     }
   })
 
-    var classesLabels2 = classes.map(function(d) {return d.class}).slice (360,380);
-    var inflationData2 = classes.map(function(d) {return d.difference}).slice (360, 380);
-   
-    var departmentColors2 = classes.map(function(d) {
-      console.log(d);
-      if (d.department === 'physical'){
-        return '#77b1d2';
-      } else if (d.department === 'life_science'){
-        return '#A2F2A3';
-      } else if (d.department === 'social'){
-        return '#FFE589';
-      } else if (d.department === 'humanities'){
-        return '#B5BAF2';
-      } else if (d.department === 'engineering'){
-        return '#E26C5D';
-      } else { 
-        return '#CFCFC4';
-      }
-    }).slice(360, 380);
-      
-      var ctx2 = document.getElementById("deflationChart");
-      var deflationChart = new Chart(ctx2, {
-        type: 'horizontalBar',
-        options: {
-          maintainAspectRatio: true,
-          legend: {
-            display: false,
-          },
-          plugins: {
-            datalabels: {
-              display: false
-            }
-          },
-          title: {
-            display: true,
-            text: 'Top 20 Most Deflated Classes'
-          },
-          scales: {
-            xAxes: [
-              {ticks: {
-                min: -1,
-                max: 1.5, // Your absolute max value
-                
-              },
-                scaleLabel: {
-                  display: true,
-                  labelString: 'Average GPA Point Difference',
-                  fontSize: 16, 
-                }
-              }
-            ]
-          }
-        },
-        data: {
-          labels: classesLabels2,
-          datasets: [
-            { 
-              data: inflationData2,
-              backgroundColor: departmentColors2
-            }
-          ]
-        }
-      }
-      
-      
-      
-      )
+  var classesLabels2 = classes.map(function (d) { return d.class }).slice(360, 380);
+  var inflationData2 = classes.map(function (d) { return d.difference }).slice(360, 380);
+
+  var departmentColors2 = classes.map(function (d) {
+    //console.log(d);
+    if (d.department === 'physical') {
+      return '#77b1d2';
+    } else if (d.department === 'life_science') {
+      return '#A2F2A3';
+    } else if (d.department === 'social') {
+      return '#FFE589';
+    } else if (d.department === 'humanities') {
+      return '#B5BAF2';
+    } else if (d.department === 'engineering') {
+      return '#E26C5D';
+    } else {
+      return '#CFCFC4';
     }
-    
-   
+  }).slice(360, 380);
+
+  var ctx2 = document.getElementById("deflationChart");
+  var deflationChart = new Chart(ctx2, {
+    type: 'horizontalBar',
+    options: {
+      maintainAspectRatio: true,
+      legend: {
+        display: false,
+      },
+      plugins: {
+        datalabels: {
+          display: false
+        }
+      },
+      title: {
+        display: true,
+        text: 'Top 20 Most Deflated Classes'
+      },
+      scales: {
+        xAxes: [
+          {
+            ticks: {
+              min: -1,
+              max: 1.5, // Your absolute max value
+
+            },
+            scaleLabel: {
+              display: true,
+              labelString: 'Average GPA Point Difference',
+              fontSize: 16,
+            }
+          }
+        ]
+      }
+    },
+    data: {
+      labels: classesLabels2,
+      datasets: [
+        {
+          data: inflationData2,
+          backgroundColor: departmentColors2
+        }
+      ]
+    }
+  }
+
+
+
+  )
+}
+
+
 
 d3.csv('/datasets/covid-grade-inflation/inflat_rank_sum.csv')
-  .then(makeCharts); 
+  .then(makeCharts);
 
 
 
-  
-  
+

@@ -70,7 +70,21 @@ function loadCSVData(choice) {
       csv_conv = Array(csv)
       console.log(csv_conv)
       console.log(Object.keys(csv_conv));
-      let precovidData = [csv_conv['A+'], csv['A']];
+      let precovidData = [];
+      for (let i = 0; i < csv['0'].length; ++i) {
+        let value = csv['0'][i]
+        // if ((csv['0'][i] == 1) || (csv['0'][i] == 2) || (csv['0'][i] == 3) || (csv['0'][i] == 4) || (csv['0'][i] == 5) || (csv['0'][i] == 6) || (csv['0'][i] == 7) || (csv['0'][i] = 8) || (csv['0'][i] == 9) || (csv['0'][i] == '0')) {
+        //   value += csv[0][i];
+        //   console.log(value);
+        // }
+        // else if (csv[0][i] == ':') {
+        //   precovidData.push(value);
+        // }
+        console.log(value)
+        precovidData.push(value)
+      }
+
+      //let precovidData = [csv_conv['A+'], csv['A']];
       console.log(precovidData)
       console.log('Inside csv function')
       resolve(csv);
