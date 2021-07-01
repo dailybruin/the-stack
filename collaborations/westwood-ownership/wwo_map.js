@@ -95,7 +95,7 @@ var overlays = {
   '<p style="color: red; margin-top: 0px; margin-bottom: 0px;"><1 million loan</p>': L.layerGroup(
     group1
   ).addTo(mymap),
-  '<p style="color: darkorange; margin-top: 0px; margin-bottom: 0px;"$1 - 5 million loan</p>': L.layerGroup(
+  '<p style="color: darkorange; margin-top: 0px; margin-bottom: 0px;">$1 - 5 million loan</p>': L.layerGroup(
     group2
   ).addTo(mymap),
   '<p style="color: olive; margin-top: 0px; margin-bottom: 0px;">$5 - 10 million</p>': L.layerGroup(
