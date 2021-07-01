@@ -45,7 +45,6 @@ let group5 = [];
 let group6 = [];
 
 geojsonFeature.features.map(feature => {
-                    
   let marker = new L.marker([
     feature.geometry.coordinates[1],
     feature.geometry.coordinates[0],
@@ -93,10 +92,10 @@ geojsonFeature.features.map(feature => {
 });
 
 var overlays = {
-  '<p style="color: red; margin-top: 0px; margin-bottom: 0px;"> Value: <1 million loan</p>': L.layerGroup(
+  '<p style="color: red; margin-top: 0px; margin-bottom: 0px;"> <$1 million</p>': L.layerGroup(
     group1
   ).addTo(mymap),
-  '<p style="color: darkorange; margin-top: 0px; margin-bottom: 0px;">$1 - 5 million loan</p>': L.layerGroup(
+  '<p style="color: darkorange; margin-top: 0px; margin-bottom: 0px;">$1 - 5 million</p>': L.layerGroup(
     group2
   ).addTo(mymap),
   '<p style="color: olive; margin-top: 0px; margin-bottom: 0px;">$5 - 10 million</p>': L.layerGroup(
