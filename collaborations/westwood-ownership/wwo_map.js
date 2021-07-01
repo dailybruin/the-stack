@@ -52,6 +52,7 @@ geojsonFeature.features.map(feature => {
   ]);
   marker.desc =
     "<b style='font-size:14px;'>" +
+    'Owned by: ' +
     feature.properties.Ownership +
     '</b> <br>' +
     "<p style='font-size:14px; margin-top: 0px; margin-bottom: 0px; '>" +
@@ -80,7 +81,7 @@ geojsonFeature.features.map(feature => {
       group5.push(marker);
       break;
     case '> $100 million':
-      marker.setIcon(getIconByColor('purple'));
+      marker.setIcon(getIconByColor('violet'));
       group6.push(marker);
       break;
     default:
@@ -91,7 +92,8 @@ geojsonFeature.features.map(feature => {
   oms.addMarker(marker);
 });
 
-var overlays = {
+var groupedOverlays = {
+"Propery Values": {
   '<p style="color: red; margin-top: 0px; margin-bottom: 0px;"><1 million loan</p>': L.layerGroup(
     group1
   ).addTo(mymap),
@@ -107,9 +109,10 @@ var overlays = {
   '<p style="color: dodgerblue; margin-top: 0px; margin-bottom: 0px;">$30 - 100 million</p>': L.layerGroup(
     group5
   ).addTo(mymap),
-  '<p style="color: purple; margin-top: 0px; margin-bottom: 0px;">>$100 million</p>': L.layerGroup(
+  '<p style="color: violet; margin-top: 0px; margin-bottom: 0px;">>$100 million</p>': L.layerGroup(
     group6
   ).addTo(mymap),
+  }
 };
 
-L.control.layers(null, overlays, { collapsed: false }).addTo(mymap);
+L.control.groupedLayers(null, groupedOverlays, { collapsed: false }).addTo(mymap);
