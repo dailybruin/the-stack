@@ -92,27 +92,25 @@ geojsonFeature.features.map(feature => {
   oms.addMarker(marker);
 });
 
-var groupedOverlays = {
-"Propery Values": {
-  '<p style="color: red; margin-top: 0px; margin-bottom: 0px;"><1 million loan</p>': L.layerGroup(
+var overlays = {
+  '<p style="color: red; margin-top: 0px; margin-bottom: 0px;"> Value: <1 million loan</p>': L.layerGroup(
     group1
   ).addTo(mymap),
-  '<p style="color: darkorange; margin-top: 0px; margin-bottom: 0px;">$1 - 5 million loan</p>': L.layerGroup(
+  '<p style="color: darkorange; margin-top: 0px; margin-bottom: 0px;"> Value: $1 - 5 million loan</p>': L.layerGroup(
     group2
   ).addTo(mymap),
-  '<p style="color: olive; margin-top: 0px; margin-bottom: 0px;">$5 - 10 million</p>': L.layerGroup(
+  '<p style="color: olive; margin-top: 0px; margin-bottom: 0px;"> Value: $5 - 10 million</p>': L.layerGroup(
     group3
   ).addTo(mymap),
-  '<p style="color: green; margin-top: 0px; margin-bottom: 0px;">$10 - 30 million</p>': L.layerGroup(
+  '<p style="color: green; margin-top: 0px; margin-bottom: 0px;"> Value: $10 - 30 million</p>': L.layerGroup(
     group4
   ).addTo(mymap),
-  '<p style="color: dodgerblue; margin-top: 0px; margin-bottom: 0px;">$30 - 100 million</p>': L.layerGroup(
+  '<p style="color: dodgerblue; margin-top: 0px; margin-bottom: 0px;" Value: >$30 - 100 million</p>': L.layerGroup(
     group5
   ).addTo(mymap),
-  '<p style="color: violet; margin-top: 0px; margin-bottom: 0px;">>$100 million</p>': L.layerGroup(
+  '<p style="color: violet; margin-top: 0px; margin-bottom: 0px;"> Value: >$100 million</p>': L.layerGroup(
     group6
   ).addTo(mymap),
-  }
 };
 
-L.control.groupedLayers(null, groupedOverlays, { collapsed: false }).addTo(mymap);
+L.control.layers(null, overlays, { collapsed: false }).addTo(mymap);
