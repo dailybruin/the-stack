@@ -17,6 +17,8 @@ let postcovidFileName = '../../../../datasets/covid-grade-inflation/LGFALL20ZERO
 //     });
 // precovidMap = {};
 
+//file = d3.csv(precovidFileName);
+
 let dropdownValue = 'All Classes';
 
 // let changeDuration = 300;
@@ -73,28 +75,56 @@ const labels = [
   'F',
 ];
 
+// function loadCSVData(choice) {
+//   input = d3.csv(precovidFileName)
+//     .then(function (d) {
+//       $.csv.toObjects(input)
+//     })
+//     // csv = $.csv.toObjects(precovidFileName)
+//     .then(function (csv) {
+//       data = csv[choice]
+//       console.log(data)
+//     })
+// };
+
+
+// function loadCSVData(choice) {
+//   d3
+//     .csv(precovidFileName, function(d){
+//       csv.filter(function (row) {
+//         return csv = row['CLASS'] == choice;
+//       })
+//     })
+//     .then(function (csv) {
+//       preCovid = [csv.Aplus, csv.A, csv.Aminus]
+//       console.log(preCovid)
+//     })
+// }
+
 function loadCSVData(choice) {
   return new Promise(resolve => {
     d3.csv(precovidFileName).then(function (csv) {
       csv = csv.filter(function (row) {
         return row['CLASS'] == choice;
       });
-      csv_conv = Array(csv)
-      console.log(csv_conv)
-      console.log(Object.keys(csv_conv));
-      let precovidData = [];
-      for (let i = 0; i < csv['0'].length; ++i) {
-        let value = csv['0'][i]
-        // if ((csv['0'][i] == 1) || (csv['0'][i] == 2) || (csv['0'][i] == 3) || (csv['0'][i] == 4) || (csv['0'][i] == 5) || (csv['0'][i] == 6) || (csv['0'][i] == 7) || (csv['0'][i] = 8) || (csv['0'][i] == 9) || (csv['0'][i] == '0')) {
-        //   value += csv[0][i];
-        //   console.log(value);
-        // }
-        // else if (csv[0][i] == ':') {
-        //   precovidData.push(value);
-        // }
-        console.log(value)
-        precovidData.push(value)
-      }
+      // csv_conv = Array(csv)
+      console.log(csv)
+      console.log(Object.keys(csv));
+      console.log(Object.keys(csv[0]));
+      console.log(csv[0]["Aplus"])
+      let precovidData = [csv[0]["A+"], csv[0]["A"], csv[0]["A-"], csv[0]["B+"], csv[0]["B"], csv[0]["B-"], csv[0]["C+"], csv[0]["C"], csv[0]["C-"], csv[0]["D+"], csv[0]["D"], csv[0]["D-"], csv[0]["F"]];
+      // for (key in Object.keys(csv[0])) {
+      //   let value = csv[0][key]
+      //   // if ((csv['0'][i] == 1) || (csv['0'][i] == 2) || (csv['0'][i] == 3) || (csv['0'][i] == 4) || (csv['0'][i] == 5) || (csv['0'][i] == 6) || (csv['0'][i] == 7) || (csv['0'][i] = 8) || (csv['0'][i] == 9) || (csv['0'][i] == '0')) {
+      //   //   value += csv[0][i];
+      //   //   console.log(value);
+      //   // }
+      //   // else if (csv[0][i] == ':') {
+      //   //   precovidData.push(value);
+      //   // }
+      //   console.log(value)
+      //   precovidData.push(value)
+      // }
 
       //let precovidData = [csv_conv['A+'], csv['A']];
       console.log(precovidData)
@@ -106,9 +136,9 @@ function loadCSVData(choice) {
 
 
 
-let precovidData = [csv['A+'], csv['A']];
-console.log(precovidData)
-console.log('Made it to line 82')
+//let precovidData = [csv['A+'], csv['A']];
+//console.log(precovidData)
+//console.log('Made it to line 82')
 
 const data = {
   labels: labels,
