@@ -44,7 +44,7 @@ let group4 = [];
 let group5 = [];
 let group6 = [];
 
-wwo_geojsonFeature.features.map(feature => {
+geojsonFeature.features.map(feature => {
                     
   let marker = new L.marker([
     feature.geometry.coordinates[1],
@@ -92,7 +92,7 @@ wwo_geojsonFeature.features.map(feature => {
 });
 
 var overlays = {
-  '<p style="color: red; margin-top: 0px; margin-bottom: 0px;"< $1 million loan</p>': L.layerGroup(
+  '<p style="color: red; margin-top: 0px; margin-bottom: 0px;"><1 million loan</p>': L.layerGroup(
     group1
   ).addTo(mymap),
   '<p style="color: darkorange; margin-top: 0px; margin-bottom: 0px;"$1 - 5 million loan</p>': L.layerGroup(
@@ -104,10 +104,10 @@ var overlays = {
   '<p style="color: green; margin-top: 0px; margin-bottom: 0px;">$10 - 30 million</p>': L.layerGroup(
     group4
   ).addTo(mymap),
-  '<p style="color: dodgerblue; margin-top: 0px; margin-bottom: 0px;"$30 - 100 million</p>': L.layerGroup(
+  '<p style="color: dodgerblue; margin-top: 0px; margin-bottom: 0px;">$30 - 100 million</p>': L.layerGroup(
     group5
   ).addTo(mymap),
-  '<p style="color: purple; margin-top: 0px; margin-bottom: 0px;"> $100 million</p>': L.layerGroup(
+  '<p style="color: purple; margin-top: 0px; margin-bottom: 0px;">>$100 million</p>': L.layerGroup(
     group6
   ).addTo(mymap),
 };
