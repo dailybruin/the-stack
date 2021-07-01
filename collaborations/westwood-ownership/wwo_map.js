@@ -92,22 +92,22 @@ geojsonFeature.features.map(feature => {
 });
 
 var overlays = {
-  '<p style="color: red; margin-top: 0px; margin-bottom: 0px;"> <$1 million</p>': L.layerGroup(
+  "<p style='color: red; margin-top: 0px; margin-bottom: 0px; font-weight: bold;'> < $1 million</p>": L.layerGroup(
     group1
   ).addTo(mymap),
-  '<p style="color: darkorange; margin-top: 0px; margin-bottom: 0px;">$1 - 5 million</p>': L.layerGroup(
+  '<p style="color: #e0860f; margin-top: 0px; margin-bottom: 0px; font-weight: bold;">$1 - 5 million</p>': L.layerGroup(
     group2
   ).addTo(mymap),
-  '<p style="color: olive; margin-top: 0px; margin-bottom: 0px;">$5 - 10 million</p>': L.layerGroup(
+  '<p style="color: #b8b919; margin-top: 0px; margin-bottom: 0px; font-weight: bold;">$5 - 10 million</p>': L.layerGroup(
     group3
   ).addTo(mymap),
-  '<p style="color: green; margin-top: 0px; margin-bottom: 0px;">$10 - 30 million</p>': L.layerGroup(
+  '<p style="color: #0dad34; margin-top: 0px; margin-bottom: 0px; font-weight: bold;">$10 - 30 million</p>': L.layerGroup(
     group4
   ).addTo(mymap),
-  '<p style="color: dodgerblue; margin-top: 0px; margin-bottom: 0px;">$30 - 100 million</p>': L.layerGroup(
+  '<p style="color: #637cdd; margin-top: 0px; margin-bottom: 0px; font-weight: bold;">$30 - 100 million</p>': L.layerGroup(
     group5
   ).addTo(mymap),
-  '<p style="color: violet; margin-top: 0px; margin-bottom: 0px;">>$100 million</p>': L.layerGroup(
+  '<p style="color: #9e08a5; margin-top: 0px; margin-bottom: 0px; font-weight: bold;">> $100 million</p>': L.layerGroup(
     group6
   ).addTo(mymap),
 };
