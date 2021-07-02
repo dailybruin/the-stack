@@ -102,111 +102,81 @@ const labels = [
 // }
 
 function loadCSVData(choice) {
-  return new Promise(resolve => {
-    d3.csv(precovidFileName).then(function (csv) {
+  //return new Promise(resolve => {
+  d3.csv(precovidFileName)
+    .then(function (csv) {
       csv = csv.filter(function (row) {
         return row['CLASS'] == choice;
       });
-      // csv_conv = Array(csv)
-      console.log(csv)
-      console.log(Object.keys(csv));
-      console.log(Object.keys(csv[0]));
-      console.log(csv[0]["Aplus"])
       let precovidData = [csv[0]["A+"], csv[0]["A"], csv[0]["A-"], csv[0]["B+"], csv[0]["B"], csv[0]["B-"], csv[0]["C+"], csv[0]["C"], csv[0]["C-"], csv[0]["D+"], csv[0]["D"], csv[0]["D-"], csv[0]["F"]];
-      // for (key in Object.keys(csv[0])) {
-      //   let value = csv[0][key]
-      //   // if ((csv['0'][i] == 1) || (csv['0'][i] == 2) || (csv['0'][i] == 3) || (csv['0'][i] == 4) || (csv['0'][i] == 5) || (csv['0'][i] == 6) || (csv['0'][i] == 7) || (csv['0'][i] = 8) || (csv['0'][i] == 9) || (csv['0'][i] == '0')) {
-      //   //   value += csv[0][i];
-      //   //   console.log(value);
-      //   // }
-      //   // else if (csv[0][i] == ':') {
-      //   //   precovidData.push(value);
-      //   // }
-      //   console.log(value)
-      //   precovidData.push(value)
-      // }
+      // console.log(precovidData)
+      // return precovidData;
+      //resolve(csv);
+      const Chartdata = {
+        labels: labels,
+        datasets: [
+          {
+            label: 'Grades During Online Learning',
+            data: precovidData,
+            backgroundColor: [
+              'purple',
+              'purple',
+              'purple',
+              'purple',
+              'purple',
+              'purple',
+              'purple',
+              'purple',
+              'purple',
+              'purple',
+              'purple',
+              'purple',
+              'purple',
+            ],
+            // borderColor: [
+            //     'purple',
+            // ],
+            borderWidth: 1,
+            index: 1,
+          },
+          {
+            label: 'Grades During On-Campus Learning',
+            data: [80, 56, 43, 100, 25, 12, 25, 100, 10, 8, 5, 12, 32],
+            backgroundColor: [
+              'teal',
+              'teal',
+              'teal',
+              'teal',
+              'teal',
+              'teal',
+              'teal',
+              'teal',
+              'teal',
+              'teal',
+              'teal',
+              'teal',
+              'teal',
+            ],
+            index: 2,
+          },
+        ],
+      };
 
-      //let precovidData = [csv_conv['A+'], csv['A']];
-      console.log(precovidData)
-      console.log('Inside csv function')
-      resolve(csv);
-    });
-  });
+      var ctxMain = document.getElementById('main-chart').getContext('2d');
+      var MainChart = new Chart(ctxMain, {
+        type: 'bar',
+        data: Chartdata,
+        options: {
+          scales: {
+            y: {
+              beginAtZero: true,
+            },
+          },
+          animation: false,
+        },
+      });
+    })
 }
-
-
-
-//let precovidData = [csv['A+'], csv['A']];
-//console.log(precovidData)
-//console.log('Made it to line 82')
-
-const data = {
-  labels: labels,
-  datasets: [
-    {
-      label: 'Grades During Online Learning',
-      data: [65, 59, 12, 150, 98, 14, 18, 23, 10, 8, 5, 13, 8],
-      backgroundColor: [
-        'purple',
-        'purple',
-        'purple',
-        'purple',
-        'purple',
-        'purple',
-        'purple',
-        'purple',
-        'purple',
-        'purple',
-        'purple',
-        'purple',
-        'purple',
-      ],
-      // borderColor: [
-      //     'purple',
-      // ],
-      borderWidth: 1,
-      index: 1,
-    },
-    {
-      label: 'Grades During On-Campus Learning',
-      data: [80, 56, 43, 100, 25, 12, 25, 100, 10, 8, 5, 12, 32],
-      backgroundColor: [
-        'teal',
-        'teal',
-        'teal',
-        'teal',
-        'teal',
-        'teal',
-        'teal',
-        'teal',
-        'teal',
-        'teal',
-        'teal',
-        'teal',
-        'teal',
-      ],
-      // borderColor: [
-      //     'teal',
-      // ],
-      index: 2,
-    },
-  ],
-};
-
-var ctxMain = document.getElementById('main-chart').getContext('2d');
-var MainChart = new Chart(ctxMain, {
-  type: 'bar',
-  data: data,
-  options: {
-    scales: {
-      y: {
-        beginAtZero: true,
-      },
-    },
-    animation: false,
-  },
-});
-
 // let updatePrecovidBars = function (data) {
 //   let bars = precovidCanvas.selectAll('.bar').data(data);
 //   // Add bars for new data

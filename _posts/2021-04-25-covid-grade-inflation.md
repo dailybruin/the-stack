@@ -46,8 +46,6 @@ Test text
 
 <script src="https://d3js.org/d3.v3.min.js"></script>
 
-<script src="http://code.jquery.com/jquery-3.3.1.slim.js" ></script>
-
 <select id="dropdown-menu"></select>
 
 <div class = "main_graph">
