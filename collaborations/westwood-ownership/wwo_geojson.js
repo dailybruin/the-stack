@@ -533,7 +533,7 @@ let geojsonFeature = {
       type: 'Feature',
       properties: {
         Address: '10975 Weyburn Ave ',
-        Ownership: 'Four Corners Investment Co ',
+        Ownership: 'Four BJD LLC',
         Value: '$4,026,206 ',
         Longitude: '-118.447796',
         Latitude: '34.06237',
@@ -545,7 +545,7 @@ let geojsonFeature = {
       type: 'Feature',
       properties: {
         Address: '10965 Weyburn Ave ',
-        Ownership: 'Four Corners Investment Co ',
+        Ownership: 'Four BJD LLC',
         Value: '$1,577,530 ',
         Longitude: '-118.447628',
         Latitude: '34.06244',
@@ -809,7 +809,7 @@ let geojsonFeature = {
       type: 'Feature',
       properties: {
         Address: '10913 Weyburn Ave ',
-        Ownership: 'Pick Benjamin & Claudette Trs ',
+        Ownership: 'BLP West II LLC',
         Value: '$1,223,075 ',
         Longitude: '-118.446054',
         Latitude: '34.062774',
@@ -990,7 +990,7 @@ let geojsonFeature = {
       type: 'Feature',
       properties: {
         Address: '1100 Glendon Ave ',
-        Ownership: 'Trizec Westwood Center LLC ',
+        Ownership: 'De Park Avenue 1100 LLC',
         Value: '$247,164,029 ',
         Longitude: '-118.443952',
         Latitude: '34.060686',
@@ -1026,7 +1026,7 @@ let geojsonFeature = {
       type: 'Feature',
       properties: {
         Address: '947 Tiverton Ave ',
-        Ownership: 'Vintage Westwood LLC ',
+        Ownership: 'Westwood Property Owner LLC',
         Value: '$73,821,114 ',
         Longitude: '-118.44306',
         Latitude: '34.062528',
@@ -1277,9 +1277,9 @@ let geojsonFeature = {
     {
       type: 'Feature',
       properties: {
-        Address: '10951 WILSHIRE BLVD',
-        Ownership: 'WILSHIRE GAYLEY LLC',
-        Value: '$0 ',
+        Address: '10951 Wilshire Blvd',
+        Ownership: 'Wilshire Gayley LLC',
+        Value: '$6,138,311',
         Longitude: '-118.445767',
         Latitude: '34.058667',
         Value_Range: '< $1 million',
