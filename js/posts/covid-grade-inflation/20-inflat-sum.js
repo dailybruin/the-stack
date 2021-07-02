@@ -167,39 +167,55 @@ function makeCharts(classes) {
             }
           }
         ]
-      },
-      data: {
-        labels: classesLabels2,
-        datasets: [
-          {
-            data: inflationData2,
-            backgroundColor: departmentColors2
-          }
-        ]
       }
+    },
+    data: {
+      labels: classesLabels2,
+      datasets: [
+        {
+          data: inflationData2,
+          backgroundColor: departmentColors2
+        }
+      ]
     }
-  }) 
+  }
 
 
 
+  )
 
-if (window.matchMedia('(max-width: 480px)').matches) {
-  deflationChart.canvas.style = 'max-height:400px';
-  deflationChart.options.maintainAspectRatio = false;
-  //console.log(deflationChart);
+  if (window.matchMedia('(max-width: 480px)').matches) {
+    inflationChart.canvas.style = 'max-height:400px';
+    inflationChart.options.maintainAspectRatio = false;
+    //console.log(inflationChart);
+    inflationChart.update();
+  };
+  if (window.matchMedia('(max-width: 480px)').matches) {
+    deflationChart.canvas.style = 'max-height:400px';
+    deflationChart.options.maintainAspectRatio = false;
+    //console.log(deflationChart);
+  
+    deflationChart.update();
+  };
 
-  deflationChart.update();
 }
-if (window.matchMedia('(max-width: 480px)').matches) {
-  inflationChart.canvas.style = 'max-height:400px';
-  inflationChart.options.maintainAspectRatio = false;
-  //console.log(inflationChart);
-  inflationChart.update();
-}
 
-}
+
+
 d3.csv('/datasets/covid-grade-inflation/inflat_rank_sum.csv')
   .then(makeCharts);
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
