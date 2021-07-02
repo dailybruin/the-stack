@@ -46,6 +46,8 @@ Test text
 
 <script src="https://d3js.org/d3.v3.min.js"></script>
 
+<script src="http://code.jquery.com/jquery-3.3.1.slim.js" ></script>
+
 <select id="dropdown-menu"></select>
 
 <div class = "main_graph">
@@ -74,6 +76,8 @@ test test
 <div class="my_dataviz">
     <div id="my_dataviz"></div>
   </div>
+
+
 
 <!-- Load d3.js
 <script src="https://d3js.org/d3.v6.js"></script>
