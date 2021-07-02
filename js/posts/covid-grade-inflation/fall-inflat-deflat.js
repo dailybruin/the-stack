@@ -129,10 +129,21 @@ function makeCharts(classes2) {
             ]
           }
         }
-        
-        
-        
+          
         )
+        if (window.matchMedia('(max-width: 480px)').matches) {
+            falldeflatChart.canvas.style = 'max-height:400px';
+            falldeflatChart.options.maintainAspectRatio = false;
+            //console.log(falldeflatChart);
+        
+            falldeflatChart.update();
+          }
+          if (window.matchMedia('(max-width: 480px)').matches) {
+            fallinflatChart.canvas.style = 'max-height:400px';
+            fallinflatChart.options.maintainAspectRatio = false;
+            //console.log(inflationChart);
+            fallinflatChart.update();
+          }
       }
       
      

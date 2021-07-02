@@ -178,10 +178,23 @@ function makeCharts(classes) {
         }
       }
       
-      
-      
       )
+      if (window.matchMedia('(max-width: 480px)').matches) {
+        deflationChart.canvas.style = 'max-height:400px';
+        deflationChart.options.maintainAspectRatio = false;
+        //console.log(deflationChart);
+    
+        deflationChart.update();
+      }
+      if (window.matchMedia('(max-width: 480px)').matches) {
+        inflationChart.canvas.style = 'max-height:400px';
+        inflationChart.options.maintainAspectRatio = false;
+        //console.log(inflationChart);
+        inflationChart.update();
+      }
+    
     }
+
     
    
 

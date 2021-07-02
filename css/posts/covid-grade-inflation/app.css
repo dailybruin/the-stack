@@ -1,5 +1,32 @@
 @media only screen and (min-width: 1000px) {
-
+    #legend {
+        display: flex;
+        justify-content: flex-end;
+        padding: 0 px 20px 20px;
+        font-size: 12px;
+      }
+      #legend .item {
+        line-height: 20px;
+        padding: 0 20px 0 20px;
+      }
+      #legend .item.physical {
+        border-left: 20px solid #77b1d2;
+      }
+      #legend .item.life_science {
+        border-left: 20px solid #A2F2A3; 
+      }
+      #legend .item.social {
+        border-left: 20px solid #FFE589;
+      }
+      #legend .item.humanities {
+        border-left: 20px solid #B5BAF2;
+      }
+      #legend .item.engineering {
+        border-left: 20px solid #E26C5D;
+      }
+      #legend .item.other {
+        border-left: 20px solid #CFCFC4;
+      }
     .dropdown-menu {
         height: 50px;
         margin-bottom: 40px;
