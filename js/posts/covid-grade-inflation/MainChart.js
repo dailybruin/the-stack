@@ -1,28 +1,9 @@
 // Load and munge data, then make the visualization.
 let precovidFileName =
-  '../../../../datasets/covid-grade-inflation/LGFALL19ZERO.csv';
-let postcovidFileName = '../../../../datasets/covid-grade-inflation/LGFALL20ZERO.csv';
-
-//dropdown.on('change', DropdownChange);
-
-// d3.csv(precovidFileName, function (error, data) {
-//   //precovid csv input
-
-//   data.forEach(function (d) {
-//     let CLASS = d.CLASS;
-//     precovidMap[CLASS] = [];
-//     // { cerealName: [ bar1Val, bar2Val, ... ] }
-//     precovidFields.forEach(function (field) {
-//       precovidMap[CLASS].push(+d[field]);
-//     });
-// precovidMap = {};
-
-//file = d3.csv(precovidFileName);
+  '../../../../datasets/covid-grade-inflation/Fall_data.csv';
 
 let dropdownValue = 'All Classes';
 
-// let changeDuration = 300;
-// let delayDuration = 100;
 let choice = 'A&O SCI 1 - BIANCHI, D.';
 loadCSVData(choice);
 
@@ -39,7 +20,6 @@ function initDropdown(classNames) {
     .select('#dropdown-menu')
     .on('change', function () {
       dropdownValue = d3.select(this).property('value');
-      //MainChart.update();
       let choice = $('#dropdown-menu option:selected').text();
       loadCSVData(choice)
     })
@@ -52,11 +32,9 @@ function initDropdown(classNames) {
     })
     .text(function (d) {
       return d.CLASS;
-      //[0].toUpperCase() + d.CLASS.slice(1, d.length); // capitalize 1st letter
     });
 }
 
-//let choice = $('#dropdown-menu option: selected').text();
 console.log(choice);
 
 const labels = [
@@ -75,32 +53,6 @@ const labels = [
   'F',
 ];
 
-// function loadCSVData(choice) {
-//   input = d3.csv(precovidFileName)
-//     .then(function (d) {
-//       $.csv.toObjects(input)
-//     })
-//     // csv = $.csv.toObjects(precovidFileName)
-//     .then(function (csv) {
-//       data = csv[choice]
-//       console.log(data)
-//     })
-// };
-
-
-// function loadCSVData(choice) {
-//   d3
-//     .csv(precovidFileName, function(d){
-//       csv.filter(function (row) {
-//         return csv = row['CLASS'] == choice;
-//       })
-//     })
-//     .then(function (csv) {
-//       preCovid = [csv.Aplus, csv.A, csv.Aminus]
-//       console.log(preCovid)
-//     })
-// }
-
 function loadCSVData(choice) {
   //return new Promise(resolve => {
   d3.csv(precovidFileName)
@@ -108,8 +60,10 @@ function loadCSVData(choice) {
       csv = csv.filter(function (row) {
         return row['CLASS'] == choice;
       });
-      let precovidData = [csv[0]["A+"], csv[0]["A"], csv[0]["A-"], csv[0]["B+"], csv[0]["B"], csv[0]["B-"], csv[0]["C+"], csv[0]["C"], csv[0]["C-"], csv[0]["D+"], csv[0]["D"], csv[0]["D-"], csv[0]["F"]];
-      // console.log(precovidData)
+      let precovidData = [csv[0]["A+_x"], csv[0]["A_x"], csv[0]["A-_x"], csv[0]["B+_x"], csv[0]["B_x"], csv[0]["B-_x"], csv[0]["C+_x"], csv[0]["C_x"], csv[0]["C-_x"], csv[0]["D+_x"], csv[0]["D_x"], csv[0]["D-_x"], csv[0]["F_x"]];
+      let postcovidData = [csv[0]["A+_y"], csv[0]["A_y"], csv[0]["A-_y"], csv[0]["B+_y"], csv[0]["B_y"], csv[0]["B-_y"], csv[0]["C+_y"], csv[0]["C_y"], csv[0]["C-_y"], csv[0]["D+_y"], csv[0]["D_y"], csv[0]["D-_y"], csv[0]["F_y"]];
+      console.log(precovidData)
+      console.log(postcovidData)
       // return precovidData;
       //resolve(csv);
       const Chartdata = {
@@ -141,7 +95,7 @@ function loadCSVData(choice) {
           },
           {
             label: 'Grades During On-Campus Learning',
-            data: [80, 56, 43, 100, 25, 12, 25, 100, 10, 8, 5, 12, 32],
+            data: postcovidData,
             backgroundColor: [
               'teal',
               'teal',
@@ -177,248 +131,3 @@ function loadCSVData(choice) {
       });
     })
 }
-// let updatePrecovidBars = function (data) {
-//   let bars = precovidCanvas.selectAll('.bar').data(data);
-//   // Add bars for new data
-//   precovidCanvas
-//     .selectAll('.bar')
-//     .select('*')
-//     .remove();
-
-//   bars
-//     .enter()
-//     .append('rect')
-//     .attr('class', 'bar');
-//   bars
-//     .transition()
-//     .duration(changeDuration)
-//     .ease('linear')
-//     .attr('x', function (d, i) {
-//       return precovidxScale(precovidFields[i]);
-//     })
-//     .attr('width', precovidxScale.rangeBand())
-//     .attr('y', function (d, i) {
-//       return precovidyScale(d);
-//     })
-//     .attr('height', function (d, i) {
-//       return precovidheight - precovidyScale(d);
-//     })
-//     .text(function (d) {
-//       return d;
-//     });
-
-//   let values = precovidCanvas.selectAll('.text').data(data);
-//   precovidCanvas.selectAll('.label').remove();
-//   values
-//     .enter()
-//     .append('text')
-//     .attr('class', 'label')
-//     .transition()
-//     .delay(changeDuration)
-//     .style('fill', 'black')
-//     .attr('text-anchor', 'middle')
-//     .attr('x', function (d, i) {
-//       return precovidxScale(precovidFields[i]);
-//     })
-//     .attr('dx', 42)
-//     .attr('y', function (d, i) {
-//       return precovidyScale(d);
-//     })
-//     .attr('dy', -3)
-//     .attr('font-weight', 'bold')
-//     .text(function (d) {
-//       return d;
-//     });
-// };
-
-// let makePrecovidVis = function (precovidMap) {
-//   // Define dimensions of vis
-//   let margin = { top: 50, right: 30, bottom: 70, left: 40 },
-//     width = 360 - margin.left - margin.right;
-//   precovidheight = 500 - margin.top - margin.bottom;
-
-//   // Make x scale
-//   precovidxScale = d3.scale
-//     .ordinal()
-//     .domain(precovidFields)
-//     .rangeRoundBands([0, width], 0.1);
-
-//   // Make y scale, the domain will be defined on bar update
-//   precovidyScale = d3.scale
-//     .linear()
-//     .range([precovidheight, 0])
-//     .domain(d3.extent([0, 100]));
-
-//   precovidCanvas = d3
-//     .select('#precovidGraph')
-//     .append('svg')
-//     .attr('width', width + margin.left + margin.right)
-//     .attr('height', precovidheight + margin.top + margin.bottom)
-//     .append('g')
-//     .attr('transform', 'translate(' + margin.left + ',' + margin.top + ')');
-
-//   //Make x - axis and add to canvas
-//   let xAxis = d3.svg
-//     .axis()
-//     .scale(precovidxScale)
-//     .orient('bottom');
-
-//   precovidCanvas
-//     .append('g')
-//     .attr('class', 'x axis')
-//     .attr('transform', 'translate(0,' + precovidheight + ')')
-//     .call(xAxis)
-//     .append('text')
-//     .attr('x', 111)
-//     .attr('y', 50)
-//     .text('pre-COVID')
-//     .attr('font-size', '24px')
-//     .attr('font-weight', 'bold');
-
-//   // Make y-axis and add to canvas
-//   let yAxis = d3.svg
-//     .axis()
-//     .scale(precovidyScale)
-//     .orient('left');
-
-//   let yAxisHandleForUpdate = precovidCanvas
-//     .append('g')
-//     .attr('class', 'y axis')
-//     .call(yAxis);
-
-//   yAxisHandleForUpdate
-//     .append('text')
-//     .attr('y', -35)
-//     .attr('x', 88)
-//     .attr('dy', '.71em')
-//     .style('text-anchor', 'end')
-//     .text('Percentage')
-//     .attr('font-weight', 'bold')
-//     .attr('font-size', '22px');
-
-//   updatePrecovidBars(precovidMap[dropdownValue]);
-// };
-
-//---------------------------------------------------------------------------------------------------------
-// Load and munge data, then make the visualization.
-// let updatePostcovidBars = function (data) {
-//   let bars = postcovidCanvas.selectAll('.bar').data(data);
-//   // Add bars for new data
-//   postcovidCanvas
-//     .selectAll('.bar')
-//     .select('*')
-//     .remove();
-
-//   bars
-//     .enter()
-//     .append('rect')
-//     .attr('class', 'bar');
-//   bars
-//     .transition()
-//     .duration(changeDuration)
-//     .ease('linear')
-//     .attr('x', function (d, i) {
-//       return postcovidxScale(postcovidFields[i]);
-//     })
-//     .attr('width', postcovidxScale.rangeBand())
-//     .attr('y', function (d, i) {
-//       return postcovidyScale(d);
-//     })
-//     .attr('height', function (d, i) {
-//       return postcovidheight - postcovidyScale(d);
-//     })
-//     .text(function (d) {
-//       return d;
-//     });
-
-//   let values = postcovidCanvas.selectAll('.text').data(data);
-//   postcovidCanvas.selectAll('.label').remove();
-//   values
-//     .enter()
-//     .append('text')
-//     .attr('class', 'label')
-//     .transition()
-//     .delay(changeDuration)
-//     .style('fill', 'black')
-//     .attr('text-anchor', 'middle')
-//     .attr('x', function (d, i) {
-//       return postcovidxScale(postcovidFields[i]);
-//     })
-//     .attr('dx', 31)
-//     .attr('y', function (d, i) {
-//       return postcovidyScale(d);
-//     })
-//     .attr('dy', -3)
-//     .attr('font-weight', 'bold')
-//     .text(function (d) {
-//       return d;
-//     });
-// };
-
-// let makePostcovidVis = function (postcovidMap) {
-//   // Define dimensions of vis
-//   let margin = { top: 50, right: 30, bottom: 70, left: 40 },
-//     width = 450 - margin.left - margin.right;
-//   postcovidheight = 500 - margin.top - margin.bottom;
-
-//   // Make x scale
-//   postcovidxScale = d3.scale
-//     .ordinal()
-//     .domain(postcovidFields)
-//     .rangeRoundBands([0, width], 0.1);
-
-//   // Make y scale, the domain will be defined on bar update
-//   postcovidyScale = d3.scale
-//     .linear()
-//     .range([postcovidheight, 0])
-//     .domain(d3.extent([0, 100]));
-
-//   postcovidCanvas = d3
-//     .select('#postcovidGraph')
-//     .append('svg')
-//     .attr('width', width + margin.left + margin.right)
-//     .attr('height', postcovidheight + margin.top + margin.bottom)
-//     .append('g')
-//     .attr('transform', 'translate(' + margin.left + ',' + margin.top + ')');
-
-//   // Make x-axis and add to canvas
-//   let xAxis = d3.svg
-//     .axis()
-//     .scale(postcovidxScale)
-//     .orient('bottom');
-
-//   postcovidCanvas
-//     .append('g')
-//     .attr('class', 'x axis')
-//     .attr('transform', 'translate(0,' + postcovidheight + ')')
-//     .call(xAxis)
-//     .append('text')
-//     .attr('x', 167)
-//     .attr('y', 50)
-//     .text('Post-COVID')
-//     .attr('font-size', '24px')
-//     .attr('font-weight', 'bold');
-
-//   // Make y-axis and add to canvas
-//   // let yAxis = d3.svg
-//   //   .axis()
-//   //   .scale(postcovidScale)
-//   //   .orient('left');
-
-//   let yAxisHandleForUpdate = postcovidCanvas
-//     .append('g')
-//     .attr('class', 'y axis')
-//     .call(yAxis);
-
-//   /*yAxisHandleForUpdate
-//     .append('text')
-//     .attr('y', -25)
-//     .attr('x', 60)
-//     .attr('dy', '.71em')
-//     .style('text-anchor', 'end')
-//     .text('Percentage')
-//     .attr('font-weight', 'bold')
-//     .attr('font-size', '18px');*/
-
-//   updatePostcovidBars(postcovidMap[dropdownValue]);
-

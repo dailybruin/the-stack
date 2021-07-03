@@ -31,18 +31,6 @@
         height: 50px;
         margin-bottom: 40px;
     }
-    .ucb-chart {
-        float: right;
-        width: 50%;
-    }
-    .ucla-chart {
-        width: 50%;
-        margin: auto;
-    }
-
-    #timeline-chart {
-        width: 70%;
-    }
 
     .chart-container {
         width: 70%;
