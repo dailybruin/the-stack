@@ -1,6 +1,6 @@
 ---
 layout: page
-permalink: /docs/workflow/
+permalink: /docs/beginner/workflow/
 ---
 
 ## Workflow
