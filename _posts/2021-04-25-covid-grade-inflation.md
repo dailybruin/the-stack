@@ -70,6 +70,9 @@ test test
 
 <script src="/js/posts/covid-grade-inflation/pie_chart.js"></script>
 
+
+
+
   <div class="dropdown-menu"></div>
 <div class="my_dataviz">
     <div id="my_dataviz"></div>
