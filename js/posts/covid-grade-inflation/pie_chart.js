@@ -6,7 +6,7 @@ Highcharts.chart('container', {
         type: 'pie'
     },
     title: {
-        text: 'Percentage of Letter Grade and Pass/No Pass Before and After Spring 2020'
+        text: 'Percentage of Letter Grade and Pass/No Pass for Summer and Fall Before and After Remote Learning'
     },
     tooltip: {
         pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
@@ -41,9 +41,9 @@ Highcharts.chart('container', {
             name: 'Pass/No Pass',
             y: 7781
         }],
-        center: [400, 120],
-        size: 250,
-    },
+        center: ['25%','20%'],
+        //size: 100,
+    }, 
     {
         name: 'Percentage',
         colorByPoint: true,
@@ -56,7 +56,9 @@ Highcharts.chart('container', {
             name: 'Pass/No Pass',
             y: 12780
         }],
-        center: [900, 120],
-        size: 250,
+        center: ['75%','20%'],
+        //size: 100,
     }]
+
 });
+
