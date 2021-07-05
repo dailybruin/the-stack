@@ -43,7 +43,7 @@ Highcharts.chart('container', {
         }],
         center: [400, 120],
         size: 250,
-    },
+    }, 
     {
         name: 'Percentage',
         colorByPoint: true,
@@ -58,5 +58,27 @@ Highcharts.chart('container', {
         }],
         center: [900, 120],
         size: 250,
-    }]
+    }],
+    responsive: {
+        rules: [{
+            condition: {
+                maxWidth: 500
+            },
+            chartOptions: {
+                legend: {
+                    align: 'center',
+                    verticalAlign: 'bottom',
+                    layout: 'horizontal'
+                }
+            }
+        }]
+    }
+});
+
+document.getElementById('small').addEventListener('click', () => {
+    chart.setSize(400, 300);
+});
+
+document.getElementById('large').addEventListener('click', () => {
+    chart.setSize(600, 300);
 });
