@@ -58,9 +58,9 @@ Test text
 
 test test
 
-<div class = "main graph">
+<!-- <div class = "main graph">
   <canvas id = "main-chart"></canvas>
-</div>
+</div> -->
 
 <figure class="highcharts-figure">
     <div id="container"></div>
@@ -70,10 +70,10 @@ test test
 
 <script src="/js/posts/covid-grade-inflation/pie_chart.js"></script>
 
-  <div class="dropdown-menu"></div>
+  <!-- <div class="dropdown-menu"></div>
 <div class="my_dataviz">
     <div id="my_dataviz"></div>
-  </div>
+  </div> -->
 
 
 
@@ -95,11 +95,11 @@ test test
     <div id="postcovidGraph"></div>
   </div>  -->
 
-  <div class="dropdown-menu"></div>
+  <!-- <div class="dropdown-menu"></div>
 <div class="graph-container">
     <div id="precovidGraph"></div>
     <div id="postcovidGraph"></div>
-  </div>
+  </div> -->
 
 # Top 20 Most Inflated and Deflated Classes
 

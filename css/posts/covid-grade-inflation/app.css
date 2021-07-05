@@ -5,11 +5,11 @@
         padding: 0 px 20px 20px;
         font-size: 12px;
       }
-      #legend .item {
+      #legend.item {
         line-height: 20px;
         padding: 0 20px 0 20px;
       }
-      #legend .item.physical {
+      #legend.item.physical {
         border-left: 20px solid #77b1d2;
       }
       #legend .item.life_science {

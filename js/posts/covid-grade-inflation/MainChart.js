@@ -115,7 +115,7 @@ function loadCSVData(choice) {
           },
         ],
       };
-
+      //MainChart.update()
       var ctxMain = document.getElementById('main-chart').getContext('2d');
       var MainChart = new Chart(ctxMain, {
         type: 'bar',
@@ -131,3 +131,4 @@ function loadCSVData(choice) {
       });
     })
 }
+
