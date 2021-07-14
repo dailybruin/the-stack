@@ -2,7 +2,8 @@ function makeCharts(classes2) {
 
   var classesLabels3 = classes2.map(function (d) { return d.class }).slice(0, 21);
   var inflationData3 = classes2.map(function (d) { return d.difference }).slice(0, 21);
-
+  //var deptLabels3 = classes2.map(function (d) { return d.department }).slice(0, 21);
+  //console.log(deptLabels3)
 
   var departmentColors3 = classes2.map(function (d) {
     //console.log(d);
@@ -39,6 +40,17 @@ function makeCharts(classes2) {
         display: true,
         text: 'Top 20 Most Inflated Classes'
       },
+      tooltips: {
+        intersect: false,
+        callbacks: {
+          label: function (tooltipItem, data) {
+            return tooltipItem.xLabel.toLocaleString('en-US', {
+              style: 'percent',
+              maximumFractionDigits: 2,
+            });
+          },
+        },
+      },
       scales: {
         xAxes: [
           {
@@ -61,7 +73,8 @@ function makeCharts(classes2) {
       datasets: [
         {
           data: inflationData3,
-          backgroundColor: departmentColors3
+          backgroundColor: departmentColors3,
+          //label: deptLabels3
         }
       ]
     }
@@ -104,6 +117,17 @@ function makeCharts(classes2) {
         display: true,
         text: 'Top 20 Most Deflated Classes'
       },
+      tooltips: {
+        intersect: false,
+        callbacks: {
+          label: function (tooltipItem, data) {
+            return tooltipItem.xLabel.toLocaleString('en-US', {
+              style: 'percent',
+              maximumFractionDigits: 2,
+            });
+          },
+        },
+      },
       scales: {
         xAxes: [
           {
@@ -144,12 +168,6 @@ function makeCharts(classes2) {
     falldeflatChart.update();
   };
 
-  if (window.matchMedia('(max-width: 480px)').matches) {
-    fallinflatChart.canvas.style = 'max-height:400px';
-    fallinflatChart.options.maintainAspectRatio = false;
-    //console.log(inflationChart);
-    fallinflatChart.update();
-  };
 
 
 

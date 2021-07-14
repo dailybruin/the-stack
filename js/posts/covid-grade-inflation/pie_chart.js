@@ -25,12 +25,12 @@ Highcharts.chart('container', {
                 format: '<b>{point.name}</b>'
             }
         }
-    }, 
+    },
     credits: {
         enabled: false
     },
     series: [{
-        name: 'Percentage',
+        name: '',
         colorByPoint: true,
         data: [{
             name: 'Letter Grade',
@@ -41,11 +41,11 @@ Highcharts.chart('container', {
             name: 'Pass/No Pass',
             y: 7781
         }],
-        center: ['25%','20%'],
+        center: ['25%', '20%'],
         //size: 100,
-    }, 
+    },
     {
-        name: 'Percentage',
+        name: '',
         colorByPoint: true,
         data: [{
             name: 'Letter Grade',
@@ -56,7 +56,7 @@ Highcharts.chart('container', {
             name: 'Pass/No Pass',
             y: 12780
         }],
-        center: ['75%','20%'],
+        center: ['75%', '20%'],
         //size: 100,
     }]
 

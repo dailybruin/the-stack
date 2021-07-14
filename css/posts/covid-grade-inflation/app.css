@@ -1,3 +1,6 @@
+/* GENERAL SETTINGS */
+
+/* DESKTOP SETTINGS */
 @media only screen and (min-width: 1000px) {
     #legend {
         display: flex;
@@ -38,15 +41,12 @@
         margin-bottom: 40px;
     }
 
-    .bubbleChart {
-        width: 50%;
-        height: 75%;
+    .main_graph {
+        width: 70%;
+        /* height: 75%; */
     }
-
-    .graphic {
-        width: 50%;
-        margin-top: 40px;
-        float: right;
+    .highcharts-figure{
+      width: 70%;
     }
 
     .chart-descrip {
@@ -60,6 +60,38 @@
     .small-line-break {
         height: 50px;
     }
+}
+/* MOBILE SETTINGS */
+@media only screen and (max-width: 1000px) {
+  #legend {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0 px 10px 10px;
+    font-size: 12px;
+    overflow: auto;
+  }
+  #legend.item {
+    line-height: 10px;
+    padding: 0 10px 0 10px;
+  }
+  #legend.item.physical {
+    border-left: 10px solid #77b1d2;
+  }
+  #legend .item.life_science {
+    border-left: 10px solid #A2F2A3; 
+  }
+  #legend .item.social {
+    border-left: 10px solid #FFE589;
+  }
+  #legend .item.humanities {
+    border-left: 10px solid #B5BAF2;
+  }
+  #legend .item.engineering {
+    border-left: 10px solid #E26C5D;
+  }
+  #legend .item.other {
+    border-left: 10px solid #CFCFC4;
+  }
 }
 
 

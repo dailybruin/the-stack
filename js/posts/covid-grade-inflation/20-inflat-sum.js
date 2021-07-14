@@ -87,6 +87,17 @@ function makeCharts(classes) {
         display: true,
         text: 'Top 20 Most Inflated Classes'
       },
+      tooltips: {
+        intersect: false,
+        callbacks: {
+          label: function (tooltipItem, data) {
+            return tooltipItem.xLabel.toLocaleString('en-US', {
+              style: 'percent',
+              maximumFractionDigits: 2,
+            });
+          },
+        },
+      },
       scales: {
         xAxes: [
           {
@@ -152,6 +163,17 @@ function makeCharts(classes) {
         display: true,
         text: 'Top 20 Most Deflated Classes'
       },
+      tooltips: {
+        intersect: false,
+        callbacks: {
+          label: function (tooltipItem, data) {
+            return tooltipItem.xLabel.toLocaleString('en-US', {
+              style: 'percent',
+              maximumFractionDigits: 2,
+            });
+          },
+        },
+      },
       scales: {
         xAxes: [
           {
@@ -194,7 +216,7 @@ function makeCharts(classes) {
     deflationChart.canvas.style = 'max-height:400px';
     deflationChart.options.maintainAspectRatio = false;
     //console.log(deflationChart);
-  
+
     deflationChart.update();
   };
 

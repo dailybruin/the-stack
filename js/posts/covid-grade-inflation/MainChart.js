@@ -138,10 +138,10 @@ var MainChart = new Chart(ctxMain, {
 
     tooltips: {
       intersect: false,
-      displayColors: false,
+      //displayColors: false,
       callbacks: {
         label: function (tooltipItem, data) {
-          return tooltipItem.yLabel.toLocaleString('en-US', {
+          return tooltipItem.index + tooltipItem.yLabel.toLocaleString('en-US', {
             style: 'percent',
             maximumFractionDigits: 2,
           });
@@ -150,3 +150,9 @@ var MainChart = new Chart(ctxMain, {
     },
   },
 });
+
+if (window.matchMedia('(max-width: 480px)').matches) {
+  MainChart.canvas.style = 'max-height:400px';
+  MainChart.options.maintainAspectRatio = false;
+  MainChart.update();
+};

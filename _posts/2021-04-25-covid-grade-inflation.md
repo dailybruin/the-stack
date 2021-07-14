@@ -46,6 +46,8 @@ Test text
 
 <script src="https://d3js.org/d3.v3.min.js"></script>
 
+# Grade Inflation by Class
+
 <select id="dropdown-menu"></select>
 
 <div class = "main_graph">
@@ -68,9 +70,7 @@ test test
 
 # Top 20 Most Inflated and Deflated Classes
 
-<!-- Chart container -->
 <div id="inflation"> 
-  <!-- Drop-down -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js"></script>
 <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
 
@@ -81,7 +81,7 @@ test test
 <div>
     <div class= "summer GFG">
       <div id="legend">
-        <div class="item physical">physical</div>
+        <div class="item physical">physical science</div>
         <div class="item life_science">life science</div>
         <div class="item social">social</div>
         <div class="item humanities">humanities</div>
