@@ -75,22 +75,10 @@ test test
 <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
 
 <select class>
-  <option value="summer">summer difference 2019/2020</option>
   <option value="fall">fall difference 2019/2020 </option>
+  <option value="summer">summer difference 2019/2020</option>
 </select>
 <div>
-    <div class= "summer GFG">
-      <div id="legend">
-        <div class="item physical">physical science</div>
-        <div class="item life_science">life science</div>
-        <div class="item social">social</div>
-        <div class="item humanities">humanities</div>
-        <div class="item engineering">engineering</div>
-        <div class="item other">other</div>
-      </div>
-      <canvas id="inflationChart"></canvas>
-      <canvas id="deflationChart"></canvas>
-    </div>
     <div class="fall GFG">
      <div id="legend">
         <div class="item physical">physical</div>
@@ -100,9 +88,29 @@ test test
         <div class="item engineering">engineering</div>
         <div class="item other">other</div>
       </div>
-      <canvas id = "fallinflatChart"></canvas>
-      <canvas id = "falldeflatChart"></canvas>
-    </div>           
+      <div class = "infChart">
+        <canvas  id="fallinflatChart"></canvas>
+      </div>
+      <div class = "defChart">
+        <canvas id="falldeflatChart"></canvas>
+      </div>
+    </div>   
+    <div class= "summer GFG">
+      <div id="legend">
+        <div class="item physical">physical science</div>
+        <div class="item life_science">life science</div>
+        <div class="item social">social</div>
+        <div class="item humanities">humanities</div>
+        <div class="item engineering">engineering</div>
+        <div class="item other">other</div>
+      </div>
+      <div class = "infChart">
+        <canvas  id="inflationChart"></canvas>
+      </div>
+      <div class = "defChart">
+        <canvas id="deflationChart"></canvas>
+      </div>
+    </div>        
 </div>
 
 </div>

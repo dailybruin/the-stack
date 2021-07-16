@@ -141,7 +141,7 @@ var MainChart = new Chart(ctxMain, {
       //displayColors: false,
       callbacks: {
         label: function (tooltipItem, data) {
-          return tooltipItem.index + tooltipItem.yLabel.toLocaleString('en-US', {
+          return tooltipItem.yLabel.toLocaleString('en-US', {
             style: 'percent',
             maximumFractionDigits: 2,
           });

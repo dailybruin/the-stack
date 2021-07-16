@@ -35,6 +35,16 @@
         margin-bottom: 40px;
     }
 
+    .defChart {
+      width: 50%;
+      float: left;
+    }
+
+    .infChart {
+      width: 50%;
+      float: right;
+    }
+
     .chart-container {
         width: 70%;
         margin: auto;
@@ -42,7 +52,8 @@
     }
 
     .main_graph {
-        width: 70%;
+        width: 80%;
+        margin: auto;
         /* height: 75%; */
     }
     .highcharts-figure{
