@@ -5,30 +5,36 @@
     #legend {
         display: flex;
         justify-content: flex-end;
-        padding: 0 px 20px 20px;
+        padding: 0px 20px 20px;
         font-size: 12px;
       }
-      #legend.item {
+      #legend .item {
         line-height: 20px;
         padding: 0 20px 0 20px;
       }
-      #legend.item.physical {
+      #legend .item.physical {
         border-left: 20px solid #77b1d2;
+        padding: 0px 10px 0px 2px;
       }
       #legend .item.life_science {
         border-left: 20px solid #A2F2A3; 
+        padding: 0px 10px 0px 2px;
       }
       #legend .item.social {
         border-left: 20px solid #FFE589;
+        padding: 0px 10px 0px 2px;
       }
       #legend .item.humanities {
         border-left: 20px solid #B5BAF2;
+        padding: 0px 10px 0px 2px;
       }
       #legend .item.engineering {
         border-left: 20px solid #E26C5D;
+        padding: 0px 10px 0px 2px;
       }
       #legend .item.other {
         border-left: 20px solid #CFCFC4;
+        padding: 0px 10px 0px 2px;
       }
     .dropdown-menu {
         height: 50px;
@@ -37,11 +43,13 @@
 
     .defChart {
       width: 50%;
+      height:150%;
       float: left;
     }
 
     .infChart {
       width: 50%;
+      height: 150%;
       float: right;
     }
 
@@ -77,32 +85,41 @@
   #legend {
     display: flex;
     justify-content: flex-end;
-    padding: 0 px 10px 10px;
-    font-size: 12px;
+    padding: 0px 9px 9px;
+    font-size: 9px;
     overflow: auto;
   }
-  #legend.item {
-    line-height: 10px;
-    padding: 0 10px 0 10px;
+  #legend .item {
+    line-height: 9 px;
+    padding: 0 9px 0 9px;
   }
-  #legend.item.physical {
-    border-left: 10px solid #77b1d2;
+  #legend .item.physical {
+    border-left: 9px solid #77b1d2;
+    padding: 0px 4px 0px 1px;
   }
   #legend .item.life_science {
-    border-left: 10px solid #A2F2A3; 
+    border-left: 9px solid #A2F2A3; 
+    padding: 0px 4px 0px 1px;
   }
   #legend .item.social {
-    border-left: 10px solid #FFE589;
+    border-left: 9px solid #FFE589;
+    padding: 0px 4px 0px 1px;
   }
   #legend .item.humanities {
-    border-left: 10px solid #B5BAF2;
+    border-left: 9px solid #B5BAF2;
+    padding: 0px 4px 0px 1px;
   }
   #legend .item.engineering {
-    border-left: 10px solid #E26C5D;
+    border-left: 9px solid #E26C5D;
+    padding: 0px 4px 0px 1px;
   }
   #legend .item.other {
-    border-left: 10px solid #CFCFC4;
+    border-left: 9px solid #CFCFC4;
+    padding: 0px 4px 0px 1px;
   }
+ 
+
+ 
 }
 
 

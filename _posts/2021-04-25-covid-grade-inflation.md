@@ -105,7 +105,7 @@ test test
         <div class="item other">other</div>
       </div>
       <div class = "infChart">
-        <canvas  id="inflationChart"></canvas>
+        <canvas id="inflationChart"></canvas>
       </div>
       <div class = "defChart">
         <canvas id="deflationChart"></canvas>
