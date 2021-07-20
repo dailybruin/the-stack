@@ -42,7 +42,7 @@ Highcharts.chart('container', {
             y: 7781
         }],
         center: ['25%','50%'],
-        size: "70%",
+        size: "50%",
     }, 
     {
         name: 'percentage',
@@ -57,7 +57,7 @@ Highcharts.chart('container', {
             y: 12780
         }],
         center: ['75%','50%'],
-        size: "70%",
+        size: "50%",
     }]
 
 });
