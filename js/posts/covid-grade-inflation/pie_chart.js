@@ -25,12 +25,12 @@ Highcharts.chart('container', {
                 format: '<b>{point.name}</b>'
             }
         }
-    }, 
+    },
     credits: {
         enabled: false
     },
     series: [{
-        name: 'Percentage',
+        name: '',
         colorByPoint: true,
         data: [{
             name: 'Letter Grade',
@@ -45,7 +45,7 @@ Highcharts.chart('container', {
         size: "50%",
     }, 
     {
-        name: 'Percentage',
+        name: '',
         colorByPoint: true,
         data: [{
             name: 'Letter Grade',

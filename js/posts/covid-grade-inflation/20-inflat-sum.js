@@ -29,6 +29,12 @@ function showHide() {
 });
 */
 
+
+
+
+
+
+
 $(document).ready(function () {
   $("select").on('change', function () {
     $(this).find("option:selected").each(function () {
@@ -46,8 +52,11 @@ $(document).ready(function () {
   }).change();
 });
 
+
+
 function makeCharts(classes) {
 
+ 
   var classesLabels = classes.map(function (d) { return d.class }).slice(0, 20);
   var inflationData = classes.map(function (d) { return d.difference }).slice(0, 20);
 
@@ -85,20 +94,31 @@ function makeCharts(classes) {
       },
       title: {
         display: true,
-        text: 'Top 20 Most Inflated Classes'
+        text: '20 Most Inflated Classes'
+      },
+      tooltips: {
+        intersect: false,
+        callbacks: {
+          label: function (tooltipItem, data) {
+            return tooltipItem.xLabel.toLocaleString('en-US', {
+              //style: 'percent',
+              maximumFractionDigits: 2,
+            });
+          },
+        },
       },
       scales: {
         xAxes: [
           {
             ticks: {
-              min: -1,
+              min: 0,
               max: 1.5, // Your absolute max value
 
             },
             scaleLabel: {
               display: true,
               labelString: 'Average GPA Point Difference',
-              fontSize: 16,
+              fontSize: 10,
             }
           }
         ]
@@ -114,9 +134,24 @@ function makeCharts(classes) {
       ]
     }
   })
+  
+  classesMobile= ['STATS 100A', 'ANTHRO 132', 'ECON106G','MGMT 120A','MATH 110A','LING 185A','INTL DV 130','EPS SCI 15','CHEM 14C', 'PHYSICS 5A', 'ANTHRO 153', 'COM SCI 31','INTL DV 1', 'COM SCI 180', 'MGMT 1A', 'MATH 33B', 'HIST 97M' ,'ECON 106F' ,'COMM 114', 'ITALIAN 1']
 
-  var classesLabels2 = classes.map(function (d) { return d.class }).slice(360, 380);
-  var inflationData2 = classes.map(function (d) { return d.difference }).slice(360, 380);
+  isMobile = true;
+  //console.log(screen.width)
+  if (screen.width > 1000) {
+      isMobile = false;
+  };
+  
+  if (isMobile) {
+      classesLabels = classesMobile;
+      ratio = 1;
+
+  }
+
+
+  var classesLabels2 = classes.map(function (d) { return d.class }).slice(344, 364);
+  var inflationData2 = classes.map(function (d) { return d.difference }).slice(344, 364);
 
   var departmentColors2 = classes.map(function (d) {
     //console.log(d);
@@ -133,7 +168,36 @@ function makeCharts(classes) {
     } else {
       return '#CFCFC4';
     }
-  }).slice(360, 380);
+  }).slice(344, 364);
+
+  classesMobile2= [
+    'DIS STD M148', 
+    'MECH&AE C296A' ,
+    'MUSC 3' ,
+    'GEOG M149', 
+    'WL ARTS 33', 
+    'FILM TV 122D', 
+    'EDUC 129', 
+    'SPAN 150',  
+    'MECH&AE 156A',
+    'MGMT 286', 
+    'STATS 100B',
+    'PHYSCI 5', 
+    'ARCH&UD 401', 
+    'ASL 8',
+    'LING 120C',
+    'URBN PL 121', 
+    'MGMT 142A' , 
+    'FILM TV 178', 
+    'PSYCH 10',
+    'PHYSCI 136',
+  ]
+
+  if (isMobile) {
+    classesLabels2= classesMobile2;
+    
+    ratio = 1;
+}
 
   var ctx2 = document.getElementById("deflationChart");
   var deflationChart = new Chart(ctx2, {
@@ -150,20 +214,31 @@ function makeCharts(classes) {
       },
       title: {
         display: true,
-        text: 'Top 20 Most Deflated Classes'
+        text: '20 Most Deflated Classes'
+      },
+      tooltips: {
+        intersect: false,
+        callbacks: {
+          label: function (tooltipItem, data) {
+            return tooltipItem.xLabel.toLocaleString('en-US', {
+              //style: 'percent',
+              maximumFractionDigits: 2,
+            });
+          },
+        },
       },
       scales: {
         xAxes: [
           {
             ticks: {
               min: -1,
-              max: 1.5, // Your absolute max value
+              max: 0, // Your absolute max value
 
             },
             scaleLabel: {
               display: true,
               labelString: 'Average GPA Point Difference',
-              fontSize: 16,
+              fontSize: 10,
             }
           }
         ]
@@ -180,24 +255,20 @@ function makeCharts(classes) {
     }
   }
 
-
-
   )
-
   if (window.matchMedia('(max-width: 480px)').matches) {
     inflationChart.canvas.style = 'max-height:400px';
     inflationChart.options.maintainAspectRatio = false;
-    //console.log(inflationChart);
-    inflationChart.update();
-  };
+    console.log(inflationChart);
+
+  }
   if (window.matchMedia('(max-width: 480px)').matches) {
     deflationChart.canvas.style = 'max-height:400px';
     deflationChart.options.maintainAspectRatio = false;
-    //console.log(deflationChart);
-  
-    deflationChart.update();
-  };
+    console.log(deflationChart);
 
+  }
+ 
 }
 
 
@@ -206,14 +277,25 @@ d3.csv('/datasets/covid-grade-inflation/inflat_rank_sum.csv')
   .then(makeCharts);
 
 
+ /*  Let classesMobile = 
+
+
+  isMobile = true;
+  //console.log(screen.width)
+  if (screen.width > 1000) {
+      isMobile = false;
+  };
+  
+  if (isMobile) {
+      labelList = classesMobile;
+      ratio = 1;
+  }
+  */
 
 
 
 
-
-
-
-
+ 
 
 
 

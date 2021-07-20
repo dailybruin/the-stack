@@ -4,11 +4,8 @@ let precovidFileName =
 
 let dropdownValue = 'All Classes';
 
-let choice = 'A&O SCI 1 - BIANCHI, D.';
-loadCSVData(choice);
-
 d3
-  .csv('/datasets/covid-grade-inflation/LGFALL19ZERO.csv', function (d) {
+  .csv('/datasets/covid-grade-inflation/Fall_data.csv', function (d) {
     return { CLASS: d.CLASS };
   })
   .then(function (data) {
@@ -21,7 +18,7 @@ function initDropdown(classNames) {
     .on('change', function () {
       dropdownValue = d3.select(this).property('value');
       let choice = $('#dropdown-menu option:selected').text();
-      loadCSVData(choice)
+      loadCSVData(choice, MainChart)
     })
     .selectAll('option')
     .data(classNames)
@@ -34,8 +31,6 @@ function initDropdown(classNames) {
       return d.CLASS;
     });
 }
-
-console.log(choice);
 
 const labels = [
   'A+',
@@ -53,7 +48,7 @@ const labels = [
   'F',
 ];
 
-function loadCSVData(choice) {
+function loadCSVData(choice, chart) {
   //return new Promise(resolve => {
   d3.csv(precovidFileName)
     .then(function (csv) {
@@ -66,68 +61,98 @@ function loadCSVData(choice) {
       console.log(postcovidData)
       // return precovidData;
       //resolve(csv);
-      const Chartdata = {
-        labels: labels,
-        datasets: [
-          {
-            label: 'Grades During Online Learning',
-            data: precovidData,
-            backgroundColor: [
-              'purple',
-              'purple',
-              'purple',
-              'purple',
-              'purple',
-              'purple',
-              'purple',
-              'purple',
-              'purple',
-              'purple',
-              'purple',
-              'purple',
-              'purple',
-            ],
-            // borderColor: [
-            //     'purple',
-            // ],
-            borderWidth: 1,
-            index: 1,
-          },
-          {
-            label: 'Grades During On-Campus Learning',
-            data: postcovidData,
-            backgroundColor: [
-              'teal',
-              'teal',
-              'teal',
-              'teal',
-              'teal',
-              'teal',
-              'teal',
-              'teal',
-              'teal',
-              'teal',
-              'teal',
-              'teal',
-              'teal',
-            ],
-            index: 2,
-          },
-        ],
-      };
-
-      var ctxMain = document.getElementById('main-chart').getContext('2d');
-      var MainChart = new Chart(ctxMain, {
-        type: 'bar',
-        data: Chartdata,
-        options: {
-          scales: {
-            y: {
-              beginAtZero: true,
-            },
-          },
-          animation: false,
+      const NewChartdata = [
+        {
+          label: 'Grades During Online Learning',
+          data: precovidData,
+          backgroundColor: 'purple'
         },
-      });
+        {
+          label: 'Grades During On-Campus Learning',
+          data: postcovidData,
+          backgroundColor: 'teal'
+        },
+      ];
+      chart.data.datasets = NewChartdata
+      chart.update()
+
     })
 }
+
+const Chartdata = {
+  labels: labels,
+  datasets: [
+    {
+      label: 'Grades During Online Learning',
+      data: [0.10309517, 0.35152027, 0.1702966, 0.12183674, 0.10739977,
+        0.04862543, 0.03022326, 0.03110901, 0.01371677, 0.00432116,
+        0.00677147, 0.00206124, 0.0090231],
+      backgroundColor: 'purple'
+    },
+    {
+      label: 'Grades During On-Campus Learning',
+      data: [0.16148227, 0.45117517, 0.14633401, 0.09202175, 0.0709398,
+        0.02804866, 0.01419788, 0.01627219, 0.00614856, 0.00228092,
+        0.00309081, 0.00103302, 0.00697498],
+      backgroundColor: 'teal'
+    },
+  ],
+};
+
+var ctxMain = document.getElementById('main-chart').getContext('2d');
+var MainChart = new Chart(ctxMain, {
+  type: 'bar',
+  data: Chartdata,
+  options: {
+    plugins: {
+      datalabels: {
+        display: false
+      }
+    },
+    scales: {
+      yAxes: [
+        {
+          scaleLabel: {
+            display: true,
+            labelString: 'Percentage of Grades',
+          },
+          beginAtZero: true,
+        },
+      ],
+      xAxes: [
+        {
+          scaleLabel: {
+            display: true,
+            labelString: 'Letter Grade',
+          },
+        },
+      ],
+    },
+    title: {
+      display: true,
+      text: 'Percentage of Each Letter Grade by Class',
+      fontSize: 16,
+    },
+
+    animation: false,
+
+    tooltips: {
+      intersect: false,
+      //displayColors: false,
+      callbacks: {
+        label: function (tooltipItem, data) {
+          return tooltipItem.yLabel.toLocaleString('en-US', {
+            style: 'percent',
+            maximumFractionDigits: 2,
+          });
+        },
+      },
+    },
+  },
+});
+
+if (window.matchMedia('(max-width: 480px)').matches) {
+  MainChart.canvas.style = 'max-height:400px';
+  MainChart.options.maintainAspectRatio = false;
+  MainChart.update();
+};
