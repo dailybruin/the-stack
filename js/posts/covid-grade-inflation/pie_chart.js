@@ -41,8 +41,8 @@ Highcharts.chart('container', {
             name: 'Pass/No Pass',
             y: 7781
         }],
-        center: ['25%','20%'],
-        //size: 100,
+        center: ['25%','50%'],
+        size: "50%",
     }, 
     {
         name: 'Percentage',
@@ -56,8 +56,8 @@ Highcharts.chart('container', {
             name: 'Pass/No Pass',
             y: 12780
         }],
-        center: ['75%','20%'],
-        //size: 100,
+        center: ['75%','50%'],
+        size: "50%",
     }]
 
 });
