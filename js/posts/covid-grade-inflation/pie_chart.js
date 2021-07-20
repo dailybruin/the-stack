@@ -30,7 +30,7 @@ Highcharts.chart('container', {
         enabled: false
     },
     series: [{
-        name: '',
+        name: 'percentage',
         colorByPoint: true,
         data: [{
             name: 'Letter Grade',
@@ -42,10 +42,10 @@ Highcharts.chart('container', {
             y: 7781
         }],
         center: ['25%','50%'],
-        size: "50%",
+        size: "70%",
     }, 
     {
-        name: '',
+        name: 'percentage',
         colorByPoint: true,
         data: [{
             name: 'Letter Grade',
@@ -57,7 +57,7 @@ Highcharts.chart('container', {
             y: 12780
         }],
         center: ['75%','50%'],
-        size: "50%",
+        size: "70%",
     }]
 
 });
