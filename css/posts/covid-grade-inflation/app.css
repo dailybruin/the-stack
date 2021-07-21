@@ -135,6 +135,24 @@
   width: 95%;
   height: 45%;
 }
+#falldeflatChart{
+  width: 95%;
+  height: 400px;
+}
+
+#fallinflatChart{
+  width: 95%;
+  height: 400px;
+}
+
+#inflationChart{
+  width: 95%;
+  height: 400px;
+}
+#deflationChart{
+  width: 95%;
+  height: 400px;
+}
 }
 
 

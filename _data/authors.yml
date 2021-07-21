@@ -321,12 +321,6 @@ catherine_hu:
   email: chu@media.ucla.edu
   mug: no
   bio: Catherine Hu is a first-year Computer Science student who enjoys writing, hiking and reading.
-lindsey_parungo:
-  name: Lindsey Parungo
-  title: Stack Developer
-  email: lparungo@media.ucla.edu
-  mug: no
-  bio: Lindsey Parungo is a second year student who loves running and hippos.
 cameron_bian:
   name: Cameron Bian
   title: Stack Developer
@@ -346,14 +340,14 @@ ziqing_luo:
   title: Stack Developer
   email: zluo@media.ucla.edu
   mug: yes
-  bio: Ziqing Luo is a third-year Applied Math and Statistics student who is passionate about dancing and enjoys eating desserts.
+  bio: Ziqing Luo is a fourth-year applied math and statistics student who is passionate about dancing and enjoys eating desserts.
   github: luoziqing99
 samantha_low:
   name: Samantha Low
   title: Stack Developer
   email: slow@media.ucla.edu
   mug: yes
-  bio: Samantha Low is a first-year environmental science major who enjoys hiking, exploring new places, and taking pcitures of food in her free time. 
+  bio: Samantha Low is a second-year environmental science student who enjoys hiking, exploring new places, and taking pcitures of food in her free time. 
 ananya_garg:
   name: Ananya Garg
   title: Stack Developer
@@ -364,14 +358,14 @@ ananya_garg:
 mansa_krishna:
   name: Mansa Krishna
   title: Stack Developer
-  bio: Mansa is a third-year, majoring in Applied Mathematics with a Specialization in Computing, and minoring in History. She is a coffee-for-breakfast advocate with a deep, abiding love for historical fiction.
+  bio: Mansa is a third-year applied mathematics with a specialization in computing student, who is also minoring in history. She is a coffee-for-breakfast advocate with a deep, abiding love for historical fiction.
   mug: Yes
   email: mkrishna@media.ucla.edu
   github: mansakrishna23
 lindsey_parungo:
   name: Lindsey Parungo
-  title: Stack Developer
-  bio: Lindsey is a second-year Financial and Actuarial Mathematics major. She enjoys running, spending time with her dog, and looking to expand her hippo memorabilia collection.
+  title: Assistant Graphics Interactives Editor
+  bio: Lindsey is a third-year financial and actuarial mathematics student. She enjoys running, spending time with her dog, and looking to expand her hippo memorabilia collection.
   mug: Yes
   email: lparungo@media.ucla.edu
   github: Lindseyp314
@@ -413,3 +407,9 @@ derrick_chau:
   bio: Derrick is a second-year mathematics and economics student with a specialization in computing who loves having a new Zoom background every week.
   mug: yes
   email: dchau2@media.ucla.edu
+priya_kanneboyina:
+  name: Priya Kanneboyina
+  title: Stack Developer
+  bio: Priya is a third-year applied mathematics student with a minor in public affairs and film. 
+  mug: yes
+  email: pkanneboyina@media.ucla.edu
