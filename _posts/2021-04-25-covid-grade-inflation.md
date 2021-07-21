@@ -52,6 +52,7 @@ Test text
 
 <div class = "main_graph">
   <canvas id = "main-chart"></canvas>
+  <p class = 'caption'>In person data is from Fall 2019. Online data is from Fall 2020. Classes with only one grade distribution were only offered during one of the quarters.</p> 
 </div>
 
 test test
@@ -78,7 +79,7 @@ test test
   <option value="fall">fall difference 2019/2020 </option>
   <option value="summer">summer difference 2019/2020</option>
 </select>
-<div>
+<div class= 'infdefchart'>
     <div class="fall GFG">
      <div id="legend">
         <div class="item physical">physical</div>

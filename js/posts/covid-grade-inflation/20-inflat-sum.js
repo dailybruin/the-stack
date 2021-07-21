@@ -257,13 +257,13 @@ function makeCharts(classes) {
 
   )
   if (window.matchMedia('(max-width: 480px)').matches) {
-    inflationChart.canvas.style = 'max-height:400px';
+    inflationChart.canvas.style = 'max-height:600px';
     inflationChart.options.maintainAspectRatio = false;
     console.log(inflationChart);
 
   }
   if (window.matchMedia('(max-width: 480px)').matches) {
-    deflationChart.canvas.style = 'max-height:400px';
+    deflationChart.canvas.style = 'max-height:600px';
     deflationChart.options.maintainAspectRatio = false;
     console.log(deflationChart);
 

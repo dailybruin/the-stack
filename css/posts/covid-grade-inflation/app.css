@@ -1,5 +1,9 @@
 /* GENERAL SETTINGS */
-
+.caption {
+  font-size: 12px;
+  margin: auto;
+  text-align: center;
+}
 /* DESKTOP SETTINGS */
 @media only screen and (min-width: 1000px) {
     #legend {
@@ -62,7 +66,7 @@
     .main_graph {
         width: 80%;
         margin: auto;
-        /* height: 75%; */
+        height: 90%;
     }
     .highcharts-figure{
       width: 70%;
@@ -117,9 +121,20 @@
     border-left: 9px solid #CFCFC4;
     padding: 0px 4px 0px 1px;
   }
- 
+  .main_graph {
+    width: 95%;
+    margin: auto;
+}
+.defChart {
+  width: 95%;
+  /* height:150%;
+  float: left; */
+}
 
- 
+.infChart {
+  width: 95%;
+  height: 45%;
+}
 }
 
 
