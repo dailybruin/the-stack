@@ -74,7 +74,7 @@ function makeCharts(classes2) {
       },
       title: {
         display: true,
-        text: '20 Most Inflated Classes'
+        text: '20 Classes with Greatest Grade Increase'
       },
       tooltips: {
         intersect: false,
@@ -184,7 +184,7 @@ function makeCharts(classes2) {
       },
       title: {
         display: true,
-        text: '20 Most Deflated Classes'
+        text: '20 Classes with Greatest Grade Decrease'
       },
       tooltips: {
         intersect: false,

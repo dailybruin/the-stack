@@ -78,6 +78,41 @@ function makeCharts(classes) {
     }
   }).slice(0, 20);
 
+  classesMobile= [
+    'STATS 100A', 
+    'ANTHRO 132', 
+    'ECON106G',
+    'MGMT 120A',
+    'MATH 110A',
+    'LING 185A',
+    'INTL DV 130',
+    'EPS SCI 15',
+    'CHEM 14C', 
+    'PHYSICS 5A', 
+    'ANTHRO 153', 
+    'COM SCI 31',
+    'INTL DV 1', 
+    'COM SCI 180', 
+    'MGMT 1A', 
+    'MATH 33B', 
+    'HIST 97M' ,
+    'ECON 106F' ,
+    'COMM 114', 
+    'ITALIAN 1'
+  ]
+
+  isMobile = true;
+    //console.log(screen.width)
+  if (screen.width > 1000) {
+      isMobile = false;
+  };
+  
+  
+  if (isMobile) {
+      classesLabels = classesMobile;
+      ratio = 1;
+
+  }
 
   var ctx = document.getElementById("inflationChart");
   var inflationChart = new Chart(ctx, {
@@ -94,7 +129,7 @@ function makeCharts(classes) {
       },
       title: {
         display: true,
-        text: '20 Most Inflated Classes'
+        text: '20 Classes with Greatest Grade Increase'
       },
       tooltips: {
         intersect: false,
@@ -135,19 +170,7 @@ function makeCharts(classes) {
     }
   })
   
-  classesMobile= ['STATS 100A', 'ANTHRO 132', 'ECON106G','MGMT 120A','MATH 110A','LING 185A','INTL DV 130','EPS SCI 15','CHEM 14C', 'PHYSICS 5A', 'ANTHRO 153', 'COM SCI 31','INTL DV 1', 'COM SCI 180', 'MGMT 1A', 'MATH 33B', 'HIST 97M' ,'ECON 106F' ,'COMM 114', 'ITALIAN 1']
 
-  isMobile = true;
-  //console.log(screen.width)
-  if (screen.width > 1000) {
-      isMobile = false;
-  };
-  
-  if (isMobile) {
-      classesLabels = classesMobile;
-      ratio = 1;
-
-  }
 
 
   var classesLabels2 = classes.map(function (d) { return d.class }).slice(344, 364);
@@ -214,7 +237,7 @@ function makeCharts(classes) {
       },
       title: {
         display: true,
-        text: '20 Most Deflated Classes'
+        text: '20 Classes with Greatest Grade Decrease'
       },
       tooltips: {
         intersect: false,
