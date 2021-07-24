@@ -153,8 +153,8 @@ The method for setting graduation Latin honors cut-offs has remained unchanged. 
 
 
 <figure class="highcharts-figure">
-    <div id="container"></div>
-    <p class="highcharts-description">
+    <div id="container" style="height: 400px; width: 1000"></div>
+    <p class='caption'>In person data is from Summer 2019 and Fall 2019. Online data is from Summer 2020 and Fall 2020.
     </p>
 </figure>
 

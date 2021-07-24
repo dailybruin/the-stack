@@ -69,7 +69,8 @@
         height: 90%;
     }
     .highcharts-figure{
-      width: 70%;
+      width: 100%;
+      margin: auto;
     }
 
     .chart-descrip {
@@ -153,6 +154,12 @@
   width: 95%;
   height: 400px;
 }
+
+#highcharts-figure{
+  width: 95%;
+  height: 400px;
+}
+
 }
 
 
