@@ -1,6 +1,6 @@
 ---
-title: COVID Grade Inflation
-teaser: Text
+title: How Have Grade Distributions Changed During Online Learning?
+teaser: Covid-19 changed routines in regards to learning and teaching. How did those changes impact grade distributions?
 authors:
   - lindsey_parungo
   - priya_kanneboyina
@@ -8,7 +8,10 @@ authors:
   - ziqing_luo
 
 key_takeaways:
-  - Take aways here
+  - 29% more As were received in fall 2019 compared to fall 2020. 
+  - The number of pass/no pass grades in fall 2020 increased 72% from fall 2019.
+  - For classes taught by the same professor in fall 2019 and fall 2020, 70% had an increase in average grade during fall 2020.
+
 
 featured_image:
   url: 
