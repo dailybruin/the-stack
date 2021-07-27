@@ -26,10 +26,15 @@ scripts:
   - //cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/semantic.min.js
   - //cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/components/dropdown.min.js
   - //cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/components/form.min.js
+  - //cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js
+  - //cdn.jsdelivr.net/gh/emn178/chartjs-plugin-labels/src/chartjs-plugin-labels.js
+
   # - /js/posts/covid-grade-inflation/Main_Graph.js
   - /js/posts/covid-grade-inflation/MainChart.js
   - /js/posts/covid-grade-inflation/20-inflat-sum.js
   - /js/posts/covid-grade-inflation/fall-inflat-deflat.js
+  - /js/posts/covid-grade-inflation/pie_chart.js
+
 
 stylesheets:
   - //cdnjs.cloudflare.com/ajax/libs/c3/0.4.10/c3.min.css
@@ -150,15 +155,17 @@ Other honor societies use proportions as cutoffs rather than numerical GPA cutof
 The method for setting graduation Latin honors cut-offs has remained unchanged. The cutoffs are determined by the Registrar’s Office report of the previous year’s graduates’ cumulative GPAs from highest to lowest.  “Based on this information, the Registrar’s determined the top 5% with the highest GPA. This is the cut-off GPA for the summa cum laude honor,” writes a representative from the Academic Senate in correspondence with Stack journalists.  Magna cum laude honors and Cum laude honors are found similarly with the next 5% and 10%, respectively. “The Registrar’s Office used 2020 graduate data to determine the minimum thresholds for the 2021-2022 academic year” (CQ 27), says the representative. 
 
 ### Pass/No Pass vs Letter Grading
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/emn178/chartjs-plugin-labels/src/chartjs-plugin-labels.js"></script>
+
+<section id="pie-charts">
+  <div><canvas id="before-covid-pie-chart" width="400" height="300"></canvas></div>
+  <div><canvas id="after-covid-pie-chart" width="400" height="300"></canvas></div>
+</section>
 
 
-<figure class="highcharts-figure">
-    <div id="container" style="height: 400px; width: 1000"></div>
-    <p class='caption'>In person data is from Summer 2019 and Fall 2019. Online data is from Summer 2020 and Fall 2020.
-    </p>
-</figure>
 
-<script src="/js/posts/covid-grade-inflation/pie_chart.js"></script>
+
 
 In spring quarter 2020, UCLA extended the deadline to change the grading basis of a course from Friday of week 2 to Friday of week 9 and removed the fee for an approved grade change petition.changed its general Pass/No Pass policy to give students up until week 9 to decide if they would like to opt-out of letter grading (CQ 3).  (CQ 4) Many of UCLA’s departments also changed their grading policies with regards to Pass/No Pass and Letter Grading requirements. The UCLA Henry Samueli School of Engineering and Applied Science gave students the option to choose Pass/No Pass for one of their major-required classes (CQ 5). The math department, on the other hand, did not allow Pass/No Pass options for any major or minor-required classes (CQ 6). The art history department allowed students to take any amount of major-required courses for Pass/No Pass, as long as it did not conflict with limits set by the Academic Senate on Pass/No Pass courses (CQ 7). Throughout the pandemic, the Academic Senate changed it’s policy on the number of Pass/No Pass courses allowed, from two during Spring 2020 to one for students in good standing or two for students who did not utilize the option in the previous quarter from Fall 2020 forward (CQ 28). The number of students who chose to Pass/No Pass increased from 2243 in Summer 2019 to 3251 in Summer 2020, a 45% increase. Pass/No Pass increased from 5527 in Fall 2019 to 9529 in Fall 2020, a 72% increase.
 

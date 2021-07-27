@@ -4,6 +4,7 @@
   margin: auto;
   text-align: center;
 }
+
 /* DESKTOP SETTINGS */
 @media only screen and (min-width: 1000px) {
     #legend {
@@ -68,9 +69,18 @@
         margin: auto;
         height: 90%;
     }
-    .highcharts-figure{
+
+    #pie-charts {
       width: 100%;
-      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    #pie-charts>div {
+      width: 45% !important;
+      height: auto !important;
+      position: relative;
     }
 
     .chart-descrip {
@@ -155,11 +165,4 @@
   height: 400px;
 }
 
-#highcharts-figure{
-  width: 95%;
-  height: 400px;
 }
-
-}
-
-

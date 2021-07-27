@@ -1,79 +1,62 @@
-Highcharts.chart('container', {
-    chart: {
-        backgroundColor: 'rgba(255,255,255, 0.0)',
-        plotBorderWidth: null,
-        plotShadow: false,
-        type: 'pie' 
+new Chart(document.getElementById("before-covid-pie-chart"), {
+    type: 'pie',
+    data: {
+      labels: ["Letter Grades", "Pass/No Pass"],
+      datasets: [{
+        label: "Before",
+        backgroundColor: ['#77b1d2','#CFCFC4'],
+        data: [153028,7781]
+      }]
     },
-    title: {
-        text: 'Percentage of Letter Grade and Pass/No Pass Before (Left) and After (Right) Remote Learning'
-    },
-    tooltip: {
-        pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
-    },
-    accessibility: {
-        point: {
-            valueSuffix: '%'
+    options: {
+      title: {
+        display: true,
+        text: 'During On-Campus Learning',
+        fontSize: 19
+      },
+      plugins: {
+        labels: {
+          render: 'percentage',
+          fontColor: ['grey','grey'],
+          precision: 1,
+          position: 'outside',
+          textMargin: 7,
+          fontSize: 17,
+          //outsidePadding: 100,
+          //rotation: [160,160]
         }
-    },
-    plotOptions: {
-        pie: {
-            allowPointSelect: true,
-            //size: '50%',
-            cursor: 'pointer',
-            dataLabels: {
-                enabled: true,
-                format: '<b>{point.name}</b>'
-            }
-        }
-    },
-    credits: {
-        enabled: false
-    },
-    //labels: {
-      //  items: [{
-        //    html: 'Before',
-          //  style: {
-          //      left: '200%',
-       //         top: '200px'
-      //      }},
-      //  {
-       //     html: 'second',
-      //      style: {
-      //          left: '175%',
-      //          top: '20px'
-      //      }}]
-  //  },
-    series: [{
-        name: 'percentage',
-        colorByPoint: true,
-        data: [{
-            name: 'Letter Grade: 95.2%',
-            y: 153028,
-            sliced: true,
-            selected: false
-        }, {
-            name: 'Pass/No Pass: 4.8%',
-            y: 7781
-        }],
-        center: ['20%','50%'],
-        size: "55%",
-    }, 
-    {
-        name: 'percentage',
-        colorByPoint: true,
-        data: [{
-            name: 'Letter Grade: 92.4%',
-            y: 156343,
-            sliced: true,
-            selected: false
-        }, {
-            name: 'Pass/No Pass: 7.6%',
-            y: 12780
-        }],
-        center: ['80%','50%'],
-        size: "55%",
-    }]
+      }
+    }
+});
 
+new Chart(document.getElementById("after-covid-pie-chart"), {
+    type: 'pie',
+    data: {
+      labels: ["Letter Grades", "Pass/No Pass"],
+      datasets: [{
+        label: "After",
+        backgroundColor: ['#77b1d2','#CFCFC4'],
+        data: [156343,12780]
+      }]
+    },
+    options: {
+      title: {
+        display: true,
+        text: 'During Online Learning',
+        fontSize: 19
+      },
+      plugins: {
+        labels: {
+          render: 'percentage',
+          fontColor: ['grey','grey'],
+          precision: 1,
+          position: 'outside',
+          fontSize: 17,
+          textMargin: 7,
+          //outsidePadding: 100,
+          //rotate: [60,60]
+        }
+      }
+    }
 });
 
