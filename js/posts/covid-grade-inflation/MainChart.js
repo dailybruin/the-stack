@@ -111,7 +111,7 @@ var MainChart = new Chart(ctxMain, {
     plugins: {
       datalabels: {
         display: false
-      }
+      },
     },
     scales: {
       yAxes: [
