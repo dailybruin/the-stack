@@ -63,14 +63,16 @@ function loadCSVData(choice, chart) {
       //resolve(csv);
       const NewChartdata = [
         {
-          label: 'Grades During Online Learning',
+          label: 'Fall 2019 (In-Person)',
+          text: 'Fall 2019',
           data: precovidData,
-          backgroundColor: 'purple'
+          backgroundColor: '#B5BAF2'
         },
         {
-          label: 'Grades During On-Campus Learning',
+          label: 'Fall 2020 (Remote)',
+          text: 'Fall 2020',
           data: postcovidData,
-          backgroundColor: 'teal'
+          backgroundColor: '#FFE589'
         },
       ];
       chart.data.datasets = NewChartdata
@@ -83,20 +85,20 @@ const Chartdata = {
   labels: labels,
   datasets: [
     {
-      label: 'Grades During On-Campus Learning (Fall 2019)',
+      label: 'Fall 2019 (In-Person)',
       text: 'Fall 2019',
       data: [0.10309517, 0.35152027, 0.1702966, 0.12183674, 0.10739977,
         0.04862543, 0.03022326, 0.03110901, 0.01371677, 0.00432116,
         0.00677147, 0.00206124, 0.0090231],
-      backgroundColor: 'purple'
+      backgroundColor: '#B5BAF2'
     },
     {
-      label: 'Grades During Online Learning (Fall 2020)',
+      label: 'Fall 2020 (Remote)',
       text: 'Fall 2020',
       data: [0.16148227, 0.45117517, 0.14633401, 0.09202175, 0.0709398,
         0.02804866, 0.01419788, 0.01627219, 0.00614856, 0.00228092,
         0.00309081, 0.00103302, 0.00697498],
-      backgroundColor: 'teal'
+      backgroundColor: '#FFE589'
     },
   ],
 };
@@ -140,7 +142,7 @@ var MainChart = new Chart(ctxMain, {
     },
     title: {
       display: true,
-      text: 'Percentage of Each Letter Grade by Class',
+      text: 'Grade Distributions for In-Person vs. Remote Classes',
       fontSize: 16,
     },
 
