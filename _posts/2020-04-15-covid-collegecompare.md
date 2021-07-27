@@ -82,6 +82,7 @@ As schools like Harvard, Columbia and Stanford make [headlines](https://news.har
 The lollipop chart below shows the changes made by each college in relation to the amount of confirmed cases of coronavirus in the area. Use the drop-down menu to select specific events, and see how many confirmed cases there were in the surrounding county at the time of the event.
 
 <!-- Dropdown for Lollipop -->
+
 <div align="left">
   <label for="graphs">Select an Event:</label>
     <select  id="graphs" class="lollipop_select" onchange='javascript: lollipop_graph(this.options[this.selectedIndex].value)' >
