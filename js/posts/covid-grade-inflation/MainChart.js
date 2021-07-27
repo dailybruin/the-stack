@@ -63,14 +63,16 @@ function loadCSVData(choice, chart) {
       //resolve(csv);
       const NewChartdata = [
         {
-          label: 'Grades During Online Learning',
+          label: 'Fall 2019 (In-Person)',
+          text: 'Fall 2019',
           data: precovidData,
-          backgroundColor: 'purple'
+          backgroundColor: '#B5BAF2'
         },
         {
-          label: 'Grades During On-Campus Learning',
+          label: 'Fall 2020 (Remote)',
+          text: 'Fall 2020',
           data: postcovidData,
-          backgroundColor: 'teal'
+          backgroundColor: '#FFE589'
         },
       ];
       chart.data.datasets = NewChartdata

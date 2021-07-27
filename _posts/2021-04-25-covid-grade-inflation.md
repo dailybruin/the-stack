@@ -126,6 +126,7 @@ Between Fall 2019 and Fall 2020, there was a 29% increase in the number of As. T
 </div>
 
 </div>
+<p class = 'caption'>The letter grade data for each course was converted to the 4.0 GPA scale and the average was computed for each course. Grade change was calculated between one in-person and one remote quarter. </p> 
 
 Over the course of the pandemic, there has been Of the 727 classes that were taught by the same professor in Summer 2019 and Summer 2020, 87.21% of classes experienced inflation, 2.61% remained unchanged, and 10.18% experienced deflation during the pandemic. Of the 922 classes taught by te same professor in Fall 2019 and Fall 2020, 69.74% had class averages increase, 9.98% remained unchanged, and 20.28% saw class averages fall during the pandemic.
 
