@@ -95,7 +95,7 @@ Between Fall 2019 and Fall 2020, there was a 29% increase in the number of As. T
      <div id="legend">
         <div class="item physical">Physical Science</div>
         <div class="item life_science">Life Science</div>
-        <div class="item social">Social</div>
+        <div class="item social">Social Science</div>
         <div class="item humanities">Humanities</div>
         <div class="item engineering">Engineering</div>
         <div class="item other">Other</div>
@@ -111,7 +111,7 @@ Between Fall 2019 and Fall 2020, there was a 29% increase in the number of As. T
       <div id="legend">
         <div class="item physical">Physical Science</div>
         <div class="item life_science">Life Science</div>
-        <div class="item social">Social</div>
+        <div class="item social">Social Science</div>
         <div class="item humanities">Humanities</div>
         <div class="item engineering">Engineering</div>
         <div class="item other">Other</div>
