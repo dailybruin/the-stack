@@ -20,20 +20,13 @@ og_image:
 scripts:
   - //cdnjs.cloudflare.com/ajax/libs/d3/5.7.0/d3.min.js 
   - //cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js
-  # - /cdnjs.cloudflare.com/ajax/libs/d3/5.7.0/d3.min.js 
   - //cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.js
-  #- //ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js
   - //d3js.org/d3.v6.min.
   - //cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js
   - //cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@0.7.0
-  # - //code.jquery.com/jquery-1.11.2.js
   - //cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/semantic.min.js
   - //cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/components/dropdown.min.js
   - //cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/components/form.min.js
-  # - //cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js
-  # - //cdn.jsdelivr.net/gh/emn178/chartjs-plugin-labels/src/chartjs-plugin-labels.js
-
-  # - /js/posts/covid-grade-inflation/Main_Graph.js
   - /js/posts/covid-grade-inflation/MainChart.js
   - /js/posts/covid-grade-inflation/20-inflat-sum.js
   - /js/posts/covid-grade-inflation/fall-inflat-deflat.js
@@ -126,10 +119,6 @@ In fall 2020, 29% more As were received in all courses compared to fall 2019. A 
 
 </div>
 
-<!-- <div class = "small-line-break"></div> -->
-
-
-
 Over the course of the pandemic, there has been significantly more increases in average class grades than decreases. Of the 727 classes taught by the same professor in summer 2019 and summer 2020, 87% had class averages increase, 3% experienced no change, and 10% saw class averages fall during the pandemic. Of the 922 classes taught by the same professor in fall 2019 and fall 2020, 70% had class averages increase, 10% experienced no change, and 20% saw class averages fall during the pandemic.
 
 Of the 20 classes that experienced the greatest grade average increase between summer 2019, which was in-person, and summer 2020, which was online, 40% were lower division courses and 55% were upper division courses, and 5% were graduate level courses. In this same period, of the 20 classes that saw the greatest decrease in grade average, 25% were lower division courses, 60% were upper division courses, and 15% were graduate level courses.
@@ -163,7 +152,7 @@ Over 90% of grades received by students were taken for a letter grade both durin
 
 ### Moving Forward
 
-With the announcement that 80% of classes will be in person in the fall,some students have expressed concerns about returning fully to normal. According to the Academic Senate’s webpage, the accommodations on pass/no pass will not be extended to fall 2021.
+With the announcement that [80% of classes will be in person](https://dailybruin.com/2021/04/02/ucla-announces-preliminary-plans-for-fall-return-to-campus-in-person-instruction) in the fall,some students have expressed concerns about returning fully to normal. According to the Academic Senate’s webpage, the accommodations on pass/no pass will not be extended to fall 2021.
 
 “I hope professors realize we're not going to be able to just go back to normal after doing it this way for so long,” said Price. “It’s not going to be like an instant thing, especially for the first years or people who only know online education, it's going to be a bit hard.” (CQ 10)
 
