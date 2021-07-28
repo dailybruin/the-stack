@@ -71,7 +71,7 @@ The bar chart below compares the grade distributions of courses in fall 2019 and
 
 <div class = "main_graph">
   <canvas id = "main-chart"></canvas>
-  <p class = 'caption'>IIn-person grade data is from fall 2019. Online grade data is from fall 2020. Classes with only one grade distribution shown were only offered during one of the quarters.</p> 
+  <p class = 'caption'>In-person grade data is from fall 2019. Online grade data is from fall 2020. Classes with only one grade distribution shown were only offered during one of the quarters.</p> 
 </div>
 
 In fall 2020, 29% more As were received in all courses compared to fall 2019. A was also the most common grade for both fall 2019 (35% of all letter grades) and fall 2020 (45% of all letter grades). For all A grades (A-, A and A+), there was a 21% increase from fall 2019 to fall 2020. However the change in the number of passing grades (C- and higher) was relatively small. 97.77% of grades were passing in fall 2019 compared to 98.65% in fall 2020.
@@ -102,6 +102,7 @@ In fall 2020, 29% more As were received in all courses compared to fall 2019. A 
       <div class = "defChart">
         <canvas id="falldeflatChart"></canvas>
       </div>
+      <p class = 'caption'>The letter grade data for each course was converted to the 4.0 GPA scale and the average was computed for each course. Grade change was calculated between one in-person and one remote quarter. </p>
     </div>   
     <div class= "summer GFG">
       <div id="legend">
@@ -118,14 +119,16 @@ In fall 2020, 29% more As were received in all courses compared to fall 2019. A 
       <div class = "defChart">
         <canvas id="deflationChart"></canvas>
       </div>
-    </div>        
+      <p class = 'caption'>The letter grade data for each course was converted to the 4.0 GPA scale and the average was computed for each course. Grade change was calculated between one in-person and one remote quarter. </p>
+    </div>
+    
 </div>
 
 </div>
 
-<div class = "small-line-break"></div>
+<!-- <div class = "small-line-break"></div> -->
 
-<p class = 'caption'>The letter grade data for each course was converted to the 4.0 GPA scale and the average was computed for each course. Grade change was calculated between one in-person and one remote quarter. </p>
+
 
 Over the course of the pandemic, there has been significantly more increases in average class grades than decreases. Of the 727 classes taught by the same professor in summer 2019 and summer 2020, 87% had class averages increase, 3% experienced no change, and 10% saw class averages fall during the pandemic. Of the 922 classes taught by the same professor in fall 2019 and fall 2020, 70% had class averages increase, 10% experienced no change, and 20% saw class averages fall during the pandemic.
 

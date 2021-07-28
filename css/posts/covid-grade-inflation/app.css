@@ -1,9 +1,13 @@
 /* GENERAL SETTINGS */
 .caption {
   font-size: 12px;
-  margin: auto;
   text-align: center;
-  line-height: 50px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+.small-line-break {
+  height: 50px;
+  width: 100%;
 }
 
 /* DESKTOP SETTINGS */
@@ -92,9 +96,7 @@
         height: 90px;
     }
 
-    .small-line-break {
-        height: 50px;
-    }
+
 }
 /* MOBILE SETTINGS */
 @media only screen and (max-width: 1000px) {

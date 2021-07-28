@@ -22,7 +22,13 @@ new Chart(document.getElementById("before-covid-pie-chart"), {
             style: 'percent',
             maximumFractionDigits: 2,
           });
-        }
+        },
+        font: {
+          size: 16,
+        },
+        anchor: 'end',
+        clamp: true,
+        align: 'start'
       }
     }
   }
@@ -52,7 +58,13 @@ new Chart(document.getElementById("after-covid-pie-chart"), {
             style: 'percent',
             maximumFractionDigits: 2,
           });
-        }
+        },
+        font: {
+          size: 16
+        },
+        anchor: 'end',
+        clamp: true,
+        align: 'start'
       }
     }
   }
