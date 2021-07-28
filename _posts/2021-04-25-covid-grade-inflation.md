@@ -91,7 +91,7 @@ In fall 2020, 29% more As were received in all courses compared to fall 2019. A 
      <div id="legend">
         <div class="item physical">Physical Science</div>
         <div class="item life_science">Life Science</div>
-        <div class="item social">Social</div>
+        <div class="item social">Social Science</div>
         <div class="item humanities">Humanities</div>
         <div class="item engineering">Engineering</div>
         <div class="item other">Other</div>
@@ -107,7 +107,7 @@ In fall 2020, 29% more As were received in all courses compared to fall 2019. A 
       <div id="legend">
         <div class="item physical">Physical Science</div>
         <div class="item life_science">Life Science</div>
-        <div class="item social">Social</div>
+        <div class="item social">Social Science</div>
         <div class="item humanities">Humanities</div>
         <div class="item engineering">Engineering</div>
         <div class="item other">Other</div>
