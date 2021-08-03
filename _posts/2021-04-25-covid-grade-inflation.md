@@ -22,7 +22,7 @@ scripts:
   - //cdnjs.cloudflare.com/ajax/libs/d3/5.7.0/d3.min.js 
   - //cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js
   - //cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.js
-  # - //d3js.org/d3.v6.min.
+  - //d3js.org/d3.v3.min.js
   - //cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js
   - //cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@0.7.0
   - //cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/semantic.min.js
@@ -39,13 +39,7 @@ stylesheets:
   - /css/posts/covid-grade-inflation/app.css
 ---
 
-<script src="https://code.highcharts.com/highcharts.js"></script>
-
-<script src="https://code.highcharts.com/modules/export-data.js"></script>
-
-<script src="https://code.highcharts.com/modules/accessibility.js"></script>
-
-<script src="https://d3js.org/d3.v3.min.js"></script>
+<!-- <script src="https://d3js.org/d3.v3.min.js"></script> -->
 
 ### Introduction
 Over the past academic year, the COVID-19 pandemic has changed the way students and professors learn and teach. At UCLA, all quarters since spring 2020 have consisted primarily of online courses. 

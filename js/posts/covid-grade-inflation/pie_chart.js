@@ -66,7 +66,17 @@ new Chart(document.getElementById("after-covid-pie-chart"), {
         clamp: true,
         align: 'start'
       }
-    }
+    },
+    tooltips: {
+      callbacks: {
+        label: function (tooltipItem, data) {
+          return tooltipItem.data.toLocaleString('en-US', {
+            style: 'decimal',
+            maximumFractionDigits: 2,
+          });
+        },
+      },
+    },
   }
 });
 
