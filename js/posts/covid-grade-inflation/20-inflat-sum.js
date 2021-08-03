@@ -1,33 +1,3 @@
-/*let select = document.querySelector('#chartType');
-
-select.addEventListener('change', showHide);
-
-function showHide() {
-  // concat Chart for the canvas ID
-  let chart = this.options[select.selectedIndex].value + 'Test';
-    document.querySelectorAll('div')
-    .forEach(c => {
-      c.style.display = (c.id === chart) ? 'inherit' : 'none';
-    })
-}
-*/
-
-/*(document).ready(function() {
-  ("select").on('change', function() {
-      (this).find("option:selected").each(function() {
-          var quarter = (this).attr("value");
-          if (quarter) {
-              (".GFG").not("." + quarter).hide();
-              ("." + quarter).show();
-          } else {
-              (".GFG").hide();
-          }
-
-      });
-  }).change();
-});
-*/
-
 $(document).ready(function() {
   $('.top20-dropdown')
     .on('change', function() {
@@ -62,7 +32,6 @@ function makeCharts(classes) {
 
   var departmentColors = classes
     .map(function(d) {
-      //console.log(d);
       if (d.department === 'physical') {
         return '#77b1d2';
       } else if (d.department === 'life_science') {
@@ -102,11 +71,7 @@ function makeCharts(classes) {
     'ITALIAN 1',
   ];
 
-  isMobile = true;
-  //console.log(screen.width)
-  if (screen.width > 1000) {
-    isMobile = false;
-  }
+  isMobile = screen.width < 1000;
 
   if (isMobile) {
     classesLabels = classesMobile;
@@ -135,7 +100,6 @@ function makeCharts(classes) {
         callbacks: {
           label: function(tooltipItem, data) {
             return tooltipItem.xLabel.toLocaleString('en-US', {
-              //style: 'percent',
               maximumFractionDigits: 2,
             });
           },
@@ -181,7 +145,6 @@ function makeCharts(classes) {
 
   var departmentColors2 = classes
     .map(function(d) {
-      //console.log(d);
       if (d.department === 'physical') {
         return '#77b1d2';
       } else if (d.department === 'life_science') {
@@ -249,7 +212,6 @@ function makeCharts(classes) {
         callbacks: {
           label: function(tooltipItem, data) {
             return tooltipItem.xLabel.toLocaleString('en-US', {
-              //style: 'percent',
               maximumFractionDigits: 2,
             });
           },
@@ -294,18 +256,3 @@ function makeCharts(classes) {
 }
 
 d3.csv('/datasets/covid-grade-inflation/inflat_rank_sum.csv').then(makeCharts);
-
-/*  Let classesMobile = 
-
-
-  isMobile = true;
-  //console.log(screen.width)
-  if (screen.width > 1000) {
-      isMobile = false;
-  };
-  
-  if (isMobile) {
-      labelList = classesMobile;
-      ratio = 1;
-  }
-  */
