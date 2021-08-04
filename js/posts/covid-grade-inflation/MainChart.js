@@ -163,6 +163,7 @@ var MainChart = new Chart(ctxMain, {
       yAxes: [
         {
           ticks: {
+            max: 1,
             callback: function(value) {
               return value.toLocaleString('en-US', {
                 style: 'percent',
