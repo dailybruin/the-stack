@@ -70,10 +70,11 @@ new Chart(document.getElementById("after-covid-pie-chart"), {
     tooltips: {
       callbacks: {
         label: function (tooltipItem, data) {
-          return tooltipItem.data.toLocaleString('en-US', {
-            style: 'decimal',
-            maximumFractionDigits: 2,
-          });
+          console.log(tooltipItem)
+          // return tooltipItem.datasets.data[tooltipItem.index].toLocaleString('en-US', {
+          //   style: 'decimal',
+          //   maximumFractionDigits: 2,
+          // });
         },
       },
     },

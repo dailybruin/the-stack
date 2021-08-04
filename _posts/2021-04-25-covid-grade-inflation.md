@@ -23,6 +23,7 @@ scripts:
   - //cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js
   - //cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.js
   - //d3js.org/d3.v3.min.js
+  - //d3js.org/d3.v6.min.js
   - //cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js
   - //cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@0.7.0
   - //cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/semantic.min.js
@@ -39,7 +40,7 @@ stylesheets:
   - /css/posts/covid-grade-inflation/app.css
 ---
 
-<!-- <script src="https://d3js.org/d3.v3.min.js"></script> -->
+<script src="https://d3js.org/d3.v3.min.js"></script>
 
 ### Introduction
 
@@ -71,7 +72,7 @@ The bar chart below compares the grade distributions of courses in fall 2019 and
 Class grade distributions showed 29% more A’s across all classes in 2020 compared to 2019. An A grade was also the most common grade for both fall 2019 (35% of all letter grades) and fall 2020 (45% of all letter grades). When combined, all A grades (A-, A and A+) increased 21% from fall 2019 to fall 2020. However, the change in the number of passing grades (C- and higher) was relatively small. In fall 2019, 97.77% of grades were passing compared to 98.65% in fall 2020.
 
 ### Classes With the Greatest Change in Grade Distribution
-
+<div class = inflation_chart>
 <div id="inflation"> 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js"></script>
 <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
@@ -114,6 +115,8 @@ Class grade distributions showed 29% more A’s across all classes in 2020 compa
       </div>
     </div>
     
+</div>
+
 </div>
 
 </div>

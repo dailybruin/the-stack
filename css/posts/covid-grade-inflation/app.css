@@ -62,6 +62,9 @@
       height: 150%;
       float: right;
     }
+    .inflationChart {
+      margin-bottom: 50px;
+    }
 
     .chart-container {
         width: 70%;
