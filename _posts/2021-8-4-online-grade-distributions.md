@@ -22,15 +22,15 @@ scripts:
   - //cdnjs.cloudflare.com/ajax/libs/d3/5.7.0/d3.min.js 
   - //cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js
   - //cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@0.7.0
-  - /js/posts/covid-grade-inflation/MainChart.js
-  - /js/posts/covid-grade-inflation/20-inflat-sum.js
-  - /js/posts/covid-grade-inflation/fall-inflat-deflat.js
-  - /js/posts/covid-grade-inflation/pie_chart.js
+  - /js/posts/online-grade-distributions/MainChart.js
+  - /js/posts/online-grade-distributions/20-inflat-sum.js
+  - /js/posts/online-grade-distributions/fall-inflat-deflat.js
+  - /js/posts/online-grade-distributions/pie_chart.js
 
 
 stylesheets:
   - //cdnjs.cloudflare.com/ajax/libs/c3/0.4.10/c3.min.css
-  - /css/posts/covid-grade-inflation/app.css
+  - /css/posts/online-grade-distributions/app.css
 ---
 
 ### Introduction
@@ -112,9 +112,9 @@ Class grade distributions showed 29% more A’s across all classes in 2020 compa
 </div>
 
 </div>
-
-<p class = 'caption'>The letter grade data for each course was converted into the 4.0 GPA scale, and the average was computed for each course. Grade change was calculated using the difference between one in-person and one remote quarter.</p>
-
+<div>
+<p class = 'caption'> The letter grade data for each course was converted into the 4.0 GPA scale, and the average was computed for each course. Grade change was calculated using the difference between one in-person and one remote quarter.</p>
+</div>
 Over the last 1 1/2 years, there were significantly more courses that had an increase in class average during online learning than courses that had a decrease in class average.
 
 Of the 727 classes taught by the same professors in summer 2019 and summer 2020, 87% had an increase in the average class grade, 3% had no change and 10% had the average class grade decline during the pandemic. Of the 922 classes taught by the same professors in fall 2019 and fall 2020, 70% had an increase in the average class grade, 10% had no change and 20% had the average class grade decline during the pandemic.
