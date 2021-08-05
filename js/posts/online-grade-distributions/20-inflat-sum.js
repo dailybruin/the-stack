@@ -1,9 +1,9 @@
-$(document).ready(function () {
+$(document).ready(function() {
   $('.top20-dropdown')
-    .on('change', function () {
+    .on('change', function() {
       $(this)
         .find('option:selected')
-        .each(function () {
+        .each(function() {
           var quarter = $(this).attr('value');
           if (quarter) {
             $('.GFG')
@@ -20,18 +20,18 @@ $(document).ready(function () {
 
 function makeCharts(classes) {
   var classesLabels = classes
-    .map(function (d) {
+    .map(function(d) {
       return d.Class_Cap;
     })
     .slice(0, 20);
   var inflationData = classes
-    .map(function (d) {
+    .map(function(d) {
       return d.difference;
     })
     .slice(0, 20);
 
   var departmentColors = classes
-    .map(function (d) {
+    .map(function(d) {
       if (d.department === 'physical') {
         return '#77b1d2';
       } else if (d.department === 'life_science') {
@@ -82,7 +82,7 @@ function makeCharts(classes) {
   var inflationChart = new Chart(ctx, {
     type: 'horizontalBar',
     options: {
-      maintainAspectRatio: true,
+      maintainAspectRatio: false,
       legend: {
         display: false,
       },
@@ -98,7 +98,7 @@ function makeCharts(classes) {
       tooltips: {
         intersect: false,
         callbacks: {
-          label: function (tooltipItem, data) {
+          label: function(tooltipItem, data) {
             return tooltipItem.xLabel.toLocaleString('en-US', {
               maximumFractionDigits: 2,
             });
@@ -133,18 +133,18 @@ function makeCharts(classes) {
   });
 
   var classesLabels2 = classes
-    .map(function (d) {
+    .map(function(d) {
       return d.Class_Cap;
     })
     .slice(344, 364);
   var inflationData2 = classes
-    .map(function (d) {
+    .map(function(d) {
       return d.difference;
     })
     .slice(344, 364);
 
   var departmentColors2 = classes
-    .map(function (d) {
+    .map(function(d) {
       if (d.department === 'physical') {
         return '#77b1d2';
       } else if (d.department === 'life_science') {
@@ -194,7 +194,7 @@ function makeCharts(classes) {
   var deflationChart = new Chart(ctx2, {
     type: 'horizontalBar',
     options: {
-      maintainAspectRatio: true,
+      maintainAspectRatio: false,
       legend: {
         display: false,
       },
@@ -210,7 +210,7 @@ function makeCharts(classes) {
       tooltips: {
         intersect: false,
         callbacks: {
-          label: function (tooltipItem, data) {
+          label: function(tooltipItem, data) {
             return tooltipItem.xLabel.toLocaleString('en-US', {
               maximumFractionDigits: 2,
             });
@@ -246,13 +246,11 @@ function makeCharts(classes) {
   if (window.matchMedia('(max-width: 480px)').matches) {
     inflationChart.canvas.style = 'max-height:600px';
     inflationChart.options.maintainAspectRatio = false;
-    console.log(inflationChart);
-  }
-  if (window.matchMedia('(max-width: 480px)').matches) {
     deflationChart.canvas.style = 'max-height:600px';
     deflationChart.options.maintainAspectRatio = false;
-    console.log(deflationChart);
   }
 }
 
-d3.csv('/datasets/online-grade-distributions/inflat_rank_sum.csv').then(makeCharts);
+d3
+  .csv('/datasets/online-grade-distributions/inflat_rank_sum.csv')
+  .then(makeCharts);

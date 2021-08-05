@@ -22,6 +22,7 @@ scripts:
   - //cdnjs.cloudflare.com/ajax/libs/d3/5.7.0/d3.min.js 
   - //cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js
   - //cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@0.7.0
+  - //code.jquery.com/jquery-3.6.0.min.js
   - /js/posts/online-grade-distributions/MainChart.js
   - /js/posts/online-grade-distributions/20-inflat-sum.js
   - /js/posts/online-grade-distributions/fall-inflat-deflat.js
@@ -60,61 +61,55 @@ The bar chart below compares the grade distributions of courses in fall 2019 and
   <p class = 'caption'> In-person grade data is from fall 2019. Online grade data is from fall 2020. Classes with only one grade distribution shown were only offered for one of the quarters.</p> 
 </div>
 
-Class grade distributions showed 29% more A’s across all classes in 2020 compared to 2019. An A grade was also the most common grade for both fall 2019 (35% of all letter grades) and fall 2020 (45% of all letter grades). When combined, all A grades (A-, A and A+) increased 21% from fall 2019 to fall 2020. However, the change in the number of passing grades (C- and higher) was relatively small. In fall 2019, 97.77% of grades were passing compared to 98.65% in fall 2020.
+Class grade distributions showed 29% more A’s across all classes in 2020 compared to 2019. An A grade was also the most common grade for both fall 2019 (35% of all letter grades) and fall 2020 (45% of all letter grades). When combined, all A grades (A-, A and A+) increased 21% from fall 2019 to fall 2020. However, the change in the number of passing grades (C- and higher) was relatively small. In fall 2019, 97.8% of grades were passing compared to 98.7% in fall 2020.
 
 ### Classes With the Greatest Change in Grade Distribution
 
 <div class = inflation_chart>
-<div id="inflation"> 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js"></script>
-<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-
-<select class='top20-dropdown'>
-  <option value="fall">Fall Difference 2019/2020 </option>
-  <option value="summer">Summer Difference 2019/2020</option>
-</select>
-<div class= 'infdefchart'>
-    <div class="fall GFG">
-     <div id="legend">
-        <div class="item physical">Physical Science</div>
-        <div class="item life_science">Life Science</div>
-        <div class="item social">Social Science</div>
-        <div class="item humanities">Humanities</div>
-        <div class="item engineering">Engineering</div>
-        <div class="item other">Other</div>
-      </div>
-      <div class = "infChart">
-        <canvas  id="fallinflatChart"></canvas>
-      </div>
-      <div class = "defChart">
-        <canvas id="falldeflatChart"></canvas>
-      </div>
-    </div>   
-    <div class= "summer GFG">
-      <div id="legend">
-        <div class="item physical">Physical Science</div>
-        <div class="item life_science">Life Science</div>
-        <div class="item social">Social Science</div>
-        <div class="item humanities">Humanities</div>
-        <div class="item engineering">Engineering</div>
-        <div class="item other">Other</div>
-      </div>
-      <div class = "infChart">
-        <canvas id="inflationChart"></canvas>
-      </div>
-      <div class = "defChart">
-        <canvas id="deflationChart"></canvas>
+  <div id="inflation"> 
+    <select class='top20-dropdown'>
+      <option value="fall">Fall Difference 2019/2020 </option>
+      <option value="summer">Summer Difference 2019/2020</option>
+    </select>
+    <div class= 'infdefchart'>
+      <div class="fall GFG">
+        <div id="legend">
+          <div class="item physical">Physical Science</div>
+          <div class="item life_science">Life Science</div>
+          <div class="item social">Social Science</div>
+          <div class="item humanities">Humanities</div>
+          <div class="item engineering">Engineering</div>
+          <div class="item other">Other</div>
+        </div>
+        <div class = "infChart">
+          <canvas id="fallinflatChart"></canvas>
+        </div>
+        <div class = "defChart">
+          <canvas id="falldeflatChart"></canvas>
+        </div>
+      </div>   
+      <div class= "summer GFG">
+        <div id="legend">
+          <div class="item physical">Physical Science</div>
+          <div class="item life_science">Life Science</div>
+          <div class="item social">Social Science</div>
+          <div class="item humanities">Humanities</div>
+          <div class="item engineering">Engineering</div>
+          <div class="item other">Other</div>
+        </div>
+        <div class = "infChart">
+          <canvas id="inflationChart"></canvas>
+        </div>
+        <div class = "defChart">
+          <canvas id="deflationChart"></canvas>
+        </div>
       </div>
     </div>
-    
+  </div>
 </div>
 
-</div>
-
-</div>
-<div>
 <p class = 'caption'> The letter grade data for each course was converted into the 4.0 GPA scale, and the average was computed for each course. Grade change was calculated using the difference between one in-person and one remote quarter.</p>
-</div>
+
 Over the last 1 1/2 years, there were significantly more courses that had an increase in class average during online learning than courses that had a decrease in class average.
 
 Of the 727 classes taught by the same professors in summer 2019 and summer 2020, 87% had an increase in the average class grade, 3% had no change and 10% had the average class grade decline during the pandemic. Of the 922 classes taught by the same professors in fall 2019 and fall 2020, 70% had an increase in the average class grade, 10% had no change and 20% had the average class grade decline during the pandemic.

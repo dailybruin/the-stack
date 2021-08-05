@@ -1,17 +1,17 @@
 function makeCharts(classes2) {
   var classesLabels3 = classes2
-    .map(function (d) {
+    .map(function(d) {
       return d.Class_Cap;
     })
     .slice(0, 20);
   var inflationData3 = classes2
-    .map(function (d) {
+    .map(function(d) {
       return d.difference;
     })
     .slice(0, 20);
 
   var departmentColors3 = classes2
-    .map(function (d) {
+    .map(function(d) {
       if (d.department === 'physical') {
         return '#77b1d2';
       } else if (d.department === 'life_science') {
@@ -65,7 +65,7 @@ function makeCharts(classes2) {
   var fallinflatChart = new Chart(ctx3, {
     type: 'horizontalBar',
     options: {
-      maintainAspectRatio: true,
+      maintainAspectRatio: false,
       legend: {
         display: false,
       },
@@ -81,7 +81,7 @@ function makeCharts(classes2) {
       tooltips: {
         intersect: false,
         callbacks: {
-          label: function (tooltipItem, data) {
+          label: function(tooltipItem, data) {
             return tooltipItem.xLabel.toLocaleString('en-US', {
               maximumFractionDigits: 2,
             });
@@ -116,18 +116,18 @@ function makeCharts(classes2) {
   });
 
   var classesLabels4 = classes2
-    .map(function (d) {
+    .map(function(d) {
       return d.Class_Cap;
     })
     .slice(922, 942);
   var inflationData4 = classes2
-    .map(function (d) {
+    .map(function(d) {
       return d.difference;
     })
     .slice(922, 942);
 
   var departmentColors4 = classes2
-    .map(function (d) {
+    .map(function(d) {
       if (d.department === 'physical') {
         return '#77b1d2';
       } else if (d.department === 'life_science') {
@@ -178,7 +178,7 @@ function makeCharts(classes2) {
   var falldeflatChart = new Chart(ctx4, {
     type: 'horizontalBar',
     options: {
-      maintainAspectRatio: true,
+      maintainAspectRatio: false,
       legend: {
         display: false,
       },
@@ -194,7 +194,7 @@ function makeCharts(classes2) {
       tooltips: {
         intersect: false,
         callbacks: {
-          label: function (tooltipItem, data) {
+          label: function(tooltipItem, data) {
             return tooltipItem.xLabel.toLocaleString('en-US', {
               maximumFractionDigits: 2,
             });
@@ -236,4 +236,6 @@ function makeCharts(classes2) {
   }
 }
 
-d3.csv('/datasets/online-grade-distributions/inflat_rank_fall.csv').then(makeCharts);
+d3
+  .csv('/datasets/online-grade-distributions/inflat_rank_fall.csv')
+  .then(makeCharts);
