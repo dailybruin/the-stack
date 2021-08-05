@@ -15,7 +15,7 @@ key_takeaways:
 
 featured_image:
   url: imdb-ucla-movies/cover_photo.jpg
-  caption: Noah Danesh/Daily Bruin
+  caption: "(Noah Danesh/Daily Bruin)"
 og_image: imdb-ucla-movies/cover_photo.jpg
 
 scripts:

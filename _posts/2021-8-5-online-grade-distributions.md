@@ -15,7 +15,7 @@ key_takeaways:
 
 featured_image:
   url: online-grade-distributions/cover_image.jpg
-  caption: Katie Frei/Daily Bruin
+  caption: "(Katie Frei/Daily Bruin)"
 og_image: online-grade-distributions/cover_image.jpg
 
 scripts:
