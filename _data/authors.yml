@@ -320,15 +320,9 @@ catherine_hu:
   title: Stack Developer
   email: chu@media.ucla.edu
   mug: yes
-  bio: Catherine Hu is a first-year computer science and geography student who loves hiking, 
+  bio: Catherine Hu is a second-year computer science and geography student who enjoys writing, hiking and reading.
   github: catherinehhu
   website: https://catherinehhu.com
-lindsey_parungo:
-  name: Lindsey Parungo
-  title: Stack Developer
-  email: lparungo@media.ucla.edu
-  mug: no
-  bio: Lindsey Parungo is a second year student who loves running and hippos.
 cameron_bian:
   name: Cameron Bian
   title: Stack Developer
@@ -348,14 +342,14 @@ ziqing_luo:
   title: Stack Developer
   email: zluo@media.ucla.edu
   mug: yes
-  bio: Ziqing Luo is a third-year applied math and statistics student who is passionate about dancing and enjoys eating desserts.
+  bio: Ziqing Luo is a fourth-year applied math and statistics student who is passionate about dancing and enjoys eating desserts.
   github: luoziqing99
 samantha_low:
   name: Samantha Low
   title: Stack Developer
   email: slow@media.ucla.edu
-  mug: Yes
-  bio: Samantha Low is a first-year environmental science major who enjoys hiking, exploring new places and taking pictures of food in her free time. 
+  mug: yes
+  bio: Samantha Low is a second-year environmental science student who enjoys hiking, exploring new places and taking pictures of food in her free time. 
 ananya_garg:
   name: Ananya Garg
   title: Stack Developer
@@ -372,8 +366,8 @@ mansa_krishna:
   github: mansakrishna23
 lindsey_parungo:
   name: Lindsey Parungo
-  title: Stack Developer
-  bio: Lindsey is a second-year financial and actuarial mathematics student. She enjoys running, spending time with her dog and looking to expand her hippo memorabilia collection.
+  title: Assistant Graphics Interactives Editor
+  bio: Lindsey is a third-year financial and actuarial mathematics student. She enjoys running, spending time with her dog and looking to expand her hippo memorabilia collection.
   mug: Yes
   email: lparungo@media.ucla.edu
   github: Lindseyp314
@@ -424,6 +418,6 @@ diego_ramirez_romero:
 priya_kanneboyina:
   name: Priya Kanneboyina
   title: Stack Developer
-  bio: Priya is a second-year applied mathematics students with a minor in public affairs and film. 
+  bio: Priya is a third-year applied mathematics student with a minor in public affairs and film. 
   mug: yes
   email: pkanneboyina@media.ucla.edu
