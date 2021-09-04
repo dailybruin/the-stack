@@ -40,7 +40,6 @@ let group1 = [];
 let group2 = [];
 let group3 = [];
 let group4 = [];
-let group5 = [];
 
 geojsonFeature.features.map((feature) => {
   var marker = new L.marker([
@@ -66,19 +65,19 @@ geojsonFeature.features.map((feature) => {
   switch (feature.properties.SeismicRating) {
     case "III":
       marker.setIcon(getIconByColor("green"));
-      group1.push(marker);
+      group4.push(marker);
       break;
     case "IV":
       marker.setIcon(getIconByColor("yellow"));
-      group2.push(marker);
+      group3.push(marker);
       break;
     case "V":
       marker.setIcon(getIconByColor("orange"));
-      group3.push(marker);
+      group2.push(marker);
       break;
     case "VI":
       marker.setIcon(getIconByColor("red"));
-      group4.push(marker);
+      group1.push(marker);
       break;
     default:
       iconColor = "black";
