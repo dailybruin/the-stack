@@ -37,7 +37,7 @@ const categories = {
     hexCode: '#ddb300',
     iconUrl: 'pins/yellow-pin.svg',
   },
-  'RAPE/SEXUAL': {
+  'RAPE/OTHER SEXUAL': {
     markers: [],
     hexCode: '#009245',
     iconUrl: 'pins/green-pin.svg',
@@ -52,7 +52,7 @@ const categories = {
     hexCode: '#0046b0',
     iconUrl: 'pins/blue-pin-1.svg',
   },
-  TRESSPASSING: {
+  TRESPASSING: {
     markers: [],
     hexCode: '#c3ace8',
     iconUrl: 'pins/purple-pin.svg',
@@ -84,7 +84,9 @@ crimesGeojson.features.map(feature => {
         <b>UCPD Designation:</b><br/>
         ${feature.properties.EVENT.split('\n').join('<br/>')}<br/><br/>
         <b>Reported location:</b><br/>
-        ${feature.properties.LOCATION.split('\n').join(',<br/>')}`;
+        ${feature.properties.LOCATION.split('\n').join(',<br/>')}<br/><br/>
+        <b>Case status:</b><br/>
+        ${feature.properties.DISPOSITION}`;
   const popUpOptions = {
     className: 'custom-popup',
     maxWidth: isMobile ? 200 : 300,
