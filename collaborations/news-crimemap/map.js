@@ -1,4 +1,4 @@
-const crimeMap = L.map('map').setView([34.04, -118.445345], 13);
+const crimeMap = L.map('map').setView([34.04, -118.43], 12);
 const oms = new OverlappingMarkerSpiderfier(crimeMap, {
   keepSpiderfied: true,
   markersWontMove: true,
@@ -12,7 +12,7 @@ L.tileLayer(
     attribution:
       'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
     maxZoom: 18,
-    minZoom: 12,
+    minZoom: 11,
     id: 'mapbox/streets-v11',
     tileSize: 512,
     zoomOffset: -1,
@@ -54,7 +54,7 @@ const categories = {
   },
   TRESSPASSING: {
     markers: [],
-    hexCode: '#8157c2',
+    hexCode: '#c3ace8',
     iconUrl: 'pins/purple-pin.svg',
   },
   VANDALISM: {
