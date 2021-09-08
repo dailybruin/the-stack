@@ -74,26 +74,27 @@ crimesGeojson.features.map(feature => {
     feature.geometry.coordinates[1],
     feature.geometry.coordinates[0],
   ];
+  // if crime has multiple categories, only use first one
   const cat = feature.properties.CATEGORY.split('\n')[0];
   const pinIcon = L.icon({
     iconUrl: categories[cat].iconUrl,
     iconSize: [35, 35],
   });
   const marker = new L.marker(coords, { icon: pinIcon });
+
   const popUpText = `<b>${feature.properties.DATE}</b><br/><br/>
-        <b>UCPD Designation:</b><br/>
-        ${feature.properties.EVENT.split('\n').join('<br/>')}<br/><br/>
-        <b>Reported location:</b><br/>
-        ${feature.properties.LOCATION.split('\n').join(',<br/>')}<br/><br/>
-        <b>Case status:</b><br/>
-        ${feature.properties.DISPOSITION}`;
+    <b>UCPD Designation:</b><br/>
+    ${feature.properties.EVENT.split('\n').join('<br/>')}<br/><br/>
+    <b>Reported location:</b><br/>
+    ${feature.properties.LOCATION.split('\n').join(',<br/>')}<br/><br/>
+    <b>Case status:</b><br/>
+    ${feature.properties.DISPOSITION}`;
   const popUpOptions = {
     className: 'custom-popup',
     maxWidth: isMobile ? 200 : 300,
   };
   marker.bindPopup(popUpText, popUpOptions);
 
-  // if crime has multiple categories, only use first one
   categories[cat].markers.push(marker);
   marker.addTo(crimeMap);
   oms.addMarker(marker);
@@ -101,9 +102,11 @@ crimesGeojson.features.map(feature => {
 
 const overlayLayers = {};
 Object.entries(categories).forEach(([key, val]) => {
-  const legendText = `<div class="legend-container"><div class="legend-box" style="background:${
-    val.hexCode
-  };"></div><div class="legend-text">${key}</div></div>`;
+  const legendText = `
+		<div class="legend-container">
+			<div class="legend-box" style="background:${val.hexCode};"></div>
+			<div class="legend-text">${key}</div>
+		</div>`;
   overlayLayers[legendText] = L.layerGroup(val.markers);
 });
 Object.values(overlayLayers).forEach(layer => layer.addTo(crimeMap));
