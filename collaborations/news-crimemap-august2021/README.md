@@ -5,6 +5,12 @@ Article: [https://dailybruin.com/2021/09/07/crimewatch-august-2021](https://dail
 
 Leaflet map of UCPD reported crimes in August 21. Displays pin for each crime, popup shows details of location, crime type, and status. Pins are color coded by crime type.
 
+## Notes
+
+For uploading to the server, the width and height of the map MUST be set to 100vw and 100vh respectively. The actual size on mainsite will be ~700px wide by ~500px tall. Make sure the map looks okay at this size while developing.
+
+For copy edits, include a byline below the map but REMOVE it before uploading to the server. Format: "Graphic reporting by < whoever gathered data >, title. Interactive by < you! >, title.
+
 ## JavaScript libraries
 
 * leaflet
