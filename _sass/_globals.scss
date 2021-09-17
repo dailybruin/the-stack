@@ -1,12 +1,14 @@
 // Fonts & spacing
 
-$base-font-family: "Open Sans", sans-serif;
+$base-font-family: "PT Sans", sans-serif;
 $base-font-size: 16px;
 $small-font-size: $base-font-size * 0.875;
 $base-line-height: 1.5;
 
-$header-font-family: "Hind", sans-serif;
-$header-font-weight: 600;
+$header-font-family: "PT Sans", sans-serif;
+$header-font-weight: 700;
+
+$accent-font-family: "Quantico", sans-serif;
 
 $spacing-unit: 30px;
 
@@ -25,7 +27,7 @@ $brand-color-primary-blue: $brand-color;
 $brand-color-primary-grey: $grey-color-dark;
 
 $brand-color-secondary-blue: #3fbbff;
-$brand-color-secondary-warm: #ff9040;
+$brand-color-secondary-warm: #ff8311;
 
 $brand-color-tertiary-blue: #7fd1ff;
 $brand-color-tertiary-warm: #cc4714;
@@ -33,10 +35,10 @@ $brand-color-tertiary-cool: #3d4899;
 
 // Width of the content area
 
-$content-width: 800px;
+$content-width: 900px;
 
 $on-palm: 620px;
-$on-laptop: 800px;
+$on-laptop: 900px;
 
 // Mixin for media queries like this:
 // @include media-query($on-palm) {

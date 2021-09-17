@@ -108,11 +108,12 @@ h6 {
  * Links
  */
 a {
-  color: darken($brand-color, 15%);
+  color: $brand-color-secondary-warm;
   text-decoration: none;
+  font-weight: bold;
 
   &:hover {
-    color: $brand-color;
+    color: $brand-color-tertiary-warm;
   }
 }
 
@@ -171,8 +172,8 @@ pre {
 .wrapper {
   margin-right: auto;
   margin-left: auto;
-  padding-right: $spacing-unit;
-  padding-left: $spacing-unit;
+  padding-right: $spacing-unit * 3;
+  padding-left: $spacing-unit * 3;
   @extend %clearfix;
 
   @include media-query($on-laptop) {

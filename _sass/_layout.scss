@@ -3,12 +3,11 @@
  */
 .site-header {
   $height: 56px;
-  border-top: 5px solid $grey-color-dark;
   border-bottom: 1px solid $grey-color-light;
   min-height: $height;
   line-height: $height;
-  padding-top: 10%;
-  background: url(/img/banner.svg) no-repeat center;
+  padding-top: $spacing-unit * 2;
+  background: url(/img/banner2.svg) no-repeat center;
   background-size: cover;
   text-shadow: 0 0 2px white;
 
@@ -16,11 +15,14 @@
   position: relative;
 }
 
-.site-title {
-  font-family: $header-font-family;
-  font-weight: 400;
+.site-title-wrapper {
   float: left;
-  font-size: 2em;
+}
+
+.site-title {
+  font-family: $accent-font-family;
+  font-weight: 700;
+  font-size: 4em;
   line-height: 1;
   margin-top: 10px;
 
@@ -37,10 +39,15 @@
 }
 
 .tagline {
+  font-family: $accent-font-family;
+  font-weight: 400;
   color: $grey-color;
-  font-size: 0.9em;
+  font-size: 1em;
+  line-height: 1em;
   margin: 1.2em;
+  margin-top: 0px;
   white-space: nowrap;
+  display: block;
 }
 
 .site-nav {
@@ -160,6 +167,28 @@
 /**
  * Page content
  */
+.page-header {
+  margin-bottom: $spacing-unit;
+}
+
+.page-title {
+  font-size: 42px;
+  line-height: 1;
+  margin-bottom: 0.1em;
+  color: $brand-color-primary-blue;
+
+  @include media-query($on-laptop) {
+    font-size: 36px;
+  }
+}
+
+.about-subheader {
+  color: $brand-color-secondary-blue;
+  font-family: $header-font-family;
+  font-style: italic;
+  font-weight: bold;
+}
+
 .page-content {
   padding: $spacing-unit 0;
 }
@@ -194,7 +223,6 @@
 
 .post-meta {
   font-size: $small-font-size;
-  color: $grey-color;
   border-bottom: 1px solid $grey-color-light;
   padding-bottom: 0.5em;
 
@@ -228,6 +256,15 @@
 }
 
 .post-content {
+  // padding-right: $spacing-unit;
+  // padding-left: $spacing-unit;
+
+  max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit}));
+  max-width: calc(#{$content-width} - (#{$spacing-unit}));
+  padding-right: $spacing-unit / 2;
+  padding-left: $spacing-unit / 2;
+  margin-right: auto;
+  margin-left: auto;
   margin-bottom: $spacing-unit;
 
   h2 {
@@ -306,8 +343,11 @@
   margin-bottom: 1em;
 
   h2 {
+    font-family: $accent-font-family;
     font-weight: 400;
     margin-bottom: 0;
+    font-size: 24px;
+    text-align: center;
   }
 
   ul {

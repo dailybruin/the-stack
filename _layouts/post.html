@@ -38,20 +38,18 @@ layout: default
     </div>
   </header>
 
-  {% if page.key_takeaways %}
-  <section class="key-takeaways">
-    <h2>Key takeaways</h2>
-    <ul>
-    {% for takeaway in page.key_takeaways %}
-      <li>{{ takeaway | markdownify }}</li>
-    {% endfor %}
-    </ul>
-  </section>
-  {% endif %}
-
-  <a href="#visualization" id="jump-to-visualization">↓ Jump to visualization</a>
-
   <article class="post-content">
+    {% if page.key_takeaways %}
+      <section class="key-takeaways">
+        <h2>Key Takeaways</h2>
+        <ul>
+        {% for takeaway in page.key_takeaways %}
+          <li>{{ takeaway | markdownify }}</li>
+        {% endfor %}
+        </ul>
+      </section>
+    {% endif %}
+    <a href="#visualization" id="jump-to-visualization">↓ Jump to visualization</a>
     {{ content }}
   </article>
 
@@ -59,13 +57,11 @@ layout: default
     {% if page.previous %}
     <a class="prev" href="{{ page.previous.url }}">
       <h2>← {{ page.previous.title }}</h2>
-      <h3>{{ page.previous.teaser }}</h3>
     </a>
     {% endif %}
     {% if page.next %}
     <a class="next" href="{{ page.next.url }}">
       <h2>{{ page.next.title }} →</h2>
-      <h3>{{ page.next.teaser }}</h3>
     </a>
     {% endif %}
   </nav>
