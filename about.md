@@ -24,7 +24,7 @@ Occasionally we'll geek out to others interested in journalism and computer scie
 
 <header class="about-subheader"> <h2>How we're giving back</h2> </header>
 
-The Daily Bruin is a community newspaper, and we plan on giving back to the community – both to our own Westwood community and to larger communities of news organizations and individuals interested in data for the public good. That's why we're making all the code on this blog [available under open-source licenses on GitHub](https://github.com/{{ site.github_username }}) and all the datasets we collect and parse [available to everyone](https://github.com/dailybruin/the-stack/tree/master/datasets/).
+The Daily Bruin is a community newspaper, and we plan on giving back to the community – both to our own Westwood community and to larger communities of news organizations and individuals interested in data for the public good. That's why we're making all the code on this blog available under open-source licenses on [GitHub](https://github.com/{{ site.github_username }}) and all the datasets we collect and parse [available to everyone](https://github.com/dailybruin/the-stack/tree/master/datasets/).
 
 We hope you'll join us in this exciting data experiment, whether that be as a reader or a collaborator.
 

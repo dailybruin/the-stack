@@ -3,7 +3,7 @@
  */
 .site-header {
   $height: 56px;
-  border-bottom: 1px solid $grey-color-light;
+  border-bottom: 1px solid $grey-color;
   min-height: $height;
   line-height: $height;
   padding-top: $spacing-unit * 2;
@@ -13,6 +13,10 @@
 
   // Positioning context for the mobile navigation icon
   position: relative;
+
+  @include media-query($on-palm) {
+    $height: 40px;
+  }
 }
 
 .site-title-wrapper {
@@ -21,6 +25,7 @@
 
 .site-title {
   font-family: $accent-font-family;
+  font-style: italic;
   font-weight: 700;
   font-size: 4em;
   line-height: 1;
@@ -29,6 +34,10 @@
   &,
   &:visited {
     color: $grey-color-dark;
+  }
+
+  @include media-query($on-palm) {
+    font-size: 48px;
   }
 
   img {
@@ -41,13 +50,17 @@
 .tagline {
   font-family: $accent-font-family;
   font-weight: 400;
-  color: $grey-color;
+  color: $grey-color-dark;
   font-size: 1em;
   line-height: 1em;
   margin: 1.2em;
   margin-top: 0px;
   white-space: nowrap;
   display: block;
+
+  a {
+    font-weight: 700;
+  }
 }
 
 .site-nav {
@@ -69,23 +82,33 @@
  */
 .site-footer {
   border-top: 1px solid $grey-color-light;
+  background-color: $grey-color-extra-light;
   padding: $spacing-unit 0;
 
   h2 {
-    font-size: 18px;
-    font-weight: 400;
+    font-family: $accent-font-family;
+    font-weight: 700;
+    font-style: italic;
+    font-size: 24px;
+    color: $text-color;
     cursor: default;
     margin-bottom: $spacing-unit / 2;
 
     .logo {
-      width: 20px;
+      width: 40px;
       margin-bottom: 4px;
     }
   }
 
+  .text {
+    padding-bottom: $spacing-unit / 2;
+    border-bottom: 1px solid $grey-color;
+  }
+
   h3 {
-    font-size: 14px;
+    font-size: 16px;
     margin-bottom: 0;
+    color: $brand-color;
   }
 
   .contact-list {
@@ -99,7 +122,7 @@
   }
 
   .copyright-info {
-    font-size: 0.7em;
+    font-size: 14px;
     margin: 0.5em 0;
   }
 }
@@ -116,7 +139,7 @@
 }
 
 .footer-col-wrapper {
-  font-size: 15px;
+  font-size: 16px;
   color: $grey-color;
   margin-left: -$spacing-unit / 2;
   @extend %clearfix;
@@ -129,31 +152,14 @@
 }
 
 .footer-col-1 {
-  width: -webkit-calc(28% - (#{$spacing-unit} / 2));
-  width: calc(28% - (#{$spacing-unit} / 2));
+  width: -webkit-calc(60% - (#{$spacing-unit} / 2));
+  width: calc(60% - (#{$spacing-unit} / 2));
 }
 
 .footer-col-2 {
-  width: -webkit-calc(27% - (#{$spacing-unit} / 2));
-  width: calc(27% - (#{$spacing-unit} / 2));
-}
-
-.footer-col-3 {
-  width: -webkit-calc(45% - (#{$spacing-unit} / 2));
-  width: calc(45% - (#{$spacing-unit} / 2));
-}
-
-@include media-query($on-laptop) {
-  .footer-col-1,
-  .footer-col-2 {
-    width: -webkit-calc(50% - (#{$spacing-unit} / 2));
-    width: calc(50% - (#{$spacing-unit} / 2));
-  }
-
-  .footer-col-3 {
-    width: -webkit-calc(100% - (#{$spacing-unit} / 2));
-    width: calc(100% - (#{$spacing-unit} / 2));
-  }
+  width: -webkit-calc(30% - (#{$spacing-unit} / 2));
+  width: calc(30% - (#{$spacing-unit} / 2));
+  float: right;
 }
 
 @include media-query($on-palm) {
@@ -277,6 +283,7 @@
 
   h3 {
     font-size: 26px;
+    margin-top: $spacing-unit;
 
     @include media-query($on-laptop) {
       font-size: 22px;
@@ -397,6 +404,7 @@
     flex-basis: 0;
 
     font-size: 0.8em;
+    color: $brand-color-primary-blue;
     box-sizing: border-box;
     padding: 1em;
     line-height: 1.2;
@@ -410,13 +418,12 @@
       text-align: right;
     }
 
-    h2 {
-      margin-bottom: 0.25em;
+    &:hover {
+      color: $brand-color-secondary-blue;
     }
 
     h3 {
-      font-weight: normal;
-      margin-bottom: 0;
+      margin-bottom: 0.25em;
     }
   }
 }
