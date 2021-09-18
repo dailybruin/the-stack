@@ -5,6 +5,7 @@ L.tileLayer(
     attribution:
       'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
     maxZoom: 18,
+    minZoom: 11, 
     id: "mapbox/streets-v11",
     tileSize: 512,
     zoomOffset: -1,
@@ -53,14 +54,13 @@ geojsonFeature.features.map((feature) => {
     "</b> <br>" +
     "<div style='font-size:14px; margin-top: 0px; margin-bottom: 0px; '>" +
     "Construction Year: " +
-    feature.properties.ConstructionYear +
-    "<br>" +
-    "Retrofit Year: " +
-    feature.properties.RetrofitYear +
-    "<br>" +
+    feature.properties.ConstructionYear
+    + ((feature.properties.RetrofitYear) ? ("<br>" +"Retrofit Year: " + feature.properties.RetrofitYear) : "") + 
+    "<br>" + 
     "Seismic Rating: " +
     feature.properties.SeismicRating +
     "</div>";
+  
 
   switch (feature.properties.SeismicRating) {
     case "III":
@@ -88,14 +88,14 @@ geojsonFeature.features.map((feature) => {
 });
 
 var overlays = {
-  "<p style='color: red; margin-top: 0px; margin-bottom: 0px; font-weight: bold;'> Seismic Rating: III</p>":
-    L.layerGroup(group1).addTo(mymap),
-  '<p style="color: orange; margin-top: 0px; margin-bottom: 0px; font-weight: bold;"> Seismic Rating: IV</p>':
-    L.layerGroup(group2).addTo(mymap),
-  '<p style="color: yelow; margin-top: 0px; margin-bottom: 0px; font-weight: bold;"> Seismic Rating: V</p>':
-    L.layerGroup(group3).addTo(mymap),
-  '<p style="color: green; margin-top: 0px; margin-bottom: 0px; font-weight: bold;"> Seismic Rating: VI</p>':
+  '<p style="color: green; margin-top: 0px; margin-bottom: 0px; font-weight: bold;"> Seismic Rating: III</p>':
     L.layerGroup(group4).addTo(mymap),
+  '<p style="color: yelow; margin-top: 0px; margin-bottom: 0px; font-weight: bold;"> Seismic Rating: IV</p>':
+    L.layerGroup(group3).addTo(mymap),
+    '<p style="color: orange; margin-top: 0px; margin-bottom: 0px; font-weight: bold;"> Seismic Rating: V</p>':
+    L.layerGroup(group2).addTo(mymap), 
+  "<p style='color: red; margin-top: 0px; margin-bottom: 0px; font-weight: bold;'> Seismic Rating: VI</p>":
+    L.layerGroup(group1).addTo(mymap)
 };
 
 L.control.layers(null, overlays, { collapsed: false }).addTo(mymap);
