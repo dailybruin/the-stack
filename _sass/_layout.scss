@@ -344,13 +344,14 @@
 }
 
 .key-takeaways {
-  background-color: rgba($brand-color-secondary-warm, 0.05);
-  border: 1px solid rgba($brand-color-secondary-warm, 0.5);
+  // background-color: rgba($brand-color-secondary-warm, 0.05);
+  border-bottom: 3px solid rgba($new-blue, 1);
   padding: 1em 1em 0.5em;
   margin-bottom: 1em;
 
   h2 {
     font-family: $accent-font-family;
+    color: rgba($new-blue, 1);
     font-weight: 400;
     margin-bottom: 0;
     font-size: 24px;
