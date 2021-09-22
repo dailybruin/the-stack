@@ -25,11 +25,9 @@ oms.addListener("spiderfy", function (markers) {
   mymap.closePopup();
 });
 
-const getIconByColor = (color) => {
+const getIconByName = (name) => {
   return new L.Icon({
-    iconUrl: `https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-${color}.png`,
-    shadowUrl:
-      "https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png",
+    iconUrl: name,
     iconSize: [25, 41],
     iconAnchor: [12, 41],
     popupAnchor: [1, -34],
@@ -37,6 +35,7 @@ const getIconByColor = (color) => {
   });
 };
 
+let groupcustom = []; 
 let group1 = [];
 let group2 = [];
 let group3 = [];
@@ -60,27 +59,77 @@ geojsonFeature.features.map((feature) => {
     "Seismic Rating: " +
     feature.properties.SeismicRating +
     "</div>";
-  
 
-  switch (feature.properties.SeismicRating) {
-    case "III":
-      marker.setIcon(getIconByColor("green"));
-      group4.push(marker);
-      break;
-    case "IV":
-      marker.setIcon(getIconByColor("yellow"));
-      group3.push(marker);
-      break;
-    case "V":
-      marker.setIcon(getIconByColor("orange"));
-      group2.push(marker);
-      break;
-    case "VI":
-      marker.setIcon(getIconByColor("red"));
-      group1.push(marker);
-      break;
-    default:
-      iconColor = "black";
+  if (feature.properties.Custom){
+      switch (feature.properties.Name){
+        case "De Neve Commons":
+        case "De Neve C": 
+        case "De Neve D": 
+        case "De Neve E (Evergreen Residential Building)": 
+        case "De Neve F (Firgrove Residential Building)": 
+          marker.setIcon(getIconByName("pins/custom-denevecommons.svg")); 
+          groupcustom.push(marker); 
+          break; 
+        case "Psychology Tower/Franz Hall": 
+        case "Psychology Building/Franz Hall – 1961 Addition": 
+          marker.setIcon(getIconByName("pins/custom-franzhall.svg")); 
+          groupcustom.push(marker); 
+          break; 
+        case "La Kretz Botany Building": 
+          marker.setIcon(getIconByName("pins/custom-lakretz.svg")); 
+          break; 
+        case "Murphy Hall (Main Building)": 
+        case "Murphy Hall (West)": 
+        case "Murphy Hall (East)": 
+          marker.setIcon(getIconByName("pins/custom-murphyhall.svg")); 
+          break; 
+        case "Powell Library (Main)": 
+        case "Powell Library (East Wing)": 
+          marker.setIcon(getIconByName("pins/custom-powell.svg")); 
+          break; 
+        case "Public Affairs Tower": 
+        case "Public Affairs – Data Processing Center": 
+        case "Public Affairs – Arts Library": 
+          marker.setIcon(getIconByName("pins/custom-publicaffairs.svg")); 
+          break; 
+        case "UCLA School of Dentistry – North Wing": 
+        case "UCLA School of Dentistry – South Wing": 
+          marker.setIcon(getIconByName("pins/custom-schoolofdentistry.svg")); 
+          break; 
+        case "Semel Institute":
+          marker.setIcon(getIconByName("pins/custom-semel.svg")); 
+          break; 
+        case "Young Research Library": 
+          marker.setIcon(getIconByName("pins/custom-yrl.svg")); 
+          break; 
+        default: 
+          marker.setIcon(getIconByName("pins/red-pin.svg")); 
+      }
+  }
+  else{
+    switch (feature.properties.SeismicRating) {
+      case "I": 
+      case "II": 
+      case "III":
+      case "IV": 
+        marker.setIcon(getIconByName("pins/green-pin.svg"));
+        group4.push(marker);
+        break;
+      case "V":
+        marker.setIcon(getIconByName("pins/yellow-pin.svg"));
+        group3.push(marker);
+        break;
+      case "VI":
+        marker.setIcon(getIconByName("pins/orange-pin.svg"));
+        group2.push(marker);
+        break;
+      case "VII":
+        marker.setIcon(getIconByName("pins/red-pin.svg"));
+        group1.push(marker);
+        break;
+      default:
+        iconColor = "black";
+    }
   }
 
   mymap.addLayer(marker);
@@ -88,13 +137,13 @@ geojsonFeature.features.map((feature) => {
 });
 
 var overlays = {
-  '<p style="color: green; margin-top: 0px; margin-bottom: 0px; font-weight: bold;"> Seismic Rating: III</p>':
+  '<p style="color: green; margin-top: 0px; margin-bottom: 0px; font-weight: bold;"> Seismic Rating: I - IV (Seismic Safety Policy Compliant)</p>':
     L.layerGroup(group4).addTo(mymap),
-  '<p style="color: yelow; margin-top: 0px; margin-bottom: 0px; font-weight: bold;"> Seismic Rating: IV</p>':
+  '<p style="color: black; margin-top: 0px; margin-bottom: 0px; font-weight: bold;"> Seismic Rating: V (Will Require Further Evaluation and, if Confirmed, Must Be Addressed</p>':
     L.layerGroup(group3).addTo(mymap),
-    '<p style="color: orange; margin-top: 0px; margin-bottom: 0px; font-weight: bold;"> Seismic Rating: V</p>':
+    '<p style="color: orange; margin-top: 0px; margin-bottom: 0px; font-weight: bold;"> Seismic Rating: VI (Priority for Improvement)</p>':
     L.layerGroup(group2).addTo(mymap), 
-  "<p style='color: red; margin-top: 0px; margin-bottom: 0px; font-weight: bold;'> Seismic Rating: VI</p>":
+  "<p style='color: red; margin-top: 0px; margin-bottom: 0px; font-weight: bold;'> Seismic Rating: VII (Unoccupied and Access-Restricted)</p>":
     L.layerGroup(group1).addTo(mymap)
 };
 

@@ -12,7 +12,8 @@ var geojsonFeature = {
      "Address":"351 Charles E. Young Drive West, Los Angeles, CA 90024",
      "ConstructionYear":2002,
      "RetrofitYear":NaN,
-     "SeismicRating":"III"
+     "SeismicRating":"III", 
+     "Custom":true
      }
    },
    {
@@ -26,7 +27,8 @@ var geojsonFeature = {
      "Address":"301 Charles E. Young Drive West, Los Angeles, CA 90095",
      "ConstructionYear":2000,
      "RetrofitYear":NaN,
-     "SeismicRating":"III"
+     "SeismicRating":"III", 
+     "Custom":true
      }
    },
    {
@@ -40,7 +42,8 @@ var geojsonFeature = {
      "Address":"321 Charles E. Young Drive West, Los Angeles, CA 90024",
      "ConstructionYear":2000,
      "RetrofitYear":NaN,
-     "SeismicRating":"III"
+     "SeismicRating":"III", 
+     "Custom":true
      }
    },
    {
@@ -54,7 +57,8 @@ var geojsonFeature = {
      "Address":"331 Charles E. Young Drive West, Los Angeles, CA 90024",
      "ConstructionYear":2000,
      "RetrofitYear":NaN,
-     "SeismicRating":"III"
+     "SeismicRating":"III", 
+     "Custom":true
      }
    },
    {
@@ -68,7 +72,8 @@ var geojsonFeature = {
      "Address":"381 Charles E. Young Drive West, Los Angeles, CA 90024",
      "ConstructionYear":2000,
      "RetrofitYear":NaN,
-     "SeismicRating":"III"
+     "SeismicRating":"III", 
+     "Custom":true
      }
    },
    {
@@ -82,7 +87,8 @@ var geojsonFeature = {
      "Address":"714 Tiverton Avenue, Los Angeles, CA 90024",
      "ConstructionYear":1966,
      "RetrofitYear":2001,
-     "SeismicRating":"IV"
+     "SeismicRating":"IV", 
+     "Custom":true
      }
    },
    {
@@ -96,7 +102,8 @@ var geojsonFeature = {
      "Address":"714 Tiverton Avenue, Los Angeles, CA 90024",
      "ConstructionYear":1966,
      "RetrofitYear":2017,
-     "SeismicRating":"III"
+     "SeismicRating":"III", 
+     "Custom":true
      }
    },
    {
@@ -110,7 +117,8 @@ var geojsonFeature = {
      "Address":"731 Charles E. Young Drive South, Los Angeles, CA 90095",
      "ConstructionYear":1994,
      "RetrofitYear":NaN,
-     "SeismicRating":"IV"
+     "SeismicRating":"IV", 
+     "Custom":false
      }
    },
    {
@@ -124,7 +132,8 @@ var geojsonFeature = {
      "Address":"731 Charles E. Young Drive South, Los Angeles, CA 90095",
      "ConstructionYear":1994,
      "RetrofitYear":NaN,
-     "SeismicRating":"III"
+     "SeismicRating":"III", 
+     "Custom":false
      }
    },
    {
@@ -138,7 +147,8 @@ var geojsonFeature = {
      "Address":"731 Charles E. Young Drive South, Los Angeles, CA 90095",
      "ConstructionYear":1994,
      "RetrofitYear":NaN,
-     "SeismicRating":"IV"
+     "SeismicRating":"IV", 
+     "Custom":false
      }
    },
    {
@@ -152,7 +162,8 @@ var geojsonFeature = {
      "Address":"731 Charles E. Young Drive South, Los Angeles, CA 90095",
      "ConstructionYear":1994,
      "RetrofitYear":NaN,
-     "SeismicRating":"III"
+     "SeismicRating":"III", 
+     "Custom":false
      }
    },
    {
@@ -166,7 +177,8 @@ var geojsonFeature = {
      "Address":"731 Charles E. Young Drive South, Los Angeles, CA 90095",
      "ConstructionYear":1994,
      "RetrofitYear":NaN,
-     "SeismicRating":"III"
+     "SeismicRating":"III", 
+     "Custom":false
      }
    },
    {
@@ -180,7 +192,8 @@ var geojsonFeature = {
      "Address":"480 Charles E. Young Drive East, Los Angeles, CA 90024",
      "ConstructionYear":1959,
      "RetrofitYear":NaN,
-     "SeismicRating":"V"
+     "SeismicRating":"V", 
+     "Custom":false
      }
    },
    {
@@ -194,7 +207,8 @@ var geojsonFeature = {
      "Address":"618 Charles E. Young Drive South, Los Angeles, CA 90095",
      "ConstructionYear":1959,
      "RetrofitYear":NaN,
-     "SeismicRating":"V"
+     "SeismicRating":"V", 
+     "Custom":true
      }
    },
    {
@@ -208,7 +222,8 @@ var geojsonFeature = {
      "Address":"410 Charles E Young Dr E, Los Angeles, CA 90095",
      "ConstructionYear":1937,
      "RetrofitYear":NaN,
-     "SeismicRating":"V"
+     "SeismicRating":"V", 
+     "Custom":true
      }
    },
    {
@@ -222,7 +237,8 @@ var geojsonFeature = {
      "Address":"410 Charles E Young Dr E, Los Angeles, CA 90095",
      "ConstructionYear":1950,
      "RetrofitYear":NaN,
-     "SeismicRating":"V"
+     "SeismicRating":"V", 
+     "Custom":true
      }
    },
    {
@@ -236,7 +252,8 @@ var geojsonFeature = {
      "Address":"410 Charles E Young Dr E, Los Angeles, CA 90095",
      "ConstructionYear":1964,
      "RetrofitYear":NaN,
-     "SeismicRating":"V"
+     "SeismicRating":"V", 
+     "Custom":true
      }
    },
    {
@@ -250,7 +267,8 @@ var geojsonFeature = {
      "Address":"10740 Dickson Ct, Los Angeles, CA 90095",
      "ConstructionYear":1930,
      "RetrofitYear":1996,
-     "SeismicRating":"V"
+     "SeismicRating":"V", 
+     "Custom":true
      }
    },
    {
@@ -264,7 +282,8 @@ var geojsonFeature = {
      "Address":"10740 Dickson Ct, Los Angeles, CA 90095",
      "ConstructionYear":1947,
      "RetrofitYear":1996,
-     "SeismicRating":"V"
+     "SeismicRating":"V", 
+     "Custom":true
      }
    },
    {
@@ -278,7 +297,8 @@ var geojsonFeature = {
      "Address":"502 Portola Plaza, Los Angeles, CA 90095",
      "ConstructionYear":1965,
      "RetrofitYear":NaN,
-     "SeismicRating":"V"
+     "SeismicRating":"V", 
+     "Custom":true
      }
    },
    {
@@ -292,7 +312,8 @@ var geojsonFeature = {
      "Address":"503 Portola Plaza, Los Angeles, CA 90095",
      "ConstructionYear":1960,
      "RetrofitYear":NaN,
-     "SeismicRating":"IV"
+     "SeismicRating":"IV", 
+     "Custom":true
      }
    },
    {
@@ -306,7 +327,8 @@ var geojsonFeature = {
      "Address":"337 Charles E. Young Drive East, Los Angeles, CA 90095",
      "ConstructionYear":1960,
      "RetrofitYear":1997,
-     "SeismicRating":"V"
+     "SeismicRating":"V", 
+     "Custom":true
      }
    },
    {
@@ -320,7 +342,8 @@ var geojsonFeature = {
      "Address":"337 Charles E. Young Drive East, Los Angeles, CA 90095",
      "ConstructionYear":1958,
      "RetrofitYear":NaN,
-     "SeismicRating":"V"
+     "SeismicRating":"V", 
+     "Custom":true
      }
    },
    {
@@ -334,7 +357,8 @@ var geojsonFeature = {
      "Address":"337 Charles E. Young Drive East, Los Angeles, CA 90095",
      "ConstructionYear":1960,
      "RetrofitYear":NaN,
-     "SeismicRating":"V"
+     "SeismicRating":"V", 
+     "Custom":true
      }
    },
    {
@@ -348,7 +372,8 @@ var geojsonFeature = {
      "Address":"760 Westwood Plaza, Los Angeles, CA 90024",
      "ConstructionYear":1961,
      "RetrofitYear":NaN,
-     "SeismicRating":"V"
+     "SeismicRating":"V", 
+     "Custom":true
      }
    },
    {
@@ -362,7 +387,8 @@ var geojsonFeature = {
      "Address":"111 Easton Drive, Los Angeles, CA 90024",
      "ConstructionYear":1965,
      "RetrofitYear":NaN,
-     "SeismicRating":"IV"
+     "SeismicRating":"IV", 
+     "Custom":false
      }
    },
    {
@@ -376,7 +402,8 @@ var geojsonFeature = {
      "Address":"111 Easton Drive, Los Angeles, CA 90024",
      "ConstructionYear":1965,
      "RetrofitYear":NaN,
-     "SeismicRating":"IV"
+     "SeismicRating":"IV", 
+     "Custom":false
      }
    },
    {
@@ -390,7 +417,8 @@ var geojsonFeature = {
      "Address":"111 Easton Drive, Los Angeles, CA 90024",
      "ConstructionYear":1965,
      "RetrofitYear":NaN,
-     "SeismicRating":"V"
+     "SeismicRating":"V", 
+     "Custom":false
      }
    },
    {
@@ -404,7 +432,8 @@ var geojsonFeature = {
      "Address":"111 Easton Drive, Los Angeles, CA 90024",
      "ConstructionYear":1965,
      "RetrofitYear":NaN,
-     "SeismicRating":"IV"
+     "SeismicRating":"IV", 
+     "Custom":false
      }
    },
    {
@@ -418,7 +447,8 @@ var geojsonFeature = {
      "Address":"111 Easton Drive, Los Angeles, CA 90024",
      "ConstructionYear":1965,
      "RetrofitYear":NaN,
-     "SeismicRating":"IV"
+     "SeismicRating":"IV", 
+     "Custom":false
      }
    },
    {
@@ -432,7 +462,8 @@ var geojsonFeature = {
      "Address":"280 Charles E. Young Drive North, Los Angeles, CA 90095",
      "ConstructionYear":1964,
      "RetrofitYear":NaN,
-     "SeismicRating":"V"
+     "SeismicRating":"V", 
+     "Custom":true
      }
    },
    {
@@ -446,7 +477,8 @@ var geojsonFeature = {
      "Address":"372 Hilgard Avenue, Los Angeles, CA 90024",
      "ConstructionYear":1929,
      "RetrofitYear":NaN,
-     "SeismicRating":"VI"
+     "SeismicRating":"VI", 
+     "Custom":false
      }
    },
    {
@@ -460,7 +492,8 @@ var geojsonFeature = {
      "Address":"10475 Kinnard Avenue, Los Angeles, CA 90024",
      "ConstructionYear":1961,
      "RetrofitYear":NaN,
-     "SeismicRating":"V"
+     "SeismicRating":"V", 
+     "Custom":false
      }
    },
    {
@@ -474,7 +507,8 @@ var geojsonFeature = {
      "Address":"1262 Westwood Boulevard, Los Angeles, CA 90024",
      "ConstructionYear":1940,
      "RetrofitYear":NaN,
-     "SeismicRating":"VI"
+     "SeismicRating":"VI", 
+     "Custom":false
      }
    },
    {
@@ -488,7 +522,8 @@ var geojsonFeature = {
      "Address":"2424 Wilshire Boulevard, Santa Monica, CA 90403",
      "ConstructionYear":1948,
      "RetrofitYear":2015,
-     "SeismicRating":"IV"
+     "SeismicRating":"IV",
+     "Custom":false
      }
    },
    {
@@ -502,7 +537,8 @@ var geojsonFeature = {
      "Address":"1821 Wilshire Boulevard, Santa Monica, CA 90403",
      "ConstructionYear":1948,
      "RetrofitYear":NaN,
-     "SeismicRating":"IV"
+     "SeismicRating":"IV", 
+     "Custom":false
      }
    },
    {
@@ -516,7 +552,8 @@ var geojsonFeature = {
      "Address":"1801 Wilshire Boulevard, Santa Monica, CA 90403",
      "ConstructionYear":1978,
      "RetrofitYear":NaN,
-     "SeismicRating":"IV"
+     "SeismicRating":"IV", 
+     "Custom":false
      }
    },
    {
@@ -530,7 +567,8 @@ var geojsonFeature = {
      "Address":"11075 Santa Monica Blvd, Los Angeles, CA 90025",
      "ConstructionYear":1980,
      "RetrofitYear":NaN,
-     "SeismicRating":"IV"
+     "SeismicRating":"IV", 
+     "Custom":false
      }
    },
    {
@@ -544,7 +582,8 @@ var geojsonFeature = {
      "Address":"1131 Wilshire Boulevard, Santa Monica, CA 90403",
      "ConstructionYear":1981,
      "RetrofitYear":NaN,
-     "SeismicRating":"IV"
+     "SeismicRating":"IV", 
+     "Custom":false
      }
    },
    {
@@ -558,7 +597,8 @@ var geojsonFeature = {
      "Address":"1807 Wilshire Boulevard, Santa Monica, CA 90403",
      "ConstructionYear":1978,
      "RetrofitYear":NaN,
-     "SeismicRating":"IV"
+     "SeismicRating":"IV", 
+     "Custom":false
      }
    },
    {
@@ -572,7 +612,8 @@ var geojsonFeature = {
      "Address":"3171 Sepulveda Boulevard, Los Angeles, CA 90034",
      "ConstructionYear":1996,
      "RetrofitYear":NaN,
-     "SeismicRating":"III"
+     "SeismicRating":"III", 
+     "Custom":false
      }
    },
    {
@@ -586,7 +627,8 @@ var geojsonFeature = {
      "Address":"3181 Sepulveda Boulevard, Los Angeles, CA 90034",
      "ConstructionYear":1996,
      "RetrofitYear":NaN,
-     "SeismicRating":"III"
+     "SeismicRating":"III", 
+     "Custom":false
      }
    },
    {
@@ -600,7 +642,8 @@ var geojsonFeature = {
      "Address":"3191 Sepulveda Boulevard, Los Angeles, CA 90034",
      "ConstructionYear":1996,
      "RetrofitYear":NaN,
-     "SeismicRating":"III"
+     "SeismicRating":"III", 
+     "Custom":false
      }
    },
    {
@@ -614,7 +657,8 @@ var geojsonFeature = {
      "Address":"3151 Sepulveda Boulevard, Los Angeles, CA 90034",
      "ConstructionYear":1996,
      "RetrofitYear":NaN,
-     "SeismicRating":"III"
+     "SeismicRating":"III", 
+     "Custom":false
      }
    },
    {
@@ -628,7 +672,8 @@ var geojsonFeature = {
      "Address":"3233 Sepulveda Boulevard, Los Angeles, CA 90034",
      "ConstructionYear":1996,
      "RetrofitYear":NaN,
-     "SeismicRating":"III"
+     "SeismicRating":"III", 
+     "Custom":false
      }
    },
    {
@@ -642,7 +687,8 @@ var geojsonFeature = {
      "Address":"3281 Sepulveda Boulevard, Los Angeles, CA 90034",
      "ConstructionYear":1995,
      "RetrofitYear":NaN,
-     "SeismicRating":"III"
+     "SeismicRating":"III", 
+     "Custom":false
      }
    },
    {
@@ -656,7 +702,8 @@ var geojsonFeature = {
      "Address":"3260 Sawtelle Boulevard, Los Angeles, CA 90034",
      "ConstructionYear":1995,
      "RetrofitYear":NaN,
-     "SeismicRating":"III"
+     "SeismicRating":"III", 
+     "Custom":false
      }
    },
    {
@@ -670,7 +717,8 @@ var geojsonFeature = {
      "Address":"3290 Sawtelle Boulevard, Los Angeles, CA 90066",
      "ConstructionYear":1995,
      "RetrofitYear":NaN,
-     "SeismicRating":"III"
+     "SeismicRating":"III", 
+     "Custom":false
      }
    },
    {
@@ -684,7 +732,8 @@ var geojsonFeature = {
      "Address":"3100 Sawtelle Boulevard, Los Angeles, CA 90066",
      "ConstructionYear":1995,
      "RetrofitYear":NaN,
-     "SeismicRating":"III"
+     "SeismicRating":"III", 
+     "Custom":false
      }
    },
    {
@@ -698,7 +747,8 @@ var geojsonFeature = {
      "Address":"3110 Sawtelle Boulevard, Los Angeles, CA 90066",
      "ConstructionYear":1995,
      "RetrofitYear":NaN,
-     "SeismicRating":"III"
+     "SeismicRating":"III", 
+     "Custom":false
      }
    },
    {
@@ -712,7 +762,8 @@ var geojsonFeature = {
      "Address":"3120 Sawtelle Boulevard, Los Angeles, CA 90066",
      "ConstructionYear":1995,
      "RetrofitYear":NaN,
-     "SeismicRating":"III"
+     "SeismicRating":"III", 
+     "Custom":false
      }
    },
    {
@@ -726,7 +777,8 @@ var geojsonFeature = {
      "Address":"3130 Sawtelle Boulevard, Los Angeles, CA 90066",
      "ConstructionYear":1995,
      "RetrofitYear":NaN,
-     "SeismicRating":"III"
+     "SeismicRating":"III", 
+     "Custom":false
      }
    },
    {
@@ -740,7 +792,8 @@ var geojsonFeature = {
      "Address":"3140 Sawtelle Boulevard, Los Angeles, CA 90066",
      "ConstructionYear":1995,
      "RetrofitYear":NaN,
-     "SeismicRating":"III"
+     "SeismicRating":"III", 
+     "Custom":false
      }
    },
    {
@@ -754,7 +807,8 @@ var geojsonFeature = {
      "Address":"3150 Sawtelle Boulevard, Los Angeles, CA 90066",
      "ConstructionYear":1995,
      "RetrofitYear":NaN,
-     "SeismicRating":"III"
+     "SeismicRating":"III", 
+     "Custom":false
      }
    },
    {
@@ -768,7 +822,8 @@ var geojsonFeature = {
      "Address":"3160 Sawtelle Boulevard, Los Angeles, CA 90066",
      "ConstructionYear":1995,
      "RetrofitYear":NaN,
-     "SeismicRating":"III"
+     "SeismicRating":"III", 
+     "Custom":false
      }
    },
    {
@@ -782,7 +837,8 @@ var geojsonFeature = {
      "Address":"3170 Sawtelle Boulevard, Los Angeles, CA 90066",
      "ConstructionYear":1995,
      "RetrofitYear":NaN,
-     "SeismicRating":"III"
+     "SeismicRating":"III", 
+     "Custom":false
      }
    },
    {
@@ -796,7 +852,8 @@ var geojsonFeature = {
      "Address":"3155 Sepulveda Boulevard, Los Angeles, CA 90034",
      "ConstructionYear":1996,
      "RetrofitYear":NaN,
-     "SeismicRating":"III"
+     "SeismicRating":"III", 
+     "Custom":false
      }
    },
    {
@@ -810,7 +867,8 @@ var geojsonFeature = {
      "Address":"3180 Sawtelle Boulevard, Los Angeles, CA 90066",
      "ConstructionYear":1995,
      "RetrofitYear":NaN,
-     "SeismicRating":"III"
+     "SeismicRating":"III", 
+     "Custom":false
      }
    },
    {
@@ -824,7 +882,8 @@ var geojsonFeature = {
      "Address":"3200 Sawtelle Boulevard, Los Angeles, CA 90066",
      "ConstructionYear":1995,
      "RetrofitYear":NaN,
-     "SeismicRating":"III"
+     "SeismicRating":"III", 
+     "Custom":false
      }
    },
    {
@@ -838,7 +897,8 @@ var geojsonFeature = {
      "Address":"3232 Sawtelle Boulevard, Los Angeles, CA 90066",
      "ConstructionYear":1995,
      "RetrofitYear":NaN,
-     "SeismicRating":"III"
+     "SeismicRating":"III", 
+     "Custom":false
      }
    },
    {
@@ -852,7 +912,8 @@ var geojsonFeature = {
      "Address":"3151 Sepulveda Boulevard, Los Angeles, CA 90034",
      "ConstructionYear":1996,
      "RetrofitYear":NaN,
-     "SeismicRating":"III"
+     "SeismicRating":"III", 
+     "Custom":false
      }
    },
    {
@@ -866,7 +927,8 @@ var geojsonFeature = {
      "Address":"3234 Sepulveda Boulevard, Los Angeles, CA 90034",
      "ConstructionYear":1995,
      "RetrofitYear":NaN,
-     "SeismicRating":"III"
+     "SeismicRating":"III", 
+     "Custom":false
      }
    },
    {
@@ -880,7 +942,8 @@ var geojsonFeature = {
      "Address":"3161 Sepulveda Boulevard, Los Angeles, CA 90034",
      "ConstructionYear":1996,
      "RetrofitYear":NaN,
-     "SeismicRating":"III"
+     "SeismicRating":"III", 
+     "Custom":false
      }
    },
    {
@@ -894,7 +957,8 @@ var geojsonFeature = {
      "Address":"3241 Sepulveda Boulevard, Los Angeles, CA 90034",
      "ConstructionYear":1996,
      "RetrofitYear":NaN,
-     "SeismicRating":"III"
+     "SeismicRating":"III", 
+     "Custom":false
      }
    },
    {
@@ -908,7 +972,8 @@ var geojsonFeature = {
      "Address":"3251 Sepulveda Boulevard, Los Angeles, CA 90034",
      "ConstructionYear":1996,
      "RetrofitYear":NaN,
-     "SeismicRating":"III"
+     "SeismicRating":"III", 
+     "Custom":false
      }
    },
    {
@@ -922,7 +987,8 @@ var geojsonFeature = {
      "Address":"3255 Sepulveda Boulevard, Los Angeles, CA 90034",
      "ConstructionYear":1996,
      "RetrofitYear":NaN,
-     "SeismicRating":"III"
+     "SeismicRating":"III", 
+     "Custom":false
      }
    },
    {
@@ -936,7 +1002,8 @@ var geojsonFeature = {
      "Address":"3245 Sepulveda Boulevard, Los Angeles, CA 90034",
      "ConstructionYear":1996,
      "RetrofitYear":NaN,
-     "SeismicRating":"III"
+     "SeismicRating":"III", 
+     "Custom":false
      }
    },
    {
@@ -950,7 +1017,8 @@ var geojsonFeature = {
      "Address":"3195 Sepulveda Boulevard, Los Angeles, CA 90034",
      "ConstructionYear":1996,
      "RetrofitYear":NaN,
-     "SeismicRating":"III"
+     "SeismicRating":"III", 
+     "Custom":false
      }
    },
    {
@@ -964,7 +1032,8 @@ var geojsonFeature = {
      "Address":"3185 Sepulveda Boulevard, Los Angeles, CA 90034",
      "ConstructionYear":1996,
      "RetrofitYear":NaN,
-     "SeismicRating":"III"
+     "SeismicRating":"III", 
+     "Custom":false
      }
    },
    {
@@ -978,7 +1047,8 @@ var geojsonFeature = {
      "Address":"3175 Sepulveda Boulevard, Los Angeles, CA 90034",
      "ConstructionYear":1996,
      "RetrofitYear":NaN,
-     "SeismicRating":"III"
+     "SeismicRating":"III", 
+     "Custom":false
      }
    },
    {
@@ -992,7 +1062,8 @@ var geojsonFeature = {
      "Address":"3165 Sepulveda Boulevard, Los Angeles, CA 90034",
      "ConstructionYear":1996,
      "RetrofitYear":NaN,
-     "SeismicRating":"III"
+     "SeismicRating":"III", 
+     "Custom":false
      }
    },
    {
@@ -1006,7 +1077,8 @@ var geojsonFeature = {
      "Address":"3240 Sawtelle Boulevard, Los Angeles, CA 90066",
      "ConstructionYear":1996,
      "RetrofitYear":NaN,
-     "SeismicRating":"III"
+     "SeismicRating":"III", 
+     "Custom":false
      }
    },
    {
@@ -1020,7 +1092,8 @@ var geojsonFeature = {
      "Address":"3271 Sepulveda Boulevard, Los Angeles, CA 90034",
      "ConstructionYear":1995,
      "RetrofitYear":NaN,
-     "SeismicRating":"III"
+     "SeismicRating":"III", 
+     "Custom":false
      }
    },
    {
@@ -1034,7 +1107,8 @@ var geojsonFeature = {
      "Address":"3280 Sawtelle Boulevard, Los Angeles, CA 90066",
      "ConstructionYear":1996,
      "RetrofitYear":NaN,
-     "SeismicRating":"III"
+     "SeismicRating":"III", 
+     "Custom":false
      }
    },
    {
@@ -1048,7 +1122,8 @@ var geojsonFeature = {
      "Address":"3270 Sawtelle Boulevard, Los Angeles, CA 90066",
      "ConstructionYear":1996,
      "RetrofitYear":NaN,
-     "SeismicRating":"III"
+     "SeismicRating":"III", 
+     "Custom":false
      }
    },
    {
@@ -1062,7 +1137,8 @@ var geojsonFeature = {
      "Address":"3250 Sawtelle Boulevard, Los Angeles, CA 90066",
      "ConstructionYear":1996,
      "RetrofitYear":NaN,
-     "SeismicRating":"III"
+     "SeismicRating":"III", 
+     "Custom":false
      }
    },
    {
@@ -1076,7 +1152,8 @@ var geojsonFeature = {
      "Address":"3265 Sepulveda Boulevard, Los Angeles, CA 90034",
      "ConstructionYear":1996,
      "RetrofitYear":NaN,
-     "SeismicRating":"III"
+     "SeismicRating":"III", 
+     "Custom":false
      }
    },
    {
@@ -1090,7 +1167,8 @@ var geojsonFeature = {
      "Address":"3261 Sepulveda Boulevard, Los Angeles, CA 90034",
      "ConstructionYear":1996,
      "RetrofitYear":NaN,
-     "SeismicRating":"III"
+     "SeismicRating":"III", 
+     "Custom":false
      }
    },
    {
@@ -1104,7 +1182,8 @@ var geojsonFeature = {
      "Address":"3327 Sepulveda Boulevard, Los Angeles, CA 90034",
      "ConstructionYear":1996,
      "RetrofitYear":NaN,
-     "SeismicRating":"III"
+     "SeismicRating":"III", 
+     "Custom":false
      }
    },
    {
@@ -1118,7 +1197,8 @@ var geojsonFeature = {
      "Address":"3300 Sawtelle Boulevard, Los Angeles, CA 90034",
      "ConstructionYear":2003,
      "RetrofitYear":NaN,
-     "SeismicRating":"III"
+     "SeismicRating":"III", 
+     "Custom":false
      }
    },
    {
@@ -1132,7 +1212,8 @@ var geojsonFeature = {
      "Address":"3310 Sawtelle Boulevard, Los Angeles, CA 90034",
      "ConstructionYear":2003,
      "RetrofitYear":NaN,
-     "SeismicRating":"III"
+     "SeismicRating":"III", 
+     "Custom":false
      }
    },
    {
@@ -1146,7 +1227,8 @@ var geojsonFeature = {
      "Address":"3320 Sawtelle Boulevard, Los Angeles, CA 90034",
      "ConstructionYear":2003,
      "RetrofitYear":NaN,
-     "SeismicRating":"III"
+     "SeismicRating":"III", 
+     "Custom":false
      }
    },
    {
@@ -1160,7 +1242,8 @@ var geojsonFeature = {
      "Address":"3340 Sawtelle Boulevard, Los Angeles, CA 90034",
      "ConstructionYear":2003,
      "RetrofitYear":NaN,
-     "SeismicRating":"III"
+     "SeismicRating":"III", 
+     "Custom":false
      }
    },
    {
@@ -1174,7 +1257,8 @@ var geojsonFeature = {
      "Address":"3350 Sawtelle Boulevard, Los Angeles CA 90034",
      "ConstructionYear":2003,
      "RetrofitYear":NaN,
-     "SeismicRating":"III"
+     "SeismicRating":"III", 
+     "Custom":false
      }
    },
    {
@@ -1188,7 +1272,8 @@ var geojsonFeature = {
      "Address":"3360 Sawtelle Boulevard, Los Angeles, CA 90034",
      "ConstructionYear":2003,
      "RetrofitYear":NaN,
-     "SeismicRating":"III"
+     "SeismicRating":"III", 
+     "Custom":false
      }
    }
  ]
