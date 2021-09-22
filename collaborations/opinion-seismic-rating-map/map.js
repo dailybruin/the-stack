@@ -131,13 +131,13 @@ geojsonFeature.features.map((feature) => {
 });
 
 var overlays = {
-  '<p style="color: green; margin-top: 0px; margin-bottom: 0px; font-weight: bold; display: inline-block"> Seismic Rating: I - IV (Seismic Safety Policy Compliant)</p>':
+  '<p style="color: green; margin-top: 0px; margin-bottom: 0px; font-weight: bold; display: inline-block"> Seismic Rating: I - IV</p> <br> <p>(Seismic Safety Policy Compliant)</p>':
     L.layerGroup(group4).addTo(mymap),
-  '<p style="color: black; margin-top: 0px; margin-bottom: 0px; font-weight: bold; display: inline-block"> Seismic Rating: V (Will Require Further Evaluation and, if Confirmed, Must Be Addressed)</p>':
+  '<p style="color: black; margin-top: 0px; margin-bottom: 0px; font-weight: bold; display: inline-block"> Seismic Rating: V</p> <br> <p>Will Require Further Evaluation and, if Confirmed, Must Be Addressed)</p>':
     L.layerGroup(group3).addTo(mymap),
-    '<p style="color: orange; margin-top: 0px; margin-bottom: 0px; font-weight: bold; display: inline-block"> Seismic Rating: VI (Priority for Improvement)</p>':
+    '<p style="color: orange; margin-top: 0px; margin-bottom: 0px; font-weight: bold; display: inline-block"> Seismic Rating: VI</p> <br> <p>(Priority for Improvement)</p>':
     L.layerGroup(group2).addTo(mymap), 
-  "<p style='color: red; margin-top: 0px; margin-bottom: 0px; font-weight: bold; display: inline-block'> Seismic Rating: VII (Unoccupied and Access-Restricted)</p>":
+  "<p style='color: red; margin-top: 0px; margin-bottom: 0px; font-weight: bold; display: inline-block'> Seismic Rating: VII</p><br><p>(Unoccupied and Access-Restricted)</p>":
     L.layerGroup(group1).addTo(mymap)
 };
 
