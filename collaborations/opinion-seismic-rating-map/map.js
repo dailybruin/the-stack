@@ -57,7 +57,7 @@ geojsonFeature.features.map((feature) => {
     + ((feature.properties.RetrofitYear) ? ("<br>" +"Retrofit Year: " + feature.properties.RetrofitYear) : "") + 
     "<br>" + 
     "Seismic Rating: " +
-    feature.properties.SeismicRating +
+    ((feature.properties.RatingText) ? (feature.properties.RatingText) : (feature.properties.SeismicRating)) +
     "</div>";
 
   if (feature.properties.Custom){
@@ -78,22 +78,16 @@ geojsonFeature.features.map((feature) => {
         case "La Kretz Botany Building": 
           marker.setIcon(getIconByName("pins/custom-lakretz.svg")); 
           break; 
-        case "Murphy Hall (Main Building)": 
-        case "Murphy Hall (West)": 
-        case "Murphy Hall (East)": 
+        case "Murphy Hall": 
           marker.setIcon(getIconByName("pins/custom-murphyhall.svg")); 
           break; 
-        case "Powell Library (Main)": 
-        case "Powell Library (East Wing)": 
+        case "Powell Library": 
           marker.setIcon(getIconByName("pins/custom-powell.svg")); 
           break; 
-        case "Public Affairs Tower": 
-        case "Public Affairs – Data Processing Center": 
-        case "Public Affairs – Arts Library": 
+        case "Public Affairs": 
           marker.setIcon(getIconByName("pins/custom-publicaffairs.svg")); 
           break; 
-        case "UCLA School of Dentistry – North Wing": 
-        case "UCLA School of Dentistry – South Wing": 
+        case "UCLA School of Dentistry": 
           marker.setIcon(getIconByName("pins/custom-schoolofdentistry.svg")); 
           break; 
         case "Semel Institute":
@@ -137,13 +131,13 @@ geojsonFeature.features.map((feature) => {
 });
 
 var overlays = {
-  '<p style="color: green; margin-top: 0px; margin-bottom: 0px; font-weight: bold;"> Seismic Rating: I - IV (Seismic Safety Policy Compliant)</p>':
+  '<p style="color: green; margin-top: 0px; margin-bottom: 0px; font-weight: bold; display: inline-block"> Seismic Rating: I - IV (Seismic Safety Policy Compliant)</p>':
     L.layerGroup(group4).addTo(mymap),
-  '<p style="color: black; margin-top: 0px; margin-bottom: 0px; font-weight: bold;"> Seismic Rating: V (Will Require Further Evaluation and, if Confirmed, Must Be Addressed</p>':
+  '<p style="color: black; margin-top: 0px; margin-bottom: 0px; font-weight: bold; display: inline-block"> Seismic Rating: V (Will Require Further Evaluation and, if Confirmed, Must Be Addressed)</p>':
     L.layerGroup(group3).addTo(mymap),
-    '<p style="color: orange; margin-top: 0px; margin-bottom: 0px; font-weight: bold;"> Seismic Rating: VI (Priority for Improvement)</p>':
+    '<p style="color: orange; margin-top: 0px; margin-bottom: 0px; font-weight: bold; display: inline-block"> Seismic Rating: VI (Priority for Improvement)</p>':
     L.layerGroup(group2).addTo(mymap), 
-  "<p style='color: red; margin-top: 0px; margin-bottom: 0px; font-weight: bold;'> Seismic Rating: VII (Unoccupied and Access-Restricted)</p>":
+  "<p style='color: red; margin-top: 0px; margin-bottom: 0px; font-weight: bold; display: inline-block'> Seismic Rating: VII (Unoccupied and Access-Restricted)</p>":
     L.layerGroup(group1).addTo(mymap)
 };
 

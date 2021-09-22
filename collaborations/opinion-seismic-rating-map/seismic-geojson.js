@@ -13,7 +13,8 @@ var geojsonFeature = {
      "ConstructionYear":2002,
      "RetrofitYear":NaN,
      "SeismicRating":"III", 
-     "Custom":true
+     "Custom":true, 
+     "RatingText":""
      }
    },
    {
@@ -28,7 +29,8 @@ var geojsonFeature = {
      "ConstructionYear":2000,
      "RetrofitYear":NaN,
      "SeismicRating":"III", 
-     "Custom":true
+     "Custom":true, 
+     "RatingText":""
      }
    },
    {
@@ -43,7 +45,8 @@ var geojsonFeature = {
      "ConstructionYear":2000,
      "RetrofitYear":NaN,
      "SeismicRating":"III", 
-     "Custom":true
+     "Custom":true, 
+     "RatingText":""
      }
    },
    {
@@ -58,7 +61,8 @@ var geojsonFeature = {
      "ConstructionYear":2000,
      "RetrofitYear":NaN,
      "SeismicRating":"III", 
-     "Custom":true
+     "Custom":true, 
+     "RatingText":""
      }
    },
    {
@@ -73,7 +77,8 @@ var geojsonFeature = {
      "ConstructionYear":2000,
      "RetrofitYear":NaN,
      "SeismicRating":"III", 
-     "Custom":true
+     "Custom":true, 
+     "RatingText":""
      }
    },
    {
@@ -83,104 +88,136 @@ var geojsonFeature = {
         "coordinates":  [ -118.4418606,34.0660175 ]
      },
      "properties": {
-     "Name":"UCLA School of Dentistry – North Wing",
+     "Name":"UCLA School of Dentistry",
      "Address":"714 Tiverton Avenue, Los Angeles, CA 90024",
-     "ConstructionYear":1966,
-     "RetrofitYear":2001,
+     "ConstructionYear":"1966 (North Wing), 1966 (South Wing) ",
+     "RetrofitYear":"2001 (North Wing), 2017 (South Wing)",
      "SeismicRating":"IV", 
-     "Custom":true
+     "Custom":true, 
+     "RatingText":"IV (North Wing), III (South Wing)"
      }
    },
-   {
-     "type": "Feature",
-     "geometry": {
-        "type": "Point",
-        "coordinates":  [ -118.4418606,34.0660175 ]
-     },
-     "properties": {
-     "Name":"UCLA School of Dentistry – South Wing",
-     "Address":"714 Tiverton Avenue, Los Angeles, CA 90024",
-     "ConstructionYear":1966,
-     "RetrofitYear":2017,
-     "SeismicRating":"III", 
-     "Custom":true
-     }
-   },
-   {
-     "type": "Feature",
-     "geometry": {
-        "type": "Point",
-        "coordinates":  [ -118.4461552,34.0672582 ]
-     },
-     "properties": {
-     "Name":"Facilities Management Building (Building 2)",
-     "Address":"731 Charles E. Young Drive South, Los Angeles, CA 90095",
-     "ConstructionYear":1994,
-     "RetrofitYear":NaN,
-     "SeismicRating":"IV", 
-     "Custom":false
-     }
-   },
-   {
-     "type": "Feature",
-     "geometry": {
-        "type": "Point",
-        "coordinates":  [ -118.4461552,34.0672582 ]
-     },
-     "properties": {
-     "Name":"Facilities Management Building E (Building 3)",
-     "Address":"731 Charles E. Young Drive South, Los Angeles, CA 90095",
-     "ConstructionYear":1994,
-     "RetrofitYear":NaN,
-     "SeismicRating":"III", 
-     "Custom":false
-     }
-   },
-   {
-     "type": "Feature",
-     "geometry": {
-        "type": "Point",
-        "coordinates":  [ -118.4461552,34.0672582 ]
-     },
-     "properties": {
-     "Name":"Facilities Management Building – CoGen W (Building 1)",
-     "Address":"731 Charles E. Young Drive South, Los Angeles, CA 90095",
-     "ConstructionYear":1994,
-     "RetrofitYear":NaN,
-     "SeismicRating":"IV", 
-     "Custom":false
-     }
-   },
-   {
-     "type": "Feature",
-     "geometry": {
-        "type": "Point",
-        "coordinates":  [ -118.4461552,34.0672582 ]
-     },
-     "properties": {
-     "Name":"Facilies Management Building – CoGen E (Building 5)",
-     "Address":"731 Charles E. Young Drive South, Los Angeles, CA 90095",
-     "ConstructionYear":1994,
-     "RetrofitYear":NaN,
-     "SeismicRating":"III", 
-     "Custom":false
-     }
-   },
-   {
-     "type": "Feature",
-     "geometry": {
-        "type": "Point",
-        "coordinates":  [ -118.4461552,34.0672582 ]
-     },
-     "properties": {
-     "Name":"Facilities Management Building – ESB (Building 4)",
-     "Address":"731 Charles E. Young Drive South, Los Angeles, CA 90095",
-     "ConstructionYear":1994,
-     "RetrofitYear":NaN,
-     "SeismicRating":"III", 
-     "Custom":false
-     }
-   },
+  //  {
+  //    "type": "Feature",
+  //    "geometry": {
+  //       "type": "Point",
+  //       "coordinates":  [ -118.4418606,34.0660175 ]
+  //    },
+  //    "properties": {
+  //    "Name":"UCLA School of Dentistry – North Wing",
+  //    "Address":"714 Tiverton Avenue, Los Angeles, CA 90024",
+  //    "ConstructionYear":1966, 
+  //    "RetrofitYear":2001,
+  //    "SeismicRating":"IV", 
+  //    "Custom":true
+  //    }
+  //  },
+  //  {
+  //    "type": "Feature",
+  //    "geometry": {
+  //       "type": "Point",
+  //       "coordinates":  [ -118.4418606,34.0660175 ]
+  //    },
+  //    "properties": {
+  //    "Name":"UCLA School of Dentistry – South Wing",
+  //    "Address":"714 Tiverton Avenue, Los Angeles, CA 90024",
+  //    "ConstructionYear":1966,
+  //    "RetrofitYear":2017,
+  //    "SeismicRating":"III", 
+  //    "Custom":true
+  //    }
+  //  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -118.4461552,34.0672582 ]
+    },
+    "properties": {
+    "Name":"Facilities Management Building",
+    "Address":"731 Charles E. Young Drive South, Los Angeles, CA 90095",
+    "ConstructionYear":"1994 (Building 2), 1994 (Building 3), 1994 (CoGen W Building 1), 1995 (CoGen E Building 5), 1994 (ESB Building 4)",
+    "RetrofitYear":NaN,
+    "SeismicRating":"IV", 
+    "Custom":false, 
+    "RatingText":"IV (Building 2), III (Building 3), IV (CoGen W Building 1), III (CoGen E Building 5), III (ESB Building 4)"
+    }
+  },
+  //  {
+  //    "type": "Feature",
+  //    "geometry": {
+  //       "type": "Point",
+  //       "coordinates":  [ -118.4461552,34.0672582 ]
+  //    },
+  //    "properties": {
+  //    "Name":"Facilities Management Building (Building 2)",
+  //    "Address":"731 Charles E. Young Drive South, Los Angeles, CA 90095",
+  //    "ConstructionYear":1994,
+  //    "RetrofitYear":NaN,
+  //    "SeismicRating":"IV", 
+  //    "Custom":false
+  //    }
+  //  },
+  //  {
+  //    "type": "Feature",
+  //    "geometry": {
+  //       "type": "Point",
+  //       "coordinates":  [ -118.4461552,34.0672582 ]
+  //    },
+  //    "properties": {
+  //    "Name":"Facilities Management Building E (Building 3)",
+  //    "Address":"731 Charles E. Young Drive South, Los Angeles, CA 90095",
+  //    "ConstructionYear":1994,
+  //    "RetrofitYear":NaN,
+  //    "SeismicRating":"III", 
+  //    "Custom":false
+  //    }
+  //  },
+  //  {
+  //    "type": "Feature",
+  //    "geometry": {
+  //       "type": "Point",
+  //       "coordinates":  [ -118.4461552,34.0672582 ]
+  //    },
+  //    "properties": {
+  //    "Name":"Facilities Management Building – CoGen W (Building 1)",
+  //    "Address":"731 Charles E. Young Drive South, Los Angeles, CA 90095",
+  //    "ConstructionYear":1994,
+  //    "RetrofitYear":NaN,
+  //    "SeismicRating":"IV", 
+  //    "Custom":false
+  //    }
+  //  },
+  //  {
+  //    "type": "Feature",
+  //    "geometry": {
+  //       "type": "Point",
+  //       "coordinates":  [ -118.4461552,34.0672582 ]
+  //    },
+  //    "properties": {
+  //    "Name":"Facilies Management Building – CoGen E (Building 5)",
+  //    "Address":"731 Charles E. Young Drive South, Los Angeles, CA 90095",
+  //    "ConstructionYear":1994,
+  //    "RetrofitYear":NaN,
+  //    "SeismicRating":"III", 
+  //    "Custom":false
+  //    }
+  //  },
+  //  {
+  //    "type": "Feature",
+  //    "geometry": {
+  //       "type": "Point",
+  //       "coordinates":  [ -118.4461552,34.0672582 ]
+  //    },
+  //    "properties": {
+  //    "Name":"Facilities Management Building – ESB (Building 4)",
+  //    "Address":"731 Charles E. Young Drive South, Los Angeles, CA 90095",
+  //    "ConstructionYear":1994,
+  //    "RetrofitYear":NaN,
+  //    "SeismicRating":"III", 
+  //    "Custom":false
+  //    }
+  //  },
    {
      "type": "Feature",
      "geometry": {
@@ -193,7 +230,8 @@ var geojsonFeature = {
      "ConstructionYear":1959,
      "RetrofitYear":NaN,
      "SeismicRating":"V", 
-     "Custom":false
+     "Custom":false, 
+     "RatingText":""
      }
    },
    {
@@ -208,84 +246,117 @@ var geojsonFeature = {
      "ConstructionYear":1959,
      "RetrofitYear":NaN,
      "SeismicRating":"V", 
-     "Custom":true
+     "Custom":true, 
+     "RatingText":""
      }
    },
    {
-     "type": "Feature",
-     "geometry": {
-        "type": "Point",
-        "coordinates":  [ -118.4387084,34.0716091 ]
-     },
-     "properties": {
-     "Name":"Murphy Hall (Main Building)",
-     "Address":"410 Charles E Young Dr E, Los Angeles, CA 90095",
-     "ConstructionYear":1937,
-     "RetrofitYear":NaN,
-     "SeismicRating":"V", 
-     "Custom":true
-     }
-   },
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -118.4387084,34.0716091 ]
+    },
+    "properties": {
+    "Name":"Murphy Hall",
+    "Address":"410 Charles E Young Dr E, Los Angeles, CA 90095",
+    "ConstructionYear":"1937 (Main), 1950 (West), 1964 (East)",
+    "RetrofitYear":NaN,
+    "SeismicRating":"V", 
+    "Custom":true, 
+    "RatingText":""
+    }
+  },
+  //  {
+  //    "type": "Feature",
+  //    "geometry": {
+  //       "type": "Point",
+  //       "coordinates":  [ -118.4387084,34.0716091 ]
+  //    },
+  //    "properties": {
+  //    "Name":"Murphy Hall (Main Building)",
+  //    "Address":"410 Charles E Young Dr E, Los Angeles, CA 90095",
+  //    "ConstructionYear":1937,
+  //    "RetrofitYear":NaN,
+  //    "SeismicRating":"V", 
+  //    "Custom":true
+  //    }
+  //  },
+  //  {
+  //    "type": "Feature",
+  //    "geometry": {
+  //       "type": "Point",
+  //       "coordinates":  [ -118.4387084,34.0716091 ]
+  //    },
+  //    "properties": {
+  //    "Name":"Murphy Hall (West)",
+  //    "Address":"410 Charles E Young Dr E, Los Angeles, CA 90095",
+  //    "ConstructionYear":1950,
+  //    "RetrofitYear":NaN,
+  //    "SeismicRating":"V", 
+  //    "Custom":true
+  //    }
+  //  },
+  //  {
+  //    "type": "Feature",
+  //    "geometry": {
+  //       "type": "Point",
+  //       "coordinates":  [ -118.4387084,34.0716091 ]
+  //    },
+  //    "properties": {
+  //    "Name":"Murphy Hall (East)",
+  //    "Address":"410 Charles E Young Dr E, Los Angeles, CA 90095",
+  //    "ConstructionYear":1964,
+  //    "RetrofitYear":NaN,
+  //    "SeismicRating":"V", 
+  //    "Custom":true
+  //    }
+  //  },
    {
-     "type": "Feature",
-     "geometry": {
-        "type": "Point",
-        "coordinates":  [ -118.4387084,34.0716091 ]
-     },
-     "properties": {
-     "Name":"Murphy Hall (West)",
-     "Address":"410 Charles E Young Dr E, Los Angeles, CA 90095",
-     "ConstructionYear":1950,
-     "RetrofitYear":NaN,
-     "SeismicRating":"V", 
-     "Custom":true
-     }
-   },
-   {
-     "type": "Feature",
-     "geometry": {
-        "type": "Point",
-        "coordinates":  [ -118.4387084,34.0716091 ]
-     },
-     "properties": {
-     "Name":"Murphy Hall (East)",
-     "Address":"410 Charles E Young Dr E, Los Angeles, CA 90095",
-     "ConstructionYear":1964,
-     "RetrofitYear":NaN,
-     "SeismicRating":"V", 
-     "Custom":true
-     }
-   },
-   {
-     "type": "Feature",
-     "geometry": {
-        "type": "Point",
-        "coordinates":  [ -118.4421809,34.0716126 ]
-     },
-     "properties": {
-     "Name":"Powell Library (Main)",
-     "Address":"10740 Dickson Ct, Los Angeles, CA 90095",
-     "ConstructionYear":1930,
-     "RetrofitYear":1996,
-     "SeismicRating":"V", 
-     "Custom":true
-     }
-   },
-   {
-     "type": "Feature",
-     "geometry": {
-        "type": "Point",
-        "coordinates":  [ -118.4421809,34.0716126 ]
-     },
-     "properties": {
-     "Name":"Powell Library (East Wing)",
-     "Address":"10740 Dickson Ct, Los Angeles, CA 90095",
-     "ConstructionYear":1947,
-     "RetrofitYear":1996,
-     "SeismicRating":"V", 
-     "Custom":true
-     }
-   },
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -118.4421809,34.0716126 ]
+    },
+    "properties": {
+    "Name":"Powell Library",
+    "Address":"10740 Dickson Ct, Los Angeles, CA 90095",
+    "ConstructionYear":"1930 (Main), 1947 (East Wing)",
+    "RetrofitYear":"1996 (Main), 1996 (East Wing)",
+    "SeismicRating":"V", 
+    "Custom":true, 
+    "RatingText":"V"
+    }
+  },
+  //  {
+  //    "type": "Feature",
+  //    "geometry": {
+  //       "type": "Point",
+  //       "coordinates":  [ -118.4421809,34.0716126 ]
+  //    },
+  //    "properties": {
+  //    "Name":"Powell Library (Main)",
+  //    "Address":"10740 Dickson Ct, Los Angeles, CA 90095",
+  //    "ConstructionYear":1930,
+  //    "RetrofitYear":1996,
+  //    "SeismicRating":"V", 
+  //    "Custom":true
+  //    }
+  //  },
+  //  {
+  //    "type": "Feature",
+  //    "geometry": {
+  //       "type": "Point",
+  //       "coordinates":  [ -118.4421809,34.0716126 ]
+  //    },
+  //    "properties": {
+  //    "Name":"Powell Library (East Wing)",
+  //    "Address":"10740 Dickson Ct, Los Angeles, CA 90095",
+  //    "ConstructionYear":1947,
+  //    "RetrofitYear":1996,
+  //    "SeismicRating":"V", 
+  //    "Custom":true
+  //    }
+  //  },
    {
      "type": "Feature",
      "geometry": {
@@ -298,7 +369,8 @@ var geojsonFeature = {
      "ConstructionYear":1965,
      "RetrofitYear":NaN,
      "SeismicRating":"V", 
-     "Custom":true
+     "Custom":true, 
+     "RatingText":""
      }
    },
    {
@@ -313,54 +385,71 @@ var geojsonFeature = {
      "ConstructionYear":1960,
      "RetrofitYear":NaN,
      "SeismicRating":"IV", 
-     "Custom":true
+     "Custom":true, 
+     "RatingText":""
      }
    },
    {
-     "type": "Feature",
-     "geometry": {
-        "type": "Point",
-        "coordinates":  [ -118.4392242,34.0741192 ]
-     },
-     "properties": {
-     "Name":"Public Affairs Tower",
-     "Address":"337 Charles E. Young Drive East, Los Angeles, CA 90095",
-     "ConstructionYear":1960,
-     "RetrofitYear":1997,
-     "SeismicRating":"V", 
-     "Custom":true
-     }
-   },
-   {
-     "type": "Feature",
-     "geometry": {
-        "type": "Point",
-        "coordinates":  [ -118.4392242,34.0741192 ]
-     },
-     "properties": {
-     "Name":"Public Affairs – Data Processing Center",
-     "Address":"337 Charles E. Young Drive East, Los Angeles, CA 90095",
-     "ConstructionYear":1958,
-     "RetrofitYear":NaN,
-     "SeismicRating":"V", 
-     "Custom":true
-     }
-   },
-   {
-     "type": "Feature",
-     "geometry": {
-        "type": "Point",
-        "coordinates":  [ -118.4392242,34.0741192 ]
-     },
-     "properties": {
-     "Name":"Public Affairs – Arts Library",
-     "Address":"337 Charles E. Young Drive East, Los Angeles, CA 90095",
-     "ConstructionYear":1960,
-     "RetrofitYear":NaN,
-     "SeismicRating":"V", 
-     "Custom":true
-     }
-   },
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -118.4392242,34.0741192 ]
+    },
+    "properties": {
+    "Name":"Public Affairs",
+    "Address":"337 Charles E. Young Drive East, Los Angeles, CA 90095",
+    "ConstructionYear":"1960 (Tower), 1958 (Data Processing Center), 1960 (Arts Library)",
+    "RetrofitYear":"1997 (Tower)",
+    "SeismicRating":"V", 
+    "Custom":true, 
+    "RatingText":"V"
+    }
+  },
+  //  {
+  //    "type": "Feature",
+  //    "geometry": {
+  //       "type": "Point",
+  //       "coordinates":  [ -118.4392242,34.0741192 ]
+  //    },
+  //    "properties": {
+  //    "Name":"Public Affairs Tower",
+  //    "Address":"337 Charles E. Young Drive East, Los Angeles, CA 90095",
+  //    "ConstructionYear":1960,
+  //    "RetrofitYear":1997,
+  //    "SeismicRating":"V", 
+  //    "Custom":true
+  //    }
+  //  },
+  //  {
+  //    "type": "Feature",
+  //    "geometry": {
+  //       "type": "Point",
+  //       "coordinates":  [ -118.4392242,34.0741192 ]
+  //    },
+  //    "properties": {
+  //    "Name":"Public Affairs – Data Processing Center",
+  //    "Address":"337 Charles E. Young Drive East, Los Angeles, CA 90095",
+  //    "ConstructionYear":1958,
+  //    "RetrofitYear":NaN,
+  //    "SeismicRating":"V", 
+  //    "Custom":true
+  //    }
+  //  },
+  //  {
+  //    "type": "Feature",
+  //    "geometry": {
+  //       "type": "Point",
+  //       "coordinates":  [ -118.4392242,34.0741192 ]
+  //    },
+  //    "properties": {
+  //    "Name":"Public Affairs – Arts Library",
+  //    "Address":"337 Charles E. Young Drive East, Los Angeles, CA 90095",
+  //    "ConstructionYear":1960,
+  //    "RetrofitYear":NaN,
+  //    "SeismicRating":"V", 
+  //    "Custom":true
+  //    }
+  //  },
    {
      "type": "Feature",
      "geometry": {
@@ -373,7 +462,8 @@ var geojsonFeature = {
      "ConstructionYear":1961,
      "RetrofitYear":NaN,
      "SeismicRating":"V", 
-     "Custom":true
+     "Custom":true, 
+     "RatingText":""
      }
    },
    {
@@ -388,7 +478,8 @@ var geojsonFeature = {
      "ConstructionYear":1965,
      "RetrofitYear":NaN,
      "SeismicRating":"IV", 
-     "Custom":false
+     "Custom":false, 
+     "RatingText":""
      }
    },
    {
@@ -403,7 +494,8 @@ var geojsonFeature = {
      "ConstructionYear":1965,
      "RetrofitYear":NaN,
      "SeismicRating":"IV", 
-     "Custom":false
+     "Custom":false, 
+     "RatingText":""
      }
    },
    {
@@ -418,7 +510,8 @@ var geojsonFeature = {
      "ConstructionYear":1965,
      "RetrofitYear":NaN,
      "SeismicRating":"V", 
-     "Custom":false
+     "Custom":false, 
+     "RatingText":""
      }
    },
    {
@@ -433,7 +526,8 @@ var geojsonFeature = {
      "ConstructionYear":1965,
      "RetrofitYear":NaN,
      "SeismicRating":"IV", 
-     "Custom":false
+     "Custom":false, 
+     "RatingText":""
      }
    },
    {
@@ -448,7 +542,8 @@ var geojsonFeature = {
      "ConstructionYear":1965,
      "RetrofitYear":NaN,
      "SeismicRating":"IV", 
-     "Custom":false
+     "Custom":false, 
+     "RatingText":""
      }
    },
    {
@@ -463,7 +558,8 @@ var geojsonFeature = {
      "ConstructionYear":1964,
      "RetrofitYear":NaN,
      "SeismicRating":"V", 
-     "Custom":true
+     "Custom":true, 
+     "RatingText":""
      }
    },
    {
@@ -478,7 +574,8 @@ var geojsonFeature = {
      "ConstructionYear":1929,
      "RetrofitYear":NaN,
      "SeismicRating":"VI", 
-     "Custom":false
+     "Custom":false, 
+     "RatingText":""
      }
    },
    {
@@ -493,7 +590,8 @@ var geojsonFeature = {
      "ConstructionYear":1961,
      "RetrofitYear":NaN,
      "SeismicRating":"V", 
-     "Custom":false
+     "Custom":false, 
+     "RatingText":""
      }
    },
    {
@@ -508,7 +606,8 @@ var geojsonFeature = {
      "ConstructionYear":1940,
      "RetrofitYear":NaN,
      "SeismicRating":"VI", 
-     "Custom":false
+     "Custom":false, 
+     "RatingText":""
      }
    },
    {
@@ -523,7 +622,8 @@ var geojsonFeature = {
      "ConstructionYear":1948,
      "RetrofitYear":2015,
      "SeismicRating":"IV",
-     "Custom":false
+     "Custom":false, 
+     "RatingText":""
      }
    },
    {
@@ -538,7 +638,8 @@ var geojsonFeature = {
      "ConstructionYear":1948,
      "RetrofitYear":NaN,
      "SeismicRating":"IV", 
-     "Custom":false
+     "Custom":false, 
+     "RatingText":""
      }
    },
    {
@@ -553,7 +654,8 @@ var geojsonFeature = {
      "ConstructionYear":1978,
      "RetrofitYear":NaN,
      "SeismicRating":"IV", 
-     "Custom":false
+     "Custom":false, 
+     "RatingText":""
      }
    },
    {
@@ -568,7 +670,8 @@ var geojsonFeature = {
      "ConstructionYear":1980,
      "RetrofitYear":NaN,
      "SeismicRating":"IV", 
-     "Custom":false
+     "Custom":false, 
+     "RatingText":""
      }
    },
    {
@@ -583,7 +686,8 @@ var geojsonFeature = {
      "ConstructionYear":1981,
      "RetrofitYear":NaN,
      "SeismicRating":"IV", 
-     "Custom":false
+     "Custom":false, 
+     "RatingText":""
      }
    },
    {
@@ -598,7 +702,8 @@ var geojsonFeature = {
      "ConstructionYear":1978,
      "RetrofitYear":NaN,
      "SeismicRating":"IV", 
-     "Custom":false
+     "Custom":false, 
+     "RatingText":""
      }
    },
    {
@@ -613,7 +718,8 @@ var geojsonFeature = {
      "ConstructionYear":1996,
      "RetrofitYear":NaN,
      "SeismicRating":"III", 
-     "Custom":false
+     "Custom":false, 
+     "RatingText":""
      }
    },
    {
@@ -628,7 +734,8 @@ var geojsonFeature = {
      "ConstructionYear":1996,
      "RetrofitYear":NaN,
      "SeismicRating":"III", 
-     "Custom":false
+     "Custom":false, 
+     "RatingText":""
      }
    },
    {
@@ -643,7 +750,8 @@ var geojsonFeature = {
      "ConstructionYear":1996,
      "RetrofitYear":NaN,
      "SeismicRating":"III", 
-     "Custom":false
+     "Custom":false, 
+     "RatingText":""
      }
    },
    {
@@ -658,7 +766,8 @@ var geojsonFeature = {
      "ConstructionYear":1996,
      "RetrofitYear":NaN,
      "SeismicRating":"III", 
-     "Custom":false
+     "Custom":false, 
+     "RatingText":""
      }
    },
    {
@@ -673,7 +782,8 @@ var geojsonFeature = {
      "ConstructionYear":1996,
      "RetrofitYear":NaN,
      "SeismicRating":"III", 
-     "Custom":false
+     "Custom":false, 
+     "RatingText":""
      }
    },
    {
@@ -688,7 +798,8 @@ var geojsonFeature = {
      "ConstructionYear":1995,
      "RetrofitYear":NaN,
      "SeismicRating":"III", 
-     "Custom":false
+     "Custom":false, 
+     "RatingText":""
      }
    },
    {
@@ -703,7 +814,8 @@ var geojsonFeature = {
      "ConstructionYear":1995,
      "RetrofitYear":NaN,
      "SeismicRating":"III", 
-     "Custom":false
+     "Custom":false, 
+     "RatingText":""
      }
    },
    {
@@ -718,7 +830,8 @@ var geojsonFeature = {
      "ConstructionYear":1995,
      "RetrofitYear":NaN,
      "SeismicRating":"III", 
-     "Custom":false
+     "Custom":false, 
+     "RatingText":""
      }
    },
    {
@@ -733,7 +846,8 @@ var geojsonFeature = {
      "ConstructionYear":1995,
      "RetrofitYear":NaN,
      "SeismicRating":"III", 
-     "Custom":false
+     "Custom":false, 
+     "RatingText":""
      }
    },
    {
@@ -748,7 +862,8 @@ var geojsonFeature = {
      "ConstructionYear":1995,
      "RetrofitYear":NaN,
      "SeismicRating":"III", 
-     "Custom":false
+     "Custom":false, 
+     "RatingText":""
      }
    },
    {
@@ -763,7 +878,8 @@ var geojsonFeature = {
      "ConstructionYear":1995,
      "RetrofitYear":NaN,
      "SeismicRating":"III", 
-     "Custom":false
+     "Custom":false, 
+     "RatingText":""
      }
    },
    {
@@ -778,7 +894,8 @@ var geojsonFeature = {
      "ConstructionYear":1995,
      "RetrofitYear":NaN,
      "SeismicRating":"III", 
-     "Custom":false
+     "Custom":false, 
+     "RatingText":""
      }
    },
    {
@@ -793,7 +910,8 @@ var geojsonFeature = {
      "ConstructionYear":1995,
      "RetrofitYear":NaN,
      "SeismicRating":"III", 
-     "Custom":false
+     "Custom":false, 
+     "RatingText":""
      }
    },
    {
@@ -808,7 +926,8 @@ var geojsonFeature = {
      "ConstructionYear":1995,
      "RetrofitYear":NaN,
      "SeismicRating":"III", 
-     "Custom":false
+     "Custom":false, 
+     "RatingText":""
      }
    },
    {
@@ -823,7 +942,8 @@ var geojsonFeature = {
      "ConstructionYear":1995,
      "RetrofitYear":NaN,
      "SeismicRating":"III", 
-     "Custom":false
+     "Custom":false, 
+     "RatingText":""
      }
    },
    {
@@ -838,7 +958,8 @@ var geojsonFeature = {
      "ConstructionYear":1995,
      "RetrofitYear":NaN,
      "SeismicRating":"III", 
-     "Custom":false
+     "Custom":false, 
+     "RatingText":""
      }
    },
    {
@@ -853,7 +974,8 @@ var geojsonFeature = {
      "ConstructionYear":1996,
      "RetrofitYear":NaN,
      "SeismicRating":"III", 
-     "Custom":false
+     "Custom":false, 
+     "RatingText":""
      }
    },
    {
@@ -868,7 +990,8 @@ var geojsonFeature = {
      "ConstructionYear":1995,
      "RetrofitYear":NaN,
      "SeismicRating":"III", 
-     "Custom":false
+     "Custom":false, 
+     "RatingText":""
      }
    },
    {
@@ -883,7 +1006,8 @@ var geojsonFeature = {
      "ConstructionYear":1995,
      "RetrofitYear":NaN,
      "SeismicRating":"III", 
-     "Custom":false
+     "Custom":false, 
+     "RatingText":""
      }
    },
    {
@@ -898,7 +1022,8 @@ var geojsonFeature = {
      "ConstructionYear":1995,
      "RetrofitYear":NaN,
      "SeismicRating":"III", 
-     "Custom":false
+     "Custom":false, 
+     "RatingText":""
      }
    },
    {
@@ -913,7 +1038,8 @@ var geojsonFeature = {
      "ConstructionYear":1996,
      "RetrofitYear":NaN,
      "SeismicRating":"III", 
-     "Custom":false
+     "Custom":false, 
+     "RatingText":""
      }
    },
    {
@@ -928,7 +1054,8 @@ var geojsonFeature = {
      "ConstructionYear":1995,
      "RetrofitYear":NaN,
      "SeismicRating":"III", 
-     "Custom":false
+     "Custom":false, 
+     "RatingText":""
      }
    },
    {
@@ -943,7 +1070,8 @@ var geojsonFeature = {
      "ConstructionYear":1996,
      "RetrofitYear":NaN,
      "SeismicRating":"III", 
-     "Custom":false
+     "Custom":false, 
+     "RatingText":""
      }
    },
    {
@@ -958,7 +1086,8 @@ var geojsonFeature = {
      "ConstructionYear":1996,
      "RetrofitYear":NaN,
      "SeismicRating":"III", 
-     "Custom":false
+     "Custom":false, 
+     "RatingText":""
      }
    },
    {
@@ -973,7 +1102,8 @@ var geojsonFeature = {
      "ConstructionYear":1996,
      "RetrofitYear":NaN,
      "SeismicRating":"III", 
-     "Custom":false
+     "Custom":false, 
+     "RatingText":""
      }
    },
    {
@@ -988,7 +1118,8 @@ var geojsonFeature = {
      "ConstructionYear":1996,
      "RetrofitYear":NaN,
      "SeismicRating":"III", 
-     "Custom":false
+     "Custom":false, 
+     "RatingText":""
      }
    },
    {
@@ -1003,7 +1134,8 @@ var geojsonFeature = {
      "ConstructionYear":1996,
      "RetrofitYear":NaN,
      "SeismicRating":"III", 
-     "Custom":false
+     "Custom":false, 
+     "RatingText":""
      }
    },
    {
@@ -1018,7 +1150,8 @@ var geojsonFeature = {
      "ConstructionYear":1996,
      "RetrofitYear":NaN,
      "SeismicRating":"III", 
-     "Custom":false
+     "Custom":false, 
+     "RatingText":""
      }
    },
    {
@@ -1033,7 +1166,8 @@ var geojsonFeature = {
      "ConstructionYear":1996,
      "RetrofitYear":NaN,
      "SeismicRating":"III", 
-     "Custom":false
+     "Custom":false, 
+     "RatingText":""
      }
    },
    {
@@ -1048,7 +1182,8 @@ var geojsonFeature = {
      "ConstructionYear":1996,
      "RetrofitYear":NaN,
      "SeismicRating":"III", 
-     "Custom":false
+     "Custom":false, 
+     "RatingText":""
      }
    },
    {
@@ -1063,7 +1198,8 @@ var geojsonFeature = {
      "ConstructionYear":1996,
      "RetrofitYear":NaN,
      "SeismicRating":"III", 
-     "Custom":false
+     "Custom":false, 
+     "RatingText":""
      }
    },
    {
@@ -1078,7 +1214,8 @@ var geojsonFeature = {
      "ConstructionYear":1996,
      "RetrofitYear":NaN,
      "SeismicRating":"III", 
-     "Custom":false
+     "Custom":false, 
+     "RatingText":""
      }
    },
    {
@@ -1093,7 +1230,8 @@ var geojsonFeature = {
      "ConstructionYear":1995,
      "RetrofitYear":NaN,
      "SeismicRating":"III", 
-     "Custom":false
+     "Custom":false, 
+     "RatingText":""
      }
    },
    {
@@ -1108,7 +1246,8 @@ var geojsonFeature = {
      "ConstructionYear":1996,
      "RetrofitYear":NaN,
      "SeismicRating":"III", 
-     "Custom":false
+     "Custom":false, 
+     "RatingText":""
      }
    },
    {
@@ -1123,7 +1262,8 @@ var geojsonFeature = {
      "ConstructionYear":1996,
      "RetrofitYear":NaN,
      "SeismicRating":"III", 
-     "Custom":false
+     "Custom":false, 
+     "RatingText":""
      }
    },
    {
@@ -1138,7 +1278,8 @@ var geojsonFeature = {
      "ConstructionYear":1996,
      "RetrofitYear":NaN,
      "SeismicRating":"III", 
-     "Custom":false
+     "Custom":false, 
+     "RatingText":""
      }
    },
    {
@@ -1153,7 +1294,8 @@ var geojsonFeature = {
      "ConstructionYear":1996,
      "RetrofitYear":NaN,
      "SeismicRating":"III", 
-     "Custom":false
+     "Custom":false, 
+     "RatingText":""
      }
    },
    {
@@ -1168,7 +1310,8 @@ var geojsonFeature = {
      "ConstructionYear":1996,
      "RetrofitYear":NaN,
      "SeismicRating":"III", 
-     "Custom":false
+     "Custom":false, 
+     "RatingText":""
      }
    },
    {
@@ -1183,7 +1326,8 @@ var geojsonFeature = {
      "ConstructionYear":1996,
      "RetrofitYear":NaN,
      "SeismicRating":"III", 
-     "Custom":false
+     "Custom":false, 
+     "RatingText":""
      }
    },
    {
@@ -1198,7 +1342,8 @@ var geojsonFeature = {
      "ConstructionYear":2003,
      "RetrofitYear":NaN,
      "SeismicRating":"III", 
-     "Custom":false
+     "Custom":false, 
+     "RatingText":""
      }
    },
    {
@@ -1213,7 +1358,8 @@ var geojsonFeature = {
      "ConstructionYear":2003,
      "RetrofitYear":NaN,
      "SeismicRating":"III", 
-     "Custom":false
+     "Custom":false, 
+     "RatingText":""
      }
    },
    {
@@ -1228,7 +1374,8 @@ var geojsonFeature = {
      "ConstructionYear":2003,
      "RetrofitYear":NaN,
      "SeismicRating":"III", 
-     "Custom":false
+     "Custom":false, 
+     "RatingText":""
      }
    },
    {
@@ -1243,7 +1390,8 @@ var geojsonFeature = {
      "ConstructionYear":2003,
      "RetrofitYear":NaN,
      "SeismicRating":"III", 
-     "Custom":false
+     "Custom":false, 
+     "RatingText":""
      }
    },
    {
@@ -1258,7 +1406,8 @@ var geojsonFeature = {
      "ConstructionYear":2003,
      "RetrofitYear":NaN,
      "SeismicRating":"III", 
-     "Custom":false
+     "Custom":false, 
+     "RatingText":""
      }
    },
    {
@@ -1273,7 +1422,8 @@ var geojsonFeature = {
      "ConstructionYear":2003,
      "RetrofitYear":NaN,
      "SeismicRating":"III", 
-     "Custom":false
+     "Custom":false, 
+     "RatingText":""
      }
    }
  ]
