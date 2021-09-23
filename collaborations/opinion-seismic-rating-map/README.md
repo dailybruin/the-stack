@@ -1,9 +1,8 @@
 # Opinion Seismic Ratings, September 2021
 
+Article: [https://dailybruin.com/2021/09/22/editorial-ucla-must-strengthen-building-protocols-prepare-for-earthquake-possibility](https://dailybruin.com/2021/09/22/editorial-ucla-must-strengthen-building-protocols-prepare-for-earthquake-possibility)
 
-Article: insert link here 
-
-Leaflet map with markers that display each researched building and a pop up with their name, address, retrofit year (if applicable), and date of construction. Buildings are organized by seismic ratings. 
+Leaflet map with markers that display each researched building and a pop up with their name, address, retrofit year (if applicable), and date of construction. Buildings are organized by seismic ratings.
 
 ## Notes
 
@@ -15,7 +14,7 @@ For copy edits, include a byline below the map but REMOVE it before uploading to
 
 * leaflet
 
-  * used an overlapping marker spidifier plugin to space out markers 
+  * used an overlapping marker spidifier plugin to space out markers
 
 NOTE: had issues using leaflet version 1.7.1, it was causing bugs on mobile where 2 click events fired so popups would close immediately. solved by using version 1.6.0
 
@@ -24,6 +23,6 @@ NOTE: had issues using leaflet version 1.7.1, it was causing bugs on mobile wher
 * Geocoding
   * data provided by opinion as a google sheet—locations as street addresses. geocoded using this:
   * see: [https://willgeary.github.io/data/2016/11/04/Geocoding-with-Google-Sheets.html](https://willgeary.github.io/data/2016/11/04/Geocoding-with-Google-Sheets.html)
-  * sanity check for locations: make sure they're in the approx westwood area 
+  * sanity check for locations: make sure they're in the approx westwood area
 * Converting CSV to GeoJson
   * used this site: [https://www.convertcsv.com/csv-to-geojson.htm](https://www.convertcsv.com/csv-to-geojson.htm)
