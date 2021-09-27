@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>Add a default marker</title>
+    <title>News-Crime Map</title>
     <meta
       name="viewport"
       content="initial-scale=1,maximum-scale=1,user-scalable=no"
@@ -17,6 +17,13 @@
     integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
     crossorigin=""></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OverlappingMarkerSpiderfier-Leaflet/0.2.6/oms.min.js"></script>
+
+    <link rel="stylesheet" href = "https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.css"/>
+    <link rel="stylesheet" href = "https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.Default.css"/>
+    <script src="https://unpkg.com/leaflet.markercluster@1.4.1/dist/leaflet.markercluster.js"></script>
+    <script src="https://unpkg.com/leaflet.markercluster.layersupport@2.0.1/dist/leaflet.markercluster.layersupport.js"></script>
+    <script src="https://unpkg.com/leaflet.featuregroup.subgroup@1.0.2/dist/leaflet.featuregroup.subgroup.js"></script>
+
    
     
     <style>
@@ -29,9 +36,10 @@
   </head>
   <body>
     <div id="map"></div>
+    <p>map for September 2021</p>
     <p class='byline'>Sources: UCLA Police Department. Graphic reporting by Justin Jung, City and crime editor. Graphic by Alex Yoo, Graphics editor. Interactive by Laurel Woods, Data editor.</p>
   </body>
 
   <script src="crimes_geojson.js"></script>
-  <script src="map.js"></script>
+  <script src="map-sept2021.js"></script>
 </html>
