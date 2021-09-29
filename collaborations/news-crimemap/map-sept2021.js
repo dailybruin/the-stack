@@ -69,7 +69,12 @@ const categories = {
   },
 };
 
-var markers = L.markerClusterGroup.layerSupport();
+var markers = L.markerClusterGroup.layerSupport({
+  maxClusterRadius: 25,
+  iconCreateFunction: function(cluster){
+    return L.divIcon({html: cluster.getChildCount() + '<img scr = "pins/purple-pin.svg"/>' , iconSize: L.point(40,40)})
+  }
+});
 
 crimesGeojson.features.map(feature => {
   const coords = [
@@ -115,6 +120,24 @@ Object.entries(categories).forEach(([key, val]) => {
 });
 Object.values(overlayLayers).forEach(layer => layer.addTo(crimeMap));
 L.control.layers(null, overlayLayers, { collapsed: isMobile }).addTo(crimeMap);
+
+//ATTMEPT AT A SELECT/DESELECT ALL BUTTON
+// function select() {L.Control.layerGroup.include({
+//   addOverlays: function (){
+//     for (var i in overlayLayers){
+//       if (overlayLayers[i].overlay){
+//         if (!crimeMap.hasLayer(overlayLayers[i].layer)){
+//           crimeMap.addLayer(layers[i].layer);
+//         }
+//       }
+//     }
+//   }
+// })
+// }
+
+// L.easyButton('fa-globe', function(btn, map){
+//   select();
+// }).addTo(crimeMap)
 
 // create custom header for layering control (legend)
 const header = document.createElement('h3');
