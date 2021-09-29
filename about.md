@@ -24,17 +24,17 @@ Occasionally we'll geek out to others interested in journalism and computer scie
 
 ## How we're giving back
 
-The Daily Bruin is a community newspaper, and we plan on giving back to the community – both to our own Westwood community and to larger communities of news organizations and individuals interested in data for the public good. That's why we're making all the code on this blog [available under open-source licenses on GitHub](https://github.com/dailybruin/) and all the datasets we collect and parse [available to everyone](https://github.com/dailybruin/the-stack/tree/master/datasets/).
+The Daily Bruin is a community newspaper, and we plan on giving back to the community – both to our own Westwood community and to larger communities of news organizations and individuals interested in data for the public good. That's why we're making all the code on this blog [available under open-source licenses on GitHub](https://github.com/{{ site.github_username }}) and all the datasets we collect and parse [available to everyone](https://github.com/dailybruin/the-stack/tree/master/datasets/).
 
 We hope you'll join us in this exciting data experiment, whether that be as a reader or a collaborator.
 
 ---
 
-If you have any feedback or questions, email us at [online@media.ucla.edu](mailto:online@media.ucla.edu).
+If you have any feedback or questions, email us at [online@media.ucla.edu](mailto:{{ site.email }}).
 
-Follow us [on Twitter](https://twitter.com/dailybruin/).
+Follow us [on Twitter](https://twitter.com/{{ site.twitter_username }}).
 
-Apply to the [Stack](https://apply.uclastudentmedia.com/applications/daily-bruin/data-journalism-intern/fall-2018/).
+Apply to the [Stack]({{ site.application }}).
 
 ---
 
@@ -42,9 +42,11 @@ Apply to the [Stack](https://apply.uclastudentmedia.com/applications/daily-bruin
 
 The data editor is the person overseeing The Stack. A list of editors by year is below.
 
-- [Andrew Kan](https://github.com/kandrewz) (2020-2021)
-- [Mattie Sanseverino](https://github.com/mattiesansev) (2019-2020)
-- [Henna Dialani](https://github.com/hennadialani) (2018-2019)
-- [Chang Liu](https://github.com/shampliu) (2016-2017)
-- [Harrison Liddiard](https://github.com/liddiard) (2015-2016)
-- [Neil Bedi](https://github.com/nbedi) (creator, 2014-2015)
+* [Laurel Woods](https://github.com/laurelrwoods) (2021-2022 top editor)
+* [Lindsey Parungo](https://github.com/Lindseyp314) (2021-2022 assitant editor)
+* [Andrew Kan](https://github.com/kandrewz) (2020-2021)
+* [Mattie Sanseverino](https://github.com/mattiesansev) (2019-2020)
+* [Henna Dialani](https://github.com/hennadialani) (2018-2019)
+* [Chang Liu](https://github.com/shampliu) (2016-2017)
+* [Harrison Liddiard](https://github.com/liddiard) (2015-2016)
+* [Neil Bedi](https://github.com/nbedi) (creator, 2014-2015)

@@ -1,0 +1,157 @@
+/* GENERAL SETTINGS */
+.caption {
+  font-size: 12px;
+  text-align: center;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+.small-line-break {
+  height: 50px;
+  width: 100%;
+}
+
+/* DESKTOP SETTINGS */
+@media only screen and (min-width: 1000px) {
+  #legend {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0px 20px 20px;
+    font-size: 12px;
+  }
+  #legend .item {
+    line-height: 20px;
+    padding: 0 20px 0 20px;
+  }
+  #legend .item.physical {
+    border-left: 20px solid #77b1d2;
+    padding: 0px 10px 0px 2px;
+  }
+  #legend .item.life_science {
+    border-left: 20px solid #A2F2A3; 
+    padding: 0px 10px 0px 2px;
+  }
+  #legend .item.social {
+    border-left: 20px solid #FFE589;
+    padding: 0px 10px 0px 2px;
+  }
+  #legend .item.humanities {
+    border-left: 20px solid #B5BAF2;
+    padding: 0px 10px 0px 2px;
+  }
+  #legend .item.engineering {
+    border-left: 20px solid #E26C5D;
+    padding: 0px 10px 0px 2px;
+  }
+  #legend .item.other {
+    border-left: 20px solid #CFCFC4;
+    padding: 0px 10px 0px 2px;
+  }
+  .dropdown-menu {
+      height: 50px;
+      margin-bottom: 40px;
+  }
+  .defChart {
+    width: 50%;
+    height: 400px;
+    float: left;
+  }
+  .infChart {
+    width: 50%;
+    float: right;
+    height: 400px;
+  }
+  .chart-container {
+      width: 70%;
+      margin: auto;
+      margin-bottom: 40px;
+  }
+  .main_graph {
+      width: 80%;
+      margin: auto;
+      height: 90%;
+  }
+  #pie-charts {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  #pie-charts>div {
+    width: 45% !important;
+    height: auto !important;
+    position: relative;
+  }
+  .chart-descrip {
+      margin-left: 100px;
+  }
+  .line-break {
+      height: 90px;
+  }
+}
+/* MOBILE SETTINGS */
+@media only screen and (max-width: 1000px) {
+  #legend {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0px 9px 9px;
+    font-size: 9px;
+    overflow: auto;
+  }
+  #legend .item {
+    line-height: 9 px;
+    padding: 0 9px 0 9px;
+  }
+  #legend .item.physical {
+    border-left: 9px solid #77b1d2;
+    padding: 0px 4px 0px 1px;
+  }
+  #legend .item.life_science {
+    border-left: 9px solid #A2F2A3; 
+    padding: 0px 4px 0px 1px;
+  }
+  #legend .item.social {
+    border-left: 9px solid #FFE589;
+    padding: 0px 4px 0px 1px;
+  }
+  #legend .item.humanities {
+    border-left: 9px solid #B5BAF2;
+    padding: 0px 4px 0px 1px;
+  }
+  #legend .item.engineering {
+    border-left: 9px solid #E26C5D;
+    padding: 0px 4px 0px 1px;
+  }
+  #legend .item.other {
+    border-left: 9px solid #CFCFC4;
+    padding: 0px 4px 0px 1px;
+  }
+  .main_graph {
+    width: 95%;
+    margin: auto;
+  }
+  #dropdown-menu{
+    width: 80%;
+  }
+  .defChart {
+    width: 95%;
+  }
+  .infChart {
+    width: 95%;
+  }
+  #falldeflatChart{
+    width: 95%;
+    height: 400px;
+  }
+  #fallinflatChart{
+    width: 95%;
+    height: 400px;
+  }
+  #inflationChart{
+    width: 95%;
+    height: 400px;
+  }
+  #deflationChart{
+    width: 95%;
+    height: 400px;
+  }
+}
