@@ -109,7 +109,9 @@ UCLA is a large school with a very well-connected student network posing numerou
 For more updates on coronavirus news relevant to UCLA, visit the [Daily Bruin’s coronavirus dashboard](https://features.dailybruin.com/2020/covid-19/). For more information about how students have been affected by the pandemic, visit the Daily Bruin’s “[Unfinished Stories](https://covidstories.dailybruin.com/)” project. To schedule a free COVID-19 test in LA County or learn more about testing, [click here](https://lacovidprod.service-now.com/rrs?id=rrs_apply). More information about the coronavirus and COVID-19 from [UCLA Health](https://www.uclahealth.org/coronavirus) can be found here.
 
 <script src="//yihui.org/js/math-code.js"></script>
+
 <!-- Just one possible MathJax CDN below. You may use others. -->
+
 <script async
   src="//mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML">
 </script>
@@ -127,7 +129,7 @@ Sciences&Business&Humanities\\
 0.1&0.2&0.7
 \end{pmatrix}$$
 
-This example has simulated probabilities, but the real probabilities in our model are based on the number of GE, diversity and language courses in each major. So if a College of Letters and Science student in the mathematics department takes 140 units of major courses and 40 units of GEs, then the probability of the student being enrolled in the mathematics department is $$\frac{140}{180}$$, and, in the other GE-offering departments, is $$\frac{40}{180}$$, which in turn are distributed by department. So if there are three GE courses offered in total, with two of them being offered in department A and one being offered in department B, department A will have probability $$\frac{2}{3} * \frac{40}{180}$$, and department B will have probability $$\frac{1}{3} * \frac{40}{180}$$.
+This example has simulated probabilities, but the real probabilities in our model are based on the number of GE, diversity and language courses in each major. So if a College of Letters and Science student in the mathematics department takes 140 units of major courses and 40 units of GEs, then the probability of the student being enrolled in the mathematics department is $$\frac{140}{180}$$, and, in the other GE-offering departments, is $$\frac{40}{180}$$, which in turn are distributed by department. So if there are three GE courses offered in total, with two of them being offered in department A and one being offered in department B, department A will have probability $$\frac{2}{3} _ \frac{40}{180}$$, and department B will have probability $$\frac{1}{3} _ \frac{40}{180}$$.
 
 $$A=\begin{pmatrix}
 Sciences&Business&Humanities\\
@@ -136,7 +138,7 @@ Sciences&Business&Humanities\\
 0.1&0.2&0.7
 \end{pmatrix}$$
 
-This example has simulated probabilities, but the real probabilities in our model are based on the number of GE, diversity and language courses in each major. So if a College of Letters and Science student in the mathematics department takes 140 units of major courses and 40 units of GEs, then the probability of the student being enrolled in the mathematics department is $$\frac{140}{180}$$, and, in the other GE-offering departments, is $$\frac{40}{180}$$, which in turn are distributed by department. So if there are three GE courses offered in total, with two of them being offered in department A and one being offered in department B, department A will have probability $$\frac{2}{3} * \frac{40}{180}$$, and department B will have probability $$\frac{1}{3} * \frac{40}{180}$$.
+This example has simulated probabilities, but the real probabilities in our model are based on the number of GE, diversity and language courses in each major. So if a College of Letters and Science student in the mathematics department takes 140 units of major courses and 40 units of GEs, then the probability of the student being enrolled in the mathematics department is $$\frac{140}{180}$$, and, in the other GE-offering departments, is $$\frac{40}{180}$$, which in turn are distributed by department. So if there are three GE courses offered in total, with two of them being offered in department A and one being offered in department B, department A will have probability $$\frac{2}{3} _ \frac{40}{180}$$, and department B will have probability $$\frac{1}{3} _ \frac{40}{180}$$.
 
 _To learn more about how this article was made, watch the video below:_
 

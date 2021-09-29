@@ -52,6 +52,7 @@ Some classes may not show up in the drop-down menu because they were not offered
 To find out the rate at which undergraduate classes fill up, explore the interactive graph below and select the academic term that you wish to look into. For the sake of visualization, only up to three classes can be selected at a time in the graph below.
 
 <!-- Chart container -->
+
 <select id="selectMe" class = "selectgroup" disabled>
     <option value="chartMD_winter">2021 Winter</option>
     <option value="chartMD_fall">2020 Fall</option>
@@ -151,14 +152,23 @@ Still, the data above begs the question – can the enrollment process at UCLA b
 “I think the enrollment process should be standardized and regularized by statisticians and people who understand how to do it,” Langdon said. “It has to be done in a much more equitable fashion.”
 
 <script src="https://unpkg.com/react-vis/dist/dist.min.js"></script>
+
 <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+
 <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+
 <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
 <script src="https://unpkg.com/react-bootstrap@next/dist/react-bootstrap.min.js" crossorigin></script>
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 
 <script type="text/babel" src="/js/posts/class-fill-ups-2/graphs/src/ChartMD.jsx"></script>
+
 <script type="text/babel" src="/js/posts/class-fill-ups-2/graphs/src/ChartMD2.jsx"></script>
+
 <script type="text/babel" src="/js/posts/class-fill-ups-2/graphs/src/ChartMD3.jsx"></script>
+
 <script type="text/babel" src="/js/posts/class-fill-ups-2/graphs/src/DropDownChart.js"></script>
+
 <script type="text/babel" src="/js/posts/class-fill-ups-2/graphs/src/insightsMD.jsx"></script>

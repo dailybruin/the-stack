@@ -1,10 +1,10 @@
 var linechart;
 
-d3.csv('/datasets/professor-donations/monthly_donations.csv').then(function(
-  donations
-) {
-  makeChart(donations);
-});
+d3
+  .csv('/datasets/professor-donations/monthly_donations.csv')
+  .then(function(donations) {
+    makeChart(donations);
+  });
 
 function makeChart(donations) {
   const verticalLinePlugin = {

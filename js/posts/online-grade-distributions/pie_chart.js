@@ -18,7 +18,7 @@ new Chart(document.getElementById('before-covid-pie-chart'), {
     },
     tooltips: {
       callbacks: {
-        label: function (tooltipItem, data) {
+        label: function(tooltipItem, data) {
           let label = data.labels[tooltipItem.index];
           let count =
             data.datasets[tooltipItem.datasetIndex].data[tooltipItem.index];
@@ -34,7 +34,7 @@ new Chart(document.getElementById('before-covid-pie-chart'), {
     },
     plugins: {
       datalabels: {
-        formatter: function (value, context) {
+        formatter: function(value, context) {
           val = value / (153028 + 7781);
           return val.toLocaleString('en-US', {
             style: 'percent',
@@ -72,7 +72,7 @@ new Chart(document.getElementById('after-covid-pie-chart'), {
     },
     tooltips: {
       callbacks: {
-        label: function (tooltipItem, data) {
+        label: function(tooltipItem, data) {
           let label = data.labels[tooltipItem.index];
           let count =
             data.datasets[tooltipItem.datasetIndex].data[tooltipItem.index];
@@ -88,7 +88,7 @@ new Chart(document.getElementById('after-covid-pie-chart'), {
     },
     plugins: {
       datalabels: {
-        formatter: function (value, context) {
+        formatter: function(value, context) {
           val = value / (156343 + 12780);
           return val.toLocaleString('en-US', {
             style: 'percent',

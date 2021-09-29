@@ -5,17 +5,17 @@ let precovidFileName =
 let dropdownValue = 'All Classes';
 
 d3
-  .csv('/datasets/online-grade-distributions/Fall_data.csv', function (d) {
+  .csv('/datasets/online-grade-distributions/Fall_data.csv', function(d) {
     return { CLASS: d.CLASS };
   })
-  .then(function (data) {
+  .then(function(data) {
     initDropdown(data);
   });
 
 function initDropdown(classNames) {
   d3
     .select('#dropdown-menu')
-    .on('change', function () {
+    .on('change', function() {
       dropdownValue = d3.select(this).property('value');
       let choice = $('#dropdown-menu option:selected').text();
       loadCSVData(choice, MainChart);
@@ -24,10 +24,10 @@ function initDropdown(classNames) {
     .data(classNames)
     .enter()
     .append('option')
-    .attr('value', function (d) {
+    .attr('value', function(d) {
       return d.CLASS;
     })
-    .text(function (d) {
+    .text(function(d) {
       return d.CLASS;
     });
 }
@@ -50,8 +50,8 @@ const labels = [
 
 function loadCSVData(choice, chart) {
   //return new Promise(resolve => {
-  d3.csv(precovidFileName).then(function (csv) {
-    csv = csv.filter(function (row) {
+  d3.csv(precovidFileName).then(function(csv) {
+    csv = csv.filter(function(row) {
       return row['CLASS'] == choice;
     });
     let precovidData = [
@@ -164,7 +164,7 @@ var MainChart = new Chart(ctxMain, {
         {
           ticks: {
             max: 1,
-            callback: function (value) {
+            callback: function(value) {
               return value.toLocaleString('en-US', {
                 style: 'percent',
                 maximumFractionDigits: 2,
@@ -197,7 +197,7 @@ var MainChart = new Chart(ctxMain, {
 
     tooltips: {
       callbacks: {
-        label: function (tooltipItem, data) {
+        label: function(tooltipItem, data) {
           var label = data.datasets[tooltipItem.datasetIndex].text;
           var value = tooltipItem.yLabel.toLocaleString('en-US', {
             style: 'percent',
