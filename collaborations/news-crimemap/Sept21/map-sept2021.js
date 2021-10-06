@@ -25,63 +25,62 @@ const categories = {
   ARSON: {
     markers: [],
     hexCode: '#d3392d',
-    iconUrl: 'pins/red-pin.svg',
+    iconUrl: '../pins/red-pin.svg',
   },
   'ASSAULT/BATTERY': {
     markers: [],
     hexCode: '#ff8b17',
-    iconUrl: 'pins/orange-pin.svg',
+    iconUrl: '../pins/orange-pin.svg',
   },
   'DRUG/CONTROLLED SUBSTANCE': {
     markers: [],
     hexCode: '#ddb300',
-    iconUrl: 'pins/yellow-pin.svg',
+    iconUrl: '../pins/yellow-pin.svg',
   },
   'RAPE/SEXUAL': {
     markers: [],
     hexCode: '#009245',
-    iconUrl: 'pins/green-pin.svg',
+    iconUrl: '../pins/green-pin.svg',
   },
   'THEFT/BURGLARY': {
     markers: [],
     hexCode: '#5bceea',
-    iconUrl: 'pins/blue-pin-2.svg',
+    iconUrl: '../pins/blue-pin-2.svg',
   },
   'TRAFFIC/VEHICULAR': {
     markers: [],
     hexCode: '#0046b0',
-    iconUrl: 'pins/blue-pin-1.svg',
+    iconUrl: '../pins/blue-pin-1.svg',
   },
-  TRESSPASSING: {
+  TRESPASSING: {
     markers: [],
     hexCode: '#8157c2',
-    iconUrl: 'pins/purple-pin.svg',
+    iconUrl: '../pins/purple-pin.svg',
   },
   VANDALISM: {
     markers: [],
     hexCode: '#ff1392',
-    iconUrl: 'pins/magenta-pin.svg',
+    iconUrl: '../pins/magenta-pin.svg',
   },
   'OTHER/MULTIPLE': {
     markers: [],
     hexCode: '#000000',
-    iconUrl: 'pins/black-pin.svg',
+    iconUrl: '../pins/black-pin.svg',
   },
 };
 
-var markers = L.markerClusterGroup.layerSupport({
+let markers = L.markerClusterGroup.layerSupport({
   maxClusterRadius: 25,
-  iconCreateFunction: function(cluster){
-    return L.divIcon({html: cluster.getChildCount() + '<img scr = "pins/purple-pin.svg"/>' , iconSize: L.point(40,40)})
-  }
 });
 
-crimesGeojson.features.map(feature => {
+sept2021crimesGeojson.features.map(feature => {
   const coords = [
     feature.geometry.coordinates[1],
     feature.geometry.coordinates[0],
   ];
   const cat = feature.properties.CATEGORY.split('\n')[0];
+  console.log(coords)
+  //console.log(categories[cat].hexCode);
   const pinIcon = L.icon({
     iconUrl: categories[cat].iconUrl,
     iconSize: [35, 35],
