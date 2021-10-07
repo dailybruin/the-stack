@@ -68,31 +68,34 @@ layout: default
 
   {% if page.authors %}
   <section class="about-the-author">
-    <h2>About the author{% if page.authors.size > 1 %}s{% endif %}</h2>
-    {% for author_key in page.authors %}
-      {% assign author = site.data.authors[author_key] %}
-    <div class="author">
-      {% if author.mug %}<img class="mug" src="/img/mugs/{{ author_key }}.jpg" />{% endif %}
-      <h3>{{ author.name }}</h3>{% if author.title %}, <h4>{{ author.title }}</h4>{% endif %}
-      {% if author.bio %}
-      {{ author.bio | markdownify }}
-      {% endif %}
-      <ul class="contact">
-        {% if author.github %}
-        <li><a href="https://github.com/{{ author.github }}"><img src="/img/icons/github.svg" /> {{ author.github }}</a></li>
+    <h2>AUTHOR{% if page.authors.size > 1 %}S{% endif %}</h2>
+    <div class="authors-list">
+      {% for author_key in page.authors %}
+        {% assign author = site.data.authors[author_key] %}
+      <div class="author">
+        <h3>{{ author.name }}</h3>
+        {% if author.title %}<h4>{{ author.title }}</h4>{% endif %}
+        {% if author.mug %}<img class="mug" src="/img/mugs/{{ author_key }}.jpg" />{% endif %}
+        {% if author.bio %}
+        {{ author.bio | markdownify }}
         {% endif %}
-        {% if author.twitter %}
-        <li><a href="https://twitter.com/{{ author.twitter }}"><img src="/img/icons/twitter.svg" /> {{ author.twitter }}</a></li>
-        {% endif %}
-        {% if author.email %}
-        <li><a href="mailto:{{ author.email }}"><img src="/img/icons/email.svg" /> {{ author.email }}</a></li>
-        {% endif %}
-        {% if author.website %}
-        <li><a href="{{ author.website }}"><img src="/img/icons/globe.svg" /> {{ author.website | replace:'http://','' | replace:'https://','' }}</a></li>
-        {% endif %}
-      </ul>
+        <ul class="contact">
+          {% if author.github %}
+          <li><a href="https://github.com/{{ author.github }}"><img src="/img/icons/github.svg" /></a></li>
+          {% endif %}
+          {% if author.twitter %}
+          <li><a href="https://twitter.com/{{ author.twitter }}"><img src="/img/icons/twitter.svg" /></a></li>
+          {% endif %}
+          {% if author.email %}
+          <li><a href="mailto:{{ author.email }}"><img src="/img/icons/email.svg" /></a></li>
+          {% endif %}
+          {% if author.website %}
+          <li><a href="{{ author.website }}"><img src="/img/icons/globe.svg" /></a></li>
+          {% endif %}
+        </ul>
+      </div>
+      {% endfor %}
     </div>
-    {% endfor %}
   </section>
   {% endif %}
 

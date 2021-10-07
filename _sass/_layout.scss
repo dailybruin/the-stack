@@ -434,28 +434,52 @@
   border-top: 1px solid $grey-color-light;
   padding-top: 1.5em;
 
+  h2 {
+    color: $brand-color-primary-blue;
+    text-align: center;
+    font-size: 26px;
+    margin-bottom: $spacing-unit;
+  }
+
+  .authors-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 300px);
+    justify-content: space-between;
+  }
+
   .author {
     overflow: hidden;
-    margin-bottom: 1em;
+    margin-bottom: $spacing-unit;
+    width: 300px;
 
-    h3,
-    h4 {
-      display: inline;
+    p {
+      font-size: 14px;
+      text-align: center;
+      margin-bottom: 5px;
+    }
+
+    h3 {
+      margin-bottom: 0px;
+      text-align: center;
     }
 
     h4 {
       font-weight: 400;
       font-style: italic;
       color: $grey-color;
+      text-align: center;
+      margin-bottom: 5px;
     }
 
     ul.contact {
       list-style-type: none;
       margin-left: 0;
+      display: flex;
+      justify-content: center;
 
       li {
         display: inline-block;
-        margin-right: 1em;
+        margin: 0px 10px;
       }
 
       img {
@@ -465,12 +489,16 @@
     }
 
     .mug {
-      float: left;
-      margin-right: 1em;
-      width: 200px;
+      width: 280px;
+      height: 280px;
+      object-fit: cover;
+      display: block;
+      margin: auto;
+      margin-bottom: 5px;
 
       @include media-query($on-palm) {
-        width: 100px;
+        width: 200px;
+        height: 200px;
       }
     }
   }
