@@ -22,50 +22,50 @@ L.tileLayer(
 ).addTo(crimeMap);
 
 const categories = {
-  ARSON: {
-    markers: [],
-    hexCode: '#d3392d',
-    iconUrl: '../pins/red-pin.svg',
-  },
+  // ARSON: {
+  //   markers: [],
+  //   hexCode: '#a50f14',
+  //   iconUrl: '../new_pins/arson-pin.svg',
+  // },
   'ASSAULT/BATTERY': {
     markers: [],
-    hexCode: '#ff8b17',
-    iconUrl: '../pins/orange-pin.svg',
+    hexCode: '#ff7d2d',
+    iconUrl: '../new_pins/assault-pin.svg',
   },
   'DRUG/CONTROLLED SUBSTANCE': {
     markers: [],
-    hexCode: '#ddb300',
-    iconUrl: '../pins/yellow-pin.svg',
+    hexCode: '#9dc12b',
+    iconUrl: '../new_pins/drug-pin.svg',
   },
-  'RAPE/SEXUAL': {
+  'RAPE/OTHER SEX CRIME': {
     markers: [],
-    hexCode: '#009245',
-    iconUrl: '../pins/green-pin.svg',
+    hexCode: '#930C62',
+    iconUrl: '../new_pins/rape-pin.svg',
   },
   'THEFT/BURGLARY': {
     markers: [],
-    hexCode: '#5bceea',
-    iconUrl: '../pins/blue-pin-2.svg',
+    hexCode: '#F5D214',
+    iconUrl: '../new_pins/theft-pin.svg',
   },
   'TRAFFIC/VEHICULAR': {
     markers: [],
-    hexCode: '#0046b0',
-    iconUrl: '../pins/blue-pin-1.svg',
+    hexCode: '#2A8BF2',
+    iconUrl: '../new_pins/traffic-pin.svg',
   },
   TRESPASSING: {
     markers: [],
-    hexCode: '#8157c2',
-    iconUrl: '../pins/purple-pin.svg',
+    hexCode: '#a683eb',
+    iconUrl: '../new_pins/trespassing-pin.svg',
   },
   VANDALISM: {
     markers: [],
-    hexCode: '#ff1392',
-    iconUrl: '../pins/magenta-pin.svg',
+    hexCode: '#35b5a8',
+    iconUrl: '../new_pins/vandalism-pin.svg',
   },
   'OTHER/MULTIPLE': {
     markers: [],
-    hexCode: '#000000',
-    iconUrl: '../pins/black-pin.svg',
+    hexCode: '#646464',
+    iconUrl: '../new_pins/other-pin.svg',
   },
 };
 
@@ -79,8 +79,6 @@ sept2021crimesGeojson.features.map(feature => {
     feature.geometry.coordinates[0],
   ];
   const cat = feature.properties.CATEGORY.split('\n')[0];
-  console.log(coords)
-  //console.log(categories[cat].hexCode);
   const pinIcon = L.icon({
     iconUrl: categories[cat].iconUrl,
     iconSize: [35, 35],
@@ -92,10 +90,12 @@ sept2021crimesGeojson.features.map(feature => {
   
 
   const popUpText = `<b>${feature.properties.DATE}</b><br/><br/>
-        <b>UCPD Designation:</b><br/>
-        ${feature.properties.EVENT.split('\n').join('<br/>')}<br/><br/>
-        <b>Reported location:</b><br/>
-        ${feature.properties.LOCATION.split('\n').join(',<br/>')}`;
+  <b>UCPD Designation:</b><br/>
+  ${feature.properties.EVENT.split('\n').join('<br/>')}<br/><br/>
+  <b>Reported location:</b><br/>
+  ${feature.properties.LOCATION.split('\n').join(',<br/>')}<br/><br/>
+  <b>Case status:</b><br/>
+  ${feature.properties.DISPOSITION}`;
   const popUpOptions = {
     className: 'custom-popup',
     maxWidth: isMobile ? 200 : 300,
