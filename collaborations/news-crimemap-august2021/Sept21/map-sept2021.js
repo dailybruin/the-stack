@@ -85,9 +85,8 @@ sept2021crimesGeojson.features.map(feature => {
   });
   const marker = new L.marker(coords, { icon: pinIcon });
   //const marker = new L.marker(coords);
-  
+
   markers.addLayer(marker);
-  
 
   const popUpText = `<b>${feature.properties.DATE}</b><br/><br/>
   <b>UCPD Designation:</b><br/>
@@ -108,7 +107,7 @@ sept2021crimesGeojson.features.map(feature => {
   oms.addMarker(marker);
 });
 
-crimeMap.addLayer(markers); 
+crimeMap.addLayer(markers);
 
 const overlayLayers = {};
 Object.entries(categories).forEach(([key, val]) => {
