@@ -1,10 +1,10 @@
-var densityCanvas = document.getElementById('densityChart');
+var densityCanvas = document.getElementById('bail-chart-ucpd');
 
 Chart.defaults.global.defaultFontFamily = 'Lato';
 Chart.defaults.global.defaultFontSize = 18;
 
 var densityData = {
-  label: 'Average Bail Amount by Charge',
+  label: 'Average Bail Amount (in Dollars)',
   data: [
     1000000,
     250000,
