@@ -17,7 +17,7 @@ var racechart = anychart.pie();
 chart.title("Arrests by Race");
 
 // add the data
-chart.data(data);
+chart.data(ArrestRaceDemographics;
 
 // display the chart in the container
 chart.container('container');
@@ -40,7 +40,7 @@ anychart.onDocumentReady(function() {
     chart.title("Arrests by Gender");
     
     // add the data
-    chart.data(data);
+    chart.data(ArrestGenderDemographics);
     
     // display the chart in the container
     chart.container('container');
