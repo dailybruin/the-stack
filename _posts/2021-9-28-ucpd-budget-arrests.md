@@ -25,7 +25,9 @@ scripts:
   <canvas id="barchart-uclapd"></canvas>
 </div>
 
-<div id="piechart-wrapper">
-  <canvas id="demographics-piechart"></canvas>
+<div id="demographics-piechart" height = "800">
+  <!-- <canvas id="demographics-piechart"></canvas> -->
 </div>
-<div class="bail-barchart"> <canvas id='bail-chart-ucpd'> </canvas> </div>
+<div class="bail-barchart">
+  <canvas id='bail-chart-ucpd'> </canvas>
+</div>
