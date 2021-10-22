@@ -18,6 +18,7 @@ scripts:
     - //cdnjs.cloudflare.com/ajax/libs/c3/0.4.10/c3.js
     - /js/posts/usac-fee-trend/app.js
 ---
+
 This year, each undergraduate student will pay around $160 to the undergraduate student government to fund its associated programs.
 
 These fees result from ballot measures that received a majority of student votes in previous USAC elections. Each fee referendum’s text and its margin of passage is available on USAC’s website.
@@ -28,7 +29,7 @@ The visualization below shows the composition of the total cost since USAC's est
 
 Hover over the fee titles at the bottom of the graph for a description of each fee.
 
-<figure class="chart-container fullwidth" id="visualization">
+<figure class="chart-container" id="visualization">
     <h2>Annual USAC fees per student (1982–2015)</h2>
     <aside id="fee-explainer">
     </aside>
@@ -41,7 +42,7 @@ The annual USAC fee was set at $24 in 1982 and has risen to $160.44 in 2014, a 6
 
 The graph below compares each year's UC and USAC fees relative to their initial fees in 1982.
 
-<figure class="chart-container fullwidth">
+<figure class="chart-container">
     <h2>Increase in UC tuition vs. increase in USAC fees (1982–2014)</h2>
     <div class="chart" id="comparison"></div>
 </figure>
