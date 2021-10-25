@@ -243,7 +243,7 @@ for (let i = 0; i < schools.length; ++i) {
   Federaldata.push(chartdata);
 }
 
-var ctxDOE = document.getElementById('DOEChart');
+var ctxDOE = document.getElementById('DOEChart').getContext('2d');
 var DOEChart = new Chart(ctxDOE, {
   type: 'line',
   data: {
