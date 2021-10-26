@@ -18,7 +18,7 @@ scripts:
   - //cdn.anychart.com/releases/8.0.1/js/anychart-core.min.js
   - //cdn.anychart.com/releases/8.0.1/js/anychart-pie.min.js
   - /js/posts/ucpd-budget-arrests/bail-barchart.js
-  - /js/posts/ucpd-budget-arrests/demographics-piechart.js
+  - /js/posts/ucpd-budget-arrests/demographics-barchart.js
 ---
 
 <div id="barchart-wrapper">
