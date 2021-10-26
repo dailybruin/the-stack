@@ -18,15 +18,15 @@ scripts:
   - //cdn.anychart.com/releases/8.0.1/js/anychart-core.min.js
   - //cdn.anychart.com/releases/8.0.1/js/anychart-pie.min.js
   - /js/posts/ucpd-budget-arrests/bail-barchart.js
-  - /js/posts/ucpd-budget-arrests/demographics-piechart.js
+  - /js/posts/ucpd-budget-arrests/demographics-barchart.js
 ---
 
 <div id="barchart-wrapper">
   <canvas id="barchart-uclapd"></canvas>
 </div>
 
-<div id="demographics-piechart" height = "800">
-  <!-- <canvas id="demographics-piechart"></canvas> -->
+<div id="demographics-barchart" height = "800">
+  <!-- <canvas id="demographics-barchart"></canvas> -->
 </div>
 <div class="bail-barchart">
   <canvas id='bail-chart-ucpd'> </canvas>
