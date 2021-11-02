@@ -17,16 +17,16 @@ var barChartRace = {
       data: [35.92, 31.25, 21.87, 3.89,0.1544, 6.83]
     },
     {
-      label: 'LA City Demographic Data',
+      label: 'Westwood Demographic Data',
       backgroundColor: "lightblue",
       borderColor: "blue",
       borderWidth: 1,
-      data: [28, 9, 49, 11, 0, , 2, 0]
+      data: [53, 3, 17, 21, 0, 5, 0]
     }
   ]
 };
 
-var chartOptions = {
+var racechartOptions = {
   responsive: true,
   legend: {
     position: "top"
@@ -49,7 +49,7 @@ window.onload = function() {
   window.myBar = new Chart(ctx, {
     type: "bar",
     data: barChartRace,
-    options: chartOptions
+    options: racechartOptions
   });
 };
 
@@ -68,16 +68,16 @@ var barChartGender = {
         data: [80.017, 11.982]
       },
       {
-        label: 'LA City Demographic Data',
+        label: 'Westwood Demographic Data',
         backgroundColor: "lightblue",
         borderColor: "blue",
         borderWidth: 1,
-        data: [49, 51]
+        data: [48, 52]
       }
     ]
   };
   
-  var chartOptions = {
+  var genderchartOptions = {
     responsive: true,
     legend: {
       position: "top"
@@ -100,7 +100,61 @@ var barChartGender = {
     window.myBar = new Chart(ctx, {
       type: "bar",
       data: barChartGender,
-      options: chartOptions
+      options: genderchartOptions
     });
   };
+// Age Chart
+  var barChartAge = {
+    labels: [
+      '10 - 19',
+      '20 - 29',
+      '30 - 39',
+      '40 - 49',
+      '50 - 59',
+      '60 - 69',
+      '70+',
+    ],
+    datasets: [
+      {
+        label:'UCPD Arrest Data',
+        backgroundColor: "pink",
+        borderColor: "red",
+        borderWidth: 1,
+        data: [0, 20.13589, 32.45831, 21.24768, 15.84311,  8.678196,  1.636813]
+      },
+      {
+        label: 'Westwood Demographic Data',
+        backgroundColor: "lightblue",
+        borderColor: "blue",
+        borderWidth: 1,
+        data: [12, 24, 17, 13, 9, 8, 9]
+      }
+    ]
+  };
 
+  var agechartOptions = {
+    responsive: true,
+    legend: {
+      position: "top"
+    },
+    title: {
+      display: true,
+      text: "Arrest Demographics by Age"
+    },
+    scales: {
+      yAxes: [{
+        ticks: {
+          beginAtZero: true
+        }
+      }]
+    }
+  }
+  
+  window.onload = function() {
+    var ctx = document.getElementById("canvas").getContext("2d");
+    window.myBar = new Chart(ctx, {
+      type: "bar",
+      data: barChartAge,
+      options: agechartOptions
+    });
+  };
