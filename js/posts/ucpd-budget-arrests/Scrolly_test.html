@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang = 'en'>
+  <head>
+    <meta charset="utf-8" />
+    <title>Scrolly Test</title>
+    <script src="https://unpkg.com/intersection-observer"></script>
+    <script src="https://unpkg.com/scrollama"></script>
+    <script src="https://unpkg.com/d3@5.9.1/dist/d3.min.js"></script>
+    <script src = "Scrolly_test.js" defer></script>
+    <script src="https://unpkg.com/intersection-observer@0.5.1/intersection-observer.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.1/chart.min.js" integrity="sha512-Wt1bJGtlnMtGP0dqNFH1xlkLBNpEodaiQ8ZN5JLA5wpc1sUlk/O5uuOMNgvzddzkpvZ9GLyYNa8w2s7rqiTk5Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.7.0/d3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@0.7.0"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!--<script src="../stickyfill.min.js"></script>-->
+    <script src="test_chart.js" defer></script>
+    <link rel="stylesheet" href="scrolly_test.css">
+  </head>
+<!--
+  <body>
+      <section id="intro">
+        <h1 class="intro__hed">Sticky Side Example</h1>
+        <p class="intro__dek">
+          Start scrolling to see how it works.
+        </p>
+      </section>
+
+      <section id="scrolly">
+        <article>
+          <div class="step" data-step="1">
+            <p>STEP 1</p>
+          </div>
+          <div class="step" data-step="2">
+            <p>STEP 2</p>
+          </div>
+          <div class="step" data-step="3">
+            <p>STEP 3</p>
+          </div>
+          <div class="step" data-step="4">
+            <p>STEP 4</p>
+          </div>
+        </article>
+
+        <figure>
+          <p>0</p>
+        </figure>
+      </section>
+
+      <section id="outro"></section>
+    </main>
+  </body>
+</html>
+-->
+<main>
+  <body>
+    <section id="intro">
+      <h1 class="intro__hed">Basic Example</h1>
+    </section>
+    <section id="stick">
+      <article>
+        <div class="step first" id = "2010" data-step="1">
+          <h1>2010</h1>
+          <p>Cheif Herren was appointed. This is the latest rewrite of UCPD Los Angeles' policies.</p>
+        </div>
+        <!-- <div class = "step later" id ="2012">Our data begins in 2012.</div> -->
+        <figure>
+          <div class = "BudgetStopChart" id = "BudgetStop">
+            <canvas id="myChart"></canvas>
+          </div>
+        </figure>
+        <div class="step later" data-step="2">
+          <p>Our data begins in 2012</p>
+          <p>The budget has stayed relatively constant</p>
+        </div>
+        <div class="step later" data-step="3">
+          <p>From here on we look at the budget in $100,000 in order to put it on the same scale as arrests and stops.</p>
+        </div>
+        <div class="step later" data-step="4">
+          <p>However arrests have shown a sharp increase</p>
+        </div>
+        <div class="step later nographic" data-step="5">
+          <iframe title="Arrests by Category" aria-label="Bar Chart" id="datawrapper-chart-XGN30" src="https://datawrapper.dwcdn.net/XGN30/1/" scrolling="no" frameborder="0" style="border: none;" width="600" height="645"></iframe>
+        </div>
+        <div class="step later" data-step="6">
+          <p>and stops have shown a large decrease.</p>
+        </div>
+      </article>
+    </section>
+    <section id="outro"> This is after the scrollama</section>
+    <!-- <section id = "scrolly">
+      <div id = "sticker"></div>
+      <div id = "scoller"></div>"
+    </section> -->
+  </body>
+</main>
