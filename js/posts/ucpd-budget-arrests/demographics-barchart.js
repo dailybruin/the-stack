@@ -44,14 +44,14 @@ var chartOptions = {
   }
 }
 
-window.onload = function() {
-  var ctx = document.getElementById("canvas").getContext("2d");
-  window.myBar = new Chart(ctx, {
-    type: "bar",
-    data: barChartRace,
-    options: chartOptions
-  });
-};
+
+var ctxRace = document.getElementById("race_chart").getContext("2d");
+RaceChart = new Chart(ctxRace, {
+  type: "bar",
+  data: barChartRace,
+  options: chartOptions
+});
+
 
 // Gender Chart
 var barChartGender = {
@@ -95,12 +95,10 @@ var barChartGender = {
     }
   }
   
-  window.onload = function() {
-    var ctx = document.getElementById("canvas").getContext("2d");
-    window.myBar = new Chart(ctx, {
-      type: "bar",
-      data: barChartGender,
-      options: chartOptions
-    });
-  };
+var ctxGender = document.getElementById("gender_chart").getContext("2d");
+GenderChart = new Chart(ctxGender, {
+  type: "bar",
+  data: barChartGender,
+  options: chartOptions
+});
 

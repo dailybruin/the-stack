@@ -25,8 +25,11 @@ scripts:
   <canvas id="barchart-uclapd"></canvas>
 </div>
 
-<div id="demographics-barchart" height = "800">
-  <!-- <canvas id="demographics-barchart"></canvas> -->
+<div height = "800">
+  <canvas id="race_chart"></canvas> 
+</div>
+<div height = "800">
+  <canvas id="gender_chart"></canvas> 
 </div>
 <div class="bail-barchart">
   <canvas id='bail-chart-ucpd'> </canvas>
