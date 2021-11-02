@@ -409,7 +409,6 @@ Outside Agency Misdemeanor Warrant,5000
 Outside Agency Misdemeanor Warrant,30000
 Outside Agency Misdemeanor Warrant,630
 Outside Agency Misdemeanor Warrant,571
-Outside Agency Misdemeanor Warrant,CITE OUT
 Outside Agency Misdemeanor Warrant,724
 Outside Agency Misdemeanor Warrant,10000
 Outside Agency Misdemeanor Warrant,10000
@@ -1398,10 +1397,10 @@ Drug related,0
 Drug related,0
 Drug related,0
 Drug related,0
-Disorderly Conduct:Under Influence Of Drug,0
-Disorderly Conduct:Under Influence Of Drug,5000
 Drug related,0
-Rape Of Drugged Victim,100000
+Drug related,5000
+Drug related,0
+Drug related,100000
 Drug related,0
 Drug related,0
 Drug related,0
@@ -2152,7 +2151,6 @@ Outside Agency Infraction Warrant,1125
 Outside Agency Infraction Warrant,412
 Outside Agency Infraction Warrant,0
 Outside Agency Infraction Warrant,406
-Outside Agency Infraction Warrant,88027519420
 Outside Agency Infraction Warrant,412
 Outside Agency Infraction Warrant,453
 Outside Agency Infraction Warrant,453
@@ -2289,7 +2287,6 @@ Battery,0
 Battery,0
 Battery,0
 Battery,0
-Battery,CITE OUT
 Battery,0
 Battery,0
 Battery,25000
@@ -2302,7 +2299,6 @@ Battery,0
 Battery,0
 Battery,0
 Battery,30000
-Battery,CITE OUT
 Battery,0
 Battery,30000
 Battery,20000
