@@ -1,7 +1,8 @@
-d3.csv('/datasets/ucpd-budget-arrests/ucla-pd-budget.csv').then(makeChart);
-
+//
+//d3.csv('/datasets/ucpd-budget-arrests/ucla-pd-budget.csv').then(makeChart);
+let StackedBar;
 function makeChart(csvData) {
-  console.log(csvData);
+  //console.log(csvData);
 
   let data = {
     labels: [
@@ -56,10 +57,21 @@ function makeChart(csvData) {
     },
   };
 
-  let ctx = document.getElementById('barchart-uclapd');
-  let stackedBarChart = new Chart(ctx, {
+  let ctxBudgetBar = document.getElementById('stacked_bar');
+  StackedBar = new Chart(ctxBudgetBar, {
     type: 'bar',
     data: data,
     options: options,
   });
+
+// if (window.matchMedia('(max-width: 480px)').matches) {
+//   stacked_bar.canvas.style = 'min-height: 200px, max-height:400px,';
+//   stacked_bar.options.maintainAspectRatio = false;
+//   stacked_bar.update();
+// }
+// else{
+//   stacked_bar.canvas.style = 'height: 500px, max-width: 55%';
+//   stacked_bar.options.maintainAspectRatio = false;
+//   stacked_bar.update();
+// }
 }

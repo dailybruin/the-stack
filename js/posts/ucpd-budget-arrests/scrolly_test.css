@@ -5,12 +5,28 @@ width: 100%;
 /* overflow: visible; 
 } */
 
-article {
-position: relative;
+.scrollama{
+    width: 100%;
+}
+
+.scrolly_title{
+    font-family: PT Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 26px;
+}
+
+#scrolly_area {
+/* position: relative; */
 padding: 0 1rem;
 margin: 0 auto;
 /* width: 90%; */
-height: 4000px;
+height: 2700px; 
+}
+
+#outro{
+    width: 100%;
 }
 
 .step {
@@ -31,19 +47,35 @@ opacity: 1;
 
 .step p {
 text-align: center;
-font-size: 1.5rem;
+/* font-size: 1.5rem; */
+font-family: PT Sans;
+font-style: normal;
+font-weight: normal;
+font-size: 20px;
+line-height: 26px;
 }
 
-step.first {
+.step.first {
     background-color: purple;
-    float: left;
+    /* float: left; */
     width: 100%
 }
 
 .step.later{
     width: 30%;
     right: 0;
+    height: 300px;
 }
+
+.step.later.chart{
+    width: 30%;
+    right: 0;
+    height: 650px;
+}
+
+.step.last{
+    width: 100%
+} 
 
 figure {
     
@@ -63,12 +95,19 @@ figure {
     position: -webkit-sticky;
     position: sticky;
     top: 25%;
+    /* width: 55%; */
+    height: 500px;
     /* height: 100%; */
 }
 
 #stick {
-    height: 4000px;
+    /* height: 4000px; */
     width: 100%;
+    position: relative;
+    padding: 0 1rem;
+    margin: 0 auto;
+    /* width: 90%; */
+    height: 3000px; 
 }
 /*
 #sticker {
