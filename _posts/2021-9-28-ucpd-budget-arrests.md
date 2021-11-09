@@ -95,8 +95,8 @@ scripts:
 
 <div id="dropdown">
   <select onchange="update_bail_data(this.value);">
-  <option value='ExcludingOutliars'>Excluding Outliars</option>
-  <option value='IncludingOutliars'>Including Outliars</option>
+  <option value='ExcludingOutliars'>Excluding Outliars >= $150k</option>
+  <option value='IncludingOutliars'>Including Outliars >= $150k</option>
   </select>
 </div>
 <div id='myDiv'></div>
