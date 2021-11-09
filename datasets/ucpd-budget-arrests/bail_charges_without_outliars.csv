@@ -251,7 +251,6 @@ DUI,0
 Drug related,0
 DUI,0
 DUI,0
-Trespass,120000
 Trespass,100000
 Trespass,500
 Trespass,0
@@ -397,7 +396,6 @@ Trespass,0
 Trespass,0
 Burglary,50000
 Burglary,20000
-Burglary,150000
 Burglary,50000
 Burglary,20000
 Burglary,20000
@@ -433,8 +431,6 @@ Burglary,60000
 Burglary,20000
 Burglary,50000
 Burglary,50000
-Burglary,150000
-Burglary,150000
 Burglary,50000
 Burglary,50000
 Burglary,50000
@@ -455,7 +451,6 @@ Burglary,20000
 Burglary,40000
 Burglary,20000
 Burglary,50000
-Burglary,150000
 Burglary,20000
 Burglary,50000
 Burglary,50000
@@ -466,7 +461,6 @@ Burglary,20000
 Burglary,20000
 Burglary,50000
 Burglary,20000
-Burglary,156000
 Burglary,20000
 Burglary,20000
 Burglary,50000
@@ -518,7 +512,6 @@ Burglary,50000
 Burglary,50000
 Burglary,50000
 Burglary,0
-Burglary,140000
 Burglary,40000
 Burglary,50000
 Burglary,50000
@@ -916,7 +909,6 @@ Battery,0
 Battery,0
 Battery,0
 Battery,0
-Battery,140000
 Battery,20000
 Battery,0
 Battery,0
