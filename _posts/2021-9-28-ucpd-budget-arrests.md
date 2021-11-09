@@ -87,11 +87,16 @@ scripts:
         </article>
     </section>
 </section>
-
-<div class="bail-barchart">
+<div class="bail-barchart" height="9000">
   <canvas id='bail-chart-ucpd'> </canvas>
 </div>
 
 <p>More text blah blah blah</p>
 
+<div id="dropdown">
+  <select onchange="update_bail_data(this.value);">
+  <option value='ExcludingOutliars'>Excluding Outliars</option>
+  <option value='IncludingOutliars'>Including Outliars</option>
+  </select>
+</div>
 <div id='myDiv'></div>
