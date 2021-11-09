@@ -48,6 +48,12 @@ scripts:
 <div height = "800">
   <canvas id="demographic_charges"></canvas> 
 </div>
+<h1>About the Data</h1>
+<p>The Westwood Demographic Data was collected by censusreporter.org from the ACS 2019 1-year census.</p>
+
+<p>The UCPD Arrest Data was collected by the UCPD from the years 2012-2019.</p>
+
+<p>The UCPD categorizes race through a set of code that can be found here. For the sake of compatibility with Westwood Demographic Data, the categories of “Other” and “Unknown” from UCPD data and the category “2+ Races”and “Other” from the Westwood Demographic Data have been combined into one category of “Other”.</p>
 
 <section class = 'scrollama'>
     <section id="stick">

@@ -6,22 +6,21 @@ var barChartRace = {
     'Asian',
     'American Indian',
     'Other',
-    'Unknown',
   ],
   datasets: [
     {
-      label:'UCPD Arrest Data',
-      backgroundColor: "pink",
-      borderColor: "red",
+      label:'UCPD Arrest Data (2012-2019)',
+      backgroundColor: 'rgba(44, 130, 201, .5)',
+      borderColor: 'rgba(44, 130, 201, 1)',
       borderWidth: 1,
-      data: [35.92, 31.25, 21.87, 3.89,0.1544, 6.83]
+      data: [36, 31, 22, 4, 7]
     },
     {
-      label: 'Westwood Demographic Data',
-      backgroundColor: "lightblue",
-      borderColor: "blue",
+      label: 'Westwood Demographic Data (2019)',
+      backgroundColor: 'rgba(0, 177, 106, .5)',
+      borderColor: 'rgba(0, 177, 106, 1)',
       borderWidth: 1,
-      data: [53, 3, 17, 21, 0, 5, 0]
+      data: [53, 3, 17, 21, 0, 5]
     }
   ]
 };
@@ -37,9 +36,14 @@ var racechartOptions = {
   },
   scales: {
     yAxes: [{
+      display: true,
+        scaleLabel: {
+          display: true,
+          labelString: 'Percent of Arrests',
       ticks: {
         beginAtZero: true
       }
+    }
     }]
   }
 }
@@ -61,16 +65,16 @@ var barChartGender = {
     ],
     datasets: [
       {
-        label:'UCPD Arrest Data',
-        backgroundColor: "pink",
-        borderColor: "red",
+        label:'UCPD Arrest Data (2012-2019)',
+        backgroundColor: 'rgba(44, 130, 201, .5)',
+        borderColor: 'rgba(44, 130, 201, 1)',
         borderWidth: 1,
-        data: [80.017, 11.982]
+        data: [80, 12]
       },
       {
-        label: 'Westwood Demographic Data',
-        backgroundColor: "lightblue",
-        borderColor: "blue",
+        label: 'Westwood Demographic Data (2019)',
+        backgroundColor: 'rgba(0, 177, 106, .5)',
+        borderColor: 'rgba(0, 177, 106, 1)',
         borderWidth: 1,
         data: [48, 52]
       }
@@ -88,9 +92,14 @@ var barChartGender = {
     },
     scales: {
       yAxes: [{
+        display: true,
+          scaleLabel: {
+            display: true,
+            labelString: 'Percent of Arrests',
         ticks: {
           beginAtZero: true
         }
+      }
       }]
     }
   }
@@ -115,16 +124,16 @@ var barChartAge = {
   ],
   datasets: [
     {
-      label:'UCPD Arrest Data',
-      backgroundColor: "pink",
-      borderColor: "red",
+      label:'UCPD Arrest Data (2012-2019)',
+      backgroundColor: 'rgba(44, 130, 201, .5)',
+      borderColor: 'rgba(44, 130, 201, 1)',
       borderWidth: 1,
-      data: [0, 20.13589, 32.45831, 21.24768, 15.84311,  8.678196,  1.636813]
+      data: [0, 21, 32, 22, 16, 7, 2]
     },
     {
-      label: 'Westwood Demographic Data',
-      backgroundColor: "lightblue",
-      borderColor: "blue",
+      label: 'Westwood Demographic Data (2019)',
+      backgroundColor: 'rgba(0, 177, 106, .5)',
+      borderColor: 'rgba(0, 177, 106, 1)',
       borderWidth: 1,
       data: [12, 24, 17, 13, 9, 8, 9]
     }
@@ -141,9 +150,14 @@ var barChartAge = {
     },
     scales: {
       yAxes: [{
+        display: true,
+          scaleLabel: {
+            display: true,
+            labelString: 'Percent of Arrests',
         ticks: {
           beginAtZero: true
         }
+      }
       }]
     }
   }
