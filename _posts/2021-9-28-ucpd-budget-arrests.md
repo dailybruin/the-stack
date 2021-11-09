@@ -25,6 +25,7 @@ scripts:
   - //unpkg.com/intersection-observer@0.5.1/intersection-observer.js
   - //code.jquery.com/jquery-3.6.0.min.js
   - /js/posts/ucpd-budget-arrests/scrolly_charts.js
+  - /js/posts/ucpd-budget-arrests/demographic_charges.js
 ---
 
 <div id="barchart-wrapper">
@@ -36,6 +37,13 @@ scripts:
 </div>
 <div height = "800">
   <canvas id="gender_chart"></canvas> 
+</div>
+<div height = "800">
+  <canvas id="age_chart"></canvas> 
+</div>
+
+<div height = "800">
+  <canvas id="demographic_charges"></canvas> 
 </div>
 
 <section class = 'scrollama'>
@@ -63,14 +71,14 @@ scripts:
         <div class="step later" data-step="5">
           <p>In addition to increased funding, there has been an increase in arrests. The largest increase in arrests was from 2018 to 2019. [INSERT IF UCPD PROVIDES INSIGHT HERE] </p>
         </div>
-        <div class="step later chart" data-step="6">
+        <!-- <div class="step later chart" data-step="6">
           <iframe title="Arrests by Category" aria-label="Bar Chart" id="datawrapper-chart-XGN30" src="https://datawrapper.dwcdn.net/XGN30/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="645 !important"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();
           </script>
-        </div>
-        <div class="step later" data-step="7">
+        </div> -->
+        <div class="step later" data-step="6">
           <p>As a contrast, stops have been on a downward trend since 2014. [INSERT HERE IF UCPD PROVIDES INSIGHT]</p>
         </div>
-        <div class="step last" data-step="8">
+        <div class="step last" data-step="7">
           <p>MAYBE SOME CLOSING THOUGHT HERE?</p>
         </div>
         </article>

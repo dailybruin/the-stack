@@ -45,7 +45,7 @@ var racechartOptions = {
 }
 
 
-var ctxRace = document.getElementById("race_chart").getContext("2d");
+var ctxRace = document.getElementById("race_chart")//.getContext("2d");
 RaceChart = new Chart(ctxRace, {
   type: "bar",
   data: barChartRace,
@@ -95,7 +95,7 @@ var barChartGender = {
     }
   }
   
-var ctxGender = document.getElementById("gender_chart").getContext("2d");
+var ctxGender = document.getElementById("gender_chart")//.getContext("2d");
 GenderChart = new Chart(ctxGender, {
   type: "bar",
   data: barChartGender,
@@ -147,7 +147,7 @@ var barChartAge = {
       }]
     }
   }
-  var ctxAge = document.getElementById("age_chart").getContext("2d");
+  var ctxAge = document.getElementById("age_chart")//.getContext("2d");
 AgeChart = new Chart(ctxAge, {
   type: "bar",
   data: barChartAge,

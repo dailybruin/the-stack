@@ -31,7 +31,7 @@ function handleStepEnter(response) {
         else if (i ===4) {
             addData(2);
         }
-        else if (i===6){
+        else if (i===5){
             addData(3)
         }
     }
