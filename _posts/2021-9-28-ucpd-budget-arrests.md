@@ -11,9 +11,11 @@ og_image:
 stylesheets:
   - /js/posts/ucpd-budget-arrests/scrolly_test.css
 scripts:
-  - //d3js.org/d3.v5.min.js
+  - //cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js
   - //cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js
   - //cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.js
+  - //cdn.jsdelivr.net/npm/chart.js@2.8.0
+  - //cdn.plot.ly/plotly-2.4.2.min.js
   - /js/posts/ucpd-budget-arrests/stacked-barchart.js
   - //cdn.anychart.com/releases/8.0.1/js/anychart-core.min.js
   - //cdn.anychart.com/releases/8.0.1/js/anychart-pie.min.js
@@ -26,6 +28,7 @@ scripts:
   - //code.jquery.com/jquery-3.6.0.min.js
   - /js/posts/ucpd-budget-arrests/scrolly_charts.js
   - /js/posts/ucpd-budget-arrests/demographic_charges.js
+  - /js/posts/ucpd-budget-arrests/bail-violin.js
 ---
 
 <div id="barchart-wrapper">
@@ -45,6 +48,12 @@ scripts:
 <div height = "800">
   <canvas id="demographic_charges"></canvas> 
 </div>
+<h1>About the Data</h1>
+<p>The Westwood Demographic Data was collected by censusreporter.org from the ACS 2019 1-year census.</p>
+
+<p>The UCPD Arrest Data was collected by the UCPD from the years 2012-2019.</p>
+
+<p>The UCPD categorizes race through a set of code that can be found here. For the sake of compatibility with Westwood Demographic Data, the categories of “Other” and “Unknown” from UCPD data and the category “2+ Races”and “Other” from the Westwood Demographic Data have been combined into one category of “Other”.</p>
 
 <section class = 'scrollama'>
     <section id="stick">
@@ -89,4 +98,6 @@ scripts:
   <canvas id='bail-chart-ucpd'> </canvas>
 </div>
 
-More text blah blah blah
+<p>More text blah blah blah</p>
+
+<div id='myDiv'></div>
