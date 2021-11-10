@@ -17,6 +17,7 @@ const labels = [
     ];
 const lines = ['Budget','Budget in $100,000','Arrests','Stops'];
 
+
 const options0 = {
     scales: {
         yAxes: [
@@ -33,6 +34,11 @@ const options0 = {
             //max: 25000,
             //stepSize: 5000,
             },
+            scaleLabel:{
+                display: true,
+                labelString: 'Dollars'
+            },
+            yAxisID: 'y'
         },
         ],
         xAxes: [
@@ -47,23 +53,63 @@ const options0 = {
 }
 
 const options1 ={
-    scales: {
-        yAxes: [
-            {
-            ticks: {
-                // callback: function(value) {
-                //     return value.toLocaleString('en-US', {
-                //         style: 'currency',
-                //         currency: 'USD',
-                //         minimumFractionDigits: 0,
-                //     }); // convert value to dollar format
-                // },
-            min: 0,
-            //max: 25000,
-            //stepSize: 5000,
-            },
+    responsive: true,
+    interaction: {
+        mode: 'index',
+        intersect: false,
+    },
+    stacked: false,
+    plugins: {
+        title: {
+            display: true,
+            text: 'Chart.js Line Chart - Multi Axis'
+        }
         },
-        ],
+    scales: {
+        yAxes: [{
+            type: 'linear',
+            display: true,
+            position: 'left',
+                ticks: {
+                    callback: function(value) {
+                        return value.toLocaleString('en-US', {
+                            style: 'decimal',
+                            minimumFractionDigits: 0,
+                        }); // convert value to dollar format
+                    },
+                min: 0,
+                max: 700,
+                stepSize: 100,
+                },
+            yAxisID: 'y',
+            id:'y'
+            },
+        {
+            type: 'linear',
+            display: true,
+            position: 'right',
+    
+            // grid line settings
+            grid: {
+              drawOnChartArea: false, // only want the grid lines for one axis to show up
+            },
+            ticks: {
+                callback: function(value) {
+                    return value.toLocaleString('en-US', {
+                        style: 'currency',
+                        currency: 'USD',
+                        minimumFractionDigits: 0,
+                    }); // convert value to dollar format
+                },
+            min: 0,
+            max: 700,
+            stepSize: 100,
+            },
+            yAxisID: 'y1',
+            id:'y1'
+        },
+    ],
+        
         xAxes: [
         {
             scaleLabel: {
@@ -75,7 +121,7 @@ const options1 ={
     },
 }
 
-let options = options0;
+
 //const data = {}
 
 const data = {
@@ -90,6 +136,7 @@ function addData(i) {
         fill: false,
         borderColor: colors[i],
         data: data_order[i],
+        //yAxisID: 'y'
         }
     // ++step_number;
     data.datasets.push(info);
@@ -99,10 +146,14 @@ function addData(i) {
 
 function changeOptions(i){
     if (i===0){
-        options = options0;
+        console.log('options0')
+        myChart.options = options0;
+        //myChart.update()
     }
     else {
-        options = options1;
+        console.log('options1')
+        myChart.options = options1;
+        //myChart.update()
     }
     myChart.update()
 }
@@ -126,6 +177,6 @@ let ctx = document.getElementById('myChart');
 let myChart = new Chart(ctx, {
     type: 'line',
     data: data,
-    options: options
+    options: options0
     }
 );
