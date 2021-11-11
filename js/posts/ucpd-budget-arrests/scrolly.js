@@ -1,3 +1,5 @@
+const { ChartLabel } = require("react-vis");
+
 let scrolly = document.querySelector("#stick");
 let article = scrolly.querySelector("article");
 let step = article.querySelectorAll(".step");
@@ -21,10 +23,21 @@ function handleStepEnter(response) {
         }
         else if (i === 2){
             removeData();
-            ChangeBar();
+            myChart.destroy();
+            document.getElementById('myChart').id = 'stacked_bar';
+            d3.csv('/datasets/ucpd-budget-arrests/ucla-pd-budget.csv').then(makeChart);
+            myChart = StackedBar
+            //ChangeBar();
         }
         else if (i === 3){
-            ChangeLine();
+            //ChangeLine();
+            myChart.destroy();
+            myChart = new Chart(ctx, {
+                type: 'line',
+                data: data,
+                options: options1
+                }
+            );
             changeOptions(1);
             addData(1);
         }

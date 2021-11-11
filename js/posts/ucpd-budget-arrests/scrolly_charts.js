@@ -1,4 +1,4 @@
-console.log('loaded chart')
+//console.log('loaded chart')
 const Budget=[13680147, 14223655, 15499349, 16281145, 16754687, 17355103, 20258656, 22375818];
 const Stops=[103, 356, 389, 316, 250, 289, 276, 199];
 const Arrests=[101, 309, 381, 416, 418, 481, 467, 665];
@@ -169,8 +169,9 @@ function ChangeBar(){
 }
 
 function ChangeLine(){
-    document.getElementById('stacked_bar').id = 'myChart'
-    StackedBar.destroy()
+    document.getElementById('stacked_bar').id = 'myChart';
+    StackedBar.destroy();
+    myChart.update();
 }
 
 let ctx = document.getElementById('myChart');
@@ -180,3 +181,14 @@ let myChart = new Chart(ctx, {
     options: options0
     }
 );
+
+if (window.matchMedia('(max-width: 480px)').matches) {
+    myhart.canvas.style = 'max-height:300px';
+    myChart.options.maintainAspectRatio = false;
+    myChart.update();
+}
+if (window.matchMedia('(min-width: 480px)').matches) {
+    myChart.canvas.style = 'width: 100%';
+    myChart.options.maintainAspectRatio = false;
+    myChart.update();
+}

@@ -67,12 +67,6 @@ line-height: 26px;
     height: 300px;
 }
 
-.step.later.chart{
-    width: 30%;
-    right: 0;
-    height: 650px;
-}
-
 .step.last{
     width: 100%
 } 
@@ -95,8 +89,8 @@ figure {
     position: -webkit-sticky;
     position: sticky;
     top: 25%;
-    /* width: 55%; */
-    /* height: 500px; */
+    width: 100%;
+    /* height: 500px;  */
     /* height: 100%; */
 }
 
@@ -108,6 +102,10 @@ figure {
     margin: 0 auto;
     /* width: 90%; */
     height: 2000px; 
+}
+
+#myChart{
+    width: 100%;
 }
 /*
 #sticker {

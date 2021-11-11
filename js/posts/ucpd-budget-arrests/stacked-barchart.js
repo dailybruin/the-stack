@@ -6,14 +6,14 @@ function makeChart(csvData) {
 
   let data = {
     labels: [
-      'FY 12-13',
-      'FY 13-14',
-      'FY 14-15',
-      ' FY 15-16',
-      'FY 16-17',
-      'FY 17-18',
-      'FY 18-19',
-      'FY 19-20 (Approved but not actual)',
+      '12-13',
+      '13-14',
+      '14-15',
+      '15-16',
+      '16-17',
+      '17-18',
+      '18-19',
+      '19-20*',
     ],
     datasets: [],
   };
@@ -63,15 +63,4 @@ function makeChart(csvData) {
     data: data,
     options: options,
   });
-
-// if (window.matchMedia('(max-width: 480px)').matches) {
-//   stacked_bar.canvas.style = 'min-height: 200px, max-height:400px,';
-//   stacked_bar.options.maintainAspectRatio = false;
-//   stacked_bar.update();
-// }
-// else{
-//   stacked_bar.canvas.style = 'height: 500px, max-width: 55%';
-//   stacked_bar.options.maintainAspectRatio = false;
-//   stacked_bar.update();
-// }
 }
