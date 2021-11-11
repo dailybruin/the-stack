@@ -16,7 +16,7 @@ og_image:
 stylesheets:
   - /js/posts/ucpd-budget-arrests/scrolly_test.css
 scripts:
-  #- //cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js
+  - //cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js
   - //d3js.org/d3.v5.min.js
   - //cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js
   - //cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.js

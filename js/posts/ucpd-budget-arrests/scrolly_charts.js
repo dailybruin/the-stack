@@ -183,14 +183,3 @@ function makeBudgetArrests()
             options: options0
             }
     );}
-
-// if (window.matchMedia('(max-width: 480px)').matches) {
-//     myChart.canvas.style = 'max-height:300px';
-//     myChart.options.maintainAspectRatio = false;
-//     myChart.update();
-// }
-// if (window.matchMedia('(min-width: 480px)').matches) {
-//     myChart.canvas.style = 'width: 100%';
-//     myChart.options.maintainAspectRatio = true;
-//     myChart.update();
-// }
