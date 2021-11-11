@@ -1,4 +1,4 @@
-const { ChartLabel } = require("react-vis");
+//const { ChartLabel } = require("react-vis");
 
 let scrolly = document.querySelector("#stick");
 let article = scrolly.querySelector("article");
@@ -18,26 +18,30 @@ function handleStepEnter(response) {
     let i = response.index 
     if(response.direction === 'down'){
         if (i ===1){
+            makeBudgetArrests();
             addData(0);
             changeOptions(0);
         }
         else if (i === 2){
             removeData();
-            myChart.destroy();
-            document.getElementById('myChart').id = 'stacked_bar';
+            //myChart.destroy();
+            //document.getElementById('myChart').id = 'stacked_bar';
+            document.getElementById('BudgetStop').innerHTML = '<canvas id = stacked_bar></canvas'
             d3.csv('/datasets/ucpd-budget-arrests/ucla-pd-budget.csv').then(makeChart);
-            myChart = StackedBar
+            //myChart = StackedBar
             //ChangeBar();
         }
         else if (i === 3){
             //ChangeLine();
-            myChart.destroy();
-            myChart = new Chart(ctx, {
-                type: 'line',
-                data: data,
-                options: options1
-                }
-            );
+            //StackedBar.destroy();
+            document.getElementById('BudgetStop').innerHTML = '<canvas id = myChart></canvas'
+            // myChart = new Chart(ctx, {
+            //     type: 'line',
+            //     data: data,
+            //     options: options1
+            //     }
+            // );
+            makeBudgetArrests();
             changeOptions(1);
             addData(1);
         }

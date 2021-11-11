@@ -173,22 +173,24 @@ function ChangeLine(){
     StackedBar.destroy();
     myChart.update();
 }
+let myChart;
+function makeBudgetArrests()
+    {
+        let ctx = document.getElementById('myChart');
+        myChart = new Chart(ctx, {
+            type: 'line',
+            data: data,
+            options: options0
+            }
+    );}
 
-let ctx = document.getElementById('myChart');
-let myChart = new Chart(ctx, {
-    type: 'line',
-    data: data,
-    options: options0
-    }
-);
-
-if (window.matchMedia('(max-width: 480px)').matches) {
-    myhart.canvas.style = 'max-height:300px';
-    myChart.options.maintainAspectRatio = false;
-    myChart.update();
-}
-if (window.matchMedia('(min-width: 480px)').matches) {
-    myChart.canvas.style = 'width: 100%';
-    myChart.options.maintainAspectRatio = false;
-    myChart.update();
-}
+// if (window.matchMedia('(max-width: 480px)').matches) {
+//     myChart.canvas.style = 'max-height:300px';
+//     myChart.options.maintainAspectRatio = false;
+//     myChart.update();
+// }
+// if (window.matchMedia('(min-width: 480px)').matches) {
+//     myChart.canvas.style = 'width: 100%';
+//     myChart.options.maintainAspectRatio = true;
+//     myChart.update();
+// }

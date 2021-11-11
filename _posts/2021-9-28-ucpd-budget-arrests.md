@@ -2,7 +2,12 @@
 title: UCPD Budget & Arrest Data
 teaser:
 authors:
-  -
+  - mattie_sanseverino
+  - sydney_kovach
+  - lindsey_parungo
+  - priya_kanneboyina
+  - samantha_low
+  - vivian_luk
 key_takeaways:
   -
 featured_image:

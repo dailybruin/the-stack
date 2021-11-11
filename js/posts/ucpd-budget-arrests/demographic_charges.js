@@ -1,18 +1,20 @@
 console.log('loaded demographic charges chart')
-d3.csv('/datasets/ucpd-budget-arrests/ucla-pd-budget.csv').then(makeChargesChart);
+d3.csv('/datasets/ucpd-budget-arrests/charge_category_race.csv').then(makeChargesChart);
 function makeChargesChart(csvData) {
   //console.log(csvData);
   //const DemoChargeslabels = ['January', 'February','March','April','May','June'];
     let DemoChargesdata = {
     labels: [
-        'FY 12-13',
-        'FY 13-14',
-        'FY 14-15',
-        ' FY 15-16',
-        'FY 16-17',
-        'FY 17-18',
-        'FY 18-19',
-        'FY 19-20 (Approved but not actual)',
+        'CA Regs: Violate Curfew',
+        'Driving Invalid License',
+        'Fail to Appear After Written Promise',
+        'False Identification to Specific Peace Officers',
+        'Obstruct/Resist',
+        'Outside Agency Infraction Warrant',
+        'Threat',
+        'Trespass',
+        'UCPD Misdemeanor Bench Warrant',
+        'Vandalism'
     ],
     datasets: [],
     };
@@ -26,14 +28,16 @@ function makeChargesChart(csvData) {
     '#ffa600',
     'green',
     'blue',
+    'light blue',
+    'purple'
     ];
 
-    for (let i = 4; i < 12; i++) {
+    for (let i = 0; i < 6; i++) {
     DemoChargesdata.datasets.push({
-        label: csvData[i].Category,
+        label: csvData[i].Race,
         data: Object.values(csvData[i]).slice(1),
-        backgroundColor: colors[i - 4],
-        borderColor: colors[i - 4],
+        backgroundColor: colors[i],
+        borderColor: colors[i],
     });
     }
 
