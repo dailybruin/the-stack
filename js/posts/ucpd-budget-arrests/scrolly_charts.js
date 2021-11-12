@@ -70,17 +70,21 @@ const options1 ={
             type: 'linear',
             display: true,
             position: 'left',
-                ticks: {
-                    callback: function(value) {
-                        return value.toLocaleString('en-US', {
-                            style: 'decimal',
-                            minimumFractionDigits: 0,
-                        }); // convert value to dollar format
-                    },
+            ticks: {
+                callback: function(value) {
+                    return value.toLocaleString('en-US', {
+                        style: 'decimal',
+                        minimumFractionDigits: 0,
+                    }); // convert value to dollar format
+                },
                 min: 0,
                 max: 700,
                 stepSize: 100,
-                },
+            },
+            scaleLabel:{
+                display: true,
+                labelString: 'Number of Arrests/Stops'
+            },
             yAxisID: 'y',
             id:'y'
             },
@@ -101,9 +105,13 @@ const options1 ={
                         minimumFractionDigits: 0,
                     }); // convert value to dollar format
                 },
-            min: 0,
-            max: 700,
-            stepSize: 100,
+                min: 0,
+                max: 700,
+                stepSize: 100,
+            },
+            scaleLabel:{
+                display: true,
+                labelString: 'Dollars'
             },
             yAxisID: 'y1',
             id:'y1'
@@ -182,4 +190,12 @@ function makeBudgetArrests()
             data: data,
             options: options0
             }
-    );}
+    );
+
+    if (window.matchMedia('(max-width: 480px)').matches) {
+        myChart.canvas.style = 'max-height:400px';
+        myChart.options.maintainAspectRatio = false;
+        myChart.update();
+        }
+}
+

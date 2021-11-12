@@ -1,5 +1,6 @@
 console.log('loaded demographic charges chart')
 d3.csv('/datasets/ucpd-budget-arrests/charge_category_race.csv').then(makeChargesChart);
+let demographic_charges;
 function makeChargesChart(csvData) {
   //console.log(csvData);
   //const DemoChargeslabels = ['January', 'February','March','April','May','June'];
@@ -42,8 +43,8 @@ function makeChargesChart(csvData) {
     }
 
 
-    let ctxDemographicCharges = document.getElementById('demographic_charges');
-    let Demographic_Charges = new Chart(ctxDemographicCharges, {
+    let ctxDemographicCharges = document.getElementById('demographic_charges').getContext('2d');
+    demographic_charges = new Chart(ctxDemographicCharges, {
     type: 'horizontalBar',
     data: DemoChargesdata,
     options: {
@@ -52,7 +53,12 @@ function makeChargesChart(csvData) {
             xAxes: [
                 {
                     stacked: true,
+                    scaleLabel:{
+                        display: true,
+                        labelString: 'Arrests',
+                    },
                 },
+                
             ],
             yAxes: [
                 {
@@ -62,4 +68,12 @@ function makeChargesChart(csvData) {
             },
     },
     });
+
+    if (window.matchMedia('(max-width: 480px)').matches) {
+        demographic_charges.canvas.style = 'min-height : 400px';
+        demographic_charges.options.maintainAspectRatio = false;
+        demographic_charges.update();
+    }
 }
+
+
