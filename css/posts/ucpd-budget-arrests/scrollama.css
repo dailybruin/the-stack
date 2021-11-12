@@ -103,75 +103,96 @@ figure {
     width: 100%;
 }
 }
+
+/*MOBILE*/
 @media only screen and (max-width: 1000px) {
     .scrollama{
-        width: 90%;
+        width: 100%;
     }
     
-    /* .scrolly_title{
-        /* font-family: PT Sans;
+    .scrolly_title{
+        font-family: PT Sans;
         font-style: normal;
-        font-weight: normal; */
-        /* font-size: 36px; */
-        /* line-height: 26px; */
-    /* } */ 
+        font-weight: normal;
+        font-size: 36px;
+        line-height: 26px;
+    }
     
     #scrolly_area {
     /* position: relative; */
     padding: 0 1rem;
     margin: 0 auto;
-    width: 100%;
-    height: 2000px; 
+    /* width: 90%; */
+    height: 2500px; 
     }
     
     .step {
     margin: 2rem auto 4rem auto;
     background-color: #3b3b3b;
     color: #fff;
-    top: 20px;
+    opacity: 0;
+    /* width: 30%; */
+    top: 0px;
     float: right;
-    width: 100%;
-    opacity: .5;
+    z-index: 0;
     }
     
     .step.is-active {
     background-color: #3b3b3b;
     color: #fff;
     opacity: 1;
-    /* padding-top: 300px; */
     }
     
     .step p {
     text-align: center;
-    float: center;
+    /* font-size: 1.5rem; */
+    font-family: PT Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 26px;
     }
     
-    figure {
-        
-        /* position: relative;
-        top: 400px; */
+    .step.first {
+        width: 100%
+    }
+    
+    .step.later{
         width: 100%;
-        /* height: 100%; */
+        right: 0;
+        height: 300px;
+    }
+    
+    .step.last{
+        width: 100%
+    } 
+    
+    figure {
+        position: -webkit-sticky;
+        position: sticky;
+        /* position: relative;*/
+        top: 200px; 
+        width: 100%;
+        /* height: 100%;  */
         float: left;
         margin: 0;
         -webkit-transform: translate3d(0, 0, 0);
         -moz-transform: translate3d(0, 0, 0);
         transform: translate3d(0, 0, 0);
-        /* background-color: #8a8a8a; */
+        z-index: 1;
+        background-color: #fff;
     }
     
     .BudgetStopChart{
-        position: -webkit-sticky;
-        position: sticky;
-        top: 10px;
         width: 100%;
-        height: 800px; 
+        z-index: 1;
+        /* height: 500px;  */
         /* height: 100%; */
     }
     
     #stick {
         /* height: 4000px; */
-        width: 90%;
+        width: 100%;
         position: relative;
         padding: 0 1rem;
         margin: 0 auto;
@@ -182,4 +203,4 @@ figure {
     #myChart{
         width: 100%;
     }
-}
+    }

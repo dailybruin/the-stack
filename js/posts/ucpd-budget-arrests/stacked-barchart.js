@@ -65,7 +65,7 @@ function makeChart(csvData) {
   });
 
   if (window.matchMedia('(max-width: 480px)').matches) {
-    StackedBar.canvas.style = 'min-height:400px';
+    StackedBar.canvas.style = 'max-height:500px';
     StackedBar.options.maintainAspectRatio = false;
     StackedBar.update();
   }
