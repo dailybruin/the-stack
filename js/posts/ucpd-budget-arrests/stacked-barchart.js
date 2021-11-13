@@ -19,14 +19,14 @@ function makeChart(csvData) {
   };
 
   let colors = [
-    '#374c80',
-    '#7a5195',
-    '#bc5090',
-    '#ef5675',
-    '#ff764a',
-    '#ffa600',
-    'green',
-    'blue',
+    '#FF8311',
+    '#2A3C6A',
+    '#A1C7F3',
+    '#FFBA35',
+    '#835FA8',
+    '#EB548C',
+    '#4B13B1',
+    '#3FBBFF',
   ];
 
   for (let i = 4; i < 12; i++) {
@@ -52,8 +52,33 @@ function makeChart(csvData) {
       yAxes: [
         {
           stacked: true,
+          ticks: {
+            callback: function(value) {
+                return value.toLocaleString('en-US', {
+                    style: 'currency',
+                    currency: 'USD',
+                    minimumFractionDigits: 0,
+                }); // convert value to dollar format
+            },
+            // min: 0,
+            // max: 700,
+            // stepSize: 100,
+        },
         },
       ],
+    },
+    tooltips: {
+      callbacks: {
+        label: function(tooltipItem, data) {
+          let value = tooltipItem.yLabel.toLocaleString('en-US', {
+            style: 'currency',
+            currency: 'USD',
+            maximumFractionDigits: 2,
+          });
+          let label = data.datasets[tooltipItem.datasetIndex].label;
+          return label + ': ' + value;
+        },
+      },
     },
   };
 

@@ -4,7 +4,7 @@ const Stops=[103, 356, 389, 316, 250, 289, 276, 199];
 const Arrests=[101, 309, 381, 416, 418, 481, 467, 665];
 const Budget_Normalized=[136.80147, 142.23655, 154.99349, 162.81145, 167.54687, 173.55103, 202.58656, 223.75818];
 const data_order = [Budget, Budget_Normalized, Arrests, Stops];
-const colors = ['Blue', 'Purple', 'Green','Pink']
+const colors = ['#FF8311', '#FF8311','#2A3C6A','#A1C7F3']
 const labels = [
     '2012',
     '2013',
@@ -49,6 +49,19 @@ const options0 = {
             },
         },
         ],
+    },
+    tooltips: {
+        callbacks: {
+            label: function(tooltipItem, data) {
+            let value = tooltipItem.yLabel.toLocaleString('en-US', {
+                style: 'currency',
+                currency: 'USD',
+                maximumFractionDigits: 2,
+            });
+            let label = data.datasets[tooltipItem.datasetIndex].label;
+            return label + ': ' + value;
+            },
+        },
     },
 }
 
@@ -106,8 +119,8 @@ const options1 ={
                     }); // convert value to dollar format
                 },
                 min: 0,
-                max: 700,
-                stepSize: 100,
+                max: 70000000,
+                stepSize: 10000000,
             },
             scaleLabel:{
                 display: true,
@@ -127,6 +140,30 @@ const options1 ={
         },
         ],
     },
+    tooltips: {
+        callbacks: {
+            label: function(tooltipItem, data) {
+                if (data.datasets[tooltipItem.datasetIndex].label === 'Budget in $100,000'){ 
+                    let val = tooltipItem.yLabel * 100000;
+                    let value = val.toLocaleString('en-US', {
+                        style: 'currency',
+                        currency: 'USD',
+                        maximumFractionDigits: 2,
+                    });
+                    let label = 'Budget:';
+                    return label + ' ' + value;
+                }
+                else {
+                    let value = tooltipItem.yLabel.toLocaleString('en-US', {
+                        style: 'decimal',
+                        maximumFractionDigits: 0,
+                    });
+                    let label = data.datasets[tooltipItem.datasetIndex].label;
+                    return label + ': ' + value;
+                }
+        },
+    },
+}
 }
 
 
@@ -193,7 +230,7 @@ function makeBudgetArrests()
     );
 
     if (window.matchMedia('(max-width: 480px)').matches) {
-        myChart.canvas.style = 'max-height:400px';
+        myChart.canvas.style = 'max-height:500px';
         myChart.options.maintainAspectRatio = false;
         myChart.update();
         }

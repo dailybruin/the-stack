@@ -15,7 +15,14 @@ function handleStepEnter(response) {
     response.element.classList.add("is-active");
     // console.log(response.index);
     // console.log(response.direction);
-    let i = response.index 
+    // let i;
+    // if (window.matchMedia('(max-width: 480px)').matches){
+    //     i = response.index+1;
+    // }
+    // else{
+    //     i = response.index;
+    // } 
+    let i = response.index;
     if(response.direction === 'down'){
         if (i ===1){
             makeBudgetArrests();

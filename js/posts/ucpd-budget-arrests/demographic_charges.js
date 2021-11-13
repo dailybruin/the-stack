@@ -21,16 +21,12 @@ function makeChargesChart(csvData) {
     };
 
     let colors = [
-    '#374c80',
-    '#7a5195',
-    '#bc5090',
-    '#ef5675',
-    '#ff764a',
-    '#ffa600',
-    'green',
-    'blue',
-    'light blue',
-    'purple'
+        '#FF8311',
+        '#2A3C6A',
+        '#A1C7F3',
+        '#FFBA35',
+        '#835FA8',
+        '#EB548C',
     ];
 
     for (let i = 0; i < 6; i++) {
