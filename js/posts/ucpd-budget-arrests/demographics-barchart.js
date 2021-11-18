@@ -20,7 +20,7 @@ var barChartRace = {
       backgroundColor: 'rgba(0, 177, 106, .5)',
       borderColor: 'rgba(0, 177, 106, 1)',
       borderWidth: 1,
-      data: [53, 3, 17, 21, 0, 5]
+      data: [53, 3, 17, 21, .15, 5]
     }
   ]
 };
@@ -35,8 +35,16 @@ var racechartOptions = {
     text: "Arrest Demographics by Race"
   },
   scales: {
+    xAxes: [{
+      gridLines: {
+        display: false
+      },
+    }],
     yAxes: [{
       display: true,
+      gridLines: {
+        display: false
+      },
         scaleLabel: {
           display: true,
           labelString: 'Percent of Arrests',
@@ -44,9 +52,20 @@ var racechartOptions = {
         beginAtZero: true
       }
     }
-    }]
+    }],
+  },
+  tooltips: {
+    backgroundColor: 'rgba(0, 0, 0, 0)',
+    bodyColor: '#000000',
+    displayColors: false,
+    callbacks: {
+      label: function(tooltipItem, data) {
+        return data['labels'][tooltipItem['index']] + ': ' + data['datasets'][0]['data'][tooltipItem['index']] + '%';
+      },
+      },
   }
 }
+
 
 
 var ctxRace = document.getElementById("race_chart")//.getContext("2d");
@@ -91,16 +110,31 @@ var barChartGender = {
       text: "Arrest Demographics by Gender"
     },
     scales: {
+      xAxes: [{
+        gridLines: {
+          display: false
+        },
+      }],
       yAxes: [{
         display: true,
+        gridLines: {
+          display: false
+        },
           scaleLabel: {
             display: true,
             labelString: 'Percent of Arrests',
-        ticks: {
-          beginAtZero: true
+      },
+      ticks: {
+        beginAtZero: true
+      },
+      }]
+    },
+    tooltips: {
+      callbacks: {
+        label: function(tooltipItem, data) {
+          return data['labels'][tooltipItem['index']] + ': ' + data['datasets'][0]['data'][tooltipItem['index']] + '%';
         }
       }
-      }]
     }
   }
   
@@ -149,8 +183,16 @@ var barChartAge = {
       text: "Arrest Demographics by Age"
     },
     scales: {
+      xAxes: [{
+        gridLines: {
+          display: false
+        },
+      }],
       yAxes: [{
         display: true,
+        gridLines: {
+          display: false
+        },
           scaleLabel: {
             display: true,
             labelString: 'Percent of Arrests',
@@ -159,6 +201,13 @@ var barChartAge = {
         }
       }
       }]
+    },
+    tooltips: {
+      callbacks: {
+        label: function(tooltipItem, data) {
+          return data['labels'][tooltipItem['index']] + ': ' + data['datasets'][0]['data'][tooltipItem['index']] + '%';
+        }
+      }
     }
   }
   var ctxAge = document.getElementById("age_chart")//.getContext("2d");
