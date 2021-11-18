@@ -6,27 +6,27 @@ function makeChart(csvData) {
 
   let data = {
     labels: [
-      'FY 12-13',
-      'FY 13-14',
-      'FY 14-15',
-      ' FY 15-16',
-      'FY 16-17',
-      'FY 17-18',
-      'FY 18-19',
-      'FY 19-20 (Approved but not actual)',
+      '12-13',
+      '13-14',
+      '14-15',
+      '15-16',
+      '16-17',
+      '17-18',
+      '18-19',
+      '19-20*',
     ],
     datasets: [],
   };
 
   let colors = [
-    '#374c80',
-    '#7a5195',
-    '#bc5090',
-    '#ef5675',
-    '#ff764a',
-    '#ffa600',
-    'green',
-    'blue',
+    '#FF8311',
+    '#2A3C6A',
+    '#A1C7F3',
+    '#FFBA35',
+    '#835FA8',
+    '#EB548C',
+    '#4B13B1',
+    '#3FBBFF',
   ];
 
   for (let i = 4; i < 12; i++) {
@@ -52,8 +52,33 @@ function makeChart(csvData) {
       yAxes: [
         {
           stacked: true,
+          ticks: {
+            callback: function(value) {
+                return value.toLocaleString('en-US', {
+                    style: 'currency',
+                    currency: 'USD',
+                    minimumFractionDigits: 0,
+                }); // convert value to dollar format
+            },
+            // min: 0,
+            // max: 700,
+            // stepSize: 100,
+        },
         },
       ],
+    },
+    tooltips: {
+      callbacks: {
+        label: function(tooltipItem, data) {
+          let value = tooltipItem.yLabel.toLocaleString('en-US', {
+            style: 'currency',
+            currency: 'USD',
+            maximumFractionDigits: 2,
+          });
+          let label = data.datasets[tooltipItem.datasetIndex].label;
+          return label + ': ' + value;
+        },
+      },
     },
   };
 
@@ -64,14 +89,10 @@ function makeChart(csvData) {
     options: options,
   });
 
-// if (window.matchMedia('(max-width: 480px)').matches) {
-//   stacked_bar.canvas.style = 'min-height: 200px, max-height:400px,';
-//   stacked_bar.options.maintainAspectRatio = false;
-//   stacked_bar.update();
-// }
-// else{
-//   stacked_bar.canvas.style = 'height: 500px, max-width: 55%';
-//   stacked_bar.options.maintainAspectRatio = false;
-//   stacked_bar.update();
-// }
+  if (window.matchMedia('(max-width: 480px)').matches) {
+    StackedBar.canvas.style = 'max-height:500px';
+    StackedBar.options.maintainAspectRatio = false;
+    StackedBar.update();
+  }
 }
+

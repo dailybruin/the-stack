@@ -1,3 +1,5 @@
+//const { ChartLabel } = require("react-vis");
+
 let scrolly = document.querySelector("#stick");
 let article = scrolly.querySelector("article");
 let step = article.querySelectorAll(".step");
@@ -13,18 +15,40 @@ function handleStepEnter(response) {
     response.element.classList.add("is-active");
     // console.log(response.index);
     // console.log(response.direction);
-    let i = response.index 
+    // let i;
+    // if (window.matchMedia('(max-width: 480px)').matches){
+    //     i = response.index+1;
+    // }
+    // else{
+    //     i = response.index;
+    // } 
+    let i = response.index;
     if(response.direction === 'down'){
         if (i ===1){
+            makeBudgetArrests();
             addData(0);
             changeOptions(0);
         }
         else if (i === 2){
             removeData();
-            ChangeBar();
+            //myChart.destroy();
+            //document.getElementById('myChart').id = 'stacked_bar';
+            document.getElementById('BudgetStop').innerHTML = `<canvas id = stacked_bar></canvas> <p class = caption>UCPD’s annual budget from 2012 to 2019 was acquired through a CPRA. Values are given for fiscal years. The 2018-2019 data is a proposed budget, not yet approved. </p>`
+            d3.csv('/datasets/ucpd-budget-arrests/ucla-pd-budget.csv').then(makeChart);
+            //myChart = StackedBar
+            //ChangeBar();
         }
         else if (i === 3){
-            ChangeLine();
+            //ChangeLine();
+            //StackedBar.destroy();
+            document.getElementById('BudgetStop').innerHTML = '<canvas id = myChart></canvas> <p class = caption>The budget values shown here are per $100,000 to match them to the scale of stops and arrests for easier comparison. Stop and arrest data was collected via CPRA submitted to UCPD. </p>'
+            // myChart = new Chart(ctx, {
+            //     type: 'line',
+            //     data: data,
+            //     options: options1
+            //     }
+            // );
+            makeBudgetArrests();
             changeOptions(1);
             addData(1);
         }
@@ -64,7 +88,7 @@ function init() {
     scroller
         .setup({
         step: "#stick article .step",
-        debug: false,
+        debug: true,
         offset: 0.5
         })
         .onStepEnter(handleStepEnter)

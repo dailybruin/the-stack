@@ -1,6 +1,6 @@
 function update_bail_data(data) {
     if (data == "ExcludingOutliars") {
-        d3.csv("https://raw.githubusercontent.com/dailybruin/the-stack/ucpd-budget-arrests/datasets/ucpd-budget-arrests/bail_charges_without_outliars.csv", function( rows){
+        d3.csv("https://raw.githubusercontent.com/dailybruin/the-stack/ucpd-budget-arrests/datasets/ucpd-budget-arrests/bail_charges_without_outliars.csv").then(function( rows){
     console.log("hi");
     console.log(rows['Bail']);
     function unpack(rows, key) {
@@ -41,7 +41,7 @@ function update_bail_data(data) {
 });
     }
     else  {  // including outliars
-        d3.csv("https://raw.githubusercontent.com/dailybruin/the-stack/ucpd-budget-arrests/datasets/ucpd-budget-arrests/bail_charges_with_outliars.csv", function( rows){
+        d3.csv("https://raw.githubusercontent.com/dailybruin/the-stack/ucpd-budget-arrests/datasets/ucpd-budget-arrests/bail_charges_with_outliars.csv").then(function( rows){
     console.log("hi");
     console.log(rows['Bail']);
     function unpack(rows, key) {
@@ -82,7 +82,7 @@ function update_bail_data(data) {
 });
     }
 }
-d3.csv("https://raw.githubusercontent.com/dailybruin/the-stack/ucpd-budget-arrests/datasets/ucpd-budget-arrests/bail_charges_without_outliars.csv", function( rows){
+d3.csv("https://raw.githubusercontent.com/dailybruin/the-stack/ucpd-budget-arrests/datasets/ucpd-budget-arrests/bail_charges_without_outliars.csv").then(function(rows){
     console.log("hi");
     console.log(rows['Bail']);
     function unpack(rows, key) {

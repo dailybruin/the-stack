@@ -1,0 +1,64 @@
+@media only screen and (max-width: 1000px) {
+    .scrollama{
+        width: 90%;
+    }
+    
+    #scrolly_area {
+    padding: 0 1rem;
+    margin: 0 auto;
+    width: 100%;
+    /* height: 2000px;  */
+    }
+    
+    .step {
+    margin: 2rem auto 4rem auto;
+    background-color: #3b3b3b;
+    color: #fff;
+    top: 20px;
+    float: right;
+    width: 100%;
+    opacity: .5;
+    }
+    
+    .step.is-active {
+    background-color: #3b3b3b;
+    color: #fff;
+    opacity: 1;
+    }
+    
+    .step p {
+    text-align: center;
+    float: center;
+    }
+    
+    figure {
+        position: -webkit-sticky;
+        position: sticky;
+        width: 100%;
+        float: left;
+        margin: 0;
+        -webkit-transform: translate3d(0, 0, 0);
+        -moz-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+    
+    .BudgetStopChart{
+        /* position: -webkit-sticky;
+        position: sticky; */
+        top: 0;
+        width: 100%;
+        /* height: 800px;  */
+    }
+    
+    #stick {
+        width: 90%;
+        position: relative;
+        padding: 0 1rem;
+        margin: 0 auto;
+        /* height: 2000px;  */
+    }
+    
+    #myChart{
+        width: 100%;
+    }
+}

@@ -2,16 +2,23 @@
 title: UCPD Budget & Arrest Data
 teaser:
 authors:
-  -
+  - mattie_sanseverino
+  - sydney_kovach
+  - lindsey_parungo
+  - priya_kanneboyina
+  - samantha_low
+  - vivian_luk
 key_takeaways:
   -
 featured_image:
   url:
 og_image:
 stylesheets:
-  - /js/posts/ucpd-budget-arrests/scrolly_test.css
+  - /css/posts/ucpd-budget-arrests/scrollama.css
+  - /css/posts/ucpd-budget-arrests/app.css
 scripts:
   - //cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js
+  - //d3js.org/d3.v5.min.js
   - //cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js
   - //cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.js
   - //cdn.jsdelivr.net/npm/chart.js@2.8.0
@@ -45,9 +52,11 @@ scripts:
   <canvas id="age_chart"></canvas> 
 </div>
 
-<div height = "800">
+<div class = demographic_charges>
   <canvas id="demographic_charges"></canvas> 
+  <p class = 'caption'> Insert Caption here</p>
 </div>
+
 <h1>About the Data</h1>
 <p>The Westwood Demographic Data was collected by censusreporter.org from the ACS 2019 1-year census.</p>
 
@@ -62,10 +71,10 @@ scripts:
           <h1 class = "scrolly_title">What changes can be seen in UCPD data and policy in the last 10 years?</h1>
           <p>The most recent UCPD policies are from 2010. The most current UC policy on policing is from 2011. While there haven’t been any formal policy changes since 2010, UCPD says it is committed to modeling a community oriented approach. This includes being influenced by programs such as #8CantWait and CampaignZero. </p>
         </div>
-        <!-- <div class = "step later" id ="2012">Our data begins in 2012.</div> -->
         <figure>
           <div class = "BudgetStopChart" id = "BudgetStop">
             <canvas id="myChart"></canvas>
+            <p class = 'caption'>UCPD’s budget was acquired through a CPRA.</p>
           </div>
         </figure>
         <div class="step later" data-step="2">
@@ -80,10 +89,6 @@ scripts:
         <div class="step later" data-step="5">
           <p>In addition to increased funding, there has been an increase in arrests. The largest increase in arrests was from 2018 to 2019. [INSERT IF UCPD PROVIDES INSIGHT HERE] </p>
         </div>
-        <!-- <div class="step later chart" data-step="6">
-          <iframe title="Arrests by Category" aria-label="Bar Chart" id="datawrapper-chart-XGN30" src="https://datawrapper.dwcdn.net/XGN30/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="645 !important"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();
-          </script>
-        </div> -->
         <div class="step later" data-step="6">
           <p>As a contrast, stops have been on a downward trend since 2014. [INSERT HERE IF UCPD PROVIDES INSIGHT]</p>
         </div>
@@ -97,7 +102,5 @@ scripts:
 <div class="bail-barchart">
   <canvas id='bail-chart-ucpd'> </canvas>
 </div>
-
-<p>More text blah blah blah</p>
 
 <div id='myDiv'></div>
