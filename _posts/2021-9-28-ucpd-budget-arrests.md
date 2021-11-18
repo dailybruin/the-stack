@@ -42,13 +42,13 @@ scripts:
   <canvas id="barchart-uclapd"></canvas>
 </div>
 
-<div height = "800">
+<div height = "600">
   <canvas id="race_chart"></canvas> 
 </div>
-<div height = "800">
+<div height = "600">
   <canvas id="gender_chart"></canvas> 
 </div>
-<div height = "800">
+<div height = "600">
   <canvas id="age_chart"></canvas> 
 </div>
 
