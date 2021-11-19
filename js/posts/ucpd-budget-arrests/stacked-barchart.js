@@ -80,6 +80,11 @@ function makeChart(csvData) {
         },
       },
     },
+    legend: {
+      position:'right',
+    },
+    responsive: true, 
+    maintainAspectRatio: false,
   };
 
   let ctxBudgetBar = document.getElementById('stacked_bar');
@@ -91,6 +96,7 @@ function makeChart(csvData) {
 
   if (window.matchMedia('(max-width: 480px)').matches) {
     StackedBar.canvas.style = 'max-height:500px';
+    StackedBar.options.legend.position = 'top';
     StackedBar.options.maintainAspectRatio = false;
     StackedBar.update();
   }
