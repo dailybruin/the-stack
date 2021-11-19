@@ -80,6 +80,11 @@ function makeChart(csvData) {
         },
       },
     },
+    legend: {
+      position:'right',
+    },
+    responsive: true, 
+    maintainAspectRatio: false,
   };
 
   let ctxBudgetBar = document.getElementById('stacked_bar');
