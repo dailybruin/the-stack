@@ -6,7 +6,8 @@ let step = article.querySelectorAll(".step");
 let figure = article.querySelectorAll(".figure");
 // initialize the scrollama
 let scroller = scrollama();
-
+let isMobile = window.matchMedia('(max-width: 480px)').matches;
+console.log(isMobile)
 // scrollama event handlers
 function handleStepEnter(response) {
     // response = { element, direction, index }
@@ -74,6 +75,7 @@ function handleStepExit(response) {
 }
 
 
+
 function init() {
     //setupStickyfill();
     // set random padding for different step heights (not required)
@@ -89,7 +91,7 @@ function init() {
         .setup({
         step: "#stick article .step",
         debug: true,
-        offset: 0.5
+        offset: isMobile ? 1 : 0.5
         })
         .onStepEnter(handleStepEnter)
         .onStepExit(handleStepExit);
