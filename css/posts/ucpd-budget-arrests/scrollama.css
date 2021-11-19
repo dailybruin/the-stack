@@ -110,20 +110,12 @@ figure {
         width: 90%;
     }
     
-    /* .scrolly_title{
-        font-family: PT Sans;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 36px;
-        line-height: 26px;
-    } */
-    
     #scrolly_area {
     /* position: relative; */
     padding: 0 1rem;
     margin: 0 auto;
     /* width: 90%; */
-    height: 2750px; 
+    height: 340vh; 
     }
     
     .step {
@@ -132,9 +124,9 @@ figure {
     color: #fff;
     opacity: .5;
     /* width: 30%; */
-    top: 300px;
+    /* top: 300px; */
     float: right;
-    z-index: 1;
+    z-index: 0;
     }
     
     .step.is-active {
@@ -145,25 +137,24 @@ figure {
     
     .step p {
     text-align: center;
-    /* font-size: 1.5rem; */
-    /* font-family: PT Sans;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 20px;
-    line-height: 26px; */
     }
     
     .step.first {
         width: 100%
     }
+
+    .step.bars{
+        height: 90vh;
+    }
     
     .step.later{
         width: 100%;
         right: 0;
-        height: 90vh;
+        /* height: 30vh; */
     }
     
     .step.last{
+        height: 50vh;
         width: 100%
     } 
     
@@ -171,7 +162,7 @@ figure {
         position: -webkit-sticky;
         position: sticky;
         /* position: relative;*/
-        top: 200px; 
+        top: 30vh; 
         width: 100%;
         /* height: 400px; */
         float: left;
@@ -183,11 +174,15 @@ figure {
         background-color: #fff;
     }
     
-    .BudgetStopChart{
+    /* #myChart{
         width: 100%;
         z-index: 0;
+        height: 500px;
         /* height: 500px;  */
         /* height: 100%; */
+   /* } */
+    .BudgetStopChart{
+        height: 40vh;
     }
     
     #stick {
@@ -197,7 +192,7 @@ figure {
         padding: 0 1rem;
         margin: 0 auto;
         /* width: 90%; */
-        height: 2000px; 
+        height: 550vh; 
     }
     
     #myChart{

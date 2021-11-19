@@ -63,6 +63,8 @@ const options0 = {
             },
         },
     },
+    responsive: true, 
+    maintainAspectRatio: false,
 }
 
 const options1 ={
@@ -161,9 +163,11 @@ const options1 ={
                     let label = data.datasets[tooltipItem.datasetIndex].label;
                     return label + ': ' + value;
                 }
+            },
         },
     },
-}
+    responsive: true, 
+    maintainAspectRatio: false,
 }
 
 
@@ -208,16 +212,16 @@ function removeData(){
     data.datasets.pop();
 }
 
-function ChangeBar(){
-    document.getElementById('myChart').id = 'stacked_bar'
-    d3.csv('/datasets/ucpd-budget-arrests/ucla-pd-budget.csv').then(makeChart);
-}
+// function ChangeBar(){
+//     document.getElementById('myChart').id = 'stacked_bar'
+//     d3.csv('/datasets/ucpd-budget-arrests/ucla-pd-budget.csv').then(makeChart);
+// }
 
-function ChangeLine(){
-    document.getElementById('stacked_bar').id = 'myChart';
-    StackedBar.destroy();
-    myChart.update();
-}
+// function ChangeLine(){
+//     document.getElementById('stacked_bar').id = 'myChart';
+//     StackedBar.destroy();
+//     myChart.update();
+// }
 let myChart;
 function makeBudgetArrests()
     {
@@ -230,8 +234,10 @@ function makeBudgetArrests()
     );
 
     if (window.matchMedia('(max-width: 480px)').matches) {
-        myChart.canvas.style = 'max-height:500px';
+        //myChart.canvas.height = .5*window.innerHeight -2 ;
         myChart.options.maintainAspectRatio = false;
+        myChart.options.animation = false;
+        //myChart.options.
         myChart.update();
         }
 }

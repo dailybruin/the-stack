@@ -80,7 +80,7 @@ scripts:
         <div class="step later" data-step="2">
           <p>Even without clear changes in policy, there have been changes to the UCPD budget over the past 10 years. For example, there has been a steady increase in UCPD’s budget with a sharper increase beginning in 2017. </p>
         </div>
-        <div class="step later" data-step="3">
+        <div class="step bars" data-step="3">
           <p>In addition to an increase in funding, there have also been changes to the distribution of funds. For instance the travel budget was only $4,200 in 2012, but reached a peak of $167,482 in 2018, a 4000% increase. However, salaries and benefits still make up a majority of UCPD’s budget every year.</p>
         </div>
         <div class="step later" data-step="4">
@@ -89,7 +89,7 @@ scripts:
         <div class="step later" data-step="5">
           <p>In addition to increased funding, there has been an increase in arrests. The largest increase in arrests was from 2018 to 2019. [INSERT IF UCPD PROVIDES INSIGHT HERE] </p>
         </div>
-        <div class="step later" data-step="6">
+        <div class="step last" data-step="6">
           <p>As a contrast, stops have been on a downward trend since 2014. [INSERT HERE IF UCPD PROVIDES INSIGHT]</p>
         </div>
         <div class="step last" data-step="7">
