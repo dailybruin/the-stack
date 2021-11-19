@@ -18,7 +18,7 @@ function makeChart(csvData) {
     datasets: [],
   };
 
-  let colors = [
+  let budget_colors = [
     '#FF8311',
     '#2A3C6A',
     '#A1C7F3',
@@ -33,8 +33,8 @@ function makeChart(csvData) {
     data.datasets.push({
       label: csvData[i].Category,
       data: Object.values(csvData[i]).slice(1),
-      backgroundColor: colors[i - 4],
-      borderColor: colors[i - 4],
+      backgroundColor: budget_colors[i - 4],
+      borderColor: budget_colors[i - 4],
     });
   }
 

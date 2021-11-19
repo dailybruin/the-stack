@@ -89,7 +89,7 @@ scripts:
         <div class="step later" data-step="5">
           <p>In addition to increased funding, there has been an increase in arrests. The largest increase in arrests was from 2018 to 2019. [INSERT IF UCPD PROVIDES INSIGHT HERE] </p>
         </div>
-        <div class="step last" data-step="6">
+        <div class="step penult" data-step="6">
           <p>As a contrast, stops have been on a downward trend since 2014. [INSERT HERE IF UCPD PROVIDES INSIGHT]</p>
         </div>
         <div class="step last" data-step="7">

@@ -106,3 +106,14 @@ function init() {
 
 // kick things off
 init();
+
+// ${isMobile ? `<div id="custom-legend">
+//                 <div class="legend-marker" id="salary" borderColor = ${budget_colors[0]}></div><span class="legend-label" id="total">Salary and Benefits</span> <br>
+//                 <div class="legend-marker" id="equipment" borderColor = ${budget_colors[1]}></div><span class="legend-label" id="ugrad">Eqiupment (Non Computer)</span> <br>
+//                 <div class="legend-marker" id="materials" borderColor = ${budget_colors[2]}></div><span class="legend-label" id="grad">Materials</span> <br>
+//                 <div class="legend-marker" id="info_tech" borderColor = ${budget_colors[3]}></div><span class="legend-label" id="tot">Information Technology</span> <br>
+//                 <div class="legend-marker" id="comm" borderColor = ${budget_colors[4]}></div><span class="legend-label" id="total">Communication</span> <br>
+//                 <div class="legend-marker" id="travel" borderColor = ${budget_colors[5]}></div><span class="legend-label" id="ugrad">Travel</span> <br>
+//                 <div class="legend-marker" id="general" borderColor = ${budget_colors[6]}></div><span class="legend-label" id="grad">General</span> <br>
+//                 <div class="legend-marker" id="maintenance" borderColor = ${budget_colors[7]}></div><span class="legend-label" id="tot">Maintenance and Repair</span> <br>
+            //</div> `: ''}
