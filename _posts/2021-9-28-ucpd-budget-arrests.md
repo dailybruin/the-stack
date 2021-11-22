@@ -45,22 +45,15 @@ scripts:
 
 <p> In this article we wanted to focus on not only on the arrests but the demographic via race, gender, and age. We also took an in-depth look at the type of arrests and the bail as well. Beyond arrests we also analyzed the distribution of the budget over the past decade, and the timeline of UCPD and it’s policies as a whole. The article aims to provide a holisitc and longitudinal overview of UCPD's history and practices at UCLA. </p>
 
-<div id="barchart-wrapper">
-  <canvas id="barchart-uclapd"></canvas>
-</div>
 
-<div class= raceclass>
-  <canvas id="race_chart"></canvas> 
-</div>
-<div>
-  <canvas id="gender_chart"></canvas> 
-</div>
+
+
 <div>
 <h1> Arrest Demographics </h1>
 
 <p> Many critics of the UCPD often cited bias and discrimination as major issues within the police department, especially in terms of treatment of individuals and rates of arrests and stops for certain demographics. While data on treatment of individuals is not readily or easily available, we can look to the demographic of arrests to see if there are disproportionate rates of of arrest for certain demographics. </p>
 
-<div height = "600">
+<div class= raceclass>
   <canvas id="race_chart"></canvas> 
 </div>
 
@@ -68,14 +61,14 @@ scripts:
   When comparing the demographics of the arrest data to the demographics of Westwood as a whole, there are a number of findings worth noting. First, Black and American Indian groups had the most disprortionate rates of arrest. On the other hand, Hispanic and White groups had the least disproportionate arrest rates. 
 </p>
 
-<div height = "600">
+<div class= genderclass>
   <canvas id="gender_chart"></canvas> 
 </div>
 <p>
   When observing arrest rates by gender, men make up a disproportionate amount of the arrests (80%) despite only being around half the population in westwoood. 
 </p>
 
-<div height = "600">
+<div class=ageclass>
   <canvas id="age_chart"></canvas> 
 </div>
 <p>

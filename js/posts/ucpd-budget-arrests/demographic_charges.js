@@ -19,6 +19,7 @@ function makeChargesChart(csvData) {
     ],
     datasets: [],
     };
+    
 
     let colors = [
         '#FF8311',

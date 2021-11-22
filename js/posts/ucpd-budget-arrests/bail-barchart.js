@@ -36,4 +36,10 @@ var barChart = new Chart(densityCanvas, {
     ],
     datasets: [densityData],
   },
-});
+})
+
+if (window.matchMedia('(max-width: 480px)').matches) {
+  barChart.canvas.style = 'max-height:500px';
+  barChart.options.maintainAspectRatio = false;
+  barChart.update();
+};;

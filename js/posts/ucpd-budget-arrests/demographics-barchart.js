@@ -63,7 +63,13 @@ RaceChart = new Chart(ctxRace, {
   type: "bar",
   data: barChartRace,
   options: racechartOptions
-});
+})
+
+if (window.matchMedia('(max-width: 480px)').matches) {
+  RaceChart.canvas.style = 'max-height:500px';
+  RaceChart.options.maintainAspectRatio = false;
+  RaceChart.update();
+};
 
 
 // Gender Chart
@@ -133,7 +139,15 @@ GenderChart = new Chart(ctxGender, {
   type: "bar",
   data: barChartGender,
   options: genderchartOptions
-});
+
+  
+})
+
+if (window.matchMedia('(max-width: 480px)').matches) {
+  GenderChart.canvas.style = 'max-height:500px';
+  GenderChart.options.maintainAspectRatio = false;
+  GenderChart.update();
+};;
 
 // Age Chart
 var barChartAge = {
@@ -205,4 +219,9 @@ AgeChart = new Chart(ctxAge, {
   type: "bar",
   data: barChartAge,
   options: agechartOptions
-    });
+    })
+if (window.matchMedia('(max-width: 480px)').matches) {
+  AgeChart.canvas.style = 'max-height:500px';
+  AgeChart.options.maintainAspectRatio = false;
+  AgeChart.update();
+};;
