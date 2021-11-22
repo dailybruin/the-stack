@@ -9,7 +9,7 @@ authors:
   - samantha_low
   - vivian_luk
 key_takeaways:
-  -
+  - 
 featured_image:
   url:
 og_image:
@@ -37,6 +37,11 @@ scripts:
   - /js/posts/ucpd-budget-arrests/demographic_charges.js
   - /js/posts/ucpd-budget-arrests/bail-violin.js
 ---
+
+
+<p> Over the past two years, a number of national events have shed light on the state of police departments all over the country. During May of 2020 all the way through August, there were a number of protests, both at UCLA and in California, calling for the reform and abolition of police departments across the nation. Protests that occurred on UCLA’s campus were centered around the UCPD (University of California Police Department) and their involvement in student affairs and Westwood as a whole. Protests also criticized the amount of money going towards UCPD and how it has been spent in recent years. </p>
+ 
+<p> Previous analyses of police departments by UCLA include Million Dollar Hood’s reports on LAPD and incarceration in Los Angeles. The Stack published an article in 2018 regarding the demographics of stops and arrests by UCPD in Westwood, which can be found here. In this article we wanted to focus on not only the demographics of arrests, the distribution of the budget over the past decade, and the timeline of UCPD and it’s policies as a whole. </p>
 
 <div id="barchart-wrapper">
   <canvas id="barchart-uclapd"></canvas>
