@@ -45,12 +45,23 @@ scripts:
 <div height = "600">
   <canvas id="race_chart"></canvas> 
 </div>
+
+<p>
+  When comparing the demographics of the arrest data to the demographics of Westwood as a whole, there are a number of findings worth noting. First, Black and American Indian groups had the most disprortionate rates of arrest. On the other hand, Hispanic and White groups had the least disproportionate arrest rates. 
+</p>
+
 <div height = "600">
   <canvas id="gender_chart"></canvas> 
 </div>
+<p>
+  When observing arrest rates by gender, men make up a disproportionate amount of the arrests (80%) despite only being around half the population in westwoood. 
+</p>
+
 <div height = "600">
   <canvas id="age_chart"></canvas> 
 </div>
+<p>
+  When looking at arrest rates by age, we find the least variation between the demographic of rates and the demographics of Westwood, in comparison to the previous two graphs. Arrest rates vs Westwood demographics are generally proportionate, with the 30-39 age range having the largest difference. THe age range of 10-19 was excluded from this analysis since a majority of the age range is not subject to arrests and reports. 
 
 <div class = demographic_charges>
   <canvas id="demographic_charges"></canvas> 
