@@ -1,8 +1,45 @@
-.caption {
+
+
+  
+  /* DESKTOP SETTINGS */
+#caption {
     font-size:smaller;
     color:gray;
 }
-
+#race_chart {
+    width: 70%; 
+    height: 500px; 
+}
 .demographic_charges{
     width: 70%;
+}
+.raceclass{
+    width: 95%; 
+    height: 90%; 
+}
+
+
+
+/* DESKTOP SETTINGS 
+@media only screen and (min-width: 1000px) {
+    
+  }
+*/
+/* MOBILE SETTINGS */
+@media only screen and (max-width: 1000px) {
+    #race_chart{
+        width: 100%; 
+        height: 400px; 
+       
+    }
+    #gender_chart{ 
+        width: 95%;
+        height: 400px; 
+    }
+    #age_chart{
+        width: 95%;
+        height: 400px; 
+        
+    }
+
 }
