@@ -49,7 +49,7 @@ scripts:
   <canvas id="barchart-uclapd"></canvas>
 </div>
 
-<h1> Arrest Demographics <h>
+<h1> Arrest Demographics </h1>
 
 <p> Many critics of the UCPD often cited bias and discrimination as major issues within the police department, especially in terms of treatment of individuals and rates of arrests and stops for certain demographics. While data on treatment of individuals is not readily or easily available, we can look to the demographic of arrests to see if there are disproportionate rates of of arrest for certain demographics. </p>
 
@@ -80,6 +80,7 @@ scripts:
 </div>
 
 <h1>About the Data</h1>
+
 <p>The Westwood Demographic Data was collected by censusreporter.org from the ACS 2019 1-year census.</p>
 
 <p>The UCPD Arrest Data was collected by the UCPD from the years 2012-2019.</p>
