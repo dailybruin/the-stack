@@ -54,17 +54,7 @@ var racechartOptions = {
     }
     }],
   },
-  tooltips: {
-    backgroundColor: 'rgba(0, 0, 0, 0)',
-    bodyColor: '#000000',
-    displayColors: false,
-    callbacks: {
-      label: function(tooltipItem, data) {
-        return data['labels'][tooltipItem['index']] + ': ' + data['datasets'][0]['data'][tooltipItem['index']] + '%';
-      },
-      },
   }
-}
 
 
 
