@@ -7,7 +7,11 @@ let figure = article.querySelectorAll(".figure");
 // initialize the scrollama
 let scroller = scrollama();
 let isMobile = window.matchMedia('(max-width: 480px)').matches;
-console.log(isMobile)
+//console.log(isMobile)
+let budget_csv = '/datasets/ucpd-budget-arrests/ucla-pd-budget.csv'
+if (isMobile){
+    budget_csv = '/datasets/ucpd-budget-arrests/budget-mobile.csv'
+}
 // scrollama event handlers
 function handleStepEnter(response) {
     // response = { element, direction, index }
@@ -35,9 +39,10 @@ function handleStepEnter(response) {
             //myChart.destroy();
             //document.getElementById('myChart').id = 'stacked_bar';
             document.getElementById('BudgetStop').className = "BudgetBar";
-            document.getElementById('BudgetStop').innerHTML = `<canvas id = stacked_bar></canvas> 
+            document.getElementById('BudgetStop').innerHTML = `
+            <canvas id = stacked_bar></canvas> 
             <p class = "caption">UCPD’s annual budget from 2012 to 2019 was acquired through a CPRA. Values are given for fiscal years. The 2018-2019 data is a proposed budget, not yet approved. </p>`;
-            d3.csv('/datasets/ucpd-budget-arrests/ucla-pd-budget.csv').then(makeChart);
+            d3.csv(budget_csv).then(makeChart);
             //myChart = StackedBar
             //ChangeBar();
         }
@@ -107,13 +112,13 @@ function init() {
 // kick things off
 init();
 
-// ${isMobile ? `<div id="custom-legend">
-//                 <div class="legend-marker" id="salary" borderColor = ${budget_colors[0]}></div><span class="legend-label" id="total">Salary and Benefits</span> <br>
-//                 <div class="legend-marker" id="equipment" borderColor = ${budget_colors[1]}></div><span class="legend-label" id="ugrad">Eqiupment (Non Computer)</span> <br>
-//                 <div class="legend-marker" id="materials" borderColor = ${budget_colors[2]}></div><span class="legend-label" id="grad">Materials</span> <br>
-//                 <div class="legend-marker" id="info_tech" borderColor = ${budget_colors[3]}></div><span class="legend-label" id="tot">Information Technology</span> <br>
-//                 <div class="legend-marker" id="comm" borderColor = ${budget_colors[4]}></div><span class="legend-label" id="total">Communication</span> <br>
-//                 <div class="legend-marker" id="travel" borderColor = ${budget_colors[5]}></div><span class="legend-label" id="ugrad">Travel</span> <br>
-//                 <div class="legend-marker" id="general" borderColor = ${budget_colors[6]}></div><span class="legend-label" id="grad">General</span> <br>
-//                 <div class="legend-marker" id="maintenance" borderColor = ${budget_colors[7]}></div><span class="legend-label" id="tot">Maintenance and Repair</span> <br>
-            //</div> `: ''}
+{/* <div id="custom-legend">
+<div class="legend-marker" id="salary" borderColor = ${budget_colors[0]}></div><span class="legend-label" id="total">Salary and Benefits</span> <br>
+<div class="legend-marker" id="equipment" borderColor = ${budget_colors[1]}></div><span class="legend-label" id="ugrad">Eqiupment (Non Computer)</span> <br>
+<div class="legend-marker" id="materials" borderColor = ${budget_colors[2]}></div><span class="legend-label" id="grad">Materials</span> <br>
+<div class="legend-marker" id="info_tech" borderColor = ${budget_colors[3]}></div><span class="legend-label" id="tot">Information Technology</span> <br>
+<div class="legend-marker" id="comm" borderColor = ${budget_colors[4]}></div><span class="legend-label" id="total">Communication</span> <br>
+<div class="legend-marker" id="travel" borderColor = ${budget_colors[5]}></div><span class="legend-label" id="ugrad">Travel</span> <br>
+<div class="legend-marker" id="general" borderColor = ${budget_colors[6]}></div><span class="legend-label" id="grad">General</span> <br>
+<div class="legend-marker" id="maintenance" borderColor = ${budget_colors[7]}></div><span class="legend-label" id="tot">Maintenance and Repair</span> <br>
+</div> */}

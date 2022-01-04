@@ -198,4 +198,19 @@ figure {
     #myChart{
         width: 100%;
     }
+    
+    .custom-legend{
+        height: 100px;
     }
+    .legend-marker {
+        border: solid #000;
+        border-width: 1px;
+        display: inline-block;
+        width: 1em;
+        line-height: 0.6em;
+        margin: 0.5em;
+    }
+    .legend-label {
+        display: inline-block;
+    }
+}
