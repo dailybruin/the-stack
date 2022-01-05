@@ -1,6 +1,6 @@
 ---
 layout: page
-permalink: /docs/good-code-practices/
+permalink: /docs/beginner/good-code-practices/
 ---
 
 ## Good Code Practices
