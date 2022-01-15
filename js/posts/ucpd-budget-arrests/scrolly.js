@@ -7,33 +7,29 @@ let figure = article.querySelectorAll(".figure");
 // initialize the scrollama
 let scroller = scrollama();
 let isMobile = window.matchMedia('(max-width: 480px)').matches;
-//console.log(isMobile)
+console.log(isMobile)
 let budget_csv = '/datasets/ucpd-budget-arrests/ucla-pd-budget.csv'
 if (isMobile){
     budget_csv = '/datasets/ucpd-budget-arrests/budget-mobile.csv'
 }
+
 // scrollama event handlers
 function handleStepEnter(response) {
-    // response = { element, direction, index }
-    // console.log(response);
+    //response = { element, direction, index }
+    console.log(response);
     // add to color to current step
     response.element.classList.add("is-active");
-    // console.log(response.index);
-    // console.log(response.direction);
-    // let i;
-    // if (window.matchMedia('(max-width: 480px)').matches){
-    //     i = response.index+1;
-    // }
-    // else{
-    //     i = response.index;
-    // } 
+    
     let i = response.index;
+    //When scrolling down the page
     if(response.direction === 'down'){
+        //First Step
         if (i ===1){
             makeBudgetArrests();
             addData(0);
             changeOptions(0);
         }
+        //Second Step
         else if (i === 2){
             removeData();
             //myChart.destroy();
@@ -46,6 +42,7 @@ function handleStepEnter(response) {
             //myChart = StackedBar
             //ChangeBar();
         }
+        //3rd sted
         else if (i === 3){
             //ChangeLine();
             //StackedBar.destroy();
@@ -62,15 +59,17 @@ function handleStepEnter(response) {
             changeOptions(1);
             addData(1);
         }
+        //4th Step
         else if (i ===4) {
             addData(2);
         }
+        //5th Step
         else if (i===5){
             addData(3)
         }
     }
 }
-    //console.log(response.element.attributes.data-step.value);
+
 
 function handleStepExit(response) {
     // response = { element, direction, index }
@@ -99,8 +98,8 @@ function init() {
     scroller
         .setup({
         step: "#stick article .step",
-        debug: false,
-        offset: isMobile ? .3 : 0.5
+        debug: true,
+        offset: 0.3
         })
         .onStepEnter(handleStepEnter)
         .onStepExit(handleStepExit);
@@ -109,16 +108,5 @@ function init() {
     window.addEventListener("resize", scroller.resize);
 }
 
-// kick things off
-init();
-
-{/* <div id="custom-legend">
-<div class="legend-marker" id="salary" borderColor = ${budget_colors[0]}></div><span class="legend-label" id="total">Salary and Benefits</span> <br>
-<div class="legend-marker" id="equipment" borderColor = ${budget_colors[1]}></div><span class="legend-label" id="ugrad">Eqiupment (Non Computer)</span> <br>
-<div class="legend-marker" id="materials" borderColor = ${budget_colors[2]}></div><span class="legend-label" id="grad">Materials</span> <br>
-<div class="legend-marker" id="info_tech" borderColor = ${budget_colors[3]}></div><span class="legend-label" id="tot">Information Technology</span> <br>
-<div class="legend-marker" id="comm" borderColor = ${budget_colors[4]}></div><span class="legend-label" id="total">Communication</span> <br>
-<div class="legend-marker" id="travel" borderColor = ${budget_colors[5]}></div><span class="legend-label" id="ugrad">Travel</span> <br>
-<div class="legend-marker" id="general" borderColor = ${budget_colors[6]}></div><span class="legend-label" id="grad">General</span> <br>
-<div class="legend-marker" id="maintenance" borderColor = ${budget_colors[7]}></div><span class="legend-label" id="tot">Maintenance and Repair</span> <br>
-</div> */}
+// kick things off 
+init(); /*isMobile ? .3 :*/ 

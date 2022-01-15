@@ -6,32 +6,17 @@
     width: 100%;
 }
 
-/* .scrolly_title{
-    font-family: PT Sans;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 36px;
-    line-height: 26px;
-} */
-
 #scrolly_area {
-/* position: relative; */
 padding: 0 1rem;
 margin: 0 auto;
-/* width: 90%; */
 height: 2000px; 
 }
-
-/* #outro{
-    width: 100%;
-} */
 
 .step {
 margin: 2rem auto 4rem auto;
 background-color: #3b3b3b;
 color: #fff;
 opacity: .5;
-/* width: 30%; */
 top: 20px;
 float: right;
 }
@@ -44,7 +29,6 @@ opacity: 1;
 
 .step p {
 text-align: center;
-/* font-size: 1.5rem; */
 font-family: PT Sans;
 font-style: normal;
 font-weight: normal;
@@ -67,9 +51,6 @@ line-height: 26px;
 } 
 
 figure {
-    
-    /* position: relative;
-    top: 400px; */
     width: 60%;
     height: 100%;
     float: left;
@@ -77,32 +58,28 @@ figure {
     -webkit-transform: translate3d(0, 0, 0);
     -moz-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
-    /* background-color: #8a8a8a; */
 }
 
 .BudgetBar, .BudgetStopChart{
     position: -webkit-sticky;
     position: sticky;
-    top: 25%;
+    top: 13%;
     width: 100%;
     height: 500px; 
-    /* height: 100%; */
 }
 
 #stick {
-    /* height: 4000px; */
     width: 100%;
     position: relative;
     padding: 0 1rem;
     margin: 0 auto;
-    /* width: 90%; */
     height: 2000px; 
 }
 
 #myChart{
     width: 100%;
 }
-}
+} 
 
 /*MOBILE*/
 @media only screen and (max-width: 1000px) {
@@ -198,19 +175,7 @@ figure {
     #myChart{
         width: 100%;
     }
-    
-    .custom-legend{
-        height: 100px;
-    }
-    .legend-marker {
-        border: solid #000;
-        border-width: 1px;
-        display: inline-block;
-        width: 1em;
-        line-height: 0.6em;
-        margin: 0.5em;
-    }
-    .legend-label {
-        display: inline-block;
-    }
+    /* .BudgetBar, .BudgetStopChart{
+        height: 30vh; 
+    } */
 }
