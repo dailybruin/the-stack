@@ -126,4 +126,10 @@ scripts:
   <canvas id='bail-chart-ucpd'> </canvas>
 </div>
 
+<div id="dropdown">
+  <select onchange="update_bail_data(this.value);">
+  <option value='ExcludingOutliars'>Excluding Outliars >= $150k</option>
+  <option value='IncludingOutliars'>Including Outliars >= $150k</option>
+  </select>
+</div>
 <div id='myDiv'></div>

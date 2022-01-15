@@ -25,7 +25,8 @@ function update_bail_data(data) {
       meanline: {
         visible: true
       },
-      x0: "Total Bill"
+      x0: "Total Bill",
+      hoverinfo='skip'
     }]
 
     var layout = {
@@ -66,7 +67,8 @@ function update_bail_data(data) {
       meanline: {
         visible: true
       },
-      x0: "Total Bill"
+      x0: "Total Bill",
+      hoverinfo='skip'
     }]
 
     var layout = {
