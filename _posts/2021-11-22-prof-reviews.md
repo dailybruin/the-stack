@@ -1,5 +1,5 @@
 ---
-title: reviews
+title: Professor Reviews
 teaser: 
 authors:
   - 
@@ -13,9 +13,19 @@ featured_image:
 og_image:
 
 scripts:
-  - /js/posts/online-grade-distributions/MainChart.js
-
+  - //d3js.org/d3.v7.min.js
+  # - //d3js.org/d3.v6.min.js
 
 stylesheets:
-  - /css/posts/online-grade-distributions/app.css
+  - /css/posts/prof-reviews/style.css
+
 ---
+
+### Comparing Words Between Male and Female Professor Reviews
+<!-- <script src="https://d3js.org/d3.v7.min.js"></script> -->
+<script type="module" src="/js/posts/prof-reviews/dropdownMenu.js"></script>
+<script type="module" src="/js/posts/prof-reviews/word_freq.js"></script>
+<div id="stats-menu">
+</div>
+<svg id="stat-svg">
+</svg>
