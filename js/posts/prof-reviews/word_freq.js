@@ -4,12 +4,13 @@ import { dropdownMenu } from './dropdownMenu.js';
 const W_WIDTH = window.innerWidth, W_HEIGHT = window.innerHeight;
 const MALE_COLOR = "#4885f7",FEMALE_COLOR = "#f5424b";
 const top_n_diff = 20;
-var config = {
+const config = {
   "vw": W_WIDTH * 0.75,
   "vh": W_HEIGHT * 0.9,
   "anim_speed": 3000
 }
-var margin = ({top: 50, right: 20, bottom: 40, left: 150});
+
+const margin = ({top: 50, right: 20, bottom: 40, left: 150});
 // globals
 var freq_data;
 var sub_data;
@@ -38,7 +39,7 @@ const onStatClicked = selection => {
   else{
     stat = "difference_abs" // change to sentiment once list created
   }
-  render_stats(sub_data,stat);
+  render_stats(freq_data,stat); // pass in full dataset to 
   
 };
 
@@ -80,10 +81,10 @@ const plot_lines = (svg,xScale,yScale,t,gender="male",stat="male",color="#aa42f5
       .attr("cy", d => {
         // show selected gender on top
           if(stat=="male"){
-            return gender ==="male" ? yScale(d.word) + margin.top  - 3: yScale(d.word) + margin.top  + 3;
+            return gender ==="male" ? yScale(d.word)   - 3: yScale(d.word)   + 3;
           }
           else{
-            return gender ==="female" ? yScale(d.word) + margin.top  - 3: yScale(d.word) + margin.top  + 3;
+            return gender ==="female" ? yScale(d.word) - 3: yScale(d.word) + 3;
           }
         })
       .call(enter => enter.transition(t)
@@ -92,7 +93,6 @@ const plot_lines = (svg,xScale,yScale,t,gender="male",stat="male",color="#aa42f5
       .attr("freq", d => d[gender])
       .attr("cx", d => xScale(d[gender])) //p
       .attr("r", 5)
-      .attr("height", yScale.bandwidth())
      ),
      update => update
         .call(update => update.transition(t)
@@ -118,10 +118,10 @@ const plot_lines = (svg,xScale,yScale,t,gender="male",stat="male",color="#aa42f5
           .attr("y", d => {
             // show selected gender on top
             if(stat=="male"){
-              return gender ==="male" ? yScale(d.word) + margin.top  - 3: yScale(d.word) + margin.top  + 3;
+              return gender ==="male" ? yScale(d.word) - 3: yScale(d.word) + 3;
             }
             else{
-              return gender ==="female" ? yScale(d.word) + margin.top  - 3: yScale(d.word) + margin.top  + 3;
+              return gender ==="female" ? yScale(d.word) - 3: yScale(d.word) + 3;
             }
           })
           .attr("width", 0)
@@ -188,7 +188,7 @@ const render_stats = (data,stat="difference") =>{
       .style("font-size","20px")
       .text('Percent of All Words');
 
-  const yScale = d3.scaleBand()
+  const yScale = d3.scalePoint()
     .domain(sub_data.map(d => d.word))
     .range([margin.top,config.vh - margin.bottom]); // need to offset bars/circles by margin.top
   const yAxis = d3.axisLeft().scale(yScale);
@@ -231,14 +231,13 @@ const render_stats = (data,stat="difference") =>{
         enter => enter.append("circle")
           .attr("class","diff-circle")
           .attr("cx", d => xScale(0))
-          .attr("cy", d => yScale(d.word) + margin.top)
+          .attr("cy", d => yScale(d.word) )
           .call(enter => enter.transition(t)
           .attr("fill", d => d.difference > 0 ? MALE_COLOR: FEMALE_COLOR)
           .attr("gender",d => d.gender)
           .attr("percent-diff", d => d.difference_abs)
           .attr("cx", d => xScale(d.difference_abs))
           .attr("r", 5)
-          .attr("height", yScale.bandwidth())
         ),
         update => update
           .call(update => update.transition(t)
@@ -260,7 +259,7 @@ const render_stats = (data,stat="difference") =>{
       enter => enter.append("rect")
         .attr("class","diff-rect")
         .attr("x", xScale(0)) //p
-        .attr("y", d => d.gender === "male" ? yScale(d.word) + margin.top + 3 : yScale(d.word) + margin.top - 3) //p
+        .attr("y", d => d.gender === "male" ? yScale(d.word) + 3 : yScale(d.word)  - 3) //p
         .attr("width", 0)
         .attr("height", 3)
         .call(enter => enter.transition(t)
