@@ -24,7 +24,7 @@ const select_words = () => {
 
 // dropdown
 const stats = ["Difference","Female Professors","Male Professors","Common Sentiment Words"]
-var stat = stats[2]; // the stat to sort words by
+var stat = stats[0]; // the stat to sort words by
 const onStatClicked = selection => {
   var stat;
   if (selection == stats[2]){
@@ -39,7 +39,7 @@ const onStatClicked = selection => {
   else{
     stat = "difference_abs" // change to sentiment once list created
   }
-  render_stats(freq_data,stat); // pass in full dataset to 
+  render_stats(freq_data,stat); // pass in full dataset to rerank top_n
   
 };
 
