@@ -27,5 +27,7 @@ stylesheets:
 <script type="module" src="/js/posts/prof-reviews/word_freq.js"></script>
 <div id="stats-menu">
 </div>
+<div id="svg-div">
 <svg id="stat-svg">
 </svg>
+</div>

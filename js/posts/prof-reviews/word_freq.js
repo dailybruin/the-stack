@@ -9,12 +9,14 @@ const config = {
   "vh": W_HEIGHT * 0.9,
   "anim_speed": 3000
 }
-
 const margin = ({top: 50, right: 20, bottom: 40, left: 150});
 // globals
 var freq_data;
 var sub_data;
 var custom_words = []; // add some here
+// element parameterss
+const point_radius = 7;
+
 
 // display and select up to top_n words on search
 const select_words = () => {
@@ -42,8 +44,6 @@ const onStatClicked = selection => {
   render_stats(freq_data,stat); // pass in full dataset to rerank top_n
   
 };
-
-// dropdown
 d3.select('#stats-menu')
   .call(dropdownMenu,{
   options: stats,
@@ -52,7 +52,38 @@ d3.select('#stats-menu')
   label: 'Sort by: '
   });
 
-// plot both F/M stats
+var tooltip = d3.select("body")
+  .append("div")
+  .attr("class", "tooltip")
+  .style("opacity", 0);
+
+// Three function that change the tooltip when user hover / move / leave a cell
+const mouseover = function(d) {
+  tooltip.transition()
+    .duration(200)
+    .style("opacity", 0.7);
+  d3.select(this)
+    .attr("r", point_radius * 1.2);
+}
+
+const mousemove = function(event,d) {
+  let tooltip_text = "Male %: " + d.male.toFixed(3) + "<br>Female %: " + d.female.toFixed(3);
+  tooltip.html(tooltip_text)
+    .style("top", (event.pageY)+"px")
+    .style("left",(event.pageX + 15)+"px")
+    .style('color', 'white');
+  d3.select(this)
+    .attr("r", point_radius * 1.2);
+}
+
+const mouseleave = function(d) {
+  tooltip
+    .style("opacity", 0);
+  d3.select(this)
+    .attr("r", point_radius);
+}
+
+// plots both F/M stats
 const plot_lines = (svg,xScale,yScale,t,gender="male",stat="male",color="#aa42f5",data=sub_data) =>{
   // clear old graphics first
   svg.selectAll(".diff-circle").remove();
@@ -66,44 +97,6 @@ const plot_lines = (svg,xScale,yScale,t,gender="male",stat="male",color="#aa42f5
     svg.selectAll(".male-sorted-circle").remove();
     svg.selectAll(".male-sorted-rect").remove();
   }
-
-  // circles
-  svg.append("g")
-      .attr("class",stat+"-sorted-circles")
-      .attr("id",gender+stat+"sorted-c");
-  svg.select("#"+gender+stat+"sorted-c")
-   .selectAll("circle")
-   .data(data)
-   .join(
-     enter => enter.append("circle")
-      .attr("class",stat+"-sorted-circle")
-      .attr("cx", xScale(0))
-      .attr("cy", d => {
-        // show selected gender on top
-          if(stat=="male"){
-            return gender ==="male" ? yScale(d.word)   - 3: yScale(d.word)   + 3;
-          }
-          else{
-            return gender ==="female" ? yScale(d.word) - 3: yScale(d.word) + 3;
-          }
-        })
-      .call(enter => enter.transition(t)
-      .attr("fill", color)
-      .attr("gender",gender)
-      .attr("freq", d => d[gender])
-      .attr("cx", d => xScale(d[gender])) //p
-      .attr("r", 5)
-     ),
-     update => update
-        .call(update => update.transition(t)
-        ),
-     exit => exit
-        .call(exit => exit.transition()
-        .attr('height',0)
-        .attr('y',config.inner_vh)
-        .remove()
-        )
-   );
   // lines
   svg.append("g")
     .attr("class",stat+"-sorted-rects")
@@ -118,14 +111,14 @@ const plot_lines = (svg,xScale,yScale,t,gender="male",stat="male",color="#aa42f5
           .attr("y", d => {
             // show selected gender on top
             if(stat=="male"){
-              return gender ==="male" ? yScale(d.word) - 3: yScale(d.word) + 3;
+              return gender ==="male" ? yScale(d.word) - point_radius * 3/4: yScale(d.word) + point_radius * 3/4;
             }
             else{
-              return gender ==="female" ? yScale(d.word) - 3: yScale(d.word) + 3;
+              return gender ==="female" ? yScale(d.word) - point_radius * 3/4: yScale(d.word) + point_radius * 3/4;
             }
           })
           .attr("width", 0)
-          .attr("height", 3)
+          .attr("height", point_radius/4)
           .call(enter => enter.transition(t)
           .attr("fill", color)
           .attr("gender", "male")
@@ -141,14 +134,52 @@ const plot_lines = (svg,xScale,yScale,t,gender="male",stat="male",color="#aa42f5
           .attr("x", xScale(0))
           .remove()
         )
-   );
+    );
+  // circles
+  svg.append("g")
+      .attr("class",stat+"-sorted-circles")
+      .attr("id",gender+stat+"sorted-c");
+  svg.select("#"+gender+stat+"sorted-c")
+   .selectAll("circle")
+   .data(data)
+   .join(
+     enter => enter.append("circle")
+      .on("mouseover", mouseover)
+      .on("mousemove", mousemove)
+      .on("mouseout", mouseleave)
+      .attr("class",stat+"-sorted-circle")
+      .attr("cx", xScale(0))
+      .attr("cy", d => {
+        // show selected gender on top
+          if(stat=="male"){
+            return gender ==="male" ? yScale(d.word) - point_radius * 3/4: yScale(d.word) + point_radius * 3/4;
+          }
+          else{
+            return gender ==="female" ? yScale(d.word) - point_radius * 3/4: yScale(d.word) + point_radius * 3/4;
+          }
+        })
+      .call(enter => enter.transition(t)
+      .attr("fill", color)
+      .attr("gender",gender)
+      .attr("freq", d => d[gender])
+      .attr("cx", d => xScale(d[gender])) //p
+      .attr("r", point_radius)
+     ),
+     update => update
+        .call(update => update.transition(t)
+        ),
+     exit => exit
+        .call(exit => exit.transition()
+        .attr('height',0)
+        .attr('y',config.inner_vh)
+        .remove()
+        )
+    );
+  
 };
 
-
-
-// plot points
+// main render function
 const render_stats = (data,stat="difference") =>{
-  
   // console.log(data.map(d => d.difference_abs));
   data.sort((a, b) => (a[stat] > b[stat]) ? -1 : 1)
   sub_data = data.slice(0,top_n_diff);
@@ -220,7 +251,34 @@ const render_stats = (data,stat="difference") =>{
     stat_svg.selectAll(".female-sorted-rects").remove();
     stat_svg.selectAll(".male-sorted-circles").remove();
     stat_svg.selectAll(".male-sorted-rects").remove();
-
+    //lines
+    stat_svg.append("g")
+    .attr("class","diff-rects");
+    stat_svg.select('.diff-rects')
+    .selectAll("rect")
+    .data(sub_data)
+    .join(
+      enter => enter.append("rect")
+        .attr("class","diff-rect")
+        .attr("x", xScale(0)) //p
+        .attr("y", d => d.gender === "male" ? yScale(d.word): yScale(d.word)) //p
+        .attr("width", 0)
+        .attr("height", point_radius/4)
+        .call(enter => enter.transition(t)
+        .attr("fill", d => d.difference > 0 ? MALE_COLOR: FEMALE_COLOR)
+        .attr("count", d => d[stat])
+        .attr("r", point_radius)
+        .attr("width", d => xScale(d[stat]) - xScale(0))
+      ),
+      update => update
+            .call(update => update.transition(t)
+            ),
+      exit => exit
+            .call(exit => exit.transition()
+            .attr('width', xScale(0))
+            .remove()
+            )
+    );
     // circles
     stat_svg.append("g")
       .attr("class","diff-circles");
@@ -229,6 +287,9 @@ const render_stats = (data,stat="difference") =>{
       .data(sub_data)
       .join(
         enter => enter.append("circle")
+          .on("mouseover", mouseover)
+          .on("mousemove", mousemove)
+          .on("mouseout", mouseleave)
           .attr("class","diff-circle")
           .attr("cx", d => xScale(0))
           .attr("cy", d => yScale(d.word) )
@@ -237,7 +298,8 @@ const render_stats = (data,stat="difference") =>{
           .attr("gender",d => d.gender)
           .attr("percent-diff", d => d.difference_abs)
           .attr("cx", d => xScale(d.difference_abs))
-          .attr("r", 5)
+          .attr("r", point_radius)
+          
         ),
         update => update
           .call(update => update.transition(t)
@@ -249,50 +311,20 @@ const render_stats = (data,stat="difference") =>{
           .remove()
           )
     );
-  //lines
-  stat_svg.append("g")
-    .attr("class","diff-rects");
-  stat_svg.select('.diff-rects')
-    .selectAll("rect")
-    .data(sub_data)
-    .join(
-      enter => enter.append("rect")
-        .attr("class","diff-rect")
-        .attr("x", xScale(0)) //p
-        .attr("y", d => d.gender === "male" ? yScale(d.word) + 3 : yScale(d.word)  - 3) //p
-        .attr("width", 0)
-        .attr("height", 3)
-        .call(enter => enter.transition(t)
-        .attr("fill", d => d.difference > 0 ? MALE_COLOR: FEMALE_COLOR)
-        .attr("count", d => d[stat])
-        .attr("r", 5)
-        .attr("width", d => xScale(d[stat]) - xScale(0))
-        // .attr("height", 3)
-      ),
-      update => update
-            .call(update => update.transition(t)
-            ),
-      exit => exit
-            .call(exit => exit.transition()
-            .attr('width', xScale(0))
-            .remove()
-            )
-    );
   }
   // else plot both male and female
   else{
     plot_lines(stat_svg,xScale,yScale,t,"male",stat,MALE_COLOR,sub_data); // plot male
     plot_lines(stat_svg,xScale,yScale,t,"female",stat,FEMALE_COLOR,sub_data); // plot female
   }
-
 };
 
 // static components
 // legend
 const stat_svg = d3.select("#stat-svg");
 stat_svg.append("g").attr("class","legend");
-stat_svg.select(".legend").append("circle").attr("cx",W_WIDTH * 0.6).attr("cy",W_HEIGHT * 0.7).attr("r", 6).style("fill", MALE_COLOR);
-stat_svg.select(".legend").append("circle").attr("cx",W_WIDTH * 0.6).attr("cy",W_HEIGHT * 0.7+30).attr("r", 6).style("fill", FEMALE_COLOR);
+stat_svg.select(".legend").append("circle").attr("cx",W_WIDTH * 0.6).attr("cy",W_HEIGHT * 0.7).attr("r", point_radius).style("fill", MALE_COLOR);
+stat_svg.select(".legend").append("circle").attr("cx",W_WIDTH * 0.6).attr("cy",W_HEIGHT * 0.7+30).attr("r", point_radius).style("fill", FEMALE_COLOR);
 stat_svg.select(".legend").append("text").attr("x",W_WIDTH * 0.6+20).attr("y",W_HEIGHT * 0.7).text("Male Professors").style("font-size", "15px").attr("alignment-baseline","middle");
 stat_svg.select(".legend").append("text").attr("x",W_WIDTH * 0.6+20).attr("y",W_HEIGHT * 0.7+30).text("Female Professors").style("font-size", "15px").attr("alignment-baseline","middle");
 // axes groups + labels
@@ -303,7 +335,8 @@ stat_svg.append("text")
 stat_svg.append("text")
   .attr("class", "ylabel");
 
-// load male and female freq data
+
+// load male and female professor frequency data
 d3.csv('/datasets/prof-reviews/prof_word_freqs.csv')
 .then(data => {
   // console.log(data);
@@ -317,3 +350,5 @@ d3.csv('/datasets/prof-reviews/prof_word_freqs.csv')
   var stat = "difference_abs";
   render_stats(sub_data,stat);
 });
+
+

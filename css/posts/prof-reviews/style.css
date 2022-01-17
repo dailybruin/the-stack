@@ -1,3 +1,11 @@
 #stats-menu{
     padding-bottom: 1em;
 }
+
+.tooltip{
+    position: absolute;
+    text-align: left;
+    padding: 2px;
+    background-color:rgb(56, 56, 56);
+    border-radius: 5px;
+}
