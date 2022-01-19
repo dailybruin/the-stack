@@ -11,6 +11,9 @@
         color:gray;
         background-color: white;
     }
+    #dropdown {
+        margin-top: 10px;
+    }
     /*.raceclass{
         float: right; 
         width: 50%; 

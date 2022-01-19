@@ -43,15 +43,14 @@ scripts:
   - /js/posts/ucpd-budget-arrests/demographic_charges.js
   - /js/posts/ucpd-budget-arrests/bail-violin.js
 ---
-
+### Introduction
 <p> Over the past two years, a number of national events have shed light on the state of police departments all over the country. During May of 2020 all the way through August, there were a number of protests, both at UCLA and in California, calling for the reform and abolition of police departments across the nation. Protests that occurred on UCLA’s campus were centered around UCPD and their involvement in student affairs and Westwood as a whole. Protestors cited bias and discrimination within UCPD and drew attention to the amount of money going towards UCPD and how it has been spent in recent years. </p>
  
 <p> Upon request, The Stack obtained records of UCPD’s arrests, stops, and budget for 2012 through 2019. We analyzed the demographic makeup of the arrests by race, gender, and age, as well as the type of arrests and the associated bail. Beyond arrests, we also analyzed the distribution of the budget and researched UCPD policies over the last decade. </p>
 
 <p> Previous analyses of police departments by UCLA include Million Dollar Hood’s reports on LAPD and incarceration in Los Angeles. The Stack also published an article in 2018 about the demographics of stops and arrests by UCPD in Westwood, which can be found here. </p>
 
-<div>
-<h1> Arrest Demographics </h1>
+### Arrest Demographics
 
 <p> Many critics of UCPD cite evidence of bias and discrimination as major issues within the police department, especially in terms of treatment of individuals and rates of arrests and stops for certain demographics. While data on treatment of individuals is not readily or easily available, the demographic of arrests show disproportionate rates of arrest for certain demographics. </p>
 
@@ -59,9 +58,9 @@ scripts:
   <canvas id="race_chart"></canvas> 
 </div>
 
- <p> The Black and American Indian groups were the most disproportionately overrepresented in the arrest data. The Hispanic and White groups had the least disproportionate arrest rates. The Asian group was the most disproportionately underrepresented in the arrest data. <p>
+The Black and American Indian groups were the most disproportionately overrepresented in the arrest data. The Hispanic and White groups had the least disproportionate arrest rates. The Asian group was the most disproportionately underrepresented in the arrest data. 
 
- <p> According to UCPD Administrative Bureau Captain Scott Scheffler, (CQ 7) since race is not listed on driver’s licenses, the information regarding race in police data is most often based on the perception of the arresting officers. <p>
+According to UCPD Administrative Bureau Captain Scott Scheffler, (CQ 7) since race is not listed on driver’s licenses, the information regarding race in police data is most often based on the perception of the arresting officers.
 
 <div class= genderclass>
   <canvas id="gender_chart"></canvas> 
@@ -73,7 +72,6 @@ scripts:
 <div class=ageclass>
   <canvas id="age_chart"></canvas> 
 </div>
-<p>
   When looking at arrest rates by age, we find the least variation between the demographic of rates and the demographics of Westwood, in comparison to the previous two graphs. Arrest rates vs Westwood demographics are generally proportionate, with the 30-39 age range having the largest difference. THe age range of 10-19 was excluded from this analysis since a majority of the age range is not subject to arrests and reports.
 
 <div class = demographic_charges>
@@ -81,57 +79,44 @@ scripts:
   <p class = 'caption'> Insert Caption here</p>
 </div>
 
-<h1>About the Data</h1>
-
-<p>The Westwood Demographic Data was collected by censusreporter.org from the ACS 2019 1-year census.</p>
-
-<p>The UCPD Arrest Data was collected by the UCPD from the years 2012-2019.</p>
-
-<p>The UCPD categorizes race through a set of code that can be found here. For the sake of compatibility with Westwood Demographic Data, the categories of “Other” and “Unknown” from UCPD data and the category “2+ Races”and “Other” from the Westwood Demographic Data have been combined into one category of “Other”.git </p>
-
+### What changes can be seen in UCPD data and policy in the last 10 years?
 <section class = 'scrollama'>
     <section id="stick">
       <article id = 'scrolly_area'>
         <div class="step first" id = "2010" data-step="1">
-          <h1 class = "scrolly_title">What changes can be seen in UCPD data and policy in the last 10 years?</h1>
-          <p>The most recent UCPD policies are from 2010. The most current UC policy on policing is from 2011. While there haven’t been any formal policy changes since 2010, UCPD says it is committed to modeling a community oriented approach. This includes being influenced by programs such as #8CantWait and CampaignZero. </p>
+          <p>The Universitywide Police Policies And Administrative Procedures, the University of California Office of the President’s guide to policing, went into effect in January of 2011 (CQ 6). As of 2021, UCOP was working on finalizing new policies that would provide guidelines for the use of body cameras. (CQ 8)   In addition to formal policy, UCPD at UCLA says it is committed to modeling a community oriented approach. This includes being influenced by programs such as #8CantWait and CampaignZero (CQ 4). The most recent UCPD policies are from 2010. The most current UC policy on policing is from 2011. While there haven’t been any formal policy changes since 2010, UCPD says it is committed to modeling a community oriented approach. This includes being influenced by programs such as #8CantWait and CampaignZero. </p>
         </div>
         <figure>
           <div class = "BudgetStopChart" id = "BudgetStop">
             <canvas id="myChart"></canvas>
-            <p class = 'caption'>UCPD’s budget was acquired through a CPRA.</p>
+            <p class = 'caption'>UCPD’s annual budget from 2012 to 2019 was acquired through a CPRA. Values are given for fiscal years. The 2019-2020 data was the proposed budget, which at the time, had not yet been approved.</p>
           </div>
         </figure>
         <div class="step later" data-step="2">
-          <p>Even without clear changes in policy, there have been changes to the UCPD budget over the past 10 years. For example, there has been a steady increase in UCPD’s budget with a sharper increase beginning in 2017. </p>
+          <p>There has been a consistent increase in UCPD’s budget, and beginning in 2017, there was an increase in the rate at which UCPD’s budget grew. Compensation, which includes salaries and benefits, accounts for roughly 80% of the annual budget. According to Scheffler, “economic impacts to salaries have had a large impact in the budget increases over the past few years.” </p>
         </div>
         <div class="step bars" data-step="3">
-          <p>In addition to an increase in funding, there have also been changes to the distribution of funds. For instance the travel budget was only $4,200 in 2012, but reached a peak of $167,482 in 2018, a 4000% increase. However, salaries and benefits still make up a majority of UCPD’s budget every year.</p>
+          <p>The “General Services” category includes general expenses such as vehicle costs, marketing, refuse, insurance, training, custodial, UCLA Facilities, non-University professional services, and other miscellaneous costs, Scheffler said. <br> Scheffler added that the “Materials” portion of the budget includes supplies such as gasoline, office supplies, online subscriptions, uniforms and badges. Firearms and other weapons supplies are also included in this category. <br> The UCPD spent around $40,000 on firearms and ammunition and $7,000 on body armor in the 2019-2020 fiscal year, Scheffler said. He added that the department also spent $255,000 on new tasers in the same fiscal year. 
+</p>
         </div>
         <div class="step later" data-step="4">
-          <p>In order to more easily compare the budget to arrest and stop data, the budget line from here on will be displayed in $100,000 dollars. </p>
+          <p>In addition to an increase in funding, there have also been changes to the distribution of funds. For instance the travel budget was only $4,200 in 2012, but reached a peak of $167,482 in 2018, a 4000% increase. <br> In regard to the sharp growth of the travel budget, Scheffler explained, “The increase from [2012-2013] to [2014-2015] is due to a variety of training classes and mutual aid assignments in which UCLA PD officers travelled to assist other UC campuses. For example, in [2014-2015], UCLA PD provided extensive assistance to UCSB PD after the 2014 Isla Vista killings.” <br> Scheffler added that other than compensation and basic operating expenses, the UCPD has discretion to spend remaining funds as it sees fit.</p>
         </div>
         <div class="step later" data-step="5">
-          <p>In addition to increased funding, there has been an increase in arrests. The largest increase in arrests was from 2018 to 2019. [INSERT IF UCPD PROVIDES INSIGHT HERE] </p>
+          <p>Stop and arrest data was collected via a CPRA submitted to UCPD for the same period as the budget data, 2012-2019. Over this time period, arrests have been increasing fairly consistently with a shallow dip from 2017 to 2018. However this dip was quickly overcome by the largest increase in arrests which occurred from 2018 to 2019.  </p>
         </div>
         <div class="step penult" data-step="6">
-          <p>As a contrast, stops have been on a downward trend since 2014. [INSERT HERE IF UCPD PROVIDES INSIGHT]</p>
-        </div>
-        <div class="step last" data-step="7">
-          <p>MAYBE SOME CLOSING THOUGHT HERE?</p>
+          <p>In contrast, stops have been on a downward trend since 2014. <br> Scheffler said that UCPD did not implement any formal or informal policy changes that led to the decrease in stops in 2014 and the increase in arrests in 2018. Scheffler added that many factors determine whether a stop results in an arrest, including whether there is a warrant, the reason for the stop, crime trends, staffing levels, among other things outside of UCPD’s control.
+</p>
         </div>
         </article>
     </section>
 </section>
 
-<div class="bail-barchart">
-  <canvas id='bail-chart-ucpd'> </canvas>
-</div>
-
 <div id="dropdown">
   <select onchange="update_bail_data(this.value);">
-  <option value='ExcludingOutliars'>Excluding Outliars >= $150k</option>
-  <option value='IncludingOutliars'>Including Outliars >= $150k</option>
+  <option value='ExcludingOutliars'>Excluding Outliers >= $150k</option>
+  <option value='IncludingOutliars'>Including Outliers >= $150k</option>
   </select>
 </div>
 <div id='myDiv'></div>

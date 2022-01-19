@@ -41,7 +41,10 @@ function handleStepEnter(response) {
       //myChart = StackedBar
       //ChangeBar();
     } else if (i === 3) {
-      //3rd sted
+      //3rd step
+      null;
+    } else if (i === 4) {
+      //4th Step
       //ChangeLine();
       //StackedBar.destroy();
       document.getElementById('BudgetStop').className = 'BudgetStopChart';
@@ -58,8 +61,6 @@ function handleStepEnter(response) {
       makeBudgetArrests();
       changeOptions(1);
       addData(1);
-    } else if (i === 4) {
-      //4th Step
       addData(2);
     } else if (i === 5) {
       //5th Step

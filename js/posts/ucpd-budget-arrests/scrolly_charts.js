@@ -15,7 +15,7 @@ const labels = [
     '2018',
     '2019'
     ];
-const lines = ['Budget','Budget in $100,000','Arrests','Stops']; 
+const lines = ['Budget','Budget','Arrests','Stops']; 
 
 
 const options0 = {

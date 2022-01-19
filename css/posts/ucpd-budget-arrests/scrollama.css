@@ -4,12 +4,13 @@
 @media only screen and (min-width: 1000px) {
 .scrollama{
     width: 100%;
+    height: 400vh;
 }
 
 #scrolly_area {
 padding: 0 1rem;
 margin: 0 auto;
-height: 2000px; 
+height: 355vh; 
 }
 
 .step {
@@ -18,7 +19,7 @@ background-color: #3b3b3b;
 color: #fff;
 opacity: .5;
 top: 20px;
-float: right;
+float: right ;
 }
 
 .step.is-active {
@@ -41,13 +42,9 @@ line-height: 26px;
 }
 
 .step.bars, .step.penult, .step.later{
-    width: 30%;
-    right: 0;
-    height: 300px;
-}
-
-.step.last{
-    width: 100%
+    width: 300px;
+    margin-right: 7.5%;
+    /* height: 300px; */
 } 
 
 figure {
