@@ -12,6 +12,13 @@ let budget_csv = '/datasets/ucpd-budget-arrests/ucla-pd-budget.csv';
 if (isMobile) {
   budget_csv = '/datasets/ucpd-budget-arrests/budget-mobile.csv';
 }
+let offsetVal;
+if (isMobile){
+  offsetVal = .7
+}
+else{
+  offsetVal = .3
+}
 
 // scrollama event handlers
 function handleStepEnter(response) {
@@ -21,10 +28,16 @@ function handleStepEnter(response) {
   response.element.classList.add('is-active');
 
   let i = response.index;
+
   //When scrolling down the page
   if (response.direction === 'down') {
+    if((i===0)&&isMobile){
+      makeBudgetArrests();
+      addData(0);
+      changeOptions(0);
+    }
     //First Step
-    if (i === 1) {
+    if ((i === 1) && !isMobile) {
       makeBudgetArrests();
       addData(0);
       changeOptions(0);
@@ -95,7 +108,7 @@ function init() {
     .setup({
       step: '#stick article .step',
       debug: false,
-      offset: 0.3,
+      offset: offsetVal,
     })
     .onStepEnter(handleStepEnter)
     .onStepExit(handleStepExit);
@@ -105,4 +118,4 @@ function init() {
 }
 
 // kick things off
-init(); /*isMobile ? .3 :*/
+init();
