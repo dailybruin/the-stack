@@ -1,4 +1,4 @@
-d3.csv('theStudy_Sunday.csv').then(makeChart);
+d3.csv('../../../../js/posts/dining-halls/theStudy_Sunday.csv').then(makeChart);
 console.log('accessed bar chart')
 
 function makeChart(csvData) {
