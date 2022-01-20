@@ -22,7 +22,12 @@ scripts:
   - //ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js
   - //d3js.org/d3.v6.min.js
   - //cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@0.7.0
+  - //cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js
+  - /js/posts/dining-halls/piechart.js
 
 stylesheets:
   - //cdnjs.cloudflare.com/ajax/libs/c3/0.4.10/c3.min.css
 ---
+
+piechart:
+<div class = 'pie chart'><canvas id = 'SwipesPieChart'></canvas></div>
