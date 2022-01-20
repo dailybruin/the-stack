@@ -10,10 +10,13 @@ const config = {
   "anim_speed": 3000
 }
 const margin = ({top: 50, right: 20, bottom: 40, left: 150});
+
 // globals
-var freq_data;
-var sub_data;
-var custom_words = []; // add some here
+var freq_data, sub_data, adj_data;
+const not_adj_adv = ['give', // verbs
+                    'lab','content', 'major', // nouns
+                    'basically','weekly']; // neutral adverbs
+const custom_words = []; // add some fun words here
 // element parameterss
 const point_radius = 7;
 
@@ -25,24 +28,25 @@ const select_words = () => {
 };
 
 // dropdown
-const stats = ["Difference","Female Professors","Male Professors","Common Sentiment Words"]
+const stats = ["Largest Difference","Female Professors","Male Professors","Female-Professor - Adj/Adverbs","Male Professor - Adj/Adverbs"]
 var stat = stats[0]; // the stat to sort words by
 const onStatClicked = selection => {
   var stat;
-  if (selection == stats[2]){
-    stat = "male";
-  }
-  else if (selection == stats[1]){
-    stat = "female";
-  }
-  else if (selection == stats[0]){
+  if (selection == stats[0]){
     stat = "difference_abs";
   }
-  else{
-    stat = "difference_abs" // change to sentiment once list created
+  else if (selection == stats[1] || selection == stats[3]){
+    stat = "female";
   }
-  render_stats(freq_data,stat); // pass in full dataset to rerank top_n
-  
+  else if (selection == stats[2] || selection == stats[4]){
+    stat = "male";
+  }
+  if (selection == stats[3] || selection == stats[4]){
+    render_stats(adj_data,stat,"Adjective/Adverb");
+  }
+  else{
+    render_stats(freq_data,stat); // pass in full dataset to rerank top_n
+  }
 };
 d3.select('#stats-menu')
   .call(dropdownMenu,{
@@ -179,7 +183,7 @@ const plot_lines = (svg,xScale,yScale,t,gender="male",stat="male",color="#aa42f5
 };
 
 // main render function
-const render_stats = (data,stat="difference") =>{
+const render_stats = (data,stat="difference",y_label="Word") =>{
   // console.log(data.map(d => d.difference_abs));
   data.sort((a, b) => (a[stat] > b[stat]) ? -1 : 1)
   sub_data = data.slice(0,top_n_diff);
@@ -236,7 +240,7 @@ const render_stats = (data,stat="difference") =>{
       .attr("transform", "rotate(-90)")
       .style("font-size","20px")
       .style("padding-bottom","5px")
-      .text('Word');
+      .text(y_label);
 
   stat_svg.append('text')
     .attr("y",20)
@@ -337,9 +341,9 @@ stat_svg.append("text")
 
 
 // load male and female professor frequency data
-d3.csv('/datasets/prof-reviews/prof_word_freqs.csv')
+d3.csv('/datasets/prof-reviews/prof_sentiment.csv')
 .then(data => {
-  // console.log(data);
+  console.log(data);
   data.forEach(d => {
     d.male = +d.male;
     d.female = +d.female;
@@ -347,8 +351,11 @@ d3.csv('/datasets/prof-reviews/prof_word_freqs.csv')
   });  
   freq_data = data;
   sub_data = data;
+  adj_data = data.filter(function (el) {
+    return (el.POS == "ADJ" ||
+           el.POS == "ADV") &&
+           !not_adj_adv.includes(el.word);
+  });
   var stat = "difference_abs";
   render_stats(sub_data,stat);
 });
-
-
