@@ -84,7 +84,7 @@ function update_bail_data(data) {
       
     }
 }
-d3.csv("https://raw.githubusercontent.com/dailybruin/the-stack/ucpd-budget-arrests/datasets/ucpd-budget-arrests/bail_charges_without_outliars.csv", function(err, rows){
+d3.csv("https://raw.githubusercontent.com/dailybruin/the-stack/ucpd-budget-arrests/datasets/ucpd-budget-arrests/bail_charges_with_outliars.csv", function(err, rows){
 
   function unpack(rows, key) {
   return rows.map(function(row) { return row[key]; });
