@@ -69,11 +69,13 @@ function update_bail_data(data) {
       var layout = {
         title: "Bail Amounts Offered Per Charge Type",
         yaxis: {
-          zeroline: false
+          zeroline: false,
+          fixedrange: true
         },
         margin: {
           b: 160,
-        }
+        },
+        xaxis : {fixedrange: true}
       }
       var config = {responsive: true}
       
