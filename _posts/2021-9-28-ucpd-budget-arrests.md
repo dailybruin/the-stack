@@ -23,8 +23,7 @@ stylesheets:
   - /css/posts/ucpd-budget-arrests/scrollama.css
   - /css/posts/ucpd-budget-arrests/app.css
 scripts:
-  - //cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js
-  - //d3js.org/d3.v5.min.js
+  - //cdnjs.cloudflare.com/ajax/libs/d3/5.7.0/d3.min.js 
   - //cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js
   - //cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.js
   - //cdn.jsdelivr.net/npm/chart.js@2.8.0
@@ -43,7 +42,9 @@ scripts:
   - /js/posts/ucpd-budget-arrests/demographic_charges.js
   - /js/posts/ucpd-budget-arrests/bail-violin.js
 ---
+
 ### Introduction
+
 <p> Over the past two years, a number of national events have shed light on the state of police departments all over the country. During May of 2020 all the way through August, there were a number of protests, both at UCLA and in California, calling for the reform and abolition of police departments across the nation. Protests that occurred on UCLA’s campus were centered around UCPD and their involvement in student affairs and Westwood as a whole. Protestors cited bias and discrimination within UCPD and drew attention to the amount of money going towards UCPD and how it has been spent in recent years. </p>
  
 <p> Upon request, The Stack obtained records of UCPD’s arrests, stops, and budget for 2012 through 2019. We analyzed the demographic makeup of the arrests by race, gender, and age, as well as the type of arrests and the associated bail. Beyond arrests, we also analyzed the distribution of the budget and researched UCPD policies over the last decade. </p>
@@ -58,7 +59,7 @@ scripts:
   <canvas id="race_chart"></canvas> 
 </div>
 
-The Black and American Indian groups were the most disproportionately overrepresented in the arrest data. The Hispanic and White groups had the least disproportionate arrest rates. The Asian group was the most disproportionately underrepresented in the arrest data. 
+The Black and American Indian groups were the most disproportionately overrepresented in the arrest data. The Hispanic and White groups had the least disproportionate arrest rates. The Asian group was the most disproportionately underrepresented in the arrest data.
 
 According to UCPD Administrative Bureau Captain Scott Scheffler, (CQ 7) since race is not listed on driver’s licenses, the information regarding race in police data is most often based on the perception of the arresting officers.
 
@@ -80,6 +81,7 @@ According to UCPD Administrative Bureau Captain Scott Scheffler, (CQ 7) since ra
 </div>
 
 ### What changes can be seen in UCPD data and policy in the last 10 years?
+
 <section class = 'scrollama'>
     <section id="stick">
       <article id = 'scrolly_area'>
