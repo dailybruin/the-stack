@@ -1,12 +1,11 @@
 //console.log('loaded chart')
-const Budget=[13680147, 14223655, 15499349, 16281145, 16754687, 17355103, 20258656, 22375818];
-const Stops=[103, 356, 389, 316, 250, 289, 276, 199];
-const Arrests=[101, 309, 381, 416, 418, 481, 467, 665];
-const Budget_Normalized=[136.80147, 142.23655, 154.99349, 162.81145, 167.54687, 173.55103, 202.58656, 223.75818];
+const Budget=[14223655, 15499349, 16281145, 16754687, 17355103, 20258656, 22375818];
+const Stops=[356, 389, 316, 250, 289, 276, 199];
+const Arrests=[309, 381, 416, 418, 481, 467, 665];
+const Budget_Normalized=[142.23655, 154.99349, 162.81145, 167.54687, 173.55103, 202.58656, 223.75818];
 const data_order = [Budget, Budget_Normalized, Arrests, Stops];
 const colors = ['#FF8311', '#FF8311','#2A3C6A','#A1C7F3']
 const labels = [
-    '2012',
     '2013',
     '2014',
     '2015',
@@ -15,7 +14,7 @@ const labels = [
     '2018',
     '2019'
     ];
-const lines = ['Budget','Budget in $100,000','Arrests','Stops'];
+const lines = ['Budget','Budget','Arrests','Stops']; 
 
 
 const options0 = {
@@ -145,7 +144,7 @@ const options1 ={
     tooltips: {
         callbacks: {
             label: function(tooltipItem, data) {
-                if (data.datasets[tooltipItem.datasetIndex].label === 'Budget in $100,000'){ 
+                if (data.datasets[tooltipItem.datasetIndex].label === 'Budget'){ 
                     let val = tooltipItem.yLabel * 100000;
                     let value = val.toLocaleString('en-US', {
                         style: 'currency',
