@@ -1,0 +1,172 @@
+@media only screen and (max-width: 1000px) {
+    .scrollama{
+        width: 90%;
+    }
+    
+    #scrolly_area {
+    padding: 0 1rem;
+    margin: 0 auto;
+    width: 100%;
+    /* height: 2000px;  */
+    }
+    
+    .step {
+    margin: 2rem auto 4rem auto;
+    background-color: #3b3b3b;
+    color: #fff;
+    top: 20px;
+    float: right;
+    width: 100%;
+    opacity: .5;
+    }
+    
+    .step.is-active {
+    background-color: #3b3b3b;
+    color: #fff;
+    opacity: 1;
+    }
+    
+    .step p {
+    text-align: center;
+    float: center;
+    }
+    
+    figure {
+        position: -webkit-sticky;
+        position: sticky;
+        width: 100%;
+        float: left;
+        margin: 0;
+        -webkit-transform: translate3d(0, 0, 0);
+        -moz-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+    
+    .BudgetStopChart{
+        /* position: -webkit-sticky;
+        position: sticky; */
+        top: 0;
+        width: 100%;
+        /* height: 800px;  */
+    }
+    
+    #stick {
+        width: 90%;
+        position: relative;
+        padding: 0 1rem;
+        margin: 0 auto;
+        /* height: 2000px;  */
+    }
+    
+    #myChart{
+        width: 100%;
+    }
+}
+
+.scrollama{
+    width: 90%;
+}
+
+#scrolly_area {
+/* position: relative; */
+padding: 0 1rem;
+margin: 0 auto;
+/* width: 90%; */
+height: 340vh; 
+}
+
+.step {
+margin: 2rem auto 4rem auto;
+background-color: #3b3b3b;
+color: #fff;
+opacity: .5;
+/* width: 30%; */
+/* top: 300px; */
+float: right;
+z-index: 0;
+}
+
+.step.is-active {
+background-color: #3b3b3b;
+color: #fff;
+opacity: 1;
+}
+
+.step p {
+text-align: center;
+}
+
+.step.first {
+    width: 100%
+}
+
+.step.bars{
+    height: 90vh;
+}
+
+.step.later{
+    width: 100%;
+    right: 0;
+    /* height: 30vh; */
+}
+
+.step.penult, .step.last{
+    height: 50vh;
+    width: 100%
+} 
+
+figure {
+    position: -webkit-sticky;
+    position: sticky;
+    /* position: relative;*/
+    top: 30vh; 
+    width: 100%;
+    /* height: 400px; */
+    float: left;
+    margin: 0;
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    z-index: 1;
+    background-color: #fff;
+}
+
+/* #myChart{
+    width: 100%;
+    z-index: 0;
+    height: 500px;
+    /* height: 500px;  */
+    /* height: 100%; */
+/* } */
+.BudgetStopChart{
+    height: 40vh;
+}
+
+#stick {
+    /* height: 4000px; */
+    width: 100%;
+    position: relative;
+    padding: 0 1rem;
+    margin: 0 auto;
+    /* width: 90%; */
+    height: 550vh; 
+}
+
+#myChart{
+    width: 100%;
+}
+
+/* .custom-legend{
+    height: 100px;
+}
+.legend-marker {
+    border: solid #000;
+    border-width: 1px;
+    display: inline-block;
+    width: 1em;
+    line-height: 0.6em;
+    margin: 0.5em;
+}
+.legend-label {
+    display: inline-block;
+} */

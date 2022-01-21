@@ -1,0 +1,54 @@
+
+
+  
+/* DESKTOP SETTINGS */
+
+
+@media only screen and (min-width: 1000px) {
+
+    #caption {
+        font-size:smaller;
+        color:gray;
+        background-color: white;
+    }
+    #dropdown {
+        margin-top: 10px;
+    }
+    /*.raceclass{
+        float: right; 
+        width: 50%; 
+        height: 200%; 
+       
+    }
+    .genderclass{ 
+        float: left; 
+        width: 50%; 
+        height: 600px; 
+    }*/
+
+    
+}
+
+
+
+@media only screen and (max-width: 1000px) {
+    #race_chart{
+        width: 95%; 
+        height: 400px; 
+       
+    }
+    #gender_chart{ 
+        width: 95%;
+        height: 300px; 
+    }
+    #age_chart{
+        width: 95%;
+        height: 400px; 
+        
+    }
+    #demographic_charges {
+        width: 95%; 
+        height: 400px; 
+    }
+
+}
