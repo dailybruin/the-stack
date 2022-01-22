@@ -28,6 +28,9 @@ stylesheets:
 <div id="stats-menu">
 </div>
 <div id="svg-div">
-<svg id="stat-svg">
-</svg>
+  <svg id="stat-svg"></svg>
+</div>
+
+<div>
+  <svg id="world-cloud-svg"></svg>
 </div>

@@ -28,25 +28,26 @@ const select_words = () => {
 };
 
 // dropdown
-const stats = ["Largest Difference","Female Professors","Male Professors","Female-Professor - Adj/Adverbs","Male Professor - Adj/Adverbs"]
+const stats = ["Largest Difference","Female Professors","Male Professors","Largest Difference - Adj/Adverbs","Female-Professor - Adj/Adverbs","Male Professor - Adj/Adverbs"]
 var stat = stats[0]; // the stat to sort words by
 const onStatClicked = selection => {
   var stat;
-  if (selection == stats[0]){
+  if (selection == stats[0] || selection == stats[3]){
     stat = "difference_abs";
   }
-  else if (selection == stats[1] || selection == stats[3]){
+  else if (selection == stats[1] || selection == stats[4]){
     stat = "female";
   }
-  else if (selection == stats[2] || selection == stats[4]){
+  else if (selection == stats[2] || selection == stats[5]){
     stat = "male";
   }
-  if (selection == stats[3] || selection == stats[4]){
+  if (selection == stats[3] || selection == stats[4] || selection == stats[5]){
     render_stats(adj_data,stat,"Adjective/Adverb");
   }
   else{
     render_stats(freq_data,stat); // pass in full dataset to rerank top_n
   }
+  // console.log("selection",selection, " stat",stat);
 };
 d3.select('#stats-menu')
   .call(dropdownMenu,{
@@ -87,20 +88,21 @@ const mouseleave = function(d) {
     .attr("r", point_radius);
 }
 
-// plots both F/M stats
+const clear_graphics = (svg) => {
+  // console.log(kept_stat,"." + kept_stat + "-sorted-circle");
+  const all_stats = ["male","female","difference"];
+  for(const stat of all_stats){
+      svg.selectAll("." + stat + "-sorted-circle").remove();
+      svg.selectAll("." + stat + "-sorted-rect").remove();
+  }
+};
+
+// function to plot both F/M stats
 const plot_lines = (svg,xScale,yScale,t,gender="male",stat="male",color="#aa42f5",data=sub_data) =>{
-  // clear old graphics first
-  svg.selectAll(".diff-circle").remove();
-  svg.selectAll(".diff-rect").remove();
-  
-  if(stat === "male"){
-    svg.selectAll(".female-sorted-circle").remove();
-    svg.selectAll(".female-sorted-rect").remove();
+  if(stat=="difference_abs"){
+    stat="difference";
   }
-  else if(stat === "female"){
-    svg.selectAll(".male-sorted-circle").remove();
-    svg.selectAll(".male-sorted-rect").remove();
-  }
+  // console.log("plotted-stat",stat)
   // lines
   svg.append("g")
     .attr("class",stat+"-sorted-rects")
@@ -183,11 +185,13 @@ const plot_lines = (svg,xScale,yScale,t,gender="male",stat="male",color="#aa42f5
 };
 
 // main render function
-const render_stats = (data,stat="difference",y_label="Word") =>{
-  // console.log(data.map(d => d.difference_abs));
+const render_stats = (data,stat="difference_abs",y_label="Word") =>{
+
+  // sort data by selected statistic
+  // console.log("selected stat",stat)
   data.sort((a, b) => (a[stat] > b[stat]) ? -1 : 1)
   sub_data = data.slice(0,top_n_diff);
-  console.log("sorted top 20 for ",stat, sub_data);
+  // console.log("sorted top 20 for ",stat, sub_data);
   
   const t = d3.transition().duration(config.anim_speed).ease(d3.easeCubic);
   
@@ -199,17 +203,17 @@ const render_stats = (data,stat="difference",y_label="Word") =>{
 
   // axes, labels, title
   let max; // find max value for x axis
-  if(stat=="difference_abs"){
-    max = Math.max(...sub_data.map(d => d.difference_abs));
-  }
-  else{
-    let max1 = Math.max(...sub_data.map(d => d.male));
-    let max2 = Math.max(...sub_data.map(d => d.female));
-    max = Math.max(max1,max2);
-  }
+  // if(stat=="difference_abs"){
+  //   max = Math.max(...sub_data.map(d => d.difference_abs));
+  // }
+  // else{
+  let max1 = Math.max(...sub_data.map(d => d.male));
+  let max2 = Math.max(...sub_data.map(d => d.female));
+  max = Math.max(max1,max2);
+  // }
   const xScale = d3.scaleLinear()
-  .domain([0, max])
-  .range([margin.left, config.vw - margin.right])
+    .domain([0, max])
+    .range([margin.left, config.vw - margin.right])
   const xAxis = d3.axisBottom().scale(xScale);
   
   stat_svg.select('g.xaxis')    
@@ -248,76 +252,19 @@ const render_stats = (data,stat="difference",y_label="Word") =>{
     .html("Word Frequencies for Male and Female Professors");
   
   // plot data
-  // if diff, only show diff (as opposed to male & female)
+  
+  // clear existing graphics first
+  clear_graphics(stat_svg)
+  
+  // if diff, add diff in tooltip, keep normal scale
+  // console.log("stat here",stat)
   if(stat=="difference_abs"){
-    // clear old graphics
-    stat_svg.selectAll(".female-sorted-circles").remove();
-    stat_svg.selectAll(".female-sorted-rects").remove();
-    stat_svg.selectAll(".male-sorted-circles").remove();
-    stat_svg.selectAll(".male-sorted-rects").remove();
-    //lines
-    stat_svg.append("g")
-    .attr("class","diff-rects");
-    stat_svg.select('.diff-rects')
-    .selectAll("rect")
-    .data(sub_data)
-    .join(
-      enter => enter.append("rect")
-        .attr("class","diff-rect")
-        .attr("x", xScale(0)) //p
-        .attr("y", d => d.gender === "male" ? yScale(d.word): yScale(d.word)) //p
-        .attr("width", 0)
-        .attr("height", point_radius/4)
-        .call(enter => enter.transition(t)
-        .attr("fill", d => d.difference > 0 ? MALE_COLOR: FEMALE_COLOR)
-        .attr("count", d => d[stat])
-        .attr("r", point_radius)
-        .attr("width", d => xScale(d[stat]) - xScale(0))
-      ),
-      update => update
-            .call(update => update.transition(t)
-            ),
-      exit => exit
-            .call(exit => exit.transition()
-            .attr('width', xScale(0))
-            .remove()
-            )
-    );
-    // circles
-    stat_svg.append("g")
-      .attr("class","diff-circles");
-    stat_svg.select('.diff-circles')
-      .selectAll("circle")
-      .data(sub_data)
-      .join(
-        enter => enter.append("circle")
-          .on("mouseover", mouseover)
-          .on("mousemove", mousemove)
-          .on("mouseout", mouseleave)
-          .attr("class","diff-circle")
-          .attr("cx", d => xScale(0))
-          .attr("cy", d => yScale(d.word) )
-          .call(enter => enter.transition(t)
-          .attr("fill", d => d.difference > 0 ? MALE_COLOR: FEMALE_COLOR)
-          .attr("gender",d => d.gender)
-          .attr("percent-diff", d => d.difference_abs)
-          .attr("cx", d => xScale(d.difference_abs))
-          .attr("r", point_radius)
-          
-        ),
-        update => update
-          .call(update => update.transition(t)
-          ),
-        exit => exit
-          .call(exit => exit.transition()
-          .attr('height',0)
-          .attr('y',config.inner_vh)
-          .remove()
-          )
-    );
+    plot_lines(stat_svg,xScale,yScale,t,"male",stat,MALE_COLOR,sub_data); // plot male
+    plot_lines(stat_svg,xScale,yScale,t,"female",stat,FEMALE_COLOR,sub_data); // plot female
   }
-  // else plot both male and female
+  // else only male and female tooltip
   else{
+    // console.log('s',stat)
     plot_lines(stat_svg,xScale,yScale,t,"male",stat,MALE_COLOR,sub_data); // plot male
     plot_lines(stat_svg,xScale,yScale,t,"female",stat,FEMALE_COLOR,sub_data); // plot female
   }
