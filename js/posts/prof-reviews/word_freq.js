@@ -287,7 +287,7 @@ const mousemove2 = function(event,d) {
     .attr("x2",mousex-30);
   percent_text
     .html(xScale.invert(mousex-30).toFixed(3) + "%")
-    .attr("x", mousex+5)
+    .attr("x", mousex-15)
     .attr("y", config.vh - margin.bottom * 1.5);
 }
 
@@ -327,7 +327,8 @@ var percent_text = overlay_g
 percent_text
   .style("opacity", 0)
   .attr("text-anchor", "left")
-  .attr("alignment-baseline", "middle");
+  .attr("alignment-baseline", "middle")
+  .style("font-size","10px");
 
 // load male and female professor frequency data
 d3.csv('/datasets/prof-reviews/prof_sentiment.csv')
@@ -363,6 +364,4 @@ stat_svg.append("g").attr('class','yaxis');
 stat_svg.append("text")
   .attr("class", "xlabel");
 stat_svg.append("text")
-  .attr("class", "ylabel")
-  .style("font-size","20px");
-// append overlay group and rect (where vertical line limited to)
+  .attr("class", "ylabel");
