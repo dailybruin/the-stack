@@ -326,9 +326,9 @@ var percent_text = overlay_g
   .append("text");
 percent_text
   .style("opacity", 0)
+  .style("font-size","15px")
   .attr("text-anchor", "left")
-  .attr("alignment-baseline", "middle")
-  .style("font-size","10px");
+  .attr("alignment-baseline", "middle");
 
 // load male and female professor frequency data
 d3.csv('/datasets/prof-reviews/prof_sentiment.csv')
