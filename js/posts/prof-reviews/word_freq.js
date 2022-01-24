@@ -286,9 +286,9 @@ const mousemove2 = function(event,d) {
     .attr("x1",mousex-30)
     .attr("x2",mousex-30);
   percent_text
-    .html(xScale.invert(mousex) + "%")
-    .attr("x", xScale.invert(mousex)+15)
-    .attr("y", config.vh);
+    .html(xScale.invert(mousex).toFixed(3) + "%")
+    .attr("x", mousex+15)
+    .attr("y", config.vh - margin.bottom);
 }
 
 const mouseleave2 = function(event,d){ 
