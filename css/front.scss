@@ -1,55 +1,124 @@
----
----
-
-@import 'globals';
+@import "globals";
 
 .post-list {
+  margin-left: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  // display: grid;
+  justify-content: space-between;
+
+  > li {
+    box-sizing: border-box;
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.25);
+  }
+
+  .post-first,
+  .post-second,
+  .post-third,
+  .post-last {
+    margin-bottom: $spacing-unit + ($spacing-unit/2);
+    flex-basis: 32%;
+    max-width: 32%;
+    padding: 15px;
+
     h2 {
-        line-height: 1;
-        margin-bottom: 0.2em;
+      font-size: 24px;
     }
 
     h3 {
-        line-height: 1.2;
-        font-weight: normal;
-        font-size: 0.8em;
-        color: $grey-color-dark;
+      font-size: 16px;
     }
 
     .info {
-      font-size: 0.65em;
-    }
-
-    .post-link {
-        color: black;
-        font-size: 1.5em;
-
-        &:hover h2, &:hover h3 {
-            color: $brand-color;
-        }
-
-        &:hover .featured-image {
-            opacity: 0.9;
-        }
+      font-size: 14px;
+      margin-bottom: 0px;
     }
 
     .featured-image {
-        display: block;
-        margin: 0 auto $spacing-unit/2;
+      height: 250px;
     }
+
+    @include media-query($on-laptop) {
+      flex-basis: 100%;
+      max-width: 100%;
+      margin-bottom: $spacing-unit;
+    }
+  }
+
+  h2 {
+    margin-bottom: 20px;
+  }
+
+  h3 {
+    font-weight: normal;
+    color: $grey-color-dark;
+  }
+
+  .info {
+    font-size: 14px;
+    color: $grey-color;
+  }
+
+  .post-link {
+    color: black;
+    font-size: 1.5em;
+
+    &:hover h2 {
+      color: $brand-color-dark;
+    }
+
+    &:hover .featured-image {
+      opacity: 0.9;
+    }
+  }
+
+  .featured-image {
+    display: block;
+    margin: 0 auto $spacing-unit/2;
+    object-fit: cover;
+  }
+}
+
+.post-middle {
+  width: 100%;
+  height: 350px;
+  margin-bottom: $spacing-unit;
+
+  .featured-image {
+    width: 50%;
+    height: 100%;
+
+    float: left;
+  }
+
+  .post-details {
+    width: 50%;
+    float: right;
+    padding: 30px;
+    box-sizing: border-box;
+  }
+
+  h2 {
+    font-size: 30px;
+  }
+
+  h3 {
+    font-size: 18px;
+  }
 }
 
 .pagination {
-    text-align: center;
+  text-align: center;
 
-    .page-number {
-        margin: 0 1em;
-        color: $grey-color;
-    }
+  .page-number {
+    margin: 0 1em;
+    color: $grey-color;
+  }
 }
 
 .rss-subscribe {
-    float: right;
-    font-size: 0.8em;
-    color: $grey-color;
+  float: right;
+  font-size: 0.8em;
+  color: $grey-color;
 }

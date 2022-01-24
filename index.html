@@ -7,30 +7,45 @@ stylesheets:
 <div class="home">
 
   <ul class="post-list">
-    {% for post in paginator.posts %}
+    {% for post in site.posts %}
       {% if post.displayed %}
-      <li>
+      
+      {% case forloop.index %}
+        {% when 1 %}
+          {% assign className = "post-middle" %}
+        {% when 2 %}
+          {% assign className = "post-middle" %}
+        {% when 3 %}
+          {% assign className = "post-middle" %}
+        {% when 4, 5 %}
+          {% assign className = "post-middle" %}
+        {% else %}
+          {% assign className = "post-last" %}
+      {% endcase %}
+      <li class="{{ className }}">
         <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
           {% if post.featured_image %}
           <img class="featured-image" src="{{ site.image_url }}/{{ post.featured_image.url }}" />
           {% endif %}
-          <h2>{{ post.title }}</h2>
-          <h3>{{ post.teaser }}</h3>
-          <h3 class='info'>
-            {{ post.date | date: "%b %-d, %Y" }}
-             &#9679 By
-            {% for author_key in post.authors %}
-              {% assign author = site.data.authors[author_key] %}
-              {{author.name}}{% unless forloop.last %}, {% endunless %}
-            {% endfor %}
-          </h3>
+          <div class="post-details">
+            <h2>{{ post.title }}</h2>
+            <h3>{{ post.teaser }}</h3>
+            <h3 class='info'>
+              {{ post.date | date: "%b %-d, %Y" }}
+              &#9679 By
+              {% for author_key in post.authors %}
+                {% assign author = site.data.authors[author_key] %}
+                {{author.name}}{% unless forloop.last %}, {% endunless %}
+              {% endfor %}
+            </h3>
+          </div>
         </a>
       </li>
       {% endif %}
     {% endfor %}
   </ul>
 
-  {% if paginator.previous_page or paginator.next_page %}
+  <!-- {% if paginator.previous_page or paginator.next_page %}
   <nav class="pagination">
     {% if paginator.previous_page %}
       <a href="{{ paginator.previous_page_path }}" class="previous">← Previous page</a>
@@ -40,8 +55,8 @@ stylesheets:
       <a href="{{ paginator.next_page_path }}" class="next">More posts →</a>
     {% endif %}
   </nav>
-  {% endif %}
+  {% endif %} -->
 
-  <p class="rss-subscribe">subscribe to {{ site.title }} <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+  <p class="rss-subscribe">subscribe to {{ site.title }} <a href="{{ '/feed.xml' | prepend: site.baseurl }}">via RSS</a></p>
 
 </div>
