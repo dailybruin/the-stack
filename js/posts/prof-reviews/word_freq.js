@@ -10,6 +10,7 @@ const config = {
   "anim_speed": 3000
 }
 const margin = ({top: 50, right: 20, bottom: 40, left: 150});
+const t = d3.transition().duration(config.anim_speed).ease(d3.easeCubic);
 
 // globals
 var freq_data, sub_data, adj_data;
@@ -17,6 +18,8 @@ const not_adj_adv = ['give', // verbs
                     'lab','content', 'major', // nouns
                     'basically','weekly']; // neutral adverbs
 const custom_words = []; // add some fun words here
+var xScale;
+
 // element parameterss
 const point_radius = 7;
 
@@ -57,41 +60,17 @@ d3.select('#stats-menu')
   label: 'Sort by: '
   });
 
-var tooltip = d3.select("body")
-  .append("div")
-  .attr("class", "tooltip")
-  .style("opacity", 0);
 
-// Three function that change the tooltip when user hover / move / leave a cell
-const mouseover = function(d) {
-  tooltip.transition()
-    .duration(200)
-    .style("opacity", 0.7);
-  d3.select(this)
-    .attr("r", point_radius * 1.2);
-}
+// bold word when hovered, fw 700
 
-const mousemove = function(event,d) {
-  let tooltip_text = "Male %: " + d.male.toFixed(3) + "<br>Female %: " + d.female.toFixed(3);
-  tooltip.html(tooltip_text)
-    .style("top", (event.pageY)+"px")
-    .style("left",(event.pageX + 15)+"px")
-    .style('color', 'white');
-  d3.select(this)
-    .attr("r", point_radius * 1.2);
-}
 
-const mouseleave = function(d) {
-  tooltip
-    .style("opacity", 0);
-  d3.select(this)
-    .attr("r", point_radius);
-}
-
+// clears previous graphics by class (needed since different datasets)
 const clear_graphics = (svg) => {
   // console.log(kept_stat,"." + kept_stat + "-sorted-circle");
   const all_stats = ["male","female","difference"];
   for(const stat of all_stats){
+      svg.selectAll("." + stat + "-sorted-circles").remove();
+      svg.selectAll("." + stat + "-sorted-rects").remove();
       svg.selectAll("." + stat + "-sorted-circle").remove();
       svg.selectAll("." + stat + "-sorted-rect").remove();
   }
@@ -186,15 +165,12 @@ const plot_lines = (svg,xScale,yScale,t,gender="male",stat="male",color="#aa42f5
 
 // main render function
 const render_stats = (data,stat="difference_abs",y_label="Word") =>{
-
-  // sort data by selected statistic
-  // console.log("selected stat",stat)
+  const t = d3.transition().duration(config.anim_speed).ease(d3.easeCubic);
+  // sort data by selected statistic and slice top n
   data.sort((a, b) => (a[stat] > b[stat]) ? -1 : 1)
   sub_data = data.slice(0,top_n_diff);
-  // console.log("sorted top 20 for ",stat, sub_data);
-  
-  const t = d3.transition().duration(config.anim_speed).ease(d3.easeCubic);
-  
+
+  // svg
   const stat_svg = d3.select("#stat-svg")
     .style("width", '85%')
     .style("height", config.vh + 'px')
@@ -202,16 +178,12 @@ const render_stats = (data,stat="difference_abs",y_label="Word") =>{
     .attr("font-size", 10);
 
   // axes, labels, title
-  let max; // find max value for x axis
-  // if(stat=="difference_abs"){
-  //   max = Math.max(...sub_data.map(d => d.difference_abs));
-  // }
-  // else{
+  // find max value for x axis
   let max1 = Math.max(...sub_data.map(d => d.male));
   let max2 = Math.max(...sub_data.map(d => d.female));
-  max = Math.max(max1,max2);
+  let max = Math.max(max1,max2);
   // }
-  const xScale = d3.scaleLinear()
+  xScale = d3.scaleLinear()
     .domain([0, max])
     .range([margin.left, config.vw - margin.right])
   const xAxis = d3.axisBottom().scale(xScale);
@@ -252,39 +224,72 @@ const render_stats = (data,stat="difference_abs",y_label="Word") =>{
     .html("Word Frequencies for Male and Female Professors");
   
   // plot data
-  
   // clear existing graphics first
   clear_graphics(stat_svg)
   
-  // if diff, add diff in tooltip, keep normal scale
+  // if diff, add word,diff in tooltip, keep normal scale
   // console.log("stat here",stat)
   if(stat=="difference_abs"){
     plot_lines(stat_svg,xScale,yScale,t,"male",stat,MALE_COLOR,sub_data); // plot male
     plot_lines(stat_svg,xScale,yScale,t,"female",stat,FEMALE_COLOR,sub_data); // plot female
   }
-  // else only male and female tooltip
+  // else only word,male and female tooltip
   else{
     // console.log('s',stat)
     plot_lines(stat_svg,xScale,yScale,t,"male",stat,MALE_COLOR,sub_data); // plot male
     plot_lines(stat_svg,xScale,yScale,t,"female",stat,FEMALE_COLOR,sub_data); // plot female
-  }
+  };
 };
 
-// static components
-// legend
-const stat_svg = d3.select("#stat-svg");
-stat_svg.append("g").attr("class","legend");
-stat_svg.select(".legend").append("circle").attr("cx",W_WIDTH * 0.6).attr("cy",W_HEIGHT * 0.7).attr("r", point_radius).style("fill", MALE_COLOR);
-stat_svg.select(".legend").append("circle").attr("cx",W_WIDTH * 0.6).attr("cy",W_HEIGHT * 0.7+30).attr("r", point_radius).style("fill", FEMALE_COLOR);
-stat_svg.select(".legend").append("text").attr("x",W_WIDTH * 0.6+20).attr("y",W_HEIGHT * 0.7).text("Male Professors").style("font-size", "15px").attr("alignment-baseline","middle");
-stat_svg.select(".legend").append("text").attr("x",W_WIDTH * 0.6+20).attr("y",W_HEIGHT * 0.7+30).text("Female Professors").style("font-size", "15px").attr("alignment-baseline","middle");
-// axes groups + labels
-stat_svg.append("g").attr('class','xaxis');
-stat_svg.append("g").attr('class','yaxis');
-stat_svg.append("text")
-  .attr("class", "xlabel");
-stat_svg.append("text")
-  .attr("class", "ylabel");
+
+// mouseover/tooltip functions
+var tooltip1 = d3.select("body")
+  .append("div")
+  .attr("class", "tooltip")
+  .style("opacity", 0);
+
+const mouseover = function(d) {
+  tooltip1.transition()
+    .duration(200)
+    .style("opacity", 0.7);
+  d3.select(this)
+    .attr("r", point_radius * 1.2);
+}
+const mousemove = function(event,d) {
+  let tooltip_text = "<b>Male</b>: " + d.male.toFixed(3) + "%<br><b>Female</b>: " + d.female.toFixed(3) + "%";
+  tooltip1.html(tooltip_text)
+    .style("top", (event.pageY)+"px")
+    .style("left",(event.pageX + 15)+"px")
+    .style('color', 'white');
+  d3.select(this)
+    .attr("r", point_radius * 1.2);
+}
+const mouseleave = function(d) {
+  tooltip1
+    .style("opacity", 0);
+  d3.select(this)
+    .attr("r", point_radius);
+}
+
+const mouseover2 = function(event,d){  
+  let mousex = event.pageX;
+  vertical_guide
+    .style("opacity",0.8);
+}
+
+const mousemove2 = function(event,d) {
+  let mousex = event.pageX;
+  // console.log("mousex",mousex);
+  vertical_guide
+    .style("opacity",0.8)
+    .attr("x1",mousex)
+    .attr("x2",mousex);
+}
+
+const mouseleave2 = function(event,d){ 
+  vertical_guide
+    .style("opacity",0)
+}
 
 
 // load male and female professor frequency data
@@ -306,3 +311,45 @@ d3.csv('/datasets/prof-reviews/prof_sentiment.csv')
   var stat = "difference_abs";
   render_stats(sub_data,stat);
 });
+
+
+// static components
+// legend
+const stat_svg = d3.select("#stat-svg");
+stat_svg.append("g").attr("class","legend");
+stat_svg.select(".legend").append("circle").attr("cx",W_WIDTH * 0.6).attr("cy",W_HEIGHT * 0.7).attr("r", point_radius).style("fill", MALE_COLOR);
+stat_svg.select(".legend").append("circle").attr("cx",W_WIDTH * 0.6).attr("cy",W_HEIGHT * 0.7+30).attr("r", point_radius).style("fill", FEMALE_COLOR);
+stat_svg.select(".legend").append("text").attr("x",W_WIDTH * 0.6+20).attr("y",W_HEIGHT * 0.7).text("Male Professors").style("font-size", "15px").attr("alignment-baseline","middle");
+stat_svg.select(".legend").append("text").attr("x",W_WIDTH * 0.6+20).attr("y",W_HEIGHT * 0.7+30).text("Female Professors").style("font-size", "15px").attr("alignment-baseline","middle");
+// axes groups + labels
+stat_svg.append("g").attr('class','xaxis');
+stat_svg.append("g").attr('class','yaxis');
+stat_svg.append("text")
+  .attr("class", "xlabel");
+stat_svg.append("text")
+  .attr("class", "ylabel");
+// append overlay group and rect (where vertical line limited to)
+var overlay_g = stat_svg.append("g").classed("overlay-g",true)
+var overlay_rect = overlay_g.append('rect');
+overlay_rect
+  .attr('class', 'overlay-rect')
+  .attr('width', (config.vw-margin.left-margin.right)) // set to graph area
+  .attr('height', (config.vh-margin.bottom-margin.top))
+  .attr('transform', 'translate('+margin.left+', ' + margin.top+')')
+  .style('fill', 'none') // transparent fill
+  .style("pointer-events", "all") // tracks mouse location
+  .on('mouseover', mouseover2)
+  .on('mousemove', mousemove2)
+  .on('mouseout', mouseleave2);
+// Add vertical line to read percentages more easily
+var vertical_guide = overlay_g
+  .append("line");
+vertical_guide
+  .attr("class", "vertical-guide")
+  .attr("y1",margin.top)
+  .attr("y2",config.vh - margin.bottom)
+  .style("stroke-width", 1)
+  .style("stroke", "#000")
+  .style("fill", "none")
+  .style("stroke-dasharray", ("2, 2"));
+  // .style("opacity",0);
