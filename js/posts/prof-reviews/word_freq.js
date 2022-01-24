@@ -274,16 +274,21 @@ const mouseleave = function(d) {
 const mouseover2 = function(event,d){  
   let mousex = event.pageX;
   vertical_guide
-    .style("opacity",0.8);
+    .style("opacity",1);
+  percent_text
+    .style("opacity",1);
 }
 
 const mousemove2 = function(event,d) {
   let mousex = event.pageX;
   // console.log("mousex",mousex);
   vertical_guide
-    .style("opacity",0.8)
-    .attr("x1",mousex)
-    .attr("x2",mousex);
+    .attr("x1",mousex-30)
+    .attr("x2",mousex-30);
+  percent_text
+    .html(xScale.invert(mousex) + "%")
+    .attr("x", xScale.invert(mousex)+15)
+    .attr("y", config.vh);
 }
 
 const mouseleave2 = function(event,d){ 
@@ -291,44 +296,8 @@ const mouseleave2 = function(event,d){
     .style("opacity",0)
 }
 
-
-// load male and female professor frequency data
-d3.csv('/datasets/prof-reviews/prof_sentiment.csv')
-.then(data => {
-  console.log(data);
-  data.forEach(d => {
-    d.male = +d.male;
-    d.female = +d.female;
-    d.difference_abs = +d.difference_abs;
-  });  
-  freq_data = data;
-  sub_data = data;
-  adj_data = data.filter(function (el) {
-    return (el.POS == "ADJ" ||
-           el.POS == "ADV") &&
-           !not_adj_adv.includes(el.word);
-  });
-  var stat = "difference_abs";
-  render_stats(sub_data,stat);
-});
-
-
-// static components
-// legend
+// static components before/above data
 const stat_svg = d3.select("#stat-svg");
-stat_svg.append("g").attr("class","legend");
-stat_svg.select(".legend").append("circle").attr("cx",W_WIDTH * 0.6).attr("cy",W_HEIGHT * 0.7).attr("r", point_radius).style("fill", MALE_COLOR);
-stat_svg.select(".legend").append("circle").attr("cx",W_WIDTH * 0.6).attr("cy",W_HEIGHT * 0.7+30).attr("r", point_radius).style("fill", FEMALE_COLOR);
-stat_svg.select(".legend").append("text").attr("x",W_WIDTH * 0.6+20).attr("y",W_HEIGHT * 0.7).text("Male Professors").style("font-size", "15px").attr("alignment-baseline","middle");
-stat_svg.select(".legend").append("text").attr("x",W_WIDTH * 0.6+20).attr("y",W_HEIGHT * 0.7+30).text("Female Professors").style("font-size", "15px").attr("alignment-baseline","middle");
-// axes groups + labels
-stat_svg.append("g").attr('class','xaxis');
-stat_svg.append("g").attr('class','yaxis');
-stat_svg.append("text")
-  .attr("class", "xlabel");
-stat_svg.append("text")
-  .attr("class", "ylabel");
-// append overlay group and rect (where vertical line limited to)
 var overlay_g = stat_svg.append("g").classed("overlay-g",true)
 var overlay_rect = overlay_g.append('rect');
 overlay_rect
@@ -351,5 +320,48 @@ vertical_guide
   .style("stroke-width", 1)
   .style("stroke", "#000")
   .style("fill", "none")
-  .style("stroke-dasharray", ("2, 2"));
-  // .style("opacity",0);
+  .style("stroke-dasharray", ("2, 2"))
+  .style("opacity",0);
+var percent_text = overlay_g
+  .append("text");
+percent_text
+  .style("opacity", 0)
+  .attr("text-anchor", "left")
+  .attr("alignment-baseline", "middle");
+
+// load male and female professor frequency data
+d3.csv('/datasets/prof-reviews/prof_sentiment.csv')
+.then(data => {
+  console.log(data);
+  data.forEach(d => {
+    d.male = +d.male;
+    d.female = +d.female;
+    d.difference_abs = +d.difference_abs;
+  });  
+  freq_data = data;
+  sub_data = data;
+  adj_data = data.filter(function (el) {
+    return (el.POS == "ADJ" ||
+           el.POS == "ADV") &&
+           !not_adj_adv.includes(el.word);
+  });
+  var stat = "difference_abs";
+  render_stats(sub_data,stat);
+});
+
+
+// static components after/below data
+// legend
+stat_svg.append("g").attr("class","legend");
+stat_svg.select(".legend").append("circle").attr("cx",W_WIDTH * 0.6).attr("cy",W_HEIGHT * 0.7).attr("r", point_radius).style("fill", MALE_COLOR);
+stat_svg.select(".legend").append("circle").attr("cx",W_WIDTH * 0.6).attr("cy",W_HEIGHT * 0.7+30).attr("r", point_radius).style("fill", FEMALE_COLOR);
+stat_svg.select(".legend").append("text").attr("x",W_WIDTH * 0.6+20).attr("y",W_HEIGHT * 0.7).text("Male Professors").style("font-size", "15px").attr("alignment-baseline","middle");
+stat_svg.select(".legend").append("text").attr("x",W_WIDTH * 0.6+20).attr("y",W_HEIGHT * 0.7+30).text("Female Professors").style("font-size", "15px").attr("alignment-baseline","middle");
+// axes groups + labels
+stat_svg.append("g").attr('class','xaxis');
+stat_svg.append("g").attr('class','yaxis');
+stat_svg.append("text")
+  .attr("class", "xlabel");
+stat_svg.append("text")
+  .attr("class", "ylabel");
+// append overlay group and rect (where vertical line limited to)
