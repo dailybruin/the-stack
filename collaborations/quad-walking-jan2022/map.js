@@ -14,24 +14,43 @@ L.tileLayer(
   }
 ).addTo(mymap);
 
+const layerControl = L.control
+  .layers({}, {}, { position: 'bottomright', collapsed: false })
+  .addTo(mymap);
+
 function addRoutes() {
   const starts = ['lv', 'reiber', 'sor'];
   const ends = ['kerckhoff', 'pubaff'];
 
   for (const s of starts) {
+    const routeArray = [];
     for (const e of ends) {
-      const path = `/collaborations/quad-walking-jan2022/${s}_${e}.gpx`;
+      const path = `${s}_${e}.gpx`;
+
+      console.log('test');
+
+      const pinIcon = L.icon({
+        iconUrl: 'pin.svg',
+        iconSize: [35, 35],
+        iconAnchor: [18, 30],
+      });
+
+      const starIcon = L.icon({
+        iconUrl: './star.svg',
+        iconSize: [20, 20], // size of the icon
+        iconAnchor: [10, 10], // point of the icon which will correspond to marker's location
+      });
 
       const route = new L.GPX(path, {
         async: true,
         marker_options: {
-          startIconUrl: '',
-          endIconUrl: '',
+          startIcon: pinIcon,
+          endIcon: starIcon,
           shadowUrl: '',
         },
         polyline_options: {
           color: '#A683EB',
-          opacity: 0.5,
+          opacity: 0.7,
           weight: 3,
           lineCap: 'round',
         },
@@ -42,27 +61,30 @@ function addRoutes() {
         mouseout: resetHighlight,
       });
 
-      mymap.addLayer(route);
+      routeArray.push(route);
+      // mymap.addLayer(route);
     }
+    const routeLayer = L.layerGroup(routeArray).addTo(mymap);
+    layerControl.addOverlay(routeLayer, `<span class="selector">${s}</span>`);
   }
 }
 
 function highlightFeature(e) {
-  console.log('highlight');
   const layer = e.target;
 
   layer.setStyle({
     weight: 5,
     color: '#930C62',
     dashArray: '',
-    fillOpacity: 0.7,
+    fillOpacity: 0.9,
   });
 
   if (!L.Browser.ie && !L.Browser.opera && !L.Browser.edge) {
     layer.bringToFront();
   }
-  console.log(layer);
+
   info.update({
+    name: layer._info.name,
     distance: layer.get_distance_imp(),
     elevation_gain: layer.get_elevation_gain_imp(),
   });
@@ -71,7 +93,7 @@ function highlightFeature(e) {
 function resetHighlight(e) {
   e.target.setStyle({
     color: '#A683EB',
-    opacity: 0.5,
+    opacity: 0.7,
     weight: 3,
     lineCap: 'round',
   });
@@ -88,9 +110,8 @@ function onEachFeature(feature, layer) {
 addRoutes();
 
 const info = L.control();
-
 info.onAdd = function(mymap) {
-  this._div = L.DomUtil.create('div', 'info'); // create a div with a class "info"
+  this._div = L.DomUtil.create('div', 'info');
   this.update();
   return this._div;
 };
@@ -101,7 +122,7 @@ info.update = function(props) {
     '<h4>Route Data</h4>' +
     (props
       ? '<b>' +
-        'route name' +
+        props.name +
         '</b><br />' +
         props.distance.toFixed(2) +
         ' miles' +
@@ -112,3 +133,13 @@ info.update = function(props) {
 };
 
 info.addTo(mymap);
+
+// create custom header for layering control
+const header = document.createElement('h4');
+header.setAttribute('class', 'control-header');
+const headerText = document.createTextNode('Route starting points');
+header.appendChild(headerText);
+const layerControlElement = document.getElementsByClassName(
+  'leaflet-control-layers-list'
+)[0];
+layerControlElement.insertBefore(header, layerControlElement.childNodes[0]);
