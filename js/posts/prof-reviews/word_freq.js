@@ -286,9 +286,9 @@ const mousemove2 = function(event,d) {
     .attr("x1",mousex-30)
     .attr("x2",mousex-30);
   percent_text
-    .html(xScale.invert(mousex).toFixed(3) + "%")
+    .html(xScale.invert(mousex-30).toFixed(3) + "%")
     .attr("x", mousex+15)
-    .attr("y", config.vh - margin.bottom);
+    .attr("y", config.vh - margin.bottom * 2);
 }
 
 const mouseleave2 = function(event,d){ 
@@ -363,5 +363,6 @@ stat_svg.append("g").attr('class','yaxis');
 stat_svg.append("text")
   .attr("class", "xlabel");
 stat_svg.append("text")
-  .attr("class", "ylabel");
+  .attr("class", "ylabel")
+  .style("font-size","10px");
 // append overlay group and rect (where vertical line limited to)
