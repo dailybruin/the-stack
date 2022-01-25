@@ -12,16 +12,19 @@ stylesheets:
       
       {% case forloop.index %}
         {% when 1 %}
-          {% assign className = "post-middle" %}
+          {% assign className = "post-first" %}
         {% when 2 %}
-          {% assign className = "post-middle" %}
+          {% assign className = "post-second" %}
         {% when 3 %}
-          {% assign className = "post-middle" %}
+          {% assign className = "post-third" %}
         {% when 4, 5 %}
           {% assign className = "post-middle" %}
         {% else %}
           {% assign className = "post-last" %}
       {% endcase %}
+      {% if forloop.index == 2 %}
+      <div class='post-layout-wrapper'>
+      {% endif %}
       <li class="{{ className }}">
         <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
           {% if post.featured_image %}
@@ -41,21 +44,12 @@ stylesheets:
           </div>
         </a>
       </li>
+    {% if forloop.index == 3 %}
+    </div>
+    {% endif %}
       {% endif %}
     {% endfor %}
   </ul>
-
-  <!-- {% if paginator.previous_page or paginator.next_page %}
-  <nav class="pagination">
-    {% if paginator.previous_page %}
-      <a href="{{ paginator.previous_page_path }}" class="previous">← Previous page</a>
-    {% endif %}
-    <span class="page-number">Page {{ paginator.page }} of {{ paginator.total_pages }}</span>
-    {% if paginator.next_page %}
-      <a href="{{ paginator.next_page_path }}" class="next">More posts →</a>
-    {% endif %}
-  </nav>
-  {% endif %} -->
 
   <p class="rss-subscribe">subscribe to {{ site.title }} <a href="{{ '/feed.xml' | prepend: site.baseurl }}">via RSS</a></p>
 
