@@ -29,6 +29,7 @@ let pieChart = new Chart(ctxPie, {
         data: [117463, 104091, 34326, 14579, 11108, 119835, 91102, 111026],
       },
     ],
+<<<<<<< HEAD
   },
   options: {
     title: {
@@ -72,3 +73,6 @@ let pieChart = new Chart(ctxPie, {
   },
 });
 
+=======
+}})
+>>>>>>> 24385b6cabc56724b80ff2399dafdf05a4f7ebb5

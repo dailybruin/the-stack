@@ -24,6 +24,7 @@ scripts:
   - //cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@0.7.0
   - //cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js
   - /js/posts/dining-halls/piechart.js
+  - /js/posts/dining-halls/busyness-barchart.js
 
 stylesheets:
   - //cdnjs.cloudflare.com/ajax/libs/c3/0.4.10/c3.min.css
@@ -31,3 +32,6 @@ stylesheets:
 
 piechart:
 <div class = 'pie chart'><canvas id = 'SwipesPieChart'></canvas></div>
+
+barchart:
+<div class = 'bar_chart'><canvas id = 'barChart'></canvas></div>
