@@ -208,7 +208,11 @@ const render_stats = (data,stat="difference_abs",y_label="Word") =>{
       .style("font-size","15px")
       .transition(t)
       .call(yAxis);
-  
+
+  d3.select("g.yaxis").selectAll(".tick text").attr("id", (d,i) => {return d + "-word" });
+  // var texts = d3.selectAll(".tick text").nodes();
+  // console.log('tick text', texts);
+
   stat_svg.select('.ylabel')
       .attr("text-anchor", "middle")
       .attr("x", -config.vh/2)
@@ -249,6 +253,7 @@ var tooltip1 = d3.select("body")
   .style("opacity", 0);
 
 const mouseover = function(d) {
+  // show tooltip
   tooltip1.transition()
     .duration(200)
     .style("opacity", 0.7);
@@ -256,19 +261,26 @@ const mouseover = function(d) {
     .attr("r", point_radius * 1.2);
 }
 const mousemove = function(event,d) {
-  let tooltip_text = "<b>Male</b>: " + d.male.toFixed(3) + "%<br><b>Female</b>: " + d.female.toFixed(3) + "%";
+  // add text
+  let tooltip_text = d.word + "<br><b>Male</b>: " + d.male.toFixed(3) + "%<br><b>Female</b>: " + d.female.toFixed(3) + "%";
   tooltip1.html(tooltip_text)
     .style("top", (event.pageY)+"px")
     .style("left",(event.pageX + 15)+"px")
     .style('color', 'white');
   d3.select(this)
     .attr("r", point_radius * 1.2);
+  // bold word
+  stat_svg.select('#' + d.word + '-word')
+    .style("font-weight","700");
 }
 const mouseleave = function(d) {
   tooltip1
     .style("opacity", 0);
   d3.select(this)
     .attr("r", point_radius);
+  // un-bold word
+  stat_svg.select('#' + d.word + '-word')
+    .style("font-weight","400");
 }
 
 const mouseover2 = function(event,d){  
