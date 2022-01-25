@@ -1,11 +1,11 @@
-const mymap = L.map('map').setView([34.07, -118.45], 15);
+const mymap = L.map('map').setView([34.07, -118.445], 15);
 L.tileLayer(
   'https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}',
   {
     attribution:
       'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
     maxZoom: 18,
-    minZoom: 11,
+    minZoom: 13,
     id: 'mapbox/light-v10',
     tileSize: 512,
     zoomOffset: -1,
@@ -14,29 +14,33 @@ L.tileLayer(
   }
 ).addTo(mymap);
 
+const routeNameMap = {
+  lv: 'Landfair Vista',
+  rieber: 'Rieber Hall',
+  hilgard: 'Hilgard Ave',
+};
+
 const layerControl = L.control
   .layers({}, {}, { position: 'bottomright', collapsed: false })
   .addTo(mymap);
 
 function addRoutes() {
-  const starts = ['lv', 'reiber', 'sor'];
-  const ends = ['kerckhoff', 'pubaff'];
+  const starts = ['lv', 'rieber', 'hilgard'];
+  const ends = ['kerckhoff', 'pubaff', 'court', 'powell'];
 
   for (const s of starts) {
     const routeArray = [];
     for (const e of ends) {
-      const path = `${s}_${e}.gpx`;
-
-      console.log('test');
+      const path = `/collaborations/quad-walking-jan2022/routes/${s}_${e}.gpx`;
 
       const pinIcon = L.icon({
-        iconUrl: 'pin.svg',
+        iconUrl: '/collaborations/quad-walking-jan2022/pin.svg',
         iconSize: [35, 35],
         iconAnchor: [18, 30],
       });
 
       const starIcon = L.icon({
-        iconUrl: './star.svg',
+        iconUrl: '/collaborations/quad-walking-jan2022/star.png',
         iconSize: [20, 20], // size of the icon
         iconAnchor: [10, 10], // point of the icon which will correspond to marker's location
       });
@@ -65,7 +69,10 @@ function addRoutes() {
       // mymap.addLayer(route);
     }
     const routeLayer = L.layerGroup(routeArray).addTo(mymap);
-    layerControl.addOverlay(routeLayer, `<span class="selector">${s}</span>`);
+    layerControl.addOverlay(
+      routeLayer,
+      `<span class="selector">${routeNameMap[s]}</span>`
+    );
   }
 }
 
@@ -83,10 +90,14 @@ function highlightFeature(e) {
     layer.bringToFront();
   }
 
+  const time = layer.get_distance() / 1.31 / 60; // 1.31 m/s walking speed
+
   info.update({
     name: layer._info.name,
     distance: layer.get_distance_imp(),
     elevation_gain: layer.get_elevation_gain_imp(),
+    time: time,
+    steps: time * 116.65, // steps/min
   });
 }
 
@@ -127,8 +138,14 @@ info.update = function(props) {
         props.distance.toFixed(2) +
         ' miles' +
         '</b><br />' +
-        props.elevation_gain.toFixed(2) +
-        ' feet elevation gain'
+        props.elevation_gain.toFixed(0) +
+        ' feet elevation gain' +
+        '</b><br />~' +
+        props.time.toFixed(0) +
+        ' minutes' +
+        '</b><br />~' +
+        props.steps.toFixed(0) +
+        ' steps'
       : 'Hover over a campus route');
 };
 
