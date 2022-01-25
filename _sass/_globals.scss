@@ -16,7 +16,8 @@ $spacing-unit: 30px;
 
 $text-color: #111;
 $background-color: #fdfdfd;
-$brand-color: #00a5ff;
+// $brand-color: #00a5ff;
+$brand-color: #0098eb;
 $brand-color-dark: darken($brand-color, 15%);
 $new-blue: #3fbbff;
 $grey-color: #828282;
@@ -26,7 +27,7 @@ $grey-color-extra-light: lighten($grey-color, 45%);
 
 // brand colors
 
-$brand-color-primary-blue: $brand-color-dark;
+$brand-color-primary-blue: $brand-color;
 $brand-color-primary-grey: $grey-color-dark;
 
 $brand-color-secondary-blue: #3fbbff;

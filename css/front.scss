@@ -1,3 +1,6 @@
+// ---
+// ---
+
 @import "globals";
 
 .post-list {
@@ -65,7 +68,7 @@
     font-size: 1.5em;
 
     &:hover h2 {
-      color: $brand-color-dark;
+      color: $brand-color;
     }
 
     &:hover .featured-image {

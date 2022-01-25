@@ -26,6 +26,7 @@
 
 .site-title {
   display: flex;
+  align-items: center;
   font-family: $accent-font-family;
   font-style: italic;
   font-weight: 700;
@@ -61,8 +62,13 @@
   white-space: nowrap;
   display: block;
 
+  @include media-query($on-palm) {
+    margin-left: 0px;
+  }
+
   a {
     font-weight: 700;
+    color: $grey-color-dark;
   }
 }
 
@@ -72,6 +78,10 @@
   display: flex;
   justify-content: flex-end;
   flex-direction: column;
+
+  @include media-query($on-palm) {
+    height: auto;
+  }
 
   .page-link {
     color: $text-color;
@@ -117,7 +127,7 @@
   h3 {
     font-size: 16px;
     margin-bottom: 0;
-    color: $brand-color;
+    // color: $brand-color;
   }
 
   .contact-list {
@@ -149,7 +159,7 @@
 
 .footer-col-wrapper {
   font-size: 16px;
-  color: $grey-color;
+  color: $grey-color-dark;
   margin-left: -$spacing-unit / 2;
   @extend %clearfix;
 }
@@ -190,7 +200,9 @@
   font-size: 42px;
   line-height: 1;
   margin-bottom: 0.1em;
-  color: $brand-color-dark;
+  color: $brand-color;
+  font-family: $accent-font-family;
+  text-align: center;
 
   @include media-query($on-laptop) {
     font-size: 36px;
@@ -198,10 +210,8 @@
 }
 
 .about-subheader {
-  color: $brand-color-secondary-blue;
-  font-family: $header-font-family;
+  color: $grey-color-dark;
   font-style: italic;
-  font-weight: bold;
 }
 
 .page-content {
@@ -274,6 +284,7 @@
 }
 
 .post-teaser {
+  font-size: 24px;
   line-height: 1.2;
   margin: 0.6em 0;
   color: $grey-color-dark;
@@ -461,9 +472,14 @@
   }
 
   .authors-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, 300px);
+    display: flex;
+    flex-wrap: wrap;
+    // grid-template-columns: repeat(auto-fill, 300px);
     justify-content: space-between;
+
+    @include media-query($on-palm) {
+      justify-content: space-evenly;
+    }
   }
 }
 
@@ -480,6 +496,7 @@
 
   h3 {
     margin-bottom: 0px;
+    margin-top: 0px;
     text-align: center;
   }
 
@@ -509,15 +526,15 @@
   }
 
   .mug {
-    width: 280px;
-    height: 280px;
+    width: 250px;
+    height: 250px;
     object-fit: cover;
     display: block;
     margin: auto;
     margin-bottom: 5px;
 
     @include media-query($on-palm) {
-      width: 200px;
+      // width: 200px;
       height: 200px;
     }
   }
@@ -536,10 +553,22 @@
  * Authors
  */
 .author-page {
+  .page-subheading {
+    color: $brand-color;
+    font-family: $accent-font-family;
+    text-align: center;
+    font-size: 42px;
+    margin-bottom: $spacing-unit * 1.5;
+  }
+
   .authors-list {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+
+    @include media-query($on-palm) {
+      justify-content: space-evenly;
+    }
   }
 
   .author {

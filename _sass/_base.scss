@@ -108,11 +108,11 @@ h6 {
  * Links
  */
 a {
-  color: $brand-color-secondary-warm;
+  color: $brand-color-tertiary-warm;
   text-decoration: none;
 
   &:hover {
-    color: $brand-color-tertiary-warm;
+    color: $brand-color-secondary-warm;
   }
 }
 

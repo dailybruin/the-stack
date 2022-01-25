@@ -6,7 +6,7 @@ permalink: /about/
 
 The Stack is [Daily Bruin's](http://dailybruin.com/) data journalism and newsroom tech blog. We investigate public data, experiment with technology and apply quantitative insights to real life.
 
-<header class="about-subheader"> <h2>Why it exists </h2></header>
+### _Why it exists_
 
 Information is being created faster than anyone can consume it. Most of it is noise, but occasionally it's important. This data usually never reaches people because it is difficult to find, difficult to collect and difficult to understand.
 
@@ -16,13 +16,13 @@ The Stack exists to fulfill this need for the UCLA community. We'll examine data
 
 If it's something you care about, and there's insight to be gained from the data, we'll cover it.
 
-<header class="about-subheader"> <h2>Who's behind it</h2> </header>
+### _Who's behind it_
 
 The Daily Bruin has one of the largest and most accomplished teams of news organization student developers in the world. Our team is excited to take risks, explore new ways to tell meaningful stories and build tools to help journalism succeed.
 
 Occasionally we'll geek out to others interested in journalism and computer science about a JavaScript library we're loving or a workflow tool we've built, but for the most part, we'll keep our posts squarely centered on what most UCLA students and Westwood residents find important.
 
-<header class="about-subheader"> <h2>How we're giving back</h2> </header>
+### _How we're giving back_
 
 The Daily Bruin is a community newspaper, and we plan on giving back to the community – both to our own Westwood community and to larger communities of news organizations and individuals interested in data for the public good. That's why we're making all the code on this blog available under open-source licenses on [GitHub](https://github.com/{{ site.github_username }}) and all the datasets we collect and parse [available to everyone](https://github.com/dailybruin/the-stack/tree/master/datasets/).
 
@@ -38,7 +38,7 @@ Apply to the [Stack]({{ site.application }}).
 
 ---
 
-<header class="about-subheader"> <h2>Data editors</h2> </header>
+### _Data editors_
 
 The data editor is the person overseeing The Stack. A list of editors by year is below.
 
