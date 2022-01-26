@@ -14,7 +14,7 @@ og_image:
 
 scripts:
   - //d3js.org/d3.v7.min.js
-  # - //d3js.org/d3.v6.min.js
+  - //rawgit.com/jasondavies/d3-cloud/master/build/d3.layout.cloud.js
 
 stylesheets:
   - /css/posts/prof-reviews/style.css
@@ -31,6 +31,8 @@ stylesheets:
   <svg id="stat-svg"></svg>
 </div>
 
+<div id="stats-menu2">
+</div>
 <div>
   <svg id="world-cloud-svg"></svg>
 </div>

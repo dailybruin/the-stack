@@ -314,6 +314,8 @@ const mousemove2 = function(event) {
 const mouseleave2 = function(event,d){ 
   vertical_guide
     .style("opacity",0)
+  percent_text
+    .style("opacity",0)
 }
 
 // static components before/above data
