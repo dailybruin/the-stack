@@ -267,7 +267,7 @@ const mouseover = function(d) {
 }
 const mousemove = function(event,d) {
   // add text
-  let tooltip_text = d.word + "<br><b>Male</b>: " + d.male.toFixed(3) + "%<br><b>Female</b>: " + d.female.toFixed(3) + "%";
+  let tooltip_text = "<b>Male</b>: " + d.male.toFixed(3) + "%<br><b>Female</b>: " + d.female.toFixed(3) + "%";
   tooltip1.html(tooltip_text)
     .style("top", (event.pageY)+"px")
     .style("left",(event.pageX + 15)+"px")
