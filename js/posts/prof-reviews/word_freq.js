@@ -61,9 +61,6 @@ d3.select('#stats-menu')
   });
 
 
-// bold word when hovered, fw 700
-
-
 // clears previous graphics by class (needed since different datasets)
 const clear_graphics = (svg) => {
   // console.log(kept_stat,"." + kept_stat + "-sorted-circle");
@@ -129,9 +126,17 @@ const plot_lines = (svg,xScale,yScale,t,gender="male",stat="male",color="#aa42f5
    .data(data)
    .join(
      enter => enter.append("circle")
-      .on("mouseover", mouseover)
-      .on("mousemove", mousemove)
-      .on("mouseout", mouseleave)
+      .on("mouseover", (event,d) => {
+        mouseover(d);
+        mouseover2(event);
+      })
+      .on("mousemove", (event,d) => {
+        mousemove(event,d);
+        mousemove2(event);
+      })
+      .on("mouseout", (event,d) => {
+        mouseleave(event,d);
+        })
       .attr("class",stat+"-sorted-circle")
       .attr("cx", xScale(0))
       .attr("cy", d => {
@@ -181,7 +186,7 @@ const render_stats = (data,stat="difference_abs",y_label="Word") =>{
   // find max value for x axis
   let max1 = Math.max(...sub_data.map(d => d.male));
   let max2 = Math.max(...sub_data.map(d => d.female));
-  let max = Math.max(max1,max2);
+  let max = Math.max(max1,max2) * 1.1;
   // }
   xScale = d3.scaleLinear()
     .domain([0, max])
@@ -209,9 +214,9 @@ const render_stats = (data,stat="difference_abs",y_label="Word") =>{
       .transition(t)
       .call(yAxis);
 
-  d3.select("g.yaxis").selectAll(".tick text").attr("id", (d,i) => {return d + "-word" });
-  // var texts = d3.selectAll(".tick text").nodes();
-  // console.log('tick text', texts);
+  d3.select("g.yaxis").selectAll(".tick text")
+    .attr("id", (d,i) => {return d + "-word" });
+    // .style("font-weight",400);
 
   stat_svg.select('.ylabel')
       .attr("text-anchor", "middle")
@@ -271,19 +276,22 @@ const mousemove = function(event,d) {
     .attr("r", point_radius * 1.2);
   // bold word
   stat_svg.select('#' + d.word + '-word')
-    .style("font-weight","700");
+    .style("font-weight",700)
+    .style("font-size","17px");
 }
-const mouseleave = function(d) {
+const mouseleave = function(event,d) {
   tooltip1
     .style("opacity", 0);
   d3.select(this)
     .attr("r", point_radius);
   // un-bold word
+  // console.log("unbold?")
   stat_svg.select('#' + d.word + '-word')
-    .style("font-weight","400");
+    .style("font-weight",400)
+    .style("font-size","15px");
 }
 
-const mouseover2 = function(event,d){  
+const mouseover2 = function(event){  
   let mousex = event.pageX;
   vertical_guide
     .style("opacity",1);
@@ -291,7 +299,7 @@ const mouseover2 = function(event,d){
     .style("opacity",1);
 }
 
-const mousemove2 = function(event,d) {
+const mousemove2 = function(event) {
   let mousex = event.pageX;
   // console.log("mousex",mousex);
   vertical_guide
