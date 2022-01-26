@@ -63,6 +63,7 @@ function addRoutes() {
       route.on({
         mouseover: highlightFeature,
         mouseout: resetHighlight,
+        click: clickFeature,
       });
 
       routeArray.push(route);
@@ -74,6 +75,22 @@ function addRoutes() {
       `<span class="selector">${routeNameMap[s]}</span>`
     );
   }
+}
+
+// for mobile: highlight feature on click
+function clickFeature(e) {
+  mymap.eachLayer(function(layer) {
+    if (layer._gpx) {
+      layer.setStyle({
+        color: '#A683EB',
+        opacity: 0.7,
+        weight: 3,
+        lineCap: 'round',
+      });
+      info.update();
+    }
+  });
+  highlightFeature(e);
 }
 
 function highlightFeature(e) {
@@ -109,13 +126,6 @@ function resetHighlight(e) {
     lineCap: 'round',
   });
   info.update();
-}
-
-function onEachFeature(feature, layer) {
-  layer.on({
-    mouseover: highlightFeature,
-    mouseout: resetHighlight,
-  });
 }
 
 addRoutes();
