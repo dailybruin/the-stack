@@ -25,6 +25,8 @@ scripts:
   - //cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js
   - /js/posts/dining-halls/piechart.js
   - /js/posts/dining-halls/busyness-barchart.js
+  - //node_modules/csvtojson/browser/csvtojson.min.js
+  - //cdn.rawgit.com/Keyang/node-csvtojson/d41f44aa/browser/csvtojson.min.js
 
 stylesheets:
   - //cdnjs.cloudflare.com/ajax/libs/c3/0.4.10/c3.min.css
