@@ -9,6 +9,7 @@ group :jekyll_plugins do
     gem "rouge"
     gem "tzinfo"
     gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw]
+    gem "webrick"
     gem "wdm", platforms: [:mingw, :mswin, :x64_mingw]
 end
 

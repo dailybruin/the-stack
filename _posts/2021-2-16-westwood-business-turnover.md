@@ -53,22 +53,27 @@ Before studying the impact of the COVID-19 pandemic on Westwood businesses, it i
 
 [1]: https://thewestwoodvillage.com/directory/ "Westwood Village website"
 
-<div id="container" style="position: relative; width:60vw; margin:0 auto"></div>
+<div class = "chart-container">
+  <div id="container" style="position: relative; width:60vw; margin:0 auto"></div>
+</div>
 
 The map below shows an overview of business closures and openings from 2018 to 2020. Click the clusters to zoom in. You can also click the boxes in the right corner to observe the opened and closed businesses for each year.
 
-<iframe width="100%" height="500" src="../../../../js/posts/westwood-business-turnover/westwood-business-map.html" frameboarder="0" allowfullscreen></iframe>
-
+<div class = "chart-contatiner">
+  <iframe width="100%" height="500" src="../../../../js/posts/westwood-business-turnover/westwood-business-map.html" frameboarder="0" allowfullscreen></iframe>
+</div>
 ## Analysis
 
 In the time plot below, we found that 41 businesses closed in 2020 by the beginning of December. More than half of those businesses first opened after 2015. Are newer businesses more vulnerable to the negative impacts of the COVID-19 pandemic?
 
-<img src="/img/posts/westwood-business/timeline.png" style="width:53vw" class = "center"/>
-
+<div class = chart-container">
+  <img src="/img/posts/westwood-business/timeline.png" style="width:53vw" class = "center"/>
+</div>
 We labeled the businesses first opened before Jan. 1, 2015, as old businesses and those opened after this date as new businesses. We calculated the ratio between the number of closed businesses in 2020 and the number of currently active businesses for both old and new businesses. This ratio is used to reflect the vulnerability of old and new businesses to the economic impacts of the pandemic – the lower the ratio is, the more resistant the business is to the impacts of the COVID-19 pandemic. The result shows that the ratio for new businesses is 0.01143 (23 closed, 2,012 active), which is almost double the value of 0.005097 (19 closed, 3,729 active) for old businesses. Thus, we conclude that the new businesses are more susceptible to the effects of the COVID-19 pandemic.
 
-<img src="/img/posts/westwood-business/barplot.png" style="width:63vw" class = "center"/>
- 
+<div class = "chart-container">
+  <img src="/img/posts/westwood-business/barplot.png" style="width:63vw" class = "center"/>
+</div>
 Compared to 2018 and 2019, there are considerably fewer businesses closed and opened for each month of 2020. On average, 4.6 businesses closed and 14.7 businesses opened monthly in 2020. In 2019, the average numbers of opening and closing businesses per month were 31.8 and 20.7, respectively. In 2018, an average of 37.1 businesses opened and 25 businesses closed each month.
 
 Ian Flores, manager of Sharetea, spoke about business trends from his past experiences of working in Westwood.
@@ -84,9 +89,9 @@ Shehbaz Mattu, the owner of the 7-Eleven store in Westwood, expressed disappoint
 In addition, our data revealed a trend that many businesses open in January and close in December. According to Thomas, there are many possible explanations for this trend, such as that it may be hard to start a process to open a business toward the end of the year.
 
 For further analysis, we dug deeper to explore Westwood business data from the past 20 years. Here, we used the closed- to open-business ratio (ratio between the total number of businesses closed and opened in a specific year) to reflect the well-being of Westwood businesses. The higher the ratio is, the worse off the businesses will in general be. From the graph below, we see that the ratio was highest during 2008 with a value of 0.86. However, the ratio of 2020 was 0.255, which is the lowest of the past 20 years. Using our ratio, we concluded that the Westwood businesses were not hit as bad as they were during the 2008 crisis.
-
-<img src="/img/posts/westwood-business/close-open-ratio.png" style="width:63vw" class = "center"/>
-
+<div class = "chart-container">
+  <img src="/img/posts/westwood-business/close-open-ratio.png" style="width:63vw" class = "center"/>
+</div>
 However, Thomas said he saw the percentage of vacancies go up in 2020.
 
 “About 31% of our ground floor retail spaces are vacant now,” Thomas said, compared to 22% the year before. The difference in the trends between the closed- to open-business ratio and the rate of vacancy may have resulted from the fact that the data we used includes all businesses in Westwood, including independent businesses and those in UCLA, while the data from the association only includes retail spaces in its estimation.
