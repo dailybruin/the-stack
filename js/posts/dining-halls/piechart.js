@@ -43,7 +43,7 @@ const pieOptions = {
             maximumFractionDigits: 2,
           });
           let label = pieData.datasets[tooltipItem.datasetIndex].label;
-          return label + ' ' + value;
+          return ' ' + value;
         },
       }
     }
