@@ -1,69 +1,48 @@
 import { dropdownMenu } from './dropdownMenu.js';
-import { WordCloud } from './d3wordcloud.js';
 
-WordCloud("Hello, World! This is a small cloud for your enjoyment", {
-  width: 250,
-  height: 100,
-  size: () => .3 + Math.random(),
-  rotate: () => (~~(Math.random() * 6) - 3) * 30
-});
+const svg = d3.select("#word-cloud-svg")
+const g = svg.append("g");
+g.append("text")
+  .attr("text","this group is working")
+  .style("fill", "#69b3a2");
 
-// // configuration parameters
-// const W_WIDTH = window.innerWidth, W_HEIGHT = window.innerHeight;
-// const MALE_COLOR = "#4885f7",FEMALE_COLOR = "#f5424b";
-// const top_n_diff = 20;
-// const config = {
-//   "vw": W_WIDTH * 0.75,
-//   "vh": W_HEIGHT * 0.9,
-//   "anim_speed": 3000
-// }
-// const margin = ({top: 50, right: 20, bottom: 40, left: 150});
-// const t = d3.transition().duration(config.anim_speed).ease(d3.easeCubic);
+// var fill = d3.scaleOrdinal(d3.schemeCategory20);
+var data = [
+  {text: "Hello", value:6260},
+  {text: "happy", value:5370},
+  {text: "beautiful", value:2480},
+  {text: "rainbow", value:4350},
+  {text: "unicorn", value:1250},
+  {text: "glitter", value:3140},
+  {text: "happy", value:990},
+  {text: "pie", value:4230}];
 
-// var freq_data, sub_data, adj_data;
+var layout = d3.layout.cloud()
+  .size([400, 300])
+  .words(data)
+  .on("end", draw);
 
-// var layout = cloud()
-//     .size([500, 500])
-//     .words([
-//       "Hello", "world", "normally", "you", "want", "more", "words",
-//       "than", "this"].map(function(d) {
-//       return {text: d, size: 10 + Math.random() * 90, test: "haha"};
-//     }))
-//     .padding(5)
-//     .rotate(function() { return ~~(Math.random() * 2) * 90; })
-//     .font("Impact")
-//     .fontSize(function(d) { return d.size; })
-//     .on("end", draw);
+layout.start()
 
-// layout.start();
+function draw(words) {
+  g
+    .attr("transform", "translate(" + layout.size()[0] / 2 + "," + layout.size()[1] / 2 + ")") // center text
+    .selectAll("text")
+    .data(words)
+    .enter()
+      .append("text") // add text data and set attributes
+        .text((d) => d.text)
+        .style("font-size", (d) => d.size + "px")
+        .style("font-family", (d) => d.font)
+        .attr("text-anchor", "middle")
+        .attr("transform", (d) => "translate(" + [d.x, d.y] + ")rotate(" + d.rotate + ")");
+}
 
-// function draw(words) {
-//   const cloud_svg = d3.select("#word-cloud-svg")
-//   .style("width", '85%')
-//   .style("height", config.vh + 'px')
-//   .attr("font-family", "sans-serif")
-//   .attr("font-size", 10);
-
-//   cloud_svg
-//     .append("g")
-//       .attr("transform", "translate(" + config.vw / 2 + "," + config.vh / 2 + ")")
-//     .selectAll("text")
-//       .data(words)
-//     .enter().append("text")
-//       .style("font-size", function(d) { return d.size + "px"; })
-//       .style("font-family", "Impact")
-//       .attr("text-anchor", "middle")
-//       .attr("transform", function(d) {
-//         return "translate(" + [d.x, d.y] + ")rotate(" + d.rotate + ")";
-//       })
-//       .text(function(d) { return d.text; });
-// }
-
-
-// // load male and female professor frequency data
+// load male and female professor frequency data
 // d3.csv('/datasets/prof-reviews/prof_sentiment.csv')
 // .then(data => {
 //   data.forEach(d => {
+//     console.log("cloud data", data);
 //     d.male = +d.male;
 //     d.female = +d.female;
 //     d.difference_abs = +d.difference_abs;
@@ -76,6 +55,5 @@ WordCloud("Hello, World! This is a small cloud for your enjoyment", {
 //            !not_adj_adv.includes(el.word);
 //   });
 //   var stat = "difference_abs";
-//   console.log("cloud")
 //   render_stats(sub_data,stat);
 // });

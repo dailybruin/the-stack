@@ -99,6 +99,7 @@ const plot_lines = (svg,xScale,yScale,t,gender="male",stat="male",color="#aa42f5
               return gender ==="female" ? yScale(d.word) - point_radius * 3/4: yScale(d.word) + point_radius * 3/4;
             }
           })
+          .attr("pointer-events","none") // testing
           .attr("width", 0)
           .attr("height", point_radius/4)
           .call(enter => enter.transition(t)
@@ -355,7 +356,7 @@ percent_text
 // load male and female professor frequency data
 d3.csv('/datasets/prof-reviews/prof_sentiment.csv')
 .then(data => {
-  console.log(data);
+  console.log('freq_data',data);
   data.forEach(d => {
     d.male = +d.male;
     d.female = +d.female;
