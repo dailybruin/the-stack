@@ -35,18 +35,22 @@ const pieOptions = {
       text: '21-22 Meal Swipes',
       fontSize: 19,
     },
-    tooltip:{
-      callbacks: {
-        label: function (tooltipItem, data) {
-          let value = tooltipItem.label.toLocaleString('en-US', {
-            style: 'percent',
-            maximumFractionDigits: 2,
-          });
-          let label = pieData.datasets[tooltipItem.datasetIndex].label;
-          return ' ' + value;
-        },
-      }
-    }
+    tooltips: {
+			callbacks: {
+				label: function(tooltipItem, data) {
+					var allData = data.datasets[tooltipItem.datasetIndex].data;
+					var tooltipLabel = data.labels[tooltipItem.index]; {
+            console.log(tooltipLabel)}
+					var tooltipData = allData[tooltipItem.index];
+					var total = 0;
+					for (var i in allData) {
+						total += allData[i];
+					}
+					var tooltipPercentage = Math.round((tooltipData / total) * 100);
+					return tooltipLabel + ': ' + tooltipData + ' (' + tooltipPercentage + '%)';
+				}
+			}
+    }  
   }
 }
   
