@@ -22,7 +22,7 @@ stylesheets:
 
 ---
 
-### Comparing Words Between Male and Female Professor Reviews
+### Comparing Individual Words Between Male and Female Professor Reviews
 <!-- <script type="module" src="/js/posts/prof-reviews/require.js"></script> -->
 <script type="module" src="/js/posts/prof-reviews/dropdownMenu.js"></script>
 <script type="module" src="/js/posts/prof-reviews/word_freq.js"></script>

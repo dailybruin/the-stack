@@ -1,34 +1,47 @@
 import { dropdownMenu } from './dropdownMenu.js';
 (function(){
-  // configuration parameters
+  /* configuration parameters */
   const W_WIDTH = window.innerWidth, W_HEIGHT = window.innerHeight;
-  const MALE_COLOR = "#4885f7",FEMALE_COLOR = "#f5424b";
-  const top_n_diff = 20;
   const config = {
-    "vw": W_WIDTH * 0.75,
+    "vw": W_WIDTH * 0.8,
     "vh": W_HEIGHT * 0.9,
     "anim_speed": 3000
   }
   const margin = ({top: 50, right: 20, bottom: 40, left: 150});
   const t = d3.transition().duration(config.anim_speed).ease(d3.easeCubic);
+  const MALE_COLOR = "#4885f7",FEMALE_COLOR = "#f5424b";
+  const top_n_words = 20;
+  const point_radius = 7; // for lollipop chart circles
 
-  // globals
+  /* static elements (only append once) */
   var freq_data, sub_data, adj_data;
   const not_adj_adv = ['give', // verbs
                       'lab','content', 'major', // nouns
                       'basically','weekly']; // neutral adverbs
   const custom_words = []; // add some fun words here
+  const stat_svg = d3.select("#stat-svg-div").append("svg");
+  stat_svg
+    .attr("id","stat-svg")
+    .style("width", '85%')
+    .style("height", config.vh + 'px')
+    .attr("font-family", "sans-serif")
+    .attr("font-size", 10);
+  // axes and labels
+  var xAxisGroup = stat_svg.append("g")
+    .attr("class","xaxis");
+  var yAxisGroup = stat_svg.append("g")
+    .attr("class","yaxis");
+  var xLabel = stat_svg.append("text")
+   .attr("class","xlabel")
+  var yLabel = stat_svg.append("text")
+    .attr("class","ylabel")
   var xScale;
-
-  // element parameterss
-  const point_radius = 7;
-
-
-  // display and select up to top_n words on search
-  const select_words = () => {
-    custom_words.append('test');
-    console.log(custom_words);
-  };
+  // legend
+  stat_svg.append("g").attr("class","legend");
+  stat_svg.select(".legend").append("circle").attr("cx",W_WIDTH * 0.6).attr("cy",W_HEIGHT * 0.7).attr("r", point_radius).style("fill", MALE_COLOR);
+  stat_svg.select(".legend").append("circle").attr("cx",W_WIDTH * 0.6).attr("cy",W_HEIGHT * 0.7+30).attr("r", point_radius).style("fill", FEMALE_COLOR);
+  stat_svg.select(".legend").append("text").attr("x",W_WIDTH * 0.6+20).attr("y",W_HEIGHT * 0.7).text("Male Professors").style("font-size", "15px").attr("alignment-baseline","middle");
+  stat_svg.select(".legend").append("text").attr("x",W_WIDTH * 0.6+20).attr("y",W_HEIGHT * 0.7+30).text("Female Professors").style("font-size", "15px").attr("alignment-baseline","middle");
 
   // dropdown
   const stats = ["Largest Difference","Female Professors","Male Professors","Largest Difference - Adj/Adverbs","Female-Professor - Adj/Adverbs","Male Professor - Adj/Adverbs"]
@@ -132,7 +145,7 @@ import { dropdownMenu } from './dropdownMenu.js';
           mouseover2(event);
         })
         .on("mousemove", (event,d) => {
-          mousemove(event,d);
+          mousemove(event,d,stat);
           mousemove2(event);
         })
         .on("mouseout", (event,d) => {
@@ -174,69 +187,62 @@ import { dropdownMenu } from './dropdownMenu.js';
     const t = d3.transition().duration(config.anim_speed).ease(d3.easeCubic);
     // sort data by selected statistic and slice top n
     data.sort((a, b) => (a[stat] > b[stat]) ? -1 : 1)
-    sub_data = data.slice(0,top_n_diff);
+    sub_data = data.slice(0,top_n_words);
 
-    // svg
-    const stat_svg = d3.select("#stat-svg-div").append("svg");
-    stat_svg
-      .attr("id","stat-svg")
-      .style("width", '85%')
-      .style("height", config.vh + 'px')
-      .attr("font-family", "sans-serif")
-      .attr("font-size", 10);
-
+    // d3.select("#stat-svg-div").select('*').remove(); // clear graphics each time
     // axes, labels, title
-    // find max value for x axis
+    // find new max value for x axis
     let max1 = Math.max(...sub_data.map(d => d.male));
     let max2 = Math.max(...sub_data.map(d => d.female));
     let max = Math.max(max1,max2) * 1.1;
-    // }
     xScale = d3.scaleLinear()
       .domain([0, max])
       .range([margin.left, config.vw - margin.right])
     const xAxis = d3.axisBottom().scale(xScale);
     
-    stat_svg.select('g.xaxis')    
-        .attr("transform", "translate(0," + (config.vh-margin.bottom) + ")")
-        .transition(t)
-        .call(xAxis);
-    stat_svg.select('.xlabel')
-        .attr("text-anchor", "middle")
-        .attr("x", (config.vw+ margin.left)/2 )
-        .attr("y",config.vh)
-        .style("font-size","20px")
-        .text('Percent of All Words');
+    // stat_svg.select('g.xaxis')    
+    xAxisGroup
+      .attr("transform", "translate(0," + (config.vh-margin.bottom) + ")")
+      .transition(t)
+      .call(xAxis);
+    xLabel
+      .attr("text-anchor", "middle")
+      .attr("x", (config.vw+ margin.left)/2 )
+      .attr("y",config.vh)
+      .style("font-size","20px")
+      .text('Percent of All Words');
 
     const yScale = d3.scalePoint()
       .domain(sub_data.map(d => d.word))
       .range([margin.top,config.vh - margin.bottom]); // need to offset bars/circles by margin.top
     const yAxis = d3.axisLeft().scale(yScale);
-    stat_svg.select('g.yaxis')    
-        .attr("transform", "translate("+ (margin.left) + ",0)")
-        .style("font-size","15px")
-        .transition(t)
-        .call(yAxis);
+    yAxisGroup   
+      .attr("transform", "translate("+ (margin.left) + ",0)")
+      .style("font-size","15px")
+      .transition(t)
+      .call(yAxis);
 
+    // assign ID to tick text so can bold on hover
     d3.select("g.yaxis").selectAll(".tick text")
       .attr("id", (d,i) => {return d + "-word" });
-      // .style("font-weight",400);
 
-    stat_svg.select('.ylabel')
-        .attr("text-anchor", "middle")
-        .attr("x", -config.vh/2)
-        .attr("y",margin.top)
-        .attr("transform", "rotate(-90)")
-        .style("font-size","20px")
-        .style("padding-bottom","5px")
-        .text(y_label);
+    yLabel
+      .attr("text-anchor", "middle")
+      .attr("x", -config.vh/2)
+      .attr("y",margin.top)
+      .attr("transform", "rotate(-90)")
+      .style("font-size","20px")
+      .style("padding-bottom","5px")
+      .text(y_label);
 
-    stat_svg.append('text')
+    stat_svg.append("g")
+      .attr("class","text")
       .attr("y",20)
       .style("font-size","25px")
       .html("Word Frequencies for Male and Female Professors");
     
     // plot data
-    // clear existing graphics first
+    // clear other lines from svg first
     clear_graphics(stat_svg)
     
     // if diff, add word,diff in tooltip, keep normal scale
@@ -268,9 +274,15 @@ import { dropdownMenu } from './dropdownMenu.js';
     d3.select(this)
       .attr("r", point_radius * 1.2);
   }
-  const mousemove = function(event,d) {
+  const mousemove = function(event,d,stat) {
     // add text
-    let tooltip_text = "<b>Male</b>: " + d.male.toFixed(3) + "%<br><b>Female</b>: " + d.female.toFixed(3) + "%";
+    let tooltip_text;
+    if (stat == "difference"){
+      tooltip_text = "<b>Diff: </b>" + d.difference_abs.toFixed(3) + "%<br><b>Male</b>: " + d.male.toFixed(3) + "%<br><b>Female</b>: " + d.female.toFixed(3) + "%";
+    }
+    else{
+      tooltip_text = "<b>Male</b>: " + d.male.toFixed(3) + "%<br><b>Female</b>: " + d.female.toFixed(3) + "%";
+    }
     tooltip1.html(tooltip_text)
       .style("top", (event.pageY)+"px")
       .style("left",(event.pageX + 15)+"px")
@@ -322,7 +334,7 @@ import { dropdownMenu } from './dropdownMenu.js';
   }
 
   // static components before/above data
-  const stat_svg = d3.select("#stat-svg");
+  // const stat_svg = d3.select("#stat-svg");
   var overlay_g = stat_svg.append("g").classed("overlay-g",true)
   var overlay_rect = overlay_g.append('rect');
   overlay_rect
@@ -374,20 +386,4 @@ import { dropdownMenu } from './dropdownMenu.js';
     var stat = "difference_abs";
     render_stats(sub_data,stat);
   });
-
-
-  // static components after/below data
-  // legend
-  stat_svg.append("g").attr("class","legend");
-  stat_svg.select(".legend").append("circle").attr("cx",W_WIDTH * 0.6).attr("cy",W_HEIGHT * 0.7).attr("r", point_radius).style("fill", MALE_COLOR);
-  stat_svg.select(".legend").append("circle").attr("cx",W_WIDTH * 0.6).attr("cy",W_HEIGHT * 0.7+30).attr("r", point_radius).style("fill", FEMALE_COLOR);
-  stat_svg.select(".legend").append("text").attr("x",W_WIDTH * 0.6+20).attr("y",W_HEIGHT * 0.7).text("Male Professors").style("font-size", "15px").attr("alignment-baseline","middle");
-  stat_svg.select(".legend").append("text").attr("x",W_WIDTH * 0.6+20).attr("y",W_HEIGHT * 0.7+30).text("Female Professors").style("font-size", "15px").attr("alignment-baseline","middle");
-  // axes groups + labels
-  stat_svg.append("g").attr('class','xaxis');
-  stat_svg.append("g").attr('class','yaxis');
-  stat_svg.append("text")
-    .attr("class", "xlabel");
-  stat_svg.append("text")
-    .attr("class", "ylabel");
 })(); // create and run anonymous fn
