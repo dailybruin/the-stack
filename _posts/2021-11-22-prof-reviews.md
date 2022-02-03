@@ -27,14 +27,15 @@ stylesheets:
 <script type="module" src="/js/posts/prof-reviews/dropdownMenu.js"></script>
 <script type="module" src="/js/posts/prof-reviews/word_freq.js"></script>
 <script type="module" src="/js/posts/prof-reviews/word_cloud.js"></script>
+
 <div id="stats-menu">
 </div>
+
 <div id="stat-svg-div">
-  <svg id="stat-svg"></svg>
 </div>
 
 <div id="stats-menu2">
 </div>
+
 <div id="cloud-svg-div">
-  <svg id="world-cloud-svg"></svg>
 </div>
