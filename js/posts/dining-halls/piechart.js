@@ -1,5 +1,4 @@
 // simple pie chart code imported from chart js
-let ctxPie = document.getElementById('SwipesPieChart')
 const pieData = {
   labels: [
   'The Study',
@@ -27,6 +26,11 @@ const pieData = {
     },
   ],
 };
+//While your function here definitely is a good idea, for something like this that never changes, it's okay to just hard code it
+let total = 503530;
+  // for (let i in allData) {
+  //   total += allData[i];
+  // }
 
 const pieOptions = {
   plugins:{
@@ -35,21 +39,50 @@ const pieOptions = {
       text: '21-22 Meal Swipes',
       fontSize: 19,
     },
-    tooltip:{
-      callbacks: {
-        label: function (tooltipItem, data) {
-          let value = tooltipItem.label.toLocaleString('en-US', {
-            style: 'percent',
-            maximumFractionDigits: 2,
-          });
-          let label = pieData.datasets[tooltipItem.datasetIndex].label;
-          return label + ' ' + value;
-        },
-      }
-    }
+    tooltip: {
+			callbacks: {
+        //tooltipItem is an "object" based on what your mouse hovers over. There are a bunch of values you can choose to access
+          //directly from the tooltipItem. A list of these can be found by console.log(tooltipItem). If one of these matches what you
+          //want, you access it by tooltipItem.item where item is the name of what you want to access
+          //If none of the preset options work, then we can look at custom tooltips by accessing the chart data
+				label: function(tooltipItem, data) {
+          console.log(tooltipItem)
+          
+          //I just consolidated these steps
+					// let allData = tooltipItem.formattedValue; //data.datasets.data[tooltipItem.datasetIndex];
+          //console.log(allData)
+
+          //Here I kept your main idea, but in order to increase the readablility I used what are called stirng literals
+            //String literals are a way to get multi line strings, or string with lots  of variables. 
+            // They are set up using backticks and access varaibles wtih ${} like `string ${variable}`
+					let tooltipLabel = `${tooltipItem.label} : ${tooltipItem.formattedValue}`;
+          console.log(tooltipLabel)
+
+          //Also I moved total outside of this function. Since it doens't ever change, it's better to only have to assign 
+            //the variable once rather than every time the function is run.
+					let tooltipPercentage = Math.round((tooltipItem.parsed / total) * 100);
+          console.log(tooltipPercentage)
+					return `${tooltipLabel} (${tooltipPercentage}%)`;
+				}
+			}
+    }  
   }
 }
-  
+
+let ctxPie = document.getElementById('SwipesPieChart')
+let pieChart = new Chart(ctxPie, {
+  type: 'pie',
+  data: pieData,
+  options: pieOptions
+});
+
+
+
+
+
+
+
+
   // tooltips: {
   //   callbacks: {
   //     label: function (tooltipItem, data) {
@@ -83,11 +116,3 @@ const pieOptions = {
   //     align: 'start',
   //   },
   // },
-
-let pieChart = new Chart(ctxPie, {
-  type: 'pie',
-  data: pieData,
-  options: pieOptions
-});
-
-
