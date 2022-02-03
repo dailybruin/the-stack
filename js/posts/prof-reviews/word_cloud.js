@@ -37,6 +37,11 @@ import { dropdownMenu } from './dropdownMenu.js';
     .style("height", config.vh + 'px')
   var male_layout = d3.layout.cloud();
   var female_layout = d3.layout.cloud();
+  const male_label = m_word_cloud
+    .append("text");
+  const female_label = f_word_cloud
+    .append("text");
+
 
   // dropdown
   const stats = ["Largest Difference","Female Professors","Male Professors",
@@ -84,52 +89,92 @@ import { dropdownMenu } from './dropdownMenu.js';
     // format sub_data into correct format
     console.log("m_data",male_data)
     console.log("f_data",female_data)
-    d3.select("#male-cloud").select("*").remove()
-    d3.select("#female-cloud").select("*").remove()
 
-    // start layouts
+    // stop then start layouts
+    male_layout.stop()
     male_layout
-      .size([config.vw/2,config.vh])
+      .size([config.vw/2,config.vh *  0.9])
       .words(male_data)
+      .font("Impact")
+      .spiral("rectangular")
+      // .rotate(function() { return ~~(Math.random() * 2) * 60; })
       .on("end", draw_m);
     male_layout.start()
     
+    female_layout.stop()
     female_layout
-      .size([config.vw/2,config.vh])
+      .size([config.vw/2,config.vh * 0.9])
       .words(female_data)
+      .font("Impact")
+      .spiral("rectangular")
+      // .rotate(function() { return ~~(Math.random() * 2) * 60; })
       .on("end", draw_f);
     female_layout.start()
   }
 
   // draw male on left, female on right
   function draw_m(words) {
+    const t = d3.transition().duration(config.anim_speed).ease(d3.easeCubic);
     m_word_cloud
-      .attr("transform", "translate(" + male_layout.size()[0] / 2 + "," + male_layout.size()[1] / 2 + ")") // center text
+      .attr("transform", "translate(" + male_layout.size()[0] / 2 + "," + config.vh / 2 + ")") // center text
       .selectAll("text")
       .data(words) // add word data
-      .enter()
-        .append("text") // add text data for each word and set attributes
-          .text((d) => d.text)
-          .style("font-size", (d) => d.size + "px")
-          .style("font-family", (d) => d.font)
-          .style("fill", MALE_COLOR)
-          .attr("text-anchor", "middle")
-          .attr("transform", (d) => "translate(" + [d.x, d.y] + ")rotate(" + d.rotate + ")");
+      .join(
+        enter => enter.append("text") // add text data for each word and set attributes
+            .text((d) => d.text)
+            .attr('font-size', 1)
+            .style("fill-opacity",1e-6)
+            .style("font-family", (d) => d.font)
+            .style("fill", MALE_COLOR)
+            .attr("text-anchor", "middle")
+            .call(enter => enter
+              .transition(t)
+                .style("font-size", (d) => d.size + "px")
+                .style("fill-opacity",1)
+                .attr("transform", (d) => "translate(" + [d.x, d.y] + ")rotate(" + d.rotate + ")"),
+        update => update
+          .call(update => update)
+        ),
+        exit => exit
+          .call(exit => exit
+            .transition(t)
+              .style('fill-opacity', 1e-6)
+              .attr('font-size', 1)
+              .remove()
+        )
+      );
   }
 
   function draw_f(words) {
+    const t = d3.transition().duration(config.anim_speed).ease(d3.easeCubic);
     f_word_cloud
-      .attr("transform", "translate(" + (male_layout.size()[0] + female_layout.size()[0] / 2) + "," + female_layout.size()[1] / 2 + ")") // center text
+      .attr("transform", "translate(" + (male_layout.size()[0] + female_layout.size()[0] / 2) + "," + config.vh / 2 + ")") // center text
       .selectAll("text")
       .data(words) // add word data
-      .enter()
-        .append("text") // add text data for each word and set attributes
-          .text((d) => d.text)
-          .style("font-size", (d) => d.size + "px")
-          .style("font-family", (d) => d.font)
-          .style("fill", FEMALE_COLOR)
-          .attr("text-anchor", "middle")
-          .attr("transform", (d) => "translate(" + [d.x, d.y] + ")rotate(" + d.rotate + ")");
+      .join(
+        enter => enter.append("text") // add text data for each word and set attributes
+            .text((d) => d.text)
+            .attr('font-size', 1)
+            .style("fill-opacity",1e-6)
+            .style("font-family", (d) => d.font)
+            .style("fill", FEMALE_COLOR)
+            .attr("text-anchor", "middle")
+            .call(enter => enter
+              .transition(t)
+                .style("font-size", (d) => d.size + "px")
+                .style("fill-opacity",1)
+                .attr("transform", (d) => "translate(" + [d.x, d.y] + ")rotate(" + d.rotate + ")"),
+        update => update
+          .call(update => update)
+        ),
+        exit => exit
+          .call(exit => exit
+            .transition(t)
+              .style('fill-opacity', 1e-6)
+              .attr('font-size', 1)
+              .remove()
+        )
+      );
   }
 
   // load male and female professor frequency data

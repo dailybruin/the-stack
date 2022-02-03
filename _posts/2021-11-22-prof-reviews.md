@@ -36,6 +36,8 @@ stylesheets:
 
 <div id="stats-menu2">
 </div>
+<div id="num-words2">
+</div>
 
 <div id="cloud-svg-div">
 </div>
