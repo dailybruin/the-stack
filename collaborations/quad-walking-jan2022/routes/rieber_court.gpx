@@ -1,0 +1,497 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<gpx xmlns="http://www.topografix.com/GPX/1/1" xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3" xmlns:gpxtpx="http://www.garmin.com/xmlschemas/TrackPointExtension/v1" creator="mapstogpx.com" version="1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd http://www.garmin.com/xmlschemas/GpxExtensions/v3 http://www.garmin.com/xmlschemas/GpxExtensionsv3.xsd http://www.garmin.com/xmlschemas/TrackPointExtension/v1 http://www.garmin.com/xmlschemas/TrackPointExtensionv1.xsd">
+  <metadata>
+    <link href="http://www.mapstogpx.com">
+      <text>Sverrir Sigmundarson</text>
+    </link>
+    <!--desc>Map data ©2022</desc-->
+    <!--copyright author="Google Inc">
+    	<year>2022</year>
+    	<license>https://developers.google.com/maps/terms</license>
+    </copyright-->
+    <!--url>https://www.google.com/maps/dir/Rieber+Hall,+%E2%9B%89+Medical+Plaza+Driveway,+Los+Angeles,+CA/Court+of+Sciences,+Hilgard+Avenue,+Los+Angeles,+CA/@34.0689929,-118.4436668,18.51z/data=!3m1!5s0x80c2bc8851222d53:0xbaac7354b32347d0!4m14!4m13!1m5!1m1!1s0x80c2bc91fe62bdbf:0xd01098acbc011963!2m2!1d-118.4515229!2d34.0716817!1m5!1m1!1s0x80c2bc87d188474b:0x51e2fd433d5394ea!2m2!1d-118.4422474!2d34.0690339!3e2?shorturl=1&hl=en</url-->
+    <time>2022-01-24T22:14:58Z</time>
+  </metadata>
+<trk>
+  <name>Rieber Hall to Court of Sciences</name>
+  <number>1</number>
+  <trkseg>
+  <trkpt lat="34.071773" lon="-118.4513399">
+    <ele>150.0066986084</ele>
+    <name>TP001</name>
+  </trkpt>
+  <trkpt lat="34.07177" lon="-118.45133">
+    <ele>148.98811340332</ele>
+    <name>TP002</name>
+  </trkpt>
+  <trkpt lat="34.07176" lon="-118.45132">
+    <ele>147.00166320801</ele>
+    <name>TP003</name>
+  </trkpt>
+  <trkpt lat="34.07176" lon="-118.45118">
+    <ele>145.2156829834</ele>
+    <name>TP004</name>
+  </trkpt>
+  <trkpt lat="34.07176" lon="-118.45111">
+    <ele>144.31962585449</ele>
+    <name>TP005</name>
+  </trkpt>
+  <trkpt lat="34.0717644" lon="-118.4511093">
+    <ele>144.04507446289</ele>
+    <name>TP006</name>
+  </trkpt>
+  <trkpt lat="34.07158" lon="-118.45111">
+    <ele>144.07325744629</ele>
+    <name>TP007</name>
+  </trkpt>
+  <trkpt lat="34.0714" lon="-118.45111">
+    <ele>144.24604797363</ele>
+    <name>TP008</name>
+  </trkpt>
+  <trkpt lat="34.07128" lon="-118.4511">
+    <ele>144.47085571289</ele>
+    <name>TP009</name>
+  </trkpt>
+  <trkpt lat="34.0712813" lon="-118.451105">
+    <ele>144.39094543457</ele>
+    <name>TP010</name>
+  </trkpt>
+  <trkpt lat="34.0713" lon="-118.45105">
+    <ele>143.78559875488</ele>
+    <name>TP011</name>
+  </trkpt>
+  <trkpt lat="34.07129" lon="-118.45103">
+    <ele>142.43324279785</ele>
+    <name>TP012</name>
+  </trkpt>
+  <trkpt lat="34.07128" lon="-118.45098">
+    <ele>141.49620056152</ele>
+    <name>TP013</name>
+  </trkpt>
+  <trkpt lat="34.07128" lon="-118.45096">
+    <ele>141.42155456543</ele>
+    <name>TP014</name>
+  </trkpt>
+  <trkpt lat="34.07127" lon="-118.45092">
+    <ele>140.7596282959</ele>
+    <name>TP015</name>
+  </trkpt>
+  <trkpt lat="34.07126" lon="-118.4509">
+    <ele>139.5553894043</ele>
+    <name>TP016</name>
+  </trkpt>
+  <trkpt lat="34.07125" lon="-118.45087">
+    <ele>138.26486206055</ele>
+    <name>TP017</name>
+  </trkpt>
+  <trkpt lat="34.07123" lon="-118.45074">
+    <ele>137.63537597656</ele>
+    <name>TP018</name>
+  </trkpt>
+  <trkpt lat="34.0712282" lon="-118.4507406">
+    <ele>136.83958435059</ele>
+    <name>TP019</name>
+  </trkpt>
+  <trkpt lat="34.07126" lon="-118.45065">
+    <ele>136.15789794922</ele>
+    <name>TP020</name>
+  </trkpt>
+  <trkpt lat="34.0713" lon="-118.45052">
+    <ele>135.5933380127</ele>
+    <name>TP021</name>
+  </trkpt>
+  <trkpt lat="34.07132" lon="-118.45044">
+    <ele>134.78564453125</ele>
+    <name>TP022</name>
+  </trkpt>
+  <trkpt lat="34.07134" lon="-118.45035">
+    <ele>134.07650756836</ele>
+    <name>TP023</name>
+  </trkpt>
+  <trkpt lat="34.07135" lon="-118.45029">
+    <ele>133.64637756348</ele>
+    <name>TP024</name>
+  </trkpt>
+  <trkpt lat="34.07135" lon="-118.45019">
+    <ele>133.13928222656</ele>
+    <name>TP025</name>
+  </trkpt>
+  <trkpt lat="34.07135" lon="-118.45007">
+    <ele>132.59658813477</ele>
+    <name>TP026</name>
+  </trkpt>
+  <trkpt lat="34.07134" lon="-118.45002">
+    <ele>131.40002441406</ele>
+    <name>TP027</name>
+  </trkpt>
+  <trkpt lat="34.07134" lon="-118.45">
+    <ele>129.92910766602</ele>
+    <name>TP028</name>
+  </trkpt>
+  <trkpt lat="34.07133" lon="-118.44996">
+    <ele>128.53302001953</ele>
+    <name>TP029</name>
+  </trkpt>
+  <trkpt lat="34.07133" lon="-118.44994">
+    <ele>127.76008605957</ele>
+    <name>TP030</name>
+  </trkpt>
+  <trkpt lat="34.07128" lon="-118.44975">
+    <ele>127.39716339111</ele>
+    <name>TP031</name>
+  </trkpt>
+  <trkpt lat="34.07127" lon="-118.44972">
+    <ele>126.16134643555</ele>
+    <name>TP032</name>
+  </trkpt>
+  <trkpt lat="34.07126" lon="-118.44966">
+    <ele>124.15566253662</ele>
+    <name>TP033</name>
+  </trkpt>
+  <trkpt lat="34.07125" lon="-118.44962">
+    <ele>122.17959594727</ele>
+    <name>TP034</name>
+  </trkpt>
+  <trkpt lat="34.07125" lon="-118.44959">
+    <ele>120.15207672119</ele>
+    <name>TP035</name>
+  </trkpt>
+  <trkpt lat="34.07126" lon="-118.4495">
+    <ele>118.58879852295</ele>
+    <name>TP036</name>
+  </trkpt>
+  <trkpt lat="34.07122" lon="-118.4495">
+    <ele>117.7779083252</ele>
+    <name>TP037</name>
+  </trkpt>
+  <trkpt lat="34.0712195" lon="-118.4494994">
+    <ele>117.56610107422</ele>
+    <name>TP038</name>
+  </trkpt>
+  <trkpt lat="34.07117" lon="-118.44949">
+    <ele>117.62812042236</ele>
+    <name>TP039</name>
+  </trkpt>
+  <trkpt lat="34.0711" lon="-118.44946">
+    <ele>117.80276489258</ele>
+    <name>TP040</name>
+  </trkpt>
+  <trkpt lat="34.07105" lon="-118.44944">
+    <ele>118.08753204346</ele>
+    <name>TP041</name>
+  </trkpt>
+  <trkpt lat="34.07103" lon="-118.44944">
+    <ele>118.3217086792</ele>
+    <name>TP042</name>
+  </trkpt>
+  <trkpt lat="34.0710307" lon="-118.4494353">
+    <ele>118.4656829834</ele>
+    <name>TP043</name>
+  </trkpt>
+  <trkpt lat="34.07101" lon="-118.44935">
+    <ele>118.37467193604</ele>
+    <name>TP044</name>
+  </trkpt>
+  <trkpt lat="34.07101" lon="-118.44934">
+    <ele>117.82292938232</ele>
+    <name>TP045</name>
+  </trkpt>
+  <trkpt lat="34.071" lon="-118.44932">
+    <ele>117.26986694336</ele>
+    <name>TP046</name>
+  </trkpt>
+  <trkpt lat="34.07098" lon="-118.44931">
+    <ele>117.13887023926</ele>
+    <name>TP047</name>
+  </trkpt>
+  <trkpt lat="34.07087" lon="-118.44918">
+    <ele>117.76010894775</ele>
+    <name>TP048</name>
+  </trkpt>
+  <trkpt lat="34.07084" lon="-118.44914">
+    <ele>118.02710723877</ele>
+    <name>TP049</name>
+  </trkpt>
+  <trkpt lat="34.07082" lon="-118.4491">
+    <ele>117.83985900879</ele>
+    <name>TP050</name>
+  </trkpt>
+  <trkpt lat="34.0708" lon="-118.44906">
+    <ele>117.76519775391</ele>
+    <name>TP051</name>
+  </trkpt>
+  <trkpt lat="34.07079" lon="-118.44903">
+    <ele>117.53869628906</ele>
+    <name>TP052</name>
+  </trkpt>
+  <trkpt lat="34.07077" lon="-118.44894">
+    <ele>117.58480834961</ele>
+    <name>TP053</name>
+  </trkpt>
+  <trkpt lat="34.07075" lon="-118.44886">
+    <ele>117.55478668213</ele>
+    <name>TP054</name>
+  </trkpt>
+  <trkpt lat="34.07075" lon="-118.4488">
+    <ele>117.64655303955</ele>
+    <name>TP055</name>
+  </trkpt>
+  <trkpt lat="34.07077" lon="-118.44859">
+    <ele>118.17153167725</ele>
+    <name>TP056</name>
+  </trkpt>
+  <trkpt lat="34.0708" lon="-118.44844">
+    <ele>118.68843078613</ele>
+    <name>TP057</name>
+  </trkpt>
+  <trkpt lat="34.07083" lon="-118.44834">
+    <ele>118.91737365723</ele>
+    <name>TP058</name>
+  </trkpt>
+  <trkpt lat="34.07086" lon="-118.44827">
+    <ele>118.22133636475</ele>
+    <name>TP059</name>
+  </trkpt>
+  <trkpt lat="34.0709" lon="-118.44818">
+    <ele>117.71952056885</ele>
+    <name>TP060</name>
+  </trkpt>
+  <trkpt lat="34.07092" lon="-118.44813">
+    <ele>117.59202575684</ele>
+    <name>TP061</name>
+  </trkpt>
+  <trkpt lat="34.07095" lon="-118.44806">
+    <ele>117.70631408691</ele>
+    <name>TP062</name>
+  </trkpt>
+  <trkpt lat="34.07097" lon="-118.44799">
+    <ele>117.82873535156</ele>
+    <name>TP063</name>
+  </trkpt>
+  <trkpt lat="34.07099" lon="-118.44793">
+    <ele>117.95369720459</ele>
+    <name>TP064</name>
+  </trkpt>
+  <trkpt lat="34.071" lon="-118.44784">
+    <ele>118.12048339844</ele>
+    <name>TP065</name>
+  </trkpt>
+  <trkpt lat="34.07099" lon="-118.44763">
+    <ele>118.46572113037</ele>
+    <name>TP066</name>
+  </trkpt>
+  <trkpt lat="34.07099" lon="-118.4475">
+    <ele>118.97694396973</ele>
+    <name>TP067</name>
+  </trkpt>
+  <trkpt lat="34.07097" lon="-118.44744">
+    <ele>119.25525665283</ele>
+    <name>TP068</name>
+  </trkpt>
+  <trkpt lat="34.07096" lon="-118.44739">
+    <ele>118.99898529053</ele>
+    <name>TP069</name>
+  </trkpt>
+  <trkpt lat="34.07095" lon="-118.44728">
+    <ele>118.14126586914</ele>
+    <name>TP070</name>
+  </trkpt>
+  <trkpt lat="34.07095" lon="-118.44708">
+    <ele>118.11500549316</ele>
+    <name>TP071</name>
+  </trkpt>
+  <trkpt lat="34.07095" lon="-118.44707">
+    <ele>118.62629699707</ele>
+    <name>TP072</name>
+  </trkpt>
+  <trkpt lat="34.07094" lon="-118.44685">
+    <ele>118.919090271</ele>
+    <name>TP073</name>
+  </trkpt>
+  <trkpt lat="34.07095" lon="-118.44646">
+    <ele>119.33203125</ele>
+    <name>TP074</name>
+  </trkpt>
+  <trkpt lat="34.07095" lon="-118.44634">
+    <ele>120.04160308838</ele>
+    <name>TP075</name>
+  </trkpt>
+  <trkpt lat="34.07096" lon="-118.44622">
+    <ele>120.94423675537</ele>
+    <name>TP076</name>
+  </trkpt>
+  <trkpt lat="34.07098" lon="-118.44616">
+    <ele>121.68096923828</ele>
+    <name>TP077</name>
+  </trkpt>
+  <trkpt lat="34.07099" lon="-118.44612">
+    <ele>122.50744628906</ele>
+    <name>TP078</name>
+  </trkpt>
+  <trkpt lat="34.07101" lon="-118.44608">
+    <ele>123.95683288574</ele>
+    <name>TP079</name>
+  </trkpt>
+  <trkpt lat="34.071" lon="-118.4454">
+    <ele>124.81407928467</ele>
+    <name>TP080</name>
+  </trkpt>
+  <trkpt lat="34.07099" lon="-118.44497">
+    <ele>124.86054229736</ele>
+    <name>TP081</name>
+  </trkpt>
+  <trkpt lat="34.07098" lon="-118.44477">
+    <ele>124.80640411377</ele>
+    <name>TP082</name>
+  </trkpt>
+  <trkpt lat="34.07098" lon="-118.44455">
+    <ele>125.06100463867</ele>
+    <name>TP083</name>
+  </trkpt>
+  <trkpt lat="34.07097" lon="-118.44445">
+    <ele>126.20799255371</ele>
+    <name>TP084</name>
+  </trkpt>
+  <trkpt lat="34.07096" lon="-118.44423">
+    <ele>127.78877258301</ele>
+    <name>TP085</name>
+  </trkpt>
+  <trkpt lat="34.07096" lon="-118.44403">
+    <ele>128.91897583008</ele>
+    <name>TP086</name>
+  </trkpt>
+  <trkpt lat="34.07096" lon="-118.44381">
+    <ele>129.79737854004</ele>
+    <name>TP087</name>
+  </trkpt>
+  <trkpt lat="34.07096" lon="-118.44363">
+    <ele>130.25425720215</ele>
+    <name>TP088</name>
+  </trkpt>
+  <trkpt lat="34.0709623" lon="-118.4436255">
+    <ele>131.33592224121</ele>
+    <name>TP089</name>
+  </trkpt>
+  <trkpt lat="34.0709" lon="-118.44363">
+    <ele>132.7511138916</ele>
+    <name>TP090</name>
+  </trkpt>
+  <trkpt lat="34.07072" lon="-118.44362">
+    <ele>132.70812988281</ele>
+    <name>TP091</name>
+  </trkpt>
+  <trkpt lat="34.0707153" lon="-118.4436245">
+    <ele>132.29054260254</ele>
+    <name>TP092</name>
+  </trkpt>
+  <trkpt lat="34.07072" lon="-118.44332">
+    <ele>131.92362976074</ele>
+    <name>TP093</name>
+  </trkpt>
+  <trkpt lat="34.07072" lon="-118.44313">
+    <ele>131.84300231934</ele>
+    <name>TP094</name>
+  </trkpt>
+  <trkpt lat="34.0707177" lon="-118.443133">
+    <ele>132.04438781738</ele>
+    <name>TP095</name>
+  </trkpt>
+  <trkpt lat="34.07054" lon="-118.44313">
+    <ele>131.86918640137</ele>
+    <name>TP096</name>
+  </trkpt>
+  <trkpt lat="34.07036" lon="-118.44313">
+    <ele>132.1248626709</ele>
+    <name>TP097</name>
+  </trkpt>
+  <trkpt lat="34.07015" lon="-118.44313">
+    <ele>132.5662689209</ele>
+    <name>TP098</name>
+  </trkpt>
+  <trkpt lat="34.0701515" lon="-118.4431256">
+    <ele>132.8063659668</ele>
+    <name>TP099</name>
+  </trkpt>
+  <trkpt lat="34.07005" lon="-118.44295">
+    <ele>133.08065795898</ele>
+    <name>TP100</name>
+  </trkpt>
+  <trkpt lat="34.06995" lon="-118.44277">
+    <ele>133.36390686035</ele>
+    <name>TP101</name>
+  </trkpt>
+  <trkpt lat="34.06993" lon="-118.44272">
+    <ele>133.47569274902</ele>
+    <name>TP102</name>
+  </trkpt>
+  <trkpt lat="34.06985" lon="-118.44265">
+    <ele>134.01008605957</ele>
+    <name>TP103</name>
+  </trkpt>
+  <trkpt lat="34.06985" lon="-118.44244">
+    <ele>134.89930725098</ele>
+    <name>TP104</name>
+  </trkpt>
+  <trkpt lat="34.06985" lon="-118.44233">
+    <ele>135.93742370605</ele>
+    <name>TP105</name>
+  </trkpt>
+  <trkpt lat="34.06985" lon="-118.44229">
+    <ele>136.12377929688</ele>
+    <name>TP106</name>
+  </trkpt>
+  <trkpt lat="34.06986" lon="-118.44226">
+    <ele>136.06980895996</ele>
+    <name>TP107</name>
+  </trkpt>
+  <trkpt lat="34.06987" lon="-118.44221">
+    <ele>135.87675476074</ele>
+    <name>TP108</name>
+  </trkpt>
+  <trkpt lat="34.06988" lon="-118.44218">
+    <ele>135.73648071289</ele>
+    <name>TP109</name>
+  </trkpt>
+  <trkpt lat="34.06992" lon="-118.4421">
+    <ele>135.27119445801</ele>
+    <name>TP110</name>
+  </trkpt>
+  <trkpt lat="34.06993" lon="-118.442">
+    <ele>134.58824157715</ele>
+    <name>TP111</name>
+  </trkpt>
+  <trkpt lat="34.0699301" lon="-118.4419976">
+    <ele>133.89916992188</ele>
+    <name>TP112</name>
+  </trkpt>
+  <trkpt lat="34.06941" lon="-118.442">
+    <ele>133.34791564941</ele>
+    <name>TP113</name>
+  </trkpt>
+  <trkpt lat="34.06922" lon="-118.442">
+    <ele>132.99914550781</ele>
+    <name>TP114</name>
+  </trkpt>
+  <trkpt lat="34.0692157" lon="-118.4419968">
+    <ele>132.88571166992</ele>
+    <name>TP115</name>
+  </trkpt>
+  <trkpt lat="34.06922" lon="-118.44223">
+    <ele>132.89503479004</ele>
+    <name>TP116</name>
+  </trkpt>
+  <trkpt lat="34.0692151" lon="-118.4422341">
+    <ele>133.07109069824</ele>
+    <name>TP117</name>
+  </trkpt>
+  <trkpt lat="34.06903" lon="-118.44223">
+    <ele>133.09634399414</ele>
+    <name>TP118</name>
+  </trkpt>
+  <trkpt lat="34.0690339" lon="-118.4422334">
+    <ele>132.8102722168</ele>
+    <name>TP119</name>
+  </trkpt>
+  </trkseg>
+</trk>
+</gpx>
