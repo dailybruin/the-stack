@@ -1,4 +1,5 @@
-d3.csv('../../../../datasets/dining-halls/theStudy_Sunday.csv').then(makeChart);
+let currentPath = '../../../../datasets/dining-halls/bcafe_Monday.csv';
+d3.csv(currentPath).then(makeChart);
 //console.log('../../../../datasets/dining-halls/theStudy_Sunday.csv');
 console.log('accessed bar chart');
 
@@ -15,25 +16,30 @@ const timeIntervals = ["12:00AM", "12:30AM", "1:00AM", "1:30AM", "2:00AM", "2:30
 // console.log('accessed bar chart')
 
 //Suggestion: You may need to set initial values for the chart to load properly
-let hallValue = 'The Study';
-let dayValue = 'Sunday';
+let hallValue = 'Bruin Café';
+let dayValue = 'Monday';
 
 
 // Drop down to choose a dining hall
 let dining_halls = [
-  "The Study",
+  "Bruin Café",
+  "Bruin Bowl",
   "Bruin Plate",
-  "Bruin Cafe"
+  "De Neve",
+  "Epicuria",
+  "Rendezvous",
+  "The Drey",
+  "The Study at Hedrick"
 ]
 //Drop down to choose a day of the week
 let days = [
-  "Sunday",
   "Monday",
   "Tuesday",
   "Wednesday",
   "Thursday",
   "Friday",
-  "Saturday"
+  "Saturday",
+  "Sunday"
 ]
 
 // let choice = values[0];
@@ -63,15 +69,15 @@ function initDropdown(values, id) {
 //These are currently working, I suggest using them to set the path for the data to import
 d3.select('#Day').on('change', function(){
   dayValue = d3.select(this).property('value');
-  console.log(dayValue)
+  console.log(dayValue);
   //My suggestion for moving forward:
-  //setPath(dayValue,hallValue)
+  setPath(dayValue,hallValue);
 })
 
 d3.select('#Dining-Hall').on('change', function () {
   hallValue = d3.select(this).property('value');
-  console.log(hallValue)
-  //setPath(dayValue, hallValue)
+  console.log(hallValue);
+  setPath(dayValue, hallValue);
 })
 
 //Possible starting value for the path
@@ -83,11 +89,25 @@ function setPath(dayValue, hallValue){
   //Maybe use a switch to choose the path, since the days of the week should display the same way they are listed
     //it may be most efficient to have each case be a dining hall
   switch(hallValue){
-    case 'The Study': 
+    case 'The Study at Hedrick': 
       path = `${path}theStudy_${dayValue}.csv`
       break;
-    //don't forget a default in case someone chooses a file that you don't have
-    //default:
+    case 'Bruin Café':
+      path = `${path}bcafe_${dayValue}.csv`
+      break;
+    case 'Bruin Plate':
+      path = `${path}bplate_${dayValue}.csv`
+      break;
+    case 'De Neve':
+      path = `${path}deNeve_${dayValue}.csv`
+      break;
+    case 'The Drey':
+      path = `${path}drey_${dayValue}.csv`
+      break;
+      //don't forget a default in case someone chooses a file that you don't have
+    default:
+      path = `${path}bplate_Monday.csv`
+      break;
   }
   console.log(path)
   //Call a new function to update the chart
@@ -96,10 +116,54 @@ function setPath(dayValue, hallValue){
 
 function updateData(csvData){
   //find a way to update realValue, and realTimes, then update data
+  realTimes = [];
+  realCount = [];
+  for(let i = 0; i < csvData.length; i++){
+    let time = timeIntervals[csvData[i].IntervalCategory];
+    realTimes.push(time);
+    let swipeCount = csvData[i].count/4;
+    if(swipeCount < 1){
+      swipeCount = 1;
+    }
+    realCount.push(parseInt(swipeCount));
+  }
 
+  let data = {
+    labels: realTimes,
+    datasets: [
+      {data: realCount,
+        label: "Average Semi-Hourly Swipe Usage",
+        backgroundColor: 'blue',
+        borderColor: 'blue',}
+    ],
+  };
   //Finally this is the syntax for updating data in chartJS
   barChart.data = data
+  barChart.options = {
+    plugins:{
+      legend: {
+        display: false,
+      },
+      title: {
+        display: true,
+        text: ("Average Semi-Hourly Traffic at " + hallValue + " on " + dayValue),
+        font:{
+          size : 19,
+        },
+      },
+    },
+    scales: {
+      y: {
+        title: {
+          display: true,
+          text: 'Average Semi-Hourly Swipe Usage',
+        },
+      },
+    },
+  };
   barChart.update()
+  //console.log(hallValue);
+  //console.log(dayValue);
 }
 
 function makeChart(csvData) {
@@ -139,7 +203,7 @@ function makeChart(csvData) {
         },
         title: {
           display: true,
-          text: "Average Semi-Hourly Traffic at The Study at Hedrick on Sunday",
+          text: ("Average Semi-Hourly Traffic at " + hallValue + " on " + dayValue),
           font:{
             size : 19,
           },
