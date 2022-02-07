@@ -76,11 +76,17 @@ import { dropdownMenu } from './dropdownMenu.js';
     selectedOption: stat,
     label: 'Sort by: '
     });
-  
+
   // function to sort data by statistic
   const sort_data = (data,stat,top_n) => {
     data.sort((a, b) => (a[stat] > b[stat]) ? -1 : 1) // sorts descending
     return data.slice(0,top_n);
+  }
+
+  // mouseover functions
+  const mouseover = function(d) {
+    d3.select(this)
+      .attr("font-size", point_radius * 1.2);
   }
 
   // draw both male and female WCs
@@ -141,7 +147,7 @@ import { dropdownMenu } from './dropdownMenu.js';
             .style("font-family", (d) => d.font)
             .style("fill", MALE_COLOR)
             .attr("text-anchor", "middle")
-            .attr("class",d => d.text + "-word")
+            .attr("class",d => d.text + "-word wc-word")
             .call(enter => enter
               .transition(t)
                 .style("font-size", (d) => d.size + "px")
@@ -164,7 +170,15 @@ import { dropdownMenu } from './dropdownMenu.js';
     f_word_cloud
       .attr("transform", "translate(" + (male_layout.size()[0] + female_layout.size()[0] / 2) + "," + config.vh / 2 + ")") // center text
       .selectAll("text")
-      .data(words, d => d) // adding unique ID binds data -> words removed correctly
+      .data(words, d => {
+        if(d==undefined){
+          return('an-undefined-word')
+        }
+        else{
+          // console.log(d, d==undefined, String(d)=='undefined');
+          return(d);
+        }
+      }) // adding unique ID binds data -> words removed correctly
       .join(
         enter => enter.append("text") // add text data for each word and set attributes
             .text((d) => d.text)
@@ -173,7 +187,10 @@ import { dropdownMenu } from './dropdownMenu.js';
             .style("font-family", (d) => d.font)
             .style("fill", FEMALE_COLOR)
             .attr("text-anchor", "middle")
-            .attr("class",d => d.text + "-word")
+            .attr("class",d => d.text + "-word wc-word")
+            // .on("mouseover", mouseover)
+            // .on("mousemove", mousemove)
+            // .on("mouseout", mouseleave)
             .call(enter => enter
               .transition(t)
                 .style("font-size", (d) => d.size + "px")
