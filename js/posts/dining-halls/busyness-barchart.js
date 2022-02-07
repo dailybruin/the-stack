@@ -104,6 +104,15 @@ function setPath(dayValue, hallValue){
     case 'The Drey':
       path = `${path}drey_${dayValue}.csv`
       break;
+    case 'Bruin Bowl':
+      path = `${path}HHDH-Bruin Bowl_${dayValue}.csv`
+      break;
+    case 'Epicuria':
+      path = `${path}HHDH-Covel Dining_${dayValue}.csv`
+      break;
+    case 'Rendezvous':
+      path = `${path}HHDH-Rendezvous_${dayValue}.csv`
+      break;
       //don't forget a default in case someone chooses a file that you don't have
     default:
       path = `${path}bplate_Monday.csv`
