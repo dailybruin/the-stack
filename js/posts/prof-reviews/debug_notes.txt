@@ -1,0 +1,4 @@
+word cloud issues
+- currently, first cloud generated is missing 1 word for both 20 & 30 words; solved: Male/female just does not have that word (value of 0)
+- on second selection, only 1 word generated => smallest (confirmed not an issue with dropdown option, seems to be order issue)
+-- > ODD SELECTIONS OK... EVEN 1 word...

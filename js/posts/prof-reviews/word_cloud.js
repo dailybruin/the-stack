@@ -11,8 +11,10 @@ import { dropdownMenu } from './dropdownMenu.js';
   const margin = ({top: 50, right: 20, bottom: 40, left: 150});
   const t = d3.transition().duration(config.anim_speed).ease(d3.easeCubic);
   const MALE_COLOR = "#4885f7",FEMALE_COLOR = "#f5424b";
-  const top_n_words = 20;
+  const top_n_words = 30;
   const scale_factor = 10000; // for scaling word cloud font size
+
+
 
   /* static elements (only append once) */
   var freq_data, sub_data, adj_data;
@@ -75,39 +77,51 @@ import { dropdownMenu } from './dropdownMenu.js';
     label: 'Sort by: '
     });
   
+  // function to sort data by statistic
+  const sort_data = (data,stat,top_n) => {
+    data.sort((a, b) => (a[stat] > b[stat]) ? -1 : 1) // sorts descending
+    return data.slice(0,top_n);
+  }
+
   // draw both male and female WCs
   const render_stats = (data,stat="difference_abs",y_label="Word") =>{
     // sort data by selected statistic and slice top n
-    data.sort((a, b) => (a[stat] > b[stat]) ? -1 : 1)
-    sub_data = data.slice(0,top_n_words);
-    // if (stat == "difference_abs"){
-    //   stat = "difference";
-    // }
+    sub_data = sort_data(data,stat,top_n_words);
+    // console.log("sliced-data",sub_data);
+
     let male_data = sub_data.map(d => ({text: d.word,value: d.male * scale_factor}))
     let female_data = sub_data.map(d => ({text: d.word,value: d.female * scale_factor}))
 
-    // format sub_data into correct format
-    console.log("m_data",male_data)
-    console.log("f_data",female_data)
+    let mSizeScale = d3.scaleSqrt()
+      .domain([0,d3.max(male_data, d => {return d.value})])
+      .range([0,95]);
 
-    // stop then start layouts
-    male_layout.stop()
+    // console.log("m_data",male_data)
     male_layout
       .size([config.vw/2,config.vh *  0.9])
       .words(male_data)
       .font("Impact")
+      .fontSize(d => mSizeScale(d.value))
       .spiral("rectangular")
-      // .rotate(function() { return ~~(Math.random() * 2) * 60; })
+      .padding(2)
+      // .overflow(true)
+      .rotate(0)
       .on("end", draw_m);
     male_layout.start()
     
-    female_layout.stop()
+    let fSizeScale = d3.scaleSqrt()
+      .domain([0,d3.max(female_data, d => {return d.value})])
+      .range([0,95]); // largest word doesnt fit with 95, try 80?
+    // female_layout.stop() // does this do anything? no idea.
+    // console.log("f_data",female_data)
     female_layout
       .size([config.vw/2,config.vh * 0.9])
       .words(female_data)
       .font("Impact")
+      .fontSize(d => fSizeScale(d.value))
+      .padding(2)
       .spiral("rectangular")
-      // .rotate(function() { return ~~(Math.random() * 2) * 60; })
+      .rotate(0)
       .on("end", draw_f);
     female_layout.start()
   }
@@ -118,15 +132,16 @@ import { dropdownMenu } from './dropdownMenu.js';
     m_word_cloud
       .attr("transform", "translate(" + male_layout.size()[0] / 2 + "," + config.vh / 2 + ")") // center text
       .selectAll("text")
-      .data(words) // add word data
+      .data(words, d => d)
       .join(
         enter => enter.append("text") // add text data for each word and set attributes
             .text((d) => d.text)
-            .attr('font-size', 1)
+            .style('font-size', 1)
             .style("fill-opacity",1e-6)
             .style("font-family", (d) => d.font)
             .style("fill", MALE_COLOR)
             .attr("text-anchor", "middle")
+            .attr("class",d => d.text + "-word")
             .call(enter => enter
               .transition(t)
                 .style("font-size", (d) => d.size + "px")
@@ -144,21 +159,21 @@ import { dropdownMenu } from './dropdownMenu.js';
         )
       );
   }
-
   function draw_f(words) {
     const t = d3.transition().duration(config.anim_speed).ease(d3.easeCubic);
     f_word_cloud
       .attr("transform", "translate(" + (male_layout.size()[0] + female_layout.size()[0] / 2) + "," + config.vh / 2 + ")") // center text
       .selectAll("text")
-      .data(words) // add word data
+      .data(words, d => d) // adding unique ID binds data -> words removed correctly
       .join(
         enter => enter.append("text") // add text data for each word and set attributes
             .text((d) => d.text)
-            .attr('font-size', 1)
+            .style('font-size', 1)
             .style("fill-opacity",1e-6)
             .style("font-family", (d) => d.font)
             .style("fill", FEMALE_COLOR)
             .attr("text-anchor", "middle")
+            .attr("class",d => d.text + "-word")
             .call(enter => enter
               .transition(t)
                 .style("font-size", (d) => d.size + "px")
@@ -185,14 +200,19 @@ import { dropdownMenu } from './dropdownMenu.js';
       d.female = +d.female;
       d.difference_abs = +d.difference_abs;
     });  
-    freq_data = data;
-    sub_data = data;
+    freq_data = data.filter(function (el) {
+      return !not_adj_adv.includes(el.word);
+    });
+    sub_data = data.filter(function (el) {
+      return !not_adj_adv.includes(el.word);
+    });
     adj_data = data.filter(function (el) {
       return (el.POS == "ADJ" ||
              el.POS == "ADV") &&
-             !not_adj_adv.includes(el.word);
+             !not_adj_adv.includes(el.word); // word not in stopwords list
     });
     var stat = "difference_abs";
-    render_stats(sub_data,stat);
+    // console.log("init_stat",stat)
+    onStatClicked(sub_data,stat);
   });
 })();

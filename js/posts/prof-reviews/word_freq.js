@@ -74,7 +74,7 @@ import { dropdownMenu } from './dropdownMenu.js';
     });
 
 
-  // clears previous graphics by class (needed since different datasets)
+  // function to clear previous graphics by class (needed since different datasets)
   const clear_graphics = (svg) => {
     // console.log(kept_stat,"." + kept_stat + "-sorted-circle");
     const all_stats = ["male","female","difference"];
@@ -86,7 +86,7 @@ import { dropdownMenu } from './dropdownMenu.js';
     }
   };
 
-  // function to plot both F/M stats
+  // function to plot both female/male stats
   const plot_lines = (svg,xScale,yScale,t,gender="male",stat="male",color="#aa42f5",data=sub_data) =>{
     if(stat=="difference_abs"){
       stat="difference";
@@ -182,14 +182,18 @@ import { dropdownMenu } from './dropdownMenu.js';
     
   };
 
+  // function to sort data by statistic
+  const sort_data = (data,stat,top_n) => {
+    data.sort((a, b) => (a[stat] > b[stat]) ? -1 : 1) // sorts descending
+    return data.slice(0,top_n);
+  }
+
   // main render function
   const render_stats = (data,stat="difference_abs",y_label="Word") =>{
     const t = d3.transition().duration(config.anim_speed).ease(d3.easeCubic);
     // sort data by selected statistic and slice top n
-    data.sort((a, b) => (a[stat] > b[stat]) ? -1 : 1)
-    sub_data = data.slice(0,top_n_words);
+    sub_data = sort_data(data,stat,top_n_words)
 
-    // d3.select("#stat-svg-div").select('*').remove(); // clear graphics each time
     // axes, labels, title
     // find new max value for x axis
     let max1 = Math.max(...sub_data.map(d => d.male));
@@ -198,9 +202,7 @@ import { dropdownMenu } from './dropdownMenu.js';
     xScale = d3.scaleLinear()
       .domain([0, max])
       .range([margin.left, config.vw - margin.right])
-    const xAxis = d3.axisBottom().scale(xScale);
-    
-    // stat_svg.select('g.xaxis')    
+    const xAxis = d3.axisBottom().scale(xScale);    
     xAxisGroup
       .attr("transform", "translate(0," + (config.vh-margin.bottom) + ")")
       .transition(t)
@@ -221,11 +223,9 @@ import { dropdownMenu } from './dropdownMenu.js';
       .style("font-size","15px")
       .transition(t)
       .call(yAxis);
-
-    // assign ID to tick text so can bold on hover
+    // assign ID to y-axis tick text so can bold on hover
     d3.select("g.yaxis").selectAll(".tick text")
       .attr("id", (d,i) => {return d + "-word" });
-
     yLabel
       .attr("text-anchor", "middle")
       .attr("x", -config.vh/2)
@@ -234,29 +234,18 @@ import { dropdownMenu } from './dropdownMenu.js';
       .style("font-size","20px")
       .style("padding-bottom","5px")
       .text(y_label);
-
+    // title
     stat_svg.append("g")
-      .attr("class","text")
+      .attr("class","text title")
       .attr("y",20)
       .style("font-size","25px")
       .html("Word Frequencies for Male and Female Professors");
-    
-    // plot data
-    // clear other lines from svg first
+  
+    // clear other lines from svg
     clear_graphics(stat_svg)
-    
-    // if diff, add word,diff in tooltip, keep normal scale
-    // console.log("stat here",stat)
-    if(stat=="difference_abs"){
-      plot_lines(stat_svg,xScale,yScale,t,"male",stat,MALE_COLOR,sub_data); // plot male
-      plot_lines(stat_svg,xScale,yScale,t,"female",stat,FEMALE_COLOR,sub_data); // plot female
-    }
-    // else only word,male and female tooltip
-    else{
-      // console.log('s',stat)
-      plot_lines(stat_svg,xScale,yScale,t,"male",stat,MALE_COLOR,sub_data); // plot male
-      plot_lines(stat_svg,xScale,yScale,t,"female",stat,FEMALE_COLOR,sub_data); // plot female
-    };
+    // then plot data
+    plot_lines(stat_svg,xScale,yScale,t,"male",stat,MALE_COLOR,sub_data); // plot male
+    plot_lines(stat_svg,xScale,yScale,t,"female",stat,FEMALE_COLOR,sub_data); // plot female
   };
 
 
@@ -313,7 +302,6 @@ import { dropdownMenu } from './dropdownMenu.js';
     percent_text
       .style("opacity",1);
   }
-
   const mousemove2 = function(event) {
     let mousex = event.pageX;
     // console.log("mousex",mousex);
@@ -325,7 +313,6 @@ import { dropdownMenu } from './dropdownMenu.js';
       .attr("x", mousex-15)
       .attr("y", config.vh - margin.bottom * 1.5);
   }
-
   const mouseleave2 = function(event,d){ 
     vertical_guide
       .style("opacity",0)
@@ -370,14 +357,18 @@ import { dropdownMenu } from './dropdownMenu.js';
   // load male and female professor frequency data
   d3.csv('/datasets/prof-reviews/prof_sentiment.csv')
   .then(data => {
-    console.log('freq_data',data);
+    // console.log('freq_data',data);
     data.forEach(d => {
       d.male = +d.male;
       d.female = +d.female;
       d.difference_abs = +d.difference_abs;
     });  
-    freq_data = data;
-    sub_data = data;
+    freq_data = data.filter(function (el) {
+      return !not_adj_adv.includes(el.word);
+    });
+    sub_data = data.filter(function (el) {
+      return !not_adj_adv.includes(el.word);
+    });
     adj_data = data.filter(function (el) {
       return (el.POS == "ADJ" ||
             el.POS == "ADV") &&
