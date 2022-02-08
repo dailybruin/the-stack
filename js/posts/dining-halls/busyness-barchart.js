@@ -6,6 +6,7 @@ console.log('accessed bar chart');
 //variables to make and update the chart
 let realTimes = [];
 let realCount = [];
+let colorGradient = [];
 let barChart;
 const timeIntervals = ["12:00AM", "12:30AM", "1:00AM", "1:30AM", "2:00AM", "2:30AM", "3:00AM", "3:30AM", "4:00AM", 
   "4:30AM", "5:00AM", "5:30AM", "6:00AM", "6:30AM", "7:00AM", "7:30AM", "8:00AM", "8:30AM", "9:00AM", "9:30AM",
@@ -137,13 +138,29 @@ function updateData(csvData){
     realCount.push(parseInt(swipeCount));
   }
 
+  let maxSwipeCount = 0;
+  for(let i = 0; i < realCount.length; i++){
+    if(realCount[i] >= maxSwipeCount){
+      maxSwipeCount = realCount[i];
+    }
+  }
+
+  colorGradient = [];
+  for(let i = 0; i < realCount.length; i++){
+    let alpha = realCount[i]/maxSwipeCount;
+    colorGradient.push(`rgba(42,60,106,${alpha})`);
+  }
+
   let data = {
     labels: realTimes,
     datasets: [
       {data: realCount,
         label: "Average Semi-Hourly Swipe Usage",
-        backgroundColor: 'blue',
-        borderColor: 'blue',}
+        backgroundColor: colorGradient,
+        borderColor: 'rgb(42,60,106)',
+        borderSkipped: 'bottom',
+        borderWidth: 2,
+      }
     ],
   };
   //Finally this is the syntax for updating data in chartJS
@@ -187,7 +204,19 @@ function makeChart(csvData) {
       }
       realCount.push(parseInt(swipeCount));
   }
-  
+
+  let maxSwipeCount = 0;
+  for(let i = 0; i < realCount.length; i++){
+    if(realCount[i] >= maxSwipeCount){
+      maxSwipeCount = realCount[i];
+    }
+  }
+
+  for(let i = 0; i < realCount.length; i++){
+    let alpha = realCount[i]/maxSwipeCount;
+    colorGradient.push(`rgba(42,60,106,${alpha})`);
+  }
+
   console.log(realTimes);
   console.log(realCount);
 
@@ -196,8 +225,11 @@ function makeChart(csvData) {
     datasets: [
       {data: realCount,
         label: "Average Semi-Hourly Swipe Usage",
-        backgroundColor: 'blue',
-        borderColor: 'blue',}
+        backgroundColor: colorGradient,
+        borderColor: 'rgb(42,60,106)',
+        borderSkipped: 'bottom',
+        borderWidth: 2,
+      }
     ],
   };
 
