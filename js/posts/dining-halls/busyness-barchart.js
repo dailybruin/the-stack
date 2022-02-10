@@ -1,4 +1,4 @@
-let currentPath = '../../../../datasets/dining-halls/bcafe_Monday.csv';
+let currentPath = '../../../../datasets/dining-halls/Monday.csv';
 d3.csv(currentPath).then(makeChart);
 //console.log('../../../../datasets/dining-halls/theStudy_Sunday.csv');
 console.log('accessed bar chart');
@@ -17,12 +17,13 @@ const timeIntervals = ["12:00AM", "12:30AM", "1:00AM", "1:30AM", "2:00AM", "2:30
 // console.log('accessed bar chart')
 
 //Suggestion: You may need to set initial values for the chart to load properly
-let hallValue = 'Bruin Café';
+let hallValue = 'All Options';
 let dayValue = 'Monday';
 
 
 // Drop down to choose a dining hall
 let dining_halls = [
+  "All Options",
   "Bruin Café",
   "Bruin Bowl",
   "Bruin Plate",
@@ -90,6 +91,9 @@ function setPath(dayValue, hallValue){
   //Maybe use a switch to choose the path, since the days of the week should display the same way they are listed
     //it may be most efficient to have each case be a dining hall
   switch(hallValue){
+    case 'All Options':
+      path `${dayValue}.csv`
+      break;
     case 'The Study at Hedrick': 
       path = `${path}theStudy_${dayValue}.csv`
       break;
