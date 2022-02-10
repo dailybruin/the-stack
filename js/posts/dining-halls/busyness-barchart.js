@@ -92,7 +92,7 @@ function setPath(dayValue, hallValue){
     //it may be most efficient to have each case be a dining hall
   switch(hallValue){
     case 'All Options':
-      path `${dayValue}.csv`
+      path = `${path}${dayValue}.csv`
       break;
     case 'The Study at Hedrick': 
       path = `${path}theStudy_${dayValue}.csv`
@@ -152,7 +152,7 @@ function updateData(csvData){
   colorGradient = [];
   for(let i = 0; i < realCount.length; i++){
     let alpha = realCount[i]/maxSwipeCount;
-    colorGradient.push(`rgba(42,60,106,${alpha})`);
+    colorGradient.push(`rgba(255,131,17,${alpha})`);
   }
 
   let data = {
@@ -161,7 +161,7 @@ function updateData(csvData){
       {data: realCount,
         label: "Average Semi-Hourly Swipe Usage",
         backgroundColor: colorGradient,
-        borderColor: 'rgb(42,60,106)',
+        borderColor: 'rgb(255,131,17)',
         borderSkipped: 'bottom',
         borderWidth: 2,
       }
@@ -218,7 +218,7 @@ function makeChart(csvData) {
 
   for(let i = 0; i < realCount.length; i++){
     let alpha = realCount[i]/maxSwipeCount;
-    colorGradient.push(`rgba(42,60,106,${alpha})`);
+    colorGradient.push(`rgba(255,131,17,${alpha})`);
   }
 
   console.log(realTimes);
@@ -230,7 +230,7 @@ function makeChart(csvData) {
       {data: realCount,
         label: "Average Semi-Hourly Swipe Usage",
         backgroundColor: colorGradient,
-        borderColor: 'rgb(42,60,106)',
+        borderColor: 'rgb(255,131,17)',
         borderSkipped: 'bottom',
         borderWidth: 2,
       }
