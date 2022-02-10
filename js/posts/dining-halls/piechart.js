@@ -27,7 +27,7 @@ const pieData = {
   ],
 };
 //While your function here definitely is a good idea, for something like this that never changes, it's okay to just hard code it
-let total = 503530;
+let total = 603530;
   // for (let i in allData) {
   //   total += allData[i];
   // }

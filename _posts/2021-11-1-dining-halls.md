@@ -35,4 +35,6 @@ piechart:
 <div class = 'pie chart'><canvas id = 'SwipesPieChart'></canvas></div>
 
 barchart:
+<select id="Dining-Hall"></select>
+<select id="Day"></select>
 <div class = 'bar_chart'><canvas id = 'barChart'></canvas></div>
