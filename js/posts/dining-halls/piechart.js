@@ -55,7 +55,7 @@ const pieOptions = {
           //Here I kept your main idea, but in order to increase the readablility I used what are called stirng literals
             //String literals are a way to get multi line strings, or string with lots  of variables. 
             // They are set up using backticks and access varaibles wtih ${} like `string ${variable}`
-					let tooltipLabel = `${tooltipItem.label} : ${tooltipItem.formattedValue}`;
+					let tooltipLabel = `${tooltipItem.label}: ${tooltipItem.formattedValue}`;
           console.log(tooltipLabel)
 
           //Also I moved total outside of this function. Since it doens't ever change, it's better to only have to assign 

@@ -190,6 +190,8 @@ function updateData(csvData){
         },
       },
     },
+    maintainAspectRatio: false,
+    animation: false
   };
   barChart.update()
   //console.log(hallValue);
@@ -262,6 +264,8 @@ function makeChart(csvData) {
           },
         },
       },
+      maintainAspectRatio: false,
+      animations: false,
     },
   });
 }

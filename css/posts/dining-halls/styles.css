@@ -3,3 +3,18 @@
     width : 500px;
     margin : 0 auto; 
 }
+/* #barChart{
+    height: 325px;
+    width: 70%;
+} */
+.bar_chart{
+    /* width: 70%; */
+    height: 500px;
+    margin: auto
+}
+@media only screen and (max-width: 480px){
+    .pie_chart{
+        height: 425px;
+        width: 400px;
+    }
+}
