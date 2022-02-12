@@ -1,6 +1,6 @@
 import { dropdownMenu } from './dropdownMenu.js';
+import { STOPWORDS, MALE_COLOR, FEMALE_COLOR } from './globals.js'
 (function(){
-
   /* configuration parameters */
   const W_WIDTH = window.innerWidth, W_HEIGHT = window.innerHeight;
   const config = {
@@ -10,17 +10,11 @@ import { dropdownMenu } from './dropdownMenu.js';
   }
   const margin = ({top: 50, right: 20, bottom: 40, left: 150});
   const t = d3.transition().duration(config.anim_speed).ease(d3.easeCubic);
-  const MALE_COLOR = "#4885f7",FEMALE_COLOR = "#f5424b";
   const top_n_words = 30;
   const scale_factor = 10000; // for scaling word cloud font size
 
-
-
   /* static elements (only append once) */
   var freq_data, sub_data, adj_data;
-  const not_adj_adv = ['give', // verbs
-                      'lab','content', 'major', // nouns
-                      'basically','weekly']; // neutral adverbs
   const cloud_svg = d3.select("#cloud-svg-div").append("svg");  
   cloud_svg
     .attr("id","word-cloud-svg")
@@ -48,7 +42,7 @@ import { dropdownMenu } from './dropdownMenu.js';
   // dropdown
   const stats = ["Largest Difference","Female Professors","Male Professors",
     "Largest Difference - Adj/Adverbs","Female-Professor - Adj/Adverbs","Male Professor - Adj/Adverbs"]
-  var stat = stats[0]; // the stat to sort words by
+  var stat = stats[1]; // the stat to sort words by
   const onStatClicked = selection => {
     // re-filter data on click
     var stat;
@@ -138,7 +132,16 @@ import { dropdownMenu } from './dropdownMenu.js';
     m_word_cloud
       .attr("transform", "translate(" + male_layout.size()[0] / 2 + "," + config.vh / 2 + ")") // center text
       .selectAll("text")
-      .data(words, d => d)
+      .data(words, d => {
+        if(d==undefined){
+          console.log(d);
+          return('an-undefined-m-word')
+        }
+        else{
+          // console.log(d, d==undefined, String(d)=='undefined');
+          return(d);
+        }
+      })
       .join(
         enter => enter.append("text") // add text data for each word and set attributes
             .text((d) => d.text)
@@ -172,7 +175,8 @@ import { dropdownMenu } from './dropdownMenu.js';
       .selectAll("text")
       .data(words, d => {
         if(d==undefined){
-          return('an-undefined-word')
+          console.log(d);
+          return('an-undefined-f-word')
         }
         else{
           // console.log(d, d==undefined, String(d)=='undefined');
@@ -210,7 +214,7 @@ import { dropdownMenu } from './dropdownMenu.js';
   }
 
   // load male and female professor frequency data
-  d3.csv('/datasets/prof-reviews/prof_sentiment.csv')
+  d3.csv('/datasets/prof-reviews/prof_word_freqs_POS.csv')
   .then(data => {
     data.forEach(d => {
       d.male = +d.male;
@@ -218,18 +222,18 @@ import { dropdownMenu } from './dropdownMenu.js';
       d.difference_abs = +d.difference_abs;
     });  
     freq_data = data.filter(function (el) {
-      return !not_adj_adv.includes(el.word);
+      return !STOPWORDS.includes(el.word);
     });
     sub_data = data.filter(function (el) {
-      return !not_adj_adv.includes(el.word);
+      return !STOPWORDS.includes(el.word);
     });
     adj_data = data.filter(function (el) {
       return (el.POS == "ADJ" ||
              el.POS == "ADV") &&
-             !not_adj_adv.includes(el.word); // word not in stopwords list
+             !STOPWORDS.includes(el.word); // word not in stopwords list
     });
-    var stat = "difference_abs";
-    // console.log("init_stat",stat)
+    var stat = "female";
+    console.log("init_stat",stat)
     onStatClicked(sub_data,stat);
   });
 })();

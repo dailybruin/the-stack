@@ -1,4 +1,6 @@
 import { dropdownMenu } from './dropdownMenu.js';
+import { STOPWORDS, MALE_COLOR, FEMALE_COLOR  } from './globals.js'
+
 (function(){
   /* configuration parameters */
   const W_WIDTH = window.innerWidth, W_HEIGHT = window.innerHeight;
@@ -9,15 +11,15 @@ import { dropdownMenu } from './dropdownMenu.js';
   }
   const margin = ({top: 50, right: 20, bottom: 40, left: 150});
   const t = d3.transition().duration(config.anim_speed).ease(d3.easeCubic);
-  const MALE_COLOR = "#4885f7",FEMALE_COLOR = "#f5424b";
   const top_n_words = 20;
   const point_radius = 7; // for lollipop chart circles
 
   /* static elements (only append once) */
   var freq_data, sub_data, adj_data;
-  const not_adj_adv = ['give', // verbs
-                      'lab','content', 'major', // nouns
-                      'basically','weekly']; // neutral adverbs
+  // STOPWORDS //
+  // const STOPWORDS = ['give', // verbs
+  //                     'lab','content', 'major', // class-related nouns
+  //                     'basically','weekly','honestly']; // neutral adverbs
   const custom_words = []; // add some fun words here
   const stat_svg = d3.select("#stat-svg-div").append("svg");
   stat_svg
@@ -355,7 +357,7 @@ import { dropdownMenu } from './dropdownMenu.js';
     .attr("alignment-baseline", "middle");
 
   // load male and female professor frequency data
-  d3.csv('/datasets/prof-reviews/prof_sentiment.csv')
+  d3.csv('/datasets/prof-reviews/prof_word_freqs_POS.csv')
   .then(data => {
     // console.log('freq_data',data);
     data.forEach(d => {
@@ -364,15 +366,15 @@ import { dropdownMenu } from './dropdownMenu.js';
       d.difference_abs = +d.difference_abs;
     });  
     freq_data = data.filter(function (el) {
-      return !not_adj_adv.includes(el.word);
+      return !STOPWORDS.includes(el.word); 
     });
     sub_data = data.filter(function (el) {
-      return !not_adj_adv.includes(el.word);
+      return !STOPWORDS.includes(el.word);
     });
     adj_data = data.filter(function (el) {
       return (el.POS == "ADJ" ||
             el.POS == "ADV") &&
-            !not_adj_adv.includes(el.word);
+            !STOPWORDS.includes(el.word);
     });
     var stat = "difference_abs";
     render_stats(sub_data,stat);
