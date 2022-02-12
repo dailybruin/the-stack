@@ -1,4 +1,5 @@
 .pie_chart {
-    height: 400px
-
+    height: 525px;
+    width : 500px;
+    margin : 0 auto; 
 }

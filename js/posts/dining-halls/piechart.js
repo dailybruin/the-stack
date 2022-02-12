@@ -62,7 +62,7 @@ const pieOptions = {
             //the variable once rather than every time the function is run.
 					let tooltipPercentage = Math.round((tooltipItem.parsed / total) * 100);
           console.log(tooltipPercentage)
-					return `${tooltipLabel} (${tooltipPercentage}%)`;
+					return `${tooltipLabel} swipes (${tooltipPercentage}%)`;
 				}
 			}
     }  
