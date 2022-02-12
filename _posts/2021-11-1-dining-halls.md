@@ -29,6 +29,7 @@ scripts:
 
 stylesheets:
   - //cdnjs.cloudflare.com/ajax/libs/c3/0.4.10/c3.min.css
+  - /css/posts/dining-halls/styles.css
 ---
 ### Introduction
 UCLA has held the No. 1 spot for the “2021 Best College Food in America” rankings for four years. With a range of options like artisanal sandwiches at The Study at Hedrick, to healthy, curated entrees at Bruin-Plate, UCLA caters to different cultural foods and diets. 
@@ -50,7 +51,7 @@ In contrast, first-year Bassel Lawand’s favorite dining hall is B-Plate becaus
 
 We analyzed how many swipes were used at each dining hall and determined the proportion of swipes at each of them. All the percentages are visualized in the pie chart below.
 
-<div class = 'pie chart'><canvas id = 'SwipesPieChart'></canvas></div>
+<div class = 'pie_chart'><canvas id = 'SwipesPieChart'></canvas></div>
 
 Although The Drey and Bruin Bowl are new additions this year, they are not leading the takeout options in popularity. Additionally, Epicuria also falls behind other dining halls, despite its reopening in fall 2021 after renovations.
 
