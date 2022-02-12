@@ -280,10 +280,20 @@ import { STOPWORDS, MALE_COLOR, FEMALE_COLOR  } from './globals.js'
       .style('color', 'white');
     d3.select(this)
       .attr("r", point_radius * 1.2);
-    // bold word
+    // bold word and color acc. to larger pct
     stat_svg.select('#' + d.word + '-word')
       .style("font-weight",700)
-      .style("font-size","17px");
+      .style("font-size","17px")
+      .style("fill",() => {
+        if(d.male > d.female){
+          return MALE_COLOR;
+        }
+        else{
+          console.log(d.male,d.female);
+          return FEMALE_COLOR;
+        }
+      }
+        );
   }
   const mouseleave = function(event,d) {
     tooltip1
@@ -294,7 +304,8 @@ import { STOPWORDS, MALE_COLOR, FEMALE_COLOR  } from './globals.js'
     // console.log("unbold?")
     stat_svg.select('#' + d.word + '-word')
       .style("font-weight",400)
-      .style("font-size","15px");
+      .style("font-size","15px")
+      .style("fill","#000");
   }
 
   const mouseover2 = function(event){  

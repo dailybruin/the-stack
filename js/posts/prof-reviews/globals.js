@@ -1,8 +1,11 @@
 // should only remove for single words (could be useful with bigrams)
 export const STOPWORDS = [
-    'give', // verbs
-    'lab','content', 'major', // nouns
-    'amazing', 'good', 'super','great', 'best', 'short', 'high', 'real', // non-descript adjectives
+    'give', 'recommend', 'solve', 'learn', 'learned', 'learning', 'participate', 'make', 'knows', 'ask', 'code', 'say', 'improve', 'answer',// verbs
+    'lab','research','content', 'extra', 'credit', 'assignment', 'homework', 'problem', 'problems', 'studies',
+    'readings', 'reader', 'essay', 'draft', 'write','test', 'group', 'work', 'clicker', 'lecturer', 'information', 'student', 'professor', 'professors', // class-related nouns
+    'major', 'physics', 'math', 'calculus', 'chemistry', 'science', 'art', 'philosophy',// subject-related words
+    'end', 'time',// other nouns
+    'amazing', 'good','fine', 'super','great', 'best', 'cool', 'short', 'high', 'real', 'little', // non-descript adjectives
     'basically','weekly','honestly' // filler adverbs
 ]; 
 

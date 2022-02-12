@@ -42,7 +42,7 @@ import { STOPWORDS, MALE_COLOR, FEMALE_COLOR } from './globals.js'
   // dropdown
   const stats = ["Largest Difference","Female Professors","Male Professors",
     "Largest Difference - Adj/Adverbs","Female-Professor - Adj/Adverbs","Male Professor - Adj/Adverbs"]
-  var stat = stats[1]; // the stat to sort words by
+  var stat = stats[0]; // the stat to sort words by
   const onStatClicked = selection => {
     // re-filter data on click
     var stat;
@@ -79,8 +79,21 @@ import { STOPWORDS, MALE_COLOR, FEMALE_COLOR } from './globals.js'
 
   // mouseover functions
   const mouseover = function(d) {
-    d3.select(this)
-      .attr("font-size", point_radius * 1.2);
+    let word_class = d3.select(this).attr("class");
+    let same_words = d3.selectAll("." + word_class);
+    same_words
+      // .transition()
+      // .duration("500")
+      .style("font-size", () => {return (parseInt(this.style.fontSize.split('px')[0]) * 1.2)}); // get font size from this -> mult
+  }
+  const mouseleave = function(d) {
+    let word_class = d3.select(this).attr("class");
+    let same_words = d3.selectAll("." + word_class);
+    same_words
+      //.transition()c
+      // .ease("elastic")
+      // .duration("500")
+      .style("font-size", () => {return (parseInt(this.style.fontSize.split('px')[0]) / 1.2)});
   }
 
   // draw both male and female WCs
@@ -150,7 +163,9 @@ import { STOPWORDS, MALE_COLOR, FEMALE_COLOR } from './globals.js'
             .style("font-family", (d) => d.font)
             .style("fill", MALE_COLOR)
             .attr("text-anchor", "middle")
-            .attr("class",d => d.text + "-word wc-word")
+            .attr("class",d => d.text + "-word")
+            .on("mouseover", mouseover)
+            .on("mouseout", mouseleave)
             .call(enter => enter
               .transition(t)
                 .style("font-size", (d) => d.size + "px")
@@ -191,10 +206,9 @@ import { STOPWORDS, MALE_COLOR, FEMALE_COLOR } from './globals.js'
             .style("font-family", (d) => d.font)
             .style("fill", FEMALE_COLOR)
             .attr("text-anchor", "middle")
-            .attr("class",d => d.text + "-word wc-word")
-            // .on("mouseover", mouseover)
-            // .on("mousemove", mousemove)
-            // .on("mouseout", mouseleave)
+            .attr("class",d => d.text + "-word")
+            .on("mouseover", mouseover)
+            .on("mouseout", mouseleave)
             .call(enter => enter
               .transition(t)
                 .style("font-size", (d) => d.size + "px")
@@ -232,8 +246,7 @@ import { STOPWORDS, MALE_COLOR, FEMALE_COLOR } from './globals.js'
              el.POS == "ADV") &&
              !STOPWORDS.includes(el.word); // word not in stopwords list
     });
-    var stat = "female";
-    console.log("init_stat",stat)
+    var stat = "difference_abs";
     onStatClicked(sub_data,stat);
   });
 })();
