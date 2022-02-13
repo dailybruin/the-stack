@@ -55,6 +55,7 @@ We analyzed how many swipes were used at each dining hall and determined the pro
 <div class = 'pie_chart'><canvas id = 'SwipesPieChart'></canvas></div>
 <div class = 'pie_chart'><canvas id = 'ScaledPieChart'></canvas></div>
 </div>
+<p class = 'caption'>Data for the pie charts was collected from September 24, 2021 to October 17, 2021</p>
 Although The Drey and Bruin Bowl are new additions this year, they are not leading the takeout options in popularity. Additionally, Epicuria also falls behind other dining halls, despite its reopening in fall 2021 after renovations.
 
 About 64% of all swipe data was recorded at the three main sit-down dining halls: Epicuria, De Neve, and B-Plate. De Neve accounted for more than a third of these dining hall swipes. 
