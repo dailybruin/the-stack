@@ -1,7 +1,14 @@
 .pie_chart {
-    height: 525px;
-    width : 500px;
+    height: auto !important;
+    width : 40% !important;
+    display: flex;
     margin : 0 auto; 
+}
+#SwipesPieChart{
+    float: left;
+}
+#ScaledPieChart{
+    float: right;
 }
 /* #barChart{
     height: 325px;

@@ -51,8 +51,10 @@ In contrast, first-year Bassel Lawand’s favorite dining hall is B-Plate becaus
 
 We analyzed how many swipes were used at each dining hall and determined the proportion of swipes at each of them. All the percentages are visualized in the pie chart below.
 
+<div class = 'pieCharts'>
 <div class = 'pie_chart'><canvas id = 'SwipesPieChart'></canvas></div>
-
+<div class = 'pie_chart'><canvas id = 'ScaledPieChart'></canvas></div>
+</div>
 Although The Drey and Bruin Bowl are new additions this year, they are not leading the takeout options in popularity. Additionally, Epicuria also falls behind other dining halls, despite its reopening in fall 2021 after renovations.
 
 About 64% of all swipe data was recorded at the three main sit-down dining halls: Epicuria, De Neve, and B-Plate. De Neve accounted for more than a third of these dining hall swipes. 
