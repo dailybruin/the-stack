@@ -76,10 +76,16 @@ let pieChart = new Chart(ctxPie, {
   options: pieOptions
 });
 
+//scaled data 
 
+hoursdata = [92, 56, 55,40,40, 73, 56, 77]
+scaledData = [];
+for (let i =0; i <data.length; ++i){
+     let scaledPoint = data[i]/hoursdata[i];
+     scaledData.push(scaledPoint)
+}
 
-
-
+console.log(scaledPoint)
 
 
 
