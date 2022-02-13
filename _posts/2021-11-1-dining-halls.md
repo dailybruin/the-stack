@@ -76,7 +76,7 @@ Beckman said that one factor that contributes to long lines may be the labor sho
 The bar chart below compares the average number of swipes in half hour intervals for each dining hall each day. semi-hourly traffic trends modeledmodelled on swipe data for each dining option per day. Note that takeout options accept more than one swipe per person while dining halls only take one so the charts for takeout options do not reflect head count. Use the drop-down menus to change dining options and day of the week. Bruin Cafée, Bruin Bowl and The Drey are only open for the weekdays and do not have data for weekends.
 
 <select id="Dining-Hall"></select>
-<select id="Day"></select>
+<!-- <select id="Day"></select> -->
 <div class = 'bar_chart'><canvas id = 'barChart'></canvas></div>
 
 The busiest meal period for the three dining halls is dinner with traffic that tends to taper off before and after it peaks from 6 p.m. to 7 p.m. Average semi-hourly traffic at peak half hour periods may reach over 300 swipes for the main dining halls. De Neve, the dining hall with the most total swipes has over XXXX swipes during it’s busiest period XXX day at XXX time. between 250 swipes to over 300 swipes/people for B-Plate, 300 to over 350 for De Neve and 300 to over 350 (400 for Sunday) for Epicuria. 
