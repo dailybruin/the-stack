@@ -1,15 +1,16 @@
 //variables to make and update the chart
 let realCount = [];
 let colors = [
-  'rgb(149, 163, 179)',
-  'rgb(130, 9, 51)',
   'rgb(132, 90, 109)',
   'rgb(28, 93, 153)',
-  'rgb(113, 124, 137)',
+  'rgb(152, 149, 114)',
   'rgb(255, 131, 17)',
   'rgb(255, 200, 87)',
-  'rgb(152, 149, 114)',
+  'rgb(130, 9, 51)',
+  'rgb(113, 124, 137)',
+  'rgb(149, 163, 179)',
       ];
+
 let barChart;
 const timeIntervals = ["6:00AM", "6:30AM", "7:00AM", "7:30AM", "8:00AM", "8:30AM", "9:00AM", "9:30AM",
   "10:00AM", "10:30AM", "11:00AM", "11:30AM", "12:00PM", "12:30PM", "1:00PM", "1:30PM", "2:00PM", "2:30PM",  "3:00PM", 
@@ -221,27 +222,8 @@ function updateChart(){
         },
       },
     },
-<<<<<<< HEAD
-    scales: {
-      x:{
-        grid: {
-          display: false
-        },
-      },
-      y: {
-        title: {
-          display: true,
-          text: 'Average Semi-Hourly Swipe Usage',
-        },
-        grid: {
-          display: true
-        },
-      },
-    },
-=======
     maintainAspectRatio: false,
     animation: false
->>>>>>> 45a4948c22768d54d7d005dacd3e0315eb62b7de
   };
   //update the chart
   barChart.update()
@@ -297,43 +279,7 @@ function makeChart() {
   barChart = new Chart(ctx, {
     type: 'line',
     data: data,
-<<<<<<< HEAD
-    options: {
-      plugins:{
-        legend: {
-          display: false,
-        },
-        title: {
-          display: true,
-          text: ("Average Semi-Hourly Traffic at " + hallValue + " on " + dayValue),
-          font:{
-            size : 19,
-          },
-        },
-      },
-      scales: {
-        x:{
-          grid: {
-            display: false
-          },
-        },
-        y: {
-          title: {
-            display: true,
-            text: 'Average Semi-Hourly Swipe Usage',
-          },
-          grid: {
-            display: true
-          },
-        },
-      },
-      animations: {
-
-      }
-    },
-=======
     options: options
->>>>>>> 45a4948c22768d54d7d005dacd3e0315eb62b7de
   });
 }
 /*load first data */

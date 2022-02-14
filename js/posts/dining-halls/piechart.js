@@ -13,14 +13,14 @@ console.log('scaled total', scaled_total)
 
 const pieData = {
   labels: [
-  'The Study',
+  'The Study at Hedrick',
   'Rendezvous',
-  'Bruin Cafe',
+  'Bruin Café',
   'Bruin Bowl',
   'The Drey',
   'De Neve',
   'Epicuria',
-  'B-Plate'],
+  'Bruin Plate'],
   datasets: [
     {
       label: 'Swipes',
@@ -93,14 +93,14 @@ let scaledPieChart = new Chart(ctxScaledPie, {
 
 const scaledData = {
   labels: [
-  'The Study',
+  'The Study at Hedrick',
   'Rendezvous',
-  'Bruin Cafe',
+  'Bruin Café',
   'Bruin Bowl',
   'The Drey',
   'De Neve',
   'Epicuria',
-  'B-Plate'],
+  'Bruin Plate'],
   datasets: [
     {
       label: 'Swipes',
