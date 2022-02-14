@@ -80,8 +80,8 @@ To avoid the lines, some students have taken to asking for wait time on Reddit. 
 
 The bar chart below compares the average number of swipes in half hour intervals for each dining hall each day. Note that students can use more than one swipe at a time at takeout restaurants,  so the charts for takeout options do not reflect head count. Use the drop-down menus to change dining options and day of the week. Bruin Café, Bruin Bowl and The Drey are only open for the weekdays and do not have data for weekends.
 
-<select id="Dining-Hall"></select>
-<!-- <select id="Day"></select> -->
+<!-- <select id="Dining-Hall"></select> -->
+<select id="Day"></select>
 <div class = 'bar_chart'><canvas id = 'barChart'></canvas></div>
 
 The busiest meal period for the three dining halls is dinner, with traffic that tends to taper off before and after it peaks from 6 p.m. to 7 p.m. Average traffic at peak half hour periods may reach over 300 swipes for the main dining halls. De Neve, the dining hall with the most total swipes has over XXXX swipes during it’s busiest period XXX day at XXX time.  
