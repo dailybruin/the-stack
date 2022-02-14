@@ -84,7 +84,8 @@ import { STOPWORDS, MALE_COLOR, FEMALE_COLOR } from './globals.js'
     same_words
       // .transition()
       // .duration("500")
-      .style("font-size", () => {return (parseInt(this.style.fontSize.split('px')[0]) * 1.2)}); // get font size from this -> mult
+      .style("opacity", () => 0.6); // get font size from this -> mult
+      // .style("font-size", () => {return (parseInt(this.style.fontSize.split('px')[0]) * 1.2)}); // get font size from this -> mult
   }
   const mouseleave = function(d) {
     let word_class = d3.select(this).attr("class");
@@ -93,7 +94,8 @@ import { STOPWORDS, MALE_COLOR, FEMALE_COLOR } from './globals.js'
       //.transition()c
       // .ease("elastic")
       // .duration("500")
-      .style("font-size", () => {return (parseInt(this.style.fontSize.split('px')[0]) / 1.2)});
+      .style("opacity", () => 1);
+      // .style("font-size", () => {return (parseInt(this.style.fontSize.split('px')[0]) / 1.2)});
   }
 
   // draw both male and female WCs
