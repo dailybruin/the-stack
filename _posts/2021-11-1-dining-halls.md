@@ -12,9 +12,9 @@ key_takeaways:
   - Residential restaurants account for about 64% of the swipes used for UCLA Housing dining locations at the start of the school year 2021-2022. Quick-service restaurants accounted for the other 36%.
   - At the beginning of the 2021-22 school year, from week 0 to week 3, De Neve, the residential restaurant with the most swipes, recorded 119,835 swipes in 23 days. The quick-service restaurant with the most swipes was The Study at Hedrick which recorded 117,463 swipes during the same period. 
 featured_image:
-  url: 
-  caption: 
-og_image: 
+  url: dining-halls/featured_image.png
+  caption: (Ashley Ko/Daily Bruin Staff)
+og_image: dining-halls/feature_image.png
 
 scripts:
   - //cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.js
