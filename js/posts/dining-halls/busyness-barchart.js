@@ -64,7 +64,7 @@ function initDropdown(values, id) {
     .attr('value', function (d) {
       return d;
     }) // corresponding value returned by the button
-    
+
 }
 
 //On Change Functions
@@ -183,10 +183,18 @@ function updateData(csvData){
       },
     },
     scales: {
+      x:{
+        grid: {
+          display: false
+        },
+      },
       y: {
         title: {
           display: true,
           text: 'Average Semi-Hourly Swipe Usage',
+        },
+        grid: {
+          display: true
         },
       },
     },
@@ -234,7 +242,7 @@ function makeChart(csvData) {
         borderSkipped: 'bottom',
         borderWidth: 2,
       }
-    ],
+    ]
   };
 
   let ctx = document.getElementById('barChart');
@@ -255,13 +263,24 @@ function makeChart(csvData) {
         },
       },
       scales: {
+        x:{
+          grid: {
+            display: false
+          },
+        },
         y: {
           title: {
             display: true,
             text: 'Average Semi-Hourly Swipe Usage',
           },
+          grid: {
+            display: true
+          },
         },
       },
+      animations: {
+
+      }
     },
   });
 }
