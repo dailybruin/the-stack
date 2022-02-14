@@ -1,15 +1,16 @@
 //variables to make and update the chart
 let realCount = [];
 let colors = [
-  'rgb(149, 163, 179)',
-  'rgb(130, 9, 51)',
   'rgb(132, 90, 109)',
   'rgb(28, 93, 153)',
-  'rgb(113, 124, 137)',
+  'rgb(152, 149, 114)',
   'rgb(255, 131, 17)',
   'rgb(255, 200, 87)',
-  'rgb(152, 149, 114)',
+  'rgb(130, 9, 51)',
+  'rgb(113, 124, 137)',
+  'rgb(149, 163, 179)',
       ];
+
 let barChart;
 const timeIntervals = ["6:00AM", "6:30AM", "7:00AM", "7:30AM", "8:00AM", "8:30AM", "9:00AM", "9:30AM",
   "10:00AM", "10:30AM", "11:00AM", "11:30AM", "12:00PM", "12:30PM", "1:00PM", "1:30PM", "2:00PM", "2:30PM",  "3:00PM", 
@@ -71,7 +72,7 @@ function initDropdown(values, id) {
     .attr('value', function (d) {
       return d;
     }) // corresponding value returned by the button
-    
+
 }
 
 //On Change Functions
@@ -270,7 +271,7 @@ function makeChart() {
         borderSkipped: 'bottom',
         borderWidth: 2,
       }
-    ],
+    ]
   };
 
   //make the original chart to be updated as we go
