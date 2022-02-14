@@ -1,29 +1,29 @@
-let currentPath = '../../../../datasets/dining-halls/Monday.csv';
-d3.csv(currentPath).then(makeChart);
-//console.log('../../../../datasets/dining-halls/theStudy_Sunday.csv');
-console.log('accessed bar chart');
-
 //variables to make and update the chart
-let realTimes = [];
 let realCount = [];
-let colorGradient = [];
+let colors = [
+  'rgb(149, 163, 179)',
+  'rgb(130, 9, 51)',
+  'rgb(132, 90, 109)',
+  'rgb(28, 93, 153)',
+  'rgb(113, 124, 137)',
+  'rgb(255, 131, 17)',
+  'rgb(255, 200, 87)',
+  'rgb(152, 149, 114)',
+      ];
 let barChart;
-const timeIntervals = ["12:00AM", "12:30AM", "1:00AM", "1:30AM", "2:00AM", "2:30AM", "3:00AM", "3:30AM", "4:00AM", 
-  "4:30AM", "5:00AM", "5:30AM", "6:00AM", "6:30AM", "7:00AM", "7:30AM", "8:00AM", "8:30AM", "9:00AM", "9:30AM",
+const timeIntervals = ["6:00AM", "6:30AM", "7:00AM", "7:30AM", "8:00AM", "8:30AM", "9:00AM", "9:30AM",
   "10:00AM", "10:30AM", "11:00AM", "11:30AM", "12:00PM", "12:30PM", "1:00PM", "1:30PM", "2:00PM", "2:30PM",  "3:00PM", 
   "3:30PM", "4:00PM", "4:30PM", "5:00PM", "5:30PM", "6:00PM", "6:30PM", "7:00PM", "7:30PM", "8:00PM", "8:30PM", "9:00PM", 
-  "9:30PM", "10:00PM", "10:30PM", "11:00PM", "11:30PM"];
+  "9:30PM", "10:00PM", "10:30PM", "11:00PM", "11:30PM","12:00AM", "12:30AM","1:00AM","1:30AM","2:00AM"];
 
-// console.log('accessed bar chart')
 
 //Suggestion: You may need to set initial values for the chart to load properly
-let hallValue = 'All Options';
+//let hallValue = 'All Options';
 let dayValue = 'Monday';
 
 
-// Drop down to choose a dining hall
+// Real names of dining halls
 let dining_halls = [
-  "All Options",
   "Bruin Café",
   "Bruin Bowl",
   "Bruin Plate",
@@ -32,6 +32,17 @@ let dining_halls = [
   "Rendezvous",
   "The Drey",
   "The Study at Hedrick"
+]
+//names of dining halls in the datasets
+let halls = [
+  'bcafe_',
+  'HHDH-Bruin Bowl_',
+  'bplate_',
+  'deNeve_',
+  'HHDH-Covel Dining_',
+  'HHDH-Rendezvous_',
+  'drey_',
+  'theStudy_'
 ]
 //Drop down to choose a day of the week
 let days = [
@@ -44,12 +55,8 @@ let days = [
   "Sunday"
 ]
 
-// let choice = values[0];
-// console.log(choice)
-// console.log("New choice after button:")
-
 //Makes Dropdown menus
-initDropdown(dining_halls, '#Dining-Hall')
+//initDropdown(dining_halls, '#Dining-Hall')
 initDropdown(days, "#Day")
 
 //Code for init found at https://www.d3-graph-gallery.com/graph/line_select.html
@@ -73,115 +80,148 @@ d3.select('#Day').on('change', function(){
   dayValue = d3.select(this).property('value');
   console.log(dayValue);
   //My suggestion for moving forward:
-  setPath(dayValue,hallValue);
+  updateData(dayValue);
 })
 
-d3.select('#Dining-Hall').on('change', function () {
-  hallValue = d3.select(this).property('value');
-  console.log(hallValue);
-  setPath(dayValue, hallValue);
-})
+// d3.select('#Dining-Hall').on('change', function () {
+//   hallValue = d3.select(this).property('value');
+//   console.log(hallValue);
+//   setPath(hallValue);
+// })
 
 //Possible starting value for the path
 let path = '../../../../datasets/dining-halls/'
 
 //I would use this function to set the path and the call a second function to update the chart
-function setPath(dayValue, hallValue){
-  path = '../../../../datasets/dining-halls/'
+// function setPath(dayValue){
+//   path = '../../../../datasets/dining-halls/'
   //Maybe use a switch to choose the path, since the days of the week should display the same way they are listed
     //it may be most efficient to have each case be a dining hall
-  switch(hallValue){
-    case 'All Options':
-      path = `${path}${dayValue}.csv`
-      break;
-    case 'The Study at Hedrick': 
-      path = `${path}theStudy_${dayValue}.csv`
-      break;
-    case 'Bruin Café':
-      path = `${path}bcafe_${dayValue}.csv`
-      break;
-    case 'Bruin Plate':
-      path = `${path}bplate_${dayValue}.csv`
-      break;
-    case 'De Neve':
-      path = `${path}deNeve_${dayValue}.csv`
-      break;
-    case 'The Drey':
-      path = `${path}drey_${dayValue}.csv`
-      break;
-    case 'Bruin Bowl':
-      path = `${path}HHDH-Bruin Bowl_${dayValue}.csv`
-      break;
-    case 'Epicuria':
-      path = `${path}HHDH-Covel Dining_${dayValue}.csv`
-      break;
-    case 'Rendezvous':
-      path = `${path}HHDH-Rendezvous_${dayValue}.csv`
-      break;
-      //don't forget a default in case someone chooses a file that you don't have
-    default:
-      path = `${path}bplate_Monday.csv`
-      break;
-  }
-  console.log(path)
-  //Call a new function to update the chart
-  d3.csv(path).then(updateData);
-}
+  // switch(hallValue){
+  //   case 'All Options':
+  //     path = `${path}`
+  //     break;
+  //   case 'The Study at Hedrick': 
+  //     path = `${path}`
+  //     break;
+  //   case 'Bruin Café':
+  //     path = `${path}bcafe_`
+  //     break;
+  //   case 'Bruin Plate':
+  //     path = `${path}bplate_`
+  //     break;
+  //   case 'De Neve':
+  //     path = `${path}deNeve_`
+  //     break;
+  //   case 'The Drey':
+//   //     path = `${path}drey_`
+//   //     break;
+//   //   case 'Bruin Bowl':
+//   //     path = `${path}HHDH-Bruin Bowl_`
+//   //     break;
+//   //   case 'Epicuria':
+//   //     path = `${path}HHDH-Covel Dining_`
+//   //     break;
+//   //   case 'Rendezvous':
+//   //     path = `${path}HHDH-Rendezvous_`
+//   //     break;
+//   //     //don't forget a default in case someone chooses a file that you don't have
+//   //   default:
+//   //     path = `${path}bplate_Monday.csv`
+//   //     break;
+//   // }
+//   console.log(path)
+//   //Call a new function to update the chart
+//   updateData(path);
+// }
 
-function updateData(csvData){
-  //find a way to update realValue, and realTimes, then update data
-  realTimes = [];
-  realCount = [];
-  for(let i = 0; i < csvData.length; i++){
-    let time = timeIntervals[csvData[i].IntervalCategory];
-    realTimes.push(time);
-    let swipeCount = csvData[i].count/4;
-    if(swipeCount < 1){
-      swipeCount = 1;
+
+//Store the new data for the chart
+let new_datasets;
+/*set new data for the chart*/
+function updateData(dayValue){
+  
+  // reset new_datasets for each time the chart is changed
+  new_datasets = []
+  
+  //set the start path for import
+  let reset_path = '../../../../datasets/dining-halls/';
+
+  //loop through each dining hall to load data
+  for (let i = 0; i< dining_halls.length; ++i){
+    //set 0s for all data, to fill in no swipe parts
+    let realCount = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
+    let hall = halls[i];
+    //if the hall is closed on the weekend skip it
+    if (dayValue == 'Saturday' || dayValue == 'Sunday'){
+      if (hall === 'bcafe_' || hall === 'drey_' || hall == 'HHDH-Bruin Bowl_'){
+        continue;
+      }
     }
-    realCount.push(parseInt(swipeCount));
-  }
-
-  let maxSwipeCount = 0;
-  for(let i = 0; i < realCount.length; i++){
-    if(realCount[i] >= maxSwipeCount){
-      maxSwipeCount = realCount[i];
+    //set data path
+    path = reset_path + hall + dayValue + '.csv';
+    // load data from path and then collect the data in realCount, then add to new datasets, call updateChart
+    d3.csv(path).then(function(csvData){
+    for(let i = 0; i < csvData.length; i++){
+      // let time = timeIntervals[csvData[i].IntervalCategory];
+      // realTimes.push(time);
+      let swipeCount = csvData[i].count/4;
+      if(swipeCount < 1){
+        swipeCount = 1;
+      }
+      if (csvData[i].IntervalCategory <6){
+        realCount[parseInt(csvData[i].IntervalCategory)+36] = parseInt(swipeCount);
+      }
+      else{
+      realCount[csvData[i].IntervalCategory-12] = parseInt(swipeCount);
+      }
     }
-  }
-
-  colorGradient = [];
-  for(let i = 0; i < realCount.length; i++){
-    let alpha = realCount[i]/maxSwipeCount;
-    colorGradient.push(`rgba(255,131,17,${alpha})`);
-  }
-
-  let data = {
-    labels: realTimes,
-    datasets: [
-      {data: realCount,
-        label: "Average Semi-Hourly Swipe Usage",
-        backgroundColor: colorGradient,
-        borderColor: 'rgb(255,131,17)',
+    }).then(function(){
+      new_datasets.push({
+        data: realCount,
+        label: dining_halls[i],
+        backgroundColor: colors[i],
+        borderColor: colors[i],
         borderSkipped: 'bottom',
         borderWidth: 2,
-      }
-    ],
+      })
+    }).then(updateChart)
+  }
+}
+
+/*push the data into the chart*/
+function updateChart(){
+  //set new data values
+  let data={
+    labels: timeIntervals,
+    datasets: new_datasets
   };
-  //Finally this is the syntax for updating data in chartJS
   barChart.data = data
+ 
+  //set new chart options
   barChart.options = {
+    scales: {
+      y: {
+        title: {
+          display: true,
+          text: 'Average Semi-Hourly Swipe Usage',
+        },
+        max: 450,
+      },
+    },
     plugins:{
       legend: {
-        display: false,
+        display: true,
       },
       title: {
         display: true,
-        text: ("Average Semi-Hourly Traffic at " + hallValue + " on " + dayValue),
+        text: ("Average Traffic Per Half Hour on " + dayValue),
         font:{
           size : 19,
         },
       },
     },
+<<<<<<< HEAD
     scales: {
       x:{
         grid: {
@@ -198,46 +238,53 @@ function updateData(csvData){
         },
       },
     },
+=======
+    maintainAspectRatio: false,
+    animation: false
+>>>>>>> 45a4948c22768d54d7d005dacd3e0315eb62b7de
   };
+  //update the chart
   barChart.update()
-  //console.log(hallValue);
-  //console.log(dayValue);
 }
 
-function makeChart(csvData) {
-  //console.log(csvData);
+//initial options
+let options = {
+  scales: {
+    y: {
+      title: {
+        display: true,
+        text: 'Average Semi-Hourly Swipe Usage',
+      },
+      max: 450,
+    },
+  },
+  plugins:{
+    legend: {
+      display: true,
+    },
+    title: {
+      display: true,
+      text: ("Average Traffic Per Half Hour on Monday"),
+      font:{
+        size : 19,
+      },
+    },
+  },
+  maintainAspectRatio: false,
+  animation: false
+};
 
-  for(let i = 0; i < csvData.length; i++){
-      let time = timeIntervals[csvData[i].IntervalCategory];
-      realTimes.push(time);
-      let swipeCount = csvData[i].count/4;
-      if(swipeCount < 1){
-        swipeCount = 1;
-      }
-      realCount.push(parseInt(swipeCount));
-  }
+/*make a chart to start from*/
+function makeChart() {
+  let realCount = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
 
-  let maxSwipeCount = 0;
-  for(let i = 0; i < realCount.length; i++){
-    if(realCount[i] >= maxSwipeCount){
-      maxSwipeCount = realCount[i];
-    }
-  }
-
-  for(let i = 0; i < realCount.length; i++){
-    let alpha = realCount[i]/maxSwipeCount;
-    colorGradient.push(`rgba(255,131,17,${alpha})`);
-  }
-
-  console.log(realTimes);
-  console.log(realCount);
-
+  //dummy data to make a starter chart to be updated immediately
   let data = {
-    labels: realTimes,
+    labels: timeIntervals,
     datasets: [
       {data: realCount,
         label: "Average Semi-Hourly Swipe Usage",
-        backgroundColor: colorGradient,
+        backgroundColor: 'rgb(255,131,17)',
         borderColor: 'rgb(255,131,17)',
         borderSkipped: 'bottom',
         borderWidth: 2,
@@ -245,10 +292,12 @@ function makeChart(csvData) {
     ]
   };
 
+  //make the original chart to be updated as we go
   let ctx = document.getElementById('barChart');
   barChart = new Chart(ctx, {
-    type: 'bar',
+    type: 'line',
     data: data,
+<<<<<<< HEAD
     options: {
       plugins:{
         legend: {
@@ -282,5 +331,11 @@ function makeChart(csvData) {
 
       }
     },
+=======
+    options: options
+>>>>>>> 45a4948c22768d54d7d005dacd3e0315eb62b7de
   });
 }
+/*load first data */
+makeChart()
+updateData('Monday');

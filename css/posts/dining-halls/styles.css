@@ -1,0 +1,32 @@
+.caption {
+    font-size:smaller;
+    color:gray;
+}
+
+.pie_chart {
+    height: auto !important;
+    width : 40% !important;
+    display: flex;
+    margin : 0 auto; 
+}
+#SwipesPieChart{
+    float: left;
+}
+#ScaledPieChart{
+    float: right;
+}
+/* #barChart{
+    height: 325px;
+    width: 70%;
+} */
+.bar_chart{
+    /* width: 70%; */
+    height: 500px;
+    margin: auto
+}
+@media only screen and (max-width: 480px){
+    .pie_chart{
+        height: 425px;
+        width: 400px;
+    }
+}
