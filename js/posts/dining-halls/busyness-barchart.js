@@ -261,14 +261,11 @@ function updateChart() {
       },
       tooltip:{
         callbacks:{
-          title: function(tooltipItem){
+          label: function(tooltipItem){
             let label = tooltipItem[0].dataset.label;
             let value = tooltipItem[0].raw
             return `${label}: ${value} swipes`
           },
-          label: function(tooltipItem){
-            return tooltipItem.label;
-          }
         }
       }
     },

@@ -32,7 +32,7 @@ stylesheets:
 ---
 
 ### Introduction
- UCLA holds the No. 1 spot for the “2021 Best College Food in America” an annual ranking done by Niche. It has held this honor four times since 2015. (CQ #1) With a range of options like artisanal sandwiches at The Study at Hedrick, to healthy, curated entrees at Bruin Plate, UCLA caters to different tastes and diets. However, some [students](https://dailybruin.com/2022/01/10/muslim-student-association-pushes-for-adequate-halal-dining-options-on-campus) have criticized UCLA for its lack of Halal options.  
+ UCLA holds the No. 1 spot for the “2021 Best College Food in America” an annual ranking done by Niche. It has held this honor four times since 2015. (CQ #1) With a range of options like artisanal sandwiches at The Study at Hedrick, to healthy, curated entrees at Bruin Plate, UCLA caters to different tastes and diets. However, some students have [criticized UCLA for its lack of Halal options](https://dailybruin.com/2022/01/10/muslim-student-association-pushes-for-adequate-halal-dining-options-on-campus).  
 
 
 Although some dining halls like Feast at Rieber and Cafe 1919 have remained closed for the 2021-22 school year, new eateries have opened to satisfy students’ taste buds. (CQ #5) 
@@ -51,6 +51,7 @@ In contrast, first-year biochemistry student, Bassel Lawand, said his (CQ #15) f
 The following chart visualizes the number and proportion of swipes used at each dining hall. 
 
 
+
 <div class = 'pieCharts'>
 <div class = 'pie_chart swipes'><canvas id = 'SwipesPieChart'></canvas></div>
 <div class = 'pie_chart scaled'><canvas id = 'ScaledPieChart'></canvas></div>
@@ -59,11 +60,11 @@ The following chart visualizes the number and proportion of swipes used at each 
 
 Although The Drey and Bruin Bowl brought new options to many Bruins, they recorded the least number of swipes. Additionally, Epicuria’s meal swipes also fall behind other dining halls, despite its renovations.
 
-About 64% of all swipe data was recorded at the three main sit-down dining halls: Epicuria, De Neve, and B-Plate. De Neve accounted for more than a third of these dining hall swipes. 
+About 64% of all swipes were recorded at the three main sit-down dining halls: Epicuria, De Neve, and B-Plate. De Neve accounted for more than a third of these dining hall swipes. 
 
-The other 36% of swipes are divided by the five takeout locations: Rendezvous, The Study, Bruin Café, Bruin Bowl, and The Drey. The Study is currently the only takeout location open for late-night dinner from 9 p.m. to 12 a.m.. Despite this, Rendezvous and The Study recorded almost the same number of swipes. Meanwhile, The Drey and Bruin Bowl were the least popular eateries, each making up 2% of all swipe data.
+The other 36% of swipes were split between the five takeout locations: Rendezvous, The Study, Bruin Café, Bruin Bowl, and The Drey. The Study is currently the only takeout location open for late-night dinner from 9 p.m. to 12 a.m.. Despite this, Rendezvous and The Study recorded almost the same number of swipes. Meanwhile, The Drey and Bruin Bowl were the least popular eateries, each making up only 2% of all swipe transactions.
 
-The scaled pie chart shows how many swipes were used at each location based on the number of hours they were open per week. Although Rendezvous recorded less meal swipes than The Study in this time period, Rendezvous had 582 more swipes per hour than The Study. 
+The scaled pie chart shows how many swipes were used at each location based on the number of hours they were open per week. Although Rendezvous recorded less meal swipes than The Study during weeks 0 through 3 of fall 2021, Rendezvous had 582 more swipes per hour than The Study. 
 
 The scaled pie chart also shows that Epicuria and De Neve recorded a relatively similar rate of meal swipes even though De Neve had 28,733 more swipes during this period.
 
@@ -84,7 +85,8 @@ Beckmann said that a factor that contributes to the staffing shortage is UCLA fa
 
 To avoid the lines, some students have taken to Reddit to ask for wait times. Additionally, UCLA Housing has recently started posting activity levels of dining halls on their menus. Activity levels are calculated by Waitz, an app to show how busy a given location is based on each facility’s Bluetooth and WiFi signals (CQ #17). 
 
-The bar chart below compares the average number of swipes at each dining hall by half hour intervals. Because students can use more than one swipe at a time at takeout restaurants, the charts do not reflect head counts. Use the drop-down menu to change the day of the week. Bruin Café, Bruin Bowl and The Drey are only open for the weekdays and do not have data for weekends.
+The bar chart below compares the average number of swipes used at each dining location over half hour intervals. Because students can use more than one swipe at a time at takeout restaurants, the charts do not reflect head counts. Use the drop-down menu to change the day of the week. Bruin Café, Bruin Bowl and The Drey are only open for the weekdays and do not have data for weekends.
+
 
 
 <!-- <select id="Dining-Hall"></select> -->
@@ -101,9 +103,10 @@ For most takeout options, peak meal periods tend to be for lunch on weekdays. Tr
 Unlike the take-out options, day to day traffic patterns for The Study remain consistently high for lunch and dinner. The Study is only open for breakfast on weekdays and traffic significantly increases at around 8 a.m. and tends to peak by 9 a.m. 
 
 ### Other Food Options
-In response to the high wait times across all dining halls, UCLA incorporated food trucks to attempt to reduce wait lines at other dining halls.  Food trucks are on location every day from 11 a.m. to 11 p.m., but close between lunch and dinner, from 3 p.m. to 5 p.m. (CQ# 9) Additionally, students are able to trade in their meal swipes for ASUCLA restaurant vouchers at their residential hall front desk. The Daily Bruin was unable to acquire data about collected meal swipes at food trucks nor ASUCLA restaurant vouchers. (CQ #10) 
+In response to the high wait times across all dining halls, UCLA UCLA brought food trucks that accept swipes to the Hill to attempt to reduce wait lines at other dining locations.  Food trucks are on location every day from 11 a.m. to 11 p.m., but close between lunch and dinner, from 3 p.m. to 5 p.m. (CQ# 9) Additionally, students are able to trade in their meal swipes for ASUCLA restaurant vouchers at their residential hall front desk. The Daily Bruin was unable to acquire data about either meal swipes exchanged for food trucks or ASUCLA restaurant vouchers. (CQ #10) 
 
 
 
 ### About the Data
-UCLA Housing shared dining hall swipe data from September 24, 2021 to October 17, 2021, for the analysis. Housing recorded all meal transactions during this time along with their times and locations.
+The Stack obtained meal plan swipe data from UCLA Housing for the period of September 24, 2021 to October 17, 2021. The data contained a record of each meal transaction, including the dining location, meal plan type and timestamp.
+
