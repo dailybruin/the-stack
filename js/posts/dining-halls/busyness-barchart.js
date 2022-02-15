@@ -259,15 +259,24 @@ function updateChart() {
           size: 19,
         },
       },
-      tooltip:{
-        callbacks:{
-          label: function(tooltipItem){
-            let label = tooltipItem.dataset.label;
-            let value = tooltipItem.raw
-            return `${label}: ${value} swipes`
+      tooltip: {
+        callbacks: {
+          title: function(tooltipItem) {
+            let startTime = timeIntervals[tooltipItem[0].dataIndex];
+            let nextIndex = tooltipItem[0].dataIndex + 1;
+            let endTime =
+              nextIndex < timeIntervals.length
+                ? timeIntervals[nextIndex]
+                : null;
+            return `${startTime}${endTime && `-${endTime}`}`;
           },
-        }
-      }
+          label: function(tooltipItem) {
+            let label = tooltipItem.dataset.label;
+            let value = tooltipItem.formattedValue;
+            return `${label}: ${value} swipes`;
+          },
+        },
+      },
     },
     maintainAspectRatio: false,
     animation: false,
@@ -298,18 +307,17 @@ let options = {
         size: 19,
       },
     },
-    tooltips:{
-      callbacks:{
-        title: function(tooltipItem){
+    tooltips: {
+      callbacks: {
+        title: function(tooltipItem) {
           //console.log(tooltipItem)
-          return(tooltipItem.label)
+          return tooltipItem.label;
         },
-        label: function(tooltipItem){
+        label: function(tooltipItem) {
           //console.log(tooltipItem)
-        }
-      }
-      
-    }
+        },
+      },
+    },
   },
   maintainAspectRatio: false,
   animation: false,
