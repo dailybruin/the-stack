@@ -181,61 +181,12 @@ function updateData(dayValue) {
   new_datasets = [];
 
   //set the start path for import
-  let reset_path = '../../../../datasets/dining-halls/';
+  let reset_path = '/datasets/dining-halls/';
 
   //loop through each dining hall to load data
   for (let i = 0; i < dining_halls.length; ++i) {
     //set 0s for all data, to fill in no swipe parts
-    let realCount = [
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-    ];
+    let realCount = Array(48).fill(0);
     let hall = halls[i];
     //if the hall is closed on the weekend skip it
     if (dayValue == 'Saturday' || dayValue == 'Sunday') {
@@ -346,32 +297,7 @@ let options = {
 
 /*make a chart to start from*/
 function makeChart() {
-  let realCount = [
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-  ];
+  let realCount = Array(24).fill(0);
 
   //dummy data to make a starter chart to be updated immediately
   let data = {
