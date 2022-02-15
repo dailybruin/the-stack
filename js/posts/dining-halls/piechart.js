@@ -9,7 +9,7 @@ for (let i =0; i <pie_data.length; ++i){
      scaled_total += scaledPoint;
      scaled_Data.push(scaledPoint)
 }
-console.log('scaled total', scaled_total)
+//console.log('scaled total', scaled_total)
 
 const pieData = {
   labels: [
@@ -59,7 +59,7 @@ const pieOptions = {
           //want, you access it by tooltipItem.item where item is the name of what you want to access
           //If none of the preset options work, then we can look at custom tooltips by accessing the chart data
 				label: function(tooltipItem, data) {
-          console.log(tooltipItem)
+          //console.log(tooltipItem)
           
           //I just consolidated these steps
 					// let allData = tooltipItem.formattedValue; //data.datasets.data[tooltipItem.datasetIndex];
@@ -69,12 +69,12 @@ const pieOptions = {
             //String literals are a way to get multi line strings, or string with lots  of variables. 
             // They are set up using backticks and access varaibles wtih ${} like `string ${variable}`
 					let tooltipLabel = `${tooltipItem.label}: ${tooltipItem.formattedValue}`;
-          console.log(tooltipLabel)
+          //console.log(tooltipLabel)
 
           //Also I moved total outside of this function. Since it doens't ever change, it's better to only have to assign 
             //the variable once rather than every time the function is run.
 					let tooltipPercentage = Math.round((tooltipItem.parsed / total) * 100);
-          console.log(tooltipPercentage)
+          //console.log(tooltipPercentage)
 					return `${tooltipLabel} swipes (${tooltipPercentage}%)`;
 				}
 			}
@@ -129,7 +129,7 @@ const scaledOptions = {
   plugins:{
     title: {
       display: true,
-      text: '21-22 Meal Swipes Scaled by Hours Open',
+      text: '21-22 Meal Swipes per Hour',
       fontSize: 19,
     },
     tooltip: {
@@ -139,7 +139,7 @@ const scaledOptions = {
           //want, you access it by tooltipItem.item where item is the name of what you want to access
           //If none of the preset options work, then we can look at custom tooltips by accessing the chart data
 				label: function(tooltipItem, data) {
-          console.log(tooltipItem)
+          //console.log(tooltipItem)
           
           //I just consolidated these steps
 					// let allData = tooltipItem.formattedValue; //data.datasets.data[tooltipItem.datasetIndex];
@@ -148,14 +148,18 @@ const scaledOptions = {
           //Here I kept your main idea, but in order to increase the readablility I used what are called stirng literals
             //String literals are a way to get multi line strings, or string with lots  of variables. 
             // They are set up using backticks and access varaibles wtih ${} like `string ${variable}`
-          let swipeValue = Math.round(tooltipItem.parsed)
+          let swipeValue = Math.round(tooltipItem.parsed).toLocaleString('en-US', {
+            style: 'decimal',
+            //currency: 'USD',
+            maximumFractionDigits: 0,
+          });
 					let tooltipLabel = `${tooltipItem.label}: ${swipeValue}`;
-          console.log(tooltipLabel)
+          //console.log(tooltipLabel)
 
           //Also I moved total outside of this function. Since it doens't ever change, it's better to only have to assign 
             //the variable once rather than every time the function is run.
 					let tooltipPercentage = Math.round((tooltipItem.parsed / scaled_total) * 100);
-          console.log(tooltipPercentage)
+          //console.log(tooltipPercentage)
 					return `${tooltipLabel} swipes per hour (${tooltipPercentage}%)`;
 				}
 			}

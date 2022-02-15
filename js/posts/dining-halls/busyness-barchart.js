@@ -116,7 +116,6 @@ function initDropdown(values, id) {
 //These are currently working, I suggest using them to set the path for the data to import
 d3.select('#Day').on('change', function() {
   dayValue = d3.select(this).property('value');
-  console.log(dayValue);
   //My suggestion for moving forward:
   updateData(dayValue);
 });
@@ -260,6 +259,18 @@ function updateChart() {
           size: 19,
         },
       },
+      tooltip:{
+        callbacks:{
+          title: function(tooltipItem){
+            let label = tooltipItem[0].dataset.label;
+            let value = tooltipItem[0].raw
+            return `${label}: ${value} swipes`
+          },
+          label: function(tooltipItem){
+            return tooltipItem.label;
+          }
+        }
+      }
     },
     maintainAspectRatio: false,
     animation: false,
@@ -290,6 +301,18 @@ let options = {
         size: 19,
       },
     },
+    tooltips:{
+      callbacks:{
+        title: function(tooltipItem){
+          //console.log(tooltipItem)
+          return(tooltipItem.label)
+        },
+        label: function(tooltipItem){
+          //console.log(tooltipItem)
+        }
+      }
+      
+    }
   },
   maintainAspectRatio: false,
   animation: false,
