@@ -262,8 +262,8 @@ function updateChart() {
       tooltip:{
         callbacks:{
           label: function(tooltipItem){
-            let label = tooltipItem[0].dataset.label;
-            let value = tooltipItem[0].raw
+            let label = tooltipItem.dataset.label;
+            let value = tooltipItem.raw
             return `${label}: ${value} swipes`
           },
         }
