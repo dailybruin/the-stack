@@ -9,10 +9,10 @@ import { STOPWORDS, MALE_COLOR, FEMALE_COLOR  } from './globals.js'
     "vh": W_HEIGHT * 0.9,
     "anim_speed": 3000
   }
-  const margin = ({top: 50, right: 20, bottom: 40, left: 150});
+  const margin = ({top: 50, right: 20, bottom: 60, left: 150});
   const t = d3.transition().duration(config.anim_speed).ease(d3.easeCubic);
-  const top_n_words = 20;
-  const point_radius = 7; // for lollipop chart circles
+  let point_radius = 7; // for lollipop chart circles
+  let top_n_words = 20;
 
   /* static elements (only append once) */
   var freq_data, sub_data, adj_data;
@@ -46,28 +46,29 @@ import { STOPWORDS, MALE_COLOR, FEMALE_COLOR  } from './globals.js'
   stat_svg.select(".legend").append("text").attr("x",W_WIDTH * 0.6+20).attr("y",W_HEIGHT * 0.7+30).text("Female Professors").style("font-size", "15px").attr("alignment-baseline","middle");
 
   // dropdown
-  const stats = ["Largest Difference","Female Professors","Male Professors","Largest Difference - Adj/Adverbs","Female-Professor - Adj/Adverbs","Male Professor - Adj/Adverbs"]
+  const stats = ["Largest Difference","Female Professors","Male Professors"]
+  // ,"Largest Difference - Adj/Adverbs","Female-Professor - Adj/Adverbs","Male Professor - Adj/Adverbs"]
   var stat = stats[0]; // the stat to sort words by
   const onStatClicked = selection => {
     var stat;
-    if (selection == stats[0] || selection == stats[3]){
+    if (selection == stats[0]){// || selection == stats[3]){
       stat = "difference_abs";
     }
-    else if (selection == stats[1] || selection == stats[4]){
+    else if (selection == stats[1]){// || selection == stats[4]){
       stat = "female";
     }
-    else if (selection == stats[2] || selection == stats[5]){
+    else if (selection == stats[2]){// || selection == stats[5]){
       stat = "male";
     }
-    if (selection == stats[3] || selection == stats[4] || selection == stats[5]){
-      render_stats(adj_data,stat,"Adjective/Adverb");
-    }
-    else{
-      render_stats(freq_data,stat); // pass in full dataset to rerank top_n
-    }
+    // if (selection == stats[3] || selection == stats[4] || selection == stats[5]){
+    //   render_stats(adj_data,stat,"Adjective/Adverb");
+    // }
+    // else{
+    render_stats(freq_data,stat); // pass in full dataset to rerank top_n
+    // }
     // console.log("selection",selection, " stat",stat);
   };
-  d3.select('#stats-menu')
+  d3.select('#stats-menu1')
     .call(dropdownMenu,{
     options: stats,
     onOptionClicked: onStatClicked,
@@ -75,6 +76,13 @@ import { STOPWORDS, MALE_COLOR, FEMALE_COLOR  } from './globals.js'
     label: 'Sort by: '
     });
 
+  // spinner
+  let num_words_input = document.getElementById('num-words-input1');
+  num_words_input.onchange = () => {
+      top_n_words = num_words_input.value
+      point_radius = Math.min(7 * 20 / top_n_words, 7) // scale circles for number of words
+      onStatClicked(); // call onStatClicked to also determine first dropdown value
+  }  
 
   // function to clear previous graphics by class (needed since different datasets)
   const clear_graphics = (svg) => {
@@ -191,10 +199,10 @@ import { STOPWORDS, MALE_COLOR, FEMALE_COLOR  } from './globals.js'
   }
 
   // main render function
-  const render_stats = (data,stat="difference_abs",y_label="Word") =>{
+  const render_stats = (data,stat="difference_abs",y_label="Word",num_words = top_n_words) =>{
     const t = d3.transition().duration(config.anim_speed).ease(d3.easeCubic);
     // sort data by selected statistic and slice top n
-    sub_data = sort_data(data,stat,top_n_words)
+    sub_data = sort_data(data,stat,num_words)
 
     // axes, labels, title
     // find new max value for x axis
@@ -206,7 +214,7 @@ import { STOPWORDS, MALE_COLOR, FEMALE_COLOR  } from './globals.js'
       .range([margin.left, config.vw - margin.right])
     const xAxis = d3.axisBottom().scale(xScale);    
     xAxisGroup
-      .attr("transform", "translate(0," + (config.vh-margin.bottom) + ")")
+      .attr("transform", "translate(0," + (config.vh - margin.bottom*2/3) + ")")
       .transition(t)
       .call(xAxis);
     xLabel
@@ -238,10 +246,12 @@ import { STOPWORDS, MALE_COLOR, FEMALE_COLOR  } from './globals.js'
       .text(y_label);
     // title
     stat_svg.append("g")
-      .attr("class","text title")
-      .attr("y",20)
+      .append("text")
+      .attr("class","title-text")
+      .attr("x", margin.left)
+      .attr("y", 30)
       .style("font-size","25px")
-      .html("Word Frequencies for Male and Female Professors");
+      .text("Word Frequencies for Male and Female Professors");
   
     // clear other lines from svg
     clear_graphics(stat_svg)
@@ -289,7 +299,7 @@ import { STOPWORDS, MALE_COLOR, FEMALE_COLOR  } from './globals.js'
           return MALE_COLOR;
         }
         else{
-          console.log(d.male,d.female);
+          // console.log(d.male,d.female);
           return FEMALE_COLOR;
         }
       }

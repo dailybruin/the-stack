@@ -10,7 +10,7 @@ import { STOPWORDS, MALE_COLOR, FEMALE_COLOR } from './globals.js'
   }
   const margin = ({top: 50, right: 20, bottom: 40, left: 150});
   const t = d3.transition().duration(config.anim_speed).ease(d3.easeCubic);
-  const top_n_words = 30;
+  let top_n_words = 30;
   const scale_factor = 10000; // for scaling word cloud font size
 
   /* static elements (only append once) */
@@ -20,12 +20,22 @@ import { STOPWORDS, MALE_COLOR, FEMALE_COLOR } from './globals.js'
     .attr("id","word-cloud-svg")
     .style("width", '85%')
     .style("height", config.vh + 'px')
-    .attr("font-family", "sans-serif");
+    .attr("font-family", "sans-serif")
+    .style("display", "block")
+    .style("margin", "auto");
   var m_word_cloud = cloud_svg.append("g");
   m_word_cloud
     .attr("id","male-cloud")
     .style("width", config.vw/2 + "%")
     .style("height", config.vh + 'px')
+  // title
+  cloud_svg.append("g").append("text")
+    .attr("class","title-text")
+    .attr("x", margin.left)
+    .attr("y", 30)
+    .style("font-size","25px")
+    .style("fill", MALE_COLOR)
+    .text("Male Professors");
   var f_word_cloud = cloud_svg.append("g");
   f_word_cloud
     .attr("id","female-cloud")
@@ -33,34 +43,38 @@ import { STOPWORDS, MALE_COLOR, FEMALE_COLOR } from './globals.js'
     .style("height", config.vh + 'px')
   var male_layout = d3.layout.cloud();
   var female_layout = d3.layout.cloud();
-  const male_label = m_word_cloud
-    .append("text");
-  const female_label = f_word_cloud
-    .append("text");
+  // title
+  cloud_svg.append("g").append("text")
+    .attr("class","title-text")
+    .attr("x", config.vw/2 + margin.left)
+    .attr("y", 30)
+    .style("font-size","25px")
+    .style("fill", FEMALE_COLOR)
+    .text("Female Professors");
 
 
   // dropdown
-  const stats = ["Largest Difference","Female Professors","Male Professors",
-    "Largest Difference - Adj/Adverbs","Female-Professor - Adj/Adverbs","Male Professor - Adj/Adverbs"]
+  // const stats = ["Largest Difference","Female Professors","Male Professors",
+  const stats = ["Largest Difference - Adj/Adverbs","Female-Professor - Adj/Adverbs","Male Professor - Adj/Adverbs"]
   var stat = stats[0]; // the stat to sort words by
   const onStatClicked = selection => {
     // re-filter data on click
     var stat;
-    if (selection == stats[0] || selection == stats[3]){
+    if (selection == stats[0]){ ///|| selection == stats[3]){
       stat = "difference_abs";
     }
-    else if (selection == stats[1] || selection == stats[4]){
+    else if (selection == stats[1]){ //|| selection == stats[4]){
       stat = "female";
     }
-    else if (selection == stats[2] || selection == stats[5]){
+    else if (selection == stats[2]){ //|| selection == stats[5]){
       stat = "male";
     }
-    if (selection == stats[3] || selection == stats[4] || selection == stats[5]){
-      render_stats(adj_data,stat,"Adjective/Adverb");
-    }
-    else{
-      render_stats(freq_data,stat); // pass in full dataset to rerank top_n
-    }
+    // if (selection == stats[3] || selection == stats[4] || selection == stats[5]){
+    render_stats(adj_data,stat,"Adjective/Adverb");
+    // }
+    // else{
+    //   render_stats(freq_data,stat); // pass in full dataset to rerank top_n
+    // }
     // console.log("selection",selection, " stat",stat);
   };
   d3.select('#stats-menu2')
@@ -70,6 +84,13 @@ import { STOPWORDS, MALE_COLOR, FEMALE_COLOR } from './globals.js'
     selectedOption: stat,
     label: 'Sort by: '
     });
+  
+  // spinner
+  let num_words_input = document.getElementById('num-words-input2');
+  num_words_input.onchange = () => {
+       top_n_words = num_words_input.value
+       onStatClicked(); // call onStatClicked to also determine first dropdown value
+   }  
 
   // function to sort data by statistic
   const sort_data = (data,stat,top_n) => {
@@ -99,9 +120,9 @@ import { STOPWORDS, MALE_COLOR, FEMALE_COLOR } from './globals.js'
   }
 
   // draw both male and female WCs
-  const render_stats = (data,stat="difference_abs",y_label="Word") =>{
+  const render_stats = (data,stat="difference_abs",y_label="Word",num_words = top_n_words) =>{
     // sort data by selected statistic and slice top n
-    sub_data = sort_data(data,stat,top_n_words);
+    sub_data = sort_data(data,stat,num_words);
     // console.log("sliced-data",sub_data);
 
     let male_data = sub_data.map(d => ({text: d.word,value: d.male * scale_factor}))
@@ -185,6 +206,7 @@ import { STOPWORDS, MALE_COLOR, FEMALE_COLOR } from './globals.js'
         )
       );
   }
+
   function draw_f(words) {
     const t = d3.transition().duration(config.anim_speed).ease(d3.easeCubic);
     f_word_cloud
@@ -240,15 +262,15 @@ import { STOPWORDS, MALE_COLOR, FEMALE_COLOR } from './globals.js'
     freq_data = data.filter(function (el) {
       return !STOPWORDS.includes(el.word);
     });
-    sub_data = data.filter(function (el) {
-      return !STOPWORDS.includes(el.word);
-    });
+    // sub_data = data.filter(function (el) {
+    //   return !STOPWORDS.includes(el.word);
+    // });
     adj_data = data.filter(function (el) {
       return (el.POS == "ADJ" ||
              el.POS == "ADV") &&
              !STOPWORDS.includes(el.word); // word not in stopwords list
     });
     var stat = "difference_abs";
-    onStatClicked(sub_data,stat);
+    onStatClicked(adj_data,stat);
   });
 })();
