@@ -1,45 +1,49 @@
 // simple pie chart code imported from chart js
-const pie_data = [117463, 104091, 34326, 14579, 11108, 119835, 91102, 111026]
-
-let hoursdata = [92, 56, 55,40,40, 73, 56, 77]
+const pie_data = [111025, 14579, 34326, 119835, 91102, 104091, 11108, 117463];
+let labels = ['B Plate','Bruin Bowl','Bruin Café', 'De Neve','Epicuria','Rendezvous','The Drey','The Study at Hedrick'];
+let hoursdata = [77, 40, 55, 73, 56, 56, 40, 92];
 let scaled_Data = [];
 let scaled_total = 0;
+let total = 0;
 for (let i =0; i <pie_data.length; ++i){
+    total += pie_data[i];
      let scaledPoint = pie_data[i]/hoursdata[i];
      scaled_total += scaledPoint;
      scaled_Data.push(scaledPoint)
 }
 //console.log('scaled total', scaled_total)
+/* 
+b plate 111025
+bowl 14579
+Bcaf 34326
+de neve 119835
+epic 91102
+Rende 104091
+drey 11108
+Study 117463
+*/
 
 const pieData = {
-  labels: [
-  'The Study at Hedrick',
-  'Rendezvous',
-  'Bruin Café',
-  'Bruin Bowl',
-  'The Drey',
-  'De Neve',
-  'Epicuria',
-  'Bruin Plate'],
+  labels: labels,
   datasets: [
     {
       label: 'Swipes',
       backgroundColor: [
-      'rgb(149, 163, 179)',
-      'rgb(130, 9, 51)',
-      'rgb(132, 90, 109)',
-      'rgb(28, 93, 153)',
-      'rgb(113, 124, 137)',
-      'rgb(255, 131, 17)',
-      'rgb(255, 200, 87)',
-      'rgb(152, 149, 114)',
-          ],
+        'rgb(132, 90, 109)',
+        'rgb(28, 93, 153)',
+        'rgb(152, 149, 114)',
+        'rgb(255, 131, 17)',
+        'rgb(255, 200, 87)',
+        'rgb(130, 9, 51)',
+        'rgb(88, 187, 131)',
+        'rgb(149, 163, 179)',
+      ],
       data: pie_data,
     },
   ],
 };
 //While your function here definitely is a good idea, for something like this that never changes, it's okay to just hard code it
-let total = 603530;
+//let total = 603530;
   // for (let i in allData) {
   //   total += allData[i];
   // }
@@ -92,28 +96,20 @@ let scaledPieChart = new Chart(ctxScaledPie, {
 ///////////////Second Chart//////////
 
 const scaledData = {
-  labels: [
-  'The Study at Hedrick',
-  'Rendezvous',
-  'Bruin Café',
-  'Bruin Bowl',
-  'The Drey',
-  'De Neve',
-  'Epicuria',
-  'Bruin Plate'],
+  labels: labels,
   datasets: [
     {
       label: 'Swipes',
       backgroundColor: [
-      'rgb(149, 163, 179)',
-      'rgb(130, 9, 51)',
-      'rgb(132, 90, 109)',
-      'rgb(28, 93, 153)',
-      'rgb(113, 124, 137)',
-      'rgb(255, 131, 17)',
-      'rgb(255, 200, 87)',
-      'rgb(152, 149, 114)',
-          ],
+        'rgb(132, 90, 109)',
+        'rgb(28, 93, 153)',
+        'rgb(152, 149, 114)',
+        'rgb(255, 131, 17)',
+        'rgb(255, 200, 87)',
+        'rgb(130, 9, 51)',
+        'rgb(88, 187, 131)',
+        'rgb(149, 163, 179)',
+      ],
       data: scaled_Data,
     },
   ],

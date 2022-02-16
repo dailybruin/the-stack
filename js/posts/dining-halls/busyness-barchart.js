@@ -7,7 +7,7 @@ let colors = [
   'rgb(255, 131, 17)',
   'rgb(255, 200, 87)',
   'rgb(130, 9, 51)',
-  'rgb(113, 124, 137)',
+  'rgb(88, 187, 131)',
   'rgb(149, 163, 179)',
 ];
 
@@ -64,7 +64,7 @@ let dayValue = 'Monday';
 let dining_halls = [
   'Bruin Café',
   'Bruin Bowl',
-  'Bruin Plate',
+  'B Plate',
   'De Neve',
   'Epicuria',
   'Rendezvous',
