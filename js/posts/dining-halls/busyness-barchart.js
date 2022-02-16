@@ -1,6 +1,8 @@
-//variables to make and update the chart
-let realCount = [];
-let colors = [
+let lineChart;
+
+const datasetPath = '/datasets/dining-halls/';
+
+const colors = [
   'rgb(132, 90, 109)',
   'rgb(28, 93, 153)',
   'rgb(152, 149, 114)',
@@ -11,7 +13,6 @@ let colors = [
   'rgb(149, 163, 179)',
 ];
 
-let barChart;
 const timeIntervals = [
   '6:00AM',
   '6:30AM',
@@ -56,34 +57,31 @@ const timeIntervals = [
   '2:00AM',
 ];
 
-//Suggestion: You may need to set initial values for the chart to load properly
-//let hallValue = 'All Options';
-let dayValue = 'Monday';
-
-// Real names of dining halls
-let dining_halls = [
-  'Bruin Café',
-  'Bruin Bowl',
+// names to display in dropdown & chart title
+const diningHallsLabels = [
   'B Plate',
+  'Bruin Bowl',
+  'Bruin Café',
   'De Neve',
   'Epicuria',
   'Rendezvous',
   'The Drey',
   'The Study at Hedrick',
 ];
+
 //names of dining halls in the datasets
-let halls = [
-  'bcafe_',
-  'HHDH-Bruin Bowl_',
+const diningHallsKeys = [
   'bplate_',
+  'HHDH-Bruin Bowl_',
+  'bcafe_',
   'deNeve_',
   'HHDH-Covel Dining_',
   'HHDH-Rendezvous_',
   'drey_',
   'theStudy_',
 ];
-//Drop down to choose a day of the week
-let days = [
+
+const days = [
   'Monday',
   'Tuesday',
   'Wednesday',
@@ -92,10 +90,6 @@ let days = [
   'Saturday',
   'Sunday',
 ];
-
-//Makes Dropdown menus
-//initDropdown(dining_halls, '#Dining-Hall')
-initDropdown(days, '#Day');
 
 //Code for init found at https://www.d3-graph-gallery.com/graph/line_select.html
 function initDropdown(values, id) {
@@ -110,135 +104,118 @@ function initDropdown(values, id) {
     .attr('value', function(d) {
       return d;
     }); // corresponding value returned by the button
+
+  d3.select(id).on('change', function() {
+    let dayValue = d3.select(this).property('value');
+    updateData(dayValue);
+  });
 }
 
-//On Change Functions
-//These are currently working, I suggest using them to set the path for the data to import
-d3.select('#Day').on('change', function() {
-  dayValue = d3.select(this).property('value');
-  //My suggestion for moving forward:
-  updateData(dayValue);
-});
-
-// d3.select('#Dining-Hall').on('change', function () {
-//   hallValue = d3.select(this).property('value');
-//   console.log(hallValue);
-//   setPath(hallValue);
-// })
-
-//Possible starting value for the path
-let path = '../../../../datasets/dining-halls/';
-
-//I would use this function to set the path and the call a second function to update the chart
-// function setPath(dayValue){
-//   path = '../../../../datasets/dining-halls/'
-//Maybe use a switch to choose the path, since the days of the week should display the same way they are listed
-//it may be most efficient to have each case be a dining hall
-// switch(hallValue){
-//   case 'All Options':
-//     path = `${path}`
-//     break;
-//   case 'The Study at Hedrick':
-//     path = `${path}`
-//     break;
-//   case 'Bruin Café':
-//     path = `${path}bcafe_`
-//     break;
-//   case 'Bruin Plate':
-//     path = `${path}bplate_`
-//     break;
-//   case 'De Neve':
-//     path = `${path}deNeve_`
-//     break;
-//   case 'The Drey':
-//   //     path = `${path}drey_`
-//   //     break;
-//   //   case 'Bruin Bowl':
-//   //     path = `${path}HHDH-Bruin Bowl_`
-//   //     break;
-//   //   case 'Epicuria':
-//   //     path = `${path}HHDH-Covel Dining_`
-//   //     break;
-//   //   case 'Rendezvous':
-//   //     path = `${path}HHDH-Rendezvous_`
-//   //     break;
-//   //     //don't forget a default in case someone chooses a file that you don't have
-//   //   default:
-//   //     path = `${path}bplate_Monday.csv`
-//   //     break;
-//   // }
-//   console.log(path)
-//   //Call a new function to update the chart
-//   updateData(path);
-// }
-
-//Store the new data for the chart
-let new_datasets;
-/*set new data for the chart*/
 function updateData(dayValue) {
-  // reset new_datasets for each time the chart is changed
-  new_datasets = [];
-
-  //set the start path for import
-  let reset_path = '/datasets/dining-halls/';
+  // reset updatedDatasets for each time Day is changed
+  let updatedDatasets = [];
 
   //loop through each dining hall to load data
-  for (let i = 0; i < dining_halls.length; ++i) {
+  for (let i = 0; i < diningHallsLabels.length; i++) {
     //set 0s for all data, to fill in no swipe parts
-    let realCount = Array(48).fill(0);
-    let hall = halls[i];
+    let hourlySwipeArray = Array(48).fill(0);
+    let hall = diningHallsKeys[i];
+
     //if the hall is closed on the weekend skip it
     if (dayValue == 'Saturday' || dayValue == 'Sunday') {
       if (hall === 'bcafe_' || hall === 'drey_' || hall == 'HHDH-Bruin Bowl_') {
         continue;
       }
     }
-    //set data path
-    path = reset_path + hall + dayValue + '.csv';
-    // load data from path and then collect the data in realCount, then add to new datasets, call updateChart
+
+    let path = datasetPath + hall + dayValue + '.csv';
     d3.csv(path)
       .then(function(csvData) {
         for (let i = 0; i < csvData.length; i++) {
-          // let time = timeIntervals[csvData[i].IntervalCategory];
-          // realTimes.push(time);
+          // CSVs have 4 weeks of data (e.g. 4 Mondays) -- divide by 4 to find average per week (e.g. Monday average)
           let swipeCount = csvData[i].count / 4;
           if (swipeCount < 1) {
             swipeCount = 1;
           }
+
           if (csvData[i].IntervalCategory < 6) {
-            realCount[parseInt(csvData[i].IntervalCategory) + 36] = parseInt(
+            // move 12am to 2am to the end of the chart (5 intervals 12am 12:30am 1am 1:30am 2am)
+            // +36 for 36 intervals 6am -> 11:30pm
+            hourlySwipeArray[
+              parseInt(csvData[i].IntervalCategory) + 36
+            ] = parseInt(swipeCount);
+          } else {
+            // starting chart at 6am not 12am, so shift back by 12 (6 hours * 2 intervals per hour)
+            hourlySwipeArray[csvData[i].IntervalCategory - 12] = parseInt(
               swipeCount
             );
-          } else {
-            realCount[csvData[i].IntervalCategory - 12] = parseInt(swipeCount);
           }
         }
       })
       .then(function() {
-        new_datasets.push({
-          data: realCount,
-          label: dining_halls[i],
+        updatedDatasets.push({
+          data: hourlySwipeArray,
+          label: diningHallsLabels[i],
           backgroundColor: colors[i],
           borderColor: colors[i],
           borderSkipped: 'bottom',
           borderWidth: 2,
         });
-      })
-      .then(updateChart);
+        if (
+          updatedDatasets.length === diningHallsLabels.length ||
+          ((dayValue == 'Saturday' || dayValue == 'Sunday') &&
+            updatedDatasets.length === diningHallsLabels.length - 3)
+        ) {
+          // update once all csv files have loaded
+          updateChart(updatedDatasets, dayValue);
+        }
+      });
   }
 }
 
-/*push the data into the chart*/
-function updateChart() {
+function updateChart(updatedDatasets, dayValue) {
   //set new data values
   let data = {
     labels: timeIntervals,
-    datasets: new_datasets.sort((a, b) => (a.label > b.label ? 1 : -1)),
+    datasets: updatedDatasets.sort((a, b) => (a.label > b.label ? 1 : -1)),
   };
-  barChart.data = data;
+  lineChart.data = data;
 
   //set new chart options
-  barChart.options = {
+  lineChart.options.plugins.title.text =
+    'Average Traffic Per Half Hour on ' + dayValue;
+  lineChart.options.plugins.tooltip = {
+    callbacks: {
+      title: function(tooltipItem) {
+        let startTime = timeIntervals[tooltipItem[0].dataIndex];
+        let nextIndex = tooltipItem[0].dataIndex + 1;
+        let endTime =
+          nextIndex < timeIntervals.length ? timeIntervals[nextIndex] : null;
+        return `${startTime}${endTime ? `-${endTime}` : ''}`;
+      },
+      label: function(tooltipItem) {
+        let label = tooltipItem.dataset.label;
+        let value = tooltipItem.formattedValue;
+        return `${label}: ${value} swipes`;
+      },
+    },
+  };
+
+  lineChart.update();
+}
+
+function initializeChart() {
+  let data = {
+    labels: timeIntervals,
+    datasets: [
+      {
+        data: [],
+        label: '',
+      },
+    ],
+  };
+
+  const options = {
     scales: {
       y: {
         title: {
@@ -254,102 +231,24 @@ function updateChart() {
       },
       title: {
         display: true,
-        text: 'Average Traffic Per Half Hour on ' + dayValue,
+        text: 'Average Traffic Per Half Hour on Monday',
         font: {
           size: 19,
-        },
-      },
-      tooltip: {
-        callbacks: {
-          title: function(tooltipItem) {
-            let startTime = timeIntervals[tooltipItem[0].dataIndex];
-            let nextIndex = tooltipItem[0].dataIndex + 1;
-            let endTime =
-              nextIndex < timeIntervals.length
-                ? timeIntervals[nextIndex]
-                : null;
-            return `${startTime}${endTime && `-${endTime}`}`;
-          },
-          label: function(tooltipItem) {
-            let label = tooltipItem.dataset.label;
-            let value = tooltipItem.formattedValue;
-            return `${label}: ${value} swipes`;
-          },
         },
       },
     },
     maintainAspectRatio: false,
     animation: false,
   };
-  //update the chart
-  barChart.update();
-}
 
-//initial options
-let options = {
-  scales: {
-    y: {
-      title: {
-        display: true,
-        text: 'Average Semi-Hourly Swipe Usage',
-      },
-      max: 450,
-    },
-  },
-  plugins: {
-    legend: {
-      display: true,
-    },
-    title: {
-      display: true,
-      text: 'Average Traffic Per Half Hour on Monday',
-      font: {
-        size: 19,
-      },
-    },
-    tooltips: {
-      callbacks: {
-        title: function(tooltipItem) {
-          //console.log(tooltipItem)
-          return tooltipItem.label;
-        },
-        label: function(tooltipItem) {
-          //console.log(tooltipItem)
-        },
-      },
-    },
-  },
-  maintainAspectRatio: false,
-  animation: false,
-};
-
-/*make a chart to start from*/
-function makeChart() {
-  let realCount = Array(24).fill(0);
-
-  //dummy data to make a starter chart to be updated immediately
-  let data = {
-    labels: timeIntervals,
-    datasets: [
-      {
-        data: realCount,
-        label: 'Average Semi-Hourly Swipe Usage',
-        backgroundColor: 'rgb(255,131,17)',
-        borderColor: 'rgb(255,131,17)',
-        borderSkipped: 'bottom',
-        borderWidth: 2,
-      },
-    ],
-  };
-
-  //make the original chart to be updated as we go
   let ctx = document.getElementById('barChart');
-  barChart = new Chart(ctx, {
+  lineChart = new Chart(ctx, {
     type: 'line',
     data: data,
     options: options,
   });
 }
-/*load first data */
-makeChart();
+
+initDropdown(days, '#Day');
+initializeChart();
 updateData('Monday');
