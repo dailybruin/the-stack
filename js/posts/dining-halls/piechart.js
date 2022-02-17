@@ -143,8 +143,6 @@ let swipesPieChart = new Chart(ctxSwipesPie, {
 if (window.matchMedia('(max-width: 480px)').matches) {
   console.log('mobile');
   console.log(swipesPieChart.options.plugins);
-  swipesPieChart.options.plugins.legend = {
-    position: 'top',
-  };
+  swipesPieChart.options.plugins.legend.position = 'top';
   swipesPieChart.update();
 }

@@ -35,4 +35,8 @@
         height: 425px;
         width: 100%;
     }
+    .bar_chart{
+        height: 450px;
+        margin: auto
+    }
 }

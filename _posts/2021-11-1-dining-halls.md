@@ -59,9 +59,9 @@ The following chart visualizes the number and proportion of swipes used at each 
 
 Although The Drey and Bruin Bowl brought new options to many Bruins, they recorded the least number of swipes. Additionally, Epicuria’s meal swipes also fall behind other dining halls despite its renovations.
 
-About 54% of all swipes were recorded at the three main sit-down dining halls: Epicuria, De Neve, and B Plate. De Neve accounted for 20% of these dining hall swipes.
+About 53% of all swipes were recorded at the three main sit-down dining halls: Epicuria, De Neve, and B Plate. De Neve accounted for 20% of these dining hall swipes.
 
-The other 46% of swipes were split between the five takeout locations: Rendezvous, The Study, Bruin Café, Bruin Bowl, and The Drey. The Study is currently the only takeout location open for late-night dinner from 9 p.m. to 12 a.m. Despite this, Rendezvous and The Study recorded almost the same number of swipes. Meanwhile, The Drey and Bruin Bowl were the least popular eateries, each making up only 2% of all swipe transactions.
+The other 47% of swipes were split between the five takeout locations: Rendezvous, The Study, Bruin Café, Bruin Bowl, and The Drey. The Study is currently the only takeout location open for late-night dinner from 9 p.m. to 12 a.m. Despite this, Rendezvous and The Study recorded almost the same number of swipes. Meanwhile, The Drey and Bruin Bowl were the least popular eateries, each making up only 2% of all swipe transactions.
 
 ### Traffic Trends of Dining Options
 
@@ -101,4 +101,4 @@ In response to the high wait times across all dining halls, UCLA UCLA brought fo
 
 ### About the Data
 
-The Stack obtained meal plan swipe data from UCLA Housing for the period of Sep. 24, 2021 to Oct. 17, 2021. The data contained a record of each meal transaction, including the dining location, meal plan type and time stamp.
+The Stack obtained meal plan swipe data from UCLA Housing for the period of Sep. 20, 2021 to Oct. 17, 2021. The data contained a record of each meal transaction, including the dining location, meal plan type and time stamp.
