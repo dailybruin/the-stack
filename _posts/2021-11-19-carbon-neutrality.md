@@ -15,7 +15,7 @@ og_image:
 scripts:
   - //cdnjs.cloudflare.com/ajax/libs/d3/5.7.0/d3.min.js
   - //cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js
-  - /js/posts/online-grade-distributions/pie_chart.js
+  - /js/posts/carbon-neutrality/line-chart.js
 
 stylesheets:
   - //cdnjs.cloudflare.com/ajax/libs/c3/0.4.10/c3.min.css
@@ -91,4 +91,4 @@ The following CO2 gas emissions are broken down by scope in the year 2019, exclu
 
 
 <script src="https://cdn.anychart.com/releases/8.10.0/js/anychart-base.min.js"></script>
-<div class = 'CarbonEmissions' style='height: 100vh'></div>
+<div id = 'CarbonEmission' style='height: 100vh'></div>
