@@ -76,3 +76,19 @@ stylesheets:
   scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
   vizElement.parentNode.insertBefore(scriptElement, vizElement);
 </script>
+
+<!-- Ridership Graphs -->
+##### Average Ridership
+{% include avg-ridership.html %}
+
+##### LADOT Ridership
+{% include ladot-ridership.html %}
+
+##### AVTA Ridership
+{% include avta-ridership.html %}
+
+##### Santa Clarita Transit Ridership
+{% include sct-ridership.html %}
+
+##### Big Blue Bus Ridership
+{% include bbb-ridership.html %}
