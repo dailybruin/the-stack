@@ -97,7 +97,7 @@ Unlike the takeout options, day-to-day traffic patterns for The Study remain con
 
 ### Other Food Options
 
-In response to the high wait times across all dining halls, UCLA UCLA brought food trucks that accept swipes to the Hill to attempt to reduce wait lines at other dining locations. Food trucks are on location every day from 11 a.m. to 11 p.m. but close between lunch and dinner from 3 p.m. to 5 p.m. Additionally, students are able to trade in their meal swipes for Associated Students UCLA restaurant vouchers at their residential hall front desk. The Daily Bruin was unable to acquire data about either meal swipes exchanged for food trucks or ASUCLA restaurant vouchers.
+In response to the high wait times across all dining halls, UCLA brought food trucks that accept swipes to the Hill to attempt to reduce wait lines at other dining locations. Food trucks are on location every day from 11 a.m. to 11 p.m. but close between lunch and dinner from 3 p.m. to 5 p.m. Additionally, students are able to trade in their meal swipes for Associated Students UCLA restaurant vouchers at their residential hall front desk. The Daily Bruin was unable to acquire data about either meal swipes exchanged for food trucks or ASUCLA restaurant vouchers.
 
 ### About the Data
 
