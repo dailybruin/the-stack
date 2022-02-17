@@ -1,0 +1,42 @@
+.caption {
+    font-size:smaller;
+    color:gray;
+    text-align: center;
+}
+
+/* .pie_chart {
+    width: 50%;
+    margin-bottom: 15px;
+} */
+
+/* .swipes {
+    float: left
+}
+
+.scaled {
+    float: right;
+} */
+
+.pieCharts {
+    width: 50%;
+    margin: auto;
+}
+
+.bar_chart{
+    height: 500px;
+    margin: auto
+}
+@media only screen and (max-width: 480px){
+    .pieCharts {
+        width: 100%;
+    }
+    
+    .pie_chart{
+        height: 425px;
+        width: 100%;
+    }
+    .bar_chart{
+        height: 450px;
+        margin: auto
+    }
+}
