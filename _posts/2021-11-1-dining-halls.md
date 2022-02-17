@@ -9,8 +9,8 @@ authors:
 
 key_takeaways:
   - Dinner is the most popular meal time for residential restaurants, whereas lunch is the most popular meal time for quick-service restaurants like The Study at Hedrick and Rendezvous. Traffic generally peaks between 6 p.m. and  7 p.m. for dining halls and between 11 a.m. and 12 p.m. for takeout locations.
-  - Residential restaurants account for about 64% of the swipes used for UCLA Housing dining locations at the start of the 2021-22 school year. Quick-service restaurants accounted for the other 36%.
-  - At the beginning of the 2021-22 school year, from week zero to week three, De Neve Residential Restaurant, the dining hall with the most swipes, recorded almost 120,000 swipes in 23 days. This accounted for 20% of all swipes during this period. The quick-service restaurant with the most swipes was The Study, which recorded over 117,000 swipes during the same period.
+  - Residential restaurants account for about 53% of the swipes used for UCLA Housing dining locations at the start of the 2021-22 school year. Quick-service restaurants accounted for the other 47%.
+  - At the beginning of the 2021-22 school year, from week zero to week three, De Neve Residential Restaurant, the dining hall with the most swipes, recorded almost 118,000 swipes in 28 days. This accounted for 20% of all swipes during this period. The quick-service restaurant with the most swipes was The Study, which recorded over 116,000 swipes during the same period.
 featured_image:
   url: dining-halls/featured_image.png
   caption: (Ashley Ko/Daily Bruin Staff)
