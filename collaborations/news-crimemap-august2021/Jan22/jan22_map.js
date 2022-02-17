@@ -89,7 +89,7 @@ jan22_crimes_geojson.features.map(feature => {
   markers.addLayer(marker);
 
   const popUpText = `<b>${feature.properties.DATE}</b><br/><br/>
-  <b>UCPD Designation:</b><br/>
+  <b>UCPD designation:</b><br/>
   ${feature.properties.EVENT.split('\n').join('<br/>')}<br/><br/>
   <b>Reported location:</b><br/>
   ${feature.properties.LOCATION.split('\n').join(',<br/>')}<br/><br/>
