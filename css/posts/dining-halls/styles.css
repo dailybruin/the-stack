@@ -4,17 +4,22 @@
     text-align: center;
 }
 
-.pie_chart {
+/* .pie_chart {
     width: 50%;
     margin-bottom: 15px;
-}
+} */
 
-.swipes {
+/* .swipes {
     float: left
 }
 
 .scaled {
     float: right;
+} */
+
+.pieCharts {
+    width: 50%;
+    margin: auto;
 }
 
 .bar_chart{
@@ -22,6 +27,10 @@
     margin: auto
 }
 @media only screen and (max-width: 480px){
+    .pieCharts {
+        width: 100%;
+    }
+    
     .pie_chart{
         height: 425px;
         width: 100%;

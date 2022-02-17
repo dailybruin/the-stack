@@ -21,29 +21,29 @@ const pieChartColors = [
 ];
 
 // data used in both pie charts (in same order as labels)
-let hoursOpen = [77, 40, 55, 73, 56, 56, 40, 92];
+// let hoursOpen = [77, 40, 55, 73, 56, 56, 40, 92];
 
 let swipesPerLocation = [
-  111025,
-  14579,
+  109613,
+  14390,
   34326,
-  119835,
-  91102,
-  104091,
+  117999,
+  89763,
+  102823,
   11108,
-  117463,
+  116627,
 ];
-let scaledSwipesPerLocation = [];
+// let scaledSwipesPerLocation = [];
 
 let totalSwipes = 0;
-let totalScaled = 0;
+// let totalScaled = 0;
 
 // calculate swipes scaled by hours open
 for (let i = 0; i < swipesPerLocation.length; i++) {
   totalSwipes += swipesPerLocation[i];
-  let scaledPoint = swipesPerLocation[i] / hoursOpen[i];
-  totalScaled += scaledPoint;
-  scaledSwipesPerLocation.push(scaledPoint);
+  // let scaledPoint = swipesPerLocation[i] / hoursOpen[i];
+  // totalScaled += scaledPoint;
+  // scaledSwipesPerLocation.push(scaledPoint);
 }
 
 // FIRST PIE CHART -- SWIPES PER DINING HALL
@@ -64,8 +64,11 @@ const swipesOptions = {
   plugins: {
     title: {
       display: true,
-      text: '21-22 Total Meal Swipes',
+      text: 'Total Meal Swipes, Fall 2021 Weeks 0-3',
       fontSize: 19,
+    },
+    legend: {
+      position: 'right',
     },
     tooltip: {
       callbacks: {
@@ -90,49 +93,58 @@ let swipesPieChart = new Chart(ctxSwipesPie, {
 
 // SECOND PIE CHART -- SWIPES PER DINING HALL SCALED BY HOURS OPEN
 
-const scaledData = {
-  labels: labels,
-  datasets: [
-    {
-      label: 'Swipes',
-      backgroundColor: pieChartColors,
-      data: scaledSwipesPerLocation,
-    },
-  ],
-};
+// const scaledData = {
+//   labels: labels,
+//   datasets: [
+//     {
+//       label: 'Swipes',
+//       backgroundColor: pieChartColors,
+//       data: scaledSwipesPerLocation,
+//     },
+//   ],
+// };
 
-const scaledOptions = {
-  maintainAspectRatio: false,
-  plugins: {
-    title: {
-      display: true,
-      text: '21-22 Meal Swipes per Hour',
-      fontSize: 19,
-    },
-    tooltip: {
-      callbacks: {
-        label: function(tooltipItem, data) {
-          let swipeValue = Math.round(tooltipItem.parsed).toLocaleString(
-            'en-US',
-            {
-              style: 'decimal',
-              maximumFractionDigits: 0,
-            }
-          );
-          let tooltipLabel = `${tooltipItem.label}: ${swipeValue}`;
-          let tooltipPercentage = Math.round(
-            (tooltipItem.parsed / totalScaled) * 100
-          );
-          return `${tooltipLabel} swipes per hour (${tooltipPercentage}%)`;
-        },
-      },
-    },
-  },
-};
+// const scaledOptions = {
+//   maintainAspectRatio: false,
+//   plugins: {
+//     title: {
+//       display: true,
+//       text: 'Meal Swipes per Hour Open',
+//       fontSize: 19,
+//     },
+//     tooltip: {
+//       callbacks: {
+//         label: function(tooltipItem, data) {
+//           let swipeValue = Math.round(tooltipItem.parsed).toLocaleString(
+//             'en-US',
+//             {
+//               style: 'decimal',
+//               maximumFractionDigits: 0,
+//             }
+//           );
+//           let tooltipLabel = `${tooltipItem.label}: ${swipeValue}`;
+//           let tooltipPercentage = Math.round(
+//             (tooltipItem.parsed / totalScaled) * 100
+//           );
+//           return `${tooltipLabel} swipes per hour (${tooltipPercentage}%)`;
+//         },
+//       },
+//     },
+//   },
+// };
 
-let ctxScaledPie = document.getElementById('ScaledPieChart');
-let scaledPieChart = new Chart(ctxScaledPie, {
-  type: 'pie',
-  data: scaledData,
-  options: scaledOptions,
-});
+// let ctxScaledPie = document.getElementById('ScaledPieChart');
+// let scaledPieChart = new Chart(ctxScaledPie, {
+//   type: 'pie',
+//   data: scaledData,
+//   options: scaledOptions,
+// });
+
+if (window.matchMedia('(max-width: 480px)').matches) {
+  console.log('mobile');
+  console.log(swipesPieChart.options.plugins);
+  swipesPieChart.options.plugins.legend = {
+    position: 'top',
+  };
+  swipesPieChart.update();
+}
