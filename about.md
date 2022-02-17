@@ -43,7 +43,7 @@ Apply to the [Stack]({{ site.application }}).
 The data editor is the person overseeing The Stack. A list of editors by year is below.
 
 * [Laurel Woods](https://github.com/laurelrwoods) (2021-2022 top editor)
-* [Lindsey Parungo](https://github.com/Lindseyp314) (2021-2022 assitant editor)
+* [Lindsey Parungo](https://github.com/Lindseyp314) (2021-2022 assistant editor)
 * [Andrew Kan](https://github.com/kandrewz) (2020-2021)
 * [Mattie Sanseverino](https://github.com/mattiesansev) (2019-2020)
 * [Henna Dialani](https://github.com/hennadialani) (2018-2019)

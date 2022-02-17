@@ -12,5 +12,3 @@ group :jekyll_plugins do
     gem "webrick"
     gem "wdm", platforms: [:mingw, :mswin, :x64_mingw]
 end
-
-

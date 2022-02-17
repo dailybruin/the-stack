@@ -1,7 +1,9 @@
 @import 'globals';
 
 iframe#visualization {
-    height: 690px;
+    height: 720px;
     border: 1px solid lightgray;
     margin-bottom: 0.5em;
+    width: 90vw;
+    margin: auto;
 }
