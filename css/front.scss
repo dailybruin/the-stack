@@ -1,5 +1,5 @@
-// ---
-// ---
+---
+---
 
 @import "globals";
 
@@ -14,6 +14,7 @@
     box-sizing: border-box;
     box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.25);
     margin-bottom: $spacing-unit;
+    background-color: #f9f9f9;
   }
 
   h2 {
@@ -78,7 +79,7 @@
   }
 
   .post-first {
-    width: calc(50% - (#{$spacing-unit}/2));
+    width: calc(50% - (#{$spacing-unit}/ 2));
 
     .featured-image {
       height: 400px;
@@ -88,24 +89,54 @@
     .post-details {
       padding: 0 $spacing-unit $spacing-unit $spacing-unit;
 
+      @include media-query($on-palm) {
+        padding: 0px;
+      }
+
       h2 {
         font-size: 30px;
+
+        @include media-query($on-palm) {
+          font-size: 24px;
+        }
       }
 
       h3 {
         font-size: 18px;
+        @include media-query($on-palm) {
+          font-size: 16px;
+        }
       }
 
       .info {
         font-size: 14px;
       }
     }
+
+    @include media-query($on-palm) {
+      flex-basis: 100%;
+      max-width: 100%;
+      padding: 15px;
+
+      .info {
+        font-size: 14px;
+        margin-bottom: 0px;
+      }
+
+      .featured-image {
+        height: 250px;
+      }
+    }
   }
 
   .post-layout-wrapper {
-    width: calc(50% - (#{$spacing-unit}/2));
+    width: calc(50% - (#{$spacing-unit}/ 2));
     display: flex;
     flex-direction: column;
+
+    @include media-query($on-palm) {
+      width: 100%;
+    }
 
     .post-second,
     .post-third {
@@ -123,10 +154,25 @@
         font-size: 12px;
         margin-bottom: 0px;
       }
+
+      @include media-query($on-palm) {
+        flex-basis: 100%;
+        max-width: 100%;
+        padding: 15px;
+
+        .info {
+          font-size: 14px;
+          margin-bottom: 0px;
+        }
+
+        .featured-image {
+          height: 250px;
+        }
+      }
     }
 
     .post-second {
-      height: calc(60% - (#{$spacing-unit}/2));
+      height: calc(60% - (#{$spacing-unit}/ 2));
 
       .featured-image {
         height: 215px;
@@ -135,16 +181,26 @@
 
       .post-details {
         padding: 0px $spacing-unit/2 $spacing-unit/2 $spacing-unit/2;
+
+        @include media-query($on-palm) {
+          padding: 0px;
+        }
       }
     }
 
     .post-third {
-      height: calc(40% - (#{$spacing-unit}/2));
+      height: calc(40% - (#{$spacing-unit}/ 2));
 
       .featured-image {
         width: 50%;
         height: 100%;
         float: left;
+
+        @include media-query($on-palm) {
+          width: 100%;
+          float: none;
+          height: 250px;
+        }
       }
 
       .post-details {
@@ -152,6 +208,12 @@
         float: right;
         padding: 15px;
         box-sizing: border-box;
+
+        @include media-query($on-palm) {
+          width: 100%;
+          float: none;
+          padding: 0px;
+        }
       }
 
       h2 {
@@ -164,10 +226,21 @@
     width: 100%;
     height: 250px;
 
+    @include media-query($on-palm) {
+      height: auto;
+      padding: 15px;
+    }
+
     .featured-image {
       width: 50%;
       height: 100%;
       float: left;
+
+      @include media-query($on-palm) {
+        width: 100%;
+        float: none;
+        height: 250px;
+      }
     }
 
     .post-details {
@@ -175,6 +248,12 @@
       float: right;
       padding: 30px;
       box-sizing: border-box;
+
+      @include media-query($on-palm) {
+        width: 100%;
+        float: none;
+        padding: 0px;
+      }
     }
 
     h2 {
@@ -195,4 +274,29 @@
   float: right;
   font-size: 0.8em;
   color: $grey-color;
+}
+
+.post-second,
+.post-third {
+  @include media-query($on-palm) {
+    flex-basis: 100%;
+    width: 100%;
+
+    h2 {
+      font-size: 24px;
+    }
+
+    h3 {
+      font-size: 16px;
+    }
+
+    .info {
+      font-size: 14px;
+      margin-bottom: 0px;
+    }
+
+    .featured-image {
+      height: 250px;
+    }
+  }
 }
