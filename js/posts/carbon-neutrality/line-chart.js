@@ -1,5 +1,4 @@
-anychart.onDocumentReady(function () {
-
+anychart.onDocumentReady(function() {
   // create a data set on our data
   var dataSet = anychart.data.set(getData());
 
@@ -14,13 +13,9 @@ anychart.onDocumentReady(function () {
   // map data for the third series,
   // take x from the zero column and value from the third column
   var thirdSeriesData = dataSet.mapAs({ x: 0, value: 3 });
-  
-  // map data for the fourth series,
-  // take x from the zero column and value from the fourth column
-  var fourthSeriesData = dataSet.mapAs({ x: 0, value: 4 });
 
   // create a line chart
-  var chart = anychart.line('CarbonEmissions');
+  var chart = anychart.line('');
 
   // configure the chart title text settings
   chart.title('UCLA CO2e Emissions');
@@ -45,26 +40,25 @@ anychart.onDocumentReady(function () {
 
   // set the container id for the line chart
   chart.container('CarbonEmission');
-  
+
   // draw the line chart
   chart.draw();
-  
 });
 
 function getData() {
   return [
-    ['2006',172442.15,172442.15,92703.48],
-    ['2007',180939.62,180939.62,108455.48],
-    ['2009',234096.24535,234096.24535,69870.24341],
-    ['2010',230210.73822,230210.73822,57675.43418],
-    ['2011',231337.95482,231337.95482,79720.05378],
-    ['2012',244235.62424,244235.62424,66246.72674],
-    ['2013',226171.94512,226171.94512,79179.28152],
-    ['2014',237885.356815,180266.356815,72983.448482],
-    ['2015',236051.712039,171515.712039,117753.587377],
-    ['2016',241727.814359,182913.814359,85290.838958],
-    ['2017',245912.134162,173930.134162,89989.171449],
-    ['2018',246783.233889,168686.233889,89945.067333],
-    ['2019',248825.773006,182508.773006,78366.044793]
+    ['2006', 172442.15, 172442.15, 92703.48],
+    ['2007', 180939.62, 180939.62, 108455.48],
+    ['2009', 234096.24535, 234096.24535, 69870.24341],
+    ['2010', 230210.73822, 230210.73822, 57675.43418],
+    ['2011', 231337.95482, 231337.95482, 79720.05378],
+    ['2012', 244235.62424, 244235.62424, 66246.72674],
+    ['2013', 226171.94512, 226171.94512, 79179.28152],
+    ['2014', 237885.356815, 180266.356815, 72983.448482],
+    ['2015', 236051.712039, 171515.712039, 117753.587377],
+    ['2016', 241727.814359, 182913.814359, 85290.838958],
+    ['2017', 245912.134162, 173930.134162, 89989.171449],
+    ['2018', 246783.233889, 168686.233889, 89945.067333],
+    ['2019', 248825.773006, 182508.773006, 78366.044793],
   ];
 }
