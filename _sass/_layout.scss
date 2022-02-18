@@ -68,7 +68,7 @@
 
   a {
     font-weight: 700;
-    color: $grey-color-dark;
+    color: $brand-color-primary-blue;
   }
 }
 
@@ -359,7 +359,7 @@
   .fullwidth {
     width: 100vw;
     margin-left: calc(
-       (100vw - (#{$content-width} - (#{$spacing-unit} * 2)))/-2
+      (100vw - (#{$content-width} - (#{$spacing-unit} * 2))) / -2
     );
 
     @include media-query($on-laptop) {
@@ -375,13 +375,13 @@
 
 .key-takeaways {
   // background-color: rgba($brand-color-secondary-warm, 0.05);
-  border-bottom: 3px solid rgba($new-blue, 1);
+  border-bottom: 3px solid $brand-color-primary-blue;
   padding: 1em 1em 0.5em;
   margin-bottom: 1em;
 
   h2 {
     font-family: $accent-font-family;
-    color: rgba($new-blue, 1);
+    color: $brand-color-primary-blue;
     font-weight: 400;
     margin-bottom: 0;
     font-size: 24px;
@@ -420,8 +420,10 @@
   margin-bottom: 1em;
   display: -webkit-flex;
   display: flex;
-  -webkit-align-items: flex-end;
-  align-items: flex-end; // vertically align children at bottom of container
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-align-items: baseline;
+  align-items: baseline;
 
   @include media-query($on-palm) {
     display: block;
@@ -434,7 +436,9 @@
     -webkit-flex-basis: 0;
     flex-basis: 0;
 
-    font-size: 0.8em;
+    max-width: 35%;
+
+    font-size: 14px;
     color: $brand-color-primary-blue;
     box-sizing: border-box;
     padding: 1em;
@@ -442,11 +446,19 @@
 
     &.prev {
       float: left;
+
+      @include media-query($on-palm) {
+        float: none;
+      }
     }
 
     &.next {
       float: right;
       text-align: right;
+
+      @include media-query($on-palm) {
+        float: none;
+      }
     }
 
     &:hover {
