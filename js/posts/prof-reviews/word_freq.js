@@ -15,12 +15,8 @@ import { STOPWORDS, MALE_COLOR, FEMALE_COLOR  } from './globals.js'
   let top_n_words = 20;
 
   /* static elements (only append once) */
-  var freq_data, sub_data, adj_data;
-  // STOPWORDS //
-  // const STOPWORDS = ['give', // verbs
-  //                     'lab','content', 'major', // class-related nouns
-  //                     'basically','weekly','honestly']; // neutral adverbs
-  const custom_words = []; // add some fun words here
+  var sub_data, adj_data;
+
   const stat_svg = d3.select("#stat-svg-div").append("svg");
   stat_svg
     .attr("id","stat-svg")
@@ -46,8 +42,8 @@ import { STOPWORDS, MALE_COLOR, FEMALE_COLOR  } from './globals.js'
   stat_svg.select(".legend").append("text").attr("x",W_WIDTH * 0.6+20).attr("y",W_HEIGHT * 0.7+30).text("Female Professors").style("font-size", "15px").attr("alignment-baseline","middle");
 
   // dropdown
-  const stats = ["Largest Difference","Female Professors","Male Professors"]
-  // ,"Largest Difference - Adj/Adverbs","Female-Professor - Adj/Adverbs","Male Professor - Adj/Adverbs"]
+  // const stats = ["Largest Difference","Female Professors","Male Professors"]
+  const stats = ["Largest Difference - Adj/Adverbs","Female-Professor - Adj/Adverbs","Male Professor - Adj/Adverbs"];
   var stat = stats[0]; // the stat to sort words by
   const onStatClicked = selection => {
     var stat;
@@ -61,10 +57,10 @@ import { STOPWORDS, MALE_COLOR, FEMALE_COLOR  } from './globals.js'
       stat = "male";
     }
     // if (selection == stats[3] || selection == stats[4] || selection == stats[5]){
-    //   render_stats(adj_data,stat,"Adjective/Adverb");
+    render_stats(adj_data,stat,"Adjective/Adverb");
     // }
     // else{
-    render_stats(freq_data,stat); // pass in full dataset to rerank top_n
+    // render_stats(freq_data,stat); // pass in full dataset to rerank top_n
     // }
     // console.log("selection",selection, " stat",stat);
   };
@@ -199,7 +195,7 @@ import { STOPWORDS, MALE_COLOR, FEMALE_COLOR  } from './globals.js'
   }
 
   // main render function
-  const render_stats = (data,stat="difference_abs",y_label="Word",num_words = top_n_words) =>{
+  const render_stats = (data,stat="difference_abs",y_label="Adjective/Adverb",num_words = top_n_words) =>{
     const t = d3.transition().duration(config.anim_speed).ease(d3.easeCubic);
     // sort data by selected statistic and slice top n
     sub_data = sort_data(data,stat,num_words)
@@ -245,13 +241,13 @@ import { STOPWORDS, MALE_COLOR, FEMALE_COLOR  } from './globals.js'
       .style("padding-bottom","5px")
       .text(y_label);
     // title
-    stat_svg.append("g")
-      .append("text")
-      .attr("class","title-text")
-      .attr("x", margin.left)
-      .attr("y", 30)
-      .style("font-size","25px")
-      .text("Word Frequencies for Male and Female Professors");
+    // stat_svg.append("g")
+    //   .append("text")
+    //   .attr("class","title-text")
+    //   .attr("x", margin.left)
+    //   .attr("y", 30)
+    //   .style("font-size","25px")
+    //   .text("Word Frequencies for Male and Female Professors");
   
     // clear other lines from svg
     clear_graphics(stat_svg)
@@ -386,18 +382,18 @@ import { STOPWORDS, MALE_COLOR, FEMALE_COLOR  } from './globals.js'
       d.female = +d.female;
       d.difference_abs = +d.difference_abs;
     });  
-    freq_data = data.filter(function (el) {
-      return !STOPWORDS.includes(el.word); 
-    });
-    sub_data = data.filter(function (el) {
-      return !STOPWORDS.includes(el.word);
-    });
+    // freq_data = data.filter(function (el) {
+    //   return !STOPWORDS.includes(el.word); 
+    // });
+    // sub_data = data.filter(function (el) {
+    //   return !STOPWORDS.includes(el.word);
+    // });
     adj_data = data.filter(function (el) {
       return (el.POS == "ADJ" ||
             el.POS == "ADV") &&
             !STOPWORDS.includes(el.word);
     });
     var stat = "difference_abs";
-    render_stats(sub_data,stat);
+    render_stats(adj_data,stat);
   });
 })(); // create and run anonymous fn

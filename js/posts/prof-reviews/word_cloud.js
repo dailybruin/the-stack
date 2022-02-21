@@ -54,8 +54,8 @@ import { STOPWORDS, MALE_COLOR, FEMALE_COLOR } from './globals.js'
 
 
   // dropdown
-  // const stats = ["Largest Difference","Female Professors","Male Professors",
-  const stats = ["Largest Difference - Adj/Adverbs","Female-Professor - Adj/Adverbs","Male Professor - Adj/Adverbs"]
+  const stats = ["Largest Difference","Female Professors","Male Professors"];
+  // const stats = ["Largest Difference - Adj/Adverbs","Female-Professor - Adj/Adverbs","Male Professor - Adj/Adverbs"]
   var stat = stats[0]; // the stat to sort words by
   const onStatClicked = selection => {
     // re-filter data on click
@@ -70,7 +70,7 @@ import { STOPWORDS, MALE_COLOR, FEMALE_COLOR } from './globals.js'
       stat = "male";
     }
     // if (selection == stats[3] || selection == stats[4] || selection == stats[5]){
-    render_stats(adj_data,stat,"Adjective/Adverb");
+    render_stats(sub_data,stat,"Adjective/Adverb");
     // }
     // else{
     //   render_stats(freq_data,stat); // pass in full dataset to rerank top_n
@@ -259,18 +259,18 @@ import { STOPWORDS, MALE_COLOR, FEMALE_COLOR } from './globals.js'
       d.female = +d.female;
       d.difference_abs = +d.difference_abs;
     });  
-    freq_data = data.filter(function (el) {
-      return !STOPWORDS.includes(el.word);
-    });
-    // sub_data = data.filter(function (el) {
+    // freq_data = data.filter(function (el) {
     //   return !STOPWORDS.includes(el.word);
     // });
-    adj_data = data.filter(function (el) {
-      return (el.POS == "ADJ" ||
-             el.POS == "ADV") &&
-             !STOPWORDS.includes(el.word); // word not in stopwords list
+    sub_data = data.filter(function (el) {
+      return !STOPWORDS.includes(el.word);
     });
+    // adj_data = data.filter(function (el) {
+    //   return (el.POS == "ADJ" ||
+    //          el.POS == "ADV") &&
+    //          !STOPWORDS.includes(el.word); // word not in stopwords list
+    // });
     var stat = "difference_abs";
-    onStatClicked(adj_data,stat);
+    onStatClicked(sub_data,stat);
   });
 })();
