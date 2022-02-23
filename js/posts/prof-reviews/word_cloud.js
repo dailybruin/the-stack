@@ -70,7 +70,7 @@ import { STOPWORDS, MALE_COLOR, FEMALE_COLOR } from './globals.js'
       stat = "male";
     }
     // if (selection == stats[3] || selection == stats[4] || selection == stats[5]){
-    render_stats(sub_data,stat,"Adjective/Adverb");
+    render_stats(freq_data,stat,"Adjective/Adverb");
     // }
     // else{
     //   render_stats(freq_data,stat); // pass in full dataset to rerank top_n
@@ -89,6 +89,7 @@ import { STOPWORDS, MALE_COLOR, FEMALE_COLOR } from './globals.js'
   let num_words_input = document.getElementById('num-words-input2');
   num_words_input.onchange = () => {
        top_n_words = num_words_input.value
+       console.log('spinmer',top_n_words)
        onStatClicked(); // call onStatClicked to also determine first dropdown value
    }  
 
@@ -122,6 +123,7 @@ import { STOPWORDS, MALE_COLOR, FEMALE_COLOR } from './globals.js'
   // draw both male and female WCs
   const render_stats = (data,stat="difference_abs",y_label="Word",num_words = top_n_words) =>{
     // sort data by selected statistic and slice top n
+    console.log('render words',num_words);
     sub_data = sort_data(data,stat,num_words);
     // console.log("sliced-data",sub_data);
 
@@ -259,9 +261,9 @@ import { STOPWORDS, MALE_COLOR, FEMALE_COLOR } from './globals.js'
       d.female = +d.female;
       d.difference_abs = +d.difference_abs;
     });  
-    // freq_data = data.filter(function (el) {
-    //   return !STOPWORDS.includes(el.word);
-    // });
+    freq_data = data.filter(function (el) {
+      return !STOPWORDS.includes(el.word);
+    });
     sub_data = data.filter(function (el) {
       return !STOPWORDS.includes(el.word);
     });

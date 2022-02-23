@@ -9,7 +9,7 @@ import { STOPWORDS, MALE_COLOR, FEMALE_COLOR  } from './globals.js'
       "vh": W_HEIGHT * 0.9,
       "anim_speed": 3000
     }
-    const margin = ({top: 50, right: 20, bottom: 60, left: 150});
+    const margin = ({top: 50, right: 20, bottom: 100, left: 150});
     const t = d3.transition().duration(config.anim_speed).ease(d3.easeCubic);
     var stats = ['temp','values'];
 
@@ -34,33 +34,61 @@ import { STOPWORDS, MALE_COLOR, FEMALE_COLOR  } from './globals.js'
       .attr("class","ylabel")
     var xScale;
     
+    // sorts x axis numerically
+    const sort_num = (a, b) => {
+      return a - b;
+    };
+
+    String.prototype.replaceAt = function(index, replacement) {
+      return this.substr(0, index) + replacement + this.substr(index + replacement.length);
+    }
+
+    // and replace quarters
+    const replace_qtr = (x_array) => {
+      let new_array = []
+      for (let q of x_array){
+        q = String(q);
+        const qtr_dict = {'1':'FA','2':'WI','3':'SP','4':'SU'};
+        q = q.replace('.', ' ');
+        q = q.replaceAt(5,qtr_dict[q[5]]);
+        new_array.push(q);
+      }
+      return new_array
+    }
+
     // main render function
-    const render_stats = (data,stat="overall_rating",y_label="Word") =>{
+    const render_stats = (data,stat="overall_rating") =>{
         const t = d3.transition().duration(config.anim_speed).ease(d3.easeCubic);
         console.log('selected_stat',stat)
         // axes, labels, title
         // find new max value for y axis
-        
-        xScale = d3.scaleLinear()
-            .domain([2013,2021])
+        let x_array = data.map(d=>d.time_taken).sort(sort_num)
+        x_array = replace_qtr(x_array)
+        console.log(x_array);
+        xScale = d3.scaleBand()
+            .domain(x_array)
             .range([margin.left, config.vw - margin.right])
         const xAxis = d3.axisBottom().scale(xScale);    
         xAxisGroup
-            .attr("transform", "translate(0," + (config.vh - margin.bottom*2/3) + ")")
+            .attr("transform", "translate(0," + (config.vh - margin.bottom) + ")")
             .transition(t)
-            .call(xAxis);
+            .call(xAxis)
+            .selectAll("text")
+              .attr("y", 0)
+              .attr("x", 9)
+              .attr("transform", "rotate(45)")
+              .style("text-anchor", "start");;
         xLabel
             .attr("text-anchor", "middle")
             .attr("x", (config.vw+ margin.left)/2 )
             .attr("y",config.vh)
             .style("font-size","20px")
-            .text('Percent of All Words');
-    
-        let max1 = Math.max(...data.map(d => d.stat));
-        let max2 = Math.max(...data.map(d => d.stat));
-        let max = Math.max(max1,max2) * 1.1;
-        const yScale = d3.scalePoint()
-            .domain([0,max])
+            .text('Quarter Taken');
+
+        // let max = Math.max(...data.map(d => d[stat])) * 1.1;
+        // console.log("ymax",max)
+        const yScale = d3.scaleLinear()
+            .domain([5,0])
             .range([margin.top,config.vh - margin.bottom]); // need to offset bars/circles by margin.top
         const yAxis = d3.axisLeft().scale(yScale);
         yAxisGroup   
@@ -68,9 +96,6 @@ import { STOPWORDS, MALE_COLOR, FEMALE_COLOR  } from './globals.js'
             .style("font-size","15px")
             .transition(t)
             .call(yAxis);
-        // assign ID to y-axis tick text so can bold on hover
-        d3.select("g.yaxis").selectAll(".tick text")
-            .attr("id", (d,i) => {return d + "-word" });
         yLabel
             .attr("text-anchor", "middle")
             .attr("x", -config.vh/2)
@@ -78,12 +103,25 @@ import { STOPWORDS, MALE_COLOR, FEMALE_COLOR  } from './globals.js'
             .attr("transform", "rotate(-90)")
             .style("font-size","20px")
             .style("padding-bottom","5px")
-            .text(y_label);
+            .text(stat);
+
+
     };
   
 
     d3.csv('/datasets/prof-reviews/prof_sentiment_by_qtr_filt.csv')
     .then(data => {
+        data.forEach(d => {
+          d.overall_rating = +d.overall_rating;
+          d.easiness_rating = +d.easiness_rating;
+          d.workload_rating = +d.workload_rating;
+          d.clarity_rating = +d.clarity_rating;
+          d.helpfulness_rating = +d.helpfulness_rating;
+          d.pos_score = +d.pos_score;
+          d.neg_score = +d.neg_score;
+          d.review_is_positive = +d.review_is_positive;
+          d.time_taken = +d.time_taken;
+        }); 
         rating_data = data;
         console.log(rating_data);
 

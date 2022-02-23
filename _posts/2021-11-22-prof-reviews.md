@@ -52,14 +52,15 @@ stylesheets:
     style="display: inline-block; text-align: right">
     Number of words
   </label>
-  <input type="number" min="15" max="40" step="5" value="20" id="num-words-input1">
+  <input type="number" min="10" max="50" step="5" value="20" id="num-words-input1">
 </div> 
 <div id="stat-svg-div">
 </div>
 
 ### Comparing Ratings Over Time
 <!-- line chart -->
-<div id="stats-menu3" style="display: inline; float: left;">
+add vert line Jan 2020 for pre/post-covid
+<div id="stats-menu3">
 </div>
 <div id="rating-svg-div">
 </div>

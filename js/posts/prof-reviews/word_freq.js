@@ -381,13 +381,7 @@ import { STOPWORDS, MALE_COLOR, FEMALE_COLOR  } from './globals.js'
       d.male = +d.male;
       d.female = +d.female;
       d.difference_abs = +d.difference_abs;
-    });  
-    // freq_data = data.filter(function (el) {
-    //   return !STOPWORDS.includes(el.word); 
-    // });
-    // sub_data = data.filter(function (el) {
-    //   return !STOPWORDS.includes(el.word);
-    // });
+    });
     adj_data = data.filter(function (el) {
       return (el.POS == "ADJ" ||
             el.POS == "ADV") &&
