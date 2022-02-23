@@ -90,17 +90,16 @@ Hover over the map for more information about the bus stop, including the bus li
 
 <!-- Timeliness graphs -->
 <!-- Overview pie chart -->
-<iframe title="Timeliness Performance of Different Transportation Agencies" aria-label="Multiple Pies" id="datawrapper-chart-VJ4Gp" src="https://datawrapper.dwcdn.net/VJ4Gp/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="302"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();
+<iframe title="Timeliness Performance of Different Transportation Agencies" aria-label="Multiple Pies" id="datawrapper-chart-VJ4Gp" src="https://datawrapper.dwcdn.net/VJ4Gp/3/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="302"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();
 </script>
-<!-- pie chart for AVTA -->
-<!-- <iframe title="Antelope Valley Transit Authority Timeliness Performance" aria-label="Multiple Pies" id="datawrapper-chart-NUP74" src="https://datawrapper.dwcdn.net/NUP74/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="439"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();
-</script> -->
+
 <!-- pie chart for LADOT -->
-<!-- <iframe title="LA Department of Transportation Bus Lines" aria-label="Multiple Pies" id="datawrapper-chart-UIRWW" src="https://datawrapper.dwcdn.net/UIRWW/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="334"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();
-</script> -->
+<iframe title="LA Department of Transportation Bus Lines" aria-label="Multiple Pies" id="datawrapper-chart-UIRWW" src="https://datawrapper.dwcdn.net/UIRWW/3/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="282"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();
+</script>
+
 <!-- pie chart for Santa Clarita -->
-<!-- <iframe title="Santa Clarita Transit Timeliness Performance " aria-label="Multiple Pies" id="datawrapper-chart-K35BC" src="https://datawrapper.dwcdn.net/K35BC/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="430"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();
-</script> -->
+<iframe title="Santa Clarita Transit Timeliness Performance " aria-label="Multiple Pies" id="datawrapper-chart-K35BC" src="https://datawrapper.dwcdn.net/K35BC/2/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="302"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();
+</script>
 
 From July 2019 to October 2021, the Antelope Valley Transit Authority bus line 786 had the highest percentage of late buses among all three transportation agencies that provided scheduled and actual bus arrival times.
 
@@ -158,7 +157,7 @@ The above ridership charts show a slow improvement in ridership since the first 
 
 Amidst declining public transit ridership, LA metro is expanding their rail system. An extension of the Metro Purple (D Line) is currently under construction to connect existing metro stations in Downtown Los Angeles and Koreatown to Westwood by 2027.
 
-According to Wasserman, the D line extension “can serve a large amount of riders, as there's a large density of both jobs and residents and housing around the stations.” The closest station to UCLA will be at Westwood Boulevard and WIlshire Boulevard.
+According to Wasserman, the D line extension “can serve a large amount of riders, as there's a large density of both jobs and residents and housing around the stations.” The closest station to UCLA will be at Westwood Boulevard and Wilshire Boulevard.
 
 Additionally, the D line is expected to run 24 hours a day, addressing concerns raised by some commuter students, like Vadez, about having reliable transportation home from campus at all hours. .
 
