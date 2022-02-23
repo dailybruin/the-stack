@@ -1,12 +1,14 @@
 ---
-title: Public Transit near UCLA
-teaser: buses are late :(
+title: Punctuality and Popularity of Public Transit Routes near UCLA Campus
+teaser: The Stack analyzes data from four major transportation agencies serving the Westwood area, looking at how often buses arrive late and how ridership levels have changed since January 2019.
 authors:
-  -
+  - justin_gong
+  - mansa_krishna
 
 key_takeaways:
   - From July 2019 to October 2021, buses operated by Antelope Valley Transit Authority, the Los Angeles Department of Transportation and Santa Clarita Transit were late 23% of the time.
   - Monthly ridership of buses run by AVTA, LADOT and Santa Clarita Transit decreased by over 70% during the pandemic.
+  - A quarter of UCLA commuter students used public transit in 2019, while only 8% of students commuting to campus traveled via public transit in 2020.
 
 featured_image:
   url:
@@ -112,7 +114,7 @@ Even before the COVID-19 pandemic, transit ridership was declining despite effor
 
 Since early 2020, public transit ridership has decreased significantly as many individuals attended work or school remotely and people avoided crowded public areas.
 
-While almost 20% of all UCLA commuters used public transit to travel to campus in 2019, the 2020 State of the Commute Report found that less than 2% of commuters in 2020 traveled to campus via public transit. The members of the UCLA community classified as commuters in the 2020 report included those who telecommuted for remote work and classes, which made up 69% and 77% of commuting employees and students, respectively.
+While almost 20% of all UCLA commuters used public transit to travel to campus in 2019, the 2020 State of the Commute Report found that only 8% of commuters traveling to campus in 2020 used public transit.
 
 In our analysis of ridership data for LADOT, AVTA, Santa Clarita Transit and Big Blue Bus from January 2019 to October 2021, we found large decreases in average monthly ridership in the months following the beginning of the COVID-19 pandemic.
 
