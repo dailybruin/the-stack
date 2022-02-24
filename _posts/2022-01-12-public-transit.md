@@ -1,6 +1,8 @@
 ---
 title: Punctuality and Popularity of Public Transit Routes near UCLA Campus
-teaser: The Stack analyzes data from four major transportation agencies serving the Westwood area, looking at how often buses arrive late and how ridership levels have changed since January 2019.
+
+teaser: The Stack analyzes data from four major transportation agencies serving the Westwood area, looking at how commuter students are impacted by bus schedules and how ridership levels have changed since January 2019.
+
 authors:
   - justin_gong
   - mansa_krishna
@@ -38,7 +40,7 @@ Many of these commuter students face issues of late buses and inconvenient trans
 
 Julie Valdez, a second-year political science student who used to commute to campus on the LADOT-operated Commuter Express 573, said that she frequently missed classes because of public transportation. She also was not able to stay on campus for club events due to limited evening bus schedules.
 
-Another commuter student, Natalie Hernandez, a third-year biology student, also said she had been late to classes due to the poor timeliness performance of the buses.
+Another commuter student, Natalie Hernandez, a third-year biology student, also said she had been late to classes due to buses not being on-time.
 
 “Since it takes so much time[to commute], I have less time to study or work,” said Hernandez.
 
@@ -89,8 +91,6 @@ Hover over the map for more information about the bus stop, including the bus li
   scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
   vizElement.parentNode.insertBefore(scriptElement, vizElement);
 </script>
-
-## Punctualness of Buses
 
 <!-- Timeliness graphs -->
 <!-- Overview pie chart -->
@@ -171,26 +171,30 @@ As LA Metro works to improve its rail lines, Matute said that UCLA students can 
 
 After directly reaching out to various bus stop agencies in Los Angeles, data from AVTA, LADOT, Santa Clarita Transit and Santa Monica BBB, was collected and compiled. In particular, details on ridership per bus stop, scheduled bus departure and arrival times, delays in bus departure and arrivals and bus routes (with bus stop names and bus stop codes) were collected for a period of three years (2019 to 2021).
 
-AVTA Data
+#### AVTA Data
+
 AVTA has operational bus lines and routes that cover an area from the Canoga & Victory stop to the 170th St. E. & Longmeadow stop and from the Scaled Composites stop to the 8th & Spring stop. The data for this article is limited to bus line 786. Both the southbound and northbound routes range from Lancaster/Palmdale to Century City/West Los Angeles and Century City/West Los Angeles to Lancaster/Palmdale respectively.
 
 AVTA data on ridership per bus stop, scheduled and actual arrival and departure times, and bus routes (with stop information) was obtained on a monthly basis for a period of three years from 2019 to 2021.
 
-LADOT Data
+#### LADOT Data
+
 LADOT has operational bus lines and routes across Los Angeles, covering an area from Sylmar, Los Angeles to San Pedro, Los Angeles and Thousand Oaks to Pasadena. The data for this article is limited to bus lines 431, 534, and 573, the Downtown LA/Westwood, West LA/Downtown LA, and Encino/Westwood lines respectively.
 
 LADOT data on total ridership per month from 2019-2021 for all three bus lines, bus stop arrival and departure statistics for on-time performance, and bus route (with stop information) was obtained.
 
-Santa Clarita Transit Data
+#### Santa Clarita Transit Data
+
 Santa Clarita Transit has operational bus lines and routes from Castaic to Downtown, Los Angeles and from Val Verde to Downtown, Los Angeles. The data for this article is limited to bus lines 792 and 797, both the Century City lines.
 
 Santa Clarita data on total ridership per stop for a period of three years (2019 to 2021) for each route, the breakdown of ridership per stop per month for a period of three years (2019 to 2021), bus stop arrival and departure statistics for on-time performance, and bus route (with stop information) was obtained.
 
-Santa Monica BBB Data
+#### Santa Monica BBB Data
+
 The Big Blue Bus has operational bus lines and routes from Westwood, Los Angeles to Aviation/LAX Station and from Pacific Palisades, Los Angeles to Downtown, Los Angeles. The data for this article is limited to bus routes 1, 2, 3, 8, and 12, the Main St & Santa Monica Blvd/UCLA, Wilshire Blvd/UCLA, Lincoln Blvd/LAX, Ocean Park Blvd & Westwood Bl/UCLA, and Westwood/UCLA-Culver City Sta bus routes respectively.
 
 Santa Monica BBB data on ridership per month, per stop for a period of three years (2019 to 2021) and bus route (with stop information) was obtained.
 
-Latitude and Longitude Positions of Bus Stops
+#### Latitude and Longitude Positions of Bus Stops
 
-Using the bus stop information provided by the aforementioned public transit bus agencies, the addresses of each of the bus stops were scraped (using the Scrapy package in Python) and appended to a comma-separated values file. This data was imported into Google Sheets with geocoding capabilities, thus enabling the retrieval of latitude and longitude coordinates of the bus stops. More details on the code are available in The Stack’s GitHub repository, available (here)[https://github.com/dailybruin/the-stack/tree/public-transit/python/bus_stops_scraper].
+Using the bus stop information provided by the aforementioned public transit bus agencies, the addresses of each of the bus stops were scraped (using the Scrapy package in Python) and appended to a comma-separated values file. This data was imported into Google Sheets with geocoding capabilities, thus enabling the retrieval of latitude and longitude coordinates of the bus stops. More details on the code are available in The Stack’s [GitHub repository](https://github.com/dailybruin/the-stack/tree/public-transit/python/bus_stops_scraper).
