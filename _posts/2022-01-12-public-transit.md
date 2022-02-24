@@ -52,30 +52,33 @@ The color scale displays how often buses are late at each respective bus stop, w
 
 Hover over the map for more information about the bus stop, including the bus line, how often buses are late to that stop, and the average number of boarding passengers. To find a specific stop, use the “Stop Name” filter to search a bus stop by its stop number or address. (Note: Clear the Stop Name search bar and hit enter to reset the map.)
 
-<div class='tableauPlaceholder' id='viz1643678902712' style='position: relative'>
+<div
+  class='tableauPlaceholder'
+  id='viz1645655548261'
+  style='position: relative'
+>
   <object class='tableauViz'  style='display:none;'>
-    <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> 
+    <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
     <param name='embed_code_version' value='3' />
     <param name='site_root' value='' />
-    <param name='name' value='Book1_16436639496760&#47;Dashboard1' />
-    <param name='tabs' value='no' />
-    <param name='toolbar' value='yes' />
+    <param name='name' value='LADOTBuslines&#47;Dashboard1' />
+    <param name='tabs' value='no' /><param name='toolbar' value='yes' />
     <param name='animate_transition' value='yes' />
     <param name='display_static_image' value='yes' />
     <param name='display_spinner' value='yes' />
     <param name='display_overlay' value='yes' />
     <param name='display_count' value='yes' />
     <param name='language' value='en-US' />
+    <param name='filter' value='publish=yes' />
   </object>
 </div>
-
 <script type='text/javascript'>
-  var divElement = document.getElementById('viz1643678902712');
+  var divElement = document.getElementById('viz1645655548261');
   var vizElement = divElement.getElementsByTagName('object')[0];
   if ( divElement.offsetWidth > 800 ) { 
     vizElement.style.width='1000px';
     vizElement.style.height='827px';
-  } else if (divElement.offsetWidth > 500){ 
+  } else if (divElement.offsetWidth > 500) { 
     vizElement.style.width='1000px';
     vizElement.style.height='827px';
   } else { 
