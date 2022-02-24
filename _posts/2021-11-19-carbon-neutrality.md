@@ -102,8 +102,4 @@ Scope 1
   <!-- <script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();
   </script> -->
 
-</script>
-</div>
-
-<script src="https://cdn.anychart.com/releases/8.10.0/js/anychart-base.min.js"></script>
-<div id = 'CarbonEmission' style='height: 100vh'></div>
+</div><canvas id="line-chart" width="800" height="450"></canvas>
