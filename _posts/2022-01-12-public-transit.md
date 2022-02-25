@@ -23,11 +23,12 @@ scripts:
   - //cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js
   - //cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@0.7.0
   - //code.jquery.com/jquery-3.6.0.min.js
-  - /js/posts/online-grade-distributions/MainChart.js
+  # - /js/posts/online-grade-distributions/MainChart.js
+  - /js/posts/public-transit/test.js
 
 stylesheets:
   - //cdnjs.cloudflare.com/ajax/libs/c3/0.4.10/c3.min.css
-  - /css/posts/online-grade-distributions/app.css
+  - /css/posts/public-transit/app.css
 ---
 
 More than half of Bruins undergraduates, as well as a majority of graduate students, staff and faculty, live off campus and must commute to class and to work. According to UCLA’s 2019 State of the Commute Report, (CQ1) over 63% of all UCLA commuters use sustainable transportation of some form, while the remaining 37% drive alone to campus.
@@ -126,21 +127,29 @@ For each of those four public transit agencies, the following chart depicts the 
 <!-- Ridership Graphs -->
 
 ##### Average Ridership
-![avg-ridership.html]({{ site.baseurl }}/python/posts/public_transit/avg-ridership.html)}
+<div id="avg-ridership" class="timeline"></div>
+<!-- ![avg-ridership.html]({{ site.baseurl }}/python/posts/public_transit/avg-ridership.html)} -->
 
 Note: Ridership data for the Big Blue Bus was unavailable for certain months, so that chart was modified to a scatter plot.
 
 ##### LADOT Ridership
-![ladot-ridership.html]({{ site.baseurl }}/python/posts/public_transit/ladot-ridership.html)
+<div id="ladot-ridership" class="timeline"></div>
+<!-- ![ladot-ridership.html]({{ site.baseurl }}/python/posts/public_transit/ladot-ridership.html) -->
 
 ##### AVTA Ridership
-![avta-ridership.html]({{ site.baseurl }}/python/posts/public_transit/avta-ridership.html)
+<div id="avta-ridership"  class="timeline"></div>
+<!-- ![avta-ridership.html]({{ site.baseurl }}/python/posts/public_transit/avta-ridership.html) -->
 
 ##### Santa Clarita Transit Ridership
-![sct-ridership.html]({{ site.baseurl }}/python/posts/public_transit/sct-ridership.html)
+<div id="sct-ridership" class="timeline"></div>
+<!-- $(document).ready(function() {
+    $('#sct-ridership').load('python/posts/public_transit/sct-ridership.html');
+}); -->
+<!-- ![sct-ridership.html]({{ site.baseurl }}/python/posts/public_transit/sct-ridership.html) -->
 
 ##### Big Blue Bus Ridership
-![bbb-ridership.html]({{ site.baseurl }}/python/posts/public_transit/bbb-ridership.html)
+<div id="bbb-ridership" class="timeline"></div>
+<!-- ![bbb-ridership.html]({{ site.baseurl }}/python/posts/public_transit/bbb-ridership.html) -->
 
 For all public transit agencies analyzed, total ridership declined significantly following the onset of the COVID-19 pandemic in early 2020. To estimate the percentage decline in ridership due to COVID-19, the mean monthly ridership from January 2019 to February 2020 was compared to the mean monthly ridership from March 2020 to October 2021.
 
