@@ -126,21 +126,21 @@ For each of those four public transit agencies, the following chart depicts the 
 <!-- Ridership Graphs -->
 
 ##### Average Ridership
-{% include ../python/public_transit/avg-ridership.html %}
+![avg-ridership.html]({{ site.baseurl }}/python/posts/public_transit/avg-ridership.html)}
 
 Note: Ridership data for the Big Blue Bus was unavailable for certain months, so that chart was modified to a scatter plot.
 
 ##### LADOT Ridership
-{% include ../python/public_transit/ladot-ridership.html %}
+![ladot-ridership.html]({{ site.baseurl }}/python/posts/public_transit/ladot-ridership.html)
 
 ##### AVTA Ridership
-{% include ../python/public_transit/avta-ridership.html %}
+![avta-ridership.html]({{ site.baseurl }}/python/posts/public_transit/avta-ridership.html)
 
 ##### Santa Clarita Transit Ridership
-{% include ../python/public_transit/sct-ridership.html %}
+![sct-ridership.html]({{ site.baseurl }}/python/posts/public_transit/sct-ridership.html)
 
 ##### Big Blue Bus Ridership
-{% include ../python/public_transit/bbb-ridership.html %}
+![bbb-ridership.html]({{ site.baseurl }}/python/posts/public_transit/bbb-ridership.html)
 
 For all public transit agencies analyzed, total ridership declined significantly following the onset of the COVID-19 pandemic in early 2020. To estimate the percentage decline in ridership due to COVID-19, the mean monthly ridership from January 2019 to February 2020 was compared to the mean monthly ridership from March 2020 to October 2021.
 
