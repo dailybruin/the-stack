@@ -79,16 +79,16 @@ stylesheets:
 
 <!-- Ridership Graphs -->
 ##### Average Ridership
-{% include avg-ridership.html %}
+{% include ../python/public_transit/avg-ridership.html %}
 
 ##### LADOT Ridership
-{% include ladot-ridership.html %}
+{% include ../python/public_transit/ladot-ridership.html %}
 
 ##### AVTA Ridership
-{% include avta-ridership.html %}
+{% include ../python/public_transit/avta-ridership.html %}
 
 ##### Santa Clarita Transit Ridership
-{% include sct-ridership.html %}
+{% include ../python/public_transit/sct-ridership.html %}
 
 ##### Big Blue Bus Ridership
-{% include bbb-ridership.html %}
+{% include ../python/public_transit/bbb-ridership.html %}
