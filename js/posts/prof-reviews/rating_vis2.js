@@ -34,76 +34,35 @@ import { STOPWORDS, MALE_COLOR, FEMALE_COLOR  } from './globals.js'
     var yLabel = rating_svg.append("text")
       .attr("class","ylabel")
     var xScale;
-    
-    // sorts x axis numerically
-    const sort_num = (a, b) => {
-      return a - b;
-    };
+   
+    // calculate average rating
+    const average = (array) => array.reduce((a, b) => a + b) / array.length;
 
     String.prototype.replaceAt = function(index, replacement) {
       return this.substr(0, index) + replacement + this.substr(index + replacement.length);
     }
 
-    // and replace quarters
-    const replace_qtr = (q) => {
-      q = String(q);
-      const qtr_dict = {'1':'FA','2':'WI','3':'SP','4':'SU'};
-      q = q.replace('.', ' ');
-      q = q.replaceAt(5,qtr_dict[q[5]]);
-      return q
-    }
-    const replace_qtr_array = (x_array) => {
-      let new_array = []
-      for (let q of x_array){
-        new_array.push(replace_qtr(q));
-      }
-      return new_array
-    }
-
-    function clear_paths(){
-      d3.select('.male-path').remove();
-      d3.select('.female-path').remove();
-      return;
-    }
-    // draws path
-    function draw(context,data,stat,xScale,yScale) {
-      let ratings = data.map(d => d[stat]);
-      let dates = data.map(d=>d.time_taken2);
-      // console.log("moveTo",ratings,dates);
-      context.moveTo(yScale(ratings[0]), xScale(dates[0])); // move current point to first rating/date
-      for (var i = 0; i < ratings.length-1; i++) { 
-        // console.log("lineTo",xScale(dates[i]),yScale(ratings[i])); 
-        context.lineTo(xScale(dates[i]), yScale(ratings[i])); // draw straight line to next quarter
-      }
-      return context; // not mandatory, but will make it easier to chain operations
-    }
-
     // main render function
-    const render_stats = (male_rating_data,female_rating_data,stat="overall_rating") =>{
+    const render_stats = (male_rating_data,female_rating_data,stat="overall_rating",word="") =>{
         const t = d3.transition().duration(config.anim_speed).ease(d3.easeCubic);
-        console.log('selected_stat',stat)
+        console.log('selected_stat', stat);
+
         // axes, labels, title
         // find new max value for y axis
-        
         xScale = d3.scaleBand()
-          .domain(date_array)
+          .domain(['Male','Female'])
           .range([margin.left, config.vw - margin.right])
         const xAxis = d3.axisBottom().scale(xScale);    
         xAxisGroup
           .attr("transform", "translate(0," + (config.vh - margin.bottom) + ")")
           .transition(t)
-          .call(xAxis)
-          .selectAll("text")
-            .attr("y", 0)
-            .attr("x", 9)
-            .attr("transform", "rotate(45)")
-            .style("text-anchor", "start");;
+          .call(xAxis);
         xLabel
           .attr("text-anchor", "middle")
           .attr("x", (config.vw+ margin.left)/2 )
           .attr("y",config.vh)
           .style("font-size","20px")
-          .text('Quarter Taken');
+          .text('Professor Gender');
         const yScale = d3.scaleLinear()
           .domain([5,0])
           .range([margin.top,config.vh - margin.bottom]); // need to offset bars/circles by margin.top
@@ -121,48 +80,33 @@ import { STOPWORDS, MALE_COLOR, FEMALE_COLOR  } from './globals.js'
           .style("font-size","20px")
           .style("padding-bottom","5px")
           .text(stat);
-
-      // clear old path
-      clear_paths();
-      // plot path for male
+      
+      // re-calculate means for male/female -> create new array of objects
+      let avg_female_rtg = average(female_rating_data.map(d => d[stat]));
+      let avg_male_rtg = average(male_rating_data.map(d => d[stat]));
+      console.log('fem array',female_rating_data.map(d => d[stat]),'fem avg',avg_female_rtg);
+      let avg_data = [{avg: avg_female_rtg, gender: "Female", color: FEMALE_COLOR},
+                      {avg: avg_male_rtg, gender: "Male", color: MALE_COLOR}]
+      
+      // plot rects
       rating_svg
-        .append("path")
-        .attr("class","male-path")
-        .style("stroke", MALE_COLOR)
-        .style("stroke-width",2)
-        .style("fill", "none")
-        .transition()
-        .attr("d", draw(d3.path(),male_rating_data,stat,xScale,yScale)) // create path and pass to draw function
-        .node();
-      // plot path for female
-      rating_svg
-        .append("path")
-        .attr("class","female-path")
-        .style("stroke", FEMALE_COLOR)
-        .style("stroke-width",2)
-        .style("fill", "none")
-        .transition()
-        .attr("d", draw(d3.path(),female_rating_data,stat,xScale,yScale))
-        .node();
-
-      // add circles to each point
-      rating_svg
-        .selectAll("circle")
-        .data(male_rating_data, d => String(d.time_taken) + String(d[stat]))
+        .selectAll("rect")
+        .data(avg_data)
         .join(
-          enter => enter.append("circle")
-            .attr("id", d => {return String(d.time_taken) + String(d[stat])})
-            .attr("r",5)
-            .attr("cx",d => xScale(d.time_taken2))
-            .attr("cy",d => yScale(d[stat]))
-            .attr("fill",MALE_COLOR)
+          enter => enter.append("rect")
+            .attr("id", d => {return String(d.gender) + String(d.avg)})
+            .attr("x", d => {console.log(d.gender); return xScale(d.gender)})
+            .attr("y", d => yScale(d.avg))
+            .attr("width", config.vw/2 *0.75)
+            .attr("height", d => yScale(d.avg))
+            .attr("fill",d => d.color)
           ,
           update => update
             .call(update => update.transition(t)
           ),
           exit => exit
             .call(exit => exit.transition()
-            .attr("r",0)
+            .attr("height",0)
             .remove()
           )
       );
@@ -182,7 +126,7 @@ import { STOPWORDS, MALE_COLOR, FEMALE_COLOR  } from './globals.js'
           d.neg_score = +d.neg_score;
           d.review_is_positive = +d.review_is_positive;
           d.time_taken = +d.time_taken; // numeric qtr (1-4)
-          d.time_taken2 = replace_qtr(d.time_taken) // alphabetic qtr
+          // d.time_taken2 = replace_qtr(d.time_taken) // alphabetic qtr
           // split male/female data
           if (d.gender_guess == "Female"){
             female_rating_data.push(d);
@@ -193,9 +137,9 @@ import { STOPWORDS, MALE_COLOR, FEMALE_COLOR  } from './globals.js'
         }); 
         // sort male and female by dates
         console.log('mf',male_rating_data,female_rating_data)
-        female_rating_data.sort((a,b) => a.time_taken > b.time_taken ? 1:-1);
-        male_rating_data.sort((a,b) => a.time_taken > b.time_taken ? 1:-1);
-        console.log('mf-sorted',male_rating_data,female_rating_data) // sorted
+        // female_rating_data.sort((a,b) => a.time_taken > b.time_taken ? 1:-1);
+        // male_rating_data.sort((a,b) => a.time_taken > b.time_taken ? 1:-1);
+        // console.log('mf-sorted',male_rating_data,female_rating_data) // sorted
 
         // filter for stats to plot
         stats = Object.getOwnPropertyNames(data[1]);
@@ -204,7 +148,7 @@ import { STOPWORDS, MALE_COLOR, FEMALE_COLOR  } from './globals.js'
         stats = stats.slice(0,5);
         // console.log(stats);
             
-        var stat = stats[0];
+        var stat = stats[0]; // overall rating
         // populate dropdown from filtered data
         d3.select('#stats-menu3')
         .call(dropdownMenu,{
@@ -214,9 +158,9 @@ import { STOPWORDS, MALE_COLOR, FEMALE_COLOR  } from './globals.js'
         label: 'Statistic: '
         });
         // create date list
-        date_array = data.map(d=>d.time_taken).sort(sort_num)
-        date_array = replace_qtr_array(date_array)
-        console.log("date-array",date_array);
+        // date_array = data.map(d=>d.time_taken).sort(sort_num)
+        // date_array = replace_qtr_array(date_array)
+        // console.log("date-array",date_array);
 
         // console.log(male_rating_data,female_rating_data)
         render_stats(male_rating_data,female_rating_data,stat);

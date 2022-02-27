@@ -27,7 +27,16 @@ stylesheets:
 <script type="module" src="/js/posts/prof-reviews/dropdownMenu.js"></script>
 <script type="module" src="/js/posts/prof-reviews/word_cloud.js"></script>
 <script type="module" src="/js/posts/prof-reviews/word_freq.js"></script>
-<script type="module" src="/js/posts/prof-reviews/rating_vis.js"></script>
+<!-- <script type="module" src="/js/posts/prof-reviews/rating_vis.js"></script> -->
+<script type="module" src="/js/posts/prof-reviews/rating_vis2.js"></script>
+
+
+### Comparing Ratings Between Male and Female Professor Reviews
+<!-- bar chart -->
+<div id="stats-menu3">
+</div>
+<div id="rating-svg-div">
+</div>
 
 ### Comparing Words Between Male and Female Professor Reviews
 <!-- word cloud -->
@@ -55,12 +64,4 @@ stylesheets:
   <input type="number" min="10" max="50" step="5" value="20" id="num-words-input1">
 </div> 
 <div id="stat-svg-div">
-</div>
-
-### Comparing Ratings Over Time
-<!-- line chart -->
-add vert line Jan 2020 for pre/post-covid
-<div id="stats-menu3">
-</div>
-<div id="rating-svg-div">
 </div>
