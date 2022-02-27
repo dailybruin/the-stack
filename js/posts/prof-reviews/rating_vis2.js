@@ -43,7 +43,7 @@ import { STOPWORDS, MALE_COLOR, FEMALE_COLOR  } from './globals.js'
     }
 
     // main render function
-    const render_stats = (male_rating_data,female_rating_data,stat="overall_rating",word="") =>{
+    const render_stats = (male_rating_data,female_rating_data,stat="overall_rating") =>{
         const t = d3.transition().duration(config.anim_speed).ease(d3.easeCubic);
         console.log('selected_stat', stat);
 
@@ -84,32 +84,62 @@ import { STOPWORDS, MALE_COLOR, FEMALE_COLOR  } from './globals.js'
       // re-calculate means for male/female -> create new array of objects
       let avg_female_rtg = average(female_rating_data.map(d => d[stat]));
       let avg_male_rtg = average(male_rating_data.map(d => d[stat]));
-      console.log('fem array',female_rating_data.map(d => d[stat]),'fem avg',avg_female_rtg);
+      // console.log('fem array',female_rating_data.map(d => d[stat]),'fem avg',avg_female_rtg);
       let avg_data = [{avg: avg_female_rtg, gender: "Female", color: FEMALE_COLOR},
                       {avg: avg_male_rtg, gender: "Male", color: MALE_COLOR}]
-      
+      console.log(avg_data);
+
       // plot rects
       rating_svg
         .selectAll("rect")
-        .data(avg_data)
+        .data(avg_data,d => d.gender)
         .join(
           enter => enter.append("rect")
-            .attr("id", d => {return String(d.gender) + String(d.avg)})
-            .attr("x", d => {console.log(d.gender); return xScale(d.gender)})
-            .attr("y", d => yScale(d.avg))
+            // .attr("id", d => {return String(d.gender) + String(d.avg)})
+            .attr("x", d => margin.right + xScale(d.gender))
+            .attr("y", d => yScale(config.vh - margin.bottom))
             .attr("width", config.vw/2 *0.75)
-            .attr("height", d => yScale(d.avg))
-            .attr("fill",d => d.color)
-          ,
+            .call(enter => enter.transition(t)
+              .attr("y", d => yScale(d.avg))
+              .attr("height", d => config.vh - margin.bottom - yScale(d.avg))
+              .attr("fill",d => d.color)
+          ),
           update => update
             .call(update => update.transition(t)
+              .attr("y", d => yScale(d.avg))
+              .attr("height", d => config.vh - margin.bottom - yScale(d.avg))
           ),
           exit => exit
-            .call(exit => exit.transition()
+            .call(exit => exit.transition(t)
             .attr("height",0)
+            .attr("opacity",1e-6)
             .remove()
           )
-      );
+        );
+      console.log(avg_data);
+      // add text
+      rating_svg
+      .data(avg_data)
+      .join(
+        enter => enter.append("text")
+          // .attr("id", d => {return String(d.gender) + String(d.avg)})
+          .attr("x", d => margin.right + xScale(d.gender))
+          .attr("y", d => yScale(config.vh - margin.bottom * 1.1))
+          .call(enter => enter.transition(t)
+            .attr("y", d => yScale(d.avg) * 1.1)
+            .text(d => d.avg)
+        ),
+        update => update
+          .call(update => update.transition(t)
+            .attr("y", d => yScale(d.avg) * 1.1)
+        ),
+        exit => exit
+          .call(exit => exit.transition(t)
+          .attr("height",0)
+          .attr("opacity",1e-6)
+          .remove()
+        )
+      ); 
       
     };
   
