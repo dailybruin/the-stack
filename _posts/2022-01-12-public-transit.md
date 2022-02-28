@@ -96,8 +96,8 @@ The pie charts below show how often buses were early, late or on time for AVTA, 
 <!-- Timeliness graphs -->
 <!-- Overview pie chart -->
 <div class='pie-chart-wrapper'>
-<iframe title="Punctuality of Different Transportation Agencies" aria-label="Multiple Pies" id="datawrapper-chart-VJ4Gp" src="https://datawrapper.dwcdn.net/VJ4Gp/6/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="305"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();
-</script>
+  <iframe title="Punctuality of different transportation agencies" aria-label="Multiple Pies" id="datawrapper-chart-aRLOq" src="https://datawrapper.dwcdn.net/aRLOq/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="289"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();
+  </script>
 </div>
 
 From July 2019 to October 2021, AVTA route 786 had the highest percentage of late buses.
@@ -111,7 +111,7 @@ The punctuality of specific bus lines for LADOT and Santa Clarita Transit are br
 </script>
 
 <!-- pie chart for Santa Clarita -->
-<iframe title="Punctuality of Santa Clarita Transit bus lines" aria-label="Multiple Pies" id="datawrapper-chart-K35BC" src="https://datawrapper.dwcdn.net/K35BC/9/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="288"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();
+<iframe title="Punctuality of Santa Clarita Transit bus lines" aria-label="Multiple Pies" id="datawrapper-chart-kMXjH" src="https://datawrapper.dwcdn.net/kMXjH/2/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="305"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();
 </script>
 
 Juan Matute, the deputy director for the UCLA Institute of Transportation Studies, said some transportation agencies prioritize the on-time performance of buses over how long a trip takes, sometimes adding time to the schedule and having buses wait along the route in order to be on time rather than early.
@@ -139,7 +139,7 @@ For all public transit agencies analyzed, total ridership declined significantly
 
 From March 2020 to October 2021, average monthly ridership for LADOT routes 431, 534 and 573 was 83% lower than ridership from January 2019 to February 2020. Similarly, AVTA average ridership for route 786 declined by 85%, and the average Santa Clarita Transit ridership declined by 77%.
 
-The percentage decline in total ridership for the Big Blue Bus was approximately 42%. However, the limited number of months with Big Blue Bus ridership data may cause the results to be less accurate.
+The percentage decline in total ridership for the Big Blue Bus was approximately 46%. However, the limited number of months with Big Blue Bus ridership data may cause the results to be less accurate.
 
 Use the drop-down below to see ridership for LADOT, Santa Clarita Transit and Big Blue Bus broken down by individual bus lines.
 
