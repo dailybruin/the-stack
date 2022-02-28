@@ -22,8 +22,14 @@ scripts:
   - //cdnjs.cloudflare.com/ajax/libs/d3/5.7.0/d3.min.js
   - //cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js
   - //cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@0.7.0
+  - //cdn.plot.ly/plotly-2.9.0.min.js
   - //code.jquery.com/jquery-3.6.0.min.js
-  - /js/posts/public-transit/test.js
+  - /js/posts/public-transit/avg-timeline.js
+  - /js/posts/public-transit/ladot-timeline.js
+  - /js/posts/public-transit/avta-timeline.js
+  - /js/posts/public-transit/bbb-timeline.js
+  - /js/posts/public-transit/sct-timeline.js
+  - /js/posts/public-transit/dropdown.js
 
 stylesheets:
   - //cdnjs.cloudflare.com/ajax/libs/c3/0.4.10/c3.min.css
@@ -132,6 +138,9 @@ For each of the four public transit agencies, the following chart depicts the nu
 
 <!-- Ridership Graphs -->
 <div id="avg-ridership" class="timeline"></div>
+<div class="timeline-container">
+  <div id="avg-timeline"></div>
+</div>
 
 Note: Ridership data for the Big Blue Bus was unavailable for certain months, so that chart was interpreted as a scatter plot instead.
 
@@ -141,15 +150,25 @@ From March 2020 to October 2021, average monthly ridership for LADOT routes 431,
 
 The percentage decline in total ridership for the Big Blue Bus was approximately 46%. However, the limited number of months with Big Blue Bus ridership data may cause the results to be less accurate.
 
-Use the drop-down below to see ridership for LADOT, Santa Clarita Transit and Big Blue Bus broken down by individual bus lines.
+Use the drop-down below to see ridership for LADOT, Big Blue Bus, AVTA and Santa Clarita Transit broken down by individual bus lines.
 
-<div id="ladot-ridership" class="timeline"></div>
+<select id="timeline-dropdown"></select>
 
-<div id="avta-ridership"  class="timeline"></div>
+<div class="timeline-container">
+  <div id="ladot-timeline"></div>
+</div>
 
-<div id="sct-ridership" class="timeline"></div>
+<div class="timeline-container">
+  <div id="avta-timeline"></div>
+</div>
 
-<div id="bbb-ridership" class="timeline"></div>
+<div class="timeline-container">
+  <div id="sct-timeline"></div>
+</div>
+
+<div class="timeline-container">
+  <div id="bbb-timeline"></div>
+</div>
 
 The above ridership charts show a slow improvement in ridership since the first case of COVID-19 in LA. However, Jacob Wasserman, a research project manager with the UCLA Institute of Transportation Studies, said that despite the recovery, ridership is not returning to pre-pandemic levels.
 
