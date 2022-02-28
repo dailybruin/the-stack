@@ -49,7 +49,7 @@ permalink: /authors/
         {% for author in sorted_authors %}
             {% assign author_key = author[0] %}
             {% assign author_data = author[1] %}
-            {% if author_data.current %}
+            {% if author_data.current and author_data.editor != true %}
             <div class="author">
                 <h3>{{ author_data.name }}</h3>
                 {% if author_data.title %}<h4>{{ author_data.title }}</h4>{% endif %}
@@ -85,7 +85,7 @@ permalink: /authors/
         {% for author in sorted_authors %}
             {% assign author_key = author[0] %}
             {% assign author_data = author[1] %}
-            {% unless author_data.current %}
+            {% unless author_data.current or author_data.editor %}
             <div class="author">
                 <h3>{{ author_data.name }}</h3>
                 {% if author_data.title %}<h4>{{ author_data.title }}</h4>{% endif %}
