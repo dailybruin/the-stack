@@ -43,8 +43,9 @@ import { STOPWORDS, MALE_COLOR, FEMALE_COLOR  } from './globals.js'
     }
 
     // main render function
-    const render_stats = (male_rating_data,female_rating_data,stat="overall_rating") =>{
+    const render_stats = (male_rating_data,female_rating_data,stat="Overall Rating") =>{
         const t = d3.transition().duration(config.anim_speed).ease(d3.easeCubic);
+        const t2 = d3.transition().duration(config.anim_speed).ease(d3.easeElastic);
         console.log('selected_stat', stat);
 
         // axes, labels, title
@@ -90,7 +91,6 @@ import { STOPWORDS, MALE_COLOR, FEMALE_COLOR  } from './globals.js'
       // re-calculate means for male/female -> create new array of objects
       let avg_female_rtg = average(female_rating_data.map(d => d[stat]));
       let avg_male_rtg = average(male_rating_data.map(d => d[stat]));
-      // console.log('fem array',female_rating_data.map(d => d[stat]),'fem avg',avg_female_rtg);
       let avg_data = [{avg: avg_female_rtg, gender: "Female", color: FEMALE_COLOR},
                       {avg: avg_male_rtg, gender: "Male", color: MALE_COLOR}]
       console.log(avg_data);
@@ -103,10 +103,11 @@ import { STOPWORDS, MALE_COLOR, FEMALE_COLOR  } from './globals.js'
           enter => enter.append("rect")
             // .attr("id", d => {return String(d.gender) + String(d.avg)})
             .attr("x", d => margin.right + xScale(d.gender))
-            .attr("y", yScale(config.vh - margin.bottom))
-            .attr("height", yScale(0))
+            .attr("y", d => yScale(0))
+            .attr("height", 0)
             .attr("width", config.vw/2 *0.75)
             .attr("fill",d => d.color)
+            .attr("stroke","black")
             .call(enter => enter
               .transition(t)
                 .attr("y", d => yScale(d.avg))
@@ -133,15 +134,15 @@ import { STOPWORDS, MALE_COLOR, FEMALE_COLOR  } from './globals.js'
         .data(avg_data)
         .join(
           enter => enter.append("text")
-            // .attr("id", d => {return String(d.gender) + String(d.avg)})
             .attr("class", "bar-label")
             .attr("x", d => margin.right + xScale(d.gender) + (config.vw/2 *0.75)/2)
-            .attr("y", yScale(config.vh - margin.bottom * 1.5))
-            .call(enter => enter.transition(t)
-              .attr("y", d => yScale(d.avg) * 1.1)
-              .attr("font-size",15)
-              .attr("fill","white")
-              .text(d => d.avg.toFixed(2))
+            .attr("y", yScale(0))
+            .call(enter => enter
+              .transition(t)
+                .attr("y", d => yScale(d.avg) * 1.1)
+                .attr("font-size",15)
+                .attr("fill","white")
+                .text(d => d.avg.toFixed(2))
           ),
           update => update
             .call(update => update.transition(t)
@@ -163,11 +164,11 @@ import { STOPWORDS, MALE_COLOR, FEMALE_COLOR  } from './globals.js'
     d3.csv('/datasets/prof-reviews/prof_sentiment_by_qtr_filt.csv')
     .then(data => {
         data.forEach(d => {
-          d.overall_rating = +d.overall_rating;
-          d.easiness_rating = +d.easiness_rating;
-          d.workload_rating = +d.workload_rating;
-          d.clarity_rating = +d.clarity_rating;
-          d.helpfulness_rating = +d.helpfulness_rating;
+          d["Overall Rating"] = +d["Overall Rating"];
+          d["Easiness Rating"] = +d["Easiness Rating"];
+          d["Workload Rating"] = +d["Workload Rating"];
+          d["Clarity Rating"] = +d["Clarity Rating"];
+          d["Helpfulness Rating"] = +d["Helpfulness Rating"];
           d.pos_score = +d.pos_score;
           d.neg_score = +d.neg_score;
           d.review_is_positive = +d.review_is_positive;
@@ -192,16 +193,17 @@ import { STOPWORDS, MALE_COLOR, FEMALE_COLOR  } from './globals.js'
         let not_stat = ['quarter_taken', 'year_taken', 'gender_guess', 'pre_covid', 'time_taken']
         stats = stats.filter(item => !not_stat.includes(item))
         stats = stats.slice(0,5);
-        // console.log(stats);
+        // console.log("stats",stats);
             
         var stat = stats[0]; // overall rating
+        // console.log("stat",stat);
         // populate dropdown from filtered data
         d3.select('#stats-menu3')
         .call(dropdownMenu,{
         options: stats,
         onOptionClicked: onStatClicked,
         selectedOption: stat,
-        label: 'Statistic: '
+        label: 'Rating: '
         });
         // create date list
         // date_array = data.map(d=>d.time_taken).sort(sort_num)
