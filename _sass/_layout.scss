@@ -410,6 +410,7 @@
         position: absolute;
         top: -8px;
         left: -14px;
+        color: $brand-color-primary-blue;
       }
     }
   }
@@ -487,18 +488,18 @@
     display: flex;
     flex-wrap: wrap;
     // grid-template-columns: repeat(auto-fill, 300px);
-    justify-content: space-between;
-
-    @include media-query($on-palm) {
-      justify-content: space-evenly;
-    }
+    justify-content: space-around;
   }
 }
 
 .author {
   overflow: hidden;
-  margin-bottom: $spacing-unit;
+  margin: 0 $spacing-unit/2 $spacing-unit/2 $spacing-unit/2;
   width: 250px;
+
+  @include media-query($on-palm) {
+    width: 300px;
+  }
 
   p {
     font-size: 14px;
@@ -547,7 +548,8 @@
 
     @include media-query($on-palm) {
       // width: 200px;
-      height: 200px;
+      height: 300px;
+      width: 300px;
     }
   }
 }
@@ -576,7 +578,7 @@
   .authors-list {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
 
     @include media-query($on-palm) {
       justify-content: space-evenly;
@@ -585,5 +587,9 @@
 
   .author {
     width: 250px;
+
+    @include media-query($on-palm) {
+      width: 300px;
+    }
   }
 }

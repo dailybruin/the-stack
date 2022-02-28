@@ -6,16 +6,22 @@ permalink: /authors/
 ---
 
 <div class='author-page'>
-    <h2 class='page-subheading'>Current authors</h3>
-    <div class="authors-list current-authors">
+    {% assign sorted_authors = site.data.authors | sort %}
+
+    <h2 class='page-subheading'>Editors</h2>
+    <div class="authors-list">
         {% for author in site.data.authors %}
             {% assign author_key = author[0] %}
             {% assign author_data = author[1] %}
-            {% if author_data.current %}
+            {% if author_data.editor %}
             <div class="author">
                 <h3>{{ author_data.name }}</h3>
                 {% if author_data.title %}<h4>{{ author_data.title }}</h4>{% endif %}
-                {% if author_data.mug %}<img class="mug" src="/img/mugs/{{ author_key }}.jpg" />{% endif %}
+                {% if author_data.mug %}
+                    <img class="mug" src="/img/mugs/{{ author_key }}.jpg" />
+                {% else %}
+                    <img class="mug" src="/img/db_icon.jpeg" />
+                {% endif %}
                 {% if author_data.bio %}
                 {{ author_data.bio | markdownify }}
                 {% endif %}
@@ -38,16 +44,56 @@ permalink: /authors/
         {% endfor %}
     </div>
 
-    <h2 class='page-subheading'>Past authors</h3>
-    <div class="authors-list past-authors">
-        {% for author in site.data.authors %}
+    <h2 class='page-subheading'>Current authors</h2>
+    <div class="authors-list">
+        {% for author in sorted_authors %}
+            {% assign author_key = author[0] %}
+            {% assign author_data = author[1] %}
+            {% if author_data.current %}
+            <div class="author">
+                <h3>{{ author_data.name }}</h3>
+                {% if author_data.title %}<h4>{{ author_data.title }}</h4>{% endif %}
+                {% if author_data.mug %}
+                    <img class="mug" src="/img/mugs/{{ author_key }}.jpg" />
+                {% else %}
+                    <img class="mug" src="/img/db_icon.jpeg" />
+                {% endif %}
+                {% if author_data.bio %}
+                {{ author_data.bio | markdownify }}
+                {% endif %}
+                <ul class="contact">
+                    {% if author_data.github %}
+                    <li><a href="https://github.com/{{ author_data.github }}"><img src="/img/icons/github.svg" /></a></li>
+                    {% endif %}
+                    {% if author_data.twitter %}
+                    <li><a href="https://twitter.com/{{ author_data.twitter }}"><img src="/img/icons/twitter.svg" /></a></li>
+                    {% endif %}
+                    {% if author_data.email %}
+                    <li><a href="mailto:{{ author_data.email }}"><img src="/img/icons/email.svg" /></a></li>
+                    {% endif %}
+                    {% if author_data.website %}
+                    <li><a href="{{ author_data.website }}"><img src="/img/icons/globe.svg" /></a></li>
+                    {% endif %}
+                </ul>
+            </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+
+    <h2 class='page-subheading'>Past authors</h2>
+    <div class="authors-list">
+        {% for author in sorted_authors %}
             {% assign author_key = author[0] %}
             {% assign author_data = author[1] %}
             {% unless author_data.current %}
             <div class="author">
                 <h3>{{ author_data.name }}</h3>
                 {% if author_data.title %}<h4>{{ author_data.title }}</h4>{% endif %}
-                {% if author_data.mug %}<img class="mug" src="/img/mugs/{{ author_key }}.jpg" />{% endif %}
+                {% if author_data.mug %}
+                    <img class="mug" src="/img/mugs/{{ author_key }}.jpg" />
+                {% else %}
+                    <img class="mug" src="/img/db_icon.jpeg" />
+                {% endif %}
                 {% if author_data.bio %}
                 {{ author_data.bio | markdownify }}
                 {% endif %}

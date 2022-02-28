@@ -1,3 +1,21 @@
+laurel_woods:
+  name: Laurel Woods
+  title: 2021-22 Data Editor
+  bio: Laurel is a fourth-year cognitive science and digital humanities student. She loves anything outdoorsy, especially if her dog is there.
+  mug: Yes
+  editor: Yes
+  current: no
+  email: lwoods@media.ucla.edu
+  github: laurelrwoods
+lindsey_parungo:
+  name: Lindsey Parungo
+  title: 2021-22 Assistant Data Editor
+  bio: Lindsey is a third-year financial and actuarial mathematics student. She enjoys running, spending time with her dog and looking to expand her hippo memorabilia collection.
+  mug: Yes
+  editor: Yes
+  current: no
+  email: lparungo@media.ucla.edu
+  github: Lindseyp314
 harrison_liddiard:
   name: Harrison Liddiard
   title: Chief Data Nerd Emeritus
@@ -233,7 +251,7 @@ alexander_chan:
 andrew_kan:
   name: Andrew Kan
   title: Stack Developer
-  bio: Kan is the 2020-2021 Stack editor and a fourth-year computer science and statistics student. He enjoys longforms and any type of puzzle.
+  bio: Kan was the 2020-2021 Stack editor and is a fourth-year computer science and statistics student. He enjoys longforms and any type of puzzle.
   mug: Yes
   current: Yes
   email: akan@media.ucla.edu
@@ -274,6 +292,8 @@ michael_huang:
   name: Michael Huang
   title: Stack Developer
   bio: Michael is lit.
+  mug: no
+  current: no
 radhika_ahuja:
   name: Radhika Ahuja
   title: Stack Developer
@@ -299,14 +319,6 @@ madeline_blasingame:
   bio: Maddy is a first-year stats student whose only goal is to be TikTok famous.
   email: mblasingame@media.ucla.edu
   github: meblasingame
-laurel_woods:
-  name: Laurel Woods
-  title: 2021-2022 Data Editor
-  bio: Laurel is a fourth-year cognitive science and digital humanities student. She loves anything outdoorsy, especially if her dog is there.
-  mug: Yes
-  current: Yes
-  email: lwoods@media.ucla.edu
-  github: laurelrwoods
 bernard_mendez:
   name: Bernard Mendez
   title: News Editor
@@ -415,14 +427,6 @@ mansa_krishna:
   current: Yes
   email: mkrishna@media.ucla.edu
   github: mansakrishna23
-lindsey_parungo:
-  name: Lindsey Parungo
-  title: 2021-2022 Assistant Data Editor
-  bio: Lindsey is a third-year financial and actuarial mathematics student. She enjoys running, spending time with her dog and looking to expand her hippo memorabilia collection.
-  mug: Yes
-  current: Yes
-  email: lparungo@media.ucla.edu
-  github: Lindseyp314
 xuxin_zhang:
   name: Xuxin Zhang
   title: Stack Developer and Photo staff

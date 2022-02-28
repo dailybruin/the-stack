@@ -80,6 +80,12 @@
   }
 }
 
+// left aligns last row to grid
+.post-list::after {
+  content: "";
+  flex-basis: 32%;
+}
+
 .post-first {
   width: calc(50% - (#{$spacing-unit}/ 2));
 
@@ -145,8 +151,6 @@
 }
 
 .post-second {
-  height: calc(60% - (#{$spacing-unit}/ 2));
-
   .featured-image {
     height: 215px;
     width: 100%;
@@ -162,8 +166,6 @@
 }
 
 .post-third {
-  height: calc(40% - (#{$spacing-unit}/ 2));
-
   .featured-image {
     width: 50%;
     height: 100%;
