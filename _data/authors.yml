@@ -486,6 +486,7 @@ disha_sikaria:
   title: Stack Developer
   bio: Disha is a second-year cognitive science and linguistics & computer science student with a specialization in computing.
   mug: yes
+  current: Yes
   email: dsikaria@media.ucla.edu
   website: https://dishasikaria.myportfolio.com/
 nalin_chopra:
@@ -493,6 +494,7 @@ nalin_chopra:
   title: Stack Developer
   bio: Nalin is a first-year mathematics of computation student. He enjoys listening to aespa and going to the beach.
   mug: yes
+  current: Yes
   github: thatsmynaevis
   email: nchopra@media.ucla.edu
 andre_hiwatig:
@@ -500,6 +502,7 @@ andre_hiwatig:
   title: Stack Developer
   bio: Andre is a first-year statistics student. He likes painting and visiting thrift stores in his free time.
   mug: yes
+  current: Yes
   github: ahiwatig
   email: ahiwatig@media.ucla.edu
 justin_gong:
@@ -507,6 +510,7 @@ justin_gong:
   title: Stack Intern
   bio: Justin is a first-year statistics and economics student who loves basketball and Marvel!
   mug: yes
+  current: Yes
   email: jgong@media.ucla.edu
 chelsea_chen:
   name: Chelsea Chen
@@ -514,17 +518,20 @@ chelsea_chen:
   email: cchen@media.ucla.edu
   bio: Chelsea is a second-year statistics student. She enjoys listening to true crime, rollerblading, playing soccer, and trying new food!
   mug: no
+  current: Yes
 tyler_wu:
   name: Tyler Wu
   title: Data Intern
   bio: Tyler is a fourth-year data theory and cognitive science student.
   mug: no
+  current: Yes
   email: twu@media.ucla.edu
 nicole_chua: 
   name: Nicole Chua
   title: Stack Developer
   bio: Nicole is a fourth-year statistics student. She enjoys spicy food, green tea and being in the sun. 
   mug: yes
+  current: Yes
   github: nicolechuaa
   email: nchua@media.ucla.edu
 nancy_zhang:
@@ -532,5 +539,6 @@ nancy_zhang:
   title: Stack Developer
   bio: Nancy is a third-year Data Theory student who likes matcha latte and volleyball.
   mug: yes
+  current: Yes
   email: nzhang@media.ucla.edu 
   
