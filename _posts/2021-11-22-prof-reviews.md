@@ -34,10 +34,23 @@ stylesheets:
 <script type="module" src="/js/posts/prof-reviews/dropdownMenu.js"></script>
 <script type="module" src="/js/posts/prof-reviews/word_cloud.js"></script>
 <script type="module" src="/js/posts/prof-reviews/word_freq.js"></script>
+<<<<<<< HEAD
 <script type="module" src="/js/posts/prof-reviews/rating_vis.js"></script>
 <script type="module" src="/js/posts/prof-reviews/scatter.js"></script>
 <script type="module" src="/js/posts/prof-reviews/bar_chart.js"></script>
 
+=======
+<!-- <script type="module" src="/js/posts/prof-reviews/rating_vis.js"></script> -->
+<script type="module" src="/js/posts/prof-reviews/rating_vis2.js"></script>
+
+
+### Comparing Ratings Between Male and Female Professor Reviews
+<!-- bar chart -->
+<div id="stats-menu3">
+</div>
+<div id="rating-svg-div">
+</div>
+>>>>>>> ff59647e3c73b7f8214fcdd422c53c461fa9de24
 
 ### Comparing Words Between Male and Female Professor Reviews
 <!-- word cloud -->
@@ -66,6 +79,7 @@ stylesheets:
 </div> 
 <div id="stat-svg-div">
 </div>
+<<<<<<< HEAD
 
 ### Comparing Ratings Over Time
 <!-- line chart -->
@@ -84,3 +98,5 @@ add vert line Jan 2020 for pre/post-covid
 <div class="chart-container">
   <canvas id='myChart'></canvas>
 </div>
+=======
+>>>>>>> ff59647e3c73b7f8214fcdd422c53c461fa9de24
