@@ -1,5 +1,5 @@
 ---
-title: "UCLA's Most Popular Dining Halls"
+title: UCLA's most popular dining halls
 teaser: The COVID-19 pandemic left campus dining halls closed for dine in on the Hill. Now that students have returned to campus, which dining halls have been the most popular among hungry Bruins?
 authors:
   - nalin_chopra

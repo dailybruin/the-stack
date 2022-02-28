@@ -1,5 +1,5 @@
 ---
-title: Modeling the Spread of COVID-19 in UCLA Classrooms
+title: Modeling the spread of COVID-19 in UCLA classrooms
 teaser: What would happen if UCLA students returned in the fall to take in-person classes? We explore the potential spread of COVID-19 among students on UCLA’s campus.
 authors:
   - radhika_ahuja
@@ -120,7 +120,7 @@ A stochastic block model considers a set of student communities, grouped by depa
 
 Then a matrix A defines the probabilities used to randomly assign students from each department to courses in other departments. Cell<sub>i, j</sub> of A represents the probability that a student housed in department i will take a course in department j. For this example, there's a probability of 0.7 that a sciences student will take a sciences class, a 0.1 probability they will take a business class, and a 0.2 probability they will take a humanities class.
 
-$$A=\begin{pmatrix}
+$$
 Sciences&Business&Humanities\\
 0.7&0.1&0.2\\
 0.1&0.8&0.1\\
@@ -128,13 +128,13 @@ Sciences&Business&Humanities\\
 \end{pmatrix}$$
 
 This example has simulated probabilities, but the real probabilities in our model are based on the number of GE, diversity and language courses in each major. So if a College of Letters and Science student in the mathematics department takes 140 units of major courses and 40 units of GEs, then the probability of the student being enrolled in the mathematics department is $$\frac{140}{180}$$, and, in the other GE-offering departments, is $$\frac{40}{180}$$, which in turn are distributed by department. So if there are three GE courses offered in total, with two of them being offered in department A and one being offered in department B, department A will have probability $$\frac{2}{3} * \frac{40}{180}$$, and department B will have probability $$\frac{1}{3} * \frac{40}{180}$$.
+$$
 
-$$A=\begin{pmatrix}
 Sciences&Business&Humanities\\
 0.7&0.1&0.2\\
 0.1&0.8&0.1\\
 0.1&0.2&0.7
-\end{pmatrix}$$
+\end{pmatrix}\\$\$
 
 This example has simulated probabilities, but the real probabilities in our model are based on the number of GE, diversity and language courses in each major. So if a College of Letters and Science student in the mathematics department takes 140 units of major courses and 40 units of GEs, then the probability of the student being enrolled in the mathematics department is $$\frac{140}{180}$$, and, in the other GE-offering departments, is $$\frac{40}{180}$$, which in turn are distributed by department. So if there are three GE courses offered in total, with two of them being offered in department A and one being offered in department B, department A will have probability $$\frac{2}{3} * \frac{40}{180}$$, and department B will have probability $$\frac{1}{3} * \frac{40}{180}$$.
 

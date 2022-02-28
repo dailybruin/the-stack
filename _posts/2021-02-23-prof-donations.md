@@ -1,5 +1,5 @@
 ---
-title: "Put Your Money Where Your Politics Are: Professors’ Political Donations"
+title: "Put your money where your politics are: professors’ political donations"
 teaser: How do UCLA professors' political donations stack up against USC and UC Berkeley?
 
 authors:
