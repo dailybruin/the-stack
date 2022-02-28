@@ -63,6 +63,12 @@ import { STOPWORDS, MALE_COLOR, FEMALE_COLOR  } from './globals.js'
           .attr("y",config.vh)
           .style("font-size","20px")
           .text('Professor Gender');
+        // increase tick label size
+        d3.selectAll('.xaxis>.tick>text')
+          .each(function(d, i){
+            d3.select(this).style("font-size","2em");
+          });
+
         const yScale = d3.scaleLinear()
           .domain([5,0])
           .range([margin.top,config.vh - margin.bottom]); // need to offset bars/circles by margin.top
@@ -97,12 +103,15 @@ import { STOPWORDS, MALE_COLOR, FEMALE_COLOR  } from './globals.js'
           enter => enter.append("rect")
             // .attr("id", d => {return String(d.gender) + String(d.avg)})
             .attr("x", d => margin.right + xScale(d.gender))
-            .attr("y", d => yScale(config.vh - margin.bottom))
+            .attr("y", yScale(config.vh - margin.bottom))
+            .attr("height", yScale(0))
             .attr("width", config.vw/2 *0.75)
-            .call(enter => enter.transition(t)
-              .attr("y", d => yScale(d.avg))
-              .attr("height", d => config.vh - margin.bottom - yScale(d.avg))
-              .attr("fill",d => d.color)
+            .attr("fill",d => d.color)
+            .call(enter => enter
+              .transition(t)
+                .attr("y", d => yScale(d.avg))
+                .attr("height", d => config.vh - margin.bottom - yScale(d.avg))
+                .attr("fill",d => d.color)
           ),
           update => update
             .call(update => update.transition(t)
@@ -117,28 +126,35 @@ import { STOPWORDS, MALE_COLOR, FEMALE_COLOR  } from './globals.js'
           )
         );
       console.log(avg_data);
+
       // add text
       rating_svg
-      .data(avg_data)
-      .join(
-        enter => enter.append("text")
-          // .attr("id", d => {return String(d.gender) + String(d.avg)})
-          .attr("x", d => margin.right + xScale(d.gender))
-          .attr("y", d => yScale(config.vh - margin.bottom * 1.1))
-          .call(enter => enter.transition(t)
-            .attr("y", d => yScale(d.avg) * 1.1)
-            .text(d => d.avg)
-        ),
-        update => update
-          .call(update => update.transition(t)
-            .attr("y", d => yScale(d.avg) * 1.1)
-        ),
-        exit => exit
-          .call(exit => exit.transition(t)
-          .attr("height",0)
-          .attr("opacity",1e-6)
-          .remove()
-        )
+        .selectAll('.bar-label')
+        .data(avg_data)
+        .join(
+          enter => enter.append("text")
+            // .attr("id", d => {return String(d.gender) + String(d.avg)})
+            .attr("class", "bar-label")
+            .attr("x", d => margin.right + xScale(d.gender) + (config.vw/2 *0.75)/2)
+            .attr("y", yScale(config.vh - margin.bottom * 1.5))
+            .call(enter => enter.transition(t)
+              .attr("y", d => yScale(d.avg) * 1.1)
+              .attr("font-size",15)
+              .attr("fill","white")
+              .text(d => d.avg.toFixed(2))
+          ),
+          update => update
+            .call(update => update.transition(t)
+              .attr("y", d => yScale(d.avg) * 1.1)
+              .attr("fill","white")
+              .text(d => d.avg.toFixed(2))
+          ),
+          exit => exit
+            .call(exit => exit.transition(t)
+            .attr("height",0)
+            .attr("opacity",1e-6)
+            .remove()
+          )
       ); 
       
     };
