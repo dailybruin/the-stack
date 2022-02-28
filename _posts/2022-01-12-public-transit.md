@@ -109,7 +109,7 @@ LADOT buses were early more than twice as often as they were late, and Santa Cla
 The punctuality of specific bus lines for LADOT and Santa Clarita Transit are broken down in the pie charts below.
 
 <!-- pie chart for LADOT -->
-<iframe title="Punctuality of LADOT bus lines" aria-label="Multiple Pies" id="datawrapper-chart-UIRWW" src="https://datawrapper.dwcdn.net/UIRWW/8/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="285"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();
+<iframe title="Punctuality of LADOT bus lines" aria-label="Multiple Pies" id="datawrapper-chart-udyGv" src="https://datawrapper.dwcdn.net/udyGv/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="285"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();
 </script>
 
 <!-- pie chart for Santa Clarita -->
