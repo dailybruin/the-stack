@@ -13,8 +13,15 @@ featured_image:
 og_image:
 
 scripts:
+  - //cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.js
+  - //ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js
   - //d3js.org/d3.v7.min.js
+  # - //cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@0.7.0
+  # - //d3js.org/d3.v7.min.js
   - //cdnjs.cloudflare.com/ajax/libs/d3-cloud/1.2.5/d3.layout.cloud.js
+  - /js/posts/prof-reviews/scatter.js
+  - /js/posts/prof-reviews/bar_chart.js
+
   # - //rawgit.com/jasondavies/d3-cloud/master/build/d3.layout.cloud.js
 
 stylesheets:
@@ -28,6 +35,9 @@ stylesheets:
 <script type="module" src="/js/posts/prof-reviews/word_cloud.js"></script>
 <script type="module" src="/js/posts/prof-reviews/word_freq.js"></script>
 <script type="module" src="/js/posts/prof-reviews/rating_vis.js"></script>
+<script type="module" src="/js/posts/prof-reviews/scatter.js"></script>
+<script type="module" src="/js/posts/prof-reviews/bar_chart.js"></script>
+
 
 ### Comparing Words Between Male and Female Professor Reviews
 <!-- word cloud -->
@@ -63,4 +73,14 @@ add vert line Jan 2020 for pre/post-covid
 <div id="stats-menu3">
 </div>
 <div id="rating-svg-div">
+</div>
+
+### Other Words Most Commonly Used for Female versus Male Professors
+<div class="chart-container">
+  <canvas id='scatter'></canvas>
+</div>
+
+### Bar Chart
+<div class="chart-container">
+  <canvas id='myChart'></canvas>
 </div>
