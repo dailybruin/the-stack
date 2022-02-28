@@ -1,5 +1,5 @@
 ---
-title: UCLA Trash Breakdown
+title: UCLA trash breakdown
 teaser: See how students sort trash and test your trash-sorting skills with a game
 authors:
   - andrew_kan

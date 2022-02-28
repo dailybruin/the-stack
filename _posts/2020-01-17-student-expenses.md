@@ -1,46 +1,47 @@
 ---
-title: Hidden Costs of Being a Student
-teaser: Analysis of the various costs of being a student at UCLA as well as a cost calculator to help you evaluate your personalized cost. 
+
+title: Hidden costs of being a student
+teaser: Analysis of the various costs of being a student at UCLA as well as a cost calculator to help you evaluate your personalized cost.
 authors:
-  - radhika_ahuja
-  - annie_zhang
-  - madeline_blasingame
-key_takeaways:
-  - College is, on average, two times more expensive for out-of-state and international students as it is for in-state students.
-  - Additionally, out-of-state students bear higher travel costs and international students also bear costs unique to them like higher standardized testing fees and visa costs
-featured_image:
+
+- radhika_ahuja
+- annie_zhang
+- madeline_blasingame
+  key_takeaways:
+- College is, on average, two times more expensive for out-of-state and international students as it is for in-state students.
+- Additionally, out-of-state students bear higher travel costs and international students also bear costs unique to them like higher standardized testing fees and visa costs
+  featured_image:
   url: student-expenses/us_price_distribution.png
-og_image: student-expenses/us_price_distribution.png
-stylesheets:
-  - https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.css 
-  - https://fonts.googleapis.com/css?family=Lato&display=swap 
-  - https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
-  - https://fonts.googleapis.com/css?family=Playfair+Display+SC|Roboto
-  - /css/posts/student-expenses/quiz.css
+  og_image: student-expenses/us_price_distribution.png
+  stylesheets:
+- https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.css
+- https://fonts.googleapis.com/css?family=Lato&display=swap
+- https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+- https://fonts.googleapis.com/css?family=Playfair+Display+SC|Roboto
+- /css/posts/student-expenses/quiz.css
 
 scripts:
-  - https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js 
-  - https://unpkg.com/leaflet@1.6.0/dist/leaflet.js
-  - /js/posts/student-expenses/quiz.js
-  - /js/posts/student-expenses/global-map.js
-  - /js/posts/student-expenses/us-map.js
-  - /js/posts/student-expenses/global-geojson.js
-  - /js/posts/student-expenses/us-geojson.js
 
----
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.css" />
-<link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+- https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js
+- https://unpkg.com/leaflet@1.6.0/dist/leaflet.js
+- /js/posts/student-expenses/quiz.js
+- /js/posts/student-expenses/global-map.js
+- /js/posts/student-expenses/us-map.js
+- /js/posts/student-expenses/global-geojson.js
+- /js/posts/student-expenses/us-geojson.js
+  ---<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.css" />
+  <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
 
 <script src="/js/posts/student-expenses/us-geojson.js"></script>
 <script src="/js/posts/student-expenses/global-geojson.js"></script>
 
-
 ## Introduction
-UCLA is the No. 1 public university in the United States. However, this title does not come at an insignificant price to students and their families. There are certain costs that every student can expect to pay like tuition or textbook fees. But, there are many other costs students don’t consider when making their college decisions, such as the price of living in the second-largest city in the nation. The price of UCLA can also vary dramatically based on where you come from, whether it be down the block or across the ocean. Using data from UCLA and outside sources, we've computed the average annual cost of attendance for in-state, out-of-state, and international students, to give a sense of the <em>true</em> cost of college. 
+
+UCLA is the No. 1 public university in the United States. However, this title does not come at an insignificant price to students and their families. There are certain costs that every student can expect to pay like tuition or textbook fees. But, there are many other costs students don’t consider when making their college decisions, such as the price of living in the second-largest city in the nation. The price of UCLA can also vary dramatically based on where you come from, whether it be down the block or across the ocean. Using data from UCLA and outside sources, we've computed the average annual cost of attendance for in-state, out-of-state, and international students, to give a sense of the <em>true</em> cost of college.
 
 ### Comparing Totals
+
 The total cost of attendance for students varies depending on whether those students are in-state, out-of-state, or international. While the price of living on the Hill or in Westwood is high no matter where your original residence, non-resident students are responsible for the cost of supplemental tuition and can incur higher travel costs, higher application costs, higher prices for standardized tests, and visa fees, all of which will be discussed in later sections.
 
 <div style="display:flex;">
@@ -185,7 +186,6 @@ let totalChart = document.getElementById('totalChart').getContext('2d');
 			totalChart.canvas.parentNode.style.width = '500px';
 </script>
 
-
 ## Geographic Distribution
 
 The maps below show the distribution of the cost of attending UCLA across the United States and worldwide, for the most represented states and countries. Outside of California, states with higher populations (or large cities) as well as the East coast are well represented and most international students come from Asia.
@@ -203,7 +203,6 @@ The maps below show the distribution of the cost of attending UCLA across the Un
 <div id="g-mapid" style="height: 85vh; width: 70vw; margin-bottom: 5vh; display: inline-block"></div>
 <script src="/js/posts/student-expenses/global-map.js"></script>
 </div>
-
 
 ## Cost Calculator
 
@@ -293,19 +292,17 @@ You can use this cost calculator to estimate your cost of college by filling out
 
 <script src="/js/posts/student-expenses/quiz.js"></script>
 
-
 ## Breakdown of Costs
 
 ### Tuition
 
-According to UCLA, annual tuition for the 2019-2020 school year is as follows. Additionally, the UC Board of Regents voted last spring to increase nonresident tuition by $762 per year and allocate 10% of the revenue generated by this increase to financial aid.
+According to UCLA, annual tuition for the 2019-2020 school year is as follows. Additionally, the UC Board of Regents voted last spring to increase nonresident tuition by \$762 per year and allocate 10% of the revenue generated by this increase to financial aid.
 
-Tuition for out-of-state and international students is almost three times that of in-state students, and it continues to rise every year. Many students don’t expect there to be such an inflated price for nonresident students. 
+Tuition for out-of-state and international students is almost three times that of in-state students, and it continues to rise every year. Many students don’t expect there to be such an inflated price for nonresident students.
 
 “When I first saw the general out-of-state tuition, I thought it was crazy,” said Matt Chen, a second-year out-of-state computer science student.
 
-Although Chen eventually decided on UCLA in order to gain independence and for the opportunities found here, it wasn’t always a given. Chen asserted that if his in-state school and UCLA had been the same price, he would choose UCLA without any doubt, and the only reason he had to consider other schools was due to cost. For some students, however, the price can make attending UCLA quite prohibitive. UCLA thrives on its diversity, but many students who could bring important perspectives to our campus are driven away by the sticker price. 
-
+Although Chen eventually decided on UCLA in order to gain independence and for the opportunities found here, it wasn’t always a given. Chen asserted that if his in-state school and UCLA had been the same price, he would choose UCLA without any doubt, and the only reason he had to consider other schools was due to cost. For some students, however, the price can make attending UCLA quite prohibitive. UCLA thrives on its diversity, but many students who could bring important perspectives to our campus are driven away by the sticker price.
 
 <div style="position: relative; height: 340px; margin: 0px; padding: 0px">
 	<canvas id="tuitionChart"></canvas>
@@ -359,7 +356,7 @@ Although Chen eventually decided on UCLA in order to gain independence and for t
 				}
 			})
 			tuitionChart.canvas.parentNode.style.width = '650px'; 
-  </script>          
+  </script>
 
 ### Cost of Living
 
@@ -368,7 +365,6 @@ For most students who choose to live near campus, there are three options: livin
 Students who live off campus must additionally cover the costs of food, utilities and WiFi, transportation and health insurance. Below is the average cost of living for students living on the Hill, in university apartments and in nonuniversity apartments.
 
 (Note: The transportation cost is the average cost for one adult to have a car in Los Angeles. It includes gas and insurance but not parking. The cost of insurance is the 2019-2020 cost of the UC Student Health Insurance Plan.)
-
 
 <div style="position: relative; height: 340px; margin: 0px; padding: 0px">
 	<canvas id="costOfLivingChart"></canvas>
@@ -449,7 +445,6 @@ UCLA students come from all parts of the world. Since the distance from Los Ange
 
 Because of the cost of flying being so high, especially internationally, many out-of-state and international students can go months without seeing their families and have to track flight prices to determine when it would be cheapest to go home.
 
-
 <div style="position: relative; height: 340px; margin: 0px; padding: 0px">
 	<canvas id="costOfFlyingChart"></canvas>
 </div>
@@ -500,11 +495,9 @@ let costOfFlyingChartDraw = new Chart(costOfFlyingChart, {
 
 </script>
 
-
 ### Cost of Applying
 
 There is also a cost associated with getting into UCLA – not only is there an application fee, but there are also mandatory standardized tests that come with their own fees. For international students, these tests are even more expensive since they come with additional fees for being administered outside of the United States. International students are also responsible for the cost of a visa and iSTART, an online resource to help them acclimate to living in the United States. An important note is that many international students come from China where there are no testing centers. This means that in addition to the international cost of these tests, Chinese students have to travel to nearby countries in order to take their exams. This can take many days and be incredibly expensive. Guo, for example, went to Taiwan twice and Singapore once just to take her exams. Even in countries where testing centers are available, they may not be present in your city, therefore warranting some domestic travel.
-
 
 <div style="position: relative; height: 340px; margin: 0px; padding: 0px">
 	<canvas id="costOfApplyingChart"></canvas>
@@ -582,7 +575,4 @@ The price of being a UCLA student adds up, whether it is from tuition, housing, 
 
 Chen says, “Whenever it comes to academics, I do put a little bit more pressure on myself because I know how much we are paying.”
 
-Guo echoed this idea and discussed how international students like herself are more likely to choose traditional majors with higher-paying careers in order to pay back some of the costs of their education. UCLA is the #No. 1 public university in the country, and its high cost is the price students pay to be here. 
-
-
-
+Guo echoed this idea and discussed how international students like herself are more likely to choose traditional majors with higher-paying careers in order to pay back some of the costs of their education. UCLA is the #No. 1 public university in the country, and its high cost is the price students pay to be here.
