@@ -141,7 +141,7 @@ For all public transit agencies analyzed, total ridership declined significantly
 
 From March 2020 to October 2021, average monthly ridership for LADOT lines 431, 534 and 573 was 83% lower than ridership from January 2019 to February 2020. Similarly, AVTA average ridership for bus line 786 declined by 85% and the average Santa Clarita Transit ridership declined by 77%.
 
-The percentage decline in total ridership for the Big Blue Bus was approximately 42%. However, the limited number of months with Big Blue Bus ridership data may cause the results to be less accurate.
+The percentage decline in total ridership for the Big Blue Bus was approximately 46%. However, the limited number of months with Big Blue Bus ridership data may cause the results to be less accurate.
 
 Use the dropdown below to see ridership for LADOT, Santa Clarita Transit and Big Blue Bus broken down by individual bus lines.
 
