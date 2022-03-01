@@ -2,3 +2,29 @@
     margin: auto;
     margin-bottom: 30px;
 }
+
+.sct-gfx,
+.avta-gfx {
+    float: left;
+    padding-right: 15px;
+}
+
+.bbb-gfx,
+.ladot-gfx {
+    float: right;
+    padding-left: 15px;
+}
+
+.google-gfx {
+    width: 50%;
+    box-sizing: border-box;
+    padding-bottom: 30px;
+}
+
+@media only screen and (max-width: 500px) {
+    .google-gfx {
+        width: 100%;
+        float: none;
+        padding: 0 0 15px 0;
+    }
+}

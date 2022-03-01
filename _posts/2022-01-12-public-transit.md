@@ -7,6 +7,7 @@ authors:
   - justin_gong
   - mansa_krishna
   - nancy_zhang
+  - abby_zhao
 
 key_takeaways:
   - From July 2019 to October 2021, buses operated by Antelope Valley Transit Authority, the Los Angeles Department of Transportation and City of Santa Clarita Transit were late 23% of the time.
@@ -52,6 +53,18 @@ Natalie Hernandez, a third-year biology student who commutes to campus, also sai
 
 In this article, The Stack examines the punctuality of several bus lines around UCLA as well as the monthly ridership of the bus lines. We obtained data on route 786 to Century City/West Los Angeles from AVTA, Commuter Express routes 431, 534 and 573 from LADOT, routes 792 and 797 from Santa Clarita Transit and routes 1, 2, 3, 8 and 12 from Big Blue Bus. These lines were chosen for their proximity to UCLA’s campus. LA Metro said it did not collect the timing or ridership data that the Daily Bruin requested.
 
+<!-- AVTA -->
+<iframe class="avta-gfx google-gfx" frameborder="0" src="https://www.google.com/maps/d/u/2/embed?mid=1J3BnhsGAKvaL-H3MvnBGWO0zfHkluFIu&ehbc=2E312F" width="640" height="480"></iframe>
+
+<!-- LADOT -->
+<iframe class="ladot-gfx google-gfx" frameborder="0" src="https://www.google.com/maps/d/u/2/embed?mid=1jSi0Rcw-N7mmJK9wIFWJZAbHPU2R43_y&ehbc=2E312F" width="640" height="480"></iframe>
+
+<!-- SCT -->
+<iframe  class="sct-gfx google-gfx" frameborder="0" src="https://www.google.com/maps/d/u/2/embed?mid=15u2xejn85E0PbzSIlyEhrCoQdyyX-4ES&ehbc=2E312F" width="50%" height="480"></iframe>
+
+<!-- BBB -->
+<iframe class="bbb-gfx google-gfx" frameborder="0" src="https://www.google.com/maps/d/u/2/embed?mid=14hcJ4PuYN489c3crHluQeHBsIZlGVKaB&ehbc=2E312F" width="50%" height="480"></iframe>
+
 ## Visualizing LADOT bus stops
 
 The map below displays the bus stops for Commuter Express routes 431, 534 and 573, which are operated by LADOT.
@@ -62,7 +75,7 @@ Use the controls on the right-hand side to filter by geographical region, bus li
 
 Note: Clear the Stop Name search bar and hit enter to reset the map.
 
-<div class='tableauPlaceholder' id='viz1646038982708' style='position: relative'>
+<div class='tableauPlaceholder' id='viz1646122485529' style='position: relative'>
   <object class='tableauViz'  style='display:none;'>
     <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
     <param name='embed_code_version' value='3' />
@@ -79,15 +92,15 @@ Note: Clear the Stop Name search bar and hit enter to reset the map.
     <param name='filter' value='publish=yes' />
   </object>
 </div>
-<script type='text/javascript'>
-  var divElement = document.getElementById('viz1646038982708');
+<script type='text/javascript'> 
+  var divElement = document.getElementById('viz1646122485529');
   var vizElement = divElement.getElementsByTagName('object')[0];
   if ( divElement.offsetWidth > 800 ) { 
-    vizElement.style.width='870px';
-    vizElement.style.height='827px';
+    vizElement.style.width='800px';
+    vizElement.style.height='727px';
   } else if ( divElement.offsetWidth > 500 ) { 
-    vizElement.style.width='870px';
-    vizElement.style.height='827px';
+    vizElement.style.width='800px';
+    vizElement.style.height='727px';
   } else { 
     vizElement.style.width='100%';
     vizElement.style.height=(divElement.offsetWidth*1.77)+'px';

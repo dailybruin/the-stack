@@ -98,12 +98,16 @@ const avgData = [
       'Big Blue Bus<br>%{x}<br>Average monthly riders: %{y}<extra></extra>',
     legendgroup: 'Big Blue Bus',
     line: {
-      color: 'rgb(220, 176, 242)',
+      color: '#c198d6',
       dash: 'solid',
       shape: 'spline',
     },
     marker: {
       symbol: 'circle',
+      line: {
+        color: '#222222',
+        width: 0.5,
+      },
     },
     mode: 'markers+lines',
     name: 'Big Blue Bus',
@@ -372,14 +376,16 @@ const avgData = [
 ];
 
 const avgLayout = {
-  height: 450,
+  height: 480,
   legend: {
     y: 1.2,
     orientation: 'h',
     tracegroupgap: 0,
+    x: -0.1,
   },
   margin: {
     r: 15,
+    t: 130,
   },
   annotations: [
     {
@@ -407,238 +413,10 @@ const avgLayout = {
   ],
   template: {
     data: {
-      bar: [
-        {
-          error_x: {
-            color: '#2a3f5f',
-          },
-          error_y: { color: '#2a3f5f' },
-          marker: {
-            line: {
-              color: '#E5ECF6',
-              width: 0.5,
-            },
-            pattern: { fillmode: 'overlay', size: 10, solidity: 0.2 },
-          },
-          type: 'bar',
-        },
-      ],
-      barpolar: [
-        {
-          marker: {
-            line: { color: '#E5ECF6', width: 0.5 },
-            pattern: { fillmode: 'overlay', size: 10, solidity: 0.2 },
-          },
-          type: 'barpolar',
-        },
-      ],
-      carpet: [
-        {
-          aaxis: {
-            endlinecolor: '#2a3f5f',
-            gridcolor: 'white',
-            linecolor: 'white',
-            minorgridcolor: 'white',
-            startlinecolor: '#2a3f5f',
-          },
-          baxis: {
-            endlinecolor: '#2a3f5f',
-            gridcolor: 'white',
-            linecolor: 'white',
-            minorgridcolor: 'white',
-            startlinecolor: '#2a3f5f',
-          },
-          type: 'carpet',
-        },
-      ],
-      choropleth: [
-        { colorbar: { outlinewidth: 0, ticks: '' }, type: 'choropleth' },
-      ],
-      contour: [
-        {
-          colorbar: { outlinewidth: 0, ticks: '' },
-          colorscale: [
-            [0.0, '#0d0887'],
-            [0.1111111111111111, '#46039f'],
-            [0.2222222222222222, '#7201a8'],
-            [0.3333333333333333, '#9c179e'],
-            [0.4444444444444444, '#bd3786'],
-            [0.5555555555555556, '#d8576b'],
-            [0.6666666666666666, '#ed7953'],
-            [0.7777777777777778, '#fb9f3a'],
-            [0.8888888888888888, '#fdca26'],
-            [1.0, '#f0f921'],
-          ],
-          type: 'contour',
-        },
-      ],
-      contourcarpet: [
-        { colorbar: { outlinewidth: 0, ticks: '' }, type: 'contourcarpet' },
-      ],
-      heatmap: [
-        {
-          colorbar: { outlinewidth: 0, ticks: '' },
-          colorscale: [
-            [0.0, '#0d0887'],
-            [0.1111111111111111, '#46039f'],
-            [0.2222222222222222, '#7201a8'],
-            [0.3333333333333333, '#9c179e'],
-            [0.4444444444444444, '#bd3786'],
-            [0.5555555555555556, '#d8576b'],
-            [0.6666666666666666, '#ed7953'],
-            [0.7777777777777778, '#fb9f3a'],
-            [0.8888888888888888, '#fdca26'],
-            [1.0, '#f0f921'],
-          ],
-          type: 'heatmap',
-        },
-      ],
-      heatmapgl: [
-        {
-          colorbar: { outlinewidth: 0, ticks: '' },
-          colorscale: [
-            [0.0, '#0d0887'],
-            [0.1111111111111111, '#46039f'],
-            [0.2222222222222222, '#7201a8'],
-            [0.3333333333333333, '#9c179e'],
-            [0.4444444444444444, '#bd3786'],
-            [0.5555555555555556, '#d8576b'],
-            [0.6666666666666666, '#ed7953'],
-            [0.7777777777777778, '#fb9f3a'],
-            [0.8888888888888888, '#fdca26'],
-            [1.0, '#f0f921'],
-          ],
-          type: 'heatmapgl',
-        },
-      ],
-      histogram: [
-        {
-          marker: { pattern: { fillmode: 'overlay', size: 10, solidity: 0.2 } },
-          type: 'histogram',
-        },
-      ],
-      histogram2d: [
-        {
-          colorbar: { outlinewidth: 0, ticks: '' },
-          colorscale: [
-            [0.0, '#0d0887'],
-            [0.1111111111111111, '#46039f'],
-            [0.2222222222222222, '#7201a8'],
-            [0.3333333333333333, '#9c179e'],
-            [0.4444444444444444, '#bd3786'],
-            [0.5555555555555556, '#d8576b'],
-            [0.6666666666666666, '#ed7953'],
-            [0.7777777777777778, '#fb9f3a'],
-            [0.8888888888888888, '#fdca26'],
-            [1.0, '#f0f921'],
-          ],
-          type: 'histogram2d',
-        },
-      ],
-      histogram2dcontour: [
-        {
-          colorbar: { outlinewidth: 0, ticks: '' },
-          colorscale: [
-            [0.0, '#0d0887'],
-            [0.1111111111111111, '#46039f'],
-            [0.2222222222222222, '#7201a8'],
-            [0.3333333333333333, '#9c179e'],
-            [0.4444444444444444, '#bd3786'],
-            [0.5555555555555556, '#d8576b'],
-            [0.6666666666666666, '#ed7953'],
-            [0.7777777777777778, '#fb9f3a'],
-            [0.8888888888888888, '#fdca26'],
-            [1.0, '#f0f921'],
-          ],
-          type: 'histogram2dcontour',
-        },
-      ],
-      mesh3d: [{ colorbar: { outlinewidth: 0, ticks: '' }, type: 'mesh3d' }],
-      parcoords: [
-        {
-          line: { colorbar: { outlinewidth: 0, ticks: '' } },
-          type: 'parcoords',
-        },
-      ],
-      pie: [{ automargin: true, type: 'pie' }],
       scatter: [
         {
           marker: { colorbar: { outlinewidth: 0, ticks: '' } },
           type: 'scatter',
-        },
-      ],
-      scatter3d: [
-        {
-          line: { colorbar: { outlinewidth: 0, ticks: '' } },
-          marker: { colorbar: { outlinewidth: 0, ticks: '' } },
-          type: 'scatter3d',
-        },
-      ],
-      scattercarpet: [
-        {
-          marker: { colorbar: { outlinewidth: 0, ticks: '' } },
-          type: 'scattercarpet',
-        },
-      ],
-      scattergeo: [
-        {
-          marker: { colorbar: { outlinewidth: 0, ticks: '' } },
-          type: 'scattergeo',
-        },
-      ],
-      scattergl: [
-        {
-          marker: { colorbar: { outlinewidth: 0, ticks: '' } },
-          type: 'scattergl',
-        },
-      ],
-      scattermapbox: [
-        {
-          marker: { colorbar: { outlinewidth: 0, ticks: '' } },
-          type: 'scattermapbox',
-        },
-      ],
-      scatterpolar: [
-        {
-          marker: { colorbar: { outlinewidth: 0, ticks: '' } },
-          type: 'scatterpolar',
-        },
-      ],
-      scatterpolargl: [
-        {
-          marker: { colorbar: { outlinewidth: 0, ticks: '' } },
-          type: 'scatterpolargl',
-        },
-      ],
-      scatterternary: [
-        {
-          marker: { colorbar: { outlinewidth: 0, ticks: '' } },
-          type: 'scatterternary',
-        },
-      ],
-      surface: [
-        {
-          colorbar: { outlinewidth: 0, ticks: '' },
-          colorscale: [
-            [0.0, '#0d0887'],
-            [0.1111111111111111, '#46039f'],
-            [0.2222222222222222, '#7201a8'],
-            [0.3333333333333333, '#9c179e'],
-            [0.4444444444444444, '#bd3786'],
-            [0.5555555555555556, '#d8576b'],
-            [0.6666666666666666, '#ed7953'],
-            [0.7777777777777778, '#fb9f3a'],
-            [0.8888888888888888, '#fdca26'],
-            [1.0, '#f0f921'],
-          ],
-          type: 'surface',
-        },
-      ],
-      table: [
-        {
-          cells: { fill: { color: '#EBF0F8' }, line: { color: 'white' } },
-          header: { fill: { color: '#C8D4E3' }, line: { color: 'white' } },
-          type: 'table',
         },
       ],
     },
@@ -778,11 +556,14 @@ const avgLayout = {
     },
   },
   title: {
-    text: '<b>Average monthly ridership per bus line</b>',
+    text: '<b>Average monthly ridership<br>per bus line</b>',
     font: {
       size: 20,
     },
-    xref: 'paper',
+    xref: 'container',
+    y: 0.9,
+    yanchor: 'top',
+    yref: 'container',
     x: 0.5,
   },
   xaxis: {
@@ -805,6 +586,10 @@ const avgLayout = {
 };
 
 if (!isMobile) {
+  avgLayout.height = 450;
+  avgLayout.legend.x = 0;
+  avgLayout.margin.t = 100;
+  avgLayout.title.xref = 'paper';
   avgLayout.annotations = [
     {
       showarrow: false,
