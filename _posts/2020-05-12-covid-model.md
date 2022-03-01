@@ -52,6 +52,7 @@ To explore the visualization, drag the time slider forward through the weeks of 
 UCLA could maintain a small R<sub>0</sub> if the university implements mandatory social distancing in classrooms, requires the wearing of masks or provides ample sanitizing products to all classrooms and lecture halls. Any combination of these measures would decrease the spread of the virus.
 
 <h3>Student Network</h3>
+<div class = "chart-container">
 <div class="loader-wrapper">
   <div class="loader"></div>
 </div>
@@ -80,11 +81,12 @@ UCLA could maintain a small R<sub>0</sub> if the university implements mandatory
     </div>
   </div>
 </div>
+</div>
 
 In our model network, students had an average of 228 connections. We ran the simulation 100 times from week 0 to finals week with an R<sub>0</sub> value of 5.7, and found that on average, 94% of students were infected by the end of fall quarter. The peak of new cases occurred at week 6 with over 11,000 new cases. With a smaller R<sub>0</sub> of 2.0, we found that 8% of students were infected by the end of fall quarter.
 
 We also calculated the average number of infections over 100 runs for several different values of R<sub>0</sub>. The following chart shows the number of people infected on average through the 11 weeks, for varying values of R<sub>0</sub>:
-
+<div class = "chart-container">
 <div id="linechart-wrapper">
   <canvas id="linechart"></canvas>
 </div>
@@ -97,7 +99,7 @@ We also calculated the average number of infections over 100 runs for several di
   <div class="legend-marker" id="4"></div><span class="legend-label">R<sub>0</sub> = 4</span> <br>
   <div class="legend-marker" id="5.7"></div><span class="legend-label">R<sub>0</sub> = 5.7</span> <br>
 </div>
-
+</div>
 # Conclusion
 
 The potential spread of the virus depicted above does not take into account interactions in shared spaces such as Bruin Walk, libraries, dining halls, etc. or the fact that the same lecture hall is used, i.e., the same chairs are reused and such surfaces might be a source of infection. These models also do not show the potential spread through shared living spaces such as dorms and apartments. Consequently, COVID-19 could be much more infectious through the UCLA community than the models above show. In fear of outbreaks, [California State University campuses will remain closed](https://www2.calstate.edu/csu-system/news/Pages/CSU-Chancellor-Timothy-P-Whites-Statement-on-Fall-2020-University-Operational-Plans.aspx) for the Fall 2020 semester, and the 23 universities in this system will proceed with primarily virtual instruction. UCLA has yet to make a decision on whether the Fall 2020 quarter will be held virtually or whether there will be some in-person instruction.
