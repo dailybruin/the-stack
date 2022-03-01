@@ -2,7 +2,8 @@ const isMobile = window.matchMedia('(max-width: 480px)').matches;
 
 const avgData = [
   {
-    hovertemplate: 'LADOT<br>%{x}<br>Number of riders: %{y}<extra></extra>',
+    hovertemplate:
+      'LADOT<br>%{x}<br>Average monthly riders: %{y}<extra></extra>',
     legendgroup: 'LADOT',
     line: {
       color: 'rgb(102, 197, 204)',
@@ -94,7 +95,7 @@ const avgData = [
   },
   {
     hovertemplate:
-      'Big Blue Bus<br>%{x}<br>Number of riders: %{y}<extra></extra>',
+      'Big Blue Bus<br>%{x}<br>Average monthly riders: %{y}<extra></extra>',
     legendgroup: 'Big Blue Bus',
     line: {
       color: 'rgb(220, 176, 242)',
@@ -185,7 +186,8 @@ const avgData = [
     yaxis: 'y',
   },
   {
-    hovertemplate: 'AVTA<br>%{x}<br>Number of riders: %{y}<extra></extra>',
+    hovertemplate:
+      'AVTA<br>%{x}<br>Average monthly riders: %{y}<extra></extra>',
     legendgroup: 'AVTA',
     line: {
       color: 'rgb(246, 207, 113)',
@@ -277,7 +279,7 @@ const avgData = [
   },
   {
     hovertemplate:
-      'Santa Clarita Transit<br>%{x}<br>Number of riders: %{y}<extra></extra>',
+      'Santa Clarita Transit<br>%{x}<br>Average monthly riders: %{y}<extra></extra>',
     legendgroup: 'Santa Clarita Transit',
     line: {
       color: 'rgb(248, 156, 116)',
@@ -776,7 +778,7 @@ const avgLayout = {
     },
   },
   title: {
-    text: '<b>Average monthly ridership</b>',
+    text: '<b>Average monthly ridership per bus line</b>',
     font: {
       size: 20,
     },
@@ -797,7 +799,7 @@ const avgLayout = {
     nticks: 20,
     tickformat: ',',
     title: {
-      text: 'Number of riders',
+      text: 'Average monthly riders',
     },
   },
 };
@@ -848,8 +850,6 @@ if (!isMobile) {
     },
   ];
   avgLayout.legend = {
-    // y: 1.2,
-    // "orientation": "h",
     tracegroupgap: 0,
   };
 }

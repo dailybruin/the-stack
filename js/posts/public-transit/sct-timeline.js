@@ -650,8 +650,6 @@ if (!isMobile) {
     },
   ];
   sctLayout.legend = {
-    // y: 1.2,
-    // "orientation": "h",
     tracegroupgap: 0,
   };
 }

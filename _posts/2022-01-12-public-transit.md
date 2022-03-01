@@ -14,9 +14,9 @@ key_takeaways:
   - A quarter of UCLA commuter students used public transit in 2019, while only 8% of students commuting to campus traveled via public transit in 2020.
 
 featured_image:
-  url:
-  caption:
-og_image:
+  url: public-transit/bigbluebus.jpg
+  caption: (Daily Bruin file photo)
+og_image: public-transit/bigbluebus.jpg
 
 scripts:
   - //cdnjs.cloudflare.com/ajax/libs/d3/5.7.0/d3.min.js
@@ -62,10 +62,11 @@ Use the controls on the right-hand side to filter by geographical region, bus li
 
 Note: Clear the Stop Name search bar and hit enter to reset the map.
 
-<div class='tableauPlaceholder' id='viz1646011737038' style='position: relative'>
+<div class='tableauPlaceholder' id='viz1646038982708' style='position: relative'>
   <object class='tableauViz'  style='display:none;'>
     <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
-    <param name='embed_code_version' value='3' /> <param name='site_root' value='' />
+    <param name='embed_code_version' value='3' />
+    <param name='site_root' value='' />
     <param name='name' value='final_public_transit_map&#47;Dashboard1' />
     <param name='tabs' value='no' />
     <param name='toolbar' value='yes' />
@@ -79,20 +80,21 @@ Note: Clear the Stop Name search bar and hit enter to reset the map.
   </object>
 </div>
 <script type='text/javascript'>
-  var divElement = document.getElementById('viz1646011737038');
+  var divElement = document.getElementById('viz1646038982708');
   var vizElement = divElement.getElementsByTagName('object')[0];
- if ( divElement.offsetWidth > 800 ) { 
-   vizElement.style.width='1000px';
-   vizElement.style.height='827px';
+  if ( divElement.offsetWidth > 800 ) { 
+    vizElement.style.width='870px';
+    vizElement.style.height='827px';
   } else if ( divElement.offsetWidth > 500 ) { 
-    vizElement.style.width='1000px';
+    vizElement.style.width='870px';
     vizElement.style.height='827px';
   } else { 
     vizElement.style.width='100%';
-    vizElement.style.height='877px';
-  } 
+    vizElement.style.height=(divElement.offsetWidth*1.77)+'px';
+  }
   var scriptElement = document.createElement('script');
-  scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);
+  scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+  vizElement.parentNode.insertBefore(scriptElement, vizElement);
 </script>
 
 ## Punctuality of buses
@@ -134,7 +136,7 @@ While almost 20% of all UCLA commuters used public transit to travel to campus i
 
 In The Stack’s analysis of ridership data for LADOT, AVTA, Santa Clarita Transit and Big Blue Bus from January 2019 to October 2021, we found large decreases in average monthly ridership in the months following the beginning of the COVID-19 pandemic.
 
-For each of the four public transit agencies, the following chart depicts the number of monthly riders averaged over the number of bus routes from that agency. Hover over the lines for more detailed statistics, and click on any of the public transit agencies in the legend for a closer look at the ridership for any specific bus agency.
+For each of the four public transit agencies, the following chart depicts the number of monthly riders averaged over the number of bus routes from that agency. Hover over or tap on the data points for more details, and click on any of the public transit agencies in the legend to hide it from the chart.
 
 <!-- Ridership Graphs -->
 <div id="avg-ridership" class="timeline"></div>

@@ -29,18 +29,14 @@ d3.select('#timeline-dropdown')
   .enter()
   .append('option')
   .text(function(d) {
-    return d.name;
-  }) // text showed in the menu
+    return d.name; // text shown in menu
+  })
   .attr('value', function(d) {
-    return d.divName;
-  }); // corresponding value returned by the button
-
-d3.select('#timeline-dropdown').on('change', function(d) {
-  console.log(d);
-
+    return d.divName; // corresponding value returned by the button
+  });
+d3.select('#timeline-dropdown').on('change', function() {
   // hide old chart
   document.getElementById(currChart).style.display = 'none';
-
   // set currChart and show
   const divName = d3.select(this).property('value');
   currChart = divName;
