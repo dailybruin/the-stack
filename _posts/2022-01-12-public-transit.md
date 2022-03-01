@@ -102,7 +102,7 @@ The pie charts below show how often buses were early, late or on time for AVTA, 
 <!-- Timeliness graphs -->
 <!-- Overview pie chart -->
 <div class='pie-chart-wrapper'>
-  <iframe title="Punctuality of different transportation agencies" aria-label="Multiple Pies" id="datawrapper-chart-aRLOq" src="https://datawrapper.dwcdn.net/aRLOq/2/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="308"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();
+  <iframe title="Punctuality of different transportation agencies" aria-label="Multiple Pies" id="datawrapper-chart-Nz14h" src="https://datawrapper.dwcdn.net/Nz14h/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="322"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();
 </script>
 </div>
 
@@ -113,7 +113,7 @@ LADOT buses were early more than twice as often as they were late, and Santa Cla
 The punctuality of specific bus lines for LADOT and Santa Clarita Transit are broken down in the pie charts below.
 
 <!-- pie chart for LADOT -->
-<iframe title="Punctuality of LADOT bus lines" aria-label="Multiple Pies" id="datawrapper-chart-udyGv" src="https://datawrapper.dwcdn.net/udyGv/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="285"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();
+<iframe title="Punctuality of LADOT bus lines" aria-label="Multiple Pies" id="datawrapper-chart-4O1Tn" src="https://datawrapper.dwcdn.net/4O1Tn/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="285"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();
 </script>
 
 <!-- pie chart for Santa Clarita -->
