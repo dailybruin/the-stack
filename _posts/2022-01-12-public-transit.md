@@ -123,7 +123,7 @@ The pie charts below show how often buses were early, late or on time for AVTA, 
 
 From July 2019 to October 2021, AVTA route 786 had the highest percentage of late buses.
 
-LADOT buses were early more than twice as often as they were late, and Santa Clarita Transit buses were also early more often than late.
+LADOT buses were early roughly twice as often as they were late, and Santa Clarita Transit buses were also early more often than late.
 
 The punctuality of specific bus lines for LADOT and Santa Clarita Transit are broken down in the pie charts below.
 
