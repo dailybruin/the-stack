@@ -70,10 +70,11 @@ Interestingly, donations to House of Representatives campaigns in particular jum
 
 ### Breaking Down the Campaigns
 
-<div class="ucla-chart"> <canvas id='ucla-top-5'> </canvas> </div>
-<div class="ucb-chart"> <canvas id='ucb-top-5'> </canvas> </div>
-<div class="usc-chart"> <canvas id='usc-top-5'> </canvas> </div>
-
+<div class = "chart-container">
+  <div class="ucla-chart"> <canvas id='ucla-top-5'> </canvas> </div>
+  <div class="ucb-chart"> <canvas id='ucb-top-5'> </canvas> </div>
+  <div class="usc-chart"> <canvas id='usc-top-5'> </canvas> </div>
+</div>
 <img class="graphic" src="/img/posts/prof-donations/campaign-explanations.png">
 
 Across all three universities, just five campaigns raked in more than half of all donations made by professors to political organizations: ActBlue, Biden for President, Biden Victory Fund, Democratic Congressional Campaign Committee and Democratic National Committee.
