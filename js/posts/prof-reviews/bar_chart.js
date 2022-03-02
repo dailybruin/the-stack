@@ -27,6 +27,10 @@ var myBarChart = new Chart(ctx, {
         barValueSpacing: 20,
         scales: {
             yAxes: [{
+                scaleLabel: {
+                    display: true,
+                    labelString: 'Average Review Positivity Score'
+                  },
                 ticks: {
                     min: 0,
                 }
