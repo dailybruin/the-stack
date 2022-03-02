@@ -54,26 +54,27 @@ Natalie Hernandez, a third-year biology student who commutes to campus, also sai
 In this article, The Stack examines the punctuality of several bus lines around UCLA as well as the monthly ridership of the bus lines. We obtained data on route 786 to Century City/West Los Angeles from AVTA, Commuter Express routes 431, 534 and 573 from LADOT, routes 792 and 797 from Santa Clarita Transit and routes 1, 2, 3, 8 and 12 from Big Blue Bus. These lines were chosen for their proximity to UCLA’s campus. LA Metro said it did not collect the timing or ridership data that the Daily Bruin requested.
 
 <!-- AVTA -->
-<iframe class="avta-gfx google-gfx" frameborder="0" src="https://www.google.com/maps/d/u/2/embed?mid=1J3BnhsGAKvaL-H3MvnBGWO0zfHkluFIu&ehbc=2E312F" width="640" height="480"></iframe>
+<iframe class="avta-gfx google-gfx" frameborder="0" src="https://www.google.com/maps/d/u/2/embed?mid=1J3BnhsGAKvaL-H3MvnBGWO0zfHkluFIu&ehbc=2E312F" height="480"></iframe>
 
 <!-- LADOT -->
-<iframe class="ladot-gfx google-gfx" frameborder="0" src="https://www.google.com/maps/d/u/2/embed?mid=1jSi0Rcw-N7mmJK9wIFWJZAbHPU2R43_y&ehbc=2E312F" width="640" height="480"></iframe>
+<iframe class="ladot-gfx google-gfx" frameborder="0" src="https://www.google.com/maps/d/u/2/embed?mid=1jSi0Rcw-N7mmJK9wIFWJZAbHPU2R43_y&ehbc=2E312F" height="480"></iframe>
 
 <!-- SCT -->
-<iframe  class="sct-gfx google-gfx" frameborder="0" src="https://www.google.com/maps/d/u/2/embed?mid=15u2xejn85E0PbzSIlyEhrCoQdyyX-4ES&ehbc=2E312F" width="50%" height="480"></iframe>
+<!-- <iframe  class="sct-gfx google-gfx" frameborder="0" src="https://www.google.com/maps/d/u/2/embed?mid=15u2xejn85E0PbzSIlyEhrCoQdyyX-4ES&ehbc=2E312F" width="50%" height="480"></iframe> -->
+
+<iframe class="sct-gfx google-gfx" frameborder="0" src="https://www.google.com/maps/d/u/0/embed?mid=1EH-L095zLCIlL_VKFOwCVlM0Z1vuePtk&ehbc=2E312F" height="480"></iframe>
 
 <!-- BBB -->
-<iframe class="bbb-gfx google-gfx" frameborder="0" src="https://www.google.com/maps/d/u/2/embed?mid=14hcJ4PuYN489c3crHluQeHBsIZlGVKaB&ehbc=2E312F" width="50%" height="480"></iframe>
+<iframe class="bbb-gfx google-gfx" frameborder="0" src="https://www.google.com/maps/d/u/2/embed?mid=14hcJ4PuYN489c3crHluQeHBsIZlGVKaB&ehbc=2E312F" height="480"></iframe>
+<p class="credit">Graphics by Alex Yoo, Graphics editor and Rebekah Limb, assistant Graphics editor.</p>
 
 ## Visualizing LADOT bus stops
 
 The map below displays the bus stops for Commuter Express routes 431, 534 and 573, which are operated by LADOT.
 
-The color scale shows how often buses are late at each bus stop, with a darker color corresponding to a larger proportion of late buses. Hover over a bus stop for more information, including the bus line it serves, how often buses are late to that stop and the average number of boarding passengers.
+The color scale shows how often buses are late at each bus stop, with a darker color corresponding to a larger proportion of late buses. Hover over a bus stop for more information, including the bus line it serves, how often buses are late to that stop and the average headway, which is the time in between buses at that stop.
 
-Use the controls on the right-hand side to filter by geographical region, bus line, lateness frequency, or average headway, which is the time in between buses at that stop. To find a specific stop, use the “Stop Name” filter to search a bus stop by its stop number or address.
-
-Note: Clear the Stop Name search bar and hit enter to reset the map.
+Use the controls on the right-hand side to filter by geographical region, bus line, lateness frequency, or average headway. To find a specific stop, use the “Stop Name” filter to search a bus stop by its stop number or address.
 
 <div class='tableauPlaceholder' id='viz1646122485529' style='position: relative'>
   <object class='tableauViz'  style='display:none;'>
@@ -109,6 +110,7 @@ Note: Clear the Stop Name search bar and hit enter to reset the map.
   scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
   vizElement.parentNode.insertBefore(scriptElement, vizElement);
 </script>
+<p class="caption">Note: Clear the Stop Name search bar and hit enter to reset the map.</p>
 
 ## Punctuality of buses
 
@@ -157,7 +159,7 @@ For each of the four public transit agencies, the following chart depicts the nu
   <div id="avg-timeline"></div>
 </div>
 
-Note: Ridership data for the Big Blue Bus was unavailable for certain months, so that chart was interpreted as a scatter plot instead.
+<p class="caption">Note: Ridership data for the Big Blue Bus was unavailable for certain months, so that chart was interpreted as a scatter plot instead.</p>
 
 For all public transit agencies analyzed, total ridership declined significantly following the onset of the COVID-19 pandemic in early 2020.
 
@@ -223,13 +225,13 @@ LADOT data on total ridership per month from 2019 to 2021 for all three bus line
 
 From Santa Clarita Transit, the Daily Bruin requested data for bus routes 792 and 797, both the Century City lines.
 
-Santa Clarita Transit data on total ridership per stop for a period of three years – 2019 to 2021 – for each route, the breakdown of ridership per stop per month for a period of three years – 2019 to 2021, bus stop arrival and departure statistics for on-time performance, and bus route with stop information was obtained.
+Santa Clarita Transit provided data for each route on the total ridership per stop, the monthly ridership per stop and the arrival and departure times at each stop from January 2019 to October 2021.
 
 #### Big Blue Bus data
 
 From Big Blue Bus, the Daily Bruin requested data for bus routes 1, Main Street and Santa Monica Boulevard; 2, Wilshire Boulevard; 3, Lincoln Boulevard; 8, Ocean Park Boulevard; and Rapid 12, UCLA/Westwood to Expo Rapid.
 
-Big Blue Bus data on ridership per month, per stop for a period of three years – 2019 to 2021, and bus route with stop information was obtained.
+Big Blue Bus data on ridership per month, per stop for a period of three years – 2019 to 2021 – was obtained.
 
 #### Latitude and longitude positions of bus stops
 

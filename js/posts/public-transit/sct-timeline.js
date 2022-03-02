@@ -172,7 +172,7 @@ const sctData = [
 ];
 
 const sctLayout = {
-  height: 450,
+  height: 480,
   legend: {
     y: 1.2,
     orientation: 'h',
@@ -180,6 +180,7 @@ const sctLayout = {
   },
   margin: {
     r: 15,
+    t: 130,
   },
   annotations: [
     {
@@ -578,12 +579,15 @@ const sctLayout = {
     },
   },
   title: {
-    text: '<b>Santa Clarita Transit monthly ridership</b>',
+    text: '<b>Santa Clarita Transit<br>monthly ridership</b>',
     font: {
       size: 20,
     },
-    xref: 'paper',
+    xref: 'container',
     x: 0.5,
+    y: 0.9,
+    yanchor: 'top',
+    yref: 'container',
   },
   xaxis: {
     anchor: 'y',
@@ -605,6 +609,10 @@ const sctLayout = {
 };
 
 if (!isMobile) {
+  sctLayout.height = 450;
+  sctLayout.legend.x = 0;
+  sctLayout.margin.t = 100;
+  sctLayout.title.xref = 'paper';
   sctLayout.annotations = [
     {
       showarrow: false,

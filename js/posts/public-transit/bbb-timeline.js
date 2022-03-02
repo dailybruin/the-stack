@@ -433,14 +433,16 @@ const bbbData = [
 ];
 
 const bbbLayout = {
-  height: 450,
+  height: 480,
   legend: {
+    x: -0.1,
     y: 1.2,
     orientation: 'h',
     tracegroupgap: 0,
   },
   margin: {
     r: 15,
+    t: 130,
   },
   annotations: [
     {
@@ -839,12 +841,15 @@ const bbbLayout = {
     },
   },
   title: {
-    text: '<b>Big Blue Bus monthly ridership</b>',
+    text: '<b>Big Blue Bus<br>monthly ridership</b>',
     font: {
       size: 20,
     },
-    xref: 'paper',
+    xref: 'container',
     x: 0.5,
+    y: 0.9,
+    yanchor: 'top',
+    yref: 'container',
   },
   xaxis: {
     anchor: 'y',
@@ -866,6 +871,10 @@ const bbbLayout = {
 };
 
 if (!isMobile) {
+  bbbLayout.height = 450;
+  bbbLayout.legend.x = 0;
+  bbbLayout.margin.t = 100;
+  bbbLayout.title.xref = 'paper';
   bbbLayout.annotations = [
     {
       showarrow: false,
