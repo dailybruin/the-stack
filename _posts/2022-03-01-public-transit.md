@@ -60,8 +60,6 @@ In this article, The Stack examines the punctuality of several bus lines around 
 <iframe class="ladot-gfx google-gfx" frameborder="0" src="https://www.google.com/maps/d/u/2/embed?mid=1jSi0Rcw-N7mmJK9wIFWJZAbHPU2R43_y&ehbc=2E312F" height="480"></iframe>
 
 <!-- SCT -->
-<!-- <iframe  class="sct-gfx google-gfx" frameborder="0" src="https://www.google.com/maps/d/u/2/embed?mid=15u2xejn85E0PbzSIlyEhrCoQdyyX-4ES&ehbc=2E312F" width="50%" height="480"></iframe> -->
-
 <iframe class="sct-gfx google-gfx" frameborder="0" src="https://www.google.com/maps/d/u/0/embed?mid=1EH-L095zLCIlL_VKFOwCVlM0Z1vuePtk&ehbc=2E312F" height="480"></iframe>
 
 <!-- BBB -->

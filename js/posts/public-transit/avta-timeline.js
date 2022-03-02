@@ -87,14 +87,16 @@ const avtaData = [
 ];
 
 const avtaLayout = {
-  height: 450,
+  height: 480,
   legend: {
+    x: -0.1,
     y: 1.2,
     orientation: 'h',
     tracegroupgap: 0,
   },
   margin: {
     r: 15,
+    t: 130,
   },
   annotations: [
     {
@@ -493,12 +495,15 @@ const avtaLayout = {
     },
   },
   title: {
-    text: '<b>AVTA monthly ridership</b>',
+    text: '<b>AVTA monthly<br>ridership</b>',
     font: {
       size: 20,
     },
-    xref: 'paper',
+    xref: 'container',
     x: 0.5,
+    y: 0.9,
+    yanchor: 'top',
+    yref: 'container',
   },
   xaxis: {
     anchor: 'y',
@@ -520,6 +525,11 @@ const avtaLayout = {
 };
 
 if (!isMobile) {
+  avtaLayout.title.text = '<b>AVTA monthly ridership</b>';
+  avtaLayout.height = 450;
+  avtaLayout.legend.x = 0;
+  avtaLayout.margin.t = 100;
+  avtaLayout.title.xref = 'paper';
   avtaLayout.annotations = [
     {
       showarrow: false,

@@ -871,6 +871,7 @@ const bbbLayout = {
 };
 
 if (!isMobile) {
+  bbbLayout.title.text = '<b>Big Blue Bus monthly ridership</b>';
   bbbLayout.height = 450;
   bbbLayout.legend.x = 0;
   bbbLayout.margin.t = 100;
