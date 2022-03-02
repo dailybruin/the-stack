@@ -117,7 +117,7 @@ The pie charts below show how often buses were early, late or on time for AVTA, 
 <!-- Timeliness graphs -->
 <!-- Overview pie chart -->
 <div class='pie-chart-wrapper'>
-  <iframe title="Punctuality of different transportation agencies" aria-label="Multiple Pies" id="datawrapper-chart-Nz14h" src="https://datawrapper.dwcdn.net/Nz14h/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="322"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();
+  <iframe title="Punctuality of different transportation agencies" aria-label="Multiple Pies" id="datawrapper-chart-mefC5" src="https://datawrapper.dwcdn.net/mefC5/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="336"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();
 </script>
 </div>
 
@@ -157,7 +157,7 @@ For each of the four public transit agencies, the following chart depicts the nu
   <div id="avg-timeline"></div>
 </div>
 
-<p class="caption">Note: Ridership data for the Big Blue Bus was unavailable for certain months, so that chart was interpreted as a scatter plot instead.</p>
+<p class="caption">Average monthly ridership was calculated based on AVTA route 786, LADOT Commuter Express routes  431, 534 and 573, Santa Clarita Transit routes 792 and 797 and Big Blue Bus routes 1, 2, 3, 8 and 12. Ridership data for the Big Blue Bus was unavailable for certain months, so that chart was interpreted as a scatter plot instead.</p>
 
 For all public transit agencies analyzed, total ridership declined significantly following the onset of the COVID-19 pandemic in early 2020.
 
