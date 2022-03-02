@@ -74,10 +74,10 @@ The color scale shows how often buses are late at each bus stop, with a darker c
 
 Use the controls on the right-hand side to filter by geographical region, bus line, lateness frequency, or average headway. To find a specific stop, use the “Stop Name” filter to search a bus stop by its stop number or address.
 
-<div class='tableauPlaceholder' id='viz1646122485529' style='position: relative'>
+<div class='tableauPlaceholder' id='viz1646197996554' style='position: relative'>
   <object class='tableauViz'  style='display:none;'>
-    <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
-    <param name='embed_code_version' value='3' />
+    <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> 
+    <param name='embed_code_version' value='3' /> 
     <param name='site_root' value='' />
     <param name='name' value='final_public_transit_map&#47;Dashboard1' />
     <param name='tabs' value='no' />
@@ -92,7 +92,7 @@ Use the controls on the right-hand side to filter by geographical region, bus li
   </object>
 </div>
 <script type='text/javascript'> 
-  var divElement = document.getElementById('viz1646122485529');
+  var divElement = document.getElementById('viz1646197996554');
   var vizElement = divElement.getElementsByTagName('object')[0];
   if ( divElement.offsetWidth > 800 ) { 
     vizElement.style.width='800px';
@@ -103,7 +103,7 @@ Use the controls on the right-hand side to filter by geographical region, bus li
   } else { 
     vizElement.style.width='100%';
     vizElement.style.height=(divElement.offsetWidth*1.77)+'px';
-  }
+  } 
   var scriptElement = document.createElement('script');
   scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
   vizElement.parentNode.insertBefore(scriptElement, vizElement);
