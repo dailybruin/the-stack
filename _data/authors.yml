@@ -422,7 +422,7 @@ ananya_garg:
 mansa_krishna:
   name: Mansa Krishna
   title: Stack Developer
-  bio: Mansa is a third-year applied mathematics with a specialization in computing student, who is also minoring in history. She is a coffee-for-breakfast advocate with a deep, abiding love for historical fiction.
+  bio: Mansa is a fourth-year applied mathematics student with a specialization in computing, who is also minoring in history. She is a coffee-for-breakfast advocate with a deep, abiding love for historical fiction.
   mug: yes
   current: yes
   email: mkrishna@media.ucla.edu
@@ -511,7 +511,7 @@ andre_hiwatig:
   email: ahiwatig@media.ucla.edu
 justin_gong:
   name: Justin Gong
-  title: Stack Intern
+  title: Stack Developer
   bio: Justin is a first-year statistics and economics student who loves basketball and Marvel!
   mug: yes
   current: yes
@@ -541,8 +541,15 @@ nicole_chua:
 nancy_zhang:
   name: Nancy (Zihan) Zhang
   title: Stack Developer
-  bio: Nancy is a third-year Data Theory student who likes matcha latte and volleyball.
+  bio: Nancy is a third-year data theory student who likes matcha latte and volleyball.
   mug: yes
   current: yes
   email: nzhang@media.ucla.edu 
+abby_zhao:
+  name: Abby Zhao
+  title: Stack Developer
+  bio: Abby is a second-year data theory and economics student. She likes spicy food, hiking and reading.
+  mug: yes
+  current: yes
+  email: azhao8@media.ucla.edu
   

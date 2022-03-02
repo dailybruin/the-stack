@@ -1,5 +1,5 @@
 ---
-title: "Evaluating the Decade's Demographic Trends Among Faculty at UCLA"
+title: "Evaluating the decade's demographic trends among faculty at UCLA"
 teaser: "How have the demographics of UCLA faculty changed since 2010?"
 authors:
   - bernard_mendez

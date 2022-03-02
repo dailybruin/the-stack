@@ -1,5 +1,5 @@
 ---
-title: Westwood Business Turnover
+title: Westwood business turnover
 teaser: An analysis of the impact of the COVID-19 pandemic on Westwood businesses
 authors:
   - cameron_bian
@@ -89,6 +89,7 @@ Shehbaz Mattu, the owner of the 7-Eleven store in Westwood, expressed disappoint
 In addition, our data revealed a trend that many businesses open in January and close in December. According to Thomas, there are many possible explanations for this trend, such as that it may be hard to start a process to open a business toward the end of the year.
 
 For further analysis, we dug deeper to explore Westwood business data from the past 20 years. Here, we used the closed- to open-business ratio (ratio between the total number of businesses closed and opened in a specific year) to reflect the well-being of Westwood businesses. The higher the ratio is, the worse off the businesses will in general be. From the graph below, we see that the ratio was highest during 2008 with a value of 0.86. However, the ratio of 2020 was 0.255, which is the lowest of the past 20 years. Using our ratio, we concluded that the Westwood businesses were not hit as bad as they were during the 2008 crisis.
+
 <div class = "chart-container">
   <img src="/img/posts/westwood-business/close-open-ratio.png" style="width:63vw" class = "center"/>
 </div>

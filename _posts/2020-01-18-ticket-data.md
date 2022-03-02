@@ -1,5 +1,5 @@
 ---
-title: "Stick It to the Ticket"
+title: Stick it to the ticket
 
 teaser: Where are you most likely to get a parking ticket, and why? Find out the times and days when parking citations spike near you.
 authors:
@@ -19,8 +19,11 @@ scripts:
   - https://code.jquery.com/jquery-3.4.1.min.js
   - //d3js.org/d3.v3.min.js
 ---
+
 <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
 #### Teaser
+
 <p class="text" style="margin:20px;">It’s notoriously impossible to find parking at UCLA, especially in the Westwood area. The difficult parking situation is compounded by the many parking regulations enforced in the area, resulting in a multitude of parking tickets for a variety of violations. In 2017 alone, 37,931 parking tickets were issued within the surrounding Westwood area. Since this problem has affected and continues to affect many students, we decided to explore the frequency of tickets issued in certain areas and streets, the most common parking violations and the times of day and days of the week when you’re more likely to be ticketed.
 </p>
 
@@ -32,7 +35,6 @@ scripts:
 Use the dropdown menu to see the parking distribution for each month in 2018.
 </p>
 <br/>
-
 
 <div class="month-select" style="width:200px;">
 <select id='month' onchange='changemonth()'>
@@ -51,10 +53,8 @@ Use the dropdown menu to see the parking distribution for each month in 2018.
 </select>
 </div>
 
-
 <div id="map"></div>
 <br/>
-
 
 <p class="text" style="margin:20px;">
 Parking tickets are clustered most prominently around Gayley Avenue, Westwood Boulevard, Weyburn Avenue, Landfair Avenue and Lindbrook Drive. Check out the distribution around your apartment on the map above.
@@ -75,12 +75,9 @@ The frequency of parking tickets peaks during January, August and June, which co
 <br>
 <div  id="plotly-div"></div>
 
-
 <p class="text" style="margin: 50px;">
 As seen in the graph below, the number of tickets given peaks at 8 a.m. and spikes again at 11 a.m. and noon. The high number of tickets at 8 a.m. is likely because of street cleaning regulations on Thursdays and Fridays, which contributes to the fact that approximately 50% of parking tickets in 2018 were given on Thursdays and Fridays, with one-third of Thursday tickets issued at 8 a.m. No parking/street cleaning was the most common type of parking violation in 2018, with other top violation reasons including meter expiration, parking over time limits and red zones. Daily Bruin posted a <a href="https://dailybruin.com/2019/12/07/graphics-gayley-parking-policies/">graphic</a> in 2019 that cites the parking restrictions for different areas of Westwood.
 </p>
-
-
 
 <div class="resp-container">
 <iframe class="resp-iframe" frameborder="0" scrolling="no" src="//plot.ly/~jeanettelin8/52.embed?showlink=false&width=40%&height=300px&modebar=false"></iframe>
@@ -97,12 +94,6 @@ Generalizing to the rest of the <a href="https://ladot.lacity.org/what-we-do/par
  <p class="text" style="margin:30px;">
 If you would like to contest your Westwood parking citation, visit the <a href="https://prodpci.etimspayments.com/pbw/include/laopm/contest.htm">LA Department of Transportation</a> for more details. 
 </p>
-
-
-
-
-
-
 
 <script>
 

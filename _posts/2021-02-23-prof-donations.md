@@ -1,5 +1,5 @@
 ---
-title: "Put Your Money Where Your Politics Are: Professors’ Political Donations"
+title: "Put your money where your politics are: professors’ political donations"
 teaser: How do UCLA professors' political donations stack up against USC and UC Berkeley?
 
 authors:
@@ -69,6 +69,7 @@ Interestingly, donations to House of Representatives campaigns in particular jum
 <div class="small-line-break"></div>
 
 ### Breaking Down the Campaigns
+
 <div class = "chart-container">
   <div class="ucla-chart"> <canvas id='ucla-top-5'> </canvas> </div>
   <div class="ucb-chart"> <canvas id='ucb-top-5'> </canvas> </div>
