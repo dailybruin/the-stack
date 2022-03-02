@@ -609,6 +609,7 @@ const sctLayout = {
 };
 
 if (!isMobile) {
+  sctLayout.title.text = '<b>Santa Clarita Transit monthly ridership</b>';
   sctLayout.height = 450;
   sctLayout.legend.x = 0;
   sctLayout.margin.t = 100;

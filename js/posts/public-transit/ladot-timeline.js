@@ -257,14 +257,16 @@ const ladotData = [
 ];
 
 const ladotLayout = {
-  height: 450,
+  height: 480,
   legend: {
+    x: -0.1,
     y: 1.2,
     orientation: 'h',
     tracegroupgap: 0,
   },
   margin: {
     r: 15,
+    t: 130,
   },
   annotations: [
     {
@@ -663,12 +665,15 @@ const ladotLayout = {
     },
   },
   title: {
-    text: '<b>LADOT monthly ridership</b>',
+    text: '<b>LADOT monthly<br>ridership</b>',
     font: {
       size: 20,
     },
-    xref: 'paper',
+    xref: 'container',
     x: 0.5,
+    y: 0.9,
+    yanchor: 'top',
+    yref: 'container',
   },
   xaxis: {
     anchor: 'y',
@@ -690,6 +695,11 @@ const ladotLayout = {
 };
 
 if (!isMobile) {
+  ladotLayout.title.text = '<b>LADOT monthly ridership</b>';
+  ladotLayout.height = 450;
+  ladotLayout.legend.x = 0;
+  ladotLayout.margin.t = 100;
+  ladotLayout.title.xref = 'paper';
   ladotLayout.annotations = [
     {
       showarrow: false,
