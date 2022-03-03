@@ -5,7 +5,7 @@ import { STOPWORDS, MALE_COLOR, FEMALE_COLOR  } from './globals.js'
   /* configuration parameters */
   const W_WIDTH = window.innerWidth, W_HEIGHT = window.innerHeight;
   const config = {
-    "vw": W_WIDTH * 0.8,
+    "vw": W_WIDTH * 0.95,
     "vh": W_HEIGHT * 0.9,
     "anim_speed": 3000
   }
