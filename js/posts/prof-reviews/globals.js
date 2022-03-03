@@ -9,4 +9,4 @@ export const STOPWORDS = [
     'basically','weekly','honestly' // filler adverbs
 ]; 
 
-export const MALE_COLOR = "#CF7058",FEMALE_COLOR = "#5A9BD4";
+export const MALE_COLOR = "#3A8369",FEMALE_COLOR = "#7462E0";

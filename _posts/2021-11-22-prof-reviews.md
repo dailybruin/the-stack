@@ -48,30 +48,30 @@ stylesheets:
 
 ### Comparing Words Between Male and Female Professor Reviews
 <!-- word cloud -->
-<div id="stats-menu2" style="display: inline; float: left;">
-</div>
 <div id="stats-menu2a" style="display: inline; float: left;">
   <label for="num-words-input2" 
-    style="display: inline-block; text-align: right; padding-left: 2em">
-    Number of words
+    style="display: inline-block; text-align: right;">
+    Show top
   </label>
-  <input type="number" min="10" max="100" step="10" value="30" id="num-words-input2">
+  <input type="number" min="10" max="100" step="10" value="30" style="width:5em;" id="num-words-input2">
 </div> 
+<div id="stats-menu2" style="display: inline; float: left;">
+</div>
 <div id="cloud-svg-div">
 </div>
 
 ### Comparing Adjectives Between Male and Female Professor Reviews
 <!-- lollipop chart -->
+<div id="stats-menu1a" style="display: inline; float: left;">
+  <label for="num-words-input1" 
+    style="display: inline-block; text-align: right;">
+    Show top
+  </label>
+  <input type="number" min="10" max="50" step="5" value="20" style="width:4em;" id="num-words-input1">
+</div> 
 <div id="stats-menu1" style="display: inline; float: left;">
 </div>
-<div id="stats-menu1a" style="display: inline; float: left; padding-left: 2em">
-  <label for="num-words-input1" 
-    style="display: inline-block; text-align: right">
-    Number of words
-  </label>
-  <input type="number" min="10" max="50" step="5" value="20" id="num-words-input1">
-</div> 
-<div id="stat-svg-div">
+<div id="lollipop-svg-div">
 </div>
 
 

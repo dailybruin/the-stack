@@ -4,31 +4,36 @@ import { STOPWORDS, MALE_COLOR, FEMALE_COLOR  } from './globals.js'
 (function(){
   /* configuration parameters */
   const W_WIDTH = window.innerWidth, W_HEIGHT = window.innerHeight;
+  const isMobile = (W_WIDTH) =>{
+    return (W_WIDTH <= 600 ? Math.min(W_WIDTH * 0.95,W_HEIGHT * 0.9) : W_HEIGHT * 0.9);
+  }  
   const config = {
     "vw": W_WIDTH * 0.95,
-    "vh": W_HEIGHT * 0.9,
-    "anim_speed": 3000
+    "vh": isMobile(W_WIDTH), // full height for desktop, square for mobile 
+    "anim_speed": 1000
   }
+  // let svg_width, svg_height;
   const margin = ({top: 50, right: 20, bottom: 60, left: 150});
   const t = d3.transition().duration(config.anim_speed).ease(d3.easeCubic);
-  let point_radius = 7; // for lollipop chart circles
+  let point_radius = 6; // for lollipop chart circles
   let top_n_words = 20;
 
   /* static elements (only append once) */
   var sub_data, adj_data;
 
-  const stat_svg = d3.select("#stat-svg-div").append("svg");
+  const stat_svg = d3.select("#lollipop-svg-div").append("svg");
+  // mobile compatability
   stat_svg
-    .attr("id","stat-svg")
-    .style("width", '95%')
-    .style("height", config.vh + 'px')
+    .attr("id","lollipop-svg")
+    .style("width", config.vw)
+    .style("height", config.vh)
     .attr("font-family", "sans-serif")
     .attr("font-size", 10);
   // axes and labels
   var xAxisGroup = stat_svg.append("g")
     .attr("class","xaxis");
   var yAxisGroup = stat_svg.append("g")
-    .attr("class","yaxis");
+    .attr("class","lollipop-yaxis");
   var xLabel = stat_svg.append("text")
    .attr("class","xlabel")
   var yLabel = stat_svg.append("text")
@@ -41,35 +46,28 @@ import { STOPWORDS, MALE_COLOR, FEMALE_COLOR  } from './globals.js'
   stat_svg.select(".legend").append("text").attr("x",W_WIDTH * 0.6+20).attr("y",W_HEIGHT * 0.7).text("Male Professors").style("font-size", "15px").attr("alignment-baseline","middle");
   stat_svg.select(".legend").append("text").attr("x",W_WIDTH * 0.6+20).attr("y",W_HEIGHT * 0.7+30).text("Female Professors").style("font-size", "15px").attr("alignment-baseline","middle");
 
-  // dropdown
-  // const stats = ["Largest Difference","Female Professors","Male Professors"]
-  const stats = ["Largest Difference - Adj/Adverbs","Female-Professor - Adj/Adverbs","Male Professor - Adj/Adverbs"];
+  // stat dropdown
+  const stats = ["with largest difference","for female professors","for male professors"];
   var stat = stats[0]; // the stat to sort words by
   const onStatClicked = selection => {
     console.log("selection",selection,"stat",stat);
-    if (selection == stats[0]){// || selection == stats[3]){
+    if (selection == stats[0]){
       stat = "difference_abs";
     }
-    else if (selection == stats[1]){// || selection == stats[4]){
+    else if (selection == stats[1]){
       stat = "female";
     }
-    else if (selection == stats[2]){// || selection == stats[5]){
+    else if (selection == stats[2]){
       stat = "male";
     }
-    // if (selection == stats[3] || selection == stats[4] || selection == stats[5]){
-    render_stats(adj_data,stat,"Adjective/Adverb");
-    // }
-    // else{
-    // render_stats(freq_data,stat); // pass in full dataset to rerank top_n
-    // }
-    // console.log("selection",selection, " stat",stat);
+    render_stats(adj_data,stat);
   };
   d3.select('#stats-menu1')
     .call(dropdownMenu,{
     options: stats,
     onOptionClicked: onStatClicked,
     selectedOption: stat,
-    label: 'Sort by: ',
+    label: 'adjectives... ',
     id: 'word-freq-select-1'
     });
 
@@ -172,6 +170,7 @@ import { STOPWORDS, MALE_COLOR, FEMALE_COLOR  } from './globals.js'
           })
         .call(enter => enter.transition(t)
         .attr("fill", color)
+        .attr("stroke","black")
         .attr("gender",gender)
         .attr("freq", d => d[gender])
         .attr("cx", d => xScale(d[gender])) //p
@@ -232,16 +231,16 @@ import { STOPWORDS, MALE_COLOR, FEMALE_COLOR  } from './globals.js'
       .transition(t)
       .call(yAxis);
     // assign ID to y-axis tick text so can bold on hover
-    d3.select("g.yaxis").selectAll(".tick text")
+    d3.select("g.lollipop-yaxis").selectAll(".tick text")
       .attr("id", (d,i) => {return d + "-word" });
-    yLabel
-      .attr("text-anchor", "middle")
-      .attr("x", -config.vh/2)
-      .attr("y",margin.top)
-      .attr("transform", "rotate(-90)")
-      .style("font-size","20px")
-      .style("padding-bottom","5px")
-      .text(y_label);
+    // yLabel
+    //   .attr("text-anchor", "middle")
+    //   .attr("x", -config.vh/2)
+    //   .attr("y",margin.top)
+    //   .attr("transform", "rotate(-90)")
+    //   .style("font-size","20px")
+    //   .style("padding-bottom","5px")
+    //   .text(y_label);
     // title
     // stat_svg.append("g")
     //   .append("text")
@@ -305,7 +304,10 @@ import { STOPWORDS, MALE_COLOR, FEMALE_COLOR  } from './globals.js'
   }
   const mouseleave = function(event,d) {
     tooltip1
-      .style("opacity", 0);
+      .style("opacity", 0)
+      // .attr("height",0)
+      // .attr("width",0);
+    tooltip1.html(); // clear html
     d3.select(this)
       .attr("r", point_radius);
     // un-bold word
@@ -342,7 +344,7 @@ import { STOPWORDS, MALE_COLOR, FEMALE_COLOR  } from './globals.js'
   }
 
   // static components before/above data
-  // const stat_svg = d3.select("#stat-svg");
+  // const stat_svg = d3.select("#lollipop-svg");
   var overlay_g = stat_svg.append("g").classed("overlay-g",true)
   var overlay_rect = overlay_g.append('rect');
   overlay_rect

@@ -1,24 +1,27 @@
 import { dropdownMenu } from './dropdownMenu.js';
 import { STOPWORDS, MALE_COLOR, FEMALE_COLOR } from './globals.js'
+
 (function(){
   /* configuration parameters */
+  // const CLIENT_WIDTH = document.documentElement.clientWidth; // smaller than window width
   const W_WIDTH = window.innerWidth, W_HEIGHT = window.innerHeight;
+  // console.log("client",CLIENT_WIDTH,"window",W_WIDTH);
   const config = {
     "vw": W_WIDTH * 0.8,
     "vh": W_HEIGHT * 0.9,
-    "anim_speed": 3000
+    "anim_speed": 1000
   }
   const margin = ({top: 50, right: 20, bottom: 40, left: 150});
   const t = d3.transition().duration(config.anim_speed).ease(d3.easeCubic);
   let top_n_words = 30;
   const scale_factor = 10000; // for scaling word cloud font size
 
-  /* static elements (only append once) */
+  /* static elements (only appended once) */
   var freq_data, sub_data, adj_data;
   const cloud_svg = d3.select("#cloud-svg-div").append("svg");  
   cloud_svg
     .attr("id","word-cloud-svg")
-    .style("width", '85%')
+    .style("width", '90%')
     .style("height", config.vh + 'px')
     .attr("font-family", "sans-serif")
     .style("display", "block")
@@ -53,44 +56,38 @@ import { STOPWORDS, MALE_COLOR, FEMALE_COLOR } from './globals.js'
     .text("Female Professors");
 
 
-  // dropdown
-  const stats = ["Largest Difference","Female Professors","Male Professors"];
+  // stats dropdown
+  const stats = ["with largest difference","for female professors","for male professors"];
   // const stats = ["Largest Difference - Adj/Adverbs","Female-Professor - Adj/Adverbs","Male Professor - Adj/Adverbs"]
   var stat = stats[0]; // the stat to sort words by
   const onStatClicked = selection => {
     // re-filter data on click
     var stat;
-    if (selection == stats[0]){ ///|| selection == stats[3]){
+    if (selection == stats[0]){
       stat = "difference_abs";
     }
-    else if (selection == stats[1]){ //|| selection == stats[4]){
+    else if (selection == stats[1]){
       stat = "female";
     }
-    else if (selection == stats[2]){ //|| selection == stats[5]){
+    else if (selection == stats[2]){
       stat = "male";
     }
-    // if (selection == stats[3] || selection == stats[4] || selection == stats[5]){
-    render_stats(freq_data,stat,"Adjective/Adverb");
-    // }
-    // else{
-    //   render_stats(freq_data,stat); // pass in full dataset to rerank top_n
-    // }
-    // console.log("selection",selection, " stat",stat);
+    render_stats(freq_data,stat);
   };
   d3.select('#stats-menu2')
     .call(dropdownMenu,{
     options: stats,
     onOptionClicked: onStatClicked,
     selectedOption: stat,
-    label: 'Sort by: ',
+    label: 'words... ',
     id: 'word-cloud-select-1'
     });
   
-  // spinner
+  // number of words spinner
   let num_words_input = document.getElementById('num-words-input2');
   num_words_input.onchange = () => {
       top_n_words = num_words_input.value
-      console.log('spinmer',top_n_words)
+      // console.log('spinner',top_n_words)
       let current_stat = document.getElementById("word-cloud-select-1").value;
       onStatClicked(current_stat); // call onStatClicked to also determine first dropdown value
    }  
@@ -122,7 +119,7 @@ import { STOPWORDS, MALE_COLOR, FEMALE_COLOR } from './globals.js'
       // .style("font-size", () => {return (parseInt(this.style.fontSize.split('px')[0]) / 1.2)});
   }
 
-  // draw both male and female WCs
+  // function to draw both male and female WCs
   const render_stats = (data,stat="difference_abs",y_label="Word",num_words = top_n_words) =>{
     // sort data by selected statistic and slice top n
     // console.log('render words',num_words);
@@ -151,7 +148,7 @@ import { STOPWORDS, MALE_COLOR, FEMALE_COLOR } from './globals.js'
     
     let fSizeScale = d3.scaleSqrt()
       .domain([0,d3.max(female_data, d => {return d.value})])
-      .range([0,95]); // largest word doesnt fit with 95, try 80?
+      .range([0,95]); // largest word dissappears after 1st cloud
     // female_layout.stop() // does this do anything? no idea.
     // console.log("f_data",female_data)
     female_layout
@@ -178,6 +175,7 @@ import { STOPWORDS, MALE_COLOR, FEMALE_COLOR } from './globals.js'
           return('an-undefined-m-word')
         }
         else{
+          console.log("wordcloud d",d);
           // console.log(d, d==undefined, String(d)=='undefined');
           return(d);
         }

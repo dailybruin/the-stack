@@ -13,3 +13,19 @@
 .title-text{
     padding-top: 2em;
 }
+
+/* mobile only (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    /* lollipop svg */
+    .lollipop-svg{
+        width: 100%;
+        height: auto;
+    }
+}
+/* medium devices and larger*/
+@media only screen and (min-width: 600px) {
+    #stats-menu1,
+    #stats-menu2{
+        padding-left: 0.5em;
+    }    
+}
