@@ -20,7 +20,7 @@ import { STOPWORDS, MALE_COLOR, FEMALE_COLOR  } from './globals.js'
     const rating_svg = d3.select("#rating-svg-div").append("svg");
     rating_svg
       .attr("id","rating-svg")
-      .style("width", '85%')
+      .style("width", '95%')
       .style("height", config.vh + 'px')
       .attr("font-family", "sans-serif")
       .attr("font-size", 10);
@@ -46,7 +46,7 @@ import { STOPWORDS, MALE_COLOR, FEMALE_COLOR  } from './globals.js'
     const render_stats = (male_rating_data,female_rating_data,stat="Overall Rating") =>{
         const t = d3.transition().duration(config.anim_speed).ease(d3.easeCubic);
         const t2 = d3.transition().duration(config.anim_speed).ease(d3.easeElastic);
-        console.log('selected_stat', stat);
+        // console.log('selected_stat', stat);
 
         // axes, labels, title
         // find new max value for y axis
@@ -60,7 +60,7 @@ import { STOPWORDS, MALE_COLOR, FEMALE_COLOR  } from './globals.js'
           .call(xAxis);
         xLabel
           .attr("text-anchor", "middle")
-          .attr("x", (config.vw+ margin.left)/2 )
+          .attr("x", (config.vw + margin.left)/2 )
           .attr("y",config.vh)
           .style("font-size","20px")
           .text('Professor Gender');
@@ -93,7 +93,7 @@ import { STOPWORDS, MALE_COLOR, FEMALE_COLOR  } from './globals.js'
       let avg_male_rtg = average(male_rating_data.map(d => d[stat]));
       let avg_data = [{avg: avg_female_rtg, gender: "Female", color: FEMALE_COLOR},
                       {avg: avg_male_rtg, gender: "Male", color: MALE_COLOR}]
-      console.log(avg_data);
+      // console.log(avg_data);
 
       // plot rects
       rating_svg
@@ -126,7 +126,6 @@ import { STOPWORDS, MALE_COLOR, FEMALE_COLOR  } from './globals.js'
             .remove()
           )
         );
-      console.log(avg_data);
 
       // add text
       rating_svg
@@ -183,7 +182,7 @@ import { STOPWORDS, MALE_COLOR, FEMALE_COLOR  } from './globals.js'
           }
         }); 
         // sort male and female by dates
-        console.log('mf',male_rating_data,female_rating_data)
+        // console.log('mf',male_rating_data,female_rating_data)
         // female_rating_data.sort((a,b) => a.time_taken > b.time_taken ? 1:-1);
         // male_rating_data.sort((a,b) => a.time_taken > b.time_taken ? 1:-1);
         // console.log('mf-sorted',male_rating_data,female_rating_data) // sorted
@@ -203,7 +202,8 @@ import { STOPWORDS, MALE_COLOR, FEMALE_COLOR  } from './globals.js'
         options: stats,
         onOptionClicked: onStatClicked,
         selectedOption: stat,
-        label: 'Rating: '
+        label: 'Rating: ',
+        id: 'rating-viz-select-1'
         });
         // create date list
         // date_array = data.map(d=>d.time_taken).sort(sort_num)

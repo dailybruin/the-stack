@@ -82,15 +82,17 @@ import { STOPWORDS, MALE_COLOR, FEMALE_COLOR } from './globals.js'
     options: stats,
     onOptionClicked: onStatClicked,
     selectedOption: stat,
-    label: 'Sort by: '
+    label: 'Sort by: ',
+    id: 'word-cloud-select-1'
     });
   
   // spinner
   let num_words_input = document.getElementById('num-words-input2');
   num_words_input.onchange = () => {
-       top_n_words = num_words_input.value
-       console.log('spinmer',top_n_words)
-       onStatClicked(); // call onStatClicked to also determine first dropdown value
+      top_n_words = num_words_input.value
+      console.log('spinmer',top_n_words)
+      let current_stat = document.getElementById("word-cloud-select-1").value;
+      onStatClicked(current_stat); // call onStatClicked to also determine first dropdown value
    }  
 
   // function to sort data by statistic
@@ -123,7 +125,7 @@ import { STOPWORDS, MALE_COLOR, FEMALE_COLOR } from './globals.js'
   // draw both male and female WCs
   const render_stats = (data,stat="difference_abs",y_label="Word",num_words = top_n_words) =>{
     // sort data by selected statistic and slice top n
-    console.log('render words',num_words);
+    // console.log('render words',num_words);
     sub_data = sort_data(data,stat,num_words);
     // console.log("sliced-data",sub_data);
 

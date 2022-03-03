@@ -20,7 +20,7 @@ import { STOPWORDS, MALE_COLOR, FEMALE_COLOR  } from './globals.js'
   const stat_svg = d3.select("#stat-svg-div").append("svg");
   stat_svg
     .attr("id","stat-svg")
-    .style("width", '85%')
+    .style("width", '95%')
     .style("height", config.vh + 'px')
     .attr("font-family", "sans-serif")
     .attr("font-size", 10);
@@ -46,7 +46,7 @@ import { STOPWORDS, MALE_COLOR, FEMALE_COLOR  } from './globals.js'
   const stats = ["Largest Difference - Adj/Adverbs","Female-Professor - Adj/Adverbs","Male Professor - Adj/Adverbs"];
   var stat = stats[0]; // the stat to sort words by
   const onStatClicked = selection => {
-    var stat;
+    console.log("selection",selection,"stat",stat);
     if (selection == stats[0]){// || selection == stats[3]){
       stat = "difference_abs";
     }
@@ -69,7 +69,8 @@ import { STOPWORDS, MALE_COLOR, FEMALE_COLOR  } from './globals.js'
     options: stats,
     onOptionClicked: onStatClicked,
     selectedOption: stat,
-    label: 'Sort by: '
+    label: 'Sort by: ',
+    id: 'word-freq-select-1'
     });
 
   // spinner
@@ -77,7 +78,8 @@ import { STOPWORDS, MALE_COLOR, FEMALE_COLOR  } from './globals.js'
   num_words_input.onchange = () => {
       top_n_words = num_words_input.value
       point_radius = Math.min(7 * 20 / top_n_words, 7) // scale circles for number of words
-      onStatClicked(); // call onStatClicked to also determine first dropdown value
+      let current_stat = document.getElementById("word-freq-select-1").value;
+      onStatClicked(current_stat); // call onStatClicked to also determine first dropdown value
   }  
 
   // function to clear previous graphics by class (needed since different datasets)
@@ -215,7 +217,7 @@ import { STOPWORDS, MALE_COLOR, FEMALE_COLOR  } from './globals.js'
       .call(xAxis);
     xLabel
       .attr("text-anchor", "middle")
-      .attr("x", (config.vw+ margin.left)/2 )
+      .attr("x", (config.vw + margin.left)/2 )
       .attr("y",config.vh)
       .style("font-size","20px")
       .text('Percent of All Words');

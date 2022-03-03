@@ -3,7 +3,8 @@ export const dropdownMenu = (selection,props) => {
         options,
         onOptionClicked,
         selectedOption,
-        label
+        label,
+        id
     } = props; // destructure/unpack props into options
     
     // create select elt
@@ -16,7 +17,7 @@ export const dropdownMenu = (selection,props) => {
             // .style('display','inline')
             .text(label)
         .append('select')
-            .attr('id', label)
+            .attr('id', id)
             .attr('class','dropdown')
         .merge(select)
             .on('change', function(){ // when select changed...
