@@ -1,19 +1,17 @@
 import { dropdownMenu } from './dropdownMenu.js';
-import { STOPWORDS, MALE_COLOR, FEMALE_COLOR  } from './globals.js'
+import { STOPWORDS, MALE_COLOR, FEMALE_COLOR, MALE_COLOR_BRIGHT, FEMALE_COLOR_BRIGHT, W_WIDTH, W_HEIGHT, isMobile} from './globals.js'
 
 (function(){
   /* configuration parameters */
-  const W_WIDTH = window.innerWidth, W_HEIGHT = window.innerHeight;
-  const isMobile = (W_WIDTH) =>{
-    return (W_WIDTH <= 600 ? Math.min(W_WIDTH * 0.95,W_HEIGHT * 0.9) : W_HEIGHT * 0.9);
-  }  
+
   const config = {
     "vw": W_WIDTH * 0.95,
-    "vh": isMobile(W_WIDTH), // full height for desktop, square for mobile 
+    "vh": isMobile() ? Math.min(W_WIDTH * 0.95,W_HEIGHT * 0.9) : W_HEIGHT * 0.9, // full height for desktop, square for mobile 
     "anim_speed": 1000
   }
   // let svg_width, svg_height;
   const margin = ({top: 50, right: 20, bottom: 60, left: 150});
+
   const t = d3.transition().duration(config.anim_speed).ease(d3.easeCubic);
   let point_radius = 6; // for lollipop chart circles
   let top_n_words = 20;
@@ -275,11 +273,24 @@ import { STOPWORDS, MALE_COLOR, FEMALE_COLOR  } from './globals.js'
   const mousemove = function(event,d,stat) {
     // add text
     let tooltip_text;
-    if (stat == "difference"){
-      tooltip_text = "<b>Diff: </b>" + d.difference_abs.toFixed(3) + "%<br><b>Male</b>: " + d.male.toFixed(3) + "%<br><b>Female</b>: " + d.female.toFixed(3) + "%";
+    // determine color of diff
+    let diff_color;
+    if(d.male > d.female){
+      diff_color = MALE_COLOR_BRIGHT;
     }
     else{
-      tooltip_text = "<b>Male</b>: " + d.male.toFixed(3) + "%<br><b>Female</b>: " + d.female.toFixed(3) + "%";
+      diff_color = FEMALE_COLOR_BRIGHT;
+    }
+
+    console.log('mousemove d',d);
+    if (stat == "difference"){
+      tooltip_text = "<span style='color:"+diff_color+"'><b>Diff</b>: " + d.difference_abs.toFixed(3) + "%</span><br><b>Male</b>: " + d.male.toFixed(3) + "%<br><b>Female</b>: " + d.female.toFixed(3) + "%";
+    }
+    else if (stat == "male"){
+      tooltip_text = "<b>Male</b>: " + d.male.toFixed(3) + "%<br><b>Female</b>: " + d.female.toFixed(3) + "%<br><span style='color:"+diff_color+"'><b>Diff</b>: " + d.difference_abs.toFixed(3) + "%</span>";
+    }
+    else{
+      tooltip_text = "<b>Female</b>: " + d.female.toFixed(3) + "%<br><b>Male</b>: " + d.male.toFixed(3) + "%<br><span style='color:"+diff_color+"'><b>Diff</b>: " + d.difference_abs.toFixed(3) + "%</span>";
     }
     tooltip1.html(tooltip_text)
       .style("top", (event.pageY)+"px")
@@ -305,9 +316,10 @@ import { STOPWORDS, MALE_COLOR, FEMALE_COLOR  } from './globals.js'
   const mouseleave = function(event,d) {
     tooltip1
       .style("opacity", 0)
-      // .attr("height",0)
-      // .attr("width",0);
-    tooltip1.html(); // clear html
+      .attr("height",0)
+      .attr("width",0);
+    let tooltip_text = "";
+    tooltip1.html(tooltip_text); // clear html?
     d3.select(this)
       .attr("r", point_radius);
     // un-bold word
@@ -357,18 +369,20 @@ import { STOPWORDS, MALE_COLOR, FEMALE_COLOR  } from './globals.js'
     .on('mouseover', mouseover2)
     .on('mousemove', mousemove2)
     .on('mouseout', mouseleave2);
-  // Add vertical line to read percentages more easily
-  var vertical_guide = overlay_g
-    .append("line");
-  vertical_guide
-    .attr("class", "vertical-guide")
-    .attr("y1",margin.top)
-    .attr("y2",config.vh - margin.bottom)
-    .style("stroke-width", 1)
-    .style("stroke", "#000")
-    .style("fill", "none")
-    .style("stroke-dasharray", ("2, 2"))
-    .style("opacity",0);
+  // Add vertical line to read percentages more easily on desktop
+  if(!isMobile()){
+    var vertical_guide = overlay_g
+      .append("line");
+    vertical_guide
+      .attr("class", "vertical-guide")
+      .attr("y1",margin.top)
+      .attr("y2",config.vh - margin.bottom)
+      .style("stroke-width", 1)
+      .style("stroke", "#000")
+      .style("fill", "none")
+      .style("stroke-dasharray", ("2, 2"))
+      .style("opacity",0);
+  }
   var percent_text = overlay_g
     .append("text");
   percent_text
