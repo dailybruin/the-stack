@@ -4,6 +4,7 @@ teaser: How do professor reviews differ based on gender? The Stack looks at the 
 authors:
   - ananya_garg
   - tyler_wu
+  - jessica_li
 
 key_takeaways:
   - Overall, male and female professors had similar numerical ratings and percentages of positive reviews.
