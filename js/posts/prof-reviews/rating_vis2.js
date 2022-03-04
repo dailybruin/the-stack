@@ -37,7 +37,7 @@ import { STOPWORDS, MALE_COLOR, FEMALE_COLOR, isMobile } from './globals.js'
     var xAxisGroup = rating_svg.append("g")
       .attr("class","xaxis");
     var yAxisGroup = rating_svg.append("g")
-      .attr("class","yaxis");
+      .attr("class","ratings-yaxis");
     var xLabel = rating_svg.append("text")
      .attr("class","xlabel")
     var yLabel = rating_svg.append("text")
@@ -81,7 +81,7 @@ import { STOPWORDS, MALE_COLOR, FEMALE_COLOR, isMobile } from './globals.js'
           });
       }
       else{
-        d3.select("yaxis").selectAll(".tick text")
+        d3.select(".ratings-yaxis").selectAll(".tick text")
           .each(function(d, i){
             d3.select(this).style("font-size",axes_tick_font_size);
           });

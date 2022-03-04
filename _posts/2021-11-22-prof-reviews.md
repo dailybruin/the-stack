@@ -47,14 +47,14 @@ stylesheets:
 
 ### The most common words overall
 <!-- word cloud -->
-<div id="stats-menu2a" style="display: inline; float: left;">
+<!-- <div id="stats-menu2a" style="display: inline; float: left;">
   <label for="num-words-input2" 
     style="display: inline-block; text-align: right;">
     Show top
   </label>
   <input type="number" min="10" max="100" step="10" value="30" style="width:5em;" id="num-words-input2">
 </div>
-<div id="stats-menu2" style="display: inline; float: left;"></div><br>
+<div id="stats-menu2" style="display: inline; float: left;"></div><br> -->
 <div id="male-WC-div" class="WC-div"></div>
 <div id="female-WC-div" class="WC-div"></div><br>
 
