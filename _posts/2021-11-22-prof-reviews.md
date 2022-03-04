@@ -29,7 +29,8 @@ scripts:
 
 stylesheets:
   - /css/posts/prof-reviews/style.css
----<!-- <script type="module" src="/js/posts/prof-reviews/require.js"></script> -->
+---
+
 <script type="module" src="/js/posts/prof-reviews/dropdownMenu.js"></script>
 <script type="module" src="/js/posts/prof-reviews/word_cloud.js"></script>
 <script type="module" src="/js/posts/prof-reviews/word_freq.js"></script>
