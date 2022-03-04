@@ -83,10 +83,10 @@ import { STOPWORDS, MALE_COLOR, FEMALE_COLOR, MALE_COLOR_BRIGHT, FEMALE_COLOR_BR
   //   .text("Female Professors");
   // determine WC width
   if(!isMobile()){
-    WC_width = config.vw/2;
+    WC_width = config.vw/2 * 0.9;
   }
   else{
-    WC_width = config.vw;
+    WC_width = config.vw * 0.9;
   }
 
 
