@@ -1,55 +1,247 @@
 ---
 ---
 
-@import 'globals';
+@import "globals";
 
 .post-list {
+  margin-left: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  li {
+    box-sizing: border-box;
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.25);
+    margin-bottom: $spacing-unit;
+    background-color: #f9f9f9;
+
+    @include media-query($on-palm) {
+      flex-basis: 100%;
+      max-width: 100%;
+
+      padding: 15px;
+
+      .info {
+        font-size: 14px;
+        margin-bottom: 0px;
+      }
+
+      .featured-image {
+        height: 250px;
+      }
+    }
+  }
+
+  h2 {
+    margin-bottom: $spacing-unit/2;
+    font-size: 24px;
+  }
+
+  h3 {
+    font-weight: normal;
+    color: $grey-color-dark;
+    font-size: 16px;
+  }
+
+  .info {
+    font-size: 14px;
+    color: $grey-color;
+  }
+
+  .post-link {
+    color: black;
+    font-size: 1.5em;
+
+    &:hover h2 {
+      color: $brand-color;
+    }
+
+    &:hover .featured-image {
+      opacity: 0.9;
+    }
+  }
+
+  .featured-image {
+    height: 250px;
+    display: block;
+    margin: 0 auto $spacing-unit/2;
+    object-fit: cover;
+  }
+
+  .post-layout-wrapper {
+    width: calc(50% - (#{$spacing-unit}/ 2));
+    display: flex;
+    flex-direction: column;
+
+    @include media-query($on-palm) {
+      width: 100%;
+    }
+  }
+}
+
+// left aligns last row to grid
+.post-list::after {
+  content: "";
+  flex-basis: 32%;
+}
+
+.post-first {
+  width: calc(50% - (#{$spacing-unit}/ 2));
+
+  .featured-image {
+    height: 400px;
+    width: 100%;
+  }
+
+  .post-details {
+    padding: 0 $spacing-unit $spacing-unit $spacing-unit;
+
+    @include media-query($on-palm) {
+      padding: 0px;
+    }
+
     h2 {
-        line-height: 1;
-        margin-bottom: 0.2em;
+      font-size: 30px;
+
+      @include media-query($on-palm) {
+        font-size: 24px;
+      }
     }
 
     h3 {
-        line-height: 1.2;
-        font-weight: normal;
-        font-size: 0.8em;
-        color: $grey-color-dark;
+      font-size: 18px;
+      @include media-query($on-palm) {
+        font-size: 16px;
+      }
     }
 
     .info {
-      font-size: 0.65em;
+      font-size: 14px;
     }
-
-    .post-link {
-        color: black;
-        font-size: 1.5em;
-
-        &:hover h2, &:hover h3 {
-            color: $brand-color;
-        }
-
-        &:hover .featured-image {
-            opacity: 0.9;
-        }
-    }
-
-    .featured-image {
-        display: block;
-        margin: 0 auto $spacing-unit/2;
-    }
+  }
 }
 
-.pagination {
-    text-align: center;
+.post-second,
+.post-third {
+  width: 100%;
 
-    .page-number {
-        margin: 0 1em;
-        color: $grey-color;
+  h2 {
+    font-size: 20px;
+  }
+
+  h3 {
+    font-size: 14px;
+  }
+
+  .info {
+    font-size: 12px;
+    margin-bottom: 0px;
+  }
+
+  @include media-query($on-palm) {
+    h2 {
+      font-size: 24px;
     }
+
+    h3 {
+      font-size: 16px;
+    }
+  }
+}
+
+.post-second {
+  .featured-image {
+    height: 215px;
+    width: 100%;
+  }
+
+  .post-details {
+    padding: 0px $spacing-unit/2 $spacing-unit/2 $spacing-unit/2;
+
+    @include media-query($on-palm) {
+      padding: 0px;
+    }
+  }
+}
+
+.post-third {
+  .featured-image {
+    width: 50%;
+    height: 100%;
+    float: left;
+
+    @include media-query($on-palm) {
+      width: 100%;
+      float: none;
+    }
+  }
+
+  .post-details {
+    width: 50%;
+    float: right;
+    padding: 15px;
+    box-sizing: border-box;
+
+    @include media-query($on-palm) {
+      width: 100%;
+      float: none;
+      padding: 0px;
+    }
+  }
+
+  h2 {
+    margin-bottom: $spacing-unit/2;
+  }
+}
+
+.post-middle {
+  width: 100%;
+  height: 250px;
+
+  @include media-query($on-palm) {
+    height: auto;
+    padding: 15px;
+  }
+
+  .featured-image {
+    width: 50%;
+    height: 100%;
+    float: left;
+
+    @include media-query($on-palm) {
+      width: 100%;
+      float: none;
+      height: 250px;
+    }
+  }
+
+  .post-details {
+    width: 50%;
+    float: right;
+    padding: 30px;
+    box-sizing: border-box;
+
+    @include media-query($on-palm) {
+      width: 100%;
+      float: none;
+      padding: 0px;
+    }
+  }
+}
+
+.post-last {
+  flex-basis: 32%;
+  max-width: 32%;
+  padding: 15px;
+
+  .info {
+    margin-bottom: 0px;
+  }
 }
 
 .rss-subscribe {
-    float: right;
-    font-size: 0.8em;
-    color: $grey-color;
+  float: right;
+  font-size: 0.8em;
+  color: $grey-color;
 }

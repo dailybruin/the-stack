@@ -4,7 +4,10 @@
 }
 
 @media only screen and (min-width: 1000px) {
-
+    .chart-container{
+        margin-left: -20%;
+        margin-right: -20%;
+    }
     .usc-chart {
         float: left;
         width: 50%;
@@ -23,16 +26,10 @@
         width: 70%;
     }
 
-    .chart-container {
-        width: 70%;
-        margin: auto;
-        margin-bottom: 40px;
-    }
-
     .bubble-container {
-        width: 50%;
+        width: 75%;
         float: right;
-        margin-bottom: 40px;
+        margin-bottom: 20px;
         margin-top: 40px;
     }
 
