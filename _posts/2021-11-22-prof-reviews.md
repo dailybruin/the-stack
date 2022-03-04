@@ -74,13 +74,8 @@ Some students have found that ratings on Bruinwalk do not match their experience
 The word clouds below display the most common words found in male and female professor reviews, with the size of the word corresponding to how often it appears in reviews.
 
 <!-- word cloud -->
-<<<<<<< HEAD
 <div id="stats-menu2a" style="display: inline; float: left;">
   <label for="num-words-input2" 
-=======
-<!-- <div id="stats-menu2a" style="display: inline; float: left;">
-  <label for="num-words-input2"
->>>>>>> 07f23599b94ef03bc6cecfb38de7a2bbd100b0da
     style="display: inline-block; text-align: right;">
     Show top
   </label>
