@@ -40,13 +40,12 @@ stylesheets:
 <script type="module" src="/js/posts/prof-reviews/percent_pos.js"></script>
 
 
-### Comparing Ratings For Male and Female Professors
+### Ratings for male and female professors
 <!-- bar chart -->
 <div id="stats-menu3"></div>
-
 <div id="rating-svg-div"></div>
 
-### Comparing Words Between Male and Female Professor Reviews
+### The most common words overall
 <!-- word cloud -->
 <div id="stats-menu2a" style="display: inline; float: left;">
   <label for="num-words-input2" 
@@ -55,13 +54,11 @@ stylesheets:
   </label>
   <input type="number" min="10" max="100" step="10" value="30" style="width:5em;" id="num-words-input2">
 </div>
-
 <div id="stats-menu2" style="display: inline; float: left;"></div><br>
-
 <div id="male-WC-div" class="WC-div"></div>
 <div id="female-WC-div" class="WC-div"></div><br>
 
-### Comparing Adjectives Between Male and Female Professor Reviews
+### A closer look at adjectives used in male and female professor reviews
 <!-- lollipop chart -->
 <div id="stats-menu1a" style="display: inline; float: left;">
   <label for="num-words-input1" 
@@ -70,11 +67,8 @@ stylesheets:
   </label>
   <input type="number" min="10" max="50" step="5" value="20" style="width:4em;" id="num-words-input1">
 </div>
-
 <div id="stats-menu1" style="display: inline; float: left;"></div>
-
 <div id="lollipop-svg-div"></div>
-
 
 ### Other Words Most Commonly Used for Female versus Male Professors
 <div class="chart-container">

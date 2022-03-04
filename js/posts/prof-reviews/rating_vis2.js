@@ -1,29 +1,38 @@
 import { dropdownMenu } from './dropdownMenu.js';
-import { STOPWORDS, MALE_COLOR, FEMALE_COLOR  } from './globals.js'
+import { STOPWORDS, MALE_COLOR, FEMALE_COLOR, isMobile } from './globals.js'
 
 (function(){
     /* configuration parameters */
     const W_WIDTH = window.innerWidth, W_HEIGHT = window.innerHeight;
     const config = {
-      "vw": W_WIDTH * 0.8,
-      "vh": W_HEIGHT * 0.9,
-      "anim_speed": 3000
+      "vw": W_WIDTH * 0.65,
+      "vh": isMobile() ? Math.min(W_WIDTH * 0.65,W_HEIGHT * 0.95) : W_HEIGHT * 0.95, // full height for desktop, square for mobile 
+      "anim_speed": 1000
     }
-    const margin = ({top: 50, right: 20, bottom: 100, left: 150});
+    let margin;
+    if(!isMobile()){
+      margin = ({top: config.vh * 0.02, right: config.vw * 0.01, bottom: config.vh * 0.07, left: config.vw * 0.12});
+    }
+    else{
+      margin = ({top: config.vh * 0.01, right: config.vw * 0.01, bottom: config.vh * 0.1, left: config.vw * 0.2});
+    }
+    let axes_font_size = isMobile() ? 9:20;
+    let axes_tick_font_size = isMobile() ? 9:20;
     const t = d3.transition().duration(config.anim_speed).ease(d3.easeCubic);
     var stats = ['temp','values'];
 
     /* static elements (only append once) */
     var male_rating_data = [],female_rating_data = [];
-    var date_array;
+    // var date_array;
 
+    const base_font_size = isMobile() ? 6:10;
     const rating_svg = d3.select("#rating-svg-div").append("svg");
     rating_svg
       .attr("id","rating-svg")
-      .style("width", '95%')
-      .style("height", config.vh + 'px')
+      .style("width", config.vw)
+      .style("height", config.vh)
       .attr("font-family", "sans-serif")
-      .attr("font-size", 10);
+      .attr("font-size", base_font_size);
     // axes and labels
     var xAxisGroup = rating_svg.append("g")
       .attr("class","xaxis");
@@ -44,49 +53,56 @@ import { STOPWORDS, MALE_COLOR, FEMALE_COLOR  } from './globals.js'
 
     // main render function
     const render_stats = (male_rating_data,female_rating_data,stat="Overall Rating") =>{
-        const t = d3.transition().duration(config.anim_speed).ease(d3.easeCubic);
-        const t2 = d3.transition().duration(config.anim_speed).ease(d3.easeElastic);
-        // console.log('selected_stat', stat);
+      const t = d3.transition().duration(config.anim_speed).ease(d3.easeCubic);
+      const t2 = d3.transition().duration(config.anim_speed).ease(d3.easeElastic);
+      // console.log('selected_stat', stat);
 
-        // axes, labels, title
-        // find new max value for y axis
-        xScale = d3.scaleBand()
-          .domain(['Male','Female'])
-          .range([margin.left, config.vw - margin.right])
-        const xAxis = d3.axisBottom().scale(xScale);    
-        xAxisGroup
-          .attr("transform", "translate(0," + (config.vh - margin.bottom) + ")")
-          .transition(t)
-          .call(xAxis);
-        xLabel
-          .attr("text-anchor", "middle")
-          .attr("x", (config.vw + margin.left)/2 )
-          .attr("y",config.vh)
-          .style("font-size","20px")
-          .text('Professor Gender');
-        // increase tick label size
+      // axes, labels, title
+      // find new max value for y axis
+      xScale = d3.scaleBand()
+        .domain(['Male','Female'])
+        .range([margin.left, config.vw - margin.right])
+      const xAxis = d3.axisBottom().scale(xScale);    
+      xAxisGroup
+        .attr("transform", "translate(0," + (config.vh - margin.bottom) + ")")
+        .transition(t)
+        .call(xAxis);
+      xLabel
+        .attr("text-anchor", "middle")
+        .attr("x", (config.vw + margin.left)/2 )
+        .attr("y",config.vh)
+        .style("font-size",axes_font_size)
+        .text('Professor Gender');
+      // increase tick label size
+      if(!isMobile()){
         d3.selectAll('.xaxis>.tick>text')
           .each(function(d, i){
             d3.select(this).style("font-size","2em");
           });
-
-        const yScale = d3.scaleLinear()
-          .domain([5,0])
-          .range([margin.top,config.vh - margin.bottom]); // need to offset bars/circles by margin.top
-        const yAxis = d3.axisLeft().scale(yScale);
-        yAxisGroup   
-          .attr("transform", "translate("+ (margin.left) + ",0)")
-          .style("font-size","15px")
-          .transition(t)
-          .call(yAxis);
-        yLabel
-          .attr("text-anchor", "middle")
-          .attr("x", -config.vh/2)
-          .attr("y",margin.top)
-          .attr("transform", "rotate(-90)")
-          .style("font-size","20px")
-          .style("padding-bottom","5px")
-          .text(stat);
+      }
+      else{
+        d3.select("yaxis").selectAll(".tick text")
+          .each(function(d, i){
+            d3.select(this).style("font-size",axes_tick_font_size);
+          });
+      }
+      const yScale = d3.scaleLinear()
+        .domain([5,0])
+        .range([margin.top,config.vh - margin.bottom]); // need to offset bars/circles by margin.top
+      const yAxis = d3.axisLeft().scale(yScale);
+      yAxisGroup   
+        .attr("transform", "translate("+ (margin.left) + ",0)")
+        .style("font-size","15px")
+        .transition(t)
+        .call(yAxis);
+      yLabel
+        .attr("text-anchor", "middle")
+        .attr("x", -config.vh/2)
+        .attr("y",margin.top)
+        .attr("transform", "rotate(-90)")
+        .style("font-size",axes_font_size)
+        // .style("padding-bottom","5px")
+        .text(stat);
       
       // re-calculate means for male/female -> create new array of objects
       let avg_female_rtg = average(female_rating_data.map(d => d[stat]));

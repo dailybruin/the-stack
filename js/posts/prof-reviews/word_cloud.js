@@ -4,13 +4,14 @@ import { STOPWORDS, MALE_COLOR, FEMALE_COLOR, MALE_COLOR_BRIGHT, FEMALE_COLOR_BR
 (function(){
   /* configuration parameters */
   const config = {
-    "vw": isMobile() ? Math.min(W_WIDTH * 0.95, W_HEIGHT * 0.9) : W_WIDTH * 0.95,
-    "vh": isMobile() ? Math.min(W_WIDTH * 0.95, W_HEIGHT * 0.9) : W_HEIGHT * 0.9,
+    "vw": isMobile() ? Math.min(W_WIDTH * 0.65, W_HEIGHT * 0.9) : W_WIDTH * 0.65,
+    "vh": isMobile() ? Math.min(W_WIDTH * 0.65, W_HEIGHT * 0.9) : W_HEIGHT * 0.9,
     "anim_speed": 1000
   }
   const CLOUD_TITLE_SIZE = config.vw/60;
   let WC_width;
-  const margin = ({top: 50, right: 20, bottom: 40, left: 150});
+  // const margin = ({top: 50, right: 20, bottom: 40, left: 150});
+  const margin = ({top: config.vh * 0.02, right: config.vw * 0.02, bottom: config.vh * 0.02, left: config.vw * 0.02});
   const t = d3.transition().duration(config.anim_speed).ease(d3.easeCubic);
   let top_n_words = 30;
   const scale_factor = 10000; // for scaling word cloud font size
@@ -210,7 +211,7 @@ import { STOPWORDS, MALE_COLOR, FEMALE_COLOR, MALE_COLOR_BRIGHT, FEMALE_COLOR_BR
           return('an-undefined-m-word')
         }
         else{
-          console.log("wordcloud d",d);
+          // console.log("wordcloud d",d);
           // console.log(d, d==undefined, String(d)=='undefined');
           return(d);
         }
