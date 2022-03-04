@@ -11,11 +11,12 @@ import { STOPWORDS, MALE_COLOR, FEMALE_COLOR, isMobile } from './globals.js'
     }
     let margin;
     if(!isMobile()){
-      margin = ({top: config.vh * 0.02, right: config.vw * 0.01, bottom: config.vh * 0.07, left: config.vw * 0.12});
+      margin = ({top: config.vh * 0.02, right: config.vw * 0.02, bottom: config.vh * 0.07, left: config.vw * 0.12});
     }
     else{
-      margin = ({top: config.vh * 0.01, right: config.vw * 0.01, bottom: config.vh * 0.1, left: config.vw * 0.2});
+      margin = ({top: config.vh * 0.03, right: config.vw * 0.03, bottom: config.vh * 0.1, left: config.vw * 0.2});
     }
+    let paddingInner = isMobile() ? 0.05:0.1;
     let axes_font_size = isMobile() ? 9:20;
     let axes_tick_font_size = isMobile() ? 9:20;
     const t = d3.transition().duration(config.anim_speed).ease(d3.easeCubic);
@@ -62,6 +63,8 @@ import { STOPWORDS, MALE_COLOR, FEMALE_COLOR, isMobile } from './globals.js'
       xScale = d3.scaleBand()
         .domain(['Male','Female'])
         .range([margin.left, config.vw - margin.right])
+        .paddingInner(paddingInner)
+        .paddingOuter(paddingInner);
       const xAxis = d3.axisBottom().scale(xScale);    
       xAxisGroup
         .attr("transform", "translate(0," + (config.vh - margin.bottom) + ")")
@@ -73,19 +76,7 @@ import { STOPWORDS, MALE_COLOR, FEMALE_COLOR, isMobile } from './globals.js'
         .attr("y",config.vh)
         .style("font-size",axes_font_size)
         .text('Professor Gender');
-      // increase tick label size
-      if(!isMobile()){
-        d3.selectAll('.xaxis>.tick>text')
-          .each(function(d, i){
-            d3.select(this).style("font-size","2em");
-          });
-      }
-      else{
-        d3.select(".ratings-yaxis").selectAll(".tick text")
-          .each(function(d, i){
-            d3.select(this).style("font-size",axes_tick_font_size);
-          });
-      }
+
       const yScale = d3.scaleLinear()
         .domain([5,0])
         .range([margin.top,config.vh - margin.bottom]); // need to offset bars/circles by margin.top
@@ -98,12 +89,26 @@ import { STOPWORDS, MALE_COLOR, FEMALE_COLOR, isMobile } from './globals.js'
       yLabel
         .attr("text-anchor", "middle")
         .attr("x", -config.vh/2)
-        .attr("y",margin.top)
+        .attr("y",margin.left/2)
         .attr("transform", "rotate(-90)")
         .style("font-size",axes_font_size)
         // .style("padding-bottom","5px")
         .text(stat);
-      
+    
+      if(!isMobile()){  // increase x tick size for desktop
+        d3.selectAll('.xaxis>.tick>text')
+          .each(function(d, i){
+            d3.select(this).style("font-size","2em");
+          });
+      }
+      else{ // shrink y tick size for mobile
+        // console.log('MoBiLe');
+        d3.selectAll(".ratings-yaxis>.tick>text")
+          .each(function(d, i){
+            d3.select(this).style("font-size",d => axes_tick_font_size);
+          });
+      }
+
       // re-calculate means for male/female -> create new array of objects
       let avg_female_rtg = average(female_rating_data.map(d => d[stat]));
       let avg_male_rtg = average(male_rating_data.map(d => d[stat]));
@@ -112,16 +117,18 @@ import { STOPWORDS, MALE_COLOR, FEMALE_COLOR, isMobile } from './globals.js'
       // console.log(avg_data);
 
       // plot rects
+      const bar_width = config.vw/2 *0.75;
       rating_svg
         .selectAll("rect")
         .data(avg_data,d => d.gender)
         .join(
           enter => enter.append("rect")
             // .attr("id", d => {return String(d.gender) + String(d.avg)})
-            .attr("x", d => margin.right + xScale(d.gender))
+            .attr("x", d => xScale(d.gender))
             .attr("y", d => yScale(0))
             .attr("height", 0)
-            .attr("width", config.vw/2 *0.75)
+            // .attr("width", bar_width)
+            .attr("width", () => {console.log('bandwidth',xScale.bandwidth()); return xScale.bandwidth()})
             .attr("fill",d => d.color)
             .attr("stroke","black")
             .call(enter => enter
@@ -150,18 +157,19 @@ import { STOPWORDS, MALE_COLOR, FEMALE_COLOR, isMobile } from './globals.js'
         .join(
           enter => enter.append("text")
             .attr("class", "bar-label")
-            .attr("x", d => margin.right + xScale(d.gender) + (config.vw/2 *0.75)/2)
+            .attr("x", d => margin.left + xScale(d.gender)) // transfrom margin, center on half bar width
             .attr("y", yScale(0))
+            .attr("text-align","middle")
             .call(enter => enter
               .transition(t)
-                .attr("y", d => yScale(d.avg) * 1.1)
-                .attr("font-size",15)
+                .attr("y", d => yScale(d.avg-0.25))
+                .attr("font-size",isMobile() ? 12:20)
                 .attr("fill","white")
                 .text(d => d.avg.toFixed(2))
           ),
           update => update
             .call(update => update.transition(t)
-              .attr("y", d => yScale(d.avg) * 1.1)
+              .attr("y", d => yScale(d.avg-0.5))
               .attr("fill","white")
               .text(d => d.avg.toFixed(2))
           ),

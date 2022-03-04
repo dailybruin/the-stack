@@ -20,7 +20,7 @@ import { STOPWORDS, MALE_COLOR, FEMALE_COLOR, MALE_COLOR_BRIGHT, FEMALE_COLOR_BR
     margin = ({top: config.vh * 0.01, right: config.vw * 0.01, bottom: config.vh * 0.12, left: config.vw * 0.2});
   }
     const t = d3.transition().duration(config.anim_speed).ease(d3.easeCubic);
-  let point_radius = 6; // for lollipop chart circles
+  let point_radius = isMobile() ? 1.5:6; // for lollipop chart circles
   let top_n_words = 20;
 
   /* static elements (only append once) */
@@ -349,7 +349,7 @@ import { STOPWORDS, MALE_COLOR, FEMALE_COLOR, MALE_COLOR_BRIGHT, FEMALE_COLOR_BR
     // console.log("unbold?")
     stat_svg.select('#' + d.word + '-word')
       .style("font-weight",400)
-      .style("font-size","15px")
+      .style("font-size",axes_tick_font_size)
       .style("fill","#000");
   }
 

@@ -526,9 +526,10 @@ chelsea_chen:
 tyler_wu:
   name: Tyler Wu
   title: Data Intern
-  bio: Tyler is a fourth-year data theory and cognitive science student.
-  mug: no
+  bio: Tyler is a fourth-year data theory and cog sci student. He likes playing basketball, drawing, and making apps.
+  mug: yes
   current: yes
+  github: tylerwu2222
   email: twu@media.ucla.edu
 nicole_chua: 
   name: Nicole Chua
