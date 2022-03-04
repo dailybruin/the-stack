@@ -33,6 +33,6 @@
     }   
     .WC-div{
         display: inline;
-        float: left;
+        /* float: left; */
     } 
 }

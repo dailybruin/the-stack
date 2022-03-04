@@ -69,36 +69,39 @@ The rating system on Bruinwalk allows students to rate professors from 0 to 5 on
 
 Some students have found that ratings on Bruinwalk do not match their experience in the classroom. Professors with bad ratings on Bruinwalk can turnout to have excellent classes, Rodriguez said.
 
-### The most common words overall
+### The most common words
 
 The word clouds below display the most common words found in male and female professor reviews, with the size of the word corresponding to how often it appears in reviews.
 
 <!-- word cloud -->
-<div id="stats-menu2a" style="display: inline; float: left;">
-  <label for="num-words-input2" 
-    style="display: inline-block; text-align: right;">
-    Show top
-  </label>
-  <input type="number" min="10" max="100" step="10" value="30" style="width:5em;" id="num-words-input2">
+<div class="word-cloud-div">
+  <div id="stats-menu2a" style="display: inline; float: left;">
+    <label for="num-words-input2" 
+      style="display: inline-block; text-align: right;">
+      Show top
+    </label>
+    <input type="number" min="10" max="100" step="10" value="30" style="width:5em;" id="num-words-input2">
+  </div>
+  <div id="stats-menu2" style="display: inline; float: left;"></div><br>
+  <div id="WC-div" class="WC-div"></div>
 </div>
-<div id="stats-menu2" style="display: inline; float: left;"></div><br>
-<div id="male-WC-div" class="WC-div"></div>
-<div id="female-WC-div" class="WC-div"></div><br>
 
 The percent differences in words used between male and female professor reviews were fairly small. The most common words for both genders tended to be classroom related, (“profesor”, “homework”, etc.) Therefore, these words were filtered out.
 
 ### A closer look at adjectives used in male and female professor reviews
 
 <!-- lollipop chart -->
-<div id="stats-menu1a" style="display: inline; float: left;">
-  <label for="num-words-input1" 
-    style="display: inline-block; text-align: right;">
-    Show top
-  </label>
-  <input type="number" min="10" max="50" step="5" value="20" style="width:4em;" id="num-words-input1">
+<div id="lollipop-div">
+  <div id="stats-menu1a" style="display: inline; float: left;">
+    <label for="num-words-input1" 
+      style="display: inline-block; text-align: right;">
+      Show top
+    </label>
+    <input type="number" min="10" max="50" step="5" value="20" style="width:4em;" id="num-words-input1">
+  </div>
+  <div id="stats-menu1" style="display: inline; float: left;"></div>
+  <div id="lollipop-svg-div"></div>
 </div>
-<div id="stats-menu1" style="display: inline; float: left;"></div>
-<div id="lollipop-svg-div"></div>
 
 Filtering only for adjectives, there is an even clearer distinction between common descriptors in male and female professors reviews. Many words used to describe male professors tend to be related to content or teaching ability: “hard", “understand”, and “smart”. On the other hand, female professors receive more reviews with the words “sweet”, “feedback", and “helpful”.
 
