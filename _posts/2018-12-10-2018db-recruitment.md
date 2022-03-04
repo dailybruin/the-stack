@@ -1,5 +1,5 @@
 ---
-title: Analysis of the Daily Bruin's Fall 2018 Interns
+title: Analysis of the Daily Bruin's fall 2018 interns
 teaser: Find out how competitive each section was and the years and majors of their interns.
 authors:
   - alexander_chan
@@ -35,7 +35,6 @@ The application process itself spans the course of two weeks. First, prospective
 <div id="acceptance-rate-years-graph" align="center"></div>
 <div id="acceptance-rate-years-hover-info" style="margin-left: 80px;"></div>
 
-
 <br>
 
 <p class = "para">
@@ -55,7 +54,6 @@ Not every section lowered the amount of interns hired however. Graphics has a ma
 <strong>Double-click</strong> on the legend to view specific age groups or go back to the original graph. <strong>Single-click</strong> on a section to add or remove its bar from the graph.
 </p>
 <div id="acceptance-rate-by-year-graph" align="center"></div>
-
 
 <br>
 

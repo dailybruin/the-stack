@@ -1,0 +1,45 @@
+.tableauPlaceholder {
+    margin: auto;
+    margin-bottom: 30px;
+}
+
+.sct-gfx,
+.avta-gfx {
+    float: left;
+    padding-right: 15px;
+}
+
+.bbb-gfx,
+.ladot-gfx {
+    float: right;
+    padding-left: 15px;
+}
+
+.google-gfx {
+    width: 50%;
+    box-sizing: border-box;
+}
+
+.avta-gfx,
+.ladot-gfx {
+    padding-bottom: 30px;
+}
+
+.sct-gfx,
+.bbb-gfx {
+    padding-bottom: 15px;
+}
+
+.caption,
+.credit {
+    font-size: 15px;
+    color: #828282;
+}
+
+@media only screen and (max-width: 500px) {
+    .google-gfx {
+        width: 100%;
+        float: none;
+        padding: 0 0 15px 0;
+    }
+}

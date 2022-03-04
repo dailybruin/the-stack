@@ -2,11 +2,26 @@
 
   <div class="wrapper">
 
-    <h2><img class="logo" src="/img/logo_monochrome_black.svg" /> {{ site.title }}</h2>
-
     <div class="footer-col-wrapper">
+      <div class="footer-col  footer-col-1">
+        <h2><img class="logo" src="/img/logo.svg" /> {{ site.title }}</h2>
+        <p class="text">{{ site.description }}</p>
+        <p class="copyright-info">Content &copy; Daily Bruin</p>
+        <p class="copyright-info">Code available under open source licenses on <a href="https://github.com/{{ site.github_username }}">GitHub</a></p>
+      </div>
+
 
       <div class="footer-col  footer-col-2">
+        <ul class="contact-list">
+          <li>
+            <h3>Develop/write for us</h3>
+            <a href="{{ site.application }}">Apply to the Stack</a>
+          </li>
+          <li>
+            <h3>Contact us</h3>
+            <a href="mailto:{{ site.email }}">{{ site.email }}</a>
+          </li>
+        </ul>
         <ul class="social-media-list">
           {% if site.github_username %}
           <li>
@@ -26,29 +41,8 @@
           </li>
           {% endif %}
         </ul>
-
-        <p class="copyright-info">Content &copy; Daily Bruin</p>
-        <p class="copyright-info">Code available under open source licenses <a href="https://github.com/{{ site.github_username }}">on
-            GitHub</a></p>
       </div>
-
-      <div class="footer-col  footer-col-1">
-        <ul class="contact-list">
-          <li>
-            <h3>Contact us</h3>
-            <a href="mailto:{{ site.email }}">{{ site.email }}</a>
-          </li>
-          <li>
-            <h3>Develop/write for us</h3>
-            <a href="{{ site.application }}">Apply to the Stack</a>
-          </li>
-        </ul>
-      </div>
-
-      <div class="footer-col  footer-col-3">
-        <p class="text">{{ site.description }}</p>
-      </div>
-
+      
     </div>
 
   </div>

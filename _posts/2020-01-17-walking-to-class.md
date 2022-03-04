@@ -1,36 +1,36 @@
 ---
-title: Walking to Class
-teaser: Running late to class? Trying to avoid endless stairs after a tough workout? Find out which walking routes from the hill to lecture halls and libraries on campus are the fastest, burn the most calories or have the least amount of stairs. 
+title: Walking to class
+teaser: Running late to class? Trying to avoid endless stairs after a tough workout? Find out which walking routes from the hill to lecture halls and libraries on campus are the fastest, burn the most calories or have the least amount of stairs.
 authors:
-    - laurel_woods
-    - bernard_mendez
-    - charlotte_huang
-    - justin_chai
+  - laurel_woods
+  - bernard_mendez
+  - charlotte_huang
+  - justin_chai
 key_takeaways:
-    - A student walking from Hedrick Hall to Powell Library (and back) once a day for class will walk more than 80 miles in a quarter. For an average-speed walker, that’s around 26 hours of walking.
-    - Walking up the hill on Charles E. Young Drive North burns approximately 20% more calories per step than walking up the Bruin Walk hill, according to an equation developed in part by the United States Army Research Institute of Environmental Medicine.
-    - Walking around UCLA’s campus at slower speed tends to burn more calories per mile than walking at a moderate speed.
+  - A student walking from Hedrick Hall to Powell Library (and back) once a day for class will walk more than 80 miles in a quarter. For an average-speed walker, that’s around 26 hours of walking.
+  - Walking up the hill on Charles E. Young Drive North burns approximately 20% more calories per step than walking up the Bruin Walk hill, according to an equation developed in part by the United States Army Research Institute of Environmental Medicine.
+  - Walking around UCLA’s campus at slower speed tends to burn more calories per mile than walking at a moderate speed.
 featured_image:
-    url: walking-to-class/featured_image.png
+  url: walking-to-class/featured_image.png
 og_image: walking-to-class/featured_image.png
 stylesheets:
-    - //api.mapbox.com/mapbox-gl-js/v0.36.0/mapbox-gl.css
-    - //unpkg.com/leaflet@1.0.3/dist/leaflet.css
-    - /css/posts/course-schedule/dropdown.min.css
-    - /css/posts/walking-to-class/app.css
+  - //api.mapbox.com/mapbox-gl-js/v0.36.0/mapbox-gl.css
+  - //unpkg.com/leaflet@1.0.3/dist/leaflet.css
+  - /css/posts/course-schedule/dropdown.min.css
+  - /css/posts/walking-to-class/app.css
 scripts:
-    - /js/lib/jquery-3.1.1.min.js
-    - //d3js.org/d3.v3.min.js
-    - //api.mapbox.com/mapbox-gl-js/v0.36.0/mapbox-gl.js
-    - //api.mapbox.com/mapbox.js/plugins/leaflet-omnivore/v0.2.0/leaflet-omnivore.min.js
-    - //unpkg.com/leaflet@1.0.3/dist/leaflet.js
-    - //cdnjs.cloudflare.com/ajax/libs/leaflet-gpx/1.4.0/gpx.min.js
-    - //cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js
-    - //cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.js
-    - //cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@0.7.0
-    - /js/posts/walking-to-class/bubble-chart.js
-    - /js/posts/walking-to-class/map.js
-    - /js/posts/walking-to-class/bernard.js
+  - /js/lib/jquery-3.1.1.min.js
+  - //d3js.org/d3.v3.min.js
+  - //api.mapbox.com/mapbox-gl-js/v0.36.0/mapbox-gl.js
+  - //api.mapbox.com/mapbox.js/plugins/leaflet-omnivore/v0.2.0/leaflet-omnivore.min.js
+  - //unpkg.com/leaflet@1.0.3/dist/leaflet.js
+  - //cdnjs.cloudflare.com/ajax/libs/leaflet-gpx/1.4.0/gpx.min.js
+  - //cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js
+  - //cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.js
+  - //cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@0.7.0
+  - /js/posts/walking-to-class/bubble-chart.js
+  - /js/posts/walking-to-class/map.js
+  - /js/posts/walking-to-class/bernard.js
 ---
 
 <p>Walking to and from class is a shared grievance that all UCLA students living on the Hill face.</p>
@@ -41,7 +41,6 @@ scripts:
 <p>We collected the data from <a href='https://openrouteservice.org'>openrouteservice</a>, which allowed us to draw routes and extract raw GPX files. We extracted the latitude, longitude and elevation of data points along the route to calculate the total distance and elevation change along each path. To calculate calories, we used an equation developed in part by the United States Army Research Institute of Environmental Medicine that estimates energy expenditure based on gradient and walking speed.</p>
 
 <p>You can choose from popular dorm locations, such as Hedrick Hall and Sproul Hall as the starting points, and popular areas on and around campus, such as Powell Library, the Court of Sciences and the Westwood Target as the ending points. Because of the limitations of the routing service, we offer the two fastest and easiest paths for each route. In total, there are 48 routes.</p>
-
 
 <div id='choices'>
 
@@ -133,7 +132,6 @@ scripts:
 </div>
 </div>
 
-
 <h2>What about accessible routes?</h2>
 
 <p>Although the hills of Westwood are iconic features of the UCLA campus, they present a challenge to students who have disabilities.</p>
@@ -147,7 +145,6 @@ scripts:
 <p>Shyam Venkatasubramanian, a second-year electrical engineering student, said he tore his meniscus at Bruin Fitness Center during during fall quarter, which made it difficult for him to walk. He said while he was injured, he had to leave his dorm 40 minutes earlier than he did before his injury in order to get to class.</p>
 
 <p>“I can't afford being late to a midterm or a final because I have an injury,” he said. “If my exam had happened to be North Campus, I probably wouldn't have made it regardless of how early I left.”</p>
-
 
 <h2>How does walking speed and incline affect calories burned?</h2>
 

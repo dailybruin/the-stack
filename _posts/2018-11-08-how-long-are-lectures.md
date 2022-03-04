@@ -1,8 +1,8 @@
 ---
-title: How Long Are Lectures?
+title: How long are lectures?
 teaser: Length of lectures per day, number of lectures per week, and other comparisons among all departments
 featured_image:
-    url: how-long-are-lectures/radial-graph.png
+  url: how-long-are-lectures/radial-graph.png
 og_image: how-long-are-lectures/radial-graph.png
 authors:
   - rishub_kumar
@@ -38,6 +38,7 @@ Across all departments in all schools, we found that the <b>top 20 departments</
 <br/>
 
 <i class="phone-text"> Graphs are not viewable on mobile devices. Check out the article on a desktop screen and be amazed. </i> <br/><br/>
+
 <div class = "graphs">
 
 <div class="filters1">
@@ -128,6 +129,7 @@ We also looked for patterns using the <i>interactive scatter plot</i> below wher
 </p><br/>
 
 <i class="phone-text"> Graphs are not viewable on mobile devices. Check out the article on a desktop screen and be amazed. </i> <br/><br/>
+
 <div class = "graphs">
 
 <div class="filters3">

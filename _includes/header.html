@@ -2,18 +2,21 @@
 
   <div class="wrapper">
 
-    <a class="site-title" href="{{ site.baseurl }}/">
-      <img src="/img/logo.svg" />
-      {{ site.title }}
-    </a>
-
-    <span class="tagline">
-      Data and tech blog from the <a href="https://dailybruin.com/">Daily Bruin</a>
-    </span>
+    <div class="site-title-wrapper">
+      <a class="site-title" href="{{ site.baseurl }}/">
+        <img src="/img/logo.svg" />
+        <div>{{ site.title }}</div>
+      </a>
+  
+      <span class="tagline">
+        Data and tech blog from the <a href="https://dailybruin.com/">Daily Bruin</a>
+      </span>
+    </div>
 
     <nav class="site-nav">
       <div class="trigger">
         <a class='page-link' href="{{ '/about' | prepend: site.baseurl }}">About</a>
+        <a class='page-link' href="{{ '/authors' | prepend: site.baseurl }}">Authors</a>
       </div>
     </nav>
 

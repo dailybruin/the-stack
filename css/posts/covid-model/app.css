@@ -2,6 +2,14 @@
     display: none;
 }
 
+@media only screen and (min-width: 1000px){
+  .chart-container{
+    width: 70%;
+    margin-left: -20%;
+    margin-right: -20%;
+  }
+}
+
 .stats {
     width: 30%;
 }
