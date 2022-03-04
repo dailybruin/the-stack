@@ -13,5 +13,5 @@ export const MALE_COLOR = "#3A8369",FEMALE_COLOR = "#7462E0", MALE_COLOR_BRIGHT 
 
 export const W_WIDTH = window.innerWidth, W_HEIGHT = window.innerHeight;
 export const isMobile = () =>{ // returns whether device is small or not
-    return (W_WIDTH <= 600);
+    return (W_WIDTH <= 600 || W_HEIGHT <= 600);
   }  

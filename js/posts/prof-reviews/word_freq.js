@@ -3,7 +3,7 @@ import { STOPWORDS, MALE_COLOR, FEMALE_COLOR, MALE_COLOR_BRIGHT, FEMALE_COLOR_BR
 
 (function(){
   /* configuration parameters */
-
+  console.log(W_WIDTH);
   const config = {
     "vw": W_WIDTH * 0.95,
     "vh": isMobile() ? Math.min(W_WIDTH * 0.95,W_HEIGHT * 0.9) : W_HEIGHT * 0.9, // full height for desktop, square for mobile 
@@ -120,8 +120,8 @@ import { STOPWORDS, MALE_COLOR, FEMALE_COLOR, MALE_COLOR_BRIGHT, FEMALE_COLOR_BR
             .attr("width", 0)
             .attr("height", point_radius/4)
             .call(enter => enter.transition(t)
-            .attr("fill", color)
-            .attr("gender", "male")
+            .attr("fill", "black")
+            // .attr("gender", "male")
             .attr("freq", d => d[gender])
             .attr("width", d => xScale(d[gender]) - xScale(0))
           ),

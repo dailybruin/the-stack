@@ -21,11 +21,18 @@
         width: 100%;
         height: auto;
     }
+    .WC-div{
+        display: block;
+    }
 }
 /* medium devices and larger*/
 @media only screen and (min-width: 600px) {
     #stats-menu1,
     #stats-menu2{
         padding-left: 0.5em;
-    }    
+    }   
+    .WC-div{
+        display: inline;
+        float: left;
+    } 
 }

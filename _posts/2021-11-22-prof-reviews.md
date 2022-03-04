@@ -43,8 +43,8 @@ stylesheets:
 ### Comparing Ratings For Male and Female Professors
 <!-- bar chart -->
 <div id="stats-menu3"></div>
-<div id="rating-svg-div">
-</div>
+
+<div id="rating-svg-div"></div>
 
 ### Comparing Words Between Male and Female Professor Reviews
 <!-- word cloud -->
@@ -54,11 +54,12 @@ stylesheets:
     Show top
   </label>
   <input type="number" min="10" max="100" step="10" value="30" style="width:5em;" id="num-words-input2">
-</div> 
-<div id="stats-menu2" style="display: inline; float: left;">
 </div>
-<div id="cloud-svg-div">
-</div>
+
+<div id="stats-menu2" style="display: inline; float: left;"></div><br>
+
+<div id="male-WC-div" class="WC-div"></div>
+<div id="female-WC-div" class="WC-div"></div><br>
 
 ### Comparing Adjectives Between Male and Female Professor Reviews
 <!-- lollipop chart -->
@@ -68,12 +69,11 @@ stylesheets:
     Show top
   </label>
   <input type="number" min="10" max="50" step="5" value="20" style="width:4em;" id="num-words-input1">
-</div> 
-<div id="stats-menu1" style="display: inline; float: left;">
-</div>
-<div id="lollipop-svg-div">
 </div>
 
+<div id="stats-menu1" style="display: inline; float: left;"></div>
+
+<div id="lollipop-svg-div"></div>
 
 
 ### Other Words Most Commonly Used for Female versus Male Professors

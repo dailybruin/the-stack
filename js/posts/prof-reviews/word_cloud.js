@@ -1,59 +1,94 @@
 import { dropdownMenu } from './dropdownMenu.js';
-import { STOPWORDS, MALE_COLOR, FEMALE_COLOR } from './globals.js'
+import { STOPWORDS, MALE_COLOR, FEMALE_COLOR, MALE_COLOR_BRIGHT, FEMALE_COLOR_BRIGHT, W_WIDTH, W_HEIGHT, isMobile} from './globals.js'
 
 (function(){
   /* configuration parameters */
-  // const CLIENT_WIDTH = document.documentElement.clientWidth; // smaller than window width
-  const W_WIDTH = window.innerWidth, W_HEIGHT = window.innerHeight;
-  // console.log("client",CLIENT_WIDTH,"window",W_WIDTH);
   const config = {
-    "vw": W_WIDTH * 0.8,
-    "vh": W_HEIGHT * 0.9,
+    "vw": isMobile() ? Math.min(W_WIDTH * 0.95, W_HEIGHT * 0.9) : W_WIDTH * 0.95,
+    "vh": isMobile() ? Math.min(W_WIDTH * 0.95, W_HEIGHT * 0.9) : W_HEIGHT * 0.9,
     "anim_speed": 1000
   }
+  const CLOUD_TITLE_SIZE = config.vw/60;
+  let WC_width;
   const margin = ({top: 50, right: 20, bottom: 40, left: 150});
   const t = d3.transition().duration(config.anim_speed).ease(d3.easeCubic);
   let top_n_words = 30;
   const scale_factor = 10000; // for scaling word cloud font size
 
   /* static elements (only appended once) */
-  var freq_data, sub_data, adj_data;
-  const cloud_svg = d3.select("#cloud-svg-div").append("svg");  
-  cloud_svg
-    .attr("id","word-cloud-svg")
-    .style("width", '90%')
-    .style("height", config.vh + 'px')
-    .attr("font-family", "sans-serif")
-    .style("display", "block")
-    .style("margin", "auto");
-  var m_word_cloud = cloud_svg.append("g");
+  var freq_data, sub_data;
+
+  /* MALE WC */
+  // male WC div
+  var male_WC_div = d3.select("#male-WC-div");
+  // male title
+  // male_WC_div.append("g").append("text")
+  //   .attr("class","title-text")
+  //   .attr("x", margin.left)
+  //   .attr("y", margin.top)
+  //   .style("font-size",Math.max(CLOUD_TITLE_SIZE,14))
+  //   .style("fill", MALE_COLOR)
+  //   .text("Male Professors");
+  // nest SVG in div
+  var m_word_cloud = male_WC_div.append("svg");
   m_word_cloud
     .attr("id","male-cloud")
-    .style("width", config.vw/2 + "%")
-    .style("height", config.vh + 'px')
-  // title
-  cloud_svg.append("g").append("text")
-    .attr("class","title-text")
-    .attr("x", margin.left)
-    .attr("y", 30)
-    .style("font-size","25px")
-    .style("fill", MALE_COLOR)
-    .text("Male Professors");
-  var f_word_cloud = cloud_svg.append("g");
+    .style("width", () => {
+        if(!isMobile()){
+          return config.vw/2 * 0.9; // side-by-side on desktop
+        }
+        else{
+          return config.vw;
+        }
+      }
+    )
+    .style("height", config.vh);
+  var m_word_cloud_words = m_word_cloud.append("g");
+  
+  /* FEMALE WC */
+  // female WC div
+  var female_WC_div = d3.select("#female-WC-div");
+  // nest SVG in div
+  var f_word_cloud = female_WC_div.append("svg");
   f_word_cloud
     .attr("id","female-cloud")
-    .style("width", config.vw/2 + "%")
-    .style("height", config.vh + 'px')
+    .style("width", () => {
+        if(!isMobile()){
+          return config.vw/2;
+        }
+        else{
+          return config.vw;
+        }
+      }
+    )
+    .style("height", config.vh + 'px');
+  var f_word_cloud_words = f_word_cloud.append("g");
   var male_layout = d3.layout.cloud();
   var female_layout = d3.layout.cloud();
-  // title
-  cloud_svg.append("g").append("text")
-    .attr("class","title-text")
-    .attr("x", config.vw/2 + margin.left)
-    .attr("y", 30)
-    .style("font-size","25px")
-    .style("fill", FEMALE_COLOR)
-    .text("Female Professors");
+  // female title
+  // female_WC_div.append("g").append("text")
+  //   .attr("class","title-text")
+  //   .attr("x",  () => {
+  //     if(isMobile()){
+  //       return config.vw;
+  //     }
+  //     else{
+  //       return config.vw/2 + margin.left;
+  //     }
+  //   }
+  //   )
+  //   .attr("y", margin.top)
+  //   .style("font-size",Math.max(CLOUD_TITLE_SIZE,14))
+  //   .style("fill", FEMALE_COLOR)
+  //   .text("Female Professors");
+  // determine WC width
+  if(!isMobile()){
+    WC_width = config.vw/2;
+  }
+  else{
+    WC_width = config.vw;
+  }
+
 
 
   // stats dropdown
@@ -135,12 +170,12 @@ import { STOPWORDS, MALE_COLOR, FEMALE_COLOR } from './globals.js'
 
     // console.log("m_data",male_data)
     male_layout
-      .size([config.vw/2,config.vh *  0.9])
+      .size([WC_width,config.vh *  0.9])
       .words(male_data)
       .font("Impact")
       .fontSize(d => mSizeScale(d.value))
       .spiral("rectangular")
-      .padding(2)
+      // .padding(2)
       // .overflow(true)
       .rotate(0)
       .on("end", draw_m);
@@ -152,7 +187,7 @@ import { STOPWORDS, MALE_COLOR, FEMALE_COLOR } from './globals.js'
     // female_layout.stop() // does this do anything? no idea.
     // console.log("f_data",female_data)
     female_layout
-      .size([config.vw/2,config.vh * 0.9])
+      .size([WC_width,config.vh *  0.9])
       .words(female_data)
       .font("Impact")
       .fontSize(d => fSizeScale(d.value))
@@ -163,15 +198,15 @@ import { STOPWORDS, MALE_COLOR, FEMALE_COLOR } from './globals.js'
     female_layout.start()
   }
 
-  // draw male on left, female on right
+  // draw male on left, female on right if desktop, else top left
   function draw_m(words) {
     const t = d3.transition().duration(config.anim_speed).ease(d3.easeCubic);
-    m_word_cloud
-      .attr("transform", "translate(" + male_layout.size()[0] / 2 + "," + config.vh / 2 + ")") // center text
+    m_word_cloud_words
+      .attr("transform", "translate(" + (male_layout.size()[0] / 2) + "," +(male_layout.size()[1] / 2) + ")") // center text
       .selectAll("text")
       .data(words, d => {
         if(d==undefined){
-          console.log(d);
+          // console.log(d);
           return('an-undefined-m-word')
         }
         else{
@@ -211,8 +246,8 @@ import { STOPWORDS, MALE_COLOR, FEMALE_COLOR } from './globals.js'
 
   function draw_f(words) {
     const t = d3.transition().duration(config.anim_speed).ease(d3.easeCubic);
-    f_word_cloud
-      .attr("transform", "translate(" + (male_layout.size()[0] + female_layout.size()[0] / 2) + "," + config.vh / 2 + ")") // center text
+    f_word_cloud_words
+      .attr("transform", "translate(" + (female_layout.size()[0] / 2) + "," + (female_layout.size()[1] / 2) + ")") // center text
       .selectAll("text")
       .data(words, d => {
         if(d==undefined){
