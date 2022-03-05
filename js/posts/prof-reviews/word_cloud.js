@@ -1,17 +1,18 @@
 import { dropdownMenu } from './dropdownMenu.js';
-import { STOPWORDS, MALE_COLOR, FEMALE_COLOR, MALE_COLOR_BRIGHT, FEMALE_COLOR_BRIGHT, W_WIDTH, W_HEIGHT, isMobile} from './globals.js'
+import { NEUTRAL_COLOR, W_WIDTH, W_HEIGHT, isMobile} from './globals.js'
 
 (function(){
   /* configuration parameters */
   const config = {
-    "vw": isMobile() ? Math.min(W_WIDTH * 0.65, W_HEIGHT * 0.9) : W_WIDTH * 0.65,
-    "vh": isMobile() ? Math.min(W_WIDTH * 0.65, W_HEIGHT * 0.9) : W_HEIGHT * 0.9,
+    "vw": isMobile() ? Math.min(W_WIDTH, W_HEIGHT) : W_WIDTH,
+    "vh": isMobile() ? Math.min(W_WIDTH * 0.9, W_HEIGHT * 0.9) : W_HEIGHT * 0.9,
     "anim_speed": 1000
   }
   const CLOUD_TITLE_SIZE = config.vw/60;
   // const margin = ({top: 50, right: 20, bottom: 40, left: 150});
   const margin = ({top: config.vh * 0.02, right: config.vw * 0.02, bottom: config.vh * 0.02, left: config.vw * 0.02});
   const t = d3.transition().duration(config.anim_speed).ease(d3.easeCubic);
+  // let top_n_words = isMobile() ? 20:30;
   let top_n_words = 30;
   const scale_factor = 10000; // for scaling word cloud font size
 
@@ -27,42 +28,6 @@ import { STOPWORDS, MALE_COLOR, FEMALE_COLOR, MALE_COLOR_BRIGHT, FEMALE_COLOR_BR
     .style("width", config.vw)
     .style("height", config.vh);
   var word_cloud_words = word_cloud_svg.append("g");
-
-  // stats dropdown
-  const stats = ["with largest difference","for female professors","for male professors"];
-  // const stats = ["Largest Difference - Adj/Adverbs","Female-Professor - Adj/Adverbs","Male Professor - Adj/Adverbs"]
-  var stat = stats[0]; // the stat to sort words by
-  const onStatClicked = selection => {
-    // re-filter data on click
-    var stat;
-    if (selection == stats[0]){
-      stat = "difference_abs";
-    }
-    else if (selection == stats[1]){
-      stat = "female";
-    }
-    else if (selection == stats[2]){
-      stat = "male";
-    }
-    render_stats(freq_data,stat);
-  };
-  d3.select('#stats-menu2')
-    .call(dropdownMenu,{
-    options: stats,
-    onOptionClicked: onStatClicked,
-    selectedOption: stat,
-    label: 'words... ',
-    id: 'word-cloud-select-1'
-    });
-  
-  // number of words spinner
-  let num_words_input = document.getElementById('num-words-input2');
-  num_words_input.onchange = () => {
-      top_n_words = num_words_input.value
-      // console.log('spinner',top_n_words)
-      let current_stat = document.getElementById("word-cloud-select-1").value;
-      onStatClicked(current_stat); // call onStatClicked to also determine first dropdown value
-   }  
 
   // function to sort data by statistic
   const sort_data = (data,stat,top_n) => {
@@ -97,15 +62,18 @@ import { STOPWORDS, MALE_COLOR, FEMALE_COLOR, MALE_COLOR_BRIGHT, FEMALE_COLOR_BR
     sub_data = sort_data(data,stat,num_words);
 
     sub_data = sub_data.map(d => ({text: d.word,value: d.both * scale_factor}))
-
-    let sqrtScale = d3.scaleSqrt() // if rare words too small
+    
+    let biggest_word_size = isMobile() ? 50:95;
+    // used since less frequent too small
+    let sqrtScale = d3.scaleSqrt() 
       .domain([0,d3.max(sub_data, d => {return d.value})])
-      .range([0,95]);
-    let linearScale = d3.scaleLinear()
-      .domain([0,d3.max(sub_data, d => {return d.value})])
-      .range([0,95]);
+      .range([0,biggest_word_size]);
 
-    cloud_layout
+    // let linearScale = d3.scaleLinear()
+    //   .domain([0,d3.max(sub_data, d => {return d.value})])
+    //   .range([0,95]);
+    
+      cloud_layout
       .size([config.vw * 0.9,config.vh *  0.9])
       .words(sub_data)
       .font("Impact")
@@ -139,7 +107,7 @@ import { STOPWORDS, MALE_COLOR, FEMALE_COLOR, MALE_COLOR_BRIGHT, FEMALE_COLOR_BR
             .style('font-size', 1)
             .style("fill-opacity",1e-6)
             .style("font-family", (d) => d.font)
-            .style("fill", MALE_COLOR)
+            .style("fill", NEUTRAL_COLOR)
             .attr("text-anchor", "middle")
             .attr("class",d => d.text + "-word")
             .on("mouseover", mouseover)
@@ -170,13 +138,9 @@ import { STOPWORDS, MALE_COLOR, FEMALE_COLOR, MALE_COLOR_BRIGHT, FEMALE_COLOR_BR
       d.female = +d.female;
       d.both = d.male + d.female; // combine both genders for one wordcloud
       d.difference_abs = +d.difference_abs;
-    });  
-    // freq_data = data.filter(function (el) {
-    //   return !STOPWORDS.includes(el.word);
-    // });
+    }); 
     freq_data = data; // no longer filter out words
     var stat = "both";
-    console.log(freq_data);
-    onStatClicked(freq_data,stat);
+    render_stats(freq_data,stat);
   });
 })();

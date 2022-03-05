@@ -3,31 +3,29 @@ import { STOPWORDS, MALE_COLOR, FEMALE_COLOR, MALE_COLOR_BRIGHT, FEMALE_COLOR_BR
 
 (function(){
   /* configuration parameters */
-  // console.log(W_WIDTH);
   const config = {
-    "vw": W_WIDTH * 0.65,
-    "vh": isMobile() ? Math.min(W_WIDTH * 0.95,W_HEIGHT * 0.9) : W_HEIGHT * 0.9, // full height for desktop, square for mobile 
+    "vw": W_WIDTH * 0.9,
+    "vh": isMobile() ? Math.min(W_WIDTH * 0.9,W_HEIGHT * 0.65) : W_HEIGHT * 0.65, // full height for desktop, square for mobile 
     "anim_speed": 1000
   }
   let margin;
-  console.log('vw',config.vw,config.vh);
-  // let svg_width, svg_height;
-  // const margin = ({top: 50, right: 20, bottom: 60, left: 150});
   if(!isMobile()){
-    margin = ({top: config.vh * 0.05, right: config.vw * 0.02, bottom: config.vh * 0.07, left: config.vw * 0.1});
+    margin = ({top: config.vh * 0.05, right: config.vw * 0.02, bottom: config.vh * 0.1, left: config.vw * 0.13});
   }
   else{
-    margin = ({top: config.vh * 0.01, right: config.vw * 0.01, bottom: config.vh * 0.12, left: config.vw * 0.2});
+    margin = ({top: config.vh * 0.03, right: config.vw * 0.01, bottom: config.vh * 0.15, left: config.vw * 0.2});
   }
     const t = d3.transition().duration(config.anim_speed).ease(d3.easeCubic);
   let point_radius = isMobile() ? 1.5:6; // for lollipop chart circles
-  let top_n_words = 20;
-
+  let top_n_words = isMobile() ? 15:20;
+  let top_n_dropdown = document.getElementById("num-words-input1");
+  top_n_dropdown.value = top_n_words;
+  
   /* static elements (only append once) */
   var sub_data, adj_data;
 
   let axes_font_size = isMobile() ? 9:20;
-  let axes_tick_font_size = isMobile() ? 9:20;
+  let axes_tick_font_size = isMobile() ? 9:15;
   const stat_svg = d3.select("#lollipop-svg-div").append("svg");
   // mobile compatability
   stat_svg
@@ -56,8 +54,8 @@ import { STOPWORDS, MALE_COLOR, FEMALE_COLOR, MALE_COLOR_BRIGHT, FEMALE_COLOR_BR
     stat_svg.attr("padding-top",20);
 
   }
-  stat_svg.select(".legend").append("circle").attr("cx",W_WIDTH * 0.6).attr("cy",W_HEIGHT * 0.7).attr("r", point_radius).style("fill", MALE_COLOR);
-  stat_svg.select(".legend").append("circle").attr("cx",W_WIDTH * 0.6).attr("cy",W_HEIGHT * 0.7+30).attr("r", point_radius).style("fill", FEMALE_COLOR);
+  stat_svg.select(".legend").append("circle").attr("cx",W_WIDTH * 0.6).attr("cy",W_HEIGHT * 0.7).attr("r", point_radius).style("fill", MALE_COLOR_BRIGHT);
+  stat_svg.select(".legend").append("circle").attr("cx",W_WIDTH * 0.6).attr("cy",W_HEIGHT * 0.7+30).attr("r", point_radius).style("fill", FEMALE_COLOR_BRIGHT);
   stat_svg.select(".legend").append("text").attr("x",W_WIDTH * 0.6+20).attr("y",W_HEIGHT * 0.7).text("Male Professors").style("font-size", "15px").attr("alignment-baseline","middle");
   stat_svg.select(".legend").append("text").attr("x",W_WIDTH * 0.6+20).attr("y",W_HEIGHT * 0.7+30).text("Female Professors").style("font-size", "15px").attr("alignment-baseline","middle");
 
@@ -65,7 +63,6 @@ import { STOPWORDS, MALE_COLOR, FEMALE_COLOR, MALE_COLOR_BRIGHT, FEMALE_COLOR_BR
   const stats = ["with largest difference","for female professors","for male professors"];
   var stat = stats[0]; // the stat to sort words by
   const onStatClicked = selection => {
-    console.log("selection",selection,"stat",stat);
     if (selection == stats[0]){
       stat = "difference_abs";
     }
@@ -90,14 +87,13 @@ import { STOPWORDS, MALE_COLOR, FEMALE_COLOR, MALE_COLOR_BRIGHT, FEMALE_COLOR_BR
   let num_words_input = document.getElementById('num-words-input1');
   num_words_input.onchange = () => {
       top_n_words = num_words_input.value
-      point_radius = Math.min(7 * 20 / top_n_words, 7) // scale circles for number of words
+      point_radius = Math.min(point_radius * 20 / top_n_words, point_radius) // scale circles for number of words
       let current_stat = document.getElementById("word-freq-select-1").value;
       onStatClicked(current_stat); // call onStatClicked to also determine first dropdown value
   }  
 
   // function to clear previous graphics by class (needed since different datasets)
   const clear_graphics = (svg) => {
-    // console.log(kept_stat,"." + kept_stat + "-sorted-circle");
     const all_stats = ["male","female","difference"];
     for(const stat of all_stats){
         svg.selectAll("." + stat + "-sorted-circles").remove();
@@ -112,7 +108,6 @@ import { STOPWORDS, MALE_COLOR, FEMALE_COLOR, MALE_COLOR_BRIGHT, FEMALE_COLOR_BR
     if(stat=="difference_abs"){
       stat="difference";
     }
-    // console.log("plotted-stat",stat)
     // lines
     svg.append("g")
       .attr("class",stat+"-sorted-rects")
@@ -177,10 +172,10 @@ import { STOPWORDS, MALE_COLOR, FEMALE_COLOR, MALE_COLOR_BRIGHT, FEMALE_COLOR_BR
         .attr("cy", d => {
           // show selected gender on top
             if(stat=="male"){
-              return gender ==="male" ? yScale(d.word) - point_radius * 3/4: yScale(d.word) + point_radius * 3/4;
+              return gender === "male" ? yScale(d.word) - point_radius * 3/4: yScale(d.word) + point_radius * 3/4;
             }
             else{
-              return gender ==="female" ? yScale(d.word) - point_radius * 3/4: yScale(d.word) + point_radius * 3/4;
+              return gender === "female" ? yScale(d.word) - point_radius * 3/4: yScale(d.word) + point_radius * 3/4;
             }
           })
         .call(enter => enter.transition(t)
@@ -245,37 +240,22 @@ import { STOPWORDS, MALE_COLOR, FEMALE_COLOR, MALE_COLOR_BRIGHT, FEMALE_COLOR_BR
       .style("font-size","15px")
       .transition(t)
       .call(yAxis);
-    // assign ID to y-axis tick text so can bold on hover
+    // assign ID to y-axis tick text so can bold on hover and set size for screen
     d3.select("g.lollipop-yaxis").selectAll(".tick text")
-      .attr("id", (d,i) => {return d + "-word" });
-    if(isMobile()){
-        d3.select("g.lollipop-yaxis").selectAll(".tick text")
-          .each(function(d, i){
-            d3.select(this).style("font-size",axes_tick_font_size);
-          });
-      }
-    // yLabel
-    //   .attr("text-anchor", "middle")
-    //   .attr("x", -config.vh/2)
-    //   .attr("y",margin.top)
-    //   .attr("transform", "rotate(-90)")
-    //   .style("font-size","20px")
-    //   .style("padding-bottom","5px")
-    //   .text(y_label);
-    // title
-    // stat_svg.append("g")
-    //   .append("text")
-    //   .attr("class","title-text")
-    //   .attr("x", margin.left)
-    //   .attr("y", 30)
-    //   .style("font-size","25px")
-    //   .text("Word Frequencies for Male and Female Professors");
-  
+      .attr("id", (d,i) => {return d + "-word" })
+      .style("font-size",axes_tick_font_size);
+    // if(isMobile()){
+    // d3.select("g.lollipop-yaxis").selectAll(".tick text")
+    //   .each(function(d, i){
+    //     d3.select(this).style("font-size",axes_tick_font_size);
+    //   });
+      // }
+
     // clear other lines from svg
     clear_graphics(stat_svg)
     // then plot data
-    plot_lines(stat_svg,xScale,yScale,t,"male",stat,MALE_COLOR,sub_data); // plot male
-    plot_lines(stat_svg,xScale,yScale,t,"female",stat,FEMALE_COLOR,sub_data); // plot female
+    plot_lines(stat_svg,xScale,yScale,t,"male",stat,MALE_COLOR_BRIGHT,sub_data); // plot male
+    plot_lines(stat_svg,xScale,yScale,t,"female",stat,FEMALE_COLOR_BRIGHT,sub_data); // plot female
   };
 
 
@@ -304,8 +284,8 @@ import { STOPWORDS, MALE_COLOR, FEMALE_COLOR, MALE_COLOR_BRIGHT, FEMALE_COLOR_BR
     else{
       diff_color = FEMALE_COLOR_BRIGHT;
     }
-
-    console.log('mousemove d',d);
+    console.log(event);
+    // console.log('mousemove d',d);
     if (stat == "difference"){
       tooltip_text = "<span style='color:"+diff_color+"'><b>Diff</b>: " + d.difference_abs.toFixed(3) + "%</span><br><b>Male</b>: " + d.male.toFixed(3) + "%<br><b>Female</b>: " + d.female.toFixed(3) + "%";
     }
@@ -324,14 +304,14 @@ import { STOPWORDS, MALE_COLOR, FEMALE_COLOR, MALE_COLOR_BRIGHT, FEMALE_COLOR_BR
     // bold word and color acc. to larger pct
     stat_svg.select('#' + d.word + '-word')
       .style("font-weight",700)
-      .style("font-size","17px")
+      .style("font-size",axes_tick_font_size * 1.1)
       .style("fill",() => {
         if(d.male > d.female){
-          return MALE_COLOR;
+          return MALE_COLOR_BRIGHT;
         }
         else{
           // console.log(d.male,d.female);
-          return FEMALE_COLOR;
+          return FEMALE_COLOR_BRIGHT;
         }
       }
         );
@@ -339,6 +319,7 @@ import { STOPWORDS, MALE_COLOR, FEMALE_COLOR, MALE_COLOR_BRIGHT, FEMALE_COLOR_BR
   const mouseleave = function(event,d) {
     tooltip1
       .style("opacity", 0)
+      .style("padding",0)
       .attr("height",0)
       .attr("width",0);
     let tooltip_text = "";
@@ -360,7 +341,11 @@ import { STOPWORDS, MALE_COLOR, FEMALE_COLOR, MALE_COLOR_BRIGHT, FEMALE_COLOR_BR
     percent_text
       .style("opacity",1);
   }
-  const mouse_offset = 60;
+  // get margin and padding as offset
+  let post_div = document.getElementsByClassName("post-content")[0];
+  const mouse_offset = post_div.offsetLeft + parseFloat(window.getComputedStyle(post_div, null).getPropertyValue('padding-left'));
+  // console.log('post div',mouse_offset);
+  // const mouse_offset = 400;
   const mousemove2 = function(event) {
     let mousex = event.pageX;
     // console.log("mousex",mousex);
@@ -369,7 +354,7 @@ import { STOPWORDS, MALE_COLOR, FEMALE_COLOR, MALE_COLOR_BRIGHT, FEMALE_COLOR_BR
       .attr("x2",mousex-mouse_offset);
     percent_text
       .html(xScale.invert(mousex-mouse_offset).toFixed(3) + "%")
-      .attr("x", mousex-15)
+      .attr("x", mousex-mouse_offset-15)
       .attr("y", config.vh - margin.bottom * 1.5);
   }
   const mouseleave2 = function(event,d){ 

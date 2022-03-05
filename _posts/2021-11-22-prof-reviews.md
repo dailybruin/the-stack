@@ -68,26 +68,26 @@ Inaccurate gender predictions could have resulted from students misgendering pro
 
 The rating system on Bruinwalk allows students to rate professors from 0 to 5 on various elements of their class. Although the average overall ratings of classes were generally the same between female and male professors before and after the COVID-19 pandemic, when comparing ratings between the genders, female professors tend to be rated slightly higher than male professors in all categories except workload.
 
-Some students have found that ratings on Bruinwalk do not match their experience in the classroom. Professors with bad ratings on Bruinwalk can turnout to have excellent classes, Rodriguez said.
+Some students have found that ratings on Bruinwalk do not match their experience in the classroom. Professors with bad ratings on Bruinwalk can turn out to have excellent classes, Rodriguez said.
 
 ### The most common words
 
-The word clouds below display the most common words found in male and female professor reviews, with the size of the word corresponding to how often it appears in reviews.
+The word cloud below displays the most common words found in both male and female professor reviews, with the size of the word corresponding to how often it appears in reviews. (Note that the words are mapped to a scale such that smaller words are enlarged for visibility.)
 
 <!-- word cloud -->
 <div class="word-cloud-div">
-  <div id="stats-menu2a" style="display: inline; float: left;">
+  <!-- <div id="stats-menu2a" style="display: inline; float: left;">
     <label for="num-words-input2" 
       style="display: inline-block; text-align: right;">
       Show top
     </label>
     <input type="number" min="10" max="100" step="10" value="30" style="width:5em;" id="num-words-input2">
   </div>
-  <div id="stats-menu2" style="display: inline; float: left;"></div><br>
+  <div id="stats-menu2" style="display: inline; float: left;"></div><br> -->
   <div id="WC-div" class="WC-div"></div>
 </div>
 
-The percent differences in words used between male and female professor reviews were fairly small. The most common words for both genders tended to be classroom related, (“profesor”, “homework”, etc.) Therefore, these words were filtered out.
+The percent differences in many words used between male and female professor reviews were fairly small. As expected, the most common words for both genders tended to be classroom related, (“profesor”, “homework”, etc). Adding some criteria for which words appear could be more informative.
 
 ### A closer look at adjectives used in male and female professor reviews
 
@@ -104,7 +104,7 @@ The percent differences in words used between male and female professor reviews 
   <div id="lollipop-svg-div"></div>
 </div>
 
-Filtering only for adjectives, there is an even clearer distinction between common descriptors in male and female professors reviews. Many words used to describe male professors tend to be related to content or teaching ability: “hard", “understand”, and “smart”. On the other hand, female professors receive more reviews with the words “sweet”, “feedback", and “helpful”.
+If we filter for only for adjectives and removing classroom-related words, a more revealing distinction between common descriptors in male and female professors reviews presents itself. Many words used to describe male professors tend to be related to content or teaching ability: “hard", “understand”, and “smart”. On the other hand, female professors receive more reviews with the words “sweet”, “feedback", and “helpful”.
 
 “Female faculty will often find themselves marked lower than male counterparts on questions related to presence of support and creating a positive classroom environment, simply because they're being held to an implicit higher standard,” said Phil Chodrow, a Visiting Assistant Adjunct Professor in the Department of Mathematics.
 

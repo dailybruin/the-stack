@@ -9,9 +9,11 @@ export const STOPWORDS = [
     'basically','weekly','honestly' // filler adverbs
 ]; 
 
-export const MALE_COLOR = "#3A8369",FEMALE_COLOR = "#7462E0", MALE_COLOR_BRIGHT = "#5dd4a9", FEMALE_COLOR_BRIGHT = "#a293fa";
+export const MALE_COLOR = "#3A8369",FEMALE_COLOR = "#7462E0", MALE_COLOR_BRIGHT = "#5dd4a9", FEMALE_COLOR_BRIGHT = "#a293fa", NEUTRAL_COLOR = "#00A5FF";
 
-export const W_WIDTH = window.innerWidth, W_HEIGHT = window.innerHeight;
+const parent_div = document.getElementById("rating-svg-div");
+export const W_WIDTH = parent_div.clientWidth;
+export const W_HEIGHT = window.innerHeight;
 export const isMobile = () =>{ // returns whether device is small or not
     return (W_WIDTH <= 600 || W_HEIGHT <= 600);
   }  

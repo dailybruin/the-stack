@@ -1,12 +1,13 @@
 import { dropdownMenu } from './dropdownMenu.js';
-import { STOPWORDS, MALE_COLOR, FEMALE_COLOR, isMobile } from './globals.js'
+import { STOPWORDS, MALE_COLOR, FEMALE_COLOR, isMobile, W_WIDTH, W_HEIGHT } from './globals.js'
 
 (function(){
     /* configuration parameters */
-    const W_WIDTH = window.innerWidth, W_HEIGHT = window.innerHeight;
+    
+    // const W_HEIGHT = parent_div.clientHeight;
     const config = {
-      "vw": W_WIDTH * 0.65,
-      "vh": isMobile() ? Math.min(W_WIDTH * 0.65,W_HEIGHT * 0.95) : W_HEIGHT * 0.95, // full height for desktop, square for mobile 
+      "vw": W_WIDTH,
+      "vh": isMobile() ? Math.min(W_WIDTH,W_HEIGHT * 0.9) : W_HEIGHT * 0.9, // full height for desktop, square for mobile 
       "anim_speed": 1000
     }
     let margin;
@@ -36,14 +37,14 @@ import { STOPWORDS, MALE_COLOR, FEMALE_COLOR, isMobile } from './globals.js'
       .attr("font-size", base_font_size);
     // axes and labels
     var xAxisGroup = rating_svg.append("g")
-      .attr("class","xaxis");
+      .attr("class","ratings-xaxis");
     var yAxisGroup = rating_svg.append("g")
       .attr("class","ratings-yaxis");
     var xLabel = rating_svg.append("text")
      .attr("class","xlabel")
     var yLabel = rating_svg.append("text")
       .attr("class","ylabel")
-    var xScale;
+    var xScale, xScaleText;
    
     // calculate average rating
     const average = (array) => array.reduce((a, b) => a + b) / array.length;
@@ -65,6 +66,9 @@ import { STOPWORDS, MALE_COLOR, FEMALE_COLOR, isMobile } from './globals.js'
         .range([margin.left, config.vw - margin.right])
         .paddingInner(paddingInner)
         .paddingOuter(paddingInner);
+      xScaleText = d3.scaleOrdinal()
+        .domain(['Male','Female'])
+        .range([margin.left + paddingInner + xScale.bandwidth()/2,config.vw - margin.right - paddingInner - xScale.bandwidth()/2]);
       const xAxis = d3.axisBottom().scale(xScale);    
       xAxisGroup
         .attr("transform", "translate(0," + (config.vh - margin.bottom) + ")")
@@ -96,7 +100,7 @@ import { STOPWORDS, MALE_COLOR, FEMALE_COLOR, isMobile } from './globals.js'
         .text(stat);
     
       if(!isMobile()){  // increase x tick size for desktop
-        d3.selectAll('.xaxis>.tick>text')
+        d3.selectAll('.ratings-xaxis>.tick>text')
           .each(function(d, i){
             d3.select(this).style("font-size","2em");
           });
@@ -157,9 +161,10 @@ import { STOPWORDS, MALE_COLOR, FEMALE_COLOR, isMobile } from './globals.js'
         .join(
           enter => enter.append("text")
             .attr("class", "bar-label")
-            .attr("x", d => margin.left + xScale(d.gender)) // transfrom margin, center on half bar width
+            .attr("x", d => {console.log("margin",margin); return xScaleText(d.gender)}) // transfrom margin, center on half bar width
+            // .attr("x", d => margin.left + xScale(d.gender)) // transfrom margin, center on half bar width
             .attr("y", yScale(0))
-            .attr("text-align","middle")
+            .attr("text-anchor","middle")
             .call(enter => enter
               .transition(t)
                 .attr("y", d => yScale(d.avg-0.25))
