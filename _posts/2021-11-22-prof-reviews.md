@@ -63,10 +63,10 @@ Inaccurate gender predictions could have resulted from students misgendering pro
 ### Ratings for male and female professors
 
 <!-- bar chart -->
+The rating system on Bruinwalk allows students to rate professors from 0 to 5 on various elements of their class. The average overall ratings of classes were generally the same for both female and male professors before and after the COVID-19 pandemic. When comparing ratings between the genders, female professors tend to be rated slightly higher than male professors in all categories except workload.
+
 <div id="stats-menu3"></div>
 <div id="rating-svg-div"></div>
-
-The rating system on Bruinwalk allows students to rate professors from 0 to 5 on various elements of their class. Although the average overall ratings of classes were generally the same between female and male professors before and after the COVID-19 pandemic, when comparing ratings between the genders, female professors tend to be rated slightly higher than male professors in all categories except workload.
 
 Some students have found that ratings on Bruinwalk do not match their experience in the classroom. Professors with bad ratings on Bruinwalk can turn out to have excellent classes, Rodriguez said.
 
@@ -87,7 +87,7 @@ The word cloud below displays the most common words found in both male and femal
   <div id="WC-div" class="WC-div"></div>
 </div>
 
-The percent differences in many words used between male and female professor reviews were fairly small. As expected, the most common words for both genders tended to be classroom related, (“profesor”, “homework”, etc). Adding some criteria for which words appear could be more informative.
+As expected for a professor review website, the most common words for tend to be classroom related, (“profesor”, “homework”, etc). Thus, we decided that adding some criteria for which words to include may be more informative.
 
 ### A closer look at adjectives used in male and female professor reviews
 
