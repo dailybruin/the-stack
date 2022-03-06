@@ -98,7 +98,7 @@ The percent differences in many words used between male and female professor rev
       style="display: inline-block; text-align: right;">
       Show top
     </label>
-    <input type="number" min="10" max="50" step="5" value="20" style="width:4em;" id="num-words-input1">
+    <input type="number" min="10" max="40" step="5" value="20" style="width:4em;" id="num-words-input1">
   </div>
   <div id="stats-menu1" style="display: inline; float: left;"></div>
   <div id="lollipop-svg-div"></div>

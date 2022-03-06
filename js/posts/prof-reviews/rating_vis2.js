@@ -44,7 +44,7 @@ import { STOPWORDS, MALE_COLOR, FEMALE_COLOR, isMobile, W_WIDTH, W_HEIGHT } from
      .attr("class","xlabel")
     var yLabel = rating_svg.append("text")
       .attr("class","ylabel")
-    var xScale, xScaleText;
+    var xScale;
    
     // calculate average rating
     const average = (array) => array.reduce((a, b) => a + b) / array.length;
@@ -66,9 +66,6 @@ import { STOPWORDS, MALE_COLOR, FEMALE_COLOR, isMobile, W_WIDTH, W_HEIGHT } from
         .range([margin.left, config.vw - margin.right])
         .paddingInner(paddingInner)
         .paddingOuter(paddingInner);
-      xScaleText = d3.scaleOrdinal()
-        .domain(['Male','Female'])
-        .range([margin.left + paddingInner + xScale.bandwidth()/2,config.vw - margin.right - paddingInner - xScale.bandwidth()/2]);
       const xAxis = d3.axisBottom().scale(xScale);    
       xAxisGroup
         .attr("transform", "translate(0," + (config.vh - margin.bottom) + ")")
@@ -132,7 +129,7 @@ import { STOPWORDS, MALE_COLOR, FEMALE_COLOR, isMobile, W_WIDTH, W_HEIGHT } from
             .attr("y", d => yScale(0))
             .attr("height", 0)
             // .attr("width", bar_width)
-            .attr("width", () => {console.log('bandwidth',xScale.bandwidth()); return xScale.bandwidth()})
+            .attr("width", xScale.bandwidth())
             .attr("fill",d => d.color)
             .attr("stroke","black")
             .call(enter => enter
@@ -153,7 +150,7 @@ import { STOPWORDS, MALE_COLOR, FEMALE_COLOR, isMobile, W_WIDTH, W_HEIGHT } from
             .remove()
           )
         );
-
+      let bar_label_offset = isMobile() ? 0.23:0.2;
       // add text
       rating_svg
         .selectAll('.bar-label')
@@ -161,20 +158,19 @@ import { STOPWORDS, MALE_COLOR, FEMALE_COLOR, isMobile, W_WIDTH, W_HEIGHT } from
         .join(
           enter => enter.append("text")
             .attr("class", "bar-label")
-            .attr("x", d => {console.log("margin",margin); return xScaleText(d.gender)}) // transfrom margin, center on half bar width
-            // .attr("x", d => margin.left + xScale(d.gender)) // transfrom margin, center on half bar width
+            .attr("x", d => {return xScale(d.gender) + xScale.bandwidth()/2}) // transfrom margin, center on half bar width
             .attr("y", yScale(0))
             .attr("text-anchor","middle")
             .call(enter => enter
               .transition(t)
-                .attr("y", d => yScale(d.avg-0.25))
-                .attr("font-size",isMobile() ? 12:20)
+                .attr("y", d => yScale(d.avg - bar_label_offset))
+                .attr("font-size",isMobile() ? 11:20)
                 .attr("fill","white")
                 .text(d => d.avg.toFixed(2))
           ),
           update => update
             .call(update => update.transition(t)
-              .attr("y", d => yScale(d.avg-0.5))
+              .attr("y", d => yScale(d.avg - bar_label_offset))
               .attr("fill","white")
               .text(d => d.avg.toFixed(2))
           ),

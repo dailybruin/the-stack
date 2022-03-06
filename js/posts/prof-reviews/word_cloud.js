@@ -63,7 +63,7 @@ import { NEUTRAL_COLOR, W_WIDTH, W_HEIGHT, isMobile} from './globals.js'
 
     sub_data = sub_data.map(d => ({text: d.word,value: d.both * scale_factor}))
     
-    let biggest_word_size = isMobile() ? 50:95;
+    let biggest_word_size = isMobile() ? 40:95;
     // used since less frequent too small
     let sqrtScale = d3.scaleSqrt() 
       .domain([0,d3.max(sub_data, d => {return d.value})])
