@@ -352,7 +352,7 @@ import { STOPWORDS, MALE_COLOR, FEMALE_COLOR, MALE_COLOR_BRIGHT, FEMALE_COLOR_BR
       .attr("x2",mousex - mouse_offset);
     percent_text
       .html(xScale.invert(mousex - mouse_offset).toFixed(3) + "%")
-      .attr("x", mousex - mouse_offset + config.vw * 0.02)
+      .attr("x", mousex - mouse_offset + config.vw * 0.01)
       .attr("y", config.vh - margin.bottom * 1.5)
       .attr("text-anchor","left");
   }
