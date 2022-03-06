@@ -104,7 +104,7 @@ The percent differences in many words used between male and female professor rev
   <div id="lollipop-svg-div"></div>
 </div>
 
-If we filter for only for adjectives and removing classroom-related words, a more revealing distinction between common descriptors in male and female professors reviews presents itself. Many words used to describe male professors tend to be related to content or teaching ability: “hard", “understand”, and “smart”. On the other hand, female professors receive more reviews with the words “sweet”, “feedback", and “helpful”.
+If we limit the words we consider to adjectives and remove classroom-related words, some more revealing differences appear between male and female professors reviews. The top adjectives for both genders have to do with difficulty: easy, hard, fair, etc. However, looking past this subset, the personality-related words used to describe professors tend to diverge by gender. Male professors recieve more reviews with words like "funny", "generous", and “smart”. On the other hand, female professors receive more reviews with the words “sweet”, “helpful”, "social".
 
 “Female faculty will often find themselves marked lower than male counterparts on questions related to presence of support and creating a positive classroom environment, simply because they're being held to an implicit higher standard,” said Phil Chodrow, a Visiting Assistant Adjunct Professor in the Department of Mathematics.
 

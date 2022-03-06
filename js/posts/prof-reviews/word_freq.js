@@ -1,5 +1,5 @@
 import { dropdownMenu } from './dropdownMenu.js';
-import { STOPWORDS, MALE_COLOR, FEMALE_COLOR, MALE_COLOR_BRIGHT, FEMALE_COLOR_BRIGHT, W_WIDTH, W_HEIGHT, isMobile} from './globals.js'
+import { STOPWORDS, MALE_COLOR, FEMALE_COLOR, MALE_COLOR_BRIGHT, FEMALE_COLOR_BRIGHT, W_WIDTH, W_HEIGHT, isMobile, INCLUDEWORDS} from './globals.js'
 
 (function(){
   /* configuration parameters */
@@ -10,16 +10,16 @@ import { STOPWORDS, MALE_COLOR, FEMALE_COLOR, MALE_COLOR_BRIGHT, FEMALE_COLOR_BR
   }
   let margin;
   if(!isMobile()){
-    margin = ({top: config.vh * 0.05, right: config.vw * 0.02, bottom: config.vh * 0.1, left: config.vw * 0.13});
+    margin = ({top: config.vh * 0.05, right: config.vw * 0.02, bottom: config.vh * 0.1, left: config.vw * 0.15});
   }
   else{
-    margin = ({top: config.vh * 0.03, right: config.vw * 0.01, bottom: config.vh * 0.15, left: config.vw * 0.2});
+    margin = ({top: config.vh * 0.03, right: config.vw * 0.01, bottom: config.vh * 0.15, left: config.vw * 0.25});
   }
   const t = d3.transition().duration(config.anim_speed).ease(d3.easeCubic);
   // point radius range
-  let point_radius = isMobile() ? 3:6;
+  let point_radius = isMobile() ? 3:4;
   let point_radius_min = isMobile() ? 1:3;
-  let point_radius_max = isMobile() ? 6:9;
+  let point_radius_max = isMobile() ? 5:7;
   // y axis tick range
   let axes_tick_font_size = isMobile() ? 9:15;
   const axes_tick_font_size_min = isMobile() ? 7:12;
@@ -83,7 +83,6 @@ import { STOPWORDS, MALE_COLOR, FEMALE_COLOR, MALE_COLOR_BRIGHT, FEMALE_COLOR_BR
     });
 
   // spinner
-  
   let num_words_input = document.getElementById('num-words-input1');
   num_words_input.onchange = () => {
     prev_n_words = top_n_words;
@@ -223,7 +222,7 @@ import { STOPWORDS, MALE_COLOR, FEMALE_COLOR, MALE_COLOR_BRIGHT, FEMALE_COLOR_BR
     // find new max value for x axis
     let max1 = Math.max(...sub_data.map(d => d.male));
     let max2 = Math.max(...sub_data.map(d => d.female));
-    let max = Math.max(max1,max2) * 1.1;
+    let max = Math.max(max1,max2) * 1.05;
     xScale = d3.scaleLinear()
       .domain([0, max])
       .range([margin.left, config.vw - margin.right])
@@ -248,17 +247,11 @@ import { STOPWORDS, MALE_COLOR, FEMALE_COLOR, MALE_COLOR_BRIGHT, FEMALE_COLOR_BR
       .style("font-size","15px")
       .transition(t)
       .call(yAxis);
+
     // assign ID to y-axis tick text so can bold on hover and set size for screen
-    
     d3.select("g.lollipop-yaxis").selectAll(".tick text")
       .attr("id", (d,i) => {return d + "-word" })
       .style("font-size",axes_tick_font_size); // scale for number of words (more words -> smaller)
-    // if(isMobile()){
-    // d3.select("g.lollipop-yaxis").selectAll(".tick text")
-    //   .each(function(d, i){
-    //     d3.select(this).style("font-size",axes_tick_font_size);
-    //   });
-      // }
 
     // clear other lines from svg
     clear_graphics(stat_svg)
@@ -273,7 +266,6 @@ import { STOPWORDS, MALE_COLOR, FEMALE_COLOR, MALE_COLOR_BRIGHT, FEMALE_COLOR_BR
     .append("div")
     .attr("class", "tooltip")
     .style("opacity", 0);
-
   const mouseover = function(d) {
     // show tooltip
     tooltip1.transition()
@@ -293,8 +285,6 @@ import { STOPWORDS, MALE_COLOR, FEMALE_COLOR, MALE_COLOR_BRIGHT, FEMALE_COLOR_BR
     else{
       diff_color = FEMALE_COLOR_BRIGHT;
     }
-    // console.log(event);
-    // console.log('mousemove d',d);
     if (stat == "difference"){
       tooltip_text = "<span style='color:"+diff_color+"'><b>Diff</b>: " + d.difference_abs.toFixed(3) + "%</span><br><b>Male</b>: " + d.male.toFixed(3) + "%<br><b>Female</b>: " + d.female.toFixed(3) + "%";
     }
@@ -354,16 +344,15 @@ import { STOPWORDS, MALE_COLOR, FEMALE_COLOR, MALE_COLOR_BRIGHT, FEMALE_COLOR_BR
   // get margin and padding as offset
   let post_div = document.getElementsByClassName("post-content")[0];
   const mouse_offset = post_div.offsetLeft + parseFloat(window.getComputedStyle(post_div, null).getPropertyValue('padding-left'));
-  // const mouse_offset = 400;
   const mousemove2 = function(event) {
     let mousex = event.pageX;
     // console.log("mousex",mousex);
     vertical_guide
-      .attr("x1",mousex-mouse_offset)
-      .attr("x2",mousex-mouse_offset);
+      .attr("x1",mousex - mouse_offset)
+      .attr("x2",mousex - mouse_offset);
     percent_text
-      .html(xScale.invert(mousex-mouse_offset).toFixed(3) + "%")
-      .attr("x", mousex-mouse_offset-15)
+      .html(xScale.invert(mousex - mouse_offset).toFixed(3) + "%")
+      .attr("x", mousex - mouse_offset + config.vw * 0.02)
       .attr("y", config.vh - margin.bottom * 1.5)
       .attr("text-anchor","left");
   }
@@ -377,6 +366,7 @@ import { STOPWORDS, MALE_COLOR, FEMALE_COLOR, MALE_COLOR_BRIGHT, FEMALE_COLOR_BR
   // static components before/above data
   var overlay_g = stat_svg.append("g").classed("overlay-g",true)
   var overlay_rect = overlay_g.append('rect');
+  // add hover effects for circles
   overlay_rect
     .attr('class', 'overlay-rect')
     .attr('width', (config.vw-margin.left-margin.right)) // set to graph area
@@ -387,8 +377,15 @@ import { STOPWORDS, MALE_COLOR, FEMALE_COLOR, MALE_COLOR_BRIGHT, FEMALE_COLOR_BR
     // .on('mouseover', () => {if(!isMobile()){mouseover2()};})
     .on('mouseover', mouseover2)
     .on('mousemove', mousemove2)
-    .on('mouseout', mouseleave2)
-  // Add vertical line to read percentages more easily on desktop
+    .on('mouseout', mouseleave2);
+  // and to words
+  d3.select("g.lollipop-yaxis")
+    .selectAll(".tick text")
+      .on('mouseover', mouseover)
+      .on('mousemove', mousemove)
+      .on('mouseout', mouseleave);
+
+  // Add vertical line to read percentages more easily (desktop only)
   if(!isMobile()){
     var vertical_guide = overlay_g
       .append("line");
@@ -422,7 +419,9 @@ import { STOPWORDS, MALE_COLOR, FEMALE_COLOR, MALE_COLOR_BRIGHT, FEMALE_COLOR_BR
     adj_data = data.filter(function (el) {
       return (el.POS == "ADJ" ||
             el.POS == "ADV") &&
-            !STOPWORDS.includes(el.word);
+            (!STOPWORDS.includes(el.word) || 
+            INCLUDEWORDS.includes(el.word)
+            );
     });
     var stat = "female";
     render_stats(adj_data,stat);
