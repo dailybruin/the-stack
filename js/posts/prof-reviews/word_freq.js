@@ -81,7 +81,7 @@ import { STOPWORDS, MALE_COLOR, FEMALE_COLOR, MALE_COLOR_BRIGHT, FEMALE_COLOR_BR
     label: 'adjectives... ',
     id: 'word-freq-select-1'
     });
-
+    
   // spinner
   let num_words_input = document.getElementById('num-words-input1');
   num_words_input.onchange = () => {
@@ -213,7 +213,8 @@ import { STOPWORDS, MALE_COLOR, FEMALE_COLOR, MALE_COLOR_BRIGHT, FEMALE_COLOR_BR
   }
 
   // main render function
-  const render_stats = (data,stat="female",y_label="Adjective/Adverb",num_words = top_n_words) =>{
+  const render_stats = (data,stat="female",num_words = top_n_words) =>{
+    // console.log('render',data,stat)
     const t = d3.transition().duration(config.anim_speed).ease(d3.easeCubic);
     // sort data by selected statistic and slice top n
     sub_data = sort_data(data,stat,num_words)
@@ -259,7 +260,6 @@ import { STOPWORDS, MALE_COLOR, FEMALE_COLOR, MALE_COLOR_BRIGHT, FEMALE_COLOR_BR
     plot_lines(stat_svg,xScale,yScale,t,"male",stat,MALE_COLOR_BRIGHT,sub_data); // plot male
     plot_lines(stat_svg,xScale,yScale,t,"female",stat,FEMALE_COLOR_BRIGHT,sub_data); // plot female
   };
-
 
   // mouseover/tooltip functions
   var tooltip1 = d3.select("body")
@@ -406,7 +406,7 @@ import { STOPWORDS, MALE_COLOR, FEMALE_COLOR, MALE_COLOR_BRIGHT, FEMALE_COLOR_BR
     .style("font-size","15px")
     .attr("text-anchor", "left")
     .attr("alignment-baseline", "middle");
-
+  
   // load male and female professor frequency data
   d3.csv('/datasets/prof-reviews/prof_word_freqs_POS.csv')
   .then(data => {
@@ -426,4 +426,22 @@ import { STOPWORDS, MALE_COLOR, FEMALE_COLOR, MALE_COLOR_BRIGHT, FEMALE_COLOR_BR
     var stat = "female";
     render_stats(adj_data,stat);
   });
+
+  // function to change dropdown to largest diff and re-render
+  let inter_text_1 = document.getElementById("interactive-text-1");
+  let largest_diff = 'with largest difference';
+  inter_text_1.onclick = () => {
+  document.getElementById("word-freq-select-1").value=largest_diff;
+  let options = document.getElementById("word-freq-select-1").options;
+  for(let i=0; i < options.length; i++)
+  {
+      if(options[i].value === largest_diff) {
+          options.selectedIndex = i;
+          break;
+      }
+  };
+  let stat = 'difference_abs';
+  render_stats(adj_data,stat);
+};
+
 })(); // create and run anonymous fn
