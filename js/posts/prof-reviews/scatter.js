@@ -1,168 +1,410 @@
-import {MALE_COLOR, FEMALE_COLOR } from './globals.js'
-
+import { MALE_COLOR, FEMALE_COLOR } from './globals.js'
 d3.csv('/datasets/prof-reviews/top_500_.csv').then(function (frequency) {
-   console.log("data loaded!", frequency);
-   // const data_1 = {
-   //    // labels: [],
-   //    datasets: [
-   //       {
-   //          data: [],
-   //          // label: 'Frequency 1',
-   //          // borderColor: '#C433FF',
-   //          // backgroundColor: '#CD8337',
-   //       },
-   //    ],
-   // };
+   // console.log("data loaded!", frequency);
 
-   const data_1 = [];
-   const labels_data_1 = [];
+   d3.csv('/datasets/prof-reviews/top_500_1.csv').then(function (frequency_1) {
+      document.getElementById("myList").addEventListener("change", change_func);
 
-   frequency.forEach(row => {
-      // data_1.labels.push(row.word);
-      data_1.push({ x: Number(row.male), y: Number(row.female) });
-      labels_data_1.push(row.word);
-   });
+      const data_1 = [];
+      const labels_data_1 = [];
+      const data_5 = [];
+      const labels_data_5 = [];
 
+      let max_num = 1.4
 
-   // frequency.forEach(row => {
-   //    // data_1.labels.push(row.word);
-   //    data_1.datasets[0].data.push({x: Number(row.male), y: Number(row.female)});
-   // });
+      console.log(max_num);
 
-   const data_2 = [{ 'x': 0.47593730082063207, 'y': 0.4046705054382598 },
-   { x: 0.12470132906603258, y: 0.06496382695998819 },
-   { 'x': 0.018786310169830338, 'y': 0.06090358777498892 },
-   { 'x': 0.36002733695942263, 'y': 0.32531128500418327 },
-   { 'x': 0.6756268819016141, 'y': 0.709311481864265 },
-   { 'x': 0.08137245769940439, 'y': 0.11024164575028299 },
-   { 'x': 0.053847111879541554, 'y': 0.030390275111964175 },
-   { 'x': 0.05091665681126718, 'y': 0.03555785225650868 },
-   { 'x': 0.30215084936100384, 'y': 0.31731384418524533 },
-   { 'x': 0.051753929687917005, 'y': 0.03887986613514444 },
-   { 'x': 0.06515029571431412, 'y': 0.052413996751808654 },
-   { 'x': 0.01951892393689893, 'y': 0.03223583837787292 },
-   { 'x': 0.18639787416416617, 'y': 0.1742211723017865 },
-   { 'x': 0.04594534910615888, 'y': 0.057335498794232 },
-   { 'x': 0.06949364876193506, 'y': 0.05844283675377726 },
-   { 'x': 0.040241427633981974, 'y': 0.029775087356661255 },
-   { 'x': 0.026688072943213015, 'y': 0.03641911511393277 }];
-   const labels_data_2 = ['hard', 'funny', 'sweet', 'difficult', 'easy', 'workload', 'old', 'generous', 'helpful', 'impossible', 'useful', 'social', 'fair', 'specific', 'tough', 'useless', 'disorganized'];
+      frequency.forEach(row => {
+         // data_1.labels.push(row.word);
+         data_1.push({ x: Number(row.male), y: Number(row.female) });
+         labels_data_1.push(row.word);
+      });
 
-   const data_3 = [{ 'x': 0, 'y': 0 },
-   { 'x': 1, 'y': 1}, {'x':0 , 'y': 0} ];
-
-   // const data_2 = {
-   //    // labels: ['hard','funny','sweet','difficult','easy','workload','old','generous','helpful',
-   //    // 'impossible','useful','social','fair','specific','tough','useless','disorganized'],   
-   //    datasets: [ {
-   //          data: [{'x': 0.47593730082063207, 'y': 0.4046705054382598},
-   //          {'x': 0.12470132906603258, 'y': 0.06496382695998819},
-   //          {'x': 0.018786310169830338, 'y': 0.06090358777498892},
-   //          {'x': 0.36002733695942263, 'y': 0.32531128500418327},
-   //          {'x': 0.6756268819016141, 'y': 0.709311481864265},
-   //          {'x': 0.08137245769940439, 'y': 0.11024164575028299},
-   //          {'x': 0.053847111879541554, 'y': 0.030390275111964175},
-   //          {'x': 0.05091665681126718, 'y': 0.03555785225650868},
-   //          {'x': 0.30215084936100384, 'y': 0.31731384418524533},
-   //          {'x': 0.051753929687917005, 'y': 0.03887986613514444},
-   //          {'x': 0.06515029571431412, 'y': 0.052413996751808654},
-   //          {'x': 0.01951892393689893, 'y': 0.03223583837787292},
-   //          {'x': 0.18639787416416617, 'y': 0.1742211723017865},
-   //          {'x': 0.04594534910615888, 'y': 0.057335498794232},
-   //          {'x': 0.06949364876193506, 'y': 0.05844283675377726},
-   //          {'x': 0.040241427633981974, 'y': 0.029775087356661255},
-   //          {'x': 0.026688072943213015, 'y': 0.03641911511393277}],
-   //          // label: 'Frequency 2',
-   //          // borderColor: '#C433FF',
-   //          // backgroundColor: '#CD8337',
-   //       }
-   //    ],
-   // };
-
-   console.log("look here for data_1", data_1);
-   console.log("look here for data_2", data_2);
+      frequency_1.forEach(row => {
+         // data_1.labels.push(row.word);
+         data_5.push({ x: Number(row.male), y: Number(row.female) });
+         labels_data_5.push(row.word);
+      });
 
 
-   let ctx = document.getElementById("scatter");
-   var scatterChart = new Chart(ctx, {
-      // type: 'scatter',
-      // data: data_1,
-      // options: options,
-      type: 'scatter',
-      data: {
-         datasets: [{
-            label: "Frequency 1",
-            // borderColor: 'rgb(255, 99, 132)',
-            data: data_1,
-            labels: labels_data_1,
-            pointRadius: 4
-         }, {
-            label: "Frequency 2",
-            borderColor: FEMALE_COLOR,
-            backgroundColor: FEMALE_COLOR,
-            data: data_2,
-            labels: labels_data_2,
-            pointRadius: 7,
-            pointHoverRadius: 7
+      const fem_data = [{ 'x': 0.019, 'y': 0.061 },
+      { 'x': 0.676, 'y': 0.709 },
+      { 'x': 0.081, 'y': 0.11 },
+      { 'x': 0.302, 'y': 0.317 },
+      { 'x': 0.02, 'y': 0.032 },
+      { 'x': 0.046, 'y': 0.057 },
+      { 'x': 0.027, 'y': 0.036 }];
+
+      const fem_labels = ['sweet', 'easy', 'workload', 'helpful', 'social', 'specific', 'disorganized'];
+
+      const male_data = [{ 'x': 0.476, 'y': 0.405 },
+      { 'x': 0.125, 'y': 0.065 },
+      { 'x': 0.36, 'y': 0.325 },
+      { 'x': 0.054, 'y': 0.03 },
+      { 'x': 0.051, 'y': 0.036 },
+      { 'x': 0.052, 'y': 0.039 },
+      { 'x': 0.065, 'y': 0.052 },
+      { 'x': 0.186, 'y': 0.174 },
+      { 'x': 0.069, 'y': 0.058 },
+      { 'x': 0.04, 'y': 0.03 }];
+
+      const male_labels = ['hard',
+         'funny',
+         'difficult',
+         'old',
+         'generous',
+         'impossible',
+         'useful',
+         'fair',
+         'tough',
+         'useless'];
+
+
+      let ctx = document.getElementById("scatter");
+      var scatterChart = new Chart(ctx, {
+         type: 'scatter',
+         data: {
+            datasets: [{
+               label: "Other words",
+               data: data_1,
+               labels: labels_data_1,
+               pointRadius: 4,
+               legend: {
+                  display: true,
+               }
+            },
+            {
+               label: "Adjectives (Female)",
+               borderColor: FEMALE_COLOR,
+               backgroundColor: FEMALE_COLOR,
+               data: fem_data,
+               labels: fem_labels,
+               pointRadius: 7,
+               pointHoverRadius: 7,
+               legend: {
+                  display: true,
+               }
+            },
+            {
+               label: "Adjectives (Male)",
+               borderColor: MALE_COLOR,
+               backgroundColor: MALE_COLOR,
+               data: male_data,
+               labels: male_labels,
+               pointRadius: 7,
+               pointHoverRadius: 7,
+               legend: {
+                  display: true,
+               }
+
+            },
+            {
+               data: [{
+                  x: 0,
+                  y: 0
+               }, {
+                  x: 0.5,
+                  y: 0.5
+               }, {
+                  x: 1.4,
+                  y: 1.4
+               }],
+               borderColor: 'grey',
+               borderWidth: 1,
+               pointRadius: 0,
+               pointHoverRadius: 0,
+               fill: false,
+               tension: 0,
+               showLine: true,
+               label: "Line y = x",
+               legend: {
+                  display: true,
+               }
+            },
+            ]
          },
-         {
-            data: [{
-               x: 0,
-               y: 0
-            }, {
-               x: 0.5,
-               y: 0.5
-            }, {
-               x: 1.4,
-               y: 1.4}],
-            borderColor: 'grey',
-            borderWidth: 1,
-            // pointBackgroundColor: ['#000', '#00bcd6', '#d300d6'],
-            // pointBorderColor: ['#000', '#00bcd6', '#d300d6'],
-            pointRadius: 0,
-            pointHoverRadius: 0,
-            fill: false,
-            tension: 0,
-            showLine: true
-         }, 
-      {
-         
-      }]
-      },
-      options: {
+         options: {
+            plugins: {
+               datalabels: {
+                 color: null
+               }
+             },
+            legend: {
+               display: true
+            },
             title: {
-            display: true,
-            text: 'Words Used Most Frequently for Males vs Females'
-          },
-          scales: {
-            yAxes: [{
-               scaleLabel: {
-                 display: true,
-                 labelString: 'Words Used for Female Professors (%)'
-               }
-             }],
+               display: true,
+               text: 'Words Used Most Frequently for Males vs Females'
+            },
+            scales: {
+               yAxes: [{
+                  scaleLabel: {
+                     display: true,
+                     labelString: 'Words Used for Female Professors (%)'
+                  },
+                  ticks: {
+                     min: 0,
+                     max: max_num
+                  }
+               }],
 
-             xAxes: [{
-               scaleLabel: {
-                 display: true,
-                 labelString: 'Words Used for Male Professors (%)'
-               }
-             }]
-                   } ,        
+               xAxes: [{
+                  scaleLabel: {
+                     display: true,
+                     labelString: 'Words Used for Male Professors (%)'
+                  },
+                  ticks: {
+                     min: 0,
+                     max: max_num
+                  }
 
-         responsive: true,
-         legend: {
-            display: false,
-         },
-         tooltips: {
-            callbacks: {
-               label: function (tooltipItem, data) {
-                  var dataset = data.datasets[tooltipItem.datasetIndex];
-                  var index = tooltipItem.index;
-                  return dataset.labels[index] + ': (' + tooltipItem.xLabel + ', ' + tooltipItem.yLabel + ')'
+               }]
+            },
+
+            responsive: true,
+            tooltips: {
+               callbacks: {
+                  labelColor: function (tooltipItem, chart) {
+                     var color_dec = "";
+                     if (tooltipItem.xLabel > tooltipItem.yLabel) {
+                        // color_dec = MALE_COLOR;
+                        return {
+                           borderColor: MALE_COLOR,
+                           backgroundColor: MALE_COLOR
+                        };
+                     }
+                     else {
+                        return {
+                           borderColor: FEMALE_COLOR,
+                           backgroundColor: FEMALE_COLOR
+                        };
+                     }
+                  },
+                  label: function (tooltipItem, data) {
+                     var dataset = data.datasets[tooltipItem.datasetIndex];
+                     var index = tooltipItem.index;
+                     return dataset.labels[index] + '\n Male frequency: ' + tooltipItem.xLabel + '% \n Female Frequency: ' + tooltipItem.yLabel + '%'
+                  }
                }
             }
          }
+
+
+      });
+
+
+      function change_func() {
+         var mylist = document.getElementById("myList");
+         var index_ = mylist.options[mylist.selectedIndex].text;
+         console.log(index_);
+
+         const data_1 = [];
+         const labels_data_1 = [];
+         const data_5 = [];
+         const labels_data_5 = [];
+
+         let max_num
+
+         if (index_ === "Words with less than 0.4% frequency") {
+            max_num = 0.4;
+         } else {
+            max_num = 1.4;
+         }
+
+         console.log(max_num);
+
+         frequency.forEach(row => {
+            data_1.push({ x: Number(row.male), y: Number(row.female) });
+            labels_data_1.push(row.word);
+         });
+
+         frequency_1.forEach(row => {
+            data_5.push({ x: Number(row.male), y: Number(row.female) });
+            labels_data_5.push(row.word);
+         });
+
+
+         const fem_data = [{ 'x': 0.019, 'y': 0.061 },
+         { 'x': 0.676, 'y': 0.709 },
+         { 'x': 0.081, 'y': 0.11 },
+         { 'x': 0.302, 'y': 0.317 },
+         { 'x': 0.02, 'y': 0.032 },
+         { 'x': 0.046, 'y': 0.057 },
+         { 'x': 0.027, 'y': 0.036 }];
+
+         const fem_labels = ['sweet', 'easy', 'workload', 'helpful', 'social', 'specific', 'disorganized'];
+
+         const male_data = [{ 'x': 0.476, 'y': 0.405 },
+         { 'x': 0.125, 'y': 0.065 },
+         { 'x': 0.36, 'y': 0.325 },
+         { 'x': 0.054, 'y': 0.03 },
+         { 'x': 0.051, 'y': 0.036 },
+         { 'x': 0.052, 'y': 0.039 },
+         { 'x': 0.065, 'y': 0.052 },
+         { 'x': 0.186, 'y': 0.174 },
+         { 'x': 0.069, 'y': 0.058 },
+         { 'x': 0.04, 'y': 0.03 }];
+
+         const male_labels = ['hard',
+            'funny',
+            'difficult',
+            'old',
+            'generous',
+            'impossible',
+            'useful',
+            'fair',
+            'tough',
+            'useless'];
+
+
+         let ctx = document.getElementById("scatter");
+         var scatterChart = new Chart(ctx, {
+            type: 'scatter',
+            data: {
+               datasets: [{
+                  label: "Other Words",
+                  data: data_1,
+                  labels: labels_data_1,
+                  pointRadius: 4,
+                  legend: {
+                     display: false,
+                  }
+               },
+               //    {
+               //    label: "Frequency 5",
+               //    data: data_5,
+               //    labels: labels_data_5,
+               //    pointRadius: 4,
+               //    legend: {
+               //       display: true,
+               //    }
+               // }, 
+               {
+                  label: "Adjectives (Female)",
+                  borderColor: FEMALE_COLOR,
+                  backgroundColor: FEMALE_COLOR,
+                  data: fem_data,
+                  labels: fem_labels,
+                  pointRadius: 7,
+                  pointHoverRadius: 7,
+                  legend: {
+                     display: true,
+                  }
+               },
+               {
+                  label: "Adjectives (Male)",
+                  borderColor: MALE_COLOR,
+                  backgroundColor: MALE_COLOR,
+                  data: male_data,
+                  labels: male_labels,
+                  pointRadius: 7,
+                  pointHoverRadius: 7,
+                  legend: {
+                     display: true,
+                  }
+
+               },
+               {
+                  data: [{
+                     x: 0,
+                     y: 0
+                  }, {
+                     x: 0.5,
+                     y: 0.5
+                  }, {
+                     x: 1.4,
+                     y: 1.4
+                  }],
+                  borderColor: 'grey',
+                  borderWidth: 1,
+                  // pointBackgroundColor: ['#000', '#00bcd6', '#d300d6'],
+                  // pointBorderColor: ['#000', '#00bcd6', '#d300d6'],
+                  pointRadius: 0,
+                  pointHoverRadius: 0,
+                  fill: false,
+                  tension: 0,
+                  showLine: true,
+                  label: "Line y = x",
+                  legend: {
+                     display: false,
+                  }
+               },
+               ]
+            },
+            options: {
+               plugins: {
+                  datalabels: {
+                    color: null
+                  }
+                },
+      
+               legend: {
+                  display: true
+               },
+               title: {
+                  display: true,
+                  text: 'Words Used Most Frequently for Males vs Females'
+               },
+               scales: {
+                  yAxes: [{
+                     scaleLabel: {
+                        display: true,
+                        labelString: 'Words Used for Female Professors (%)'
+                     },
+                     ticks: {
+                        min: 0,
+                        max: max_num
+                     }
+                  }],
+
+                  xAxes: [{
+                     scaleLabel: {
+                        display: true,
+                        labelString: 'Words Used for Male Professors (%)'
+                     },
+                     // if (cipher_char === from_char) {
+                     //    result = result + to_char;
+                     //    x++;
+                     //  } else {
+                     //    result = result + clear_char;
+                     //  }
+                     ticks: {
+                        min: 0,
+                        max: max_num
+                     }
+
+                  }]
+               },
+
+               tooltips: {
+                  callbacks: {
+                     labelColor: function (tooltipItem, chart) {
+                        var color_dec = "";
+                        if (tooltipItem.xLabel > tooltipItem.yLabel) {
+                           return {
+                              borderColor: MALE_COLOR,
+                              backgroundColor: MALE_COLOR
+                           };
+                        }
+                        else {
+                           return {
+                              borderColor: FEMALE_COLOR,
+                              backgroundColor: FEMALE_COLOR
+                           };
+                        }
+                     },
+                     label: function (tooltipItem, data) {
+                        var dataset = data.datasets[tooltipItem.datasetIndex];
+                        var index = tooltipItem.index;
+                        return dataset.labels[index] + '\n' + 'Male frequency: ' + tooltipItem.xLabel + '% \n' + 'Female Frequency: ' + tooltipItem.yLabel + '%'
+                     }
+                  }
+               }
+            }
+
+
+         });
+
       }
 
    });

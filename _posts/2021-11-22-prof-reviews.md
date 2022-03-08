@@ -19,18 +19,27 @@ og_image:
 scripts:
   - //cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.js
   - //ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js
-  - //d3js.org/d3.v7.min.js
+  - //d3js.org/d3.v6.min.js
+  - //cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@0.7.0
+
+  # - //cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.js
+  # - //ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js
+  # - //d3js.org/d3.v7.min.js
   # - //cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@0.7.0
   # - //d3js.org/d3.v7.min.js
   - //cdnjs.cloudflare.com/ajax/libs/d3-cloud/1.2.5/d3.layout.cloud.js
   - /js/posts/prof-reviews/scatter.js
   - /js/posts/prof-reviews/bar_chart.js
+  # - //cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0    
 
   # - //rawgit.com/jasondavies/d3-cloud/master/build/d3.layout.cloud.js
 
 stylesheets:
   - /css/posts/prof-reviews/style.css
 ---
+<script src="https://cdn.jsdelivr.net/npm/chart.js@3.0.0/dist/chart.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-datalabels/2.0.0/chartjs-plugin-datalabels.min.js" integrity="sha512-R/QOHLpV1Ggq22vfDAWYOaMd5RopHrJNMxi8/lJu8Oihwi4Ho4BRFeiMiCefn9rasajKjnx9/fTQ/xkWnkDACg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 <script type="module" src="/js/posts/prof-reviews/dropdownMenu.js"></script>
 <script type="module" src="/js/posts/prof-reviews/word_cloud.js"></script>
@@ -111,6 +120,24 @@ If we limit the words we consider to adjectives and remove classroom-related wor
 These adjectives can be placed in the context of other commonly used words used in reviews for female versus male professors.The chart below plots the relative frequency of words used in reviews for female professors versus reviews for male professors.
 
 ### Other words most commonly used for female versus male professors
+
+<!-- <form>  
+<label> Select Data </label>  
+<select>  
+<option id = "full" value = "full"> All words   
+</option>  
+<option id = "subset" value = "subset"> Words with less than 0.4% frequency
+</option>  
+</select>  
+</form>  
+ -->
+<form>  
+<b> Select Data </b>  
+<select id = "myList">  
+<option id = "full" value = "full"> All words </option>  
+<option id = "subset" value = "subset"> Words with less than 0.4% frequency </option>  
+</select>  
+</form>  
 
 <div class="chart-container">
   <canvas id='scatter'></canvas>
