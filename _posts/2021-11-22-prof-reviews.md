@@ -5,6 +5,7 @@ authors:
   - ananya_garg
   - tyler_wu
   - jessica_li
+  - hinal_jajal
 
 key_takeaways:
   - Overall, male and female professors had similar numerical ratings and percentages of positive reviews.
