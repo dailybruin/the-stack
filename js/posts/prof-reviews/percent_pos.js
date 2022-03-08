@@ -8,8 +8,8 @@ var data = {
         {
             label: "Pre-COVID",
             data: [80.35, 79.65],
-            backgroundColor: MALE_COLOR,
-            hoverBackgroundColor: MALE_COLOR,
+            backgroundColor: '#f0a13e',
+            hoverBackgroundColor: '#f0a13e',
             // datalabels: {
             //     color: 'yellow',
             //     value: 80.35
@@ -18,8 +18,8 @@ var data = {
         {
             label: "COVID",
             data: [84.09, 85.02],
-            backgroundColor: FEMALE_COLOR,
-            hoverBackgroundColor: FEMALE_COLOR
+            backgroundColor: '#1293d1',
+            hoverBackgroundColor: '#1293d1'
         },
     ]
 };

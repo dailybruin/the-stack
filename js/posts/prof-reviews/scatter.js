@@ -163,6 +163,7 @@ d3.csv('/datasets/prof-reviews/top_500_.csv').then(function (frequency) {
 
             responsive: true,
             tooltips: {
+               // mode: 'point',
                callbacks: {
                   labelColor: function (tooltipItem, chart) {
                      var color_dec = "";
@@ -180,10 +181,16 @@ d3.csv('/datasets/prof-reviews/top_500_.csv').then(function (frequency) {
                         };
                      }
                   },
-                  label: function (tooltipItem, data) {
-                     var dataset = data.datasets[tooltipItem.datasetIndex];
+                  // title: function(tooltipItems,data){
+                  //    return data.datasets[tooltipItems[0].datasetIndex].labels[tooltipItems[0].index]
+                  // },
+                  label: function(tooltipItem, data){
+                     return data.datasets[tooltipItem.datasetIndex].labels[tooltipItem.index]
+                  },
+                  afterBody: function (tooltipItem, data) {
+                     var dataset = data.datasets[tooltipItem[0].datasetIndex];
                      var index = tooltipItem.index;
-                     return dataset.labels[index] + '\n Male frequency: ' + tooltipItem.xLabel + '% \n Female Frequency: ' + tooltipItem.yLabel + '%'
+                     return ['Male frequency: ' + tooltipItem[0].xLabel + '%','Female frequency: ' + tooltipItem[0].yLabel + '%']
                   }
                }
             }
@@ -192,10 +199,10 @@ d3.csv('/datasets/prof-reviews/top_500_.csv').then(function (frequency) {
 
       });
 
-
+//NEW CHART
       function change_func() {
-         var mylist = document.getElementById("myList");
-         var index_ = mylist.options[mylist.selectedIndex].text;
+         let mylist = document.getElementById("myList");
+         let index_ = mylist.options[mylist.selectedIndex].text;
          console.log(index_);
 
          const data_1 = [];
@@ -224,26 +231,30 @@ d3.csv('/datasets/prof-reviews/top_500_.csv').then(function (frequency) {
          });
 
 
-         const fem_data = [{ 'x': 0.019, 'y': 0.061 },
-         { 'x': 0.676, 'y': 0.709 },
-         { 'x': 0.081, 'y': 0.11 },
-         { 'x': 0.302, 'y': 0.317 },
-         { 'x': 0.02, 'y': 0.032 },
-         { 'x': 0.046, 'y': 0.057 },
-         { 'x': 0.027, 'y': 0.036 }];
+         const fem_data = [
+            { 'x': 0.019, 'y': 0.061 },
+            { 'x': 0.676, 'y': 0.709 },
+            { 'x': 0.081, 'y': 0.11 },
+            { 'x': 0.302, 'y': 0.317 },
+            { 'x': 0.02, 'y': 0.032 },
+            { 'x': 0.046, 'y': 0.057 },
+            { 'x': 0.027, 'y': 0.036 }
+         ];
 
          const fem_labels = ['sweet', 'easy', 'workload', 'helpful', 'social', 'specific', 'disorganized'];
 
-         const male_data = [{ 'x': 0.476, 'y': 0.405 },
-         { 'x': 0.125, 'y': 0.065 },
-         { 'x': 0.36, 'y': 0.325 },
-         { 'x': 0.054, 'y': 0.03 },
-         { 'x': 0.051, 'y': 0.036 },
-         { 'x': 0.052, 'y': 0.039 },
-         { 'x': 0.065, 'y': 0.052 },
-         { 'x': 0.186, 'y': 0.174 },
-         { 'x': 0.069, 'y': 0.058 },
-         { 'x': 0.04, 'y': 0.03 }];
+         const male_data = [
+            { 'x': 0.476, 'y': 0.405 },
+            { 'x': 0.125, 'y': 0.065 },
+            { 'x': 0.36, 'y': 0.325 },
+            { 'x': 0.054, 'y': 0.03 },
+            { 'x': 0.051, 'y': 0.036 },
+            { 'x': 0.052, 'y': 0.039 },
+            { 'x': 0.065, 'y': 0.052 },
+            { 'x': 0.186, 'y': 0.174 },
+            { 'x': 0.069, 'y': 0.058 },
+            { 'x': 0.04, 'y': 0.03 }
+         ];
 
          const male_labels = ['hard',
             'funny',
@@ -257,10 +268,7 @@ d3.csv('/datasets/prof-reviews/top_500_.csv').then(function (frequency) {
             'useless'];
 
 
-         let ctx = document.getElementById("scatter");
-         var scatterChart = new Chart(ctx, {
-            type: 'scatter',
-            data: {
+         scatterChart.data= {
                datasets: [{
                   label: "Other Words",
                   data: data_1,
@@ -330,13 +338,13 @@ d3.csv('/datasets/prof-reviews/top_500_.csv').then(function (frequency) {
                   }
                },
                ]
-            },
-            options: {
+            }
+            scatterChart.options ={
                plugins: {
                   datalabels: {
-                    color: null
+                  color: null
                   }
-                },
+               },
       
                legend: {
                   display: true
@@ -393,21 +401,19 @@ d3.csv('/datasets/prof-reviews/top_500_.csv').then(function (frequency) {
                            };
                         }
                      },
-                     label: function (tooltipItem, data) {
-                        var dataset = data.datasets[tooltipItem.datasetIndex];
+                     label: function(tooltipItem, data){
+                     return data.datasets[tooltipItem.datasetIndex].labels[tooltipItem.index]
+                     },
+                     afterBody: function (tooltipItem, data) {
+                        var dataset = data.datasets[tooltipItem[0].datasetIndex];
                         var index = tooltipItem.index;
-                        return dataset.labels[index] + '\n' + 'Male frequency: ' + tooltipItem.xLabel + '% \n' + 'Female Frequency: ' + tooltipItem.yLabel + '%'
+                        return ['Male frequency: ' + tooltipItem[0].xLabel + '%','Female frequency: ' + tooltipItem[0].yLabel + '%']
                      }
                   }
                }
             }
+            scatterChart.update()
+}
 
-
-         });
-
-      }
-
-   });
-
-});
+})})
 
