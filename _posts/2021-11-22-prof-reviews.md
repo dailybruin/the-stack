@@ -158,13 +158,14 @@ STEM related words such as “physics”, “chem”, and “math” appear sign
 
 The Stack used sentiment analysis to categorize reviews as “positive” or “negative” groups, depending on the language used in each review.
 
-For both male and female professors, about 80% of the reviews given for quarters prior to Spring 2020 were positive. This number went up to about 85% for reviews given during the COVID-19 pandemic.
+For both male and female professors, about 80% of the reviews given for quarters prior to Spring 2020 were positive. This number went up to about 85% for reviews given during the COVID-19 pandemic. 
 
 ### Percentage of positive reviews
 
 <div class="chart-container">
   <canvas id='myChart'></canvas>
 </div>
+In the chart, 'COVID' indicates reviews for classes during the quarters Winter 2020, Spring 2020, Summer 2020, Fall 2020, Winter 2021, Spring 2021, Summer 2021, and Winter 2022. Pre-COVID includes all quarters except for the ones listed before. 
 
 While student evaluations can offer a reflection of how different methods of teaching work for individual students, they can also simply be a measure of if a student was happy or a class was easy, Chodrow said.
 
@@ -182,6 +183,6 @@ Official course evaluations from UCLA could not be obtained due to privacy reaso
 
 #### Methodology
 
-Sentiment analysis was performed through softwares in R and Python, specifically the Python package nltk and pandas for filtering data
+Sentiment analysis was performed through softwares in R and Python, specifically the Python package nltk and Pandas for filtering data. All frequencies of the words were normalized by the total the number of words used for the specified gender.  
 
 We used the frequency of male and female pronouns in all the reviews for a professor to predict the professor’s gender. Professors with no pronouns in their reviews or an equal number of male and female pronouns were labeled indeterminate in our dataset.
