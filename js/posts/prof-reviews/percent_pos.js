@@ -1,76 +1,68 @@
-import { MALE_COLOR, FEMALE_COLOR } from './globals.js'
+import {
+  MALE_COLOR,
+  FEMALE_COLOR,
+  PRE_PANDEMIC_COLOR,
+  PANDEMIC_COLOR,
+} from './globals.js';
+const font_size = 16;
 
-var ctx = document.getElementById("myChart").getContext("2d");
+var ctx = document.getElementById('myChart').getContext('2d');
 
 var data = {
-    labels: ["Male", "Female"],
-    datasets: [
-        {
-            label: "Pre-COVID",
-            data: [80.35, 79.65],
-            backgroundColor: '#f0a13e',
-            hoverBackgroundColor: '#f0a13e',
-            // datalabels: {
-            //     color: 'yellow',
-            //     value: 80.35
-            //   }        
-        },
-        {
-            label: "COVID",
-            data: [84.09, 85.02],
-            backgroundColor: '#1293d1',
-            hoverBackgroundColor: '#1293d1'
-        },
-    ]
+  labels: ['Male professors', 'Female professors'],
+  datasets: [
+    {
+      label: 'Pre-pandemic',
+      data: [80.35, 79.65],
+      backgroundColor: PRE_PANDEMIC_COLOR,
+      hoverBackgroundColor: PRE_PANDEMIC_COLOR,
+    },
+    {
+      label: 'Pandemic',
+      data: [84.09, 85.02],
+      backgroundColor: PANDEMIC_COLOR,
+      hoverBackgroundColor: PANDEMIC_COLOR,
+    },
+  ],
 };
 
 var myBarChart = new Chart(ctx, {
-    type: 'bar',
-    data: data,
-    options: {
-        plugins: {
-            datalabels: {
-              color: 'white'
-            //   labels: {
-            //     title: {
-            //       font: {
-            //         weight: 'bold'
-            //       }
-            //     },
-            //   }
-            }
-          },
-                  
-        // plugins: {
-        //     datalabels: {
-        //         color: 'white',
-        //         labels: {
-        //             title: {
-        //                 font: {
-        //                     weight: 'bold'
-        //                 }
-        //             },
-        //         }
-        //     }
-        // },
-
-        barValueSpacing: 20,
-        scales: {
-            yAxes: [{
-                scaleLabel: {
-                    display: true,
-                    labelString: 'Percentage of Positive Reviews'
-                },
-                ticks: {
-                    min: 0,
-                    max: 100
-                }
-            }]
+  type: 'bar',
+  data: data,
+  options: {
+    legend: {
+      labels: {
+        fontSize: font_size,
+      },
+    },
+    tooltips: {
+      enabled: false,
+    },
+    plugins: {
+      datalabels: {
+        align: 'start',
+        anchor: 'end',
+        color: 'white',
+        font: {
+          size: 16,
         },
-        title: {
+      },
+    },
+    barValueSpacing: 20,
+    scales: {
+      yAxes: [
+        {
+          scaleLabel: {
             display: true,
-            text: 'Percentage of Positive Reviews'
+            labelString: 'Positive review percentage',
+            fontSize: font_size,
+          },
+          ticks: {
+            min: 0,
+            max: 100,
+          },
         },
-
-    }
+      ],
+    },
+  },
 });

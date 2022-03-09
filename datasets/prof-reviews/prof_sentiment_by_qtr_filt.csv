@@ -1,4 +1,4 @@
-quarter_taken,year_taken,gender_guess,Overall Rating,Easiness Rating,Workload Rating,Clarity Rating,Helpfulness Rating,pre_covid,pos_score,neg_score,review_is_positive,upper_div,time_taken
+quarter_taken,year_taken,gender_guess,Overall rating,Easiness rating,Workload rating,Clarity rating,Helpfulness rating,pre_covid,pos_score,neg_score,review_is_positive,upper_div,time_taken
 1,2013,Female,4.333333333,3.333333333,3.333333333,4.333333333,4.333333333,1,0.339166667,0.011166667,1,0.666666667,2013.1
 1,2013,Male,3.625,2.8125,3,3.6875,3.625,1,0.1985625,0.0496875,0.875,0.1875,2013.1
 1,2014,Female,3.882352941,3.411764706,3.352941176,3.823529412,3.882352941,0.941176471,0.162235294,0.036,0.764705882,0.235294118,2014.1

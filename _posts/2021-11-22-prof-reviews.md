@@ -13,9 +13,9 @@ key_takeaways:
   - Common sentiments differed between male and female professor reviews. Reviews for male professors commonly included words related to their teaching, such as “hard”, “smart”, and “understand”, while common words in reviews for female professors were “easy,” “sweet”, and “interesting”.
 
 featured_image:
-  url:
-  caption:
-og_image:
+  url: prof-reviews/web.stack.prof.reviews.KM.jpg
+  caption: (Photo by Kanishka Mehra/Daily Bruin senior staff. Photo illustration by Anika Chakrabarti/Assistant Photo editor)
+og_image: prof-reviews/web.stack.prof.reviews.KM.jpg
 
 scripts:
   - //cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.js
@@ -31,13 +31,13 @@ scripts:
   - //cdnjs.cloudflare.com/ajax/libs/d3-cloud/1.2.5/d3.layout.cloud.js
   - /js/posts/prof-reviews/scatter.js
   - /js/posts/prof-reviews/bar_chart.js
-  # - //cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0    
-
+  # - //cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0
   # - //rawgit.com/jasondavies/d3-cloud/master/build/d3.layout.cloud.js
 
 stylesheets:
   - /css/posts/prof-reviews/style.css
 ---
+
 <script src="https://cdn.jsdelivr.net/npm/chart.js@3.0.0/dist/chart.min.js"></script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-datalabels/2.0.0/chartjs-plugin-datalabels.min.js" integrity="sha512-R/QOHLpV1Ggq22vfDAWYOaMd5RopHrJNMxi8/lJu8Oihwi4Ho4BRFeiMiCefn9rasajKjnx9/fTQ/xkWnkDACg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -73,6 +73,7 @@ Inaccurate gender predictions could have resulted from students misgendering pro
 ### Ratings for male and female professors
 
 <!-- bar chart -->
+
 The rating system on Bruinwalk allows students to rate professors from 0 to 5 on various elements of their class. The average overall ratings of classes were generally the same for both female and male professors before and after the COVID-19 pandemic. When comparing ratings between the genders, female professors tend to be rated slightly higher than male professors in all categories except workload.
 
 <div id="stats-menu3"></div>
@@ -122,23 +123,23 @@ These adjectives can be placed in the context of other commonly used words used 
 
 ### Other words most commonly used for female versus male professors
 
-<!-- <form>  
-<label> Select Data </label>  
-<select>  
-<option id = "full" value = "full"> All words   
-</option>  
+<!-- <form>
+<label> Select Data </label>
+<select>
+<option id = "full" value = "full"> All words
+</option>
 <option id = "subset" value = "subset"> Words with less than 0.4% frequency
-</option>  
-</select>  
-</form>  
+</option>
+</select>
+</form>
  -->
 <form>  
-<b> Select Data </b>  
+<b> Show: </b>  
 <select id = "myList">  
 <option id = "full" value = "full"> All words </option>  
 <option id = "subset" value = "subset"> Words with less than 0.4% frequency </option>  
 </select>  
-</form>  
+</form>
 
 <div class="chart-container">
   <canvas id='scatter'></canvas>
@@ -158,14 +159,14 @@ STEM related words such as “physics”, “chem”, and “math” appear sign
 
 The Stack used sentiment analysis to categorize reviews as “positive” or “negative” groups, depending on the language used in each review.
 
-For both male and female professors, about 80% of the reviews given for quarters prior to Spring 2020 were positive. This number went up to about 85% for reviews given during the COVID-19 pandemic. 
+For both male and female professors, about 80% of the reviews given for quarters prior to Spring 2020 were positive. This number went up to about 85% for reviews given during the COVID-19 pandemic.
 
 ### Percentage of positive reviews
 
 <div class="chart-container">
   <canvas id='myChart'></canvas>
 </div>
-In the chart, 'COVID' indicates reviews for classes during the quarters Winter 2020, Spring 2020, Summer 2020, Fall 2020, Winter 2021, Spring 2021, Summer 2021, and Winter 2022. Pre-COVID includes all quarters except for the ones listed before. 
+In the chart, 'COVID' indicates reviews for classes during the quarters Winter 2020, Spring 2020, Summer 2020, Fall 2020, Winter 2021, Spring 2021, Summer 2021, and Winter 2022. Pre-COVID includes all quarters except for the ones listed before.
 
 While student evaluations can offer a reflection of how different methods of teaching work for individual students, they can also simply be a measure of if a student was happy or a class was easy, Chodrow said.
 
@@ -183,6 +184,6 @@ Official course evaluations from UCLA could not be obtained due to privacy reaso
 
 #### Methodology
 
-Sentiment analysis was performed through softwares in R and Python, specifically the Python package nltk and Pandas for filtering data. All frequencies of the words were normalized by the total the number of words used for the specified gender.  
+Sentiment analysis was performed through softwares in R and Python, specifically the Python package nltk and Pandas for filtering data. All frequencies of the words were normalized by the total the number of words used for the specified gender.
 
 We used the frequency of male and female pronouns in all the reviews for a professor to predict the professor’s gender. Professors with no pronouns in their reviews or an equal number of male and female pronouns were labeled indeterminate in our dataset.
