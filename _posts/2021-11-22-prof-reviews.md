@@ -134,7 +134,7 @@ These adjectives can be placed in the context of other commonly used words used 
 </form>
  -->
 <form>  
-<b> Show: </b>  
+Show:
 <select id = "myList">  
 <option id = "full" value = "full"> All words </option>  
 <option id = "subset" value = "subset"> Words with less than 0.4% frequency </option>  

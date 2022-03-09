@@ -27,6 +27,10 @@
     cursor: pointer;
 }
 
+#scatter {
+    height: 700px;
+}
+
 /* mobile only (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
     /* lollipop svg */
@@ -36,6 +40,10 @@
     }
     .WC-div{
         display: block;
+    }
+
+    #scatter {
+        height: 400px;
     }
 }
 /* medium devices and larger*/

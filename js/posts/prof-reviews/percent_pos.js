@@ -3,6 +3,7 @@ import {
   FEMALE_COLOR,
   PRE_PANDEMIC_COLOR,
   PANDEMIC_COLOR,
+  isMobile,
 } from './globals.js';
 const font_size = 16;
 
@@ -40,6 +41,11 @@ var myBarChart = new Chart(ctx, {
     },
     plugins: {
       datalabels: {
+        formatter: function(value, context) {
+          let numDecimalPlaces = isMobile() ? 0 : 1;
+          console.log(numDecimalPlaces);
+          return `${Number(value).toFixed(numDecimalPlaces)}%`;
+        },
         align: 'start',
         anchor: 'end',
         color: 'white',
@@ -63,6 +69,21 @@ var myBarChart = new Chart(ctx, {
           },
         },
       ],
+      xAxes: [
+        {
+          type: 'category',
+          labels: ['Male professors', 'Female professors'],
+          ticks: {
+            fontSize: isMobile() ? 12 : font_size,
+          },
+        },
+      ],
     },
   },
 });
+
+if (isMobile()) {
+  myBarChart.canvas.style = 'height:400px';
+  myBarChart.options.maintainAspectRatio = false;
+  myBarChart.update();
+}

@@ -2,9 +2,9 @@ import { MALE_COLOR, FEMALE_COLOR } from './globals.js';
 const font_size = 16;
 const tooltip_font_size = 14;
 
-d3.csv('/datasets/prof-reviews/top_500_.csv').then(function(frequency) {
-  // console.log("data loaded!", frequency);
+var scatterChart;
 
+d3.csv('/datasets/prof-reviews/top_500_.csv').then(function(frequency) {
   d3.csv('/datasets/prof-reviews/top_500_1.csv').then(function(frequency_1) {
     document.getElementById('myList').addEventListener('change', change_func);
 
@@ -14,8 +14,6 @@ d3.csv('/datasets/prof-reviews/top_500_.csv').then(function(frequency) {
     const labels_data_5 = [];
 
     let max_num = 1.4;
-
-    console.log(max_num);
 
     frequency.forEach(row => {
       // data_1.labels.push(row.word);
@@ -76,7 +74,7 @@ d3.csv('/datasets/prof-reviews/top_500_.csv').then(function(frequency) {
     ];
 
     let ctx = document.getElementById('scatter');
-    var scatterChart = new Chart(ctx, {
+    scatterChart = new Chart(ctx, {
       type: 'scatter',
       data: {
         datasets: [
@@ -85,33 +83,27 @@ d3.csv('/datasets/prof-reviews/top_500_.csv').then(function(frequency) {
             data: data_1,
             labels: labels_data_1,
             pointRadius: 4,
-            legend: {
-              display: true,
-            },
+            displayInLegend: false,
           },
           {
-            label: 'Top 10 female adjectives',
+            label: 'Adjectives (female)',
             borderColor: FEMALE_COLOR,
             backgroundColor: FEMALE_COLOR,
             data: fem_data,
             labels: fem_labels,
             pointRadius: 7,
             pointHoverRadius: 7,
-            legend: {
-              display: true,
-            },
+            displayInLegend: true,
           },
           {
-            label: 'Top 10 male adjectives',
+            label: 'Adjectives (male)',
             borderColor: MALE_COLOR,
             backgroundColor: MALE_COLOR,
             data: male_data,
             labels: male_labels,
             pointRadius: 7,
             pointHoverRadius: 7,
-            legend: {
-              display: true,
-            },
+            displayInLegend: true,
           },
           {
             data: [
@@ -136,13 +128,13 @@ d3.csv('/datasets/prof-reviews/top_500_.csv').then(function(frequency) {
             tension: 0,
             showLine: true,
             label: 'Line y = x',
-            legend: {
-              display: true,
-            },
+            displayInLegend: false,
           },
         ],
       },
       options: {
+        animation: false,
+        maintainAspectRatio: false,
         plugins: {
           datalabels: {
             color: null,
@@ -150,6 +142,13 @@ d3.csv('/datasets/prof-reviews/top_500_.csv').then(function(frequency) {
         },
         legend: {
           display: true,
+          labels: {
+            fontSize: font_size,
+            filter: (legendItem, chartData) => {
+              return chartData.datasets[legendItem.datasetIndex]
+                .displayInLegend;
+            },
+          },
         },
         // title: {
         //    display: true,
@@ -231,7 +230,6 @@ d3.csv('/datasets/prof-reviews/top_500_.csv').then(function(frequency) {
     function change_func() {
       let mylist = document.getElementById('myList');
       let index_ = mylist.options[mylist.selectedIndex].text;
-      console.log(index_);
 
       const data_1 = [];
       const labels_data_1 = [];
@@ -245,8 +243,6 @@ d3.csv('/datasets/prof-reviews/top_500_.csv').then(function(frequency) {
       } else {
         max_num = 1.4;
       }
-
-      console.log(max_num);
 
       frequency.forEach(row => {
         data_1.push({ x: Number(row.male), y: Number(row.female) });
@@ -311,42 +307,27 @@ d3.csv('/datasets/prof-reviews/top_500_.csv').then(function(frequency) {
             data: data_1,
             labels: labels_data_1,
             pointRadius: 4,
-            legend: {
-              display: false,
-            },
+            displayInLegend: false,
           },
-          //    {
-          //    label: "Frequency 5",
-          //    data: data_5,
-          //    labels: labels_data_5,
-          //    pointRadius: 4,
-          //    legend: {
-          //       display: true,
-          //    }
-          // },
           {
-            label: 'Adjectives (Female)',
+            label: 'Adjectives (female)',
             borderColor: FEMALE_COLOR,
             backgroundColor: FEMALE_COLOR,
             data: fem_data,
             labels: fem_labels,
             pointRadius: 7,
             pointHoverRadius: 7,
-            legend: {
-              display: true,
-            },
+            displayInLegend: true,
           },
           {
-            label: 'Adjectives (Male)',
+            label: 'Adjectives (fale)',
             borderColor: MALE_COLOR,
             backgroundColor: MALE_COLOR,
             data: male_data,
             labels: male_labels,
             pointRadius: 7,
             pointHoverRadius: 7,
-            legend: {
-              display: true,
-            },
+            displayInLegend: true,
           },
           {
             data: [
@@ -373,26 +354,28 @@ d3.csv('/datasets/prof-reviews/top_500_.csv').then(function(frequency) {
             tension: 0,
             showLine: true,
             label: 'Line y = x',
-            legend: {
-              display: false,
-            },
+            displayInLegend: false,
           },
         ],
       };
       scatterChart.options = {
+        animation: false,
+        maintainAspectRatio: false,
         plugins: {
           datalabels: {
             color: null,
           },
         },
-
         legend: {
           display: true,
+          labels: {
+            fontSize: font_size,
+            filter: (legendItem, chartData) => {
+              return chartData.datasets[legendItem.datasetIndex]
+                .displayInLegend;
+            },
+          },
         },
-        // title: {
-        //    display: true,
-        //    text: 'Words Used Most Frequently for Males vs Females'
-        // },
         scales: {
           yAxes: [
             {
