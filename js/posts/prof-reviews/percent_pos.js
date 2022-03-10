@@ -43,7 +43,6 @@ var myBarChart = new Chart(ctx, {
       datalabels: {
         formatter: function(value, context) {
           let numDecimalPlaces = isMobile() ? 0 : 1;
-          console.log(numDecimalPlaces);
           return `${Number(value).toFixed(numDecimalPlaces)}%`;
         },
         align: 'start',

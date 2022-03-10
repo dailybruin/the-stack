@@ -30,21 +30,29 @@ d3.csv('/datasets/prof-reviews/top_500_.csv').then(function(frequency) {
     const fem_data = [
       { x: 0.019, y: 0.061 },
       { x: 0.676, y: 0.709 },
-      { x: 0.081, y: 0.11 },
+      // { x: 0.081, y: 0.11 },
       { x: 0.302, y: 0.317 },
       { x: 0.02, y: 0.032 },
       { x: 0.046, y: 0.057 },
       { x: 0.027, y: 0.036 },
+      { x: 0.016, y: 0.026 },
+      { x: 0.216, y: 0.225 },
+      { x: 0.04, y: 0.048 },
+      { x: 0.075, y: 0.083 },
     ];
 
     const fem_labels = [
       'sweet',
       'easy',
-      'workload',
+      // 'workload',
       'helpful',
       'social',
       'specific',
       'disorganized',
+      'busy',
+      'bad',
+      'small',
+      'worst',
     ];
 
     const male_data = [
@@ -58,6 +66,10 @@ d3.csv('/datasets/prof-reviews/top_500_.csv').then(function(frequency) {
       { x: 0.186, y: 0.174 },
       { x: 0.069, y: 0.058 },
       { x: 0.04, y: 0.03 },
+      { x: 0.093, y: 0.073 },
+      { x: 0.034, y: 0.019 },
+      { x: 0.1, y: 0.09 },
+      { x: 0.042, y: 0.033 },
     ];
 
     const male_labels = [
@@ -71,6 +83,10 @@ d3.csv('/datasets/prof-reviews/top_500_.csv').then(function(frequency) {
       'fair',
       'tough',
       'useless',
+      'harder',
+      'smart',
+      'easier',
+      'basic',
     ];
 
     let ctx = document.getElementById('scatter');
@@ -83,24 +99,24 @@ d3.csv('/datasets/prof-reviews/top_500_.csv').then(function(frequency) {
             data: data_1,
             labels: labels_data_1,
             pointRadius: 4,
-            displayInLegend: false,
+            displayInLegend: true,
           },
           {
-            label: 'Adjectives (female)',
-            borderColor: FEMALE_COLOR,
-            backgroundColor: FEMALE_COLOR,
-            data: fem_data,
-            labels: fem_labels,
+            label: 'Top male-skewed adjectives',
+            borderColor: MALE_COLOR,
+            backgroundColor: MALE_COLOR,
+            data: male_data,
+            labels: male_labels,
             pointRadius: 7,
             pointHoverRadius: 7,
             displayInLegend: true,
           },
           {
-            label: 'Adjectives (male)',
-            borderColor: MALE_COLOR,
-            backgroundColor: MALE_COLOR,
-            data: male_data,
-            labels: male_labels,
+            label: 'Top female-skewed adjectives',
+            borderColor: FEMALE_COLOR,
+            backgroundColor: FEMALE_COLOR,
+            data: fem_data,
+            labels: fem_labels,
             pointRadius: 7,
             pointHoverRadius: 7,
             displayInLegend: true,
@@ -141,6 +157,7 @@ d3.csv('/datasets/prof-reviews/top_500_.csv').then(function(frequency) {
           },
         },
         legend: {
+          reverse: true,
           display: true,
           labels: {
             fontSize: font_size,
@@ -257,21 +274,29 @@ d3.csv('/datasets/prof-reviews/top_500_.csv').then(function(frequency) {
       const fem_data = [
         { x: 0.019, y: 0.061 },
         { x: 0.676, y: 0.709 },
-        { x: 0.081, y: 0.11 },
+        // { x: 0.081, y: 0.11 },
         { x: 0.302, y: 0.317 },
         { x: 0.02, y: 0.032 },
         { x: 0.046, y: 0.057 },
         { x: 0.027, y: 0.036 },
+        { x: 0.016, y: 0.026 },
+        { x: 0.216, y: 0.225 },
+        { x: 0.04, y: 0.048 },
+        { x: 0.075, y: 0.083 },
       ];
 
       const fem_labels = [
         'sweet',
         'easy',
-        'workload',
+        // 'workload',
         'helpful',
         'social',
         'specific',
         'disorganized',
+        'busy',
+        'bad',
+        'small',
+        'worst',
       ];
 
       const male_data = [
@@ -285,6 +310,10 @@ d3.csv('/datasets/prof-reviews/top_500_.csv').then(function(frequency) {
         { x: 0.186, y: 0.174 },
         { x: 0.069, y: 0.058 },
         { x: 0.04, y: 0.03 },
+        { x: 0.093, y: 0.073 },
+        { x: 0.034, y: 0.019 },
+        { x: 0.1, y: 0.09 },
+        { x: 0.042, y: 0.033 },
       ];
 
       const male_labels = [
@@ -298,33 +327,37 @@ d3.csv('/datasets/prof-reviews/top_500_.csv').then(function(frequency) {
         'fair',
         'tough',
         'useless',
+        'harder',
+        'smart',
+        'easier',
+        'basic',
       ];
 
       scatterChart.data = {
         datasets: [
           {
-            label: 'Other Words',
+            label: 'Other words',
             data: data_1,
             labels: labels_data_1,
             pointRadius: 4,
-            displayInLegend: false,
+            displayInLegend: true,
           },
           {
-            label: 'Adjectives (female)',
-            borderColor: FEMALE_COLOR,
-            backgroundColor: FEMALE_COLOR,
-            data: fem_data,
-            labels: fem_labels,
+            label: 'Top male-skewed adjectives',
+            borderColor: MALE_COLOR,
+            backgroundColor: MALE_COLOR,
+            data: male_data,
+            labels: male_labels,
             pointRadius: 7,
             pointHoverRadius: 7,
             displayInLegend: true,
           },
           {
-            label: 'Adjectives (fale)',
-            borderColor: MALE_COLOR,
-            backgroundColor: MALE_COLOR,
-            data: male_data,
-            labels: male_labels,
+            label: 'Top female-skewed adjectives',
+            borderColor: FEMALE_COLOR,
+            backgroundColor: FEMALE_COLOR,
+            data: fem_data,
+            labels: fem_labels,
             pointRadius: 7,
             pointHoverRadius: 7,
             displayInLegend: true,
@@ -367,6 +400,7 @@ d3.csv('/datasets/prof-reviews/top_500_.csv').then(function(frequency) {
           },
         },
         legend: {
+          reverse: true,
           display: true,
           labels: {
             fontSize: font_size,
