@@ -31,6 +31,11 @@ var myBarChart = new Chart(ctx, {
   type: 'bar',
   data: data,
   options: {
+    title: {
+      display: true,
+      text: 'Positive review percentages',
+      fontSize: font_size,
+    },
     legend: {
       labels: {
         fontSize: font_size,

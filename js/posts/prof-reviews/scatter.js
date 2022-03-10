@@ -1,4 +1,4 @@
-import { MALE_COLOR, FEMALE_COLOR } from './globals.js';
+import { MALE_COLOR, FEMALE_COLOR, isMobile } from './globals.js';
 const font_size = 16;
 const tooltip_font_size = 14;
 
@@ -160,7 +160,7 @@ d3.csv('/datasets/prof-reviews/top_500_.csv').then(function(frequency) {
           reverse: true,
           display: true,
           labels: {
-            fontSize: font_size,
+            fontSize: isMobile() ? 14 : font_size,
             filter: (legendItem, chartData) => {
               return chartData.datasets[legendItem.datasetIndex]
                 .displayInLegend;
@@ -403,7 +403,7 @@ d3.csv('/datasets/prof-reviews/top_500_.csv').then(function(frequency) {
           reverse: true,
           display: true,
           labels: {
-            fontSize: font_size,
+            fontSize: isMobile() ? 14 : font_size,
             filter: (legendItem, chartData) => {
               return chartData.datasets[legendItem.datasetIndex]
                 .displayInLegend;
