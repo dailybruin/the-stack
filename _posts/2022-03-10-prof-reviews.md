@@ -77,8 +77,6 @@ Inaccurate gender predictions could have resulted from students misgendering pro
 
 The rating system on Bruinwalk allows students to rate professors from 0 to 5 on various elements of their class. The average overall ratings of classes were generally the same for both female and male professors before and after the COVID-19 pandemic. When comparing ratings between the genders, female professors tended to be rated slightly higher than male professors in all categories except workload.
 
-Some students have found that ratings on Bruinwalk do not match their experience in the classroom. Professors with bad ratings on Bruinwalk can turn out to have excellent classes, Rodriguez said.
-
 <div id="stats-menu3"></div>
 <div id="rating-svg-div"></div>
 
