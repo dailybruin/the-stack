@@ -414,7 +414,7 @@ samantha_low:
 ananya_garg:
   name: Ananya Garg
   title: Stack Developer
-  bio: Ananya is a first-year statistics student who enjoys travelling, cooking and rewatching Friends in her free time.
+  bio: Ananya is a second-year statistics student who enjoys travelling, cooking and rewatching Friends in her free time.
   mug: yes
   current: yes
   email: agarg@media.ucla.edu
@@ -525,10 +525,11 @@ chelsea_chen:
   current: yes
 tyler_wu:
   name: Tyler Wu
-  title: Data Intern
-  bio: Tyler is a fourth-year data theory and cognitive science student.
-  mug: no
+  title: Stack Developer
+  bio: Tyler is a fourth-year data theory and cognitive science student. He likes making apps and taking naps.
+  mug: yes
   current: yes
+  github: tylerwu2222
   email: twu@media.ucla.edu
 nicole_chua: 
   name: Nicole Chua
@@ -552,4 +553,21 @@ abby_zhao:
   mug: yes
   current: yes
   email: azhao8@media.ucla.edu
+jessica_li:
+  name: Jessica Li
+  title: Stack Developer
+  bio: Jessica is a third-year computational and systems biology student. She enjoys hiking and playing music. 
+  mug: yes
+  current: yes
+  email: jli4@media.ucla.edu
+  website: https://jesstsomethoughts.github.io/
+hinal_jajal:
+  name: Hinal Jajal
+  title: Stack Developer
+  bio: Hinal is a third-year applied math student. She likes cooking and going to the gym.
+  mug: yes
+  current: yes
+  email: hinaljajal@g.ucla.edu
+  github: hinalsj
+  
   
