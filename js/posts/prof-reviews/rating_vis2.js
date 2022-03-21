@@ -52,10 +52,10 @@ import {
   const rating_svg = d3.select('#rating-svg-div').append('svg');
   rating_svg
     .attr('id', 'rating-svg')
-    .style('width', config.vw)
-    .style('height', config.vh + padding_bottom)
+    .style('width', config.vw + 'px')
+    .style('height', config.vh + padding_bottom + 'px')
     .attr('font-family', 'sans-serif')
-    .attr('font-size', base_font_size);
+    .attr('font-size', base_font_size + 'px');
   // axes and labels
   var xAxisGroup = rating_svg.append('g').attr('class', 'ratings-xaxis');
   var yAxisGroup = rating_svg.append('g').attr('class', 'ratings-yaxis');
@@ -84,10 +84,10 @@ import {
       .transition()
       .duration(config.anim_speed)
       .ease(d3.easeCubic);
-    const t2 = d3
-      .transition()
-      .duration(config.anim_speed)
-      .ease(d3.easeElastic);
+    // const t2 = d3
+    //   .transition()
+    //   .duration(config.anim_speed)
+    //   .ease(d3.easeElastic);
     // console.log('selected_stat', stat);
 
     // axes, labels, title
@@ -138,7 +138,7 @@ import {
       // shrink y tick size for mobile
       // console.log('MoBiLe');
       d3.selectAll('.ratings-yaxis>.tick>text').each(function(d, i) {
-        d3.select(this).style('font-size', d => axes_tick_font_size);
+        d3.select(this).style('font-size', d => axes_tick_font_size + 'px');
       });
     }
 

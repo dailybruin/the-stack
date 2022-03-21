@@ -33,8 +33,8 @@ import { NEUTRAL_COLOR, W_WIDTH, W_HEIGHT, isMobile } from './globals.js';
   var word_cloud_svg = WC_div.append('svg');
   word_cloud_svg
     .attr('id', 'word-cloud')
-    .style('width', config.vw)
-    .style('height', config.vh);
+    .style('width', config.vw  + 'px')
+    .style('height', config.vh  + 'px');
   var word_cloud_words = word_cloud_svg.append('g');
 
   // function to sort data by statistic
