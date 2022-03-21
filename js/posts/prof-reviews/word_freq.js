@@ -58,8 +58,8 @@ import {
   // mobile compatability
   stat_svg
     .attr('id', 'lollipop-svg')
-    .style('width', config.vw)
-    .style('height', config.vh)
+    .style('width', config.vw  + 'px')
+    .style('height', config.vh  + 'px')
     .attr('font-family', 'sans-serif')
     .attr('font-size', 10);
   // axes and labels
@@ -147,12 +147,12 @@ import {
       axes_tick_font_size_min
     );
 
-    console.log(
-      'new point radius',
-      point_radius,
-      'new font',
-      axes_tick_font_size
-    );
+    // console.log(
+    //   'new point radius',
+    //   point_radius,
+    //   'new font',
+    //   axes_tick_font_size
+    // );
     let current_stat = document.getElementById('word-freq-select-1').value;
     onStatClicked(current_stat); // call onStatClicked to also determine first dropdown value
   };
@@ -348,7 +348,7 @@ import {
       .attr('id', (d, i) => {
         return d + '-word';
       })
-      .style('font-size', axes_tick_font_size); // scale for number of words (more words -> smaller)
+      .style('font-size', axes_tick_font_size + 'px'); // scale for number of words (more words -> smaller)
 
     // clear other lines from svg
     clear_graphics(stat_svg);
