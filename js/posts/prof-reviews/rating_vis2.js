@@ -12,13 +12,11 @@ import {
   /* configuration parameters */
 
   // const W_HEIGHT = parent_div.clientHeight;
-  
   const config = {
     vw: W_WIDTH,
     vh: isMobile() ? Math.min(W_WIDTH, W_HEIGHT * 0.9) : W_HEIGHT * 0.6, // full height for desktop, square for mobile
     anim_speed: 1000,
   };
-  // console.log('W_wh',W_WIDTH,W_HEIGHT,'config_vw_vh',config.vw,config.vh)
   let margin;
   if (!isMobile()) {
     margin = {
@@ -47,6 +45,7 @@ import {
   /* static elements (only append once) */
   var male_rating_data = [],
     female_rating_data = [];
+  // var date_array;
 
   const base_font_size = isMobile() ? 6 : 10;
   const padding_bottom = 20;
@@ -54,9 +53,9 @@ import {
   rating_svg
     .attr('id', 'rating-svg')
     .style('width', config.vw + 'px')
-    .style('height', (config.vh + padding_bottom) + 'px')
+    .style('height', config.vh + padding_bottom + 'px')
     .attr('font-family', 'sans-serif')
-    .attr('font-size', base_font_size  + 'px');
+    .attr('font-size', base_font_size + 'px');
   // axes and labels
   var xAxisGroup = rating_svg.append('g').attr('class', 'ratings-xaxis');
   var yAxisGroup = rating_svg.append('g').attr('class', 'ratings-yaxis');
