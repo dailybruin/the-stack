@@ -1,6 +1,7 @@
 Don't know markdown? Check out this link (markdown guide)[https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet]
 
 # Title of Article
+Gendered language in Bruinwalk reviews
 
 **Authors**: Ananya Garg, Hinal Jajal, Jessica Li, Tyler Wu
 
@@ -69,9 +70,18 @@ Describe:
 
 ### Source A
 
-* Relevance to story
-* Contact information
-* Difficulty in reaching source
+* Prof. Ashley Sanders
+* Spoke about bias in professor reviews based on gender
+* Work focuses on analyzing data in digital humanities
+* asandersgarcia@ucla.edu
+* Not difficult at all, easy to coordinate interview
+
+### Source B 
+
+ * Antonio Rodriguez 
+ * 4th year Gender Studies major on the student side of reviews
+ * Contact through Facebook Messenger
+ * Very responsive, easy to coordinate interview
 
 ## Additional Information
 
