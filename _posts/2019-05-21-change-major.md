@@ -1,29 +1,27 @@
 ---
-
-title: "To stick or to switch: student major changes at UCLA"
+title: To Stick or To Switch&#58; Student Major Changes at UCLA
 teaser: A look at how UCLA students change their majors from admissions to their attained degree, data aggregated from 2013-2018.
 authors:
-
-- keith_atienza
-- jeanette_lin
-  key_takeaways:
-- Roughly 30% of UCLA students change their majors, with the highest changes seen among business economics, sociology, psychobiology, political science and psychology students.
-- Around 20% of admitted life sciences and physical sciences students switch to other fields, while less than 5% of humanities, engineering or social sciences students switch.
-- Students share their personal stories and advice on switching majors that allowed them to pursue their passions and career interests.
-  featured_image:
+  - keith_atienza
+  - jeanette_lin
+key_takeaways:
+  - Roughly 30% of UCLA students change their majors, with the highest changes seen among business economics, sociology, psychobiology, political science and psychology students.
+  - Around 20% of admitted life sciences and physical sciences students switch to other fields, while less than 5% of humanities, engineering or social sciences students switch.
+  - Students share their personal stories and advice on switching majors that allowed them to pursue their passions and career interests.
+featured_image:
   url: change-major/featured_image.png
-  og_image: change-major/featured_image.png
-  scripts:
-- //ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js
-- //d3js.org/d3.v5.min.js
-- //unpkg.com/d3-array@1
-- //unpkg.com/d3-collection@1
-- //unpkg.com/d3-path@1
-- //unpkg.com/d3-shape@1
-- //unpkg.com/d3-sankey@0
-- //unpkg.com/d3-sankey@0
-- /js/posts/change-major/sankey.js
-  ---Choosing a major can feel like one of the biggest decisions an incoming student makes, and the pressure of choosing the “right” major can be overwhelming. However, as students gain more experiences and exposure throughout college, they begin to realize what they are truly passionate about, a passion that may not necessarily align with their major. This phenomenon of changing majors is quite common as we will see below.
+og_image: change-major/featured_image.png
+scripts:
+  - //ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js
+  - //d3js.org/d3.v5.min.js
+  - //unpkg.com/d3-array@1
+  - //unpkg.com/d3-collection@1
+  - //unpkg.com/d3-path@1
+  - //unpkg.com/d3-shape@1
+  - //unpkg.com/d3-sankey@0
+  - //unpkg.com/d3-sankey@0
+  - /js/posts/change-major/sankey.js
+---Choosing a major can feel like one of the biggest decisions an incoming student makes, and the pressure of choosing the “right” major can be overwhelming. However, as students gain more experiences and exposure throughout college, they begin to realize what they are truly passionate about, a passion that may not necessarily align with their major. This phenomenon of changing majors is quite common as we will see below.
 
 ### About the Data
 

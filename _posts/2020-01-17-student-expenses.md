@@ -1,37 +1,34 @@
 ---
-
 title: Hidden costs of being a student
 teaser: Analysis of the various costs of being a student at UCLA as well as a cost calculator to help you evaluate your personalized cost.
 authors:
-
-- radhika_ahuja
-- annie_zhang
-- madeline_blasingame
-  key_takeaways:
-- College is, on average, two times more expensive for out-of-state and international students as it is for in-state students.
-- Additionally, out-of-state students bear higher travel costs and international students also bear costs unique to them like higher standardized testing fees and visa costs
-  featured_image:
+  - radhika_ahuja
+  - annie_zhang
+  - madeline_blasingame
+key_takeaways:
+  - College is, on average, two times more expensive for out-of-state and international students as it is for in-state students.
+  - Additionally, out-of-state students bear higher travel costs and international students also bear costs unique to them like higher standardized testing fees and visa costs
+featured_image:
   url: student-expenses/us_price_distribution.png
-  og_image: student-expenses/us_price_distribution.png
-  stylesheets:
-- https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.css
-- https://fonts.googleapis.com/css?family=Lato&display=swap
-- https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
-- https://fonts.googleapis.com/css?family=Playfair+Display+SC|Roboto
-- /css/posts/student-expenses/quiz.css
+og_image: student-expenses/us_price_distribution.png
+stylesheets:
+  - https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.css
+  - https://fonts.googleapis.com/css?family=Lato&display=swap
+  - https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+  - https://fonts.googleapis.com/css?family=Playfair+Display+SC|Roboto
+  - /css/posts/student-expenses/quiz.css
 
 scripts:
-
-- https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js
-- https://unpkg.com/leaflet@1.6.0/dist/leaflet.js
-- /js/posts/student-expenses/quiz.js
-- /js/posts/student-expenses/global-map.js
-- /js/posts/student-expenses/us-map.js
-- /js/posts/student-expenses/global-geojson.js
-- /js/posts/student-expenses/us-geojson.js
-  ---<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.css" />
-  <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+  - https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js
+  - https://unpkg.com/leaflet@1.6.0/dist/leaflet.js
+  - /js/posts/student-expenses/quiz.js
+  - /js/posts/student-expenses/global-map.js
+  - /js/posts/student-expenses/us-map.js
+  - /js/posts/student-expenses/global-geojson.js
+  - /js/posts/student-expenses/us-geojson.js
+---<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.css" />
+<link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
 
 <script src="/js/posts/student-expenses/us-geojson.js"></script>
 <script src="/js/posts/student-expenses/global-geojson.js"></script>
