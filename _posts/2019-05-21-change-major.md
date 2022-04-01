@@ -21,7 +21,9 @@ scripts:
   - //unpkg.com/d3-sankey@0
   - //unpkg.com/d3-sankey@0
   - /js/posts/change-major/sankey.js
----Choosing a major can feel like one of the biggest decisions an incoming student makes, and the pressure of choosing the “right” major can be overwhelming. However, as students gain more experiences and exposure throughout college, they begin to realize what they are truly passionate about, a passion that may not necessarily align with their major. This phenomenon of changing majors is quite common as we will see below.
+---
+
+Choosing a major can feel like one of the biggest decisions an incoming student makes, and the pressure of choosing the “right” major can be overwhelming. However, as students gain more experiences and exposure throughout college, they begin to realize what they are truly passionate about, a passion that may not necessarily align with their major. This phenomenon of changing majors is quite common as we will see below.
 
 ### About the Data
 
