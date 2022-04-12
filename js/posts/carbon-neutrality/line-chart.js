@@ -235,5 +235,40 @@ new Chart(document.getElementById('line-chart'), {
       display: true,
       text: 'UCLA CO2e Emissions',
     },
+    scales: {
+      yAxes: [
+        {
+          scaleLabel: {
+            display: true,
+            labelString: 'CO2e Emissions (metric tons)',
+          },
+          ticks: {
+            beginAtZero: true,
+            userCallback: function(value, index, values) {
+              return value.toLocaleString();
+            },
+          },
+        },
+      ],
+      xAxes: [
+        {
+          scaleLabel: {
+            display: true,
+            labelString: 'Year',
+          },
+        },
+      ],
+    },
+    tooltips: {
+      callbacks: {
+        label: function(tooltipItem, data) {
+          var value = data.datasets[0].data[tooltipItem.index];
+          value = value.toString();
+          value = value.split(/(?=(?:...)*$)/);
+          value = value.join(',');
+          return value;
+        },
+      },
+    },
   },
 });
