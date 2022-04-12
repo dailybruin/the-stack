@@ -24,7 +24,7 @@ stylesheets:
 
 ### UC Greenhouse Gas Emissions by Source
 
-The following CO2 gas emissions are broken down by scope in the year 2019, excluding UC Santa Cruz and UC Davis reported from 2018 and UC Merced from 2017.
+The following CO2 gas emissions are broken down by scope in the year 2019, excluding UCLA, UC Santa Cruz and UC Davis reported from 2018 and UC Merced from 2017.
 
 #### Legend
 
@@ -66,7 +66,7 @@ Scope 1
 <p>&nbsp;</p>
 
 <div class="pie-charts">
-  <iframe id = "UCLA" title="UCLA" aria-label="Pie Chart" id="datawrapper-chart-5sDqJ" src="https://datawrapper.dwcdn.net/5sDqJ/10/" scrolling="no" frameborder="0" style="width: 0; min-width: 33% !important; border: none;" height="350"></iframe>
+  <iframe id = "UCLA" title="UCLA" aria-label="Pie Chart" id="datawrapper-chart-5sDqJ" src="https://datawrapper.dwcdn.net/5sDqJ/11/" scrolling="no" frameborder="0" style="width: 0; min-width: 33% !important; border: none;" height="350"></iframe>
   <!-- <script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();
   </script> -->
 
@@ -102,4 +102,6 @@ Scope 1
   <!-- <script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();
   </script> -->
 
-</div><canvas id="line-chart" width="800" height="450"></canvas>
+</div>
+
+<canvas id="line-chart" width="800" height="450"></canvas>
