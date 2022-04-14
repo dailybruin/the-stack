@@ -1,7 +1,9 @@
 ---
-title: Athletics Records Article
-teaser: 
-authors:
+title: Quantifying Value Added By NCAA Athletics Coaches
+teaser: Comparing salaries of college athletics coaches in an effort to quantify value added. A comparison of salaries vs win-loss records for coaches across UCLA sports as well as a comparison for football and basketball across the PAC-12. We are looking for students, student-athletes and coaches to interview
+authors: 
+- sid_baphna
+- emma_cotter
 
 key_takeaways:
   - 
