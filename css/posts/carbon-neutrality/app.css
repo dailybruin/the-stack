@@ -21,6 +21,12 @@
     margin-right: auto
 } */
 
+@media only screen and (max-width: 480px) {
+    .emission-chart {
+        width: 100%;
+    }
+}
+
 .my-legend .legend-title {
     text-align: left;
     margin-bottom: 5px;
