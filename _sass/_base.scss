@@ -108,11 +108,11 @@ h6 {
  * Links
  */
 a {
-  color: darken($brand-color, 15%);
+  color: $brand-color-tertiary-warm;
   text-decoration: none;
 
   &:hover {
-    color: $brand-color;
+    color: $brand-color-secondary-warm;
   }
 }
 
@@ -171,15 +171,15 @@ pre {
 .wrapper {
   margin-right: auto;
   margin-left: auto;
-  padding-right: $spacing-unit;
-  padding-left: $spacing-unit;
+  padding-right: $spacing-unit * 3;
+  padding-left: $spacing-unit * 3;
   @extend %clearfix;
 
   @include media-query($on-laptop) {
-    max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit}));
-    max-width: calc(#{$content-width} - (#{$spacing-unit}));
-    padding-right: $spacing-unit / 2;
-    padding-left: $spacing-unit / 2;
+    max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit}* 2));
+    max-width: calc(#{$content-width} - (#{$spacing-unit}* 2));
+    padding-right: $spacing-unit;
+    padding-left: $spacing-unit;
   }
 }
 

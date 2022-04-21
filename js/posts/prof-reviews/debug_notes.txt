@@ -1,0 +1,10 @@
+word cloud issues
+FIXED even selections not shwoing up
+- currently, first cloud generated is missing 1 word for both 20 & 30 words; solved: Male/female just does not have that word (value of 0)
+- on second selection, only 1 word generated => smallest (confirmed not an issue with dropdown option, seems to be order issue)
+-- > ODD SELECTIONS OK... EVEN 1 word...
+
+UNFIXED:
+- looks like second largest word doesn't fade away with others? just disappears
+    - changing range to [1,95] doesn't fix nor [0,50] -> not an issue of not fitting
+    - nor does adding data key to undefined (not sure if working)

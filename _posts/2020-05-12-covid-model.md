@@ -1,5 +1,5 @@
 ---
-title: Modeling the Spread of COVID-19 in UCLA Classrooms
+title: Modeling the spread of COVID-19 in UCLA classrooms
 teaser: What would happen if UCLA students returned in the fall to take in-person classes? We explore the potential spread of COVID-19 among students on UCLA’s campus.
 authors:
   - radhika_ahuja
@@ -52,6 +52,7 @@ To explore the visualization, drag the time slider forward through the weeks of 
 UCLA could maintain a small R<sub>0</sub> if the university implements mandatory social distancing in classrooms, requires the wearing of masks or provides ample sanitizing products to all classrooms and lecture halls. Any combination of these measures would decrease the spread of the virus.
 
 <h3>Student Network</h3>
+<div class = "chart-container">
 <div class="loader-wrapper">
   <div class="loader"></div>
 </div>
@@ -80,11 +81,13 @@ UCLA could maintain a small R<sub>0</sub> if the university implements mandatory
     </div>
   </div>
 </div>
+</div>
 
 In our model network, students had an average of 228 connections. We ran the simulation 100 times from week 0 to finals week with an R<sub>0</sub> value of 5.7, and found that on average, 94% of students were infected by the end of fall quarter. The peak of new cases occurred at week 6 with over 11,000 new cases. With a smaller R<sub>0</sub> of 2.0, we found that 8% of students were infected by the end of fall quarter.
 
 We also calculated the average number of infections over 100 runs for several different values of R<sub>0</sub>. The following chart shows the number of people infected on average through the 11 weeks, for varying values of R<sub>0</sub>:
 
+<div class = "chart-container">
 <div id="linechart-wrapper">
   <canvas id="linechart"></canvas>
 </div>
@@ -97,7 +100,7 @@ We also calculated the average number of infections over 100 runs for several di
   <div class="legend-marker" id="4"></div><span class="legend-label">R<sub>0</sub> = 4</span> <br>
   <div class="legend-marker" id="5.7"></div><span class="legend-label">R<sub>0</sub> = 5.7</span> <br>
 </div>
-
+</div>
 # Conclusion
 
 The potential spread of the virus depicted above does not take into account interactions in shared spaces such as Bruin Walk, libraries, dining halls, etc. or the fact that the same lecture hall is used, i.e., the same chairs are reused and such surfaces might be a source of infection. These models also do not show the potential spread through shared living spaces such as dorms and apartments. Consequently, COVID-19 could be much more infectious through the UCLA community than the models above show. In fear of outbreaks, [California State University campuses will remain closed](https://www2.calstate.edu/csu-system/news/Pages/CSU-Chancellor-Timothy-P-Whites-Statement-on-Fall-2020-University-Operational-Plans.aspx) for the Fall 2020 semester, and the 23 universities in this system will proceed with primarily virtual instruction. UCLA has yet to make a decision on whether the Fall 2020 quarter will be held virtually or whether there will be some in-person instruction.
@@ -120,7 +123,7 @@ A stochastic block model considers a set of student communities, grouped by depa
 
 Then a matrix A defines the probabilities used to randomly assign students from each department to courses in other departments. Cell<sub>i, j</sub> of A represents the probability that a student housed in department i will take a course in department j. For this example, there's a probability of 0.7 that a sciences student will take a sciences class, a 0.1 probability they will take a business class, and a 0.2 probability they will take a humanities class.
 
-$$A=\begin{pmatrix}
+$$
 Sciences&Business&Humanities\\
 0.7&0.1&0.2\\
 0.1&0.8&0.1\\
@@ -128,13 +131,13 @@ Sciences&Business&Humanities\\
 \end{pmatrix}$$
 
 This example has simulated probabilities, but the real probabilities in our model are based on the number of GE, diversity and language courses in each major. So if a College of Letters and Science student in the mathematics department takes 140 units of major courses and 40 units of GEs, then the probability of the student being enrolled in the mathematics department is $$\frac{140}{180}$$, and, in the other GE-offering departments, is $$\frac{40}{180}$$, which in turn are distributed by department. So if there are three GE courses offered in total, with two of them being offered in department A and one being offered in department B, department A will have probability $$\frac{2}{3} * \frac{40}{180}$$, and department B will have probability $$\frac{1}{3} * \frac{40}{180}$$.
+$$
 
-$$A=\begin{pmatrix}
 Sciences&Business&Humanities\\
 0.7&0.1&0.2\\
 0.1&0.8&0.1\\
 0.1&0.2&0.7
-\end{pmatrix}$$
+\end{pmatrix}\\\$\$
 
 This example has simulated probabilities, but the real probabilities in our model are based on the number of GE, diversity and language courses in each major. So if a College of Letters and Science student in the mathematics department takes 140 units of major courses and 40 units of GEs, then the probability of the student being enrolled in the mathematics department is $$\frac{140}{180}$$, and, in the other GE-offering departments, is $$\frac{40}{180}$$, which in turn are distributed by department. So if there are three GE courses offered in total, with two of them being offered in department A and one being offered in department B, department A will have probability $$\frac{2}{3} * \frac{40}{180}$$, and department B will have probability $$\frac{1}{3} * \frac{40}{180}$$.
 

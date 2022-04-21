@@ -66,19 +66,21 @@ Looking at the graphs below, UCLA has on average the highest Latino graduation r
 
 Sylvia Hurtado, a professor of education, said UCLA must have programming to address student completion so that every student admitted graduates.
 
-<div class ="rate-line">
-  <canvas id="grad-rate-line"></canvas>
-  <div class= "caption">
-The dotted lines show the average graduation rate for Latino students for each school from 2011-2019.
-</div>
-</div>
+<div class = "chart-container">
+  <div class ="rate-line">
+    <canvas id="grad-rate-line"></canvas>
+    <div class= "caption">
+  The dotted lines show the average graduation rate for Latino students for each school from 2011-2019.
+  </div>
+  </div>
 
-<div class ="rate-change">
-  <canvas id="grad-rate-change"></canvas>
-</div>
+  <div class ="rate-change">
+    <canvas id="grad-rate-change"></canvas>
+  </div>
 
-<div class ="rate-gap">
-  <canvas id="grad-rate-gap"></canvas>
+  <div class ="rate-gap">
+    <canvas id="grad-rate-gap"></canvas>
+  </div>
 </div>
 
 ### Changes in Grant Funding
@@ -87,17 +89,19 @@ One major aspect of an HSI designation is being qualified for a large range of g
 
 The graphs below show the amount of grant money that each campus in the UC system received per student each year. Most grants reliant on HSI designation come from federal sources. There does not appear to be a large immediate correlation between reaching HSI designation and receiving a large increase in funding even when only federal grants are considered.
 
-<div class = "DOEViz">
-        <canvas id="DOEChart"></canvas>
+<div class = "chart-container">
+  <div class = "DOEViz">
+    <canvas id="DOEChart"></canvas>
+  </div>
+
+  <div class = "TotalViz">
+    <canvas id = "TotalChart"></canvas>
+  </div>
 </div>
 
-<div class = "TotalViz">
-<canvas id = "TotalChart"></canvas>
-</div>
+<!-- <script src = "C:/Users/Lindsey/Desktop/Daily-Bruin/the-stack/js/posts/student-demographic-hsis/TotalViz.js"></script>
 
-<script src = "C:/Users/Lindsey/Desktop/Daily-Bruin/the-stack/js/posts/student-demographic-hsis/TotalViz.js"></script>
-
-<script src = "C:/Users/Lindsey/Desktop/Daily-Bruin/the-stack/js/posts/student-demographic-hsis/DOEviz.js"></script>
+<script src = "C:/Users/Lindsey/Desktop/Daily-Bruin/the-stack/js/posts/student-demographic-hsis/DOEviz.js"></script> -->
 
 Looking at the graphs above, it first seems as though being an HSI does not have a significant impact on the amount of federal grants that each university receives. However, Hurtado said grants awarded to schools with HSI designation can have a significant impact.
 
@@ -125,12 +129,14 @@ The graphs below show UCLA’s historic growth in its Latino student population 
 
 Hurtado said that 2025 was a good goal for UCLA. Hurtado added that in order to achieve the goal, UCLA needs more focus on freshman and transfer admissions and making sure that UCLA is improving in terms of admission and completion.
 
+<div class = 'chart-container'>
 <div class = 'undergrad-predict'>
   <canvas id = 'HSIS_Projection_Undergrad'></canvas>
 </div>
 
 <div class = 'total-predict'>
   <canvas id = 'HSIS_Projection'></canvas> 
+</div>
 </div>
 
 <div class='small-line-break'></div>
