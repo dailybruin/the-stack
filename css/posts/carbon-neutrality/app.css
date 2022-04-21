@@ -21,9 +21,21 @@
     margin-right: auto
 } */
 
+.pie-charts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.emission-chart {
+    width: 45%;
+    margin-bottom: 30px;
+}
+
 @media only screen and (max-width: 480px) {
     .emission-chart {
         width: 100%;
+        margin-bottom: 0px;
     }
 }
 

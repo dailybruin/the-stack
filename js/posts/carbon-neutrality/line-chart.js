@@ -262,11 +262,18 @@ new Chart(document.getElementById('line-chart'), {
     tooltips: {
       callbacks: {
         label: function(tooltipItem, data) {
-          var value = data.datasets[0].data[tooltipItem.index];
-          value = value.toString();
-          value = value.split(/(?=(?:...)*$)/);
-          value = value.join(',');
+          value = data.datasets[tooltipItem.datasetIndex].data[
+            tooltipItem.index
+          ].toLocaleString('en-US', {
+            maximumFractionDigits: 0,
+          });
           return value;
+          // var value = data.datasets[0].data[tooltipItem.index];
+          // console.log(value);
+          // value = value.toString();
+          // value = value.split(/(?=(?:...)*$)/);
+          // value = value.join(',');
+          // return value;
         },
       },
     },
