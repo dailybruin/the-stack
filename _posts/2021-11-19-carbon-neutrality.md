@@ -1,5 +1,5 @@
 ---
-title: "Keen to go Green: Evaluating UCLA’s Carbon Neutrality Initiative"
+title: "Keen to go green: evaluating UCLA’s Carbon Neutrality Initiative"
 teaser: Despite UCLA’s claims of being a leader in sustainability and climate action, the university is projected to fall short of its 2025 goal of carbon neutrality.
 
 authors:
@@ -7,9 +7,9 @@ authors:
   - chelsea_chen
 
 key_takeaways:
-  - Based on its current trajectory, UCLA is projected to reach zero net carbon emissions in 2049, 24 years after its 2025 goal.
-  - Although UCLA is offsetting its carbon emissions, the university’s total carbon emissions continue to increase by 2.4% each year.
-  - UC Merced is currently the only UC campus to have reached achieve carbon neutrality.
+  - Based on UCLA’s current carbon emission trends, The Stack projects that UCLA will reach zero net carbon emissions in 2049, 24 years after its 2025 goal.
+  - Although UCLA is offsetting its carbon emissions, the university’s total carbon emissions continue to increase by an average of 2.4% each year.
+  - UC Merced is currently the only UC campus to have reached carbon neutrality (CQ 1).
 
 featured_image:
   url:
@@ -26,30 +26,27 @@ stylesheets:
   - /css/posts/carbon-neutrality/app.css
 ---
 
-From raging wildfires to damaging droughts, the effects of climate change can be felt around the globe. Climate change, which is also responsible for the rise of sea levels and global temperatures, poses an unprecedented challenge with extensive scientific research pointing at one main cause: the overwhelming release of carbon emissions into the atmosphere from human activity.
+From raging wildfires (CQ 2) to damaging droughts (CQ 3) to record-breaking heat waves (CQ 4), the effects of climate change can be felt around the globe. Climate change poses an unprecedented challenge with extensive scientific research pointing at one main cause: the release of greenhouse gases, which include carbon dioxide, methane and ​​chlorofluorocarbons, into the atmosphere from human activity (CQ 5).
 
-The University of California has long been working to make improvements in the field of sustainability. In November 2013, UC pledged to be completely carbon neutral by the year 2025 through the Carbon Neutrality Initiative announced by President Janet Napolitano. The effort committed all ten UC campuses to emit net zero greenhouse gasses from their buildings and university vehicles. Achieving this goal would make the University of California the first major university system to do so.
+The University of California has long been working to make improvements in the field of sustainability. In November 2013, UC pledged to be carbon neutral by the year 2025 through the Carbon Neutrality Initiative (CQ 6). Achieving this goal would make the University of California the first major university system to do so (CQ 6).
 
-Carbon neutrality is the idea that any greenhouse gas emissions released by an organization is balanced by the same amount of emissions removed from the atmosphere, achieving net zero emissions. As it is impossible for an organization to produce zero emissions, net zero is a more viable goal as an organization can balance their emissions through offsetting, the funding of carbon dioxide saving. The UC’s goal of reaching carbon neutrality is synonymous with funding carbon offsets.
+Becoming carbon neutral means that the total amount of carbon emissions from an organization is balanced with the amount of carbon offsets that the organization funds, and thus net carbon emissions are zero (CQ 7). Some types of carbon offsetting include reforestation, renewable energy projects and landfill management (CQ 8).
 
-Common examples of carbon offsetting include reforestation, renewable energy projects, and landfill management. In 2019, the UC campuses have funded the Ozone Depleting Substances (ODS) Projects, which provides methods to quantify greenhouse gas emissions associated with damaging the ozone layer to discover their sources and destroy them, and U.S Forest Projects, which includes reforestation and improved forest management.
+In 2019, the UC campuses funded carbon offsets (CQ 9) through the Ozone Depleting Substances Projects (CQ 10) and U.S. Forest Projects (CQ 11).
 
-Since the initial announcement of the Carbon Neutrality Initiative, the University of California has taken several next steps through forming different councils, committees, and programs to advise and engage UC in its efforts. Each of the individual campuses have also moved forward on their own with different strategies and plans.
+Nurit Katz, the Chief Sustainability Officer for UCLA (CQ 12), says that the University of California is firmly committed to meeting their milestone.
 
-Nurit Katz, the Chief Sustainability Officer for UCLA, is the Climate Action Plan Lead for UCLA and believes that the University of California is firmly committed to meeting their milestone.
+“As the University works to accomplish that goal, we will continue to challenge ourselves by harnessing the best available science and technology to achieve greater carbon reductions,” Katz said in an emailed statement (CQ 13).
 
-“As the University works to accomplish that goal, we will continue to challenge ourselves by harnessing the best available science and technology to achieve greater carbon reductions,” Katz said in an emailed statement.
+The Stack analyzed data provided by the Climate Registry (CQ 14) and the Association for the Advancement of Sustainability in Higher Education (CQ 15) to examine UC campuses’ progress towards their goal of carbon neutrality. Based on the current data and emissions trends, The Stack also calculated future projections to predict when UCLA will achieve carbon neutrality.
 
-The Stack analyzed data provided by the Climate Registry and The Sustainability Tracking, Assessment & Rating System to examine different UC campuses’ progress over the past years towards their goal of carbon neutrality. Based on the current data and findings, the Stack also formed future projections to predict UCLA’s true time frame for achieving carbon neutrality.
+### Comparing UC campuses’ carbon emissions
 
-### UC Greenhouse Gas Emissions by Source
+The Carbon Neutrality Initiative aims for emitting net-zero greenhouse gas emissions from Scope 1 and Scope 2 sources by 2025 (CQ 16). The UCOP has also set a goal of carbon neutrality from certain scope 3 sources by 2050 at the latest (CQ 16).
 
-Comparing UC campuses’ carbon emissions
-The Carbon Neutrality Initiative aims for emitting net-zero greenhouse gas emissions from Scope 1 and Scope 2 by 2025. As these two scopes are managed directly by the organization, they are easier to measure and therefore are usually targeted first in achieving carbon neutrality. The UCOP has also set a goal of carbon neutrality from Scope 3 emissions by 2050.
+The pie charts below categorize the greenhouse gas emissions from the nine undergraduate UCs into Scope 1, Scope 2 and Other. “Other” consists of Scope 3 emissions as well as biogenic emissions, which come from natural sources such as plants and soil (CQ 17).
 
-The pie charts below categorize the greenhouse gas emissions from the nine undergraduate UCs into Scope 1, Scope 2 and Other, taken from the most recent data available. “Other” consists of Scope 3 emissions as well as biogenic emissions, which come from natural sources such as trees and soil.
-
-The following CO2 gas emissions are taken from the year 2019, excluding UCLA and UC Davis reported from 2018, UC Merced from 2017, and UC Santa Cruz from 2016.
+The charts display data for the most recent year available for each campus, which is 2016 for UC Santa Cruz, 2017 for UC Merced, 2018 for UCLA and UC Davis, and 2019 for all other UCs.
 
 #### Legend
 
@@ -133,39 +130,42 @@ For all the UCs, the emissions from Scopes 1 and 2 cover the majority of CO2 emi
 
 Looking at UCLA’s emission breakdown, Scope 1 emissions constitute 60% of the total emissions, while Scope 2 accounts for 22% of emissions. ‘Stationary combustion’ is the largest individual source, alone responsible for 58% of the total emissions.
 
-In 2018, UCLA had the most carbon emissions compared to the other UC campuses. UCLA had a total of over 400,000 metric tons of carbon emissions; of that total, over 46,000 tons came from the Ronald Reagan UCLA Medical Center and the Santa Monica UCLA Medical Center.
-The UC campuses without medical centers release fewer total emissions, as hospitals omit an immense amount of greenhouse gasses. Hospitals alone are responsible for over a third of health care related carbon emissions, with health care constituting 10% of total U.S emissions.
+In 2018, UCLA had the most carbon emissions compared to the other UC campuses. UCLA had a total of over 400,000 metric tons of carbon emissions; of that total, over 45,000 tons came from the Ronald Reagan UCLA Medical Center and the Santa Monica UCLA Medical Center (CQ 18).
 
-Notably, UC Merced is currently the only UC to have achieved net-zero carbon emissions. They reached this milestone in 2018, seven years ahead of the Carbon Neutrality Initiative’s goal.
+The UC campuses without medical centers release fewer total emissions (CQ 19). In the US as a whole, hospitals contribute over a third of health care related carbon emissions, with health care constituting almost 10% of total US emissions (CQ 20).
+
+Notably, UC Merced is currently the only UC to have achieved net-zero carbon emissions. They reached this milestone in 2018, seven years ahead of the UC-wide Carbon Neutrality Initiative goal (CQ 21).
 
 ### Evaluating UCLA’s progress toward zero net carbon emissions
+
+Although UCLA is offsetting its carbon emissions, its total carbon emissions continue to rise by an average of 4,750 metric tons each year.
+
+The line chart below displays UCLA’s total carbon emissions for Scope 1 and Scope 2 from 2006 to 2019, as well as the net total of Scope 1 emissions.
 
 <canvas id="line-chart" width="800" height="450"></canvas>
 
 Since UCLA started offsetting its carbon emissions in 2013, the university’s net emissions have been decreasing by an average of 2.7% per year. At this rate, UCLA is set to reach carbon neutrality in 2049, 24 years after its current 2025 goal.
 
-Additionally, although UCLA is offsetting its carbon emissions, its total carbon emissions continue to rise every year by an average of 4,750 metric tons.
-
 Despite this, some remain optimistic and dedicated to the University of California’s original initiative.
 
-“The University remains committed to meeting its carbon neutrality goals,” Katz said in an emailed statement when asked what the possible consequences are for UC not meeting its 2025 deadline.
+“The University remains committed to meeting its carbon neutrality goals,” Katz said in an emailed statement when asked what the possible consequences are for UC not meeting its 2025 deadline (CQ 13).
 
 Yet, as 2025 creeps into the near future, others see room for adjustment.
 
-Fonna Forman, an associate professor of political science at UC San Diego, was recently appointed to the Global Climate Leadership Council which was formed shortly after the initial carbon neutrality proposal to advise the University of California on how to achieve their goal. Forman believes that as we approach 2025, we need to reassess and revisit our goals with new knowledge and information that we have learned over the past several years.
+Fonna Forman, an associate professor of political science at UC San Diego (CQ 22) and co-chair of the UC’s Global Climate Leadership Council (CQ 23), believes that as we approach 2025, we need to reassess and revisit our goals with new knowledge and information that we have learned over the past several years (CQ 24).
 
-“Carbon neutrality is not enough. We need to go beyond carbon neutrality,” said Forman, who believes that offsetting is only a stage in a much larger process.
+“Carbon neutrality is not enough. We need to go beyond carbon neutrality,” said Forman, who believes that carbon offsetting is only one step in a much larger process of climate action. (CQ 24)
 
-Karen McKinnon, an assistant professor in the UCLA Institute of Environment and Sustainability and the Department of Statistics, agrees.
+Karen McKinnon, an assistant professor in the UCLA Institute of Environment and Sustainability and the Department of Statistics, (CQ 25) agrees.
 
-“We need to additionally have negative emissions, meaning removing carbon from the atmosphere with things like direct air capture or other methodologies,” McKinnon said.
+“We need to additionally have negative emissions, meaning removing carbon from the atmosphere with things like direct air capture or other methodologies,” McKinnon said (CQ 26).
 
 ### Looking ahead
 
 For many, seeing the University of California’s slow progression towards carbon neutrality is disheartening, but progress doesn’t end with the Carbon Neutrality Initiative. Through individual choices and involvement in student organizations focused on sustainability, change can also be made on smaller scales.
 
-“Individuals can take actions like reducing their energy use and making sustainable transportation choices in how they get to campus. Change depends both on large scale infrastructure changes and individual behavior change. We need the community engaged to achieve these ambitious goals,” Katz said.
+“Change depends both on large scale infrastructure changes and individual behavior change. We need the community engaged to achieve these ambitious goals,” Katz said in an emailed statement (CQ 13).
 
-Although by current projections it remains unclear whether or not the University of California will be able to accomplish its goal by 2025, the Carbon Neutrality Initiative is not intended to be an indicator of success or failure in the long term. Ultimately, McKinnon believes that maintaining the right mindset and attitude from individuals and institutions alike is more important for making positive environmental changes now and in the future.
+Ultimately, McKinnon believes that a positive mindset can help individuals create change at multiple levels of climate policy (CQ 26).
 
-“It’s important to remain hopeful and remain optimistic, because that will allow you to actually take action,” McKinnon said.
+“I think it is important to remain hopeful and remain optimistic because that will actually allow you to take action,” McKinnon said (CQ 26).
