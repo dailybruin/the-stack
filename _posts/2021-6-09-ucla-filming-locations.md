@@ -1,5 +1,5 @@
 ---
-title: "Hollywood in Westwood: Exploring Filmography on the UCLA Campus"
+title: "Hollywood in Westwood: exploring filmography on the UCLA campus"
 teaser: Take a virtual tour of the most frequented filming locations, discover the most popular genres of filmography at UCLA and scroll through the recent film history on campus.
 
 authors:
@@ -44,7 +44,7 @@ Throughout the school year, students often see cameras and film crews as they wa
 
 ### The Ideal Filming Location
 
-To film at UCLA, crews must contact the UCLA Events Office and follow a list of guidelines. The cost of filming is a combination of the UCLA film permit fee, event manager staffing costs, location venue rental fees, parking, police and any other facilities or other miscellaneous services. For a full day, between six to 12 hours, the permit fee for movie and television filming by itself is $4,510.
+To film at UCLA, crews must contact the UCLA Events Office and follow a list of guidelines. The cost of filming is a combination of the UCLA film permit fee, event manager staffing costs, location venue rental fees, parking, police and any other facilities or other miscellaneous services. For a full day, between six to 12 hours, the permit fee for movie and television filming by itself is \$4,510.
 
 While most of campus is available for filming, some areas are not allowed to be captured by commercial shooting: the full south facade of Royce Hall with roofline and towers, full north facade of Powell Library with roofline, full north facade of Kerckhoff Hall with roofline and spires, Bruin Bear, Health Sciences and Ronald Reagan UCLA Medical Center buildings, Murphy Hall, Chancellor’s Residence, residential halls, dining halls and other housing facilities.
 
