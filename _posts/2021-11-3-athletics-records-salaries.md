@@ -9,7 +9,7 @@ authors:
 key_takeaways:
   - The average salary of PAC-12 Football Head Coaches in 2020 was $3,109,214. This is about 1.6 million less than Kelly’s starting salary in the new contract.
   - Head coach salaries, as averaged over the last 5 years for each sport, at UCLA range from about $3.5 million for football to about $100 thousand for women’s rowing.
-  - There exists a gender pay gap within the UCLA head coaching salaries: salary difference between the currently highest paid coach for a men's sport, Mick Cronin (4.2M), and highest paid coach of a women’s sport Cori Close ($600k).
+  - There exists a gender pay gap within the UCLA head coaching salaries. The salary difference between the currently highest paid coach for a men's sport, Mick Cronin (4.2M), and highest paid coach of a women’s sport Cori Close ($600k).
 
 
 featured_image:
@@ -61,9 +61,8 @@ Despite the risk of large payouts, buyouts are an important part of athletics co
 
 ### Head football coach salaries in the PAC-12
 UCLA is not the only university budgeting large sums of money towards athletic departments and coaching salaries. Within the PAC-12, the annual Head Football coach salary from 2015-2020 averaged at almost $3 million and all schools have exceeded an annual salary over 1.5 million dollars in the same period.
-
-<iframe title="PAC-12 Head Football Coach Salaries 2015-2020" aria-label="Interactive line chart" id="datawrapper-chart-BW1Zx" src="https://datawrapper.dwcdn.net/BW1Zx/2/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="530"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();
-</script>
+  <iframe title="PAC-12 Head Football Coach Salaries 2015-2020" aria-label="Interactive line chart" id="datawrapper-chart-BW1Zx" src="https://datawrapper.dwcdn.net/BW1Zx/2/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="530"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();
+  </script>
 
 The graph above shows the base scheduled pay for the head football coaching position based on the contract each coach signed at the beginning of his first season. However, this number does not include the additional monetary bonuses coaches can receive from broadcasting revenue, team records, accomplishments and appearances. 
 
