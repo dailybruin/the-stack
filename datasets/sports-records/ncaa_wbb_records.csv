@@ -1,0 +1,183 @@
+stat, stat_value, season, school,player
+points,1109,2017, Washington (I),Kelsey Plum
+points,1075,1991, Fort Valley St. (II),Jackie Givens
+points,1062,2001, Missouri St. (I),Jackie Stiles
+points,1054,2014, Baylor (I),Odyssey Sims
+points,1016,2003, Felician (II),Tysell Bozeman
+points,1001,2019, Iowa (I),Megan Gustafson
+points,974,1987, Long Beach St. (I),Cindy Brown
+points,972,2014, FIU (I),Jerica Coley
+points,969,1991, Cal St. Fullerton (I),Genia Miller
+points,967,2014, Stanford (I),Chiney Ogwumike
+points,960,2016, Washington (I),Kelsey Plum
+points,955,1993, Texas Tech (I),Sheryl Swoopes
+points,938,1991, Minn. Duluth (II),Dina Kangas
+points,935,2009, Middle Tenn. (I),Alysha Clark
+points,930,1980,UCLA,Denise Curry
+points,930,2008, Middle Tenn. (I),Amber Holt
+points,929,2012, Baylor (I),Brittney Griner
+points,927,2012, Delaware (I),Elena Delle Donne
+points,925,1992, Mercer (I),Andrea Congreaves
+points,919,1986, Drake,Wanda Ford
+points,915,1998, Tennessee,Chamique Holdsclaw
+points,915,2010, Franklin Pierce,Johannah Leedham
+points,914,2016, Minnesota,Racehl Banham
+PPG,38.4,1991, Fort Valley St. (II),Jackie Givens
+PPG,37.6,2003, Felician (II),Tysell Bozeman
+PPG,34.3,1987, Buena Vista (III),Jeannie Demers
+PPG,33.7,1988, Pine Manor (III),Catie Cleary
+PPG,33.6,1989, Mississippi Val. (I),Patricia Hoskins
+PPG,33.4,1997, Stillman (III),Glenda Gileud
+PPG,33.1,1991, Grinnell (III),Missy Sharer
+PPG,33,1992, Mercer (I),Andrea Congreaves
+PPG,32.4,1990, Johnson C. Smith (II),Kim Brewington
+PPG,31.7,2017, Washington (I),Kelsey Plum
+PPG,31.3,2009, Tex. A&M-Commerce (II),Britney Jordan
+PPG,31.2,1998, Johnson C. Smith (II),Konecka Drakeford
+PPG,31.2,1991, Oberlin (III),Ann Gilbert
+PPG,31.2,1984, Delta St. (I),Deborah Temple
+PPG,31.1,1990, Oberlin (III),Ann Gilbert
+PPG,31.1,1986, Buena Vista (III),Jeannie Demers
+PPG,31,1993, Mercer (I),Andrea Congreaves
+FG_pct,0.78,2017, Carnegie Mellon (III),Lisa Murphy
+FG_pct,0.76,1996, Valdosta St. (II),Deidre Williams
+FG_pct,0.752,2016, Carnegie Mellon (III),Lisa Murphy
+FG_pct,0.742,2005, Willamette (III),Vanessa Wyffels
+FG_pct,0.725,2002, Loras (III),Alicia Davis
+FG_pct,0.725,1991, Oakland City (II),Dalonda Newton
+FG_pct,0.724,1998, Southern Utah (I),Myndee Kay Larsen
+FG_pct,0.723,2001, Vanderbilt (I),Chantelle Anderson
+FG_pct,0.721,1996, Southeastern La. (I),Deneka Knowles
+FG_pct,0.719,1998, Tulane (I),Barbara Farris
+FG_pct,0.717,1991, Tennessee Tech (I),Renay Adams
+FG_pct,0.714,2011, Boston College (I),Carolyn Swords
+FG_pct,0.714,1998, St. Thomas (MN) (III),Kirsten Vipond
+FG_pct,0.711,2006, Lake Superior St. (II),Becky Marquardt-King
+FG_pct,0.709,2018, Concord (II),Riley Fitzwater
+FG_pct,0.707,2007, Maryland (I),Crystal Langhorne
+FG_pct,0.705,1986, Ga. Southern (I),Regina Days
+FG_pct,0.621,1977,UCLA,Denise Curry
+3PT_pct,0.6,1989, Rhodes (III),Ellen Thompson
+3PT_pct,0.575,1990, Fordham (I),Heather Donlon
+3PT_pct,0.566,1993, Berea (III),Missie Burns
+3PT_pct,0.563,1990, North Dakota (II),Durene Heisler
+3PT_pct,0.563,1998, North Ala. (II),Becky Mauck
+3PT_pct,0.561,2008, Ohio Northern (III),Jenny Markle
+3PT_pct,0.558,1988, UC San Diego (III),Tracy Ragatz
+3PT_pct,0.558,2005, Rose-Hulman (III) ,Suzy Carlson
+3PT_pct,0.556,1990, St. Joseph's (IN) (II),Jeannette Yeoman
+3PT_pct,0.554,1992, Creighton (I),Kathy Halligan
+3PT_pct,0.553,2000, Wayne St. (NE) (II),Krista Bernadt
+3PT_pct,0.551,2018, Trinity (CT) (III),Erin Cunningham
+3PT_pct,0.548,1993, Maryville (TN) (III),Honey Brown
+3PT_pct,0.547,2001, Notre Dame (I),Alicia Ratay
+3PT_pct,0.545,2016, Maryland (I),Shatori Walker-Kimbrough
+3PT_pct,0.535,2000, Louisville (I),Jill Morton
+3PT_pct,0.534,1992, Bowdoin (III),Lori Towle
+3PT_pct,0.471,1994,UCLA,Kellie Bennett
+FT_pct,0.977,2019, Vassar (III),Sophie Nick
+FT_pct,0.969,2009, Saint Martin’s (II),Jamey Gelhar
+FT_pct,0.965,2018, South Fla. (I),Kitija Laksa
+FT_pct,0.964,2006, Penn St. (I),Adrienne Squire
+FT_pct,0.962,2020, West Liberty (II),Morgan Brunner
+FT_pct,0.957,2004, Tennessee (I),Shanna Zolman
+FT_pct,0.956,2015, Drury (II),Annie Armstrong
+FT_pct,0.956,2018, East Central (II),Lakin Preisner
+FT_pct,0.955,2013, UNI (I),Jacqui Kalin
+FT_pct,0.955,1989, Baldwin Wallaace (III),Valerie Kepner
+FT_pct,0.953,2006, Rose-Hulman (III),Suzy Carlson
+FT_pct,0.951,2014, Fairleigh Dickinson (I),Kelsey Cruz
+FT_pct,0.95,1992, Richmond (I),Ginny Doyle
+FT_pct,0.95,2020, Creighton (I),Jaylyn Agnew
+FT_pct,0.949,2014, Penn St. (I),Maggie Lucas
+FT_pct,0.946,2003, La Salle (I),Jill Marano
+FT_pct,0.946,2017, Millikin (III),Devin Curry
+FT_pct,0.946,2017, Wheeling Jesuit (II),Monica Burns
+FT_pct,0.945,2015, Santa Clara (I),Nici Gilday
+FT_pct,0.945,2018, Providence (I),Jovana Nogic
+FT_pct,0.944,2019, Central Mich. (I),Presley Hudson
+FT_pct,0.943,2009, Fontbonne (III),Kathryn Kirby
+FT_pct,0.942,2002, UConn (I),Sue Bird
+FT_pct,0.922,2018,UCLA,Japreece Dean
+rebounds,635,1982, Quinnipiac (II),Francine Perry
+rebounds,617,2017, Lancaster Bible (III),Courtney Goyak
+rebounds,579,1982, New Jersey City (III),Carla Gadsden
+rebounds,563,2018, George Mason (I),Natalie Butler
+rebounds,544,2018, Mississippi St. (I),Teaira McCowan
+rebounds,539,2006, Oklahoma (I),Courtney Paris
+rebounds,536,2015, Oral Roberts (I),Vicky McIntyre
+rebounds,534,1985, Drake (I),Wanda Ford
+rebounds,533,2019, California (I),Kristine Anigwe
+rebounds,527,2007, Southeast Mo. St. (I),Lachelle Lyles
+rebounds,527,2018, Randolph-Macon (III),Kelly Williams
+rebounds,526,2007, Oklahoma (I),Courtney Paris
+rebounds,523,1995, Baruch (III),Sybil Smith
+rebounds,522,2016, York (NY) (III),Jigcara Grant
+rebounds,521,2009, Hillsdale (II),Katie Cezat
+rebounds,519,2014, Oregon (I),Jillian Alleyne
+rebounds,519,2017, Washington (I),Chantel Osahor
+rebounds,507,1982, Hampton (II),Toni Goodman
+rebounds,506,1986, Drake (I),Wanda Ford
+rebounds,504,1983, Old Dominion (I),Anne Donovan
+rebounds,503,2009, Oklahoma (I),Courtney Paris
+rebounds,360,1980,UCLA,Denise Curry
+assists,367,2011, Gonzaga (I),Courtney Vandersloot
+assists,355,1987, Penn St. (I),Suzie McConnell
+assists,338,1986, Penn St. (I),Suzie McConnell
+assists,326,2016, West Liberty (II),Kailee Howe
+assists,322,2015, Baylor (I),Niya Johnson
+assists,321,1990, Pacific (I),Tine Freil
+assists,321,2010, Gonzaga (I),Courtney Vandersloot
+assists,321,2016, Baylor (I),Niya Johnson
+assists,320,1992, La Salle (I),Mimi Harris
+assists,319,1989, Alabama St. (I),Neacole Hall
+assists,318,1988, Alabama St. (I),Neacole Hall
+assists,316,1985, Loyola Chicago (I),Faith Mimnaugh
+assists,315,1995, FIU (I),Andrea Nagy
+assists,309,1992, Albany St. (GA) (II),Selina Bynum
+assists,305,1993, Norfolk St. (II),Lisa Rice
+assists,304,2017, Texas A&M (I),Curtyce Knox
+assists,304,2018, Syracuse (I),iana Mangakahia
+assists,303,1990, Rust (III),Tonja Sanders
+assists,303,1998, Mount Union (III),Suzy Venet
+assists,302,2003, West Liberty (II),Kelly West
+assists,248,2017,UCLA,Jordin Canada
+blocks,223,2010, Baylor (I),Brittney Griner
+blocks,219,1996, St. Paul’s (II),LaKisha Phifer
+blocks,206,2012, Baylor (I),Brittney Griner
+blocks,205,1996, Marymount (VA) (III),Cori Carson
+blocks,195,2010, St. Mary’s (CA) (I),Louella Tomlinson
+blocks,194,1994, Pace (II),Rebecca Hanson
+blocks,185,1997, Marymount (VA) (III),Cori Carson
+blocks,175,2016, Stockton (III),Sasha Williams
+blocks,173,2016, Denison (III),Jordan Holmes
+blocks,170,2011, Baylor (I),Brittney Griner
+blocks,168,1997, St. Paul's (II),LaKisha Phifer
+blocks,167,1995, Ferrum (III),Tamiko Martin
+blocks,164,2014, Denison (III),Jordan Holmes
+blocks,164,2009, Morehead St. (I),Brittany Pittman
+blocks,161,2005, Kennesaw St. (II),Lauren Harris
+blocks,161,2009, St. Mary’s (CA) (I),Louella Tomlinson
+blocks,160,2015, Oral Roberts (I),Vicky McIntyre
+blocks,160,2017, Denison (III),Jordan Holmes
+blocks,159,2001, West Liberty (II),Jaana Kotova
+blocks,159,2002, Le Moyne (II),Stacy Schrader
+blocks,66,2016,UCLA,Monique Billings
+steals,193,2019, Lamar University (I),Chastadie Barrs
+steals,192,1999, Charleston (WV) (II),Hayley Blue
+steals,191,1995, Florida A&M (I),Natalie White
+steals,191,2018, Lamar University (I),Chastadie Barrs
+steals,190,2005, Central Ark. (II),Carone Harris
+steals,188,2002, Central Ark. (II),Carone Harris
+steals,182,1999, New York U. (III),Jehan Clark
+steals,179,2003, Emmanuel (MA) (III),Evita Esteves
+steals,178,1996, CCNY (III),Enma Rivera
+steals,178,1997, Rowan (III),Jenn Denby
+steals,175,1994, CCNY (III),Thais Palmer
+steals,172,1994, Florida A&M (I),Natalie White
+steals,171,1995, Rutgers-Newark (III),Crystal Robinson
+steals,171,2003, Millersville (II),Gema Robles
+steals,170,1995, Salve Regina (III),Jill St. Germain
+steals,169,2003, Notre Dame (MD) (III),Amanda Poppleton
+steals,168,1993, Lafayette (I),Heidi Caruso
+steals,125,1977,UCLA,Ann Meyers
