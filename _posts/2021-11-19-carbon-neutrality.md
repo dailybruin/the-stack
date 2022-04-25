@@ -1,10 +1,11 @@
 ---
 title: "Keen to go green: evaluating UCLA’s Carbon Neutrality Initiative"
+
 teaser: Despite UCLA’s claims of being a leader in sustainability and climate action, the university is projected to fall short of its 2025 goal of carbon neutrality.
 
 authors:
-  - vivian_luk
   - chelsea_chen
+  - vivian_luk
 
 key_takeaways:
   - Based on UCLA’s current carbon emission trends, The Stack projects that UCLA will reach zero net carbon emissions in 2049, 24 years after its 2025 goal.
@@ -142,7 +143,9 @@ Although UCLA is offsetting its carbon emissions, its total carbon emissions con
 
 The line chart below displays UCLA’s total carbon emissions for Scope 1 and Scope 2 from 2006 to 2019, as well as the net total of Scope 1 emissions.
 
+<div class="small-line-break"></div>
 <canvas id="line-chart" width="800" height="450"></canvas>
+<br/>
 
 Since UCLA started offsetting its carbon emissions in 2013, the university’s net emissions have been decreasing by an average of 2.7% per year. At this rate, UCLA is set to reach carbon neutrality in 2049, 24 years after its current 2025 goal.
 
