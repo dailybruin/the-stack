@@ -13,9 +13,9 @@ key_takeaways:
   - UC Merced is currently the only UC campus to have reached carbon neutrality (CQ 1).
 
 featured_image:
-  url:
-  caption:
-og_image:
+  url: carbon-neutrality/cover-art-illo.png
+  caption: (Katelyn Dang/Illustrations Director)
+og_image: carbon-neutrality/cover-art-illo.png
 
 scripts:
   - //cdnjs.cloudflare.com/ajax/libs/d3/5.7.0/d3.min.js
