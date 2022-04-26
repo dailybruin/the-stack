@@ -28,7 +28,7 @@
 }
 
 .emission-chart {
-    width: 45%;
+    width: 350px;
     margin-bottom: 30px;
 }
 
@@ -36,6 +36,10 @@
     .emission-chart {
         width: 100%;
         margin-bottom: 0px;
+    }
+
+    #line-chart {
+        height: 400px;
     }
 }
 

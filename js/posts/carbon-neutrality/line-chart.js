@@ -231,6 +231,7 @@ new Chart(document.getElementById('line-chart'), {
     ],
   },
   options: {
+    maintainAspectRatio: false,
     title: {
       display: true,
       text: 'UCLA CO2e Emissions',
