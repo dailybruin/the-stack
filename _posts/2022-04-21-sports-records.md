@@ -33,21 +33,20 @@ stylesheets:
 <!-- scatter plot -->
 basketball basketball basketball
 <div>
-  <canvas id="men-bb-chart" width="400" height="400"></canvas>
+  <div id="mbb-stats-menu" style="display: inline; float: left;"></div>
+  <canvas id="men-bb-chart" width="400"></canvas>
 </div>
 <div>
-  <canvas id="women-bb-chart" width="400" height="400"></canvas>
+  <canvas id="women-bb-chart" width="400"></canvas>
 </div>
 
-### Gymnastics
+### Gymnastics 
 
 ### Volleyball
 
 ### About the data
 
-The data was collected from Sports-Reference.com, NCAA, and __. Most of the data spans from the 1990s to 2021, and specific
-
-Official course evaluations from UCLA could not be obtained due to privacy reasons.
+The data was collected from Sports-Reference.com, NCAA, and __. Most of the data spans from the 1990s to 2021, and involves individual record statistics.
 
 #### Methodology
 
