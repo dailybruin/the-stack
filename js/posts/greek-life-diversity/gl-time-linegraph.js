@@ -52,7 +52,7 @@ const chart = new Chart(ctx, {
       borderColor: 'rgb(232, 107, 146)',
       tension: 0.1},
     {label: 'Black',
-      data: [0.8,, 1.1, 1.1,	0.8],
+      data: [0.8, 1.1, 1.1,	0.8],
       fill: false,
       borderColor: 'rgb(28, 93, 153)',
       tension: 0.1},
