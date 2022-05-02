@@ -22,7 +22,7 @@ scripts:
   - //ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js
   - //d3js.org/d3.v6.min.js
   - //cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@0.7.0
-  - /js/posts/uc-admissions/linechart.js
+  - ../../../../js/posts/uc-admissions/yearly-freshman.js
   - 
 
 

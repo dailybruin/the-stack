@@ -185,7 +185,7 @@ let colors = [
 let UCdata = [];
 for (let i = 0; i < schools.length; ++i) {
 chartdata = {
-  label: labelList[i],
+  label: schools[i],
   fill: false,
   data: DataNames[i],
   backgroundColor: colors[i],
@@ -221,8 +221,6 @@ options: {
             }); // convert value to dollar format
           },
           min: 0,
-          max: 25000,
-          stepSize: 5000,
         },
         scaleLabel: {
           display: true,
