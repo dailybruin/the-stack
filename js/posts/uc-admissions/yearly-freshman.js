@@ -207,24 +207,14 @@ data: {
 options: {
   title: {
     display: true,
-    text: 'Number of Freshman Applications by UC Campus',
+    text: 'Number of Freshman Applications at Each UC Campus',
   },
   scales: {
     yAxes: [
-      {
-        ticks: {
-          callback: function(value) {
-            return value.toLocaleString('en-US', {
-              style: 'currency',
-              currency: 'USD',
-              minimumFractionDigits: 0,
-            }); // convert value to dollar format
-          },
-          min: 0,
-        },
+      {        
         scaleLabel: {
           display: true,
-          labelString: 'Grant Money per Student (USD)',
+          labelString: 'Number of Freshman Applicants',
         },
       },
     ],
@@ -232,7 +222,7 @@ options: {
       {
         scaleLabel: {
           display: true,
-          labelString: 'UC Fiscal Year (UC Fiscal Years start July 1)',
+          labelString: 'Year',
         },
       },
     ],
@@ -240,13 +230,9 @@ options: {
   tooltips: {
     callbacks: {
       label: function(tooltipItem, data) {
-        var value = tooltipItem.yLabel.toLocaleString('en-US', {
-          style: 'currency',
-          currency: 'USD',
-          maximumFractionDigits: 2,
-        });
+        var value = tooltipItem.yLabel.toLocaleString('en-US');
         var label = data.datasets[tooltipItem.datasetIndex].label;
-        return label + ' ' + value;
+        return label + ' : ' + value;
       },
     },
   },
