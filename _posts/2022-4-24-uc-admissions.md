@@ -47,8 +47,4 @@ line chart
 
 <div><canvas id = 'CAMPUS_Line_Chart'></canvas></div>
 
-<div class="chart-container">
-  <canvas id='id_of_the_div'></canvas>
-</div>
-
-<div id="tester"></div>
+<div id="bubble_map"></div>
