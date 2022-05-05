@@ -1,0 +1,10 @@
+Campus,Size (in acres),Lat,Lng,Applicants,Density,Source
+Los Angeles,419,34.1139,-118.407,149779,357.4677804,https://www.usnews.com
+Santa Barbara,989,34.4285,-119.72,110991,112.2254803,https://www.usnews.com
+San Diego,1976,33.2247,-117.308,131226,66.40991903,https://www.usnews.com
+Berkeley,1232,37.8723,-122.276,128192,104.0519481,https://www.usnews.com
+Merced,815,37.063,-120.841,26043,31.95460123,https://www.usnews.com
+Irvine,1475,37.6969,-83.9685,119165,80.78983051,https://www.usnews.com
+Davis,5300,34.4577,-97.1655,94725,17.87264151,https://www.usnews.com
+Riverside,1200,33.5275,-116.126,54365,45.30416667,https://www.usnews.com
+Santa Cruz,2000,36.9276,-121.845,65866,32.933,https://www.usnews.com
