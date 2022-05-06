@@ -2,34 +2,52 @@ import { UCLA_FILL, GREY_FILL, BLACK_BORDER } from './globals.js';
 import { dropdownMenu } from './dropdownMenu.js';
 let m_datasets = {}, w_datasets = {};
 let mbb_chart, wbb_chart;
-const men_title = 'Individual Men\'s Basketball Records: ', 
-women_title = 'Individual Women\'s Basketball Records: ';
-const years = [...Array(31).keys()].map(y =>{return y + 1990});
+let mctx = document.getElementById('men-bb-chart');
+let wctx = document.getElementById('women-bb-chart');
+let config_m, config_w;
+const men_title = 'Individual Men\'s Basketball Records: ', women_title = 'Individual Women\'s Basketball Records: ';
+// const years = [...Array(31).keys()].map(y =>{return y + 1990});
 
 // dropdown for m and f
 const m_stats = ["PPG", "FG_pct","2PT_pct", "3PT_pct","FT_pct","rebounds","assists","blocks","steals","mins_played"];
-const f_stats = ["points","PPG", "FG_pct","3PT_pct","FT_pct","rebounds","assists","blocks","steals"];
+const w_stats = ["points","PPG", "FG_pct","3PT_pct","FT_pct","rebounds","assists","blocks","steals"];
 let m_stat = m_stats[0]; // the stat to sort words by
+let w_stat = w_stats[0];
 
-const onMaleStatClicked = selection => {
+const onMenStatClicked = selection => {
     m_stat = selection;
     mbb_chart.destroy(); // clear old chart --> add new data
-    let [mctx, config_m] = generateBB(m_datasets, men_title+m_stat,m_stat); // generate new config
+    [mctx, config_m] = generateBB(m_datasets, men_title+m_stat,m_stat,mctx); // generate new config
+    console.log("stat_clicked",mctx,config_m)
     mbb_chart = new Chart(
         mctx,
         config_m
     );
 };
+
 d3.select('#mbb-stats-menu').call(dropdownMenu, {
     options: m_stats,
-    onOptionClicked: onMaleStatClicked,
+    onOptionClicked: onMenStatClicked,
     selectedOption: m_stat,
     label: 'Stat: ',
     id: 'mens-bb-stat',
 });
-
-// get M context
-let mctx = document.getElementById('men-bb-chart');//.getContext("2d");
+const onWomenStatClicked = selection => {
+    w_stat = selection;
+    wbb_chart.destroy(); // clear old chart --> add new data
+    [wctx, config_w] = generateBB(w_datasets, women_title+w_stat,w_stat,wctx); // generate new config
+    wbb_chart = new Chart(
+        wctx,
+        config_w
+    );
+};
+d3.select('#wbb-stats-menu').call(dropdownMenu, {
+    options: w_stats,
+    onOptionClicked: onWomenStatClicked,
+    selectedOption: w_stat,
+    label: 'Stat: ',
+    id: 'womens-bb-stat',
+});
 
 // groups array by some property
 function groupBy(arr,property){
@@ -43,9 +61,9 @@ function groupBy(arr,property){
 // load male and female data with d3 --> split by stat into object (dict) display based on dropdown
 d3.csv('/datasets/sports-records/ncaa_mbb_records.csv')
     .then(data => {
-        // console.log(data);
+        console.log("mbb",data);
         let grouped_data = groupBy(data,"stat"); // group data by stat
-        // console.log("groupeddata",grouped_data);
+        console.log("groupeddatam",grouped_data);
         // should be object (dict) instead of array
         for (const stat in grouped_data){
             m_datasets[stat] = grouped_data[stat].map(row => { // year v. stat value
@@ -56,28 +74,39 @@ d3.csv('/datasets/sports-records/ncaa_mbb_records.csv')
                   school: row["school"]
                 }
               })
-            // m_datasets.push(
-            //     {
-            //         label: stat, // stat name
-            //         data: grouped_data[stat].map(row => { // year v. stat value
-            //             return {
-            //               x: parseInt(row["season"]), // convert to int
-            //               y: parseFloat(row["stat_value"]), // convert to int
-            //             //   title: row["player"] + " - " + row["school"],
-            //             //   school: row["school"]
-            //             }
-            //           }),
-            //         borderColor: BLACK_BORDER,
-            //         backgroundColor: GREY_FILL // blue for UCLA
-            //     }
-            // );
         }; // format m_datasets for chart
         console.log("m_datasets",m_datasets);
-
-        let [mctx, config_m] = generateBB(m_datasets, men_title + m_stat,m_stat) // get initial config
+        // get M context
+        // let mctx0 = document.getElementById('men-bb-chart');
+        [mctx, config_m] = generateBB(m_datasets, men_title + m_stat,m_stat,mctx) // get initial config
         mbb_chart = new Chart(
             mctx,
             config_m
+        );
+    });
+
+d3.csv('/datasets/sports-records/ncaa_wbb_records.csv')
+    .then(data => {
+        console.log("wbb",data);
+        let grouped_data = groupBy(data,"stat"); // group data by stat
+        console.log("groupeddataw",grouped_data);
+        // should be object (dict) instead of array
+        for (const stat in grouped_data){
+            w_datasets[stat] = grouped_data[stat].map(row => { // year v. stat value
+                return {
+                  x: parseInt(row["season"]), // convert to int
+                  y: parseFloat(row["stat_value"]), // convert to int
+                  title: row["player"] + " - " + row["school"],
+                  school: row["school"]
+                }
+              })
+        }; // format m_datasets for chart
+        console.log("w_datasets",w_datasets);
+        // let wctx0 = document.getElementById('women-bb-chart');
+        [wctx, config_w] = generateBB(w_datasets, women_title + w_stat,w_stat,wctx) // get initial config
+        wbb_chart = new Chart(
+            wctx,
+            config_w
         );
     });
 
@@ -97,23 +126,24 @@ function isUCLA(data){
 function getRanges(dataset){
     let y_min = Math.min(...dataset.map(row => row.y));
     let y_max = Math.ceil(Math.max(...dataset.map(row => row.y)));
-    let y_margin = Math.round((y_max - y_min) * 0.05);
+    // let y_margin = Math.round((y_max - y_min) * 0.05);
     // if stat is percentage, set range to [0,1]
     if (y_max <= 1){
-        y_max = 1;
-        y_margin = 0;
+        y_max = Math.ceil(Math.max(...dataset.map(row => row.y)) * 10)/10
+        y_min = Math.min(0.5,Math.round(Math.floor(y_min * 10)) / 10)
+        // y_margin = 0;
     }
     let x_min = Math.min(...dataset.map(row => row.x));
     let x_max = Math.max(...dataset.map(row => row.x));
-    let x_margin = Math.round((x_max - x_min) * 0.05);
+    // let x_margin = Math.round((x_max - x_min) * 0.05);
     // console.log('test map',y);
-    let stat_range = [y_min - y_margin, y_max]; // get min and max from y
-    let year_range = [x_min - x_margin, 2021];
+    let stat_range = [y_min, y_max]; // get min and max from y
+    let year_range = [x_min, 2021];
     console.log('ranges',[stat_range,year_range]);
     return [stat_range,year_range]
 };
 
-function generateBB(datasets,title,stat){
+function generateBB(datasets,title,stat,ctx){
     // mctx.data.datasets.data = []; // clear chart data before render/update
     console.log("generate",datasets,stat,datasets[stat]);
     const stat_dataset = datasets[stat];
@@ -170,7 +200,7 @@ function generateBB(datasets,title,stat){
     };
 
     console.log("params",formatted_data,title,stat_range,year_range)
-    let config_m = {
+    let config = {
         type: 'scatter',
         data: formatted_data,
         options: {
@@ -210,18 +240,18 @@ function generateBB(datasets,title,stat){
             // animation: false
             tooltips: {
                 callbacks: {
-                  title: function(mctx,data) {
+                  title: function(ctx,data) {
                     // console.log("title fn",mctx, data, mctx[0]);
                     // return "title";
-                    return data['datasets'][mctx[0].datasetIndex]['player_name'][mctx[0].index];
+                    return data['datasets'][ctx[0].datasetIndex]['player_name'][ctx[0].index];
                   },
-                  label: function(mctx) {
+                  label: function(ctx) {
                     //   console.log("mctx",mctx);
-                    return mctx.value + " " + stat;
+                    return ctx.value + " " + stat;
                   },
-                  afterLabel: function(mctx) {
+                  afterLabel: function(ctx) {
                     //   console.log("mctx",mctx);
-                    return mctx.label + " season";
+                    return ctx.label + " season";
                   }
                 }
             },//tooltips
@@ -235,9 +265,8 @@ function generateBB(datasets,title,stat){
     };
 
     // render (or re-render) charts using configs
-    return [mctx,config_m];
+    return [ctx,config];
 };
-
 
 // const wbb_chart = new Chart(
 //     document.getElementById('women-bb-chart'),

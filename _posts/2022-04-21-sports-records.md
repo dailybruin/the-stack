@@ -34,10 +34,11 @@ stylesheets:
 basketball basketball basketball
 <div>
   <div id="mbb-stats-menu" style="display: inline; float: left;"></div>
-  <canvas id="men-bb-chart" width="400"></canvas>
+  <canvas id="men-bb-chart"></canvas>
 </div>
 <div>
-  <canvas id="women-bb-chart" width="400"></canvas>
+  <div id="wbb-stats-menu" style="display: inline; float: left;"></div>
+  <canvas id="women-bb-chart"></canvas>
 </div>
 
 ### Gymnastics 
