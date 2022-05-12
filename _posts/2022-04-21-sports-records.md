@@ -1,6 +1,6 @@
 ---
 title: UCLA in the Record Books
-teaser: 
+teaser: One question that always comes up with sports records is whether we've reached that "plateau" of what's humanly possible. Looking at a small subset of statistical records in collegiate sports may give us some insight.
 
 authors:
   - tyler wu
@@ -8,7 +8,8 @@ authors:
   - mansa krishna
 
 key_takeaways:
-  - sports sports sports
+  - individual records do/do not correlate with post-season success in men's basketball
+  - UCLA has had individual players dock record-level shooting, rebounding, and assists
 
 featured_image:
   url: prof-reviews/web.stack.prof.reviews.KM.jpg
@@ -31,7 +32,7 @@ stylesheets:
 
 ### Basketball
 
-With UCLA's recent foray in March Madness, now might be as a good time as ever to revisit some of the historic records UCLA Basketball has set in the past.
+With the UCLA Men's basketball team's recent foray in March Madness, now might be as a good time as ever to revisit some of the historic records UCLA Basketball has set in the past.
 
 <!-- scatter plot -->
 <div>
@@ -39,13 +40,16 @@ With UCLA's recent foray in March Madness, now might be as a good time as ever t
   <canvas id="men-bb-chart"></canvas>
 </div>
 
-In terms of individual records, UCLA men's basketball appears to do the best with certain categories of statistics. Four different players: Jelani McCoy (75.6% FG%), Lonzo Ball (73.15% 2PT%), Darren Collison (52.5% 3PT%), and Rod Foster (95% FT%), appear in the top 100 leaders for their respective shooting statistics. UCLA has also had a few historic rebounders: Bill Walton in 1973 with 506 and Kevin Love with 415, and assistors (a very rarely used term): Larry Drew with 256 and Lonzo Ball with 274.
+
+
+In terms of individual records, UCLA men's basketball appears to do the best with certain categories of statistics. Four different players: Jelani McCoy (75.6% FG%), Lonzo Ball (73.15% 2PT%), Darren Collison (52.5% 3PT%), and Rod Foster (95% FT%), appear in the top 100 leaders for their respective shooting statistics. UCLA has also had a couple historic rebounders: Bill Walton in 1973 with 506 and Kevin Love with 415, and assistors (a very rarely used term): Larry Drew with 256 and Lonzo Ball with 274.
 
 But do individual record-bearers correlate with success in March Madness tournament? Let's take a look:
 <div>
   <canvas id="men-bb-chart2"></canvas>
 </div>
 
+UCLA's Women's basketball has also seen it's fair share of success. With the most notable player statistically being Denise Curry, leading UCLA in highest points in a single season (930) as well as rebounds (360).
 <div>
   <div id="wbb-stats-menu" style="display: inline; float: left;"></div>
   <canvas id="women-bb-chart"></canvas>
