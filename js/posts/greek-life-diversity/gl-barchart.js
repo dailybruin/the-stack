@@ -1,9 +1,9 @@
-// Load and munge data, then make the visualization.
+//Load and munge data, then make the visualization.
 let greeklifeFileName =
   '../../../../datasets/greek-life-diversity/Demographics.csv';
 
 let dropdownValue = 'Year';
-
+ 
 d3
   .csv('/datasets/greek-life-diversity/Demographics.csv', function(d) {
     return { Year: d.Year };
@@ -104,7 +104,7 @@ const Chartdata = {
       label: 'Greek Life',
       text: 'Greek Life',
       data: [
-        62.3,9.86,13.05,8.075,0.95,2.225,0.3,0.15,2.1,7.2,9.9,
+        .623,.0986,.1305,.08075,.0095,.02225,.003,.0015,.021,.072,.099,
       ],
       backgroundColor: '#B5BAF2',
     },
@@ -112,7 +112,7 @@ const Chartdata = {
       label: 'Student Body',
       text: 'Student Body',
       data: [
-        27.31,27.7125,22.01,5.49,3.325,2.2825,0.2625,0.205,11.43,23.1,27.5225,
+        .2731,.277125,.2201,.0549,.03325,.022825,.002625,.00205,.1143,.231,.275225,
       ],
       backgroundColor: '#FFE589',
     },
