@@ -30,12 +30,22 @@ stylesheets:
 <script type="module" src="/js/posts/sports-records/basketball.js"></script>
 
 ### Basketball
+
+With UCLA's recent foray in March Madness, now might be as a good time as ever to revisit some of the historic records UCLA Basketball has set in the past.
+
 <!-- scatter plot -->
-basketball basketball basketball
 <div>
   <div id="mbb-stats-menu" style="display: inline; float: left;"></div>
   <canvas id="men-bb-chart"></canvas>
 </div>
+
+In terms of individual records, UCLA men's basketball appears to do the best with certain categories of statistics. Four different players: Jelani McCoy (75.6% FG%), Lonzo Ball (73.15% 2PT%), Darren Collison (52.5% 3PT%), and Rod Foster (95% FT%), appear in the top 100 leaders for their respective shooting statistics. UCLA has also had a few historic rebounders: Bill Walton in 1973 with 506 and Kevin Love with 415, and assistors (a very rarely used term): Larry Drew with 256 and Lonzo Ball with 274.
+
+But do individual record-bearers correlate with success in March Madness tournament? Let's take a look:
+<div>
+  <canvas id="men-bb-chart2"></canvas>
+</div>
+
 <div>
   <div id="wbb-stats-menu" style="display: inline; float: left;"></div>
   <canvas id="women-bb-chart"></canvas>
