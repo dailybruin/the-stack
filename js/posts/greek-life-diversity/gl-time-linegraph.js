@@ -85,9 +85,10 @@ const chart = new Chart(ctx, {
                     beginAtZero: true,
                 }
             }]
-        }
+        },
+        title: {
+          display: true,
+          text: 'Diversity in Greek Life over Time'
+      }
     }
   });
-
-
-
