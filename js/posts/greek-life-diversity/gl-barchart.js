@@ -4,33 +4,6 @@ let greeklifeFileName =
 
 let dropdownValue = 'Year';
  
-d3
-  .csv('/datasets/greek-life-diversity/Demographics.csv', function(d) {
-    return { Year: d.Year };
-  })
-  .then(function(data) {
-    initDropdown(data);
-  });
-
-function initDropdown(Year) {
-  d3
-    .select('#dropdown-menu')
-    .on('change', function() {
-      dropdownValue = d3.select(this).property('value');
-      let choice = $('#dropdown-menu option:selected').text();
-      loadCSVData(choice, MainChart);
-    })
-    .selectAll('option')
-    .data(Year)
-    .enter()
-    .append('option')
-    .attr('value', function(d) {
-      return d.Year;
-    })
-    .text(function(d) {
-      return d.Year;
-    });
-}
 
 const labels = [
   'White',
@@ -41,13 +14,21 @@ const labels = [
   'Unknown',
   'Pacific Islander',
   'American Indian',
-  'International',
-  'Transfer',
-  'First Generation',
+ // 'International',
+ // 'Transfer',
+ // 'First Generation',
+];
+
+const YEARS = [
+  'Average',
+  '2016-2017',
+  '2017-2018',
+  '2018-2019',
+  '2019-2020',
 ];
 
 function loadCSVData(choice, chart) {
-  //return new Promise(resolve => {
+  
   d3.csv(greeklifeFileName).then(function(csv) {
     csv = csv.filter(function(row) {
       return row['Year'] == choice;
@@ -61,9 +42,9 @@ function loadCSVData(choice, chart) {
       csv[0]['Unknown_GL'],
       csv[0]['PacificIslander_GL'],
       csv[0]['AmericanIndian_GL'],
-      csv[0]['International_GL'],
-      csv[0]['Transfer_GL'],
-      csv[0]['FirstGeneration_GL'],
+    //  csv[0]['International_GL'],
+    //  csv[0]['Transfer_GL'],
+    // csv[0]['FirstGeneration_GL'],
     ];
     let studentbodyData = [
         csv[0]['White_SB'],
@@ -74,22 +55,23 @@ function loadCSVData(choice, chart) {
         csv[0]['Unknown_SB'],
         csv[0]['PacificIslander_SB'],
         csv[0]['AmericanIndian_SB'],
-        csv[0]['International_SB'],
-        csv[0]['Transfer_SB'],
-        csv[0]['FirstGeneration_SB'],
+       // csv[0]['International_SB'],
+       // csv[0]['Transfer_SB'],
+       // csv[0]['FirstGeneration_SB'],
     ];
+
     const NewChartdata = [
       {
         label: 'Greek Life',
         text: 'Greek Life',
         data: greeklifeData,
-        backgroundColor: '#B5BAF2',
+        backgroundColor: 'rgb(255, 200, 87)',
       },
       {
         label: 'Student Body',
         text: 'Student Body',
         data: studentbodyData,
-        backgroundColor: '#FFE589',
+        backgroundColor: 'rgb(114, 150, 108)',
       },
     ];
     chart.data.datasets = NewChartdata;
@@ -104,17 +86,17 @@ const Chartdata = {
       label: 'Greek Life',
       text: 'Greek Life',
       data: [
-        .623,.0986,.1305,.08075,.0095,.02225,.003,.0015,.021,.072,.099,
+        .623,.0986,.1305,.08075,.0095,.02225,.003,.0015,//.021,.072,.099,
       ],
-      backgroundColor: '#B5BAF2',
+      backgroundColor: 'rgb(255, 200, 87)',
     },
     {
       label: 'Student Body',
       text: 'Student Body',
       data: [
-        .2731,.277125,.2201,.0549,.03325,.022825,.002625,.00205,.1143,.231,.275225,
+        .2731,.277125,.2201,.0549,.03325,.022825,.002625,.00205,//.1143,.231,.275225,
       ],
-      backgroundColor: '#FFE589',
+      backgroundColor: 'rgb(114, 150, 108)',
     },
   ],
 };
@@ -143,7 +125,7 @@ var MainChart = new Chart(ctxMain, {
           },
           scaleLabel: {
             display: true,
-            labelString: 'Percentage of People',
+            labelString: 'Percentage of Population',
           },
           beginAtZero: true,
         },
