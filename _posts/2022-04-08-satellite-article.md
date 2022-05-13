@@ -19,7 +19,7 @@ scripts:
   - //cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@0.7.0
   - //cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js
   - //cdn.rawgit.com/Keyang/node-csvtojson/d41f44aa/browser/csvtojson.min.js
-  - /js/posts/satellie-article/precipitation_chart.js
+  - /js/posts/satellite-article/precipitation_chart.js
 
 stylesheets:
   - //cdnjs.cloudflare.com/ajax/libs/c3/0.4.10/c3.min.css
