@@ -489,7 +489,7 @@ sid_baphna:
   name: Sid Baphna
   title: Stack Developer
   bio: Sid is a fourth-year economics and psychology student. He enjoys reading, playing basketball, and exploring LA in his free time.
-  mug: yes
+  mug: no
   email: sbaphna@media.ucla.edu
 disha_sikaria:
   name: Disha Sikaria
@@ -575,5 +575,10 @@ hinal_jajal:
   current: yes
   email: hinaljajal@g.ucla.edu
   github: hinalsj
+emma_cotter:
+  name: Emma Cotter
+  title: Stack Developer
+  mug: no
+  email: ecotter@media.ucla.edu
   
   
