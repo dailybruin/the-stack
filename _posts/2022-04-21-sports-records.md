@@ -50,6 +50,9 @@ But do individual record-bearers correlate with success in March Madness tournam
   <!-- <canvas id="men-bb-chart2"></canvas> -->
 </div>
 
+Since the data is only from 1992 to 2021, it should be noted that the above plot is very much an incomplete picture. Notably, UCLA has had 10 championships from 1964-1975 that are not accounted for here. Keeping this in mind, there are still some interesting patterns to note.  
+Right off the bat it seems like having a record-breaking player on your team is not necessary for March Madness success. Our championship in 1995 (defeating Arkansas, 89-78) was with zero record-setters, and our runner-up season in 2006 was similarly lacking in a record-setter.
+
 UCLA's Women's basketball has also seen it's fair share of success. With the most notable player statistically being Denise Curry, leading UCLA in highest points in a single season (930) as well as rebounds (360).
 <div>
   <div id="wbb-stats-menu" style="display: inline; float: left;"></div>
