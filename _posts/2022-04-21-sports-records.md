@@ -46,7 +46,8 @@ In terms of individual records, UCLA men's basketball appears to do the best wit
 
 But do individual record-bearers correlate with success in March Madness tournament? Let's take a look:
 <div>
-  <canvas id="men-bb-chart2"></canvas>
+  <img src='img\posts\sports-records\results.png' alt='ncaa-mens-results'>
+  <!-- <canvas id="men-bb-chart2"></canvas> -->
 </div>
 
 UCLA's Women's basketball has also seen it's fair share of success. With the most notable player statistically being Denise Curry, leading UCLA in highest points in a single season (930) as well as rebounds (360).
@@ -55,7 +56,7 @@ UCLA's Women's basketball has also seen it's fair share of success. With the mos
   <canvas id="women-bb-chart"></canvas>
 </div>
 
-### Gymnastics 
+### Swimming/Track & Field
 
 ### Volleyball
 
