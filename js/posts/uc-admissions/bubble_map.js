@@ -1,14 +1,13 @@
 let hoverText = [
-    'Los Angeles',
-  'Santa Barbara',
-  'San Diego',
-  'Merced',
-  'Irvine',
-  'Davis',
-  'Riverside',
-  'Santa Cruz',
-  'Berkeley',
-];
+  "Los Angeles",
+  "Santa Barbara",
+  "San Diego",
+  "Berkeley",
+  "Merced",
+  "Irvine",
+  "Davis",
+  "Riverside",
+"Santa Cruz"];
 
 
 TESTER = document.getElementById('bubble_map');
@@ -20,7 +19,8 @@ var data = [{
   hoverinfo: 'text',
   text: hoverText,
   marker: {
-      size: [357.4677804,112.2254803,66.40991903,104.0519481,31.95460123,80.78983051,17.87264151,45.30416667,32.933],
+      size: [110.0620525,26.41456016,21.19686235,36.55519481,11.15705521,24.74915254,7.556603774,22.3725,9.9205],
+      // size: [357.4677804,112.2254803,66.40991903,104.0519481,31.95460123,80.78983051,17.87264151,45.30416667,32.933],
       // color:   ['#3284BF',
       // '#041E42',
       // '#B3A369',
