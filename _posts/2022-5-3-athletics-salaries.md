@@ -14,9 +14,9 @@ key_takeaways:
 
 
 featured_image:
-  url: 
-  caption: 
-og_image: 
+  url: athletic-salaries-records/featured_image.png
+  caption: (Ashley Kenney/Photo editor)
+og_image: athletic-salaries-records/featured_image.png
 
 scripts:
   - //cdnjs.cloudflare.com/ajax/libs/d3/5.7.0/d3.min.js 
