@@ -6,6 +6,7 @@ teaser: Despite UCLA’s claims of being a leader in sustainability and climate 
 authors:
   - chelsea_chen
   - vivian_luk
+  - connie_ma
 
 key_takeaways:
   - Based on UCLA’s current carbon emission trends, The Stack projects that UCLA will reach zero net carbon emissions in 2049, 24 years after its 2025 goal.
@@ -40,6 +41,10 @@ Nurit Katz, the Chief Sustainability Officer for UCLA (CQ 12), says that the Uni
 “As the University works to accomplish that goal, we will continue to challenge ourselves by harnessing the best available science and technology to achieve greater carbon reductions,” Katz said in an emailed statement (CQ 13).
 
 The Stack analyzed data provided by the Climate Registry (CQ 14) and the Association for the Advancement of Sustainability in Higher Education (CQ 15) to examine UC campuses’ progress towards their goal of carbon neutrality. Based on the current data and emissions trends, The Stack also calculated future projections to predict when UCLA will achieve carbon neutrality.
+
+![Graphic: Understanding Greenhouse Gas Emissions. The Greenhouse Gas Protocol Corporate Standard (or GHG protocol) classifies greenhouse gas emissions into three categories: Scope 1, Scope 2, and Scope 3. 
+Scope 1 consists of emissions from direct or controlled sources from an organization, such as stationary combustion, mobile combustion, chemical processes and fugitive sources. Stationary combustion is the combustion of fossil fuels for industrial applications such as gas boilers. Mobile combustion is the combustion of fossil fuels for transportation such as cars, trucks and other petrol-run vehicles. Chemical processes release emissions from the chemical transformation of raw materials during manufacturing such as cement production. Fugitive emissions are the leaks and other unintentional gas emissions such as gas leaks from refrigeration units. 
+Scope 2 consists of indirect emissions from purchased entities by an organization. These are indirect emissions released by purchased electricity, heating, cooling or steam. Scope 3 involves indirect emissions from activities organized, but neither directly owned or controlled, by an organization. Some examples include business travel, employee commute, and waste disposal.](/img/posts/carbon-neutrality/graphic.png)
 
 ### Comparing UC campuses’ carbon emissions
 
