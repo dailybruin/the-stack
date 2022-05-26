@@ -41,7 +41,8 @@ The Stack analyzed base salaries for head coaches of all UCLA Division I sports 
 <div class="chart-container">
 <iframe title="Average salaries of UCLA head coaches from 2015 to 2019" aria-label="Bar Chart" id="datawrapper-chart-z2rIH" src="https://datawrapper.dwcdn.net/z2rIH/4/" scrolling="no" frameborder="0" style="border: none;" height="522"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();
 </script>
-<iframe title=" " aria-label="Bar Chart" id="datawrapper-chart-Zo6zb" src="https://datawrapper.dwcdn.net/Zo6zb/1/" scrolling="no" frameborder="0" style="border: none;" height="279"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();
+
+<iframe title=" " aria-label="Bar Chart" id="datawrapper-chart-Zo6zb" src="https://datawrapper.dwcdn.net/Zo6zb/4/" scrolling="no" frameborder="0" style="border: none;" height="279"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();
 </script>
 </div>
 
@@ -71,7 +72,7 @@ From 2015 to 2019, the third- and fourth-highest average salaries were paid to c
 
 Despite the risk of large payouts, buyouts are an important part of athletics contracts because coaches want insurance in case they lose public favor, Flintoft said.
 
-“Avoiding buyouts is definitely tough because if you want to attract a good coach, you have to include a buyout in there in case things do go awry,” Flintoft said (CQ 15). 
+“Avoiding buyouts is definitely tough because if you want to attract a good coach, you have to include a buyout in there in case things do go awry,” Flintoft said. 
 
 
 
