@@ -1,6 +1,10 @@
 let map;
 function makeMap(data){
-    map = L.map('map').setView([40.8, -110], 3.5);
+    map = L.map('map',{
+        minZoom: 3,
+        maxZoom: 6,
+        zoomSnap: .5
+    }).setView([40.8, -110], 3.5);
 
     L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibGFydW5nbyIsImEiOiJjbDNlc2Q2cGEwMGo0M2luZW5iaTlsaXhqIn0.dVufWiWzW63BK_sbjnWhCg', {
         id: 'mapbox/light-v9',
@@ -32,14 +36,17 @@ function deleteMap(){
 }
 
 function getColor(d) {
-    return d > 100000 ? '#800026' :
-           d > 50000  ? '#BD0026' :
-           d > 20000  ? '#E31A1C' :
-           d > 10000  ? '#FC4E2A' :
-           d > 5000   ? '#FD8D3C' :
-           d > 2000   ? '#FEB24C' :
-           d > 0   ? '#FED976' :
-                      'green';
+    return  d > 50000 ? 'rgba(5, 76, 168, 1)' :
+            d > 40000 ? '#4d66b7': 
+            d > 30000 ? '#7583c5' :
+           d > 20000  ? '#99a0d4' :
+           d > 10000  ? '#bbbfe2' :
+           d >= 1      ? '#dddef1' :
+           d > -10000 ? ' #eab5b7' :
+           d > -20000 ? '#dc9095' :
+           d > -30000 ? '#cc6b74' :
+           d > -40000 ? '#ba4455' :
+                      'rgba(166, 8, 56, 1)';
 }
 
 function style(feature) {
@@ -97,14 +104,15 @@ var legend = L.control({position: 'bottomright'});
 legend.onAdd = function (map) {
 
     var div = L.DomUtil.create('div', 'info legend'),
-        grades = [-2, 1, 2000, 5000, 10000, 20000, 50000, 100000],
+        grades = [-40000, -30000, -20000, -10000, 1, 10000, 20000, 30000, 40000, 50000],
         labels = [];
+    div.innerHTML += '<b>Projected deficit/surplus</b><br/>'
 
     // loop through our difference intervals and generate a label with a colored square for each interval
     for (var i = 0; i < grades.length; i++) {
         div.innerHTML +=
             '<i style="background:' + getColor(grades[i] + 1) + '"></i> ' +
-            grades[i] + (grades[i + 1] ? '&ndash;' + grades[i + 1] + '<br>' : '+');
+            grades[i] + (grades[i + 1] ? '&ndash; ' + grades[i + 1] + '<br>' : '+');
     }
     console.log("in legend")
     console.log(div)
@@ -120,9 +128,21 @@ info.onAdd = function (map) {
 // method that we will use to update the control based on feature properties passed
 info.update = function (props) {
     info.update = function (props) {
-        if (props) {difference = props.difference.toLocaleString('en-US')}
-        this._div.innerHTML = '<h4>2030 Nurse Projections</h4>' +  (props ?
-            '<b>' + props.name + '</b><br /> Difference between supply and demand: ' + difference + ' nurses'
+        if (props) {
+            difference = props.difference.toLocaleString('en-US')
+            supply = props.supply.toLocaleString('en-US')
+            demand = props.demand.toLocaleString('en-US')
+            if(props.supply-props.demand !== props.difference){
+                console.log(props.name)
+            }
+        }
+        
+
+        this._div.innerHTML = (props ?
+            `<b> ${props.name} projected number of nurses</b>
+            <br /> Projected supply: ${supply}
+            <br /> Projected demand: ${demand}
+            <br /> Projected deficit/surplus: ${difference}`
             : 'Hover over a state');
     };};    
 
@@ -131,19 +151,29 @@ info.update = function (props) {
 function Allmap(){
     deleteMap();
     makeMap(AllData);
+    document.getElementById('RN').className = ''
+    document.getElementById('LPN').className = ''
+    document.getElementById('All').className = 'selected'
     console.log('all')
 }
 
 function LPNmap(){
     deleteMap();
     makeMap(LPNData);
+    document.getElementById('RN').className = ''
+    document.getElementById('LPN').className = 'selected'
+    document.getElementById('All').className = ''
     console.log('LPN')
 }
 
 function RNmap(){
     deleteMap();
     makeMap(RNData);
+    document.getElementById('RN').className = 'selected'
+    document.getElementById('LPN').className = ''
+    document.getElementById('All').className = ''
     console.log('RN')
 }
 
 makeMap(RNData);
+info.update();

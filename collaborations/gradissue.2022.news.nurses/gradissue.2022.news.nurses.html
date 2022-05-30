@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang= "en">
+<head>
+    <meta charset="UTF-8">
+    <title>Map test</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css" integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ==" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js" integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ==" crossorigin=""></script>
+    <script src="data.js"></script>
+    <script src="gradissue.2022.news.nurses.js" defer></script>
+    <style>
+		/* html, body {
+			height: 100%;
+			margin: 30;
+		} */
+        div, button{
+            font-family: 'Noto Serif',serif;  /*default font, change if requested*/
+        }
+        .header{
+            font-size: 20px;
+            text-align: center;
+            align-content: center;
+        }
+        .explainer{
+            font-size: 16px;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+        hr{
+            border: black solid 1px;
+        }
+        button{
+            border: black solid 1px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            margin-left: 10px;
+            padding: 5px;
+            background-color: white;
+        }
+        .selected{
+            background-color: lightgray;
+        }
+        .byLine{
+            font-size: 10px;
+            text-align: center;
+        }
+        .viz_box{
+            border: 2px black solid;
+            width: 100%;
+            height: 100%;
+        }
+		.leaflet-container {
+			height: 500px;
+			width: 100%;
+            margin: auto;
+			max-width: 100%;
+			max-height: 100%;
+		}
+        .info {
+            padding: 6px 8px;
+            font: 14px/16px 'Noto Serif',serif;
+            background: white;
+            background: rgba(255,255,255,0.8);
+            box-shadow: 0 0 15px rgba(0,0,0,0.2);
+            border-radius: 5px;
+        }
+        .info h4 {
+            margin: 0 0 5px;
+            color: #777;
+        }
+        .legend {
+            line-height: 18px;
+            color: #555;
+        }
+        .legend i {
+            width: 18px;
+            height: 18px;
+            float: left;
+            margin-right: 8px;
+            opacity: 0.7;
+        }
+	</style>
+
+</head>
+<body>
+    <div class = "viz_box">
+    <div class='header'>Nurse projections for 2030</div>
+        <hr>
+        <div class = 'explainer'>Learn about the 2030 projections for the number of nurses working and needed to work by state in the United States. The gradient represents if there is projected to be a deficit or surplus of nurses by 2030. Hover over a state to see the difference in the number of nurses working and needed to work for that state.</div>
+        <hr>
+        <button onClick="Allmap()" id = "All" class = 'selected'> Total nurses </button>
+        <button onClick="RNmap()" id = "RN">Registered nurses</button> 
+        <button onClick="LPNmap()" id ="LPN"> Licensed practical nurses</button>
+        <div id="map-box"><div id="map"></div></div>
+        <div class='byLine'>
+            <hr>
+            Sources: National Nurses United, U.S. Department of Health and Human Services. <br> Graphic Reporting by Aditi Kumar, science and health editor. Interactive by Lindsey Parungo, Data editor.</div>
+    </div>
+    
+</body>
+</html>
