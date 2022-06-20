@@ -576,7 +576,6 @@ hinal_jajal:
   current: yes
   email: hinaljajal@g.ucla.edu
   github: hinalsj
-<<<<<<< HEAD
 connie_ma:
   name: Connie Ma
   title: Stack Developer
@@ -584,7 +583,6 @@ connie_ma:
   mug: no
   current: yes
   email: cma@media.ucla.edu
-=======
 emma_cotter:
   name: Emma Cotter
   title: Stack Developer
@@ -592,5 +590,4 @@ emma_cotter:
   mug: yes
   email: ecotter@media.ucla.edu
   
->>>>>>> master
   
