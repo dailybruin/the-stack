@@ -1,0 +1,21 @@
+@media (min-width: 1000px){
+    #datawrapper-chart-z2rIH{
+        width: 48%;
+        float: left;
+    }
+    #datawrapper-chart-Zo6zb{
+        width: 48%;
+        float: right;
+        padding-top: 20px;
+        margin-left: 4%;
+    }
+    .chart-container{
+        width: 100%
+    }
+}
+.caption {
+    font-size: 12px;
+    text-align: center;
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }

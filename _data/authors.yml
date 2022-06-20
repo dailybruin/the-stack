@@ -486,6 +486,12 @@ priya_kanneboyina:
   mug: yes
   current: yes
   email: pkanneboyina@media.ucla.edu
+sid_baphna:
+  name: Sid Baphna
+  title: Stack Developer
+  bio: Sid is a fourth-year economics and psychology student. He enjoys reading, playing basketball, and exploring LA in his free time.
+  mug: yes
+  email: sbaphna@media.ucla.edu
 disha_sikaria:
   name: Disha Sikaria
   title: Stack Developer
@@ -570,6 +576,7 @@ hinal_jajal:
   current: yes
   email: hinaljajal@g.ucla.edu
   github: hinalsj
+<<<<<<< HEAD
 connie_ma:
   name: Connie Ma
   title: Stack Developer
@@ -577,5 +584,13 @@ connie_ma:
   mug: no
   current: yes
   email: cma@media.ucla.edu
+=======
+emma_cotter:
+  name: Emma Cotter
+  title: Stack Developer
+  bio: Emma is a second-year communication student with a minor in digital humanities. She likes graphic design and collecting postcards from places she visits. 
+  mug: yes
+  email: ecotter@media.ucla.edu
   
+>>>>>>> master
   
