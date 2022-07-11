@@ -1,5 +1,5 @@
 const startYear = 2006;
-const predictionStartYear = 2020;
+const predictionStartYear = 2019;
 const endYear = 2070;
 
 let totalPredictions = [];

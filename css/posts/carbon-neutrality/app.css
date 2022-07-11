@@ -34,13 +34,21 @@
 
 @media only screen and (max-width: 480px) {
     .emission-chart {
-        width: 100%;
+        width: 110%;
         margin-bottom: 0px;
+        overflow-x: scroll;
     }
 
     #line-chart {
         height: 400px;
     }
+}
+@media only screen and (min-width: 480px) {
+    .ucla-chart{
+        width: 100%; 
+        padding-left: 30%; 
+        align-content: center;
+    } 
 }
 
 .my-legend .legend-title {
