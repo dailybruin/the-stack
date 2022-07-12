@@ -460,10 +460,11 @@ brittney_le:
 vivian_luk:
   name: Vivian Luk
   title: Stack Developer
-  bio: Vivian is a second-year applied mathematics and statistics student. Contrary to what her photo might suggest, she does not watch anime. Instead, she enjoys hikes, Jeopardy! and matcha lattes.
+  bio: Vivian is a third-year statistics and sociology student with a specialization in computing. She enjoys hikes, matcha lattes and podcasts on 1.8x speed.
   mug: yes
   current: yes
   email: vluk@media.ucla.edu
+  github: vivianluk
 derrick_chau:
   name: Derrick Chau
   title: Stack Developer
@@ -526,7 +527,7 @@ chelsea_chen:
   name: Chelsea Chen
   title: Stack Developer
   email: cchen@media.ucla.edu
-  bio: Chelsea is a second-year statistics student. She enjoys listening to true crime, rollerblading, playing soccer, and trying new food!
+  bio: Chelsea is a second-year statistics student. She enjoys listening to true crime, rollerblading, playing soccer and trying new food!
   mug: no
   current: yes
 tyler_wu:
@@ -575,6 +576,13 @@ hinal_jajal:
   current: yes
   email: hinaljajal@g.ucla.edu
   github: hinalsj
+connie_ma:
+  name: Connie Ma
+  title: Stack Developer
+  bio: Connie is a second-year student.
+  mug: no
+  current: yes
+  email: cma@media.ucla.edu
 emma_cotter:
   name: Emma Cotter
   title: Stack Developer
