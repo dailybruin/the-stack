@@ -139,7 +139,7 @@ For all the UCs, the emissions from Scopes 1 and 2 cover the majority of CO2 emi
 
 Looking at UCLA’s emission breakdown, Scope 1 emissions constitute 60% of the total emissions, while Scope 2 accounts for 22% of emissions. ‘Stationary combustion’ is the largest individual source, responsible for 58% of the total emissions.
 
-In 2018, UCLA had the most carbon emissions compared to the other UC campuses. UCLA had a total of over 400,000 metric tons of carbon emissions; of that total, over 45,000 tons came from the Ronald Reagan UCLA Medical Center and the Santa Monica UCLA Medical Center (CQ 18). 
+In 2018, UCLA had the most carbon emissions compared to the other UC campuses. UCLA had a total of over 400,000 metric tons of carbon emissions; of that total, over 45,000 tons came from the Ronald Reagan UCLA Medical Center and the Santa Monica UCLA Medical Center. 
 
 The UC campuses without medical centers release fewer total emissions. In the U.S. as a whole, hospitals contribute over a third of health care-related carbon emissions, with health care constituting almost 10% of total U.S. emissions.
 
