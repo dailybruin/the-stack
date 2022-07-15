@@ -73,7 +73,7 @@ let markers = L.markerClusterGroup.layerSupport({
   maxClusterRadius: 25,
 });
 
-june_2022_crimes_geojson.features.map(feature => {
+MONTH_2022_crimes_geojson.features.map(feature => {
   const coords = [
     feature.geometry.coordinates[1],
     feature.geometry.coordinates[0],
