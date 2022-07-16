@@ -15,7 +15,7 @@ key_takeaways:
 
 featured_image:
   url: carbon-neutrality/cover-art-illo.png
-  caption: (Katelyn Dang/Illustrations Director)
+  caption: (Katelyn Dang/Daily Bruin senior staff)
 og_image: carbon-neutrality/cover-art-illo.png
 
 scripts:
