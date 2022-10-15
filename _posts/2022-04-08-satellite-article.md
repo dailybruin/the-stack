@@ -4,6 +4,7 @@ teaser:
 
 authors: 
   - nalin_chopra
+  - jessica_li
 
 key_takeaways:
 
@@ -23,7 +24,6 @@ scripts:
   - /js/posts/satellite-article/fire_map.js
   - /js/posts/satellite-article/nouislider.js
   - //cdnjs.cloudflare.com/ajax/libs/leaflet-ajax/2.1.0/leaflet.ajax.js
-  - /unpkg.com/leaflet@1.8.0/dist/leaflet.js
 
 stylesheets:
   - //cdnjs.cloudflare.com/ajax/libs/c3/0.4.10/c3.min.css
@@ -33,6 +33,12 @@ stylesheets:
   - //code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css
 
 ---
+<script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
+integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
+crossorigin="">
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-ajax/2.1.0/leaflet.ajax.js"></script> 
+<script type="module" src="/js/posts/satellite-article/nouislider.js"></script>
 
 ### Introduction
 
