@@ -40,3 +40,35 @@
         margin: auto
     }
 }
+
+#map {
+    height: 500px;
+}
+
+.leaflet-popup-content-wrapper {
+    border-radius: 0;
+    background: orange;
+}
+
+.leaflet-popup-tip {
+    background: orange;
+}
+
+#overlay {
+    position: absolute;
+    z-index: 1000;
+    background: rgba(255,255,255,0.7);
+    padding: 10px;
+    margin: 350px 0px 20px 20px;
+    border-radius: 10px;
+    box-shadow: 1px 1 px 1px 1px grey;
+    font-family: 'Helvetica Neue'
+}
+
+#slider {
+    position: absolute;
+    z-index: 2000;
+    margin: 450px 0px 20px 20px;
+    width: 50%;
+}
+

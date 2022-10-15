@@ -20,10 +20,17 @@ scripts:
   - //cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js
   - //cdn.rawgit.com/Keyang/node-csvtojson/d41f44aa/browser/csvtojson.min.js
   - /js/posts/satellite-article/precipitation_chart.js
+  - /js/posts/satellite-article/fire_map.js
+  - /js/posts/satellite-article/nouislider.js
+  - //cdnjs.cloudflare.com/ajax/libs/leaflet-ajax/2.1.0/leaflet.ajax.js
+  - /unpkg.com/leaflet@1.8.0/dist/leaflet.js
 
 stylesheets:
   - //cdnjs.cloudflare.com/ajax/libs/c3/0.4.10/c3.min.css
   - /css/posts/satellite-article/style.css
+  - /css/posts/satellite-article/nouislider.css
+  - //unpkg.com/leaflet@1.8.0/dist/leaflet.css
+  - //code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css
 
 ---
 
@@ -31,4 +38,9 @@ stylesheets:
 
 ### About the Data
 
+
+<div id="map">
+    <div id="overlay"></div>
+    <div id="slider"></div>
+</div>
 
