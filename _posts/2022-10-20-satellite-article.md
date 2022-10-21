@@ -31,4 +31,5 @@ stylesheets:
 
 ### About the Data
 
-
+<div class = 'bar_chart'><canvas id = 'barChart'></canvas></div>
+<p class = 'caption'> Data for annual precipitation recorded at various weather stations in Southern California.</p>
