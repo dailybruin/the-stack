@@ -589,5 +589,12 @@ emma_cotter:
   bio: Emma is a second-year communication student with a minor in digital humanities. She likes graphic design and collecting postcards from places she visits. 
   mug: yes
   email: ecotter@media.ucla.edu
+mari_yamamoto:
+  name: Mari Yamamoto
+  title: Stack Developer
+  bio: Mari is a second-year computational & systems biology student. 
+  mug: no
+  current: yes
+  email: myamamoto@media.ucla.edu
   
   
