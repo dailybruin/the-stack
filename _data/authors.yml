@@ -589,5 +589,11 @@ emma_cotter:
   bio: Emma is a second-year communication student with a minor in digital humanities. She likes graphic design and collecting postcards from places she visits. 
   mug: yes
   email: ecotter@media.ucla.edu
-  
-  
+jessica_nguyen:
+  name: Jessica Nguyen
+  title: Stack Developer
+  bio: Jessica is a first-year statistics student. She
+  mug: yes
+  current: yes
+  email: jessicanguyen6@media.ucla.edu
+  github: nguyenxjessica  
