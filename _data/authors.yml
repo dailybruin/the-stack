@@ -589,5 +589,12 @@ emma_cotter:
   bio: Emma is a second-year communication student with a minor in digital humanities. She likes graphic design and collecting postcards from places she visits. 
   mug: yes
   email: ecotter@media.ucla.edu
-  
+angela_kan:
+  name: Angela Kan
+  title: Stack Developer
+  bio: Angela is a third-year Statistics and Cognitive Science double major with a minor in Film. She likes hiking, green tea, and volleyball.
+  mug: yes
+  current: yes
+  email: akan7@media.ucla.edu
+  github: kangelaa
   
