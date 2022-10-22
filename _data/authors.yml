@@ -589,5 +589,12 @@ emma_cotter:
   bio: Emma is a second-year communication student with a minor in digital humanities. She likes graphic design and collecting postcards from places she visits. 
   mug: yes
   email: ecotter@media.ucla.edu
+leo_cardozo:
+  name: Leo Cardozo
+  title: Stack Developer
+  bio: 
+  mug: yes
+  email: lcardozo@media.ucla.edu
+  github: cardo14
   
   
