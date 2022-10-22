@@ -589,5 +589,13 @@ emma_cotter:
   bio: Emma is a second-year communication student with a minor in digital humanities. She likes graphic design and collecting postcards from places she visits. 
   mug: yes
   email: ecotter@media.ucla.edu
+liam_mcglynn:
+  name: Liam McGlynn
+  title: Stack Developer
+  bio: Liam is a first-year mechanical engineering student. He likes golden retrievers, crossword puzzles, and oxford commas.
+  mug: no
+  current: yes
+  github: lmcglynn
+  email: lmcglynn@media.ucla.edu
   
   
