@@ -589,5 +589,12 @@ emma_cotter:
   bio: Emma is a second-year communication student with a minor in digital humanities. She likes graphic design and collecting postcards from places she visits. 
   mug: yes
   email: ecotter@media.ucla.edu
+jake_kovinsky:
+  name: Jake Kovinsky
+  title: Stack Developer
+  bio: Jake is a third-year cognitive science student
+  mug: no
+  email: jkovinsky@media.ucla.edu
+
   
   
