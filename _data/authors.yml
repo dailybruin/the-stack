@@ -589,5 +589,12 @@ emma_cotter:
   bio: Emma is a second-year communication student with a minor in digital humanities. She likes graphic design and collecting postcards from places she visits. 
   mug: yes
   email: ecotter@media.ucla.edu
+ben_greer:
+  name: Ben Greer
+  title: Stack Developer
+  bio: Ben is a third year Politcal Science major with a minor in social data science and film. In his free time, Ben likes to play music and travel. 
+  mug: no
+  current: yes
+  email: bgreer@media.ucla.edu 
   
   
