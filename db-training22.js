@@ -35,3 +35,4 @@ const myChart = new Chart(ctx, {
 });
 
 console.log("Print this")
+
