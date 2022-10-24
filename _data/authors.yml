@@ -599,5 +599,25 @@ emma_cotter:
   mug: yes
   current: yes
   email: ecotter@media.ucla.edu
+haryn_shin:
+  name: Haryn Shin
+  title: Stack Developer
+  bio: Haryn is a second-year cognitive science student with a specialization in computing and a minor in digital humanities. She likes to go eat Korean food and hang out with friends in her free time. 
+  mug: no
+  email: hshin@media.ucla.edu
+jake_kovinsky:
+  name: Jake Kovinsky
+  title: Stack Developer
+  bio: Jake is a third-year cognitive science student
+  mug: no
+  email: jkovinsky@media.ucla.edu
+leo_cardozo:
+  name: Leo Cardozo
+  title: Stack Developer
+  bio: 
+  mug: yes
+  email: lcardozo@media.ucla.edu
+  github: cardo14
+
   
   
