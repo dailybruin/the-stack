@@ -599,7 +599,6 @@ emma_cotter:
   mug: yes
   current: yes
   email: ecotter@media.ucla.edu
-<<<<<<< HEAD
 mari_yamamoto:
   name: Mari Yamamoto
   title: Stack Developer
@@ -607,7 +606,6 @@ mari_yamamoto:
   mug: no
   current: yes
   email: myamamoto@media.ucla.edu
-=======
 haryn_shin:
   name: Haryn Shin
   title: Stack Developer
@@ -630,7 +628,3 @@ leo_cardozo:
   email: lcardozo@media.ucla.edu
   github: cardo14
   current: yes
-
->>>>>>> master
-  
-  
