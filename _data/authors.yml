@@ -599,6 +599,14 @@ emma_cotter:
   mug: yes
   current: yes
   email: ecotter@media.ucla.edu
+jessica_nguyen:
+  name: Jessica Nguyen
+  title: Stack Developer
+  bio: Jessica is a first-year statistics student.
+  mug: yes
+  current: yes
+  email: jessicanguyen6@media.ucla.edu
+  github: nguyenxjessica  
 camille_gengania:
   name: Camille Gengania
   title: Stack Developer
