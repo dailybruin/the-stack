@@ -599,6 +599,14 @@ emma_cotter:
   mug: yes
   current: yes
   email: ecotter@media.ucla.edu
+liam_mcglynn:
+  name: Liam McGlynn
+  title: Stack Developer
+  bio: Liam is a first-year mechanical engineering student. He likes golden retrievers, crossword puzzles, and oxford commas.
+  mug: no
+  current: yes
+  github: lmcglynn
+  email: lmcglynn@media.ucla.edu
 jessica_nguyen:
   name: Jessica Nguyen
   title: Stack Developer
