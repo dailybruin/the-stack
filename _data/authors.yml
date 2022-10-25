@@ -599,6 +599,13 @@ emma_cotter:
   mug: yes
   current: yes
   email: ecotter@media.ucla.edu
+ben_greer:
+  name: Ben Greer
+  title: Stack Developer
+  bio: Ben is a third year Politcal Science major with a minor in social data science and film. In his free time, Ben likes to play music and travel. 
+  mug: no
+  current: yes
+  email: bgreer@media.ucla.edu 
 angela_kan:
   name: Angela Kan
   title: Stack Developer
