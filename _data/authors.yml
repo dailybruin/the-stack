@@ -599,6 +599,13 @@ emma_cotter:
   mug: yes
   current: yes
   email: ecotter@media.ucla.edu
+camille_gengania:
+  name: Camille Gengania
+  title: Stack Developer
+  bio: Camille is a third-year statistics student with a minor in Film, TV, and Digital Media.
+  mug: no
+  current: yes
+  email: cgengania@media.ucla.edu
 ben_greer:
   name: Ben Greer
   title: Stack Developer
