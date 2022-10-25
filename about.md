@@ -39,9 +39,8 @@ Apply to the [Stack]({{ site.application }}).
 ---
 
 ### _Data editors_
-
-- [Laurel Woods](https://github.com/laurelrwoods) (2021-2022 top editor)
-- [Lindsey Parungo](https://github.com/Lindseyp314) (2021-2022 assistant editor)
+- [Lindsey Parungo](https://github.com/Lindseyp314) (2022-2023) 
+- [Laurel Woods](https://github.com/laurelrwoods) (2021-2022)
 - [Andrew Kan](https://github.com/kandrewz) (2020-2021)
 - [Mattie Sanseverino](https://github.com/mattiesansev) (2019-2020)
 - [Henna Dialani](https://github.com/hennadialani) (2018-2019)
