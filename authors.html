@@ -80,7 +80,7 @@ permalink: /authors/
     </div>
     <h2 class='page-subheading'>Past editors</h2>
     <div class="authors-list">
-        {% for author in site.data.authors %}
+        {% for author in sorted_authors %}
             {% assign author_key = author[0] %}
             {% assign author_data = author[1] %}
             {% if author_data.editor and author_data.current != true%}

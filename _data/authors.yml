@@ -1,7 +1,7 @@
 
 lindsey_parungo:
   name: Lindsey Parungo
-  title: 2022-23 Data Editor
+  title: Data editor
   bio: Lindsey is a fourth-year financial and actuarial mathematics student. She was the 2021-22 assistant Data editor. She enjoys running, spending time with her dog and looking to expand her hippo memorabilia collection.
   mug: yes
   editor: yes
@@ -10,8 +10,8 @@ lindsey_parungo:
   github: Lindseyp314
 priya_kanneboyina:
   name: Priya Kanneboyina
-  title: Stack Developer
-  bio: Priya is a third-year applied mathematics student with a minor in public affairs and film. 
+  title: Assistant Data editor
+  bio: Priya is a fourth-year applied mathematics student with a minor in public affairs and film. 
   mug: yes
   current: yes
   editor: yes
@@ -607,6 +607,14 @@ junwon_choi:
   current: yes
   email: jchoi7@media.ucla.edu
   github: cjunwon
+liam_mcglynn:
+  name: Liam McGlynn
+  title: Stack Developer
+  bio: Liam is a first-year mechanical engineering student. He likes golden retrievers, crossword puzzles and oxford commas. However, DB style is no oxford commas.
+  mug: no
+  current: yes
+  github: lmcglynn
+  email: lmcglynn@media.ucla.edu
 jessica_nguyen:
   name: Jessica Nguyen
   title: Stack Developer
@@ -625,14 +633,14 @@ camille_gengania:
 ben_greer:
   name: Ben Greer
   title: Stack Developer
-  bio: Ben is a third year Politcal Science major with a minor in social data science and film. In his free time, Ben likes to play music and travel. 
+  bio: Ben is a third-year politcal science student with a minor in social data science and film. In his free time, Ben likes to play music and travel. 
   mug: no
   current: yes
   email: bgreer@media.ucla.edu 
 angela_kan:
   name: Angela Kan
   title: Stack Developer
-  bio: Angela is a third-year Statistics and Cognitive Science double major with a minor in Film. She likes hiking, green tea, and volleyball.
+  bio: Angela is a third-year statistics and cognitive science student with a minor in film. She likes hiking, green tea, and volleyball.
   mug: yes
   current: yes
   email: akan7@media.ucla.edu
@@ -654,7 +662,7 @@ haryn_shin:
 jake_kovinsky:
   name: Jake Kovinsky
   title: Stack Developer
-  bio: Jake is a third-year cognitive science student
+  bio: Jake is a third-year cognitive science student.
   mug: no
   current: yes
   email: jkovinsky@media.ucla.edu
