@@ -599,6 +599,14 @@ emma_cotter:
   mug: yes
   current: yes
   email: ecotter@media.ucla.edu
+junwon_choi:
+  name: Junwon Choi
+  title: Stack Developer
+  bio: Junwon is a second-year data theory and economics student.
+  mug: no
+  current: yes
+  email: jchoi7@media.ucla.edu
+  github: cjunwon
 liam_mcglynn:
   name: Liam McGlynn
   title: Stack Developer
