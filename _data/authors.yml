@@ -323,7 +323,7 @@ annie_zhang:
   title: Stack Developer
   bio: Annie is a third-year math student who really enjoys heist novels, murder mystery TV shows, noodles and setting unrealistic goals.
   mug: yes
-  current: yes
+  current: no
   email: azhang2@media.ucla.edu
   github: aczhang777
 madeline_blasingame:
@@ -567,7 +567,7 @@ abby_zhao:
   title: Stack Developer
   bio: Abby is a second-year data theory and economics student. She likes spicy food, hiking and reading.
   mug: yes
-  current: yes
+  current: no
   email: azhao8@media.ucla.edu
 jessica_li:
   name: Jessica Li
@@ -599,6 +599,13 @@ emma_cotter:
   mug: yes
   current: yes
   email: ecotter@media.ucla.edu
+angel_perez:
+  name: Angel Perez
+  title: Stack Developer
+  bio: Angel is a second-year global studies student from San Diego, who likes cats and swimming in the ocean.
+  mug: yes
+  current: yes
+  email: aperez2@media.ucla.edu
 finn_liu: 
   name: Finn Liu 
   title: Stack Developer 
