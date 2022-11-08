@@ -21,6 +21,8 @@ scripts:
   - //cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js
   - /js/posts/biodiversity/plantsbygarden.js
   - /js/posts/biodiversity/plantypes.js
+  - /js/posts/biodiversity/CA_native_pie.js
+  - /js/posts/biodiversity/CA_native_over_time.js
 
 stylesheets:
   - //cdnjs.cloudflare.com/ajax/libs/c3/0.4.10/c3.min.css
@@ -28,3 +30,5 @@ stylesheets:
 
 <div><canvas id = "PlantD"></canvas></div>
 <div><canvas id = "PlantTypes"></canvas></div>
+<div><canvas id = "CA_native_piechart"></canvas></div>
+<div><canvas id = "CA_native_linechart"></canvas></div>
