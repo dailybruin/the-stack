@@ -1,0 +1,167 @@
+﻿PlantType,ScientificPlantName,CommonPlantName,GrandSavana/OakWoodland,SageHill,UrbanCanyon,AlluvialCorridor,TurfAlternative,Bioswale/RainGarden,CA_native,SMM_native,TongvaList,HistoricallyImportant,upper_drier_edges,foot_trafic_tolerance,prostrate_groundcover,comments
+trees,Acer macrophyllum,bigleaf maple,0,0,1,1,0,0,1,1,0,0,0,0,0,
+trees,Aesculus californica,California buckeye,1,0,0,0,0,0,1,0,0,0,0,0,0,
+trees,Alnus rhombifolia,white alder,0,1,0,1,0,0,1,1,0,0,0,0,0,root nodules fix nitrogen
+trees,Arbutus 'Marina',Marina madrone,0,0,1,0,0,0,0,0,0,0,0,0,0,
+trees,Arbutus unedo,strawberry tree,1,0,1,0,0,0,0,0,0,0,0,0,0,small stature
+trees,Calocedrus decurrens,incense cedar,0,0,1,0,0,0,1,0,0,0,0,0,0,
+trees,Cedrus deodara,deodor cedar,1,0,1,0,0,0,0,0,0,0,0,0,0,
+trees,Corymbia ficifolia,red gum,1,0,1,0,0,0,0,0,0,0,0,0,0,
+trees,Eucalyptus,eucalyptus,1,0,1,0,0,0,0,0,0,0,0,0,0,several spp. w/rounded crowns
+trees,Fraxinus dipetala,flowering ash,0,0,0,1,0,0,1,1,0,0,0,0,0,
+trees,Fraxinus velutina,velvet ash,0,0,0,1,0,0,1,1,0,0,0,0,0,
+trees,Jacaranda mimosifolia,jacaranda,1,0,1,0,0,0,0,0,0,0,0,0,0, overplanted on campus?
+trees,Juglans californica,southern California black walnut,1,1,1,1,0,0,1,1,0,0,0,0,0,
+trees,Laurus nobilis,bay laurel,0,0,1,0,0,0,0,0,0,0,0,0,0,
+trees,Melaleuca linariifolia,flaxleaf paperbark,1,0,1,0,0,0,0,0,0,0,0,0,0,
+trees,Metrosideros excelsa,New Zealand Christmas tree,1,0,1,0,0,0,0,0,0,0,0,0,0,
+trees,Olea europaea,olive,1,0,1,0,0,0,0,0,0,0,0,0,0,fruitless varieties only
+trees,Pinus pinea,Italian stone pine,1,0,0,0,0,0,0,0,0,0,0,0,0,
+trees,Pinus torreyana,Torrey pine,1,0,0,0,0,0,1,0,0,0,0,0,0,
+trees,Platanus racemosa,California sycamore,0,1,0,1,0,0,1,1,1,0,0,0,0,
+trees,Populus fremontii,Fremont cottonwood,0,0,0,1,0,0,1,1,0,0,0,0,0,roots are invasive; use with caution!
+trees,Populus trichocarpa,black cottonwood,0,0,0,1,0,0,1,1,0,0,0,0,0,roots are invasive; use with caution!
+trees,Quercus agrifolia,coast live oak,1,1,1,1,0,0,1,1,0,0,0,0,0,
+trees,Quercus chrysolepis,canyon oak,0,0,1,0,0,0,1,0,0,0,0,0,0,
+trees,Quercus engelmannii,Engelmann oak,1,0,0,0,0,0,1,0,0,0,0,0,0,
+trees,Quercus ilex,holly oak,1,0,0,0,0,0,0,0,0,0,0,0,0,
+trees,Quercus lobata,valley oak,1,0,0,0,0,0,1,1,0,0,0,0,0,
+trees,Quercus suber,cork oak,1,0,0,0,0,0,0,0,0,0,0,0,0,
+trees,Quercus tomentella,island oak,0,0,1,0,0,0,1,0,0,0,0,0,0,
+trees,Salix laevigata,red willow,0,1,0,1,0,0,1,1,1,0,0,0,0,
+trees,Salix lasiolepis,arroyo willow,0,0,0,1,0,0,1,1,1,0,0,0,0,
+trees,Sambucus caerulea,western elderberry,1,1,0,1,0,0,1,1,1,0,0,0,0,naturally multitrunked
+trees,Tipuana tipu,tipu tree,1,0,1,0,0,0,0,0,0,0,0,0,0,
+trees,Umbellularia californica,California bay,0,1,1,1,0,0,1,1,1,0,0,0,0,
+shrubs,Adenostoma fasciculatum-prostrate forms,chamisa,0,0,0,1,0,0,1,1,0,0,0,0,0,
+shrubs,Arbutus unedo 'Compacta',compact strawberry tree,1,0,1,0,0,0,0,0,0,0,0,0,0,
+shrubs,Arctostaphylos,manzanita,1,0,1,0,1,0,1,1,1,0,0,0,1,many other spp and cvs
+shrubs,Artemisia californica and cvs,California sagebrush,1,1,0,1,1,0,1,1,1,0,0,0,1,cvs not local
+shrubs,Atriplex lentiformis breweri,quail bush,0,0,0,1,0,0,1,1,0,0,0,0,0,
+shrubs,Baccharis pilularis,coyote bush,1,1,0,1,0,0,1,1,0,0,0,0,0,groundcover cvs except in Sage Hill
+shrubs,Baccharis salicifolia,mulefat,0,1,0,1,0,0,1,1,1,0,0,0,0,
+shrubs,Berberis pinnata/aquifolium/repens,California barberry/Oregon-grape/creeping barberry,0,0,1,0,0,0,1,1,0,0,0,0,0,*pinnata rare in SMM
+shrubs,Carpenteria californica,bush-anemone,0,0,1,0,0,0,1,0,0,0,0,0,0,
+shrubs,Ceanothus,ceanothus or California lilac,1,0,1,0,1,0,1,1,0,0,0,0,1,many spp and cvs
+shrubs,Cercis occidentalis,western redbud,1,0,1,0,0,0,1,0,0,0,0,0,0,
+shrubs,Cercocarpus betuloides,mountain mahogany,0,0,1,1,0,0,1,1,0,0,0,0,0,
+shrubs,Cistus ,rockrose,1,0,0,0,1,0,0,0,0,0,0,0,1,many spp and cvs
+shrubs,Constancea nevinii,Catalina silver-lace,1,0,0,0,0,0,1,0,0,0,0,0,0,
+shrubs,Correa,Australian fuchsia,0,0,1,0,0,0,0,0,0,0,0,0,0,many spp and cvs
+shrubs,Cotinus coggygria,smoke bush,0,0,1,0,0,0,0,0,0,0,0,0,0,
+shrubs,Cotoneaster dammeria and cvs,bearberry cotoneaster,0,0,0,0,1,0,0,0,0,0,0,0,0,
+shrubs,Dalea greggii,trailing indigo bush,0,0,0,0,1,0,0,0,0,0,0,0,0,
+shrubs,Dymondia margaretae,silver carpet,0,0,0,0,1,0,0,0,0,0,0,1,0,weeds can easily invade w/o proper prep
+shrubs,Encelia californica,California bush sunflower,0,1,0,1,0,0,1,1,0,0,0,0,0,
+shrubs,Eriogonum arborescens,Santa Cruz Island buckwheat,1,0,0,1,0,0,1,0,0,0,0,0,0,
+shrubs,Eriogonum cinereum,ashyleaf buckwheat,1,0,0,0,0,0,1,1,0,0,0,0,0,
+shrubs,Eriogonum fasciculatum,California buckwheat,1,1,0,1,0,0,1,1,1,0,0,0,0,
+shrubs,Eriogonum giganteum,St. Catherine's lace,1,0,0,0,0,0,1,0,0,0,0,0,0,
+shrubs,Frangula [Rhamnus] californica,coffeeberry,1,1,1,0,0,0,1,1,0,0,0,0,0,
+shrubs,Heteromeles arbutifolia,toyon,1,1,1,1,0,0,1,0,0,0,0,0,0,
+shrubs,Isocoma menziesii,coast goldenbush,1,0,0,1,0,0,1,1,0,0,0,0,0,
+shrubs,Lavandula,lavender,1,0,0,0,0,0,0,0,0,0,0,0,0,many spp and cvs
+shrubs,Leptospermum,tea tree,1,0,0,0,0,0,0,0,0,0,0,0,0,
+shrubs,Malacothamnus fasciculatus,chaparral bush mallow,0,0,0,1,0,0,1,1,0,0,0,0,0,
+shrubs,Malosma laurina,laurel sumac,0,1,0,1,0,0,1,1,0,0,0,0,0,
+shrubs,Mimulus aurantiacus,bush monkeyflower,0,1,1,1,0,0,1,1,0,0,0,0,0,important taxon but can be difficult in cultivation
+shrubs,Myoporum parvifolium and cvs,creeping myoporum,0,0,0,0,1,0,0,0,0,0,0,0,0,
+shrubs,Myrica californica,Pacific wax myrtle,0,0,1,0,0,0,1,0,0,0,0,0,0,
+shrubs,Myrtus communis,myrtle,1,0,1,0,0,0,0,0,0,0,0,0,0,
+shrubs,Osmanthus fragrans,sweet olive,0,0,1,0,0,0,0,0,0,0,0,0,0,fragrant flowers
+shrubs,Peritoma arborea,bladderpod,0,0,0,1,0,0,1,1,1,0,0,0,0,
+shrubs,Phlomis fruticosa/purpurea,Jerusalem sage,1,0,0,0,0,0,0,0,0,0,0,0,0,
+shrubs,Pittosporum,pittosporum,0,0,1,0,0,0,0,0,0,0,0,0,0,many spp and cvs-use adjacent to lawns
+shrubs,Prunus,cherry,0,0,1,0,0,0,0,0,0,0,0,0,0,sev species useful as hedges/screens
+shrubs,Prunus ilicifolia,hollyleaf cherry,1,1,1,1,0,0,1,1,1,0,0,0,0,
+shrubs,Rhamnus alaternus,italian buckthorn,1,0,1,0,0,0,0,0,0,0,0,0,0,many spp and cvs
+shrubs,Rhamnus ilicifolia,hollyleaf redberry,1,0,1,1,0,0,1,1,0,0,0,0,0,
+shrubs,Rhus integrifolia,lemonade berry,0,0,1,1,0,0,1,1,1,0,0,0,0,
+shrubs,Rhus ovata,sugar bush,0,0,1,0,0,0,1,1,0,0,0,0,0,
+shrubs,Rhus trilobata,basket bush,0,1,1,1,0,0,1,1,1,0,0,0,0,
+shrubs,Ribes aureum,golden currant,1,1,1,1,0,0,1,1,1,0,0,0,0,
+shrubs,Ribes malvaceum,chaparral currant,0,0,1,0,0,0,1,1,1,0,0,0,0,R. indecorum on Stone Cyn list-mistake?
+shrubs,Ribes speciosum,fuchsia-flowered gooseberry,0,1,1,1,0,0,1,1,1,0,0,0,0,
+shrubs,Ribes viburnifolium,Catalina perfume,0,0,1,0,0,0,1,0,0,0,0,0,0,
+shrubs,Rosa californica,California wild rose,0,1,0,1,0,1,1,1,1,0,1,0,0,
+shrubs,Rosmarinus,rosemary,1,0,0,0,0,0,0,0,0,0,0,0,0,many cvs
+shrubs,Salix exigua,narrow-leaved willow,0,0,0,1,0,1,1,1,0,0,1,0,0,
+shrubs,Salvia clevelandii hybrids,Cleveland sage,1,0,0,0,0,0,1,0,0,0,0,0,0,
+shrubs,Salvia apiana,white sage,1,0,0,1,0,0,1,1,1,0,0,0,0,
+shrubs,Salvia leucophylla,purple sage,1,0,0,1,0,0,1,1,0,0,0,0,0,
+shrubs,Salvia mellifera,black sage,1,1,0,1,0,0,1,1,1,0,0,0,0,
+shrubs,Santolina,lavender cotton,1,0,0,0,0,0,0,0,0,0,0,0,0,many spp and cvs
+shrubs,Sarcococca ruscifolia,sweet box,0,0,1,0,0,0,0,0,0,0,0,0,0,fragrant flowers
+shrubs,Senna artemisioides,feathery cassia,1,0,0,0,0,0,0,0,0,0,0,0,0,
+shrubs,Symphoricarpos mollis,creeping snowberry,1,1,1,1,0,0,1,1,0,0,0,0,0,   
+shrubs,Trichostema lanatum,woolly blue-curls,0,1,0,1,0,0,1,1,1,0,0,0,0,beautiful but difficult to cultivate
+forbs,Achillea ,yarrow,1,0,0,0,0,0,0,0,0,0,0,0,0,many cvs
+forbs,Achillea millefolium,common yarrow,1,1,0,1,1,1,1,1,0,0,1,1,0,Island Pink' cv from Channel Is.
+forbs,Acmispon glaber,deerweed,0,1,0,1,0,0,1,1,0,0,0,0,0,
+forbs,Anemopsis californica,yerba mansa,0,1,0,1,0,1,1,1,1,0,0,0,0,
+forbs,Artemisia douglasiana,mugwort,0,1,0,1,0,1,1,1,1,0,0,0,0,
+forbs,Asclepias fascicularis,narrow-leaved milkweed,1,0,0,1,0,1,1,1,1,0,1,0,0,
+forbs,Centaurea cinerea/gymnocarpa,dusty miller,1,0,0,0,0,0,0,0,0,0,0,0,0,
+forbs,Corethrogyne filaginifolia,California aster,1,0,0,1,1,0,1,1,0,0,0,0,0,Silver Carpet' ok for small-scale turf areas
+forbs,Epilobium canum,California fuchsia,1,1,1,1,0,0,1,1,0,0,0,0,0,many cvs
+forbs,Eriogonum crocatum,saffron buckwheat,0,0,0,1,0,0,1,1,0,0,0,0,0,
+forbs,Eriogonum grande var. rubescens,red-flowered buckwheat,0,0,0,1,0,0,1,0,0,0,0,0,0,
+forbs,Eriophyllum confertiflorum,golden yarrow,1,0,0,1,0,0,1,1,0,0,0,0,0,
+forbs,Euthamia occidentalis,western goldenrod,0,0,0,0,0,1,1,0,0,0,0,0,0,
+forbs,Fragaria vesca/chiloensis,woodland strawberry/beach strawberry,1,0,1,0,1,0,1,0,0,0,0,1,0,
+forbs,Helleborus,lenten rose,0,0,1,0,0,0,0,0,0,0,0,0,0,many spp and cvs
+forbs,Iris,iris,0,0,1,0,0,0,1,0,0,0,0,0,0,many spp and cvs
+forbs,Mimulus cardinalis/guttatus,scarlet monkeyflower/seep monkeyflower,0,0,0,1,0,1,1,0,0,0,0,0,0,
+forbs,Phyla nodiflora,common lippia,0,0,0,0,1,1,1,0,0,0,0,1,0,Kurapia' cv 
+forbs,Pluchea odorata,marsh fleabane,0,0,0,1,0,0,1,1,0,0,0,0,0,
+forbs,Salvia spathacea,hummingbird sage,1,1,1,1,0,0,1,1,1,0,0,0,0,
+forbs,Sisyrinchium bellum,blue-eyed grass,1,1,1,1,0,0,1,1,0,0,0,0,0,
+forbs,Solidago californica,California goldenrod,1,1,0,1,1,1,1,1,0,0,1,0,0,very aggressive rhizomes
+forbs,Stachys albens,white wood mint,0,0,0,0,0,1,1,1,0,0,0,0,0,
+forbs,Stachys byzantina,lamb's ears,0,0,1,0,0,0,0,0,0,0,0,0,0,good edging adjacent to lawns
+forbs,Stachys bullata,common wood mint,0,0,1,1,0,1,1,1,0,0,1,0,0,very aggressive rhizomes
+forbs,Symphyotrichum chilense [Aster chilensis],coast aster,1,0,0,1,1,1,1,0,0,0,1,0,0,Pt. St. George' ok as turf alternative/bioswales
+forbs,Teucrium chamaedrys/ cossonii,germander/Majorcan teucrium,0,0,1,0,0,0,0,0,0,0,0,0,0,
+forbs,Thalictrum fendleri ssp. polycarpum,western meadow-rue,0,1,1,1,0,0,1,1,0,0,0,0,0,
+forbs,Verbena lasiostachys,western vervain,0,0,0,0,0,1,1,1,0,0,1,0,0,
+forbs,Verbena lilacina,lilac verbena,0,0,0,1,0,0,1,0,0,0,0,0,0,long flowering season
+grasses_and_sedges,Agrostis pallens,thin grass,1,0,1,0,1,0,1,1,0,0,0,1,0,
+grasses_and_sedges,Bothriochloa barbinodis,silver beardgrass,1,0,0,1,0,1,1,1,0,0,1,0,0,
+grasses_and_sedges,Bouteloua gracilis,blue grama,1,0,0,0,1,0,1,0,0,0,0,1,0,
+grasses_and_sedges,Buchloe dactyloides 'UC Verde',UC Verde buffalograss,1,0,0,0,1,0,0,0,0,0,0,1,0,
+grasses_and_sedges,Carex pansa/praegracilis,dune sedge/meadow sedge,1,1,1,1,1,1,1,1,1,0,0,1,0,*praegracilis plus other indigenous species
+grasses_and_sedges,Carex divulsa,Berkeley sedge,0,0,1,0,1,0,0,0,0,0,0,0,0,
+grasses_and_sedges,Carex flacca,blue sedge,0,0,0,0,1,0,0,0,0,0,0,1,0,
+grasses_and_sedges,Elymus condensatus,giant wild-rye,0,1,0,1,0,0,1,1,0,0,0,0,0, *'Canyon Prince' as well
+grasses_and_sedges,Festuca californica,California fescue,1,0,1,0,0,0,1,0,0,0,0,0,0,
+grasses_and_sedges,Festuca idahoensis,Idaho fescue,1,0,1,0,0,0,1,0,0,0,0,0,0,
+grasses_and_sedges,Festuca mairei,Maire's fescue,1,0,0,0,0,0,0,0,0,0,0,0,0,
+grasses_and_sedges,Juncus effusus var. pacificus,Pacific bog rush,0,0,0,0,0,1,1,0,1,0,0,0,0,
+grasses_and_sedges,Juncus patens,wire grass,0,0,1,1,0,1,1,1,0,0,0,0,0,many other local species as well
+grasses_and_sedges,Muhlenbergia,,1,0,1,0,0,0,0,0,0,0,0,0,0,many non-native species
+grasses_and_sedges,Muhlenbergia rigens,deer grass,1,0,1,1,0,1,1,1,1,0,1,0,0,on Stone Cyn list but may be inappropriate
+grasses_and_sedges,Sesleria autumnalis,autumn moor grass,0,0,1,0,1,0,0,0,0,0,0,0,0,Greenlee's Hybrid' as well
+grasses_and_sedges,Sporobolus airoides,alkali sacaton,1,0,0,1,0,1,1,0,0,0,1,0,0,
+grasses_and_sedges,Stipa pulchra/lepida/cernua,purple/foothill/nodding needlegrasses,1,1,1,1,0,0,1,1,0,0,0,0,0,*lepida on Sage Hill list; also takes some shade
+succulents,Hesperoyucca whipplei,chaparral yucca,0,1,0,1,0,0,1,1,1,0,0,0,0,nasty spines; use with caution
+succulents,Cylindropuntia californica [Opuntia parryi],snake cholla,0,0,0,1,0,0,1,1,1,0,0,0,0,nasty spines; use with caution
+succulents,Opuntia littoralis,coastal prickly pear,0,1,0,1,0,0,1,1,1,0,0,0,0,nasty spines; use with caution
+vines,Calystegia macrostegia,California morning glory,0,1,1,1,0,0,1,1,0,0,0,0,0,
+vines,Clematis lasiantha,chaparral clematis,0,0,1,1,0,0,1,1,0,0,0,0,0,
+vines,Clematis ligusticifolia,creek clematis,0,0,1,1,0,0,1,1,0,0,0,0,0,
+vines,Lonicera hispidula var vacillans,California honeysuckle,0,0,1,1,0,0,1,1,0,0,0,0,0,
+vines,Vitis girdiana,desert grape,0,0,1,1,0,0,1,1,0,0,0,0,0,
+annuals,Clarkia amoena/unguiculata/bottae/purpurea,farewell-to-spring,1,0,1,1,0,0,1,0,0,0,0,0,0,
+annuals,Collinsia heterophylla,Chinese houses,1,0,1,0,0,0,1,0,0,0,0,0,0,
+annuals,Eschscholzia californica,California poppy,1,0,0,1,0,0,1,0,1,0,0,0,0,can repeat bloom if cut back
+annuals,Gilia capitata,globe gilia,1,0,1,0,0,0,1,0,0,0,0,0,0,
+annuals,Gilia tricolor,bird's eye gilia,1,0,1,0,0,0,1,0,0,0,0,0,0,
+annuals,Helianthus annuus,annual sunflower,0,0,0,1,0,0,1,0,0,0,0,0,0,summer blooming
+annuals,Lasthenia glabrata,goldfields,1,0,0,0,0,0,1,0,0,0,0,0,0,
+annuals,Layia platyglossa,tidy tips,1,0,0,0,0,0,1,0,0,0,0,0,0,
+annuals,Limnanthes douglasii,meadowfoam,0,0,0,0,0,1,1,0,0,0,0,0,0,
+annuals,Lupinus bicolor/microcarpus/nanus/succulentus,lupine bicolor/microcarpus/nanus/succulentus,1,0,0,1,0,0,1,0,0,0,0,0,0,
+annuals,Madia elegans,elegant tarweed,0,0,0,1,0,0,1,0,0,0,0,0,0,summer blooming
+annuals,Nemophila menziesii,baby blue eyes,1,0,1,0,0,0,1,0,0,0,0,0,0,
+annuals,Phacelia viscida/minor/parryi/tanacetifolia,phacelia,1,0,0,1,0,0,1,0,0,0,0,0,0,
+annuals,Stylomecon heterophylla,wind poppy,1,0,0,0,0,0,1,0,0,0,0,0,0,
