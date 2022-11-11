@@ -1,0 +1,36 @@
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background: white;
+  }
+  h2 {
+    margin: 5px 0;
+  }
+  #wrapper {
+    width: 600px;
+    margin: 0 auto;
+    background: white;
+    padding: 10px 15px;
+    border-radius: 10px;
+  }
+  input {
+    margin: 5px 10px;
+  }
+  button {
+    font-size: 18px;
+    padding: 10px;
+    margin: 20px 0;
+    color: white;
+    border: 0;
+    border-radius: 10px;
+    border-bottom: 3px solid #333;
+  }
+  #submit {
+    background: rgb(166, 203, 255);
+  }
+  #answer {
+    font-size: 25px;
+    
+    border: 1px dashed #ccc;
+    background: #eee;
+    padding: 10px;
+  }
