@@ -1,6 +1,6 @@
 //Chart.defaults.font.family = 'Noto Serif, serif'  //FONT FOR CHART CHANGE IF NEEDED
 const labels = ['Grand Savana/Oakwoodland','Sage Hill','Urban Canyon','Alluvial Corridor', 'Turf Alternative', 'Bioswale/Rain Garden']; //THIS SHOULD BE A LIST OF WHAT EACH SEGMENT IN THE PIE REPRESENTS
-const colors = ['#5FA0CE', '#E5A539','#CECC5F', '#CE665F','#A45FCE','#5FCE8E','white'] //CHANGE THESE TO WHAT MATCHES THE SUBJECT
+const colors_by_garden = ['#5FA0CE', '#E5A539','#A45FCE','#CECC5F', '#CE665F','#5FCE8E'] //CHANGE THESE TO WHAT MATCHES THE SUBJECT
 const data = {
   labels: labels,
   //DATA SETS IN A LIST. EACH OBJECT IN LIST IS A RING OF THE PIE CHART 
@@ -9,8 +9,8 @@ const data = {
   datasets: [{
     label: 'Plant Distribution at UCLA',
     data:[39, 77, 81, 21, 21, 85], //VALUE FOR EACH SEGMENT
-    backgroundColor: colors,
-    borderColor: colors,
+    backgroundColor: colors_by_garden,
+    borderColor: 'white',
     borderWidth: 1
   }]
 };

@@ -1,6 +1,6 @@
 // Chart.defaults.font.family = 'Noto Serif, serif'  //FONT FOR CHART CHANGE IF NEEDED
 const labels_type = ['Shrubs', 'Trees', 'Forbs', 'Grasses and Sedges', 'Annuals','Vines', 'Succulents']; //THIS SHOULD BE A LIST OF WHAT EACH SEGMENT IN THE PIE REPRESENTS
-const colors = ['#5FA0CE', '#E5A539','#CECC5F', '#CE665F','#A45FCE','#5FCE8E', '#9C9494','white'] //CHANGE THESE TO WHAT MATCHES THE SUBJECT 
+const colors_types = ['#5FA0CE', '#E5A539','#A45FCE','#CECC5F', '#CE665F','#5FCE8E', '#9C9494'] //CHANGE THESE TO WHAT MATCHES THE SUBJECT 
 const data_type = {
   labels: labels_type,
   //DATA SETS IN A LIST. EACH OBJECT IN LIST IS A RING OF THE PIE CHART 
@@ -9,8 +9,8 @@ const data_type = {
   datasets: [{
     label: 'Plant Types at UCLA',
     data:[62, 34, 30, 18, 14, 5, 3], //VALUE FOR EACH SEGMENT
-    backgroundColor: colors,
-    borderColor: colors,
+    backgroundColor: colors_types,
+    borderColor: 'white',
     borderWidth: 1
   }]
 };
