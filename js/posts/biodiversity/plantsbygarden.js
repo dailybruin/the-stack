@@ -10,7 +10,7 @@ const data = {
     label: 'Plant Distribution at UCLA',
     data:[39, 77, 81, 21, 21, 85], //VALUE FOR EACH SEGMENT
     backgroundColor: colors,
-    borderColor: colors,
+    borderColor: colors[6],
     borderWidth: 1
   }]
 };

@@ -10,7 +10,7 @@ const data_type = {
     label: 'Plant Types at UCLA',
     data:[62, 34, 30, 18, 14, 5, 3], //VALUE FOR EACH SEGMENT
     backgroundColor: colors,
-    borderColor: colors,
+    borderColor: colors[7],
     borderWidth: 1
   }]
 };
