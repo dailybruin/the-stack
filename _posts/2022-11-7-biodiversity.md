@@ -27,7 +27,9 @@ scripts:
 stylesheets:
   - //cdnjs.cloudflare.com/ajax/libs/c3/0.4.10/c3.min.css
 ---
-
+<div class = "map-container">
+  <iframe width="100%" height="415" src="../../../../js/posts/biodiversity/Heatmap_Visualization/CAnativeplants.html" frameboarder="0" allowfullscreen></iframe>
+</div>
 <div><canvas id = "PlantD"></canvas></div>
 <div><canvas id = "PlantTypes"></canvas></div>
 <div><canvas id = "CA_native_piechart"></canvas></div>
