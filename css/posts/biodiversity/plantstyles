@@ -1,0 +1,27 @@
+.PlantTypes {
+    width: 50%;
+    margin: auto;
+}
+
+
+@media only screen and (max-width: 480px){
+    .PlantTypes {
+        height: 425 px;
+        width: 100%;
+    }
+    
+}
+
+.PlantD {
+    width: 50%;
+    margin: auto;
+}
+
+
+@media only screen and (max-width: 480px){
+    .PlantD {
+        height: 425 px;
+        width: 100%;
+    }
+    
+}
