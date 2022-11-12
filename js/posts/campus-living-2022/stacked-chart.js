@@ -7,7 +7,7 @@ const data = {
             data:[11697,12492,14587]
                 //{x:0, y:17866, room: '$11,697', food: '$5534', trans: '$635', utilities: 'n/a'},
                 //{x:1, y:17304, room: '$12,492', food: '$3732', trans: '$1080', utilities: 'n/a'},
-                //{x:2, y:20638, room: '$14,587', food: '$3732', trans: '$1080', utilities: '$1284'}
+                //{x:2, y:20638, room: '$14,587', food: '$3732', trans: '$1300', utilities: '$1284'}
             },
             {
                 label: 'Food',
@@ -18,7 +18,7 @@ const data = {
             {
                 label: 'Transportation',
                 backgroundColor: "#a7bfd4",
-                data: [635,1080,1080],
+                data: [635,1080,1300],
             },
             {
                 label: 'Utilities',
