@@ -3,9 +3,9 @@ title: "On-Campus vs. off-Campus Living: Which is for you?"
 
 teaser: Analysis of the differences between on-campus and off-campus living at UCLA. 
 authors:
-  - haryn_shin
   - leo_cardozo
-  - 
+  - angela_kan
+  - haryn_shin
 
 key_takeaways:
   - 
@@ -27,5 +27,5 @@ stylesheets:
 
 
 <div class = "quiz-contatiner">
-  <iframe width="100%" height="500" src="../../../../the-stack/match-quiz.html" frameboarder="0" allowfullscreen></iframe>
+  <iframe width="100%" height="500" src="../../../../js/posts/campus-living-2022/match-quiz.html" frameboarder="0" allowfullscreen></iframe>
 </div>
