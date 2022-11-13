@@ -595,6 +595,11 @@ haryn_shin:
   bio: Haryn is a second-year cognitive science student with a specialization in computing and a minor in digital humanities. She likes to go eat Korean food and hang out with friends in her free time. 
   mug: no
   email: hshin@media.ucla.edu
-
+leo_cardozo:
+  name: Leo Cardozo
+  title: Stack Developer
+  bio: Leo is a first-year statistics student. He enjoys playing tennis, watching UCLA sports, and going on hikes.
+  mug: no
+  email: lcardozo@media.ucla.edu
   
   
