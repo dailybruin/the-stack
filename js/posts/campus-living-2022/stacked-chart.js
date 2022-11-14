@@ -4,7 +4,7 @@ const data = {
         datasets: [{
             label: 'Room/Rent',
             backgroundColor: "#004582",
-            data:[11697,12492,14587]
+            data:[13080,10472,9594]
                 //{x:0, y:17866, room: '$11,697', food: '$5534', trans: '$635', utilities: 'n/a'},
                 //{x:1, y:17304, room: '$12,492', food: '$3732', trans: '$1080', utilities: 'n/a'},
                 //{x:2, y:20638, room: '$14,587', food: '$3732', trans: '$1300', utilities: '$1284'}
@@ -12,13 +12,13 @@ const data = {
             {
                 label: 'Food',
                 backgroundColor: "#3772a0",
-                data: [5534,3732,3732],
+                data: [5850,2789,2789],
 
             },
             {
                 label: 'Transportation',
                 backgroundColor: "#a7bfd4",
-                data: [635,1080,1300],
+                data: [635,1080,1080],
             },
             {
                 label: 'Utilities',
