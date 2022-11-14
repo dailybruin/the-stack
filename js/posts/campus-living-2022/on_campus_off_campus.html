@@ -14,12 +14,25 @@
 <body>
     <div class = "selectBox" >
         <select id = "studentType">
-            <option value="40, 40, 40, 39, 36, 48, 35, 39, 43, 45, 47, 48, 48, 48, 48">All Students</option>
-            <option value="39, 39, 38, 34, 34, 34, 34, 39, 47, 51, 53, 51, 54, 56, 56">Transfers</option>
-            <option value="94, 94, 94, 93, 94, 94, 94, 95, 96, 98, 97, 98, 98, 98, 98">First-Years</option>
+            <option value="40, 40, 40, 39, 36, 48, 35, 39, 43, 45, 47, 48, 48, 48, 48"
+                    label = "All Students" 
+                    selected>% of All Students On Campus</option>
+            <option value="39, 39, 38, 34, 34, 34, 34, 39, 47, 51, 53, 51, 54, 56, 56"
+                    label = "Transfers"
+                    >% of New Transfers On Campus</option>
+            <option value="94, 94, 94, 93, 94, 94, 94, 95, 96, 98, 97, 98, 98, 98, 98"
+                    label = "First-Years"
+                    >% of First-Years On Campus</option>
         </select>  
         </div>
     <div class = "chartBox" >
         <canvas id="campusData" width="400" height="400"></canvas> 
     </div> 
 </body>
+ <!-- data-backgroundColor="rgb(255, 99, 132)"
+                    data-borderColor="rgba(255, 99, 132, 0.5)" -->
+                    <!-- data-backgroundColor="rgb(54, 162, 235)"
+                    data-borderColor="rgba(54, 162, 235, 0.5)" -->
+                    <!-- data-backgroundColor="rgb(34, 139, 34)"
+                    data-borderColor="rgba(34, 139, 34, 0.5)" -->
+
