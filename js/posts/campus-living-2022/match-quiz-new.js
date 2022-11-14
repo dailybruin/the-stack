@@ -25,7 +25,7 @@ function matchQuiz(){
         answerbox.innerHTML = "You got a " + (off_camp/7)*100 + "% match for living OFF CAMPUS!";
     }
 
-    matchChart1.datasets.data.value = (on_camp/9)*100
+    matchChart1.datasets.data.value = (on_camp/7)*100
 
 }
 

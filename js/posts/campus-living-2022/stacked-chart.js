@@ -1,8 +1,8 @@
 const ctx = document.getElementById('stacked-chart');
 const data = {
-        labels: ['On Campus', 'University Apartments', 'Non-University Apartments (Westwood)'],
+        labels: ['On-campus dorms', 'University apartments', 'Non-university apartments'],
         datasets: [{
-            label: 'Room/Rent',
+            label: 'Room/rent',
             backgroundColor: "#126CBD",
             data:[13080,10472,9594]
             },
@@ -35,7 +35,7 @@ const config = {
             plugins: {
                 title: {
                     display: true,
-                    text: 'Estimated Living Costs'
+                    text: 'Total Estimated Living Costs'
                 },
                 
             },
