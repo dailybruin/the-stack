@@ -61,8 +61,8 @@ const campusData = new Chart(ctx, {
             type: 'bar',
             label: '% of All Students On Campus',
             data: [40, 40, 40, 39, 36, 48, 35, 39, 43, 45, 47, 48, 48, 48, 48],
-            borderColor: 'rgb(54, 162, 235)',
-            backgroundColor: 'rgba(54, 162, 235, 0.75'
+            //borderColor: 'rgb(54, 162, 235)',
+            backgroundColor: '#00498D'
         }],
     },
     options: {
