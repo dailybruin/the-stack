@@ -1,10 +1,12 @@
 ---
-title: Biodiveristy at UCLA
+title: Plant Biodiveristy at UCLA
 
 teaser: 
 
 authors:
-  - 
+  - angel_perez
+  - junwon_choi
+  - finn_liu
 
 key_takeaways:
   - 
@@ -15,6 +17,7 @@ featured_image:
   url: 
   caption: 
 og_image: 
+
 
 scripts:
   - //cdnjs.cloudflare.com/ajax/libs/d3/5.7.0/d3.min.js
