@@ -12,7 +12,7 @@
     
 }
 
-.PlantD {
+/*.PlantD {
     width: 50%;
     margin: auto;
 }
@@ -24,4 +24,4 @@
         width: 100%;
     }
     
-}
+}*/
