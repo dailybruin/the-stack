@@ -59,10 +59,10 @@ const campusData = new Chart(ctx, {
     '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020'],
         datasets: [{
             type: 'bar',
-            label: 'All Students',
+            label: '% of All Students On Campus',
             data: [40, 40, 40, 39, 36, 48, 35, 39, 43, 45, 47, 48, 48, 48, 48],
-            borderColor: 'rgb(255, 99, 132)',
-            backgroundColor: 'rgba(255, 99, 132, 0.2)'
+            borderColor: 'rgb(54, 162, 235)',
+            backgroundColor: 'rgba(54, 162, 235, 0.75'
         }],
     },
     options: {
