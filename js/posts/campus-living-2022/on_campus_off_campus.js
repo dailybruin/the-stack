@@ -66,11 +66,20 @@ const campusData = new Chart(ctx, {
         }],
     },
     options: {
+        plugins: {
+            tooltip: {
+                callbacks: {
+                    label: function(tooltipItem, data) {
+                        return `${tooltipItem.label}: ${tooltipItem.formattedValue}%`
+                    },
+                },
+            },
         scales: {
           y: {
             beginAtZero: true
           }
         }
+    }
     }
 });
     const studentType = document.getElementById('studentType');
