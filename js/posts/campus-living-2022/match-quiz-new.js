@@ -19,10 +19,10 @@ function matchQuiz(){
     var answerbox = document.getElementById('answer');
 
     if (on_camp == maxscore) { 
-        answerbox.innerHTML = "You got a " + (on_camp/7)*100 + "% match for living ON CAMPUS!";
+        answerbox.innerHTML = "You got a " + Math.ceil((on_camp/7)*100) + "% match for living ON CAMPUS!";
     }
     if (off_camp == maxscore) {
-        answerbox.innerHTML = "You got a " + (off_camp/7)*100 + "% match for living OFF CAMPUS!";
+        answerbox.innerHTML = "You got a " + Math.ceil((off_camp/7)*100) + "% match for living OFF CAMPUS!";
     }
 
     matchChart1.datasets.data.value = (on_camp/7)*100

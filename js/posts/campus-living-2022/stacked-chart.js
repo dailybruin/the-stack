@@ -2,25 +2,26 @@ const ctx = document.getElementById('stacked-chart');
 const data = {
         labels: ['On-campus dorms', 'University apartments', 'Non-university apartments'],
         datasets: [{
-            label: 'Room/rent',
-            backgroundColor: "#126CBD",
-            data:[13080,10472,9594]
+                label: 'Room/rent',
+                backgroundColor: "#126CBD",
+                data:[13080, 10472, 9594]
             },
             {
                 label: 'Food',
                 backgroundColor: "#E67A01",
-                data: [5850,2789,2789],
+                data: [5850, 2789, 2789],
 
             },
             {
                 label: 'Transportation',
                 backgroundColor: "#FFCB05",
-                data: [635,1080,1080],
+                data: [635, 1080, 1080],
             },
             {
                 label: 'Utilities',
                 backgroundColor: "#AFAFAF",
-                data: ['n/a','n/a',1284],
+                data: [0, 0, 963],
+                    
             }
 
 
@@ -35,10 +36,17 @@ const config = {
             plugins: {
                 title: {
                     display: true,
-                    text: 'Total Estimated Living Costs'
+                    text: 'Total Estimated Living Costs',
+                    fontSize: 19,
                 },
-                
-            },
+                tooltip:{
+                    callbacks: {
+                        label: function(tooltipItem, data) {
+                            return `$${tooltipItem.formattedValue}`
+                        },
+                    },
+                },
+            },                
             scales: {
                 x: {
                  stacked: true,
@@ -49,7 +57,6 @@ const config = {
             } ,
             responsive: true,
         } //this bracket
-        
     };
 // render init block
 const myChart = new Chart(

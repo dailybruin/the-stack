@@ -1,5 +1,6 @@
 ---
-title: "On-Campus vs. off-Campus Living: Which is for you?"
+title: "On-Campus vs. off-Campus Living: Which Living Location Matches Your Preferences?"
+
 
 teaser: Analysis of the differences between on-campus and off-campus living at UCLA. 
 authors:
@@ -8,6 +9,8 @@ authors:
   - haryn_shin
 
 key_takeaways:
+  - 
+  - 
   - 
 
 featured_image:
@@ -24,6 +27,7 @@ scripts:
 
 stylesheets:
   - /css/posts/campus-living-2022/match-quiz.css
+  - /css/posts/campus-living-2022/stacked-chart.css
   - //fonts.googleapis.com/css?family=Lato&display=swap
   # - //cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js
 ---
