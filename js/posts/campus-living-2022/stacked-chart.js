@@ -42,7 +42,7 @@ const config = {
                 tooltip:{
                     callbacks: {
                         label: function(tooltipItem, data) {
-                            return `$${tooltipItem.formattedValue}`
+                            return `${tooltipItem.dataset.label}: $${tooltipItem.formattedValue}`
                         },
                     },
                 },
