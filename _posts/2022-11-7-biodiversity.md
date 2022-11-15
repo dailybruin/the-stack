@@ -28,6 +28,7 @@ scripts:
 
 stylesheets:
   - //cdnjs.cloudflare.com/ajax/libs/c3/0.4.10/c3.min.css
+  - /css/posts/biodiversity/plantstyles.css
 ---
 
 Despite the existence of around 6,500 types of California native plants, mass development and homogenized landscape practices have resulted in the degradation of these local ecosystems. These native plants have evolved to survive in their particular environments and in conjunction with native wildlife, meaning that they have generally adapted to desert conditions while providing food and shelter for California’s fauna. The survival of native wildlife largely depends on the presence of native plants, particularly for pollinators which rely on certain native pollen-producers.
@@ -90,6 +91,12 @@ Currently, there are 653 observed native and 57 non-native plants on campus.
 #### Where are the native plants located on UCLA’s campus?
 
 <div class = "map-container">
+  <div class="legend-container">
+      <div class="legend-box" style="background:#5FA0CE;"></div>
+      <span class="legend-text">Native CA</span>
+      <div class="legend-box" style="background:#E5A539;"></div>
+      <span class="legend-text">Non-native CA</span>
+    </div>
   <iframe width="100%" height="415" src="../../../../js/posts/biodiversity/Heatmap_Visualization/CAnativeplants.html" frameboarder="0" allowfullscreen></iframe>
 </div>
 

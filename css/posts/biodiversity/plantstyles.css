@@ -25,3 +25,10 @@
     }
     
 }
+
+.legend-box{
+    display: inline-block;
+    height: 10px;
+    width: 10px;
+    border: 2px solid black;
+}
