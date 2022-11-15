@@ -73,11 +73,16 @@ const campusData = new Chart(ctx, {
                     },
                 },
             },
+        },
         scales: {
           y: {
+            ticks: {
+                callback: function(value, index, ticks) {
+                    return value + '%';
+            },
             beginAtZero: true
+            }
           }
-        }
     }
     }
 });

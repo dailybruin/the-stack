@@ -53,11 +53,16 @@ const config = {
                 },    
                 y: {
                     stacked: true,
-                }
-            } ,
+                    ticks: {
+                        callback: function(value, index, ticks) {
+                            return '$' + value;
+                    },
+                },
+            },
             responsive: true,
         } //this bracket
-    };
+    }
+}
 // render init block
 const myChart = new Chart(
     ctxStacked,
