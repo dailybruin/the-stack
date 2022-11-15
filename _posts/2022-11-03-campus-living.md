@@ -25,7 +25,7 @@ stylesheets:
 ---
 
 ### Introduction:
-UCLA recently announced four years of guaranteed housing for the classes of 2026 and onward and two years of housing for transfer students starting Fall 2022 (CQ#1). This year, UCLA has opened multiple new apartments to accommodate more students (CQ#2). Students have a variety of housing options to choose from based on their living preferences, but choosing whether to live on-campus and off-campus can be difficult. Using official UCLA and government data to analyze different factors such as the overall demographics of on-campus and off-campus students and the various living costs associated with each type of housing, we lay out the differences between living on-campus and off-campus that students may want to consider when selecting their next home at UCLA.
+In Marth, UCLA became the first UC to offer four years of guaranteed housing for the classes of 2026 and onward and two years of housing for transfer students starting Fall 2022 (CQ#1). This year, UCLA has opened multiple new apartments to accommodate more students (CQ#2). Students have a variety of housing options to choose from based on their living preferences, but choosing whether to live on-campus and off-campus can be difficult. Using official UCLA and government data to analyze different factors such as the overall demographics of on-campus and off-campus students and the various living costs associated with each type of housing, we lay out the differences between living on-campus and off-campus that students may want to consider when selecting their next home at UCLA.
 ### Match Quiz
 <div id="wrapper">  
   <h1>On-Campus vs. Off-Campus Living: Which is for you?</h1>
@@ -107,15 +107,15 @@ UCLA recently announced four years of guaranteed housing for the classes of 2026
 			  Yes
 		  </label>
       <br />
-		<p class = "question">Q7. Where do you typically prefer to study?</p>
+		<p class = "question">Q7. How important of a factor is proximity from campus to you?</p>
 		  <label>
         <input type="radio" name="q7" value="oncamp" required>
-			  At lounges and shared spaces
+			  Very important, I want to be as close as possible
 		  </label>
       <br />
 		  <label>
         <input type="radio" name="q7" value="offcamp" required>
-			  In my room
+			  Not that important, I’d rather prioritize other things
 		  </label>
       <br />
   </form>
@@ -128,32 +128,6 @@ UCLA recently announced four years of guaranteed housing for the classes of 2026
   </div>
 </div>
 
-### Overall Demographics of student living on-campus and off-campus
-The chart below shows the percentage of students living on campus each year from Fall 2006 to Fall 2020. 
-
-<div class = "selectBox" >
-  <select id = "studentType">
-      <option value="40, 40, 40, 39, 36, 48, 35, 39, 43, 45, 47, 48, 48, 48, 48"
-              label = "All Students" 
-              selected>% of All Students On Campus</option>
-      <option value="39, 39, 38, 34, 34, 34, 34, 39, 47, 51, 53, 51, 54, 56, 56"
-              label = "Transfers"
-              >% of New Transfers On Campus</option>
-      <option value="94, 94, 94, 93, 94, 94, 94, 95, 96, 98, 97, 98, 98, 98, 98"
-              label = "First-Years"
-              >% of First-Years On Campus</option>
-  </select>  
-</div>
-<div class = "chartBox" >
-    <canvas id="campusData" width="400" height="400"></canvas> 
-</div> 
-
-The percentage of the student body living on campus has steadily risen since 2012, concurrent with the construction and completion of several university housing projects over the years (CQ #3). One possible explanation for the notable 2011 spike in the percentage of students living on campus could be UCLA’s expansion of the housing guarantee to more upperclassmen that year (CQ #4). 
-
-
-The increased tendency of upperclassmen to live off campus can play a huge role in one’s decision to live off campus. Robi Chattergee, a fourth-year data theory student, cited the social scene as one of the key reasons he enjoys living in an off-campus apartment. (CQ #5): 
-
-“As a fourth year, that’s kinda where most of the other fourth years are, so it’s kinda nice to be around people my age,” said Chattergee (CQ #6).
 ### Breakdown of Estimated Yearly Living Costs
 <div>
   <canvas id="stacked-chart" width="200" height="200"></canvas>
@@ -191,24 +165,61 @@ While on-campus housing fees are all inclusive, there may be unexpected miscella
 “Especially for non-university apartments, you [usually] do have to furnish everything by yourself. During your first few weeks, you spend a lot on furniture. I would say this is an upfront cost that some people may not necessarily calculate,” Seok said (CQ#9).
 
 Chattergee has had a similar experience. “Sometimes you gotta buy your own furniture, that’s kinda something I was like not anticipating, but it makes sense I guess. Buying furniture, moving in is like a whole ordeal…at least the dorms come furnished, with the apartments sometimes you have to bring your bed which is annoying and expensive,” Chattergee said (CQ #18).
+
 ### Miscellaneous Factors 
-There are other factors that can affect students’ choice of living besides costs, however. This includes students’ living styles and preferences, walking distance to campus, social life, and more. 
+There are other factors that can affect students’ choice of living besides costs. This includes students’ living styles and preferences, distance from campus, social life, and more. 
 
-Apartments are typically more spacious and may provide an increased sense of “home” to students, as they are usually accompanied by a kitchen, common living area, and individual rooms, whereas dorms are single rooms that are supplied with only essential furniture like beds, dressers, and desks. Off-campus apartments may also offer a way for students to separate school and personal life. 
+Apartments are typically more spacious and may provide an increased sense of “home” to students, as they are usually accompanied by a kitchen, common living area, and individual rooms, whereas dorms are single rooms that are supplied with only essential furniture like beds, dressers, and desks. 
 
-“I like that there’s a lot more space for people. There’s some degree of privacy, there’s multiple rooms, and you’re not all in one room at the same time as each other. It’s really nice to be able to, in my opinion, go away from campus, have your own personal space, have your own kitchen, all that stuff,” Malham said. (CQ#17)
+“I like that there’s a lot more space for people. There’s some degree of privacy, there’s multiple rooms, and you’re not all in one room at the same time as each other,” Malham said. (CQ#17)
 
 Some students may prefer living in apartments because of the personal feel. 
 
-It feels more of like a home than like a dorm,” (CQ#10) Seok said. 
+“It feels more of like a home than like a dorm,” (CQ#10) Seok said. 
 
 Off-campus apartments may also offer a way for students to separate school and personal life.
 
-It’s really nice to be able to, in my opinion, go away from campus, have your own personal space, have your own kitchen, all that stuff,” Malham said. 
+“It’s really nice to be able to, in my opinion, go away from campus, have your own personal space, have your own kitchen, all that stuff,” Malham said. (CQ#17)
 
-The convenience of meal plans, on the other hand, could be a reason why some students may prefer to live on campus.
+The convenience of meal plans, on the other hand, could be a reason why some students may prefer to live on-campus.
 
 Seok further mentioned that it was easier to grab food when he lived in the dorms, as he could just walk down to one of the dining halls instead of spending time cooking (CQ#11). 
+
+Additionally, the social scene that comes with living on the Hill can be a great way to meet new people.
+
+“I like the social aspect of it, and seeing and talking to people every day and hanging out in the lounge is really fun and relaxing. It’s a good way to destress from all your schoolwork,” said Camryn Deisman, a first-year music education major. (CQ#20)
+
+However, while the Hill might be more social, it also comes with more restrictions. 
+
+Deisman continued, “With dorms, you’re still contained to like a set of rules—when you are in an apartment, it’s a little different.” (CQ #21). 
+
+### Overall Demographics of student living on-campus and off-campus
+Aside from these miscellaneous considerations, another important factor that might impact where students choose to live is what their peers are doing, and how many of them are doing it. The chart below shows the percentage of students living on campus each year from Fall 2006 to Fall 2020.  
+
+<div class = "selectBox" >
+  <select id = "studentType">
+      <option value="40, 40, 40, 39, 36, 48, 35, 39, 43, 45, 47, 48, 48, 48, 48"
+              label = "All Students" 
+              selected>% of All Students On Campus</option>
+      <option value="39, 39, 38, 34, 34, 34, 34, 39, 47, 51, 53, 51, 54, 56, 56"
+              label = "Transfers"
+              >% of New Transfers On Campus</option>
+      <option value="94, 94, 94, 93, 94, 94, 94, 95, 96, 98, 97, 98, 98, 98, 98"
+              label = "First-Years"
+              >% of First-Years On Campus</option>
+  </select>  
+</div>
+<div class = "chartBox" >
+    <canvas id="campusData" width="400" height="400"></canvas> 
+</div> 
+
+The percentage of the student body living on campus has steadily risen since 2012, concurrent with the construction and completion of several university housing projects over the years (CQ #3). One possible explanation for the notable 2011 spike in the percentage of students living on campus could be UCLA’s expansion of the housing guarantee to more upperclassmen that year (CQ #4). 
+
+
+The increased tendency of upperclassmen to live off campus can play a huge role in one’s decision to live off campus. Robi Chattergee, a fourth-year data theory student, cited the social scene as one of the key reasons he enjoys living in an off-campus apartment. (CQ #5): 
+
+“As a fourth year, that’s kinda where most of the other fourth years are, so it’s kinda nice to be around people my age,” said Chattergee (CQ #6).
+
 ### Looking Forward 
 With so many different options out there, the decision of where to live can be an overwhelming one. However overwhelming, the fact that students have many choices of where to live means that there are different options out there to cater to a wider range of preferences and budgets. As an institution now offering a full housing guarantee for all its undergraduates, something that many other Californian universities are struggling with (CQ#19), UCLA has given its students not only greater housing security, but also the privilege to choose what suits them best.
 ### About the Data
