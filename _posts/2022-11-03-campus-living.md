@@ -20,8 +20,7 @@ scripts:
   - /js/posts/campus-living-2022/on_campus_off_campus.js
   - /js/posts/campus-living-2022/stacked-chart.js
 stylesheets:
-#  - /css/posts/campus-living-2022/match-quiz.css
-  - /css/posts/campus-living-2022/stacked-chart.css
+  - /css/posts/campus-living-2022/app.css
   - //fonts.googleapis.com/css?family=Lato&display=swap
 ---
 
@@ -32,7 +31,7 @@ UCLA recently announced four years of guaranteed housing for the classes of 2026
   <h1>On-Campus vs. Off-Campus Living: Which is for you?</h1>
   <p>Take this quiz to find out your best match!</p> 
   <form id = "quiz">
-		<h2>Q1. Do you prefer dining hall food or cooking your own meal?</h2>
+		<p class = "question">Q1. Do you prefer dining hall food or cooking your own meal?</p>
       <label>
         <input type="radio" name="q1" value="oncamp" required>
         Dining hall food
@@ -43,7 +42,7 @@ UCLA recently announced four years of guaranteed housing for the classes of 2026
         Cooking
       </label>
       <br />         
-		<h2>Q2. Do you have a car?</h2>
+		<p class = "question">Q2. Do you have a car?</p>
       <label>
         <input type="radio" name="q2" value="offcamp" required>
         Yes, I have a car
@@ -54,7 +53,7 @@ UCLA recently announced four years of guaranteed housing for the classes of 2026
         No, I don't have a car
       </label>
       <br />
-    <h2>Q3. What year are you?</h2>
+    <p class = "question">Q3. What year are you?</p>
       <label>
         <input type="radio" name="q3" value="oncamp" required>
         1st year
@@ -75,7 +74,7 @@ UCLA recently announced four years of guaranteed housing for the classes of 2026
         4th+ year
       </label>
       <br />
-		<h2>Q4. Do you mind communal bathrooms?</h2>
+		<p class = "question">Q4. Do you mind communal bathrooms?</p>
 		  <label>
         <input type="radio" name="q4" value="oncamp" required>
 			  No, I don't mind
@@ -86,7 +85,7 @@ UCLA recently announced four years of guaranteed housing for the classes of 2026
 			  Yes, I don't want communal bathrooms
 		  </label>
       <br />
-		<h2>Q5. How many people are you comfortable living with?</h2>
+		<p class = "question">Q5. How many people are you comfortable living with?</p>
 		  <label>
         <input type="radio" name="q5" value="oncamp" required>
 			  Less than 3 people
@@ -97,7 +96,7 @@ UCLA recently announced four years of guaranteed housing for the classes of 2026
 			  More than 3 people
 		  </label>
       <br />
-		<h2>Q6. Would you need a space to live during summer/winter breaks?</h2>
+		<p class = "question">Q6. Would you need a space to live during summer/winter breaks?</p>
 		  <label>
         <input type="radio" name="q6" value="oncamp" required>
 			  No
@@ -108,7 +107,7 @@ UCLA recently announced four years of guaranteed housing for the classes of 2026
 			  Yes
 		  </label>
       <br />
-		<h2>Q7. Where do you typically prefer to study?</h2>
+		<p class = "question">Q7. Where do you typically prefer to study?</p>
 		  <label>
         <input type="radio" name="q7" value="oncamp" required>
 			  At lounges and shared spaces
@@ -121,11 +120,11 @@ UCLA recently announced four years of guaranteed housing for the classes of 2026
       <br />
   </form>
   <div>
-		<button type="button" id="submit" onclick="matchQuiz()">Click Me For Results!</button>
+		<button class = "quiz_submit" type="button" id="submit" onclick="matchQuiz()">Click Me For Results!</button>
   </div>
   <div id="answer">Your result will show up here!</div> 
   <div>
-		<canvas id="matchChart" ></canvas>
+		<canvas class = "no_results" id="matchChart" ></canvas>
   </div>
 </div>
 
