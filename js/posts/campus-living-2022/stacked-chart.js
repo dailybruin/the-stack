@@ -3,7 +3,7 @@ const dataStacked = {
         labels: ['On-campus dorms', 'University apartments', 'Non-university apartments'],
         datasets: [{
                 label: 'Room/rent',
-                backgroundColor: "#126CBD",
+                backgroundColor: "#00498D",
                 data:[13080, 10472, 9594]
             },
             {
