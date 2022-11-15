@@ -1,5 +1,5 @@
-const ctx = document.getElementById('stacked-chart');
-const data = {
+const ctxStacked = document.getElementById('stacked-chart');
+const dataStacked = {
         labels: ['On-campus dorms', 'University apartments', 'Non-university apartments'],
         datasets: [{
                 label: 'Room/rent',
@@ -31,7 +31,7 @@ const data = {
     };
 const config = {
     type: 'bar',
-    data,
+    data: dataStacked,
     options: { //All of your options should be between this bracket and...
             plugins: {
                 title: {
@@ -60,6 +60,6 @@ const config = {
     };
 // render init block
 const myChart = new Chart(
-    document.getElementById('stacked-chart'),
+    ctxStacked,
     config
   );
