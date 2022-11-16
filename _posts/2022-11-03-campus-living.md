@@ -212,7 +212,7 @@ Aside from these miscellaneous considerations, another important factor that mig
   </select>  
 </div>
 <div class = "chartBox" >
-    <canvas id="campusData" width="400" height="400"></canvas> 
+    <canvas id="campusData" width="400" height="320"></canvas> 
 </div> 
 
 The percentage of the student body living on campus has steadily risen since 2012, concurrent with the construction and completion of several university housing projects over the years (CQ #3). One possible explanation for the notable 2011 spike in the percentage of students living on campus could be UCLA’s expansion of the housing guarantee to more upperclassmen that year (CQ #4). 
