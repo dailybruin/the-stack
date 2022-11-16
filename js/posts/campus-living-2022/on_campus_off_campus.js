@@ -8,7 +8,7 @@ const campusData = new Chart(ctx, {
         labels: ['2006', '2007', '2008', '2009', '2010', '2011',
     '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020'],
         datasets: [{
-            label: '% of All Students on campus',
+            label: '% of All Students On Campus',
             data: [40, 40, 40, 39, 36, 48, 35, 39, 43, 45, 47, 48, 48, 48, 48],
             //borderColor: 'rgb(54, 162, 235)',
             backgroundColor: '#00498D'
@@ -16,6 +16,13 @@ const campusData = new Chart(ctx, {
     },
     options: {
         plugins: {
+            title: {
+                display: true,
+                text: 'Students Living On-Campus Since 2006',
+                font: {
+                    size: 22
+                },
+            },
             tooltip: {
                 callbacks: {
                     label: function(tooltipItem, data) {
