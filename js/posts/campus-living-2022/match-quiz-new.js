@@ -59,8 +59,8 @@ let optionsMatch = {
         },
         tooltip:{
             callbacks: {
-            label: function(tooltipItem){
-                return tooltipItem.label + ': ' + tooltipItem.parsed + '%';
+            label: function(tooltipItem, data){
+                return `${tooltipItem.label} : ${tooltipItem.formattedValue}%`;
             }}
         }
     },
