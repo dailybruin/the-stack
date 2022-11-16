@@ -30,7 +30,7 @@ In March, UCLA became the first UC to offer four years of guaranteed housing for
 
 Here is a short quiz for you to see whether you better match with living on-campus or off-campus.
 
-<div id="wrapper">  
+<div id="wrapper_quiz">  
   <h1>On-Campus vs. Off-Campus Living: Which is for you?</h1>
   <p>Take this quiz to find out your best match!</p> 
   <form id = "quiz">
@@ -133,7 +133,7 @@ Here is a short quiz for you to see whether you better match with living on-camp
 
 ### Breakdown of Estimated Yearly Living Costs
 <div>
-  <canvas id="stacked-chart" width="200" height="160"></canvas>
+  <canvas id="stacked-chart"></canvas>
 </div>
 
 #### Housing Costs

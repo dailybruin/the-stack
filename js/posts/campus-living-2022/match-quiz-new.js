@@ -39,7 +39,7 @@ function matchQuiz(){
 }
 
 const labelsMatch = ['On-campus', 'Off-campus']; 
-const colorsMatch = ['#00498D', '#FFCB05']
+const colorsMatch = ['#4B8BD0', '#FFDF16']
 let dataMatch = {
   labels: labelsMatch,
   datasets: [{
@@ -72,3 +72,9 @@ matchChart = new Chart(ctxPIE, {
     data: dataMatch,
     options: optionsMatch
   });
+
+  if (window.matchMedia('(max-width: 480px)').matches) {
+    matchChart.canvas.style = 'min-height:500px';
+    matchChart.options.maintainAspectRatio = false;
+    matchChart.update();
+    }

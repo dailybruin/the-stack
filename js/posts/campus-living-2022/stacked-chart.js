@@ -1,5 +1,5 @@
 Chart.defaults.font.size = 15;
-Chart.defaults.font.family = 'Lato'
+Chart.defaults.font.family = 'PT Sans'
 Chart.defaults.color = '#000';
 
 const ctxStacked = document.getElementById('stacked-chart');
@@ -67,6 +67,7 @@ const config = {
                 },
             },
             responsive: true,
+            maintainAspectRatio: false,
         } //this bracket
     }
 }
@@ -75,3 +76,9 @@ const myChart = new Chart(
     ctxStacked,
     config
   );
+
+  if (window.matchMedia('(max-width: 480px)').matches) {
+    myChart.canvas.style = 'max-height:400px';
+    myChart.options.maintainAspectRatio = false;
+    myChart.update();
+  }
