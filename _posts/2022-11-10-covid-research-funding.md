@@ -2,7 +2,10 @@
 title: Impacts of COVID-19 on Public and Private Research Funding 
 teaser: How did the COVID-19 pandemic impact research funding at UCLA? Which departments and types of research were affected the most?
 authors:
-  - 
+  - Benjamin Greer
+  - Jake Kovinsky
+  - Mari Yamamoto
+  - Robin Lee
 
 key_takeaways:
   - 
@@ -15,9 +18,7 @@ scripts:
   - //cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js
   - js/posts/covid-research-funding/C&G_By_Year.js
 
-stylesheets:
-  - //cdnjs.cloudflare.com/ajax/libs/c3/0.4.10/c3.min.css
-  - /css/posts/dining-halls/styles.css
+
 ---
 
 ### Introduction
