@@ -73,7 +73,7 @@ const swipesOptions = {
     tooltip: {
       callbacks: {
         label: function(tooltipItem, data) {
-          let tooltipLabel = `${tooltipItem}: ${tooltipItem.formattedValue}`;
+          let tooltipLabel = `${tooltipItem.label}: ${tooltipItem.formattedValue}`;
           let tooltipPercentage = Math.round(
             (tooltipItem.parsed / totalSwipes) * 100
           );
