@@ -13,7 +13,7 @@ const data_time = {
     borderWidth: 3,
     fill: false
   },{
-    label: 'Non California Native',
+    label: 'Non-Native',
     data: [1, 2, 3, 12, 14, 20, 57], //DATA HERE
     backgroundColor: colors_time[1],
     borderColor: colors_time[1],
