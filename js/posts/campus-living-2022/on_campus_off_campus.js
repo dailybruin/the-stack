@@ -1,3 +1,6 @@
+Chart.defaults.font.size = 15;
+Chart.defaults.font.family = 'Lato'
+Chart.defaults.color = '#000';
 const ctx = document.getElementById('campusData');
 const campusData = new Chart(ctx, {
     type: 'bar', 
