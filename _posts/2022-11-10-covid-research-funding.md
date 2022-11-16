@@ -16,9 +16,22 @@ og_image: dining-halls/feature_image.png
 
 scripts:
   - //cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js
+  - /js/posts/covid-research-funding/rev17-21.js
+
+  - //cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js
   - js/posts/covid-research-funding/C&G_By_Year.js
 
+  - //ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js
+  - //d3js.org/d3.v6.min.js
+  - //cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@0.7.0
+  - //cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js
+  - //cdn.rawgit.com/Keyang/node-csvtojson/d41f44aa/browser/csvtojson.min.js
+  - /js/posts/dining-halls/piechart.js
+  - /js/posts/dining-halls/busyness-barchart.js
 
+stylesheets:
+  - //cdnjs.cloudflare.com/ajax/libs/c3/0.4.10/c3.min.css
+  - /css/posts/dining-halls/styles.css
 ---
 
 ### Introduction
