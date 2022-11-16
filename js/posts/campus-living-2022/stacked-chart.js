@@ -1,25 +1,30 @@
+Chart.defaults.font.size = 15;
+Chart.defaults.font.family = 'Lato'
+Chart.defaults.color = '#000';
+
 const ctxStacked = document.getElementById('stacked-chart');
 const dataStacked = {
+
         labels: ['On-campus dorms', 'University apartments', 'Non-university apartments'],
         datasets: [{
                 label: 'Room/rent',
-                backgroundColor: "#00498D",
+                backgroundColor: "#94D8FB",
                 data:[13080, 10472, 9594]
             },
             {
                 label: 'Food',
-                backgroundColor: "#E67A01",
+                backgroundColor: "#4B8BD0",
                 data: [5850, 2789, 2789],
 
             },
             {
                 label: 'Transportation',
-                backgroundColor: "#FFCB05",
+                backgroundColor: "#ACDE7E",
                 data: [635, 1080, 1080],
             },
             {
                 label: 'Utilities',
-                backgroundColor: "#AFAFAF",
+                backgroundColor: "#FFDF16",
                 data: [0, 0, 963],
                     
             }
@@ -36,8 +41,10 @@ const config = {
             plugins: {
                 title: {
                     display: true,
-                    text: 'Total Estimated Living Costs',
-                    fontSize: 19,
+                    text: 'Total estimated yearly living costs',
+                    font: {
+                        size: 22
+                    },
                 },
                 tooltip:{
                     callbacks: {

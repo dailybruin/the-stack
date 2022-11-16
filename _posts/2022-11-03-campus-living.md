@@ -25,7 +25,7 @@ stylesheets:
 ---
 
 ### Introduction:
-In Marth, UCLA became the first UC to offer four years of guaranteed housing for the classes of 2026 and onward and two years of housing for transfer students starting Fall 2022 (CQ#1). This year, UCLA has opened multiple new apartments to accommodate more students (CQ#2). Students have a variety of housing options to choose from based on their living preferences, but choosing whether to live on-campus and off-campus can be difficult. Using official UCLA and government data to analyze different factors such as the overall demographics of on-campus and off-campus students and the various living costs associated with each type of housing, we lay out the differences between living on-campus and off-campus that students may want to consider when selecting their next home at UCLA.
+In March, UCLA became the first UC to offer four years of guaranteed housing for the classes of 2026 and onward and two years of housing for transfer students starting Fall 2022 (CQ#1). This year, UCLA has opened multiple new apartments to accommodate more students (CQ#2). Students have a variety of housing options to choose from based on their living preferences, but choosing whether to live on-campus and off-campus can be difficult. Using official UCLA and government data to analyze different factors such as the overall demographics of on-campus and off-campus students and the various living costs associated with each type of housing, we lay out the differences between living on-campus and off-campus that students may want to consider when selecting their next home at UCLA.
 ### Match Quiz
 
 Here is a short quiz for you to see whether you better match with living on-campus or off-campus.
@@ -133,7 +133,7 @@ Here is a short quiz for you to see whether you better match with living on-camp
 
 ### Breakdown of Estimated Yearly Living Costs
 <div>
-  <canvas id="stacked-chart" width="190" height="120"></canvas>
+  <canvas id="stacked-chart" width="200" height="160"></canvas>
 </div>
 
 #### Housing Costs
