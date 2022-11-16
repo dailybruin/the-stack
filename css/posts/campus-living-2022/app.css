@@ -1,0 +1,34 @@
+  #wrapper {
+    width: 80%;
+    padding: 10px 15px;
+    margin: auto;
+    border: black 2px solid
+  }
+
+  .question{
+    font-weight: 800;
+  }
+
+  .quiz_submit {
+    font-family: 'PT Sans', sans-serif;
+    font-size: 18px;
+    padding: 10px;
+    margin: 20px 0;
+    border-radius: 10px;
+  }
+  #submit {
+    background: rgb(166, 203, 255);
+  }
+  #answer {
+    font-size: 25px;
+    border: 1px dashed #ccc;
+    background: #eee;
+    padding: 10px;
+  }
+  .no_results{
+    display: none !important;
+    border: 2px black solid
+  }
+  .results{
+    display: block;
+  }
