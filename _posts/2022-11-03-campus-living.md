@@ -6,7 +6,7 @@ authors:
   - angela_kan
   - haryn_shin
 key_takeaways:
-  - The percentage of students living on campus has been steadily increasing since 2012.
+  - The percentage of students living on campus has increased by 13% since 2012.
   - 48% of all students, 56% of new transfers, and 98% of first years live on-campus at UCLA as of 2020.
   - Living in a university apartment double is, on average, cheaper than living in an off-campus apartment when factoring in food, transportation, and utilities.
 
