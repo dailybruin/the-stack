@@ -1,5 +1,5 @@
 //Chart.defaults.font.family = 'Noto Serif, serif'  //FONT FOR CHART CHANGE IF NEEDED
-const labels = ['Bioswale/Rain Garden','Urban Canyon','Sage Hill','Grand Savana/Oakwoodland','Alluvial Corridor', 'Turf Alternative']; //THIS SHOULD BE A LIST OF WHAT EACH SEGMENT IN THE PIE REPRESENTS
+const labels = ['Bioswale/Rain Garden','Urban Canyon','Sage Hill','Grand Savanna/Oakwoodland','Alluvial Corridor', 'Turf Alternative']; //THIS SHOULD BE A LIST OF WHAT EACH SEGMENT IN THE PIE REPRESENTS
 const colors_by_garden = ['#5FA0CE', '#E5A539','#A45FCE','#CECC5F', '#CE665F','#5FCE8E'] //CHANGE THESE TO WHAT MATCHES THE SUBJECT
 const data = {
   labels: labels,
