@@ -67,7 +67,7 @@ const privvspubbar = new Chart(ctx, {
             }
         },
         layout: {
-            padding: 100
+            padding: 0
         },
         maintainAspectRatio: false,
         indexAxis: 'y',

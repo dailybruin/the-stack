@@ -1,5 +1,5 @@
 ---
-title: Shifts in Public and Private Research Funding\:\ Evaluating the Impact of COVID-19 on UCLA’s Research Activity
+title: Shifts in Public and Private Research Funding - Evaluating the Impact of COVID-19 on UCLA’s Research Activity
 teaser: How did the COVID-19 pandemic impact research funding at UCLA? Which departments and types of research were affected the most?
 authors:
   - Benjamin Greer
@@ -14,13 +14,9 @@ key_takeaways:
 
 scripts:
   - //cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js
-  - js/posts/covid-research-funding/priv-vs-pub.js
-
-  - //cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js
-  - js/posts/covid-research-funding/C&G_By_Year.js
-
-  - //cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js
-  - js/posts/coivd-research-funding/awarddropdown.js
+  - /js/posts/covid-research-funding/priv-vs-pub.js
+  - /js/posts/covid-research-funding/C&G_By_Year.js
+  - /js/posts/covid-research-funding/awarddropdown.js
 ---
 
 ### Introduction
@@ -31,8 +27,8 @@ This raises the question: how exactly did the COVID-19 pandemic impact research 
 
 ### Where The Funding Comes From 
 
-<div><canvas id="privvspubbar" width="700" height="700"></canvas></div>
-<p class = 'caption'></p>
+<div class="bar1-chart"><canvas id = "privvspubbar" width="80%" height="500%"></canvas></div>
+
 
 Public funding has remained to be the University’s overwhelming primary source of revenue. However, the amount of dollars the institution received from private sources increased by $150 million from 2017 to 2022. 
 
@@ -47,8 +43,7 @@ Although there was not a drastic difference between public and private sources o
 
 Currently, according to the National Science Foundation’s (NSF) rankings on research and development expenditures, UCLA sits at number 7 in the nation behind other notable private and public universities—including UCSD and John Hopkins.
 
-<div style="text-align:center;"><canvas id="C&G_Chart" width="400" height="400"></canvas></div>
-<p class = 'caption'></p>
+<div class="bar2-chart"><canvas id="CG_Chart" width="80%" height="500%"></canvas></div>
 
 Prior to the onset of the COVID-19 pandemic, the dollar amounts for contracts and grants received by the university showed a slow rate change. Contrasting this, there was a substantial increase in the annual growth rate of funding between the onset of the pandemic and the few years following. 
 
@@ -72,10 +67,8 @@ This hypothesis could be supported by a direct increase of funding for 25 of the
 
 ### Breakdown of Funding by Department 
 
-<div style="text-align:center;">
-    <div class="chartbox">
-        <canvas id="myChart" width = "400" height="400"></canvas>
-    </div>
+<div class="pie-chart">
+        <canvas id="awardspie" width="80%" height="500%"></canvas>
 </div>
 
 <div id="container">
@@ -91,8 +84,6 @@ This hypothesis could be supported by a direct increase of funding for 25 of the
         </div>
     </div>
 <p class = 'caption'>This chart represents the breakdown of awarded dollars for research by department, grouped into six overarching categories: Medical/Health Sciences, STEM, Humanities, College of Letters & Science, Higher Education, and a miscellaneous General category.</p>
-
-This chart represents the breakdown of awarded dollars for research by department, grouped into six overarching categories: Medical/Health Sciences, STEM, Humanities, College of Letters & Science, Higher Education, and a miscellaneous General category. 
 
 From our analysis, we observed a substantial increase in funding for Medical/Health Sciences and STEM-related departments, relative to departments in other fields of study. These departments include—but are not limited to—the David Geffen School of Medicine, Basic Biomedical Sciences, and the Fielding School of Public Health. In 2019, these departments accounted for 56.9% of the total research award dollars for that year. We can see a notable increase in this percentage, presumably due to the demand for Covid-related research in the height of the pandemic—with medical and health sciences accounting for 60.2%, 61.8%, and 64.5% in 2020, 2021, and 2022 respectively. (CQ 3)
 

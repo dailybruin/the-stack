@@ -1,11 +1,11 @@
-const labels = ['2006', '2007', '2008', '2009', '2010',
+const labels1 = ['2006', '2007', '2008', '2009', '2010',
 '2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', 
 '2019', '2020', '2021', '2022']; //THIS SHOULD BE A LIST OF WHAT YOU WANT ON THE X-AXIS
 const colors = ['rgba(50, 132, 191, 0.8)']; //CHANGE THESE TO WHAT MATCHES THE SUBJECT
 const dataCounts = [NaN, NaN, 5380, 5714, 6212, 6483, 5994, 5194, 5386, 5648, 5554, 
 5779, 6568, 6382, 6730, 7190, 7258];
-const data = {
-  labels: labels,
+const data2 = {
+  labels: labels1,
   //DATA SETS IN A LIST. EACH OBJECT IN LIST IS A CATEGORY OF DATA CHANGE THESE OUT WITH YOUR DATA
   datasets: [{
     label: 'Award Dollars',
@@ -19,7 +19,7 @@ const data = {
   },]
 };
 //OPTIONS FOR THE DISPLAY OF THE CHART, FOR MORE OPTIONS GO TO CHART.JS
-const options = {
+const options1 = {
   scales: {
     y: {
       beginAtZero: true,
@@ -80,10 +80,10 @@ const options = {
   maintainAspectRatio: false,
 }
 
-const ctxBAR = document.getElementById('C&G_Chart');
+const ctxBAR = document.getElementById('CG_Chart');
 
-const chart = new Chart(ctxBAR, {
+const CG_Chart = new Chart(ctxBAR, {
     type: 'bar',
-    data: data,
-    options: options
+    data: data2,
+    options: options1
   });

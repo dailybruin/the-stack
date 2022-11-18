@@ -1,6 +1,6 @@
-const ctx = document.getElementById('awardspie');
+const ctx1 = document.getElementById('awardspie');
 
-const data = {
+const data1 = {
     labels: [
         'General',
         'Medical/Health Sciences',
@@ -45,9 +45,9 @@ const data = {
     ]
 
 }
-const awardspie = new Chart(ctx, {
+const awardspie = new Chart(ctx1, {
     type: 'pie',
-    data: data,
+    data: data1,
     options: {
         plugins: {
             datalables: {
@@ -72,8 +72,15 @@ const year = document.getElementById('year');
 year.addEventListener('change', changeyear);
 function changeyear(){
     const label = year.options[year.selectedIndex].text
-    myChart.data.datasets[0].label = label;
-    myChart.data.datasets[0].data = year.value.split(',');
-    myChart.update();
+    awardspie.data.datasets[0].label = label;
+    awardspie.data.datasets[0].data = year.value.split(',');
+    awardspie.update();
 }
-
+changeyear();
+// function makeChart(){
+//     const label = year.options[year.selectedIndex].text
+//     awardspie.data.datasets[0].label = label;
+//     awardspie.data.datasets[0].data = year.value.split(',');
+//     awardspie.update();
+// }
+// makeChart()
