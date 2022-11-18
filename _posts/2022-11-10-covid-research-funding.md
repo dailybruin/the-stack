@@ -58,6 +58,8 @@ Despite an overall positive trajectory, Smith expects there to be a drop in annu
 
 “That [ACTG] is a big component of the increase [in funding], but there’s an increase without it,” said Smith in an interview with The Stack back in October. 
 
+Daniel Newbower, the Principle Administrative Analyst for Research, when asked if ACTG was the only contribution to this spike, said that "...there was definitely a general trend..." and that "...it [ACTG] explained a lot of that large jump... ...but it doesn't explain it all."
+
 The burden imposed on researchers during the height of the COVID-19 pandemic limited their ability to work in their labs and engage with their colleagues. Smith speculates that the time away from active research allowed researchers in many departments to spend more time working on grant applications.
 
 “I mean, maybe they can do [more] data analysis…, management plans and stuff that are overdue…but I’m sure that they just [had] more time to write,” said Smith. 
