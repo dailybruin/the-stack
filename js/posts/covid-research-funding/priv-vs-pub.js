@@ -1,4 +1,4 @@
-const ctx = document.getElementById('myChart');
+const ctx = document.getElementById('privvspubbar');
 
 const labels = ['2017', '2018', '2019', '2020', '2021']
 const data = {
@@ -7,31 +7,31 @@ const data = {
         {
             label: 'State Educational Appropriations',
             data: [511, 448, 493, 536, 454],
-            backgroundColor: 'rgba(0, 0, 255, 0.5)',
+            backgroundColor: 'rgba(50, 132, 191, 0.9)',
             stack: 'Stack 0',
         },
         {
             label: 'Government Grants & Contracts',
             data: [707, 743, 773, 803, 893],
-            backgroundColor: 'rgba(43, 60, 249, 0.33)',
+            backgroundColor: 'rgba(50, 132, 191, 0.55)',
             stack: 'Stack 0',
         },
         {
             label: 'Private Gifts',
             data: [308, 379, 367, 365, 405],
-            backgroundColor: 'rgba(249, 206, 43, 0.81)',
+            backgroundColor: 'rgba(255, 210, 0, 0.8)',
             stack: 'Stack 1',
         },
         {
             label: 'Private Industry Grants & Contracts',
             data: [241, 273, 276, 277, 295],
-            backgroundColor: 'rgba(249, 206, 43, 0.5)',
+            backgroundColor: 'rgba(255, 210, 0, 0.5)',
             stack: 'Stack 1',
         },
     ]
 
 }
-const myChart = new Chart(ctx, {
+const privvspubbar = new Chart(ctx, {
     type: 'bar',
     data: data,
     options: {
@@ -52,15 +52,15 @@ const myChart = new Chart(ctx, {
                 stacked: true,
                 title: {
                     display: true,
-                    text: "Revenue",
-                    padding: 30,
+                    text: "Revenue in Millions of Dollars",
+                    padding: 20,
                 }
             },
             y: {
                 title: {
                     display: true,
                     text: "Year",
-                    padding: 30,
+                    padding: 20,
                 },
                 beginAtZero: true,
                 stacked: true,
@@ -69,10 +69,11 @@ const myChart = new Chart(ctx, {
         layout: {
             padding: 100
         },
-        indexAxis: 'y'
+        maintainAspectRatio: false,
+        indexAxis: 'y',
+        
     }
 });
 
 
 
-console.log("Print this")

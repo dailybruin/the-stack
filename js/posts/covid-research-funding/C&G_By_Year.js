@@ -1,8 +1,7 @@
-Chart.defaults.font.family = 'Noto Serif, serif'  //FONT FOR CHART CHANGE IF NEEDED
 const labels = ['2006', '2007', '2008', '2009', '2010',
 '2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', 
 '2019', '2020', '2021', '2022']; //THIS SHOULD BE A LIST OF WHAT YOU WANT ON THE X-AXIS
-const colors = ['rgba(0, 0, 255, 0.5)']; //CHANGE THESE TO WHAT MATCHES THE SUBJECT
+const colors = ['rgba(50, 132, 191, 0.8)']; //CHANGE THESE TO WHAT MATCHES THE SUBJECT
 const dataCounts = [NaN, NaN, 5380, 5714, 6212, 6483, 5994, 5194, 5386, 5648, 5554, 
 5779, 6568, 6382, 6730, 7190, 7258];
 const data = {
@@ -36,8 +35,16 @@ const options = {
     },
       title:{
         display: true,
-        text: 'Amount'
+        text: 'Amount',
+        padding: 20,
         }
+    },
+    x: {
+      title:{
+        display:true,
+        text: 'Year',
+        padding: 20,
+      }
     }
   },
   plugins: {
@@ -72,11 +79,9 @@ const options = {
   },
   maintainAspectRatio: false,
 }
-//THIS CODE MAKES THE CHART, MAKE SURE THE CTX VARIABLE DOES NOT MATCH ANY OTHER CTX VARIABLE
-//CHANGE ID-HERE TO WHATEVER YOU MADE YOUR ID IN THE HTML FILE, CHOOSE SOMETHING DESCRIPTIVE
+
 const ctxBAR = document.getElementById('C&G_Chart');
-//THE CHART VARIABLE NEEDS TO HAVE A UNIQUE NAME RENAME IT SOMETHING DESCRIPTIVE
-//MAKE SURE ctxBAR MATCHES THE CONST VARIABLE YOU JUST SET
+
 const chart = new Chart(ctxBAR, {
     type: 'bar',
     data: data,
