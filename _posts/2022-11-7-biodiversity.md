@@ -21,6 +21,7 @@ og_image:
 scripts:
   - //cdnjs.cloudflare.com/ajax/libs/d3/5.7.0/d3.min.js
   - //cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js
+  # - //cdn.jsdelivr.net/npm/chartjs-plugin-piechart-outlabels@1
   - /js/posts/biodiversity/plantsbygarden.js
   - /js/posts/biodiversity/plantypes.js
   - /js/posts/biodiversity/CA_native_pie.js
@@ -30,7 +31,7 @@ stylesheets:
   - //cdnjs.cloudflare.com/ajax/libs/c3/0.4.10/c3.min.css
   - /css/posts/biodiversity/plantstyles.css
 ---
-
+<script src=https://cdn.jsdelivr.net/npm/chartjs-plugin-piechart-outlabels@1></script>
 Despite the existence of around 6,500 types of California native plants, mass development and homogenized landscape practices have resulted in the degradation of these local ecosystems. These native plants have evolved to survive in their particular environments and in conjunction with native wildlife, meaning that they have generally adapted to desert conditions while providing food and shelter for California’s fauna. The survival of native wildlife largely depends on the presence of native plants, particularly for pollinators which rely on certain native pollen-producers.
 
 Plants native to California require far less maintenance than non-native species in terms of water as well as fertilizer, pesticides, and labor, which makes them far more sustainable than non-native species. (CQ #2) These native plants play an important role in both mitigating climate change and hosting a livable environment for surrounding fauna. (CQ #2) They have shown to be efficient at trapping planet-warming carbon dioxide while also providing food and shelter for insects and animals. (CQ #2)
@@ -51,7 +52,9 @@ Across UCLA’s campus, there are a variety of different plant types ranging fro
 
 The following chart depicts the distribution of the different plant types at UCLA.
 
-<div><canvas id = "PlantTypes"></canvas></div>
+<div style='height: 300px'>
+  <canvas id = "PlantTypes"></canvas>
+</div>
 
 Shrubs make up a vast majority of the plants of UCLA at 62 different species, including the California Sagebrush, California Sumac, and the quailbush.(CQ #4) Meanwhile, succulents are in the vast minority of plant types with only three different species which include the chaparral yuca, snake cholla, and the coastal prickly pear (CQ #4). 
 
@@ -63,7 +66,9 @@ The campus contains 7 different gardens, all with a varying distribution of plan
 
 The following chart depicts the number of different plant species per garden at UCLA. 
 
-<div><canvas id = "PlantD"></canvas></div>
+<div style='height: 300px'>
+  <canvas id = "PlantD"></canvas>
+</div>
 
 The Bioswale/Rain Garden contains the highest distribution of unique plant species at 85 while lowest distribution of different plants are contained within the category turf alternative and in the alluvial corridor at 21 for both (CQ #4). 
 
@@ -83,7 +88,9 @@ The school currently maintains a total of 121 California native and 45 non-nativ
 
 Plants native to California have been observed more over time than non-native ones since 2016.
 
-<div><canvas id = "CA_native_linechart"></canvas></div>
+<div style='height: 300px'>
+  <canvas id = "CA_native_linechart"></canvas>
+</div>
 [Note: The first iNaturalist Observations at UCLA were in 2016]
 
 Currently, there are 653 observed native and 57 non-native plants on campus.
