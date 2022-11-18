@@ -1,6 +1,6 @@
 // Chart.defaults.font.family = 'Noto Serif, serif'  //FONT FOR CHART CHANGE IF NEEDED
 const labels_type = ['Shrubs', 'Trees', 'Forbs', 'Grasses and Sedges', 'Annuals','Vines', 'Succulents']; //THIS SHOULD BE A LIST OF WHAT EACH SEGMENT IN THE PIE REPRESENTS
-const colors_types = ['#5FA0CE', '#E5A539','#DF2F44', '#4FB349', '#5E267D', '#EACE10', '#B45CD8'] //CHANGE THESE TO WHAT MATCHES THE SUBJECT 
+const colors_types = ['#5FA0CE', '#E5A539','#68CAC4', '#5F9E5B', '#B7234A', '#A254CE', '#C3DA6A'] //CHANGE THESE TO WHAT MATCHES THE SUBJECT 
 const data_type = {
   labels: labels_type,
   //DATA SETS IN A LIST. EACH OBJECT IN LIST IS A RING OF THE PIE CHART 

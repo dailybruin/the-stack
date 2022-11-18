@@ -69,7 +69,7 @@ The distribution of the other plant types include 32 different species of trees,
 
 #### Which gardens at UCLA host the most plants?
 
-The campus contains 7 different plant communities, all with a varying distribution of plant species within them. (CQ #4)
+The campus contains six different plant communities, all with a varying distribution of plant species within them. (CQ #4)
 
 The following chart depicts the number of different plant species per garden at UCLA. 
 
@@ -77,9 +77,12 @@ The following chart depicts the number of different plant species per garden at 
   <canvas id = "PlantD"></canvas>
 </div>
 
-The Bioswale/Rain Garden contains the highest distribution of unique plant species at 85, while the lowest distribution are in the alluvial corridor or have been categorized as turf alternatives with 21 different plants in both locations. (CQ #4)
+The Grand Savanna/Oakwoodland contains the highest distribution of unique plant species at 85, while the lowest distribution are in the Bioswale/Rain Garden or have been categorized as turf alternatives with 21 different plants in both locations. (CQ #4)
 
 Turf alternatives are a category for native plants that are replacing grass and turf areas in order to promote water conservation as native plants require less water to tend to. This conversion is currently occurring at Murphy Hall and Moore Hall, according to a written statement from Katz. (CQ #3).
+
+Despite this categorization of turf alternatives, only about 57% of the plant species in the turf alternatives category are native to California. This is the category with the lowest percentage of native species. The Bioswale/Rain Garden, Alluvial Corridor, and Sage Hill communities have only native species. 
+
 
 #### Where are the native plants located on UCLA’s campus?
 
