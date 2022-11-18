@@ -22,7 +22,7 @@ const options_type = {
           display: true,
           text: 'Plant Types at UCLA'
         },
-        legend: {position: 'right',
+        legend: {align: 'end',
       }
     },
     maintainAspectRatio: false,

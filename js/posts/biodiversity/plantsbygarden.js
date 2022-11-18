@@ -22,7 +22,7 @@ const options = {
           display: true,
           text: 'Distribution of Plants at UCLA'
         },
-        legend: {position: 'right',
+        legend: {align: 'end',
       }
     },
     maintainAspectRatio: false,
