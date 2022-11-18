@@ -1,6 +1,6 @@
 //Chart.defaults.font.family = 'Noto Serif, serif'  //FONT FOR CHART CHANGE IF NEEDED
 const labels = ['Bioswale/Rain Garden','Urban Canyon','Sage Hill','Grand Savanna/Oakwoodland','Alluvial Corridor', 'Turf Alternative']; //THIS SHOULD BE A LIST OF WHAT EACH SEGMENT IN THE PIE REPRESENTS
-const colors_by_garden = ['#5FA0CE', '#E5A539','#A45FCE','#CECC5F', '#CE665F','#5FCE8E'] //CHANGE THESE TO WHAT MATCHES THE SUBJECT
+const colors_by_garden = ['#5FA0CE', '#E5A539','#DF2F44', '#4FB349', '#5E267D', '#EACE10'] //CHANGE THESE TO WHAT MATCHES THE SUBJECT
 const data = {
   labels: labels,
   //DATA SETS IN A LIST. EACH OBJECT IN LIST IS A RING OF THE PIE CHART 
