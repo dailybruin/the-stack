@@ -16,16 +16,14 @@ const data = {
 };
 //OPTIONS FOR THE DISPLAY OF THE CHART, FOR MORE OPTIONS GO TO CHART.JS
 const options = {
-    
-    plugins: {
-      title: {
-          display: true,
-          text: 'Distribution of Plants at UCLA'
-        },
-        legend: {align: 'end',
-      }
-    },
-    maintainAspectRatio: false,
+  title: {
+    display: true,
+    text: 'Distribution of plants at UCLA'
+  },
+    legend: {
+      position: 'right',
+  },
+  maintainAspectRatio: false,
   }
 //THIS CODE MAKES THE CHART, MAKE SURE THE CTX VARIABLE DOES NOT MATCH ANY OTHER CTX VARIABLE
 //CHANGE ID-HERE TO WHATEVER YOU MADE YOUR ID IN THE HTML FILE, CHOOSE SOMETHING DESCRIPTIVE

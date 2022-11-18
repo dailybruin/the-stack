@@ -16,15 +16,13 @@ const data_type = {
 };
 //OPTIONS FOR THE DISPLAY OF THE CHART, FOR MORE OPTIONS GO TO CHART.JS
 const options_type = {
-    
-    plugins: {
-      title: {
-          display: true,
-          text: 'Plant Types at UCLA'
-        },
-        legend: {align: 'end',
-      }
-    },
+  title: {
+    display: true,
+    text: 'Plant types at UCLA'
+  },
+  legend: {
+    position: 'right',
+  },
     maintainAspectRatio: false,
   }
 //THIS CODE MAKES THE CHART, MAKE SURE THE CTX VARIABLE DOES NOT MATCH ANY OTHER CTX VARIABLE
