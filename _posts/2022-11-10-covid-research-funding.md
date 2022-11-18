@@ -12,6 +12,10 @@ key_takeaways:
   - STEM and medical science departments—such as the Semel Institute and the David Geffen School of Medicine—received substantial increases in funding with the onset of COVID-19.
   - No dramatic shifts in public vs private revenue streams during COVID-19
 
+featured_image:
+  url: covid-research-funding/featured_image.png
+og_image: covid-research-funcing/featured_image.png
+
 scripts:
   - //cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js
   - /js/posts/covid-research-funding/priv-vs-pub.js
