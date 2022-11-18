@@ -52,9 +52,9 @@ Prior to the onset of the COVID-19 pandemic, the dollar amounts for contracts an
 
 In an interview with the Associate Vice Chancellor for Research, Marcia Smith, the recent surge in UCLA’s public funding is a direct result of the university’s high research productivity, specialized facilities, and expertise in particular fields of study—namely, the institution’s ongoing research and the institution’s clinical trials into HIV treatment. 
 
-In 2020, a grant of $400 million from the AIDS Clinical Trials Group (ACTG), the largest HIV research network composed of universities and nonprofits, was awarded to UCLA. A portion of this grant was also directed towards identifying effective treatments for early onset of COVID-19 in patients (CQ 9). 
+In 2020, a grant of $400 million from the AIDS Clinical Trials Group (ACTG), the largest HIV research network composed of universities and nonprofits, was awarded to UCLA. A portion of this grant was also directed towards identifying effective treatments for early onset of COVID-19 in patients.
 
-Despite an overall positive trajectory, Smith expects there to be a drop in annual growth rate in overall public funding once the grant shifts to the next recipient within the ACTG network in 2027. (CQ 10)
+Despite an overall positive trajectory, Smith expects there to be a drop in annual growth rate in overall public funding once the grant shifts to the next recipient within the ACTG network in 2027.
 
 “That [ACTG] is a big component of the increase [in funding], but there’s an increase without it,” said Smith in an interview with The Stack back in October. 
 
@@ -62,7 +62,7 @@ The burden imposed on researchers during the height of the COVID-19 pandemic lim
 
 “I mean, maybe they can do [more] data analysis…, management plans and stuff that are overdue…but I’m sure that they just [had] more time to write,” said Smith. 
 
-This hypothesis could be supported by a direct increase of funding for 25 of the 32 departments on campus from 2018 - 2022.
+This hypothesis could be supported by a direct increase of funding for 25 of the 32 departments on campus from 2018 to 2022.
 
 
 ### Breakdown of Funding by Department 
@@ -85,12 +85,12 @@ This hypothesis could be supported by a direct increase of funding for 25 of the
     </div>
 <p class = 'caption'>This chart represents the breakdown of awarded dollars for research by department, grouped into six overarching categories: Medical/Health Sciences, STEM, Humanities, College of Letters & Science, Higher Education, and a miscellaneous General category.</p>
 
-From our analysis, we observed a substantial increase in funding for Medical/Health Sciences and STEM-related departments, relative to departments in other fields of study. These departments include—but are not limited to—the David Geffen School of Medicine, Basic Biomedical Sciences, and the Fielding School of Public Health. In 2019, these departments accounted for 56.9% of the total research award dollars for that year. We can see a notable increase in this percentage, presumably due to the demand for Covid-related research in the height of the pandemic—with medical and health sciences accounting for 60.2%, 61.8%, and 64.5% in 2020, 2021, and 2022 respectively. (CQ 3)
+From our analysis, we observed a substantial increase in funding for Medical/Health Sciences and STEM-related departments, relative to departments in other fields of study. These departments include—but are not limited to—the David Geffen School of Medicine, Basic Biomedical Sciences, and the Fielding School of Public Health. In 2019, these departments accounted for 56.9% of the total research award dollars for that year. We can see a notable increase in this percentage, presumably due to the demand for Covid-related research in the height of the pandemic—with medical and health sciences accounting for 60.2%, 61.8%, and 64.5% in 2020, 2021, and 2022 respectively. 
 
 Some notable departments accounting for a significant portion of the increase in funding include: 
-  - The David Geffen School of Medicine, which accounted for 75% of the increase in funding from 2018 to 2022. (CQ 4)
+  - The David Geffen School of Medicine, which accounted for 75% of the increase in funding from 2018 to 2022. 
   - The Infectious Disease, which in 2018, made up 1.9% of the total funding received by the Geffen School of Medicine. That number jumped to 20% in 2022. (CQ 5)
-  - The UCLA Medical Center, which received an increase of $1,584,554 in awards between 2018 and 2021—an increase upwards of 164%. (CQ 6)
+  - The UCLA Medical Center, which received an increase of $1,584,554 in awards between 2018 and 2021—an increase upwards of 164%. 
 
 ### Looking Forward
 
