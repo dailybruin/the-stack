@@ -110,3 +110,4 @@ Our analysis of the increase in funding has highlighted the success and agency o
 
 ### About the Data 
 
+Data collected about the University's revenue was directly pulled from UCLA's annual financial reports from FY17 - FY21. Data regarding the distribution of C&G Awarded Dollars overtime and by department was kindly gathered from the Office of Research Administration.
