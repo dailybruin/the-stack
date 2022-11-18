@@ -22,6 +22,8 @@ const options_type = {
           display: true,
           text: 'Plant Types at UCLA'
         },
+        legend: {position: 'right',
+      }
     },
     maintainAspectRatio: false,
   }

@@ -22,6 +22,8 @@ const options = {
           display: true,
           text: 'Distribution of Plants at UCLA'
         },
+        legend: {position: 'right',
+      }
     },
     maintainAspectRatio: false,
   }
