@@ -20,15 +20,9 @@ scripts:
 ---
 
 ### Introduction
-
-<div align="center">
-> “Research is part of the fabric of UCLA – it’s integrated into the undergraduate
->
-> curriculum. Students come to UCLA because they want to be part of a research 
->
-> institution.”
-
-*Dr. Tama Hasson, Assistant Dean for Undergraduate Research, and Director, Undergraduate Research Center – Sciences*</div>
+<br>
+<div align="center"><blockquote>“Research is part of the fabric of UCLA – it’s integrated into the undergraduate curriculum.<br>Students come to UCLA because they want to be part of a research institution.”</blockquote>
+<em>Dr. Tama Hasson, Assistant Dean for Undergraduate Research and<br>Director of Undergraduate Research Center – Sciences</em></div><br>
 
 UCLA has long boasted an impressive history of scientific prowess, with funding from both public and private benefactors garnering a steady source of revenue for the university. This has allowed the institution to regularly financially contribute to a variety of grants and projects. Following the onset of COVID-19 at the turn of the decade, the stream of funding towards the university saw a significant surge, specifically in the STEM fields—where departments such as the Semel Institute and the David Geffen School of Medicine received the bulk of the increase in awarded dollars.
 
