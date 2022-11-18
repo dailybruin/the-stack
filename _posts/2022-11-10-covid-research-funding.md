@@ -17,6 +17,9 @@ scripts:
   - /js/posts/covid-research-funding/priv-vs-pub.js
   - /js/posts/covid-research-funding/C&G_By_Year.js
   - /js/posts/covid-research-funding/awarddropdown.js
+
+stylesheets:
+  - /css/posts/covid-research-funding/apps.css
 ---
 
 ### Introduction
