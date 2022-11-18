@@ -2,10 +2,10 @@
 title: Shifts in Public and Private Research Funding - Evaluating the Impact of COVID-19 on UCLA’s Research Activity
 teaser: How did the COVID-19 pandemic impact research funding at UCLA? Which departments and types of research were affected the most?
 authors:
-  - Benjamin Greer
-  - Jake Kovinsky
-  - Mari Yamamoto
-  - Robin Lee
+  - ben_greer
+  - jake_kovinsky
+  - mari_yamamoto
+  - robin_lee
 
 key_takeaways:
   - Annual growth rate for government contracts and grants awarded to UCLA doubled between 2019 and 2022, compared to the annual growth rate in the 12 years prior (2006 - 2018). 
