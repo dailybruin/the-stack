@@ -28,6 +28,7 @@ This raises the question: how exactly did the COVID-19 pandemic impact research 
 ### Where The Funding Comes From 
 
 <div class="bar1-chart"><canvas id = "privvspubbar" width="80%" height="500%"></canvas></div>
+<p class = 'caption'>Contract and grant counts are not available for 2006 and 2007.</p>
 
 
 Public funding has remained to be the University’s overwhelming primary source of revenue. However, the amount of dollars the institution received from private sources increased by $150 million from 2017 to 2022. 
@@ -67,10 +68,6 @@ This hypothesis could be supported by a direct increase of funding for 25 of the
 
 ### Breakdown of Funding by Department 
 
-<div class="pie-chart">
-        <canvas id="awardspie" width="80%" height="500%"></canvas>
-</div>
-
 <div id="container">
         <div class="selectBox">
             <select id="year">
@@ -83,6 +80,9 @@ This hypothesis could be supported by a direct increase of funding for 25 of the
             </select>
         </div>
     </div>
+<div class="pie-chart">
+        <canvas id="awardspie" width="80%" height="500%"></canvas>
+</div>
 <p class = 'caption'>This chart represents the breakdown of awarded dollars for research by department, grouped into six overarching categories: Medical/Health Sciences, STEM, Humanities, College of Letters & Science, Higher Education, and a miscellaneous General category.</p>
 
 From our analysis, we observed a substantial increase in funding for Medical/Health Sciences and STEM-related departments, relative to departments in other fields of study. These departments include—but are not limited to—the David Geffen School of Medicine, Basic Biomedical Sciences, and the Fielding School of Public Health. In 2019, these departments accounted for 56.9% of the total research award dollars for that year. We can see a notable increase in this percentage, presumably due to the demand for Covid-related research in the height of the pandemic—with medical and health sciences accounting for 60.2%, 61.8%, and 64.5% in 2020, 2021, and 2022 respectively. 

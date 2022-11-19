@@ -3,15 +3,15 @@ const ctx1 = document.getElementById('awardspie');
 const data1 = {
     labels: [
         'General',
-        'Medical/Health Sciences',
+        'Medical/health sciences',
         'STEM',
         'Humanities',
-        'Letters & Science',
-        'Higher Education'
+        'Letters & science',
+        'Higher education'
     ],
     datasets: [
         {
-            label: 'Total Funding 2018-2022', 
+            label: 'Total funding 2018-2022', 
             data: [
                 {
                     group: 'General', amount: 163052484
@@ -37,7 +37,7 @@ const data1 = {
                 'rgba(50, 132, 191, 0.8)',
                 'rgba(173, 216, 230, 0.8)',
                 'rgba(247, 201, 25, 0.8)',
-                'rgba(0, 145, 179, 0.8)',
+                'rgba(0, 175, 180, 0.8)',
                 'rgba(179, 163, 105, 0.8)'
             ],
             hoverOffset:4
@@ -59,12 +59,15 @@ const awardspie = new Chart(ctx1, {
                     size: 25,
                 },
             },
-            title: {
-                display: true,
-                text: "Award Dollars by Year"
+            tooltip: {
+                callbacks: {
+                    label: function(context) {
+                        return `${context.label}: $${context.formattedValue}`;
+                    }
+                }
             },
-        },
         maintainAspectRatio: false,
+        }
     }
  });
 
@@ -77,10 +80,4 @@ function changeyear(){
     awardspie.update();
 }
 changeyear();
-// function makeChart(){
-//     const label = year.options[year.selectedIndex].text
-//     awardspie.data.datasets[0].label = label;
-//     awardspie.data.datasets[0].data = year.value.split(',');
-//     awardspie.update();
-// }
-// makeChart()
+

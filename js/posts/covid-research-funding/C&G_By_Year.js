@@ -8,7 +8,7 @@ const data2 = {
   labels: labels1,
   //DATA SETS IN A LIST. EACH OBJECT IN LIST IS A CATEGORY OF DATA CHANGE THESE OUT WITH YOUR DATA
   datasets: [{
-    label: 'Award Dollars',
+    label: 'Award dollars',
     data: [717898536, 913864854, 889326185, 966264691, 1046010017, 1077641319, 
         1011808031, 893603316, 972467059, 1033159101, 1049075841,
     1060140489, 1121751691, 1271780515, 1426986822, 1607202701,
@@ -50,7 +50,7 @@ const options1 = {
   plugins: {
     title: {
         display: true,
-        text: 'UCLA C&G Award Dollars and Counts by Fiscal Year (FY06-FY22)'
+        text: 'UCLA Contracts & grants - award dollars and counts by fiscal year (FY06-FY22)'
       },
       tooltip: {
         callbacks: {
