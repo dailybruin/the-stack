@@ -2,22 +2,33 @@
 title: Shifts in Public and Private Research Funding - Evaluating the Impact of COVID-19 on UCLA’s Research Activity
 teaser: How did the COVID-19 pandemic impact research funding at UCLA? Which departments and types of research were affected the most?
 authors:
-  - Benjamin Greer
-  - Jake Kovinsky
-  - Mari Yamamoto
-  - Robin Lee
+  - ben_greer
+  - jake_kovinsky
+  - mari_yamamoto
+  - robin_lee
 
 key_takeaways:
   - Annual growth rate for government contracts and grants awarded to UCLA doubled between 2019 and 2022, compared to the annual growth rate in the 12 years prior (2006 - 2018). 
   - STEM and medical science departments—such as the Semel Institute and the David Geffen School of Medicine—received substantial increases in funding with the onset of COVID-19.
   - No dramatic shifts in public vs private revenue streams during COVID-19
 
+featured_image:
+  url: covid-research-funding/featured_image.png
+og_image: covid-research-funcing/featured_image.png
+
 scripts:
   - //cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js
   - /js/posts/covid-research-funding/priv-vs-pub.js
   - /js/posts/covid-research-funding/C&G_By_Year.js
   - /js/posts/covid-research-funding/awarddropdown.js
+
+stylesheets:
+  - /css/posts/covid-research-funding/apps.css
 ---
+
+<br>
+<div><blockquote>“Research is part of the fabric of UCLA – it’s integrated into the undergraduate curriculum.<br>Students come to UCLA because they want to be part of a research institution.”</blockquote>
+<em>Dr. Tama Hasson, Assistant Dean for Undergraduate Research and<br>Director of Undergraduate Research Center – Sciences</em></div><br>
 
 ### Introduction
 
@@ -45,6 +56,7 @@ Although there was not a drastic difference between public and private sources o
 Currently, according to the National Science Foundation’s (NSF) rankings on research and development expenditures, UCLA sits at number 7 in the nation behind other notable private and public universities—including UCSD and John Hopkins.
 
 <div class="bar2-chart"><canvas id="CG_Chart" width="80%" height="500%"></canvas></div>
+<p class='caption'>Longitudinal distribution of UCLA contracts and grants award dollars over a 16 year period. Award counts included in distribution as well.</p> 
 
 Prior to the onset of the COVID-19 pandemic, the dollar amounts for contracts and grants received by the university showed a slow rate change. Contrasting this, there was a substantial increase in the annual growth rate of funding between the onset of the pandemic and the few years following. 
 
@@ -59,6 +71,8 @@ Despite an overall positive trajectory, Smith expects there to be a drop in annu
 
 “That [ACTG] is a big component of the increase [in funding], but there’s an increase without it,” said Smith in an interview with The Stack back in October. 
 
+Daniel Newbower, the Principle Administrative Analyst for Research, when asked if ACTG was the only contribution to this spike, said that "...there was definitely a general trend..." and that "...it [ACTG] explained a lot of that large jump... ...but it doesn't explain it all."
+
 The burden imposed on researchers during the height of the COVID-19 pandemic limited their ability to work in their labs and engage with their colleagues. Smith speculates that the time away from active research allowed researchers in many departments to spend more time working on grant applications.
 
 “I mean, maybe they can do [more] data analysis…, management plans and stuff that are overdue…but I’m sure that they just [had] more time to write,” said Smith. 
@@ -71,6 +85,7 @@ This hypothesis could be supported by a direct increase of funding for 25 of the
 <div id="text">
   <b style="font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif; font-size: 12px; color: rgba(0,0,0,0.65); padding:20px;">Award dollars by year</b>
 </div>
+
 <div id="container">
         <div class="selectBox">
             <select id="year">
@@ -82,9 +97,10 @@ This hypothesis could be supported by a direct increase of funding for 25 of the
                 <option value="163052484, 4337242811, 1386346505, 274355868, 945147472, 44144654" selected>2018-2022</option>
             </select>
         </div>
-    </div>
+</div>
+  
 <div class="pie-chart">
-        <canvas id="awardspie" width="80%" height="500%"></canvas>
+      <canvas id="awardspie" width="80%" height="500%"></canvas>
 </div>
 <p class = 'caption'>This chart represents the breakdown of awarded dollars for research by department, grouped into six overarching categories: Medical/Health Sciences, STEM, Humanities, College of Letters & Science, Higher Education, and a miscellaneous General category.</p>
 
@@ -105,3 +121,4 @@ Our analysis of the increase in funding has highlighted the success and agency o
 
 ### About the Data 
 
+Data collected about the University's revenue was directly pulled from UCLA's annual financial reports from FY17 - FY21. Data regarding the distribution of C&G Awarded Dollars overtime and by department was kindly gathered from the Office of Research Administration.

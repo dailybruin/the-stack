@@ -1,0 +1,13 @@
+.caption {
+    font-size:smaller;
+    color:gray;
+    text-align: center;
+}
+
+blockquote {
+    font-size: larger;
+}
+
+em {
+    font-size:smaller;
+}
