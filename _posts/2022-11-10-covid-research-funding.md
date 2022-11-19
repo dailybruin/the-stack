@@ -38,8 +38,10 @@ This raises the question: how exactly did the COVID-19 pandemic impact research 
 
 ### Where The Funding Comes From 
 
-<div class="bar1-chart"><canvas id = "privvspubbar" width="80%" height="500%"></canvas></div>
-<p class = 'caption'>Contract and grant counts are not available for 2006 and 2007.</p>
+<div class="bar1-chart">
+  <canvas id = "privvspubbar" width="80%" height="500%"></canvas>
+</div>
+<p class = 'caption'>Distribution of funding over a 5 year period broken down by 4 sources: State educational appropriations, Government grants & contracts, Private fifts, and Private industry grants & contracts.</p>
 
 
 Public funding has remained to be the University’s overwhelming primary source of revenue. However, the amount of dollars the institution received from private sources increased by $150 million from 2017 to 2022. 
@@ -55,8 +57,10 @@ Although there was not a drastic difference between public and private sources o
 
 Currently, according to the National Science Foundation’s (NSF) rankings on research and development expenditures, UCLA sits at number 7 in the nation behind other notable private and public universities—including UCSD and John Hopkins.
 
-<div class="bar2-chart"><canvas id="CG_Chart" width="80%" height="500%"></canvas></div>
-<p class='caption'>Longitudinal distribution of UCLA contracts and grants award dollars over a 16 year period. Award counts included in distribution as well.</p> 
+<div class="bar2-chart">
+  <canvas id="CG_Chart" width="80%" height="500%"></canvas>
+</div>
+<p class='caption'>Longitudinal distribution of UCLA contracts and grants award dollars over a 16 year period. Award counts included in distribution as well. Contract and grant counts not available for 2006 and 2007.</p> 
 
 Prior to the onset of the COVID-19 pandemic, the dollar amounts for contracts and grants received by the university showed a slow rate change. Contrasting this, there was a substantial increase in the annual growth rate of funding between the onset of the pandemic and the few years following. 
 
@@ -82,11 +86,11 @@ This hypothesis could be supported by a direct increase of funding for 25 of the
 
 ### Breakdown of Funding by Department 
 
-<div id="text">
-  <b style="font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif; font-size: 12px; color: rgba(0,0,0,0.65); padding:20px;">Award dollars by year</b>
+<div id="text" style="text-align: center">
+  <b style="font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif; font-size: 12px; color: rgba(0,0,0,0.65);">Award dollars by year</b>
 </div>
 
-<div id="container">
+<div id="dropdown" style="text-align:center;">
         <div class="selectBox">
             <select id="year">
                 <option value="3820830, 648950405, 244387034, 46502493, 170732336, 7358593">2018</option>

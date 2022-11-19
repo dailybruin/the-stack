@@ -11,3 +11,9 @@ blockquote {
 em {
     font-size:smaller;
 }
+
+.selectBox {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
