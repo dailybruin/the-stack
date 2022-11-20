@@ -1,5 +1,5 @@
 Chart.defaults.font.size = 15;
-Chart.defaults.font.family = 'Lato'
+Chart.defaults.font.family = 'PT Sans'
 Chart.defaults.color = '#000';
 const ctx = document.getElementById('campusData');
 const campusData = new Chart(ctx, {
@@ -49,4 +49,11 @@ const campusData = new Chart(ctx, {
         campusData.data.datasets[0].label = studentType.options[studentType.selectedIndex].text;
         campusData.data.datasets[0].data = studentType.value.split(',');
         campusData.update();
+    }
+
+
+if (window.matchMedia('(max-width: 480px)').matches) {
+    campusData.canvas.style = 'max-height:350px';
+    campusData.options.maintainAspectRatio = false;
+    campusData.update();
     }

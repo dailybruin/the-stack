@@ -1,4 +1,4 @@
-  #wrapper {
+  #wrapper_quiz{
     width: 80%;
     padding: 10px 15px;
     margin: auto;
@@ -10,14 +10,14 @@
   }
 
   .quiz_submit {
-    font-family: 'Lato';
+    font-family: 'PT Sans';
     font-size: 18px;
     padding: 10px;
     margin: 20px 0;
     border-radius: 10px;
   }
   #submit {
-    background: rgb(7, 73, 165);
+    background:#94D8FB;
   }
   #answer {
     font-size: 25px;
@@ -32,3 +32,11 @@
   .results{
     display: block;
   }
+@media (max-width: 600px){
+  #stacked-chart{
+    height: 600px;
+  }
+  #wrapper_quiz{
+    width: 95%;
+  }
+}
