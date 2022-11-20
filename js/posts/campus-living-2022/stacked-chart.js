@@ -51,13 +51,39 @@ const config = {
           label: function(tooltipItem, data) {
             return `${tooltipItem.dataset.label}: $${tooltipItem.formattedValue}`;
           },
-          footer: (tooltipItems, data) => {
-            let total = tooltipItems.reduce(
-              (a, e) => a + parseInt(e.yLabel),
-              0
-            );
-            return 'Total: ' + total;
-          },
+          //   footer: (tooltipItems, data) => {
+          //     let total = tooltipItems.reduce(
+          //       (a, e) => a + parseInt(e.yLabel),
+          //       0
+          //     );
+          //     return 'Total: ' + total;
+          //   },
+        },
+      },
+      datalabels: {
+        display: true,
+        align: 'top',
+        anchor: 'end',
+        formatter: (value, context) => {
+          const datasetArray = [];
+          context.chart.data.datasets.forEach(dataset => {
+            //console.log(dataset.data[context.dataIndex]);
+            if (dataset.data[context.dataIndex] != undefined) {
+              datasetArray.push(dataset.data[context.dataIndex]);
+            }
+          });
+
+          function totalSum(total, datapoint) {
+            return total + datapoint;
+          }
+
+          let sum = datasetArray.reduce(totalSum, 0);
+
+          if (context.datasetIndex === datasetArray.length - 1) {
+            return 'Total: $' + sum;
+          } else {
+            return '';
+          }
         },
       },
     },
