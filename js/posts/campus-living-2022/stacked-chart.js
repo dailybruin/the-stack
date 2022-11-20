@@ -51,7 +51,9 @@ const config = {
                         label: function(tooltipItem, data) {
                             return `${tooltipItem.dataset.label}: $${tooltipItem.formattedValue}`
                         },
+    
                     },
+            
                 },
             },                
             scales: {
