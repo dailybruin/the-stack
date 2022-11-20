@@ -1,5 +1,5 @@
 Chart.register(ChartDataLabels);
-Chart.defaults.font.size = 15;
+Chart.defaults.font.size = 14;
 Chart.defaults.font.family = 'PT Sans';
 Chart.defaults.color = '#000';
 
@@ -43,7 +43,7 @@ const config = {
         display: true,
         text: 'Total estimated yearly living costs',
         font: {
-          size: 22,
+          size: 27,
         },
       },
       tooltip: {
@@ -80,7 +80,7 @@ const config = {
           let sum = datasetArray.reduce(totalSum, 0);
 
           if (context.datasetIndex === datasetArray.length - 1) {
-            return 'Total: $' + sum;
+            return '$' + sum;
           } else {
             return '';
           }
@@ -97,6 +97,7 @@ const config = {
           callback: function(value, index, ticks) {
             return '$' + value;
           },
+        
         },
       },
       responsive: true,
