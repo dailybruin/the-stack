@@ -81,11 +81,18 @@ This hypothesis could be supported by a direct increase of funding for 25 of the
 
 ### Breakdown of Funding by Department 
 
+<<<<<<< HEAD
 <div id="text" style="text-align: center">
   <b style="font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif; font-size: 12px; color: rgba(0,0,0,0.65);">Award dollars by year</b>
 </div>
 
 <div id="dropdown" style="text-align:center;">
+=======
+<div id="text">
+  <b style="font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif; font-size: 12px; color: rgba(0,0,0,0.65); padding:20px;">Award dollars by year</b>
+</div>
+<div id="container">
+>>>>>>> 9bc7ab3f (c)
         <div class="selectBox">
             <select id="year">
                 <option value="3820830, 648950405, 244387034, 46502493, 170732336, 7358593">2018</option>
