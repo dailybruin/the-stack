@@ -1,8 +1,9 @@
-Chart.register(ChartDataLabels);
+//Chart.register(ChartDataLabels);
 Chart.defaults.font.size = 14;
 Chart.defaults.font.family = 'PT Sans';
 Chart.defaults.color = '#000';
 
+const totals = ['$19,565', '$14,341', '$14,426' ];
 const ctxStacked = document.getElementById('stacked-chart');
 const dataStacked = {
   labels: [
@@ -51,6 +52,10 @@ const config = {
           label: function(tooltipItem, data) {
             return `${tooltipItem.dataset.label}: $${tooltipItem.formattedValue}`;
           },
+          beforeBody: function(tooltipItem){
+            index = tooltipItem[0].parsed.x;
+            return 'Total: ' + totals[index]
+          }
           //   footer: (tooltipItems, data) => {
           //     let total = tooltipItems.reduce(
           //       (a, e) => a + parseInt(e.yLabel),
@@ -60,32 +65,32 @@ const config = {
           //   },
         },
       },
-      datalabels: {
-        display: true,
-        align: 'top',
-        anchor: 'end',
-        formatter: (value, context) => {
-          const datasetArray = [];
-          context.chart.data.datasets.forEach(dataset => {
-            //console.log(dataset.data[context.dataIndex]);
-            if (dataset.data[context.dataIndex] != undefined) {
-              datasetArray.push(dataset.data[context.dataIndex]);
-            }
-          });
+      // datalabels: {
+      //   display: true,
+      //   align: 'top',
+      //   anchor: 'end',
+      //   formatter: (value, context) => {
+      //     const datasetArray = [];
+      //     context.chart.data.datasets.forEach(dataset => {
+      //       //console.log(dataset.data[context.dataIndex]);
+      //       if (dataset.data[context.dataIndex] != undefined) {
+      //         datasetArray.push(dataset.data[context.dataIndex]);
+      //       }
+      //     });
 
-          function totalSum(total, datapoint) {
-            return total + datapoint;
-          }
+      //     function totalSum(total, datapoint) {
+      //       return total + datapoint;
+      //     }
 
-          let sum = datasetArray.reduce(totalSum, 0);
+      //     let sum = datasetArray.reduce(totalSum, 0);
 
-          if (context.datasetIndex === datasetArray.length - 1) {
-            return '$' + sum;
-          } else {
-            return '';
-          }
-        },
-      },
+      //     if (context.datasetIndex === datasetArray.length - 1) {
+      //       return '$' + sum;
+      //     } else {
+      //       return '';
+      //     }
+      //   },
+      // },
     },
     scales: {
       x: {
@@ -100,16 +105,16 @@ const config = {
         
         },
       },
-      responsive: true,
-      maintainAspectRatio: false,
     }, //this bracket
+    responsive: true,
+    maintainAspectRatio: false,
   },
 };
 // render init block
 const myChart = new Chart(ctxStacked, config);
 
 if (window.matchMedia('(max-width: 480px)').matches) {
-  myChart.canvas.style = 'max-height:400px';
+  myChart.canvas.style = 'max-height:450px';
   myChart.options.maintainAspectRatio = false;
   myChart.update();
 }

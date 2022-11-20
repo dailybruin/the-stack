@@ -32,6 +32,9 @@
   .results{
     display: block;
   }
+  #stacked-chart{
+    height: 400px;
+  }
 @media (max-width: 600px){
   #stacked-chart{
     height: 600px;
