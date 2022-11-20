@@ -49,13 +49,17 @@ The Stack analyzed data from YEAR to YEAR in order to understand how funding cha
 
 Public funding has remained to be the University’s overwhelming primary source of revenue by a factor of 2 times the amount of private funding contributions. However, the amount of dollars the institution received from private sources increased by $150 million from 2017 to 2022. 
 
-From 2017 to 2019, public revenue increased by $66 million, compared to an increase of $120 million from 2019 to 2021. The majority of this funding, according to our distribution, came from public sources – indicating a growth in federal support throughout the COVID-19 pandemic (CQ 1). 
+Public funding has remained to be the University’s overwhelming primary source of revenue by a factor of 2 times the amount of private funding contributions. However, the amount of dollars the institution received from private sources increased by $150 million from 2017 to 2022. 
+
+From 2017 to 2019, public revenue increased by $66 million, compared to an increase of $120 million from 2019 to 2021. The majority of this funding, according to our distribution, came from public sources – indicating a growth in federal support throughout the COVID-19 pandemic. 
+
+Although there was not a drastic difference between public and private sources of revenue during the pandemic, UCLA saw an increase in total revenue from the last few years. Taking a closer look at the longitudinal distribution of government contracts and grants, we analyzed  the overall impact of COVID-19 on federal funding.
 
 Although there was not a difference in the distribution of revenue between public and private sources during the pandemic, UCLA saw an increase in total revenue from the last few years. Taking a closer look at the longitudinal distribution of government contracts and grants, we analyzed  the overall impact of COVID-19 on federal funding.
 
 ### Distribution of Funding Over Time
 
-Currently, according to the National Science Foundation’s (NSF) rankings, UCLA is ranked seventh in the nation for total research and development expenditures behind other notable private and public universities—including UCSD and John Hopkins
+Currently, according to the National Science Foundation’s (NSF) rankings, UCLA is ranked seventh in the nation for total research and development expenditures behind other notable private and public universities—including UCSD and John Hopkins.
 
 <div class="bar2-chart">
   <canvas id="CG_Chart" width="80%" height="500%"></canvas>
@@ -66,33 +70,25 @@ Prior to the onset of the COVID-19 pandemic, the dollar amounts for contracts an
 
 Marcia Smith, the Associate Vice Chancellor for Research, said the recent surge in UCLA’s public funding is a direct result of the university’s high research productivity, specialized facilities, and expertise in particular fields of study—namely, the institution’s ongoing research and the institution’s clinical trials into HIV treatment. 
 
-In 2020, a grant of $400 million from the AIDS Clinical Trials Group (ACTG), the largest HIV research network composed of universities and nonprofits, was awarded to UCLA. A portion of this grant was also directed towards identifying effective treatments for early onset of COVID-19 in patients.
+In 2020, a grant of $400 million from the AIDS Clinical Trials Group (ACTG), the largest HIV research network composed of universities and nonprofits, was awarded to UCLA. A portion of this grant was also directed towards identifying effective treatments for early onset of COVID-19 in patients. 
 
 “That [ACTG] is a big component of the increase [in funding], but there’s an increase without it,” Smith said.
 
-Daniel Newbower, the Principal Administrative Analyst for Research at UCLA, when asked if ACTG was the only contribution to this spike, said that there was definitely a general trend up explained by ACTG, but it doesn’t explain it all. 
+Daniel Newbower, the Principal Administrative Analyst for Research at UCLA, when asked if ACTG was the only contribution to this spike, said that there was definitely a general trend up explained by ACTG, but it doesn’t explain it all.
 
 Despite an overall positive trajectory, Smith expects there to be a drop in annual growth rate in overall public funding once the grant shifts to the next recipient within the ACTG network in 2027.
 
-In addition to an increase in federal support from the ACTG grant, the burden imposed on researchers during the height of the COVID-19 pandemic limited their ability to work in their labs and engage with their colleagues; Smith said that this time away may have allowed researchers in many departments to spend more time working on grant applications.
+In addition to an increase in federal support from the ACTG grant, the burden imposed on researchers during the height of the COVID-19 pandemic limited their ability to work in their labs and engage with their colleagues; Smith said that this time away may have allowed researchers in many departments to spend more time working on grant applications.(CQ 4, timestamp 24:11)
 
-This hypothesis could be supported by a direct increase of funding for 25 of the 32 departments on campus from 2018 - 2022.
+This hypothesis could be supported by a direct increase of funding for 25 of the 32 departments on campus from 2018 - 2022. 
 
 
 ### Breakdown of Funding by Department 
 
-<<<<<<< HEAD
-<div id="text" style="text-align: center">
-  <b style="font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif; font-size: 12px; color: rgba(0,0,0,0.65);">Award dollars by year</b>
-</div>
-
-<div id="dropdown" style="text-align:center;">
-=======
 <div id="text">
   <b style="font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif; font-size: 12px; color: rgba(0,0,0,0.65); padding:20px;">Award dollars by year</b>
 </div>
 <div id="container">
->>>>>>> 9bc7ab3f (c)
         <div class="selectBox">
             <select id="year">
                 <option value="3820830, 648950405, 244387034, 46502493, 170732336, 7358593">2018</option>
@@ -114,8 +110,9 @@ From our analysis, we observed a substantial increase in funding for Medical/Hea
 
 Some notable departments accounting for a significant portion of the increase in funding include: 
   - The David Geffen School of Medicine, which accounted for 75% of the increase in funding from 2018 to 2022. 
-  - The Infectious Disease Department made up 1.9% of the total funding received by the Geffen School of Medicine in 2018. That number jumped to 20% in 2022.
-  - The UCLA Medical Center, which received an increase of $1,584,554 in awards between 2018 and 2021 — an increase upwards of 164%. 
+  - The Infectious Disease Department, made up 1.9% of the total funding received by the Geffen School of Medicine in 2018. That number jumped to 20% in 2022. 
+  - The UCLA Medical Center, which received an increase of $1,584,554 in awards between 2018 and 2021—an increase upwards of 164%. 
+
 
 ### Looking Forward
 
