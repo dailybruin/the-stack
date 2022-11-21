@@ -18,7 +18,8 @@ const data = {
 const options = {
   title: {
     display: true,
-    text: 'Distribution of plants at UCLA'
+    text: 'Distribution of plants at UCLA',
+    font: {size: 22}
   },
     legend: {
       position: 'right',
