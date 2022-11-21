@@ -81,3 +81,8 @@ function changeyear(){
 }
 changeyear();
 
+if (window.matchMedia('(min-width: 480px)').matches) {
+    awardspie.canvas.style = 'max-height:400px';
+    awardspie.options.maintainAspectRatio = false;
+    awardspie.update();
+  }

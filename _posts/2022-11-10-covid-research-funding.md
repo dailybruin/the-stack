@@ -102,7 +102,7 @@ This hypothesis could be supported by a direct increase of funding for 25 of the
 </div>
   
 <div class="pie-chart">
-      <canvas id="awardspie" width="80%" height="500%"></canvas>
+      <canvas id="awardspie" width="80%" height="100%"></canvas>
 </div>
 <p class = 'caption'>This chart represents the breakdown of awarded dollars for research by department, grouped into six overarching categories: Medical/Health Sciences, STEM, Humanities, College of Letters & Science, Higher Education, and a miscellaneous General category.</p>
 
