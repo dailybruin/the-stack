@@ -58,7 +58,7 @@ Across UCLA’s campus, there are a total of 166 different plant types ranging f
 
 The following chart depicts the distribution of the different plant types at UCLA. 
 
-<div>
+<div class = 'pie-chart'>
   <canvas id = "PlantTypes"></canvas>
 </div>
 
@@ -73,7 +73,7 @@ The campus contains six different plant communities, all with a varying distribu
 
 The following chart depicts the number of different plant species per garden at UCLA. 
 
-<div>
+<div class = 'pie-chart'>
   <canvas id = "PlantD"></canvas>
 </div>
 

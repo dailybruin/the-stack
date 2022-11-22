@@ -9,6 +9,9 @@
     text-align: center;
 }
 
+.pie-chart{
+    height: 350px;
+}
 @media only screen and (max-width: 480px){
     .PlantTypes {
         height: 425 px;
