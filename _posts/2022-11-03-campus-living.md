@@ -11,9 +11,9 @@ key_takeaways:
   - Living in a university apartment double is, on average, cheaper than living in an off-campus apartment when factoring in food, transportation, and utilities.
 
 featured_image:
-  url: 
-  caption: 
-og_image: 
+  url: campus-living/featured_image.jpg
+  caption: (Nikole Liang / Daily Bruin)
+og_image: campus-living/featured_image.jpg
 scripts:
   - //cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js
   - /js/posts/campus-living-2022/match-quiz-new.js
