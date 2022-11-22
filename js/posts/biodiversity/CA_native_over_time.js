@@ -32,12 +32,11 @@ const options_time = {
       }
       }
     },
-    plugins: {
-      title: {
-          display: true,
-          text: 'California Native VS Non-Native Plants at UCLA (2016-2022)'
-        },
-    },
+    title: {
+        display: true,
+        text: 'California native vs non-native plants at UCLA (2016-2022)',
+        fontSize: 14
+      },
     maintainAspectRatio: false,
   }
 //THIS CODE MAKES THE CHART, MAKE SURE THE CTX VARIABLE DOES NOT MATCH ANY OTHER CTX VARIABLE

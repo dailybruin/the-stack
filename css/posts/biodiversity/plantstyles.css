@@ -2,7 +2,12 @@
     width: 50%;
     margin: auto;
 }
-
+.map-title{
+    font-size: 18px;
+    font-weight: 600;
+    margin: auto;
+    text-align: center;
+}
 
 @media only screen and (max-width: 480px){
     .PlantTypes {

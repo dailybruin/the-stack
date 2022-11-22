@@ -58,7 +58,7 @@ Across UCLA’s campus, there are a total of 166 different plant types ranging f
 
 The following chart depicts the distribution of the different plant types at UCLA. 
 
-<div style='height: 300px'>
+<div>
   <canvas id = "PlantTypes"></canvas>
 </div>
 
@@ -73,7 +73,7 @@ The campus contains six different plant communities, all with a varying distribu
 
 The following chart depicts the number of different plant species per garden at UCLA. 
 
-<div style='height: 300px'>
+<div>
   <canvas id = "PlantD"></canvas>
 </div>
 
@@ -87,9 +87,10 @@ Despite this categorization of turf alternatives, only about 57% of the plant sp
 #### Where are the native plants located on UCLA’s campus?
 
 <div class = "map-container">
+  <div class = 'map-title'>Location of plants on campus</div>
   <div class="legend-container">
       <div class="legend-box" style="background:#5FA0CE;"></div>
-      <span class="legend-text">California Native</span>
+      <span class="legend-text">California native</span>
       <div class="legend-box" style="background:#E5A539;"></div>
       <span class="legend-text">Non-native</span>
     </div>

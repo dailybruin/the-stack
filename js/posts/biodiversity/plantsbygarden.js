@@ -19,7 +19,7 @@ const options = {
   title: {
     display: true,
     text: 'Distribution of plants at UCLA',
-    font: {size: 22}
+    fontSize: 14
   },
     legend: {
       position: 'right',
@@ -36,3 +36,10 @@ const chart = new Chart(ctxPIE, {
     data: data,
     options: options
   });
+
+  if (window.matchMedia('(max-width: 480px)').matches) {
+    chart.canvas.style = 'max-height:300px';
+    chart.options.legend.position = 'top';
+    chart.options.maintainAspectRatio = false;
+    chart.update();
+  }

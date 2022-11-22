@@ -18,7 +18,8 @@ const data_type = {
 const options_type = {
   title: {
     display: true,
-    text: 'Plant types at UCLA'
+    text: 'Plant types at UCLA',
+    fontSize: 14
   },
   legend: {
     position: 'right'
@@ -35,3 +36,10 @@ const chart_type = new Chart(ctxPT, {
     data: data_type,
     options: options_type
   });
+
+  if (window.matchMedia('(max-width: 480px)').matches) {
+    chart_type.canvas.style = 'max-height:300px';
+    chart_type.options.legend.position = 'top';
+    chart_type.options.maintainAspectRatio = false;
+    chart_type.update();
+  }
