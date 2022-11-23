@@ -65,15 +65,15 @@ At 62 different species, shrubs maintain the highest number of unique species at
 
 <div class = 'image-holder'>
   <div class = 'image-triad'>
-   <img alt ='' src = '/img/posts/biodiversity/web.stack.biodiversity.d.CK.jpg'>
+   <img alt ='native plants in a UCLA garden' src = '/img/posts/biodiversity/web.stack.biodiversity.d.CK.jpg'>
    <span class = 'caption'> (Christine Kao/Daily Bruin staff)</span>
   </div>
   <div class = 'image-triad'> 
-   <img  alt ='' src = '/img/posts/biodiversity/web.stack.biodiversity.c.HY.jpg'>
+   <img  alt ='Chapparral Yucca in a UCLA garden' src = '/img/posts/biodiversity/web.stack.biodiversity.c.HY.jpg'>
    <span class = 'caption'>  (Halinda Yu/Daily Bruin)</span>
   </div>
   <div class = 'image-triad'>
-    <img alt ='' src = '/img/posts/biodiversity/web.stack.biodiversity.e.CK.jpg'>
+    <img alt ='Dropped debris from a native plant' src = '/img/posts/biodiversity/web.stack.biodiversity.e.CK.jpg'>
     <span class = 'caption'> (Christine Kao/Daily Bruin staff)</span>
   </div>
 </div>
