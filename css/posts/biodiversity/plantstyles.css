@@ -1,3 +1,22 @@
+.caption{
+    font-size: smaller;
+    color: gray;
+}
+.image-holder{
+    margin-left: -15%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 130%;
+}
+.image-triad{
+    width: 33%;
+}
+.vert_image{
+    width: 60%;
+}
+.vert_image_holder{
+    margin-left:25% ;
+}
 .PlantTypes {
     width: 50%;
     margin: auto;
@@ -16,6 +35,13 @@
     .PlantTypes {
         height: 425 px;
         width: 100%;
+    }
+    .vert_image{
+        width: 900%;
+        /* margin: auto; */
+    }
+    .vert_image_holder{
+        margin-left:5% ;
     }
     
 }
