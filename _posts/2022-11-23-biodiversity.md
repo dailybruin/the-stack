@@ -64,10 +64,18 @@ The following chart depicts the distribution of the different plant types at UCL
 At 62 different species, shrubs maintain the highest number of unique species at UCLA. A few species of shrubs include the California sagebrush, laurel sumac and the quailbush. Meanwhile, succulents are in the minority of plant types with only three different species, which include the chaparral yucca, snake cholla and the coastal prickly pear. 
 
 <div class = 'image-holder'>
-   <img class = 'image-triad' src = '/img/posts/biodiversity/web.stack.biodiversity.d.CK.jpg'>
-   <img class = 'image-triad' src = '/img/posts/biodiversity/web.stack.biodiversity.c.HY.jpg'>
-    <img class = 'image-triad' src = '/img/posts/biodiversity/web.stack.biodiversity.e.CK.jpg'>
-    <div class = 'caption'>Native plants on UCLA's campus. Credits from left to right: (Christine Kao/Daily Bruin staff), (Halinda Yu/Daily Bruin), (Christine Kao/Daily Bruin staff)</div>
+  <div class = 'image-triad'>
+   <img alt ='' src = '/img/posts/biodiversity/web.stack.biodiversity.d.CK.jpg'>
+   <span class = 'caption'> (Christine Kao/Daily Bruin staff)</span>
+  </div>
+  <div class = 'image-triad'> 
+   <img  alt ='' src = '/img/posts/biodiversity/web.stack.biodiversity.c.HY.jpg'>
+   <span class = 'caption'>  (Halinda Yu/Daily Bruin)</span>
+  </div>
+  <div class = 'image-triad'>
+    <img alt ='' src = '/img/posts/biodiversity/web.stack.biodiversity.e.CK.jpg'>
+    <span class = 'caption'> (Christine Kao/Daily Bruin staff)</span>
+  </div>
 </div>
 
 The distribution of the other plant types include 32 different species of trees, 30 forbs – also known as wildflowers – 18 grasses and sedges, 14 annuals and four vines.
@@ -136,11 +144,11 @@ These efforts are saving water campuswide.
 
 ### Looking forward
 
-<div class = vert_image_holder>
+<!-- <div class = vert_image_holder>
 <img class = "vert_image" src = "/img/posts/biodiversity/web.stack.biodiversity.b.HY.jpg"
 alt = "Image of trees near the Bruin Bear">
 <div class = 'caption'> Trees near the Bruin Bear. (Halinda Yu/Daily Bruin)</div>
-</div>
+</div> -->
 
 “The main focus will be converting areas of ornamental or ‘non-functional’ grass/turf, which use a lot of water,” Katz added in an emailed statement. In addition to turf, trees may also be replaced by native species, Katz said. Katz added that when existing non-native trees or landscaping needs replacement, UCLA plans to transition those to native plants. An example of this is the tree by the Bruin Bear, which was recently replaced by a coast live oak.
 
