@@ -58,10 +58,13 @@ const options1 = {
             return `Year: ${context[0].label}`;
           },
           beforeBody: function(context) {
-            if (context[0].dataindex == NaN){
-              return `Counts: Not available`
+            if (isNaN(dataCounts[context[0].dataIndex])){
+              return `Counts: Not available`;
             }
-            return `Counts: ${dataCounts[context[0].dataIndex]}`;
+              return `Counts: ${dataCounts[context[0].dataIndex].toLocaleString('en-US', {
+                style: 'decimal',
+                maximumFractionDigits: 0,
+              })}`;
           },
             label: function(context) {
                 let label = context.dataset.label || '';

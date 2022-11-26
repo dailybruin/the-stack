@@ -48,10 +48,22 @@ const privvspubbar = new Chart(ctx, {
                         return `Year: ${context[0].label}`;
                     },
                     label: function(context) {
-                        return `$${context.parsed.x} million`;
+                        return `${context.parsed.x.toLocaleString('en-US', {
+                            style: 'currency',
+                            currency: 'USD',
+                            maximumFractionDigits: 0,
+                          })} million`;
                     },
                     afterBody: function(context) {
-                        var array = [`Public Total: $${pubTotals[context[0].dataIndex]} million`,`Private Total: $${privTotals[context[0].dataIndex]} million`];
+                        var array = [`Public Total: ${pubTotals[context[0].dataIndex].toLocaleString('en-US', {
+                            style: 'currency',
+                            currency: 'USD',
+                            maximumFractionDigits: 0,
+                          })} million`,`Private Total: ${privTotals[context[0].dataIndex].toLocaleString('en-US', {
+                            style: 'currency',
+                            currency: 'USD',
+                            maximumFractionDigits: 0,
+                          })} million`];
                         return array;
                     },
                 }
@@ -63,7 +75,11 @@ const privvspubbar = new Chart(ctx, {
             x: {
                 ticks: {
                     callback: function(value, index, ticks) {
-                        return '$' + value;
+                        return value.toLocaleString('en-US', {
+                            style: 'currency',
+                            currency: 'USD',
+                            maximumFractionDigits: 0,
+                          });
                     }
                 },
                 stacked: true,
