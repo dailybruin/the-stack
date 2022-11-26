@@ -6,7 +6,7 @@ const data1 = {
         'Medical/health sciences',
         'STEM',
         'Humanities',
-        'Letters & science',
+        'Letters and science',
         'Higher education'
     ],
     datasets: [
@@ -65,6 +65,10 @@ const awardspie = new Chart(ctx1, {
                         return `${context.label}: $${context.formattedValue}`;
                     }
                 }
+            },
+            title: {
+                display: true,
+                text: 'Award dollars by year'
             },
         maintainAspectRatio: false,
         }

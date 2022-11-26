@@ -40,7 +40,7 @@ const privvspubbar = new Chart(ctx, {
         plugins:{
             title:{
                 display:true,
-                text: 'Private and public revenue (2017 - 2021)'
+                text: 'Private and public revenue (2017-2021)'
             },
             tooltip: {
                 callbacks: {
