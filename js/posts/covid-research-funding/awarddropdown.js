@@ -6,7 +6,7 @@ const data1 = {
         'Medical/health sciences',
         'STEM',
         'Humanities',
-        'Letters & science',
+        'Letters and science',
         'Higher education'
     ],
     datasets: [
@@ -66,6 +66,10 @@ const awardspie = new Chart(ctx1, {
                     }
                 }
             },
+            title: {
+                display: true,
+                text: 'Award dollars by year'
+            },
         maintainAspectRatio: false,
         }
     }
@@ -81,3 +85,8 @@ function changeyear(){
 }
 changeyear();
 
+if (window.matchMedia('(min-width: 480px)').matches) {
+    awardspie.canvas.style = 'max-height:400px';
+    awardspie.options.maintainAspectRatio = false;
+    awardspie.update();
+  }
