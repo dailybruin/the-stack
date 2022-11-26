@@ -45,7 +45,6 @@ const privvspubbar = new Chart(ctx, {
             tooltip: {
                 callbacks: {
                     title: function(context) {
-                        console.log(context[0].label);
                         return `Year: ${context[0].label}`;
                     },
                     label: function(context) {

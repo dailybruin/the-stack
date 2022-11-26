@@ -75,13 +75,8 @@ Corroborating both statements, there was in fact an increase in funding among 25
 
 ### Breakdown of contracts and grants by department
 
-<<<<<<< HEAD
-<div id="text" style="text-align:center;">
-  <b style="font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif; font-size: 12px; color: rgba(0,0,0,0.65); padding:20px;">Award dollars by year</b>
-=======
 <div id="text">
   <!-- <b style="font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif; font-size: 12px; color: rgba(0,0,0,0.65); padding:20px;">Award dollars by year</b> -->
->>>>>>> 9b86fa761797117827bbc8660c4988cac7f2696c
 </div>
 <div id="container" style="text-align:center;">
         <div class="selectBox">
@@ -97,11 +92,7 @@ Corroborating both statements, there was in fact an increase in funding among 25
 </div>
   
 <div class="pie-chart">
-<<<<<<< HEAD
-      <canvas id="awardspie" width="400" height="400"></canvas>
-=======
       <canvas id="awardspie" width="80%" height="100%"></canvas>
->>>>>>> 9b86fa761797117827bbc8660c4988cac7f2696c
 </div>
 <p class = 'caption'>This chart represents the breakdown of awarded dollars for research by department, grouped into six overarching categories: medical/health sciences, STEM, humanities, college of letters and science, higher education and a miscellaneous general category.</p>
 

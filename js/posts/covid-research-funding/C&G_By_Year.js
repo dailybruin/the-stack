@@ -55,11 +55,12 @@ const options1 = {
       tooltip: {
         callbacks: {
           title: function(context) {
-            console.log(context[0].label);
             return `Year: ${context[0].label}`;
           },
           beforeBody: function(context) {
-            console.log(context);
+            if (context[0].dataindex == NaN){
+              return `Counts: Not available`
+            }
             return `Counts: ${dataCounts[context[0].dataIndex]}`;
           },
             label: function(context) {
