@@ -85,10 +85,10 @@ This hypothesis could be supported by a direct increase of funding for 25 of the
 
 ### Breakdown of Funding by Department 
 
-<div id="text">
+<div id="text" style="text-align:center;">
   <b style="font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif; font-size: 12px; color: rgba(0,0,0,0.65); padding:20px;">Award dollars by year</b>
 </div>
-<div id="container">
+<div id="container" style="text-align:center;">
         <div class="selectBox">
             <select id="year">
                 <option value="3820830, 648950405, 244387034, 46502493, 170732336, 7358593">2018</option>
@@ -102,7 +102,7 @@ This hypothesis could be supported by a direct increase of funding for 25 of the
 </div>
   
 <div class="pie-chart">
-      <canvas id="awardspie" width="80%" height="500%"></canvas>
+      <canvas id="awardspie" width="400" height="400"></canvas>
 </div>
 <p class = 'caption'>This chart represents the breakdown of awarded dollars for research by department, grouped into six overarching categories: Medical/Health Sciences, STEM, Humanities, College of Letters & Science, Higher Education, and a miscellaneous General category.</p>
 
