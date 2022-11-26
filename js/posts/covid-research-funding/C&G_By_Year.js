@@ -8,11 +8,11 @@ const data2 = {
   labels: labels1,
   //DATA SETS IN A LIST. EACH OBJECT IN LIST IS A CATEGORY OF DATA CHANGE THESE OUT WITH YOUR DATA
   datasets: [{
-    label: 'Award dollars',
-    data: [717898536, 913864854, 889326185, 966264691, 1046010017, 1077641319, 
-        1011808031, 893603316, 972467059, 1033159101, 1049075841,
-    1060140489, 1121751691, 1271780515, 1426986822, 1607202701,
-1722568065], //VALUE FOR EACH BAR
+    label: 'Award dollars (in millions)',
+    data: [717.898536, 913.864854, 889.326185, 966.264691, 1046.010017, 1077.641319, 
+        1011.808031, 893.603316, 972.467059, 1033.159101, 1049.075841,
+    1060.140489, 1121.751691, 1271.780515, 1426.986822, 1607.202701,
+1722.568065], //VALUE FOR EACH BAR
     backgroundColor: colors[0],
     borderColor: colors[0],
     borderWidth: 1
@@ -35,7 +35,7 @@ const options1 = {
     },
       title:{
         display: true,
-        text: 'Amount',
+        text: 'Amount (in millions)',
         padding: 20,
         }
     },
