@@ -66,7 +66,7 @@ Marcia Smith, the associate vice chancellor for research administration, said th
 
 As such, the AIDS Clinical Trials Group, an HIV research network composed of universities and nonprofits, awarded UCLA a grant upward of $400 million in 2020. A portion of this grant was subsequently directed toward identifying effective treatments for the early onset of COVID-19 in patients. 
 
-When asked if the ACTG was the primary contributor behind this spike between 2019 and 2022, Daniel Newbower, a principal administrative analyst for research at UCLA, said that while the ACTG played a part in the general upward trend in research funding, it does not explain everything. Smith said UCLA experienced an increase in overall funding even without the ACTG grant.
+When asked if the ACTG was the primary contributor behind this spike between 2019 and 2022, Dan Newbower, a principal administrative analyst for research at UCLA, said that while the ACTG played a part in the general upward trend in research funding, it does not explain everything. Smith said UCLA experienced an increase in overall funding even without the ACTG grant.
 
 “That (ACTG) is a big component of the increase (in funding), but there’s an increase without it,” Smith said.
 
@@ -96,7 +96,7 @@ Corroborating both statements, there was in fact an increase in funding among 25
 </div>
 <p class = 'caption'>This chart represents the breakdown of awarded dollars for research by department, grouped into six overarching categories: medical/health sciences, STEM, humanities, college of letters and science, higher education and a miscellaneous general category.</p>
 
-Focusing closer on each department, an analysis of the above graphic shows a larger increase in funding for medical/health sciences and STEM-related departments relative to the departments in other fields of study. Some of these departments include the David Geffen School of Medicine, Basic Biomedical Sciences and the Fielding School of Public Health. In 2019, these facilities accounted for 56.9% of the total amount of money awarded to UCLA’s research programs for that year. There was a notable increase in this percentage with medical and health sciences accounting for 60.2%, 61.8% and 64.5% in 2020, 2021 and 2022. respectively. This is possibly due to the demand for COVID-related research in the height of the pandemic. 
+Focusing closer on each department, an analysis of the above graphic shows a larger increase in funding for medical/health sciences and STEM-related departments relative to the departments in other fields of study. Some of these departments include the David Geffen School of Medicine and the Fielding School of Public Health. In 2019, these facilities accounted for 56.9% of the total amount of money awarded to UCLA’s research programs for that year. There was a notable increase in this percentage with medical and health sciences accounting for 60.2%, 61.8% and 64.5% in 2020, 2021 and 2022. respectively. This is possibly due to the demand for COVID-related research in the height of the pandemic. 
 
 Some notable departments accounting for a significant portion of the increase in funding include: 
   - The School of Medicine, which accounted for 75% of the increase in funding from 2018 to 2022.
