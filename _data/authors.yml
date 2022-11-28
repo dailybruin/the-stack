@@ -663,7 +663,7 @@ mari_yamamoto:
   name: Mari Yamamoto
   title: Stack Developer
   bio: Mari is a second-year computational & systems biology student. 
-  mug: no
+  mug: yes
   current: yes
   email: myamamoto@media.ucla.edu
 haryn_shin:
@@ -677,7 +677,7 @@ jake_kovinsky:
   name: Jake Kovinsky
   title: Stack Developer
   bio: Jake is a third-year cognitive science student.
-  mug: no
+  mug: yes
   current: yes
   email: jkovinsky@media.ucla.edu
 leo_cardozo:
