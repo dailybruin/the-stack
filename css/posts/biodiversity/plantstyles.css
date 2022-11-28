@@ -1,0 +1,80 @@
+.caption{
+    font-size: smaller;
+    color: gray;
+    display: inline;
+}
+.image-holder{
+    margin-left: -15%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 130%;
+}
+.image-triad{
+    width: 33%;
+    display: inline-block
+}
+.vert_image{
+    width: 60%;
+}
+.vert_image_holder{
+    margin-left:25% ;
+}
+.PlantTypes {
+    width: 50%;
+    margin: auto;
+}
+.map-title{
+    font-size: 18px;
+    font-weight: 600;
+    margin: auto;
+    text-align: center;
+}
+
+.pie-chart{
+    height: 350px;
+}
+@media only screen and (max-width: 480px){
+    .PlantTypes {
+        height: 425 px;
+        width: 100%;
+    }
+    .vert_image{
+        width: 900%;
+        /* margin: auto; */
+    }
+    .vert_image_holder{
+        margin-left:5% ;
+    }
+    .image-holder{
+        margin: auto;
+        margin-bottom: 25px;
+        margin-top: 25px;
+        width: 100%;
+    }
+    .image-triad{
+        width: 90%
+        /* margin: auto; */
+    }
+    
+}
+
+.PlantD {
+    width: 50%;
+    margin: auto;
+}
+
+
+@media only screen and (max-width: 480px){
+    .PlantD {
+        height: 425 px;
+        width: 100%;
+    }
+    
+}
+
+.legend-box{
+    display: inline-block;
+    height: 10px;
+    width: 10px;
+    border: 2px solid black;
+}

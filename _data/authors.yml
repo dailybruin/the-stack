@@ -610,14 +610,14 @@ finn_liu:
   name: Finn Liu 
   title: Stack Developer 
   bio: Finn is a second year mathematics/economics student. 
-  mug: no 
+  mug: yes 
   current: yes 
   email: yiliu7@g.ucla.edu   
 junwon_choi:
   name: Junwon Choi
   title: Stack Developer
-  bio: Junwon is a second-year data theory and economics student.
-  mug: no
+  bio: Junwon is a second-year data theory student.
+  mug: yes
   current: yes
   email: jchoi7@media.ucla.edu
   github: cjunwon
@@ -663,7 +663,7 @@ mari_yamamoto:
   name: Mari Yamamoto
   title: Stack Developer
   bio: Mari is a second-year computational & systems biology student. 
-  mug: no
+  mug: yes
   current: yes
   email: myamamoto@media.ucla.edu
 haryn_shin:
@@ -677,7 +677,7 @@ jake_kovinsky:
   name: Jake Kovinsky
   title: Stack Developer
   bio: Jake is a third-year cognitive science student.
-  mug: no
+  mug: yes
   current: yes
   email: jkovinsky@media.ucla.edu
 leo_cardozo:
@@ -685,6 +685,14 @@ leo_cardozo:
   title: Stack Developer
   bio: Leo is a first-year statistics student. He enjoys playing tennis, cheering on UCLA sports, and going on hikes.
   mug: yes
-  current: no
   email: lcardozo@media.ucla.edu
   github: cardo14
+  current: yes
+robin_lee:
+  name: Robin Lee
+  title: Stack Developer
+  bio: Robin is a third-year statistics student. 
+  mug: no
+  email: rglee@media.ucla.edu
+  github: robin-leee
+  current: yes
