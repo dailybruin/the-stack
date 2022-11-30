@@ -670,9 +670,9 @@ haryn_shin:
   name: Haryn Shin
   title: Stack Developer
   bio: Haryn is a second-year cognitive science student with a specialization in computing and a minor in digital humanities. She likes to go eat Korean food and hang out with friends in her free time. 
-  mug: no
-  current: yes
+  mug: yes
   email: hshin@media.ucla.edu
+  current: yes
 jake_kovinsky:
   name: Jake Kovinsky
   title: Stack Developer
@@ -683,7 +683,7 @@ jake_kovinsky:
 leo_cardozo:
   name: Leo Cardozo
   title: Stack Developer
-  bio: 
+  bio: Leo is a first-year statistics student. He enjoys playing tennis, cheering on UCLA sports, and going on hikes.
   mug: yes
   email: lcardozo@media.ucla.edu
   github: cardo14
