@@ -33,7 +33,7 @@ Here is a short quiz for you to see whether you match better with living on camp
 
 
 <div id="wrapper_quiz">  
-  <h1>On-Campus vs. Off-Campus Living: Which is for you?</h1>
+  <h1>On-campus vs. off-campus living: Which is for you?</h1>
   <p>Take this quiz to find out your best match!</p> 
   <form id = "quiz">
 		<p class = "question">Q1. Do you like to cook?</p>
