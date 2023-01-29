@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<head>
+    <meta charset = "utf-8">
+    <title>study-abroad</title>
+    <script src = "sb-barchart.js" defer></script>
+    <script src = "https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js" ></script>
+    <style type = "text/css">
+        .chartBox {
+            width: 600px;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class = "selectBox" >
+        <select id = "Program">
+            <option value="597,596,527,562,743,986,1089,1041,1205,1266,464,754,624"
+                    label = "UCEAP" 
+                    selected>Total Yearly UCEAP Students</option>
+            <option value="1145,849,1024,910,761,708,947,793,886,949,0,0,464"
+                    label = "Travel Study"
+                    >Total Yearly Travel Study Students</option>
+        </select>  
+        </div>
+    <div class = "chartBox" >
+        <canvas id="studyAbroadData" width="500" height="350"></canvas> 
+    </div> 
+</body>
+ 
+
