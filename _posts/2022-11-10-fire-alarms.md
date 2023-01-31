@@ -1,224 +1,118 @@
 ---
-title: Fire Alarm Title
+title: "Fire Alarms: A Bothersome Blessing"
 
-teaser: insert teaser
+teaser: While fire alarms are life saving devices, they can be a nuisance when they go off too frequently without cause. The Stack looks into the occurrence and response of fire alarms at UCLA.
 
 authors:
-  - justin_gong
-  - connie_ma
   - liam_mcglynn
   - jessica_nguyen
 
 key_takeaways:
-  - tbd
+  - UCLA had 2,462 fire alarm activations and 120 fires from 2018 to 2022. Roughly five percent of fire alarm activations were the result of an actual fire in this period. 
+  - Medical buildings had the highest number of fire alarms during the period with XX alarms. followed by STEM research buildings with XX alarms..
+  - The number of fire alarms tends to peak during fall quarters and drop during the winter and spring quarters.
+
 
 featured_image:
-  url: public-transit/bigbluebus.jpg
+  url: fire-alarms/dbfirephoto.jpg
   caption: (Daily Bruin file photo)
-og_image: public-transit/bigbluebus.jpg
+og_image: fire-alarms/dbfirephoto.jpg
 
 scripts:
   - //cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js
+  - //unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js
+  - //unpkg.com/leaflet.markercluster.layersupport@2.0.1/dist/leaflet.markercluster.layersupport.js
+  - //unpkg.com/leaflet.featuregroup.subgroup@1.0.2/dist/leaflet.featuregroup.subgroup.js
+  - //cdn.jsdelivr.net/npm/leaflet-easybutton@2/src/easy-button.js
+  - //stamen-maps.a.ssl.fastly.net/js/tile.stamen.js?v1.3.0
+  - //unpkg.com/leaflet@1.9.2/dist/leaflet.js
+  - //cdnjs.cloudflare.com/ajax/libs/OverlappingMarkerSpiderfier-Leaflet/0.2.6/oms.min.js
+  - /js/posts/fire-alarms/Fire Alarm Map/firegeojson.js
+  - /js/posts/fire-alarms/Fire Alarm Map/firemap.js
+  - /js/posts/fire-alarms/Fire Alarm Map/firemap.html
 
 stylesheets:
   - //cdnjs.cloudflare.com/ajax/libs/c3/0.4.10/c3.min.css
-  - /css/posts/public-transit/app.css
+  - //unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css
+  - //unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css
+  - //cdn.jsdelivr.net/npm/leaflet-easybutton@2/src/easy-button.css
+  - //use.typekit.net/xmo8psg.css
+  - //unpkg.com/leaflet@1.9.2/dist/leaflet.css
+  - /css/posts/fire-alarms/leaflet.css
 ---
 
-In 2019, more than half of undergraduate students at UCLA, as well as a majority of graduate students, staff and faculty, lived off campus and commuted to class and to work. According to UCLA’s 2019 State of the Commute Report, nearly 64% of all UCLA commuters use sustainable transportation of some kind, while the remaining 36% drive alone to campus.
+While being abruptly woken up at 3:00 a.m. to a blaring voice repeatedly asking for attention may be unusual for most, this experience is not uncommon for UCLA students. 
 
-Active transportation methods were the largest group of sustainable transportation, with walkers constituting almost 24% of all commuters and bikers making up about 3% of all commuters. After walking, the most common form of sustainable transportation was public transit, which was used by more than 19% of all UCLA commuters, including more than 13% of employees and more than 25% of students.
+Over the past five years, UCLA and Westwood had nearly 2,500 fire alarm activations. With a total of 120 fires in the same period, roughly five percent of alarm activations were the result of an actual fire. Despite the inconvenience of repeated false alarms, fire alarms, when working properly, save lives. 
 
-Of the commuters who use public transit, 49% reported taking the BruinBus, which UCLA operates on routes around campus and Westwood Village. Fifty-nine percent of public transit commuters reported using other public transit agencies, which included Los Angeles Metro, Big Blue Bus, Culver CityBus, Antelope Valley Transit Authority, City of Santa Clarita Transit, Long Beach Transit and Los Angeles Department of Transportation.
+According to the National Fire Protection Agency, the death rate from 2014 to 2018 per 1,000 reported home fires was 91 percent lower when there were hard-wired smoke alarms and sprinklers.
 
-Many of these commuter students face issues with late buses and inconvenient transit schedules, which can interfere with their classes and work.
+The Stack investigated the frequency of UCLA’s fire alarms analyzing patterns to determine what buildings, time of day and areas have had a higher number of fire alarm activations. The Stack spoke with the UCLA fire department to understand how these alarm activations are handled.
 
-Julie Valdez, a second-year political science student who used to commute to campus on the LADOT-operated Commuter Express 573, said that she frequently missed classes because of public transportation. She also was not able to stay on campus for club events because of limited evening bus schedules.
+## Fire Alarm Response
 
-Natalie Hernandez, a third-year biology student who commutes to campus, also said she had been late to classes because of buses not being on time.
+In the event of an on-campus fire alarm activation, the fire alarm system automatically sends a notification to UCPD. UCPD then dispatches a fire engine from the UCLA Fire Department to investigate the source of the alarm. Upon arrival, first responders examine the building’s fire panel to determine the location and type of fire alarm that was activated before entering. 
 
-“Since it takes so much time (to commute), I have less time to study or work,” Hernandez added.
+Fire alarms can be activated by a number of different devices such as smoke detectors, beam detectors, heat detectors, water flow devices or manual pull stations. Even after investigating the source, sometimes the Fire Department does not know what set the alarm off. 
 
-In this article, The Stack examines the punctuality of several bus lines around UCLA as well as the monthly ridership of the bus lines. We obtained data on route 786 to Century City/West Los Angeles from AVTA, Commuter Express routes 431, 534 and 573 from LADOT, routes 792 and 797 from Santa Clarita Transit and routes 1, 2, 3, 8 and 12 from Big Blue Bus. These lines were chosen for their proximity to UCLA’s campus. LA Metro said it did not collect the timing or ridership data that the Daily Bruin requested.
+“We'll investigate the origin and determine what the cause is. Sometimes we don't know what set it off,” said Ricardo Barboza, the UCLA Fire Marshall.
 
-<!-- AVTA -->
-<iframe class="avta-gfx google-gfx" frameborder="0" src="https://www.google.com/maps/d/u/2/embed?mid=1J3BnhsGAKvaL-H3MvnBGWO0zfHkluFIu&ehbc=2E312F" height="480"></iframe>
+## Where Fire Alarms Occur Most Often
 
-<!-- LADOT -->
-<iframe class="ladot-gfx google-gfx" frameborder="0" src="https://www.google.com/maps/d/u/2/embed?mid=1jSi0Rcw-N7mmJK9wIFWJZAbHPU2R43_y&ehbc=2E312F" height="480"></iframe>
+The chart below shows the 10 places that had the most fire alarm activations from 2018 through 2022. 
 
-<!-- SCT -->
-<iframe class="sct-gfx google-gfx" frameborder="0" src="https://www.google.com/maps/d/u/0/embed?mid=1EH-L095zLCIlL_VKFOwCVlM0Z1vuePtk&ehbc=2E312F" height="480"></iframe>
-
-<!-- BBB -->
-<iframe class="bbb-gfx google-gfx" frameborder="0" src="https://www.google.com/maps/d/u/2/embed?mid=14hcJ4PuYN489c3crHluQeHBsIZlGVKaB&ehbc=2E312F" height="480"></iframe>
-<p class="credit">Graphics by Alex Yoo, Graphics editor and Rebekah Limb, assistant Graphics editor.</p>
-
-## Visualizing LADOT bus stops
-
-The map below displays the bus stops for Commuter Express routes 431, 534 and 573, which are operated by LADOT.
-
-The color scale shows how often buses are late at each bus stop, with a darker color corresponding to a larger proportion of late buses. Hover over a bus stop for more information, including the bus line it serves, how often buses are late to that stop and the average headway, which is the time in between buses at that stop.
-
-Use the controls on the right-hand side to filter by geographical region, bus line, lateness frequency, or average headway. To find a specific stop, use the “Stop Name” filter to search a bus stop by its stop number or address.
-
-<div class='tableauPlaceholder' id='viz1646197996554' style='position: relative'>
-  <object class='tableauViz'  style='display:none;'>
-    <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> 
-    <param name='embed_code_version' value='3' /> 
-    <param name='site_root' value='' />
-    <param name='name' value='final_public_transit_map&#47;Dashboard1' />
-    <param name='tabs' value='no' />
-    <param name='toolbar' value='yes' />
-    <param name='animate_transition' value='yes' />
-    <param name='display_static_image' value='yes' />
-    <param name='display_spinner' value='yes' />
-    <param name='display_overlay' value='yes' />
-    <param name='display_count' value='yes' />
-    <param name='language' value='en-US' />
-    <param name='filter' value='publish=yes' />
-  </object>
-</div>
-<script type='text/javascript'> 
-  var divElement = document.getElementById('viz1646197996554');
-  var vizElement = divElement.getElementsByTagName('object')[0];
-  if ( divElement.offsetWidth > 800 ) { 
-    vizElement.style.width='800px';
-    vizElement.style.height='727px';
-  } else if ( divElement.offsetWidth > 500 ) { 
-    vizElement.style.width='800px';
-    vizElement.style.height='727px';
-  } else { 
-    vizElement.style.width='100%';
-    vizElement.style.height=(divElement.offsetWidth*1.77)+'px';
-  } 
-  var scriptElement = document.createElement('script');
-  scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
-  vizElement.parentNode.insertBefore(scriptElement, vizElement);
-</script>
-<p class="caption">Note: Clear the Stop Name search bar and hit enter to reset the map.</p>
-
-## Punctuality of buses
-
-The pie charts below show how often buses were early, late or on time for AVTA, LADOT and Santa Clarita Transit. Big Blue Bus did not provide the Daily Bruin with timing data for its routes.
-
-<!-- Timeliness graphs -->
-<!-- Overview pie chart -->
-<div class='pie-chart-wrapper'>
-  <iframe title="Punctuality of different transportation agencies" aria-label="Multiple Pies" id="datawrapper-chart-mefC5" src="https://datawrapper.dwcdn.net/mefC5/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="336"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();
-</script>
+<!-- Fire Alarms by Locations -->
+<div>
+  <canvas id="FAlocations" width="400" height="150"></canvas>
 </div>
 
-From July 2019 to October 2021, AVTA route 786 had the highest percentage of late buses.
+Over the course of this period, Ronald Reagan UCLA Medical Center had the most alarm activations by 50 percent more. Barboza said that the higher rate of fire alarms is due to its size, constant use and type of activity.
 
-LADOT buses were early roughly twice as often as they were late, and Santa Clarita Transit buses were also early more often than late.
+“There's always someone there, so the propensity of activity, maliciousness and attention activations to go off is high just for those reasons,” said Barboza.
 
-The punctuality of specific bus lines for LADOT and Santa Clarita Transit are broken down in the pie charts below.
+According to the data, a significant amount of fire alarms on campus occur in medical buildings. Combined, the Ronald Reagan Medical Center, Center for Health Sciences and Medical Plaza 200 Building account for over 15 percent of all fire alarms on and around campus. Additionally, STEM-related research buildings, such as Boelter Hall, Young Hall and the Biomedical Sciences Building, tend to have higher numbers of fire alarms. 
 
-<!-- pie chart for LADOT -->
-<iframe title="Punctuality of LADOT bus lines" aria-label="Multiple Pies" id="datawrapper-chart-4O1Tn" src="https://datawrapper.dwcdn.net/4O1Tn/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="285"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();
-</script>
+Among residence halls and university apartment buildings, Hedrick Hall (whose previous residents had dubbed the “Fire Alarm Villa” in 2018) had the most alarm activations with 62 activations. Hedrick Hall had nearly the same number of alarms as Dykstra Hall, Rieber Hall and Sproul Hall combined, despite all being the same type of residence hall and of similar size. Other than Hedrick Hall, De Neve Plaza and Rieber Vista had the most alarms with 37 each.
 
-<!-- pie chart for Santa Clarita -->
-<iframe title="Punctuality of Santa Clarita Transit bus lines" aria-label="Multiple Pies" id="datawrapper-chart-kMXjH" src="https://datawrapper.dwcdn.net/kMXjH/2/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="305"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();
-</script>
+<div id="map"></div>
 
-Juan Matute, the deputy director for the UCLA Institute of Transportation Studies, said some transportation agencies prioritize the on-time performance of buses over how long a trip takes, sometimes adding time to the schedule and having buses wait along the route in order to be on time rather than early.
+## When Fire Alarms Occur Most Often
 
-“It's led to a deterioration of the service performance for the people who are using it. Some of it is congestion. Some of it is mismanagement of scheduling and transit,” Matute said.
+Fire alarms tend to occur at the greatest frequency between 9 a.m. and 12 p.m., peaking around 10 a.m., when many students are awake. In contrast, there are fewer fire alarms between the times of 11 p.m. and 5 a.m. 
 
-## Public transit ridership over time
+The distribution of alarms throughout the day is fairly similar for alarms on campus and alarms on the hill.
 
-Even before the COVID-19 pandemic, transit ridership was declining despite efforts to expand and improve the current forms of public transportation. According to a study by UCLA’s Institute of Transportation Studies, the Los Angeles County Metropolitan Transportation Authority experienced a ridership drop of more than 17% between 2014 and 2018.
+## Fire Alarms over Time
 
-Since early 2020, public transit ridership has decreased significantly as many individuals attended work or school remotely and people avoided crowded public areas.
-
-While almost 20% of all UCLA commuters used public transit to travel to campus in 2019, the 2020 State of the Commute Report found that 8% of commuters traveling to campus in 2020 used public transit.
-
-In The Stack’s analysis of ridership data for LADOT, AVTA, Santa Clarita Transit and Big Blue Bus from January 2019 to October 2021, we found large decreases in average monthly ridership in the months following the beginning of the COVID-19 pandemic.
-
-For each of the four public transit agencies, the following chart depicts the number of monthly riders averaged over the number of bus routes from that agency. Hover over or tap on the data points for more details, and click on any of the public transit agencies in the legend to hide it from the chart.
-
-<!-- Ridership Graphs -->
-<div id="avg-ridership" class="timeline"></div>
-<div class="timeline-container">
-  <div id="avg-timeline"></div>
+Having had 2,462 fire alarms from 2018 through 2022, UCLA has averaged 1.35 fire alarms per day, 41 per month and 492 per year. The following chart illustrates the number of fire alarm activations for each year since 2018.
+<div>
+  <canvas id="FAtimeline"></canvas>
 </div>
 
-<p class="caption">Average monthly ridership was calculated based on AVTA route 786, LADOT Commuter Express routes  431, 534 and 573, Santa Clarita Transit routes 792 and 797 and Big Blue Bus routes 1, 2, 3, 8 and 12. Ridership data for the Big Blue Bus was unavailable for certain months, so that chart was interpreted as a scatter plot instead.</p>
+During the COVID-19 pandemic, the number of alarm activations decreased in 2020 and 2021 when students were not on campus. In UCLA residence halls and university apartment buildings, there were 148 and 155 alarms in 2018 and 2019, respectively. Although these buildings were mostly vacated during the pandemic, the number of alarms decreased by a mere eight percent in 2020 and 2021 compared to 2018 and 2019, indicating that fire alarms are not necessarily correlated with student presence. 
 
-For all public transit agencies analyzed, total ridership declined significantly following the onset of the COVID-19 pandemic in early 2020.
-
-From March 2020 to October 2021, average monthly ridership for LADOT routes 431, 534 and 573 was 83% lower than ridership from January 2019 to February 2020. Similarly, AVTA average ridership for route 786 declined by 85%, and the average Santa Clarita Transit ridership declined by 77%.
-
-The percentage decline in total ridership for the Big Blue Bus was approximately 46%. However, the limited number of months with Big Blue Bus ridership data may cause the results to be less accurate.
-
-Use the drop-down below to see ridership for LADOT, Big Blue Bus, AVTA and Santa Clarita Transit broken down by individual bus lines.
-
-<select id="timeline-dropdown"></select>
-
-<div class="timeline-container">
-  <div id="ladot-timeline"></div>
+<div>
+  <canvas id="FAmonths" width="400" height="150"></canvas>
 </div>
 
-<div class="timeline-container">
-  <div id="avta-timeline"></div>
-</div>
+According to the chart, the number of alarms follows a yearly cycle. Typically, the number of fire alarms tends to peak during the fall quarter and drop during the winter and spring quarters. 
 
-<div class="timeline-container">
-  <div id="sct-timeline"></div>
-</div>
+## Conclusion
 
-<div class="timeline-container">
-  <div id="bbb-timeline"></div>
-</div>
+For students, UCLA’s frequent fire alarms can act as an incessant nuisance. However, for some, the pros outweigh the cons.
 
-The above ridership charts show a slow improvement in ridership since the first case of COVID-19 in LA. However, Jacob Wasserman, a research project manager with the UCLA Institute of Transportation Studies, said that despite the recovery, ridership is not returning to pre-pandemic levels.
+“It's a necessity and I can see how a bunch of teenagers stuck in the room in an emergency like that, you kind of need that [fire alarm] before it gets into a fracas,” first-year pre-economics student Jack Donaldson said.
 
-“I think from our ridership research and our continuing ridership research, the message I would say is that transit can't just return back to, quote, normal, unquote,” Wasserman said.
+While the replacement of faulty fire alarms could help lessen the frequency of unintentional activations, in reality, fixing every single imperfect fire alarm is a costly challenge.
 
-## Future of public transportation
+“A lot of the buildings we have here on campus are older and some of them have older systems. We update fire alarm systems as budgets happen. It's always a money situation,” Barboza said.
 
-Amid declining public transit ridership, LA Metro is expanding its rail system. An extension of the Metro Purple Line is currently under construction to connect existing metro stations in downtown LA and Koreatown to Westwood by 2027.
+In the end, the annoyance created by fire alarms is not expected to disappear in the near future. Instead, frequent fire alarms will likely remain another part of life for UCLA students.
 
-LA Metro is also in the planning stages of the Sepulveda Transit Corridor Project, which would connect the San Fernando Valley and West LA.
+## About The Data
 
-“Both of those are pretty ideal opportunities for rail transit that can serve a large amount of riders. There's a large density of both jobs and residents and housing around the stations,” Wasserman said.
+The Stack collected data from the past five years (2018-2022). This data was obtained from the UCLA Administrative Policies & Compliance Office and UCLA Police Department’s Daily Crime and Fire Log and contained a record of the date, time, location and address of each fire alarm. Notes and limitations of the data are listed below.
 
-Additionally, the Purple Line currently runs from before 5 a.m. until after midnight, addressing concerns raised by some commuter students, such as Valdez, about having reliable transportation home from campus at all hours.
+All fire alarms without a specified location name and those located outside of Westwood were excluded from all visualizations and statistics. 
 
-As LA Metro works to improve its rail lines, Matute said that investing in better bus lanes can also speed up bus routes and make service more reliable.
-
-“If we improve the quality of service on the bus network, that's where the biggest dividends come,” Matute said.
-
-## About the data
-
-After directly reaching out to various bus stop agencies in LA, data from AVTA, LADOT, Santa Clarita Transit and Big Blue Bus was collected and compiled. In particular, details on ridership per bus stop, scheduled bus departure and arrival times, delays in bus departure and arrivals and bus routes – with bus stop names and bus stop codes – were collected for a period of three years, from 2019 to 2021.
-
-#### AVTA data
-
-From AVTA, the Daily Bruin requested data only for bus route 786, which runs from Lancaster and Palmdale to Century City and West LA.
-
-AVTA data on ridership per bus stop, scheduled and actual arrival and departure times, and bus routes with stop information was obtained on a monthly basis for a period of three years, from 2019 to 2021.
-
-#### LADOT data
-
-From LADOT, the Daily Bruin requested data for Commuter Express routes 431, 534, and 573, the downtown LA to Westwood, West LA to downtown LA, and Encino to Westwood lines, respectively.
-
-LADOT data on total ridership per month from 2019 to 2021 for all three bus lines, bus stop arrival and departure statistics for on-time performance, and bus route with stop information was obtained.
-
-#### Santa Clarita Transit data
-
-From Santa Clarita Transit, the Daily Bruin requested data for bus routes 792 and 797, both the Century City lines.
-
-Santa Clarita Transit provided data for each route on the total ridership per stop, the monthly ridership per stop and the arrival and departure times at each stop from January 2019 to October 2021.
-
-#### Big Blue Bus data
-
-From Big Blue Bus, the Daily Bruin requested data for bus routes 1, Main Street and Santa Monica Boulevard; 2, Wilshire Boulevard; 3, Lincoln Boulevard; 8, Ocean Park Boulevard; and Rapid 12, UCLA/Westwood to Expo Rapid.
-
-Big Blue Bus data on ridership per month, per stop for a period of three years – 2019 to 2021 – was obtained.
-
-#### Latitude and longitude positions of bus stops
-
-Using the bus stop information provided by the aforementioned public transit bus agencies, the addresses of each of the bus stops were scraped, using the Scrapy package in Python, and appended to a comma-separated values file. This data was imported into Google Sheets with geocoding capabilities, thus enabling the retrieval of latitude and longitude coordinates of the bus stops. More details on the code are available in The Stack’s [GitHub repository](https://github.com/dailybruin/the-stack/tree/master/python/posts/public_transit/bus_stops_scraper).
+All “actual fires” were excluded from visualizations (excluding the map of alarms and fires) due to the lack of clarity surrounding how they were reported.

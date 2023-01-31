@@ -1,5 +1,5 @@
-const ctt = document.getElementById('myCha');
-const myCha = new Chart(ctt, {
+const ctt = document.getElementById('FAmonths');
+const FAmonths = new Chart(ctt, {
     type: 'bar',
     data: {
         labels: ['Jan-18', 'Feb-18', 'Mar-18', 'Apr-18', 'May-18', 'June-18', 'July-18', 'Aug-18', 'Sep-18', 'Oct-18', 'Nov-18', 'Dec-18', 'Jan-19', 'Feb-19', 'Mar-19', 'Apr-19', 'May-19', 'June-19', 'July-19', 'Aug-19', 'Sep-19', 'Oct-19', 'Nov-19', 'Dec-19', 'Jan-20', 'Feb-20', 'Mar-20', 'Apr-20', 'May-20', 'June-20', 'July-20', 'Aug-20', 'Sep-20', 'Oct-20', 'Nov-20', 'Dec-20', 'Jan-21', 'Feb-21', 'Mar-21', 'Apr-21', 'May-21', 'June-21', 'July-21', 'Aug-21', 'Sep-21', 'Oct-21', 'Nov-21', 'Dec-21', 'Jan-22', 'Feb-22', 'Mar-22', 'Apr-22', 'May-22', 'June-22', 'July-22', 'Aug-22', 'Sep-22', 'Oct-22', 'Nov-22', 'Dec-22'],
