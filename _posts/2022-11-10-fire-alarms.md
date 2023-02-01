@@ -30,9 +30,9 @@ scripts:
   #- /js/posts/fire-alarms/FAmap/firegeojson.js
   #- /js/posts/fire-alarms/FAmap/firemap.js
   #- /js/posts/fire-alarms/FAmap/firemap.html
-  - /js/posts/fire-alarms/FAloc.js #added imports for chart files
-  - /js/posts/fire-alarms/FAmonths.js
-  - /js/posts/fire-alarms/FAtimeline.js
+  #- /js/posts/fire-alarms/FAloc.js #added imports for chart files
+  #- /js/posts/fire-alarms/FAmonths.js
+  #- /js/posts/fire-alarms/FAtimeline.js
 
 stylesheets:
   - //cdnjs.cloudflare.com/ajax/libs/c3/0.4.10/c3.min.css
@@ -65,9 +65,9 @@ The chart below shows the 10 places that had the most fire alarm activations fro
 
 
 <!-- Fire Alarms by Locations -->
-<div>
+<!-- <div>
   <canvas id="FAlocations" width="400" height="150"></canvas>
-</div>
+</div> -->
 
 Over the course of this period, Ronald Reagan UCLA Medical Center had the most alarm activations with 165.(CQ#7) Barboza said that the higher rate of fire alarms is due to its size, constant use and type of activity.(CQ#8)
 
@@ -78,7 +78,7 @@ According to the data, a significant amount of fire alarms on campus occur in me
 Among residence halls and university apartment buildings, Hedrick Hall (whose previous residents had dubbed the “Fire Alarm Villa”(CQ#12) in 2018) had the most alarm activations with 62 activations.(CQ#13) Hedrick Hall had nearly the same number of alarms as Dykstra Hall, Rieber Hall and Sproul Hall combined, despite all being the same type of residence hall and of similar size.(CQ#14) Other than Hedrick Hall, De Neve Plaza and Rieber Vista had the most alarms with 37 each.(CQ#15)
 
 
-<!-- <iframe src="/js/posts/fire-alarms/FAmap/firemap.html" title="Map of fire alarms locations" id = "fire-map"></iframe> -->
+<iframe src="/js/posts/fire-alarms/FAmap/firemap.html" title="Map of fire alarms locations" id = "fire-map"></iframe>
 
 ### When fire alarms occur most often
 
@@ -89,16 +89,16 @@ The distribution of alarms throughout the day is fairly similar for alarms on ca
 ### Fire alarms over time
 Having had 2,462 fire alarms from 2018 through 2022, UCLA has averaged 1.35 fire alarms per day, 41 per month and 492 per year.(CQ#18) The following chart illustrates the number of fire alarm activations for each year since 2018.
 
-<div>
+<!-- <div>
   <canvas id="FAtimeline"></canvas>
-</div>
+</div> -->
 
 During the COVID-19 pandemic, the number of alarm activations decreased in 2020 and 2021 when students were not on campus.(CQ#19) In UCLA residence halls and university apartment buildings, there were 148 and 155 alarms in 2018 and 2019, respectively.(CQ#20) Although these buildings were mostly vacated during the pandemic, the number of alarms decreased by a mere seven percent in 2020 and 2021 compared to 2018 and 2019, indicating that fire alarms are not directly proportional with student presence.(CQ#21) 
 
 
-<div>
+<!-- <div>
   <canvas id="FAmonths" width="400" height="150"></canvas>
-</div>
+</div> -->
 
 According to the chart, the number of alarms follows a yearly cycle. Typically, the number of fire alarms tends to peak during the fall quarter and drop during the winter and spring quarters.(CQ#22) 
 
