@@ -27,8 +27,8 @@ scripts:
   - //stamen-maps.a.ssl.fastly.net/js/tile.stamen.js?v1.3.0
   #- //unpkg.com/leaflet@1.9.2/dist/leaflet.js
   #- //cdnjs.cloudflare.com/ajax/libs/OverlappingMarkerSpiderfier-Leaflet/0.2.6/oms.min.js
-  - /js/posts/fire-alarms/FAmap/firegeojson.js
-  - /js/posts/fire-alarms/FAmap/firemap.js
+  #- /js/posts/fire-alarms/FAmap/firegeojson.js
+  #- /js/posts/fire-alarms/FAmap/firemap.js
   #- /js/posts/fire-alarms/FAmap/firemap.html
   - /js/posts/fire-alarms/FAloc.js #added imports for chart files
   - /js/posts/fire-alarms/FAmonths.js
