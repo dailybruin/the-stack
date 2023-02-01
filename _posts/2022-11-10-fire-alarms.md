@@ -27,9 +27,12 @@ scripts:
   - //stamen-maps.a.ssl.fastly.net/js/tile.stamen.js?v1.3.0
   - //unpkg.com/leaflet@1.9.2/dist/leaflet.js
   - //cdnjs.cloudflare.com/ajax/libs/OverlappingMarkerSpiderfier-Leaflet/0.2.6/oms.min.js
-  - /js/posts/fire-alarms/Fire Alarm Map/firegeojson.js
-  - /js/posts/fire-alarms/Fire Alarm Map/firemap.js
-  - /js/posts/fire-alarms/Fire Alarm Map/firemap.html
+  - /js/posts/fire-alarms/FAmap/firegeojson.js
+  - /js/posts/fire-alarms/FAmap/firemap.js
+  #- /js/posts/fire-alarms/FAmap/firemap.html
+  - /js/posts/fire-alarms/FAloc.js #added imports for chart files
+  - /js/posts/fire-alarms/FAmonths.js
+  - /js/posts/fire-alarms/FAtimeline.js
 
 stylesheets:
   - //cdnjs.cloudflare.com/ajax/libs/c3/0.4.10/c3.min.css
@@ -39,6 +42,7 @@ stylesheets:
   - //use.typekit.net/xmo8psg.css
   - //unpkg.com/leaflet@1.9.2/dist/leaflet.css
   - /css/posts/fire-alarms/leaflet.css
+  - /css/posts/fire-alarms/app.css
 ---
 
 While being abruptly woken up at 3:00 a.m. to a blaring voice repeatedly asking for attention may be unusual for most, this experience is not uncommon for UCLA students. 
@@ -74,7 +78,7 @@ According to the data, a significant amount of fire alarms on campus occur in me
 
 Among residence halls and university apartment buildings, Hedrick Hall (whose previous residents had dubbed the “Fire Alarm Villa” in 2018) had the most alarm activations with 62 activations. Hedrick Hall had nearly the same number of alarms as Dykstra Hall, Rieber Hall and Sproul Hall combined, despite all being the same type of residence hall and of similar size. Other than Hedrick Hall, De Neve Plaza and Rieber Vista had the most alarms with 37 each.
 
-<div id="map"></div>
+<iframe src="/js/posts/fire-alarms/FAmap/firemap.html" title="Map of fire alarms locations" id = "fire-map"></iframe>
 
 ## When Fire Alarms Occur Most Often
 

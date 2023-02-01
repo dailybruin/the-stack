@@ -24,12 +24,12 @@ const categories = {
   'ACTUAL FIRE': {
     markers: [],
     hexCode: '#d3392d',
-    iconUrl: './red-pin-copy.svg',
+    //iconUrl: '../../../../red-pin-copy.svg',
   },
   'FIRE ALARM': {
     markers: [],
     hexCode: '#ff8b17',
-    iconUrl: './orange-pin-copy.svg',
+    //iconUrl: '/orange-pin-copy.svg',
   },
 };
 
