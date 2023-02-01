@@ -78,7 +78,7 @@ According to the data, a significant amount of fire alarms on campus occur in me
 Among residence halls and university apartment buildings, Hedrick Hall (whose previous residents had dubbed the “Fire Alarm Villa”(CQ#12) in 2018) had the most alarm activations with 62 activations.(CQ#13) Hedrick Hall had nearly the same number of alarms as Dykstra Hall, Rieber Hall and Sproul Hall combined, despite all being the same type of residence hall and of similar size.(CQ#14) Other than Hedrick Hall, De Neve Plaza and Rieber Vista had the most alarms with 37 each.(CQ#15)
 
 
-<iframe src="/js/posts/fire-alarms/FAmap/firemap.html" title="Map of fire alarms locations" id = "fire-map"></iframe>
+<!-- <iframe src="/js/posts/fire-alarms/FAmap/firemap.html" title="Map of fire alarms locations" id = "fire-map"></iframe> -->
 
 ### When fire alarms occur most often
 
