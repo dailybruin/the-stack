@@ -1,0 +1,86 @@
+$blue: #008fd5;
+$yellow: #ffb81c;
+$mobile-threshold: 650px;
+
+.heatchart-tip {
+  @media only screen and (max-width: $mobile-threshold) {
+    font-size: 13px;
+    padding: 2px;
+  }
+  display: block;
+  position: absolute;
+  text-align: center;
+  width: auto;
+  height: auto;
+  padding: 3px;
+  font-size: 15px;
+  font-family: sans-serif;
+  background-color: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
+.invisible {
+  opacity: 0;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.time-line {
+  fill: none;
+  stroke-width: 3px;
+  opacity: 0.8;
+}
+
+.wooden {
+  stroke: $blue;
+  border-bottom: 3px solid $blue;
+}
+
+.bfit {
+  stroke: $yellow;
+  border-bottom: 3px solid $yellow;
+}
+
+.heat-circle:hover {
+  opacity: 0.6;
+  stroke: black;
+  stroke-width: 1px;
+}
+
+.voronoi path {
+  fill: none;
+  pointer-events: all;
+}
+
+.chart-label {
+  @media only screen and (max-width: $mobile-threshold) {
+    font-size: 9px;
+  }
+  font-size: 14px;
+  text-anchor: middle;
+}
+
+.legend-label, .line-legend .label {
+  @media only screen and (max-width: $mobile-threshold) {
+    font-size: 8px;
+  }
+  font-size: 11px;
+  text-anchor: middle;
+}
+
+.black-stroke {
+  stroke: black;
+  stroke-width: 2.5px;
+}
+
+.no-border {
+  stroke: none;
+}
