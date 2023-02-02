@@ -2,7 +2,7 @@ var xValues = [12, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 1, 2, 3, 4, 5, 6, 7, 8
 var yValues = [69, 68, 73, 57, 52, 70, 104, 138, 118, 149, 156, 145, 129, 140, 118, 100, 96, 107, 114, 115, 119, 103, 106, 73];
 const xLabels =  ['12AM','1AM','2AM','3AM','4AM','5AM','6AM','7AM','8AM','9AM','10AM',
     '11AM','12PM','1PM','2PM','3PM','4PM','5PM','6PM','7PM','8PM','9PM','10PM','11PM'];
-Chart.defaults.font.family = 'Noto Serif, serif'  
+//Chart.defaults.font.family = 'Noto Serif, serif'  
 const options = {
     legend: {display: false},
     scales: {

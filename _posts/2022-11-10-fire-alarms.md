@@ -67,7 +67,7 @@ The chart below shows the 10 places that had the most fire alarm activations fro
 
 <!-- Fire Alarms by Locations -->
 <div>
-  <canvas id="FAlocations" width="400" height="150"></canvas>
+  <canvas id="FAlocations" width="100vw" height="70vh"></canvas>
 </div>
 
 Over the course of this period, Ronald Reagan UCLA Medical Center had the most alarm activations with 165.(CQ#7) Barboza said that the higher rate of fire alarms is due to its size, constant use and type of activity.(CQ#8)
@@ -84,7 +84,7 @@ Among residence halls and university apartment buildings, Hedrick Hall (whose pr
 ### When fire alarms occur most often
 
 <div>
-  <canvas id="FAhours" width="400" height="150"></canvas>
+  <canvas id="FAhours" width="100vw" height="70vh"></canvas>
 </div>
 
 Fire alarms tend to occur at the greatest frequency between 9 a.m. and 12 p.m., peaking around 10 a.m., when many students are awake. In contrast, there are fewer fire alarms between the times of 11 p.m. and 5 a.m.(CQ#16) 
@@ -94,16 +94,16 @@ The distribution of alarms throughout the day is fairly similar for alarms on ca
 ### Fire alarms over time
 Having had 2,462 fire alarms from 2018 through 2022, UCLA has averaged 1.35 fire alarms per day, 41 per month and 492 per year.(CQ#18) The following chart illustrates the number of fire alarm activations for each year since 2018.
 
-<!-- <div>
-  <canvas id="FAtimeline"></canvas>
-</div> -->
+<div>
+  <canvas id="FAtimeline" width="100vw" height="70vh"></canvas>
+</div>
 
 During the COVID-19 pandemic, the number of alarm activations decreased in 2020 and 2021 when students were not on campus.(CQ#19) In UCLA residence halls and university apartment buildings, there were 148 and 155 alarms in 2018 and 2019, respectively.(CQ#20) Although these buildings were mostly vacated during the pandemic, the number of alarms decreased by a mere seven percent in 2020 and 2021 compared to 2018 and 2019, indicating that fire alarms are not directly proportional with student presence.(CQ#21) 
 
 
-<!-- <div>
-  <canvas id="FAmonths" width="400" height="150"></canvas>
-</div> -->
+<div>
+  <canvas id="FAmonths" width="100vw" height="70vh"></canvas>
+</div>
 
 According to the chart, the number of alarms follows a yearly cycle. Typically, the number of fire alarms tends to peak during the fall quarter and drop during the winter and spring quarters.(CQ#22) 
 

@@ -47,3 +47,7 @@ const FAlocations = new Chart(ctxt, {
         }
     }
 });
+if (window.matchMedia('(max-width: 480px)').matches) {
+    FAlocations.data.labels = ['RRMC', 'CHS', 'MP200', 'Boelter', 'Hedrick', 'Young', 'Franz', 'Dentistry', 'BMSB', 'SPH'];
+    FAlocations.update();
+  }
