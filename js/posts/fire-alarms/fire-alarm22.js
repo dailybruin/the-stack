@@ -1,13 +1,3 @@
-<html>
-<head>
-    <meta charset="utf-8">
-    <title>Frequency of Fire Alarms Per Hour From 2018 to 2022</title>
-</head>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
-<body>
-<canvas id="myChart" style="width: 10000px;;max-width:10000px"></canvas>
-
-<script>
 var xValues = [12, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
 var yValues = [69, 68, 73, 57, 52, 70, 104, 138, 118, 149, 156, 145, 129, 140, 118, 100, 96, 107, 114, 115, 119, 103, 106, 73];
 const xLabels =  ['12AM','1AM','2AM','3AM','4AM','5AM','6AM','7AM','8AM','9AM','10AM',
@@ -52,15 +42,15 @@ const options = {
       },
       title: {
         display: true,
-        text: 'Frequency of Fire Alarms Per Hour From 2018 to 2022'
+        text: 'Frequency of Fire Alarms Per Hour'
       }},
     maintainAspectRatio: true,
   }
-new Chart("myChart", {
+const ctx = document.getElementById('FAhours');
+const FAhours = new Chart(ctx, {
   type: "line",
   data: {
     labels: xLabels,
-    
     datasets: [{
         label: 'Number of Fire Alarms',
       fill: false,
@@ -72,8 +62,3 @@ new Chart("myChart", {
   },
   options:options
 });
-  
-</script>
-
-</body>
-</html>
