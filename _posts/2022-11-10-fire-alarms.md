@@ -20,19 +20,20 @@ og_image: fire-alarms/dbfirephoto.jpg
 
 scripts:
   - //cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js
-  #- //unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js
-  #- //unpkg.com/leaflet.markercluster.layersupport@2.0.1/dist/leaflet.markercluster.layersupport.js
-  #- //unpkg.com/leaflet.featuregroup.subgroup@1.0.2/dist/leaflet.featuregroup.subgroup.js
+  - //unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js
+  - //unpkg.com/leaflet.markercluster.layersupport@2.0.1/dist/leaflet.markercluster.layersupport.js
+  - //unpkg.com/leaflet.featuregroup.subgroup@1.0.2/dist/leaflet.featuregroup.subgroup.js
   - //cdn.jsdelivr.net/npm/leaflet-easybutton@2/src/easy-button.js
   - //stamen-maps.a.ssl.fastly.net/js/tile.stamen.js?v1.3.0
-  #- //unpkg.com/leaflet@1.9.2/dist/leaflet.js
-  #- //cdnjs.cloudflare.com/ajax/libs/OverlappingMarkerSpiderfier-Leaflet/0.2.6/oms.min.js
-  #- /js/posts/fire-alarms/FAmap/firegeojson.js
-  #- /js/posts/fire-alarms/FAmap/firemap.js
-  #- /js/posts/fire-alarms/FAmap/firemap.html
-  #- /js/posts/fire-alarms/FAloc.js #added imports for chart files
-  #- /js/posts/fire-alarms/FAmonths.js
-  #- /js/posts/fire-alarms/FAtimeline.js
+  - //unpkg.com/leaflet@1.9.2/dist/leaflet.js
+  - //cdnjs.cloudflare.com/ajax/libs/OverlappingMarkerSpiderfier-Leaflet/0.2.6/oms.min.js
+  - /js/posts/fire-alarms/FAmap/firegeojson.js
+  - /js/posts/fire-alarms/FAmap/firemap.js
+  - /js/posts/fire-alarms/FAmap/firemap.html
+  - /js/posts/fire-alarms/FAloc.js #added imports for chart files
+  - /js/posts/fire-alarms/FAmonths.js
+  - /js/posts/fire-alarms/FAtimeline.js
+  - /js/posts/fire-alarms/FAtime.js
 
 stylesheets:
   - //cdnjs.cloudflare.com/ajax/libs/c3/0.4.10/c3.min.css
@@ -65,9 +66,9 @@ The chart below shows the 10 places that had the most fire alarm activations fro
 
 
 <!-- Fire Alarms by Locations -->
-<!-- <div>
+<div>
   <canvas id="FAlocations" width="400" height="150"></canvas>
-</div> -->
+</div>
 
 Over the course of this period, Ronald Reagan UCLA Medical Center had the most alarm activations with 165.(CQ#7) Barboza said that the higher rate of fire alarms is due to its size, constant use and type of activity.(CQ#8)
 
@@ -81,6 +82,10 @@ Among residence halls and university apartment buildings, Hedrick Hall (whose pr
 <iframe src="/js/posts/fire-alarms/FAmap/firemap.html" title="Map of fire alarms locations" id = "fire-map"></iframe>
 
 ### When fire alarms occur most often
+
+<div>
+  <canvas id="FAhours" width="400" height="150"></canvas>
+</div>
 
 Fire alarms tend to occur at the greatest frequency between 9 a.m. and 12 p.m., peaking around 10 a.m., when many students are awake. In contrast, there are fewer fire alarms between the times of 11 p.m. and 5 a.m.(CQ#16) 
 
