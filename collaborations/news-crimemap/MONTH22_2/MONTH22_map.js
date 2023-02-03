@@ -73,7 +73,7 @@ let markers = L.markerClusterGroup.layerSupport({
   maxClusterRadius: 25,
 });
 
-MONTH_2022_crimes_geojson.features.map(feature => {
+MONTH_2023_crimes_geojson.features.map(feature => {
   const coords = [
     feature.geometry.coordinates[1],
     feature.geometry.coordinates[0],
@@ -109,7 +109,9 @@ crimeMap.addLayer(markers);
 
 const overlayLayers = {};
 Object.entries(categories).forEach(([key, val]) => {
-  const legendText = `<div class="legend-container"><div class="legend-box" style="background:${val.hexCode};"></div><div class="legend-text">${key}</div></div>`;
+  const legendText = `<div class="legend-container"><div class="legend-box" style="background:${
+    val.hexCode
+  };"></div><div class="legend-text">${key}</div></div>`;
   overlayLayers[legendText] = L.layerGroup(val.markers);
 });
 Object.values(overlayLayers).forEach(layer => layer.addTo(crimeMap));

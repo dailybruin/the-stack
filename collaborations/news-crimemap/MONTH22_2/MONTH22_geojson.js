@@ -1,3 +1,1 @@
-const MONTH_2022_crimes_geojson = {
-  
- }
+const MONTH_2023_crimes_geojson = {};
