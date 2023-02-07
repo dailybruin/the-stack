@@ -21,7 +21,7 @@ $(document).ready(function() {
   });
 
   // render comparison chart
-  d3.csv('/datasets/gym-traffic/comparison-chart-data.csv', function(error, data) {
+  d3.csv('/datasets/gym-traffic-2023/comparison-chart-data.csv', function(error, data) {
     if (error)  throw error;
 
     // process data
@@ -247,7 +247,7 @@ function renderHeatChart(data, colors, container, legendCircles = null) {
         let timeTip = "<span class='bold'>" + dayStr + "</span>" + " | " +
             "<span class='bold'>" + hourStr + "</span>" + "<br>";
 
-        if (d.n_people_rel <= 0 | d.traffic_ratio <= 0) {
+        if (d.n_people_rel <= 0 | d.traffic_ratio < 0) {
           return (
             timeTip +
             "<span class='bold'>" + "Closed" + "</span>"
