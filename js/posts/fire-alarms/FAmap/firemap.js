@@ -1,15 +1,18 @@
-var firemap = new L.map("map", {
-    center: new L.LatLng(34.0682709,-118.4457082),
-    zoom: 15
+var firemap = new L.map('map', {
+  center: new L.LatLng(34.0682709, -118.4457082),
+  zoom: 15,
 });
 
-L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/toner/{z}/{x}/{y}{r}.{ext}', {
-	attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-	subdomains: 'abcd',
-	minZoom: 0,
-	maxZoom: 20,
-	ext: 'png'
-}
+L.tileLayer(
+  'https://stamen-tiles-{s}.a.ssl.fastly.net/toner/{z}/{x}/{y}{r}.{ext}',
+  {
+    attribution:
+      'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+    subdomains: 'abcd',
+    minZoom: 0,
+    maxZoom: 20,
+    ext: 'png',
+  }
 ).addTo(firemap);
 
 //map.addLayer(layer);
@@ -18,7 +21,6 @@ const oms = new OverlappingMarkerSpiderfier(firemap, {
   markersWontMove: true,
 });
 const isMobile = window.matchMedia('(max-width: 480px)').matches;
-
 
 const categories = {
   'Actual Fire': {
@@ -40,7 +42,7 @@ firegeojson.features.map(feature => {
   ];
   // if crime has multiple categories, only use first one
   const cat = feature.properties.Event;
-  console.log(cat)
+  console.log(cat);
   const pinIcon = L.icon({
     iconUrl: categories[cat].iconUrl,
     iconSize: [35, 35],
