@@ -69,7 +69,7 @@ function renderBothFacilityHeatCharts(data) {
   let facilityData = filterFacilityData(data);
 
   let sequentialColors = ['#feedde','#fdbe85','#fd8d3c','#d94701'], // http://colorbrewer2.org/#type=sequential&scheme=Oranges&n=4
-      sequentialLabels = ['Not Busy', '', '', 'Very Busy'];
+      sequentialLabels = ['Not Busy', 'Moderate','Busy', 'Very Busy'];
 
   configAndRenderChart(facilityData.wooden, '#wooden-heatmap', 'wooden', sequentialColors, sequentialLabels);
   configAndRenderChart(facilityData.bfit, '#bfit-heatmap', 'bfit', sequentialColors, sequentialLabels);

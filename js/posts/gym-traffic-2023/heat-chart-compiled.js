@@ -3,7 +3,7 @@ b=processFacilityData(b),renderTrafficText(b),renderBothFacilityHeatCharts(b),$(
 b=processComparisonData(b);var c='#comparison-heatmap';// render chart
 renderComparisonChart(b,c),$(window).resize(function(){renderComparisonChart(b,c)})})});function renderTrafficText(a){var b=filterFacilityData(a),c=null;b.wooden.forEach(function(f){f.hour==currentTime_.hour&f.day_of_week==currentTime_.day_of_week&&(c=f.category)});var e=null;b.bfit.forEach(function(f){f.hour==currentTime_.hour&f.day_of_week==currentTime_.day_of_week&&(e=f.category)}),d3.select('#wooden-traffic-text').text(labelTrafficCategory(c)).attr('class','italic'),d3.select('#bfit-traffic-text').text(labelTrafficCategory(e)).attr('class','italic')}// render wooden and bfit heat charts
 function renderBothFacilityHeatCharts(a){var b=filterFacilityData(a),c=['#feedde','#fdbe85','#fd8d3c','#d94701'],// http://colorbrewer2.org/#type=sequential&scheme=Oranges&n=4
-e=['Not Busy','','','Very Busy'];configAndRenderChart(b.wooden,'#wooden-heatmap','wooden',c,e),configAndRenderChart(b.bfit,'#bfit-heatmap','bfit',c,e)}// render comparison charts
+e=['Not Busy','Moderate','Busy','Very Busy'];configAndRenderChart(b.wooden,'#wooden-heatmap','wooden',c,e),configAndRenderChart(b.bfit,'#bfit-heatmap','bfit',c,e)}// render comparison charts
 function renderComparisonChart(a,b){var// http://www.colorhexa.com/80a478
 c=['#008FD5'].concat(['#CFDDCC']).concat(['#ffb81c'])// [darker, less dark]
 ;configAndRenderChart(a,b,null,c,['Wooden','"Same"','BFit'])}function configAndRenderChart(a,b,c,e,f){$(b).html('');var g=['#CCD1D1'].concat(e),h=['Closed'].concat(f),j=d3.scaleOrdinal().domain(d3.range(0,g.length,1)).range(g);// filter data to exclude hours from 1 to 4
