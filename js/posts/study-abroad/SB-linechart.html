@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<head>
+    <meta charset = "utf-8">
+    <title>UCEAPdestinations</title>
+    <script src = "https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+    <script src = "SB-linechart.js" defer></script>
+    
+    <style type = "text/css">
+        .chartBox {
+            width: 600px;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="selectBox">
+        <select id="prog">
+            <option value="EAPdata" label="UCEAP" selected>Top UCEAP Destinations</option>
+            <option value="TSdata" label="Travel Study">Top Travel Study Destinations</option>
+        </select>
+    </div>
+    <div class="chartBox">
+        <canvas id="topDestinations" width="500" height="350"></canvas>
+    </div>
+</body>
