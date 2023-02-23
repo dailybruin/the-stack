@@ -1,29 +1,30 @@
 const UCEAPdata = {
   label: 'UCEAP Destinations',
-  borderColor: 'rgb(255, 99, 132)',
   data: [
       [85, 149, 170, 211, 293, 351, 387, 309, 298, 304, 64, 149, 148],
-      [60, 49, 54, 68, 95, 115, 113, 72, 100, 116, 58, 107, 107],
-      [49, 45, 31, 39, 65, 83, 78, 87, 123, 126, 59, 88, 75],
       [42, 48, 41, 37, 60, 57, 99, 69, 71, 69, 56, 76, 69],
+      [49, 45, 31, 39, 65, 83, 78, 87, 123, 126, 59, 88, 75],
+      [60, 49, 54, 68, 95, 115, 113, 72, 100, 116, 58, 107, 107],
       [52, 56, 31, 31, 34, 56, 51, 67, 67, 71, 26, 105, 89]
   ]
 };
 
 const TSdata = {
   label: 'Travel Study Destinations',
-  borderColor: 'rgb(54, 162, 235)',
   data: [
-      [289, 174, 224, 210, 184, 212, 230, 218, 197, 179, 0, 0, 129],
       [199, 144, 164, 122, 136, 134, 143, 103, 107, 98, 0, 0, 0],
+      [289, 174, 224, 210, 184, 212, 230, 218, 197, 179, 0, 0, 129],
       [91, 109, 124, 117, 105, 0, 105, 106, 106, 135, 0, 0, 153],
       [153, 64, 66, 90, 63, 89, 96, 60, 94, 74, 0, 0, 0],
       [122, 64, 66, 62, 63, 65, 70, 60, 68, 74, 0, 0, 24]
   ]
 };
 
-const UCEAPlabels = ['United Kingdom', 'Italy', 'Spain', 'France', 'South Korea']
-const TSlabels = ['France', 'United Kingdom', 'Spain', 'Belgium', 'Netherlands']
+const UCEAPlabels = ['United Kingdom', 'France', 'Spain', 'Italy', 'South Korea']
+const TSlabels = ['United Kingdom', 'France', 'Spain', 'Belgium', 'Netherlands']
+
+const UCEAPcolors = ['rgb(64, 36, 131)', 'rgb(121, 161, 228)', 'rgb(188, 210, 88)', 'rgb(248, 212, 93)', 'rgb(222, 131, 99)']
+const TScolors = ['rgb(248, 212, 93)', 'rgb(64, 36, 131)', 'rgb(188, 210, 88)', 'rgb(114, 9, 183)', 'rgb(188, 71, 73)']
 
 const chartConfig = {
   type: 'line',
@@ -102,8 +103,14 @@ function updateChart() {
   const newLabels = selectedDataset === 'UCEAPdata' ? UCEAPlabels : TSlabels;
   chart.data.datasets[0].data = newDataset.data[0];
   chart.data.datasets[1].data = newDataset.data[1];
+  chart.data.datasets[2].data = newDataset.data[2];
+  chart.data.datasets[3].data = newDataset.data[3];
+  chart.data.datasets[4].data = newDataset.data[4];
   chart.data.datasets[0].label = newLabels[0];
   chart.data.datasets[1].label = newLabels[1];
+  chart.data.datasets[2].label = newLabels[2];
+  chart.data.datasets[3].label = newLabels[3];
+  chart.data.datasets[4].label = newLabels[4];
   chart.update();
 }
 
