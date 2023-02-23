@@ -1,5 +1,5 @@
 ---
-title: Visualizing Los Angeles Hospitals, and Simulating COVID-19 on an Unprotected UCLA
+title: Visualizing Los Angeles hospitals, and simulating COVID-19 on an unprotected UCLA
 
 teaser: Explore the number of COVID-19 cases and hospital capacities in each neighborhood within Los Angeles County. What would have happened if UCLA students were on campus and became infected? We investigate the consequences.
 

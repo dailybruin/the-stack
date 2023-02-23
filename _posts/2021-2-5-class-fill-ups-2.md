@@ -1,5 +1,5 @@
 ---
-title: When to Enroll in Each Class
+title: When to enroll in each class
 teaser: Determine which classes you should enroll in during your first or second pass, based on analysis of Spring 2020, Fall 2020, and Winter 2021 Quarter Enrollment Data
 authors:
   - ananya_garg

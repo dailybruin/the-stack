@@ -4,7 +4,10 @@
 }
 
 @media only screen and (min-width: 1000px) {
-
+    .chart-container{
+        margin-left: -20%;
+        margin-right: -20%;
+    }
     .rate-line {
         float: left;
         width: 50%;

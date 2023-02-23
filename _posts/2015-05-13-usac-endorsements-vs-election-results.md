@@ -14,6 +14,7 @@ og_image: /usac-endorsements-vs-election-results/visualization.png
 stylesheets:
     - /css/posts/usac-endorsements-vs-election-results/iframe.css
 ---
+
 Every year, when the circus of undergraduate student government elections begins, the Daily Bruin publishes endorsements of candidates the Editorial Board sees as most fit to lead.
 
 The board keeps writing each year, with the hope that its carefully considered evaluations of candidate platforms and experience will influence voters to cast well-educated ballots.
@@ -24,7 +25,7 @@ While it is impossible to prove that the Editorial Board’s endorsements have a
 
 So how likely is it that a candidate endorsed by the Daily Bruin will win a contested seat?
 
-<iframe id="visualization" class="fullwidth" src="/static/usac-endorsements-vs-election-results" frameborder="0"></iframe>
+<iframe id="visualization" src="/static/usac-endorsements-vs-election-results" frameborder="0"></iframe>
 
 Since 1986, 26 percent of endorsed candidates won a coveted spot at the Undergraduate Students Association Council table.
 
@@ -34,7 +35,7 @@ Still, voters don’t always side with the paper. Fourteen percent of endorsed c
 
 The Bruin archives didn’t turn up endorsements for 2009 or 1992.
 
-In 2009, the Editorial Board didn’t run an endorsement package. Although the board didn’t publish an explanation for the missing pieces, it is worth noting that 2009 was the year that the PLEDGE referendum – a fee that helps fund student media, among other student organizations –  was up for a vote on the USAC election ballot.
+In 2009, the Editorial Board didn’t run an endorsement package. Although the board didn’t publish an explanation for the missing pieces, it is worth noting that 2009 was the year that the PLEDGE referendum – a fee that helps fund student media, among other student organizations – was up for a vote on the USAC election ballot.
 
 The Bruin archives for spring 1992 were missing.
 
@@ -54,5 +55,5 @@ There were a few title changes in the 30 year span this data covers. We used the
 
 All data can be found on a [public Google Spreadsheet](https://docs.google.com/spreadsheets/d/1aQLmaEXESo17dzU_zr0ThV_ws-LpViZrJHTyxkF8G8g/edit?usp=sharing).
 
-*Interactive graphic by Tim Guo, Daily Bruin developer.*
-*Story by Katie Shepherd, Daily Bruin.*
+_Interactive graphic by Tim Guo, Daily Bruin developer._
+_Story by Katie Shepherd, Daily Bruin._
