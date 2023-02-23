@@ -23,8 +23,8 @@ const TSdata = {
 const UCEAPlabels = ['United Kingdom', 'France', 'Spain', 'Italy', 'South Korea']
 const TSlabels = ['United Kingdom', 'France', 'Spain', 'Belgium', 'Netherlands']
 
-const UCEAPcolors = ['rgb(64, 36, 131)', 'rgb(121, 161, 228)', 'rgb(188, 210, 88)', 'rgb(248, 212, 93)', 'rgb(222, 131, 99)']
-const TScolors = ['rgb(248, 212, 93)', 'rgb(64, 36, 131)', 'rgb(188, 210, 88)', 'rgb(114, 9, 183)', 'rgb(188, 71, 73)']
+const UCEAPcolors = ['rgb(64, 36, 131)', 'rgb(188, 210, 88)', 'rgb(248, 212, 93)', 'rgb(121, 161, 228)', 'rgb(222, 131, 99)']
+const TScolors = ['rgb(64, 36, 131)', 'rgb(188, 210, 88)', 'rgb(248, 212, 93)', 'rgb(157, 78, 221)', 'rgb(188, 71, 73)']
 
 const chartConfig = {
   type: 'line',
@@ -33,32 +33,32 @@ const chartConfig = {
       datasets: [
           {
               label: UCEAPlabels[0],
-              borderColor: 'rgb(64, 36, 131)',
-              backgroundColor: 'rgb(64, 36, 131)',
+              borderColor: UCEAPcolors[0],
+              backgroundColor: UCEAPcolors[0],
               data: UCEAPdata.data[0]
           },
           {
               label: UCEAPlabels[1],
-              borderColor: 'rgb(121, 161, 228)',
-              backgroundColor: 'rgb(121, 161, 228)',
+              borderColor: UCEAPcolors[1],
+              backgroundColor: UCEAPcolors[1],
               data: UCEAPdata.data[1]
           },
           {
               label: UCEAPlabels[2],
-              borderColor: 'rgb(188, 210, 88)',
-              backgroundColor: 'rgb(188, 210, 88)',
+              borderColor: UCEAPcolors[2],
+              backgroundColor: UCEAPcolors[2],
               data: UCEAPdata.data[2]
           },
           {
               label: UCEAPlabels[3],
-              borderColor: 'rgb(248, 212, 93)',
-              backgroundColor: 'rgb(248, 212, 93)',
+              borderColor: UCEAPcolors[3],
+              backgroundColor: UCEAPcolors[3],
               data: UCEAPdata.data[3]
           },
           {
               label: UCEAPlabels[4],
-              borderColor: 'rgb(222, 131, 99)',
-              backgroundColor: 'rgb(222, 131, 99)',
+              borderColor: UCEAPcolors[4],
+              backgroundColor: UCEAPcolors[4],
               data: UCEAPdata.data[4]
           }
       ]
@@ -101,16 +101,32 @@ function updateChart() {
   const selectedDataset = document.getElementById('dataset-select').value;
   const newDataset = selectedDataset === 'UCEAPdata' ? UCEAPdata : TSdata;
   const newLabels = selectedDataset === 'UCEAPdata' ? UCEAPlabels : TSlabels;
+  const newColors = selectedDataset === 'UCEAPdata' ? UCEAPcolors : TScolors;
+
   chart.data.datasets[0].data = newDataset.data[0];
   chart.data.datasets[1].data = newDataset.data[1];
   chart.data.datasets[2].data = newDataset.data[2];
   chart.data.datasets[3].data = newDataset.data[3];
   chart.data.datasets[4].data = newDataset.data[4];
+
   chart.data.datasets[0].label = newLabels[0];
   chart.data.datasets[1].label = newLabels[1];
   chart.data.datasets[2].label = newLabels[2];
   chart.data.datasets[3].label = newLabels[3];
   chart.data.datasets[4].label = newLabels[4];
+
+  chart.data.datasets[0].borderColor = newColors[0];
+  chart.data.datasets[1].borderColor = newColors[1];
+  chart.data.datasets[2].borderColor = newColors[2];
+  chart.data.datasets[3].borderColor = newColors[3];
+  chart.data.datasets[4].borderColor = newColors[4];
+
+  chart.data.datasets[0].backgroundColor = newColors[0];
+  chart.data.datasets[1].backgroundColor = newColors[1];
+  chart.data.datasets[2].backgroundColor = newColors[2];
+  chart.data.datasets[3].backgroundColor = newColors[3];
+  chart.data.datasets[4].backgroundColor = newColors[4];
+  
   chart.update();
 }
 
