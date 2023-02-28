@@ -163,7 +163,7 @@ function renderHeatChart(data, colors, container, legendCircles = null) {
     .attr('transform', 'translate(' + margins.left + ',' + margins.top + ')');
 
   // render day of week labels vertically
-  let days = isMobile? ['Mo~Th', 'Fri', 'Sat', 'Sun'] : ['Mon to Thur', 'Fri', 'Sat', 'Sun'];
+  let days = isMobile? ['Mo~Th', 'Fri', 'Sat', 'Sun'] : ['Mon to Thur', 'Friday', 'Saturday', 'Sunday'];
 
   let dayLabels = chartG.selectAll(".day-label")
     .data(days)
@@ -241,16 +241,23 @@ function renderHeatChart(data, colors, container, legendCircles = null) {
       .html(d => {
         let hourStr = formatHour(d.hour),
             dayStr = d.day_of_week == 1? "Mon to Thur" :
-                     d.day_of_week == 5? "Fri" :
-                     d.day_of_week == 6? "Sat" : "Sun";
+                     d.day_of_week == 5? "Friday" :
+                     d.day_of_week == 6? "Saturday" : "Sunday";
 
         let timeTip = "<span class='bold'>" + dayStr + "</span>" + " | " +
             "<span class='bold'>" + hourStr + "</span>" + "<br>";
 
-        if (d.n_people_rel <= 0 | d.traffic_ratio < 0) {
+        if (d.n_people_rel <= 0 | d.traffic_ratio == -1) {
           return (
             timeTip +
             "<span class='bold'>" + "Closed" + "</span>"
+          );
+        }
+
+        if (d.traffic_ratio == 0) {
+          return (
+            timeTip +
+            "Wooden is " + "<span class='bold'>" + "Open" + "</span>" + "<br>" + " BFit is " + "<span class='bold'>" + "Closed" + "</span>"
           );
         }
 
