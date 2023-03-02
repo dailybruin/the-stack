@@ -14,6 +14,7 @@ scripts:
     - //cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js
     - //cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js
     - //cdnjs.cloudflare.com/ajax/libs/d3/5.7.0/d3.min.js 
+    - /js/posts/greek-life-diversity/timeline-all-councils.js
     - /js/posts/greek-life-diversity/gl-time-linegraph.js 
     - /js/posts/greek-life-diversity/gl-barchart.js
     - /js/posts/greek-life-diversity/gl-council-chart.js
@@ -29,4 +30,8 @@ scripts:
 
 <div class="council-chart">
   <canvas id='council-chart'></canvas>
+</div>
+
+<div>
+<select id = timeline_dropdown></select>
 </div>
