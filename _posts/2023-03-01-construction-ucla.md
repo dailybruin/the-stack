@@ -1,6 +1,6 @@
 ---
 title:  Construction Projects at UCLA
-teaser: The Stack is Daily Bruin’s data journalism and newsroom tech blog.
+teaser: This is the stack article about construction
 authors:
     - angel_perez
     - madeline_blasingame
