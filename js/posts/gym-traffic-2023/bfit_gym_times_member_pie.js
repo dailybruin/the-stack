@@ -28,7 +28,7 @@
     }
   //THIS CODE MAKES THE CHART, MAKE SURE THE CTX VARIABLE DOES NOT MATCH ANY OTHER CTX VARIABLE
   //CHANGE ID-HERE TO WHATEVER YOU MADE YOUR ID IN THE HTML FILE, CHOOSE SOMETHING DESCRIPTIVE
-  const ctxPIE = document.getElementById('bfit_member_demo_gym_times').getContext('2d');
+  const ctxPIE = document.getElementById('bfit_member_pie').getContext('2d');
   //THE CHART VARIABLE NEEDS TO HAVE A UNIQUE NAME RENAME IT SOMETHING DESCRIPTIVE
   //MAKE SURE ctxBAR MATCHES THE CONST VARIABLE YOU JUST SET
   const chart = new Chart(ctxPIE, {
