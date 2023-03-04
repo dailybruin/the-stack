@@ -15,7 +15,7 @@ const labels_time = [
 ]; //THIS SHOULD BE A LIST OF WHAT YOU WANT ON THE X-AXIS
 const colors_time = ['rgb(255, 200, 87)', 'rgb(28, 93, 153)']; //CHANGE THESE TO WHAT MATCHES THE SUBJECT
 const data_time = {
-  labels: labels,
+  labels: labels_time,
   //DATA SETS IN A LIST. EACH OBJECT IN LIST IS A CATEGORY OF DATA CHANGE THESE OUT WITH YOUR DATA
   //IF YOU HAVE MORE DATA TO DISPLAY ADD ADDITIONAL {...}
   datasets: [
