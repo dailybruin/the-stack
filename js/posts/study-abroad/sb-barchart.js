@@ -7,12 +7,20 @@ const studyAbroadData = new Chart(ctx, {
     data: {
         labels: ['2009-10','2010-11','2011-12','2012-13','2013-14','2014-15','2015-16',
         	'2016-17','2017-18','2018-19','2019-20','2020-21','2021-22'],
-        datasets: [{
-            label: 'Number of Study Abroad Students',
-            data: [597,	596, 527, 562,743,986,1089,1041,1205,1266,464,754,624],
-            //borderColor: 'rgb(54, 162, 235)'
-            backgroundColor: '#feca1f'
-        }],
+        datasets: [
+            {
+                label: "UCEAP",
+                data: [597,	596, 527, 562,743,986,1089,1041,1205,1266,464,754,624],
+                //borderColor: 'rgb(54, 162, 235)'
+                backgroundColor: '#0062cc'
+            },
+            {
+                label: "Travel Study",
+                data: [1145,849,1024,910,761,708,947,793,886,949,0,0,464],
+                //borderColor: 'rgb(54, 162, 235)'
+                backgroundColor: '#feca1f'
+            }
+        ],
     },
     options: {
         plugins: {
