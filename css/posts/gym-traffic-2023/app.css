@@ -1,3 +1,8 @@
+.caption {
+  font-size:smaller;
+  color:gray;
+}
+
 .heatchart-tip {
   display: block;
   position: absolute;
