@@ -73,7 +73,8 @@ const TSchartConfig = {
                 title: {
                     display: true,
                     text: 'Number of Students'
-                }
+                },
+                max: 400
             }
         }
     }
