@@ -14,9 +14,13 @@ featured_image:
 og_image: 
 scripts:
   - //cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js
+  - /js/posts/study-abroad/sb-barchart.js
+  - /js/posts/study-abroad/sb-UCEAPline.js
+  - /js/posts/study-abroad/sb-TSline.js
 
 stylesheets:
-  - //fonts.googleapis.com/css?family=Lato&display=swap
+  - /css/posts/study-abroad/app.css
+  - //fonts.googleapis.com/css?family=PTSans&display=swap
 ---
 ### Introduction:
 Immersing in a new culture, learning a different language, and exploring global opportunities—studying abroad can be an exciting opportunity during one’s college journey. Due to the pandemic, however, the suspension of numerous study abroad programs and travel restrictions prevented students from pursuing these experiences. Three years since UCLA closed its classrooms, UCLA’s study abroad programs have returned to normal, enabling students to develop memorable experiences across the globe.
@@ -24,9 +28,12 @@ Immersing in a new culture, learning a different language, and exploring global 
 In this article, the Stack explores UCLA’s study abroad programs, students’ experiences and factors to consider before making a decision. There are two main programs through which UCLA students study abroad: the University of California Education Abroad Program (UCEAP) and the UCLA Travel Study Program. UCEAP is a UC-wide study abroad program that allows students to take classes abroad through a local university while Travel Study allows students to take courses taught by UCLA faculty during the summer while abroad. The Stack compares these two programs in terms of the different programs they offer and the proportions of students enrolling in each program to provide an overview of study abroad experiences at UCLA. 
 
 ### How many students are studying abroad each year?:
-<div class = "sb-barchart" >
+
+<div class = "selectBox" >
+    </div>
+<div class = "chartBox" >
     <canvas id="studyAbroadData" width="600" height="350"></canvas> 
-</div> 
+ </div> 
 
 ### Which countries are students studying abroad in? 
 The heat map below displays the number of students who have studied abroad within each country since 2009, broken down by the total number of UCEAP students and Travel Study. 
