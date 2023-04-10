@@ -35,6 +35,10 @@ In this article, the Stack explores UCLA’s study abroad programs, students’ 
     <canvas id="studyAbroadData" width="600" height="350"></canvas> 
  </div> 
 
+The bar chart above shows the number of students who studied abroad each year from 2009 and 2022 through UCEAP and the Travel Study programs. (CQ#4 Sheets 1/2)
+
+Over time, the popularity of UCEAP programs has steadily increased, peaking during the 2018-2019 academic year with 1,266 study abroad students. (CQ#4 Sheet 4) However, following worldwide travel restrictions resulting from the COVID-19 pandemic, the number of UCEAP students fell by nearly two-thirds in the following academic year, (CQ#4 Sheet 1)according to the Centers for Disease Control and Prevention (CQ #1). Additionally, in February 2020, the UCLA International Education Office suspended all summer study abroad programs due to the increasing number of COVID-19 cases (CQ #2).
+
 ### Which countries are students studying abroad in? 
 The heat map below displays the number of students who have studied abroad within each country since 2009, broken down by the total number of UCEAP students and Travel Study. 
 
@@ -46,7 +50,15 @@ Since 2009, Europe has been the most popular study abroad region, hosting over 7
 
 The chart below details the number of UCEAP and Travel Study students in each of the top five most popular study abroad destinations since 2009. (CQ#4 Sheet4/5)
 
-[ Insert Liam's chart]
+<div>
+  <canvas id="EAPchart" width="550" height="400"></canvas>
+</div>
+
+<div>
+  <canvas id="TSchart" width="550" height="400"></canvas>
+</div>
+
+
 
 ### Making the Decision to Study Abroad 
 For some, making the decision to study abroad can be easy. However, deciding which program to enroll in can be a daunting task. 
@@ -100,9 +112,3 @@ In the end, choosing to study abroad can be a great opportunity for those that h
 
 ### About the data
 All data visualizations were created using the public data provided by the UCLA Global website, which reported the number of students who have studied abroad in different countries. The data was filtered by the UCEAP program and the Travel Study program, sorted by each academic year from 2009 to 2022. 
-
-
-
-
-
-

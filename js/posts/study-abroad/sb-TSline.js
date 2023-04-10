@@ -80,4 +80,4 @@ const TSchartConfig = {
 };
 
 const cll = document.getElementById('TSchart');
-const chart = new Chart(cll, TSchartConfig);
+const TSline = new Chart(cll, TSchartConfig);
