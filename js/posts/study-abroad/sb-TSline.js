@@ -11,7 +11,7 @@ const TSdata = {
 const TSlabels = ['United Kingdom', 'France', 'Spain', 'Belgium', 'Netherlands']
 const TScolors = ['rgb(64, 36, 131)', 'rgb(188, 210, 88)', 'rgb(248, 212, 93)', 'rgb(157, 78, 221)', 'rgb(188, 71, 73)']
 
-const chartConfig = {
+const TSchartConfig = {
     type: 'line',
     data: {
         labels: ['2009-10', '2010-11', '2011-12', '2012-13', '2013-14', '2014-15', '2015-16', '2016-17', '2017-18', '2018-19', '2019-20', '2020-21', '2021-22'],
@@ -80,4 +80,4 @@ const chartConfig = {
 };
 
 const cll = document.getElementById('TSchart');
-const chart = new Chart(cll, chartConfig);
+const chart = new Chart(cll, TSchartConfig);
