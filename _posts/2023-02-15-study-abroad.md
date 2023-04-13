@@ -9,9 +9,9 @@ key_takeaways:
   - The number of students studying abroad dropped by more than half in 2019 and 2020 for both UCEAP and Travel Study programs due to COVID-19.
   - Various factors such as cultural exposure, financial aid, fulfilling requirements, and travel destinations influenced students’ decisions to study abroad. 
 featured_image:
-  url: 
-  caption: 
-og_image: 
+  url: study-abroad/cover_image.jpeg
+  caption: (Ayumi Bergan/DailyBruin)
+og_image: study-abroad/cover_image.jpeg
 scripts:
   - //cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js
   - /js/posts/study-abroad/sb-barchart.js
