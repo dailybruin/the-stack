@@ -107,7 +107,7 @@ const chartConfig = {
 };
 
 const ctm = document.getElementById('EAPchart');
-const chart = new Chart(ctm, chartConfig);
-// EAPchart.canvas.style = 'min-height:500px';
-// EAPchart.options.maintainAspectRatio = false;
-// EAPchart.update();
+const EAPchart = new Chart(ctm, chartConfig);
+EAPchart.canvas.style = 'max-height:500px';
+EAPchart.options.maintainAspectRatio = false;
+EAPchart.update();
