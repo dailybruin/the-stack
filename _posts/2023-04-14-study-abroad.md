@@ -21,7 +21,7 @@ scripts:
 
 stylesheets:
   - /css/posts/study-abroad/app.css
-  - //fonts.googleapis.com/css?family=PTSans&display=swap
+  # - //fonts.googleapis.com/css?family=PTSans&display=swap
 ---
 
 ### Introduction:
