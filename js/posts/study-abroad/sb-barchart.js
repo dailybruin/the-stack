@@ -53,7 +53,7 @@ const studyAbroadData = new Chart(ctx, {
     plugins: {
       title: {
         display: true,
-        text: 'How many students are studying abroad each year?',
+        text: 'Number of students studying abroad each year',
         font: {
           size: 22,
         },
