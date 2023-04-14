@@ -1,14 +1,14 @@
 const verticalLines = [
-  {    
-    x: 'September',    
-    borderColor: '#5A5A5A',    
-    borderWidth: 2,    
+  {
+    x: 'September',
+    borderColor: '#5A5A5A',
+    borderWidth: 2,
     borderDash: [5, 5],
     label: {
       enabled: true,
       content: 'Fall 2021',
       position: 'top',
-      color: '#5A5A5A'
+      color: '#5A5A5A',
     },
     month: 'September', // Add month property
   },
@@ -21,7 +21,7 @@ const verticalLines = [
       enabled: true,
       content: 'Winter 2022',
       position: 'bottom',
-      color: '#5A5A5A'
+      color: '#5A5A5A',
     },
     month: 'January', // Add month property
   },
@@ -34,7 +34,7 @@ const verticalLines = [
       enabled: true,
       content: 'Spring 2022',
       position: 'bottom',
-      color: '#5A5A5A'
+      color: '#5A5A5A',
     },
     month: 'March', // Add month property
   },
@@ -47,7 +47,7 @@ const verticalLines = [
       enabled: true,
       content: 'Summer 2022',
       position: 'bottom',
-      color: '#5A5A5A'
+      color: '#5A5A5A',
     },
     month: 'June', // Add month property
   },
@@ -55,10 +55,10 @@ const verticalLines = [
 
 // Define the shift values for each month
 const shiftValues = {
-  'September': 50,  // September
-  'January': 5,  // January
-  'March': 55,  // March
-  'June': 52,  // June
+  September: 50, // September
+  January: 5, // January
+  March: 55, // March
+  June: 52, // June
 };
 
 const verticalLinePlugin = {
@@ -68,7 +68,8 @@ const verticalLinePlugin = {
     ctx.save();
     for (let i = 0; i < verticalLines.length; i++) {
       const line = verticalLines[i];
-      const xValue = x.getPixelForValue(line.x) + (shiftValues[line.month] || 0);
+      const xValue =
+        x.getPixelForValue(line.x) + (shiftValues[line.month] || 0);
       ctx.beginPath();
       ctx.moveTo(xValue, top);
       ctx.lineTo(xValue, bottom);
@@ -83,14 +84,13 @@ const verticalLinePlugin = {
         ctx.font = '10px sans-serif';
         const { width } = ctx.measureText(line.label.content);
         const labelX = xValue + 4;
-        const labelY = top+5;
+        const labelY = top + 5;
         ctx.fillText(line.label.content, labelX, labelY);
       }
     }
     ctx.restore();
-  }
+  },
 };
-
 
 //Chart.defaults.font.family = 'Noto Serif, serif'  //FONT FOR CHART CHANGE IF NEEDED
 const labels_time = [
@@ -194,5 +194,5 @@ const chart_time = new Chart(ctxLINE, {
   type: 'line',
   data: data_time,
   options: options_time,
-  plugins: [verticalLinePlugin]
+  plugins: [verticalLinePlugin],
 });

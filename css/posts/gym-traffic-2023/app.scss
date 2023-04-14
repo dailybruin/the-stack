@@ -68,7 +68,8 @@ $mobile-threshold: 650px;
   text-anchor: middle;
 }
 
-.legend-label, .line-legend .label {
+.legend-label,
+.line-legend .label {
   @media only screen and (max-width: $mobile-threshold) {
     font-size: 8px;
   }
