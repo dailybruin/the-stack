@@ -1,0 +1,16 @@
+iframe{
+    margin:auto !important;
+    border: black solid 2px
+}
+
+.iframe_holder{
+    margin: auto;
+    width: 500px;
+}
+
+@media screen and (max-width:500px){
+    .iframe_holder{
+        margin: auto;
+        width: 100%;
+    }
+}

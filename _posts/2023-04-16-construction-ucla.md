@@ -16,7 +16,10 @@ scripts:
     - //cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js
     - //cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js
     - //cdnjs.cloudflare.com/ajax/libs/d3/5.7.0/d3.min.js
-    - /js/posts/construction/CONSTRUCTION_CHART.js
+    # - /js/posts/construction/CONSTRUCTION_CHART.js
+    - /js/posts/construction/construction_barchart.js
+stylesheets:
+    - /css/posts/construction/app.css
 ---
 
 ### Introduction
@@ -27,19 +30,27 @@ In order to comprehensively understand the scope of these projects, The Stack ha
 
 Peter Hendrickson, Associate Vice Chancellor for Design and Construction, said that construction projects require immense planning and analysis. “A major part of the campus project development process involves evaluating the capital needs of a school, department, or business unit, and aligning them with capital resources available to the campus,” Hendrickson said. “For specific projects, project initiation and planning activities involve studying environmental and site alternatives and developing conceptual program, funding, and schedule parameters.”
 
-<iframe title="Percentage of Total Spending" aria-label="Pie Chart" id="datawrapper-chart-B35Pt" src="https://datawrapper.dwcdn.net/B35Pt/1/" scrolling="no" frameborder="0" style="border: none;" width="600" height="533" data-external="1"></iframe>
+<div class = 'iframe_holder'>
+    <iframe title="Percentage of Total Spending" aria-label="Pie Chart" id="datawrapper-chart-B35Pt" src="https://datawrapper.dwcdn.net/B35Pt/1/" scrolling="no" frameborder="0" style="border: none; margin: auto;" width="100%" height="533" data-external="1"></iframe>
+</div>
 
 ### Spending by Year & Cost vs Number of Projects
 
 Including active projects, 2022 saw the most construction spending while 2018 saw the least. According to the data provided, only one project was completed in 2018, the CHS Seismic Correction and Fire Safety, which cost $52,155,000 (CQ #1). In 2017, 26 projects were completed, which is the greatest number for any year between 2013 and 2022 (CQ #1). Higher spending in 2022 than 2017 despite far fewer projects, with only 7 completed and active projects in 2022, can be attributed to far higher per project costs in 2022 (CQ #1). Particularly, the average cost of a project in 2022 was $129,053,857, while the 2017 average was $15,851,154 (CQ #1).
 
-<iframe title="Spending vs Number of Projects by Year (as proportion)" aria-label="Stacked Column Chart" id="datawrapper-chart-geWCS" src="https://datawrapper.dwcdn.net/geWCS/1/" scrolling="no" frameborder="0" style="border: none;" width="600" height="400" data-external="1"></iframe>
+<div class = 'iframe_holder'>
+    <iframe title="Spending vs Number of Projects by Year (as proportion)" aria-label="Stacked Column Chart" id="datawrapper-chart-geWCS" src="https://datawrapper.dwcdn.net/geWCS/1/" scrolling="no" frameborder="0" style="border: none; margin: auto;" width = "100%" height="400" data-external="1"></iframe>
+</div>
 
 ### Changes in Spending
 
 While the number and type of projects play a role in dictating costs as is shown by the varying proportions of projects and costs per year, other factors often cause changes in the cost of construction by producing unforeseen costs or opportunities to save. Although many projects are able to maintain their initial budget, some projects see significant changes, particularly the Northwest Campus Student Housing Infill, which cost 40% less than initially intended, and the Clark Library Seismic Correction, which cost an additional almost 25% (CQ #1). Before 2022, the primary causes for these changes included favorable and unfavorable offers from contractors and site conditions (CQ #1). However, delays in more recent projects are attributed to COVID, which reflects changes in the factors that influence construction.
 
-<iframe title="% Change in Spending from Initial Budget to Completion " aria-label="Bullet Bars" id="datawrapper-chart-cPujn" src="https://datawrapper.dwcdn.net/cPujn/1/" scrolling="no" frameborder="0" style="border: none;" width="600" height="1600" data-external="1"></iframe>
+<!-- <iframe title="% Change in Spending from Initial Budget to Completion " aria-label="Bullet Bars" id="datawrapper-chart-cPujn" src="https://datawrapper.dwcdn.net/cPujn/1/" scrolling="no" frameborder="0" style="border: none;" width="600" height="1600" data-external="1"></iframe> -->
+
+<div>
+    <canvas id = "mchart"></canvas>
+</div>
 
 The graph above displays projects that were completed between 2013 and 2022. We can compare the original budget set compared to the final amount spent on a project. Typically, construction projects come in at or below budget. We see a dip in completed project spending that began in 2018 and continued through the COVID-19 pandemic. We also see a huge spike in completed projects between 2021 and 2022 with over a 435% year over year increase in spending. This is due to the new University Apartment buildings as well as Olympic and Centennial dorm buildings which were completed in 2022. The new Olympic and Centennial dorm buildings accounted for $223,042,000 or just over 50% of 2022 spending (CQ #5 and #6). The total spending for new University apartment building Gayley Heights was $184,500,000 or about 41% of 2022 spending (CQ #5 and CQ #7).
 
