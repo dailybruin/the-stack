@@ -1,21 +1,27 @@
-Chart.defaults.font.family = 'Noto Serif, serif'; //FONT FOR CHART CHANGE IF NEEDED
+// Chart.defaults.font.family = 'Noto Serif, serif'  //FONT FOR CHART CHANGE IF NEEDED
 const labels = [
-  'Shrubs',
-  'Trees',
-  'Forbs',
-  'Grasses and Sedges',
-  'Annuals',
-  'Vines',
-  'Succulents',
+  '2013',
+  '2014',
+  '2015',
+  '2016',
+  '2017',
+  '2018',
+  '2019',
+  '2020',
+  '2021',
+  '2022',
 ]; //THIS SHOULD BE A LIST OF WHAT EACH SEGMENT IN THE PIE REPRESENTS
 const colors = [
-  '#5FA0CE',
-  '#E5A539',
-  '#CECC5F',
-  '#CE665F',
-  '#A45FCE',
-  '#5FCE8E',
-  '#9C9494',
+  '#0081AF',
+  '#CEEAF7',
+  '#14213D',
+  '#3F00FF',
+  '#A7C7E7',
+  '#96DED1',
+  '#1F51FF',
+  '#87CEEB',
+  '#6495ED',
+  '#40E0D0',
 ]; //CHANGE THESE TO WHAT MATCHES THE SUBJECT
 const data = {
   labels: labels,
@@ -24,8 +30,19 @@ const data = {
   //IF YOU HAVE MORE DATA TO DISPLAY ADD ADDITIONAL {...}, BUT THIS IS *NOT* RECOMMENDED
   datasets: [
     {
-      label: 'Plant Types at UCLA',
-      data: [62, 34, 30, 18, 14, 5, 3], //VALUE FOR EACH SEGMENT
+      label: 'LABEL FOR DATA 1',
+      data: [
+        13.02180355,
+        9.379701083,
+        5.422302704,
+        13.74978688,
+        20.01893427,
+        2.53339363,
+        3.033077654,
+        7.252437337,
+        4.026811081,
+        21.5617518,
+      ],
       backgroundColor: colors,
       borderColor: colors,
       borderWidth: 1,
@@ -34,20 +51,29 @@ const data = {
 };
 //OPTIONS FOR THE DISPLAY OF THE CHART, FOR MORE OPTIONS GO TO CHART.JS
 const options = {
+  scales: {
+    y: {
+      beginAtZero: true,
+      title: {
+        display: true,
+        text: 'Y-AXIS TITLE',
+      },
+    },
+  },
   plugins: {
     title: {
       display: true,
-      text: 'Plant Types at UCLA',
+      text: 'CHART TITLE',
     },
   },
   maintainAspectRatio: false,
 };
 //THIS CODE MAKES THE CHART, MAKE SURE THE CTX VARIABLE DOES NOT MATCH ANY OTHER CTX VARIABLE
 //CHANGE ID-HERE TO WHATEVER YOU MADE YOUR ID IN THE HTML FILE, CHOOSE SOMETHING DESCRIPTIVE
-const ctxPT = document.getElementById('PlantTypes').getContext('2d');
+const ctxPIE = document.getElementById('Construction-Chart');
 //THE CHART VARIABLE NEEDS TO HAVE A UNIQUE NAME RENAME IT SOMETHING DESCRIPTIVE
 //MAKE SURE ctxBAR MATCHES THE CONST VARIABLE YOU JUST SET
-const chart = new Chart(ctxPT, {
+const chart = new Chart(ctxPIE, {
   type: 'pie', //chose "pie" or "doughnut"
   data: data,
   options: options,

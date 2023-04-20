@@ -39,13 +39,13 @@ In terms of sustainability, native species’ adaptations to desert conditions m
 
 Integrating a greater number of California native plants into constructed ecosystems, such as university campuses, reduces both the amount of resources required for maintenance and promotes biodiversity by encouraging the development of local wildlife.
 
-In order to understand UCLA’s impact on biodiversity, The Stack analyzed data relating to the concentration of native plants on UCLA’s campus. 
+In order to understand UCLA’s impact on biodiversity, The Stack analyzed data relating to the concentration of native plants on UCLA’s campus.
 
 ### UCLA’s efforts to increase biodiversity on campus
 
 Nurit Katz, the chief sustainability officer for UCLA, said in an emailed statement that the school plans to increase plant diversity on campus as part of its Sustainability Plan Goals for Landscape and Biodiversity. This plan aims to bolster biodiversity and transform the campus landscape into a part of the native ecosystem.
 
-In order to meet its sustainability goals, the campus has started to implement plans to replace turf areas with native species of plants. 
+In order to meet its sustainability goals, the campus has started to implement plans to replace turf areas with native species of plants.
 
 “In general, many non-native species do require more water than native species, which is why we have begun transitioning turf areas of campus to drought tolerant and native plants,” Katz said in an emailed statement.
 
@@ -55,13 +55,13 @@ In order to meet its sustainability goals, the campus has started to implement p
 
 Across UCLA’s campus, there are a total of 166 different plant types, ranging from drought resistant succulents to large trees and a wide array of shrubs.
 
-The following chart depicts the distribution of the different plant types at UCLA. 
+The following chart depicts the distribution of the different plant types at UCLA.
 
 <div class = 'pie-chart'>
   <canvas id = "PlantTypes"></canvas>
 </div>
 
-At 62 different species, shrubs maintain the highest number of unique species at UCLA. A few species of shrubs include the California sagebrush, laurel sumac and the quailbush. Meanwhile, succulents are in the minority of plant types with only three different species, which include the chaparral yucca, snake cholla and the coastal prickly pear. 
+At 62 different species, shrubs maintain the highest number of unique species at UCLA. A few species of shrubs include the California sagebrush, laurel sumac and the quailbush. Meanwhile, succulents are in the minority of plant types with only three different species, which include the chaparral yucca, snake cholla and the coastal prickly pear.
 
 <div class = 'image-holder'>
   <div class = 'image-triad'>
@@ -91,7 +91,7 @@ Sage Hill - Sage Hill is situated in the Northwest Corner of campus, around wher
 Alluvial Corridor - A plant community located in environments with heavy amounts of moisture. This plant community consists of willow scrubs and clusters of trees that thrive near water. 
 Oakwoodland/Grand Savanna - A plant community containing various trees, either grouped or by themselves. The ground layer below the trees contains grasses, sedges and wildflowers, creating a meadow-like landscape with shrubs scattered throughout.](/img/posts/biodiversity/graphic.png)
 
-The following chart depicts the number of different plant species per garden at UCLA. 
+The following chart depicts the number of different plant species per garden at UCLA.
 
 <div class = 'pie-chart'>
   <canvas id = "PlantD"></canvas>
@@ -101,9 +101,7 @@ The Grand Savanna/Oakwoodland contains the highest distribution of unique plant 
 
 Turf alternatives are a category for native plants that are replacing grass and turf areas in order to promote water conservation, as native plants tend to require less water. This conversion is currently occurring at Murphy Hall and Moore Hall, according to a written statement from Katz.
 
-Despite this categorization of turf alternatives, only about 57% of the plant species in the turf alternatives category are native to California. This is the category with the lowest percentage of native species. The Bioswale/Rain Garden, Alluvial Corridor, and Sage Hill communities contain only native species. 
- 
-
+Despite this categorization of turf alternatives, only about 57% of the plant species in the turf alternatives category are native to California. This is the category with the lowest percentage of native species. The Bioswale/Rain Garden, Alluvial Corridor, and Sage Hill communities contain only native species.
 
 #### Where are the native plants located on UCLA’s campus?
 
@@ -124,8 +122,7 @@ This map displays the distribution of plants on UCLA’s campus as provided by U
 
 As of today, the campus hosts close to three times as many native plant species as non-native plant species, currently maintaining a total of 121 California native and 45 non-native plant species across its campus.
 
-The number of observed plants that are native to California has increased more over time than the number of observed non-native ones since 2016. There were 653 observed native and 57 observed non-native plants on campus as of this year. The gap between native and non-native plant counts on campus has been increasing each year, with this year’s figures displaying ten times more plants from native species than plants from non-native species. 
-
+The number of observed plants that are native to California has increased more over time than the number of observed non-native ones since 2016. There were 653 observed native and 57 observed non-native plants on campus as of this year. The gap between native and non-native plant counts on campus has been increasing each year, with this year’s figures displaying ten times more plants from native species than plants from non-native species.
 
 <div style='height: 300px'>
   <canvas id = "CA_native_linechart"></canvas>
@@ -134,13 +131,11 @@ The number of observed plants that are native to California has increased more o
 
 ### Impacts of increased native plant species on campus
 
-As a part of this landscaping plan, UCLA is converting previous turf areas into areas that house native plants. 
+As a part of this landscaping plan, UCLA is converting previous turf areas into areas that house native plants.
 
-These efforts are saving water campuswide. 
+These efforts are saving water campuswide.
 
 “The rough estimate of water savings from converting these formerly grass/turf spaces to native plants is approximately 5 million gallons annually,” Katz said in an emailed statement.
-
-
 
 ### Looking forward
 
@@ -154,12 +149,9 @@ alt = "Image of trees near the Bruin Bear">
 
 The increasing trends in plant diversity on campus sets UCLA on track to becoming a more resource-efficient and more environmentally friendly campus for California’s native flora and fauna.
 
-
 ### About the data
 
 The data used in this article were provided by the Institute of Sustainability at UCLA and collected from iNaturalist. The dataset provided by the Institute of Sustainability at UCLA contains plant information by species by scientific name, whether plants are native to California, and its location on UCLA’s campus. The dataset provided by iNaturalist contains observation date, location, and species guess.
 
 Some of the graphs may not reflect the actual number of plants on campus because of the following limitation:
 Observation data provided by iNaturalist contained more observed species than officially reported by UCLA, resulting in truncation of unreported species when merging both datasets. The Stack only analyzed the species reported by UCLA, which allowed us to determine whether plants were native to California or not. This resulted in observations not reported by UCLA being removed in the final dataset.
-
-

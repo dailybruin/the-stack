@@ -3,7 +3,7 @@ Chart.defaults.font.size = 14;
 Chart.defaults.font.family = 'PT Sans';
 Chart.defaults.color = '#000';
 
-const totals = ['$19,565', '$14,341', '$14,426' ];
+const totals = ['$19,565', '$14,341', '$14,426'];
 const ctxStacked = document.getElementById('stacked-chart');
 const dataStacked = {
   labels: [
@@ -50,12 +50,14 @@ const config = {
       tooltip: {
         callbacks: {
           label: function(tooltipItem, data) {
-            return `${tooltipItem.dataset.label}: $${tooltipItem.formattedValue}`;
+            return `${tooltipItem.dataset.label}: $${
+              tooltipItem.formattedValue
+            }`;
           },
-          beforeBody: function(tooltipItem){
+          beforeBody: function(tooltipItem) {
             index = tooltipItem[0].parsed.x;
-            return 'Total: ' + totals[index]
-          }
+            return 'Total: ' + totals[index];
+          },
           //   footer: (tooltipItems, data) => {
           //     let total = tooltipItems.reduce(
           //       (a, e) => a + parseInt(e.yLabel),
@@ -102,7 +104,6 @@ const config = {
           callback: function(value, index, ticks) {
             return '$' + value;
           },
-        
         },
       },
     }, //this bracket
