@@ -57,19 +57,41 @@ const data = {
 //OPTIONS FOR THE DISPLAY OF THE CHART, FOR MORE OPTIONS GO TO CHART.JS
 const options = {
   scales: {
-    y: {
-      beginAtZero: true,
-      title: {
-        display: true,
-        text: 'Budget',
+    yAxes: [
+      {
+        ticks: {
+          beginAtZero: true,
+          callback: function(value, index, values) {
+            let val = value.toLocaleString('en-US', {
+              style: 'currency',
+              currency: 'USD',
+              maximumFractionDigits: 0,
+            });
+            return val;
+          },
+        },
+        title: {
+          display: true,
+          text: 'Budget',
+        },
+      },
+    ],
+  },
+  tooltips: {
+    callbacks: {
+      label: function(tooltipItem) {
+        let val = tooltipItem.yLabel.toLocaleString('en-US', {
+          style: 'currency',
+          currency: 'USD',
+          maximumFractionDigits: 0,
+        });
+        return val;
       },
     },
   },
-  plugins: {
-    title: {
-      display: true,
-      text: 'CHART TITLE',
-    },
+  title: {
+    display: true,
+    text: 'Difference between budgeted and actual spending per year',
   },
   maintainAspectRatio: false,
 };
