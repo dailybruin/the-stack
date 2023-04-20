@@ -37,7 +37,7 @@ Peter Hendrickson, the associate vice chancellor for design and construction, sa
 
 ### Spending by Year & Cost vs Number of Projects
 
-Including active projects, 2022 saw the most construction spending, while 2018 saw the least. According to the data provided, only one project was completed in 2018, the CHS Seismic Correction and Fire Safety, which cost $52,155,000. In 2017, 26 projects were completed, which is the greatest number for any year between 2013 and 2022. Higher spending in 2022 than 2017 despite far fewer projects, with only 7 completed and active projects in 2022, can be attributed to far higher costs per project in 2022. Particularly, the average cost of a project in 2022 was $129,053,857, while the average in 2017 was $15,851,154.
+Including active projects, 2022 saw the most construction spending, while 2018 saw the least. According to the data provided, only one project was completed in 2018, the CHS Seismic Correction and Fire Safety, which cost $52,155,000. In 2017, 26 projects were completed, which is the greatest number for any year between 2013 and 2022. Higher spending in 2022 than in 2017 despite far fewer projects, with only 7 completed and active projects in 2022, can be attributed to far higher costs per project in 2022. Particularly, the average cost of a project in 2022 was $129,053,857, while the average in 2017 was $15,851,154.
 
 <div class = 'iframe_holder'>
     <iframe title="Spending vs Number of Projects by Year (as proportion)" aria-label="Stacked Column Chart" id="datawrapper-chart-geWCS" src="https://datawrapper.dwcdn.net/geWCS/1/" scrolling="no" frameborder="0" style="border: none; margin: auto;" width = "100%" height="400" data-external="1"></iframe>
@@ -53,26 +53,26 @@ The number and type of projects play a role in dictating costs, as shown by the 
     <canvas id = "mchart"></canvas>
 </div>
 
-The graph above displays projects that were completed between 2013 and 2022. We can compare the original budget set compared to the final amount spent on a project. Typically, construction projects come in at or below budget. There was a dip in completed project spending that began in 2018 and continued through the COVID-19 pandemic. Completed projects spiked between 2021 and 2022, with more than a 435% year-over-year increase in spending. This is due to the new university apartment buildings, as well as the Olympic and Centennial dorm buildings, which were completed in 2022. The new Olympic and Centennial dorm buildings accounted for $223,042,000, or just over 50% of 2022 spending (CQ #5 and #6). The total spending for t building Gayley Heights was $184,500,000, or about 41% of 2022 spending (CQ #5 and CQ #7).
+The graph above displays projects that were completed between 2013 and 2022. We can compare the original budget set compared to the final amount spent on a project. Typically, construction projects come in at or below budget. There was a dip in completed project spending that began in 2018 and continued through the COVID-19 pandemic. Completed projects spiked between 2021 and 2022, with more than a 435% year-over-year increase in spending. This is due to the new university apartment buildings, as well as the Olympic and Centennial dorm buildings, which were completed in 2022. The new Olympic and Centennial dorm buildings accounted for $223,042,000, or just over 50% of 2022 spending. The total spending for building Gayley Heights was $184,500,000, or about 41% of 2022 spending.
 
 ### Conclusion
 
-While construction can be frustrating for many students, the new university apartments and dorms allowed UCLA to guarantee housing for all students (CQ #3).
+While construction can be frustrating for many students, the new university apartments and dorms allowed UCLA to guarantee housing for all students.
 
-Alexa Escamilla, a second-year Molecular Cellular Developmental Biology student, currently lives in Laurel, one of the new Undergraduate Apartment buildings (CQ #4 0:08 & 0:38 & 1:02). She said she chose a 8 person, 4 bedroom, 2 bathroom unit in Laurel because it was a cheaper option than other buildings (CQ #4 2:26).
+Alexa Escamilla, a second-year molecular, cell and developmental biology student, currently lives in Laurel, one of the new undergraduate apartment buildings. She said she chose an eight-person, four-bedroom, and two-bathroom unit in Laurel because it was a cheaper option than other buildings.
 
-Escamilla said she enjoyed the modern look of her apartment as well as the view of the sunset (CQ #4 9:15). However, she wishes the building had a gym (CQ #4 5:28). Laurel is also further from campus than many other University Apartments, but Escamilla added that the bus stop just outside her building made getting to campus easy (CQ #4 5:28).
+Escamilla said she enjoyed the modern look of her apartment as well as the view of the sunset. However, she wishes the building had a gym. Laurel is also farther from campus than many other university apartments, but Escamilla added that the bus stop just outside her building made getting to campus easy.
 
 Part of the allure of Laurel to Escamilla was that it was a new development.
 
-“I like that I’m the first person living there,” Escamilla said (CQ #4 9:03).
+“I like that I’m the first person living there,” Escamilla said.
 
-On the other hand, some students were upset by the recent construction, particularly if they will not have the opportunity to reap the benefits of the renovations. Doryenna Ammari, a third-year Political Science major, said that the constant construction is highly disruptive. “It’s been really difficult to navigate campus, even when I’m just getting to my classes.” (CQ #8).
+On the other hand, some students were upset by the recent construction, since they may not have the opportunity to reap the benefits of the renovations. Doryenna Ammari, a third-year political science student, said that the constant construction is highly disruptive. “It’s been really difficult ever since they got on campus to navigate to my classes.”
 
-She expressed further disappointment with the closure of iconic campus destinations, such as Powell Library’s Main Reading Room, which is undergoing seismic renovations. (CQ
+She expressed further disappointment with the closure of iconic campus destinations, such as Powell Library’s Main Reading Room, which is undergoing seismic renovations.
 
-“Especially as a student during COVID, I didn’t have my first year of college here, and not being able to take graduation photos at Powell is just really disappointing,” Ammari said. (CQ #8).
+“Especially being a student of COVID for 2020, I didn’t have a graduation, I didn’t have my first year of college here, and not being able to take graduation photos and stuff like that at Powell is really disappointing,” Ammari said.
 
 ### About the Data
 
-The data was collected from the UC Office of the President’s capital annual status reports. The information related to UCLA was isolated from the other UC campuses and organized as “new construction” or “renovation.” Particularly, the figures that appear are the funds dedicated to construction projects categorized by the year they were completed and, in the case of active projects, the year they are listed on the annual status report (2022). These documents described the construction projects in terms of their name, type, original budget, augmented budget, percentage change in price, notes, year, and phase of construction. Before 2017, the data also included whether projects are state or non-state funded, but funding information is available in a more detailed form in the capital financial plans, which offer 6-year projections of construction across the UC campuses. (CQ #2)
+The data was collected from the UC Office of the President’s capital annual status reports. The information related to UCLA was isolated from the other UC campuses and organized as “new construction” or “renovation.” Particularly, the figures that appear are the funds dedicated to construction projects categorized by the year they were completed and, in the case of active projects, the year they are listed on the annual status report (2022). These documents described the construction projects in terms of their name, type, original budget, augmented budget, percentage change in price, notes, year and phase of construction. Before 2017, the data also included whether projects are state or nonstate-funded, but funding information is available in a more detailed form in the capital financial plans, which offer six-year projections of construction across the UC campuses.
