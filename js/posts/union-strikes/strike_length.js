@@ -53,9 +53,9 @@ const options = {
 }
 //THIS CODE MAKES THE CHART, MAKE SURE THE CTX VARIABLE DOES NOT MATCH ANY OTHER CTX VARIABLE
 //CHANGE ID-HERE TO WHATEVER YOU MADE YOUR ID IN THE HTML FILE, CHOOSE SOMETHING DESCRIPTIVE
-const ctxBAR = document.getElementById('sector_bar');
+const strike_length = document.getElementById('Strike_Length_Line');
 
-const chart = new Chart(ctxBAR, {
+const chart = new Chart(strike_length, {
     type: 'line',
     data: data,
     options: options

@@ -19,8 +19,12 @@ og_image:
 
 scripts:
   - //cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js
-  - /js/posts/union-strikes/postdocwage.js
+  - /js/posts/union-strikes/industry_strikes_chart.js
   - /js/posts/union-strikes/strike_length.js
+  - /js/posts/union-strikes/postdocwage.js
+stylesheets:
+  - //cdnjs.cloudflare.com/ajax/libs/c3/0.4.10/c3.min.css
+  - /css/posts/union-strikes/app.css
   
 ---
 
@@ -46,8 +50,8 @@ The data shows that Oakland had the highest number of strikes in the last 10 yea
 
 We also wanted to see which industries had higher numbers of strikes and workers idled. The Healthcare and Social Assistance industry had the largest number of strikes in California in the last 10 years as per the dataset at 92 strikes as well as the largest number of total idled workers. The Transportation and Warehousing industry followed with 17 strikes. However, despite the high coverage of the recent UC higher education strike, within the last 10 years, the Educational Services industry had the second least number of strikes across California. 
 
-<div class="bar graph">
-    <iframe title="Number of Strikes by Industry between 2012-2022" aria-label="Column Chart" id="datawrapper-chart-lbxk9" src="https://datawrapper.dwcdn.net/lbxk9/2/" scrolling="no" frameborder="0" style="border: none;" width="800" height="600" data-external="1"></iframe>
+<div class="bar-chart">
+    <canvas id="Industry_Strikes_Chart"></canvas>
 </div>
 
 The average strike length is 12.2 days across the country and 8.8 in California within the past decade. The 2022 UC Academic Worker strike lasted 39 days – about 320% more than the national average and 443% more than California’s average. 
@@ -60,8 +64,8 @@ Starting in March 2021, Graduate Workers of Columbia University began its strike
 
 Strike lengths vary until both parties agree on a resolution. Unions with larger emergency funds – used to support their workers during the strike – may be able to bargain longer. 
 
-<div class="line-chart">
-    <canvas id="sector_bar"></canvas>
+<div style='line-chart'>
+    <canvas id="Strike_Length_Line"></canvas>
 </div>
 
 Last year, the 2022 UAW strike contributed 71% of strike days in California’s public sector. On average, private sector workers strike longer than those in the public sector. In 2022, the average number of strike days surpassed that of the past decade in the public sector. 
