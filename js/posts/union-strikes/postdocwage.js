@@ -1,8 +1,8 @@
 
-const labels = ['2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021'];
+const postdoc_labels = ['2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021'];
 
-const data = {
-    labels: labels,
+const postdoc_data = {
+    labels: postdoc_labels,
     datasets: [
         {
             label: "Postdoc Wage Minimum", 
@@ -19,7 +19,7 @@ const data = {
     ]
 };
 
-const options = {
+const postdoc_options = {
     scales: {
         y: {
             beginAtZero: true,
@@ -72,10 +72,10 @@ const options = {
       },
 };
 
-const wage_bar= document.getElementById('Wage_Chart');
+const postdoc_wage_bar= document.getElementById('Wage_Chart');
 
-const chart = new Chart(wage_bar, {
+const postdoc_chart = new Chart(postdoc_wage_bar, {
     type: 'bar',
-    data: data,
-    options: options
+    data: postdoc_data,
+    options: postdoc_options
 });

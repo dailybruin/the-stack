@@ -1,6 +1,11 @@
 .bar-chart{
-    height: 350px;
+    height: 400px;
+    border: 2px black solid;
 }
 .line-chart{
     height: 350px;
+    border: 2px black solid;
+}
+.map{
+    border: 2px black solid;
 }

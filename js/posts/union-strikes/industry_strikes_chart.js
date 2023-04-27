@@ -1,5 +1,5 @@
 
-const labels = [['Health Care and', 'Social Assistance'], 
+const industry_labels = [['Health Care and', 'Social Assistance'], 
                 ['Transportation and', 'Warehousing'], 
                 'Manufacturing', 
                 ['Accommodation and', 'Food Services'], 
@@ -11,10 +11,9 @@ const labels = [['Health Care and', 'Social Assistance'],
                 ['Professional,', 'Scientific &Tech Serv'],
                 'Educational Services',
                 'Wholesale Trade'];
-const test_labels = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k' ,'l'];
 
-const data = {
-    labels: labels,
+const industry_data = {
+    labels: industry_labels,
     datasets: [
         {
             label: "Strikes per Industry", 
@@ -25,7 +24,7 @@ const data = {
     ]
 };
 
-const options = {
+const industry_options = {
     scales: {
         y: {
             beginAtZero: true,
@@ -68,8 +67,8 @@ const options = {
 
 const industry_bar= document.getElementById('Industry_Strikes_Chart');
 
-const chart = new Chart(industry_bar, {
+const industry_chart = new Chart(industry_bar, {
     type: 'bar',
-    data: data,
-    options: options
+    data: industry_data,
+    options: industry_options
 });
