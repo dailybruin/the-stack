@@ -1,0 +1,19 @@
+body {
+    margin: 0px;
+}
+
+@media only screen and (min-width: 600px) {
+    .chart-container{
+        width: 130%;
+        margin-left: -15%;
+    }
+    .side-by-side{
+        width: 50%;
+    }
+    #EAPcontainer{
+        float: left;
+    }
+    #TScontainer{
+        float: right;
+    }
+}
