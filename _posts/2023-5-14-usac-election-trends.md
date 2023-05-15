@@ -5,7 +5,7 @@ authors:
   - lindsey_parungo
   - priya_kanneboyina
   - liam_mcglynn
-  - maddie_blasingame
+  - madeline_blasingame
   - leo_cardozo
 key_takeaways:
   - KEY TAKEAWAY 1
@@ -16,10 +16,14 @@ featured_image:
   caption: 
 og_image: 
 scripts:
-  - //cdnjs.cloudflare.com/ajax/libs/Chart.js/4.3.0/chart.min.js
+  - //cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js
   - /js/posts/usac-election-trends/expenses-bar.js
 stylesheets:
   -
 ---
 
 Text here
+
+<div>
+  <canvas id = 'expenses-chart'></canvas>
+</div>
