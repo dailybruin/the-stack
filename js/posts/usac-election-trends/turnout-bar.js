@@ -1,19 +1,19 @@
 Chart.defaults.font.family = 'Noto Serif, serif'  //FONT FOR CHART CHANGE IF NEEDED
-const labels = ['2016','2017','2018','2019','2020', '2021', '2022']; 
+const labels = ['2016','2017','2018','2019','2020', '2021', '2022', '2023']; 
 const colors = ['#2774AE', '#D3D3D3'] 
 const data = {
   labels: labels,
   //DATA SETS IN A LIST. EACH OBJECT IN LIST IS A CATEGORY OF DATA CHANGE THESE OUT WITH YOUR DATA
   datasets: [{
     label: 'Voted',
-    data: [40.3, 27.5, 26.5, 16.18, 30.06, 19.82, 15.19], //VALUE FOR EACH BAR
+    data: [40.3, 27.5, 26.5, 16.18, 30.06, 19.82, 15.19, 23.03], //VALUE FOR EACH BAR
     backgroundColor: colors[0],
     borderColor: colors[0],
     borderWidth: 1
   },
   {
     label: 'Did Not Vote',
-    data: [59.7, 72.5, 73.5, 83.82, 69.94, 80.18 , 84.81], //VALUE FOR EACH BAR
+    data: [59.7, 72.5, 73.5, 83.82, 69.94, 80.18 , 84.81, 76.97], //VALUE FOR EACH BAR
     backgroundColor: colors[1],
     borderColor: colors[1],
     borderWidth: 1
