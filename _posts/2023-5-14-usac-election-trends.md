@@ -18,11 +18,17 @@ og_image:
 scripts:
   - //cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js
   - /js/posts/usac-election-trends/expenses-bar.js
+  - /js/posts/usac-election-trends/sanctions-by-year.js
+
 stylesheets:
   -
 ---
 
 Text here
+
+<div>
+  <canvas id = 'sanctions-by-year'> </canvas>
+</div>
 
 <div>
   <canvas id = 'expenses-chart'></canvas>
