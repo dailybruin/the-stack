@@ -19,6 +19,7 @@ scripts:
   - //cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js
   - /js/posts/usac-election-trends/expenses-bar.js
   - /js/posts/usac-election-trends/sanctions-by-year.js
+  - /js/posts/usac-election-trends/turnout-bar.js
 
 stylesheets:
   -
