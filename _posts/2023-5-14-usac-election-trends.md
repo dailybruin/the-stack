@@ -27,7 +27,7 @@ stylesheets:
 Text here
 
 <div>
-  <canvas id = 'sanctions-by-year'> </canvas>
+  <canvas id = 'yearly-sanctions'> </canvas>
 </div>
 
 <div>
