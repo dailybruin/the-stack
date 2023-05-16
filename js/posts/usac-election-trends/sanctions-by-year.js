@@ -28,7 +28,7 @@ const sanctions_data = {
   }]
 };
 //OPTIONS FOR THE DISPLAY OF THE CHART, FOR MORE OPTIONS GO TO CHART.JS
-const options = {
+const sanctions_options = {
   scales: {
     y: {
       beginAtZero: true,
@@ -41,7 +41,7 @@ const options = {
   plugins: {
     title: {
         display: true,
-        text: 'Complaints Filed During USAC Elections, 2020-2023'
+        text: 'Complaints Filed During USAC Elections'
       },
   },
   maintainAspectRatio: false,
@@ -51,8 +51,8 @@ const options = {
 const sanctionsYear = document.getElementById('yearly-sanctions');
 //THE CHART VARIABLE NEEDS TO HAVE A UNIQUE NAME RENAME IT SOMETHING DESCRIPTIVE
 //MAKE SURE ctxBAR MATCHES THE CONST VARIABLE YOU JUST SET
-const chart = new Chart(sanctionsYear, {
+const sanctions_chart = new Chart(sanctionsYear, {
     type: 'bar',
     data: sanctions_data,
-    options: options
+    options: sanctions_options
   });

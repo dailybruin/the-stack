@@ -19,6 +19,10 @@ scripts:
   - //cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js
   - /js/posts/usac-election-trends/expenses-bar.js
   - /js/posts/usac-election-trends/sanctions-by-year.js
+  - /js/posts/usac-election-trends/punishments-pie.js
+  - /js/posts/usac-election-trends/sanctions-winners.js
+
+
 
 stylesheets:
   -
@@ -30,6 +34,13 @@ Text here
   <canvas id = 'yearly-sanctions'> </canvas>
 </div>
 
+<div>
+  <canvas id = 'winners-sanctions'> </canvas>
+</div>
+
+<div>
+  <canvas id = 'punishments-sanctions'> </canvas>
+</div>
 <div>
   <canvas id = 'expenses-chart'></canvas>
 </div>
