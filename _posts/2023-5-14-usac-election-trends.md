@@ -18,12 +18,8 @@ og_image:
 scripts:
   - //cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js
   - /js/posts/usac-election-trends/expenses-bar.js
-<<<<<<< HEAD
   - /js/posts/usac-election-trends/sanctions-by-year.js
 
-=======
-  - /js/posts/usac-election-trends/turnout-bar.js
->>>>>>> cf3e8d24 (fix turnout bar and add to markdown)
 stylesheets:
   -
 ---
