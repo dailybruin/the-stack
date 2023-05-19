@@ -44,11 +44,11 @@ Throughout the election process, candidates can be sanctioned for a number of re
 
 Of the 165 times a candidate has been accused in a citation in the past four years, 85 of these violations have been deemed valid, 30 partially valid, and 50 have been determined as invalid complaints. The bar chart below details the number of citations per year, detailed by the Election Board’s decision.
 
-<div>
+<div style='height: 300px'>
   <canvas id = 'yearly-sanctions'> </canvas>
 </div>
 
-<div>
+<div style='height: 300px'>
   <canvas id = 'winners-sanctions'> </canvas>
 </div>
 
@@ -71,10 +71,11 @@ USAC candidates are allowed to spend up to $450 on their campaigns. Candidates c
 While candidates are allowed to spend up to $450, the average expenditure per campaign during the 2020, 2021, 2022 and 2023 spring elections was about $118. The chart below shows the average expenditures per candidate for each office over the last 4 years. Both Dylan Cano, a fourth year global health major, and Paredes said that, from a general student perspective, campaign finances aren’t heavily reflected in the campaigns, since most of the campaigning is done over Instagram (CQ). However, many candidates reported expense costs related to graphic design for social media advertising.
 
 <div>
-  <canvas id = 'officers-chart'></canvas>
+  <canvas id = 'officers-chart' width="800" height="400"></canvas>
 </div>
+
 <div>
-  <canvas id = 'commissioners-chart'></canvas>
+  <canvas id = 'commissioners-chart' width="800" height="400"></canvas>
 </div>
 
 In 2021, the campaign expenditures were the lowest in the last 4 years. The total expenditures in 2021 totaled to $845.68 which is about 12% of the total spending in the 2023 campaigns, which had the highest spending in the last four years. Slates are also allowed to claim expenditures on behalf of all their candidates, but slate spending was not included in the above chart. 
@@ -83,7 +84,7 @@ On average, independent candidates spent 50% more than candidates that were memb
 
 ### Slates
 
-<div>
+<div style='height: 300px'>
   <canvas id = 'mchart'></canvas>
 </div>  
 
@@ -97,7 +98,7 @@ Alvi said that recent political drama in previous campaigns and a general disill
 
 ### Turnout
 
-<div>
+<div style='height: 300px'>
   <canvas id = 'turnout-bar'></canvas>
 </div>
 
