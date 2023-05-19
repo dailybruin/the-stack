@@ -12,9 +12,9 @@ key_takeaways:
   - Over the last eight years, five elections have met the 20% voter turnout threshold required to pass a referendum.
 
 featured_image:
-  url: 
-  caption: 
-og_image: 
+  url: usac-election-trends/cover_art.png
+  caption: (Alicia Caldera/Daily Bruin)
+og_image: usac-election-trends/cover_art.png
 scripts:
   - //cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js
   - /js/posts/usac-election-trends/expenses-bar.js
