@@ -70,12 +70,14 @@ USAC candidates are allowed to spend up to $450 on their campaigns. Candidates c
 
 While candidates are allowed to spend up to $450, the average expenditure per campaign during the 2020, 2021, 2022 and 2023 spring elections was about $118. The chart below shows the average expenditures per candidate for each office over the last 4 years. Both Dylan Cano, a fourth year global health major, and Paredes said that, from a general student perspective, campaign finances aren’t heavily reflected in the campaigns, since most of the campaigning is done over Instagram (CQ). However, many candidates reported expense costs related to graphic design for social media advertising.
 
-<div>
-  <canvas id = 'officers-chart' width="800" height="400"></canvas>
+<!-- Render 'officers-chart' with conditional formatting based on screen size -->
+
+<div class='line-chart' style='height: 100%; max-height: 500px;'>
+  <canvas id = 'officers-chart'></canvas>
 </div>
 
-<div>
-  <canvas id = 'commissioners-chart' width="800" height="400"></canvas>
+<div class = 'line-chart'>
+  <canvas id = 'commissioners-chart'></canvas>
 </div>
 
 In 2021, the campaign expenditures were the lowest in the last 4 years. The total expenditures in 2021 totaled to $845.68 which is about 12% of the total spending in the 2023 campaigns, which had the highest spending in the last four years. Slates are also allowed to claim expenditures on behalf of all their candidates, but slate spending was not included in the above chart. 

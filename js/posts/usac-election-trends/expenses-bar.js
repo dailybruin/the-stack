@@ -96,6 +96,12 @@ const officersChart = new Chart(ctx_officers, {
   options: officer_options,
 });
 
+if (window.matchMedia('(max-width: 480px)').matches) {
+  officersChart.canvas.style = 'max-height:500px';
+  officersChart.options.maintainAspectRatio = false;
+  officersChart.update();
+}
+
 //// Commissioners
 const commissioner_options = {
   scales: {
@@ -194,3 +200,9 @@ const commissionersChart = new Chart(ctx_commissioners, {
   data: commissioners_data,
   options: commissioner_options,
 });
+
+if (window.matchMedia('(max-width: 480px)').matches) {
+  commissionersChart.canvas.style = 'max-height:500px';
+  commissionersChart.options.maintainAspectRatio = false;
+  commissionersChart.update();
+}
