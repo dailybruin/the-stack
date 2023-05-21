@@ -29,6 +29,10 @@ const options = {
     },
     y: {
       stacked: true,
+      title: {
+        display: true,
+        text: 'Number of Winners',
+      },
     },
   },
   plugins: {

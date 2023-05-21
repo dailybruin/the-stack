@@ -42,7 +42,7 @@ const party_options = {
   plugins: {
     title: {
       display: true,
-      text: 'Percentage of candidates and winners who are independents',
+      text: 'Percentage of Independent Candidates and Winners',
     },
   },
   maintainAspectRatio: false,

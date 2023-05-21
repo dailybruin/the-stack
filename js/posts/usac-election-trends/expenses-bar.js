@@ -22,7 +22,7 @@ const officer_options = {
       },
       title: {
         display: true,
-        text: 'Campaign spending',
+        text: 'Campaign Spending',
       },
     },
   },
@@ -41,18 +41,18 @@ const officer_options = {
     },
     title: {
       display: true,
-      text: 'Average spending per campaign for officer positions',
+      text: 'Average Spending per Campaign for Officer Positions',
     },
   },
 };
 
 const officer_labels = [
-  'External vice president',
-  'General representative',
-  'Internal vice president',
-  'International student representative',
+  'External Vice President',
+  'General Representative',
+  'Internal Vice President',
+  'International Student Representative',
   'President',
-  'Transfer student representative',
+  'Transfer Student Representative',
 ];
 const officer_data = [
   [283.855, 11.83, 137.82, 205.92],
@@ -124,7 +124,7 @@ const commissioner_options = {
       },
       title: {
         display: true,
-        text: 'Campaign spending',
+        text: 'Campaign Spending',
       },
     },
   },
@@ -143,7 +143,7 @@ const commissioner_options = {
     },
     title: {
       display: true,
-      text: 'Average spending per campaign for commissioner positions',
+      text: 'Average Spending per Campaign for Commissioner Positions',
     },
   },
 };

@@ -35,10 +35,10 @@ const options_turnout = {
   scales: {
     x: {
       stacked: true,
-      title: {
-        display: true,
-        text: 'Years',
-      },
+      // title: {
+      //   display: true,
+      //   text: 'Years',
+      // },
     },
     y: {
       grid: {

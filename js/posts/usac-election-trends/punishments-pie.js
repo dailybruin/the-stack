@@ -1,5 +1,5 @@
 Chart.defaults.font.family = 'Noto Serif, serif'; //FONT FOR CHART CHANGE IF NEEDED
-const punishments_labels = ['None', 'Suspension', 'Correction', 'Other']; //THIS SHOULD BE A LIST OF WHAT EACH SEGMENT IN THE PIE REPRESENTS
+const punishments_labels = ['None', 'Suspension from Campaigning', 'Correction', 'Other']; //THIS SHOULD BE A LIST OF WHAT EACH SEGMENT IN THE PIE REPRESENTS
 const punishments_colors = ['#2774AE', '#AED6F1', '#C69214', '#FFD200']; //CHANGE THESE TO WHAT MATCHES THE SUBJECT
 const punishments_data = {
   labels: punishments_labels,
