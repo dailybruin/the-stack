@@ -22,7 +22,7 @@ const data_turnout = {
       borderWidth: 1,
     },
     {
-      label: 'Did Not Vote',
+      label: 'Did not Vote',
       data: [59.7, 72.5, 73.5, 83.82, 69.94, 80.18, 84.81, 76.97], //VALUE FOR EACH BAR
       backgroundColor: colors_turnout[1],
       borderColor: colors_turnout[1],
