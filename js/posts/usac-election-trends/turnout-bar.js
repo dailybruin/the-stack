@@ -49,14 +49,14 @@ const options_turnout = {
       max: 100,
       title: {
         display: true,
-        text: '% of Students',
+        text: 'Percent',
       },
     },
   },
   plugins: {
     title: {
       display: true,
-      text: 'Student Turnout for USAC Elections Voting',
+      text: 'Turnout',
     },
   },
   tooltips: {
