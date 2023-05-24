@@ -22,7 +22,7 @@ const officer_options = {
       },
       title: {
         display: true,
-        text: 'Campaign Spending',
+        text: 'Campaign spending',
       },
     },
   },
@@ -41,18 +41,18 @@ const officer_options = {
     },
     title: {
       display: true,
-      text: 'Average Spending per Campaign for Officer Positions',
+      text: 'Average spending per campaign for officer positions',
     },
   },
 };
 
 const officer_labels = [
-  'External Vice President',
-  'General Representative',
-  'Internal Vice President',
-  'International Student Representative',
+  'External vice president',
+  'General representative',
+  'Internal vice president',
+  'International student representative',
   'President',
-  'Transfer Student Representative',
+  'Transfer student representative',
 ];
 const officer_data = [
   [283.855, 11.83, 137.82, 205.92],
@@ -124,7 +124,7 @@ const commissioner_options = {
       },
       title: {
         display: true,
-        text: 'Campaign Spending',
+        text: 'Campaign spending',
       },
     },
   },
@@ -143,19 +143,19 @@ const commissioner_options = {
     },
     title: {
       display: true,
-      text: 'Average Spending per Campaign for Commissioner Positions',
+      text: 'Average spending per campaign for commissioner positions',
     },
   },
 };
 
 const commissioner_labels = [
-  'Academic Affairs commissioner',
-  'Campus Events commissioner',
-  'Community Service commissioner',
-  'Cultural Affairs commissioner',
+  'Academic affairs commissioner',
+  'Campus events commissioner',
+  'Community service commissioner',
+  'Cultural affairs commissioner',
   'Facilities commissioner',
-  'Financial Supports commissioner',
-  'Student Wellness commissioner',
+  'Financial supports commissioner',
+  'Student wellness commissioner',
 ];
 const commissioner_data = [
   [180.64, 30.540000000000003, 314.14, 97.99],

@@ -6,14 +6,14 @@ const data = {
   //DATA SETS IN A LIST. EACH OBJECT IN LIST IS A CATEGORY OF DATA CHANGE THESE OUT WITH YOUR DATA
   datasets: [
     {
-      label: 'Sanctioned Winners',
+      label: 'Sanctioned winners',
       data: [6, 4, 5, 5], //VALUE FOR EACH BAR
       backgroundColor: acolors[0],
       borderColor: acolors[0],
       borderWidth: 1,
     },
     {
-      label: 'Unsanctioned Winners',
+      label: 'Unsanctioned winners',
       data: [9, 11, 10, 10], //DATA HERE
       backgroundColor: acolors[1],
       borderColor: acolors[1],
@@ -31,14 +31,14 @@ const options = {
       stacked: true,
       title: {
         display: true,
-        text: 'Number of Winners',
+        text: 'Number of winners',
       },
     },
   },
   plugins: {
     title: {
       display: true,
-      text: 'Distribution of USAC Election Winners',
+      text: 'Distribution of USAC election winners',
     },
   },
   maintainAspectRatio: false,

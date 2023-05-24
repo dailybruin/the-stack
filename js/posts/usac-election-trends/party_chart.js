@@ -6,7 +6,7 @@ const party_data = {
   //DATA SETS IN A LIST. EACH OBJECT IN LIST IS A CATEGORY OF DATA CHANGE THESE OUT WITH YOUR DATA
   datasets: [
     {
-      label: 'Independent Candidates',
+      label: 'Independent candidates',
       data: [56.25, 47.37, 73.91, 85.37], //VALUE FOR EACH BAR
       backgroundColor: party_colors[0],
       borderColor: party_colors[0],
@@ -14,7 +14,7 @@ const party_data = {
       stack: 0,
     },
     {
-      label: 'Independent Wins',
+      label: 'Independent winners',
       data: [33.33, 40, 80, 93.33], //DATA HERE
       backgroundColor: party_colors[1],
       borderColor: party_colors[1],
@@ -35,14 +35,14 @@ const party_options = {
       max: 100,
       title: {
         display: true,
-        text: 'Percent of Candidates',
+        text: 'Percent of candidates',
       },
     },
   },
   plugins: {
     title: {
       display: true,
-      text: 'Percentage of Independent Candidates and Winners',
+      text: 'Percentage of independent candidates and winners',
     },
   },
   maintainAspectRatio: false,

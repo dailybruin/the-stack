@@ -6,7 +6,7 @@ const sanctions_data = {
   //DATA SETS IN A LIST. EACH OBJECT IN LIST IS A CATEGORY OF DATA CHANGE THESE OUT WITH YOUR DATA
   datasets: [
     {
-      label: 'Valid Complaints',
+      label: 'Valid complaints',
       data: [58, 27, 8, 6], //VALUE FOR EACH BAR
       backgroundColor: sanctions_colors[0],
       borderColor: sanctions_colors[0],
@@ -14,7 +14,7 @@ const sanctions_data = {
       stack: 'Stack 0',
     },
     {
-      label: 'Partially Valid Complaints',
+      label: 'Partially valid complaints',
       data: [9, 9, 3, 9], //DATA HERE
       backgroundColor: sanctions_colors[1],
       borderColor: sanctions_colors[1],
@@ -22,7 +22,7 @@ const sanctions_data = {
       stack: 'Stack 1',
     },
     {
-      label: 'Invalid Complaints',
+      label: 'Invalid complaints',
       data: [13, 13, 15, 9], //DATA HERE
       backgroundColor: sanctions_colors[2],
       borderColor: sanctions_colors[2],
@@ -38,14 +38,14 @@ const sanctions_options = {
       beginAtZero: true,
       title: {
         display: true,
-        text: 'Number of Citations Filed',
+        text: 'Number of citations filed',
       },
     },
   },
   plugins: {
     title: {
       display: true,
-      text: 'Complaints Filed During USAC Elections',
+      text: 'Complaints filed during USAC elections',
     },
   },
   maintainAspectRatio: false,
