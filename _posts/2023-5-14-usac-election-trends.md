@@ -68,7 +68,7 @@ However, sanctions do not necessarily stop candidates from winning elections. In
 
 ### Finances
 
-According to the election code found on the 2023 election webpage, USAC candidates were allowed to spend up to $500 on their campaigns during the 2023 election. Candidates can have up to 100% of their expenses reimbursed by the elections board. However, this reimbursement is capped at 10% of the total elections board budget. Funding is split equally amongst candidates that reported spending.
+USAC candidates were allowed to spend up to $500 on their campaigns during the 2023 election. Candidates can have up to 100% of their expenses reimbursed by the elections board. However, this reimbursement is capped at 10% of the total elections board budget. Funding is split equally amongst candidates that reported spending.
 
 While candidates are allowed to spend up to $500, the average expenditure per campaign during the 2020, 2021, 2022 and 2023 elections was about $118. The chart below shows the average expenditures per candidate for each office over the last four years. Dylan Cano, a fourth-year global studies student said that, to him, campaign finances aren’t obvious to most students, since most of the campaigning is done over Instagram. However, many candidates reported expense costs related to graphic design for social media advertising.
 
@@ -124,7 +124,7 @@ Alvi said that among the various factors that impact voter turnout, COVID-19 was
 
 Last year, voter turnout reached its lowest in more than a decade, at 15.19%. This year, voter turnout saw a relative increase, with 23.03% of students voting.
 
-### Conclusion:
+### Conclusion
 
 Cano said the average student may miss most of the things USAC does. However, the results of the election can have a direct impact on students.
 
