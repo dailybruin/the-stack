@@ -8,7 +8,7 @@ authors:
   - leo_cardozo
 key_takeaways:
   - 165 accusations of Undergraduate Students Association Council election policy violations have been filed over the last four years. Of these 165 accusations, 85 of them have been found valid.
-  - Candidates are allowed to spend up to $500 on their campaigns, yet the average campaign spending over the last four years was $118.
+  - According to the election code found on the 2023 elections board [website](https://www.uclaelectionsboard.org/docs-forms), candidates are allowed to spend up to $500 on their campaigns, yet the average campaign spending over the last four years was $118.
   - Over the last eight years, five elections have met the 20% voter turnout threshold required to pass a referendum.
 
 featured_image:
@@ -68,7 +68,7 @@ However, sanctions do not necessarily stop candidates from winning elections. In
 
 ### Finances
 
-USAC candidates were allowed to spend up to $500 on their campaigns during the 2023 election. Candidates can have up to 100% of their expenses reimbursed by the elections board. However, this reimbursement is capped at 10% of the total elections board budget. Funding is split equally amongst candidates that reported spending. 
+According to the election code found on the 2023 election webpage, USAC candidates were allowed to spend up to $500 on their campaigns during the 2023 election. Candidates can have up to 100% of their expenses reimbursed by the elections board. However, this reimbursement is capped at 10% of the total elections board budget. Funding is split equally amongst candidates that reported spending.
 
 While candidates are allowed to spend up to $500, the average expenditure per campaign during the 2020, 2021, 2022 and 2023 elections was about $118. The chart below shows the average expenditures per candidate for each office over the last four years. Dylan Cano, a fourth-year global studies student said that, to him, campaign finances aren’t obvious to most students, since most of the campaigning is done over Instagram. However, many candidates reported expense costs related to graphic design for social media advertising.
 
