@@ -4,7 +4,7 @@ teaser: The Bruin created an official Diversity Report in 2020. This marks the f
 authors:
   - lindsey_parungo
 featured_image:
-  url: diversity-report/feature-photo-2.png
+  url: diversity-report/feature-photo-3.png
 scripts:
 ---
 
