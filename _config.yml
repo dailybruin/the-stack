@@ -1,6 +1,6 @@
 # Site settings
 title: The Stack
-email: dbdata@media.ucla.edu
+email: online@media.ucla.edu
 description: > # this means to ignore newlines until next key
   The Stack is Daily Bruin’s data journalism and newsroom tech blog. We investigate
   public data, experiment with technology and apply quantitative insights to
@@ -13,7 +13,7 @@ url: "https://stack.dailybruin.com" # the base hostname & protocol for your site
 image_url: /img/posts # corresponds to directory for post images (cf. https://github.com/opattison/jekyll-figure-image-tag#why-yaml-is-useful-for-storing-images)
 twitter_username: dailybruin
 github_username: dailybruin
-application: "https://apply.uclastudentmedia.com/applications/daily-bruin/data-journalism-intern/"
+application: "https://apply.uclastudentmedia.com/applications/daily-bruin/data-and-graphics-intern/"
 
 # Defaults
 defaults:
