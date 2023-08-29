@@ -30,7 +30,7 @@ We hope you'll join us in this exciting data experiment, whether that be as a re
 
 ---
 
-If you have any feedback or questions, email us at [online@media.ucla.edu](mailto:{{ site.email }}).
+If you have any feedback or questions, email us at [dbdata@media.ucla.edu](mailto:{{ site.email }}).
 
 Follow us [on Twitter](https://twitter.com/{{ site.twitter_username }}).
 
@@ -40,11 +40,12 @@ Apply to the [Stack]({{ site.application }}).
 
 ### _Data editors_
 
-* [Lindsey Parungo](https://github.com/Lindseyp314) (2022-2023)
-* [Laurel Woods](https://github.com/laurelrwoods) (2021-2022)
-* [Andrew Kan](https://github.com/kandrewz) (2020-2021)
-* [Mattie Sanseverino](https://github.com/mattiesansev) (2019-2020)
-* [Henna Dialani](https://github.com/hennadialani) (2018-2019)
-* [Chang Liu](https://github.com/shampliu) (2016-2017)
-* [Harrison Liddiard](https://github.com/liddiard) (2015-2016)
-* [Neil Bedi](https://github.com/nbedi) (creator, 2014-2015)
+- [Junwon Choi](https://github.com/cjunwon) (2023-2024)
+- [Lindsey Parungo](https://github.com/Lindseyp314) (2022-2023)
+- [Laurel Woods](https://github.com/laurelrwoods) (2021-2022)
+- [Andrew Kan](https://github.com/kandrewz) (2020-2021)
+- [Mattie Sanseverino](https://github.com/mattiesansev) (2019-2020)
+- [Henna Dialani](https://github.com/hennadialani) (2018-2019)
+- [Chang Liu](https://github.com/shampliu) (2016-2017)
+- [Harrison Liddiard](https://github.com/liddiard) (2015-2016)
+- [Neil Bedi](https://github.com/nbedi) (creator, 2014-2015)
