@@ -1,6 +1,6 @@
 junwon_choi:
   name: Junwon Choi
-  title: Stack Developer
+  title: Data editor
   bio: Junwon is a third-year data theory student. He enjoys lifting weights, running, and taking photos.
   mug: yes
   editor: yes
@@ -9,7 +9,7 @@ junwon_choi:
   github: cjunwon
 liam_mcglynn:
   name: Liam McGlynn
-  title: Stack Developer
+  title: Assistant Data editor
   bio: Liam is a second-year mechanical engineering student. He likes golden retrievers, crossword puzzles and oxford commas. However, DB style is no oxford commas.
   mug: yes
   editor: yes
