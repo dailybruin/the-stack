@@ -1,0 +1,47 @@
+latitude,logitude,altitude,geometry,CODE,TYPE,ADDRESS,DESCRIPTION,LOCATION
+34.05084436,-118.4463303,,Point,A1,Rack,"1500 S Sepulveda Blvd, Los Angeles, CA 90025",,University Credit Union
+34.05979129,-118.4480861,,Point,A4,Kiosk,"1070 Veteran Ave, Los Angeles, CA 90024",Westwood lot,UCLA Parking Structure 32
+34.06455713,-118.4461036,,Point,A7,Kiosk,"300 Medical Plaza Driveway # B200, Los Angeles, CA 90095",,UCLA Neuropsychiatric and Biobehavioral Health Services
+34.06837476,-118.4452506,,Point,A8,Front Desk,"555 Westwood Plaza, Los Angeles, CA 90095",In UCLA fleet and Transit office on front desk,UCLA Transportation Office
+34.07134873,-118.4498308,,Point,A11,Kiosk,"380 De Neve Dr, Los Angeles, CA 90024",,Sproul Landing
+34.06687485,-118.4436043,,Point,A14,Rack,"650 Charles E Young Dr S, Los Angeles, CA 90095",Front door (off Charles E. Young) 2 shelf rack by elevator,Fielding School of Public Health
+34.06687485,-118.4436043,,Point,A16,Rack,"650 Charles E Young Dr S, Los Angeles, CA 90095",Left corner on very old rack,Fielding School of Public Health Patio
+34.06868752,-118.4424542,,Point,A17,Kiosk,"617 Charles E Young Dr E, Los Angeles, CA 90095",Right before stairs into bombshelter,Court of Sciences (Bombshelter)
+34.07085048,-118.4401046,,Point,A20,Kiosk,"445 Charles E Young Dr E, Los Angeles, CA 90095",,Shoenberg Music Building
+34.07138952,-118.4393469,,Point,A21,Wood Box,"410 Charles E Young Dr E, Los Angeles, CA 90095","Entrance Across from Dickson Court, outside on wooden shelf",Murphy Hall (South)
+34.07192881,-118.4392901,,Point,A22,Wood Box,"410 Charles E Young Dr E, Los Angeles, CA 90095","Entrance across from Dodd, outside on wooden shelf",Murphy Hall (North)
+34.0711467,-118.4432652,,Point,B4,Kiosk,,Start of Election Walk,Myerhoff Park / Election Walk
+34.07121484,-118.4457043,,Point,B5,Kiosk,"Bruin Walk, Los Angeles, CA 90095",,John Wooden Center
+34.0632381,-118.4450979,,Point,B6,Kiosk,"Bank of America Building, 924 Westwood Blvd #610, Los Angeles, CA 90024",,Westwood Plaza
+34.07037746,-118.4441537,,Point,B8,Rack,"308 Westwood Plaza, Los Angeles, CA 90024","Next to ATMs, empty DB metal rack (2 shelves)",Ackerman Viewpoint Conference Room
+34.07056801,-118.4439617,,Point,B9,Rack,"308 Westwood Plaza, Los Angeles, CA 90024","Entrance across from Kerckhoff, rack on the left (2 shelves)",Ackerman 1st floor
+34.07066327,-118.4436267,,Point,B10,Rack,"308 Westwood Plaza, Los Angeles, CA 90095",Front of Daily Bruin Office,Kerckhoff Hall (Daily Bruin Office)
+34.07060443,-118.4434119,,Point,B11,Rack,"308 Westwood Plaza #2, Los Angeles, CA 90095",,Kerckhoff Coffee House
+34.0698635,-118.4447357,,Point,B12,Kiosk,"425 Westwood Plaza, Los Angeles, CA 90095","Bottom of Engineering Stairs, south side of Ackerman",UCLA Parking Structure 6
+34.06881595,-118.4443966,,Point,B13,Kiosk,"7400 Boelter Hall, Los Angeles, CA 90095",,Henry Samueli School of Engineering (Top)
+34.06963801,-118.442015,,Point,B14,Kiosk,"520 Portola Plaza, Los Angeles, CA 90095","Between Franz Hall and Match Sciences building, outside",Franz Hall / Math Sciences
+34.07001378,-118.4406432,,Point,B15,Kiosk,"Inverted Fountain, Los Angeles, CA 90095",East side of fountain,Inverted Fountain
+34.07059386,-118.4410891,,Point,B16,Kiosk,"475 Portola Plaza, Los Angeles, CA 90095",,Knudsen Hall
+34.07213317,-118.4406603,,Point,B17,Kiosk,"UCLA Flag Pole, Los Angeles, CA 90095",,UCLA Flag Pole
+34.06183061,-118.4500286,,Point,B20,,"Weyburn Terrace, Los Angeles, CA 90024",Across from grad housing at Bus stop,Weyburn Terrace
+34.0711648,-118.4484996,,Point,C1,Kiosk,"340 Bruin Walk, Los Angeles, CA 90095",,Drake Stadium
+34.07050356,-118.4501947,,Point,C2,,"370 De Neve Dr, Los Angeles, CA 90024",,DeNeve Commons
+34.06972498,-118.4491717,,Point,C3,,"Gayley Ave, Los Angeles, CA 90095",,Tom Bradley International Hall
+34.07234397,-118.4519774,,Point,C4,Rack,"270 De Neve Dr, Los Angeles, CA 90024","South side elevators, rack (2 shelves)",Rieber
+34.0737016,-118.4526451,,Point,C5,Box,"250 De Neve Dr, Los Angeles, CA 90024",Outside on top of LA Times kiosk,Hedrick
+34.07300647,-118.4499672,,Point,C7,,"330 De Neve Dr, Los Angeles, CA 90095",,Covel Commons
+34.07198645,-118.4496857,,Point,C8,,"350 De Neve Dr, Los Angeles, CA 90024",,Sproul Hall
+34.07174892,-118.4504756,,Point,C9,,"360 De Neve Dr, Los Angeles, CA 90095",Housing Office in dorms,UCLA Housing Services
+34.07393731,-118.4437823,,Point,C10,Shelf,"Parking Structure 5, 110 Westwood Plaza, Los Angeles, CA 90077",Empty Wooden Shelf in left corner where other newspapers are held,Anderson Cafe
+34.07435727,-118.4422721,,Point,C11,Rack,"Royce Dr, Los Angeles, CA 90095","Main Entrance, metal rack on the left",Northern Lights Cafe
+34.07436549,-118.4412621,,Point,C12,Kiosk,"Charles E. Young Research Library, 21536, Los Angeles, CA 90095",In front of Charles E. Young Research Library,North Campus
+34.07411152,-118.4412842,,Point,C13,Kiosk,"335 Portola Plaza, Los Angeles, CA 90095",,Campbell Hall (North)
+34.07413767,-118.4400779,,Point,C14,Kiosk,"11282 Portola Plaza, Los Angeles, CA 90095",,Bunche Hall
+34.07642825,-118.440009,,Point,C15,Kiosk,"235 Charles E Young Dr E, Los Angeles, CA 90024",,Melnitz Hall
+34.07450437,-118.4385019,,Point,C16,,"330 Charles E Young Dr E, Los Angeles, CA 90024",,UCLA Guest House
+34.07299453,-118.4384671,,Point,C17,Kiosk,"385 Charles E Young Dr E, Los Angeles, CA 90095",,UCLA School of Law
+34.07286716,-118.4411126,,Point,C18,Kiosk,"Portola Plaza, Los Angeles, CA 90095",,Haines Hall
+34.07367091,-118.441139,,Point,C19,Kiosk,"335 Portola Plaza, Los Angeles, CA 90095",,Campbell Hall (East)
+34.07361336,-118.4393858,,Point,C20,Kiosk,"Lu Valle Commons, 398 Portola Plaza, Los Angeles, CA 90095",,Lu Valle Commons
+34.07255958,-118.439319,,Point,C21,Kiosk,"315 Portola Plaza, Los Angeles, CA 90095",,Dodd Hall
+34.06926547,-118.44576,,Point,,Front Desk,"425 Westwood Plaza, Los Angeles, CA 90095",,UCLA Meyer and Renee Luskin Conference Center
