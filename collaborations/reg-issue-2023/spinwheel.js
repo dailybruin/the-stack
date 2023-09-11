@@ -12,37 +12,39 @@ var padding = { top: 20, right: 40, bottom: 0, left: 0 },
 //randomNumbers = getRandomNumbers();
 //http://osric.com/bingo-card-generator/?title=HTML+and+CSS+BINGO!&words=padding%2Cfont-family%2Ccolor%2Cfont-weight%2Cfont-size%2Cbackground-color%2Cnesting%2Cbottom%2Csans-serif%2Cperiod%2Cpound+sign%2C%EF%B9%A4body%EF%B9%A5%2C%EF%B9%A4ul%EF%B9%A5%2C%EF%B9%A4h1%EF%B9%A5%2Cmargin%2C%3C++%3E%2C{+}%2C%EF%B9%A4p%EF%B9%A5%2C%EF%B9%A4!DOCTYPE+html%EF%B9%A5%2C%EF%B9%A4head%EF%B9%A5%2Ccolon%2C%EF%B9%A4style%EF%B9%A5%2C.html%2CHTML%2CCSS%2CJavaScript%2Cborder&freespace=true&freespaceValue=Web+Design+Master&freespaceRandom=false&width=5&height=5&number=35#results
 var data = [
-  { label: '', value: 1, question: 'I DESERVE A COFFEE AT KIRKHOFF TODAY' }, // padding
+  { label: '', value: 1, question: 'I DESERVE A COFFEE AT KERCKHOFF TODAY' },
   {
     label: '',
     value: 2,
     question: 'I WILL NOT BE SCARED OF SCOOTERS ON CAMPUS',
-  }, //font-family
-  { label: '', value: 3, question: 'I WILL NOT GET BIT BY A SQUIRREL' }, //color
+  },
+  { label: '', value: 3, question: 'I WILL NOT GET BITTEN BY A SQUIRREL' },
   {
     label: '',
     value: 4,
     question:
-      'I WILL MAKE IT OUT FROM THE SECOND FLOOR OF THE MATH SCIENCES BUILDING',
-  }, //font-weight
+      'I WILL MAKE IT OUT OF THE SECOND FLOOR OF THE MATH SCIENCES BUILDING',
+  },
   {
     label: '',
     value: 5,
     question: 'I WILL CONQUER ALL THE STAIRS ON CAMPUS TODAY',
-  }, //font-size
-  { label: '', value: 6, question: 'I AM PASSING ALL MY CLASSES THIS QUARTER' }, //background-color
-  { label: '', value: 7, question: 'I WILL USE UP ALL MY SWIPES THIS QUARTER' }, //nesting
+  },
+  { label: '', value: 6, question: 'I AM PASSING ALL MY CLASSES THIS QUARTER' },
+  { label: '', value: 7, question: 'I WILL USE UP ALL MY SWIPES THIS QUARTER' },
+  { label: '', value: 8, question: "I'M THE BEST 😎" },
   {
     label: '',
     value: 9,
     question: 'I SHALL NOT TOUCH THE INVERTED FOUNTAIN BEFORE GRADUATION',
-  }, //sans-serif
+  },
   { label: '', value: 10, question: 'MY GPA WILL SKYROCKET THIS YEAR' },
-  { label: '', value: 11, question: 'I WILL NOT SKIP CLASS' }, //period
-  { label: '', value: 12, question: 'ALL MY WORK GETS DONE NOW' }, //<body>
-  { label: '', value: 13, question: '💙 SOUTH CAMPUS' }, //<ul>
-  { label: '', value: 14, question: '💛 NORTH CAMPUS' }, //<h1>
-  { label: '', value: 15, question: 'I WILL NOT BE LATE TO CLASS' }, //<h1>
+  { label: '', value: 11, question: 'I WILL NOT SKIP CLASS' },
+  { label: '', value: 12, question: 'ALL MY WORK GETS DONE NOW' },
+  { label: '', value: 13, question: '💙 SOUTH CAMPUS' },
+  { label: '', value: 14, question: '💛 NORTH CAMPUS' },
+  { label: '', value: 15, question: 'I WILL NOT BE LATE TO CLASS' },
+  { label: '', value: 16, question: 'I WILL NOT SLEEP THROUGH MY ALARM' },
 ];
 var svg = d3
   .select('#chart')
