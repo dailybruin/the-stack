@@ -1,0 +1,47 @@
+#map {
+    margin: auto; 
+    height: 100vh;
+    width: 100vw; 
+}
+
+body {
+    margin: 0px;
+}
+
+.custom-popup {
+    font-family: acumin-pro, sans-serif;
+    font-size: 12px;
+    margin-bottom: 40px;
+}
+
+.legend-header {
+    margin: 0px 0px 5px 0px;
+}
+
+.legend-box {
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+    margin-right: 5px;
+    border: 1px solid black;
+    border-radius: 50%;
+    border: 1px solid black;
+    vertical-align: middle;
+}
+
+.legend-text {
+    display: inline-block;
+    vertical-align: middle;
+    font-family: acumin-pro, sans-serif;
+    font-weight: 600
+}
+
+.legend-container {
+    display: inline-block;  
+    margin-bottom: 5px;
+}
+
+.leaflet-control-layers-selector {
+    margin-top: 0px;
+    vertical-align: middle;
+}
