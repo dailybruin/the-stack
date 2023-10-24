@@ -690,3 +690,11 @@ robin_lee:
   email: rglee@media.ucla.edu
   github: robin-leee
   current: no
+joey_ling:
+  name: Joey Ling
+  title: Stack Intern
+  bio: Joey is a cognitive science student specializing in computing and minoring in data science engineering. She likes movies, playing guitar, and cooking. 
+  mug: yes
+  email: joeyling@g.ucla.edu
+  github: joeyling24
+  current: yes
