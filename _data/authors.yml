@@ -19,7 +19,7 @@ liam_mcglynn:
 lindsey_parungo:
   name: Lindsey Parungo
   title: Data editor
-  bio: Lindsey is a fourth-year financial and actuarial mathematics student. She was the 2021-22 assistant Data editor. She enjoys running, spending time with her dog and looking to expand her hippo memorabilia collection.
+  bio: Lindsey was a financial and actuarial mathematics student. She was the 2022-23 Data editor and 2021-22 assistant Data editor. She enjoys running, spending time with her dog and looking to expand her hippo memorabilia collection.
   mug: yes
   editor: yes
   current: no
@@ -28,7 +28,7 @@ lindsey_parungo:
 priya_kanneboyina:
   name: Priya Kanneboyina
   title: Assistant Data editor
-  bio: Priya is a fourth-year applied mathematics student with a minor in public affairs and film. 
+  bio: Priya was a applied mathematics student with a minor in public affairs and film. She was the 2022-23 assistant Data editor.
   mug: yes
   current: no
   editor: yes
@@ -36,7 +36,7 @@ priya_kanneboyina:
 laurel_woods:
   name: Laurel Woods
   title: 2021-22 Data Editor
-  bio: Laurel is a fourth-year cognitive science and digital humanities student. She loves anything outdoorsy, especially if her dog is there.
+  bio: Laurel was a cognitive science and digital humanities student. She was the 2021-22 Data Editor. She loves anything outdoorsy, especially if her dog is there.
   mug: yes
   editor: yes
   current: no
@@ -105,7 +105,7 @@ nick_yu:
 angie_wang:
   name: Angie Wang
   title: Executive Newsinator
-  bio: Angie is the News editor at the Daily Bruin. She was previously an assistant Photo editor and News contributor. This summer, she reported on undocumented student access to higher education on a national level. She studies communication with a specialization in computing and has a complicated relationship with tomatoes.
+  bio: Angie was the News editor at the Daily Bruin. She was previously an assistant Photo editor and News contributor. Previously, she reported on undocumented student access to higher education on a national level. She studies communication with a specialization in computing and has a complicated relationship with tomatoes.
   mug: yes
   current: no
   email: angiewang@media.ucla.edu
@@ -121,7 +121,7 @@ tyson_ni:
 ryan_leou:
   name: Ryan Leou
   title: Daily Bruin Reporter
-  bio: Ryan is the national news and higher education editor for the Daily Bruin. He studies political and environmental science. In his free time, he enjoys browsing Wikipedia, napping, traveling around the world and compiling data about elections.
+  bio: Ryan was the national news and higher education editor for the Daily Bruin. He studied political and environmental science. In his free time, he enjoys browsing Wikipedia, napping, traveling around the world and compiling data about elections.
   mug: yes
   current: no
   email: rleou@media.ucla.edu
@@ -129,7 +129,7 @@ ryan_leou:
 chang_liu:
   name: Chang Liu
   title: Stack Editor
-  bio: Chang is currently the guy in charge of this website. He studies Linguistics & Computer Science at UCLA. When he's not busy learning both natural and programming languages, he likes to take photos, dance and travel.
+  bio: Chang used to be the guy in charge of this website. He studies Linguistics & Computer Science at UCLA. When he's not busy learning both natural and programming languages, he likes to take photos, dance and travel.
   mug: yes
   current: no
   editor: yes
@@ -147,7 +147,7 @@ michael_hull:
 jeffrey_chan:
   name: Jeffrey Chan
   title: Stack Developer
-  bio: Jeffrey is a front end developer who strives to add his own flavor to Daily Bruin webpages. He studies Electrical Engineering at UCLA and has an insatiable curiousity for technology. Outside of his academic coursework, he likes to tinker on personal projects, listen to EDM, and search for LA's finest cuisine.
+  bio: Jeffrey was a front end developer who strives to add his own flavor to Daily Bruin webpages. He studied Electrical Engineering at UCLA and has an insatiable curiousity for technology. Outside of his academic coursework, he likes to tinker on personal projects, listen to EDM, and search for LA's finest cuisine.
   mug: yes
   current: no
   email: jchan6@media.ucla.edu
@@ -156,7 +156,7 @@ jeffrey_chan:
 carter_wu:
   name: Carter Wu
   title: Stack Developer
-  bio: Carter is one of the developers for The Stack. He is currently studying Computer Science and Engineering, and enjoys working with big data. Outside of school, Carter loves to eat delicious food, play sports, and browse Reddit.
+  bio: Carter was one of the developers for The Stack. He studied Computer Science and Engineering, and enjoys working with big data. Outside of school, Carter loves to eat delicious food, play sports, and browse Reddit.
   mug: yes
   current: no
   email: xwu@media.ucla.edu
@@ -164,14 +164,14 @@ carter_wu:
 yiling_liu:
   name: Yiling Liu
   title: Daily Bruin Contributor
-  bio: Yiling writes for the Science and Health beat in the Daily Bruin. She studies biochemistry. In her free time, she enjoys watching good music videos like Luhan's "Lu".
+  bio: Yiling wrote for the Science and Health beat in the Daily Bruin. She studied biochemistry. In her free time, she enjoys watching good music videos like Luhan's "Lu".
   mug: yes
   current: no
   email: yliu2@media.ucla.edu
 natalie_ethell:
   name: Natalie Ethell
   title: Stack Developer
-  bio: Natalie is a fourth-year computer science student. She has been dancing since she was 5 and enjoys any combination of bagels and dogs.
+  bio: Natalie was a computer science student. She has been dancing since she was 5 and enjoys any combination of bagels and dogs.
   mug: yes
   current: no
   email: nethell@media.ucla.edu
@@ -179,14 +179,14 @@ natalie_ethell:
 mahir_eusufzai:
   name: Mahir Eusufzai
   title: Stack Developer
-  bio: Mahir is a fourth-year computer science student. He's a huge Lakers fan and occasionally posts piano/guitar videos on YouTube.  He is frequently mistaken for Mihir Mathur.
+  bio: Mahir was a computer science student. He's a huge Lakers fan and occasionally posts piano/guitar videos on YouTube.  He is frequently mistaken for Mihir Mathur.
   mug: yes
   current: no
   email: meusufzai@media.ucla.edu
 fay_wu:
   name: Fay Wu
   title: Stack Developer
-  bio: Fay is in her last quarter at UCLA CS and loves oysters.
+  bio: Fay was a UCLA CS student and loves oysters.
   mug: yes
   current: no
   email: mfaywu@ucla.edu
@@ -194,7 +194,7 @@ fay_wu:
 benson_han:
   name: Benson Han
   title: Casual Programmer
-  bio: Benson is a second-year computer science student and is more comfortable writing code than bios.
+  bio: Benson was a computer science student and is more comfortable writing code than bios.
   mug: yes
   current: no
   email: bhan@media.ucla.edu
@@ -202,7 +202,7 @@ benson_han:
 jerry_li:
   name: Jerry Li
   title: Stack Developer
-  bio: Jerry is a third-year computer science student who transforms food into code. When not hacking away or getting lost in data, he likes to play badminton, fold origami and play board games.
+  bio: Jerry was a computer science student who transforms food into code. When not hacking away or getting lost in data, he likes to play badminton, fold origami and play board games.
   mug: yes
   current: no
   email: jerrylinew@ucla.edu
@@ -210,14 +210,14 @@ jerry_li:
 rupan_bharanidaran:
   name: Rupan Bharanidaran
   title: News Editor
-  bio: Bharanidaran is the news editor at the Daily Bruin and a fourth-year political science and economics student. He helped input data from the crime logs and enjoys reading books and analyzing campaign contribution data in his free time.
+  bio: Bharanidaran was the news editor at the Daily Bruin and a political science and economics student. He helped input data from the crime logs and enjoys reading books and analyzing campaign contribution data in his free time.
   mug: yes
   current: no
   email: rbharanidaran@media.ucla.edu
 madeleine_pauker:
   name: Madeleine Pauker
   title: Managing Editor
-  bio: Pauker is the managing editor of the Daily Bruin and a third-year world arts and cultures student. She recorded data from 365 days of crime logs to create this post.
+  bio: Pauker was the managing editor of the Daily Bruin and a world arts and cultures student. She recorded data from 365 days of crime logs to create this post.
   mug: yes
   current: no
   email: mpauker@media.ucla.edu
@@ -231,7 +231,7 @@ rishub_kumar:
 dinkar_khattar:
   name: Dinkar Khattar
   title: Stack Developer
-  bio: Khattar is a third-year computer science student. He’s probably the guy you see yoyo-ing and/or riding a Bird down Charles E. Young Drive.
+  bio: Khattar was a third-year computer science student. He’s probably the guy you see yoyo-ing and/or riding a Bird down Charles E. Young Drive.
   mug: yes
   current: no
   email: dkhattar@media.ucla.edu
@@ -239,7 +239,7 @@ dinkar_khattar:
 henna_dialani:
   name: Henna Dialani
   title: Stack Developer
-  bio: Dialani is the 2018-2019 Stack editor and a fourth-year statistics student. When not working with data, she’s exploring Los Angeles and its food.
+  bio: Dialani was the 2018-2019 Stack editor and a fourth-year statistics student. When not working with data, she’s exploring Los Angeles and its food.
   mug: yes
   current: no
   editor: yes
@@ -248,7 +248,7 @@ henna_dialani:
 nathan_smith:
   name: Nathan Smith
   title: Assistant Online Editor
-  bio: Smith is an assistant online editor at the Daily Bruin and a second-year computer science student. When he's not scrolling through USAC PDFs or staring at lines of code, he enjoys Eggo waffles, visiting museums and writing about electric scooters.
+  bio: Smith was an assistant online editor at the Daily Bruin and a computer science student. When he's not scrolling through USAC PDFs or staring at lines of code, he enjoys Eggo waffles, visiting museums and writing about electric scooters.
   mug: yes
   current: no
   email: nsmith@media.ucla.edu
@@ -258,14 +258,14 @@ nathan_smith:
 lik_teng_ung:
   name: Lik Teng Ung
   title: Stack Developer
-  bio: Ung is a stack contributor at the Daily Bruin and a third-year statistics and political science student. He's an avid political poll watcher, Pythonistas and boba connoisseur.
+  bio: Ung was a stack contributor at the Daily Bruin and a statistics and political science student. He's an avid political poll watcher, Pythonistas and boba connoisseur.
   email: lung@media.ucla.edu
   mug: yes
   current: no
 kyle_wong:
   name: Kyle Wong
   title: Stack Developer
-  bio: Wong is a third-year computer science student who enjoys attending hackathons.
+  bio: Wong was a computer science student who enjoys attending hackathons.
   mug: yes
   current: no
   email: kwong@media.ucla.edu
@@ -273,7 +273,7 @@ kyle_wong:
   website: http://kylewong.me
 alexander_chan:
   name: Alexander Chan
-  bio: Chan is a graduate student in the Statistics Department. He likes stats, a lot. Previously, a software engineering intern at Amazon AWS, American Express, and data science intern at a start-up in France.
+  bio: Chan was a graduate student in the Statistics Department. He likes stats, a lot. Previously, a software engineering intern at Amazon AWS, American Express, and data science intern at a start-up in France.
   mug: yes
   current: no
   email: achan@media.ucla.edu
@@ -290,7 +290,7 @@ andrew_kan:
 saachi_kudtarkar:
   name: Saachi Kudtarkar
   title: Stack Developer
-  bio: Kudtarkar is a third-year mathematics of computation student. She enjoys watching TED talks and eating Veggie Grill, especially at the same time!
+  bio: Kudtarkar was a mathematics of computation student. She enjoys watching TED talks and eating Veggie Grill, especially at the same time!
   mug: yes
   current: no
   email: skudtarkar@media.ucla.edu
@@ -298,7 +298,7 @@ saachi_kudtarkar:
 mattie_sanseverino:
   name: Mattie Sanseverino
   title: Online Editor
-  bio: Mattie is a fourth-year computer science student. She loves the ocean and anything that contains too much sugar for her own good.
+  bio: Mattie was a computer science student. She loves the ocean and anything that contains too much sugar for her own good.
   mug: yes
   current: no
   editor: yes
@@ -307,7 +307,7 @@ mattie_sanseverino:
 keith_atienza:
   name: Keith Atienza
   title: Stack Developer
-  bio: Atienza is a fourth-year applied mathematics and statistics student who loves stand-up comedy and being lit.
+  bio: Atienza was an applied mathematics and statistics student who loves stand-up comedy and being lit.
   mug: yes
   current: no
   email: katienza@media.ucla.edu
@@ -315,7 +315,7 @@ keith_atienza:
 jeanette_lin:
   name: Jeanette Lin
   title: Stack Developer
-  bio: Lin is a fourth-year statistics student. Outside of school and data analysis projects, she loves hiking, going to the beach and drinking boba.
+  bio: Lin was a statistics student. Outside of school and data analysis projects, she loves hiking, going to the beach and drinking boba.
   mug: yes
   current: no
   email: jlin1@media.ucla.edu
@@ -329,7 +329,7 @@ michael_huang:
 radhika_ahuja:
   name: Radhika Ahuja
   title: Stack Developer
-  bio: Radhika is a fourth-year math of computation student. Outside of school, she enjoys writing, dance, cooking and other things creative.
+  bio: Radhika was a math of computation student. Outside of school, she enjoys writing, dance, cooking and other things creative.
   mug: yes
   current: no
   email: rahuja@media.ucla.edu
@@ -338,7 +338,7 @@ radhika_ahuja:
 annie_zhang:
   name: Annie Zhang
   title: Stack Developer
-  bio: Annie is a third-year math student who really enjoys heist novels, murder mystery TV shows, noodles and setting unrealistic goals.
+  bio: Annie was a math student who really enjoys heist novels, murder mystery TV shows, noodles and setting unrealistic goals.
   mug: yes
   current: no
   email: azhang2@media.ucla.edu
@@ -348,13 +348,13 @@ madeline_blasingame:
   title: Stack Developer
   mug: yes
   current: no
-  bio: Maddy is a fourth-year statistics and data science student whose only goal is to be TikTok famous.
+  bio: Maddy was a statistics and data science student whose only goal is to be TikTok famous.
   email: mblasingame@media.ucla.edu
   github: meblasingame
 bernard_mendez:
   name: Bernard Mendez
   title: News Editor
-  bio: Bernard is the Bruin's News Editor. In his free time, Bernard spends time as a second-year math student at UCLA.
+  bio: Bernard was the Bruin's News Editor. In his free time, Bernard spent time as a math student at UCLA.
   mug: yes
   current: no
   email: bmendez@media.ucla.edu
@@ -363,7 +363,7 @@ bernard_mendez:
 charlotte_huang:
   name: Charlotte Huang
   title: Stack Developer
-  bio: Charlotte is a fourth-year applied math and cognitive science student. Outside of math and data, she enjoys reading, watching K-Drama and listening to K-Pop.
+  bio: Charlotte was an applied math and cognitive science student. Outside of math and data, she enjoys reading, watching K-Drama and listening to K-Pop.
   mug: yes
   current: no
   email: chuang@media.ucla.edu
@@ -371,7 +371,7 @@ charlotte_huang:
 justin_chai:
   name: Justin Chai
   title: Stack Developer
-  bio: Justin is a first-year linguisitics and computer science student.
+  bio: Justin was a linguisitics and computer science student.
   mug: yes
   current: no
   email: jchai@media.ucla.edu
@@ -379,21 +379,21 @@ jc_rios:
   name: Juan C. Rios
   title: Stack Developer
   email: jrios@media.ucla.edu
-  bio: Rios is a third-year computer engineering student who enjoys programming and music.
+  bio: Rios was a computer engineering student who enjoys programming and music.
   mug: yes
   current: no
 kelly_chen:
   name: Kelly Chen
   title: Stack Developer
   email: kchen2@media.ucla.edu
-  bio: Chen is a second-year statistics student. She can usually be found dancing, even when she's not supposed to, and is always looking for her next adventure.
+  bio: Chen was a statistics student. She can usually be found dancing, even when she's not supposed to, and is always looking for her next adventure.
   mug: yes
   current: no
 keri_chen:
   name: Keri Chen
   title: Stack Developer
   email: kchen1@media.ucla.edu
-  bio: Chen is a second-year communications student. When not writing articles and designing for Daily Bruin, she enjoys discovering new music and takes pride in being able to pack for two weeks in a single carry-on.
+  bio: Chen was a communications student. When not writing articles and designing for Daily Bruin, she enjoys discovering new music and takes pride in being able to pack for two weeks in a single carry-on.
   mug: yes
   current: no
 sydney_kovach:
@@ -402,14 +402,14 @@ sydney_kovach:
   email: skovach@media.ucla.edu
   mug: yes
   current: no
-  bio: Sydney Kovach is a second year global Studies and geography student who loves dancing and taking yoga classes in her free time.
+  bio: Sydney Kovach was a global Studies and geography student who loves dancing and taking yoga classes in her free time.
 catherine_hu:
   name: Catherine Hu
   title: Stack Developer
   email: chu@media.ucla.edu
   mug: yes
   current: no
-  bio: Catherine Hu is a second-year computer science and geography student who enjoys writing, hiking and reading.
+  bio: Catherine Hu was a computer science and geography student who enjoys writing, hiking and reading.
   github: catherinehhu
   website: https://catherinehhu.com
 cameron_bian:
@@ -418,7 +418,7 @@ cameron_bian:
   email: cbian3@media.ucla.edu
   mug: yes
   current: no
-  bio: Cameron Bian is a fourth-year math of computation student. He enjoys basketball, video games and watching comics.
+  bio: Cameron Bian was a math of computation student. He enjoys basketball, video games and watching comics.
   github: Cambn
 eustina_kim:
   name: Eustina Kim
@@ -426,7 +426,7 @@ eustina_kim:
   email: ekim5@media.ucla.edu
   mug: yes
   current: no
-  bio: Eustina Kim is a fourth-year statistics student, who is also minoring in digital humanities.
+  bio: Eustina Kim was a statistics student, who also minored in digital humanities.
   github: kimjee8955
 ziqing_luo:
   name: Ziqing Luo
@@ -434,7 +434,7 @@ ziqing_luo:
   email: zluo@media.ucla.edu
   mug: yes
   current: no
-  bio: Ziqing Luo is a fourth-year applied math and statistics student who is passionate about dancing and enjoys eating desserts.
+  bio: Ziqing Luo was an applied math and statistics student who is passionate about dancing and enjoys eating desserts.
   github: luoziqing99
 samantha_low:
   name: Samantha Low
@@ -442,11 +442,11 @@ samantha_low:
   email: slow@media.ucla.edu
   mug: yes
   current: no
-  bio: Samantha Low is a second-year environmental science student who enjoys hiking, exploring new places and taking pictures of food in her free time. 
+  bio: Samantha Low was an environmental science student who enjoys hiking, exploring new places and taking pictures of food in her free time. 
 ananya_garg:
   name: Ananya Garg
   title: Stack Developer
-  bio: Ananya is a second-year statistics student who enjoys travelling, cooking and rewatching Friends in her free time.
+  bio: Ananya was a statistics student who enjoys travelling, cooking and rewatching Friends in her free time.
   mug: yes
   current: no
   email: agarg@media.ucla.edu
@@ -454,7 +454,7 @@ ananya_garg:
 mansa_krishna:
   name: Mansa Krishna
   title: Stack Developer
-  bio: Mansa is a fourth-year applied mathematics student with a specialization in computing, who is also minoring in history. She is a coffee-for-breakfast advocate with a deep, abiding love for historical fiction.
+  bio: Mansa was an applied mathematics student with a specialization in computing, who also minored in history. She is a coffee-for-breakfast advocate with a deep, abiding love for historical fiction.
   mug: yes
   current: no
   email: mkrishna@media.ucla.edu
@@ -462,7 +462,7 @@ mansa_krishna:
 xuxin_zhang:
   name: Xuxin Zhang
   title: Stack Developer and Photo staff
-  bio: Xuxin is a third-year applied mathematics and statistics student. He loves collecting vintage film cameras and taking photos for strangers.
+  bio: Xuxin was an applied mathematics and statistics student. He loves collecting vintage film cameras and taking photos for strangers.
   mug: yes
   current: no
   email: xzhang1@media.ucla.edu
@@ -471,28 +471,28 @@ xuxin_zhang:
 faye_zou:
   name: Faye Zou
   title: Stack Developer
-  bio: Faye is a third-year cognitive science student. During her spare time, she likes going to the gym and playing with her puppies. 
+  bio: Faye was a cognitive science student. During her spare time, she likes going to the gym and playing with her puppies. 
   mug: yes
   current: no
   email: fzou@media.ucla.edu
 maria_becerra:
   name: Maria Becerra
   title: Stack Developer
-  bio: Maria is a fourth-year cognitive science student with a specialization in computing. She loves coffee, flowers and collecting stationary.
+  bio: Maria was a cognitive science student with a specialization in computing. She loves coffee, flowers and collecting stationary.
   mug: yes
   current: no
   email: msoto@media.ucla.edu
 brittney_le:
   name: Brittney Le
   title: Stack Developer
-  bio: Brittney is a fourth-year human biology and society student. She likes to browse too much on Reddit, meditate and listen to podcasts.
+  bio: Brittney was a human biology and society student. She likes to browse too much on Reddit, meditate and listen to podcasts.
   mug: yes
   current: no
   email: ble@media.ucla.edu
 vivian_luk:
   name: Vivian Luk
   title: Stack Developer
-  bio: Vivian is a third-year statistics and sociology student with a specialization in computing. She enjoys hikes, matcha lattes and podcasts on 1.8x speed.
+  bio: Vivian was a statistics and sociology student with a specialization in computing. She enjoys hikes, matcha lattes and podcasts on 1.8x speed.
   mug: yes
   current: no
   email: vluk@media.ucla.edu
@@ -500,7 +500,7 @@ vivian_luk:
 derrick_chau:
   name: Derrick Chau
   title: Stack Developer
-  bio: Derrick is a second-year mathematics and economics student with a specialization in computing who loves having a new Zoom background every week.
+  bio: Derrick was a mathematics and economics student with a specialization in computing who loves having a new Zoom background every week.
   mug: yes
   current: no
   email: dchau2@media.ucla.edu
@@ -510,18 +510,18 @@ diego_ramirez_romero:
   email: dromero@media.ucla.edu
   mug: no 
   current: no
-  bio: Diego is a first-year computational and systems biology student. 
+  bio: Diego was a computational and systems biology student. 
 sid_baphna:
   name: Sid Baphna
   title: Stack Developer
-  bio: Sid is a fourth-year economics and psychology student. He enjoys reading, playing basketball, and exploring LA in his free time.
+  bio: Sid was an economics and psychology student. He enjoys reading, playing basketball, and exploring LA in his free time.
   mug: yes
   email: sbaphna@media.ucla.edu
   current: no
 disha_sikaria:
   name: Disha Sikaria
   title: Stack Developer
-  bio: Disha is a second-year cognitive science and linguistics & computer science student with a specialization in computing.
+  bio: Disha was a cognitive science and linguistics & computer science student with a specialization in computing.
   mug: yes
   current: no
   email: dsikaria@media.ucla.edu
@@ -529,7 +529,7 @@ disha_sikaria:
 nalin_chopra:
   name: Nalin Chopra
   title: Stack Developer
-  bio: Nalin is a first-year mathematics of computation student. He enjoys listening to aespa and going to the beach.
+  bio: Nalin is third-year a data theory student. He enjoys listening to aespa and going to the beach.
   mug: yes
   current: no
   github: thatsmynaevis
@@ -537,7 +537,7 @@ nalin_chopra:
 andre_hiwatig:
   name: Andre Hiwatig
   title: Stack Developer
-  bio: Andre is a first-year statistics student. He likes painting and visiting thrift stores in his free time.
+  bio: Andre was a third-year statistics and data science student. He likes painting and visiting thrift stores in his free time.
   mug: yes
   current: no
   github: ahiwatig
@@ -545,7 +545,7 @@ andre_hiwatig:
 justin_gong:
   name: Justin Gong
   title: Stack Developer
-  bio: Justin is a first-year statistics and economics student who loves basketball and Marvel!
+  bio: Justin is a third-year statistics and economics student who loves basketball and Marvel!
   mug: yes
   current: no
   email: jgong@media.ucla.edu
@@ -553,13 +553,13 @@ chelsea_chen:
   name: Chelsea Chen
   title: Stack Developer
   email: cchen@media.ucla.edu
-  bio: Chelsea is a second-year statistics student. She enjoys listening to true crime, rollerblading, playing soccer and trying new food!
+  bio: Chelsea is a fourth-year statistics student. She enjoys listening to true crime, rollerblading, playing soccer and trying new food!
   mug: no
   current: no
 tyler_wu:
   name: Tyler Wu
   title: Stack Developer
-  bio: Tyler is a fourth-year data theory and cognitive science student. He likes making apps and taking naps.
+  bio: Tyler was a data theory and cognitive science student. He likes making apps and taking naps.
   mug: yes
   current: no
   github: tylerwu2222
@@ -567,7 +567,7 @@ tyler_wu:
 nicole_chua: 
   name: Nicole Chua
   title: Stack Developer
-  bio: Nicole is a fourth-year statistics student. She enjoys spicy food, green tea and being in the sun. 
+  bio: Nicole was a statistics student. She enjoys spicy food, green tea and being in the sun. 
   mug: yes
   current: no
   github: nicolechuaa
