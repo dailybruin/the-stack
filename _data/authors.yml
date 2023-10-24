@@ -436,13 +436,6 @@ ziqing_luo:
   current: no
   bio: Ziqing Luo was an applied math and statistics student who is passionate about dancing and enjoys eating desserts.
   github: luoziqing99
-samantha_low:
-  name: Samantha Low
-  title: Stack Developer
-  email: slow@media.ucla.edu
-  mug: yes
-  current: no
-  bio: Samantha Low was an environmental science student who enjoys hiking, exploring new places and taking pictures of food in her free time. 
 ananya_garg:
   name: Ananya Garg
   title: Stack Developer
@@ -690,3 +683,10 @@ robin_lee:
   email: rglee@media.ucla.edu
   github: robin-leee
   current: no
+samantha_low:
+  name: Samantha Low
+  title: Stack Developer
+  email: slow@media.ucla.edu
+  mug: yes
+  current: yes
+  bio: Samantha Low is an environmental science student who enjoys hiking, exploring new places and taking pictures of food in her free time. 
