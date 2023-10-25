@@ -690,3 +690,11 @@ samantha_low:
   mug: yes
   current: yes
   bio: Samantha Low is an environmental science student who enjoys hiking, exploring new places and taking pictures of food in her free time. 
+luca_adams:
+  name: Luca Adams
+  title: Stack Developer
+  email: lucaadams@ucla.edu
+  mug: no
+  current: yes
+  github: luca-adams94
+  bio:  Luca Adams, a political science student, enjoys being part of the UCLA Club ultimate frisbee team and reading fiction in his spare time.
