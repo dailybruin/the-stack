@@ -683,6 +683,80 @@ robin_lee:
   email: rglee@media.ucla.edu
   github: robin-leee
   current: no
+l_yang:
+  name: L Yang
+  title: Stack Intern
+  bio: L is an economics student with a minor in digital humanities. She enjoys jazz, painting, and dinner parties.
+  mug: no
+  email: lyang02@ucla.edu
+  github: lyang02
+  current: yes
+jun_ryu:
+  name: Jun Ryu
+  title: Stack Intern
+  bio: Jun is an applied mathematics and statistics student who enjoys jamming, playing basketball, and searching for good food.
+  mug: yes
+  editor: no
+  current: yes
+  email: ryujunhee@g.ucla.edu
+  github: jryu20
+kimi_cui:
+  name: Kimberly Cui
+  title: Stack Intern
+  bio: Kimberly (Kimi) is a data theory student. She is a matcha and guinea pig enthusiast and enjoys blogging food on Instagram.
+  mug: yes
+  email: kcui@ucla.edu
+  github: kimiicui 
+  current: yes
+joey_ling:
+  name: Joey Ling
+  title: Stack Intern
+  bio: Joey is a cognitive science student specializing in computing and minoring in data science engineering. She likes movies, playing guitar, and cooking. 
+  mug: yes
+  email: joeyling@g.ucla.edu
+  github: joeyling24
+  current: yes
+alicia_ying:
+  name: Alicia Ying
+  title: Stack Intern
+  bio: Alicia is a math and cognitive science student. In her free time, enjoys hiking, thrifting, and following Youtube recipes.
+  mug: yes
+  email: aying@media.ucla.edu
+  github: lycheeay
+  current: yes
+luca_adams:
+  name: Luca Adams
+  title: Stack Intern
+  email: lucaadams@ucla.edu
+  mug: no
+  current: yes
+  github: luca-adams94
+  bio:  Luca Adams, a political science student, enjoys being part of the UCLA Club ultimate frisbee team and reading fiction in his spare time.
+mabel_huynh:
+  name: Mabel Huynh
+  title: Stack Intern
+  bio: Mabel is a Data Theory student who enjoys watching movies and collecting merch from local artists. 
+  mug: yes
+  email: mbhuynh@g.ucla.edu
+  github: mbhuynh
+  editor: no
+  current: yes
+caroline_sha:
+  name: Caroline Sha
+  title: Stack Intern
+  bio: Caroline is a biology student. 
+  mug: no
+  email: csha@media.ucla.edu
+  github: carolinesha
+  current: yes
+naomi_suzuki:
+  name: Naomi Suzuki
+  title: Stack Intern
+  bio: Naomi is a Statistics and Data Science student. 
+  mug: no
+  email: nfsuzuki07@ucla.edu
+  github: naomisuzuko
+  current: yes
 samantha_low:
   name: Samantha Low
   title: Stack Developer
@@ -690,3 +764,27 @@ samantha_low:
   mug: yes
   current: yes
   bio: Samantha Low is an environmental science student who enjoys hiking, exploring new places and taking pictures of food in her free time. 
+ayushi_kadakia:
+  name: Ayushi Kadakia
+  title: Stack Intern
+  bio: Ayushi is a Business Economics student. She loves writing, coffee, and crosswords. 
+  mug: no
+  email: ayukadakia@ucla.edu
+  github: ayukadakia
+  current: yes
+sydney_tomsick:
+  name: Sydney Tomsick
+  title: Stack Intern
+  bio: Sydney is a pre-Data Theory major. She loves to dance, cook, and hangout with friends. 
+  mug: no
+  email: sydneytomsick@g.ucla.edu
+  github: sydneytomsick
+  current: yes
+cassidy_sadowski:
+  name: Cassidy Sadowski
+  title: Stack Intern
+  bio: Cassidy is studying Ecology, Behavior, & Evolution and Statistics & Data Science. She enjoys working with animals, theater, and swimming.
+  mug: yes
+  email: cassidysadowski@g.ucla.edu
+  github: cassidysadowski
+  current: yes
