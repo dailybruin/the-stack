@@ -111,7 +111,7 @@ const options = {
       }
       }
     },
-    maintainAspectRatio: false,
+    maintainAspectRatio: false
   }
 
   const options2 = {
@@ -131,7 +131,7 @@ const options = {
       }
       }
     },
-    maintainAspectRatio: false,
+    maintainAspectRatio: false
   }
 
 //THIS CODE MAKES THE CHART, MAKE SURE THE CTX VARIABLE DOES NOT MATCH ANY OTHER CTX VARIABLE

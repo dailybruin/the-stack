@@ -5,10 +5,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Net Cost of Attendance</title>
+    <title>YOUR TITLE HERE</title>
     <!-- chart js imports -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js" integrity="sha512-QSkVNOCYLtj73J4hbmVoOV6KVZuMluZlioC+trLpewV8qMjsWqlIQvkn1KGX2StWvPMdWGBqim1xlC8krl1EKQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src = 'net-cost-line.js' defer></script>
+    <script src = 'stacked.js' defer></script>
     <!-- font imports -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -43,15 +43,15 @@
         }
         @media only screen and (max-width: 800px) {
             .chart{
-            display: block;
-            width: 98%;
+            display: 'block';
+            width: 98% !important;
             float: left;
             height: 400px;
         }
         }
         @media only screen and (min-width: 800px) {
         .chart{
-            display: block;
+            display: 'block';
             width: 98% !important; /*CHANGE THIS IF THERE IS MORE THAN ONE CHART */
             float: left;
             height: 500px;
@@ -65,18 +65,12 @@
 </head>
 <body>
     <div class = 'viz_box'>
-        <div class='header'>Net Cost of Attendance</div>
+        <div class='header'>Net Cost of Attendance and Financial Aid Received</div>
         <hr>
-        <div class = 'explainer'>A comparison of the net cost for attendance across all UCs when the cost is not adjusted for inflation and when the cost is adjusted for inflation.<br></div>
-        <hr>
-        <div class = 'chartContainer'>
-            <div class = 'chart'><canvas id = 'net-cost-for-all-ucs-line-chart'></canvas></div>
-        </div>
-        <hr>
-        <div class = 'explainer'>The inflation-adjusted net cost of attendance for all of the UC campuses from 2002 to 2022.<br></div>
+        <div class = 'explainer'>The bars depict the total amount of financial aid received per capita. The bars are broken down by the type of financial aid with the blue sections representing gift aid and the yellow sections representing loans.<br>The line depicts the inflation-adjusted net cost of attendance.</div>
         <hr>
         <div class = 'chartContainer'>
-            <div class = 'chart'><canvas id = 'net-cost-by-campus-line-chart'></canvas></div>
+            <div class = 'chart'><canvas id = 'fin-aid-stacked-bar'></canvas></div>
         </div>
         <div class='byLine'>
             <hr>
