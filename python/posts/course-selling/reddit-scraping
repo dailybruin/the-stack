@@ -1,0 +1,22 @@
+import praw
+from datetime import datetime
+
+
+reddit = praw.Reddit(client_id='8eWx8IaUOl3ecXJrmqQS5Q', client_secret='4-KZWbeQNjeIWLZvUE-YVMgnkWyYKg', user_agent='course-selling')
+ 
+#CHANGE KEYWORD AS NEEDED
+keyword='class'
+
+print ("Subreddit: ",'ucla')
+print ("Keyword: ",keyword)
+
+
+for submission in reddit.subreddit('ucla').search(keyword):
+    print ("=ID: ",submission.id)
+    print ("  Title: ",submission.title.encode('ascii', 'ignore'))
+    print ("  Score: ",submission.score)
+    print ("  URL: ",submission.url.encode('ascii', 'ignore'))
+    print ("  Text: ",submission.selftext[:120].encode('ascii', 'ignore')) 
+   # Converts to Pacific Time
+    time = submission.created_utc
+    print (datetime.fromtimestamp(time).strftime('%Y-%m-%d %H:%M:%S'))
