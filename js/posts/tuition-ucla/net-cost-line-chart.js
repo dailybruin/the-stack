@@ -1,13 +1,12 @@
-Chart.defaults.font.family = 'Noto Serif, serif'  //FONT FOR CHART CHANGE IF NEEDED
+Chart.defaults.font.family = 'Noto Serif, serif'
 
 const labels = ['2002','2003','2004','2005','2006','2007','2008','2009','2010','2011','2012','2013','2014','2015','2016','2017','2018','2019','2020','2021','2022'] //THIS SHOULD BE A LIST OF WHAT YOU WANT ON THE X-AXIS
 
 const colors = ['#ffebd2', '#ffd6a5', '#e89c81', '#d1625c', '#de9399', '#eac4d5', '#d6eadf', '#b8e0d4', '#809bce', '#60759b', '#ffffff', '#000000']
 
-const data = {
+const campusdata = {
   labels: labels,
-  //DATA SETS IN A LIST. EACH OBJECT IN LIST IS A CATEGORY OF DATA CHANGE THESE OUT WITH YOUR DATA
-  //IF YOU HAVE MORE DATA TO DISPLAY ADD ADDITIONAL {...}
+
   datasets: [{
     label: 'Berkeley',
     data: [20499,	21958,	23495,	24156,	23877,	23368,	23290,	24853,	25656,	25862,	25398,	24199, 23603,	24817,	26571,	26734,	26507,	26451,	26547,	26158,	24131], //DATA HERE
@@ -74,7 +73,24 @@ const data = {
   }]
 };
 
-//OPTIONS FOR THE DISPLAY OF THE CHART, FOR MORE OPTIONS GO TO CHART.JS
+const ucdata = {
+  labels: labels,
+  datasets: [{
+    label: 'Not adjusted for inflation',
+    data:[12310,	13575,	14795,	15519,	15986,	16613,	17004,	17550,	17967,	18116,	17994,	18087,	17924,	18293,	18909,	19063,	19636,	20100,	19848,	21449,	21559],
+    backgroundColor: colors[10],
+    borderColor: colors[11],
+    borderWidth: 1
+  },{
+    label: 'Inflation adjusted',
+    data:[21348, 22927,	24313, 24592, 24410,  24571,	24253, 25188,	25384, 24843,	24117,	23897,	23285, 23501,	23843,	23368,	23172, 23040, 22359, 23071, 21559],
+    backgroundColor: colors[10],
+    borderColor: colors[11],
+    borderDash: [5, 5],
+    borderWidth: 1
+  }]
+};
+
 const options = {
     scales: {
       y: {
@@ -95,38 +111,19 @@ const options = {
     maintainAspectRatio: false
   }
 
-  const data2 = {
-    labels: labels,
-    datasets: [{
-      label: 'Not adjusted for inflation',
-      data:[12310,	13575,	14795,	15519,	15986,	16613,	17004,	17550,	17967,	18116,	17994,	18087,	17924,	18293,	18909,	19063,	19636,	20100,	19848,	21449,	21559],
-      backgroundColor: colors[10],
-      borderColor: colors[11],
-      borderWidth: 1
-    },{
-      label: 'Inflation adjusted',
-      data:[21348, 22927,	24313, 24592, 24410,  24571,	24253, 25188,	25384, 24843,	24117,	23897,	23285, 23501,	23843,	23368,	23172, 23040, 22359, 23071, 21559],
-      backgroundColor: colors[10],
-      borderColor: colors[11],
-      borderDash: [5, 5],
-      borderWidth: 1
-    }]
-  };
-
 //THIS CODE MAKES THE CHART, MAKE SURE THE CTX VARIABLE DOES NOT MATCH ANY OTHER CTX VARIABLE
 //CHANGE ID-HERE TO WHATEVER YOU MADE YOUR ID IN THE HTML FILE, CHOOSE SOMETHING DESCRIPTIVE
 const ctxLINE= document.getElementById('net-cost-by-campus-line-chart');
 //THE CHART VARIABLE NEEDS TO HAVE A UNIQUE NAME RENAME IT SOMETHING DESCRIPTIVE
-//MAKE SURE ctxBAR MATCHES THE CONST VARIABLE YOU JUST SET
 const chart = new Chart(ctxLINE, {
     type: 'line',
-    data: data,
+    data: campusdata,
     options: options
   });
 
 const ctxLINE2= document.getElementById('net-cost-for-all-ucs-line-chart');
 const chart2 = new Chart(ctxLINE2, {
     type: 'line',
-    data: data2,
+    data: ucdata,
     options: options
   });

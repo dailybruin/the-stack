@@ -1,13 +1,11 @@
-Chart.defaults.font.family = 'Noto Serif, serif'  //FONT FOR CHART CHANGE IF NEEDED
+Chart.defaults.font.family = 'Noto Serif, serif'
 
 const labels = ['2002','2003','2004','2005','2006','2007','2008','2009','2010','2011','2012','2013','2014','2015','2016','2017','2018','2019','2020','2021','2022'] //THIS SHOULD BE A LIST OF WHAT YOU WANT ON THE X-AXIS
 
 const colors = ['#c6e0f5', '#74befa', '#229cff', '#016ac5', '#014f9b', '#013470', '#ffca3a', '#ffffff', '#000000'] //CHANGE THESE TO WHAT MATCHES THE SUBJECT
 
-const data = {
+const bardata = {
   labels: labels,
-  //DATA SETS IN A LIST. EACH OBJECT IN LIST IS A CATEGORY OF DATA CHANGE THESE OUT WITH YOUR DATA
-  //IF YOU HAVE MORE DATA TO DISPLAY ADD ADDITIONAL {...}
   datasets: [{
     label: 'Cal Grant',
     data: [955,	1325,	1593,	1750,	1725,	1878,	2092,	2580,	3399,	4185,	4424,	4787,	4988,	5120,	5205,	5449,	5368,	5419,	5292,	5203,	5210], //DATA HERE
@@ -39,7 +37,7 @@ const data = {
   }]
 };
 
-const data2 = {
+const linedata = {
   labels: labels,
   datasets: [{
     label: 'Cost of Attendance',
@@ -51,7 +49,6 @@ const data2 = {
   }]
 };
 
-//OPTIONS FOR THE DISPLAY OF THE CHART, FOR MORE OPTIONS GO TO CHART.JS
 const options = {
   responsive: true,
   scales: {
@@ -77,12 +74,11 @@ const options = {
 //CHANGE ID-HERE TO WHATEVER YOU MADE YOUR ID IN THE HTML FILE, CHOOSE SOMETHING DESCRIPTIVE
 const ctxBAR= document.getElementById('fin-aid-stacked-bar');
 //THE CHART VARIABLE NEEDS TO HAVE A UNIQUE NAME RENAME IT SOMETHING DESCRIPTIVE
-//MAKE SURE ctxBAR MATCHES THE CONST VARIABLE YOU JUST SET
 const chart = new Chart(ctxBAR, {
     type: 'bar',
-    data: data,
+    data: bardata,
     options: options
   });
 
-chart.data.datasets.push(...data2.datasets);
+chart.data.datasets.push(...linedata.datasets);
 chart.update();
