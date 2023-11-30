@@ -39,10 +39,10 @@ const options = {
 }
 //THIS CODE MAKES THE CHART, MAKE SURE THE CTX VARIABLE DOES NOT MATCH ANY OTHER CTX VARIABLE
 //CHANGE ID-HERE TO WHATEVER YOU MADE YOUR ID IN THE HTML FILE, CHOOSE SOMETHING DESCRIPTIVE
-const ctxBAR = document.getElementById('ID-HERE');
+const ctxBAR_a = document.getElementById('YEARS-V-FUNDING');
 //THE CHART VARIABLE NEEDS TO HAVE A UNIQUE NAME RENAME IT SOMETHING DESCRIPTIVE
 //MAKE SURE ctxBAR MATCHES THE CONST VARIABLE YOU JUST SET
-const chart = new Chart(ctxBAR, {
+const chart = new Chart(ctxBAR_a, {
     type: 'bar',
     data: data,
     options: options
