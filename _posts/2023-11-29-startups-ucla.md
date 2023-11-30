@@ -24,5 +24,5 @@ stylesheets:
 ---
 
 <div style='height: 300px'>
-  <canvas id = 'years_v_funding'> </canvas>
+  <canvas id = 'JoeyChart'> </canvas>
 </div>
