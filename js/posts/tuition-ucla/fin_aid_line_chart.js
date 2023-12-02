@@ -1,6 +1,6 @@
 Chart.defaults.font.family = 'Noto Serif, serif'  //FONT FOR CHART CHANGE IF NEEDED
 const labels = ['2002','2003','2004','2005','2006','2007','2008','2009','2010','2011','2012','2013','2014','2015','2016','2017','2018','2019','2020','2021','2022']; //THIS SHOULD BE A LIST OF WHAT YOU WANT ON THE X-AXIS
-const colors = ['blue', 'yellow',"red", "pink", "purple","orange","cyan","green","teal", "black", "white"] //CHANGE THESE TO WHAT MATCHES THE SUBJECT
+const colors = ['#ffd6a5', '#e89c81', '#d1625c', '#de9399', '#eac4d5', '#b8e0d4', '#809bce', "black", "white"] //CHANGE THESE TO WHAT MATCHES THE SUBJECT
 const data = {
   labels: labels,
   //DATA SETS IN A LIST. EACH OBJECT IN LIST IS A CATEGORY OF DATA CHANGE THESE OUT WITH YOUR DATA
@@ -50,14 +50,14 @@ const data = {
   },{
     label: 'Total Gift Aid',
     data: [148342382.06,180494529.66,194758855.85,208776459.99,196992254.98,200328581.43,218669747.72,240383573.00,277857851.24,311633956.21,315301163.59,320966684.50,339159684.93,333423796.97,345147800.53,356253541.91,353482992.50,360173766.64,343875424.50,346077190.12,317317066.04], //DATA HERE
-    backgroundColor: colors[10],
-    borderColor: colors[9],
+    backgroundColor: colors[8],
+    borderColor: colors[7],
     borderWidth: 1
   },{
     label: 'Total Loans (excl. PLUS)',
     data: [81913626.95,84800037.27,79899154.47,70575197.79,75150707.61,73698782.37,72729804.28,84143379.54,81136050.08,87179339.20,84432117.25,80425544.19,74488606.76,73941984.84,73823220.27,70562090.99,61920736.18,56665298.48,21181251.50,42205541.56,39404770.00], //DATA HERE
-    backgroundColor: colors[10],
-    borderColor: colors[9],
+    backgroundColor: colors[8],
+    borderColor: colors[7],
     borderDash: [5, 5],
     borderWidth: 1
   }]
