@@ -8,11 +8,13 @@
     <title>Test Chart</title>
     <!-- chart js imports -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
     <!-- font imports -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap" rel="stylesheet">
-    <script src = 'joey_test.js'></script>
+    <script src = 'industry_frequency.js'></script>
+    <script src = 'startups_treemap.js'></script>
     <style>
         div{
             font-family: 'Noto Serif',serif;  /*default font, change if requested*/
@@ -70,7 +72,19 @@
         <div class = 'explainer'>COPY PASTE EXPLAINER TEXT HERE</div>
         <hr>
             <div class = 'chartContainer'>
-                <div class = 'chart'><canvas id = 'JoeyChart'></canvas></div>
+                <div class = 'chart'><canvas id = 'INDUSTRY-FREQUENCY'></canvas></div>
+            </div>
+        <div class='byLine'>
+            <hr>
+            Source is from The Stack <br> Graphic Reporting by Joey Ling, Data Intern. Interactive by Joey Ling, Data Intern.</div>
+    </div>
+    <div class = 'viz_box'>
+        <div class='header'>Level of Funding vs. Years in Operation</div>
+        <hr>
+        <div class = 'explainer'>COPY PASTE EXPLAINER TEXT HERE</div>
+        <hr>
+            <div class = 'chartContainer'>
+                <div class = 'chart'><canvas id = 'INDUSTRY-TREEMAP'></canvas></div>
             </div>
         <div class='byLine'>
             <hr>
