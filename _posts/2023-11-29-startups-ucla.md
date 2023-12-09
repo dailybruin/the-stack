@@ -16,11 +16,12 @@ scripts:
   - //cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js
   - https://cdn.plot.ly/plotly-2.27.0.min.js
   - /js/posts/startups-ucla/basic_treemap.js
-  - /js/posts/startups-ucla/industry_frequency.js
-  - /js/posts/startups-ucla/startups-ucla.html
+  - /js/posts/startups-ucla/startups_treemap.js
+
 
 stylesheets:
   -
 ---
 
 <div id = 'basic-tree'></div>
+<div id = 'startups-tree'></div>
