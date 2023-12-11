@@ -8,7 +8,6 @@
     <title>Test Chart</title>
     <!-- chart js imports -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
-    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
     <!-- font imports -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,7 +17,6 @@
     <!-- file imports -->
     <script src = 'industry_frequency.js'></script>
     <script src = 'startups_treemap.js'></script>
-    <script src = 'basic_treemap.js'></script>
     <style>
         div{
             font-family: 'Noto Serif',serif;  /*default font, change if requested*/
@@ -70,9 +68,9 @@
 </head>
 <body>
     <div class = 'viz_box'>
-        <div class='header'>Level of Funding vs. Years in Operation</div>
+        <div class='header'>Popularity of Different Industries</div>
         <hr>
-        <div class = 'explainer'>COPY PASTE EXPLAINER TEXT HERE</div>
+        <div class = 'explainer'>Below are the different numbers of startups within various industries</div>
         <hr>
             <div class = 'chartContainer'>
                 <div class = 'chart'><canvas id = 'INDUSTRY-FREQUENCY'></canvas></div>
@@ -82,12 +80,12 @@
             Source is from The Stack <br> Graphic Reporting by Joey Ling, Data Intern. Interactive by Joey Ling, Data Intern.</div>
     </div>
     <div class = 'viz_box'>
-        <div class='header'>Level of Funding vs. Years in Operation</div>
+        <div class='header'>Degree of Startup Founders</div>
         <hr>
-        <div class = 'explainer'>COPY PASTE EXPLAINER TEXT HERE</div>
+        <div class = 'explainer'>Below are the various undergraduate degrees, graduate programs, or other UCLA-based programs of each founder, grouped by the industry of their startup</div>
         <hr>
             <div class = 'chartContainer'>
-                <div class = 'chart'><canvas id = 'INDUSTRY-TREEMAP'></canvas></div>
+                <div class = 'chart'><canvas id = 'startups-treemap'></canvas></div>
             </div>
         <div class='byLine'>
             <hr>
