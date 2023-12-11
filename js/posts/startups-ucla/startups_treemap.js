@@ -4,6 +4,10 @@ var data = [{
       type: "treemap",
       labels: labels,
       parents: parents,
-      values: [1,2,15,2,4,13,1,6,8,1,2,2,10,7,7,4, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 3, 1, 1, 2, 1, 2, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 3, 1, 3, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 2, 1, 1, 1, 2, 1, 1, 1, 1, 2, 1, 2, 2, 2, 1, 2, 1, 1, 1, 1, 1]
+      values: [1,2,15,2,4,13,1,6,8,1,2,2,10,7,7,4, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 3, 1, 1, 2, 1, 2, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 3, 1, 3, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 2, 1, 1, 1, 2, 1, 1, 1, 1, 2, 1, 2, 2, 2, 1, 2, 1, 1, 1, 1, 1],
+      textinfo: "label+value+percent parent+percent entry",
+      outsidetextfont: {"size": 20, "color": "#377eb8"},
+      marker: {"line": {"width": 2}},
+      pathbar: {"visible": false}
  }];
 Plotly.newPlot('startups-treemap', data);
