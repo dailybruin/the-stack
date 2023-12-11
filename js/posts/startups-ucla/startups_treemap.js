@@ -8,6 +8,6 @@ var data = [{
       textinfo: "label+value+percent parent+percent entry",
       outsidetextfont: {"size": 20, "color": "#377eb8"},
       marker: {"line": {"width": 2}},
-      pathbar: {"visible": false}
+      pathbar: {"visible": true}
  }];
 Plotly.newPlot('startups-treemap', data);
