@@ -24,4 +24,4 @@ stylesheets:
 ---
 
 <div id = 'basic-tree'></div>
-<div id = 'startups-tree'></div>
+<div id = 'startups-treemap'></div>
