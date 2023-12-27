@@ -47,7 +47,7 @@ const options = {
   plugins: {
     title: {
       display: true,
-      text: 'CHART TITLE',
+      text: 'Frequency of Startup Industries',
     },
   },
   maintainAspectRatio: false,
