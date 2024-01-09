@@ -1,13 +1,10 @@
 document.addEventListener("DOMContentLoaded", function() {
 Chart.defaults.font.family = 'Noto Serif, serif'; //FONT FOR CHART CHANGE IF NEEDED
-const labels = []; //THIS SHOULD BE A LIST OF WHAT YOU WANT ON THE X-AXIS
 const colors = ['blue', 'yellow', 'pink', 'purple']; //CHANGE THESE TO WHAT MATCHES THE SUBJECT
 const data = {
-  labels: labels,
   //DATA SETS IN A LIST. EACH OBJECT IN LIST IS A CATEGORY OF DATA CHANGE THESE OUT WITH YOUR DATA
   datasets: [
     {
-      label: 'Type of Industry',
       data: [
         {x: ' AI/ML ' , y:  9 },
         {x: ' Agency/Coaching ' , y:  15 },
@@ -26,8 +23,8 @@ const data = {
         {x: ' VC ' , y:  14 },
         {x: ' Web3 ' , y:  2 }
       ], //VALUE FOR EACH BAR
-      backgroundColor: colors[0],
-      borderColor: colors[0],
+      backgroundColor: '#4B8BD0',
+      borderColor: '#4B8BD0',
       borderWidth: 1,
     },
   ],
@@ -42,12 +39,22 @@ const options = {
         text: 'Number of Startups',
       },
     },
+    x: {
+      beginAtZero: true,
+      title: {
+        display: true,
+        text: 'Type of Industry',
+      },
+    },
   },
   plugins: {
     title: {
       display: true,
       text: 'Frequency of Startup Industries',
     },
+    legend: {
+      display: false,
+    }
   },
   maintainAspectRatio: false,
 };
