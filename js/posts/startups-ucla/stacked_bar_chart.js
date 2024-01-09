@@ -3,7 +3,7 @@ Chart.defaults.font.size = 14;
 Chart.defaults.font.family = 'PT Sans';
 Chart.defaults.color = '#000';
 
-const totals = ['20', '19', '11', '6', '2', '3', '6'];
+const totals = ['21', '19', '10', '6', '2', '3', '6'];
 const ctxStacked = document.getElementById('stacked-chart');
 const dataStacked = {
   labels: [
@@ -19,7 +19,7 @@ const dataStacked = {
     {
       label: '0-50K funding',
       backgroundColor: '#4B8BD0',
-      data: [6, 14, 6, null, null, 1, null],
+      data: [7, 14, 5, null, null, 1, null],
     },
     {
       label: '50K-1M funding',
@@ -43,7 +43,7 @@ const config = {
                 beginAtZero: true,
                 title: {
                     display: true,
-                    text: '# of Start-Ups'
+                    text: 'Number of Startups'
                 }
             },
             x: { 
@@ -51,7 +51,7 @@ const config = {
                 beginAtZero: true,
                 title: {
                     display: true, 
-                    text: 'Start-Up Duration (years)'
+                    text: 'Startup Duration (years)'
                 }
             }
         },
