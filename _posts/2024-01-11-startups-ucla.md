@@ -11,9 +11,9 @@ key_takeaways:
   - One of the most common reasons for startup failures is a lack of funding (CQ#9). In 2022, a lack of funding made up 47% of startup failures (CQ#9).
 
 featured_image:
-  url:
-  caption:
-og_image:
+  url: startups-ucla/startups_header.jpeg
+  caption: (Joy Chen/Daily Bruin)
+og_image: startups-ucla/startups_header.jpeg
 scripts:
   - https://cdn.plot.ly/plotly-2.27.0.min.js
   - /js/posts/startups-ucla/startups_treemap.js
@@ -39,7 +39,7 @@ The startups created at UCLA span many different industries, ranging from educat
   <canvas id = 'industry-frequency'></canvas>
 </div>
 <p class = 'caption'>Note: Abbreviations are defined as AI/ML: Artificial Intelligence and Machine Learning, B2B SAAS: Business-to-Business Software-as-a-Service, Consumer SAAS: Consumer Software-as-a-Service, Ecommerce/CPG: Ecommerce and Consumer Packaged Goods</p>
-<p class = 'caption'>Graphic Reporting by Joey Ling, Data Intern</p>
+<p class = 'caption'>Graphic Reporting by Joey Ling, Stack Intern</p>
 
 Evidently, there are plenty of different fields for students to pursue their entrepreneurial endeavors, though the most common ones are Agency/Coaching and Venture Capital (VC). (CQ#5) VC’s provide revenue to promising startups in exchange for a percent of the profits and Agency/Coaching businesses help startups to network, acquire funding and or just get started. Both these types of businesses are crucial to supporting startups in the beginning stages, helping them to get off the ground. Lance Ding, fourth year Undergraduate student and founder of Bruin Startup Village explains his goals behind creating his business. “What I’m trying to do is just build an environment where people are really supportive. Where there’s a network that you can tap into that can help you along your journey. I just wanted to build a community that I wish I had when I was building my company.” (0:49-2:44) (CQ#2)
 
@@ -56,7 +56,7 @@ Most importantly, startups founded at UCLA can create a strong community of like
 Within each industry, there are also founders from a wide range of backgrounds, thus demonstrating how students need not be in a business program to develop a successful startup. (CQ#4) The treemap below shows the different undergraduate or graduate majors of UCLA startup founders. (CQ#4)
 
 <div id = 'startups-treemap'></div>
-<p class = 'caption'>Graphic Reporting by Joey Ling, Data Intern</p>
+<p class = 'caption'>Graphic Reporting by Joey Ling, Stack Intern</p>
 
 The most common startups are in Agency/Coaching and VC, though within all of these fields, there are founders who come from different backgrounds. (CQ#4) This gives each startup a unique purpose, strategy, and goal. Additionally, many of these student founders come from more than one educational background. (CQ#4) 76% of these founders are undergraduate students, 6% are graduate students, and 18% are students in other programs, such as an extension or an accelerator. (CQ#4) Even with this large pool of founders, MacLaverty believes the startup community at UCLA could be better. “UCLA could improve by bringing all the schools together to create an ecosystem where all different interests can connect. People from the engineering, law, and business schools at UCLA can all contribute to different parts of a startup, and there could be a bit more harmony between the different groups,” said MacLaverty. (12:52 - 14:01) (CQ#3).
 
@@ -75,7 +75,7 @@ Although there is an abundance of students with great ideas and are willing to g
 <div class = 'chart'>
   <canvas id = 'stacked-chart'></canvas>
 </div>
-<p class = 'caption'>Graphic Reporting by Sydney Tomsick, Data Intern</p>
+<p class = 'caption'>Graphic Reporting by Sydney Tomsick, Stack Intern</p>
 
 A lack of funding for startups at UCLA could affect the success of student-led startups. The chart above shows the relationship between the amount of funding a startup receives and how long their start up remains active (CQ #4).
 
