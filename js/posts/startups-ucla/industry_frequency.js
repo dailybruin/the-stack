@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function() {
           { x: ' Hard Tech ', y: 8 },
           { x: ' Influencer Marketing ', y: 1 },
           { x: ' Marketplace ', y: 3 },
-          { x: ' Non-Profit ', y: 1 },
+          { x: ' Nonprofit ', y: 1 },
           { x: ' VC: Venture Capital ', y: 14 },
           { x: ' Web3 ', y: 2 },
         ], //VALUE FOR EACH BAR
