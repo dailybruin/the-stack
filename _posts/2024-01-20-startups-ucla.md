@@ -39,7 +39,7 @@ The startups created at UCLA span many different industries, ranging from educat
   <canvas id = 'industry-frequency'></canvas>
 </div>
 <p class = 'caption'>Note: Abbreviations are defined as AI/ML: Artificial Intelligence and Machine Learning, B2B SAAS: Business-to-Business Software-as-a-Service, Consumer SAAS: Consumer Software-as-a-Service, Ecommerce/CPG: Ecommerce and Consumer Packaged Goods</p>
-<p class = 'caption'>Graphic Reporting by Joey Ling, Stack Intern</p>
+<p class = 'caption'>Graphic reporting by Joey Ling, Stack Intern</p>
 
 Evidently, there are plenty of different fields for students to pursue their entrepreneurial endeavors, though the most common ones are Agency/Coaching and Venture Capital (VC). VCs provide revenue to promising startups in exchange for a percent of the profits, and Agency/Coaching businesses help startups to network, acquire funding or just get started. Both these types of businesses are crucial to supporting startups in the beginning stages, helping them to get off the ground. Recognizing the importance of having support for early-stage startups, Lance Ding, a fourth-year cognitive science student, founded Startup Village as a community where Bruins could network with and provide resources and insights for one another. Ding explains his goals behind creating his business.
 
@@ -58,7 +58,7 @@ Most importantly, startups founded at UCLA can create a strong community of like
 Within each industry, there are also founders from a wide range of backgrounds, thus demonstrating how students don’t need to be in a business program to develop a successful startup. The treemap below shows the different undergraduate or graduate majors of UCLA startup founders.
 
 <div id = 'startups-treemap'></div>
-<p class = 'caption'>Graphic Reporting by Joey Ling, Stack Intern</p>
+<p class = 'caption'>Graphic reporting by Joey Ling, Stack Intern</p>
 
 The most common startups are in Agency/Coaching and VC, though within all of these fields, there are founders who come from different backgrounds. This gives each startup a unique purpose, strategy and goal. Additionally, many of these student founders come from more than one educational background. 76% of these founders are undergraduate students, 6% are graduate students and 18% are students in other programs, such as an extension or an accelerator. Even with this large pool of founders, MacLaverty believes the startup community at UCLA could be better.
 
@@ -79,7 +79,7 @@ Although there is an abundance of students with great ideas and who are willing 
 <div class = 'chart'>
   <canvas id = 'stacked-chart'></canvas>
 </div>
-<p class = 'caption'>Graphic Reporting by Sydney Tomsick, Stack Intern</p>
+<p class = 'caption'>Graphic reporting by Sydney Tomsick, Stack Intern</p>
 
 A lack of funding for startups at UCLA could affect the success of student-led startups. The chart above shows the relationship between the amount of funding a startup receives and how long their startup remains active.
 
