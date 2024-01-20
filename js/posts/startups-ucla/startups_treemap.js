@@ -262,15 +262,16 @@ var data = [
       1,
     ],
     textinfo: 'label+value+percent parent+percent entry',
-    outsidetextfont: { size: 20, color: '#377eb8' },
+    insidetextfont: { size: 100 },
+    outsidetextfont: { size: 100, color: '#377eb8' },
     marker: { line: { width: 2 } },
-    pathbar: { visible: true },
+    pathbar: { visible: false },
   },
 ];
 var layout = {
   autosize: true,
-  height: 800, // Minimum height
-  width: 800, // Minimum width
+  height: 900, // Minimum height
+  width: 900, // Minimum width
 };
 
 var config = {
