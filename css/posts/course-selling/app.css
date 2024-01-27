@@ -1,0 +1,86 @@
+.caption {
+    font-size:smaller;
+    color:gray;
+  }
+  
+  .heatchart-tip {
+    display: block;
+    position: absolute;
+    text-align: center;
+    width: auto;
+    height: auto;
+    padding: 3px;
+    font-size: 15px;
+    font-family: sans-serif;
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px; }
+    @media only screen and (max-width: 650px) {
+      .heatchart-tip {
+        font-size: 13px;
+        padding: 2px; } }
+  
+  .invisible {
+    opacity: 0; }
+  
+  .bold {
+    font-weight: bold; }
+  
+  .italic {
+    font-style: italic; }
+  
+  .time-line {
+    fill: none;
+    stroke-width: 3px;
+    opacity: 0.8; }
+  
+  .wooden {
+    stroke: #008fd5;
+    border-bottom: 3px solid #008fd5; }
+  
+  .bfit {
+    stroke: #ffb81c;
+    border-bottom: 3px solid #ffb81c; }
+  
+  .heat-circle:hover {
+    opacity: 0.6;
+    stroke: black;
+    stroke-width: 1px; }
+  
+  .voronoi path {
+    fill: none;
+    pointer-events: all; }
+  
+  .chart-label {
+    font-size: 14px;
+    text-anchor: middle; }
+    @media only screen and (max-width: 650px) {
+      .chart-label {
+        font-size: 9px; } }
+  
+  .legend-label, .line-legend .label {
+    font-size: 11px;
+    text-anchor: middle; }
+    @media only screen and (max-width: 650px) {
+      .legend-label, .line-legend .label {
+        font-size: 8px; } }
+  
+  .black-stroke {
+    stroke: black;
+    stroke-width: 2.5px; }
+  
+  .no-border {
+    stroke: none; }
+  
+  /*# sourceMappingURL=app.css.map */
+
+.chart {
+    height: 600px;
+}
+
+@media (max-width: 480px) {
+    .chart {
+      max-height: 450px;
+    }
+  }

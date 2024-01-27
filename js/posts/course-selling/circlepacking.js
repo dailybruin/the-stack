@@ -61,11 +61,11 @@ anychart.onDocumentReady(function() {
       // customize the labels (country names)
       chart
         .labels()
-        .fontSize('14')
+        .fontSize('16')
         .fontColor('#696969')
         .textShadow('none')
         .anchor('center-top')
-        .offsetY('-3%');
+        .offsetY('-0%');
 
       chart
         .labels()
