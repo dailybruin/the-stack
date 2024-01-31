@@ -2,8 +2,8 @@
 title: "Course Scarcity: Unveiling UCLA’s online course selling market"
 teaser: The Stack scraped data from the UCLA Subreddit and Snapchat groups to model UCLA’s course selling market.
 authors:
-  - cassidy_sadowski
   - ayushi_kadakia
+  - cassidy_sadowski
   - luca_adams
   - junwon_choi
 key_takeaways:
@@ -32,23 +32,29 @@ stylesheets:
 
 The quarterly stress of enrolling in classes is not new to students at UCLA. For some students however, getting classes they want is not always guaranteed, and they turn to buying or asking for courses held by other students to secure their spots.
 
-Course selling, as the name indicates, is when students buy and sell a seat in a UCLA course. This is done when the seller, who is enrolled in the class, drops the class at a prescribed time so that the buyer, who wants to enroll in the class, can guarantee themselves a spot in the class. This can also be done without a monetary transaction, a process referred to as course holding.
+Course selling is when students buy and sell a seat in a UCLA course. This is done when the seller, who is enrolled in the class, drops the class at a prescribed time so that the buyer, who wants to enroll in the class, can guarantee themselves a spot in the class. This can also be done without a monetary transaction, a process referred to as course holding.
 
 According to a 2020 email from UCLA spokesperson, Ricardo Vazquez, “acquiring courses in a non-sanctioned way, such as on Facebook, is a violation of the Student Conduct Code and may result in a student being referred to the Student Conduct Office for review if they are caught engaging in this activity.” (CQ#4)
 
-If there are strict punishments for course selling, one should ask why students are incentivized to purchase spots in such courses. Why do many go beyond the official and authorized mechanisms for enrollment?
+If there are strict punishments for course selling, why are students incentivized to purchase spots in such courses? Why do many go beyond the official and authorized mechanisms for enrollment?
 
-Some UCLA students believe that the limited number of seats in courses compel students to look for alternative means. “In the life sciences (department), a lot of times they (the department) don’t make accommodations or expand class seats, too, so that just makes it extra hard and competitive to get into the classes,” Shania Garrison, a third year physiological science student, said. (CQ#5)
+###Student Reactions
 
-When asked about the impacts of course holding on students, Garrison says that “it’s unfair for people to hold spots if they’re not planning on taking the class or holding it for someone else who has a later registration time.” (CQ#6)
+Some UCLA students believe that the limited number of seats in courses compel students to look for alternative enrollment methods.
 
-Other students consider the root of the issue to be the insufficient amount of lectures available for certain courses.
+“In the life sciences (department), a lot of times they (the department) don’t make accommodations or expand class seats, too, so that just makes it extra hard and competitive to get into the classes,” Shania Garrison, a third year physiological science student, said. (CQ#5)
 
-Matthew O’Brien, a fourth-year psychology student, notes that “the fact that people have to pay to get the courses they want kind of says a lot about how impacted a lot of the school is. So, I think a solution might be hiring more faculty, having more (lectures) of each class.” (CQ#7)
+When asked about the impacts of course holding on students, Garrison said that “it’s unfair for people to hold spots if they’re not planning on taking the class or holding it for someone else who has a later registration time.” (CQ#6)
 
-###Most Requested Departments and Courses
+Other students consider the root of the issue to be the insufficient number of lectures available for certain courses.
 
-In an effort to gain a better understanding of the true scope of course selling at UCLA and its true impact, The Stack compiled course selling data from the UCLA Subreddit and Snapchat groups from the class of 2025, 2026 and 2027, two popular platforms for course selling.
+“The fact that people have to pay to get the courses they want kind of says a lot about how impacted a lot of the school is” fourth-year psychology student Matthew O’Brien said. (CQ#7)
+
+### About the Data
+
+The Stack scraped posts regarding buying, selling, and holding classes from the UCLA Subreddit during the five enrollment periods between February 2022 and November 2023. Data from Snapchat was collected during the enrollment period for the Winter 2024 quarter from each class’ Snapchat group: class of 2025 (current juniors), 2026 (current sophomores), and 2027 (current freshmen).
+
+### Most Requested Departments and Courses
 
 The interactive below displays the number of course selling related posts on the UCLA subreddit between the enrollment periods for Fall 2022 to Winter 2024. The posts include both requests and offers to hold courses. The circle sizes are categorized by department, with their sizes representing the number of respective posts for the department courses. Hover over the circles to see the number of posts made for the department and the most requested classes.
 
@@ -71,19 +77,17 @@ The interactive below displays the number of course selling related posts on the
 <p class = 'caption'>Note: Subject areas with less than 5 posts requesting or selling a class were removed from the interactive.</p>
 <p class = 'caption'>Graphic reporting by Ayushi Kadakia, Stack Intern and Junwon Choi, Data editor.</p>
 
-The most common subject area for course selling was Psychology with 83 Reddit posts. The second most common subject area was Physics with 72 posts. The next most common subject area for course selling posts was Chemistry at 47 posts. In general, the data indicates that STEM courses are more frequently subjects of course selling as 85.5% of Reddit Posts were for courses in STEM. (CQ#8)
+The most common subject area for course selling was Psychology with 83 Reddit posts. The second most common subject area was Physics with 72 posts. The next most common subject area for course selling posts was Chemistry at 47 posts. In general, the data indicates that STEM courses are more frequently subjects of course selling as 85.5% of Reddit posts were for STEM courses. (CQ#8)
 
-It is important to note that the Physics Department does not officially designate any of its classes as “Impacted.” Impacted status means that demand for the class far exceeds the number of seats available, and dropping after Week 2 results in a transcript notation. (CQ#9) The goal of these rules is to enable qualified students to be able to take the classes they need.
+It is important to note that the Physics Department does not officially designate any of its classes as “impacted.” Impacted status means that demand for the class far exceeds the number of seats available, and dropping after Week 2 results in a transcript notation. (CQ#9) The goal of this rule is to enable qualified students to be able to take the classes they need. This is because a lack of consequences of dropping a class within the first two weeks may incentivize students to enroll in the course when they are unsure if they will remain in the course. As a result, the course may fill up more quickly and, consequently, some students who need the course may turn to buying the course. The choice not to classify Physics classes as impacted may contribute to the shortage of available seats in popular physics courses.
 
-Therefore, not classifying Physics classes as Impacted leads to a shortage of available seats in popular physics courses. When there are no consequences for dropping courses within the first two weeks, students are more likely to enroll in the course even if they do not plan to remain in the course. The course may fill up more quickly and, consequently, some students who need the course may turn to buying the course.
+To address this issue, some departments have implemented alternative course enrollment tools. The Mathematics department, for example, allows students to submit a Course Request to enroll into upper division math courses, providing motivated students an avenue into courses they need without having to resort to buying seats.
 
-However, some departments have used other methods in order to mitigate demand. The Mathematics department allows students to submit a Course Request to enroll into upper division math courses. However, given that requests can be completed as late as Week 3, and that many popular courses are lower division, there is still relatively high demand to hold and sell math courses despite this option.
+### Variability Between Class Years
 
-### Variability between Class Years
+In an effort to understand when enrollment challenges are most felt by the undergraduate population, The Stack also analyzed course holding and selling requests from Snapchat. By collecting data about each poster’s class year, The Stack sought to identify patterns regarding the frequency with which each cohort engaged in course selling.
 
-In an effort to understand when enrollment challenges are most felt by the undergraduate population, The Stack also analyzed the Snapchat posters’ class year to identify patterns regarding the frequency with which each cohort engaged in course selling.
-
-Though each student completes their major requirements at their own pace, first and second year students (class of 25 and 26) are more likely to be enrolling in lower division courses in high demand while upperclassmen are likely seeking out more major-specific upper division courses. On average, these students receive the latest enrollment appointments, which may lead to their desired classes being filled up by those with earlier enrollment appointments. The interactive found below presents a potential impact of this trend. It displays the number of posts found on Snapchat around course selling by class graduation year.
+First and second year students (class of 2026 and 2027) are more likely to be enrolling in lower division courses in high demand while upperclassmen are likely seeking out more major-specific upper division courses. Students with fewer completed units–first and second years–generally receive later enrollment appointments which may lead to their desired classes being filled up by those with earlier enrollment appointments. The interactive found below presents a potential impact of the unit-based enrollment time distribution. It displays the number of posts found on Snapchat about course selling by class graduation year.
 
 <div class="chart">
     <canvas id="yearGraph"></canvas>
@@ -111,8 +115,10 @@ The collected Reddit data revealed that 69% of all course selling posts mention 
 
 “Obviously, you need to pay someone to get a course, which puts wealthy students at an advantage,”(CQ#15) O’Brien said.
 
-To hear more about students’ personal experiences with course buying and selling as well as the UCLA administration’s response to the course selling market, click [here](https://prime.dailybruin.com/enrollmentmarket) for an article from the Daily Bruin’s PRIME Magazine.
+### Conclusion
 
-### About the Data
+The findings presented here display the challenges that students face during course enrollment. As the course selling market is dominated by monetary transactions, financial disparities between students emerge as a concern, especially as students attempt to enroll in high-popularity courses.
 
-The Stack scraped posts regarding buying, selling, and holding classes from the UCLA Subreddit during the five enrollment periods between February 2022 and November 2023. Snapchat data was collected during the enrollment period for the Winter 2024 quarter from each class’ Snapchat group: class of 2025 (current juniors), 2026 (current sophomores), and 2027 (current freshmen).
+### Related Article
+
+- [Enrollment’s Out-of-Pocket Price](https://prime.dailybruin.com/enrollmentmarket)

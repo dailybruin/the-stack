@@ -46,7 +46,7 @@ anychart.onDocumentReady(function() {
         );
 
       // customize the appearance
-      chart.background('#f6f6f6');
+      chart.background('#ffffff');
       chart.hovered().stroke(function() {
         return {
           thickness: 2,
@@ -74,6 +74,29 @@ anychart.onDocumentReady(function() {
         .fill('#f6f6f6 0.8')
         .stroke('#888888')
         .corners(5);
+
+      // chart.labels().format(function() {
+      //   // This function is called for each circle. `this` refers to the data of the current circle.
+
+      //   // Check the level of the current circle.
+      //   if (this.level === 1) {
+      //     // This is an outer circle.
+      //     // Apply formatting for outer circles here.
+      //     return this.getData('name');
+      //   } else if (this.level === 2) {
+      //     // This is an inner circle.
+      //     // Apply formatting for inner circles here.
+      //     if (['Physics 5C', 'Physics 5A', 'Chemistry 14C', 'Physics 5B'].includes(this.getData('name'))) {
+      //       return this.getData('name');
+      //     } else {
+      //       return '';
+      //     }
+      //   } else {
+      //     // This is a circle at another level.
+      //     // Apply formatting for other circles here, or return an empty string to hide the label.
+      //     return '';
+      //   }
+      // });
 
       // specify the container element id
       chart.container('container');
