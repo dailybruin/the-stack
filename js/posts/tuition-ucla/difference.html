@@ -5,10 +5,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Across all UCs: Net Cost of Attendance & Financial Aid Received</title>
+    <title>Acoss all UCs: Out-of-Pocket Cost</title>
     <!-- chart js imports -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js" integrity="sha512-QSkVNOCYLtj73J4hbmVoOV6KVZuMluZlioC+trLpewV8qMjsWqlIQvkn1KGX2StWvPMdWGBqim1xlC8krl1EKQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src = 'stacked.js' defer></script>
+    <script src = 'difference.js' defer></script>
     <!-- font imports -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -65,12 +65,12 @@
 </head>
 <body>
     <div class = 'viz_box'>
-        <div class='header'>Across all UCs: Net Cost of Attendance & Financial Aid Received</div>
+        <div class='header'>Across all UCs: Out-of-Pocket Cost</div>
         <hr>
-        <div class = 'explainer'>The bars depict the total amount of financial aid received per capita. The bars are broken down by the type of financial aid with the blue sections representing gift aid and the yellow sections representing loans.<br>The line depicts the inflation-adjusted net cost of attendance.</div>
+        <div class = 'explainer'>The points were calculated by taking the difference between Cost of Attendance and Financial Aid, which results in the cost that students have to cover themselves.</div>
         <hr>
         <div class = 'chartContainer'>
-            <div class = 'chart'><canvas id = 'fin-aid-stacked-bar'></canvas></div>
+            <div class = 'chart'><canvas id = 'difference-line'></canvas></div>
         </div>
         <div class='byLine'>
             <hr>
