@@ -9,7 +9,7 @@ const labels = [
   'Fall 2023',
   'Winter 2024',
 ];
-const acolors = ['#2774AE', '#AED6F1'];
+const acolors = ['#3D7E00', '#ABE8A1'];
 const data = {
   labels: labels,
   datasets: [
