@@ -12,8 +12,8 @@ key_takeaways:
   - The Class of 2026 and 2027 Snapchat groups each had over twice the amount of course selling posts than the Class of 2025 Snapchat group (CQ#3)
 
 featured_image:
-  url:
-  caption:
+  url: course-selling/design-cover.png
+  caption: (Helen Quach/Daily Bruin)
 og_image:
 scripts:
   - //cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js
