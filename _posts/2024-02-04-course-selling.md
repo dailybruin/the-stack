@@ -44,7 +44,7 @@ Some UCLA students believe that the limited number of seats in courses compels s
 
 “In the life sciences (department), a lot of times they (the department) don’t make accommodations or expand class seats, too, so that just makes it extra hard and competitive to get into the classes,” said Shania Garrison, a third-year physiological science student.
 
-When asked about the impacts of course holding on students, Garrison said that, “It’s unfair for people to hold spots if they’re not planning on taking the class or holding it for someone else who has a later registration time.” (CQ#6)
+When asked about the impacts of course holding on students, Garrison said that, “It’s unfair for people to hold spots if they’re not planning on taking the class or holding it for someone else who has a later registration time.”
 
 Other students consider the root of the issue to be the insufficient number of lectures available for certain courses.
 
