@@ -8,7 +8,7 @@ const linedata = {
   labels: labels,
   datasets: [{
     label: 'Out-of-Pocket Cost',
-    data: [6947, 7259,	8034,	8430,	8667,	8824,	8340,	7258,	5647,	4423,	3805,	3563,	2914,	3294,	3727,	3194,	3966,	4484,	5251,	6302,	4912],
+    data: [6947, 7259, 8034, 8430, 8667, 8824, 8340, 7258, 5647, 4423, 3805, 3563, 2914, 3294, 3727, 3194, 3966, 4484, 5251, 6302, 4912],
     backgroundColor: colors[0],
     borderColor: colors[0],
     borderWidth: 1
