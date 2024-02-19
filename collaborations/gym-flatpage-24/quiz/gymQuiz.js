@@ -6,7 +6,8 @@ const result = document.getElementById('result');
 const controls = document.querySelector('.controls-container');
 const dragContainer = document.querySelector('.draggable-objects');
 const dropContainer = document.querySelector('.drop-points');
-const data = ["Chae Campbell", "Selena Harris", "Nya Reed", "Sara Ulias", "Katie McNamara", "Emily Lee"]
+const data = ["Chae Campbell", "Selena Harris", "Nya Reed", "Emma Malabuyo", "Margzetta Frazier", "Katelyn Rosen", "Brooklyn Moors"]
+const questions = ["7 perfect vault scores", "Super Bowl Halftime Show-themed floor routine", "Florida Transfer", "Most recent beam perfect 10", '133 "no-fall" streak', "2022 U.S. Classic floor champion", "Canadian Olympian"]
 
 let deviceType = "";
 let initialX = 0, initialY = 0;
@@ -28,9 +29,14 @@ const isTouchDevice = () => {
 let count = 0;
 
 //random data
-const randomValueGenerator = () => {
-    return data[Math.floor(Math.random() * data.length)];
-};
+function randomValueGenerator(numbers) {
+    value = Math.floor(Math.random() * data.length);
+    if (numbers.includes(value)) {
+        return randomValueGenerator(numbers);
+    }
+    else {numbers.push(value);}
+    return data[value];
+}
 
 //win game display
 const stopGame = () => {
@@ -62,8 +68,8 @@ const touchMove = (e) => {
         let newX = e.touches[0].clientX;
         let newY = e.touches[0].clientY;
         let currentSelectedElement = document.getElementById(e.target.id);
-        currentSelectedElement.parentElement.style.top = currentSelectedElement.parentElement.offsetTop + (newY - initialY) + "px";
-        currentSelectedElement.parentElement.style.left = currentSelectedElement.parentElement.offsetLeft + (newX - initialX) + "px";
+        currentSelectedElement.parentElement.style.top = currentSelectedElement.parentElement.offsetTop - (initialY - newY) + "px";
+        currentSelectedElement.parentElement.style.left = currentSelectedElement.parentElement.offsetLeft - (initialX - newX) + "px";
         initialX = newX;
         initialY = newY;
     }
@@ -74,7 +80,7 @@ const drop = (e) => {
     e.preventDefault();
     if (isTouchDevice()) {
         moveElement = false;
-        const currentDrop = document.querySelector(`div[data-id='${e.target.id}']`);
+        const currentDrop = document.querySelector(`div[data-id='${questions[data.indexOf(e.target.id)]}']`);
         const currentDropBound = currentDrop.getBoundingClientRect();
         if (
             initialX >= currentDropBound.left &&
@@ -91,7 +97,7 @@ const drop = (e) => {
     } else {
         const draggedElementData = e.dataTransfer.getData('text');
         const droppableElementData = e.target.getAttribute('data-id');
-        if (draggedElementData === droppableElementData) {
+        if (draggedElementData === data[questions.indexOf(droppableElementData)]) {
             const draggedElement = document.getElementById(draggedElementData);
             e.target.classList.add('dropped');
             draggedElement.classList.add('hide');
@@ -112,9 +118,11 @@ const creator = () => {
     dragContainer.innerHTML = "";
     dropContainer.innerHTML = "";
     let randomData = [];
+    let randomQuestions = [];
+    let randomNumbers = [];
     //for string random values in array
-    for (let i = 1; i <= 3; i++) {
-        let randomValue = randomValueGenerator();
+    for (let i = 0; i < 3; i++) {
+        let randomValue = randomValueGenerator(randomNumbers);
         if (!randomData.includes(randomValue)) {
             randomData.push(randomValue);
         } else {
@@ -122,6 +130,7 @@ const creator = () => {
             i -= 1;
         }
     }
+    randomData = randomData.slice();
     for (let i of randomData) {
         const photoDiv = document.createElement("div");
         photoDiv.classList.add("draggable-image");
@@ -133,8 +142,15 @@ const creator = () => {
         dragContainer.appendChild(photoDiv);
     }
     //Sort the array randomly before creating country divs
-    randomData = randomData.sort(() => 0.5 - Math.random());
-    for (let i of randomData) {
+
+    randomNumbers = randomNumbers.sort(() => 0.5 - Math.random());
+    let x = 0;
+    for (let n of randomNumbers) {
+        randomData[x] = data[n];
+        randomQuestions[x] = questions[n];
+        x++;
+    }
+    for (let i of randomQuestions) {
         const songDiv = document.createElement("div");
         songDiv.innerHTML = `<div class='songs' data-id='${i}'>
       ${i.charAt(0).toUpperCase() + i.slice(1).replace("-", " ")}
