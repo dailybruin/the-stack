@@ -3,7 +3,7 @@ let draggableObjects;
 let dropPoints;
 const startButton = document.getElementById('start');
 const result = document.getElementById('result');
-const controls = document.querySelector('controls-container');
+const controls = document.querySelector('.controls-container');
 const dragContainer = document.querySelector('.draggable-objects');
 const dropContainer = document.querySelector('.drop-points');
 const data = ["Chae Campbell", "Selena Harris", "Nya Reed", "Sara Ulias", "Katie McNamara", "Emily Lee"]
@@ -89,9 +89,10 @@ const drop = (e) => {
             count++;
         }
     } else {
-        const data = e.dataTransfer.getData('text');
+        const draggedElementData = e.dataTransfer.getData('text');
         const droppableElementData = e.target.getAttribute('data-id');
         if (draggedElementData === droppableElementData) {
+            const draggedElement = document.getElementById(draggedElementData);
             e.target.classList.add('dropped');
             draggedElement.classList.add('hide');
             draggedElement.setAttribute('draggable', false);
@@ -135,7 +136,7 @@ const creator = () => {
     randomData = randomData.sort(() => 0.5 - Math.random());
     for (let i of randomData) {
         const songDiv = document.createElement("div");
-        songDiv.innerHTML = `<div class='countries' data-id='${i}'>
+        songDiv.innerHTML = `<div class='songs' data-id='${i}'>
       ${i.charAt(0).toUpperCase() + i.slice(1).replace("-", " ")}
       </div>
       `;
