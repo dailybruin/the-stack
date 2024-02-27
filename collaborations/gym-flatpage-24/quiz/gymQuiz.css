@@ -1,0 +1,95 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Fjalla One", sans-serif;
+}
+body {
+    background-color: #F8EA41;
+}
+.container {
+    width: 90%;
+    background-color: #8BB8E8;
+    padding: 3em 0.5em;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    border-radius: 1em;
+    filter: drop-shadow(0 0.3em 0.9em rgba(0, 0, 0, 0.25));
+}
+h3{
+    text-align: center;
+    width: 60%;
+    margin: 0 auto 1em auto;
+    font-size: 2em;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    line-height: 1.8em;
+    color: #010c39;
+}
+.draggable-objects,.drop-points{
+    display: flex;
+    justify-content: space-around;
+    padding: 2em;
+}
+.draggable-image {
+    width: 24vw;
+    cursor: move;
+}
+img {
+    width: 24vw;
+    max-width: 20em;
+    filter: drop-shadow(0 0.3em 0.9em rgba(0, 0, 0, 0.25));
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -2em;
+    margin-bottom: auto;
+}
+.songs {
+    width: 24vw;
+    max-width: 18em;
+    height: 18vh;
+    display: grid;
+    place-items: center;
+    border: 0.25em dashed #010c39;
+    border-radius: 0.8em;
+    text-align: center;
+    font-size: 2.5vh;
+}
+.dropped {
+    padding: 0;
+    background-color: #e5ffc8;
+    justify-content: space-around;
+    margin-bottom: 3em;
+}
+.controls-container {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    background-color: #F8EA41;
+    flex-direction: column;
+    top: 0;
+}
+.controls-container button {
+    font-size: 1.12em;
+    padding: 0.8em 1em;
+    border-radius: 0.2em;
+    border: none;
+    outline: none;
+    color: #010c39;
+    letter-spacing: 0.06em;
+    cursor: pointer;
+}
+.controls-container p {
+    color: #010c39;
+    font-size: 2em;
+    margin-bottom: 1em;
+}
+.hide {
+    display: none;
+}
