@@ -1,0 +1,8 @@
+https://s3.us-east-2.amazonaws.com/sidearm.nextgen.sites/uclabruins.com/documents/2017/1/7/Stats.htm
+https://s3.us-east-2.amazonaws.com/sidearm.nextgen.sites/uclabruins.com/documents/2018/1/7/Stats.htm
+https://s3.us-east-2.amazonaws.com/sidearm.nextgen.sites/uclabruins.com/documents/2019/1/5/Stats.htm
+https://s3.us-east-2.amazonaws.com/sidearm.nextgen.sites/uclabruins.com/documents/2020/1/5/Stats.htm
+https://s3.us-east-2.amazonaws.com/sidearm.nextgen.sites/uclabruins.com/documents/2021/1/24/Stats.htm
+https://s3.us-east-2.amazonaws.com/sidearm.nextgen.sites/uclabruins.com/documents/2022/1/18/Stats.htm
+https://s3.us-east-2.amazonaws.com/sidearm.nextgen.sites/uclabruins.com/documents/2023/1/8/Stats.htm
+https://s3.us-east-2.amazonaws.com/sidearm.nextgen.sites/uclabruins.com/documents/2024/1/10/Stats.htm
