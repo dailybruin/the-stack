@@ -1,0 +1,748 @@
+service,date,price
+Netflix,Jan-2014,7.99
+Netflix,Feb-2014,7.99
+Netflix,Mar-2014,7.99
+Netflix,Apr-2014,7.99
+Netflix,May-2014,7.99
+Netflix,Jun-2014,7.99
+Netflix,Jul-2014,7.99
+Netflix,Aug-2014,7.99
+Netflix,Sep-2014,7.99
+Netflix,Oct-2014,7.99
+Netflix,Nov-2014,7.99
+Netflix,Dec-2014,7.99
+Netflix,Jan-2015,7.99
+Netflix,Feb-2015,7.99
+Netflix,Mar-2015,7.99
+Netflix,Apr-2015,7.99
+Netflix,May-2015,7.99
+Netflix,Jun-2015,7.99
+Netflix,Jul-2015,7.99
+Netflix,Aug-2015,7.99
+Netflix,Sep-2015,7.99
+Netflix,Oct-2015,7.99
+Netflix,Nov-2015,7.99
+Netflix,Dec-2015,7.99
+Netflix,Jan-2016,7.99
+Netflix,Feb-2016,7.99
+Netflix,Mar-2016,7.99
+Netflix,Apr-2016,7.99
+Netflix,May-2016,7.99
+Netflix,Jun-2016,7.99
+Netflix,Jul-2016,7.99
+Netflix,Aug-2016,7.99
+Netflix,Sep-2016,7.99
+Netflix,Oct-2016,7.99
+Netflix,Nov-2016,7.99
+Netflix,Dec-2016,7.99
+Netflix,Jan-2017,7.99
+Netflix,Feb-2017,7.99
+Netflix,Mar-2017,7.99
+Netflix,Apr-2017,7.99
+Netflix,May-2017,7.99
+Netflix,Jun-2017,7.99
+Netflix,Jul-2017,7.99
+Netflix,Aug-2017,7.99
+Netflix,Sep-2017,7.99
+Netflix,Oct-2017,7.99
+Netflix,Nov-2017,7.99
+Netflix,Dec-2017,7.99
+Netflix,Jan-2018,7.99
+Netflix,Feb-2018,7.99
+Netflix,Mar-2018,7.99
+Netflix,Apr-2018,7.99
+Netflix,May-2018,7.99
+Netflix,Jun-2018,7.99
+Netflix,Jul-2018,7.99
+Netflix,Aug-2018,7.99
+Netflix,Sep-2018,7.99
+Netflix,Oct-2018,7.99
+Netflix,Nov-2018,7.99
+Netflix,Dec-2018,7.99
+Netflix,Jan-2019,8.99
+Netflix,Feb-2019,8.99
+Netflix,Mar-2019,8.99
+Netflix,Apr-2019,8.99
+Netflix,May-2019,8.99
+Netflix,Jun-2019,8.99
+Netflix,Jul-2019,8.99
+Netflix,Aug-2019,8.99
+Netflix,Sep-2019,8.99
+Netflix,Oct-2019,8.99
+Netflix,Nov-2019,8.99
+Netflix,Dec-2019,8.99
+Netflix,Jan-2020,8.99
+Netflix,Feb-2020,8.99
+Netflix,Mar-2020,8.99
+Netflix,Apr-2020,8.99
+Netflix,May-2020,8.99
+Netflix,Jun-2020,8.99
+Netflix,Jul-2020,8.99
+Netflix,Aug-2020,8.99
+Netflix,Sep-2020,8.99
+Netflix,Oct-2020,8.99
+Netflix,Nov-2020,8.99
+Netflix,Dec-2020,8.99
+Netflix,Jan-2021,8.99
+Netflix,Feb-2021,8.99
+Netflix,Mar-2021,8.99
+Netflix,Apr-2021,8.99
+Netflix,May-2021,8.99
+Netflix,Jun-2021,8.99
+Netflix,Jul-2021,8.99
+Netflix,Aug-2021,8.99
+Netflix,Sep-2021,8.99
+Netflix,Oct-2021,8.99
+Netflix,Nov-2021,8.99
+Netflix,Dec-2021,8.99
+Netflix,Jan-2022,9.99
+Netflix,Feb-2022,9.99
+Netflix,Mar-2022,9.99
+Netflix,Apr-2022,9.99
+Netflix,May-2022,9.99
+Netflix,Jun-2022,9.99
+Netflix,Jul-2022,9.99
+Netflix,Aug-2022,9.99
+Netflix,Sep-2022,9.99
+Netflix,Oct-2022,9.99
+Netflix,Nov-2022,9.99
+Netflix,Dec-2022,9.99
+Netflix,Jan-2023,9.99
+Netflix,Feb-2023,9.99
+Netflix,Mar-2023,9.99
+Netflix,Apr-2023,9.99
+Netflix,May-2023,9.99
+Netflix,Jun-2023,9.99
+Netflix,Jul-2023,9.99
+Netflix,Aug-2023,9.99
+Netflix,Sep-2023,9.99
+Netflix,Oct-2023,15.49
+Netflix,Nov-2023,15.49
+Netflix,Dec-2023,15.49
+Netflix,Jan-2024,15.49
+Disney+,Nov-2019,6.99
+Disney+,Dec-2019,6.99
+Disney+,Jan-2020,6.99
+Disney+,Feb-2020,6.99
+Disney+,Mar-2020,6.99
+Disney+,Apr-2020,6.99
+Disney+,May-2020,6.99
+Disney+,Jun-2020,6.99
+Disney+,Jul-2020,6.99
+Disney+,Aug-2020,6.99
+Disney+,Sep-2020,6.99
+Disney+,Oct-2020,6.99
+Disney+,Nov-2020,6.99
+Disney+,Dec-2020,6.99
+Disney+,Jan-2021,6.99
+Disney+,Feb-2021,6.99
+Disney+,Mar-2021,7.99
+Disney+,Apr-2021,7.99
+Disney+,May-2021,7.99
+Disney+,Jun-2021,7.99
+Disney+,Jul-2021,7.99
+Disney+,Aug-2021,7.99
+Disney+,Sep-2021,7.99
+Disney+,Oct-2021,7.99
+Disney+,Nov-2021,7.99
+Disney+,Dec-2021,7.99
+Disney+,Jan-2022,7.99
+Disney+,Feb-2022,7.99
+Disney+,Mar-2022,7.99
+Disney+,Apr-2022,7.99
+Disney+,May-2022,7.99
+Disney+,Jun-2022,7.99
+Disney+,Jul-2022,7.99
+Disney+,Aug-2022,7.99
+Disney+,Sep-2022,7.99
+Disney+,Oct-2022,7.99
+Disney+,Nov-2022,7.99
+Disney+,Dec-2022,10.99
+Disney+,Jan-2023,10.99
+Disney+,Feb-2023,10.99
+Disney+,Mar-2023,10.99
+Disney+,Apr-2023,10.99
+Disney+,May-2023,10.99
+Disney+,Jun-2023,10.99
+Disney+,Jul-2023,10.99
+Disney+,Aug-2023,10.99
+Disney+,Sep-2023,10.99
+Disney+,Oct-2023,13.99
+Disney+,Nov-2023,13.99
+Disney+,Dec-2023,13.99
+Disney+,Jan-2024,13.99
+HBO Max,May-2020,14.99
+HBO Max,Jun-2020,14.99
+HBO Max,Jul-2020,14.99
+HBO Max,Aug-2020,14.99
+HBO Max,Sep-2020,14.99
+HBO Max,Oct-2020,14.99
+HBO Max,Nov-2020,14.99
+HBO Max,Dec-2020,14.99
+HBO Max,Jan-2021,14.99
+HBO Max,Feb-2021,14.99
+HBO Max,Mar-2021,14.99
+HBO Max,Apr-2021,14.99
+HBO Max,May-2021,14.99
+HBO Max,Jun-2021,14.99
+HBO Max,Jul-2021,14.99
+HBO Max,Aug-2021,14.99
+HBO Max,Sep-2021,14.99
+HBO Max,Oct-2021,14.99
+HBO Max,Nov-2021,14.99
+HBO Max,Dec-2021,14.99
+HBO Max,Jan-2022,14.99
+HBO Max,Feb-2022,14.99
+HBO Max,Mar-2022,14.99
+HBO Max,Apr-2022,14.99
+HBO Max,May-2022,14.99
+HBO Max,Jun-2022,14.99
+HBO Max,Jul-2022,14.99
+HBO Max,Aug-2022,14.99
+HBO Max,Sep-2022,14.99
+HBO Max,Oct-2022,14.99
+HBO Max,Nov-2022,14.99
+HBO Max,Dec-2022,14.99
+HBO Max,Jan-2023,14.99
+HBO Max,Feb-2023,15.99
+HBO Max,Mar-2023,15.99
+HBO Max,Apr-2023,15.99
+HBO Max,May-2023,15.99
+HBO Max,Jun-2023,15.99
+HBO Max,Jul-2023,15.99
+HBO Max,Aug-2023,15.99
+HBO Max,Sep-2023,15.99
+HBO Max,Oct-2023,15.99
+HBO Max,Nov-2023,15.99
+HBO Max,Dec-2023,15.99
+HBO Max,Jan-2024,15.99
+Hulu,Oct-2015,11.99
+Hulu,Nov-2015,11.99
+Hulu,Dec-2015,11.99
+Hulu,Jan-2016,11.99
+Hulu,Feb-2016,11.99
+Hulu,Mar-2016,11.99
+Hulu,Apr-2016,11.99
+Hulu,May-2016,11.99
+Hulu,Jun-2016,11.99
+Hulu,Jul-2016,11.99
+Hulu,Aug-2016,11.99
+Hulu,Sep-2016,11.99
+Hulu,Oct-2016,11.99
+Hulu,Nov-2016,11.99
+Hulu,Dec-2016,11.99
+Hulu,Jan-2017,11.99
+Hulu,Feb-2017,11.99
+Hulu,Mar-2017,11.99
+Hulu,Apr-2017,11.99
+Hulu,May-2017,11.99
+Hulu,Jun-2017,11.99
+Hulu,Jul-2017,11.99
+Hulu,Aug-2017,11.99
+Hulu,Sep-2017,11.99
+Hulu,Oct-2017,11.99
+Hulu,Nov-2017,11.99
+Hulu,Dec-2017,11.99
+Hulu,Jan-2018,11.99
+Hulu,Feb-2018,11.99
+Hulu,Mar-2018,11.99
+Hulu,Apr-2018,11.99
+Hulu,May-2018,11.99
+Hulu,Jun-2018,11.99
+Hulu,Jul-2018,11.99
+Hulu,Aug-2018,11.99
+Hulu,Sep-2018,11.99
+Hulu,Oct-2018,11.99
+Hulu,Nov-2018,11.99
+Hulu,Dec-2018,11.99
+Hulu,Jan-2019,11.99
+Hulu,Feb-2019,11.99
+Hulu,Mar-2019,11.99
+Hulu,Apr-2019,11.99
+Hulu,May-2019,11.99
+Hulu,Jun-2019,11.99
+Hulu,Jul-2019,11.99
+Hulu,Aug-2019,11.99
+Hulu,Sep-2019,11.99
+Hulu,Oct-2019,11.99
+Hulu,Nov-2019,11.99
+Hulu,Dec-2019,11.99
+Hulu,Jan-2020,11.99
+Hulu,Feb-2020,11.99
+Hulu,Mar-2020,11.99
+Hulu,Apr-2020,11.99
+Hulu,May-2020,11.99
+Hulu,Jun-2020,11.99
+Hulu,Jul-2020,11.99
+Hulu,Aug-2020,11.99
+Hulu,Sep-2020,11.99
+Hulu,Oct-2020,11.99
+Hulu,Nov-2020,11.99
+Hulu,Dec-2020,11.99
+Hulu,Jan-2021,11.99
+Hulu,Feb-2021,11.99
+Hulu,Mar-2021,11.99
+Hulu,Apr-2021,11.99
+Hulu,May-2021,11.99
+Hulu,Jun-2021,11.99
+Hulu,Jul-2021,11.99
+Hulu,Aug-2021,11.99
+Hulu,Sep-2021,11.99
+Hulu,Oct-2021,12.99
+Hulu,Nov-2021,12.99
+Hulu,Dec-2021,12.99
+Hulu,Jan-2022,12.99
+Hulu,Feb-2022,12.99
+Hulu,Mar-2022,12.99
+Hulu,Apr-2022,12.99
+Hulu,May-2022,12.99
+Hulu,Jun-2022,12.99
+Hulu,Jul-2022,12.99
+Hulu,Aug-2022,12.99
+Hulu,Sep-2022,12.99
+Hulu,Oct-2022,12.99
+Hulu,Nov-2022,12.99
+Hulu,Dec-2022,14.99
+Hulu,Jan-2023,14.99
+Hulu,Feb-2023,14.99
+Hulu,Mar-2023,14.99
+Hulu,Apr-2023,14.99
+Hulu,May-2023,14.99
+Hulu,Jun-2023,14.99
+Hulu,Jul-2023,14.99
+Hulu,Aug-2023,14.99
+Hulu,Sep-2023,14.99
+Hulu,Oct-2023,14.99
+Hulu,Nov-2023,14.99
+Hulu,Dec-2023,14.99
+Hulu,Jan-2024,17.99
+Paramount+,Oct-2014,9.99
+Paramount+,Nov-2014,9.99
+Paramount+,Dec-2014,9.99
+Paramount+,Jan-2015,9.99
+Paramount+,Feb-2015,9.99
+Paramount+,Mar-2015,9.99
+Paramount+,Apr-2015,9.99
+Paramount+,May-2015,9.99
+Paramount+,Jun-2015,9.99
+Paramount+,Jul-2015,9.99
+Paramount+,Aug-2015,9.99
+Paramount+,Sep-2015,9.99
+Paramount+,Oct-2015,9.99
+Paramount+,Nov-2015,9.99
+Paramount+,Dec-2015,9.99
+Paramount+,Jan-2016,9.99
+Paramount+,Feb-2016,9.99
+Paramount+,Mar-2016,9.99
+Paramount+,Apr-2016,9.99
+Paramount+,May-2016,9.99
+Paramount+,Jun-2016,9.99
+Paramount+,Jul-2016,9.99
+Paramount+,Aug-2016,9.99
+Paramount+,Sep-2016,9.99
+Paramount+,Oct-2016,9.99
+Paramount+,Nov-2016,9.99
+Paramount+,Dec-2016,9.99
+Paramount+,Jan-2017,9.99
+Paramount+,Feb-2017,9.99
+Paramount+,Mar-2017,9.99
+Paramount+,Apr-2017,9.99
+Paramount+,May-2017,9.99
+Paramount+,Jun-2017,9.99
+Paramount+,Jul-2017,9.99
+Paramount+,Aug-2017,9.99
+Paramount+,Sep-2017,9.99
+Paramount+,Oct-2017,9.99
+Paramount+,Nov-2017,9.99
+Paramount+,Dec-2017,9.99
+Paramount+,Jan-2018,9.99
+Paramount+,Feb-2018,9.99
+Paramount+,Mar-2018,9.99
+Paramount+,Apr-2018,9.99
+Paramount+,May-2018,9.99
+Paramount+,Jun-2018,9.99
+Paramount+,Jul-2018,9.99
+Paramount+,Aug-2018,9.99
+Paramount+,Sep-2018,9.99
+Paramount+,Oct-2018,9.99
+Paramount+,Nov-2018,9.99
+Paramount+,Dec-2018,9.99
+Paramount+,Jan-2019,9.99
+Paramount+,Feb-2019,9.99
+Paramount+,Mar-2019,9.99
+Paramount+,Apr-2019,9.99
+Paramount+,May-2019,9.99
+Paramount+,Jun-2019,9.99
+Paramount+,Jul-2019,9.99
+Paramount+,Aug-2019,9.99
+Paramount+,Sep-2019,9.99
+Paramount+,Oct-2019,9.99
+Paramount+,Nov-2019,9.99
+Paramount+,Dec-2019,9.99
+Paramount+,Jan-2020,9.99
+Paramount+,Feb-2020,9.99
+Paramount+,Mar-2020,9.99
+Paramount+,Apr-2020,9.99
+Paramount+,May-2020,9.99
+Paramount+,Jun-2020,9.99
+Paramount+,Jul-2020,9.99
+Paramount+,Aug-2020,9.99
+Paramount+,Sep-2020,9.99
+Paramount+,Oct-2020,9.99
+Paramount+,Nov-2020,9.99
+Paramount+,Dec-2020,9.99
+Paramount+,Jan-2021,9.99
+Paramount+,Feb-2021,9.99
+Paramount+,Mar-2021,9.99
+Paramount+,Apr-2021,9.99
+Paramount+,May-2021,9.99
+Paramount+,Jun-2021,9.99
+Paramount+,Jul-2021,9.99
+Paramount+,Aug-2021,9.99
+Paramount+,Sep-2021,9.99
+Paramount+,Oct-2021,9.99
+Paramount+,Nov-2021,9.99
+Paramount+,Dec-2021,9.99
+Paramount+,Jan-2022,9.99
+Paramount+,Feb-2022,9.99
+Paramount+,Mar-2022,9.99
+Paramount+,Apr-2022,9.99
+Paramount+,May-2022,9.99
+Paramount+,Jun-2022,9.99
+Paramount+,Jul-2022,9.99
+Paramount+,Aug-2022,9.99
+Paramount+,Sep-2022,9.99
+Paramount+,Oct-2022,9.99
+Paramount+,Nov-2022,9.99
+Paramount+,Dec-2022,9.99
+Paramount+,Jan-2023,9.99
+Paramount+,Feb-2023,9.99
+Paramount+,Mar-2023,9.99
+Paramount+,Apr-2023,9.99
+Paramount+,May-2023,9.99
+Paramount+,Jun-2023,11.99
+Paramount+,Jul-2023,11.99
+Paramount+,Aug-2023,11.99
+Paramount+,Sep-2023,11.99
+Paramount+,Oct-2023,11.99
+Paramount+,Nov-2023,11.99
+Paramount+,Dec-2023,11.99
+Paramount+,Jan-2024,11.99
+Prime Video,Apr-2016,8.99
+Prime Video,May-2016,8.99
+Prime Video,Jun-2016,8.99
+Prime Video,Jul-2016,8.99
+Prime Video,Aug-2016,8.99
+Prime Video,Sep-2016,8.99
+Prime Video,Oct-2016,8.99
+Prime Video,Nov-2016,8.99
+Prime Video,Dec-2016,8.99
+Prime Video,Jan-2017,8.99
+Prime Video,Feb-2017,8.99
+Prime Video,Mar-2017,8.99
+Prime Video,Apr-2017,8.99
+Prime Video,May-2017,8.99
+Prime Video,Jun-2017,8.99
+Prime Video,Jul-2017,8.99
+Prime Video,Aug-2017,8.99
+Prime Video,Sep-2017,8.99
+Prime Video,Oct-2017,8.99
+Prime Video,Nov-2017,8.99
+Prime Video,Dec-2017,8.99
+Prime Video,Jan-2018,8.99
+Prime Video,Feb-2018,8.99
+Prime Video,Mar-2018,8.99
+Prime Video,Apr-2018,8.99
+Prime Video,May-2018,8.99
+Prime Video,Jun-2018,8.99
+Prime Video,Jul-2018,8.99
+Prime Video,Aug-2018,8.99
+Prime Video,Sep-2018,8.99
+Prime Video,Oct-2018,8.99
+Prime Video,Nov-2018,8.99
+Prime Video,Dec-2018,8.99
+Prime Video,Jan-2019,8.99
+Prime Video,Feb-2019,8.99
+Prime Video,Mar-2019,8.99
+Prime Video,Apr-2019,8.99
+Prime Video,May-2019,8.99
+Prime Video,Jun-2019,8.99
+Prime Video,Jul-2019,8.99
+Prime Video,Aug-2019,8.99
+Prime Video,Sep-2019,8.99
+Prime Video,Oct-2019,8.99
+Prime Video,Nov-2019,8.99
+Prime Video,Dec-2019,8.99
+Prime Video,Jan-2020,8.99
+Prime Video,Feb-2020,8.99
+Prime Video,Mar-2020,8.99
+Prime Video,Apr-2020,8.99
+Prime Video,May-2020,8.99
+Prime Video,Jun-2020,8.99
+Prime Video,Jul-2020,8.99
+Prime Video,Aug-2020,8.99
+Prime Video,Sep-2020,8.99
+Prime Video,Oct-2020,8.99
+Prime Video,Nov-2020,8.99
+Prime Video,Dec-2020,8.99
+Prime Video,Jan-2021,8.99
+Prime Video,Feb-2021,8.99
+Prime Video,Mar-2021,8.99
+Prime Video,Apr-2021,8.99
+Prime Video,May-2021,8.99
+Prime Video,Jun-2021,8.99
+Prime Video,Jul-2021,8.99
+Prime Video,Aug-2021,8.99
+Prime Video,Sep-2021,8.99
+Prime Video,Oct-2021,8.99
+Prime Video,Nov-2021,8.99
+Prime Video,Dec-2021,8.99
+Prime Video,Jan-2022,8.99
+Prime Video,Feb-2022,8.99
+Prime Video,Mar-2022,8.99
+Prime Video,Apr-2022,8.99
+Prime Video,May-2022,8.99
+Prime Video,Jun-2022,8.99
+Prime Video,Jul-2022,8.99
+Prime Video,Aug-2022,8.99
+Prime Video,Sep-2022,8.99
+Prime Video,Oct-2022,8.99
+Prime Video,Nov-2022,8.99
+Prime Video,Dec-2022,8.99
+Prime Video,Jan-2023,8.99
+Prime Video,Feb-2023,8.99
+Prime Video,Mar-2023,8.99
+Prime Video,Apr-2023,8.99
+Prime Video,May-2023,8.99
+Prime Video,Jun-2023,8.99
+Prime Video,Jul-2023,8.99
+Prime Video,Aug-2023,8.99
+Prime Video,Sep-2023,8.99
+Prime Video,Oct-2023,8.99
+Prime Video,Nov-2023,8.99
+Prime Video,Dec-2023,8.99
+Prime Video,Jan-2024,11.99
+Apple TV+,Nov-2019,4.99
+Apple TV+,Dec-2019,4.99
+Apple TV+,Jan-2020,4.99
+Apple TV+,Feb-2020,4.99
+Apple TV+,Mar-2020,4.99
+Apple TV+,Apr-2020,4.99
+Apple TV+,May-2020,4.99
+Apple TV+,Jun-2020,4.99
+Apple TV+,Jul-2020,4.99
+Apple TV+,Aug-2020,4.99
+Apple TV+,Sep-2020,4.99
+Apple TV+,Oct-2020,4.99
+Apple TV+,Nov-2020,4.99
+Apple TV+,Dec-2020,4.99
+Apple TV+,Jan-2021,4.99
+Apple TV+,Feb-2021,4.99
+Apple TV+,Mar-2021,4.99
+Apple TV+,Apr-2021,4.99
+Apple TV+,May-2021,4.99
+Apple TV+,Jun-2021,4.99
+Apple TV+,Jul-2021,4.99
+Apple TV+,Aug-2021,4.99
+Apple TV+,Sep-2021,4.99
+Apple TV+,Oct-2021,4.99
+Apple TV+,Nov-2021,4.99
+Apple TV+,Dec-2021,4.99
+Apple TV+,Jan-2022,4.99
+Apple TV+,Feb-2022,4.99
+Apple TV+,Mar-2022,4.99
+Apple TV+,Apr-2022,4.99
+Apple TV+,May-2022,4.99
+Apple TV+,Jun-2022,4.99
+Apple TV+,Jul-2022,4.99
+Apple TV+,Aug-2022,4.99
+Apple TV+,Sep-2022,4.99
+Apple TV+,Oct-2022,6.99
+Apple TV+,Nov-2022,6.99
+Apple TV+,Dec-2022,6.99
+Apple TV+,Jan-2023,6.99
+Apple TV+,Feb-2023,6.99
+Apple TV+,Mar-2023,6.99
+Apple TV+,Apr-2023,6.99
+Apple TV+,May-2023,6.99
+Apple TV+,Jun-2023,6.99
+Apple TV+,Jul-2023,6.99
+Apple TV+,Aug-2023,6.99
+Apple TV+,Sep-2023,6.99
+Apple TV+,Oct-2023,6.99
+Apple TV+,Nov-2023,6.99
+Apple TV+,Dec-2023,6.99
+Apple TV+,Jan-2024,9.99
+Peacock,Jul-2020,9.99
+Peacock,Aug-2020,9.99
+Peacock,Sep-2020,9.99
+Peacock,Oct-2020,9.99
+Peacock,Nov-2020,9.99
+Peacock,Dec-2020,9.99
+Peacock,Jan-2021,9.99
+Peacock,Feb-2021,9.99
+Peacock,Mar-2021,9.99
+Peacock,Apr-2021,9.99
+Peacock,May-2021,9.99
+Peacock,Jun-2021,9.99
+Peacock,Jul-2021,9.99
+Peacock,Aug-2021,9.99
+Peacock,Sep-2021,9.99
+Peacock,Oct-2021,9.99
+Peacock,Nov-2021,9.99
+Peacock,Dec-2021,9.99
+Peacock,Jan-2022,9.99
+Peacock,Feb-2022,9.99
+Peacock,Mar-2022,9.99
+Peacock,Apr-2022,9.99
+Peacock,May-2022,9.99
+Peacock,Jun-2022,9.99
+Peacock,Jul-2022,9.99
+Peacock,Aug-2022,9.99
+Peacock,Sep-2022,9.99
+Peacock,Oct-2022,9.99
+Peacock,Nov-2022,9.99
+Peacock,Dec-2022,9.99
+Peacock,Jan-2023,9.99
+Peacock,Feb-2023,9.99
+Peacock,Mar-2023,9.99
+Peacock,Apr-2023,9.99
+Peacock,May-2023,9.99
+Peacock,Jun-2023,9.99
+Peacock,Jul-2023,9.99
+Peacock,Aug-2023,11.99
+Peacock,Sep-2023,11.99
+Peacock,Oct-2023,11.99
+Peacock,Nov-2023,11.99
+Peacock,Dec-2023,11.99
+Peacock,Jan-2024,11.99
+Shudder,Oct-2016,5.99
+Shudder,Nov-2016,5.99
+Shudder,Dec-2016,5.99
+Shudder,Jan-2017,5.99
+Shudder,Feb-2017,5.99
+Shudder,Mar-2017,5.99
+Shudder,Apr-2017,5.99
+Shudder,May-2017,5.99
+Shudder,Jun-2017,5.99
+Shudder,Jul-2017,5.99
+Shudder,Aug-2017,5.99
+Shudder,Sep-2017,5.99
+Shudder,Oct-2017,5.99
+Shudder,Nov-2017,5.99
+Shudder,Dec-2017,5.99
+Shudder,Jan-2018,5.99
+Shudder,Feb-2018,5.99
+Shudder,Mar-2018,5.99
+Shudder,Apr-2018,5.99
+Shudder,May-2018,5.99
+Shudder,Jun-2018,5.99
+Shudder,Jul-2018,5.99
+Shudder,Aug-2018,5.99
+Shudder,Sep-2018,5.99
+Shudder,Oct-2018,5.99
+Shudder,Nov-2018,5.99
+Shudder,Dec-2018,5.99
+Shudder,Jan-2019,5.99
+Shudder,Feb-2019,5.99
+Shudder,Mar-2019,5.99
+Shudder,Apr-2019,5.99
+Shudder,May-2019,5.99
+Shudder,Jun-2019,5.99
+Shudder,Jul-2019,5.99
+Shudder,Aug-2019,5.99
+Shudder,Sep-2019,5.99
+Shudder,Oct-2019,5.99
+Shudder,Nov-2019,5.99
+Shudder,Dec-2019,5.99
+Shudder,Jan-2020,5.99
+Shudder,Feb-2020,5.99
+Shudder,Mar-2020,5.99
+Shudder,Apr-2020,5.99
+Shudder,May-2020,5.99
+Shudder,Jun-2020,5.99
+Shudder,Jul-2020,5.99
+Shudder,Aug-2020,5.99
+Shudder,Sep-2020,5.99
+Shudder,Oct-2020,5.99
+Shudder,Nov-2020,5.99
+Shudder,Dec-2020,5.99
+Shudder,Jan-2021,5.99
+Shudder,Feb-2021,5.99
+Shudder,Mar-2021,5.99
+Shudder,Apr-2021,5.99
+Shudder,May-2021,5.99
+Shudder,Jun-2021,5.99
+Shudder,Jul-2021,5.99
+Shudder,Aug-2021,5.99
+Shudder,Sep-2021,5.99
+Shudder,Oct-2021,5.99
+Shudder,Nov-2021,5.99
+Shudder,Dec-2021,5.99
+Shudder,Jan-2022,5.99
+Shudder,Feb-2022,5.99
+Shudder,Mar-2022,5.99
+Shudder,Apr-2022,5.99
+Shudder,May-2022,5.99
+Shudder,Jun-2022,5.99
+Shudder,Jul-2022,5.99
+Shudder,Aug-2022,5.99
+Shudder,Sep-2022,5.99
+Shudder,Oct-2022,5.99
+Shudder,Nov-2022,5.99
+Shudder,Dec-2022,5.99
+Shudder,Jan-2023,5.99
+Shudder,Feb-2023,5.99
+Shudder,Mar-2023,5.99
+Shudder,Apr-2023,5.99
+Shudder,May-2023,5.99
+Shudder,Jun-2023,5.99
+Shudder,Jul-2023,5.99
+Shudder,Aug-2023,6.99
+Shudder,Sep-2023,6.99
+Shudder,Oct-2023,6.99
+Shudder,Nov-2023,6.99
+Shudder,Dec-2023,6.99
+Shudder,Jan-2024,6.99
+Crunchyroll,Aug-2020,7.99
+Crunchyroll,Sep-2020,7.99
+Crunchyroll,Oct-2020,7.99
+Crunchyroll,Nov-2020,7.99
+Crunchyroll,Dec-2020,7.99
+Crunchyroll,Jan-2021,7.99
+Crunchyroll,Feb-2021,7.99
+Crunchyroll,Mar-2021,7.99
+Crunchyroll,Apr-2021,7.99
+Crunchyroll,May-2021,7.99
+Crunchyroll,Jun-2021,7.99
+Crunchyroll,Jul-2021,7.99
+Crunchyroll,Aug-2021,7.99
+Crunchyroll,Sep-2021,7.99
+Crunchyroll,Oct-2021,7.99
+Crunchyroll,Nov-2021,7.99
+Crunchyroll,Dec-2021,7.99
+Crunchyroll,Jan-2022,7.99
+Crunchyroll,Feb-2022,7.99
+Crunchyroll,Mar-2022,7.99
+Crunchyroll,Apr-2022,7.99
+Crunchyroll,May-2022,7.99
+Crunchyroll,Jun-2022,7.99
+Crunchyroll,Jul-2022,7.99
+Crunchyroll,Aug-2022,7.99
+Crunchyroll,Sep-2022,7.99
+Crunchyroll,Oct-2022,7.99
+Crunchyroll,Nov-2022,7.99
+Crunchyroll,Dec-2022,7.99
+Crunchyroll,Jan-2023,7.99
+Crunchyroll,Feb-2023,7.99
+Crunchyroll,Mar-2023,7.99
+Crunchyroll,Apr-2023,7.99
+Crunchyroll,May-2023,7.99
+Crunchyroll,Jun-2023,7.99
+Crunchyroll,Jul-2023,7.99
+Crunchyroll,Aug-2023,7.99
+Crunchyroll,Sep-2023,7.99
+Crunchyroll,Oct-2023,7.99
+Crunchyroll,Nov-2023,7.99
+Crunchyroll,Dec-2023,7.99
+Crunchyroll,Jan-2024,7.99
