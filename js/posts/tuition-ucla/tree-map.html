@@ -6,10 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BruinBill Breakdown</title>
-    <!-- amcharts imports -->
-    <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
-    <script src="https://cdn.amcharts.com/lib/5/hierarchy.js"></script>
-    <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
+    <!-- anychart imports -->
+    <script src="https://cdn.anychart.com/releases/8.12.0/js/anychart-core.min.js"></script>
+    <script src="https://cdn.anychart.com/releases/8.12.0/js/anychart-treemap.min.js"></script>
     <script src = 'tree-map.js' defer></script>
     <!-- font imports -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -69,10 +68,10 @@
     <div class = 'viz_box'>
         <div class='header'>BruinBill Breakdown</div>
         <hr>
-        <div class = 'explainer'>A breakdown of the fees listed on a BruinBill.</div>
+        <div class = 'explainer'>A breakdown of the fees listed on the BruinBill.</div>
         <hr>
         <div class = 'chartContainer'>
-            <div class = 'chart'><canvas id = 'tree-map'></canvas></div>
+            <div class = 'chart'><canvas id = "tree-map"></canvas></div>
         </div>
         <div class='byLine'>
             <hr>
