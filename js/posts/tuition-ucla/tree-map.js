@@ -47,14 +47,17 @@ anychart.onDocumentReady(function () {
   
   // configure labels
   chart.labels().format(
-    "<span style='font-family: Noto Serif,serif;'>{%name}</span><br>{%value}"
+    "<span>{%name}</span><br>{%value}"
   );
-  
+
   // configure tooltips
   chart.tooltip().format(
     "Amount: {%value}\nDescription: {%desc}"
   );
-  
+
+  chart.tooltip().width(800);
+  chart.tooltip().wordWrap("normal");
+
   // initiate drawing the chart
   chart.draw();
 });
