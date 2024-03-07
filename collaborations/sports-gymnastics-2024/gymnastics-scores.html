@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>YOUR TITLE HERE</title>
+    <title>UCLA Gymnastics scores</title>
     <!-- chart js imports -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js" integrity="sha512-QSkVNOCYLtj73J4hbmVoOV6KVZuMluZlioC+trLpewV8qMjsWqlIQvkn1KGX2StWvPMdWGBqim1xlC8krl1EKQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src = 'gymnastics-scores.js' defer></script>
@@ -15,7 +15,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap" rel="stylesheet">
     <style>
         div{
-            font-family: 'Noto Serif',serif;  /*default font, change if requested*/
+            font-family: 'PT Sans',serif;  /*default font, change if requested*/
         }
         .header{
             font-size: 20px;
@@ -32,14 +32,14 @@
             margin-top: -1%;
         }
         hr{
-            border: black solid 1px;
+            border: white solid 1px;
         }
         .byLine{
             font-size: 10px;
             text-align: center;
         }
         .viz_box{
-            border: 2px black solid
+            border: 2px white solid
         }
         @media only screen and (max-width: 800px) {
             .chart{
@@ -67,14 +67,14 @@
     <div class = 'viz_box'>
         <div class='header'>UCLA Gymnastics Through The Years</div>
         <hr>
-        <div class = 'explainer'>Yearly mean score for UCLA Gymnastics for each event</div>
+        <div class = 'explainer'>Event season average scores for UCLA Gymnastics</div>
         <hr>
         <div class = 'chartContainer'>
             <div class = 'chart'><canvas id = 'gymnastics-line-chart'></canvas></div>
         </div>
         <div class='byLine'>
             <hr>
-            Source: UCLA Gymnastics Archive <br> Graphic Reporting by Cassidy Sadowski, Stack Contributor. Interactive by Cassidy Sadowski, Stack Contributor.</div>
+            Source: UCLA Gymnastics<br> Graphic Reporting by Cassidy Sadowski, Stack Contributor, and Junwon Choi, Data editor. Interactive by Cassidy Sadowski, Stack Contributor.</div>
     </div>
 </body>
 </html>
