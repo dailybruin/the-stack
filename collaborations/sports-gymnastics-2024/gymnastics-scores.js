@@ -22,7 +22,7 @@ const labels = [
   '2022',
   '2023',
 ]; //THIS SHOULD BE A LIST OF WHAT YOU WANT ON THE X-AXIS
-const colors = ['#FFB81C', '#005587', '#8BB8E8', '#DAEBFE']; //CHANGE THESE TO WHAT MATCHES THE SUBJECT
+const colors = ['#FF9442', '#B7CCF2', '#9AABF5', '#A1E0FF']; //CHANGE THESE TO WHAT MATCHES THE SUBJECT
 const rankarray = [
   1,
   4,
@@ -76,7 +76,7 @@ const data = {
       ], //DATA HERE
       backgroundColor: colors[0],
       borderColor: colors[0],
-      borderWidth: 1,
+      borderWidth: 5,
     },
     {
       label: 'Vault',
@@ -172,7 +172,14 @@ const options = {
       beginAtZero: false,
       title: {
         display: true,
-        text: 'Season average score',
+        text: 'Average event score',
+      },
+    },
+    x: {
+      beginAtZero: false,
+      title: {
+        display: true,
+        text: 'Season',
       },
     },
   },
