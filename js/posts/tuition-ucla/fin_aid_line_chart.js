@@ -1,6 +1,6 @@
 Chart.defaults.font.family = 'Noto Serif, serif'  //FONT FOR CHART CHANGE IF NEEDED
 const labels = ['2002','2003','2004','2005','2006','2007','2008','2009','2010','2011','2012','2013','2014','2015','2016','2017','2018','2019','2020','2021','2022']; //THIS SHOULD BE A LIST OF WHAT YOU WANT ON THE X-AXIS
-const colors = ['#ffd6a5', '#e89c81', '#d1625c', '#de9399', '#eac4d5', '#b8e0d4', '#809bce', "black", "white"] //CHANGE THESE TO WHAT MATCHES THE SUBJECT
+const colors = ['#ffebd2', '#e89c81', '#eac4d5', '#d6eadf', '#b1cfe6', '#809bce', '#60759b', "black", "white"] //CHANGE THESE TO WHAT MATCHES THE SUBJECT
 const data = {
   labels: labels,
   //DATA SETS IN A LIST. EACH OBJECT IN LIST IS A CATEGORY OF DATA CHANGE THESE OUT WITH YOUR DATA

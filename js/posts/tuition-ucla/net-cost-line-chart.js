@@ -2,7 +2,7 @@ Chart.defaults.font.family = 'Noto Serif, serif'
 
 const labels = ['2002','2003','2004','2005','2006','2007','2008','2009','2010','2011','2012','2013','2014','2015','2016','2017','2018','2019','2020','2021','2022'] //THIS SHOULD BE A LIST OF WHAT YOU WANT ON THE X-AXIS
 
-const colors = ['#ffebd2', '#ffd6a5', '#e89c81', '#d1625c', '#de9399', '#eac4d5', '#d6eadf', '#b8e0d4', '#809bce', '#60759b', '#ffffff', '#000000']
+const colors = ['#ffebd2', '#ffd6a5', '#e89c81', '#d1625c', '#e6828c', '#eac4d5', '#d6eadf', '#b1cfe6', '#809bce', '#60759b', '#ffffff', '#000000']
 
 const campusdata = {
   labels: labels,

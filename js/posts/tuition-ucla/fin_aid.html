@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Financial Aid Recieved</title>
+    <title>Financial aid recieved</title>
     <!-- chart js imports -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js" integrity="sha512-QSkVNOCYLtj73J4hbmVoOV6KVZuMluZlioC+trLpewV8qMjsWqlIQvkn1KGX2StWvPMdWGBqim1xlC8krl1EKQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src = 'fin_aid_line_chart.js' defer></script>
@@ -29,7 +29,7 @@
         }
         .chart{
             margin: 1%;
-            margin-top: -1%;
+            margin-top: 0%;
         }
         hr{
             border: black solid 1px;
@@ -65,7 +65,7 @@
 </head>
 <body>
     <div class = 'viz_box'>
-        <div class='header'>Financial Aid Recieved</div>
+        <div class='header'>Financial aid recieved</div>
         <hr>
         <div class = 'explainer'>The inflation-adjusted amount of financial aid recieved by UCLA students from 2002 to 2022</div>
         <hr>
@@ -73,8 +73,7 @@
             <div class = 'chart'><canvas id = 'fin_aid_line_chart'></canvas></div>
         </div>
         <div class='byLine'>
-            <hr>
-            https://www.universityofcalifornia.edu/about-us/information-center/net-cost <br> Graphic Reporting by Caroline Sha, Stack Intern. Interactive by Caroline Sha, Stack Intern.</div>
+            <hr>Source: University of California <br> Graphic Reporting by Caroline Sha, Stack Intern.</div>
     </div>
 </body>
 </html>
