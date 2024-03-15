@@ -67,7 +67,14 @@ const options = {
       }
     }
   },
-  maintainAspectRatio: false
+  maintainAspectRatio: false,
+  plugins:
+  {
+    legend:
+    {
+      display: true
+    }
+  }
 };
 
 //THIS CODE MAKES THE CHART, MAKE SURE THE CTX VARIABLE DOES NOT MATCH ANY OTHER CTX VARIABLE
