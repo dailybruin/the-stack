@@ -34,6 +34,10 @@ const bardata = {
     label: 'Total Loans (excl. PLUS)',
     data: [2042,	2086,	2136,	2114,	2116,	2243,	2547,	2824,	2928,	3118,	3067,	2961,	2829,	2747,	2659,	2581,	2453,	2326,	1537,	1734,	1760], //DATA HERE
     backgroundColor: colors[6],
+  },{
+    label: '',
+    data: [0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0], //DATA HERE
+    backgroundColor: colors[7],
   }]
 };
 
@@ -67,14 +71,7 @@ const options = {
       }
     }
   },
-  maintainAspectRatio: false,
-  plugins:
-  {
-    legend:
-    {
-      display: true
-    }
-  }
+  maintainAspectRatio: false
 };
 
 //THIS CODE MAKES THE CHART, MAKE SURE THE CTX VARIABLE DOES NOT MATCH ANY OTHER CTX VARIABLE
