@@ -22,7 +22,7 @@ const labels = [
   '2022',
   '2023',
 ]; //THIS SHOULD BE A LIST OF WHAT YOU WANT ON THE X-AXIS
-const colors = ['#FF9442', '#B7CCF2', '#9AABF5', '#A1E0FF']; //CHANGE THESE TO WHAT MATCHES THE SUBJECT
+const colors = ['#FF9442', '#BCEBF5', '#BF79F5', '#68BCFF']; //CHANGE THESE TO WHAT MATCHES THE SUBJECT
 const rankarray = [
   1,
   4,
