@@ -1,0 +1,76 @@
+Chart.defaults.font.family = 'Noto Serif, serif';
+const ctxt2 = document.getElementById('sportGraph2');
+const pointImage = new Image(25,25);
+pointImage.src = 'icons8-star-48.png';
+const costGraph2 = new Chart(ctxt2, {
+ type: 'line',
+ data: {
+   labels: ['Fresno State Invite', 'Washington State Dual Meet', 'UC Santa Barbara Dual Meet', 'Illinos Dual Meet', 'Arizona State Dual Meet', 'Arizona Dual Meet', 'Art Adamson Invitational', 'UC San Diego-Wisconsin Tri-Meet', 'Utah Dual Meet', 'Stanford Dual Meet', 'California Dual Meet', 'USC Dual Meet', 'Pac-12 Championship Preliminary Round', 'Pac-12 Championship Finals', 'NCAA Preliminary Round', 'NCAA Finals'],
+     datasets: [{
+       label: 'Rosie Murphy',
+       data: [124.38, null, 123.55, 123.55, 121.92, null, 117.93, 123.34, 122.95, null, 121.64, 117.45, 115.93, 116.41, 116.32, null],
+       backgroundColor: ['#eb6762'],
+       borderColor: ['#eb6762'],
+       spanGaps: true,
+       pointStyle: ['circle', 'circle', 'circle', 'circle', 'circle', 'circle', 'circle', 'circle', 'circle', 'circle', 'circle', 'circle', 'circle', pointImage, 'circle',]
+     },
+     {
+       label: 'Paige MacEachern',
+       data: [null, null, 123.66, null, 119.53, null, 117.20, 122.99, 122.71, null, 124.01, 119.27, 115.97, 116.29, 118.16, null],
+       backgroundColor: ['#AED6F1'],
+       borderColor: ['#AED6F1'],
+       spanGaps: true,
+       pointStyle: ['circle', 'circle', 'circle', 'circle', 'circle', 'circle', 'circle', 'circle', 'circle', 'circle', 'circle', 'circle', 'circle', pointImage, 'circle',]
+     }, 
+     {
+      label: 'School Record Breaking Times',
+      backgroundColor: ['#939033'],
+      borderColor: ['#939033'],
+      
+    }]
+ },
+ options: {
+
+   scales: {
+     y: {
+       min: 115,
+       title: {
+           display: true,
+           text: 'Time in Seconds',
+         },
+     },
+   },
+   plugins: {
+     legend: {
+       display: true,
+       title: {
+           display: true,
+           text: 'UCLA Swimmers - IM',
+           font: {
+               size: 20,
+             }
+         },
+     },
+   },
+ },
+});
+const selectElement = document.querySelector('select');
+selectElement.addEventListener("change", changeGraph);
+function changeGraph(){
+    if(selectElement.value === "sportGraph2"){
+      costGraph2.data.datasets[0].data = [262.52, 264.46, null, null, null, 255.93, 250.67, null, null, 257.03, null, null, 248.88, 246.00, 246.23, 245.01];
+      costGraph2.data.datasets[1].data = [261.04, null, null, null, null, 253.92, 246.15, null, null, 259.71, null, null, 248.47, 243.47, 245.38, 248.95];
+      costGraph2.options.scales.y.min = 242;
+      costGraph2.data.datasets[0].pointStyle = [['circle', 'circle', 'circle', 'circle', 'circle', 'circle', 'circle', 'circle', 'circle', 'circle', 'circle', 'circle', 'circle', 'circle', 'circle',]]
+      costGraph2.data.datasets[1].pointStyle = ['circle', 'circle', 'circle', 'circle', 'circle', 'circle', pointImage, 'circle', 'circle', 'circle', 'circle', 'circle', 'circle', pointImage, 'circle',]
+    }
+    else{
+      costGraph2.data.datasets[0].data = [124.38, null, 123.55, 123.55, 121.92, null, 117.93, 123.34, 122.95, null, 121.64, 117.45, 115.93, 116.41, 116.32, null];
+      costGraph2.data.datasets[1].data = [null, null, 123.66, null, 119.53, null, 117.20, 122.99, 122.71, null, 124.01, 119.27, 115.97, 116.29, 118.16, null];
+      costGraph2.options.scales.y.min = 115;
+      costGraph2.data.datasets[0].pointStyle = ['circle', 'circle', 'circle', 'circle', 'circle', 'circle', 'circle', 'circle', 'circle', 'circle', 'circle', 'circle', 'circle', pointImage, 'circle',]
+      costGraph2.data.datasets[1].pointStyle = ['circle', 'circle', 'circle', 'circle', 'circle', 'circle', 'circle', 'circle', 'circle', 'circle', 'circle', 'circle', 'circle', pointImage, 'circle',]
+
+    }    
+    costGraph2.update();
+}
