@@ -9,16 +9,16 @@ const costGraph2 = new Chart(ctxt2, {
      datasets: [{
        label: 'Rosie Murphy',
        data: [124.38, null, 123.55, 123.55, 121.92, null, 117.93, 123.34, 122.95, null, 121.64, 117.45, 115.93, 116.41, 116.32, null],
-       backgroundColor: ['#eb6762'],
-       borderColor: ['#eb6762'],
+       backgroundColor: ['#191970'],
+       borderColor: ['#191970'],
        spanGaps: true,
        pointStyle: ['circle', 'circle', 'circle', 'circle', 'circle', 'circle', 'circle', 'circle', 'circle', 'circle', 'circle', 'circle', 'circle', pointImage, 'circle',]
      },
      {
        label: 'Paige MacEachern',
        data: [null, null, 123.66, null, 119.53, null, 117.20, 122.99, 122.71, null, 124.01, 119.27, 115.97, 116.29, 118.16, null],
-       backgroundColor: ['#AED6F1'],
-       borderColor: ['#AED6F1'],
+       backgroundColor: ['#F07857'],
+       borderColor: ['#F07857'],
        spanGaps: true,
        pointStyle: ['circle', 'circle', 'circle', 'circle', 'circle', 'circle', 'circle', 'circle', 'circle', 'circle', 'circle', 'circle', 'circle', pointImage, 'circle',]
      }, 
