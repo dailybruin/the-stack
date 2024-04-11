@@ -249,7 +249,7 @@ function generateVis(dataset, switchin) {
 
 
 
-d3.json('python\posts\stack-major-change\output.json').then(function (d) {
+d3.json('/datasets/stack-major-change/major_data.json').then(function (d) {
 
     var dataset = d[0];
 

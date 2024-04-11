@@ -1,0 +1,2150 @@
+[
+    {
+        "Aerospace Engineering": {
+            "nodes": [
+                {
+                    "name": "Aerospace Engineering"
+                },
+                {
+                    "name": "Aerospace Engineering "
+                }
+            ],
+            "links": [
+                {
+                    "source": 0,
+                    "target": 1,
+                    "value": 689
+                }
+            ]
+        },
+        "African American Studies": {
+            "nodes": [
+                {
+                    "name": "African American Studies"
+                },
+                {
+                    "name": "African American Studies "
+                }
+            ],
+            "links": [
+                {
+                    "source": 0,
+                    "target": 1,
+                    "value": 92
+                }
+            ]
+        },
+        "American Literature & Culture": {
+            "nodes": [
+                {
+                    "name": "American Literature & Culture"
+                },
+                {
+                    "name": "American Literature & Culture "
+                }
+            ],
+            "links": [
+                {
+                    "source": 0,
+                    "target": 1,
+                    "value": 104
+                }
+            ]
+        },
+        "Anthropology": {
+            "nodes": [
+                {
+                    "name": "Anthropology"
+                },
+                {
+                    "name": "Anthropology "
+                }
+            ],
+            "links": [
+                {
+                    "source": 0,
+                    "target": 1,
+                    "value": 1074
+                }
+            ]
+        },
+        "Anthropology-BS": {
+            "nodes": [
+                {
+                    "name": "Anthropology-BS"
+                },
+                {
+                    "name": "Anthropology-BS "
+                }
+            ],
+            "links": [
+                {
+                    "source": 0,
+                    "target": 1,
+                    "value": 182
+                }
+            ]
+        },
+        "Applied Linguistics": {
+            "nodes": [
+                {
+                    "name": "Applied Linguistics"
+                },
+                {
+                    "name": "Applied Linguistics "
+                }
+            ],
+            "links": [
+                {
+                    "source": 0,
+                    "target": 1,
+                    "value": 57
+                }
+            ]
+        },
+        "Applied Mathematics": {
+            "nodes": [
+                {
+                    "name": "Applied Mathematics"
+                },
+                {
+                    "name": "Applied Mathematics "
+                },
+                {
+                    "name": "Applied Linguistics"
+                },
+                {
+                    "name": "Mathematics Of Computation"
+                }
+            ],
+            "links": [
+                {
+                    "source": 0,
+                    "target": 1,
+                    "value": 1394
+                },
+                {
+                    "source": 0,
+                    "target": 2,
+                    "value": 57
+                },
+                {
+                    "source": 0,
+                    "target": 3,
+                    "value": 13
+                }
+            ]
+        },
+        "Architectural Studies": {
+            "nodes": [
+                {
+                    "name": "Architectural Studies"
+                },
+                {
+                    "name": "Architectural Studies "
+                }
+            ],
+            "links": [
+                {
+                    "source": 0,
+                    "target": 1,
+                    "value": 137
+                }
+            ]
+        },
+        "Art": {
+            "nodes": [
+                {
+                    "name": "Art"
+                },
+                {
+                    "name": "Art "
+                }
+            ],
+            "links": [
+                {
+                    "source": 0,
+                    "target": 1,
+                    "value": 570
+                }
+            ]
+        },
+        "Art History": {
+            "nodes": [
+                {
+                    "name": "Art History"
+                },
+                {
+                    "name": "Art History "
+                }
+            ],
+            "links": [
+                {
+                    "source": 0,
+                    "target": 1,
+                    "value": 323
+                }
+            ]
+        },
+        "Asian Humanities": {
+            "nodes": [
+                {
+                    "name": "Asian Humanities"
+                },
+                {
+                    "name": "Asian Humanities "
+                }
+            ],
+            "links": [
+                {
+                    "source": 0,
+                    "target": 1,
+                    "value": 62
+                }
+            ]
+        },
+        "Asian Studies": {
+            "nodes": [
+                {
+                    "name": "Asian Studies"
+                },
+                {
+                    "name": "Asian Studies "
+                }
+            ],
+            "links": [
+                {
+                    "source": 0,
+                    "target": 1,
+                    "value": 86
+                }
+            ]
+        },
+        "Astrophysics": {
+            "nodes": [
+                {
+                    "name": "Astrophysics"
+                },
+                {
+                    "name": "Astrophysics "
+                }
+            ],
+            "links": [
+                {
+                    "source": 0,
+                    "target": 1,
+                    "value": 393
+                }
+            ]
+        },
+        "Biochemistry": {
+            "nodes": [
+                {
+                    "name": "Biochemistry"
+                },
+                {
+                    "name": "Biochemistry "
+                },
+                {
+                    "name": "Biology"
+                },
+                {
+                    "name": "MCDB"
+                },
+                {
+                    "name": "Not Enrolled"
+                },
+                {
+                    "name": "Physiological Science"
+                },
+                {
+                    "name": "Psychobiology"
+                }
+            ],
+            "links": [
+                {
+                    "source": 0,
+                    "target": 1,
+                    "value": 2649
+                },
+                {
+                    "source": 0,
+                    "target": 2,
+                    "value": 10
+                },
+                {
+                    "source": 0,
+                    "target": 3,
+                    "value": 43
+                },
+                {
+                    "source": 0,
+                    "target": 4,
+                    "value": 24
+                },
+                {
+                    "source": 0,
+                    "target": 5,
+                    "value": 37
+                },
+                {
+                    "source": 0,
+                    "target": 6,
+                    "value": 30
+                }
+            ]
+        },
+        "Bioengineering": {
+            "nodes": [
+                {
+                    "name": "Bioengineering"
+                },
+                {
+                    "name": "Bioengineering "
+                }
+            ],
+            "links": [
+                {
+                    "source": 0,
+                    "target": 1,
+                    "value": 826
+                }
+            ]
+        },
+        "Biology": {
+            "nodes": [
+                {
+                    "name": "Biology"
+                },
+                {
+                    "name": "Biology "
+                },
+                {
+                    "name": "Human Biology and Society-BA"
+                },
+                {
+                    "name": "MIMG"
+                },
+                {
+                    "name": "MCDB"
+                },
+                {
+                    "name": "Not Enrolled"
+                },
+                {
+                    "name": "Physiological Science"
+                },
+                {
+                    "name": "Psychobiology"
+                },
+                {
+                    "name": "Psychology"
+                }
+            ],
+            "links": [
+                {
+                    "source": 0,
+                    "target": 1,
+                    "value": 4773
+                },
+                {
+                    "source": 0,
+                    "target": 2,
+                    "value": 67
+                },
+                {
+                    "source": 0,
+                    "target": 3,
+                    "value": 37
+                },
+                {
+                    "source": 0,
+                    "target": 4,
+                    "value": 154
+                },
+                {
+                    "source": 0,
+                    "target": 5,
+                    "value": 128
+                },
+                {
+                    "source": 0,
+                    "target": 6,
+                    "value": 137
+                },
+                {
+                    "source": 0,
+                    "target": 7,
+                    "value": 276
+                },
+                {
+                    "source": 0,
+                    "target": 8,
+                    "value": 11
+                }
+            ]
+        },
+        "Biophysics": {
+            "nodes": [
+                {
+                    "name": "Biophysics"
+                },
+                {
+                    "name": "Biophysics "
+                }
+            ],
+            "links": [
+                {
+                    "source": 0,
+                    "target": 1,
+                    "value": 22
+                }
+            ]
+        },
+        "Business Economics": {
+            "nodes": [
+                {
+                    "name": "Business Economics"
+                },
+                {
+                    "name": "Business Economics "
+                },
+                {
+                    "name": "Cognitive Science"
+                },
+                {
+                    "name": "Communication"
+                },
+                {
+                    "name": "Economics"
+                },
+                {
+                    "name": "Not Enrolled"
+                },
+                {
+                    "name": "Political Science"
+                },
+                {
+                    "name": "Sociology"
+                },
+                {
+                    "name": "Undeclared"
+                }
+            ],
+            "links": [
+                {
+                    "source": 0,
+                    "target": 1,
+                    "value": 4756
+                },
+                {
+                    "source": 0,
+                    "target": 2,
+                    "value": 49
+                },
+                {
+                    "source": 0,
+                    "target": 3,
+                    "value": 82
+                },
+                {
+                    "source": 0,
+                    "target": 4,
+                    "value": 830
+                },
+                {
+                    "source": 0,
+                    "target": 5,
+                    "value": 258
+                },
+                {
+                    "source": 0,
+                    "target": 6,
+                    "value": 44
+                },
+                {
+                    "source": 0,
+                    "target": 7,
+                    "value": 69
+                },
+                {
+                    "source": 0,
+                    "target": 8,
+                    "value": 87
+                }
+            ]
+        },
+        "Chemical Engineering": {
+            "nodes": [
+                {
+                    "name": "Chemical Engineering"
+                },
+                {
+                    "name": "Chemical Engineering "
+                }
+            ],
+            "links": [
+                {
+                    "source": 0,
+                    "target": 1,
+                    "value": 895
+                }
+            ]
+        },
+        "Chemistry": {
+            "nodes": [
+                {
+                    "name": "Chemistry"
+                },
+                {
+                    "name": "Chemistry "
+                },
+                {
+                    "name": "Biochemistry"
+                }
+            ],
+            "links": [
+                {
+                    "source": 0,
+                    "target": 1,
+                    "value": 743
+                },
+                {
+                    "source": 0,
+                    "target": 2,
+                    "value": 45
+                }
+            ]
+        },
+        "Chemistry/Materials Science": {
+            "nodes": [
+                {
+                    "name": "Chemistry/Materials Science"
+                },
+                {
+                    "name": "Chemistry/Materials Science "
+                }
+            ],
+            "links": [
+                {
+                    "source": 0,
+                    "target": 1,
+                    "value": 50
+                }
+            ]
+        },
+        "Chicana & Chicano Studies": {
+            "nodes": [
+                {
+                    "name": "Chicana & Chicano Studies"
+                },
+                {
+                    "name": "Chicana & Chicano Studies "
+                }
+            ],
+            "links": [
+                {
+                    "source": 0,
+                    "target": 1,
+                    "value": 215
+                }
+            ]
+        },
+        "Civil Engineering": {
+            "nodes": [
+                {
+                    "name": "Civil Engineering"
+                },
+                {
+                    "name": "Civil Engineering "
+                }
+            ],
+            "links": [
+                {
+                    "source": 0,
+                    "target": 1,
+                    "value": 1083
+                }
+            ]
+        },
+        "Cognitive Science": {
+            "nodes": [
+                {
+                    "name": "Cognitive Science"
+                },
+                {
+                    "name": "Cognitive Science "
+                },
+                {
+                    "name": "Not Enrolled"
+                },
+                {
+                    "name": "Psychobiology"
+                }
+            ],
+            "links": [
+                {
+                    "source": 0,
+                    "target": 1,
+                    "value": 1771
+                },
+                {
+                    "source": 0,
+                    "target": 2,
+                    "value": 11
+                },
+                {
+                    "source": 0,
+                    "target": 2,
+                    "value": 10
+                }
+            ]
+        },
+        "Communication": {
+            "nodes": [
+                {
+                    "name": "Communication"
+                },
+                {
+                    "name": "Communication "
+                }
+            ],
+            "links": [
+                {
+                    "source": 0,
+                    "target": 1,
+                    "value": 1394
+                }
+            ]
+        },
+        "Comparative Literature": {
+            "nodes": [
+                {
+                    "name": "Comparative Literature"
+                },
+                {
+                    "name": "Comparative Literature "
+                }
+            ],
+            "links": [
+                {
+                    "source": 0,
+                    "target": 1,
+                    "value": 13
+                }
+            ]
+        },
+        "Computational & Systems Biology": {
+            "nodes": [
+                {
+                    "name": "Computational & Systems Biology"
+                },
+                {
+                    "name": "Computational & Systems Biology "
+                },
+                {
+                    "name": "Computer Science"
+                }
+            ],
+            "links": [
+                {
+                    "source": 0,
+                    "target": 1,
+                    "value": 704
+                },
+                {
+                    "source": 0,
+                    "target": 2,
+                    "value": 10
+                }
+            ]
+        },
+        "Computer Engineering": {
+            "nodes": [
+                {
+                    "name": "Computer Engineering"
+                },
+                {
+                    "name": "Computer Engineering "
+                }
+            ],
+            "links": [
+                {
+                    "source": 0,
+                    "target": 1,
+                    "value": 271
+                }
+            ]
+        },
+        "Computer Science & Engineering": {
+            "nodes": [
+                {
+                    "name": "Computer Science & Engineering"
+                },
+                {
+                    "name": "Computer Science & Engineering "
+                },
+                {
+                    "name": "Computer Science"
+                }
+            ],
+            "links": [
+                {
+                    "source": 0,
+                    "target": 1,
+                    "value": 638
+                },
+                {
+                    "source": 0,
+                    "target": 2,
+                    "value": 133
+                }
+            ]
+        },
+        "Computer Science": {
+            "nodes": [
+                {
+                    "name": "Computer Science"
+                },
+                {
+                    "name": "Computer Science "
+                },
+                {
+                    "name": "Not Enrolled"
+                }
+            ],
+            "links": [
+                {
+                    "source": 0,
+                    "target": 1,
+                    "value": 3259
+                },
+                {
+                    "source": 0,
+                    "target": 2,
+                    "value": 28
+                }
+            ]
+        },
+        "Dance": {
+            "nodes": [
+                {
+                    "name": "Dance"
+                },
+                {
+                    "name": "Dance "
+                }
+            ],
+            "links": [
+                {
+                    "source": 0,
+                    "target": 1,
+                    "value": 272
+                }
+            ]
+        },
+        "Data Theory": {
+            "nodes": [
+                {
+                    "name": "Data Theory"
+                },
+                {
+                    "name": "Data Theory "
+                },
+                {
+                    "name": "Statistics & Data Science"
+                }
+            ],
+            "links": [
+                {
+                    "source": 0,
+                    "target": 1,
+                    "value": 424
+                },
+                {
+                    "source": 0,
+                    "target": 2,
+                    "value": 83
+                }
+            ]
+        },
+        "Design / Media Arts": {
+            "nodes": [
+                {
+                    "name": "Design / Media Arts"
+                },
+                {
+                    "name": "Design / Media Arts "
+                }
+            ],
+            "links": [
+                {
+                    "source": 0,
+                    "target": 1,
+                    "value": 490
+                }
+            ]
+        },
+        "Ecology, Behavior, & Evolution": {
+            "nodes": [
+                {
+                    "name": "Ecology, Behavior, & Evolution"
+                },
+                {
+                    "name": "Ecology, Behavior, & Evolution "
+                }
+            ],
+            "links": [
+                {
+                    "source": 0,
+                    "target": 1,
+                    "value": 250
+                }
+            ]
+        },
+        "Economics": {
+            "nodes": [
+                {
+                    "name": "Economics"
+                },
+                {
+                    "name": "Economics "
+                },
+                {
+                    "name": "Business Economics"
+                },
+                {
+                    "name": "Not Enrolled"
+                },
+                {
+                    "name": "Political Science"
+                }
+            ],
+            "links": [
+                {
+                    "source": 0,
+                    "target": 1,
+                    "value": 2881
+                },
+                {
+                    "source": 0,
+                    "target": 2,
+                    "value": 116
+                },
+                {
+                    "source": 0,
+                    "target": 3,
+                    "value": 20
+                },
+                {
+                    "source": 0,
+                    "target": 4,
+                    "value": 10
+                }
+            ]
+        },
+        "Education & Social Transformation": {
+            "nodes": [
+                {
+                    "name": "Education & Social Transformation"
+                },
+                {
+                    "name": "Education & Social Transformation "
+                }
+            ],
+            "links": [
+                {
+                    "source": 0,
+                    "target": 1,
+                    "value": 281
+                }
+            ]
+        },
+        "Electrical Engineering": {
+            "nodes": [
+                {
+                    "name": "Electrical Engineering"
+                },
+                {
+                    "name": "Electrical Engineering "
+                },
+                {
+                    "name": "Computer Engineering"
+                },
+                {
+                    "name": "Computer Science"
+                }
+            ],
+            "links": [
+                {
+                    "source": 0,
+                    "target": 1,
+                    "value": 1708
+                },
+                {
+                    "source": 0,
+                    "target": 2,
+                    "value": 40
+                },
+                {
+                    "source": 0,
+                    "target": 3,
+                    "value": 24
+                }
+            ]
+        },
+        "English": {
+            "nodes": [
+                {
+                    "name": "English"
+                },
+                {
+                    "name": "English "
+                }
+            ],
+            "links": [
+                {
+                    "source": 0,
+                    "target": 1,
+                    "value": 2253
+                }
+            ]
+        },
+        "Environmental Science": {
+            "nodes": [
+                {
+                    "name": "Environmental Science"
+                },
+                {
+                    "name": "Environmental Science "
+                }
+            ],
+            "links": [
+                {
+                    "source": 0,
+                    "target": 1,
+                    "value": 1185
+                }
+            ]
+        },
+        "Ethnomusicology": {
+            "nodes": [
+                {
+                    "name": "Ethnomusicology"
+                },
+                {
+                    "name": "Ethnomusicology "
+                }
+            ],
+            "links": [
+                {
+                    "source": 0,
+                    "target": 1,
+                    "value": 42
+                }
+            ]
+        },
+        "Film & Television": {
+            "nodes": [
+                {
+                    "name": "Film & Television"
+                },
+                {
+                    "name": "Film & Television "
+                }
+            ],
+            "links": [
+                {
+                    "source": 0,
+                    "target": 1,
+                    "value": 292
+                }
+            ]
+        },
+        "Financial Actuarial Mathematics": {
+            "nodes": [
+                {
+                    "name": "Financial Actuarial Mathematics"
+                },
+                {
+                    "name": "Financial Actuarial Mathematics "
+                },
+                {
+                    "name": "Economics"
+                }
+            ],
+            "links": [
+                {
+                    "source": 0,
+                    "target": 1,
+                    "value": 621
+                },
+                {
+                    "source": 0,
+                    "target": 2,
+                    "value": 11
+                }
+            ]
+        },
+        "Gender Studies": {
+            "nodes": [
+                {
+                    "name": "Gender Studies"
+                },
+                {
+                    "name": "Gender Studies "
+                },
+                {
+                    "name": "Sociology"
+                }
+            ],
+            "links": [
+                {
+                    "source": 0,
+                    "target": 1,
+                    "value": 289
+                },
+                {
+                    "source": 0,
+                    "target": 2,
+                    "value": 27
+                }
+            ]
+        },
+        "Geography": {
+            "nodes": [
+                {
+                    "name": "Geography"
+                },
+                {
+                    "name": "Geography "
+                }
+            ],
+            "links": [
+                {
+                    "source": 0,
+                    "target": 1,
+                    "value": 208
+                }
+            ]
+        },
+        "Geography/Environmental Studies": {
+            "nodes": [
+                {
+                    "name": "Geography/Environmental Studies"
+                },
+                {
+                    "name": "Geography/Environmental Studies "
+                }
+            ],
+            "links": [
+                {
+                    "source": 0,
+                    "target": 1,
+                    "value": 213
+                }
+            ]
+        },
+        "Global Jazz Studies": {
+            "nodes": [
+                {
+                    "name": "Global Jazz Studies"
+                },
+                {
+                    "name": "Global Jazz Studies "
+                }
+            ],
+            "links": [
+                {
+                    "source": 0,
+                    "target": 1,
+                    "value": 83
+                }
+            ]
+        },
+        "Global Studies": {
+            "nodes": [
+                {
+                    "name": "Global Studies"
+                },
+                {
+                    "name": "Global Studies "
+                },
+                {
+                    "name": "International Development Studies"
+                }
+            ],
+            "links": [
+                {
+                    "source": 0,
+                    "target": 1,
+                    "value": 498
+                },
+                {
+                    "source": 0,
+                    "target": 2,
+                    "value": 22
+                }
+            ]
+        },
+        "History": {
+            "nodes": [
+                {
+                    "name": "History"
+                },
+                {
+                    "name": "History "
+                },
+                {
+                    "name": "Not Enrolled"
+                }
+            ],
+            "links": [
+                {
+                    "source": 0,
+                    "target": 1,
+                    "value": 1997
+                },
+                {
+                    "source": 0,
+                    "target": 2,
+                    "value": 53
+                }
+            ]
+        },
+        "Human Biology and Society-BA": {
+            "nodes": [
+                {
+                    "name": "Human Biology and Society-BA"
+                },
+                {
+                    "name": "Human Biology and Society-BA "
+                }
+            ],
+            "links": [
+                {
+                    "source": 0,
+                    "target": 1,
+                    "value": 192
+                }
+            ]
+        },
+        "Human Biology and Society-BS": {
+            "nodes": [
+                {
+                    "name": "Human Biology and Society-BS"
+                },
+                {
+                    "name": "Human Biology and Society-BS "
+                },
+                {
+                    "name": "Physiological Science"
+                },
+                {
+                    "name": "Psychobiology"
+                }
+            ],
+            "links": [
+                {
+                    "source": 0,
+                    "target": 1,
+                    "value": 1916
+                },
+                {
+                    "source": 0,
+                    "target": 2,
+                    "value": 37
+                },
+                {
+                    "source": 0,
+                    "target": 3,
+                    "value": 42
+                }
+            ]
+        },
+        "International Development Studies": {
+            "nodes": [
+                {
+                    "name": "International Development Studies"
+                },
+                {
+                    "name": "International Development Studies "
+                }
+            ],
+            "links": [
+                {
+                    "source": 0,
+                    "target": 1,
+                    "value": 514
+                }
+            ]
+        },
+        "Japanese": {
+            "nodes": [
+                {
+                    "name": "Japanese"
+                },
+                {
+                    "name": "Japanese "
+                }
+            ],
+            "links": [
+                {
+                    "source": 0,
+                    "target": 1,
+                    "value": 96
+                }
+            ]
+        },
+        "Labor Studies": {
+            "nodes": [
+                {
+                    "name": "Labor Studies"
+                },
+                {
+                    "name": "Labor Studies "
+                }
+            ],
+            "links": [
+                {
+                    "source": 0,
+                    "target": 1,
+                    "value": 31
+                }
+            ]
+        },
+        "Linguistics": {
+            "nodes": [
+                {
+                    "name": "Linguistics"
+                },
+                {
+                    "name": "Linguistics "
+                }
+            ],
+            "links": [
+                {
+                    "source": 0,
+                    "target": 1,
+                    "value": 111
+                }
+            ]
+        },
+        "Linguistics & Computer Science": {
+            "nodes": [
+                {
+                    "name": "Linguistics & Computer Science"
+                },
+                {
+                    "name": "Linguistics & Computer Science "
+                }
+            ],
+            "links": [
+                {
+                    "source": 0,
+                    "target": 1,
+                    "value": 322
+                }
+            ]
+        },
+        "Linguistics & Psychology": {
+            "nodes": [
+                {
+                    "name": "Linguistics & Psychology"
+                },
+                {
+                    "name": "Linguistics & Psychology "
+                }
+            ],
+            "links": [
+                {
+                    "source": 0,
+                    "target": 1,
+                    "value": 94
+                }
+            ]
+        },
+        "Marine Biology": {
+            "nodes": [
+                {
+                    "name": "Marine Biology"
+                },
+                {
+                    "name": "Marine Biology "
+                }
+            ],
+            "links": [
+                {
+                    "source": 0,
+                    "target": 1,
+                    "value": 166
+                }
+            ]
+        },
+        "Materials Engineering": {
+            "nodes": [
+                {
+                    "name": "Materials Engineering"
+                },
+                {
+                    "name": "Materials Engineering "
+                }
+            ],
+            "links": [
+                {
+                    "source": 0,
+                    "target": 1,
+                    "value": 382
+                }
+            ]
+        },
+        "Mathematics": {
+            "nodes": [
+                {
+                    "name": "Mathematics"
+                },
+                {
+                    "name": "Mathematics "
+                },
+                {
+                    "name": "Applied Mathematics"
+                }
+            ],
+            "links": [
+                {
+                    "source": 0,
+                    "target": 1,
+                    "value": 716
+                },
+                {
+                    "source": 0,
+                    "target": 2,
+                    "value": 64
+                }
+            ]
+        },
+        "Mathematics/Applied Science": {
+            "nodes": [
+                {
+                    "name": "Mathematics/Applied Science"
+                },
+                {
+                    "name": "Mathematics/Applied Science "
+                }
+            ],
+            "links": [
+                {
+                    "source": 0,
+                    "target": 1,
+                    "value": 43
+                }
+            ]
+        },
+        "Mathematics/Economics": {
+            "nodes": [
+                {
+                    "name": "Mathematics/Economics"
+                },
+                {
+                    "name": "Mathematics/Economics "
+                }
+            ],
+            "links": [
+                {
+                    "source": 0,
+                    "target": 1,
+                    "value": 884
+                }
+            ]
+        },
+        "Mathematics For Teaching": {
+            "nodes": [
+                {
+                    "name": "Mathematics For Teaching"
+                },
+                {
+                    "name": "Mathematics For Teaching "
+                }
+            ],
+            "links": [
+                {
+                    "source": 0,
+                    "target": 1,
+                    "value": 49
+                }
+            ]
+        },
+        "Mathematics of Computation": {
+            "nodes": [
+                {
+                    "name": "Mathematics of Computation"
+                },
+                {
+                    "name": "Mathematics of Computation "
+                },
+                {
+                    "name": "Computer Science"
+                }
+            ],
+            "links": [
+                {
+                    "source": 0,
+                    "target": 1,
+                    "value": 828
+                },
+                {
+                    "source": 0,
+                    "target": 2,
+                    "value": 139
+                }
+            ]
+        },
+        "Mechanical Engineering": {
+            "nodes": [
+                {
+                    "name": "Mechanical Engineering"
+                },
+                {
+                    "name": "Mechanical Engineering "
+                }
+            ],
+            "links": [
+                {
+                    "source": 0,
+                    "target": 1,
+                    "value": 1949
+                }
+            ]
+        },
+        "Microbiology, Immunology, & Molecular Genetics (MIMG)": {
+            "nodes": [
+                {
+                    "name": "MIMG"
+                },
+                {
+                    "name": "MIMG "
+                },
+                {
+                    "name": "MCDB"
+                },
+                {
+                    "name": "Physiological Science"
+                }
+            ],
+            "links": [
+                {
+                    "source": 0,
+                    "target": 1,
+                    "value": 1769
+                },
+                {
+                    "source": 0,
+                    "target": 2,
+                    "value": 25
+                },
+                {
+                    "source": 0,
+                    "target": 3,
+                    "value": 25
+                }
+            ]
+        },
+        "Molecular, Cell, & Developmental Biology (MCDB)": {
+            "nodes": [
+                {
+                    "name": "MCDB"
+                },
+                {
+                    "name": "MCDB "
+                },
+                {
+                    "name": "Computational & Systems Biology"
+                },
+                {
+                    "name": "Physiological Science"
+                },
+                {
+                    "name": "Psychobiology"
+                }
+            ],
+            "links": [
+                {
+                    "source": 0,
+                    "target": 1,
+                    "value": 2638
+                },
+                {
+                    "source": 0,
+                    "target": 2,
+                    "value": 10
+                },
+                {
+                    "source": 0,
+                    "target": 3,
+                    "value": 43
+                },
+                {
+                    "source": 0,
+                    "target": 4,
+                    "value": 25
+                }
+            ]
+        },
+        "Music": {
+            "nodes": [
+                {
+                    "name": "Music"
+                },
+                {
+                    "name": "Music "
+                },
+                {
+                    "name": "Music Performance"
+                }
+            ],
+            "links": [
+                {
+                    "source": 0,
+                    "target": 1,
+                    "value": 23
+                },
+                {
+                    "source": 0,
+                    "target": 1,
+                    "value": 12
+                }
+            ]
+        },
+        "Music Education": {
+            "nodes": [
+                {
+                    "name": "Music Education"
+                },
+                {
+                    "name": "Music Education "
+                }
+            ],
+            "links": [
+                {
+                    "source": 0,
+                    "target": 1,
+                    "value": 13
+                }
+            ]
+        },
+        "Music History & Industry": {
+            "nodes": [
+                {
+                    "name": "Music History & Industry"
+                },
+                {
+                    "name": "Music History & Industry "
+                }
+                ,
+                {
+                    "name": "Music Industry"
+                }
+            ],
+            "links": [
+                {
+                    "source": 0,
+                    "target": 1,
+                    "value": 80
+                },
+                {
+                    "source": 0,
+                    "target": 2,
+                    "value": 43
+                }
+            ]
+        },
+        "Music Performance": {
+            "nodes": [
+                {
+                    "name": "Music Performance"
+                },
+                {
+                    "name": "Music Performance "
+                }
+            ],
+            "links": [
+                {
+                    "source": 0,
+                    "target": 1,
+                    "value": 349
+                }
+            ]
+        },
+        "Neuroscience": {
+            "nodes": [
+                {
+                    "name": "Neuroscience"
+                },
+                {
+                    "name": "Neuroscience "
+                },
+                {
+                    "name": "Cognitive Science"
+                },
+                {
+                    "name": "Not Enrolled"
+                },
+                {
+                    "name": "Physiological Science"
+                },
+                {
+                    "name": "Psychobiology"
+                }
+            ],
+            "links": [
+                {
+                    "source": 0,
+                    "target": 1,
+                    "value": 2268
+                },
+                {
+                    "source": 0,
+                    "target": 2,
+                    "value": 10
+                },
+                {
+                    "source": 0,
+                    "target": 3,
+                    "value": 48
+                },
+                {
+                    "source": 0,
+                    "target": 4,
+                    "value": 28
+                },
+                {
+                    "source": 0,
+                    "target": 5,
+                    "value": 140
+                }
+            ]
+        },
+        "Nursing-Prelicensure": {
+            "nodes": [
+                {
+                    "name": "Nursing-Prelicensure"
+                },
+                {
+                    "name": "Nursing-Prelicensure "
+                }
+            ],
+            "links": [
+                {
+                    "source": 0,
+                    "target": 1,
+                    "value": 658
+                }
+            ]
+        },
+        "Philosophy": {
+            "nodes": [
+                {
+                    "name": "Philosophy"
+                },
+                {
+                    "name": "Philosophy "
+                },
+                {
+                    "name": "Not Enrolled"
+                }
+            ],
+            "links": [
+                {
+                    "source": 0,
+                    "target": 1,
+                    "value": 944
+                },
+                {
+                    "source": 0,
+                    "target": 2,
+                    "value": 24
+                }
+            ]
+        },
+        "Physics": {
+            "nodes": [
+                {
+                    "name": "Physics"
+                },
+                {
+                    "name": "Physics "
+                }
+            ],
+            "links": [
+                {
+                    "source": 0,
+                    "target": 1,
+                    "value": 816
+                }
+            ]
+        },
+        "Physiological Science": {
+            "nodes": [
+                {
+                    "name": "Physiological Science"
+                },
+                {
+                    "name": "Physiological Science "
+                },
+                {
+                    "name": "Biology"
+                },
+                {
+                    "name": "Psychobiology"
+                }
+            ],
+            "links": [
+                {
+                    "source": 0,
+                    "target": 1,
+                    "value": 2023
+                },
+                {
+                    "source": 0,
+                    "target": 2,
+                    "value": 26
+                },
+                {
+                    "source": 0,
+                    "target": 3,
+                    "value": 39
+                }
+            ]
+        },
+        "Political Science": {
+            "nodes": [
+                {
+                    "name": "Political Science"
+                },
+                {
+                    "name": "Political Science "
+                },
+                {
+                    "name": "Not Enrolled"
+                },
+                {
+                    "name": "Public Affairs"
+                }
+            ],
+            "links": [
+                {
+                    "source": 0,
+                    "target": 1,
+                    "value": 6001
+                },
+                {
+                    "source": 0,
+                    "target": 2,
+                    "value": 215
+                },
+                {
+                    "source": 0,
+                    "target": 3,
+                    "value": 39
+                }
+            ]
+        },
+        "Psychobiology": {
+            "nodes": [
+                {
+                    "name": "Psychobiology"
+                },
+                {
+                    "name": "Psychobiology "
+                },
+                {
+                    "name": "Human Biology and Society-BS"
+                },
+                {
+                    "name": "Not Enrolled"
+                },
+                {
+                    "name": "Physiological Science"
+                },
+                {
+                    "name": "Psychology"
+                },
+                {
+                    "name": "Undeclared"
+                }
+            ],
+            "links": [
+                {
+                    "source": 0,
+                    "target": 1,
+                    "value": 4177
+                },
+                {
+                    "source": 0,
+                    "target": 2,
+                    "value": 35
+                },
+                {
+                    "source": 0,
+                    "target": 3,
+                    "value": 10
+                },
+                {
+                    "source": 0,
+                    "target": 4,
+                    "value": 14
+                },
+                {
+                    "source": 0,
+                    "target": 5,
+                    "value": 72
+                },
+                {
+                    "source": 0,
+                    "target": 6,
+                    "value": 10
+                }
+            ]
+        },
+        "Psychology": {
+            "nodes": [
+                {
+                    "name": "Psychology"
+                },
+                {
+                    "name": "Psychology "
+                },
+                {
+                    "name": "Cognitive Science"
+                },
+                {
+                    "name": "Not Enrolled"
+                },
+                {
+                    "name": "Psychobiology"
+                },
+                {
+                    "name": "Sociology"
+                }
+            ],
+            "links": [
+                {
+                    "source": 0,
+                    "target": 1,
+                    "value": 6320
+                },
+                {
+                    "source": 0,
+                    "target": 2,
+                    "value": 39
+                },
+                {
+                    "source": 0,
+                    "target": 3,
+                    "value": 150
+                },
+                {
+                    "source": 0,
+                    "target": 4,
+                    "value": 33
+                },
+                {
+                    "source": 0,
+                    "target": 5,
+                    "value": 33
+                }
+            ]
+        },
+        "Public Affairs": {
+            "nodes": [
+                {
+                    "name": "Public Affairs"
+                },
+                {
+                    "name": "Public Affairs "
+                }
+            ],
+            "links": [
+                {
+                    "source": 0,
+                    "target": 1,
+                    "value": 1005
+                }
+            ]
+        },
+        "Sociology": {
+            "nodes": [
+                {
+                    "name": "Sociology"
+                },
+                {
+                    "name": "Sociology "
+                },
+                {
+                    "name": "Not Enrolled"
+                }
+            ],
+            "links": [
+                {
+                    "source": 0,
+                    "target": 1,
+                    "value": 4510
+                },
+                {
+                    "source": 0,
+                    "target": 2,
+                    "value": 195
+                }
+            ]
+        },
+        "Spanish": {
+            "nodes": [
+                {
+                    "name": "Spanish"
+                },
+                {
+                    "name": "Spanish "
+                }
+            ],
+            "links": [
+                {
+                    "source": 0,
+                    "target": 1,
+                    "value": 71
+                }
+            ]
+        },
+        "Statistics & Data Science": {
+            "nodes": [
+                {
+                    "name": "Statistics & Data Science"
+                },
+                {
+                    "name": "Statistics & Data Science "
+                },
+                {
+                    "name": "Not Enrolled"
+                }
+            ],
+            "links": [
+                {
+                    "source": 0,
+                    "target": 1,
+                    "value": 1116
+                },
+                {
+                    "source": 0,
+                    "target": 1,
+                    "value": 12
+                }
+            ]
+        },
+        "Theater": {
+            "nodes": [
+                {
+                    "name": "Theater"
+                },
+                {
+                    "name": "Theater "
+                }
+            ],
+            "links": [
+                {
+                    "source": 0,
+                    "target": 1,
+                    "value": 824
+                }
+            ]
+        },
+        "Undeclared-Engineering & Applied Science": {
+            "nodes": [
+                {
+                    "name": "Undeclared-Engineering & Applied Science"
+                },
+                {
+                    "name": "Undeclared-Engineering & Applied Science "
+                },
+                {
+                    "name": "Computer Science"
+                },
+                {
+                    "name": "Mechanical Engineering"
+                }
+            ],
+            "links": [
+                {
+                    "source": 0,
+                    "target": 1,
+                    "value": 244
+                },
+                {
+                    "source": 0,
+                    "target": 2,
+                    "value": 36
+                },
+                {
+                    "source": 0,
+                    "target": 31,
+                    "value": 21
+                }
+            ]
+        },
+        "Undeclared-Humanities": {
+            "nodes": [
+                {
+                    "name": "Undeclared-Humanities"
+                },
+                {
+                    "name": "Undeclared-Humanities "
+                },
+                {
+                    "name": "Not Enrolled"
+                }
+            ],
+            "links": [
+                {
+                    "source": 0,
+                    "target": 1,
+                    "value": 253
+                },
+                {
+                    "source": 0,
+                    "target": 2,
+                    "value": 13
+                }
+            ]
+        },
+        "Undeclared-Life Science": {
+            "nodes": [
+                {
+                    "name": "Undeclared-Life Science"
+                },
+                {
+                    "name": "Undeclared-Life Science "
+                },
+                {
+                    "name": "Psychobiology"
+                }
+            ],
+            "links": [
+                {
+                    "source": 0,
+                    "target": 1,
+                    "value": 365
+                },
+                {
+                    "source": 0,
+                    "target": 2,
+                    "value": 27
+                }
+            ]
+        },
+        "Undeclared-Physical Science": {
+            "nodes": [
+                {
+                    "name": "Undeclared-Physical Science"
+                },
+                {
+                    "name": "Undeclared-Physical Science "
+                }
+            ],
+            "links": [
+                {
+                    "source": 0,
+                    "target": 1,
+                    "value": 192
+                }
+            ]
+        },
+        "Undeclared-Social Science": {
+            "nodes": [
+                {
+                    "name": "Undeclared-Social Science"
+                },
+                {
+                    "name": "Undeclared-Social Science "
+                },
+                {
+                    "name": "Communication"
+                },
+                {
+                    "name": "Economics"
+                },
+                {
+                    "name": "Not Enrolled"
+                },
+                {
+                    "name": "Political Science"
+                },
+                {
+                    "name": "Psychology"
+                },
+                {
+                    "name": "Public Affairs"
+                },
+                {
+                    "name": "Sociology"
+                }
+            ],
+            "links": [
+                {
+                    "source": 0,
+                    "target": 1,
+                    "value": 578
+                },
+                {
+                    "source": 0,
+                    "target": 2,
+                    "value": 46
+                },
+                {
+                    "source": 0,
+                    "target": 3,
+                    "value": 11
+                },
+                {
+                    "source": 0,
+                    "target": 4,
+                    "value": 85
+                },
+                {
+                    "source": 0,
+                    "target": 5,
+                    "value": 13
+                },
+                {
+                    "source": 0,
+                    "target": 5,
+                    "value": 43
+                },
+                {
+                    "source": 0,
+                    "target": 5,
+                    "value": 11
+                },
+                {
+                    "source": 0,
+                    "target": 5,
+                    "value": 62
+                }
+            ]
+        },
+        "World Arts & Cultures": {
+            "nodes": [
+                {
+                    "name": "World Arts & Cultures"
+                },
+                {
+                    "name": "World Arts & Cultures "
+                }
+            ],
+            "links": [
+                {
+                    "source": 0,
+                    "target": 1,
+                    "value": 226
+                }
+            ]
+        }
+    }
+]
