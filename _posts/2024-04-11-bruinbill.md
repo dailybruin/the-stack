@@ -134,4 +134,4 @@ When adjusted for inflation, the net cost of attendance of UCLA has remained abo
 
 ### About the Data:
 
-All visualizations were created using a dataset from the University of California (https://www.universityofcalifornia.edu/about-us/information-center/net-cost). Only data for undergraduates was examined.
+All visualizations were created using a dataset from the [Net cost of attendance](https://www.universityofcalifornia.edu/about-us/information-center/net-cost) published by the University of California. Only data for undergraduates was examined.
