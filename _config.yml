@@ -33,5 +33,9 @@ paginate_path: "/page/:num/"
 # Build settings
 markdown: kramdown
 
+kramdown:
+  input: GFM
+  math_engine: mathjax
+
 # plugins
 plugins: [jekyll-paginate]

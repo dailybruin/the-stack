@@ -1,0 +1,2097 @@
+const FEBRUARY_2024_crimes_geojson = {
+  type: 'FeatureCollection',
+  features: [
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-118.446351, 34.066399],
+      },
+      properties: {
+        'Event #': 2024006152,
+        DATE: '2/1/2024',
+        EVENT: 'BATTERY ON PEACE OFFICER/EMERGENCY PERSONNEL/ETC',
+        CATEGORY: 'ASSAULT/BATTERY',
+        LOCATION: 'RONALD REAGAN UCLA MEDICAL CENTER\n757 WESTWOOD PLAZA',
+        DISPOSITION: 'CLOSED: SUBJECT ARRESTED',
+        'Case #': '24-0227',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-118.446351, 34.066399],
+      },
+      properties: {
+        'Event #': 2024006164,
+        DATE: '2/1/2024',
+        EVENT:
+          'TRESPASS - REFUSE TO LEAVE PROPERTY\n(2) OBSTRUCT/RESIST/ETC PUBLIC/P OFFICER/EMT',
+        CATEGORY: 'OTHER/MULTIPLE',
+        LOCATION: 'RONALD REAGAN UCLA MEDICAL CENTER\n757 WESTWOOD PLAZA',
+        DISPOSITION: 'CLOSED: NO FURTHER ACTION',
+        'Case #': '24-0229',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-118.446871, 34.072043],
+      },
+      properties: {
+        'Event #': 2024006190,
+        DATE: '2/1/2024',
+        EVENT: 'VANDALISM ($400 OR MORE)',
+        CATEGORY: 'VANDALISM',
+        LOCATION: 'PARKING STRUCTURE 7\n336 CHARLES E YOUNG DRIVE N',
+        DISPOSITION: 'CLOSED: NO FURTHER ACTION',
+        'Case #': '24-0232',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-118.4443954, 34.0618158],
+      },
+      properties: {
+        'Event #': 2024006215,
+        DATE: '2/1/2024',
+        EVENT: 'PETTY THEFT - FROM BUILDINGS',
+        CATEGORY: 'THEFT/BURGLARY',
+        LOCATION: '1041 GLENDON AVE.',
+        DISPOSITION: 'OPEN CASE',
+        'Case #': '24-0234',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-118.4452672, 34.06804],
+      },
+      properties: {
+        'Event #': 2024006277,
+        DATE: '2/1/2024',
+        EVENT: 'VANDALISM - DEFACE PROPERTY',
+        CATEGORY: 'VANDALISM',
+        LOCATION: 'STRATHMORE BUILDING\n555 WESTWOOD PLAZA',
+        DISPOSITION: 'CLOSED: NO FURTHER ACTION',
+        'Case #': '24-0235',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-118.4545831, 34.032426],
+      },
+      properties: {
+        'Event #': 2024006446,
+        DATE: '2/2/2024',
+        EVENT: 'OBTAIN MONEY/ETC BY FALSE PRETENSES',
+        CATEGORY: 'OTHER/MULTIPLE',
+        LOCATION: '12121 W OLYMPIC BLVD.',
+        DISPOSITION: 'CLOSED / INACTIVE: NO LEADS',
+        'Case #': '24-0236',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-118.4527487, 34.0739077],
+      },
+      properties: {
+        'Event #': 2024006498,
+        DATE: '2/2/2024',
+        EVENT: 'BURGLARY',
+        CATEGORY: 'THEFT/BURGLARY',
+        LOCATION: 'HEDRICK SUMMIT\n240 DE NEVE DRIVE',
+        DISPOSITION: 'OPEN CASE',
+        'Case #': '24-0240',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-118.4485653, 34.0613151],
+      },
+      properties: {
+        'Event #': 2024006677,
+        DATE: '2/3/2024',
+        EVENT:
+          'TAKE VEHICLE W/O OWNER`S CONSENT/VEHICLE THEFT\n(2) VANDALISM - DAMAGE PROPERTY',
+        CATEGORY: 'THEFT/BURGLARY\nVANDALISM',
+        LOCATION: 'PASEO WEYBURN TERRACE\n11000 WEYBURN DRIVE',
+        DISPOSITION: 'CLOSED / INACTIVE: NO LEADS',
+        'Case #': '24-0248',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-118.4447794, 34.0667059],
+      },
+      properties: {
+        'Event #': 2024006698,
+        DATE: '2/3/2024',
+        EVENT: 'ANNOY/MOLESTS VICTIM UNDER 18 YEARS OF AGE',
+        CATEGORY: 'OTHER/MULTIPLE',
+        LOCATION: '700-BLOCK WESTWOOD PLAZA',
+        DISPOSITION: 'OPEN CASE',
+        'Case #': '24-0249',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-118.4479783, 34.0619707],
+      },
+      properties: {
+        'Event #': 2024006705,
+        DATE: '2/3/2024',
+        EVENT:
+          'POSSESS CONTROLLED SUBSTANCE\n(2) PARAPHERNALIA - POSSESS UNLAWFUL\n(3) FELON PURCHASE/POSSESS/USE TEAR GAS/ETC',
+        CATEGORY: 'OTHER/MULTIPLE',
+        LOCATION: '999 GAYLEY AVE./WEYBURN AVE.',
+        DISPOSITION: 'CLOSED: SUBJECT ARRESTED',
+        'Case #': '24-0250',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-118.4527487, 34.0739077],
+      },
+      properties: {
+        'Event #': 2024006993,
+        DATE: '2/5/2024',
+        EVENT: 'PETTY THEFT - OTHER',
+        CATEGORY: 'THEFT/BURGLARY',
+        LOCATION: 'HEDRICK SUMMIT\n240 DE NEVE DRIVE',
+        DISPOSITION: 'OPEN CASE',
+        'Case #': '24-0254',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-118.4473921, 34.0670903],
+      },
+      properties: {
+        'Event #': 2024007023,
+        DATE: '2/5/2024',
+        EVENT: 'TRESPASS - REFUSE TO LEAVE PROPERTY\n(2) WARRANT ARREST',
+        CATEGORY: 'TRESPASSING\nOTHER/MULTIPLE',
+        LOCATION: '757 CHARLES E YOUNG DRIVE S',
+        DISPOSITION: 'CLOSED: SUBJECT ARRESTED',
+        'Case #': '24-0255',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-118.4520173, 34.0723013],
+      },
+      properties: {
+        'Event #': 2024007070,
+        DATE: '2/6/2024',
+        EVENT: 'TRAFFIC COLLISION REPORT',
+        CATEGORY: 'TRAFFIC/VEHICULAR',
+        LOCATION: 'RIEBER TURNAROUND\n310 DE NEVE DRIVE',
+        DISPOSITION: 'OPEN CASE: TO BE ASSIGNED',
+        'Case #': '24-0256',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-118.4412792, 34.0696422],
+      },
+      properties: {
+        'Event #': 2024007081,
+        DATE: '2/6/2024',
+        EVENT:
+          'GIVE FALSE IDENTIFICATION TO PO\n(2) APPROPRIATE LOST PROPERTY\n(3) TRESPASS - REFUSE TO LEAVE PROPERTY',
+        CATEGORY: 'OTHER/MULTIPLE',
+        LOCATION: 'FRANZ HALL\n502 PORTOLA PLAZA',
+        DISPOSITION: 'CLOSED: SUBJECT ARRESTED',
+        'Case #': '24-0257',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-118.4452612, 34.0649793],
+      },
+      properties: {
+        'Event #': 2024007135,
+        DATE: '2/6/2024',
+        EVENT:
+          'GIVE FALSE IDENTIFICATION TO PO\n(2) POSSESS NARCOTIC CONTROLLED SUBSTANCE\n(3) WARRANT ARREST',
+        CATEGORY: 'OTHER/MULTIPLE',
+        LOCATION: 'PARKING STRUCTURE 18\n820 WESTWOOD PLAZA',
+        DISPOSITION: 'CLOSED: SUBJECT ARRESTED',
+        'Case #': '24-0259',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-118.4465738, 34.0664764],
+      },
+      properties: {
+        'Event #': 2024007276,
+        DATE: '2/7/2024',
+        EVENT: 'BATTERY\n(2) WARRANT ARREST',
+        CATEGORY: 'ASSAULT/BATTERY\nOTHER/MULTIPLE',
+        LOCATION: 'RRMC ER\n757 WESTWOOD PLAZA',
+        DISPOSITION: 'CLOSED: SUBJECT ARRESTED',
+        'Case #': '24-0260',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-118.4477106, 34.0600313],
+      },
+      properties: {
+        'Event #': 2024007280,
+        DATE: '2/7/2024',
+        EVENT: 'APPROPRIATE LOST PROPERTY\n(2) CA REGS - VIOLATE CURFEW',
+        CATEGORY: 'THEFT/BURGLARY\nOTHER/MULTIPLE',
+        LOCATION: 'PARKING STRUCTURE 32\n1070 VETERAN AVE.',
+        DISPOSITION: 'CLOSED: NO FURTHER ACTION',
+        'Case #': '24-0261',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-118.4445984, 34.0596499],
+      },
+      properties: {
+        'Event #': 2024007351,
+        DATE: '2/7/2024',
+        EVENT: 'BATTERY',
+        CATEGORY: 'ASSAULT/BATTERY',
+        LOCATION: '1159 WESTWOOD BLVD./LINDBROOK DRIVE',
+        DISPOSITION: 'OPEN CASE',
+        'Case #': '24-0263',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-118.4314314, 34.000896],
+      },
+      properties: {
+        'Event #': 2024007511,
+        DATE: '2/7/2024',
+        EVENT:
+          'PARAPHERNALIA - POSSESS UNLAWFUL\n(2) OBSTRUCT/RESIST/ETC PUBLIC/P OFFICER/EMT',
+        CATEGORY: 'OTHER/MULTIPLE',
+        LOCATION: '3947 S CENTINELA AVE./CASWELL AVE.',
+        DISPOSITION: 'CLOSED: SUBJECT ARRESTED',
+        'Case #': '24-0270',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-118.4447968, 34.0726364],
+      },
+      properties: {
+        'Event #': 2024007606,
+        DATE: '2/8/2024',
+        EVENT: 'VANDALISM - DEFACE PROPERTY',
+        CATEGORY: 'VANDALISM',
+        LOCATION: 'PARKING STRUCTURE 4\n219 WESTWOOD PLAZA',
+        DISPOSITION: 'OPEN CASE',
+        'Case #': '24-0273',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-118.4479294, 34.0651113],
+      },
+      properties: {
+        'Event #': 2024007715,
+        DATE: '2/8/2024',
+        EVENT: 'VANDALISM - DEFACE PROPERTY',
+        CATEGORY: 'VANDALISM',
+        LOCATION: 'PARKING STRUCTURE 1\n720 GAYLEY AVE.',
+        DISPOSITION: 'CLOSED / INACTIVE: NO LEADS',
+        'Case #': '24-0274',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-118.4477106, 34.0600313],
+      },
+      properties: {
+        'Event #': 2024007749,
+        DATE: '2/8/2024',
+        EVENT: 'POSSESS CONTROLLED SUBSTANCE',
+        CATEGORY: 'DRUG/CONTROLLED SUBSTANCE',
+        LOCATION: 'PARKING STRUCTURE 32\n1070 VETERAN AVE.',
+        DISPOSITION: 'CLOSED: SUBJECT ARRESTED',
+        'Case #': '24-0275',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-118.4525116, 34.0637032],
+      },
+      properties: {
+        'Event #': 2024007786,
+        DATE: '2/9/2024',
+        EVENT: 'DISTURB BY LOUD/UNREASONABLE NOISE',
+        CATEGORY: 'OTHER/MULTIPLE',
+        LOCATION: '714 VETERAN AVE.',
+        DISPOSITION: 'OPEN CASE',
+        'Case #': '24-0278',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-118.4534841, 34.0657516],
+      },
+      properties: {
+        'Event #': 2024007791,
+        DATE: '2/9/2024',
+        EVENT: 'RECKLESS DRIVING IN OFFSTREET PARKING FACILITY',
+        CATEGORY: 'TRAFFIC/VEHICULAR',
+        LOCATION: '627 KELTON AVE.',
+        DISPOSITION: 'CLOSED: SUBJECT ARRESTED',
+        'Case #': '24-0277',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-118.4499575, 34.0688876],
+      },
+      properties: {
+        'Event #': 2024007821,
+        DATE: '2/9/2024',
+        EVENT: 'COMMIT MAIL THEFT\n(2) WARRANT ARREST',
+        CATEGORY: 'THEFT/BURGLARY\nOTHER/MULTIPLE',
+        LOCATION: 'ZETA BETA TAU\n555 GAYLEY AVE.',
+        DISPOSITION: 'CLOSED: SUBJECT ARRESTED',
+        'Case #': '24-0279',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-118.446351, 34.066399],
+      },
+      properties: {
+        'Event #': 2024007856,
+        DATE: '2/9/2024',
+        EVENT: 'GRAND THEFT - FROM BUILDINGS',
+        CATEGORY: 'THEFT/BURGLARY',
+        LOCATION: 'RONALD REAGAN UCLA MEDICAL CENTER\n757 WESTWOOD PLAZA',
+        DISPOSITION: 'CLOSED / INACTIVE: NO LEADS',
+        'Case #': '24-0280',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-118.4510504, 34.0729717],
+      },
+      properties: {
+        'Event #': 2024007861,
+        DATE: '2/9/2024',
+        EVENT: 'GRAND THEFT - FROM BUILDINGS',
+        CATEGORY: 'THEFT/BURGLARY',
+        LOCATION: 'DELTA TERRACE\n330 DE NEVE DRIVE',
+        DISPOSITION: 'OPEN CASE',
+        'Case #': '24-0281',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-118.4302378, 34.0716933],
+      },
+      properties: {
+        'Event #': 2024007870,
+        DATE: '2/9/2024',
+        EVENT: 'BURGLARY - FROM MOTOR VEHICLE\n(2) VANDALISM - DEFACE PROPERTY',
+        CATEGORY: 'THEFT/BURGLARY\nVANDALISM',
+        LOCATION: '567 COMSTOCK AVE.',
+        DISPOSITION: 'OPEN CASE',
+        'Case #': '24-0282',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-118.4422066, 34.0750807],
+      },
+      properties: {
+        'Event #': 2024007898,
+        DATE: '2/9/2024',
+        EVENT:
+          'FALSE IMPRISONMENT\n(2) RAPE BY FORCE/FEAR/ETC\n(3) SEX PENETRATION - FORCE/ETC',
+        CATEGORY: 'OTHER/MULTIPLE',
+        LOCATION: '300-BLOCK CHARLES E YOUNG DRIVE N',
+        DISPOSITION: 'OPEN CASE',
+        'Case #': '24-0283',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-118.4455012, 34.0583746],
+      },
+      properties: {
+        'Event #': 2024007921,
+        DATE: '2/9/2024',
+        EVENT: 'TRAFFIC COLLIS UNIVERSITY VEH',
+        CATEGORY: 'TRAFFIC/VEHICULAR',
+        LOCATION: 'WILSHIRE BLVD./GAYLEY AVE.',
+        DISPOSITION: 'OPEN CASE: TO BE ASSIGNED',
+        'Case #': '24-0285',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-118.4441726, 34.0704554],
+      },
+      properties: {
+        'Event #': 2024008040,
+        DATE: '2/10/2024',
+        EVENT: 'GRAND THEFT - SHOPLIFTING',
+        CATEGORY: 'THEFT/BURGLARY',
+        LOCATION: 'ACKERMAN UNION\n308 WESTWOOD PLAZA',
+        DISPOSITION: 'OPEN CASE',
+        'Case #': '24-0289',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-118.4441161, 34.0519244],
+      },
+      properties: {
+        'Event #': 2024008044,
+        DATE: '2/10/2024',
+        EVENT: 'FORGE/ALTER VEHICLE REGISTRATION/ETC',
+        CATEGORY: 'TRAFFIC/VEHICULAR',
+        LOCATION: '10999 OHIO AVE./GREENFIELD AVE.',
+        DISPOSITION: 'CLOSED: SUBJECT ARRESTED',
+        'Case #': '24-0290',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-118.4501049, 34.0704957],
+      },
+      properties: {
+        'Event #': 2024008063,
+        DATE: '2/10/2024',
+        EVENT:
+          'BATTERY\n(2) OBSTRUCT/RESIST/ETC PUBLIC/P OFFICER/EMT\n(3) MENTAL DISORDER 72 HR OBSERVATION',
+        CATEGORY: 'OTHER/MULTIPLE',
+        LOCATION: 'DE NEVE PLAZA\n351 CHARLES E YOUNG DRIVE W',
+        DISPOSITION: 'CLOSED: SUBJECT ARRESTED',
+        'Case #': '24-0291',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-118.4479348, 34.0659715],
+      },
+      properties: {
+        'Event #': 2024008124,
+        DATE: '2/11/2024',
+        EVENT:
+          'DISORDERLY CONDUCT - ALCOHOL\n(2) DOMESTIC VIOLENCE INCIDENT REPORT (NON-CRIMINAL)',
+        CATEGORY: 'OTHER/MULTIPLE',
+        LOCATION: '679 GAYLEY AVE.',
+        DISPOSITION: 'CLOSED: SUBJECT ARRESTED',
+        'Case #': '24-0294',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-118.4527487, 34.0739077],
+      },
+      properties: {
+        'Event #': 2024008132,
+        DATE: '2/11/2024',
+        EVENT: 'DISORDERLY CONDUCT - DISTRIBUTE INTIMATE PHOTOS/ETC OF ANOTHER',
+        CATEGORY: 'RAPE/OTHER SEX CRIME',
+        LOCATION: 'HEDRICK SUMMIT\n240 DE NEVE DRIVE',
+        DISPOSITION: 'OPEN CASE',
+        'Case #': '24-0295',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-118.4457852, 34.0692755],
+      },
+      properties: {
+        'Event #': 2024008163,
+        DATE: '2/11/2024',
+        EVENT: 'GRAND THEFT - OTHER',
+        CATEGORY: 'THEFT/BURGLARY',
+        LOCATION: 'LUSKIN CONFERENCE CENTER\n425 WESTWOOD PLAZA',
+        DISPOSITION: 'CLOSED / INACTIVE: NO LEADS',
+        'Case #': '24-0297',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-118.4469528, 34.059361],
+      },
+      properties: {
+        'Event #': 2024008235,
+        DATE: '2/11/2024',
+        EVENT:
+          'CA REGS - BRING/MAINTAIN LARGE PERSONAL BELONGINGS\n(2) MISCELLANEOUS CALIFORNIA CODE OF REGULATIONS',
+        CATEGORY: 'OTHER/MULTIPLE',
+        LOCATION: 'GEFFEN ACADEMY AT UCLA\n11000 KINROSS AVENUE',
+        DISPOSITION: 'CLOSED: NO FURTHER ACTION',
+        'Case #': '24-0299',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-121.8940626, 36.6012716],
+      },
+      properties: {
+        'Event #': 2024008275,
+        DATE: '2/12/2024',
+        EVENT: 'CA REGS - NON-AFFILIATE CONSUME ALCOHOL',
+        CATEGORY: 'OTHER/MULTIPLE',
+        LOCATION: '300-BLOCK PORTOLA PLAZA',
+        DISPOSITION: 'CLOSED: SUBJECT ARRESTED',
+        'Case #': '24-0300',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-118.4415114, 34.0685828],
+      },
+      properties: {
+        'Event #': 2024008297,
+        DATE: '2/12/2024',
+        EVENT:
+          'PARAPHERNALIA - POSSESS UNLAWFUL\n(2) TRESPASS - OCCUPY PROPERTY WITHOUT CONSENT\n(3) ACCESS COMPUTER/ALTER/ETC DATA - DEVISE SCHEME/ETC DEFRAUD/ETC\n(4) WARRANT ARREST\n(5) WARRANT ARREST',
+        CATEGORY: 'OTHER/MULTIPLE',
+        LOCATION: 'YOUNG HALL\n607 CHARLES E YOUNG DRIVE E',
+        DISPOSITION: 'CLOSED: SUBJECT ARRESTED',
+        'Case #': '24-0302',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-118.4419627, 34.0661155],
+      },
+      properties: {
+        'Event #': 2024008306,
+        DATE: '2/12/2024',
+        EVENT: 'GRAND THEFT - OTHER',
+        CATEGORY: 'THEFT/BURGLARY',
+        LOCATION: '714 TIVERTON DRIVE',
+        DISPOSITION: 'OPEN CASE',
+        'Case #': '24-0303',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-118.432715, 34.0640529],
+      },
+      properties: {
+        'Event #': 2024008309,
+        DATE: '2/12/2024',
+        EVENT: 'IDENTITY THEFT - GET CREDIT/ETC OTHER`S ID',
+        CATEGORY: 'THEFT/BURGLARY',
+        LOCATION: '10501 WILSHIRE BLVD.',
+        DISPOSITION: 'OPEN CASE',
+        'Case #': '24-0305',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-118.4401283, 34.0742539],
+      },
+      properties: {
+        'Event #': 2024008321,
+        DATE: '2/12/2024',
+        EVENT: 'VANDALISM - DEFACE PROPERTY',
+        CATEGORY: 'VANDALISM',
+        LOCATION: 'BUNCHE HALL\n315 PORTOLA PLAZA',
+        DISPOSITION: 'CLOSED: NO FURTHER ACTION',
+        'Case #': '24-0306',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-118.4452612, 34.0649793],
+      },
+      properties: {
+        'Event #': 2024008348,
+        DATE: '2/12/2024',
+        EVENT: 'TRAFFIC COLLISION OPEN VEHICLE',
+        CATEGORY: 'TRAFFIC/VEHICULAR',
+        LOCATION: 'WESTWOOD PLAZA/MEDICAL PLAZA',
+        DISPOSITION: 'OPEN CASE: TO BE ASSIGNED',
+        'Case #': '24-0308',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-118.4456309, 34.070108],
+      },
+      properties: {
+        'Event #': 2024008357,
+        DATE: '2/12/2024',
+        EVENT: 'TAKE VEHICLE W/O OWNER`S CONSENT/VEHICLE THEFT',
+        CATEGORY: 'THEFT/BURGLARY',
+        LOCATION: 'MORGAN ATHLETIC CENTER\n325 WESTWOOD PLAZA',
+        DISPOSITION: 'CLOSED / INACTIVE: NO LEADS',
+        'Case #': '24-0309',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-118.4401988, 34.0692348],
+      },
+      properties: {
+        'Event #': 2024008418,
+        DATE: '2/13/2024',
+        EVENT: 'PETTY THEFT - OTHER',
+        CATEGORY: 'THEFT/BURGLARY',
+        LOCATION: 'PARKING STRUCTURE 2\n602 CHARLES E YOUNG DRIVE E',
+        DISPOSITION: 'OPEN CASE',
+        'Case #': '24-0315',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-118.4432392, 34.0692388],
+      },
+      properties: {
+        'Event #': 2024008419,
+        DATE: '2/13/2024',
+        EVENT:
+          'CA REGS - VIOLATE CURFEW\n(2) CA REGS - NON-AFFILIATE IN POSSESSION OF DANGEROUS WPN',
+        CATEGORY: 'OTHER/MULTIPLE',
+        LOCATION: 'BOELTER HALL\n580 PORTOLA PLAZA',
+        DISPOSITION: 'CLOSED: SUBJECT ARRESTED',
+        'Case #': '24-0311',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-118.4411509, 34.0710921],
+      },
+      properties: {
+        'Event #': 2024008422,
+        DATE: '2/13/2024',
+        EVENT:
+          'CA REGS - VIOLATE CURFEW\n(2) CA REGS - NON-AFFILIATE IN POSSESSION OF DANGEROUS WPN',
+        CATEGORY: 'OTHER/MULTIPLE',
+        LOCATION: 'KAPLAN HALL\n415 PORTOLA PLAZA',
+        DISPOSITION: 'CLOSED: SUBJECT ARRESTED',
+        'Case #': '24-0312',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-118.4451436, 34.0635092],
+      },
+      properties: {
+        'Event #': 2024008428,
+        DATE: '2/13/2024',
+        EVENT:
+          'RECKLESSLY CAUSING FIRE OF PROPERTY\n(2) WARRANT ARREST\n(3) WARRANT ARREST\n(4) WARRANT ARREST\n(5) WARRANT ARREST\n(6) WARRANT ARREST',
+        CATEGORY:
+          'ARSON\nOTHER/MULTIPLE\nOTHER/MULTIPLE\nOTHER/MULTIPLE\nOTHER/MULTIPLE\nOTHER/MULTIPLE',
+        LOCATION: 'CHICK-FIL-A\n900 WESTWOOD BLVD.',
+        DISPOSITION: 'CLOSED: SUBJECT ARRESTED',
+        'Case #': '24-0313',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-118.4444635, 34.0747297],
+      },
+      properties: {
+        'Event #': 2024008435,
+        DATE: '2/13/2024',
+        EVENT: 'TAMPER WITH VEHICLE',
+        CATEGORY: 'VANDALISM',
+        LOCATION: '336 CHARLES E YOUNG DRIVE N',
+        DISPOSITION: 'CLOSED / INACTIVE: NO LEADS',
+        'Case #': '24-0314',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-118.4452356, 34.0737524],
+      },
+      properties: {
+        'Event #': 2024008507,
+        DATE: '2/13/2024',
+        EVENT: 'PETTY THEFT - BICYCLES',
+        CATEGORY: 'THEFT/BURGLARY',
+        LOCATION: '300 WESTWOOD PLAZA',
+        DISPOSITION: 'CLOSED / INACTIVE: NO LEADS',
+        'Case #': '24-0321',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-118.446351, 34.066399],
+      },
+      properties: {
+        'Event #': 2024008514,
+        DATE: '2/13/2024',
+        EVENT: 'BATTERY',
+        CATEGORY: 'ASSAULT/BATTERY',
+        LOCATION: 'RONALD REAGAN UCLA MEDICAL CENTER\n757 WESTWOOD PLAZA',
+        DISPOSITION: 'CLOSED: SUBJECT ARRESTED',
+        'Case #': '24-0317',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-118.4394355, 34.0661065],
+      },
+      properties: {
+        'Event #': 2024008529,
+        DATE: '2/13/2024',
+        EVENT: 'TAKE VEHICLE W/O OWNER`S CONSENT/VEHICLE THEFT',
+        CATEGORY: 'THEFT/BURGLARY',
+        LOCATION: 'ALPHA DELTA PI SORORITY\n808 HILGARD AVE.',
+        DISPOSITION: 'OPEN CASE',
+        'Case #': '24-0319',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-118.4495014, 34.0710873],
+      },
+      properties: {
+        'Event #': 2024008537,
+        DATE: '2/13/2024',
+        EVENT: 'PETTY THEFT - OTHER',
+        CATEGORY: 'THEFT/BURGLARY',
+        LOCATION: 'FACILITIES MANAGEMENT BUILDING\n731 CHARLES E YOUNG DRIVE W',
+        DISPOSITION: 'CLOSED / INACTIVE: NO LEADS',
+        'Case #': '24-0322',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-118.4429259, 34.0587071],
+      },
+      properties: {
+        'Event #': 2024008600,
+        DATE: '2/13/2024',
+        EVENT: 'POSSESS CONTROLLED SUBSTANCE',
+        CATEGORY: 'DRUG/CONTROLLED SUBSTANCE',
+        LOCATION: 'OPPENHEIMER TOWER\n10880 WILSHIRE BLVD.',
+        DISPOSITION: 'CLOSED: SUBJECT ARRESTED',
+        'Case #': '24-0324',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-118.4461552, 34.0672582],
+      },
+      properties: {
+        'Event #': 2024008632,
+        DATE: '2/13/2024',
+        EVENT:
+          'GIVE FALSE IDENTIFICATION TO PO\n(2) APPROPRIATE LOST PROPERTY\n(3) POSSESS NARCOTIC CONTROLLED SUBSTANCE\n(4) CA REGS - NON-AFFILIATE IN POSSESSION OF DANGEROUS WPN\n(5) CA REGS - NON-AFFILIATE IN POSSESSION OF DANGEROUS WPN\n(6) WARRANT ARREST',
+        CATEGORY: 'OTHER/MULTIPLE',
+        LOCATION: '731 CHARLES E YOUNG DRIVE S',
+        DISPOSITION: 'CLOSED: SUBJECT ARRESTED',
+        'Case #': '24-0325',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-118.4449354, 34.0662362],
+      },
+      properties: {
+        'Event #': 2024008681,
+        DATE: '2/14/2024',
+        EVENT: 'BURGLARY\n(2) VANDALISM - DEFACE PROPERTY',
+        CATEGORY: 'THEFT/BURGLARY\nVANDALISM',
+        LOCATION: 'REED NEUROLOGICAL RESEARCH CENTER\n710 WESTWOOD PLAZA',
+        DISPOSITION: 'OPEN CASE',
+        'Case #': '24-0327',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-118.4491115, 34.0696351],
+      },
+      properties: {
+        'Event #': 2024008817,
+        DATE: '2/14/2024',
+        EVENT: 'TRAFFIC COLLISION OPEN VEHICLE',
+        CATEGORY: 'TRAFFIC/VEHICULAR',
+        LOCATION: 'BRADLEY INTERNATIONAL HALL\n417 CHARLES E YOUNG DRIVE W',
+        DISPOSITION: 'OPEN CASE: TO BE ASSIGNED',
+        'Case #': '24-0332',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-118.4423562, 34.0642829],
+      },
+      properties: {
+        'Event #': 2024008854,
+        DATE: '2/15/2024',
+        EVENT:
+          'BURGLARY\n(2) POSSESS/ETC BURGLARY TOOLS\n(3) MAKE/USE/POSSESS PUBLIC BUILDING KEY',
+        CATEGORY: 'OTHER/MULTIPLE',
+        LOCATION: 'BIOMEDICAL LIBRARY\n10833 LE CONTE AVE.',
+        DISPOSITION: 'CLOSED: SUBJECT ARRESTED',
+        'Case #': '24-0333',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-118.4539059, 34.0677245],
+      },
+      properties: {
+        'Event #': 2024008896,
+        DATE: '2/15/2024',
+        EVENT: 'BURGLARY - FROM MOTOR VEHICLE',
+        CATEGORY: 'THEFT/BURGLARY',
+        LOCATION: '515 KELTON APARTMENTS\n515 KELTON AVE.',
+        DISPOSITION: 'CLOSED / INACTIVE: NO LEADS',
+        'Case #': '24-0336',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-118.4539059, 34.0677245],
+      },
+      properties: {
+        'Event #': 2024008907,
+        DATE: '2/15/2024',
+        EVENT: 'BURGLARY - FROM MOTOR VEHICLE',
+        CATEGORY: 'THEFT/BURGLARY',
+        LOCATION: '515 KELTON APARTMENTS\n515 KELTON AVE.',
+        DISPOSITION: 'CLOSED / INACTIVE: NO LEADS',
+        'Case #': '24-0334',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-118.4539059, 34.0677245],
+      },
+      properties: {
+        'Event #': 2024008912,
+        DATE: '2/15/2024',
+        EVENT: 'BURGLARY - FROM MOTOR VEHICLE',
+        CATEGORY: 'THEFT/BURGLARY',
+        LOCATION: '515 KELTON APARTMENTS\n515 KELTON AVE.',
+        DISPOSITION: 'CLOSED / INACTIVE: NO LEADS',
+        'Case #': '24-0335',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-118.4484825, 34.0661349],
+      },
+      properties: {
+        'Event #': 2024009083,
+        DATE: '2/16/2024',
+        EVENT: 'BATTERY - SPOUSE/EX SPOUSE/DATE/ETC',
+        CATEGORY: 'ASSAULT/BATTERY',
+        LOCATION: '10900-BLOCK ROEBLING AVE.',
+        DISPOSITION: 'CLOSED: SUBJECT ARRESTED',
+        'Case #': '24-0338',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-118.4445256, 34.0694996],
+      },
+      properties: {
+        'Event #': 2024009122,
+        DATE: '2/16/2024',
+        EVENT:
+          'PETTY THEFT - OTHER\n(2) GIVE FALSE IDENTIFICATION TO PO\n(3) WARRANT ARREST',
+        CATEGORY: 'OTHER/MULTIPLE',
+        LOCATION: 'ENGINEERING 6\n404 WESTWOOD PLAZA',
+        DISPOSITION: 'CLOSED: SUBJECT ARRESTED',
+        'Case #': '24-0340',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-118.446351, 34.066399],
+      },
+      properties: {
+        'Event #': 2024009142,
+        DATE: '2/16/2024',
+        EVENT: 'MISCELLANEOUS INCIDENT REPORT',
+        CATEGORY: 'OTHER/MULTIPLE',
+        LOCATION: 'RONALD REAGAN UCLA MEDICAL CENTER\n757 WESTWOOD PLAZA',
+        DISPOSITION: 'OPEN CASE',
+        'Case #': '24-0343',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-118.4453406, 34.0715641],
+      },
+      properties: {
+        'Event #': 2024009146,
+        DATE: '2/16/2024',
+        EVENT: 'TAKE VEHICLE W/O OWNER`S CONSENT/VEHICLE THEFT',
+        CATEGORY: 'THEFT/BURGLARY',
+        LOCATION: 'WOODEN CENTER\n221 WESTWOOD PLAZA',
+        DISPOSITION: 'CLOSED / INACTIVE: NO LEADS',
+        'Case #': '24-0342',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-97.7248661, 30.3628668],
+      },
+      properties: {
+        'Event #': 2024009180,
+        DATE: '2/16/2024',
+        EVENT: 'TAKE VEHICLE W/O OWNER`S CONSENT/VEHICLE THEFT',
+        CATEGORY: 'THEFT/BURGLARY',
+        LOCATION: '11020 WEYBURN DRIVE',
+        DISPOSITION: 'CLOSED / INACTIVE: NO LEADS',
+        'Case #': '24-0344',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-118.450633, 34.0637379],
+      },
+      properties: {
+        'Event #': 2024009186,
+        DATE: '2/16/2024',
+        EVENT: 'PETTY THEFT - OTHER',
+        CATEGORY: 'THEFT/BURGLARY',
+        LOCATION: 'MAGNOLIA COURT\n765 WEYBURN TERRACE',
+        DISPOSITION: 'CLOSED / INACTIVE: NO LEADS',
+        'Case #': '24-0345',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-118.4465738, 34.0664764],
+      },
+      properties: {
+        'Event #': 2024009349,
+        DATE: '2/17/2024',
+        EVENT:
+          'TRESPASS - REFUSE TO LEAVE PROPERTY\n(2) OBSTRUCT/RESIST/ETC PUBLIC/P OFFICER/EMT',
+        CATEGORY: 'OTHER/MULTIPLE',
+        LOCATION: 'RRMC ER\n757 WESTWOOD PLAZA',
+        DISPOSITION: 'CLOSED: SUBJECT ARRESTED',
+        'Case #': '24-0348',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-118.4489671, 34.068547],
+      },
+      properties: {
+        'Event #': 2024009486,
+        DATE: '2/18/2024',
+        EVENT: 'TRAFFIC COLLISION NO INJURIES',
+        CATEGORY: 'TRAFFIC/VEHICULAR',
+        LOCATION: 'GAYLEY AVE./STRATHMORE PLACE',
+        DISPOSITION: 'OPEN CASE: TO BE ASSIGNED',
+        'Case #': '24-0350',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-118.4468107, 34.0593389],
+      },
+      properties: {
+        'Event #': 2024009515,
+        DATE: '2/18/2024',
+        EVENT: 'BURGLARY',
+        CATEGORY: 'THEFT/BURGLARY',
+        LOCATION: '11000-BLOCK KINROSS AVE.',
+        DISPOSITION: 'CLOSED: SUBJECT ARRESTED',
+        'Case #': '24-0351',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-118.446351, 34.066399],
+      },
+      properties: {
+        'Event #': 2024009563,
+        DATE: '2/18/2024',
+        EVENT: 'VANDALISM - DAMAGE PROPERTY',
+        CATEGORY: 'VANDALISM',
+        LOCATION: 'RONALD REAGAN UCLA MEDICAL CENTER\n757 WESTWOOD PLAZA',
+        DISPOSITION: 'OPEN CASE',
+        'Case #': '24-0353',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-118.450844, 34.0621111],
+      },
+      properties: {
+        'Event #': 2024009572,
+        DATE: '2/18/2024',
+        EVENT: 'PETTY THEFT - BICYCLES\n(2) VANDALISM - DEFACE PROPERTY',
+        CATEGORY: 'THEFT/BURGLARY\nVANDALISM',
+        LOCATION: 'OLIVE COURT\n825 WEYBURN TERRACE',
+        DISPOSITION: 'CLOSED / INACTIVE: NO LEADS',
+        'Case #': '24-0354',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-118.3418946, 33.8245912],
+      },
+      properties: {
+        'Event #': 2024009592,
+        DATE: '2/18/2024',
+        EVENT: 'GRAND THEFT - MOTOR VEH PARTS',
+        CATEGORY: 'THEFT/BURGLARY',
+        LOCATION: '3161 SEPULVEDA BLVD. AND QUEENSLAND STREET2/27/2024',
+        DISPOSITION: 'CLOSED / INACTIVE: NO LEADS',
+        'Case #': '24-0357',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-118.4525205, 34.0650383],
+      },
+      properties: {
+        'Event #': 2024009627,
+        DATE: '2/18/2024',
+        EVENT: 'BURGLARY - FROM MOTOR VEHICLE\n(2) VANDALISM - DEFACE PROPERTY',
+        CATEGORY: 'THEFT/BURGLARY\nVANDALISM',
+        LOCATION: '662 KELTON AVE.',
+        DISPOSITION: 'CLOSED / INACTIVE: NO LEADS',
+        'Case #': '24-0358',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-118.4477106, 34.0600313],
+      },
+      properties: {
+        'Event #': 2024009645,
+        DATE: '2/18/2024',
+        EVENT: 'TAMPER/ETC WITH FIRE ALARM/ETC\n(2) WARRANT ARREST',
+        CATEGORY: 'ARSON\nOTHER/MULTIPLE',
+        LOCATION: 'PARKING STRUCTURE 32\n1070 VETERAN AVE.',
+        DISPOSITION: 'CLOSED: SUBJECT ARRESTED',
+        'Case #': '24-0359',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-118.4391573, 34.07517442],
+      },
+      properties: {
+        'Event #': 2024009737,
+        DATE: '2/19/2024',
+        EVENT: 'GRAND THEFT - OTHER',
+        CATEGORY: 'THEFT/BURGLARY',
+        LOCATION: 'SCULPTURE GARDEN\n301 CHARLES E YOUNG DRIVE E',
+        DISPOSITION: 'CLOSED / INACTIVE: NO LEADS',
+        'Case #': '24-0360',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-118.4500411, 34.0699969],
+      },
+      properties: {
+        'Event #': 2024009776,
+        DATE: '2/19/2024',
+        EVENT: 'GRAND THEFT - FROM BUILDINGS',
+        CATEGORY: 'THEFT/BURGLARY',
+        LOCATION: 'DYKSTRA HALL\n401 CHARLES E YOUNG DRIVE W',
+        DISPOSITION: 'CLOSED / INACTIVE: NO LEADS',
+        'Case #': '24-0363',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-118.4425103, 34.0637198],
+      },
+      properties: {
+        'Event #': 2024009859,
+        DATE: '2/20/2024',
+        EVENT: 'PARAPHERNALIA - POSSESS UNLAWFUL\n(2) WARRANT ARREST',
+        CATEGORY: 'DRUG/CONTROLLED SUBSTANCE\nOTHER/MULTIPLE',
+        LOCATION: 'LE CONTE AVE. AND TIVERTON AVE.',
+        DISPOSITION: 'CLOSED: SUBJECT ARRESTED',
+        'Case #': '24-0364',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-118.4501706, 34.0704055],
+      },
+      properties: {
+        'Event #': 2024009872,
+        DATE: '2/20/2024',
+        EVENT:
+          'TRESPASS - REFUSE TO LEAVE PROPERTY\n(2) GIVE FALSE IDENTIFICATION TO PO',
+        CATEGORY: 'OTHER/MULTIPLE',
+        LOCATION: '351 CHARLES E YOUNG DRIVE W',
+        DISPOSITION: 'CLOSED: SUBJECT ARRESTED',
+        'Case #': '24-0365',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-118.4866355, 34.0274739],
+      },
+      properties: {
+        'Event #': 2024009920,
+        DATE: '2/20/2024',
+        EVENT: 'GRAND THEFT - FROM BUILDINGS',
+        CATEGORY: 'THEFT/BURGLARY',
+        LOCATION: 'UCLA SANTA MONICA HOSPITAL\n1250 16TH ST.',
+        DISPOSITION: 'OPEN CASE',
+        'Case #': '24-0367',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-118.4436004, 34.0704371],
+      },
+      properties: {
+        'Event #': 2024009923,
+        DATE: '2/20/2024',
+        EVENT: 'DEFRAUDING AN INNKEEPER -$950',
+        CATEGORY: 'OTHER/MULTIPLE',
+        LOCATION: 'KERCKHOFF HALL\n310 WESTWOOD PLAZA',
+        DISPOSITION: 'OPEN CASE',
+        'Case #': '24-0366',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-118.4496448, 34.0719775],
+      },
+      properties: {
+        'Event #': 2024009929,
+        DATE: '2/20/2024',
+        EVENT: 'ANNOYING COMM - OBSCENE/THREATENING',
+        CATEGORY: 'OTHER/MULTIPLE',
+        LOCATION: 'SPROUL HALL\n350 DE NEVE DRIVE',
+        DISPOSITION: 'OPEN CASE',
+        'Case #': '24-0368',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-118.4423562, 34.0642829],
+      },
+      properties: {
+        'Event #': 2024010118,
+        DATE: '2/21/2024',
+        EVENT: 'PETTY THEFT - FROM BUILDINGS',
+        CATEGORY: 'THEFT/BURGLARY',
+        LOCATION: 'CENTER FOR HEALTH SCIENCES\n10833 LE CONTE AVE.',
+        DISPOSITION: 'OPEN CASE',
+        'Case #': '24-0371',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-118.4490299, 34.0621787],
+      },
+      properties: {
+        'Event #': 2024010183,
+        DATE: '2/21/2024',
+        EVENT: 'TRESPASSING',
+        CATEGORY: 'TRESPASSING',
+        LOCATION: 'SYCAMORE COURT\n925 WEYBURN PLACE',
+        DISPOSITION: 'OPEN CASE',
+        'Case #': '24-0372',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-118.4410474, 34.0756937],
+      },
+      properties: {
+        'Event #': 2024010214,
+        DATE: '2/21/2024',
+        EVENT: 'TAKE VEHICLE W/O OWNER`S CONSENT/VEHICLE THEFT',
+        CATEGORY: 'THEFT/BURGLARY',
+        LOCATION: 'BROAD ART CENTER\n240 CHARLES E YOUNG DRIVE N',
+        DISPOSITION: 'CLOSED / INACTIVE: NO LEADS',
+        'Case #': '24-0374',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-118.4447968, 34.0726364],
+      },
+      properties: {
+        'Event #': 2024010308,
+        DATE: '2/22/2024',
+        EVENT: 'BURGLARY - FROM MOTOR VEHICLE',
+        CATEGORY: 'THEFT/BURGLARY',
+        LOCATION: 'PARKING STRUCTURE 4\n219 WESTWOOD PLAZA',
+        DISPOSITION: 'OPEN CASE',
+        'Case #': '24-0376',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-118.4171385, 34.0128507],
+      },
+      properties: {
+        'Event #': 2024010311,
+        DATE: '2/22/2024',
+        EVENT:
+          'PARAPHERNALIA - POSSESS UNLAWFUL\n(2) OBSTRUCT/RESIST/ETC PUBLIC/P OFFICER/EMT',
+        CATEGORY: 'OTHER/MULTIPLE',
+        LOCATION: 'VENICE BLVD. AND S. SEPULVEDA BLVD.',
+        DISPOSITION: 'CLOSED: SUBJECT ARRESTED',
+        'Case #': '24-0375',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-118.4445256, 34.0694996],
+      },
+      properties: {
+        'Event #': 2024010320,
+        DATE: '2/22/2024',
+        EVENT:
+          'OBSTRUCT/RESIST/ETC PUBLIC/P OFFICER/EMT\n(2) CA REGS - VIOLATE CURFEW',
+        CATEGORY: 'OTHER/MULTIPLE',
+        LOCATION: 'ENGINEERING 6\n404 WESTWOOD PLAZA',
+        DISPOSITION: 'CLOSED: SUBJECT ARRESTED',
+        'Case #': '24-0377',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-118.4449354, 34.0662362],
+      },
+      properties: {
+        'Event #': 2024010348,
+        DATE: '2/22/2024',
+        EVENT: 'GRAND THEFT REPORT',
+        CATEGORY: 'THEFT/BURGLARY',
+        LOCATION: 'REED NEUROLOGICAL RESEARCH CENTER\n710 WESTWOOD PLAZA',
+        DISPOSITION: 'OPEN CASE: TO BE ASSIGNED',
+        'Case #': '24-0379',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [121.0597871, 14.5219678],
+      },
+      properties: {
+        'Event #': 2024010388,
+        DATE: '2/22/2024',
+        EVENT: 'BATTERY',
+        CATEGORY: 'ASSAULT/BATTERY',
+        LOCATION: '1200-BLOCK 16TH ST.',
+        DISPOSITION: 'CLOSED: SUBJECT ARRESTED',
+        'Case #': '24-0380',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-118.4418704, 34.0660174],
+      },
+      properties: {
+        'Event #': 2024010442,
+        DATE: '2/22/2024',
+        EVENT: 'TAKE VEHICLE W/O OWNER`S CONSENT/VEHICLE THEFT',
+        CATEGORY: 'THEFT/BURGLARY',
+        LOCATION: 'SCHOOL OF DENTISTRY\n714 TIVERTON AVE.',
+        DISPOSITION: 'CLOSED / INACTIVE: NO LEADS',
+        'Case #': '24-0381',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-118.4522865, 34.0755234],
+      },
+      properties: {
+        'Event #': 2024010455,
+        DATE: '2/22/2024',
+        EVENT: 'BATTERY',
+        CATEGORY: 'ASSAULT/BATTERY',
+        LOCATION: '101 DE NEVE DRIVE',
+        DISPOSITION: 'OPEN CASE',
+        'Case #': '24-0382',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-118.4503324, 34.0726066],
+      },
+      properties: {
+        'Event #': 2024010607,
+        DATE: '2/23/2024',
+        EVENT: 'GRAND THEFT - FROM MOTOR VEHICLE',
+        CATEGORY: 'THEFT/BURGLARY',
+        LOCATION: 'BRUIN CAFE\n350 DE NEVE DRIVE',
+        DISPOSITION: 'OPEN CASE',
+        'Case #': '24-0384',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-118.4441726, 34.0704554],
+      },
+      properties: {
+        'Event #': 2024010624,
+        DATE: '2/23/2024',
+        EVENT: 'PETTY THEFT - FROM BUILDINGS',
+        CATEGORY: 'THEFT/BURGLARY',
+        LOCATION: 'ACKERMAN UNION\n308 WESTWOOD PLAZA',
+        DISPOSITION: 'CLOSED: SUBJECT ARRESTED',
+        'Case #': '24-0385',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-118.4276778, 34.0254322],
+      },
+      properties: {
+        'Event #': 2024010644,
+        DATE: '2/23/2024',
+        EVENT: 'PETTY THEFT - BICYCLES',
+        CATEGORY: 'THEFT/BURGLARY',
+        LOCATION: 'SEPULVEDA APARTMENTS\n3151 S SEPULVEDA BLVD.',
+        DISPOSITION: 'CLOSED / INACTIVE: NO LEADS',
+        'Case #': '24-0388',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-118.4495832, 34.0737767],
+      },
+      properties: {
+        'Event #': 2024010646,
+        DATE: '2/23/2024',
+        EVENT: 'TAMPER WITH VEHICLE',
+        CATEGORY: 'VANDALISM',
+        LOCATION: '200 DE NEVE DRIVE DRIVE',
+        DISPOSITION: 'CLOSED / INACTIVE: NO LEADS',
+        'Case #': '24-0390',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-118.4500411, 34.0699969],
+      },
+      properties: {
+        'Event #': 2024010650,
+        DATE: '2/23/2024',
+        EVENT: 'PETTY THEFT - FROM BUILDINGS',
+        CATEGORY: 'THEFT/BURGLARY',
+        LOCATION: 'DYKSTRA HALL\n401 CHARLES E YOUNG DRIVE W',
+        DISPOSITION: 'CLOSED / INACTIVE: NO LEADS',
+        'Case #': '24-0389',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-118.4911884, 34.0252844],
+      },
+      properties: {
+        'Event #': 2024010802,
+        DATE: '2/24/2024',
+        EVENT: 'VANDALISM - DEFACE PROPERTY',
+        CATEGORY: 'VANDALISM',
+        LOCATION: 'FAMILY PRACTICE CLINIC\n1131 WILSHIRE BLVD.',
+        DISPOSITION: 'CLOSED: NO FURTHER ACTION',
+        'Case #': '24-0392',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-118.4440863, 34.0715644],
+      },
+      properties: {
+        'Event #': 2024010853,
+        DATE: '2/24/2024',
+        EVENT: 'PETTY THEFT - OTHER',
+        CATEGORY: 'THEFT/BURGLARY',
+        LOCATION: 'STUDENT ACTIVITIES CENTER\n220 WESTWOOD PLAZA',
+        DISPOSITION: 'CLOSED: NO FURTHER ACTION',
+        'Case #': '24-0393',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-118.4468107, 34.0593389],
+      },
+      properties: {
+        'Event #': 2024010871,
+        DATE: '2/24/2024',
+        EVENT: 'TAKE VEHICLE W/O OWNER`S CONSENT/VEHICLE THEFT',
+        CATEGORY: 'THEFT/BURGLARY',
+        LOCATION: 'KINROSS RECREATION CENTER\n11000 KINROSS AVE.',
+        DISPOSITION: 'CLOSED / INACTIVE: NO LEADS',
+        'Case #': '24-0394',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-118.4512233, 34.0706705],
+      },
+      properties: {
+        'Event #': 2024010882,
+        DATE: '2/24/2024',
+        EVENT: 'GRAND THEFT - OTHER',
+        CATEGORY: 'THEFT/BURGLARY',
+        LOCATION: 'EVERGREEN PASS\n331 CHARLES E YOUNG DRIVE W',
+        DISPOSITION: 'CLOSED / INACTIVE: NO LEADS',
+        'Case #': '24-0395',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-118.4457535, 34.0606793],
+      },
+      properties: {
+        'Event #': 2024010906,
+        DATE: '2/24/2024',
+        EVENT:
+          'BATTERY - SPOUSE/EX SPOUSE/DATE/ETC\n-2 MANUFACTURE/SALE/POSSESS/ETC METAL KNUCKLES\n(3) DISORDERLY CONDUCT - ALCOHOL\n(4) OBSTRUCT/RESIST/ETC PUBLIC/P OFFICER/EMT',
+        CATEGORY: 'OTHER/MULTIPLE',
+        LOCATION: '10900-BLOCK KINROSS AVE.',
+        DISPOSITION: 'CLOSED: SUBJECT ARRESTED',
+        'Case #': '24-0396',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-118.4387297, 34.0677281],
+      },
+      properties: {
+        'Event #': 2024010969,
+        DATE: '2/25/2024',
+        EVENT:
+          'THEFT UTIL SRVS DIVERTS\n(2) DISORDERLY CONDUCT - LOITER/ETC PRIVATE PROPERTY',
+        CATEGORY: 'THEFT/BURGLARY\nTRESPASSING',
+        LOCATION: 'CHI OMEGA SORORITY\n708 HILGARD AVE.',
+        DISPOSITION: 'CLOSED: SUBJECT ARRESTED',
+        'Case #': '24-0397',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-118.4387255, 34.0689933],
+      },
+      properties: {
+        'Event #': 2024010971,
+        DATE: '2/25/2024',
+        EVENT: 'DISORDERLY CONDUCT - LOITER/ETC PRIVATE PROPERTY',
+        CATEGORY: 'TRESPASSING',
+        LOCATION: 'GAMMA PHI BETA SORORITY\n616 HILGARD AVE.',
+        DISPOSITION: 'CLOSED: SUBJECT ARRESTED',
+        'Case #': '24-0398',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-118.4522695, 34.0707527],
+      },
+      properties: {
+        'Event #': 2024010980,
+        DATE: '2/25/2024',
+        EVENT:
+          'UNAUTHORIZED ENTRY OF DWELLING\n(2) MISCELLANEOUS EDUCATION CODE\n(3) WARRANT ARREST',
+        CATEGORY: 'TRESPASSING\nOTHER/MULTIPLE\nOTHER/MULTIPLE',
+        LOCATION: '470 GAYLEY AVE.',
+        DISPOSITION: 'CLOSED: SUBJECT ARRESTED',
+        'Case #': '24-0399',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-118.4496687, 34.0650804],
+      },
+      properties: {
+        'Event #': 2024010983,
+        DATE: '2/25/2024',
+        EVENT:
+          'DISORDERLY CONDUCT - LOITER/ETC PRIVATE PROPERTY\n(2) DISORDERLY CONDUCT - PEEK INTO INHABITED BUILDING',
+        CATEGORY: 'TRESPASSING\nOTHER/MULTIPLE',
+        LOCATION: '10987 ROEBLING AVE.',
+        DISPOSITION: 'OPEN CASE',
+        'Case #': '24-0400',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-118.4488034, 34.0655944],
+      },
+      properties: {
+        'Event #': 2024010995,
+        DATE: '2/25/2024',
+        EVENT: 'TRAFFIC COLLISION NO INJURIES',
+        CATEGORY: 'TRAFFIC/VEHICULAR',
+        LOCATION: '10956 ROEBLING AVE.',
+        DISPOSITION: 'OPEN CASE: TO BE ASSIGNED',
+        'Case #': '24-0401',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-118.4465738, 34.0664764],
+      },
+      properties: {
+        'Event #': 2024011013,
+        DATE: '2/25/2024',
+        EVENT:
+          'ASSAULT\n(2) TRESPASS - REFUSE TO LEAVE PROPERTY\n(3) OBSTRUCT/RESIST/ETC PUBLIC/P OFFICER/EMT',
+        CATEGORY: 'OTHER/MULTIPLE',
+        LOCATION: 'RRMC ER\n757 WESTWOOD PLAZA',
+        DISPOSITION: 'CLOSED: SUBJECT ARRESTED',
+        'Case #': '24-0403',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-118.4505217, 34.0628528],
+      },
+      properties: {
+        'Event #': 2024011041,
+        DATE: '2/26/2024',
+        EVENT: 'DOMESTIC VIOLENCE INCIDENT REPORT (NON-CRIMINAL)',
+        CATEGORY: 'OTHER/MULTIPLE',
+        LOCATION: 'PALO VERDE\n910 WEYBURN PLACE',
+        DISPOSITION: 'OPEN CASE',
+        'Case #': '24-0404',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-118.4490527, 34.0681086],
+      },
+      properties: {
+        'Event #': 2024011043,
+        DATE: '2/26/2024',
+        EVENT: 'UNAUTHORIZED ENTRY OF DWELLING',
+        CATEGORY: 'TRESPASSING',
+        LOCATION: 'SIGMA NU FRATERNITY\n601 GAYLEY AVENUE',
+        DISPOSITION: 'CLOSED: SUBJECT ARRESTED',
+        'Case #': '24-0405',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-118.4505217, 34.0628528],
+      },
+      properties: {
+        'Event #': 2024011050,
+        DATE: '2/26/2024',
+        EVENT: 'UNAUTHORIZED ENTRY OF DWELLING\n(2) CA REGS - VIOLATE CURFEW',
+        CATEGORY: 'TRESPASSING\nOTHER/MULTIPLE',
+        LOCATION: 'PALO VERDE\n910 WEYBURN PLACE',
+        DISPOSITION: 'CLOSED: SUBJECT ARRESTED',
+        'Case #': '24-0406',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-118.4493965, 34.0673571],
+      },
+      properties: {
+        'Event #': 2024011063,
+        DATE: '2/26/2024',
+        EVENT: 'PETTY THEFT - FROM MOTOR VEHICLES',
+        CATEGORY: 'THEFT/BURGLARY',
+        LOCATION: '10938 STRATHMORE DRIVE',
+        DISPOSITION: 'OPEN CASE',
+        'Case #': '24-0407',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-118.4543678, 34.0762667],
+      },
+      properties: {
+        'Event #': 2024011079,
+        DATE: '2/26/2024',
+        EVENT: 'SEXUAL PENETRATION W/FOREIGN OBJ - VICTIM INCAPABLE CONSENT',
+        CATEGORY: 'RAPE/OTHER SEX CRIME',
+        LOCATION: '100-BLOCK BELLAGIO DRIVE',
+        DISPOSITION: 'OPEN CASE',
+        'Case #': '24-0409',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-118.4452612, 34.0649793],
+      },
+      properties: {
+        'Event #': 2024011081,
+        DATE: '2/26/2024',
+        EVENT: 'BURGLARY',
+        CATEGORY: 'THEFT/BURGLARY',
+        LOCATION: 'JULES STEIN EYE INSTITUTE\n800 WESTWOOD PLAZA',
+        DISPOSITION: 'OPEN CASE',
+        'Case #': '24-0408',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-118.4452397, 34.06513037],
+      },
+      properties: {
+        'Event #': 2024011102,
+        DATE: '2/26/2024',
+        EVENT: 'GRAND THEFT - FROM BUILDINGS',
+        CATEGORY: 'THEFT/BURGLARY',
+        LOCATION: 'STEIN PLAZA\n800 WESTWOOD PLAZA',
+        DISPOSITION: 'OPEN CASE',
+        'Case #': '24-0412',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-118.4463791, 34.0650959],
+      },
+      properties: {
+        'Event #': 2024011111,
+        DATE: '2/26/2024',
+        EVENT: 'TRAFFIC COLLISION OPEN VEHICLE',
+        CATEGORY: 'TRAFFIC/VEHICULAR',
+        LOCATION: 'MEDICAL PLAZA 200 PETER MORTON BUILDING\n200 MEDICAL PLAZA',
+        DISPOSITION: 'OPEN CASE: TO BE ASSIGNED',
+        'Case #': '24-0413',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-118.4497265, 34.071907],
+      },
+      properties: {
+        'Event #': 2024011124,
+        DATE: '2/26/2024',
+        EVENT: 'PETTY THEFT - OTHER',
+        CATEGORY: 'THEFT/BURGLARY',
+        LOCATION: 'CARNESALE COMMONS\n251 CHARLES E YOUNG DRIVE W',
+        DISPOSITION: 'OPEN CASE',
+        'Case #': '24-0416',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-118.444123, 34.075333],
+      },
+      properties: {
+        'Event #': 2024011140,
+        DATE: '2/26/2024',
+        EVENT: 'TAKE AUTO W/O OWNER`S CONSENT- OAA RECOVERY',
+        CATEGORY: 'OTHER/MULTIPLE',
+        LOCATION:
+          'UNIV ELEMENTARY SCHOOL LAB SCHOOL 1\n330 CHARLES E YOUNG DRIVE N',
+        DISPOSITION: 'OPEN CASE',
+        'Case #': '24-0417',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-118.4532532, 34.0705383],
+      },
+      properties: {
+        'Event #': 2024011172,
+        DATE: '2/26/2024',
+        EVENT: 'FELONY HIT AND RUN',
+        CATEGORY: 'TRAFFIC/VEHICULAR',
+        LOCATION: 'GAYLEY AVE./LANDFAIR AVE.',
+        DISPOSITION: 'OPEN CASE: TO BE ASSIGNED',
+        'Case #': '24-0418',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-118.4411509, 34.0710921],
+      },
+      properties: {
+        'Event #': 2024011310,
+        DATE: '2/27/2024',
+        EVENT: 'GRAND THEFT - FROM BUILDINGS',
+        CATEGORY: 'THEFT/BURGLARY',
+        LOCATION: 'KAPLAN HALL\n415 PORTOLA PLAZA',
+        DISPOSITION: 'CLOSED / INACTIVE: NO LEADS',
+        'Case #': '24-0419',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-118.4442056, 34.0703779],
+      },
+      properties: {
+        'Event #': 2024011332,
+        DATE: '2/27/2024',
+        EVENT: 'TRAFFIC COLLIS UNIVERSITY VEH',
+        CATEGORY: 'TRAFFIC/VEHICULAR',
+        LOCATION: 'ACKERMAN TURNAROUND\n308 WESTWOOD PLAZA',
+        DISPOSITION: 'OPEN CASE: TO BE ASSIGNED',
+        'Case #': '24-0421',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-118.441998, 34.0744275],
+      },
+      properties: {
+        'Event #': 2024011357,
+        DATE: '2/27/2024',
+        EVENT: 'THREATEN CRIME W/INTENT TO TERRORIZE',
+        CATEGORY: 'OTHER/MULTIPLE',
+        LOCATION: 'NORTH CAMPUS STUDENT CENTER\n295 CHARLES E YOUNG DRIVE N',
+        DISPOSITION: 'CLOSED: SUBJECT ARRESTED',
+        'Case #': '24-0422',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-118.4401988, 34.0692348],
+      },
+      properties: {
+        'Event #': 2024011500,
+        DATE: '2/28/2024',
+        EVENT: 'GRAND THEFT - FROM BUILDINGS',
+        CATEGORY: 'THEFT/BURGLARY',
+        LOCATION: 'PARKING STRUCTURE 2\n602 CHARLES E YOUNG DRIVE E',
+        DISPOSITION: 'CLOSED: NO FURTHER ACTION',
+        'Case #': '24-0425',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-118.4548247, 34.0757098],
+      },
+      properties: {
+        'Event #': 2024011508,
+        DATE: '2/28/2024',
+        EVENT: 'MISCELLANEOUS INCIDENT REPORT',
+        CATEGORY: 'OTHER/MULTIPLE',
+        LOCATION: 'KRIEGER CHILD CARE CENTER\n101 BELLAGIO DRIVE',
+        DISPOSITION: 'OPEN CASE',
+        'Case #': '24-0427',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-118.4522588, 34.07085043],
+      },
+      properties: {
+        'Event #': 2024011526,
+        DATE: '2/28/2024',
+        EVENT: 'TAKE VEHICLE W/O OWNER`S CONSENT/VEHICLE THEFT',
+        CATEGORY: 'THEFT/BURGLARY',
+        LOCATION: 'GARDENIA WAY\n470 GAYLEY AVE.',
+        DISPOSITION: 'OPEN CASE',
+        'Case #': '24-0428',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-118.4486342, 34.0638872],
+      },
+      properties: {
+        'Event #': 2024011538,
+        DATE: '2/28/2024',
+        EVENT: 'PETTY THEFT - MAIL OR PACKAGE',
+        CATEGORY: 'THEFT/BURGLARY',
+        LOCATION: 'GAYLEY HEIGHTS APARTMENTS\n10995 LE CONTE AVE.',
+        DISPOSITION: 'OPEN CASE',
+        'Case #': '24-0429',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-118.4845426, 34.0255451],
+      },
+      properties: {
+        'Event #': 2024011544,
+        DATE: '2/28/2024',
+        EVENT: 'VANDALISM - DEFACE PROPERTY',
+        CATEGORY: 'VANDALISM',
+        LOCATION: 'BUSY BEE’S HARDWARE\n1521 SANTA MONICA BLVD.',
+        DISPOSITION: 'CLOSED: NO FURTHER ACTION',
+        'Case #': '24-0430',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-118.4496448, 34.0719775],
+      },
+      properties: {
+        'Event #': 2024011554,
+        DATE: '2/28/2024',
+        EVENT: 'PETTY THEFT REPORT',
+        CATEGORY: 'THEFT/BURGLARY',
+        LOCATION: 'SPROUL HALL\n350 DE NEVE DRIVE',
+        DISPOSITION: 'OPEN CASE: TO BE ASSIGNED',
+        'Case #': '24-0431',
+      },
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-118.4447794, 34.0667059],
+      },
+      properties: {
+        'Event #': 2024011556,
+        DATE: '2/28/2024',
+        EVENT: 'SEXUAL BATTERY AGAINST WILL FOR SEXUAL AROUSAL/ETC',
+        CATEGORY: 'RAPE/OTHER SEX CRIME',
+        LOCATION: '700-BLOCK WESTWOOD PLAZA',
+        DISPOSITION: 'OPEN CASE',
+        'Case #': '24-0432',
+      },
+    },
+  ],
+};
