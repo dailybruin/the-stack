@@ -92,6 +92,18 @@ const chart_difference = new Chart(ctxLINE_difference, {
           size: 20, // You can change the font size here
         },
       },
+      subtitle: {
+        display: true,
+        text:
+          'The points were calculated by taking the difference between Cost of Attendance and Financial Aid, which results in the cost that students have to cover themselves.',
+        // align: 'start', // Add this line
+        font: {
+          size: 15,
+        },
+        padding: {
+          bottom: 20, // Add space above the subtitle
+        },
+      },
       legend: {
         display: false,
       },

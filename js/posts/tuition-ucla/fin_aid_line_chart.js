@@ -329,6 +329,18 @@ const options_finaid = {
         size: 20, // You can change the font size here
       },
     },
+    subtitle: {
+      display: true,
+      text:
+        'The inflation-adjusted amount of financial aid recieved by UCLA students from 2002 to 2022.',
+      // align: 'start', // Add this line
+      font: {
+        size: 15,
+      },
+      padding: {
+        bottom: 20, // Add space above the subtitle
+      },
+    },
   },
 };
 //THIS CODE MAKES THE CHART, MAKE SURE THE CTX VARIABLE DOES NOT MATCH ANY OTHER CTX VARIABLE

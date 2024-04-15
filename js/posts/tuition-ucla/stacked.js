@@ -303,6 +303,21 @@ const options_stacked = {
         size: 20, // You can change the font size here
       },
     },
+    subtitle: {
+      display: true,
+      text: [
+        'The bars depict the total amount of financial aid received per capita.',
+        'The bars are broken down by the type of financial aid with the blue sections representing gift aid and the yellow sections representing loans.',
+        'The line depicts the unadjusted net cost of attendance.',
+      ],
+      align: 'start', // Add this line
+      font: {
+        size: 15,
+      },
+      padding: {
+        bottom: 20,
+      },
+    },
   },
   maintainAspectRatio: false,
 };

@@ -382,6 +382,27 @@ const ucdata = {
 };
 
 const options1 = {
+  plugins: {
+    title: {
+      display: true,
+      text: 'Inflation-adjusted net cost of attendance',
+      font: {
+        size: 20, // You can change the font size here
+      },
+    },
+    subtitle: {
+      display: true,
+      text:
+        'The inflation-adjusted net cost of attendance for each of the UC campuses from 2002 to 2022.',
+      align: 'start', // Add this line
+      font: {
+        size: 15,
+      },
+      padding: {
+        bottom: 20, // Add space above the subtitle
+      },
+    },
+  },
   scales: {
     y: {
       title: {
@@ -432,6 +453,18 @@ const options2 = {
       text: 'Net cost of attendance',
       font: {
         size: 20, // You can change the font size here
+      },
+    },
+    subtitle: {
+      display: true,
+      text:
+        'A comparison of the net cost for attendance across all UCs when the cost is not adjusted for inflation and when the cost is adjusted for inflation.',
+      // align: 'start', // Add this line
+      font: {
+        size: 15,
+      },
+      padding: {
+        bottom: 20, // Add space above the subtitle
       },
     },
   },
