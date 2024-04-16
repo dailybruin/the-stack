@@ -45,7 +45,7 @@ const costGraph = new Chart(ctxt, {
             'circle',
             pointImage,
             'circle',
-            'circle',
+            pointImage,
             'circle',
           ],
       },

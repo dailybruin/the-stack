@@ -60,8 +60,8 @@ const costGraph2 = new Chart(ctxt2, {
           'circle',
           'circle',
           'circle',
-          'circle',
           pointImage,
+          'circle',
           'circle',
         ],
       },
@@ -101,8 +101,8 @@ const costGraph2 = new Chart(ctxt2, {
           'circle',
           'circle',
           'circle',
-          'circle',
           pointImage,
+          'circle',
           'circle',
         ],
       },
@@ -265,8 +265,8 @@ function changeGraph() {
       'circle',
       'circle',
       'circle',
-      'circle',
       pointImage,
+      'circle',
       'circle',
     ];
     costGraph2.data.datasets[1].pointStyle = [
@@ -282,8 +282,8 @@ function changeGraph() {
       'circle',
       'circle',
       'circle',
-      'circle',
       pointImage,
+      'circle',
       'circle',
     ];
   }
