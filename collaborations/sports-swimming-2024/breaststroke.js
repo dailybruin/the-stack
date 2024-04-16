@@ -7,7 +7,7 @@ const costGraph = new Chart(ctxt, {
       'Fresno State Invite',
       'Washington State Dual Meet',
       'UC Santa Barbara Dual Meet',
-      'Illinos Dual Meet',
+      'Illinois Dual Meet',
       'Arizona State Dual Meet',
       'Arizona Dual Meet',
       'Art Adamson Invitational',
