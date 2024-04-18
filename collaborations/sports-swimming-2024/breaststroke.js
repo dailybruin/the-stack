@@ -113,7 +113,8 @@ const costGraph = new Chart(ctxt, {
         display: true,
         title: {
           display: true,
-          text: 'UCLA Swimmers - Breaststroke',
+          text: ['UCLA Swimmers', 'Breaststroke'],
+          padding: 20,
           font: {
             size: 20,
           },

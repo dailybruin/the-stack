@@ -107,7 +107,7 @@ const costGraph2 = new Chart(ctxt2, {
         ],
       },
       {
-        label: 'School Record Breaking Times',
+        label: 'School Record-Breaking Times',
         backgroundColor: ['#939033'],
         borderColor: ['#939033'],
       },
@@ -128,7 +128,8 @@ const costGraph2 = new Chart(ctxt2, {
         display: true,
         title: {
           display: true,
-          text: 'UCLA Swimmers - IM',
+          text: ['UCLA Swimmers', 'IM'],
+          padding: 20,
           font: {
             size: 20,
           },
