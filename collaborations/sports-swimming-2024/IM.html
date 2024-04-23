@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>chart.js</title>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <!-- <link rel="stylesheet" href="styles.css"> -->
+        <style>
+          div{
+              font-family: 'PT Sans';  /*default font, change if requested*/
+          }
+          .header{
+              font-size: 20px;
+              text-align: center;
+              align-content: center;
+          }
+          .explainer{
+              font-size: 16px;
+              padding-left: 10px;
+              padding-right: 10px;
+          }
+          .chart{
+              margin: 1%;
+              margin-top: -1%;
+          }
+          hr{
+              border: white solid 1px;
+          }
+          .byLine{
+              font-size: 10px;
+              text-align: center;
+          }
+          .viz_box{
+              border: 2px white solid
+          }
+          @media only screen and (max-width: 800px) {
+              .chart{
+              display: 'block';
+              width: 98% !important;
+              float: left;
+              height: 400px;
+          }
+          }
+          @media only screen and (min-width: 800px) {
+          .chart{
+              display: 'block';
+              width: 98% !important; /*CHANGE THIS IF THERE IS MORE THAN ONE CHART */
+              float: left;
+              height: 500px;
+          }
+          .viz_box{
+              width: 100%;
+              height: 100%;
+          }}
+      </style>
+    </head>
+    
+    <body>
+      <div class = "selectBox" >
+        <select id = "studentType">
+            <option value="sportGraph2"
+                    label = "400 Yards" selected></option>
+            <option value="sportGraph"
+                    label = "200 Yards" selected></option>
+        </select> 
+      </div>
+
+
+     
+     
+        <div class = "chartBox" >
+            <canvas id="sportGraph2" width="400" height="320"></canvas> 
+        </div>
+        
+        <script src="IM.js"></script>
+    </body>
+
+    
+</html>
