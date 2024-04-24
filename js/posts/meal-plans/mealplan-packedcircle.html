@@ -9,7 +9,10 @@
 </head>
 <body>
   <!-- Container for the chart -->
-  <div id="chart-container"></div>
+  <div id="chart-container">
+    <h3 style="text-align: center;">Weekly Average Distribution of Meal Swipes from Fall 2023</h1>
+  </div>
+  <p style="text-align: left;">Graphic reporting by Joey Ling, Stack Intern</p>
   <script>
     // Your JavaScript code
     const data = {
@@ -48,7 +51,7 @@
         .attr("width", width)
         .attr("height", height)
         .attr("viewBox", [-margin, -margin, width, height])
-        .attr("style", "width: 100%; height: auto; font: 10px sans-serif;")
+        .attr("style", "width: 100%; height: auto; font: 16px sans-serif;") // Increased font size to 16px
         .attr("text-anchor", "middle");
 
       const node = svg.append("g")
@@ -68,7 +71,8 @@
       const text = node
         .filter(d => !d.children && d.r > 10)
         .append("text")
-        .attr("clip-path", d => `circle(${d.r})`);
+        .attr("clip-path", d => `circle(${d.r})`)
+        .attr("fill", d => d3.lab(colorScale(d.value)).l > 70 ? "black" : "white");
 
       text.selectAll()
         .data(d => d.data.name.split(/(?=[A-Z][a-z])|\s+/g))

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bar Chart</title>
+    <!-- Include Chart.js library -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <canvas id="ENROLLMENT" width="800" height="400"></canvas>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Data
+            const data = {
+                datasets: [
+                    {
+                        data: [
+                            { x: ' 11P ', y: 1530 },
+                            { x: ' 11R ', y: 371 },
+                            { x: ' 14P ', y: 5814 },
+                            { x: ' 14R ', y: 938 },
+                            { x: ' 19P ', y: 4199 },
+                            { x: ' 19R  ', y: 1584 },
+                        ],
+                        backgroundColor: '#4B8BD0',
+                        borderColor: '#4B8BD0',
+                        borderWidth: 1,
+                    },
+                ],
+            };
+
+            // Options
+            const options = {
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: '# of Students Enrolled',
+                        },
+                    },
+                    x: {
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: 'Meal Plans',
+                        },
+                    },
+                },
+                plugins: {
+                    title: {
+                        display: true,
+                        text: 'Meal Plan Enrollment 2023-2024',
+                        font: {
+                            size: 22,
+                        },
+                    },
+                    legend: {
+                        display: false,
+                    },
+                },
+                maintainAspectRatio: false,
+            };
+
+            // Chart initialization
+            const ctxBAR_a = document.getElementById('ENROLLMENT');
+            const chart2 = new Chart(ctxBAR_a, {
+                type: 'bar',
+                data: data,
+                options: options,
+            });
+
+            // Responsive adjustments
+            if (window.matchMedia('(max-width: 480px)').matches) {
+                chart2.canvas.style = 'max-height:450px';
+                chart2.options.maintainAspectRatio = false;
+                chart2.update();
+            }
+
+            if (window.matchMedia('(min-width: 481px)').matches) {
+                chart2.canvas.style = 'min-height:600px';
+                chart2.canvas.style = 'max-height:600px';
+                chart2.options.maintainAspectRatio = false;
+                chart2.update();
+            }
+        });
+    </script>
+</body>
+</html>

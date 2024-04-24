@@ -1,0 +1,20 @@
+var data = [
+    {
+      "type": "sunburst",
+      "labels": ["Swipes", "11P", "11P Consumed", "11P Leftover", "11P Donated", "11R", "11R Consumed", "11R Leftover", "11R Donated", "14P", "14P Consumed", "14P Leftover", "14P Donated", "14R", "14R Consumed", "14R Leftover", "14R Donated", "19P", "19P Consumed", "19P Leftover", "19P Donated", "19R", "19R Consumed", "19R Leftover", "19R Donated"],
+      "parents": ["", "Swipes", "11P","11P","11P", "Swipes", "11R","11R","11R","Swipes", "14P","14P","14P",  "Swipes", "14R","14R","14R","Swipes", "19P","19P","19P", "Swipes", "19R","19R","19R"],
+      "values":  [null, 557634, 496361, 53102, 8171, 166056, 160626, 4706, 724, 2494716, 2317617, 153482, 23617, 452676, 433935, 16241, 2499, 2235806, 2036503, 172725, 26578, 1078820, 1033203, 39534, 6083],
+      "leaf": {"opacity": 0.4},
+      "marker": {"line": {"width": 2}},
+      "branchvalues": 'total'
+    }];
+    
+    var layout = {
+      "margin": {"l": 0, "r": 0, "b": 0, "t": 0},
+    };
+    
+    
+    Plotly.newPlot('myDiv', data, layout, {showSendToCloud: true})
+    
+    myPlot = document.getElementById("myDiv");
+    
