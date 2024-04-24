@@ -28,14 +28,14 @@ document.addEventListener('DOMContentLoaded', function() {
           beginAtZero: true,
           title: {
             display: true,
-            text: 'Dollars Wasted',
+            text: 'Average dollars wasted per person',
           },
         },
         x: {
           beginAtZero: true,
           title: {
             display: true,
-            text: 'Meal Plans',
+            text: 'Meal plan',
           },
         },
       },
