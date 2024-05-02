@@ -5,8 +5,8 @@ const data = {
   datasets: [
     {
       data: [
-        { x: labels[0], y: 31709 },
-        { x: labels[1], y: 24117 },
+        { x: labels[0], y: 33578 },
+        { x: labels[1], y: 22248 },
         { x: labels[2], y: 12103 },
         { x: labels[3], y: 11934 },
         { x: labels[4], y: 6480 },
