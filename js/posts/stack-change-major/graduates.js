@@ -1,14 +1,14 @@
 Chart.defaults.font.family = 'Noto Serif, serif'
-const labels = ['Social Sciences','Life Sciences','Engineering','Physical Sciences','Humanities', 'Other'];
-const colors = ['#fff9a3', '#b5fec7','#fb8c85', '#a5bffc', '#d0adfb', '#d9d9d9']
+const labels = ['Social Sciences','Life Sciences','Physical Sciences','Engineering','Humanities','Other'];
+const colors = ['#fff9a3', '#b5fec7','#a5bffc', '#fb8c85', '#d0adfb', '#d9d9d9']
 const data = {
   datasets: [
     {
       data: [
         { x: labels[0], y: 33578 },
         { x: labels[1], y: 22248 },
-        { x: labels[2], y: 12103 },
-        { x: labels[3], y: 11934 },
+        { x: labels[2], y: 12116 },
+        { x: labels[3], y: 12103 },
         { x: labels[4], y: 6480 },
         { x: labels[5], y: 4114 }
       ],

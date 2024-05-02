@@ -62,6 +62,12 @@ anychart.onDocumentReady(function() {
                 desc: 'The Geography major allows students to combine a broad background in the field with more specific interests and career goals. Students can select classes in several areas of geography such as urban, economic, cultural, environmental, physical, or biogeography.'
               },
               {
+                name: 'Geography/Environmental Studies',
+                value: 213,
+                fill: '#fff9a3',
+                desc: 'The major in Geography/Environmental Studies develops and deepens students’ understanding of environmental issues; it explores problem-solving approaches from an interactive people/nature viewpoint and involves analysis of social, physical, and biotic environmental systems. The major’s uniqueness lies in its emphasis on its geographical perspective of human impacts on natural systems, as well as of implications of global change on local and regional human systems.'
+              },
+              {
                 name: 'Global Studies',
                 value: 498,
                 fill: '#fff9a3',
@@ -135,7 +141,7 @@ anychart.onDocumentReady(function() {
               },
               {
                 name: 'Human Biology and Society - BA',
-                value: 1522,
+                value: 192,
                 fill: '#b5fec7',
                 desc: 'The Human Biology and Society majors provide an interdisciplinary approach to learning about current issues at the intersections of human biology, genomics and society. The majors attempt to bridge the gap between life sciences and humanities/social sciences, generating an interdisciplinary perspective needed to address many important and current questions of ethics; history; public policy about food and nutrition; genetics research and commercialization; genetic origins and relatedness of human populations; medical privacy right; etc. The Human Biology and Society, B.A. is good preparation for careers in health, law, business, academia, and public policy.'
               },
@@ -285,7 +291,7 @@ anychart.onDocumentReady(function() {
               },
               {
                 name: 'Data Theory',
-                value: 242,
+                value: 424,
                 fill: '#a5bffc',
                 desc: 'The Data Theory Major is a program at UCLA that produces students well equipped to understand current data science and develop the data science of the future.'
               },

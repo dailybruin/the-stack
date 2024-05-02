@@ -1,155 +1,166 @@
+Chart.defaults.font.family = 'Noto Serif, serif'
+
 const data = {
   datasets: [
   {
-    label: 'APPLIED MATHEMATICS',
+    label: 'Applied Mathematics',
     data: [{
       x: 64,
       y: 13,
-      r: 3.03
+      r: 3.16
     }],
     backgroundColor: '#a5bffc'
   },
   {
-    label: 'BIOCHEMISTRY',
+    label: 'Biochemistry',
     data: [{
       x: 45,
       y: 144,
-      r: 2.33
+      r: 3.43
     }],
     backgroundColor: '#a5bffc'
   },
   {
-    label: 'BUSINESS ECONOMICS',
+    label: 'Biology',
+    data: [{
+      x: 36,
+      y: 810,
+      r: 3.68
+    }],
+    backgroundColor: '#b5fec7'
+  },
+  {
+    label: 'Business Economics',
     data: [{
       x: 116,
       y: 1419,
-      r: 2.58
+      r: 3.69
     }],
     backgroundColor: '#fff9a3'
   },
   {
-    label: 'COGNITIVE SCIENCE',
+    label: 'Cognitive Science',
     data: [{
       x: 98,
       y: 21,
-      r: 1.92
+      r: 3.27
     }],
-    backgroundColor: '#b5fec7'
+    backgroundColor: '#fff9a3'
   },
   {
-    label: 'COMPUTATIONAL AND SYSTEMS BIOLOGY',
+    label: 'Computational and Systems Biology',
     data: [{
       x: 10,
       y: 10,
-      r: 1.79
+      r: 2.85
     }],
     backgroundColor: '#b5fec7'
   },
   {
-    label: 'COMPUTER SCIENCE',
+    label: 'Computer Science',
     data: [{
       x: 342,
       y: 28,
-      r: 2.56
+      r: 3.56
     }],
     backgroundColor: '#fb8c85'
   },
   {
-    label: 'ECONOMICS',
+    label: 'Economics',
     data: [{
       x: 852,
       y: 146,
-      r: 2.82
+      r: 3.57
     }],
     backgroundColor: '#fff9a3'
   },
   {
-    label: 'HUMAN BIOLOGY AND SOCIETY - BS',
+    label: 'Human Biology and Society - BS',
     data: [{
       x: 102,
       y: 79,
-      r: 1.69
+      r: 3.30
     }],
     backgroundColor: '#b5fec7'
   },
   {
-    label: 'MATHEMATICS OF COMPUTATION',
+    label: 'Mathematics of Computation',
     data: [{
       x: 13,
       y: 139,
-      r: 1.70
+      r: 2.92
     }],
     backgroundColor: '#a5bffc'
   },
   {
-    label: 'MICROBIOLOGY, IMMUNOLOGY, AND MOLECULAR GENETICS',
+    label: 'Microbiology, Immunology, and Molecular Genetics',
     data: [{
       x: 37,
       y: 50,
-      r: 3.18
+      r: 3.26
     }],
     backgroundColor: '#b5fec7'
   },
   {
-    label: 'MOLECULAR, CELL, AND DEVELOPMENTAL BIOLOGY',
+    label: 'Molecular, Cell, and Developmental Biology',
     data: [{
       x: 222,
       y: 78,
-      r: 2.91
+      r: 3.46
     }],
     backgroundColor: '#b5fec7'
   },
   {
-    label: 'PHYSIOLOGICAL SCIENCE',
+    label: 'Physiological Science',
     data: [{
       x: 321,
       y: 65,
-      r: 3.67
+      r: 3.37
     }],
     backgroundColor: '#b5fec7'
   },
   {
-    label: 'POLITICAL SCIENCE',
+    label: 'Political Science',
     data: [{
       x: 67,
       y: 254,
-      r: 3.23
+      r: 3.78
     }],
     backgroundColor: '#fff9a3'
   },
   {
-    label: 'PSYCHOBIOLOGY',
+    label: 'Psychobiology',
     data: [{
       x: 622,
       y: 141,
-      r: 3.56
+      r: 3.68
     }],
     backgroundColor: '#b5fec7'
   },
   {
-    label: 'PSYCHOLOGY',
+    label: 'Psychology',
     data: [{
       x: 126,
       y: 255,
-      r: 2.56
+      r: 3.81
     }],
     backgroundColor: '#fff9a3'
   },
   {
-    label: 'SOCIOLOGY',
+    label: 'Sociology',
     data: [{
       x: 191,
       y: 195,
-      r: 3.02
+      r: 3.67
     }],
     backgroundColor: '#fff9a3'
   },
   {
-    label: 'STATISTICS AND DATA SCIENCE',
+    label: 'Statistics and Data Science',
     data: [{
       x: 83,
       y: 12,
-      r: 2.33
+      r: 3.08
     }],
     backgroundColor: '#a5bffc'
   }
