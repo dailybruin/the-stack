@@ -24,7 +24,7 @@ body,
 }
 
 .anychart-tooltip {
-  font-size: 0.6em;
+  font-size: 0.9em;
   background: #fff;
   color: #333;
   box-shadow: 0 0 5px #333;
@@ -46,13 +46,21 @@ body,
   <script src="https://cdn.anychart.com/releases/v8/js/anychart-exports.min.js"></script>
   <script src="https://cdn.anychart.com/releases/v8/js/anychart-sankey.min.js"></script>
   <script src="https://cdn.anychart.com/releases/v8/js/anychart-data-adapter.min.js"></script>
-  <script src="https://cdn.anychart.com/samples-data/sankey-diagram/energy-flow-chart/data.js"></script>
-  <script type="text/javascript">anychart.onDocumentReady(function () {
+  <script src="test_flow_data.js"></script>
+  
+  <script type="text/javascript">
+
+  // FORMATTING TO APPROPRIATE CURRENCY FORMAT
+  function formatCurrency(number) {
+    return '$' + number.toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+  }
+  
+  anychart.onDocumentReady(function () {
   // create sankey chart
   var chart = anychart.sankey();
 
   // set title for chart
-  chart.title('Energy Flows (TWh/y)');
+  chart.title('UC Holdings Flow (as of June 30, 2023)')
 
   // set chart's data
   chart.data(getData()); // eslint-disable-line no-undef
@@ -80,11 +88,13 @@ body,
   // set tooltips position for node
   chart.node().tooltip().anchor('center-bottom');
 
-  // disable tooltips for flows and dropoffs
-  chart.flow().tooltip().enabled(false);
+  // disable tooltips for dropoffs
+  chart.flow().tooltip().enabled(true);
+  chart.flow().tooltip().format(function() {
+    return 'Flow: ' + formatCurrency(this.value);
+  });
   chart.dropoff().tooltip().enabled(false);
 
-  // enable HTML-mode for node's tooltip and set formatter for it
   chart
     .node()
     .tooltip()
@@ -104,12 +114,12 @@ body,
             '<li>' +
             this.income[i].name +
             ': ' +
-            this.income[i].value +
+            formatCurrency(this.income[i].value) +
             '</li>';
           income += this.income[i].value;
         }
         ul += '</ul>';
-        tooltip += '<h5>Income(' + income + '):</h5>' + ul;
+        tooltip += '<h5>Income(' + formatCurrency(income) + '):</h5>' + ul;
       }
       if (this.outcome.length) {
         outcome = 0;
@@ -119,28 +129,28 @@ body,
             '<li>' +
             this.outcome[i].name +
             ': ' +
-            this.outcome[i].value +
+            formatCurrency(this.outcome[i].value) +
             '</li>';
           outcome += this.outcome[i].value;
         }
         ul += '</ul>';
-        tooltip += '<h5>Outcome(' + outcome + '):</h5>' + ul;
+        tooltip += '<h5>Outcome(' + formatCurrency(outcome) + '):</h5>' + ul;
       }
       if (this.dropoff > 0) {
-        tooltip += '<h5>Dropoff: ' + this.dropoff + '</h5>';
+        tooltip += '<h5>Dropoff: ' + formatCurrency(this.dropoff) + '</h5>';
       }
       if (this.isConflict) {
         if (income > outcome + this.dropoff) {
           conflict = income - (outcome + this.dropoff);
           tooltip +=
             '<h5>Conflict:</h5><ul><li> income is greater than outcome by ' +
-            conflict +
+            formatCurrency(conflict) +
             '</li></ul>';
         } else {
           conflict = outcome + this.dropoff - income;
           tooltip +=
             '<h5>Conflict:</h5><ul><li>outcome is greater than income by ' +
-            conflict +
+            formatCurrency(conflict) +
             '</li></ul>';
         }
       }
@@ -154,9 +164,9 @@ body,
     .useHtml(true)
     .format(function () {
       if (this.isConflict) {
-        return '<b style="color: red">' + this.name + '</b>';
+        return '<b style="color: red; font-size: 20px;">' + this.name + '</b>';
       }
-      return this.name;
+      return '<span style="font-size: 15px;">' + this.name + '</span>';
     });
 
   // Set flow's normal and hovered fill
