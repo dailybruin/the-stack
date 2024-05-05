@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta content="IE=edge" http-equiv="X-UA-Compatible">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <title>Energy Flow Chart</title>
+  <link href="https://playground.anychart.com/gallery/src/Sankey_Diagram/Energy_Flow_Chart/iframe" rel="canonical">
+  <meta content="Sankey Chart,Tooltip" name="keywords">
+  <meta content="AnyChart - JavaScript Charts designed to be embedded and integrated" name="description">
+  <!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+  <link href="https://cdn.anychart.com/releases/v8/css/anychart-ui.min.css" rel="stylesheet" type="text/css">
+  <link href="https://cdn.anychart.com/releases/v8/fonts/css/anychart-font.min.css" rel="stylesheet" type="text/css">
+  <style>html,
+body,
+#container {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.anychart-tooltip {
+  font-size: 0.6em;
+  background: #fff;
+  color: #333;
+  box-shadow: 0 0 5px #333;
+  padding: 20px;
+}
+
+.anychart-tooltip h5 {
+  margin: 0 0 5px;
+}
+
+.anychart-tooltip ul {
+  margin: 0 0 5px;
+}</style>
+ </head>
+ <body>
+  <div id="container"></div>
+  <script src="https://cdn.anychart.com/releases/v8/js/anychart-base.min.js"></script>
+  <script src="https://cdn.anychart.com/releases/v8/js/anychart-ui.min.js"></script>
+  <script src="https://cdn.anychart.com/releases/v8/js/anychart-exports.min.js"></script>
+  <script src="https://cdn.anychart.com/releases/v8/js/anychart-sankey.min.js"></script>
+  <script src="https://cdn.anychart.com/releases/v8/js/anychart-data-adapter.min.js"></script>
+  <script src="https://cdn.anychart.com/samples-data/sankey-diagram/energy-flow-chart/data.js"></script>
+  <script type="text/javascript">anychart.onDocumentReady(function () {
+  // create sankey chart
+  var chart = anychart.sankey();
+
+  // set title for chart
+  chart.title('Energy Flows (TWh/y)');
+
+  // set chart's data
+  chart.data(getData()); // eslint-disable-line no-undef
+
+  // set chart's padding
+  chart.padding(20, 80, 20, 40);
+
+  // set chart's flows curvature
+  chart.curveFactor(0.2);
+
+  // set chart's node width
+  chart.nodeWidth(50);
+
+  // set chart's node padding
+  chart.nodePadding(30);
+
+  // set node's label position
+  chart
+    .node()
+    .normal()
+    .labels()
+    .anchor('center-bottom')
+    .position('center-top');
+
+  // set tooltips position for node
+  chart.node().tooltip().anchor('center-bottom');
+
+  // disable tooltips for flows and dropoffs
+  chart.flow().tooltip().enabled(false);
+  chart.dropoff().tooltip().enabled(false);
+
+  // enable HTML-mode for node's tooltip and set formatter for it
+  chart
+    .node()
+    .tooltip()
+    .useHtml(true)
+    .format(function () {
+      var tooltip = '';
+      var i;
+      var ul;
+      var income;
+      var outcome;
+      var conflict;
+      if (this.income.length) {
+        income = 0;
+        ul = '<ul>';
+        for (i = 0; i < this.income.length; i++) {
+          ul +=
+            '<li>' +
+            this.income[i].name +
+            ': ' +
+            this.income[i].value +
+            '</li>';
+          income += this.income[i].value;
+        }
+        ul += '</ul>';
+        tooltip += '<h5>Income(' + income + '):</h5>' + ul;
+      }
+      if (this.outcome.length) {
+        outcome = 0;
+        ul = '<ul>';
+        for (i = 0; i < this.outcome.length; i++) {
+          ul +=
+            '<li>' +
+            this.outcome[i].name +
+            ': ' +
+            this.outcome[i].value +
+            '</li>';
+          outcome += this.outcome[i].value;
+        }
+        ul += '</ul>';
+        tooltip += '<h5>Outcome(' + outcome + '):</h5>' + ul;
+      }
+      if (this.dropoff > 0) {
+        tooltip += '<h5>Dropoff: ' + this.dropoff + '</h5>';
+      }
+      if (this.isConflict) {
+        if (income > outcome + this.dropoff) {
+          conflict = income - (outcome + this.dropoff);
+          tooltip +=
+            '<h5>Conflict:</h5><ul><li> income is greater than outcome by ' +
+            conflict +
+            '</li></ul>';
+        } else {
+          conflict = outcome + this.dropoff - income;
+          tooltip +=
+            '<h5>Conflict:</h5><ul><li>outcome is greater than income by ' +
+            conflict +
+            '</li></ul>';
+        }
+      }
+      return tooltip;
+    });
+
+  // set node's label formatter
+  chart
+    .node()
+    .labels()
+    .useHtml(true)
+    .format(function () {
+      if (this.isConflict) {
+        return '<b style="color: red">' + this.name + '</b>';
+      }
+      return this.name;
+    });
+
+  // Set flow's normal and hovered fill
+  chart.flow({
+    normal: {
+      fill: function () {
+        return anychart.color.lighten(this.sourceColor, 0.5) + ' ' + 0.3;
+      }
+    },
+    hovered: {
+      fill: function () {
+        return this.sourceColor + ' ' + 0.9;
+      }
+    }
+  });
+
+  // set container id for the chart
+  chart.container('container');
+
+  // initiate chart drawing
+  chart.draw();
+});</script>
+ </body>
+</html>
