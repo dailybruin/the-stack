@@ -685,7 +685,7 @@ robin_lee:
   current: no
 l_yang:
   name: L Yang
-  title: Stack Intern
+  title: Stack Developer
   bio: L is an economics student with a minor in digital humanities. She enjoys jazz, painting, and dinner parties.
   mug: no
   email: lyang02@ucla.edu
@@ -702,7 +702,7 @@ jun_ryu:
   github: jryu20
 kimi_cui:
   name: Kimberly Cui
-  title: Stack Intern
+  title: Stack Developer
   bio: Kimberly (Kimi) is a data theory student. She is a matcha and guinea pig enthusiast and enjoys blogging food on Instagram.
   mug: yes
   email: kcui@ucla.edu
@@ -710,7 +710,7 @@ kimi_cui:
   current: yes
 joey_ling:
   name: Joey Ling
-  title: Stack Intern
+  title: Stack Developer
   bio: Joey is a cognitive science student specializing in computing and minoring in data science engineering. She likes movies, playing guitar, and cooking. 
   mug: yes
   email: joeyling@g.ucla.edu
@@ -743,7 +743,7 @@ mabel_huynh:
   current: yes
 caroline_sha:
   name: Caroline Sha
-  title: Stack Intern
+  title: Stack Developer
   bio: Caroline is a biology student. 
   mug: no
   email: csha@media.ucla.edu
@@ -751,7 +751,7 @@ caroline_sha:
   current: yes
 naomi_suzuki:
   name: Naomi Suzuki
-  title: Stack Intern
+  title: Stack Developer
   bio: Naomi is a Statistics and Data Science student. 
   mug: no
   email: nfsuzuki07@ucla.edu
@@ -766,7 +766,7 @@ samantha_low:
   bio: Samantha Low is an environmental science student who enjoys hiking, exploring new places and taking pictures of food in her free time. 
 ayushi_kadakia:
   name: Ayushi Kadakia
-  title: Stack Intern
+  title: Stack Developer
   bio: Ayushi is a Business Economics student. She loves writing, coffee, and crosswords. 
   mug: no
   email: ayukadakia@ucla.edu
@@ -774,7 +774,7 @@ ayushi_kadakia:
   current: yes
 sydney_tomsick:
   name: Sydney Tomsick
-  title: Stack Intern
+  title: Stack Developer
   bio: Sydney is a pre-Data Theory major. She loves to dance, cook, and hangout with friends. 
   mug: no
   email: sydneytomsick@g.ucla.edu
@@ -782,25 +782,25 @@ sydney_tomsick:
   current: yes
 cassidy_sadowski:
   name: Cassidy Sadowski
-  title: Stack Intern
+  title: Stack Developer
   bio: Cassidy is studying Ecology, Behavior, & Evolution and Statistics & Data Science. She enjoys working with animals, theater, and swimming.
   mug: yes
   email: cassidysadowski@g.ucla.edu
   github: cassidysadowski
   current: yes
-sue_tang:
-  name: Shuqin (Sue) Tang
-  title: Stack Intern
-  bio: Sue is a Mathematics of Computation and Statistics & Data Science student.
-  mug: yes
-  email: sqtang37@ucla.edu
-  github: sqtang37
+bethany_kim:
+  name: Bethany Kim
+  title: Stack Developer
+  bio: 
+  mug: no
+  email: bkim@media.ucla.edu
+  github: bethanyyk
   current: yes
 hannah_um:
   name: Hannah Um
   title: Stack Intern
   bio: Hannah is a Statistics and Data Science student. She enjoys traveling, thrifting, and cafe-hopping in her free time.
   mug: yes
-  email: hannahum@g.ucla.edu
+  email: hum@media.ucla.edu
   github: hannahum
   current: yes
