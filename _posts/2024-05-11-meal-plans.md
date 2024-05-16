@@ -12,8 +12,8 @@ key_takeaways:
   - Based on leftover meals from 2022-2023, students with the 19P and 11P meal plans wasted over $500 on average due to uneaten meals.
 
 featured_image:
-  url:
-  caption:
+  url: meal-plans/bplate.JPG
+  caption: (Zimo Li/Daily Bruin)
 og_image:
 scripts:
   - https://d3js.org/d3.v7.min.js
