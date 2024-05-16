@@ -12,7 +12,7 @@ key_takeaways:
   - Based on leftover meals from 2022-2023, students with the 19P and 11P meal plans wasted over $500 on average due to uneaten meals.
 
 featured_image:
-  url: meal-plans/bplate.JPG
+  url: meal-plans/bplate-bright.JPG
   caption: (Zimo Li/Daily Bruin)
 og_image:
 scripts:
@@ -86,7 +86,7 @@ An alternative way to use leftover swipes is to purchase large packages of food 
 <div class="cust_chart">
     <canvas id='MONEY-WASTED'></canvas>
 </div>
-<p class = 'caption'>The average dollars wasted per person was calculated by dividing average meals leftover by cost per meal for each meal plan (2022-2023)</p>
+<p class = 'caption'>The average dollars wasted per person was calculated by multiplying the average meals leftover per meal plan by the cost per meal (2022-2023)</p>
 <p class = 'byline'>Graphic reporting by L Yang, Stack Contributor</p>
 
 The visualization above shows how much money goes wasted per meal plan holder due to unused meal swipes from 2022-2023 data, calculated by the average leftover meals per person multiplied by the cost per meal for each plan. While many students with the 19P meal plan expect to swipe in guests or to have multiple meals a day, a new class schedule and lifestyle after moving into the dorms can drastically change their eating habits, leading to more swipes going unused.
