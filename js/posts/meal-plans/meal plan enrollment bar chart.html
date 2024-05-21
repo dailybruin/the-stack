@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horizontal Bar Chart</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <canvas id="ENROLLMENT" width="800" height="400"></canvas>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const data = {
+                labels: ['11P', '11R', '14P', '14R', '19P', '19R'], // Labels for the Y-axis
+                datasets: [{
+                    label: 'Number of Students',
+                    data: [1530, 371, 5814, 938, 4199, 1584],
+                    backgroundColor: '#4B8BD0',
+                    borderColor: '#4B8BD0',
+                    borderWidth: 1
+                }]
+            };
+
+            const options = {
+                indexAxis: 'y', // This makes the chart horizontal
+                scales: {
+                    x: {
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: 'Number of students enrolled'
+                        }
+                    },
+                    y: {
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: 'Meal plans'
+                        }
+                    }
+                },
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+                    title: {
+                        display: true,
+                        text: 'Meal plan enrollment 2023-2024',
+                        font: {
+                            size: 22
+                        }
+                    }
+                },
+                maintainAspectRatio: false
+            };
+            const ctx = document.getElementById('ENROLLMENT').getContext('2d');
+            const myChart = new Chart(ctx, {
+                type: 'bar', // Type 'bar' remains for both vertical and horizontal bars
+                data: data,
+                options: options
+            });
+        });
+    </script>
+</body>
+</html>
