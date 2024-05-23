@@ -35,7 +35,7 @@ var rawData = [
     {x: 47, y: 128079, name: "Habibi Shack"},
     {x: 35, y: 94743.5, name: "Go Fusion"},
     {x: 41, y: 109962.5, name: "Original Herbivore"},
-    {x: 29, y: 73843.5, name: "Salvage Tacos"},
+    {x: 29, y: 73843.5, name: "Savage Tacos"},
     {x: 26, y: 65635.5, name: "Thai Mex Cocina"},
     {x: 55, y: 138757, name: "Bollywood Kitchen"},
     {x: 22, y: 53342.5, name: "Café Vietnam"},
@@ -79,7 +79,7 @@ var rawData = [
     // Creating the second series (line) and setting the theoretical data
     var series2 = chart.line(data_2);
     series2.name("Theoretically calculated data");
-    series2.markers(true);
+    series2.markers(false); // change to true if you want to display theoretical values
   
     // Enable tooltips for the second series
     series2.tooltip().titleFormat(function() {

@@ -42,7 +42,7 @@ anychart.onDocumentReady(function() {
                 { name: "Habibi Shack", value: 47, fill: '#ffffff'},
                 { name: "Go Fusion", value: 35, fill: '#ffffff'},
                 { name: "Original Herbivore", value: 41, fill: '#ffffff'},
-                { name: "Salvage Tacos", value: 29, fill: '#ffffff'},
+                { name: "Savage Tacos", value: 29, fill: '#ffffff'},
                 { name: "Thai Mex Cocina", value: 26, fill: '#ffffff'},
                 { name: "Bollywood Kitchen", value: 55, fill: '#ffffff'},
                 { name: "Café Vietnam", value: 22, fill: '#ffffff'},
