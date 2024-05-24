@@ -1,0 +1,196 @@
+/*@media only screen and (min-width: 1000px) {
+.UCLA {
+    float: left;
+    min-width: 50%;
+    margin-bottom: 10px;
+}
+
+.UCM {
+    float: right;
+    min-width: 50%;
+    margin-bottom: 10px;
+}
+}
+*/
+
+
+/* #UCLA {
+    width: 200px;
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto
+} */
+.byline {
+    font: 'PT Sans';
+    font-size:smaller;
+    color:gray;
+  }
+
+.caption {
+    font: 'PT Sans';
+    font-size:17px;
+    color:rgb(61, 60, 60);
+  }
+
+.title {
+    font: 'PT Sans';
+    font-size:20px;
+    color:rgb(61, 60, 60);
+    text-align: center;
+    font-weight: bold;
+  }
+
+.title, .caption, .byline {
+    overflow-wrap: break-word;
+    margin: 20px 0;
+}
+
+/* .pie-charts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+} */
+
+/* .emission-chart {
+    width: 350px;
+    margin-bottom: 30px;
+} */
+
+#tree-map {
+    width: 100%;
+    height: 100%;
+  }
+
+#circle-chart {
+    max-width: 75%;
+    height: auto;
+    margin: auto;
+    display: block;
+}
+
+@media only screen and (max-width: 480px) {
+    .cust_chart {
+        width: 90%;
+        height: 500px;
+        overflow-x: scroll;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+@media only screen and (min-width: 480px) {
+    .cust_chart {
+        width: 90%;
+        height: 500px;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+/* 
+.my-legend .legend-title {
+    text-align: left;
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 90%;
+}
+
+.my-legend .legend-scale ul {
+    margin: 0;
+    margin-bottom: 5px;
+    padding: 0;
+    float: left;
+    list-style: none;
+}
+
+.my-legend .legend-scale ul li {
+    display: inline-block;
+    font-size: 80%;
+    list-style: none;
+    line-height: 18px;
+    vertical-align: text-top;
+}
+
+.my-legend ul.legend-labels li span {
+    display: inline-block;
+    height: 16px;
+    width: 20px;
+    margin-right: 5px;
+    margin-left: 10px;
+    border: 1px solid #999;
+}
+
+.my-legend a {
+    color: #777;
+} */
+
+.slider {
+    position: relative;
+    max-width: 80%;
+    margin: auto;
+    overflow: hidden;
+    border: 2px solid #ddd;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+
+table {
+    margin: 0 auto;
+    text-align: center;
+}
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    font-family:pt sans,sans-serif;
+    padding: 15px;
+}
+
+tr:nth-child(odd) {
+    background-color: #f5f5f5;
+}
+
+
+h1 {
+    font-family:pt sans,sans-serif;
+    font-size: 1.5em;
+}
