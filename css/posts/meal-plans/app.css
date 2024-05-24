@@ -125,3 +125,72 @@
 .my-legend a {
     color: #777;
 } */
+
+.slider {
+    position: relative;
+    max-width: 80%;
+    margin: auto;
+    overflow: hidden;
+    border: 2px solid #ddd;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+
+table {
+    margin: 0 auto;
+    text-align: center;
+}
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    font-family:pt sans,sans-serif;
+    padding: 15px;
+}
+
+tr:nth-child(odd) {
+    background-color: #f5f5f5;
+}
+
+
+h1 {
+    font-family:pt sans,sans-serif;
+    font-size: 1.5em;
+}
