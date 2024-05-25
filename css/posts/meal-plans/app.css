@@ -71,7 +71,7 @@
 @media only screen and (max-width: 480px) {
     .cust_chart {
         width: 90%;
-        height: 500px;
+        height: 300px;
         overflow-x: scroll;
         margin: auto;
         display: flex;
@@ -149,7 +149,7 @@ img {
     display: block;
 }
 
-.prev, .next {
+.prev_img, .next_img {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -161,15 +161,15 @@ img {
     border-radius: 50%;
 }
 
-.prev {
+.prev_img {
     left: 10px;
 }
 
-.next {
+.next_img {
     right: 10px;
 }
 
-.prev:hover, .next:hover {
+.prev_img:hover, .next_img:hover {
     background-color: rgba(0,0,0,0.8);
 }
 

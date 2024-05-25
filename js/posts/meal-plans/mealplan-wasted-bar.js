@@ -25,6 +25,11 @@ const options_wasted = {
         display: true,
         text: 'Average dollars wasted per person',
       },
+      ticks: {
+        callback: function(value, index, values) {
+          return '$' + value;
+        },
+      },
     },
     y: {
       title: {

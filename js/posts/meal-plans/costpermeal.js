@@ -26,6 +26,11 @@ const costGraph = new Chart(ctxt, {
           display: true,
           text: 'Cost per meal',
         },
+        ticks: {
+          callback: function(value, index, values) {
+            return '$' + value;
+          },
+        },
       },
     },
     plugins: {
