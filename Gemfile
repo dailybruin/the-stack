@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
 group :jekyll_plugins do
+    ruby '~> 3.1'
     gem "jekyll"
     gem "jekyll-watch"
     gem "jekyll-paginate"
