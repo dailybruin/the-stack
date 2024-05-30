@@ -1,0 +1,19 @@
+current directory: /Users/ayushikadakia/the-stack/vendor/bundle/ruby/3.0.0/gems/eventmachine-1.2.7/ext/fastfilereader
+/opt/homebrew/opt/ruby@3.0/bin/ruby extconf.rb
+creating Makefile
+
+current directory: /Users/ayushikadakia/the-stack/vendor/bundle/ruby/3.0.0/gems/eventmachine-1.2.7/ext/fastfilereader
+make DESTDIR\= sitearchdir\=./.gem.20240529-74828-fzcr5d sitelibdir\=./.gem.20240529-74828-fzcr5d clean
+
+current directory: /Users/ayushikadakia/the-stack/vendor/bundle/ruby/3.0.0/gems/eventmachine-1.2.7/ext/fastfilereader
+make DESTDIR\= sitearchdir\=./.gem.20240529-74828-fzcr5d sitelibdir\=./.gem.20240529-74828-fzcr5d
+compiling mapper.cpp
+compiling rubymain.cpp
+linking shared-object fastfilereaderext.bundle
+
+current directory: /Users/ayushikadakia/the-stack/vendor/bundle/ruby/3.0.0/gems/eventmachine-1.2.7/ext/fastfilereader
+make DESTDIR\= sitearchdir\=./.gem.20240529-74828-fzcr5d sitelibdir\=./.gem.20240529-74828-fzcr5d install
+/usr/bin/install -c -m 0755 fastfilereaderext.bundle ./.gem.20240529-74828-fzcr5d
+
+current directory: /Users/ayushikadakia/the-stack/vendor/bundle/ruby/3.0.0/gems/eventmachine-1.2.7/ext/fastfilereader
+make DESTDIR\= sitearchdir\=./.gem.20240529-74828-fzcr5d sitelibdir\=./.gem.20240529-74828-fzcr5d clean
