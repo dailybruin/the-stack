@@ -61,6 +61,8 @@ var rawData = [
     var chart = anychart.scatter();
   
     chart.title("The calculated formula: " + result.string + "\nThe coefficient of determination (R2): " + result.r2.toPrecision(2));
+    chart.xAxis().title("Number of times the food truck has visited UCLA")
+    chart.yAxis().title("Sales")
   
     chart.legend(true);
   
