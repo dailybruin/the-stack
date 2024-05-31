@@ -686,9 +686,9 @@ robin_lee:
 l_yang:
   name: L Yang
   title: Stack Developer
-  bio: L is an economics student with a minor in digital humanities. She enjoys jazz, painting, and dinner parties.
-  mug: no
-  email: lyang02@ucla.edu
+  bio: L is an economics student minoring in digital humanities and statistics/data science. She enjoys jazz, painting, and dinner parties.
+  mug: yes
+  email: lyang@media.ucla.edu
   github: lyang02
   current: yes
 jun_ryu:
