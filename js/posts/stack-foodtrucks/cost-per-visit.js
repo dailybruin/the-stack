@@ -1,4 +1,4 @@
-// raw data: (number of visits, average cost per visit) with labels
+// raw data (number of visits, average cost per visit) with labels
 var rawData = [
   {x: 62, y: 9795.11, name: "8E8 Thai Street Food"},
   {x: 46, y: 8020.68, name: "Aloha Friday"},
@@ -51,22 +51,15 @@ var rawData = [
   anychart.onDocumentReady(function () {
       
     //Create data for series
-    var data_1 = rawData.map(function(item) { return [item.x, item.y]; });
+    var data = rawData.map(function(item) { return [item.x, item.y]; });
     
     // Create chart
     var chart = anychart.scatter();
-    
-    // Create series (marker) and set data
-    var series1 = chart.marker(data_1);
+    var series = chart.marker(data);
 
-      /*
-      series.tooltip().titleFormat(function() {
-        return rawData[this.index].name;
-      });
-      series.tooltip().format(function() {
-        return "Number of visits: " + this.x + "\nAverage sales per visit: " + "$" + this.y;
-      });
-      */
+    // Create axis labels
+    chart.xAxis().title("Number of times the food truck has visited UCLA");
+    chart.yAxis().title("Average sales per visit");
 
     // Enable grid lines
     chart.xGrid(true);
@@ -74,13 +67,9 @@ var rawData = [
 
     chart.xMinorGrid(true);
     chart.yMinorGrid(true);
-      
-    // Create axis labels
-    chart.xAxis().title("Number of times the food truck has visited UCLA");
-    chart.yAxis().title("Average sales per visit");
 
     // Set container id
-    chart.container("cpv");
+    chart.container("cost-per-visit0");
 
     // Draw chart
     chart.draw();
