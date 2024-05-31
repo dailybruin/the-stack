@@ -57,9 +57,17 @@ var rawData = [
     var chart = anychart.scatter();
     var series = chart.marker(data);
 
+     // Enable tooltips for the first series
+     series.tooltip().titleFormat(function() {
+      return rawData[this.index].name;
+    });
+    series.tooltip().format(function() {
+      return "Number of visits: " + this.x + "\nAverages sales per visit: $" + this.value;
+    });
+
     // Create axis labels
     chart.xAxis().title("Number of times the food truck has visited UCLA");
-    chart.yAxis().title("Average sales per visit");
+    chart.yAxis().title("Average sales per visit (in dollars)");
 
     // Enable grid lines
     chart.xGrid(true);
@@ -69,7 +77,7 @@ var rawData = [
     chart.yMinorGrid(true);
 
     // Set container id
-    chart.container("cost-per-visit0");
+    chart.container("cost-per-visit");
 
     // Draw chart
     chart.draw();
