@@ -4,7 +4,7 @@ junwon_choi:
   bio: Junwon is a third-year data theory student. He enjoys lifting weights, running, and taking photos.
   mug: yes
   editor: yes
-  current: yes
+  current: no
   email: jchoi7@media.ucla.edu
   github: cjunwon
 liam_mcglynn:
@@ -769,6 +769,7 @@ ayushi_kadakia:
   title: Stack Developer
   bio: Ayushi is a Business Economics student. She loves writing, coffee, and crosswords. 
   mug: no
+  editor: yes
   email: ayukadakia@ucla.edu
   github: ayukadakia
   current: yes
