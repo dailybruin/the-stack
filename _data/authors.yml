@@ -614,7 +614,7 @@ angel_perez:
   title: Stack Developer
   bio: Angel is a third-year global studies student from San Diego, who likes cats and swimming in the ocean.
   mug: yes
-  current: yes
+  current: no
   email: aperez2@media.ucla.edu
 finn_liu: 
   name: Finn Liu 
@@ -697,7 +697,7 @@ jun_ryu:
   bio: Jun is an applied mathematics and statistics student who enjoys jamming, playing basketball, and searching for good food.
   mug: yes
   editor: no
-  current: yes
+  current: no
   email: ryujunhee@g.ucla.edu
   github: jryu20
 kimi_cui:
@@ -715,7 +715,7 @@ joey_ling:
   mug: yes
   email: joeyling@g.ucla.edu
   github: joeyling24
-  current: yes
+  current: no
 alicia_ying:
   name: Alicia Ying
   title: Stack Intern
@@ -723,32 +723,32 @@ alicia_ying:
   mug: yes
   email: aying@media.ucla.edu
   github: lycheeay
-  current: yes
+  current: no
 luca_adams:
   name: Luca Adams
   title: Stack Intern
   email: lucaadams@ucla.edu
   mug: no
-  current: yes
+  current: no
   github: luca-adams94
   bio:  Luca Adams, a political science student, enjoys being part of the UCLA Club ultimate frisbee team and reading fiction in his spare time.
 mabel_huynh:
   name: Mabel Huynh
   title: Stack Intern
-  bio: Mabel is a Data Theory student who enjoys watching movies and collecting merch from local artists. 
+  bio: Mabel was a Data Theory student who enjoys watching movies and collecting merch from local artists. 
   mug: yes
   email: mbhuynh@g.ucla.edu
   github: mbhuynh
   editor: no
-  current: yes
+  current: no
 caroline_sha:
   name: Caroline Sha
   title: Stack Developer
-  bio: Caroline is a biology student. 
+  bio: Caroline was a biology student. 
   mug: no
   email: csha@media.ucla.edu
   github: carolinesha
-  current: yes
+  current: no
 naomi_suzuki:
   name: Naomi Suzuki
   title: Stack Developer
@@ -762,8 +762,8 @@ samantha_low:
   title: Stack Developer
   email: slow@media.ucla.edu
   mug: yes
-  current: yes
-  bio: Samantha Low is an environmental science student who enjoys hiking, exploring new places and taking pictures of food in her free time. 
+  current: no
+  bio: Samantha Low was an environmental science student who enjoys hiking, exploring new places and taking pictures of food in her free time. 
 ayushi_kadakia:
   name: Ayushi Kadakia
   title: Stack Developer
