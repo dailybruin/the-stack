@@ -1,6 +1,6 @@
 junwon_choi:
   name: Junwon Choi
-  title: Data editor
+  title: 2023-2024 Data editor
   bio: Junwon is a third-year data theory student. He enjoys lifting weights, running, and taking photos.
   mug: yes
   editor: yes
@@ -9,8 +9,8 @@ junwon_choi:
   github: cjunwon
 liam_mcglynn:
   name: Liam McGlynn
-  title: Assistant Data editor
-  bio: Liam is a second-year mechanical engineering student. He likes golden retrievers, crossword puzzles, and oxford commas.
+  title: Data editor
+  bio: Liam is a third-year mechanical engineering student. He likes golden retrievers, crossword puzzles, and oxford commas.
   mug: yes
   editor: yes
   current: yes
@@ -718,7 +718,7 @@ joey_ling:
   current: no
 alicia_ying:
   name: Alicia Ying
-  title: Stack Intern
+  title: Stack Developer
   bio: Alicia is a math and cognitive science student. In her free time, enjoys hiking, thrifting, and following Youtube recipes.
   mug: yes
   email: aying@media.ucla.edu
@@ -726,7 +726,7 @@ alicia_ying:
   current: no
 luca_adams:
   name: Luca Adams
-  title: Stack Intern
+  title: Stack Developer
   email: lucaadams@ucla.edu
   mug: no
   current: no
@@ -734,7 +734,7 @@ luca_adams:
   bio:  Luca Adams, a political science student, enjoys being part of the UCLA Club ultimate frisbee team and reading fiction in his spare time.
 mabel_huynh:
   name: Mabel Huynh
-  title: Stack Intern
+  title: Stack Developer
   bio: Mabel was a Data Theory student who enjoys watching movies and collecting merch from local artists. 
   mug: yes
   email: mbhuynh@g.ucla.edu
@@ -766,7 +766,7 @@ samantha_low:
   bio: Samantha Low was an environmental science student who enjoys hiking, exploring new places and taking pictures of food in her free time. 
 ayushi_kadakia:
   name: Ayushi Kadakia
-  title: Stack Developer
+  title: Assistant Data editor 
   bio: Ayushi is a Business Economics student. She loves writing, coffee, and crosswords. 
   mug: no
   editor: yes
@@ -799,7 +799,7 @@ bethany_kim:
   current: yes
 hannah_um:
   name: Hannah Um
-  title: Stack Intern
+  title: Stack Developer
   bio: Hannah is a Statistics and Data Science student. She enjoys traveling, thrifting, and cafe-hopping in her free time.
   mug: yes
   email: hum@media.ucla.edu
