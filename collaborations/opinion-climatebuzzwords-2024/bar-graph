@@ -74,3 +74,9 @@ if (window.matchMedia('(max-width: 480px)').matches) {
   campusData.options.maintainAspectRatio = false;
   campusData.update();
 }
+
+
+
+
+
+
