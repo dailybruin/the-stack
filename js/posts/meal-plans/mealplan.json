@@ -1,0 +1,53 @@
+{
+    "name": "Meal Plan", 
+    "children": [ 
+    { 
+        "name": " 11P ",
+        "children": [
+            {"name": "Consumed", "size": 496361 },
+            {"name": "Leftover", "size": 61273 },
+            {"name": "Donated", "size": 8171 } 
+        ] 
+        },
+   { 
+    "name": " 11R ", 
+    "children": [
+   {"name": "Consumed", "size": 160626 },
+   {"name": "Leftover", "size": 5430 },
+   {"name": "Donated", "size": 724 } 
+    ] 
+    },
+   { 
+    "name": " 14P " ,
+    "children": [
+   {"name": "Consumed", "size": 2317617 },
+   {"name": "Leftover", "size": 177099 },
+   {"name": "Donated", "size": 23617 } 
+    ] 
+    },
+   { 
+    "name": " 14R " ,
+    "children": [
+   {"name": "Consumed", "size": 433935 },
+   {"name": "Leftover", "size": 18741 },
+   {"name": "Donated", "size": 2499 } 
+    ] 
+    },
+   { 
+    "name": " 19P " ,
+    "children": [
+   {"name": "Consumed", "size": 2036503 },
+   {"name": "Leftover", "size": 199303 },
+   {"name": "Donated", "size": 26578 } 
+    ] 
+    },
+   { 
+    "name": " 19R " ,
+    "children": [
+   {"name": "Consumed", "size": 1033203 },
+   {"name": "Leftover", "size": 45617 },
+   {"name": "Donated", "size": 6083 } 
+    ] 
+    }
+   ] 
+}

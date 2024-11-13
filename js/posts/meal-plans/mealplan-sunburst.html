@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+
+path {
+  stroke: #fff;
+}
+
+</style>
+<body>
+<div>
+  <h3 style="text-align: center;">Number of Swipes that were Consumed, Left Over, and Donated from Fall 2022 to Spring 2023</h1>
+</div>
+<div>
+  <svg id="chart" width="960" height="700"></svg>
+</div>
+<div>
+  <p style="text-align: left;">The innermost circle represents enrollment for all meal plans. The inner ring represents the number of swipes for each meal plan. The outermost ring represents the number of swipes that were consumed, left over, or donated for each meal plan.</p>
+</div>
+<div>
+  <p style="text-align: left;">The total number of swipes from all students for each meal plan was calculated by multiplying the number of enrolled people by the number of weeks, then multiplying that value by the number of swipes per week according to the meal plan. The number of consumed swipes was calculated by subtracting the number of leftover swipes, which was provided by UCLA housing, from the total number of enrolled swipes. The number of donated swipes was estimated using the proportion of leftover swipes for each meal plan relative to all left over swipes.</p>
+</div>
+<div>
+  <p style="text-align: left;">Graphic reporting by Joey Ling, Stack Intern</p>
+</div>
+
+<script src="https://d3js.org/d3.v3.min.js"></script>
+<script>
+var width = 960,
+    height = 700,
+    radius = (Math.min(width, height) / 2) - 10;
+
+var formatNumber = d3.format(",d");
+
+var x = d3.scale.linear()
+    .range([0, 2 * Math.PI]);
+
+var y = d3.scale.sqrt()
+    .range([0, radius]);
+
+var color = d3.scale.category20c();
+
+var partition = d3.layout.partition()
+    .value(function(d) { return d.size; });
+
+var arc = d3.svg.arc()
+    .startAngle(function(d) { return Math.max(0, Math.min(2 * Math.PI, x(d.x))); })
+    .endAngle(function(d) { return Math.max(0, Math.min(2 * Math.PI, x(d.x + d.dx))); })
+    .innerRadius(function(d) { return Math.max(0, y(d.y)); })
+    .outerRadius(function(d) { return Math.max(0, y(d.y + d.dy)); });
+
+var svg = d3.select("#chart").append("svg")
+    .attr("width", width)
+    .attr("height", height)
+    .append("g")
+    .attr("transform", "translate(" + width / 2 + "," + (height / 2) + ")");
+
+d3.json("mealplan.json", function(error, root) {
+  if (error) throw error;
+
+  var g = svg.selectAll("g")
+      .data(partition.nodes(root))
+    .enter().append("g");
+
+  var path = g.append("path")
+      .attr("d", arc)
+      .style("fill", function(d) { return color((d.children ? d : d.parent).name); })
+      .on("click", click);
+
+  path.append("title")
+      .text(function(d) { return d.name + "\n" + formatNumber(d.value); });
+
+  g.append("text")
+      .attr("transform", function(d) { return "translate(" + arc.centroid(d) + ")"; })
+      .attr("dy", ".35em")
+      .style("text-anchor", "middle")
+      .text(function(d) { return d.name; });
+
+  function click(d) {
+    svg.transition()
+        .duration(750)
+        .tween("scale", function() {
+          var xd = d3.interpolate(x.domain(), [d.x, d.x + d.dx]),
+              yd = d3.interpolate(y.domain(), [d.y, 1]),
+              yr = d3.interpolate(y.range(), [d.y ? 20 : 0, radius]);
+          return function(t) { x.domain(xd(t)); y.domain(yd(t)).range(yr(t)); };
+        })
+      .selectAll("path")
+        .attrTween("d", function(d) { return function() { return arc(d); }; });
+  }
+});
+
+d3.select(self.frameElement).style("height", height + "px");
+
+</script>
+</body>
+</html>
