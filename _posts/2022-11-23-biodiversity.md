@@ -4,7 +4,7 @@ title: "Growing a sustainable campus: A look at the biodiversity of plants at UC
 teaser: According to the California Native Plant Society, native plants are more environmentally friendly. But how much of UCLA’s landscaping is made up of native plants?  
 
 authors:
-  - angel_perez
+  - angel_pippins_lopez
   - junwon_choi
   - finn_liu
 

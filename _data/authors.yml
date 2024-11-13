@@ -1,16 +1,16 @@
 junwon_choi:
   name: Junwon Choi
   title: Data editor
-  bio: Junwon is a third-year data theory student. He enjoys lifting weights, running, and taking photos.
+  bio: Junwon was a data theory student. He was the 2023-24 Data editor. He enjoys lifting weights, running, and taking photos.
   mug: yes
   editor: yes
-  current: yes
+  current: no
   email: jchoi7@media.ucla.edu
   github: cjunwon
 liam_mcglynn:
   name: Liam McGlynn
-  title: Assistant Data editor
-  bio: Liam is a second-year mechanical engineering student. He likes golden retrievers, crossword puzzles, and oxford commas.
+  title: Data editor
+  bio: Liam is a third-year mechanical engineering student. He likes golden retrievers, crossword puzzles, and oxford commas.
   mug: yes
   editor: yes
   current: yes
@@ -609,12 +609,12 @@ emma_cotter:
   mug: yes
   current: no
   email: ecotter@media.ucla.edu
-angel_perez:
-  name: Angel Perez
+angel_pippins_lopez:
+  name: Angel Pippins-Lopez
   title: Stack Developer
-  bio: Angel is a third-year global studies student from San Diego, who likes cats and swimming in the ocean.
+  bio: Angel was a global studies student from San Diego, who likes cats and swimming in the ocean.
   mug: yes
-  current: yes
+  current: no
   email: aperez2@media.ucla.edu
 finn_liu: 
   name: Finn Liu 
@@ -766,9 +766,10 @@ samantha_low:
   bio: Samantha Low is an environmental science student who enjoys hiking, exploring new places and taking pictures of food in her free time. 
 ayushi_kadakia:
   name: Ayushi Kadakia
-  title: Stack Developer
+  title: Assistant Data editor
   bio: Ayushi is a Business Economics student. She loves writing, coffee, and crosswords. 
   mug: no
+  editor: yes
   email: ayukadakia@ucla.edu
   github: ayukadakia
   current: yes
