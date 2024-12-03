@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HSI Chart</title>
+  <!-- Include Chart.js from a CDN  -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation@1.0.0"></script>
+  <style>
+    #subtitle {
+      text-align: center;
+      margin-top: 2.5vh;
+      font-family: 'Helvetica Neue', sans-serif;
+      font-size: 0.8em;
+      color: #7c7c7c;
+    }
+  </style>
+</head>
+
+<body>
+  <div style="padding: 3.5vw;">
+    <canvas id="hsi_chart"></canvas>
+    <div id="subtitle">*Federal eligibility for HSI does not have currently have an available definition. Generally, it is assumed that the instutition must have 25% full-time equivalent (FTE) students of Hispanic/Latino origin.</div>
+    <div id="subtitle">Source: U.S. Department of Education, National Center for Education Statistics, Integrated
+      Postsecondary Education Data System (IPEDS), [2023]<br>Graphic Reporting by L Yang, Stack Contributor</div>
+  </div>
+
+  </div>
+
+  <script>
+    // Data for the chart
+    const data = [
+      { name: "UCLA", total: 49010, percent: 20, count: 9906},
+      { name: "CSU Pomona", total: 29442, percent: 52, count: 15364},
+      { name: "CSU Dominguez Hills", total: 18253, percent: 67, count: 12184},
+      { name: "CSU Long Beach", total: 43106, percent: 48, count: 20850},
+      { name: "CSU Los Angeles", total: 28820, percent: 73, count: 20941},
+      { name: "CSU Northridge", total: 41751, percent: 53, count: 22041},
+      { name: "Los Angeles Valley College", total: 24256, percent: 53, count: 12769},
+      { name: "Los Angeles City College", total: 23627, percent: 53, count: 12595},
+      { name: "Santa Monica College", total: 32856, percent: 39, count: 12853},
+      { name: "West Los Angeles College", total: 17492, percent: 49, count: 8567},
+    ];
+
+    // Extract the labels and datasets
+    const labels = data.map(item => item.name);
+    const totals = data.map(item => item.total);
+    const percents = data.map(item => item.percent);
+    const counts = data.map(item => item.count);
+
+    // Create the chart
+    new Chart(document.getElementById('hsi_chart'), {
+      type: 'bar',
+      data: {
+        labels: labels,
+        datasets: [{
+          label: 'Percentage of Hispanic/Latino students (%)',
+          data: percents,
+          backgroundColor: '#5DA7F0',
+          borderWidth: 1,
+        }],
+      },
+      options: {
+        indexAxis: 'y',
+        scales: {
+          x: {
+            beginAtZero: true,
+            title: {
+              display: true,
+              text: 'Percent of 12-month unduplicated headcount that are Hispanic/Latino (2022-2023)', 
+              font: {
+                size: 14
+              },
+            },
+            ticks: {
+              font: {
+                size: 14 
+              }
+            }
+          },
+          y: {
+            beginAtZero: true,
+            title: {
+              display: true,
+              text: 'Institution',
+              font: {
+                size: 14
+              },
+            },
+            ticks: {
+              font: {
+                size: 14  
+              }
+            }
+          },
+        },
+        plugins: {
+          tooltip: {
+        enabled: true,  
+        displayColors: false,
+        callbacks: {
+          label: function(context) {
+            const index = context.dataIndex;
+            const name = labels[index]; 
+            const percent = percents[index];  
+            const count = counts[index];  
+            const total = totals[index]; 
+            
+            //tooltip output
+            return [
+              `Percentage of Hispanic/Latino students: ${percent}%`, 
+              `Total Hispanic/Latino students: ${count.toLocaleString()}`,  
+              `Total students enrolled (for credit during the 12-month reporting period): ${total.toLocaleString()}` 
+            ];
+          }
+        }
+      },
+          title: {
+            display: true,
+            text: 'Comparing UCLA to Surrounding Hispanic-Serving Institutions (2022-2023)',
+            font: {
+              size: 20,
+            },
+            padding: {
+              bottom: 50, 
+            }
+          },
+        legend: {
+          display: false,
+        },
+        annotation: {
+          annotations: { //vertical HSI threshold line
+            line1: {
+              type: 'line',
+              xMin: 25, 
+              xMax: 25,  
+              borderColor: 'rgba(88, 64, 64, 0.75)',  
+              borderWidth: 2,  
+              borderDash: [5, 5], 
+              label: {
+                content: '25% threshold for HSI eligibility*', 
+                enabled: true, 
+                position: 'start', 
+                font: {
+                  size: 12.5,  
+                },
+                yAdjust: -40,  
+                backgroundColor: 'rgba(0, 0, 0, 0.5)',  
+                padding: 5  
+              }
+            }
+          }
+        },
+      }
+    }
+  },
+    );
+  </script>
+</body>
+
+</html>
