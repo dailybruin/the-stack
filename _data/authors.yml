@@ -766,9 +766,9 @@ samantha_low:
   bio: Samantha Low is an environmental science student who enjoys hiking, exploring new places and taking pictures of food in her free time. 
 ayushi_kadakia:
   name: Ayushi Kadakia
-  title: Stack Developer
-  bio: Ayushi is a Business Economics student. She loves writing, coffee, and crosswords. 
-  mug: no
+  title: Assistant Data editor
+  bio: Ayushi is an Economics and Statistics/Data Science student. She loves writing and crosswords. 
+  mug: yes
   email: ayukadakia@ucla.edu
   github: ayukadakia
   current: yes
