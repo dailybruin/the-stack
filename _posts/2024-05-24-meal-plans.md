@@ -1,5 +1,5 @@
 ---
-title: "Dishing it Out - A Closer Look at UCLA Dining’s Meal Plan Offerings"
+title: "Dishing it Out -A Closer Look at UCLA Dining’s Meal Plan Offerings"
 teaser: Which UCLA meal plan should you choose?
 authors:
   - l_yang
