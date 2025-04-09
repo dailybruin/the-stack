@@ -1,5 +1,5 @@
 ---
-title: "Dishing it Out - A Closer Look at UCLA Dining’s Meal Plan Offerings"
+title: "Dishing it Out -A Closer Look at UCLA Dining’s Meal Plan Offerings"
 teaser: Which UCLA meal plan should you choose?
 authors:
   - l_yang
@@ -12,7 +12,7 @@ key_takeaways:
   - Nearly 6,000 students opted for 14P in 2023-2024, making it the most popular meal plan. Based on leftover meals from 2022-2023, students with the premier meal plans wasted over $400 on average due to uneaten meals.
 
 featured_image:
-  url: meal-plans/bplate-bright.JPG
+  url: meal-plans/bplate-bright copy.jpg
   caption: (Zimo Li/Daily Bruin)
 og_image:
 scripts:
