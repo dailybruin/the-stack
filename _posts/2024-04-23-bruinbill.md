@@ -12,7 +12,7 @@ key_takeaways:
   - Tuition and UC Student Health Insurance Plan are the largest components of the BruinBill.
 
 featured_image:
-  url: tuition-ucla/web.data.bruinbill.MC.jpg
+  url: meal-plans/bplate-bright copy.JPG
   caption: (Megan Cai/Photo editor)
 og_image:
 scripts:
