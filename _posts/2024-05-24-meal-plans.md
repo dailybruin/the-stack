@@ -58,7 +58,7 @@ On top of selecting courses and housing each year, a key decision for on-campus 
 
 ### A Breakdown of UCLA’s Meal Plan System
 
-The flexibility of the meal plan program allows students to choose from a variety of options. UCLA Dining offers three tiers of meal plans: 19, 14 or 11 meals per week. Each tier has two versions: Premier, a more flexible plan with carry-over privileges until the end of the quarter, or Regular, a more cost-effective plan without carry-over privileges. Students with the Premier plan can use their unused swipes at any time during the quarter, whereas students with the Regular plan can only use their swipes once per meal period (breakfast, lunch or dinner), and any unused swipes cannot be used in following weeks. As of fall quarter, students can also use their swipes on campus instead of spending their own money on weekdays between 11 a.m. and 3:59 p.m. In fall 2023, 80% of all swipes were used on the Hill, while 20% were used at on-campus restaurants. 
+The flexibility of the meal plan program allows students to choose from a variety of options. UCLA Dining offers three tiers of meal plans: 19, 14 or 11 meals per week. Each tier has two versions: Premier, a more flexible plan with carry-over privileges until the end of the quarter, or Regular, a more cost-effective plan without carry-over privileges. Students with the Premier plan can use their unused swipes at any time during the quarter, whereas students with the Regular plan can only use their swipes once per meal period (breakfast, lunch or dinner), and any unused swipes cannot be used in following weeks. As of fall quarter, students can also use their swipes on campus instead of spending their own money on weekdays between 11 a.m. and 3:59 p.m. In fall 2023, 80% of all swipes were used on the Hill, while 20% were used at on-campus restaurants.
 
 <p class = 'title'>Weekly average distribution of meal swipes from Fall 2023</p>
 <div id="circle-chart" class="cust_chart"></div>
@@ -86,6 +86,7 @@ Premier plans are more costly compared to their Regular counterparts. Additional
 </div>
 <p class = 'byline'>Graphic reporting by Hannah Um, Stack Contributor</p>
 
+
 For the 2023-2024 school year, 14P was by far the most popular meal plan, with nearly 6,000 students enrolled. In contrast, 11R was the least popular meal plan, with only 371 students enrolled. Generally, there is higher enrollment in the Premier plans than in the Regular plans, suggesting that students prefer to have more flexible meal schedules. Additionally, UCLA Housing  said the 11P plan is a recent addition to meal plan options, being offered since 2020 due to student demand.
 
 ### Leftover and Donated Swipes
@@ -95,7 +96,6 @@ Laura Zhou, a second-year statistics and data science student, initially selecte
 “After fall quarter, I got into the UCLA Cricket Team. Most people on the cricket team offer to swipe [others] in for lunches and dinners after team training, and that's why I switched from 19R to 19P,” Balamurali said.
 
 This transition, however, resulted in him having leftover swipes at the end of the quarter. 
-
 
 <p class = 'title'>Number of Swipes that were Consumed, Left Over, and Donated from Fall 2022 to Spring 2023</p>
 <div class="cust_chart">
@@ -110,7 +110,7 @@ This contrast between students’ expectation versus reality of their swipe usag
 
 An alternative way to use up extra swipes is to purchase large packages of food in bulk that are offered at the end of each quarter or to stock up on snacks from different cafes. 
 
-Zhou said she preferred to use her accumulated excess swipes to purchase items. Last quarter, she cashed out swipes for a $500 Panda Express gift card. This quarter, she hopes to trade swipes for vouchers to use at the UCLA Store. 
+Zhou said she preferred to use her accumulated excess swipes to purchase items. Last quarter, she cashed out swipes for a $500 Panda Express gift card. This quarter, she hopes to trade swipes for vouchers to use at the UCLA Store.
 
 <p class = 'title'>How much money is wasted from uneaten meals?</p>
 <div class="cust_chart">

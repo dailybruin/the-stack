@@ -17,6 +17,7 @@
   };
 
   function onLoad() {
+    // test
     console.log(asciiLogo);
     console.log(
       'Welcome to The Stack! Want to develop for us? Type Stack.apply();'
