@@ -9,7 +9,7 @@ authors:
 key_takeaways:
   - The most expensive meal plan by cost per meal for 2022-2023 was 11P, at $14.32 per swipe.
   - Nearly 6,000 students opted for 14P in 2023-2024, making it the most popular meal plan.
-  - Nearly 6,000 students opted for 14P in 2023-2024, making it the most popular meal plan. Based on leftover meals from 2022-2023, students with the premier meal plans wasted over $400 on average due to uneaten meals.
+  - Based on leftover meals from 2022-2023, students with the premier meal plans wasted over $400 on average due to uneaten meals.
 
 featured_image:
   url: meal-plans/bplate-bright copy.jpg
@@ -58,7 +58,7 @@ On top of selecting courses and housing each year, a key decision for on-campus 
 
 ### A Breakdown of UCLA’s Meal Plan System
 
-The flexibility of the meal plan program allows students to choose from a variety of options. UCLA Dining offers three tiers of meal plans: 19, 14 or 11 meals per week. Each tier has two versions: Premier, a more flexible plan with carry-over privileges until the end of the quarter, or Regular, a more cost-effective plan without carry-over privileges. Students with the Premier plan can use their unused swipes at any time during the quarter, whereas students with the Regular plan can only use their swipes once per meal period (breakfast, lunch or dinner), and any unused swipes cannot be used in following weeks. As of fall quarter, students can also use their swipes on campus instead of spending their own money on weekdays between 11 a.m. and 3:59 p.m. In fall 2023, 80% of all swipes were used on the Hill, while 20% were used at on-campus restaurants.
+The flexibility of the meal plan program allows students to choose from a variety of options. UCLA Dining offers three tiers of meal plans: 19, 14 or 11 meals per week. Each tier has two versions: Premier, a more flexible plan with carry-over privileges until the end of the quarter, or Regular, a more cost-effective plan without carry-over privileges. Students with the Premier plan can use their unused swipes at any time during the quarter, whereas students with the Regular plan can only use their swipes once per meal period (breakfast, lunch or dinner), and any unused swipes cannot be used in following weeks. As of fall quarter 2024, students can also use their swipes on campus instead of spending their own money on weekdays between 11 a.m. and 3:59 p.m. In fall 2023, 80% of all swipes were used on the Hill, while 20% were used at on-campus restaurants.
 
 <p class = 'title'>Weekly average distribution of meal swipes from Fall 2023</p>
 <div id="circle-chart" class="cust_chart"></div>
