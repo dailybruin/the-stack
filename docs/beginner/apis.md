@@ -1,6 +1,6 @@
 ---
 layout: page
-permalink: /docs/apis/
+permalink: /docs/beginner/apis/
 ---
 
 ## What Are APIs?

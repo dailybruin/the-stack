@@ -1,6 +1,6 @@
 ---
 layout: page
-permalink: /docs/markdown/
+permalink: /docs/beginner/markdown/
 ---
 
 ## Intro to Markdown
