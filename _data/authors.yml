@@ -697,7 +697,7 @@ jun_ryu:
   bio: Jun is an applied mathematics and statistics student who enjoys jamming, playing basketball, and searching for good food.
   mug: yes
   editor: no
-  current: yes
+  current: no
   email: ryujunhee@g.ucla.edu
   github: jryu20
 kimi_cui:
@@ -707,7 +707,7 @@ kimi_cui:
   mug: yes
   email: kcui@ucla.edu
   github: kimiicui 
-  current: yes
+  current: no
 joey_ling:
   name: Joey Ling
   title: Stack Developer
@@ -715,7 +715,7 @@ joey_ling:
   mug: yes
   email: joeyling@g.ucla.edu
   github: joeyling24
-  current: yes
+  current: no
 alicia_ying:
   name: Alicia Ying
   title: Stack Intern
@@ -723,13 +723,13 @@ alicia_ying:
   mug: yes
   email: aying@media.ucla.edu
   github: lycheeay
-  current: yes
+  current: no
 luca_adams:
   name: Luca Adams
   title: Stack Intern
   email: lucaadams@ucla.edu
   mug: no
-  current: yes
+  current: no
   github: luca-adams94
   bio:  Luca Adams, a political science student, enjoys being part of the UCLA Club ultimate frisbee team and reading fiction in his spare time.
 mabel_huynh:
@@ -740,7 +740,7 @@ mabel_huynh:
   email: mbhuynh@g.ucla.edu
   github: mbhuynh
   editor: no
-  current: yes
+  current: no
 caroline_sha:
   name: Caroline Sha
   title: Stack Developer
@@ -748,7 +748,7 @@ caroline_sha:
   mug: no
   email: csha@media.ucla.edu
   github: carolinesha
-  current: yes
+  current: no
 naomi_suzuki:
   name: Naomi Suzuki
   title: Stack Developer
@@ -756,13 +756,13 @@ naomi_suzuki:
   mug: no
   email: nfsuzuki07@ucla.edu
   github: naomisuzuko
-  current: yes
+  current: no
 samantha_low:
   name: Samantha Low
   title: Stack Developer
   email: slow@media.ucla.edu
   mug: yes
-  current: yes
+  current: no
   bio: Samantha Low is an environmental science student who enjoys hiking, exploring new places and taking pictures of food in her free time. 
 ayushi_kadakia:
   name: Ayushi Kadakia
@@ -804,4 +804,37 @@ hannah_um:
   mug: yes
   email: hum@media.ucla.edu
   github: hannahum
+  current: no
+noah_hrung:
+  name: Noah Hrung
+  title: Graphics Editor
+  bio: Noah is the 2025-2026 Graphics Editor. He was previously a Data contributor.
+  mug: no
+  email: nhrung.f24@media.ucla.edu
+  github: noah-80
+  current: yes
+  editor: yes
+justine_lim:
+  name: Justine Lim
+  title: Stack Developer
+  bio: Justine is a Computational & Systems Biology and Digital Humanities student. In her free time, she likes to edit photos and videos, knit blankets, and collect smiskis!
+  mug: no
+  email: justineclim@ucla.edu
+  github: stinest
+  current: yes
+vidusha_adira:
+  name: Vidusha Adira
+  title: Stack Developer
+  bio: Vidusha is a Statistics/Data Scienceand Political Science student. She traveling, reading, crocheting, and exploring new restaurants in her free time.
+  mug: no
+  email: vadira.f24@media.ucla.edu
+  github: vidusha-adira
+  current: yes
+chloe_kim:
+  name: Chloe Kim
+  title: Stack Developer
+  bio: 
+  mug: no
+  email: cykim.f24@media.ucla.edu
+  github: vidusha-adira
   current: yes

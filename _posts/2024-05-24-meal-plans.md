@@ -1,5 +1,5 @@
 ---
-title: "Dishing it Out -A Closer Look at UCLA Dining’s Meal Plan Offerings"
+title: "Dishing it Out: A Closer Look at UCLA Dining’s Meal Plan Offerings"
 teaser: Which UCLA meal plan should you choose?
 authors:
   - l_yang
@@ -32,7 +32,7 @@ stylesheets:
 
 ### Introduction
 
-On top of selecting courses and housing each year, a key decision for on-campus UCLA undergraduates is selecting a meal plan most suitable to their needs. A meal plan for the 2023-2024 academic year costs between $5,000 to upward of $6,000. Students must balance the cost of a meal plan with the amount of food they get as well as how many meal swipes may go unused by the end of the quarter. 
+On top of selecting courses and housing each year, a key decision for on-campus UCLA undergraduates is selecting a meal plan most suitable to their needs. A meal plan for the 2023-2024 academic year costs between $5,000 to upward of $6,000. Students must balance the cost of a meal plan with the amount of food they get as well as how many meal swipes may go unused by the end of the quarter.
 
 <p class = 'title'>UCLA meal plans cost (2024-2025)</p>
     
@@ -86,8 +86,7 @@ Premier plans are more costly compared to their Regular counterparts. Additional
 </div>
 <p class = 'byline'>Graphic reporting by Hannah Um, Stack Contributor</p>
 
-
-For the 2023-2024 school year, 14P was by far the most popular meal plan, with nearly 6,000 students enrolled. In contrast, 11R was the least popular meal plan, with only 371 students enrolled. Generally, there is higher enrollment in the Premier plans than in the Regular plans, suggesting that students prefer to have more flexible meal schedules. Additionally, UCLA Housing  said the 11P plan is a recent addition to meal plan options, being offered since 2020 due to student demand.
+For the 2023-2024 school year, 14P was by far the most popular meal plan, with nearly 6,000 students enrolled. In contrast, 11R was the least popular meal plan, with only 371 students enrolled. Generally, there is higher enrollment in the Premier plans than in the Regular plans, suggesting that students prefer to have more flexible meal schedules. Additionally, UCLA Housing said the 11P plan is a recent addition to meal plan options, being offered since 2020 due to student demand.
 
 ### Leftover and Donated Swipes
 
@@ -95,7 +94,7 @@ Laura Zhou, a second-year statistics and data science student, initially selecte
 
 “After fall quarter, I got into the UCLA Cricket Team. Most people on the cricket team offer to swipe [others] in for lunches and dinners after team training, and that's why I switched from 19R to 19P,” Balamurali said.
 
-This transition, however, resulted in him having leftover swipes at the end of the quarter. 
+This transition, however, resulted in him having leftover swipes at the end of the quarter.
 
 <p class = 'title'>Number of Swipes that were Consumed, Left Over, and Donated from Fall 2022 to Spring 2023</p>
 <div class="cust_chart">
@@ -106,11 +105,11 @@ This transition, however, resulted in him having leftover swipes at the end of t
 
 Many other students like Zhou and Balamurali have had numerous leftover swipes. The visualization above shows a breakdown of how many swipes are consumed, left over or donated from fall 2022 to spring 2023. The total number of swipes for each meal plan was calculated by multiplying the number of enrolled people by the number of weeks, then multiplying that value by the number of swipes per week according to the meal plan. The number of consumed swipes was calculated by subtracting the number of leftover swipes, which was provided by UCLA Housing, from the total number of enrolled swipes. The number of donated swipes was estimated using the proportion of leftover swipes for each meal plan relative to all leftover swipes.
 
-This contrast between students’ expectation versus reality of their swipe usage leads to options for using up unused swipes before the quarter ends. Students can donate their leftover swipes to Swipe Out Hunger. Swipe Out Hunger is a leading non-profit campus organization founded in 2010 by UCLA alumnus Rachel Sumekh that aims to end college student hunger by encouraging students to donate their extra meals to peers facing food insecurity on campus. Swipe Out Hunger stations can be spotted around the UCLA dining halls toward the end of academic quarters. However, while there tends to be just a small number of leftover swipes for every meal plan at 6.30%, students still rarely donate those swipes. If they do not donate their unused swipes, they are discarded at the end of the quarter. 
+This contrast between students’ expectation versus reality of their swipe usage leads to options for using up unused swipes before the quarter ends. Students can donate their leftover swipes to Swipe Out Hunger. Swipe Out Hunger is a leading non-profit campus organization founded in 2010 by UCLA alumnus Rachel Sumekh that aims to end college student hunger by encouraging students to donate their extra meals to peers facing food insecurity on campus. Swipe Out Hunger stations can be spotted around the UCLA dining halls toward the end of academic quarters. However, while there tends to be just a small number of leftover swipes for every meal plan at 6.30%, students still rarely donate those swipes. If they do not donate their unused swipes, they are discarded at the end of the quarter.
 
-An alternative way to use up extra swipes is to purchase large packages of food in bulk that are offered at the end of each quarter or to stock up on snacks from different cafes. 
+An alternative way to use up extra swipes is to purchase large packages of food in bulk that are offered at the end of each quarter or to stock up on snacks from different cafes.
 
-Zhou said she preferred to use her accumulated excess swipes to purchase items. Last quarter, she cashed out swipes for a $500 Panda Express gift card. This quarter, she hopes to trade swipes for vouchers to use at the UCLA Store.
+Zhou said she preferred to use her accumulated excess swipes to purchase items. Last quarter, she cashed out swipes for a \$500 Panda Express gift card. This quarter, she hopes to trade swipes for vouchers to use at the UCLA Store.
 
 <p class = 'title'>How much money is wasted from uneaten meals?</p>
 <div class="cust_chart">
@@ -119,13 +118,13 @@ Zhou said she preferred to use her accumulated excess swipes to purchase items. 
 <p class = 'caption'>The average dollars wasted per person was calculated by multiplying the average meals leftover per meal plan by the cost per meal (2022-2023)</p>
 <p class = 'byline'>Graphic reporting by L Yang, Stack Contributor</p>
 
-The visualization above shows how much money goes wasted per meal plan holder due to unused meal swipes from 2022-2023 data, calculated by the average leftover meals per person multiplied by the cost per meal for each plan. While many students with the 19P meal plan expect to swipe in guests or to have multiple meals a day, a new class schedule and lifestyle after moving into the dorms can drastically change their eating habits, leading to more swipes going unused. 
+The visualization above shows how much money goes wasted per meal plan holder due to unused meal swipes from 2022-2023 data, calculated by the average leftover meals per person multiplied by the cost per meal for each plan. While many students with the 19P meal plan expect to swipe in guests or to have multiple meals a day, a new class schedule and lifestyle after moving into the dorms can drastically change their eating habits, leading to more swipes going unused.
 
-Some students would prefer to have their swipes carry over from one quarter to the next. Other students, like Balamurali, would like an option to cash in remaining swipes at the end of the quarter. Students with such requests can provide feedback with their community representative on a weekly basis or use a dine and dish form, UCLA Housing said in the written statement. Yet Balamurali said he is satisfied and still thinks the cost of his meal plan justifies its offerings.  
+Some students would prefer to have their swipes carry over from one quarter to the next. Other students, like Balamurali, would like an option to cash in remaining swipes at the end of the quarter. Students with such requests can provide feedback with their community representative on a weekly basis or use a dine and dish form, UCLA Housing said in the written statement. Yet Balamurali said he is satisfied and still thinks the cost of his meal plan justifies its offerings.
 
 ### Comparing UCLA Meal Plans with Other UC Meal Plans
 
-Among the various options for implementing meal plans, UCLA Housing determined that meal swipes are the best system. 
+Among the various options for implementing meal plans, UCLA Housing determined that meal swipes are the best system.
 
 “By having a meal swipe system versus dollars, students do not have to decide how much and what to eat based on their finances. Students with the lowest swipe meal plan can still access the all-you-care-to-eat restaurants, and do not have to decide to eat lower priced food,” the statement said.
 
