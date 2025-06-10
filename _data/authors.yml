@@ -766,9 +766,9 @@ samantha_low:
   bio: Samantha Low is an environmental science student who enjoys hiking, exploring new places and taking pictures of food in her free time. 
 ayushi_kadakia:
   name: Ayushi Kadakia
-  title: Assistant Data editor
-  bio: Ayushi is a Business Economics student. She loves writing, coffee, and crosswords. 
-  mug: no
+  title: Data editor
+  bio: Ayushi is an Economics and Statistics/Data Science student. She loves writing and crosswords. 
+  mug: yes
   editor: yes
   email: ayukadakia@ucla.edu
   github: ayukadakia
@@ -776,8 +776,8 @@ ayushi_kadakia:
 sydney_tomsick:
   name: Sydney Tomsick
   title: Stack Developer
-  bio: Sydney is a pre-Data Theory major. She loves to dance, cook, and hangout with friends. 
-  mug: no
+  bio: Sydney is a Statistics/Data Science major with a minor in Digital Humanities!
+  mug: yes
   email: sydneytomsick@g.ucla.edu
   github: sydneytomsick
   current: yes
@@ -799,7 +799,7 @@ bethany_kim:
   current: yes
 hannah_um:
   name: Hannah Um
-  title: Stack Intern
+  title: Stack Developer
   bio: Hannah is a Statistics and Data Science student. She enjoys traveling, thrifting, and cafe-hopping in her free time.
   mug: yes
   email: hum@media.ucla.edu
@@ -838,3 +838,35 @@ chloe_kim:
   email: cykim.f24@media.ucla.edu
   github: vidusha-adira
   current: yes
+gabriel_schwinden:
+  name: Gabriel Schwinden
+  title: Stack Developer
+  bio: Gabriel is a Cognitive Science major and Data Science Engineering minor. He loves animals, all things horror, and playing board games.
+  mug: yes
+  email: gschwinden.f24@media.ucla.edu
+  github: BriboSD
+  current: yes
+catherine_wang:
+  name: Catherine Wang
+  title: Stack Developer
+  bio: Catherine is studying Computational and Systems Biology and Statistics & Data Science. She likes Kpop, swimming, watching shows with friends, and eating yummy food.
+  mug: yes
+  email: crwang@media.ucla.edu
+  github: catherine2477
+  current: yes
+lipika goel:
+  name: Lipika Goel
+  title: Stack Developer
+  bio: Lipika is a pre-Computational and Systems Biology student. She enjoys spending time with her dog, listening to music, and doing NYT puzzles.
+  mug: yes
+  email: lgoel.f24@media.ucla.edu
+  github: lipikagoel
+  current: yes
+siddharth_singh:
+  name: Siddharth Singh
+  title: Stack Developer
+  bio: Siddharth is a Statistics and Data Science student. He loves playing soccer, strumming the guitar, and going to the gym. 
+  mug: yes
+  email: ssingh.f24@media.ucla.edu
+  github: siddharthsingh2004
+  current: yes 
