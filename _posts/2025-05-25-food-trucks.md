@@ -6,7 +6,7 @@ authors:
   - chloe_kim
   - liam_mcglynn
 featured_image:
-  url: food-trucks/Cover.png
+  url: food-trucks/Cover2.png
 scripts:
 ---
 
