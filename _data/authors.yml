@@ -568,21 +568,21 @@ nicole_chua:
 nancy_zhang:
   name: Nancy (Zihan) Zhang
   title: Stack Developer
-  bio: Nancy is a third-year data theory student who likes matcha latte and volleyball.
+  bio: Nancy was a data theory student who likes matcha latte and volleyball.
   mug: yes
   current: no
   email: nzhang@media.ucla.edu 
 abby_zhao:
   name: Abby Zhao
   title: Stack Developer
-  bio: Abby is a second-year data theory and economics student. She likes spicy food, hiking and reading.
+  bio: Abby was a data theory and economics student. She likes spicy food, hiking and reading.
   mug: yes
   current: no
   email: azhao8@media.ucla.edu
 jessica_li:
   name: Jessica Li
   title: Stack Developer
-  bio: Jessica is a third-year computational and systems biology student. She enjoys hiking and playing music. 
+  bio: Jessica was a computational and systems biology student. She enjoys hiking and playing music. 
   mug: yes
   current: no
   email: jli4@media.ucla.edu
@@ -641,7 +641,7 @@ ben_greer:
 angela_kan:
   name: Angela Kan
   title: Stack Developer
-  bio: Angela is a third-year statistics and cognitive science student with a minor in film. She likes hiking, green tea, and volleyball.
+  bio: Angela was a statistics and cognitive science student with a minor in film. She likes hiking, green tea, and volleyball.
   mug: yes
   current: no
   email: akan7@media.ucla.edu
@@ -649,28 +649,28 @@ angela_kan:
 mari_yamamoto:
   name: Mari Yamamoto
   title: Stack Developer
-  bio: Mari is a second-year computational & systems biology student. 
+  bio: Mari was a computational & systems biology student. 
   mug: yes
   current: no
   email: myamamoto@media.ucla.edu
 haryn_shin:
   name: Haryn Shin
   title: Stack Developer
-  bio: Haryn is a second-year cognitive science student with a specialization in computing and a minor in digital humanities. She likes to go eat Korean food and hang out with friends in her free time. 
+  bio: Haryn was a cognitive science student with a specialization in computing and a minor in digital humanities. She likes to go eat Korean food and hang out with friends in her free time. 
   mug: yes
   email: hshin@media.ucla.edu
   current: no
 jake_kovinsky:
   name: Jake Kovinsky
   title: Stack Developer
-  bio: Jake is a third-year cognitive science student.
+  bio: Jake was a cognitive science student.
   mug: yes
   current: no
   email: jkovinsky@media.ucla.edu
 leo_cardozo:
   name: Leo Cardozo
   title: Stack Developer
-  bio: Leo is a first-year statistics student. He enjoys playing tennis, cheering on UCLA sports, and going on hikes.
+  bio: Leo was a statistics student. He enjoys playing tennis, cheering on UCLA sports, and going on hikes.
   mug: yes
   email: lcardozo@media.ucla.edu
   github: cardo14
@@ -678,7 +678,7 @@ leo_cardozo:
 robin_lee:
   name: Robin Lee
   title: Stack Developer
-  bio: Robin is a third-year statistics student. 
+  bio: Robin was a statistics student. 
   mug: no
   email: rglee@media.ucla.edu
   github: robin-leee
@@ -694,7 +694,7 @@ l_yang:
 jun_ryu:
   name: Jun Ryu
   title: Stack Intern
-  bio: Jun is an applied mathematics and statistics student who enjoys jamming, playing basketball, and searching for good food.
+  bio: Jun was an applied mathematics and statistics student who enjoys jamming, playing basketball, and searching for good food.
   mug: yes
   editor: no
   current: no
@@ -703,7 +703,7 @@ jun_ryu:
 kimi_cui:
   name: Kimberly Cui
   title: Stack Developer
-  bio: Kimberly (Kimi) is a data theory student. She is a matcha and guinea pig enthusiast and enjoys blogging food on Instagram.
+  bio: Kimberly (Kimi) was a data theory student. She is a matcha and guinea pig enthusiast and enjoys blogging food on Instagram.
   mug: yes
   email: kcui@ucla.edu
   github: kimiicui 
@@ -711,7 +711,7 @@ kimi_cui:
 joey_ling:
   name: Joey Ling
   title: Stack Developer
-  bio: Joey is a cognitive science student specializing in computing and minoring in data science engineering. She likes movies, playing guitar, and cooking. 
+  bio: Joey was a cognitive science student specializing in computing and minoring in data science engineering. She likes movies, playing guitar, and cooking. 
   mug: yes
   email: joeyling@g.ucla.edu
   github: joeyling24
@@ -719,7 +719,7 @@ joey_ling:
 alicia_ying:
   name: Alicia Ying
   title: Stack Intern
-  bio: Alicia is a math and cognitive science student. In her free time, enjoys hiking, thrifting, and following Youtube recipes.
+  bio: Alicia was a math and cognitive science student. In her free time, enjoys hiking, thrifting, and following Youtube recipes.
   mug: yes
   email: aying@media.ucla.edu
   github: lycheeay
@@ -735,7 +735,7 @@ luca_adams:
 mabel_huynh:
   name: Mabel Huynh
   title: Stack Intern
-  bio: Mabel is a Data Theory student who enjoys watching movies and collecting merch from local artists. 
+  bio: Mabel was a Data Theory student who enjoys watching movies and collecting merch from local artists. 
   mug: yes
   email: mbhuynh@g.ucla.edu
   github: mbhuynh
@@ -744,7 +744,7 @@ mabel_huynh:
 caroline_sha:
   name: Caroline Sha
   title: Stack Developer
-  bio: Caroline is a biology student. 
+  bio: Caroline was a biology student. 
   mug: no
   email: csha@media.ucla.edu
   github: carolinesha
@@ -763,7 +763,7 @@ samantha_low:
   email: slow@media.ucla.edu
   mug: yes
   current: no
-  bio: Samantha Low is an environmental science student who enjoys hiking, exploring new places and taking pictures of food in her free time. 
+  bio: Samantha Low was an environmental science student who enjoys hiking, exploring new places and taking pictures of food in her free time. 
 ayushi_kadakia:
   name: Ayushi Kadakia
   title: Data editor
@@ -836,7 +836,7 @@ chloe_kim:
   bio: 
   mug: no
   email: cykim.f24@media.ucla.edu
-  github: vidusha-adira
+  github:
   current: yes
 gabriel_schwinden:
   name: Gabriel Schwinden
