@@ -45,7 +45,7 @@ Every two years, the UC Office of the President estimates the cost of attendance
 <!-- <p class = 'caption'>The bars depict the total amount of financial aid received per capita. The bars are broken down by the type of financial aid with the blue sections representing gift aid and the yellow sections representing loans. The line depicts the unadjusted net cost of attendance.</p> -->
 <p class = 'byline'>Graphic reporting by Bethany Kim, Stack Contributor</p>
 
-The line on the chart above depicts the inflation-adjusted cost of attendance across all of the UC campuses. The cost of attendance has increased by almost $10,000 between 2002 and 2022. With the exception of 2012, 2014, and 2020, the COA has always increased from the previous year. Notably, the COA increased by almost $2,000 between 2020 and 2021, which marked a notable change compared to the fact that it took the previous 10 years for the COA to increase by $2,000.
+The line on the chart above depicts the inflation-adjusted cost of attendance across all of the UC campuses. The cost of attendance has increased by almost $10,000 between 2002 and 2022. With the exception of 2012, 2014, and 2020, the COA has always increased from the previous year. Notably, the COA increased by almost $2,000 between 2020 and 2021, which marked a notable change compared to the fact that it took the previous 10 years for the COA to increase by \$2,000.
 
 The bars on the visualization above depict the average financial aid received by students in the UC system.
 
@@ -63,14 +63,13 @@ At first glance, it seems like financial aid increases when tuition increases an
 
 As shown in the line chart above, the out-of-pocket costs for the average UC student decreased from 2007 to 2014 before increasing until 2021. Additionally, there was a sharp decrease between 2021 and 2022, which can be attributed to a large increase in other scholarships and Middle Class Scholarships.
 
-Over the years, there has been an increased focus on making UCLA affordable, said Marvin Smith, the executive director of UCLA Financial Aid & Scholarships. 
+Over the years, there has been an increased focus on making UCLA affordable, said Marvin Smith, the executive director of UCLA Financial Aid & Scholarships.
 
 “I would say that you see more of an increase in financial aid programs,” Smith said. “I think there's a recognition by the regents of the state of California, the University of California system, the state of California, that college access is critical and that funding is critical for students to be successful.”
 
 Hailey Mendelsohn, a third-year molecular, cell and developmental biology student, said she has looked at many different scholarships and resources to help pay for college.
 
 “It would be nice if higher education was more accessible for everyone, but there are a lot of opportunities out there to find,” said Mendelsohn.
-
 
 ### Comparing Cost of Attendance at UCLA with Costs of Attendance at Other UCs
 
@@ -86,16 +85,15 @@ Hailey Mendelsohn, a third-year molecular, cell and developmental biology studen
 <!-- <p class = 'caption'>The inflation-adjusted net cost of attendance for each of the UC campuses from 2002 to 2022.</p> -->
 <p class = 'byline'>Graphic reporting by Bethany Kim, Stack Contributor</p>
 
-Since 2002, the overall trend for COA shares similarities across all UC schools. Adjusting for inflation reveals that tuition costs have remained relatively stable, staying within a range of $21,000 and $25,000 for the past 20 years. After increasing from 2002 to 2010, inflation-adjusted COA continued to fall over the next decade. In fact, after adjusting for inflation, the COA in 2022 was only about $200 greater than the cost of tuition in 2002.
+Since 2002, the overall trend for COA shares similarities across all UC schools. Adjusting for inflation reveals that tuition costs have remained relatively stable, staying within a range of $21,000 and $25,000 for the past 20 years. After increasing from 2002 to 2010, inflation-adjusted COA continued to fall over the next decade. In fact, after adjusting for inflation, the COA in 2022 was only about \$200 greater than the cost of tuition in 2002.
 
 Comparing the COA at UCLA to other UC schools reveals that UCLA has had lower COAs than UC Santa Barbara and UC Santa Cruz for all years spanning from 2002 to 2022 and has consistently had lower COA than UC Berkeley since 2014.
 
 ### UCLA BruinBill Breakdown
 
-As students pay their tuition, the BruinBill receipt lists all of the various fees and categories along with respective pricings. It is a transparent process to understand how the total payment amount is calculated. However, students must go the extra mile to look into each component and understand its purpose and relevance. 
+As students pay their tuition, the BruinBill receipt lists all of the various fees and categories along with respective pricings. It is a transparent process to understand how the total payment amount is calculated. However, students must go the extra mile to look into each component and understand its purpose and relevance.
 
 Anthony Chen, a second-year data theory student, said he is familiar with the components based on what is on the receipt and assumes documentation is available online to learn more about where the money actually goes. While he is correct, it proves to be difficult to find specifics about the fees and charges besides that they are related to housing, transportation and registration. Thus, the best way to better understand what exactly the money is going towards is by looking at an actual BruinBill receipt posted to a student’s account.
-
 
 <p class = 'caption'>Click on one of the four categories to see the fees that fall under it. Click on the grey bar to go back to the four categories.</p>
 <div class="cust_chart">
@@ -105,9 +103,9 @@ Anthony Chen, a second-year data theory student, said he is familiar with the co
 
 The treemap above is based on a winter 2024 BruinBill for a sample in-state student, which should be reflective of the general costs for other in-state students. The base chart contains the major categories and clicking on a category will display the fees associated with that category.
 
-Although not included in the above charts, housing is one of the largest expenses for most students. For students living in the dorms at UCLA, the cost is between $13,566 to stay in a three-person room in a classic residence hall with the cheapest meal plan available and $23,498 to stay in a single room in a plaza residence hall with the most expensive meal plan available. For students living in the undergraduate university apartments managed by UCLA, the cost for one academic year is between $6,883 to stay in a 1 bedroom/4 person unit and $18,561 to stay in a studio unit with one occupant. As for students living in apartments in Westwood, the average rent for one academic year in 2022 was $26,995 for a one-bedroom apartment, $36,000 for a two-bedroom apartment and $58,050 for a three-bedroom apartment.
+Although not included in the above charts, housing is one of the largest expenses for most students. For students living in the dorms at UCLA, the cost is between $13,566 to stay in a three-person room in a classic residence hall with the cheapest meal plan available and $23,498 to stay in a single room in a plaza residence hall with the most expensive meal plan available. For students living in the undergraduate university apartments managed by UCLA, the cost for one academic year is between $6,883 to stay in a 1 bedroom/4 person unit and $18,561 to stay in a studio unit with one occupant. As for students living in apartments in Westwood, the average rent for one academic year in 2022 was $26,995 for a one-bedroom apartment, $36,000 for a two-bedroom apartment and \$58,050 for a three-bedroom apartment.
 
-The $9,918 Nonresident Supplemental Tuition that out-of-state students must pay is not pictured in the tree map.
+The \$9,918 Nonresident Supplemental Tuition that out-of-state students must pay is not pictured in the tree map.
 
 ### Financial Aid at UCLA
 
@@ -117,13 +115,13 @@ The $9,918 Nonresident Supplemental Tuition that out-of-state students must pay 
 <!-- <p class = 'caption'>The inflation-adjusted amount of financial aid recieved by UCLA students from 2002 to 2022.</p> -->
 <p class = 'byline'>Graphic Reporting by Caroline Sha, Stack Contributor</p>
 
-While the amount of loans received by UCLA students has decreased since 2002, the total gift aid received by UCLA students has seen an increasing trend for the past 20 years. The amounts of UC and state aid, given by UC grants and Cal Grant, respectively, have increased by nearly $50 million each. The total amount students received from UC grants increased the most, more than doubling since 2002. Over the same period, the amount of federal aid administered through the Pell Grant has remained relatively constant. 
+While the amount of loans received by UCLA students has decreased since 2002, the total gift aid received by UCLA students has seen an increasing trend for the past 20 years. The amounts of UC and state aid, given by UC grants and Cal Grant, respectively, have increased by nearly \$50 million each. The total amount students received from UC grants increased the most, more than doubling since 2002. Over the same period, the amount of federal aid administered through the Pell Grant has remained relatively constant.
 
 The amount of financial aid awarded each year is dependent on a variety of factors, such as federal, state and institutional regulations, said Smith. After students fill out the Free Application for Federal Student Aid (FAFSA), UCLA uses a formula-based procedure to determine whether a student is eligible for need-based financial aid.
 
 “We're really ... trying to focus on scholarship opportunities and the funding that we can provide to students so they might be able to attend UCLA debt free,” Smith said.
 
-For some, the process for receiving financial aid can be confusing, especially given the number of entities that are involved with receiving financial information, calculating how much aid a student should receive and disbursing the aid. 
+For some, the process for receiving financial aid can be confusing, especially given the number of entities that are involved with receiving financial information, calculating how much aid a student should receive and disbursing the aid.
 
 “For my process of getting financial aid, I had to go to a lot of different people in order to get the information that I needed for the forms. It was like a wild goose chase trying to get all of the information I needed. So if there was a way to do that, a more centralized way to do that, that would be nice,” said Mendelsohn.
 
