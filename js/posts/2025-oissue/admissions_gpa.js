@@ -41,7 +41,7 @@ const options = {
       beginAtZero: false, 
       min: 3.70,
       max: 4.30,
-      title: { display: true, text: 'Average Admitted GPA' } 
+      title: { display: true, text: 'Admitted GPA' } 
     },
     y1: {
       position: 'right',
