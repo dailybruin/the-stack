@@ -1329,7 +1329,6 @@ const chart = new Chart(ctx_admissions_income_scatter, {
                         const schoolNames = matchingPoints.map(p => p.school);
                         return [
                             ...schoolNames,
-                            `Income: $${point.x.toLocaleString()}`,
                             `Admission Rate: ${point.y}%`
                         ];
                     }
@@ -1386,18 +1385,25 @@ const chart = new Chart(ctx_admissions_income_scatter, {
     {
         id: 'hoveredCountyLabel',
         afterDraw(chart, args, options) {
-        const { ctx, chartArea } = chart;
-        if (!hoveredCounty) return;
+            const { ctx, chartArea } = chart;
+            if (!hoveredCounty) return;
 
-        ctx.save();
-        ctx.font = '20px PT Sans';
-        ctx.fillStyle = 'black';
-        ctx.textAlign = 'right';
-        ctx.textBaseline = 'top';
+            const allPoints = chart.data.datasets[0].data;
+            const countyPoint = allPoints.find(p => p.county === hoveredCounty);
+            if (!countyPoint) return;
 
-        const text = `County: ${hoveredCounty}`;
-        ctx.fillText(text, chartArea.right - 10, chartArea.top + 10);
-        ctx.restore();
+            ctx.save();
+            ctx.font = '20px PT Sans';
+            ctx.fillStyle = 'black';
+            ctx.textAlign = 'right';
+            ctx.textBaseline = 'top';
+            ctx.fillText(`County: ${hoveredCounty}`, chartArea.right - 10, chartArea.top + 10);
+
+            const income = countyPoint.x;
+            ctx.font = '18px PT Sans';
+            ctx.fillStyle = '#333'
+            ctx.fillText(`Income: $${income.toLocaleString()}`, chartArea.right - 10, chartArea.top + 35);
+            ctx.restore();
         }
     }
     ]
