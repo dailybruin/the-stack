@@ -41,7 +41,7 @@ const options = {
       beginAtZero: false, 
       min: 3.70,
       max: 4.30,
-      title: { display: true, text: 'Admitted GPA' } 
+      title: { display: true, text: 'County\'s Average Admitted GPA' } 
     },
     y1: {
       position: 'right',
@@ -49,7 +49,7 @@ const options = {
       min: 3.70 - average_gpa,
       max: 4.30 - average_gpa,
       grid: { drawOnChartArea: false },
-      title: { display: true, text: 'Difference from Average' },
+      title: { display: true, text: 'Difference from In-State Average Admitted GPA ' },
       ticks: {
         callback: function(value) {
           return value >= 0 ? `+${value.toFixed(3)}` : value.toFixed(3);
@@ -59,7 +59,27 @@ const options = {
     x: { ticks: { maxRotation: 45, minRotation: 45 } }
   },
   plugins: {
-    legend: { display: false },
+    legend: {
+      display: true,
+      labels: {
+        generateLabels: function(chart) {
+          return [
+            {
+              text: "County's average admitted GPA was lower than overall average admitted GPA",
+              fillStyle: 'rgba(255, 99, 132, 1)',
+              strokeStyle: 'rgba(255, 99, 132, 1)',
+              lineWidth: 1
+            },
+            {
+              text: "County's average admitted GPA was higher than overall admitted GPA",
+              fillStyle: 'rgba(75, 192, 192, 1)',
+              strokeStyle: 'rgba(75, 192, 192, 1)',
+              lineWidth: 1
+            }
+          ];
+        }
+      }
+    },
     tooltip: {
       callbacks: {
         label: ctx => {
@@ -79,7 +99,7 @@ const options = {
     },
     subtitle: {
         display: true,
-        text: ['Each bar represents the average GPA of admitted students for a county. Each point represents the average GPA of applicants for a county.', 'The GPA of admitted students was higher than the GPA of all applicants for every county.'],
+        text: ['Each bar represents the average GPA of admitted students for a county. The average GPA for in-state admitted students was 4.24.', 'Each point represents the average GPA of applicants for a county. The GPA of admitted students was higher than the GPA of all applicants for every county.'],
         font: {
           size: 15,
         },
