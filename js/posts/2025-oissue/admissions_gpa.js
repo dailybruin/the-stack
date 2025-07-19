@@ -99,7 +99,7 @@ const options = {
     },
     subtitle: {
         display: true,
-        text: ['Each bar represents the average GPA of admitted students for a county. The average GPA for in-state admitted students was 4.24.', 'Each point represents the average GPA of applicants for a county. The GPA of admitted students was higher than the GPA of all applicants for every county.'],
+        text: ['The average GPA for in-state admitted students was 4.24.', 'Each bar represents the average GPA of admitted students for a county. Each point represents the average GPA of applicants for a county.', 'The average admitted GPA of a county was always higher than the average application GPA of that county.'],
         font: {
           size: 15,
         },
