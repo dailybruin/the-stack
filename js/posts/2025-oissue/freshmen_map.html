@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- SET UP FOR AN HTML FILE -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map of Enrollment by County</title>
+    <!-- leaflet and chroma imports -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chroma-js/2.4.2/chroma.min.js"></script>
+    <script src = 'freshmen_map.js' defer></script>
+    <!-- font imports -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap" rel="stylesheet">
+    <style>
+        div{
+            font-family: 'PT Sans',serif;  /*default font, change if requested*/
+        }
+        .header{
+            font-size: 20px;
+            text-align: center;
+            color: #666;
+            padding-bottom: 5px;
+        }
+        .explainer{
+            font-size: 16px;
+            text-align: center;
+            color: #666;
+            padding-bottom: 8px;
+        }
+        .chart{
+            margin: 1%;
+            margin-top: -1%;
+        }
+        hr{
+            border: white solid 1px;
+        }
+        .byLine{
+            font-size: 10px;
+            text-align: center;
+        }
+        .viz_box{
+            border: 2px white solid
+        }
+        @media only screen and (max-width: 800px) {
+            .chart{
+            display: 'block';
+            width: 98% !important;
+            float: left;
+            height: 600px;
+        }
+        }
+        @media only screen and (min-width: 800px) {
+        .chart{
+            display: 'block';
+            width: 98% !important; /*CHANGE THIS IF THERE IS MORE THAN ONE CHART */
+            float: left;
+            height: 600px;
+        }
+        .viz_box{
+            width: 100%;
+            height: 100%;
+        }}
+        .legend {
+            background: white;
+            padding: 8px;
+            font-size: 14px;
+            color: #666;
+            box-shadow: 0 0 6px rgba(0,0,0,0.3);
+            text-align: center;
+            font-family: Arial, sans-serif;
+            user-select: none;
+        }
+    </style>
+    
+</head>
+<body>
+    <div class = 'viz_box'>
+        <div class='header'><b>Map of Enrolled In-State Public School Freshmen Admits by County</b></div>
+        <div class = 'explainer'>59% of freshmen admits were in-state public school students for the incoming class of 2024.<br>Hover over a county to see the exact enrollment rate for in-state public school students as well as the county population.</div>
+        <hr>
+        <div class = 'chartContainer'>
+            <div class="chart"><div id="freshmen-enrollment-map" style="height: 600px; width: 100%;"></div></div>
+        </div>
+        <div class='byLine'>
+            <hr>
+            Sources: University of California, U.S. Census Bureau <br> Graphic Reporting by Bethany Kim, Stack Developer</div>
+    </div>
+</body>
+</html>

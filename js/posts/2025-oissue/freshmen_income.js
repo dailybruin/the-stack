@@ -1276,135 +1276,127 @@ const dataPoints = [
 
 let hoveredCounty = null;
 
-const ctx_admissions_income_scatter = document.getElementById('admissions-income-scatter');
-const chart = new Chart(ctx_admissions_income_scatter, {
-    type: 'scatter',
-    data: {
-        datasets: [{
-            label: 'Schools',
-            data: dataPoints,
-            parsing: false,
-            backgroundColor: context => {
-                const point = context.raw;
-                if (!point) return '#2774AE';
-                return (hoveredCounty && point.county === hoveredCounty) ? '#FFD100' : '#2774AE';
+document.addEventListener('DOMContentLoaded', () => {
+    const ctx_admissions_income_scatter = document.getElementById('freshmen-income');
+    const chart = new Chart(ctx_admissions_income_scatter, {
+        type: 'scatter',
+        data: {
+            datasets: [{
+                label: 'Schools',
+                data: dataPoints,
+                parsing: false,
+                backgroundColor: context => {
+                    const point = context.raw;
+                    if (!point) return '#2774AE';
+                    return (hoveredCounty && point.county === hoveredCounty) ? '#FFD100' : '#2774AE';
+                },
+                radius: context => {
+                    const point = context.raw;
+                    if (!point) return 6;
+                    return (!hoveredCounty || point.county === hoveredCounty) ? 6 : 3;
+                }
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            interaction: {
+                mode: 'nearest',
+                intersect: true
             },
-            radius: context => {
-                const point = context.raw;
-                if (!point) return 6;
-                return (!hoveredCounty || point.county === hoveredCounty) ? 6 : 3;
-            }
-        }]
-    },
-    options: {
-        responsive: true,
-        maintainAspectRatio: false,
-        interaction: {
-            mode: 'nearest',
-            intersect: true
-        },
-        onHover: (event, elements) => {
-            if (elements.length > 0) {
-                const { datasetIndex, index } = elements[0];
-                const point = chart.data.datasets[datasetIndex].data[index];
-                hoveredCounty = point.county;
-            } else {
-                hoveredCounty = null;
-            }
-            chart.update();
-        },
-        plugins: {
-            tooltip: {
-                callbacks: {
-                    label: context => {
-                        const point = context.raw;
-                        const dataset = context.chart.data.datasets[context.datasetIndex].data;
-                        const matchingPoints = dataset.filter(p => p.x === point.x && p.y === point.y);
+            onHover: (event, elements) => {
+                if (elements.length > 0) {
+                    const { datasetIndex, index } = elements[0];
+                    const point = chart.data.datasets[datasetIndex].data[index];
+                    hoveredCounty = point.county;
+                } else {
+                    hoveredCounty = null;
+                }
+                chart.update();
+            },
+            plugins: {
+                tooltip: {
+                    callbacks: {
+                        label: context => {
+                            const point = context.raw;
+                            const dataset = context.chart.data.datasets[context.datasetIndex].data;
+                            const matchingPoints = dataset.filter(p => p.x === point.x && p.y === point.y);
 
-                        const firstMatch = dataset.findIndex(p => p.x === point.x && p.y === point.y);
-                        if (context.dataIndex !== firstMatch) {
-                            return null;
+                            const firstMatch = dataset.findIndex(p => p.x === point.x && p.y === point.y);
+                            if (context.dataIndex !== firstMatch) {
+                                return null;
+                            }
+
+                            const schoolNames = matchingPoints.map(p => p.school);
+                            return [
+                                ...schoolNames,
+                                `Admission Rate: ${point.y}%`
+                            ];
                         }
-
-                        const schoolNames = matchingPoints.map(p => p.school);
-                        return [
-                            ...schoolNames,
-                            `Admission Rate: ${point.y}%`
-                        ];
+                    }
+                },
+                title: {
+                    display: true,
+                    text: 'Freshmen Admits',
+                    font: {
+                        size: 16,
+                    },
+                },
+                hoveredCountyLabel: {
+                    display: true
+                },
+                legend: { display: false }
+            },
+            scales: {
+                x: {
+                    title: {
+                        display: true,
+                        text: 'County Income'
+                    },
+                    min: 50000,
+                    max: 165000,
+                    ticks: {
+                        callback: val => '$' + val
+                    }
+                },
+                y: {
+                    title: {
+                        display: true,
+                        text: 'Acceptance Rate'
+                    },
+                    min: 0,
+                    max: 60,
+                    ticks: {
+                        callback: val => val + '%'
                     }
                 }
-            },
-            title: {
-                display: true,
-                text: 'County Income vs. Acceptance Rate',
-                font: {
-                    size: 20,
-                },
-            },
-            subtitle: {
-                display: true,
-                text: 'Each point represents a school. Hovering over a point will spotlight the other schools in the same county.',
-                font: {
-                    size: 15,
-                },
-                padding: {
-                    bottom: 20,
-                }
-            },
-            hoveredCountyLabel: {
-                display: true
-            },
-            legend: { display: false }
+            }
         },
-        scales: {
-            x: {
-                title: {
-                    display: true,
-                    text: 'County Income'
-                },
-                min: 50000,
-                max: 165000,
-                ticks: {
-                    callback: val => '$' + val
-                }
-            },
-            y: {
-                title: {
-                    display: true,
-                    text: 'Acceptance Rate'
-                },
-                min: 0,
-                max: 60,
-                ticks: {
-                    callback: val => val + '%'
-                }
+        plugins: [
+        {
+            id: 'hoveredCountyLabel',
+            afterDraw(chart, args, options) {
+                const { ctx, chartArea } = chart;
+                if (!hoveredCounty) return;
+
+                const allPoints = chart.data.datasets[0].data;
+                const countyPoint = allPoints.find(p => p.county === hoveredCounty);
+                if (!countyPoint) return;
+
+                ctx.save();
+                ctx.font = '20px PT Sans';
+                ctx.fillStyle = 'black';
+                ctx.textAlign = 'right';
+                ctx.textBaseline = 'top';
+                ctx.fillText(`County: ${hoveredCounty}`, chartArea.right - 10, chartArea.top + 10);
+
+                const income = countyPoint.x;
+                ctx.font = '18px PT Sans';
+                ctx.fillStyle = '#333'
+                ctx.fillText(`Income: $${income.toLocaleString()}`, chartArea.right - 10, chartArea.top + 35);
+                ctx.restore();
             }
         }
-    },
-    plugins: [
-    {
-        id: 'hoveredCountyLabel',
-        afterDraw(chart, args, options) {
-            const { ctx, chartArea } = chart;
-            if (!hoveredCounty) return;
-
-            const allPoints = chart.data.datasets[0].data;
-            const countyPoint = allPoints.find(p => p.county === hoveredCounty);
-            if (!countyPoint) return;
-
-            ctx.save();
-            ctx.font = '20px PT Sans';
-            ctx.fillStyle = 'black';
-            ctx.textAlign = 'right';
-            ctx.textBaseline = 'top';
-            ctx.fillText(`County: ${hoveredCounty}`, chartArea.right - 10, chartArea.top + 10);
-
-            const income = countyPoint.x;
-            ctx.font = '18px PT Sans';
-            ctx.fillStyle = '#333'
-            ctx.fillText(`Income: $${income.toLocaleString()}`, chartArea.right - 10, chartArea.top + 35);
-            ctx.restore();
-        }
-    }
-    ]
-});
+        ]
+    });
+})

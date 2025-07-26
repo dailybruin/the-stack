@@ -5,11 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Applied and Admitted GPA by County</title>
+    <title>County Income vs. Acceptance Rate</title>
     <!-- chart js imports -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js" integrity="sha512-QSkVNOCYLtj73J4hbmVoOV6KVZuMluZlioC+trLpewV8qMjsWqlIQvkn1KGX2StWvPMdWGBqim1xlC8krl1EKQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation@1.4.0/dist/chartjs-plugin-annotation.min.js"></script>
-    <script src = 'admissions_gpa.js' defer></script>
+    <script src = 'freshmen_income.js' defer></script>
+    <script src = 'transfers_income.js' defer></script>
     <!-- font imports -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,12 +21,14 @@
         .header{
             font-size: 20px;
             text-align: center;
-            align-content: center;
+            color: #666;
+            padding-bottom: 5px;
         }
         .explainer{
             font-size: 16px;
-            padding-left: 10px;
-            padding-right: 10px;
+            text-align: center;
+            color: #666;
+            padding-bottom: 8px;
         }
         .chart{
             margin: 1%;
@@ -47,7 +49,7 @@
             display: 'block';
             width: 98% !important;
             float: left;
-            height: 400px;
+            height: 600px;
         }
         }
         @media only screen and (min-width: 800px) {
@@ -55,7 +57,7 @@
             display: 'block';
             width: 98% !important; /*CHANGE THIS IF THERE IS MORE THAN ONE CHART */
             float: left;
-            height: 500px;
+            height: 700px;
         }
         .viz_box{
             width: 100%;
@@ -66,12 +68,16 @@
 </head>
 <body>
     <div class = 'viz_box'>
+        <div class='header'><b>County Income vs. Acceptance Rate</b></div>
+        <div class = 'explainer'>Each point represents a school. Hovering over a point will spotlight the other schools in the same county.</div>
+        <hr>
         <div class = 'chartContainer'>
-            <div class = 'chart'><canvas id = 'admissions_gpa_bar'></canvas></div>
+            <div class = 'chart'><canvas id = 'freshmen-income'></canvas></div>
+            <div class = 'chart'><canvas id = 'transfers-income'></canvas></div>
         </div>
         <div class='byLine'>
             <hr>
-            Sources: University of California <br> Graphic Reporting by Bethany Kim, Stack Developer</div>
+            Sources: University of California, NIMHD <br> Graphic Reporting by Bethany Kim, Stack Developer</div>
     </div>
 </body>
 </html>

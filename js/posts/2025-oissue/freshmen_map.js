@@ -1,4 +1,4 @@
-const mapContainer = document.getElementById("enrollment-map");
+const mapContainer = document.getElementById("freshmen-enrollment-map");
 
 const enrollmentData = {
     "Alameda County": 3.13,
@@ -137,10 +137,14 @@ function style(feature) {
     };
 }
 
-const map = L.map(mapContainer).setView([37.5, -119.5], 6);
+const map = L.map(mapContainer, { attributionControl: false }).setView([37.5, -119.5], 6);
+
+const myAttrControl = L.control.attribution().addTo(map);
+myAttrControl.setPrefix('<a href="https://leafletjs.com/">Leaflet</a>');
 
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: 'Map data © OpenStreetMap contributors'
+    maxZoom: 19,
+    attribution: '© <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 }).addTo(map);
 
 fetch("California_Counties.geojson")
@@ -152,7 +156,7 @@ fetch("California_Counties.geojson")
             const countyName = feature.properties.NAME;
             const percent = enrollmentData[countyName] || 0;
             const population = populationData[countyName] || "?";
-            const popupContent = `Public school students from <strong>${countyName}</strong><br> make up <strong>${percent}%</strong> of the incoming class.<br><br>The total population of ${countyName} is<br><strong>${population?.toLocaleString()}</strong>.`;
+            const popupContent = `Public school students from <strong>${countyName}</strong><br> made up <strong>${percent}%</strong> of incoming freshmen admits in 2024.<br><br>The total population of ${countyName} is<br><strong>${population?.toLocaleString()}</strong>.`;
             
             layer.bindPopup(popupContent, {
                 closeButton: false,
@@ -195,7 +199,7 @@ legend.onAdd = function (map) {
   }
 
   const title = document.createElement('div');
-  title.innerHTML = `% of enrolled UCLA students from public schools`;
+  title.innerHTML = `% of first-year students at UCLA from public schools`;
   title.style.marginBottom = "5px";
 
   const labels = document.createElement('div');
