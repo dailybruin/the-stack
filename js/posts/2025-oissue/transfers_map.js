@@ -172,7 +172,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     legend.onAdd = function (map) {
         const div = L.DomUtil.create('div', 'legend');
-        const width = 300;
+        const width = 250;
         const height = 20;
 
         const canvas = document.createElement('canvas');
@@ -188,7 +188,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         const title = document.createElement('div');
-        title.innerHTML = `% of transfer students at UCLA`;
+        title.innerHTML = `% of transfer students at UCLA<br>from California community colleges`;
         title.style.marginBottom = "5px";
 
         const labels = document.createElement('div');

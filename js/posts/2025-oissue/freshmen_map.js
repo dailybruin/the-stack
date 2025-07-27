@@ -183,7 +183,7 @@ const legend = L.control({ position: 'bottomleft' });
 
 legend.onAdd = function (map) {
   const div = L.DomUtil.create('div', 'legend');
-  const width = 300;
+  const width = 250;
   const height = 20;
 
   const canvas = document.createElement('canvas');
@@ -199,7 +199,7 @@ legend.onAdd = function (map) {
   }
 
   const title = document.createElement('div');
-  title.innerHTML = `% of first-year students at UCLA from public schools`;
+  title.innerHTML = `% of first-year students at UCLA<br>from public schools`;
   title.style.marginBottom = "5px";
 
   const labels = document.createElement('div');
