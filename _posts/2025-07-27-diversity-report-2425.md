@@ -5,7 +5,7 @@ authors:
   - ayushi_kadakia
   - liam_mcglynn
 featured_image:
-  url: diversity-report/feature-photo-5.png
+  url: diversity-report-2425/diversityreportcover2425.png
 scripts:
 ---
 
