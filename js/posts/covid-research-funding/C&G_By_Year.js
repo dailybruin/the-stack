@@ -19,7 +19,7 @@ const labels1 = [
 ]; //THIS SHOULD BE A LIST OF WHAT YOU WANT ON THE X-AXIS
 const colors = ['rgba(50, 132, 191, 0.8)']; //CHANGE THESE TO WHAT MATCHES THE SUBJECT
 const dataCounts = [
-  NaN,
+  4590,
   NaN,
   5380,
   5714,
