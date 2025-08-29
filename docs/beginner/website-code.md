@@ -1,6 +1,6 @@
 ---
 layout: page
-permalink: /docs/website-code/
+permalink: /docs/beginner/website-code/
 ---
 
 # Website code documentation

@@ -1,6 +1,6 @@
 ---
 layout: page
-permalink: /docs/frontend/
+permalink: /docs/advanced/frontend/
 ---
 
 # Summary

@@ -1,6 +1,6 @@
 ---
 layout: page
-permalink: /docs/chartjs/
+permalink: /docs/beginner/chartjs/
 ---
 
 ## ChartJS 

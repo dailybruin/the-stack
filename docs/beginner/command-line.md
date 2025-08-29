@@ -1,6 +1,6 @@
 ---
 layout: page
-permalink: /docs/command-line/
+permalink: /docs/beginner/command-line/
 ---
 
 ## Intro to Command Line
